@@ -355,15 +355,29 @@ def script_words(text: str, asr: list) -> list:
     raw, P = _spans(text)
     araw = [re.sub(r"\s+", "", w["w"]) for w in asr]
     _, A = _spans(" ".join(araw))
-    out = []
+    out, seen = [], {}                                                 # seen: raw index -> emitted entry (one per script word)
+
+    def emit(k, s, e):
+        seen[k] = {"w": raw[k], "s": s, "e": e}; out.append(seen[k])
 
     def place(sw_idx: list, aw_idx: list):
+        new = [k for k in dict.fromkeys(sw_idx) if k not in seen]
+        if not new:                                                    # e.g. "area" of "equal-area": extend the word's span
+            for k in sw_idx:
+                if aw_idx and seen[k]["e"] is not None:
+                    seen[k]["e"] = max(seen[k]["e"], asr[aw_idx[-1]]["e"])
+            return
         if not aw_idx:
-            out.extend({"w": raw[k], "s": None, "e": None} for k in sw_idx); return
-        if len(sw_idx) == len(aw_idx):
-            out.extend({"w": raw[k], "s": asr[j]["s"], "e": asr[j]["e"]} for k, j in zip(sw_idx, aw_idx)); return
-        s0, e0 = asr[aw_idx[0]]["s"], asr[aw_idx[-1]]["e"]; n = len(sw_idx); d = (e0 - s0) / n
-        out.extend({"w": raw[k], "s": round(s0 + i * d, 3), "e": round(s0 + (i + 1) * d, 3)} for i, k in enumerate(sw_idx))
+            for k in new:
+                emit(k, None, None)
+            return
+        if len(new) == len(aw_idx):
+            for k, j in zip(new, aw_idx):
+                emit(k, asr[j]["s"], asr[j]["e"])
+            return
+        s0, e0 = asr[aw_idx[0]]["s"], asr[aw_idx[-1]]["e"]; n = len(new); d = (e0 - s0) / n
+        for i, k in enumerate(new):
+            emit(k, round(s0 + i * d, 3), round(s0 + (i + 1) * d, 3))
 
     sm = difflib.SequenceMatcher(a=[t for t, _ in P], b=[t for t, _ in A], autojunk=False)
     for op, i1, i2, j1, j2 in sm.get_opcodes():

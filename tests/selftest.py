@@ -99,6 +99,11 @@ def main():
         okw = [w["w"] for w in got] == line.replace("…", "… ").split() and all(w["s"] is not None and w["e"] >= w["s"] for w in got) \
             and all(got[i]["s"] <= got[i + 1]["s"] for i in range(len(got) - 1))
         say(okw, "voice script_words: script owns the words, ASR owns the timing (decimal split, monotonic)", " ".join(w["w"] for w in got))
+        line2 = "On this equal-area map, that is bigger than India's peninsula and Scandinavia put together."
+        for heard2 in (line2, line2.replace("equal-area", "equal area"), line2.replace("equal-area", "Equallaria")):
+            fake2 = [{"w": w, "s": round(i * .3, 3), "e": round(i * .3 + .3, 3)} for i, w in enumerate(heard2.split())]
+            got2 = _voice.script_words(line2, fake2)
+            say([w["w"] for w in got2] == line2.split(), f"voice script_words: hyphenated word once, heard as “{heard2.split()[2]}”", " ".join(w["w"] for w in got2))
         for ep in (tpl, dis):
             r = run(["python3", str(RK / "voice.py"), "check", str(ep), "--plan-only"])
             say(r.returncode == 0, f"{ep.name}: voice plan gate (tones, pauses, climax, arc)", "" if r.returncode == 0 else (r.stdout + r.stderr)[-600:])

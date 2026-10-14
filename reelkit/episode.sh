@@ -69,7 +69,11 @@ has planlint && { if [ -f "$EP/shots.json" ]; then log "plan lint (story-format 
 has check  && { log "composition check (lint + runtime + layout collisions)"; python3 "$REPO/reelkit/hfcheck.py" "$HF" --report "$EP/out/check.json"; }
 has textqa && { log "readability gate (every on-screen text ≥ 3:1, target 4.5:1)"; python3 "$REPO/reelkit/textqa.py" "$HF" --report "$EP/out/textqa.json" --sheet "$BUILD/textqa_fails.jpg"; }
 has layout && { log "layout gate (dead zones + reading time, DOM only)"; python3 "$REPO/reelkit/textqa.py" "$HF" --layout-only; }
-has snap   && { log "snapshots"; (cd "$HF" && hyperframes snapshot --at "${SNAP_AT:-1,8,16,19,30,44}" --no-end --timeout 30000 -o "$BUILD/snaps" >/dev/null 2>&1); ls "$BUILD/snaps"; }
+has snap   && { log "snapshots"
+  # default: 0.8 s into every scene (hook, options, countdown, reveal, story…, cta), clamped inside the episode
+  AT="${SNAP_AT:-$(python3 -c "import json;T=json.load(open('$EP/timeline.json'));print(','.join(str(round(min(s['start']+0.8,T['total']-0.5),1)) for s in T['scenes']))")}"
+  (cd "$HF" && hyperframes snapshot --at "$AT" --no-end --timeout 30000 -o "$BUILD/snaps" >/dev/null 2>&1) || log "snapshot failed (non-fatal)"
+  ls "$BUILD/snaps" 2>/dev/null || true; }
 has render && { log "render ${FPS}fps crf $CRF workers $WORKERS"; (cd "$HF" && hyperframes render -f "$FPS" -w "$WORKERS" --crf "$CRF" -o "$BUILD/render.mp4" 2>&1 | grep -vE "@hf-progress|Render:trace|^\s+█" | tail -12); }
 has encode && { log "upload master (H.264 High 4.2, CRF 18 capped 12 Mbps, AAC 256k, faststart)"
   ffmpeg -hide_banner -loglevel error -y -i "$BUILD/render.mp4" -i "$BUILD/mix.wav" -map 0:v -map 1:a -c:v libx264 -preset "${PRESET:-faster}" \
