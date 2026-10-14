@@ -147,6 +147,30 @@ class Scene:
         """Fade a per-feature layer path in (highlight_<id>); CSS sets the colours."""
         self.G.J(f"tl.fromTo('#{self.id}_{layer}_{fid}',{{opacity:0}},{{opacity:{opacity},duration:{f(dur)},ease:'power2.out',immediateRender:false}},{f(t)});")
 
+    def highlight_out(self, t, fid, dur=0.4, layer="highlight"):
+        self.G.J(f"tl.to('#{self.id}_{layer}_{fid}',{{opacity:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")
+
+    def route_out(self, t, rid, dur=0.4, layer="route"):
+        self.G.J(f"tl.to('#{self.id}_{layer}_{rid}',{{opacity:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")
+
+    def clear(self, t, dur=0.5):
+        """Loop-frame reset (Plan v2 Q12): fade every per-feature highlight/route path, pin and label of this scene (scalebar stays),
+        so the last frame matches the first. Policy plates (disputed) are kept — they must stay while the border is on screen."""
+        for L in self.spec.get("layers", []):
+            kind = L.get("kind")
+            if kind not in ("highlight", "route", "area", "feature"): continue
+            lid = L.get("id") or kind
+            fids = [str(x) for x in (L.get("ids") or [])]
+            gj = L.get("geojson") or {}
+            fids += [str(ft.get("id", i)) for i, ft in enumerate(gj.get("features", []))] if gj else []
+            if L.get("perFeature") is False or not fids:
+                self.G.J(f"tl.to('#{self.id}_{lid}',{{opacity:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")
+            for fid in fids:
+                self.G.J(f"tl.to('#{self.id}_{lid}_{fid}',{{opacity:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")
+        for p in self.spec.get("pins", []): self.pin_out(t, p["id"], dur=dur)
+        for L in self.spec.get("labels", []):
+            if not L.get("for"): self.label_out(t, L["id"], dur=dur)
+
     def highlight_pulse(self, t, fid, dur=1.2, layer="highlight"):
         self.G.J(f"tl.fromTo('#{self.id}_{layer}_{fid}',{{opacity:0.55}},{{opacity:1,duration:{f(dur / 2)},ease:'sine.inOut',yoyo:true,repeat:1,immediateRender:false}},{f(t)});")
 

@@ -17,7 +17,8 @@ visuals.json
   actions    = quiz: card_in card_out options_in countdown reveal answer_in answer_out fact_in end_in
                quiz v2 (episode.json format "quiz-v2", docs/PLAN_V2.md): hook_in hook_out chips_in beat reveal chips_out bug_in
                cta_in credit_in (+ "captions": {roles, max_words, max_chars, hold} → word-timed captions from timeline words)
-               geo.<Scene method> (needs "stage"; "until" gives t1 for cam_to/spin/route_draw)
+               geo.<Scene method> (needs "stage"; "until" gives t1 for cam_to/spin/route_draw; geo.clear = loop-frame reset)
+               hide (needs "id"; fades any element, e.g. a counter, before the loop frame)
                chart.<Charts method>_in / counter_run (needs "id"; "until" for counter_run)
                fx.flash
 A bare `python3 engine/compose.py` on the template episode is the engine smoke test (tests/selftest.py).
@@ -146,6 +147,7 @@ class Composer:
         elif do == "credit_in": self.Q.credit_in(t, t1, **args)                                                       # v2
         elif do in ("answer_in", "answer_out"): getattr(self.Q, do)(t, b["id"], **args)
         elif do == "fact_in": self.Q.fact_in(t, t1, b["id"], **args)
+        elif do == "hide": self.J(f"tl.to('#{b['id']}',{{autoAlpha:0,duration:{float(args.get('dur', 0.4))},ease:'power1.in'}},{t:.3f});")   # any element (counter, chart…)
         elif do == "end_in": self.Q.end_in(t, getattr(self, "clip_ids", []))
         else: raise ValueError(f"beat: unknown action {do}")
 

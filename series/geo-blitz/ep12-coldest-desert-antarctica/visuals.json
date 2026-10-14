@@ -229,6 +229,14 @@
   },
   {
    "at": "end-1.8",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "end-1.8",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "end-0.2",

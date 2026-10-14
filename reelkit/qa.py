@@ -5,6 +5,7 @@ FAIL: 1080x1920 · 30 fps · H.264/AAC 48 kHz · ≤ 3 min · −14 ±1 LUFS · 
       (platforms re-encode harder below that) · no black stretches > 2 s · narration intelligibility (faster-whisper) ≥ 0.90.
 WARN: true peak > −1.5 dBTP · video < 8 Mbps · silence > 2.5 s · frozen picture > 2.5 s."""
 import argparse, json, re, shutil, subprocess, sys
+from pathlib import Path
 ap = argparse.ArgumentParser(); ap.add_argument("video"); ap.add_argument("--words"); ap.add_argument("--report")
 a = ap.parse_args()
 FF, FP = shutil.which("ffmpeg") or "ffmpeg", shutil.which("ffprobe") or "ffprobe"
@@ -42,7 +43,11 @@ try:
     if a.words:
         pcm = subprocess.run([FF, "-v", "error", "-i", a.video, "-ac", "1", "-ar", "16000", "-f", "s16le", "-"], capture_output=True).stdout
         segs, _ = WhisperModel("small.en", device="cpu", compute_type="int8").transcribe(np.frombuffer(pcm, np.int16).astype(np.float32) / 32768, beam_size=1, language="en")
-        norm = lambda s: re.sub(r"[^a-z0-9 ]", " ", s.lower()).split()
+        try:                                   # voice.py canonical tokens: numbers → words, UK/US spelling, hyphens (same normaliser as the voice gate)
+            sys.path.insert(0, str(Path(__file__).resolve().parent)); from voice import tokens as _vt
+            norm = lambda s: [t for t, _ in _vt(s)]
+        except Exception:
+            norm = lambda s: re.sub(r"[^a-z0-9 ]", " ", s.lower()).split()
         W = json.load(open(a.words)); W = W["words"] if "words" in W else [w for k in sorted(W) for w in W[k]]
         ref = norm(" ".join(w.get("w") or w.get("word", "") for w in W)); hyp = norm(" ".join(s.text for s in segs))
         res["asr_match"] = round(difflib.SequenceMatcher(None, ref, hyp).ratio(), 3)

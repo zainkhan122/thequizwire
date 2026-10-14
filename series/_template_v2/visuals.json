@@ -250,7 +250,7 @@
    "at": "s06+1.6",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s07.end",
+   "until": "end-1.8",
    "args": {
     "k": 1.05,
     "lonlat": [
@@ -311,6 +311,14 @@
    "at": "s08",
    "do": "credit_in",
    "until": "end-0.2"
+  },
+  {
+   "at": "end-1.8",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.6
+   }
   },
   {
    "at": "end-1.8",
