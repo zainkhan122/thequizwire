@@ -1,0 +1,250 @@
+{
+ "version": 1,
+ "episode": "ep11-budapest-buda-pest",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "projection": "equalEarth",
+   "projection_reason": "no size or distance claim; a river course and city pins — equal-area keeps the house style honest (geolint P1)",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     8,
+     43.5,
+     28,
+     55
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hun",
+     "ids": [
+      "348"
+     ],
+     "cls": "",
+     "note": "Hungary"
+    },
+    {
+     "kind": "route",
+     "id": "river",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "danube",
+        "properties": {
+         "name": "Danube (simplified course)"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           8.5,
+           47.95
+          ],
+          [
+           9.99,
+           48.4
+          ],
+          [
+           12.1,
+           49.02
+          ],
+          [
+           13.43,
+           48.57
+          ],
+          [
+           14.29,
+           48.31
+          ],
+          [
+           16.37,
+           48.21
+          ],
+          [
+           17.11,
+           48.14
+          ],
+          [
+           18.12,
+           47.74
+          ],
+          [
+           18.74,
+           47.79
+          ],
+          [
+           18.97,
+           47.79
+          ],
+          [
+           19.13,
+           47.78
+          ],
+          [
+           19.05,
+           47.5
+          ],
+          [
+           18.93,
+           46.96
+          ],
+          [
+           18.68,
+           45.99
+          ],
+          [
+           19.0,
+           45.35
+          ],
+          [
+           19.85,
+           45.25
+          ],
+          [
+           20.45,
+           44.82
+          ],
+          [
+           22.5,
+           44.65
+          ],
+          [
+           22.88,
+           43.99
+          ],
+          [
+           25.97,
+           43.85
+          ],
+          [
+           28.05,
+           45.43
+          ],
+          [
+           28.8,
+           45.18
+          ],
+          [
+           29.65,
+           45.15
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "hand-simplified course Donaueschingen → delta (23 vertices); for the drawn line only"
+    }
+   ],
+   "pins": [
+    {
+     "id": "budapest",
+     "lonlat": [
+      19.04,
+      47.5
+     ],
+     "label": "Budapest",
+     "qid": "Q1781"
+    },
+    {
+     "id": "vienna",
+     "lonlat": [
+      16.37,
+      48.21
+     ],
+     "label": "Vienna",
+     "qid": "Q1741"
+    },
+    {
+     "id": "bratislava",
+     "lonlat": [
+      17.11,
+      48.14
+     ],
+     "label": "Bratislava",
+     "qid": "Q1780"
+    },
+    {
+     "id": "belgrade",
+     "lonlat": [
+      20.45,
+      44.82
+     ],
+     "label": "Belgrade",
+     "qid": "Q3711"
+    },
+    {
+     "id": "chain_bridge",
+     "lonlat": [
+      19.0436,
+      47.4989
+     ],
+     "label": "Chain Bridge",
+     "qid": "Q222393"
+    }
+   ],
+   "labels": [
+    {
+     "id": "buda",
+     "lonlat": [
+      18.7,
+      47.52
+     ],
+     "text": "Buda",
+     "cls": "sea"
+    },
+    {
+     "id": "pest",
+     "lonlat": [
+      19.42,
+      47.52
+     ],
+     "text": "Pest",
+     "cls": "sea"
+    },
+    {
+     "id": "danube",
+     "lonlat": [
+      18.95,
+      46.55
+     ],
+     "text": "Danube",
+     "cls": "sea"
+    }
+   ],
+   "disputed": [
+    {
+     "id": "kosovo",
+     "ne_name": "Kosovo",
+     "name": "Kosovo",
+     "controller": "Republic of Kosovo (self-governing since 2008)",
+     "claimants": [
+      "Serbia"
+     ],
+     "note": "recognised by ~100 UN members, not by Serbia",
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#kosovo",
+     "label_at": [
+      20.9,
+      42.6
+     ]
+    }
+   ],
+   "sources": [
+    "Natural Earth"
+   ]
+  }
+ }
+}

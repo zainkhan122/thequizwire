@@ -1,0 +1,244 @@
+{
+ "version": 1,
+ "episode": "ep11-budapest-buda-pest",
+ "topic": "Which capital is split into Buda and Pest? (Budapest)",
+ "researched": "2026-10-15",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "sources": {
+  "britannica_budapest": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Budapest",
+   "url": "https://www.britannica.com/place/Budapest",
+   "date": "2026-10-14",
+   "notes": "divided by the Danube into Buda (west: hills, higher terraces) and Pest (east: flat sandy plain); eight bridges incl. the Széchenyi Chain Bridge; banks of the Danube = UNESCO site"
+  },
+  "wiki_budapest": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Budapest",
+   "url": "https://en.wikipedia.org/wiki/Budapest",
+   "date": "2026-10-01",
+   "notes": "Buda, Óbuda and Pest officially unified in 1873 and given the new name Budapest; Chain Bridge opened 1849 as the first permanent bridge across the Danube"
+  },
+  "wiki_chain_bridge": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Széchenyi Chain Bridge",
+   "url": "https://en.wikipedia.org/wiki/Sz%C3%A9chenyi_Chain_Bridge",
+   "date": "2026-10-01",
+   "notes": "spans the Danube between Buda (west) and Pest (east); first permanent bridge across the Danube in Hungary; opened 1849"
+  },
+  "usf_pesth": {
+   "type": "reference",
+   "publisher": "University of South Florida — Educational Technology Clearinghouse",
+   "title": "The bridge at Pesth",
+   "url": "https://etc.usf.edu/clipart/63800/63817/63817_bridge_pesth.htm",
+   "date": "2009-03-16",
+   "notes": "Pest = eastern flat part; 1849 Chain Bridge; 1873 unification with Óbuda to become Budapest"
+  },
+  "britannica_danube": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Danube River",
+   "url": "https://www.britannica.com/place/Danube-River",
+   "date": "2026-09-22",
+   "notes": "second-longest river in Europe, about 2,850 km; passes through 10 countries; four national capitals on its banks: Vienna, Bratislava, Budapest, Belgrade"
+  },
+  "wiki_danube": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Danube",
+   "url": "https://en.wikipedia.org/wiki/Danube",
+   "date": "2026-10-01",
+   "notes": "2,850 km; connects ten countries; four national capitals: Vienna, Bratislava, Budapest and Belgrade"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 – Countries (public domain)",
+   "url": "https://www.naturalearthdata.com/downloads/",
+   "date": "2025-01-01",
+   "notes": "map geometry; Hungary = 348"
+  },
+  "unesco_budapest": {
+   "type": "primary",
+   "publisher": "UNESCO World Heritage Centre",
+   "title": "Budapest, including the Banks of the Danube, the Buda Castle Quarter and Andrássy Avenue",
+   "url": "https://whc.unesco.org/en/list/400/",
+   "date": "2025-10-06",
+   "notes": "World Heritage listing of the Hungarian capital's Danube banks; description: the Danube originally separated two towns — Buda on the right-bank spur and Pest on the left-bank plain"
+  },
+  "britannica_kosovo": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Kosovo",
+   "url": "https://www.britannica.com/place/Kosovo",
+   "date": "2026-10-01",
+   "notes": "self-declared independent country since 2008; Serbia does not recognise its independence; recognised by about 100 UN member states"
+  },
+  "border_registry": {
+   "type": "primary",
+   "publisher": "thequizwire border registry (docs/BORDER_POLICY.md)",
+   "title": "docs/border_registry.json#kosovo",
+   "url": "https://github.com/zainkhan122/thequizwire/blob/main/docs/border_registry.json",
+   "date": "2026-10-01",
+   "notes": "controller / claimant wording as of 2026-10; no sovereignty asserted"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Budapest, the capital of Hungary, is divided by the Danube into Buda on the hilly west bank and Pest on the flat east bank.",
+   "sources": [
+    "britannica_budapest",
+    "unesco_budapest",
+    "wiki_budapest",
+    "wiki_chain_bridge"
+   ],
+   "vo": [
+    "which capital is split into buda and pest",
+    "it's budapest",
+    "the danube splits it: hilly buda west, flat pest east"
+   ],
+   "screen": [
+    "Budapest",
+    "Buda",
+    "Pest",
+    "Danube"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "record",
+   "text": "Buda, Óbuda and Pest were officially unified in 1873 under the new name Budapest.",
+   "sources": [
+    "wiki_budapest",
+    "usf_pesth"
+   ],
+   "vo": [
+    "separate towns until eighteen seventy-three, when buda, óbuda and pest merged"
+   ],
+   "screen": [
+    "1873",
+    "Buda + Óbuda + Pest become Budapest."
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "record",
+   "text": "The Széchenyi Chain Bridge, opened in 1849, was the first permanent bridge across the Danube linking Buda and Pest.",
+   "sources": [
+    "wiki_chain_bridge",
+    "wiki_budapest",
+    "usf_pesth",
+    "britannica_budapest"
+   ],
+   "vo": [
+    "the chain bridge joined them first, in eighteen forty-nine"
+   ],
+   "screen": [
+    "1849 · CHAIN BRIDGE",
+    "First permanent bridge across it.",
+    "Chain Bridge"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "record",
+   "text": "Four national capitals lie on the Danube: Vienna, Bratislava, Budapest and Belgrade.",
+   "sources": [
+    "britannica_danube",
+    "wiki_danube"
+   ],
+   "vo": [
+    "the same river links four capitals: vienna, bratislava, budapest and belgrade"
+   ],
+   "screen": [
+    "4 CAPITALS ON THE DANUBE",
+    "Vienna · Bratislava · Budapest · Belgrade",
+    "Vienna",
+    "Bratislava",
+    "Belgrade"
+   ]
+  },
+  {
+   "id": "C05",
+   "weight": "framing",
+   "text": "Border policy plate (the wide shot shows Kosovo's boundary): Kosovo is self-governing since its 2008 declaration of independence, recognised by about 100 UN members; Serbia claims it. No sovereignty asserted.",
+   "sources": [
+    "britannica_kosovo",
+    "border_registry"
+   ],
+   "vo": [],
+   "screen": [
+    "Kosovo",
+    "Administered by Republic of Kosovo (self-governing since 2008)",
+    "Claimed by Serbia",
+    "recognised by ~100 UN members, not by Serbia"
+   ]
+  }
+ ],
+ "myths": [
+  {
+   "myth": "Budapest has always been one city.",
+   "reality": "Buda, Óbuda and Pest were separate towns until the 1873 unification.",
+   "sources": [
+    "wiki_budapest",
+    "usf_pesth"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^One map question a day",
+  "^Tomorrow:",
+  "^Vienna$",
+  "^Prague$"
+ ],
+ "landscape": {
+  "our_gap": "The feed says 'Budapest' over skyline footage; nobody draws the river through the city and then pulls out to the four capitals on the same line.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/@thequizwire-com/shorts",
+    "title": "Feed Geo Blitz (own channel, v1)",
+    "angle": "card over b-roll",
+    "misses": "no map, no river, no sources"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=buda+pest+quiz+shorts",
+    "title": "Search results: Buda and Pest quiz",
+    "angle": "text quiz over footage",
+    "misses": "the split is never shown on a map"
+   },
+   {
+    "url": "https://www.youtube.com/@geomapunveiled25/shorts",
+    "title": "Geo Map Unveiled",
+    "angle": "satellite listicles",
+    "misses": "no question format, no sources"
+   }
+  ]
+ },
+ "vo_exempt": [
+  "^vienna, budapest, or prague\\?$",
+  "^tomorrow[,:]? the coldest desert on earth",
+  "^subscribe, and guess it first"
+ ]
+}

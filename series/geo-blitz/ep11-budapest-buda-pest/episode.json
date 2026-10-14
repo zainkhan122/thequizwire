@@ -1,0 +1,41 @@
+{
+ "id": "ep11-budapest-buda-pest",
+ "format": "quiz-v2",
+ "series": "geo-blitz",
+ "number": 11,
+ "title": "Which capital is split into BUDA and PEST?",
+ "difficulty": "MEDIUM",
+ "seed": 1011,
+ "quiz": {
+  "question": "Which capital is split into BUDA and PEST?",
+  "keyword": "BUDA and PEST",
+  "options": [
+   "Vienna",
+   "Budapest",
+   "Prague"
+  ],
+  "correct": 1,
+  "beat": 1.5,
+  "answer_line": "Budapest",
+  "answer_sub": "Buda west · Pest east",
+  "tease": "Tomorrow: the coldest desert on Earth.",
+  "cta_line": "One map question a day · Subscribe"
+ },
+ "hook_type": "misconception",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which capital is split into BUDA and PEST?",
+  "description": "Which capital is split into BUDA and PEST? Guess first — then watch the Danube draw the line.\n\nWhat was your first guess?\n\nSources: Britannica (Budapest, Danube River), Wikipedia (Budapest, Széchenyi Chain Bridge), USF Educational Technology Clearinghouse.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #11",
+  "hashtags": [
+   "#GKshorts",
+   "#thequizwire",
+   "#shorts",
+   "#geoblitz"
+  ]
+ }
+}
