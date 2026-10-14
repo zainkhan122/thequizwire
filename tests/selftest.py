@@ -110,7 +110,7 @@ def main():
             ok = r.returncode == 0 and rep.exists() and (Path.home() / ".cache/build/_template/mix.wav").exists()
             say(ok, "quizscore → mix.wav + mix_report.json", "" if ok else (r.stdout + r.stderr)[-800:])
             if ok:
-                j = json.loads(rep.read_text()); say(j.get("mastered") in (True, False), f"mix_report mastered={j.get('mastered')} duration={j.get('duration', '?')}")
+                j = json.loads(rep.read_text()); say(j.get("mastered") in (True, False), f"mix_report mastered={j.get('mastered')} peak={j.get('peak_dbfs', '?')} dBFS missing_vo={len(j.get('missing_vo', []))}")
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
     print(f"selftest: OK in {time.time() - t0:.1f}s")
