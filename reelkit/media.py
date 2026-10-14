@@ -171,7 +171,9 @@ def cmd_push(a):
 
 
 def cmd_pull(a):
-    d = Path(a.dir).resolve(); man = json.loads((d / "media.json").read_text()); slug = man.get("repo") or repo_slug()
+    d = Path(a.dir).resolve(); man = json.loads((d / "media.json").read_text()) if (d / "media.json").exists() else {}; slug = man.get("repo") or repo_slug()
+    if not man.get("files") or not man.get("release"):              # fresh episode: takes/clips are generated on this run, nothing to restore
+        print(f"  – {d.name}: no media pushed yet (nothing to pull)"); return
     rel = get_release(slug, man["release"], create=False)
     if not rel: sys.exit(f"release {man['release']} not found")
     existing = assets_of(slug, rel); n = 0
