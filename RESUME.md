@@ -1,6 +1,6 @@
 # RESUME.md — where this repo is and what happens next
 
-_Updated 2026-10-14 (end of Phase 1 session). Owner decisions: free tools only · phases per session · four feed series · Kokoro
+_Updated 2026-10-15 (Plan v2 session; Phase 1 ended 2026-10-14). Owner decisions: free tools only · phases per session · four feed series · Kokoro
 `am_michael` · disputed borders shown with controller/claimant plates · **no videos until the owner says go**._
 
 ## Now
@@ -24,14 +24,16 @@ What exists (all new unless noted; history-repo toolkit reused where it fit):
 
 ## Current phase
 ```
-Phase 2.0 — waiting for the owner's go (nothing runs until then)
-goal        : first real episode (Geo Blitz #10) through the proven pipeline — only on the owner's explicit "make videos"
-entry       : Phase 1.7 done — docs carry measured actuals; selftest #11 green; `check` green on main
-steps       : 2.1 research (research.json, ≥ 5 sources, border check) → 2.2 authoring + offline gates + previews →
-              2.3 `cloud.py render <ep> --wait` (≈ 10 min, Release) → 2.4 owner review → fixes as 2.4.x
-exit check  : a Release with <Question>.mp4 + POST_KIT.md the owner can upload
-rollback    : none needed — episodes are folders; delete the folder + the Release tag
-next        : Phase 2.5+ one engine per phase (Body & Brain callouts/counter, Sports Sprint strip/compare, Wild Files compare)
+Phase 2.0 — Plan v2 written (2026-10-15); system work 2.1–2.8 may start, production (3.x) still waits for "make videos"
+goal        : format pivot "Guess it → See it" per docs/PLAN_V2.md — reveal-first 28–35-s Shorts, 2/day, Geo → Wild → Sports → Body
+entry       : 60-day public audit (docs/CHANNEL_BASELINE.md) + Studio export (docs/data/studio_2026-09-16_10-13_*.csv):
+              stayed 57.6 %, AVD 24 s, 72 subs / 113k views, plateau ≈ 1,000–1,300 views per Short
+steps       : 2.1 tools/studio_import.py + docs/SCORECARD.md → 2.2 series/_template_v2 + quizlint Q9–Q13 → 2.3 word-timed captions →
+              2.4 flag-fill/glow/icons → 2.5 Wild Files compare/counter → 2.6 Sports strip → 2.7 first maptile clip (cost) →
+              2.8 v2 runner proof (selftest) → 3.1 pilot batch of 10 (owner's go) → 3.2 score after 7 days (gates in PLAN_V2 §4)
+exit check  : 2.8 — selftest renders _template_v2 on the runner with Q9–Q13 green; then owner's go gates 3.1
+rollback    : v1 template and gates stay untouched; v2 lives in new files/flags
+next        : Phase 2.1 (≤ 15 min) — importer reproduces PLAN_V2 §1.2 tables from the CSVs with one command
 ```
 Last completed: **Phase 1.7 Actuals** (2026-10-14) — measured CI timings in `docs/OPERATING_MODEL.md §3/§6`, verified animator CLI +
 `clips.py` width/flag rules in `docs/MAPTILE.md`, budget guard 12 min/episode, `render.yml` timeout 30 min.
@@ -39,6 +41,7 @@ Known, accepted `hyperframes check` warnings on quiz episodes: `lint/nested_stru
 wrapper, needed so fades never tween the clip element) and `layout/container_overflow` (#geo_main_cam when zoomed) — both benign.
 
 ## Next (in order)
+0. **Plan v2 (2026-10-15)** — `docs/PLAN_V2.md` is the roadmap now: 2.1 scorecard → 2.2 v2 template/gates → 2.3 captions → 2.4 flag-fill/icons → 2.5 Wild → 2.6 Sports → 2.7 maptile cost → 2.8 v2 runner proof → 3.1 pilot batch (owner's go).
 1. ~~Phase 1.5 Connect~~ — done 2026-10-14: private repo, PAT stored (expires 2027-01-12), `check` green.
 2. ~~Phase 1.6 Runner proof~~ — done 2026-10-14 after 11 attempts / 12 one-commit fixes (1.6.1–1.6.12: whisper arrays, media pull,
    planlint/voice silence lines, voice number parser + script_words, end-card fade + clip wrapper, label centring, dead zones,
@@ -58,6 +61,7 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 | date | decision | by |
 |---|---|---|
 | 2026-10-14 | New repo `quizwire` for all four feed topics (not a geo-only repo, not the history repo) | owner |
+| 2026-10-15 | Format v2 "Guess it → See it" (reveal-first, 28–35 s, 3 options, 1.5-s beat, loop end), 2/day, series order Geo → Wild → Sports → Body — proposed from the Studio export; awaiting owner approval + "make videos" | agent (proposal) |
 | 2026-10-14 | Narrator Kokoro `am_michael` | owner |
 | 2026-10-14 | Sensitive borders included and labelled with controller + claimants (policy + registry + geolint P4) | owner |
 | 2026-10-14 | Phase 1 = tools/system only; no episode production | owner |

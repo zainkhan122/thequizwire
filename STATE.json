@@ -1,9 +1,16 @@
 {
- "now": "Phase 1.6 + 1.7 done (2026-10-14): selftest #11 green on the private-repo runner (Kokoro → whisper → mix → render → master → QA pass; final.mp4 artifact), measured ≈ 7.5 min job time per 45-s episode; docs carry actuals + verified animator CLI. No episodes produced (owner instruction). Next: Phase 2 only on the owner's go.",
- "phase": "2.0-waiting",
+ "now": "Plan v2 written 2026-10-15 (docs/PLAN_V2.md): Studio export shows stayed-to-watch 57.6 %, AVD 24 s, 0.64 subs/1k, plateau ≈ 1,000–1,300 views/Short; pivot to reveal-first 'Guess it → See it' Shorts (28–35 s, 2/day, Geo → Wild → Sports → Body). System phases 2.1–2.8 may start; production 3.x waits for the owner's 'make videos'.",
+ "phase": "2.0-planned",
  "next": [
-  "Phase 2.x only on owner's go: pilot Geo Blitz #10 (2.1 research → 2.2 authoring → 2.3 render ≈ 10 min → 2.4 review), then one engine per phase for the other series",
-  "First maptile clip (Phase 2.x): measure the animator's runner cost, pin the image digest in clips.json"
+  "Phase 2.1 tools/studio_import.py + docs/SCORECARD.md (reproduce PLAN_V2 §1.2 from docs/data/studio_*.csv)",
+  "Phase 2.2 series/_template_v2 + series.json structure v2 + quizlint Q9–Q13",
+  "2.3 word-timed captions",
+  "2.4 flag-fill/glow/icons layer",
+  "2.5 Wild Files compare/counter",
+  "2.6 Sports strip",
+  "2.7 first maptile clip cost",
+  "2.8 v2 runner proof (selftest)",
+  "3.1 pilot batch of 10 only on the owner's 'make videos'; 3.2 score after 7 days against PLAN_V2 §4 gates"
  ],
  "owner_rules": [
   "Free tools only: public-repo GitHub Actions + the Arena sandbox",
@@ -46,13 +53,23 @@
    "next_number": 5
   }
  },
- "updated_at": "2026-10-14T19:00:38Z",
+ "updated_at": "2026-10-14T19:56:17Z",
  "episodes": {},
  "current_phase": {
   "id": "2.0",
-  "name": "Waiting for the owner's go",
-  "status": "idle — Phase 1 complete and runner-proven",
-  "exit_check": "owner says 'make videos' → Phase 2.1",
+  "name": "Plan v2 written — ready for 2.1",
+  "status": "planned",
+  "exit_check": "owner approves PLAN_V2 §2–3; 2.1–2.8 are system work; 3.1 needs 'make videos'",
+  "evidence": {
+   "studio_window": "2026-09-16..2026-10-13",
+   "stayed_pct": 57.59,
+   "avd_s": 24,
+   "views": 113104,
+   "subs": 72,
+   "subs_per_1k": 0.64,
+   "public_plateau_median": 1074,
+   "public_max": 2035
+  },
   "runner_proof": {
    "selftest_run": 38618062409,
    "run_number": 11,

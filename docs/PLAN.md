@@ -1,5 +1,7 @@
 # PLAN.md — the phased plan this repo executes
 
+> **2026-10-15 — superseded in part by [`docs/PLAN_V2.md`](PLAN_V2.md)**: the Studio export (stayed-to-watch 57.6 %, AVD 24 s, 0.64 subs/1k) moved the format to reveal-first "Guess it → See it" (28–35 s, 3 options, 1.5-s beat, visual reveal, loop end), cadence to 2/day, and replaced the Phase-2 roadmap. §2.1 structure and §5 cadence below are historical.
+
 > Status (2026-10-14): **Phase 1 built in this repo** — see `RESUME.md` for what exists and `STATE.json` for the machine view.
 > Decisions taken by the owner after the plan below was written (they override the plan's "D" table):
 > **D1** new repo = this one (`quizwire`, 4 feed topics, not geography only) · **D2** Geo Blitz continues at #10; Body & Brain,
