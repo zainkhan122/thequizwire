@@ -19,7 +19,7 @@ Update `RESUME.md` and `STATE.json` (`tools/state.py set …`), then `bash tools
 Work in bounded phases: one phase per session, sync at the end — the sandbox times out and is wiped.
 
 ## Operator model
-| Sandbox (agent) | GitHub Actions (public repo, 4 vCPU / 16 GB, free) |
+| Sandbox (agent) | GitHub Actions (private repo, 4 vCPU / 16 GB, 2,000 free min/month) |
 |---|---|
 | research, writing, decisions, asking the owner | the repo = SSOT; Releases = all media (`media-<ep>`, `cache-clips`, finals) |
 | `tools/new_episode.py`, editing the five episode JSONs | `tts` stage: Kokoro `am_michael` takes + whisper word times (`voice.py words`) |
@@ -30,6 +30,7 @@ Never render video, decode media, or install HyperFrames/Chrome in the sandbox (
 
 ## Hard rules
 - **Phases, always.** Fill the phase card in `RESUME.md` before starting; commit per step; sync per phase; report in the §6 format (`docs/PHASE_PROTOCOL.md`).
+- **Minutes are a budget.** Private repo ⇒ 2,000 Linux-minutes/month. `cloud.py minutes` before planning renders; `selftest`/`geodata` are manual; never add a cron without the owner.
 - **Heavy work is CI work.** Anything > 3 min of compute (render, whisper, TTS batches, docker, big downloads) is dispatched to Actions, never run here (`docs/OPERATING_MODEL.md §3–4`).
 - **No media in git** (`tools/repo_guard.py`: no media extensions, no file > 1 MB, repo < 15 MB). `docs/img/*.png` previews are the only exception.
 - **No videos until the owner says so.** Phase 1 delivered tools only; Phase 2 starts with the owner's go and `docs/PLAN.md §4`.

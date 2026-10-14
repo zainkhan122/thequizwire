@@ -3,7 +3,7 @@
 Faceless 9:16 quiz Shorts (45–60 s) for **@thequizwire-com** in four series — **Geo Blitz** (maps), **Body & Brain**, **Sports Sprint**,
 **Wild Files** — generated from JSON episode folders by a free toolchain: HyperFrames (HTML + GSAP) compositions, **Kokoro `am_michael`**
 narration, a d3-geo / Natural Earth map engine, a procedural score, and nine quality gates. Heavy work runs on **GitHub Actions**
-(public repo = free runners); the Arena sandbox authors, builds HTML and runs the offline gates. Nothing here uploads to YouTube.
+(private repo, GitHub Free: 2,000 min/month — `cloud.py minutes` keeps the ledger); the Arena sandbox authors, builds HTML and runs the offline gates. Nothing here uploads to YouTube.
 
 > Phase 1 (this commit) = tooling, engines, gates, templates, docs. **No episodes have been produced yet** — by owner instruction.
 > `RESUME.md` says what to do next; `docs/PLAN.md` is the full phased plan; `docs/OPERATING_MODEL.md` says who does what and
@@ -59,7 +59,7 @@ tools/     new_episode.py, sync.sh, state.py, repo_guard.py
 ```
 
 ## Owner decisions baked in
-Free tools only · public-repo Actions + sandbox · Kokoro `am_michael` · disputed borders shown with *Administered by / Claimed by*
+Free tools only · private repo on GitHub Free (2,000 Actions min/month, budget guard) + sandbox · Kokoro `am_michael` · disputed borders shown with *Administered by / Claimed by*
 plates, never hidden, never "owned" · every fact sourced twice · media in Releases, never git · no auto-posting · four feed series,
 numbering continues from the feed (Geo Blitz #10, Body & Brain #4, Sports Sprint #9, Wild Files #7).
 

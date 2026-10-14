@@ -24,8 +24,8 @@ What exists (all new unless noted; history-repo toolkit reused where it fit):
 ```
 Phase 1.5 — Connect
 goal        : repo on GitHub, first push, `check` workflow green
-entry       : owner has created the public repo (default zainkhan122/quizwire → edit .repo if different) and issued a fine-grained
-              PAT (this repo only: Contents + Actions + Workflows read/write)
+entry       : owner has created the PRIVATE repo (default zainkhan122/quizwire → edit .repo if different) and issued a fine-grained
+              PAT (this repo only: Contents + Actions + Workflows read/write; Metadata read is automatic)
 steps       : 1) store PAT at ~/.cache/secrets/gh_token (chmod 600); `source bootstrap.sh` → remote wired
               2) `bash tools/sync.sh "phase 1: system"` → push
               3) poll the `check` run (≤ 60-s calls) → read the step summary
@@ -37,7 +37,7 @@ Operating model: `docs/OPERATING_MODEL.md` (agent authors + offline gates + orch
 render/encode/QA/Release; owner decides + uploads). Phase roadmap with entry/exit criteria: `docs/PHASE_PROTOCOL.md §7`.
 
 ## Next (in order)
-1. **Phase 1.5 Connect** — needs the owner's repo + PAT (above).
+1. **Phase 1.5 Connect** — needs the owner's private repo + PAT (above). Phase 1.4.1 (private-repo mode) is done.
 2. **Phase 1.6 Runner proof** — `selftest` workflow once: toolchain install, Kokoro `am_michael` smoke, `_template` render artifact,
    map-animator `--help`. Reds become Phase 1.6.x, one fix per phase.
 3. **Phase 1.7 Actuals** — write measured CI timings into `docs/OPERATING_MODEL.md §3`, paste the animator CLI into `docs/MAPTILE.md`,
@@ -60,4 +60,5 @@ render/encode/QA/Release; owner decides + uploads). Phase roadmap with entry/exi
 | 2026-10-14 | Sensitive borders included and labelled with controller + claimants (policy + registry + geolint P4) | owner |
 | 2026-10-14 | Phase 1 = tools/system only; no episode production | owner |
 | 2026-10-14 | Geo Blitz / Body & Brain / Sports Sprint / Wild Files active; Cosmic Quiz, Time Vault registered inactive | agent (from feed), to confirm |
+| 2026-10-14 | Repo is **private** (GitHub Free: 2,000 Actions min/month); crons off, `check` main-only, `cloud.py` budget guard | owner |
 | 2026-10-14 | Vector maps (d3-geo + Natural Earth) are the default stage; VersaTiles flyovers are cached hero clips; Blue Marble globe deferred | agent |

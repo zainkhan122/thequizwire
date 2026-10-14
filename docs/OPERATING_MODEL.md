@@ -8,7 +8,7 @@ done in the wrong place. Companion: `docs/PHASE_PROTOCOL.md` (how the agent chun
 | actor | machine | can | cannot / must not | cost |
 |---|---|---|---|---|
 | **Agent** (Arena sandbox, "I") | 2 vCPU · ~2 GB RAM · Python 3 + NumPy/SciPy/Pillow · Node 20 · network (sometimes flaky) · persistent only under `/home/user` (128 MB snapshot) · `~/.cache` wiped on restart · every tool call times out (keep ≤ 3 min) | think, research, write, decide, ask; author episode JSON; run the **offline gates in seconds**; preview maps as PNG; preview the mix; orchestrate CI; read CI reports; commit + push | render video, decode/encode media, run Chrome/HyperFrames, run docker, run whisper, keep anything only in `~/.cache`, hold secrets in files inside the repo, post anywhere | my time |
-| **GitHub Actions** (ubuntu-latest, public repo) | 4 vCPU · 16 GB RAM · ffmpeg · Chrome (via hyperframes) · docker · Node 22 · 6 h per job · 10 GB cache · Releases for media | everything heavy and everything that must be byte-reproducible: TTS takes, whisper timing, mastering, map-tile flyovers, HyperFrames check/render/encode, textqa, QA, Release publishing, cache warming | judge content, change an episode, commit to git, post to YouTube, hold any secret except its own `GITHUB_TOKEN` | **free** (public repo: unlimited standard-runner minutes) |
+| **GitHub Actions** (ubuntu-latest, **private repo**) | 4 vCPU · 16 GB RAM · ffmpeg · Chrome (via hyperframes) · docker · Node 22 · 6 h per job · 10 GB cache · Releases for media | everything heavy and everything that must be byte-reproducible: TTS takes, whisper timing, mastering, map-tile flyovers, HyperFrames check/render/encode, textqa, QA, Release publishing, cache warming | judge content, change an episode, commit to git, post to YouTube, hold any secret except its own `GITHUB_TOKEN` | **free within 2,000 Linux-minutes / month** (GitHub Free, private repo; resets on the 1st) — `cloud.py minutes` is the ledger, `cloud.py render` refuses to dispatch below a 60-min reserve |
 | **Owner** | browser + YouTube Studio | create the repo + PAT, decide (series, topics, exceptions, go/no-go), review the finished mp4 on the Release page, upload with `POST_KIT.md`, report metrics | — | attention |
 
 Rule of thumb: **the sandbox is the brain, Actions are the muscle, Releases are the warehouse, git is the memory.**
@@ -93,11 +93,11 @@ Budget: **sandbox ≈ 20 s per full offline pass; CI ≈ 15–25 min per episode
 
 | resource | limit | our use |
 |---|---|---|
-| Actions minutes (public repo, standard runners) | unlimited | ~20 min per episode render, ~3 min per push (`check`), ~25 min weekly `selftest` |
+| Actions minutes (private repo, GitHub Free) | **2,000 / month** (Linux ×1) | ~20 min per episode render · ~2 min per `check` (main only, doc pushes skipped, superseded runs cancelled) · `selftest` ≈ 25 min **manual only** · `geodata` manual. Capacity ≈ 80–90 renders/month ≈ 2–3 per day incl. re-renders. If cadence must exceed that: flip the repo to public (unlimited) — nothing else changes. |
 | Job / workflow duration | 6 h / 35 days | render job `timeout-minutes: 60` |
 | Concurrent jobs | 20 | render matrix `max-parallel: 4` |
 | Actions cache | 10 GB per repo (LRU, 7-day eviction) | ~1.3 GB: hyperframes + Chrome, pip (faster-whisper/ctranslate2), whisper `base.en`, Kokoro 90 MB, geodata 9 MB |
-| Artifacts | retention set to 5–7 days | failure debug bundles only |
+| Artifacts / packages storage | 500 MB (private repo) | failure debug bundles + selftest artifact, 5–7 day retention → a few hundred MB at peak |
 | Releases | 2 GB per asset | mp4 ≈ 20–40 MB, takes ≈ 5 MB per episode, clips ≈ 10 MB each |
 | Sandbox snapshot | 128 MB / 10 k files | repo ≈ 2.5 MB; builds and caches stay in `~/.cache` |
 | Sandbox tool call | times out | ≤ 3 min per call; long waits are polled, not blocked on (`PHASE_PROTOCOL.md`) |
@@ -106,11 +106,14 @@ Budget: **sandbox ≈ 20 s per full offline pass; CI ≈ 15–25 min per episode
 - The PAT lives only at `~/.cache/secrets/gh_token` (chmod 600), is re-entered by the owner each new sandbox, and is used for
   git push, `workflow_dispatch`, Release uploads and reading run logs — nothing else. Scope: this repo only (Contents, Actions, Workflows).
 - Workflows use the ephemeral `GITHUB_TOKEN` (`permissions: contents: write` for Releases). No YouTube credentials exist anywhere.
-- Public repo ⇒ everything committed is public: no owner PII, no analytics exports, no draft scripts the owner wants private
-  (keep those in chat until approved).
+- Private repo (owner decision 2026-10-14): ledgers, scripts and the topic backlog stay private. Still: no PII, no analytics exports
+  in git — a repo can be flipped public later without a history rewrite only if nothing sensitive was ever committed.
+- Owner's PAT (fine-grained, this repo only): **Contents R/W** (push, Releases) · **Actions R/W** (dispatch, logs, timings for the
+  minutes ledger) · **Workflows R/W** (pushing `.github/workflows/*`) · Metadata R (automatic). Nothing else. 90-day expiry; the agent
+  warns before it lapses (`cloud.py` token_expiry_warning).
 
 ## 8 · What the next two phases look like under this model
-- **Phase 1.5 — Connect** (agent ≈ 10 min, CI ≈ 3 min): owner creates the public repo + PAT → agent stores the token, runs
+- **Phase 1.5 — Connect** (agent ≈ 10 min, CI ≈ 3 min): owner creates the **private** repo + PAT → agent stores the token, runs
   `bootstrap.sh`, `tools/sync.sh "phase 1"` → `check` workflow runs → agent reports green/red.
 - **Phase 1.6 — Runner proof** (agent ≈ 10 min, CI ≈ 25 min): agent dispatches `selftest` → polls → reads toolchain timings,
   Kokoro smoke, template render artifact, map-animator `--help` → records actuals in §3, fills `docs/MAPTILE.md`, fixes any red in

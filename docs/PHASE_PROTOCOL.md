@@ -60,8 +60,8 @@ next        : Phase N.M+1 — <name> (needs: <owner input or nothing>)
 
 | phase | goal | entry | exit check | agent | CI |
 |---|---|---|---|---|---|
-| **1.5 Connect** | repo on GitHub, `check` green | owner: public repo + PAT | `tools/sync.sh` pushed; `check` run = success | 10 min | 3 min |
-| **1.6 Runner proof** | toolchain proven on a real runner | 1.5 | `selftest` workflow success: Kokoro smoke OK, `_template` `final.mp4` artifact exists, animator `--help` captured | 10 min + polls | 25 min |
+| **1.5 Connect** | repo on GitHub, `check` green | owner: private repo + PAT (scopes in OPERATING_MODEL §7) | `tools/sync.sh` pushed; `check` run = success | 10 min | 3 min |
+| **1.6 Runner proof** | toolchain proven on a real runner (≈25 of the month's 2,000 min) | 1.5 | `selftest` workflow success: Kokoro smoke OK, `_template` `final.mp4` artifact exists, animator `--help` captured | 10 min + polls | 25 min |
 | 1.6.x Fixes | each red item from 1.6 | 1.6 red | the failing step green on re-run | ≤ 15 min each | ≤ 25 min each |
 | **1.7 Actuals** | OPERATING_MODEL §3 timings + MAPTILE "CLI (verified)" filled from the run | 1.6 green | docs updated, committed | 10 min | — |
 | **2.1 Pilot research** (owner's go) | Geo Blitz #10 topic + ledger (≥ 5 sources, claims, guardrails, landscape) | 1.7 | `factcheck --hf /nonexistent` on the scaffold passes the brief checks | 15 min | — |
