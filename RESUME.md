@@ -18,21 +18,35 @@ What exists (all new unless noted; history-repo toolkit reused where it fit):
 - **Clips** `clips.py` engine `maptile` (VersaTiles animator via docker on CI; lint/spec/cache/provenance wired; CLI flags to verify on first CI run — `docs/MAPTILE.md`).
 - **Scaffolding** `tools/new_episode.py <series> "<question>" --options A B C D --correct i` (bumps `series/series.json` counters; produces a folder that fails only on the TODOs).
 - **CI** `.github/workflows/check.yml` (compile, guard, runtime tests, selftest, every episode's offline gates), `render.yml` (full pipeline → Release, RELEASE=1 GEOLINT_ONLINE=1), `selftest.yml` (toolchain + Kokoro smoke + template render + animator `--help`), `geodata.yml` (weekly cache warm); `reelkit/ci_setup.sh` installs ffmpeg, chrome libs, hyperframes@0.8.137, kokoro-onnx + model files, faster-whisper, geodata.
-- **Docs** `README.md`, `AGENTS.md`, `docs/PLAN.md` (the phased plan + decision overrides), `docs/BORDER_POLICY.md` (+ registry table generated from JSON), `docs/DATA_SOURCES.md`, `docs/MAPTILE.md`, `docs/CHANNEL_BASELINE.md`, `series/<slug>/SERIES.md` ×6, `docs/img/preview_*.png` (browser-less map previews).
+- **Docs** `README.md`, `AGENTS.md`, `docs/OPERATING_MODEL.md`, `docs/PHASE_PROTOCOL.md`, `docs/PLAN.md` (the phased plan + decision overrides), `docs/BORDER_POLICY.md` (+ registry table generated from JSON), `docs/DATA_SOURCES.md`, `docs/MAPTILE.md`, `docs/CHANNEL_BASELINE.md`, `series/<slug>/SERIES.md` ×6, `docs/img/preview_*.png` (browser-less map previews).
+
+## Current phase
+```
+Phase 1.5 — Connect
+goal        : repo on GitHub, first push, `check` workflow green
+entry       : owner has created the public repo (default zainkhan122/quizwire → edit .repo if different) and issued a fine-grained
+              PAT (this repo only: Contents + Actions + Workflows read/write)
+steps       : 1) store PAT at ~/.cache/secrets/gh_token (chmod 600); `source bootstrap.sh` → remote wired
+              2) `bash tools/sync.sh "phase 1: system"` → push
+              3) poll the `check` run (≤ 60-s calls) → read the step summary
+exit check  : Actions → check → success (compile, repo guard, runtime tests, selftest, template gates)
+rollback    : nothing to roll back (first push)
+next        : Phase 1.6 — Runner proof (dispatch `selftest`, poll, read Kokoro smoke / template render / animator --help)
+```
+Operating model: `docs/OPERATING_MODEL.md` (agent authors + offline gates + orchestration; Actions do TTS/whisper/master/docker/
+render/encode/QA/Release; owner decides + uploads). Phase roadmap with entry/exit criteria: `docs/PHASE_PROTOCOL.md §7`.
 
 ## Next (in order)
-1. **Owner:** create the empty public repo (default `zainkhan122/quizwire` — change `.repo` if different) and hand over a fine-grained
-   PAT (contents: read/write, actions: read/write, workflows) → `~/.cache/secrets/gh_token`. Then `source bootstrap.sh && bash tools/sync.sh "phase 1"`.
-2. **First CI proof (Phase 1 → 2 hand-off, ~25 min of runner time, zero sandbox risk):** Actions → `selftest` → Run. Expect: toolchain
-   installs, Kokoro selftest OK, `_template` renders (`series/_template/out/final.mp4` artifact), animator `--help` printed.
-   Fix anything red in `reelkit/ci_setup.sh` / `episode.sh`; paste the animator CLI into `docs/MAPTILE.md` and adjust `gen_maptile` if flags differ.
-3. **Phase 2 (only when the owner says "make videos"):** pilot episode per `docs/PLAN.md §4` — Geo Blitz #10 via
-   `tools/new_episode.py`, real research ledger, `geo.json` at 50m/10m, `cloud.py render … --wait`, review snaps/QA, owner uploads from POST_KIT.
-   Then Body & Brain #4 (needs `callouts`/`counter` in `engine/charts.py`), Sports Sprint #9 (`strip`/`compare`), Wild Files #7 (`compare`, GBIF range layer).
-4. **Phase 2 engine backlog:** `callouts`, `counter`, `compare`, `strip` in `engine/charts.py` + compose actions; raster globe (Blue Marble) stage; `geofacts.py`
-   (Wikidata/Factbook → draft claims); `textqa` caption-zone profile for the quiz card; `cloud.py` adaptation check against the new workflow inputs.
-5. Known soft spots to watch on the first runner: `voice.py words` on Kokoro takes (trim thresholds), `master.finish` levels for the quiz bed
-   (VO-over-music ≥ 15 dB), HyperFrames caption-zone (`hfcheck --caption-zone` severity error) against the answer card at y 960.
+1. **Phase 1.5 Connect** — needs the owner's repo + PAT (above).
+2. **Phase 1.6 Runner proof** — `selftest` workflow once: toolchain install, Kokoro `am_michael` smoke, `_template` render artifact,
+   map-animator `--help`. Reds become Phase 1.6.x, one fix per phase.
+3. **Phase 1.7 Actuals** — write measured CI timings into `docs/OPERATING_MODEL.md §3`, paste the animator CLI into `docs/MAPTILE.md`,
+   adjust `clips.py gen_maptile` if flags differ.
+4. **Phase 2.x (only on the owner's "make videos")** — 2.1 pilot research (Geo Blitz #10) → 2.2 authoring + previews → 2.3 cloud
+   render → 2.4 owner review; then 2.5+ one engine per phase: `callouts`/`counter` (Body & Brain), `strip`/`compare` (Sports Sprint),
+   `compare` + GBIF range (Wild Files), raster globe, `geofacts.py`.
+5. Soft spots to watch on the first runner: `voice.py words` on Kokoro takes, `master.finish` VO-over-music ≥ 15 dB for the quiz bed,
+   `hfcheck --caption-zone` against the answer card at y 960.
 
 ## Secrets / accounts
 - GitHub PAT: not yet provided for this repo (needed for step 1). Stored only at `~/.cache/secrets/gh_token`.

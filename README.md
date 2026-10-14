@@ -6,7 +6,8 @@ narration, a d3-geo / Natural Earth map engine, a procedural score, and nine qua
 (public repo = free runners); the Arena sandbox authors, builds HTML and runs the offline gates. Nothing here uploads to YouTube.
 
 > Phase 1 (this commit) = tooling, engines, gates, templates, docs. **No episodes have been produced yet** — by owner instruction.
-> `RESUME.md` says what to do next; `docs/PLAN.md` is the full phased plan.
+> `RESUME.md` says what to do next; `docs/PLAN.md` is the full phased plan; `docs/OPERATING_MODEL.md` says who does what and
+> `docs/PHASE_PROTOCOL.md` how every task is split into time-boxed phases.
 
 ## 60-second tour
 ```bash
@@ -51,7 +52,7 @@ episode.json  voice.json  research.json  geo.json  visuals.json  clips.json     
 reelkit/   pipeline + gates (episode.sh, plan, geodata, quizscore, quizlint, geolint, factcheck, provenance, clips[maptile], voice, tts_kokoro, cloud, media…)
 engine/    composition: compose.py (data-driven assembler), quiz.py (card), geo.py + geo-runtime.js (maps), charts.py, fx.py, vendor/ (gsap, d3-geo, topojson), data/ (110m atlas)
 series/    series.json (channel + series registry + counters), _template/ (fixture episode), <slug>/SERIES.md
-docs/      PLAN.md · BORDER_POLICY.md + border_registry.json · DATA_SOURCES.md · MAPTILE.md · CHANNEL_BASELINE.md · img/ (map previews)
+docs/      OPERATING_MODEL.md (agent vs Actions vs owner) · PHASE_PROTOCOL.md (how work is chunked) · PLAN.md · BORDER_POLICY.md + border_registry.json · DATA_SOURCES.md · MAPTILE.md · CHANNEL_BASELINE.md · img/
 tests/     selftest.py, test_geo_runtime.mjs, fixtures/ (ep-disputed = Kashmir path, ne_disputed_kashmir.geojson)
 tools/     new_episode.py, sync.sh, state.py, repo_guard.py
 .github/   check (every push) · render (per episode) · selftest (weekly/manual, real runner) · geodata (cache warm)

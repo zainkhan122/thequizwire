@@ -3,6 +3,9 @@
 This repo is the **single source of truth** for the owner's TheQuizWire Shorts system. The Arena workspace is a disposable working
 copy; if it isn't in git or in a GitHub Release, it doesn't exist.
 
+**Two documents bind every session:** `docs/OPERATING_MODEL.md` (who does what — agent / GitHub Actions / owner, stage by stage) and
+`docs/PHASE_PROTOCOL.md` (every task is a ≤ 15-min phase with a phase card, ≤ 3-min tool calls, checkpoint commits, exit check, sync, report).
+
 ## Session start (empty workspace)
 1. Ask the owner for the GitHub token if `~/.cache/secrets/gh_token` is missing; store it there (chmod 600). Never write tokens into
    the repo, the workspace or logs.
@@ -26,6 +29,8 @@ Work in bounded phases: one phase per session, sync at the end — the sandbox t
 Never render video, decode media, or install HyperFrames/Chrome in the sandbox (2 GB RAM, /tmp is RAM). Builds live in `~/.cache/build/`.
 
 ## Hard rules
+- **Phases, always.** Fill the phase card in `RESUME.md` before starting; commit per step; sync per phase; report in the §6 format (`docs/PHASE_PROTOCOL.md`).
+- **Heavy work is CI work.** Anything > 3 min of compute (render, whisper, TTS batches, docker, big downloads) is dispatched to Actions, never run here (`docs/OPERATING_MODEL.md §3–4`).
 - **No media in git** (`tools/repo_guard.py`: no media extensions, no file > 1 MB, repo < 15 MB). `docs/img/*.png` previews are the only exception.
 - **No videos until the owner says so.** Phase 1 delivered tools only; Phase 2 starts with the owner's go and `docs/PLAN.md §4`.
 - **Four series, feed numbering** — `series/series.json` is the counter; only `tools/new_episode.py` bumps it. Cosmic Quiz / Time Vault stay inactive.
