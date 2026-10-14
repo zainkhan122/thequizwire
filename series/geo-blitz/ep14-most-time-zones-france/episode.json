@@ -1,0 +1,41 @@
+{
+ "id": "ep14-most-time-zones-france",
+ "format": "quiz-v2",
+ "series": "geo-blitz",
+ "number": 14,
+ "title": "Which country has the MOST time zones?",
+ "difficulty": "MEDIUM",
+ "seed": 1014,
+ "quiz": {
+  "question": "Which country has the MOST time zones?",
+  "keyword": "MOST",
+  "options": [
+   "Russia",
+   "USA",
+   "France"
+  ],
+  "correct": 2,
+  "beat": 1.5,
+  "answer_line": "France",
+  "answer_sub": "12 time zones",
+  "tease": "Next: the country with the most islands.",
+  "cta_line": "One map question a day · Subscribe"
+ },
+ "hook_type": "misconception",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country has the MOST time zones?",
+  "description": "Which country has the MOST time zones? Guess first — then watch all twelve light up around the world.\n\nWhat was your first guess?\n\nSources: Wikipedia (Time in France, Time in Russia, List of time zones by country), timeanddate.com, time.now.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #14",
+  "hashtags": [
+   "#GKshorts",
+   "#thequizwire",
+   "#shorts",
+   "#geoblitz"
+  ]
+ }
+}

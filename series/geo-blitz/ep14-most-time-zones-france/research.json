@@ -1,0 +1,235 @@
+{
+ "version": 1,
+ "episode": "ep14-most-time-zones-france",
+ "topic": "Which country has the most time zones? (France, 12)",
+ "researched": "2026-10-15",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "sources": {
+  "wiki_time_france": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Time in France",
+   "url": "https://en.wikipedia.org/wiki/Time_in_France",
+   "date": "2026-10-01",
+   "notes": "with its overseas territories France uses 12 different time zones (13 including its Antarctic claim), more than any other country; table: UTC−10 (Society Islands/Tahiti) … UTC+12 (Wallis and Futuna); metropolitan France UTC+1"
+  },
+  "wiki_tz_by_country": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "List of time zones by country",
+   "url": "https://en.wikipedia.org/wiki/List_of_time_zones_by_country",
+   "date": "2026-10-01",
+   "notes": "France 12 (incl. dependent territories, excluding Antarctica); Russia 11; United States 11 incl. territories"
+  },
+  "wiki_time_russia": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Time in Russia",
+   "url": "https://en.wikipedia.org/wiki/Time_in_Russia",
+   "date": "2026-10-01",
+   "notes": "eleven time zones, UTC+2 to UTC+12, contiguous"
+  },
+  "timeanddate_zones": {
+   "type": "reference",
+   "publisher": "timeanddate.com",
+   "title": "How Many Time Zones Are There?",
+   "url": "https://www.timeanddate.com/time/current-number-time-zones.html",
+   "date": "2025-01-01",
+   "notes": "France (incl. overseas) 12 time zones, the most of any country; Russia 11; USA 11 incl. territories"
+  },
+  "timenow_france": {
+   "type": "press",
+   "publisher": "time.now",
+   "title": "Which Country Has the Most Time Zones? (It's Not Russia)",
+   "url": "https://time.now/articles/which-country-has-the-most-time-zones-not-russia/",
+   "date": "2026-04-11",
+   "notes": "France 12, Russia 11, United States 11 including territories"
+  },
+  "geographypin_tz": {
+   "type": "press",
+   "publisher": "GeographyPin",
+   "title": "Countries With the Most Time Zones",
+   "url": "https://geographypin.com/countries-with-the-most-time-zones/",
+   "date": "2026-01-02",
+   "notes": "France 12 (13 with the Antarctic claim); Russia 11 contiguous zones UTC+2 to UTC+12; US 11 incl. islands"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 – Countries (public domain)",
+   "url": "https://www.naturalearthdata.com/downloads/",
+   "date": "2025-01-01",
+   "notes": "map geometry (110m); France 250, New Caledonia 540, TAAF 260; Russia 643"
+  },
+  "iana_tzdb": {
+   "type": "primary",
+   "publisher": "IANA Time Zone Database (tzdb)",
+   "title": "zone1970.tab — zones by country (FR, GF, MQ, GP, PM, RE, YT, TF, PF, NC, WF)",
+   "url": "https://data.iana.org/time-zones/tzdb/zone1970.tab",
+   "date": "2026-01-01",
+   "notes": "France-governed zones: Europe/Paris; America/Cayenne, Martinique, Miquelon; Indian/Reunion, Mayotte, Kerguelen; Pacific/Tahiti, Marquesas, Gambier, Noumea, Wallis — distinct standard offsets −10, −9:30, −9, −8 (Clipperton, tz Pacific/Pitcairn equivalent), −4, −3, +1, +3, +4, +5, +11, +12"
+  },
+  "legifrance_2017": {
+   "type": "primary",
+   "publisher": "Légifrance (Journal officiel de la République française)",
+   "title": "Décret n° 2017-292 du 6 mars 2017 relatif au temps légal français",
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000034154511/",
+   "date": "2017-03-06",
+   "notes": "legal time of metropolitan France (UTC+1) and of each overseas collectivity: Guadeloupe/Martinique/St-Barth/St-Martin UTC−4, Guyane UTC−3, St-Pierre-et-Miquelon UTC−3, Mayotte UTC+3, La Réunion UTC+4, TAAF UTC+5, Polynésie UTC−10/−9:30/−9, Nouvelle-Calédonie UTC+11, Wallis-et-Futuna UTC+12, Clipperton UTC−8"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Counting its overseas departments and territories, France uses 12 standard time zones — more than any other country (Russia and the USA have 11 each when territories are counted).",
+   "sources": [
+    "wiki_time_france",
+    "wiki_tz_by_country",
+    "timeanddate_zones",
+    "legifrance_2017",
+    "iana_tzdb",
+    "timenow_france"
+   ],
+   "vo": [
+    "which country has the most time zones",
+    "it's france",
+    "twelve time zones, thanks to territories scattered across the oceans"
+   ],
+   "screen": [
+    "France",
+    "12",
+    "time zones"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "record",
+   "text": "Russia has 11 time zones, UTC+2 to UTC+12, in one contiguous landmass.",
+   "sources": [
+    "wiki_time_russia",
+    "geographypin_tz",
+    "wiki_tz_by_country"
+   ],
+   "vo": [
+    "russia stretches across eleven, but all in one block"
+   ],
+   "screen": [
+    "RUSSIA · 11 ZONES",
+    "One block, UTC+2 to UTC+12.",
+    "Russia"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "record",
+   "text": "France's zones span UTC−10 (Tahiti / Society Islands) to UTC+12 (Wallis and Futuna); the full set: −10, −9:30, −9, −8, −4, −3, +1, +3, +4, +5, +11, +12.",
+   "sources": [
+    "wiki_time_france",
+    "legifrance_2017",
+    "iana_tzdb",
+    "timeanddate_zones"
+   ],
+   "vo": [
+    "france runs from tahiti at minus ten to wallis and futuna at plus twelve"
+   ],
+   "screen": [
+    "FRANCE · UTC−10 TO UTC+12",
+    "Tahiti to Wallis and Futuna.",
+    "−10 Tahiti",
+    "−9:30",
+    "−9",
+    "−8",
+    "−4",
+    "−3 Guiana",
+    "+1 Paris",
+    "+3",
+    "+4",
+    "+5",
+    "+11",
+    "+12 Wallis"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "framing",
+   "text": "Arithmetic on the table: Paris (UTC+1 standard time) is 11 hours ahead of Tahiti (UTC−10), so 07:00 in Paris is 20:00 the previous day in Tahiti.",
+   "sources": [
+    "wiki_time_france",
+    "legifrance_2017",
+    "timeanddate_zones"
+   ],
+   "vo": [
+    "when paris wakes at seven, tahiti is still on yesterday evening"
+   ],
+   "screen": [
+    "PARIS 07:00 = TAHITI 20:00",
+    "The evening before."
+   ]
+  }
+ ],
+ "myths": [
+  {
+   "myth": "Russia has the most time zones.",
+   "reality": "Russia has the most on a single landmass (11); France has 12 once its overseas territories are counted.",
+   "sources": [
+    "wiki_tz_by_country",
+    "timenow_france"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^One map question a day",
+  "^Next:",
+  "^Tomorrow:",
+  "^USA$",
+  "^Pacific$",
+  "^Indian Ocean$",
+  "^0$"
+ ],
+ "landscape": {
+  "our_gap": "Feed versions state 'France' over an Eiffel Tower clip; nobody puts the twelve pins on the map with their offsets and a count-up.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/@thequizwire-com/shorts",
+    "title": "Feed Geo Blitz (own channel, v1)",
+    "angle": "card over b-roll",
+    "misses": "no map, no pins, no sources"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=country+with+most+time+zones+shorts",
+    "title": "Search results: most time zones",
+    "angle": "text over footage",
+    "misses": "territories never shown"
+   },
+   {
+    "url": "https://www.youtube.com/@geomapunveiled25/shorts",
+    "title": "Geo Map Unveiled",
+    "angle": "satellite listicles",
+    "misses": "no question format"
+   }
+  ]
+ },
+ "vo_exempt": [
+  "^russia, the usa, or france\\?$",
+  "^next[,:]? the country with the most islands",
+  "^subscribe, and guess it first"
+ ]
+}

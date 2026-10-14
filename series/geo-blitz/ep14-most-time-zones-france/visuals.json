@@ -1,0 +1,438 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1180
+   ],
+   "anchor": [
+    540,
+    600
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "cnt",
+   "type": "counter",
+   "start": 0,
+   "end": 12,
+   "x": 40,
+   "y": 60,
+   "w": 380,
+   "label": "time zones",
+   "fmt": "int",
+   "z": 40
+  },
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "RUSSIA · 11 ZONES",
+   "text": "One block, UTC+2 to UTC+12.",
+   "y": 1350
+  },
+  {
+   "id": "f2",
+   "type": "fact",
+   "kicker": "FRANCE · UTC−10 TO UTC+12",
+   "text": "Tahiti to Wallis and Futuna.",
+   "y": 1350
+  },
+  {
+   "id": "f3",
+   "type": "fact",
+   "kicker": "PARIS 07:00 = TAHITI 20:00",
+   "text": "The evening before.",
+   "y": 1350
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     10,
+     10
+    ]
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 1.06,
+    "lonlat": [
+     10,
+     10
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s02+0.2",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s03",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 1.15,
+    "lonlat": [
+     0,
+     0
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 1.18,
+    "lonlat": [
+     0,
+     0
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.20",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "250",
+    "layer": "fr",
+    "dur": 0.4
+   }
+  },
+  {
+   "at": "s04+0.28",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "540",
+    "layer": "fr",
+    "dur": 0.4
+   }
+  },
+  {
+   "at": "s04+0.76",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "260",
+    "layer": "fr",
+    "dur": 0.4
+   }
+  },
+  {
+   "at": "s04@scattered",
+   "do": "chart.counter_run",
+   "id": "cnt",
+   "until": "s04.end",
+   "args": {
+    "steps": 12
+   }
+  },
+  {
+   "at": "s04+1.40",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "tahiti"
+   }
+  },
+  {
+   "at": "s04+1.62",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "marquesas"
+   }
+  },
+  {
+   "at": "s04+1.84",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "gambier"
+   }
+  },
+  {
+   "at": "s04+2.06",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "clipperton"
+   }
+  },
+  {
+   "at": "s04+2.28",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "guadeloupe"
+   }
+  },
+  {
+   "at": "s04+2.50",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "cayenne"
+   }
+  },
+  {
+   "at": "s04+2.72",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "paris"
+   }
+  },
+  {
+   "at": "s04+2.94",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "mayotte"
+   }
+  },
+  {
+   "at": "s04+3.16",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "reunion"
+   }
+  },
+  {
+   "at": "s04+3.38",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "kerguelen"
+   }
+  },
+  {
+   "at": "s04+3.60",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "noumea"
+   }
+  },
+  {
+   "at": "s04+3.82",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "wallis"
+   }
+  },
+  {
+   "at": "s04+2.0",
+   "do": "chips_out"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.4",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     10,
+     10
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 1.02,
+    "lonlat": [
+     10,
+     10
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@russia",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "643",
+    "layer": "ru",
+    "dur": 0.6,
+    "opacity": 0.75
+   }
+  },
+  {
+   "at": "s05+0.4",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s05.end"
+  },
+  {
+   "at": "s06",
+   "do": "geo.highlight_out",
+   "stage": "stage_map",
+   "args": {
+    "fid": "643",
+    "layer": "ru",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 1.1,
+    "lonlat": [
+     -10,
+     -10
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-1.8",
+   "args": {
+    "k": 1.14,
+    "lonlat": [
+     -12,
+     -10
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06+0.3",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "pacific"
+   }
+  },
+  {
+   "at": "s06+0.6",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "indian"
+   }
+  },
+  {
+   "at": "s06+0.3",
+   "do": "fact_in",
+   "id": "f2",
+   "until": "s06.end"
+  },
+  {
+   "at": "s07+0.3",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s07.end"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.9"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.8",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "end-1.8",
+   "do": "hide",
+   "id": "cnt"
+  },
+  {
+   "at": "end-1.8",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.2",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     10,
+     10
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "end-1.4",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}
