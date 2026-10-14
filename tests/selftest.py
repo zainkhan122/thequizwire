@@ -81,6 +81,16 @@ def main():
         dis = copy_ep(ROOT / "tests/fixtures/ep-disputed", tmp)
         expect_ok(tpl, "_template")
         expect_ok(dis, "ep-disputed")
+        # voice gate token normaliser: script words vs whisper digits must compare equal (decimals, scales, UK/US spelling)
+        sys.path.insert(0, str(RK)); import voice as _voice
+        tok = lambda s: [t for t, _ in _voice.tokens(s)]
+        pairs = [("around three point two million square kilometres", "around 3 .2 million square kilometers."),
+                 ("three million people", "3 million people"), ("eight point eight kilometres", "8.8 kilometers"),
+                 ("nineteen eighty-three", "in 1983."[3:]), ("two hundred and sixty-nine", "269"),
+                 ("the twenty-first century", "the 21st century"), ("twelve hundred metres", "1,200 meters"),
+                 ("one point five million", "1.5 million"), ("at eleven eighteen", "at 11:18")]
+        badp = [(a, b, tok(a), tok(b)) for a, b in pairs if tok(a) != tok(b)]
+        say(not badp, f"voice tokens: {len(pairs) - len(badp)}/{len(pairs)} script/ASR pairs normalise equal", str(badp[:2]))
         for ep in (tpl, dis):
             r = run(["python3", str(RK / "voice.py"), "check", str(ep), "--plan-only"])
             say(r.returncode == 0, f"{ep.name}: voice plan gate (tones, pauses, climax, arc)", "" if r.returncode == 0 else (r.stdout + r.stderr)[-600:])

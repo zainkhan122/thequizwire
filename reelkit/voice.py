@@ -101,56 +101,91 @@ def syllables(text: str) -> int:
     return n
 
 
+SPELL = {  # UK → US so a British script and whisper's American output compare equal (units + common words only)
+    "kilometre": "kilometer", "kilometres": "kilometers", "metre": "meter", "metres": "meters", "litre": "liter",
+    "litres": "liters", "centre": "center", "centres": "centers", "colour": "color", "colours": "colors",
+    "coloured": "colored", "harbour": "harbor", "harbours": "harbors", "neighbour": "neighbor", "neighbours": "neighbors",
+    "neighbouring": "neighboring", "honour": "honor", "favourite": "favorite", "grey": "gray", "theatre": "theater",
+    "defence": "defense", "travelling": "traveling", "travelled": "traveled", "labour": "labor", "armour": "armor",
+    "behaviour": "behavior", "kilogramme": "kilogram", "programme": "program", "tonne": "ton", "tonnes": "tons",
+}
+
+
+def _fmt_num(x: float) -> str:
+    if abs(x - round(x)) < 1e-9:
+        return str(int(round(x)))
+    return f"{x:.6f}".rstrip("0").rstrip(".")
+
+
 def tokens(text: str):
-    """Normalised comparison tokens; number-word runs collapse to digit strings. Returns [(token, raw_word_index)]."""
+    """Normalised comparison tokens; number runs (words or digits, decimals, scales) collapse to one numeric string.
+    "three point two million" == "3.2 million" == whisper's "3 .2 million" == "3200000". Returns [(token, raw_word_index)]."""
     raw = text.replace("—", " — ").split()
-    out, run, run_idx = [], [], -1
+    out = []
+    run, run_idx = [], -1          # run: [(value, kind)] kind u=unit/digit literal, h=scale
+    dec = None                     # decimal digits collected after "point" / a ".2" fragment (list of str)
 
     def flush():
-        nonlocal run
+        nonlocal run, dec
         if not run:
-            return
+            dec = None; return
         vals = [v for v, _ in run]
-        if len(vals) == 2 and 10 <= vals[0] < 100 and 10 <= vals[1] < 100 and "h" not in [k for _, k in run]:
+        if dec is None and len(vals) == 2 and all(isinstance(v, int) for v in vals) and 10 <= vals[0] < 100 \
+                and 10 <= vals[1] < 100 and "h" not in [k for _, k in run]:
             num = vals[0] * 100 + vals[1]                                # nineteen eighty(-three) as a year
         else:
-            total, cur = 0, 0
+            total, cur = 0.0, 0.0
             for v, k in run:
                 if k == "h":
-                    cur = max(cur, 1) * v
+                    cur = (cur or 1) * v
                     if v >= 1000:
-                        total += cur; cur = 0
+                        total += cur; cur = 0.0
+                elif k == "dec":
+                    cur = cur + v                                        # fractional part already scaled (0.2)
                 else:
                     cur += v
             num = total + cur
-        out.append((str(num), run_idx)); run = []
+        out.append((_fmt_num(num), run_idx)); run = []; dec = None
 
     for i, rw in enumerate(raw):
-        t = re.fullmatch(r"(\d{1,2})?[:.](\d{2})\W*", rw)              # clock times: 11:18 / "11" ".18" -> 1118
-        if t and t.group(1):
+        t = re.fullmatch(r"(\d{1,2}):(\d{2})\W*", rw)                  # clock times with a colon: 11:18 -> 1118
+        if t:
             flush(); out.append((t.group(1) + t.group(2), i)); continue
-        if t and out and re.fullmatch(r"\d{1,2}", out[-1][0]) and not run:
-            out[-1] = (out[-1][0] + t.group(2), i); continue           # raw indices stay aligned to ASR words
+        frag = re.fullmatch(r"\.(\d+)\W*", rw)                         # whisper split decimal: "3" ".2"
+        if frag and (run or (out and re.fullmatch(r"\d+", out[-1][0]))):
+            if not run:                                                # re-open the flushed integer
+                run = [(int(out.pop()[0]), "u")]
+            run.append((float("0." + frag.group(1)), "dec")); dec = []; run_idx = i; continue
         for part in re.split(r"[-–]", rw):
-            w = re.sub(r"[^\w']", "", part.lower())
+            w = re.sub(r"[^\w'.]", "", part.lower()).strip(".")
             if not w:
                 continue
-            m = re.fullmatch(r"(\d+)(st|nd|rd|th)?", w)
+            m = re.fullmatch(r"(\d+)(?:\.(\d+))?(st|nd|rd|th)?", w)
             if m:
-                flush(); out.append((m.group(1), i)); continue
+                if dec is not None and run and len(m.group(1)) == 1 and not m.group(2):
+                    run.append((float("0." + "0" * len(dec) + m.group(1)), "dec")); dec.append(m.group(1)); run_idx = i
+                    continue                                           # "3 point 2 5" → 3.25
+                flush()
+                v = float(m.group(1) + "." + m.group(2)) if m.group(2) else int(m.group(1))
+                run.append((v, "u")); run_idx = i; continue
+            if w == "point" and run and dec is None:
+                dec = []; continue                                     # "three point two"
             w2 = ORD.get(w, w) if run else w
             if w2 in UNITS or w2 in TENS:
                 v = UNITS.get(w2, TENS.get(w2))
-                if run and run[-1][1] == "u" and v < 10 and run[-1][0] % 10 == 0 and run[-1][0] >= 20:
+                if dec is not None and v < 10:
+                    run.append((v / 10 ** (len(dec) + 1), "dec")); dec.append(str(v)); run_idx = i; continue
+                if run and run[-1][1] == "u" and isinstance(run[-1][0], int) and v < 10 and run[-1][0] % 10 == 0 \
+                        and run[-1][0] >= 20:
                     run[-1] = (run[-1][0] + v, "u")                    # twenty + three
                 else:
                     run.append((v, "u"))
                 run_idx = i; continue
             if w in SCALES and run:
-                run.append((SCALES[w], "h")); run_idx = i; continue
+                run.append((SCALES[w], "h")); run_idx = i; dec = None if dec == [] else dec; continue
             if w == "and" and run and any(k == "h" for _, k in run):
                 continue                                               # "two hundred AND sixty-nine"
-            flush(); out.append((w, i))
+            flush(); out.append((SPELL.get(w, w), i))
     flush()
     return out
 
@@ -241,7 +276,8 @@ def measure(line: dict, y, words: list):
         if wer2 < m["wer"]:
             m["wer_base"], m["wer"], heard, An = m["wer"], wer2, w2, A2
             m["asr"] = asr2
-    pn = [t for t, _ in P if t.isdigit()]; an = [t for t, _ in An if t.isdigit()]
+    isnum = lambda t: re.fullmatch(r"\d+(\.\d+)?", t) is not None
+    pn = [t for t, _ in P if isnum(t)]; an = [t for t, _ in An if isnum(t)]
     if pn != an:
         fails.append(f"numbers spoken {an} ≠ script {pn}")
     if m["wer"] > WER_FAIL:
