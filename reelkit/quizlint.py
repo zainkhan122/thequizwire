@@ -39,6 +39,14 @@ TIME_RE = re.compile(r"(end|s\w+?)(?:\.(end))?(?:@([\w-]+))?(?:([+-])([\d.]+))?"
 
 def norm(s): return re.sub(r"[^a-z0-9 ]", "", str(s).lower())
 
+_SMALL = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen".split()
+_TENS = "_ _ twenty thirty forty fifty sixty seventy eighty ninety".split()
+def num_word(tok):
+    """'11' → 'eleven', '45' → 'forty five' (digits on chips are read as words by the VO)."""
+    if not tok.isdigit() or int(tok) > 99: return tok
+    n = int(tok)
+    return _SMALL[n] if n < 20 else (_TENS[n // 10] + ("" if n % 10 == 0 else " " + _SMALL[n % 10]))
+
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("ep"); ap.add_argument("--hf"); ap.add_argument("--release", action="store_true")
@@ -84,7 +92,8 @@ def main():
     vo_all = norm(" ".join(l.get("text", "") for l in V["lines"]))
     if norm(q.get("question", ""))[:40] not in vo_all: W.append("the VO does not read the question text (hook line should contain it)")
     for o in q.get("options", []):
-        if norm(o).split()[-1] not in vo_all: W.append(f"option '{o}' is never spoken")
+        last = norm(o).split()[-1]
+        if last not in vo_all and num_word(last) not in vo_all: W.append(f"option '{o}' is never spoken")
     # ---- timeline-dependent
     story_share = None; motion = None
     if T:

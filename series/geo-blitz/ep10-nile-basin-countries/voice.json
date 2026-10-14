@@ -1,0 +1,131 @@
+{
+ "version": 1,
+ "episode": "ep10-nile-basin-countries",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.0
+ },
+ "intent": "A quick, confident quizmaster: curious on the question, playful on the countdown, satisfied on the reveal, genuinely interested in the one fact that makes the answer stick.",
+ "pacing_profile": "question on the map at zero, three quick options, a 1.5-s beat, a warm reveal, three short see-it beats, a tease and a loop",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "tense",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "straight in, like a dare",
+   "text": "How many countries share the Nile basin?",
+   "cues": {
+    "which": "how"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Seven, eleven, or fifteen?",
+   "cues": {
+    "a": "seven",
+    "b": "eleven",
+    "c": "fifteen"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 1.5,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "It's eleven. Eleven countries, Lake Victoria to the Mediterranean.",
+   "cues": {
+    "answer": "eleven",
+    "number": "eleven",
+    "victoria": "victoria",
+    "med": "mediterranean"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "count it out",
+   "text": "About six thousand six hundred and fifty kilometres, the longest river in Africa.",
+   "cues": {
+    "six": "six",
+    "longest": "longest"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "let the comparison land",
+   "text": "The White Nile from the lakes, the Blue Nile from Ethiopia, meeting at Khartoum.",
+   "cues": {
+    "white": "white",
+    "blue": "blue",
+    "khartoum": "khartoum"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.4,
+   "direction": "the number people repeat",
+   "text": "The basin: a tenth of Africa. Over three hundred million people rely on it.",
+   "cues": {
+    "tenth": "tenth",
+    "three": "three"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "a promise, not a plea",
+   "text": "Tomorrow, the capital a river split in two. Subscribe, and guess it first.",
+   "cues": {
+    "subscribe": "subscribe"
+   }
+  }
+ ],
+ "title": "How many countries share the NILE basin?"
+}

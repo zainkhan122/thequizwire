@@ -105,7 +105,7 @@ def main():
             elif l["id"] == "v05": l["text"] = "TODO see-it beat one (one claim, shown on the visual)."; l["cues"] = {"seven": "todo", "saudi": "see-it"}
             elif l["id"] == "v06": l["text"] = "TODO see-it beat two."; l["cues"] = {"bigger": "todo"}
             elif l["id"] == "v07": l["text"] = "TODO payoff — the number people repeat."; l["cues"] = {"three": "todo"}
-            elif l["id"] == "v08": l["text"] = f"{a.tease} Subscribe, and guess it first."; l["cues"] = {"subscribe": "subscribe"}
+            elif l["id"] == "v08": l["text"] = f"{re.sub(r'^Tomorrow:', 'Tomorrow,', a.tease)} Subscribe, and guess it first."; l["cues"] = {"subscribe": "subscribe"}   # Kokoro skips the colon pause; the screen keeps 'Tomorrow:'
     else:
         read = f"{LETTERS[0]}, {opts[0]}. {LETTERS[1]}, {opts[1]}. {LETTERS[2]}, {opts[2]}. Or {LETTERS[3]}, {opts[3]}."
         for l in V["lines"]:
@@ -123,7 +123,7 @@ def main():
               "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source."})
     R["screen_exempt"] = [x for x in R["screen_exempt"] if not re.search(r"Peninsula|Riyadh|Sea\$", x)]
     R["screen_exempt"][0] = "^" + ser["name"].upper().replace("&", "&")
-    R["vo_exempt"] = (["^" + re.escape(read.lower()).replace("\\ ", " ") + "$", "^tomorrow:", "^subscribe, and guess it first"] if v2
+    R["vo_exempt"] = (["^" + re.escape(read.lower()).replace("\\ ", " ") + "$", "^tomorrow[,:]? ", "^subscribe, and guess it first"] if v2
                       else ["^(a|b|c|or d), .*\\.$", "^what was your first guess", "^tell me in the comments"])
     if v2: R["screen_exempt"] = [x for x in R["screen_exempt"] if "Tomorrow" not in x] + ["^Tomorrow:"]
     R["landscape"] = {"our_gap": "TODO — what the feed's version of this question misses", "existing": []}

@@ -185,7 +185,7 @@
  },
  "vo_exempt": [
   "^arabian, indian, or scandinavian\\?$",
-  "^tomorrow: the country with the most neighbours",
+  "^tomorrow[,:]? the country with the most neighbours",
   "^subscribe, and guess it first"
  ]
 }

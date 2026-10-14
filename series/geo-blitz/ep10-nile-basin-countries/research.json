@@ -1,0 +1,244 @@
+{
+ "version": 1,
+ "episode": "ep10-nile-basin-countries",
+ "topic": "How many countries share the Nile basin? (11)",
+ "researched": "2026-10-15",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "sources": {
+  "britannica_nile": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Nile River",
+   "url": "https://www.britannica.com/place/Nile-River",
+   "date": "2026-09-13",
+   "notes": "basin spans Egypt, Sudan, South Sudan, Eritrea, Ethiopia, Kenya, DR Congo, Burundi, Rwanda, Uganda, Tanzania; length about 4,132 mi (6,650 km); White Nile from Lake Victoria and Blue Nile from Lake Tana converge at Khartoum"
+  },
+  "wiki_nile": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Nile",
+   "url": "https://en.wikipedia.org/wiki/Nile",
+   "date": "2026-08-11",
+   "notes": "drainage basin extends across eleven countries (list); basin ≈ 2,927,843 km² — about 10% of the African continent; South Sudan became the eleventh basin country in 2011"
+  },
+  "infonile_basin": {
+   "type": "reference",
+   "publisher": "InfoNile (Nile Basin Initiative data journalism)",
+   "title": "The Nile Basin",
+   "url": "https://infonile.org/en/infomaps/the-nile-basin/",
+   "date": "2017-05-22",
+   "notes": "basin = 10.3% of the continent, spreads over eleven countries (list); White Nile sources on the Equatorial Lake Plateau, Blue Nile in the Ethiopian highlands"
+  },
+  "conversation_nile": {
+   "type": "press",
+   "publisher": "The Conversation",
+   "title": "Why the 11 countries that rely on the Nile need to reach a river deal soon",
+   "url": "https://theconversation.com/why-the-11-countries-that-rely-on-the-nile-need-to-reach-a-river-deal-soon-75868",
+   "date": "2017-04-12",
+   "notes": "more than 300 million people rely on the waters of the Nile; basin contains over 10% of Africa's landmass in 11 countries"
+  },
+  "sis_egypt_nile": {
+   "type": "primary",
+   "publisher": "Egypt State Information Service",
+   "title": "Egypt and Nile Basin Countries",
+   "url": "https://sis.gov.eg/en/media-center/files/egypt-and-nile-basin-countries/",
+   "date": "2021-01-01",
+   "notes": "lists the ten Nile Basin states of the agreement plus South Sudan, which joined after independence on 9 July 2011"
+  },
+  "nbi_home": {
+   "type": "primary",
+   "publisher": "Nile Basin Initiative",
+   "title": "Nile Basin Initiative (intergovernmental partnership of the basin states)",
+   "url": "https://nilebasin.org/",
+   "date": "2026-10-15",
+   "notes": "official basin body; 'One river, one people, one vision'"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 – Countries (public domain)",
+   "url": "https://www.naturalearthdata.com/downloads/",
+   "date": "2025-01-01",
+   "notes": "map geometry; highlighted ISO numeric ids 108 646 834 800 404 180 728 231 232 729 818"
+  },
+  "infonile_deal": {
+   "type": "reference",
+   "publisher": "InfoNile (Nile Basin Initiative data journalism)",
+   "title": "Nile Basin countries need a deal on the river and the water",
+   "url": "https://infonile.org/en/2018/04/nile-basin-countries-need-a-deal-on-the-river-and-the-water/",
+   "date": "2018-04-01",
+   "notes": "more than 300 million people rely on the waters of the River Nile; basin > 10 % of Africa in 11 countries"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Eleven countries lie wholly or partly in the Nile basin: Burundi, DR Congo, Egypt, Eritrea, Ethiopia, Kenya, Rwanda, South Sudan, Sudan, Tanzania and Uganda.",
+   "sources": [
+    "britannica_nile",
+    "wiki_nile",
+    "infonile_basin",
+    "conversation_nile",
+    "sis_egypt_nile"
+   ],
+   "vo": [
+    "how many countries share the nile basin",
+    "it's eleven",
+    "eleven countries"
+   ],
+   "screen": [
+    "11",
+    "countries"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "detail",
+   "text": "The river system runs from Lake Victoria (White Nile outlet at Jinja) north to the Mediterranean Sea.",
+   "sources": [
+    "britannica_nile",
+    "wiki_nile"
+   ],
+   "vo": [
+    "lake victoria to the mediterranean"
+   ],
+   "screen": [
+    "Lake Victoria",
+    "Mediterranean"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "record",
+   "text": "The Nile is about 6,650 km (4,132 mi) long — the longest river in Africa (Britannica calls it the longest in the world; the Amazon claim is contested, so the script says 'in Africa').",
+   "sources": [
+    "britannica_nile",
+    "wiki_nile"
+   ],
+   "vo": [
+    "about six thousand six hundred and fifty kilometres",
+    "the longest river in africa"
+   ],
+   "screen": [
+    "6,650 KM",
+    "The longest river in Africa."
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "The White Nile (from the Equatorial lakes) and the Blue Nile (from Lake Tana, Ethiopia) converge at Khartoum, Sudan.",
+   "sources": [
+    "britannica_nile",
+    "infonile_basin"
+   ],
+   "vo": [
+    "the white nile from the lakes",
+    "the blue nile from ethiopia",
+    "meeting at khartoum"
+   ],
+   "screen": [
+    "TWO NILES",
+    "White + Blue Nile meet at Khartoum.",
+    "White Nile",
+    "Blue Nile",
+    "Khartoum"
+   ]
+  },
+  {
+   "id": "C05",
+   "weight": "record",
+   "text": "The basin covers roughly a tenth of Africa (Wikipedia ≈ 2.93 million km² ≈ 10%; InfoNile 10.3%; Britannica drains ≈ 3,349,000 km²).",
+   "sources": [
+    "wiki_nile",
+    "infonile_basin",
+    "britannica_nile",
+    "conversation_nile"
+   ],
+   "vo": [
+    "the basin: a tenth of africa"
+   ],
+   "screen": [
+    "1/10 OF AFRICA"
+   ]
+  },
+  {
+   "id": "C06",
+   "weight": "record",
+   "text": "More than 300 million people rely on the waters of the Nile.",
+   "sources": [
+    "conversation_nile",
+    "infonile_deal"
+   ],
+   "vo": [
+    "over three hundred million people rely on it"
+   ],
+   "screen": [
+    "300 million+ people rely on it."
+   ]
+  }
+ ],
+ "myths": [
+  {
+   "myth": "The Nile flows through only Egypt and Sudan.",
+   "reality": "Its basin spans eleven countries; most of the water comes from the upstream states.",
+   "sources": [
+    "wiki_nile",
+    "britannica_nile"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^One map question a day",
+  "^Tomorrow:",
+  "^0$",
+  "^7$",
+  "^15$"
+ ],
+ "landscape": {
+  "our_gap": "Feed versions read the number over stock footage; nobody lights the eleven states up one by one with the two Niles drawn on an equal-area map.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/@thequizwire-com/shorts",
+    "title": "Feed Geo Blitz (own channel, v1 format)",
+    "angle": "card over stock b-roll, 3-2-1 countdown",
+    "misses": "no map, no count-up, no sources"
+   },
+   {
+    "url": "https://www.youtube.com/@geomapunveiled25/shorts",
+    "title": "Geo Map Unveiled — river facts",
+    "angle": "satellite-map listicles",
+    "misses": "no question, no basin outline, no scale"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=how+many+countries+does+the+nile+flow+through",
+    "title": "Search results for the question",
+    "angle": "talking text over footage",
+    "misses": "the eleven states are never shown together"
+   }
+  ]
+ },
+ "vo_exempt": [
+  "^seven, eleven, or fifteen\\?$",
+  "^tomorrow[,:]? the capital a river split in two",
+  "^subscribe, and guess it first"
+ ]
+}

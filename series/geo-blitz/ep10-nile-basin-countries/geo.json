@@ -1,0 +1,263 @@
+{
+ "version": 1,
+ "episode": "ep10-nile-basin-countries",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "projection": "equalEarth",
+   "projection_reason": "basin-share and 'a tenth of Africa' are size claims → equal-area (geolint P1)",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -20,
+     -36,
+     56,
+     38
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "nile",
+     "ids": [
+      "108",
+      "646",
+      "834",
+      "800",
+      "404",
+      "180",
+      "728",
+      "231",
+      "232",
+      "729",
+      "818"
+     ],
+     "cls": "",
+     "note": "the 11 Nile-basin states (Natural Earth admin-0 ISO numeric ids)"
+    },
+    {
+     "kind": "route",
+     "id": "river",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "white",
+        "properties": {
+         "name": "White Nile → Nile (simplified course)"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           33.2,
+           0.42
+          ],
+          [
+           32.6,
+           1.9
+          ],
+          [
+           31.5,
+           2.4
+          ],
+          [
+           32.05,
+           3.6
+          ],
+          [
+           31.6,
+           4.85
+          ],
+          [
+           31.55,
+           6.2
+          ],
+          [
+           31.65,
+           9.53
+          ],
+          [
+           32.8,
+           11.75
+          ],
+          [
+           32.66,
+           13.17
+          ],
+          [
+           32.53,
+           15.6
+          ],
+          [
+           33.98,
+           17.7
+          ],
+          [
+           33.32,
+           19.53
+          ],
+          [
+           31.8,
+           18.5
+          ],
+          [
+           30.47,
+           19.17
+          ],
+          [
+           31.35,
+           21.8
+          ],
+          [
+           32.9,
+           24.09
+          ],
+          [
+           32.64,
+           25.69
+          ],
+          [
+           31.18,
+           27.18
+          ],
+          [
+           31.24,
+           30.04
+          ],
+          [
+           30.42,
+           31.4
+          ]
+         ]
+        }
+       },
+       {
+        "type": "Feature",
+        "id": "blue",
+        "properties": {
+         "name": "Blue Nile (simplified course)"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           37.39,
+           11.6
+          ],
+          [
+           37.59,
+           11.49
+          ],
+          [
+           37.9,
+           10.6
+          ],
+          [
+           37.0,
+           10.0
+          ],
+          [
+           36.0,
+           10.2
+          ],
+          [
+           35.1,
+           10.9
+          ],
+          [
+           34.4,
+           11.8
+          ],
+          [
+           33.6,
+           13.55
+          ],
+          [
+           32.53,
+           15.6
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "hand-simplified course from Jinja/Lake Tana to the delta (~20 + 9 vertices); for the drawn line only, not a measurement"
+    }
+   ],
+   "pins": [
+    {
+     "id": "khartoum",
+     "lonlat": [
+      32.53,
+      15.6
+     ],
+     "label": "Khartoum",
+     "qid": "Q1963"
+    }
+   ],
+   "labels": [
+    {
+     "id": "lake_victoria",
+     "lonlat": [
+      33.0,
+      -2.6
+     ],
+     "text": "Lake Victoria",
+     "cls": "sea"
+    },
+    {
+     "id": "med",
+     "lonlat": [
+      27.0,
+      33.6
+     ],
+     "text": "Mediterranean",
+     "cls": "sea"
+    },
+    {
+     "id": "white_nile",
+     "lonlat": [
+      27.4,
+      8.0
+     ],
+     "text": "White Nile",
+     "cls": "sea"
+    },
+    {
+     "id": "blue_nile",
+     "lonlat": [
+      40.6,
+      12.6
+     ],
+     "text": "Blue Nile",
+     "cls": "sea"
+    }
+   ],
+   "scalebar": {
+    "km": 1000,
+    "lonlat": [
+     20,
+     10
+    ],
+    "at": [
+     40,
+     1100
+    ]
+   },
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ]
+  }
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "id": "ep10-nile-basin-countries",
+ "format": "quiz-v2",
+ "series": "geo-blitz",
+ "number": 10,
+ "title": "How many countries share the NILE basin?",
+ "difficulty": "MEDIUM",
+ "seed": 1010,
+ "quiz": {
+  "question": "How many countries share the NILE basin?",
+  "keyword": "NILE",
+  "options": [
+   "7",
+   "11",
+   "15"
+  ],
+  "correct": 1,
+  "beat": 1.5,
+  "answer_line": "11 countries",
+  "answer_sub": "Lake Victoria → the Mediterranean",
+  "tease": "Tomorrow: the capital a river split in two.",
+  "cta_line": "One map question a day · Subscribe"
+ },
+ "hook_type": "misconception",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "How many countries share the NILE basin?",
+  "description": "How many countries share the NILE basin? Guess first — then see all of them light up on the map.\n\nWhat was your first guess?\n\nSources: Britannica (Nile River), Nile Basin Initiative / InfoNile, Wikipedia (Nile), The Conversation.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #10",
+  "hashtags": [
+   "#GKshorts",
+   "#thequizwire",
+   "#shorts",
+   "#geoblitz"
+  ]
+ }
+}
