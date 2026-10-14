@@ -75,9 +75,11 @@ has snap   && { log "snapshots"
   (cd "$HF" && hyperframes snapshot --at "$AT" --no-end --timeout 30000 -o "$BUILD/snaps" >/dev/null 2>&1) || log "snapshot failed (non-fatal)"
   ls "$BUILD/snaps" 2>/dev/null || true; }
 has render && { log "render ${FPS}fps crf $CRF workers $WORKERS"; (cd "$HF" && hyperframes render -f "$FPS" -w "$WORKERS" --crf "$CRF" -o "$BUILD/render.mp4" 2>&1 | grep -vE "@hf-progress|Render:trace|^\s+█" | tail -12); }
-has encode && { log "upload master (H.264 High 4.2, CRF 18 capped 12 Mbps, AAC 256k, faststart)"
+has encode && { log "upload master (H.264 High 4.2, ${MASTER_BITRATE:-10M} target / ${MASTER_MAXRATE:-12M} cap, AAC 256k, faststart)"
+  # Constrained ABR, not CRF: flat vector quiz frames at CRF 18 land near 0.7 Mbps, which YouTube's transcoder then
+  # softens (text edges). A 10 Mbps target keeps every master upload-grade and makes qa.py's ≥ 5 Mbps floor a real check.
   ffmpeg -hide_banner -loglevel error -y -i "$BUILD/render.mp4" -i "$BUILD/mix.wav" -map 0:v -map 1:a -c:v libx264 -preset "${PRESET:-faster}" \
-    -crf "${MASTER_CRF:-18}" -maxrate "${MASTER_MAXRATE:-12M}" -bufsize "${MASTER_BUFSIZE:-24M}" -pix_fmt yuv420p -profile:v high -level 4.2 \
+    -b:v "${MASTER_BITRATE:-10M}" -maxrate "${MASTER_MAXRATE:-12M}" -bufsize "${MASTER_BUFSIZE:-24M}" -pix_fmt yuv420p -profile:v high -level 4.2 \
     -r "$FPS" -g "$((FPS * 2))" -bf 2 -threads "${THREADS:-2}" -c:a aac -b:a 256k -ar 48000 -movflags +faststart -shortest "$EP/out/final.mp4"
   ffmpeg -hide_banner -loglevel error -y -ss "${COVER_AT:-1.3}" -i "$BUILD/render.mp4" -frames:v 1 -q:v 2 "$EP/out/cover.jpg"; ls -la "$EP/out"; }
 has qa     && { log "QA"; python3 "$REPO/reelkit/qa.py" "$EP/out/final.mp4" --words "$EP/timeline.json" --report "$EP/out/qa.json"; }
