@@ -1,0 +1,226 @@
+{
+ "version": 1,
+ "episode": "ep13-southern-alps-new-zealand",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "projection": "equalEarth",
+   "projection_reason": "a distance (range length) is quoted → scalebar; no area comparison; equal-area house style (geolint P1/P2)",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     163,
+     -48.5,
+     181,
+     -33
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "nz",
+     "ids": [
+      "554"
+     ],
+     "cls": "",
+     "note": "New Zealand"
+    },
+    {
+     "kind": "route",
+     "id": "line",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "alps",
+        "properties": {
+         "name": "Southern Alps main divide (simplified)"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           166.9,
+           -45.5
+          ],
+          [
+           167.8,
+           -44.9
+          ],
+          [
+           168.7,
+           -44.5
+          ],
+          [
+           169.6,
+           -44.0
+          ],
+          [
+           170.14,
+           -43.6
+          ],
+          [
+           170.9,
+           -43.15
+          ],
+          [
+           171.6,
+           -42.7
+          ],
+          [
+           172.3,
+           -42.25
+          ],
+          [
+           173.0,
+           -41.85
+          ],
+          [
+           173.5,
+           -41.6
+          ]
+         ]
+        }
+       },
+       {
+        "type": "Feature",
+        "id": "fault",
+        "properties": {
+         "name": "Alpine Fault (simplified)"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           167.0,
+           -45.1
+          ],
+          [
+           167.9,
+           -44.5
+          ],
+          [
+           168.8,
+           -44.05
+          ],
+          [
+           169.7,
+           -43.55
+          ],
+          [
+           170.4,
+           -43.15
+          ],
+          [
+           171.1,
+           -42.75
+          ],
+          [
+           171.8,
+           -42.35
+          ],
+          [
+           172.5,
+           -42.0
+          ],
+          [
+           173.2,
+           -41.7
+          ],
+          [
+           173.8,
+           -41.5
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "hand-simplified lines for drawing only; the fault runs just west of the divide"
+    }
+   ],
+   "pins": [
+    {
+     "id": "aoraki",
+     "lonlat": [
+      170.142,
+      -43.595
+     ],
+     "label": "Aoraki / Mount Cook",
+     "qid": "Q5059"
+    },
+    {
+     "id": "christchurch",
+     "lonlat": [
+      172.64,
+      -43.53
+     ],
+     "label": "Christchurch",
+     "qid": "Q79990"
+    },
+    {
+     "id": "tasman",
+     "lonlat": [
+      170.3,
+      -43.55
+     ],
+     "label": "Tasman Glacier",
+     "qid": "Q1140440"
+    }
+   ],
+   "labels": [
+    {
+     "id": "south_island",
+     "lonlat": [
+      168.2,
+      -46.3
+     ],
+     "text": "South Island",
+     "cls": "sea"
+    },
+    {
+     "id": "tasman_sea",
+     "lonlat": [
+      165.5,
+      -41.5
+     ],
+     "text": "Tasman Sea",
+     "cls": "sea"
+    },
+    {
+     "id": "alpine_fault",
+     "lonlat": [
+      169.0,
+      -42.4
+     ],
+     "text": "Alpine Fault",
+     "cls": "sea"
+    }
+   ],
+   "scalebar": {
+    "km": 200,
+    "lonlat": [
+     170,
+     -43
+    ],
+    "at": [
+     40,
+     1100
+    ]
+   },
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ]
+  }
+ }
+}
