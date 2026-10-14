@@ -1,0 +1,123 @@
+{
+ "version": 1,
+ "episode": "ep09-basketball-invented-springfield",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "projection": "equalEarth",
+   "projection_reason": "regional close-up of the US Northeast; no size claim, equal-area default (geolint P1)",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -80.0,
+     38.6,
+     -66.8,
+     47.4
+    ]
+   },
+   "padding": 6,
+   "resolution": "50m",
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "feature",
+     "id": "st",
+     "source": "us-states",
+     "ids": [
+      "36",
+      "09",
+      "44",
+      "33",
+      "50",
+      "23",
+      "34",
+      "42",
+      "25"
+     ],
+     "cls": "faint",
+     "note": "state lines (US Census Bureau via us-atlas 3.0.1, ISC)"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "source": "us-states",
+     "ids": [
+      "25"
+     ],
+     "cls": "",
+     "note": "Massachusetts (FIPS 25)"
+    }
+   ],
+   "pins": [
+    {
+     "id": "springfield",
+     "lonlat": [
+      -72.59,
+      42.1
+     ],
+     "label": "Springfield · 1891",
+     "qid": "Q49158"
+    },
+    {
+     "id": "boston",
+     "lonlat": [
+      -71.06,
+      42.36
+     ],
+     "label": "Boston",
+     "qid": "Q100"
+    },
+    {
+     "id": "nyc",
+     "lonlat": [
+      -74.0,
+      40.71
+     ],
+     "label": "New York",
+     "qid": "Q60"
+    }
+   ],
+   "labels": [
+    {
+     "id": "ma",
+     "lonlat": [
+      -72.0,
+      42.85
+     ],
+     "text": "Massachusetts"
+    },
+    {
+     "id": "ny",
+     "lonlat": [
+      -75.6,
+      43.2
+     ],
+     "text": "New York"
+    },
+    {
+     "id": "atlantic",
+     "lonlat": [
+      -69.6,
+      40.2
+     ],
+     "text": "Atlantic",
+     "cls": "sea"
+    }
+   ],
+   "scalebar": {
+    "km": 100,
+    "at_lat": 42
+   },
+   "disputed": [],
+   "sources": [
+    "Natural Earth",
+    "US Census Bureau"
+   ]
+  }
+ }
+}

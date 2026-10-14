@@ -1,0 +1,42 @@
+{
+ "id": "ep09-basketball-invented-springfield",
+ "format": "quiz-v2",
+ "series": "sports-sprint",
+ "number": 9,
+ "title": "In which US state was BASKETBALL invented?",
+ "difficulty": "MEDIUM",
+ "seed": 1009,
+ "quiz": {
+  "question": "In which US state was BASKETBALL invented?",
+  "keyword": "BASKETBALL",
+  "options": [
+   "Indiana",
+   "Massachusetts",
+   "New York"
+  ],
+  "correct": 1,
+  "beat": 1.5,
+  "answer_line": "Massachusetts",
+  "answer_sub": "Springfield, December 1891",
+  "tease": "Tomorrow: the only Grand Slam played on grass.",
+  "cta_line": "One question a day · Subscribe"
+ },
+ "hook_type": "misconception",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth",
+  "US Census Bureau"
+ ],
+ "post": {
+  "title": "In which US state was BASKETBALL invented?",
+  "description": "In which US state was BASKETBALL invented? Guess first — then see where the first peach baskets went up.\n\nWhat was your first guess?\n\nSources: Springfield College (Birthplace of Basketball), Naismith Memorial Basketball Hall of Fame, Wikipedia (History of basketball, Basketball court, Springfield, Massachusetts), Britannica.\nMap data: Natural Earth (public domain) · US Census Bureau via us-atlas (ISC). Voice: AI (Kokoro).\n\nSports Sprint #9",
+  "hashtags": [
+   "#GKshorts",
+   "#thequizwire",
+   "#shorts",
+   "#sportssprint"
+  ]
+ }
+}

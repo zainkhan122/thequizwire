@@ -24,6 +24,9 @@ WORLD_ATLAS_VER = "2.0.2"
 RES_FILES = {"110m": ["countries-110m.json", "land-110m.json"], "50m": ["countries-50m.json", "land-50m.json"], "10m": ["countries-10m.json", "land-10m.json"]}
 WA_URLS = [f"https://cdn.jsdelivr.net/npm/world-atlas@{WORLD_ATLAS_VER}/{{f}}", f"https://unpkg.com/world-atlas@{WORLD_ATLAS_VER}/{{f}}"]
 NE_RAW = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/{f}.geojson"
+US_ATLAS_VER = "3.0.1"                                   # admin-1 for the USA: Census Bureau cartographic boundaries (ISC-licensed TopoJSON)
+EXTRA_ATLASES = {"us-states": {"file": "states-10m.json", "object": "states", "pkg": "us-atlas", "ver": US_ATLAS_VER, "credit": "US Census Bureau",
+                               "licence": "ISC", "urls": [f"https://cdn.jsdelivr.net/npm/us-atlas@{US_ATLAS_VER}/{{f}}", f"https://unpkg.com/us-atlas@{US_ATLAS_VER}/{{f}}"]}}
 NE_FILES = ["ne_10m_admin_0_disputed_areas", "ne_10m_admin_0_boundary_lines_disputed_areas"]
 ENGINE_DATA = Path(__file__).resolve().parents[1] / "engine" / "data"
 SOURCES = {"natural-earth": {"name": "Natural Earth", "licence": "PD", "url": "https://www.naturalearthdata.com/about/terms-of-use/"},
@@ -64,6 +67,42 @@ def cmd_fetch(a):
     for res in ("110m,50m,10m" if a.all else a.res).split(","):
         for kind in ("countries", "land"): print("  ✓", atlas_path(res, kind))
     for n in NE_FILES: print("  ✓", ne_path(n))
+
+
+def extra_atlas_path(name):
+    a = EXTRA_ATLASES[name]; p = CACHE / a["pkg"] / a["file"]
+    if not p.exists():
+        for u in a["urls"]:
+            try: fetch(u.format(f=a["file"]), p); break
+            except Exception: continue
+        if not p.exists(): sys.exit(f"geodata: could not fetch {a['pkg']}/{a['file']} — needs network once (cached under {CACHE})")
+    return p
+
+
+def topo_features(topo, obj, ids=None):
+    """TopoJSON object → GeoJSON features (pure python; used for admin-1 sources the runtime reads from data.geo[source])."""
+    def ring(arcs):
+        pts = []
+        for i in arcs:
+            seg = _decode_arc(topo, i if i >= 0 else ~i)
+            if i < 0: seg = seg[::-1]
+            pts += seg[1:] if pts and pts[-1] == seg[0] else seg
+        return [list(pt) for pt in pts]
+    def geom(g):
+        t = g["type"]
+        if t == "Polygon": return {"type": t, "coordinates": [ring(r) for r in g["arcs"]]}
+        if t == "MultiPolygon": return {"type": t, "coordinates": [[ring(r) for r in poly] for poly in g["arcs"]]}
+        if t == "LineString": return {"type": t, "coordinates": ring(g["arcs"])}
+        if t == "MultiLineString": return {"type": t, "coordinates": [ring(l) for l in g["arcs"]]}
+        return None
+    want = {str(i) for i in ids} if ids else None
+    out = []
+    for g in topo["objects"][obj]["geometries"]:
+        fid = str(g.get("id", "")); name = (g.get("properties") or {}).get("name", "")
+        if want and fid not in want and name not in want: continue
+        gj = geom(g)
+        if gj: out.append({"type": "Feature", "id": fid, "properties": {"name": name}, "geometry": gj})
+    return out
 
 
 # ---------------------------------------------------------------- TopoJSON filtering (pure python)
@@ -200,6 +239,13 @@ def prep(ep: Path, out: Path, fixtures=None, quiet=False):
         if (spec.get("fit") or {}).get("type") == "features" and spec.get("clip_to_fit"): ids = spec["fit"]["ids"]
         ft = filter_topo(topo, bbox=scene_bbox(spec), ids=ids) if (scene_bbox(spec) or ids) and spec.get("projection") != "orthographic" else topo
         data = {"topo": ft, "geo": dict(spec.get("geo", {})), "sources": ["Natural Earth"], "quality": f"ne-{res}", "resolution": res}
+        extras = []
+        for L in spec.get("layers", []):                                   # admin-1 layers: {"kind": "highlight", "source": "us-states", "ids": ["25"]}
+            src = L.get("source")
+            if src in EXTRA_ATLASES and src not in data["geo"]:
+                xt = json.loads(extra_atlas_path(src).read_text())
+                data["geo"][src] = {"type": "FeatureCollection", "features": topo_features(xt, EXTRA_ATLASES[src]["object"], L.get("ids"))}
+                extras.append(src); data["sources"].append(EXTRA_ATLASES[src]["credit"])
         if spec.get("disputed"):
             idx = idx or disputed_index(fixtures)
             feats = []
@@ -212,8 +258,9 @@ def prep(ep: Path, out: Path, fixtures=None, quiet=False):
         s = json.dumps(data, separators=(",", ":"))
         (out / f"{sid}.json").write_text(s)
         gen[f"geo/{sid}.json"] = {"kind": "data", "licence": "PD", "provider": "Natural Earth", "by": "reelkit/geodata.py",
-                                  "source": f"world-atlas {WORLD_ATLAS_VER} {res}" + (" + ne_10m_admin_0_disputed_areas" if spec.get("disputed") else ""),
-                                  "credit": "Natural Earth", "bytes": len(s)}
+                                  "source": f"world-atlas {WORLD_ATLAS_VER} {res}" + (" + ne_10m_admin_0_disputed_areas" if spec.get("disputed") else "")
+                                            + "".join(f" + {EXTRA_ATLASES[x]['pkg']} {EXTRA_ATLASES[x]['ver']} ({EXTRA_ATLASES[x]['licence']})" for x in extras),
+                                  "credit": " · ".join(["Natural Earth"] + [EXTRA_ATLASES[x]["credit"] for x in extras]), "bytes": len(s)}
         report[sid] = {"res": res, "kb": len(s) // 1024, "countries": len(ft["objects"].get("countries", {}).get("geometries", [])), "disputed": len(spec.get("disputed", []))}
         if not quiet: print(f"  ✓ {sid}: {res} · {len(s) // 1024} KB · {report[sid]['countries']} countries · {report[sid]['disputed']} disputed")
         if len(s) > 400_000: print(f"  ! {sid}: {len(s) // 1024} KB inline data — tighten the bbox or set \"resolution\": \"50m\"")

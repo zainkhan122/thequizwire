@@ -1,0 +1,220 @@
+{
+ "version": 1,
+ "episode": "ep09-basketball-invented-springfield",
+ "topic": "In which US state was basketball invented? (Massachusetts — Springfield, 1891)",
+ "researched": "2026-10-15",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "sources": {
+  "springfield_college": {
+   "type": "primary",
+   "publisher": "Springfield College",
+   "title": "The Birthplace of Basketball",
+   "url": "https://springfield.edu/about/birthplace-of-basketball",
+   "date": "2025-01-01",
+   "notes": "invented by instructor/graduate student James Naismith in 1891 at the school (then the International YMCA Training School); janitor brought two peach baskets; nailed to the lower rail of the gym balcony, one at each end — 'the height of that lower balcony rail happened to be ten feet'"
+  },
+  "hoophall_naismith": {
+   "type": "primary",
+   "publisher": "Naismith Memorial Basketball Hall of Fame",
+   "title": "James Naismith — Hall of Famer",
+   "url": "https://www.hoophall.com/hall-of-famers/james-naismith/",
+   "date": "2025-01-01",
+   "notes": "By the numbers: invented 'Basket Ball' 1891; 13 original rules; Olympic sport 1936"
+  },
+  "wiki_history_basketball": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "History of basketball",
+   "url": "https://en.wikipedia.org/wiki/History_of_basketball",
+   "date": "2026-10-01",
+   "notes": "created by Dr James Naismith in December 1891 in Springfield, Massachusetts; peach baskets and a soccer-style ball; 13 rules; class of 18 split into two teams of nine; first public game 11 March 1892"
+  },
+  "wiki_basketball_court": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Basketball court",
+   "url": "https://en.wikipedia.org/wiki/Basketball_court",
+   "date": "2026-10-01",
+   "notes": "rims are 10 feet (3.05 m) above the floor (except some youth competition)"
+  },
+  "wiki_springfield": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Springfield, Massachusetts",
+   "url": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts",
+   "date": "2026-10-01",
+   "notes": "'Hoop City' — basketball invented in Springfield in 1891 by Canadian James Naismith"
+  },
+  "britannica_basketball": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Basketball",
+   "url": "https://www.britannica.com/sports/basketball",
+   "date": "2025-01-01",
+   "notes": "invented by James Naismith in December 1891 at the YMCA International Training School, Springfield, Massachusetts; peach baskets, soccer ball, 13 rules"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 – Countries 10m (public domain)",
+   "url": "https://www.naturalearthdata.com/downloads/",
+   "date": "2025-01-01",
+   "notes": "coastline/country geometry"
+  },
+  "us_atlas": {
+   "type": "primary",
+   "publisher": "US Census Bureau (cartographic boundary files via us-atlas 3.0.1, ISC)",
+   "title": "states-10m.json",
+   "url": "https://www.npmjs.com/package/us-atlas/v/3.0.1",
+   "date": "2020-01-01",
+   "notes": "state polygons; Massachusetts FIPS 25"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Basketball was invented in Springfield, Massachusetts, in December 1891 by James Naismith, an instructor at the International YMCA Training School (now Springfield College).",
+   "sources": [
+    "springfield_college",
+    "hoophall_naismith",
+    "wiki_history_basketball",
+    "britannica_basketball",
+    "wiki_springfield"
+   ],
+   "vo": [
+    "in which us state was basketball invented",
+    "it's massachusetts",
+    "springfield, december eighteen ninety-one, by james naismith"
+   ],
+   "screen": [
+    "Massachusetts",
+    "Springfield · 1891",
+    "December · Springfield"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Naismith nailed two peach baskets to the lower rail of the gym balcony, one at each end; that rail happened to be ten feet high.",
+   "sources": [
+    "springfield_college",
+    "wiki_history_basketball",
+    "britannica_basketball"
+   ],
+   "vo": [
+    "he nailed two peach baskets to a gym balcony rail, exactly ten feet up"
+   ],
+   "screen": [
+    "TWO PEACH BASKETS",
+    "Nailed to a balcony rail, 10 ft up."
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "detail",
+   "text": "The first game used 13 rules, two teams of nine (a class of 18) and a soccer ball.",
+   "sources": [
+    "wiki_history_basketball",
+    "hoophall_naismith",
+    "britannica_basketball"
+   ],
+   "vo": [
+    "thirteen rules, nine a side, and a soccer ball"
+   ],
+   "screen": [
+    "13 RULES · 9 A SIDE",
+    "Played with a soccer ball."
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Rims are still 10 feet (3.05 m) above the floor — the height of that 1891 balcony rail.",
+   "sources": [
+    "wiki_basketball_court",
+    "springfield_college"
+   ],
+   "vo": [
+    "today's rim is still ten feet",
+    "the height of that rail"
+   ],
+   "screen": [
+    "RIM HEIGHT TODAY",
+    "Still 10 ft (3.05 m)."
+   ]
+  }
+ ],
+ "myths": [
+  {
+   "myth": "Basketball was invented in Indiana (or by the NBA / in New York).",
+   "reality": "Indiana's 'Hoosier hysteria' came later; the game began at a Springfield, Massachusetts YMCA school in 1891.",
+   "sources": [
+    "springfield_college",
+    "wiki_history_basketball"
+   ]
+  },
+  {
+   "myth": "The 10-foot rim was chosen by design.",
+   "reality": "It was simply the height of the balcony rail the baskets were nailed to.",
+   "sources": [
+    "springfield_college"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^SPORTS SPRINT",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^One question a day",
+  "^Next:",
+  "^Tomorrow:",
+  "^Atlantic$",
+  "^New York$",
+  "^Boston$",
+  "^Indiana$",
+  "^1800$"
+ ],
+ "landscape": {
+  "our_gap": "Feed versions show an NBA clip and the word 'Massachusetts'. We put Springfield on a real state map and explain why the rim is 10 ft.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/@thequizwire-com/shorts",
+    "title": "Feed Sports Sprint (own channel, v1)",
+    "angle": "card over b-roll",
+    "misses": "no map, no source"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=where+was+basketball+invented+shorts",
+    "title": "Search: where was basketball invented shorts",
+    "angle": "talking head / clips",
+    "misses": "no location shown"
+   },
+   {
+    "url": "https://springfield.edu/about/birthplace-of-basketball",
+    "title": "Springfield College page",
+    "angle": "reference",
+    "misses": "not a video"
+   }
+  ]
+ },
+ "vo_exempt": [
+  "^indiana, massachusetts, or new york\\?$",
+  "^tomorrow[,:]? the only grand slam played on grass",
+  "^subscribe and guess first"
+ ]
+}

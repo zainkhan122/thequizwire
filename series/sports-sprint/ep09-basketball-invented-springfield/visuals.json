@@ -1,0 +1,327 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1180
+   ],
+   "anchor": [
+    540,
+    600
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "cnt",
+   "type": "counter",
+   "start": 1800,
+   "end": 1891,
+   "x": 40,
+   "y": 850,
+   "w": 420,
+   "label": "December · Springfield",
+   "fmt": "raw",
+   "z": 40
+  },
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "TWO PEACH BASKETS",
+   "text": "Nailed to a balcony rail, 10 ft up.",
+   "y": 1350
+  },
+  {
+   "id": "f2",
+   "type": "fact",
+   "kicker": "13 RULES · 9 A SIDE",
+   "text": "Played with a soccer ball.",
+   "y": 1350
+  },
+  {
+   "id": "f3",
+   "type": "fact",
+   "kicker": "RIM HEIGHT TODAY",
+   "text": "Still 10 ft (3.05 m).",
+   "y": 1350
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     -73.4,
+     42.9
+    ]
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 1.05,
+    "lonlat": [
+     -73.4,
+     42.9
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s02+0.2",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s03",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "25",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s04+0.3",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ma"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 1.6,
+    "lonlat": [
+     -72.2,
+     42.2
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 1.64,
+    "lonlat": [
+     -72.2,
+     42.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04@springfield",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "springfield"
+   }
+  },
+  {
+   "at": "s04@springfield",
+   "do": "chart.counter_run",
+   "id": "cnt",
+   "until": "s04.end",
+   "args": {}
+  },
+  {
+   "at": "s04+2.0",
+   "do": "chips_out"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 1.7,
+    "lonlat": [
+     -72.3,
+     42.1
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05+0.3",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s05.end"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 1.15,
+    "lonlat": [
+     -72.8,
+     42.0
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-1.8",
+   "args": {
+    "k": 1.18,
+    "lonlat": [
+     -72.6,
+     42.0
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "boston"
+   }
+  },
+  {
+   "at": "s06+0.4",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "nyc"
+   }
+  },
+  {
+   "at": "s06+0.6",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ny"
+   }
+  },
+  {
+   "at": "s06+0.8",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "atlantic"
+   }
+  },
+  {
+   "at": "s06+0.3",
+   "do": "fact_in",
+   "id": "f2",
+   "until": "s06.end"
+  },
+  {
+   "at": "s07@today",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "25",
+    "layer": "hl",
+    "dur": 1.2
+   }
+  },
+  {
+   "at": "s07+0.3",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s07.end"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.9"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.8",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "end-1.8",
+   "do": "hide",
+   "id": "cnt"
+  },
+  {
+   "at": "end-1.8",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.2",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     -73.4,
+     42.9
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "end-1.4",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

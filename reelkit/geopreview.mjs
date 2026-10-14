@@ -25,7 +25,7 @@ const show = new Set(arg("show", "pins,labels,highlights,scalebar").split(","));
 const css = { "g-sphere": "fill:#0F2A3A", "g-grat": "fill:none;stroke:rgba(239,230,210,.14);stroke-width:1", "g-land": "fill:#1D3A4A", "g-countries": "fill:#1D3A4A",
   "g-border": "fill:none;stroke:rgba(239,230,210,.38);stroke-width:1.2", "g-highlight": "fill:#E3A72F;stroke:#EFE6D2;stroke-width:1.6", "g-highlight alt": "fill:#C8102E;stroke:#EFE6D2;stroke-width:1.6",
   "g-route": "fill:none;stroke:#E3A72F;stroke-width:4", "g-disputed": "fill:none;stroke:#EFE6D2;stroke-width:3;stroke-dasharray:10 8", "g-disputed policy": "fill:rgba(239,230,210,.16);stroke:#EFE6D2;stroke-width:3;stroke-dasharray:10 8",
-  "g-area": "fill:rgba(227,167,47,.35);stroke:#E3A72F;stroke-width:1.4", "g-feature": "fill:none;stroke:#EFE6D2;stroke-width:2" };
+  "g-area": "fill:rgba(227,167,47,.35);stroke:#E3A72F;stroke-width:1.4", "g-feature": "fill:none;stroke:#EFE6D2;stroke-width:2", "g-feature faint": "fill:none;stroke:rgba(239,230,210,.32);stroke-width:1.2;stroke-dasharray:6 5" };
 const sc = ([x, y]) => [anchor[0] + (x - focus[0]) * k, anchor[1] + (y - focus[1]) * k];
 let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><rect width="${W}" height="${H}" fill="#0F2A3A"/><g transform="matrix(${k} 0 0 ${k} ${tx} ${ty})">`;
 for (const p of C.paths) {
