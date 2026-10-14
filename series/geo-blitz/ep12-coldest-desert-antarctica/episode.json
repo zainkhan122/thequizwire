@@ -1,0 +1,41 @@
+{
+ "id": "ep12-coldest-desert-antarctica",
+ "format": "quiz-v2",
+ "series": "geo-blitz",
+ "number": 12,
+ "title": "Which is the COLDEST desert on Earth?",
+ "difficulty": "MEDIUM",
+ "seed": 1012,
+ "quiz": {
+  "question": "Which is the COLDEST desert on Earth?",
+  "keyword": "COLDEST",
+  "options": [
+   "Gobi",
+   "Antarctica",
+   "Sahara"
+  ],
+  "correct": 1,
+  "beat": 1.5,
+  "answer_line": "Antarctica",
+  "answer_sub": "a polar desert",
+  "tease": "Tomorrow: a mountain range called the Southern Alps.",
+  "cta_line": "One map question a day · Subscribe"
+ },
+ "hook_type": "misconception",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which is the COLDEST desert on Earth?",
+  "description": "Which is the COLDEST desert on Earth? Guess first — then see the globe turn to it.\n\nWhat was your first guess?\n\nSources: WMO World Weather & Climate Extremes Archive, NSIDC, Discovering Antarctica (BAS/RGS), Wikipedia (Antarctica).\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #12",
+  "hashtags": [
+   "#GKshorts",
+   "#thequizwire",
+   "#shorts",
+   "#geoblitz"
+  ]
+ }
+}

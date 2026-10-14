@@ -1,0 +1,191 @@
+{
+ "version": 1,
+ "episode": "ep12-coldest-desert-antarctica",
+ "topic": "Which is the coldest desert on Earth? (Antarctica)",
+ "researched": "2026-10-15",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "sources": {
+  "wiki_antarctica": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Antarctica",
+   "url": "https://en.wikipedia.org/wiki/Antarctica",
+   "date": "2026-10-13",
+   "notes": "area 14,200,000 km²; coldest, driest, windiest continent; mainly a polar desert; interior receives less than 50 mm per year; about 70% of the world's freshwater reserves are frozen in Antarctica; lowest natural air temperature on Earth −89.2 °C at Vostok Station, 21 July 1983"
+  },
+  "discovering_antarctica": {
+   "type": "reference",
+   "publisher": "Discovering Antarctica (British Antarctic Survey / Royal Geographical Society / FCDO)",
+   "title": "Antarctica's climate: the key factors",
+   "url": "https://discoveringantarctica.org.uk/oceans-atmosphere-landscape/atmosphere-weather-and-climate/key-factors-behind-antarcticas-climate/",
+   "date": "2023-02-20",
+   "notes": "the continent is a polar desert; precipitation mostly snow, averaging less than 50 mm a year (water equivalent) across much of the interior — 'hyper arid', like the Sahara; cites the Vostok record of 21 July 1983"
+  },
+  "wmo_archive": {
+   "type": "primary",
+   "publisher": "World Meteorological Organization",
+   "title": "World Weather and Climate Extremes Archive — lowest temperature",
+   "url": "https://wmo.int/site/world-weather-and-climate-extremes-archive",
+   "date": "2024-09-18",
+   "notes": "official record: −89.2 °C, Vostok, Antarctica, 21 July 1983"
+  },
+  "nsidc_ice_sheets": {
+   "type": "primary",
+   "publisher": "National Snow and Ice Data Center (NSIDC, University of Colorado / NASA)",
+   "title": "Ice sheet quick facts",
+   "url": "https://nsidc.org/learn/parts-cryosphere/ice-sheets/ice-sheet-quick-facts",
+   "date": "2025-01-01",
+   "notes": "Antarctic Ice Sheet covers almost 14 million km²; together with Greenland holds more than 99 % of land ice and over 68 % of the fresh water on Earth"
+  },
+  "aurora_desert": {
+   "type": "press",
+   "publisher": "Aurora Expeditions",
+   "title": "Is Antarctica a desert? YES.",
+   "url": "https://www.aurora-expeditions.com/blog/is-antarctica-a-desert",
+   "date": "2020-02-06",
+   "notes": "largest desert (14 million km²), interior under 50 mm/yr; Sahara 9.2 million km² — corroboration only"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 – Countries (public domain)",
+   "url": "https://www.naturalearthdata.com/downloads/",
+   "date": "2025-01-01",
+   "notes": "map geometry; Antarctica = 010"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Antarctica is a polar desert — the coldest and driest continent; a desert is defined by low precipitation, and the Antarctic interior receives less than 50 mm (water equivalent) a year.",
+   "sources": [
+    "wiki_antarctica",
+    "discovering_antarctica",
+    "nsidc_ice_sheets",
+    "aurora_desert"
+   ],
+   "vo": [
+    "which is the coldest desert on earth",
+    "it's antarctica",
+    "desert means dry: the interior gets under fifty millimetres a year"
+   ],
+   "screen": [
+    "Antarctica",
+    "UNDER 50 MM A YEAR",
+    "Interior snowfall, water equivalent.",
+    "South Pole"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "record",
+   "text": "Antarctica covers about 14.2 million km², making it the largest desert on Earth (the Sahara is about 9.2 million km²).",
+   "sources": [
+    "wiki_antarctica",
+    "aurora_desert",
+    "nsidc_ice_sheets"
+   ],
+   "vo": [
+    "fourteen point two million square kilometres: the largest desert of all"
+   ],
+   "screen": [
+    "14.2 MILLION KM²",
+    "The largest desert of all."
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "detail",
+   "text": "The Antarctic ice sheet is the largest store of fresh water on Earth (about 70 % of the world's fresh water; NSIDC: Antarctica and Greenland together hold over 68 %).",
+   "sources": [
+    "wiki_antarctica",
+    "nsidc_ice_sheets"
+   ],
+   "vo": [
+    "its ice is the planet's biggest store of fresh water"
+   ],
+   "screen": []
+  },
+  {
+   "id": "C04",
+   "weight": "record",
+   "text": "The lowest natural air temperature ever measured on Earth is −89.2 °C, at Vostok Station, Antarctica, on 21 July 1983 (WMO-recognised record).",
+   "sources": [
+    "wmo_archive",
+    "wiki_antarctica",
+    "discovering_antarctica"
+   ],
+   "vo": [
+    "earth's coldest air was measured here: minus eighty-nine point two degrees, at vostok"
+   ],
+   "screen": [
+    "−89.2 °C · VOSTOK, 1983",
+    "Coldest air ever measured on Earth.",
+    "Vostok Station"
+   ]
+  }
+ ],
+ "myths": [
+  {
+   "myth": "Deserts have to be hot.",
+   "reality": "Deserts are defined by low precipitation; Antarctica's interior is drier than much of the Sahara.",
+   "sources": [
+    "discovering_antarctica",
+    "wiki_antarctica"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^One map question a day",
+  "^Tomorrow:",
+  "^Gobi$",
+  "^Sahara$",
+  "^Southern Ocean$"
+ ],
+ "landscape": {
+  "our_gap": "The feed answers 'Antarctica' over penguin footage; nobody turns a globe to the pole and puts the 50 mm / 14.2 M km² / −89.2 °C numbers on the continent itself.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/@thequizwire-com/shorts",
+    "title": "Feed Geo Blitz (own channel, v1)",
+    "angle": "card over b-roll",
+    "misses": "no globe, no numbers, no sources"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=coldest+desert+on+earth+shorts",
+    "title": "Search results: coldest desert",
+    "angle": "stock footage + text",
+    "misses": "no definition of desert, no record source"
+   },
+   {
+    "url": "https://www.youtube.com/@geomapunveiled25/shorts",
+    "title": "Geo Map Unveiled",
+    "angle": "satellite listicles",
+    "misses": "no question format"
+   }
+  ]
+ },
+ "vo_exempt": [
+  "^gobi, antarctica, or sahara\\?$",
+  "^tomorrow[,:]? a mountain range called the southern alps",
+  "^subscribe, and guess it first"
+ ]
+}

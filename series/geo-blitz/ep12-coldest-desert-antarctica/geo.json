@@ -1,0 +1,76 @@
+{
+ "version": 1,
+ "episode": "ep12-coldest-desert-antarctica",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "projection": "orthographic",
+   "projection_reason": "a polar continent is unreadable on flat world maps; the globe shows its true shape — the area figure is quoted, not visually compared (geolint P1)",
+   "fit": {
+    "type": "world"
+   },
+   "padding": 60,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "ant",
+     "ids": [
+      "010"
+     ],
+     "cls": "",
+     "note": "Antarctica (ISO 010); no territorial claim is drawn or named (Antarctic Treaty art. IV)"
+    }
+   ],
+   "pins": [
+    {
+     "id": "vostok",
+     "lonlat": [
+      106.84,
+      -78.46
+     ],
+     "label": "Vostok Station",
+     "qid": "Q207151"
+    },
+    {
+     "id": "pole",
+     "lonlat": [
+      0,
+      -90
+     ],
+     "label": "South Pole",
+     "qid": "Q933"
+    }
+   ],
+   "labels": [
+    {
+     "id": "antarctica",
+     "lonlat": [
+      60,
+      -72
+     ],
+     "text": "Antarctica",
+     "cls": "sea"
+    },
+    {
+     "id": "southern_ocean",
+     "lonlat": [
+      -60,
+      -62
+     ],
+     "text": "Southern Ocean",
+     "cls": "sea"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ]
+  }
+ }
+}

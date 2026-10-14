@@ -1,0 +1,258 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1180
+   ],
+   "anchor": [
+    540,
+    600
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "UNDER 50 MM A YEAR",
+   "text": "Interior snowfall, water equivalent.",
+   "y": 1350
+  },
+  {
+   "id": "f2",
+   "type": "fact",
+   "kicker": "14.2 MILLION KM²",
+   "text": "The largest desert of all.",
+   "y": 1350
+  },
+  {
+   "id": "f3",
+   "type": "fact",
+   "kicker": "−89.2 °C · VOSTOK, 1983",
+   "text": "Coldest air ever measured on Earth.",
+   "y": 1350
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     15,
+     -15
+    ]
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s01",
+   "do": "geo.spin",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "lon": 35,
+    "lat": -20,
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s02+0.2",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s03",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04",
+   "do": "geo.spin",
+   "stage": "stage_map",
+   "until": "s04+1.8",
+   "args": {
+    "lon": 20,
+    "lat": -90,
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.8",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 1.12,
+    "lonlat": [
+     20,
+     -90
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.6",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "010",
+    "layer": "ant",
+    "dur": 0.8
+   }
+  },
+  {
+   "at": "s04+1.9",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "antarctica"
+   }
+  },
+  {
+   "at": "s04+2.1",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "pole"
+   }
+  },
+  {
+   "at": "s04+2.0",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04@fifty",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05+0.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "010",
+    "layer": "ant"
+   }
+  },
+  {
+   "at": "s05+0.3",
+   "do": "fact_in",
+   "id": "f2",
+   "until": "s05.end"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     20,
+     -90
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07.end",
+   "args": {
+    "k": 1.04,
+    "lonlat": [
+     25,
+     -90
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06+0.4",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "southern_ocean"
+   }
+  },
+  {
+   "at": "s07@vostok",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "vostok"
+   }
+  },
+  {
+   "at": "s07+0.3",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s07.end"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.9"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.8",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.2",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     15,
+     -15
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "end-1.4",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}
