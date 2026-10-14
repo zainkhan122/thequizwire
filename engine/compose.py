@@ -72,6 +72,7 @@ class Composer:
 
     # ---------------------------------------------------------------- build
     def clip(self, id_, start, end, inner, z=10, style=""):
+        self.clip_ids = getattr(self, "clip_ids", []) + [id_]
         self.body.append(f'<div id="{id_}" class="clip" data-start="{f(start)}" data-duration="{f(end - start)}" data-track-index="{z // 10}" style="z-index:{z};{style}">{inner}</div>')
 
     def stage(self, st):
@@ -135,7 +136,7 @@ class Composer:
         elif do in ("card_in", "card_out", "options_in", "reveal", "countdown"): getattr(self.Q, do)(t, **args)
         elif do in ("answer_in", "answer_out"): getattr(self.Q, do)(t, b["id"], **args)
         elif do == "fact_in": self.Q.fact_in(t, t1, b["id"], **args)
-        elif do == "end_in": self.Q.end_in(t)
+        elif do == "end_in": self.Q.end_in(t, getattr(self, "clip_ids", []))
         else: raise ValueError(f"beat: unknown action {do}")
 
     def run(self):
