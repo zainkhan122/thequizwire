@@ -1,8 +1,8 @@
 {
- "now": "Phase 1 built (2026-10-14): quiz pipeline, map engine (d3-geo/Natural Earth, disputed-border plates), Kokoro am_michael TTS stages, procedural score, gates quizlint/geolint/factcheck/provenance, maptile clip engine (CI docker), CI workflows, docs. tests/selftest.py green offline. No episodes produced (owner instruction). Repo not yet pushed (needs owner's repo + PAT).",
- "phase": "1.5",
+ "now": "Phase 1.5 done (2026-10-14): private repo zainkhan122/thequizwire live, check workflow green (#2 @ f4ee206). Phase 1 system complete offline + hygiene CI. Next: selftest workflow = first real-runner proof. No episodes produced (owner instruction).",
+ "phase": "1.6",
  "next": [
-  "Phase 1.5 Connect: owner creates PRIVATE repo (default zainkhan122/thequizwire; edit .repo if different) + fine-grained PAT (Contents, Actions, Workflows R/W) → ~/.cache/secrets/gh_token; source bootstrap.sh; tools/sync.sh; `check` green",
+  "Phase 1.6 Runner proof: dispatch `selftest`, poll, read Kokoro smoke / template render artifact / animator --help; reds → 1.6.x",
   "Phase 1.6 Runner proof: dispatch `selftest` workflow, poll, read Kokoro smoke / template render artifact / animator --help; reds → 1.6.x one per phase",
   "Phase 1.7 Actuals: CI timings → docs/OPERATING_MODEL.md §3; animator CLI → docs/MAPTILE.md; adjust clips.py gen_maptile if needed",
   "Phase 2.x only on owner's go: pilot Geo Blitz #10 (2.1 research → 2.2 authoring → 2.3 render → 2.4 review), then one engine per phase for the other series"
@@ -18,11 +18,9 @@
   "Every task is done in time-boxed phases (docs/PHASE_PROTOCOL.md); the agent/Actions/owner split is fixed in docs/OPERATING_MODEL.md",
   "Repo is private (GitHub Free): 2,000 Actions minutes/month — ledger `cloud.py minutes`, guard in `cloud.py render`, no crons"
  ],
- "blockers": [
-  "GitHub repo + PAT not yet provided (first push + CI proof wait on it)"
- ],
+ "blockers": [],
  "secrets": {
-  "github": "not yet provided — store only at ~/.cache/secrets/gh_token (chmod 600)"
+  "github": "fine-grained PAT (Contents/Actions/Workflows R/W, repo-scoped), expires 2027-01-12, stored only at ~/.cache/secrets/gh_token — ask the owner each new sandbox"
  },
  "series": {
   "geo-blitz": {
@@ -53,9 +51,15 @@
  "updated_at": "2026-10-14T17:27:40Z",
  "episodes": {},
  "current_phase": {
-  "id": "1.5",
-  "name": "Connect",
-  "status": "waiting on owner (PRIVATE repo + fine-grained PAT: Contents/Actions/Workflows R/W)",
-  "exit_check": "GitHub Actions `check` workflow success after first push"
+  "id": "1.6",
+  "name": "Runner proof",
+  "status": "ready to dispatch selftest workflow",
+  "exit_check": "selftest run success + final.mp4 artifact"
+ },
+ "repo": {
+  "slug": "zainkhan122/thequizwire",
+  "visibility": "private",
+  "first_push": "2026-10-14",
+  "check_green_sha": "f4ee206"
  }
 }

@@ -79,9 +79,15 @@ def minutes(slug, verbose=True):
         r = req("GET", f"{API}/repos/{slug}/actions/runs?created=>={month}-01&per_page=100&page={page}") or {"workflow_runs": []}
         for run in r["workflow_runs"]:
             if run["status"] != "completed": continue
-            t = req("GET", f"{API}/repos/{slug}/actions/runs/{run['id']}/timing") or {}
-            ms = sum(v.get("total_ms", 0) for v in (t.get("billable") or {}).values())
-            m = ms / 60000; used += m; rows.append((run["name"], run["run_number"], run["conclusion"], m))
+            # GitHub bills per job, rounded UP to the minute. The /timing endpoint is being retired (billable total_ms now 0),
+            # so the ledger is computed from each job's started/completed timestamps the way the invoice does it.
+            jobs = (req("GET", f"{API}/repos/{slug}/actions/runs/{run['id']}/jobs?per_page=100") or {}).get("jobs", [])
+            m = 0.0
+            for j in jobs:
+                if j.get("started_at") and j.get("completed_at"):
+                    a = datetime.datetime.fromisoformat(j["started_at"].replace("Z", "+00:00")); b = datetime.datetime.fromisoformat(j["completed_at"].replace("Z", "+00:00"))
+                    m += max(1, -(-int((b - a).total_seconds()) // 60))
+            used += m; rows.append((run["name"], run["run_number"], run["conclusion"], m))
         if len(r["workflow_runs"]) < 100: break
         page += 1
     left = BUDGET_MIN - used

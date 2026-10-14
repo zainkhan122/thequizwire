@@ -22,22 +22,22 @@ What exists (all new unless noted; history-repo toolkit reused where it fit):
 
 ## Current phase
 ```
-Phase 1.5 — Connect
-goal        : repo on GitHub, first push, `check` workflow green
-entry       : owner has created the PRIVATE repo (default zainkhan122/thequizwire → edit .repo if different) and issued a fine-grained
-              PAT (this repo only: Contents + Actions + Workflows read/write; Metadata read is automatic)
-steps       : 1) store PAT at ~/.cache/secrets/gh_token (chmod 600); `source bootstrap.sh` → remote wired
-              2) `bash tools/sync.sh "phase 1: system"` → push
-              3) poll the `check` run (≤ 60-s calls) → read the step summary
-exit check  : Actions → check → success (compile, repo guard, runtime tests, selftest, template gates)
-rollback    : nothing to roll back (first push)
-next        : Phase 1.6 — Runner proof (dispatch `selftest`, poll, read Kokoro smoke / template render / animator --help)
+Phase 1.6 — Runner proof
+goal        : the full toolchain proven once on a real runner (ffmpeg, Chrome/HyperFrames, Kokoro am_michael, whisper, docker image)
+entry       : Phase 1.5 done — repo zainkhan122/thequizwire (private), `check` #2 green on f4ee206
+steps       : 1) dispatch the `selftest` workflow (API) and record the run id in STATE.json
+              2) poll in ≤ 60-s calls; when done, read: ci_setup timings, Kokoro selftest line, template pipeline log,
+                 artifact list (final.mp4?), animator --help text
+              3) reds → Phase 1.6.x (one fix each); greens → Phase 1.7 Actuals (timings into OPERATING_MODEL §3, CLI into MAPTILE.md)
+exit check  : selftest run conclusion = success AND artifact contains series/_template/out/final.mp4
+rollback    : nothing (no repo changes in this phase)
+next        : Phase 1.7 — Actuals
 ```
 Operating model: `docs/OPERATING_MODEL.md` (agent authors + offline gates + orchestration; Actions do TTS/whisper/master/docker/
 render/encode/QA/Release; owner decides + uploads). Phase roadmap with entry/exit criteria: `docs/PHASE_PROTOCOL.md §7`.
 
 ## Next (in order)
-1. **Phase 1.5 Connect** — needs the owner's private repo + PAT (above). Phase 1.4.1 (private-repo mode) is done.
+1. ~~Phase 1.5 Connect~~ — done 2026-10-14: repo `zainkhan122/thequizwire` (private), PAT stored (expires 2027-01-12), first push, `check` #1 failed (bare runner lacked numpy → fixed in check.yml), `check` #2 green.
 2. **Phase 1.6 Runner proof** — `selftest` workflow once: toolchain install, Kokoro `am_michael` smoke, `_template` render artifact,
    map-animator `--help`. Reds become Phase 1.6.x, one fix per phase.
 3. **Phase 1.7 Actuals** — write measured CI timings into `docs/OPERATING_MODEL.md §3`, paste the animator CLI into `docs/MAPTILE.md`,
