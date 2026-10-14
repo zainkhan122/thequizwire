@@ -243,7 +243,7 @@ def fetch(url, dl, tries=6):
     Honours Retry-After; writes <dl>.part then renames, so a cut download is never mistaken for a cached file."""
     import urllib.request, urllib.error
     dl = Path(dl); dl.parent.mkdir(parents=True, exist_ok=True); part = dl.with_name(dl.name + ".part")
-    rq = urllib.request.Request(url, headers={"User-Agent": "QuizWireResearch/1.0 (github.com/zainkhan122/quizwire)"})
+    rq = urllib.request.Request(url, headers={"User-Agent": "QuizWireResearch/1.0 (github.com/zainkhan122/thequizwire)"})
     for i in range(tries):
         try:
             with urllib.request.urlopen(rq, timeout=60) as r, open(part, "wb") as o: shutil.copyfileobj(r, o, 1 << 20)

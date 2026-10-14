@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Fresh-session bootstrap (Arena sandbox). From an EMPTY workspace:
 #   1. save the GitHub token:  mkdir -p ~/.cache/secrets && printf %s "$TOKEN" > ~/.cache/secrets/gh_token
-#   2. git clone https://github.com/zainkhan122/quizwire.git ~/quizwire   (use the token if the repo is private)
-#   3. source ~/quizwire/bootstrap.sh
+#   2. git clone https://github.com/zainkhan122/thequizwire.git ~/thequizwire   (use the token if the repo is private)
+#   3. source ~/thequizwire/bootstrap.sh
 # Restores the toolchain into ~/.cache (not persisted, not counted against the workspace budget),
 # wires git auth to the token file, pulls nothing heavy until an episode needs it, then prints the resume pack.
 HROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

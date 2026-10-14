@@ -24,7 +24,7 @@ What exists (all new unless noted; history-repo toolkit reused where it fit):
 ```
 Phase 1.5 — Connect
 goal        : repo on GitHub, first push, `check` workflow green
-entry       : owner has created the PRIVATE repo (default zainkhan122/quizwire → edit .repo if different) and issued a fine-grained
+entry       : owner has created the PRIVATE repo (default zainkhan122/thequizwire → edit .repo if different) and issued a fine-grained
               PAT (this repo only: Contents + Actions + Workflows read/write; Metadata read is automatic)
 steps       : 1) store PAT at ~/.cache/secrets/gh_token (chmod 600); `source bootstrap.sh` → remote wired
               2) `bash tools/sync.sh "phase 1: system"` → push

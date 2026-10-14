@@ -9,7 +9,7 @@ copy; if it isn't in git or in a GitHub Release, it doesn't exist.
 ## Session start (empty workspace)
 1. Ask the owner for the GitHub token if `~/.cache/secrets/gh_token` is missing; store it there (chmod 600). Never write tokens into
    the repo, the workspace or logs.
-2. `[ -d ~/quizwire ] || git clone https://github.com/$(cat .repo 2>/dev/null || echo zainkhan122/quizwire).git ~/quizwire; source ~/quizwire/bootstrap.sh`
+2. `[ -d ~/thequizwire ] || git clone https://github.com/$(cat .repo 2>/dev/null || echo zainkhan122/thequizwire).git ~/thequizwire; source ~/thequizwire/bootstrap.sh`
    (Arena drops `.git/config` from snapshots; bootstrap restores it from `.repo`).
 3. Read `RESUME.md`, continue from its **Next** list. `python3 tools/state.py show` is the short version. `python3 tests/selftest.py`
    proves the toolchain still works (15 s) before you touch anything.

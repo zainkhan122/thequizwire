@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # reelkit/setup.sh — idempotent SANDBOX toolkit bootstrap (the light half; CI uses reelkit/ci_setup.sh).
-#     source ~/quizwire/reelkit/setup.sh   (or: source ~/quizwire/bootstrap.sh — also wires git + prints the resume pack)
+#     source ~/thequizwire/reelkit/setup.sh   (or: source ~/thequizwire/bootstrap.sh — also wires git + prints the resume pack)
 #
 # Everything heavy lives in ~/.cache (excluded from workspace snapshots → never blows the 128 MB / 10k-file save budget).
 # Re-running only fetches what is missing. The sandbox never renders video; it authors, builds HTML, runs the offline gates

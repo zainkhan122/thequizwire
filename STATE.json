@@ -2,7 +2,7 @@
  "now": "Phase 1 built (2026-10-14): quiz pipeline, map engine (d3-geo/Natural Earth, disputed-border plates), Kokoro am_michael TTS stages, procedural score, gates quizlint/geolint/factcheck/provenance, maptile clip engine (CI docker), CI workflows, docs. tests/selftest.py green offline. No episodes produced (owner instruction). Repo not yet pushed (needs owner's repo + PAT).",
  "phase": "1.5",
  "next": [
-  "Phase 1.5 Connect: owner creates PRIVATE repo (default zainkhan122/quizwire; edit .repo if different) + fine-grained PAT (Contents, Actions, Workflows R/W) → ~/.cache/secrets/gh_token; source bootstrap.sh; tools/sync.sh; `check` green",
+  "Phase 1.5 Connect: owner creates PRIVATE repo (default zainkhan122/thequizwire; edit .repo if different) + fine-grained PAT (Contents, Actions, Workflows R/W) → ~/.cache/secrets/gh_token; source bootstrap.sh; tools/sync.sh; `check` green",
   "Phase 1.6 Runner proof: dispatch `selftest` workflow, poll, read Kokoro smoke / template render artifact / animator --help; reds → 1.6.x one per phase",
   "Phase 1.7 Actuals: CI timings → docs/OPERATING_MODEL.md §3; animator CLI → docs/MAPTILE.md; adjust clips.py gen_maptile if needed",
   "Phase 2.x only on owner's go: pilot Geo Blitz #10 (2.1 research → 2.2 authoring → 2.3 render → 2.4 review), then one engine per phase for the other series"

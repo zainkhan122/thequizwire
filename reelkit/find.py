@@ -20,7 +20,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from provenance import ALLOWED, REFUSED  # noqa: E402  (one licence policy for search and gate)
 
-UA = "QuizWireFinder/1.0 (https://github.com/zainkhan122/quizwire; research use)"   # Wikimedia API policy: identify yourself
+UA = "QuizWireFinder/1.0 (https://github.com/zainkhan122/thequizwire; research use)"   # Wikimedia API policy: identify yourself
 NEED_H = {"insert": 1080, "bleed": 1920}
 CAP_H = 2160
 
