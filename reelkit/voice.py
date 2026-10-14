@@ -401,6 +401,8 @@ def cmd_check(a):
     if not a.plan_only:
         Wj = json.loads((ep / "words.json").read_text())
         for l in V["lines"]:
+            if l.get("silence") is not None:            # pacing beat (countdown / hold): no take by design
+                continue
             p = take_path(ep, l["id"])
             if not p:
                 F.append(f"{l['id']}: no take in vo/ (run the pull stage)"); continue

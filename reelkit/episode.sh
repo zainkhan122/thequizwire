@@ -64,7 +64,8 @@ has quizlint && { log "quiz format gate"; python3 "$REPO/reelkit/quizlint.py" "$
 has geolint  && { log "map honesty + border policy gate"; ONL=""; [ "${GEOLINT_ONLINE:-0}" = 1 ] && ONL="--online"; python3 "$REPO/reelkit/geolint.py" "$EP" --hf "$HF" $REL $ONL --report "$EP/out/geolint.json"; }
 has facts  && { log "fact gate (claims ledger ↔ narration + on-screen text)"; python3 "$REPO/reelkit/factcheck.py" "$EP" --hf "$HF" --report "$EP/out/factcheck.json" --sources-md "$EP/out/sources.md"; }
 has provenance && { log "provenance gate (origin + licence of every shipped file, credits, AI disclosure)"; python3 "$REPO/reelkit/provenance.py" "$EP" --hf "$HF" --report "$EP/out/provenance.json" --credits-md "$EP/out/credits.md"; }
-has planlint && { log "plan lint (story-format episodes with shots.json)"; python3 "$REPO/reelkit/planlint.py" "$EP" --hf "$HF" --report "$EP/out/planlint.json"; }
+has planlint && { if [ -f "$EP/shots.json" ]; then log "plan lint (story-format episodes with shots.json)"; python3 "$REPO/reelkit/planlint.py" "$EP" --hf "$HF" --report "$EP/out/planlint.json"
+  else log "plan lint skipped — quiz format has no shots.json (quizlint Q5/Q6 cover beats, holds and motion)"; fi; }
 has check  && { log "composition check (lint + runtime + layout collisions)"; python3 "$REPO/reelkit/hfcheck.py" "$HF" --report "$EP/out/check.json"; }
 has textqa && { log "readability gate (every on-screen text ≥ 3:1, target 4.5:1)"; python3 "$REPO/reelkit/textqa.py" "$HF" --report "$EP/out/textqa.json" --sheet "$BUILD/textqa_fails.jpg"; }
 has layout && { log "layout gate (dead zones + reading time, DOM only)"; python3 "$REPO/reelkit/textqa.py" "$HF" --layout-only; }
