@@ -90,7 +90,9 @@ def main():
                  ("three million people", "3 million people"), ("eight point eight kilometres", "8.8 kilometers"),
                  ("nineteen eighty-three", "in 1983."[3:]), ("two hundred and sixty-nine", "269"),
                  ("the twenty-first century", "the 21st century"), ("twelve hundred metres", "1,200 meters"),
-                 ("one point five million", "1.5 million"), ("at eleven eighteen", "at 11:18")]
+                 ("one point five million", "1.5 million"), ("at eleven eighteen", "at 11:18"),
+                 ("Seven, eleven, or fifteen?", "7, 11 or 15."), ("It's eleven: eleven countries", "It's 11, 11 countries"),
+                 ("six thousand six hundred and fifty kilometres", "6 ,650 kilometers"), ("three thousand seven hundred and twenty-four metres.", "3 ,724 meters.")]
         badp = [(a, b, tok(a), tok(b)) for a, b in pairs if tok(a) != tok(b)]
         say(not badp, f"voice tokens: {len(pairs) - len(badp)}/{len(pairs)} script/ASR pairs normalise equal", str(badp[:2]))
         # script_words keeps every script word (whisper "3 .2" has no word for "point"; the fact ledger needs it)

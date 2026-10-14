@@ -53,7 +53,7 @@ END_HOLD = (2.0, 5.0)
 MARK_DEFAULT = 0.30           # default target for a marked pause (… : —)
 MARK_DROPPED = 0.12           # below this the TTS ignored the mark
 SIL_MIN = 0.15                # silence ≥ 150 ms counts as a pause
-WER_FAIL, WER_WARN = 0.08, 0.03
+WER_FAIL, WER_WARN = 0.08, 0.03      # FAIL needs > 8 % AND ≥ 2 unmatched words; fuzzy-matched proper nouns and glued numbers do not count
 
 # ---------------------------------------------------------------- text
 UNITS = {w: i for i, w in enumerate("zero one two three four five six seven eight nine ten eleven twelve thirteen "
@@ -148,9 +148,18 @@ def tokens(text: str):
         out.append((_fmt_num(num), run_idx)); run = []; dec = None
 
     for i, rw in enumerate(raw):
+        if i and re.search(r"[,:;?!]$|[^\d.]\.$", raw[i - 1]):
+            flush()                                                    # punctuation ends a number run: "eighteen, eleven" is 18 + 11, not the year 1811
         t = re.fullmatch(r"(\d{1,2}):(\d{2})\W*", rw)                  # clock times with a colon: 11:18 -> 1118
         if t:
             flush(); out.append((t.group(1) + t.group(2), i)); continue
+        kfrag = re.fullmatch(r",(\d{3})\W*", rw)                       # whisper split thousands: "6" ",650" -> 6650
+        if kfrag and dec is None and ((run and run[-1][1] == "u" and isinstance(run[-1][0], int)) or (not run and out and re.fullmatch(r"\d+", out[-1][0]))):
+            if not run:
+                run = [(int(out.pop()[0]), "u")]
+            run[-1] = (run[-1][0] * 1000 + int(kfrag.group(1)), "u"); run_idx = i
+            if re.search(r"[,:;?!]$", rw): flush()
+            continue
         frag = re.fullmatch(r"\.(\d+)\W*", rw)                         # whisper split decimal: "3" ".2"
         if frag and (run or (out and re.fullmatch(r"\d+", out[-1][0]))):
             if not run:                                                # re-open the flushed integer
@@ -264,8 +273,17 @@ def measure(line: dict, y, words: list):
 
     def wer_of(ws):
         A = tokens(" ".join(w["w"] for w in ws))
-        sm = difflib.SequenceMatcher(a=[t for t, _ in P], b=[t for t, _ in A], autojunk=False)
-        return round(sum(max(i2 - i1, j2 - j1) for op, i1, i2, j1, j2 in sm.get_opcodes() if op != "equal") / max(1, len(P)), 3), A, sm
+        a, b = [t for t, _ in P], [t for t, _ in A]
+        sm = difflib.SequenceMatcher(a=a, b=b, autojunk=False)
+        err = 0
+        for op, i1, i2, j1, j2 in sm.get_opcodes():
+            if op == "equal": continue
+            if op == "replace":                                        # ASR spelling of a proper noun ("buda"→"buta", "gobi"→"go by") is not a skipped word:
+                x, y = "".join(a[i1:i2]), "".join(b[j1:j2])            # compare the joined letters; digits only pass when identical ("7 11" glued to "711")
+                if x == y or (not re.search(r"\d", x + y) and len(x) >= 4 and difflib.SequenceMatcher(a=x, b=y).ratio() >= 0.7):
+                    continue
+            err += max(i2 - i1, j2 - j1)
+        return round(err / max(1, len(P)), 3), A, sm
     m["wer"], A, sm = wer_of(words)                                   # A/sm (words.json timings) drive the pause mapping below
     heard, An = words, A                                               # fidelity reading (may come from the second opinion)
     # Second opinion: base.en mishears reduced function words ("as" -> "a"/"is"). When it reports errors, re-listen with a
@@ -278,9 +296,9 @@ def measure(line: dict, y, words: list):
             m["asr"] = asr2
     isnum = lambda t: re.fullmatch(r"\d+(\.\d+)?", t) is not None
     pn = [t for t, _ in P if isnum(t)]; an = [t for t, _ in An if isnum(t)]
-    if pn != an:
+    if pn != an and "".join(pn) != "".join(an):                        # whisper glues adjacent numbers ("Seven, eleven" → "711"): same digits in order = same numbers
         fails.append(f"numbers spoken {an} ≠ script {pn}")
-    if m["wer"] > WER_FAIL:
+    if m["wer"] > WER_FAIL and round(m["wer"] * len(P)) >= 2:       # one unmatched word (an unspellable name like Óbuda) is a WARN; two or more fail the take
         fails.append(f"word error {m['wer']:.0%} (skipped/garbled words): heard “{' '.join(w['w'] for w in heard)}”")
     elif m["wer"] > WER_WARN:
         warns.append(f"word error {m['wer']:.0%}: heard “{' '.join(w['w'] for w in heard)}”")
