@@ -1,0 +1,213 @@
+{
+ "version": 1,
+ "episode": "ep07-arctic-tern-migration",
+ "topic": "Which bird migrates the farthest? (Arctic tern)",
+ "researched": "2026-10-15",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "sources": {
+  "pnas_egevang_2010": {
+   "type": "scholarly",
+   "publisher": "PNAS (Egevang, Stenhouse, Phillips, Petersen, Fox & Silk 2010)",
+   "title": "Tracking of Arctic terns Sterna paradisaea reveals longest animal migration",
+   "url": "https://www.pnas.org/doi/10.1073/pnas.0909493107",
+   "date": "2010-02-02",
+   "notes": "11 terns from Greenland (n=10) and Iceland (n=1) with 1.4-g geolocators; mean annual round trip ≈ 70,900 km (some > 80,000 km); North Atlantic stopover 41–53°N 27–41°W; southbound along West Africa (7 birds) or Brazil (4); all returned on a sigmoidal mid-Atlantic track; wintered south of 58°S, 0–61°W (Weddell Sea sector); species < 125 g"
+  },
+  "wiki_arctic_tern": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Arctic tern",
+   "url": "https://en.wikipedia.org/wiki/Arctic_tern",
+   "date": "2026-10-01",
+   "notes": "average annual round trip about 70,900 km for Iceland/Greenland birds; lives about 30 years → some 2.4 million km in a lifetime, 'a roundtrip from Earth to the Moon more than three times'; weight 86–127 g; sees two summers a year"
+  },
+  "britannica_arctic_tern": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Arctic tern",
+   "url": "https://www.britannica.com/animal/Arctic-tern",
+   "date": "2025-01-01",
+   "notes": "breeds in the Arctic and winters in Antarctic waters; the longest migration of any bird"
+  },
+  "audubon_arctic_tern": {
+   "type": "press",
+   "publisher": "National Audubon Society",
+   "title": "Arctic Tern — Guide to North American Birds",
+   "url": "https://www.audubon.org/field-guide/bird/arctic-tern",
+   "date": "2025-01-01",
+   "notes": "champion long-distance migrant; Arctic breeding grounds to Antarctic pack ice; tracked individuals cover ~70,000 km a year"
+  },
+  "wiki_godwit": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Bar-tailed godwit",
+   "url": "https://en.wikipedia.org/wiki/Bar-tailed_godwit",
+   "date": "2026-10-01",
+   "notes": "Alaska → New Zealand flight is the longest known NON-STOP flight of any bird; round trip over 29,000 km — far shorter than the tern's annual total"
+  },
+  "nasa_moon": {
+   "type": "primary",
+   "publisher": "NASA Science",
+   "title": "Moon facts — average distance 384,400 km",
+   "url": "https://science.nasa.gov/moon/facts/",
+   "date": "2025-01-01",
+   "notes": "mean Earth–Moon distance 384,400 km; 3 round trips ≈ 2.31 million km (checks the 'three Moon round trips' framing)"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 – Countries (public domain)",
+   "url": "https://www.naturalearthdata.com/downloads/",
+   "date": "2025-01-01",
+   "notes": "map geometry (110m); Greenland 304"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The Arctic tern has the longest known migration of any animal: tracked Greenland/Iceland birds averaged about 70,900 km a year between Arctic breeding grounds and the Antarctic (Weddell Sea sector).",
+   "sources": [
+    "pnas_egevang_2010",
+    "wiki_arctic_tern",
+    "britannica_arctic_tern",
+    "audubon_arctic_tern"
+   ],
+   "vo": [
+    "which bird migrates the farthest",
+    "it's the arctic tern",
+    "pole to pole, about seventy-one thousand kilometres a year"
+   ],
+   "screen": [
+    "Arctic tern",
+    "km a year",
+    "Weddell Sea",
+    "Greenland colony"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Egevang et al. (2010) tracked 11 terns with geolocators: southbound along the West African (or Brazilian) coast, with a North Atlantic stopover; all returned on a sigmoidal track up the mid-Atlantic.",
+   "sources": [
+    "pnas_egevang_2010",
+    "wiki_arctic_tern"
+   ],
+   "vo": [
+    "trackers on greenland terns traced it",
+    "south past africa, home mid-atlantic"
+   ],
+   "screen": [
+    "TRACKED · PNAS 2010",
+    "Greenland → Antarctica → back.",
+    "N. Atlantic stopover"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "record",
+   "text": "Over a ~30-year life an Arctic tern flies some 2.4 million km — more than three round trips to the Moon (384,400 km each way).",
+   "sources": [
+    "wiki_arctic_tern",
+    "pnas_egevang_2010",
+    "nasa_moon",
+    "audubon_arctic_tern"
+   ],
+   "vo": [
+    "over a thirty-year life, that's two point four million kilometres",
+    "three moon round trips"
+   ],
+   "screen": [
+    "2.4 MILLION KM IN A LIFETIME",
+    "About 30 years of flying.",
+    "3 MOON ROUND TRIPS"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "An Arctic tern weighs 86–127 g (PNAS: < 125 g) — lighter than a typical 100–150 g bar of soap.",
+   "sources": [
+    "wiki_arctic_tern",
+    "pnas_egevang_2010"
+   ],
+   "vo": [
+    "on a bird lighter than a bar of soap"
+   ],
+   "screen": [
+    "On a bird under 125 grams."
+   ]
+  }
+ ],
+ "myths": [
+  {
+   "myth": "The bar-tailed godwit migrates the farthest.",
+   "reality": "The godwit holds the longest NON-STOP flight (Alaska → New Zealand); its round trip is ~29,000 km. The Arctic tern's yearly total is more than double.",
+   "sources": [
+    "wiki_godwit",
+    "pnas_egevang_2010"
+   ]
+  },
+  {
+   "myth": "Arctic terns fly about 40,000 km a year.",
+   "reality": "That was the pre-tracking estimate; geolocators showed ~70,900 km on average.",
+   "sources": [
+    "pnas_egevang_2010"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^One question a day",
+  "^Next:",
+  "^Tomorrow:",
+  "^Atlantic$",
+  "^Africa$",
+  "^South America$",
+  "^0$"
+ ],
+ "landscape": {
+  "our_gap": "Feed versions show a stock tern over 'Arctic tern — 70,000 km'. Nobody draws the published loop (Africa down, mid-Atlantic up) or ties the Moon comparison to the real distance.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/@thequizwire-com/shorts",
+    "title": "Feed Wild Files (own channel, v1)",
+    "angle": "card over b-roll",
+    "misses": "no route, no source"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=arctic+tern+migration+shorts",
+    "title": "Search: arctic tern migration shorts",
+    "angle": "stock footage + text",
+    "misses": "route never drawn; the 40,000 km myth repeated"
+   },
+   {
+    "url": "https://www.audubon.org/field-guide/bird/arctic-tern",
+    "title": "Audubon guide",
+    "angle": "reference page",
+    "misses": "not a video"
+   }
+  ]
+ },
+ "vo_exempt": [
+  "^bar-tailed godwit, arctic tern, or barn swallow\\?$",
+  "^tomorrow[,:]? the country with the most wild tigers",
+  "^subscribe and guess first"
+ ]
+}

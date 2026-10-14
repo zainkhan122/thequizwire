@@ -1,0 +1,232 @@
+{
+ "version": 1,
+ "episode": "ep07-arctic-tern-migration",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "projection": "equalEarth",
+   "projection_reason": "pole-to-pole route down the whole Atlantic; equal-area so the Southern Ocean leg is not inflated (geolint P1)",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -80,
+     -76,
+     30,
+     82
+    ]
+   },
+   "padding": 8,
+   "resolution": "110m",
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "304"
+     ],
+     "cls": "",
+     "note": "Greenland (304) — breeding colony of the tracked birds"
+    },
+    {
+     "kind": "route",
+     "id": "trk",
+     "cls": "river",
+     "note": "Egevang et al. 2010 (PNAS) tracks, hand-simplified: southbound along West Africa, sigmoidal return up the mid-Atlantic",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "south",
+        "properties": {
+         "name": "southbound"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           -20.5,
+           74.3
+          ],
+          [
+           -30,
+           62
+          ],
+          [
+           -35,
+           48
+          ],
+          [
+           -30,
+           32
+          ],
+          [
+           -24,
+           16
+          ],
+          [
+           -15,
+           4
+          ],
+          [
+           0,
+           -10
+          ],
+          [
+           10,
+           -24
+          ],
+          [
+           10,
+           -38
+          ],
+          [
+           0,
+           -50
+          ],
+          [
+           -15,
+           -60
+          ],
+          [
+           -35,
+           -65
+          ]
+         ]
+        }
+       },
+       {
+        "type": "Feature",
+        "id": "north",
+        "properties": {
+         "name": "northbound"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           -35,
+           -65
+          ],
+          [
+           -25,
+           -52
+          ],
+          [
+           -27,
+           -38
+          ],
+          [
+           -34,
+           -24
+          ],
+          [
+           -38,
+           -10
+          ],
+          [
+           -32,
+           2
+          ],
+          [
+           -44,
+           14
+          ],
+          [
+           -50,
+           28
+          ],
+          [
+           -46,
+           44
+          ],
+          [
+           -34,
+           58
+          ],
+          [
+           -24,
+           68
+          ],
+          [
+           -20.5,
+           74.3
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "pins": [
+    {
+     "id": "colony",
+     "lonlat": [
+      -20.5,
+      74.3
+     ],
+     "label": "Greenland colony"
+    },
+    {
+     "id": "stop",
+     "lonlat": [
+      -34,
+      47
+     ],
+     "label": "N. Atlantic stopover"
+    }
+   ],
+   "labels": [
+    {
+     "id": "atlantic",
+     "lonlat": [
+      -30,
+      10
+     ],
+     "text": "Atlantic",
+     "cls": "sea"
+    },
+    {
+     "id": "weddell",
+     "lonlat": [
+      -40,
+      -64
+     ],
+     "text": "Weddell Sea",
+     "cls": "sea"
+    },
+    {
+     "id": "africa",
+     "lonlat": [
+      20,
+      5
+     ],
+     "text": "Africa"
+    },
+    {
+     "id": "samerica",
+     "lonlat": [
+      -58,
+      -14
+     ],
+     "text": "South America"
+    }
+   ],
+   "scalebar": {
+    "km": 2000,
+    "at_lat": 0
+   },
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ]
+  }
+ }
+}

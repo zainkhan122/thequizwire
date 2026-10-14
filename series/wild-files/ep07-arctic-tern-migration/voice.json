@@ -1,0 +1,130 @@
+{
+ "version": 1,
+ "episode": "ep07-arctic-tern-migration",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.0
+ },
+ "intent": "A quick, confident quizmaster: curious on the question, playful on the countdown, satisfied on the reveal, genuinely interested in the one fact that makes the answer stick.",
+ "pacing_profile": "question on the map at zero, three quick options, a 1.5-s beat, a warm reveal, three short see-it beats, a tease and a loop",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "tense",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "straight in, like a dare",
+   "text": "Which bird migrates the farthest?",
+   "cues": {
+    "which": "which"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Bar-tailed godwit, Arctic tern, or barn swallow?",
+   "cues": {
+    "a": "godwit",
+    "b": "tern",
+    "c": "swallow"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 1.5,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "It's the Arctic tern: pole to pole, about seventy-one thousand kilometres a year.",
+   "cues": {
+    "answer": "tern",
+    "pole": "pole",
+    "year": "year"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "count it out",
+   "text": "Trackers on Greenland terns traced it: south past Africa, home mid-Atlantic.",
+   "cues": {
+    "trackers": "trackers",
+    "south": "south",
+    "home": "home"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "let the comparison land",
+   "text": "Over a thirty-year life, that's two point four million kilometres.",
+   "cues": {
+    "life": "life",
+    "million": "million"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.4,
+   "direction": "the number people repeat",
+   "text": "Three Moon round trips, on a bird lighter than a bar of soap.",
+   "cues": {
+    "moon": "moon",
+    "soap": "soap"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "a promise, not a plea",
+   "text": "Tomorrow, the country with the most wild tigers. Subscribe and guess first.",
+   "cues": {
+    "subscribe": "subscribe"
+   }
+  }
+ ],
+ "title": "Which bird migrates the FARTHEST?"
+}

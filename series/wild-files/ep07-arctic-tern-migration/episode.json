@@ -1,0 +1,41 @@
+{
+ "id": "ep07-arctic-tern-migration",
+ "format": "quiz-v2",
+ "series": "wild-files",
+ "number": 7,
+ "title": "Which bird migrates the FARTHEST?",
+ "difficulty": "MEDIUM",
+ "seed": 1007,
+ "quiz": {
+  "question": "Which bird migrates the FARTHEST?",
+  "keyword": "FARTHEST",
+  "options": [
+   "Bar-tailed godwit",
+   "Arctic tern",
+   "Barn swallow"
+  ],
+  "correct": 1,
+  "beat": 1.5,
+  "answer_line": "The Arctic tern",
+  "answer_sub": "about 70,900 km a year",
+  "tease": "Tomorrow: the country with the most wild tigers.",
+  "cta_line": "One question a day · Subscribe"
+ },
+ "hook_type": "misconception",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which bird migrates the FARTHEST?",
+  "description": "Which bird migrates the FARTHEST? Guess first — then watch the pole-to-pole loop drawn on the map.\n\nWhat was your first guess?\n\nSources: Egevang et al. 2010, PNAS (geolocator tracking); Wikipedia (Arctic tern, Bar-tailed godwit); Britannica; Audubon.\nMap data: Natural Earth (public domain). Route simplified from the published tracks. Voice: AI (Kokoro).\n\nWild Files #7",
+  "hashtags": [
+   "#GKshorts",
+   "#thequizwire",
+   "#shorts",
+   "#wildfiles"
+  ]
+ }
+}
