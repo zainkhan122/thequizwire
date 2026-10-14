@@ -7,9 +7,11 @@ import fs from "fs"; import path from "path"; import vm from "vm"; import { exec
 const [hf, sid, out] = process.argv.slice(2, 5);
 const arg = (k, d) => { const i = process.argv.indexOf("--" + k); return i > 0 ? process.argv[i + 1] : d; };
 const html = fs.readFileSync(path.join(hf, "index.html"), "utf8");
-const m = html.match(new RegExp(`GeoRT\\.mount\\("geo_${sid}", (\\{[\\s\\S]*?\\}), JSON\\.parse\\(document\\.getElementById\\("geo_${sid}_data"\\)`));
+// spec: <script type="application/json" id="geo_<sid>_spec"> (compose.py) — or an inline object literal in the mount call
+const ms = html.match(new RegExp(`<script type="application/json" id="geo_${sid}_spec">([\\s\\S]*?)</script>`));
+const m = ms || html.match(new RegExp(`GeoRT\\.mount\\("geo_${sid}", (\\{[\\s\\S]*?\\}), JSON\\.parse\\(document\\.getElementById\\("geo_${sid}_data"\\)`));
 if (!m) { console.error("scene not found in index.html: " + sid); process.exit(2); }
-const spec = JSON.parse(m[1]);
+const spec = JSON.parse(m[1].replace(/<\\\//g, "</"));
 const data = JSON.parse(html.match(new RegExp(`<script type="application/json" id="geo_${sid}_data">([\\s\\S]*?)</script>`))[1].replace(/<\\\//g, "</"));
 const sb = { module: {}, exports: {}, require: (n) => { const f = { "d3-geo": "d3-geo.min.js", "d3-array": "d3-array.min.js", "topojson-client": "topojson-client.min.js" }[n]; const s = { module: { exports: {} }, exports: {}, require: sb.require }; s.module.exports = s.exports; vm.runInNewContext(fs.readFileSync(path.join(hf, f), "utf8"), s); return s.module.exports; } };
 sb.module.exports = sb.exports; vm.runInNewContext(fs.readFileSync(path.join(hf, "geo-runtime.js"), "utf8"), sb);

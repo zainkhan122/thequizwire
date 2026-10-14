@@ -121,6 +121,14 @@ def main():
         edit_json(bad / "episode.json", break_quiz)
         expect_fail(bad, "quizlint", "plan quizlint", "Q1")
 
+        # negative 2b: fact card fading in while the question card is still leaving → quizlint Q8 (band crossfade)
+        xf = copy_ep(ROOT / "series/_template", tmp, "ep-crossfade")
+        def break_handoff(v):
+            for b in v["beats"]:
+                if b.get("do") == "fact_in" and b["at"].startswith("s05"): b["at"] = "s05+0.1"
+        edit_json(xf / "visuals.json", break_handoff)
+        expect_fail(xf, "quizlint", "plan quizlint", "Q8")
+
         # negative 3: an unsourced sentence in the narration → factcheck coverage; sovereignty wording → guardrail
         unf = copy_ep(ROOT / "tests/fixtures/ep-disputed", tmp, "ep-unsourced")
         def break_vo(v):

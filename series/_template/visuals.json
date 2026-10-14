@@ -58,6 +58,20 @@
   },
   {
    "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 1.07,
+    "lonlat": [
+     45,
+     25
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s01",
    "do": "card_in"
   },
   {
@@ -89,6 +103,20 @@
      22
     ],
     "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.8",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 2.55,
+    "lonlat": [
+     47.5,
+     22.5
+    ],
+    "ease": "none"
    }
   },
   {
@@ -184,7 +212,7 @@
    }
   },
   {
-   "at": "s05+0.2",
+   "at": "s05+0.5",
    "do": "fact_in",
    "id": "f1",
    "until": "s05.end"
@@ -195,11 +223,26 @@
    "stage": "stage_map",
    "until": "s06+1.6",
    "args": {
-    "k": 1.15,
+    "k": 1.0,
     "lonlat": [
-     50,
-     28
-    ]
+     52,
+     38
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.6",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 1.05,
+    "lonlat": [
+     52,
+     38
+    ],
+    "ease": "none"
    }
   },
   {
@@ -233,7 +276,7 @@
    }
   },
   {
-   "at": "s06+0.2",
+   "at": "s06+0.3",
    "do": "fact_in",
    "id": "f2",
    "until": "s06.end"

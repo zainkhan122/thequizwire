@@ -12,6 +12,7 @@ FAIL (exit 1)
   Q4 copy fits   question > 90 chars · an option > 24 chars · a fact > 140 chars · kicker > 28 chars (overflow = unreadable)
   Q5 beats       every beat references an existing scene/cue/stage/element; each element has an *_in beat; each fact has
                  `until`; each stage is used by ≥ 1 beat (map stages need ≥ 1 camera move or highlight)
+  Q8 hand-offs   fact_in ≥ 0.45 s after card_out and after the previous fact's `until` (no band crossfades)
   Q6 motion      weighted visual-motion share below episode.json promise.min_motion (geo .75, globe/maptile 1, chart .5,
                  kenburns plate .25, colour 0) — a quiz card over a static plate is the "mass-produced" look we refuse
   Q7 release     timeline.json is estimated (--release) · mix.wav missing in hf/assets (--release)
@@ -96,10 +97,18 @@ def main():
             return t + (float(off) * (1 if sign == "+" else -1) if sign and off else 0)
         stages = {s["id"]: s for s in X.get("stage", [])}; elements = {e["id"]: e for e in X.get("elements", [])}
         used_stage, elem_in, n_cd, t_cd_end, t_reveal, cam_moves = set(), set(), 0, None, None, {}
+        t_card_out, facts = [], []                      # Q8: the caption band hands over, never crossfades
         for b in X.get("beats", []):
             try: t = tt(b["at"]); t1 = tt(b["until"]) if "until" in b else None
             except (KeyError, ValueError) as e: F.append(f"Q5: beat {b} — unknown time reference {e}"); continue
             do = b.get("do", "")
+            if do == "card_out": t_card_out.append(t)
+            if do == "fact_in":
+                for tc in t_card_out:
+                    if 0 <= t - tc < 0.45: F.append(f"Q8: fact_in at {t:.2f}s starts {t - tc:.2f}s after card_out — give the card 0.45 s to leave (crossfades in the band read as occluded text in `hyperframes check`)")
+                for (f0, f1) in facts:
+                    if f1 is not None and t < f1 + 0.05: F.append(f"Q8: fact_in at {t:.2f}s overlaps the previous fact (until {f1:.2f}s)")
+                facts.append((t, t1))
             if do.startswith(("geo.", "chart.")) and "stage" in b:
                 if b["stage"] not in stages: F.append(f"Q5: beat {do} references unknown stage {b['stage']}")
                 else:
