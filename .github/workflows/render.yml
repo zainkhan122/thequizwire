@@ -46,7 +46,7 @@ jobs:
     needs: plan
     name: render ${{ matrix.ep }}
     runs-on: ubuntu-latest
-    timeout-minutes: 45          # private-repo budget: a healthy render is 15–25 min; anything longer is a bug, not a wait
+    timeout-minutes: 60          # private-repo runner is 2 vCPU / 7 GB: a healthy 60-s render is ~30–40 min; longer is a bug, not a wait
     strategy:
       fail-fast: false
       max-parallel: 4
@@ -54,7 +54,7 @@ jobs:
         ep: ${{ fromJSON(needs.plan.outputs.eps) }}
     env:
       GH_TOKEN: ${{ github.token }}
-      WORKERS: "3"
+      WORKERS: "2"
       CRF: ${{ inputs.crf }}
       PRESET: medium
       THREADS: "0"

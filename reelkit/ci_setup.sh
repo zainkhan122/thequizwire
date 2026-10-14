@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Toolchain for a GitHub Actions ubuntu runner (public repo: 4 vCPU / 16 GB, free). Node 22 comes from actions/setup-node.
+# Toolchain for a GitHub Actions ubuntu runner (private repo on GitHub Free: 2 vCPU / 7 GB; public repos get 4 / 16). Node 22 from actions/setup-node.
+# NOTE: whisper (faster-whisper) must be fed NumPy arrays, never file paths — its PyAV decoder broke with av ≥ 19 (seen 2026-10-14).
 # Cached by actions/cache: ~/.cache/hyperframes (chrome-headless-shell), ~/.cache/pip, ~/.cache/huggingface (whisper),
 # ~/.cache/kokoro (TTS model + voices, ~90 MB), ~/.cache/geodata (Natural Earth 50m/10m + disputed areas).
 # Idempotent: every step is a no-op when its artefact is already present, so a warm cache finishes in ~1 minute.

@@ -101,7 +101,7 @@ def minutes(slug, verbose=True):
 def render(a):
     slug = repo_slug(); head = git("rev-parse", "HEAD")
     used, left, private = minutes(slug, verbose=False)
-    need = 25 * len(a.episodes)
+    need = 40 * len(a.episodes)        # private-repo runner (2 vCPU / 7 GB): a 60-s Short ≈ 30–40 min end to end
     if private and left < MIN_RESERVE + need and not a.force:
         sys.exit(f"budget guard: {left:.0f} min left this month, a render of {len(a.episodes)} episode(s) needs ≈{need} + {MIN_RESERVE} reserve "
                  f"(python3 reelkit/cloud.py minutes · --force to override · budget resets on the 1st)")

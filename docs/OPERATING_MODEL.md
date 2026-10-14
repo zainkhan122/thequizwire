@@ -8,7 +8,7 @@ done in the wrong place. Companion: `docs/PHASE_PROTOCOL.md` (how the agent chun
 | actor | machine | can | cannot / must not | cost |
 |---|---|---|---|---|
 | **Agent** (Arena sandbox, "I") | 2 vCPU · ~2 GB RAM · Python 3 + NumPy/SciPy/Pillow · Node 20 · network (sometimes flaky) · persistent only under `/home/user` (128 MB snapshot) · `~/.cache` wiped on restart · every tool call times out (keep ≤ 3 min) | think, research, write, decide, ask; author episode JSON; run the **offline gates in seconds**; preview maps as PNG; preview the mix; orchestrate CI; read CI reports; commit + push | render video, decode/encode media, run Chrome/HyperFrames, run docker, run whisper, keep anything only in `~/.cache`, hold secrets in files inside the repo, post anywhere | my time |
-| **GitHub Actions** (ubuntu-latest, **private repo**) | 4 vCPU · 16 GB RAM · ffmpeg · Chrome (via hyperframes) · docker · Node 22 · 6 h per job · 10 GB cache · Releases for media | everything heavy and everything that must be byte-reproducible: TTS takes, whisper timing, mastering, map-tile flyovers, HyperFrames check/render/encode, textqa, QA, Release publishing, cache warming | judge content, change an episode, commit to git, post to YouTube, hold any secret except its own `GITHUB_TOKEN` | **free within 2,000 Linux-minutes / month** (GitHub Free, private repo; resets on the 1st) — `cloud.py minutes` is the ledger, `cloud.py render` refuses to dispatch below a 60-min reserve |
+| **GitHub Actions** (ubuntu-latest, **private repo**) | **2 vCPU · 7 GB RAM** (measured 2026-10-14; public repos would get 4 / 16) · ffmpeg · Chrome (via hyperframes) · docker · Node 22 · 6 h per job · 10 GB cache · Releases for media | everything heavy and everything that must be byte-reproducible: TTS takes, whisper timing, mastering, map-tile flyovers, HyperFrames check/render/encode, textqa, QA, Release publishing, cache warming | judge content, change an episode, commit to git, post to YouTube, hold any secret except its own `GITHUB_TOKEN` | **free within 2,000 Linux-minutes / month** (GitHub Free, private repo; resets on the 1st) — `cloud.py minutes` is the ledger, `cloud.py render` refuses to dispatch below a 60-min reserve |
 | **Owner** | browser + YouTube Studio | create the repo + PAT, decide (series, topics, exceptions, go/no-go), review the finished mp4 on the Release page, upload with `POST_KIT.md`, report metrics | — | attention |
 
 Rule of thumb: **the sandbox is the brain, Actions are the muscle, Releases are the warehouse, git is the memory.**
@@ -63,7 +63,8 @@ Rule of thumb: **the sandbox is the brain, Actions are the muscle, Releases are 
 | `qa` | CI | loudness, bitrate, ASR of the final | → `out/qa.json` | — | 1 min |
 | publish | CI | Release `<tag>`: mp4 + jpg + reports + POST_KIT; takes → `media-<ep>` | — | — | 30 s |
 
-Budget: **sandbox ≈ 20 s per full offline pass; CI ≈ 15–25 min per episode, up to 4 episodes in parallel.** `ci_setup.sh` adds
+Budget: **sandbox ≈ 20 s per full offline pass; CI ≈ 30–40 min per episode on the 2-vCPU private-repo runner** (the stage times above are
+4-vCPU history figures — Phase 1.7 replaces them with measured actuals), up to 4 episodes in parallel. `ci_setup.sh` adds
 ~1 min warm / ~6 min cold (cache key = `ci_setup.sh` + `geodata.py` hash).
 
 ## 4 · Hand-offs — what crosses the boundary, and only that
@@ -93,7 +94,7 @@ Budget: **sandbox ≈ 20 s per full offline pass; CI ≈ 15–25 min per episode
 
 | resource | limit | our use |
 |---|---|---|
-| Actions minutes (private repo, GitHub Free) | **2,000 / month** (Linux ×1) | ~20 min per episode render · ~2 min per `check` (main only, doc pushes skipped, superseded runs cancelled) · `selftest` ≈ 25 min **manual only** · `geodata` manual. Capacity ≈ 80–90 renders/month ≈ 2–3 per day incl. re-renders. If cadence must exceed that: flip the repo to public (unlimited) — nothing else changes. |
+| Actions minutes (private repo, GitHub Free) | **2,000 / month** (Linux ×1) | ~30–40 min per episode render (2-vCPU runner) · ~1–2 min per `check` (main only, doc pushes skipped, superseded runs cancelled) · `selftest` ≈ 25 min **manual only** · `geodata` manual. Capacity ≈ 50–60 renders/month ≈ 1–2 per day incl. re-renders. If cadence must exceed that: flip the repo to public (unlimited) — nothing else changes. |
 | Job / workflow duration | 6 h / 35 days | render job `timeout-minutes: 60` |
 | Concurrent jobs | 20 | render matrix `max-parallel: 4` |
 | Actions cache | 10 GB per repo (LRU, 7-day eviction) | ~1.3 GB: hyperframes + Chrome, pip (faster-whisper/ctranslate2), whisper `base.en`, Kokoro 90 MB, geodata 9 MB |

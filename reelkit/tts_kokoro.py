@@ -57,8 +57,12 @@ def selftest(voice="am_michael"):
     out = os.path.expanduser("~/.cache/tmp/kokoro_selftest.wav"); text = "Which is the largest peninsula in the world? The answer is Arabia."
     k = load(); d = speak(k, text, voice, 1.0, out)
     assert 2.0 < d < 8.0, f"take length {d:.2f}s out of range"
+    # hand whisper a 16 kHz float32 array (like voice.py/qa.py do) — faster-whisper's own file decoder breaks with PyAV ≥ 19
+    import soundfile as sf_, scipy.signal as sps
+    y, sr = sf_.read(out, dtype="float32", always_2d=True); y = y.mean(axis=1)
+    if sr != 16000: y = sps.resample_poly(y, 16000, sr).astype(np.float32)
     from faster_whisper import WhisperModel
-    segs, _ = WhisperModel("base.en", device="cpu", compute_type="int8").transcribe(out, beam_size=1)
+    segs, _ = WhisperModel("base.en", device="cpu", compute_type="int8").transcribe(y, beam_size=1, language="en")
     heard = " ".join(s.text for s in segs).lower()
     for w in ("largest", "peninsula", "arabia"):
         assert w in heard, f"whisper did not hear {w!r} in {heard!r}"
