@@ -333,23 +333,69 @@ def measure(line: dict, y, words: list):
 
 
 # ---------------------------------------------------------------- plan
+def _spans(text: str):
+    """[(token, [raw word indices])] — the raw words each comparison token covers (number runs span several words)."""
+    raw = text.replace("—", " — ").split()
+    isword = [bool(re.sub(r"[^\w']", "", w)) for w in raw]
+    out, prev = [], -1
+    for tok, idx in tokens(text):
+        cover = [k for k in range(prev + 1, idx + 1) if isword[k]] or [idx]
+        out.append((tok, cover)); prev = idx
+    return raw, out
+
+
 def script_words(text: str, asr: list) -> list:
     """The script owns the WORDS, ASR owns the TIMING: align whisper words to the plan text and return
-    [{w: script spelling + punctuation, s, e}]. 1:1 substitutions take the script word ("60" -> "sixty,", "is" -> "as");
-    whisper splits ("11", ".18") or merges are re-timed across the span; unmatched ASR words keep their own text."""
-    sw = [w for w in text.replace("—", " — ").replace("…", "… ").split() if re.sub(r"[^\w']", "", w)]
-    key = lambda w: [t for t, _ in tokens(w)]
-    a = [" ".join(key(w)) for w in sw]; b = [" ".join(key(w["w"])) for w in asr]
+    [{w: script spelling + punctuation, s, e}]. Alignment is on comparison tokens, so "three point two million" ↔
+    whisper's "3 .2 million" is one match and the four script words share that span; 1:1 substitutions take the script
+    word ("60" -> "sixty,", "is" -> "as"); splits/merges are re-timed across the span; script words whisper never heard
+    are KEPT (placed in the neighbouring gap or borrowed from the previous word — the voice gate flags real skips);
+    unmatched ASR words keep their own text."""
+    text = text.replace("…", "… ")
+    raw, P = _spans(text)
+    araw = [re.sub(r"\s+", "", w["w"]) for w in asr]
+    _, A = _spans(" ".join(araw))
     out = []
-    for op, i1, i2, j1, j2 in difflib.SequenceMatcher(a=a, b=b, autojunk=False).get_opcodes():
+
+    def place(sw_idx: list, aw_idx: list):
+        if not aw_idx:
+            out.extend({"w": raw[k], "s": None, "e": None} for k in sw_idx); return
+        if len(sw_idx) == len(aw_idx):
+            out.extend({"w": raw[k], "s": asr[j]["s"], "e": asr[j]["e"]} for k, j in zip(sw_idx, aw_idx)); return
+        s0, e0 = asr[aw_idx[0]]["s"], asr[aw_idx[-1]]["e"]; n = len(sw_idx); d = (e0 - s0) / n
+        out.extend({"w": raw[k], "s": round(s0 + i * d, 3), "e": round(s0 + (i + 1) * d, 3)} for i, k in enumerate(sw_idx))
+
+    sm = difflib.SequenceMatcher(a=[t for t, _ in P], b=[t for t, _ in A], autojunk=False)
+    for op, i1, i2, j1, j2 in sm.get_opcodes():
         if op == "equal" or (op == "replace" and i2 - i1 == j2 - j1):
-            out += [{"w": sw[i1 + k], "s": asr[j1 + k]["s"], "e": asr[j1 + k]["e"]} for k in range(i2 - i1)]
-        elif op == "replace" and j2 > j1:                              # n script words over m ASR words: spread the span
-            s0, e0 = asr[j1]["s"], asr[j2 - 1]["e"]; n = i2 - i1; d = (e0 - s0) / n
-            out += [{"w": sw[i1 + k], "s": round(s0 + k * d, 3), "e": round(s0 + (k + 1) * d, 3)} for k in range(n)]
+            for k in range(i2 - i1):
+                place(P[i1 + k][1], A[j1 + k][1])
+        elif op == "replace":
+            place([x for _, c in P[i1:i2] for x in c], [x for _, c in A[j1:j2] for x in c])
         elif op == "insert":
-            out += [dict(asr[j]) for j in range(j1, j2)]              # spoken but not scripted: keep (the voice gate flags it)
-        # "delete" (scripted, not heard) -> nothing to time; the voice gate already FAILs real skips
+            out.extend(dict(asr[j]) for _, c in A[j1:j2] for j in c)   # spoken but not scripted: keep
+        else:                                                          # delete: scripted, not heard — keep, time below
+            place([x for _, c in P[i1:i2] for x in c], [])
+    # time the unheard script words: inside the surrounding gap when there is one, else borrow from the previous word
+    i = 0
+    while i < len(out):
+        if out[i]["s"] is not None:
+            i += 1; continue
+        j = i
+        while j < len(out) and out[j]["s"] is None:
+            j += 1
+        n = j - i; prev = out[i - 1] if i else None; nxt = out[j] if j < len(out) else None
+        pe = prev["e"] if prev else (nxt["s"] if nxt else 0.0)
+        ns = nxt["s"] if nxt else (pe + 0.25 * n)
+        if ns - pe >= 0.06 * n:
+            s0, d = pe, (ns - pe) / n
+        elif prev:                                                     # split the previous word's span n+1 ways
+            d = (prev["e"] - prev["s"]) / (n + 1); prev["e"] = round(prev["s"] + d, 3); s0 = prev["e"]
+        else:                                                          # borrow from the next word
+            d = (nxt["e"] - nxt["s"]) / (n + 1); s0 = nxt["s"]; nxt["s"] = round(nxt["s"] + n * d, 3)
+        for k in range(n):
+            out[i + k]["s"] = round(s0 + k * d, 3); out[i + k]["e"] = round(s0 + (k + 1) * d, 3)
+        i = j
     return out
 
 

@@ -91,6 +91,14 @@ def main():
                  ("one point five million", "1.5 million"), ("at eleven eighteen", "at 11:18")]
         badp = [(a, b, tok(a), tok(b)) for a, b in pairs if tok(a) != tok(b)]
         say(not badp, f"voice tokens: {len(pairs) - len(badp)}/{len(pairs)} script/ASR pairs normalise equal", str(badp[:2]))
+        # script_words keeps every script word (whisper "3 .2" has no word for "point"; the fact ledger needs it)
+        line = "It's A… the Arabian Peninsula. Around three point two million square kilometres."
+        heard = "It's A, the Arabian Peninsula, around 3 .2 million square kilometers.".split()
+        fake = [{"w": w, "s": round(i * .3, 3), "e": round(i * .3 + .3, 3)} for i, w in enumerate(heard)]
+        got = _voice.script_words(line, fake)
+        okw = [w["w"] for w in got] == line.replace("…", "… ").split() and all(w["s"] is not None and w["e"] >= w["s"] for w in got) \
+            and all(got[i]["s"] <= got[i + 1]["s"] for i in range(len(got) - 1))
+        say(okw, "voice script_words: script owns the words, ASR owns the timing (decimal split, monotonic)", " ".join(w["w"] for w in got))
         for ep in (tpl, dis):
             r = run(["python3", str(RK / "voice.py"), "check", str(ep), "--plan-only"])
             say(r.returncode == 0, f"{ep.name}: voice plan gate (tones, pauses, climax, arc)", "" if r.returncode == 0 else (r.stdout + r.stderr)[-600:])
