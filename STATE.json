@@ -1,6 +1,6 @@
 {
- "now": "Plan v2 written 2026-10-15 (docs/PLAN_V2.md): Studio export shows stayed-to-watch 57.6 %, AVD 24 s, 0.64 subs/1k, plateau ≈ 1,000–1,300 views/Short; pivot to reveal-first 'Guess it → See it' Shorts (28–35 s, 2/day, Geo → Wild → Sports → Body). System phases 2.1–2.8 may start; production 3.x waits for the owner's 'make videos'.",
- "phase": "2.0-planned",
+ "now": "2026-10-15: owner approved Plan v2 and gave the go ('make videos'). Executing 2.1 → 2.8 (system work for the v2 template) then 3.1 pilot batch of 10 (5 Geo, 3 Wild, 2 Sports).",
+ "phase": "2.1-go",
  "next": [
   "Phase 2.1 tools/studio_import.py + docs/SCORECARD.md (reproduce PLAN_V2 §1.2 from docs/data/studio_*.csv)",
   "Phase 2.2 series/_template_v2 + series.json structure v2 + quizlint Q9–Q13",
@@ -18,10 +18,10 @@
   "Four feed series (Geo Blitz, Body & Brain, Sports Sprint, Wild Files); numbering continues from the feed",
   "Narrator: Kokoro am_michael",
   "Sensitive/disputed borders are shown and labelled with who administers and who claims them (docs/BORDER_POLICY.md)",
-  "Do not make videos until told; Phase 1 = tools and system only",
   "Repo is the SSOT; media in Releases, never git; no auto-posting; every fact sourced; readable text",
   "Every task is done in time-boxed phases (docs/PHASE_PROTOCOL.md); the agent/Actions/owner split is fixed in docs/OPERATING_MODEL.md",
-  "Repo is private (GitHub Free): 2,000 Actions minutes/month — ledger `cloud.py minutes`, guard in `cloud.py render`, no crons"
+  "Repo is private (GitHub Free): 2,000 Actions minutes/month — ledger `cloud.py minutes`, guard in `cloud.py render`, no crons",
+  "2026-10-15: owner approved PLAN_V2 and said 'make videos' — production (Phase 3.x) is unlocked; v2 format is the only format produced"
  ],
  "blockers": [],
  "secrets": {
@@ -56,37 +56,10 @@
  "updated_at": "2026-10-14T19:56:17Z",
  "episodes": {},
  "current_phase": {
-  "id": "2.0",
-  "name": "Plan v2 written — ready for 2.1",
-  "status": "planned",
-  "exit_check": "owner approves PLAN_V2 §2–3; 2.1–2.8 are system work; 3.1 needs 'make videos'",
-  "evidence": {
-   "studio_window": "2026-09-16..2026-10-13",
-   "stayed_pct": 57.59,
-   "avd_s": 24,
-   "views": 113104,
-   "subs": 72,
-   "subs_per_1k": 0.64,
-   "public_plateau_median": 1074,
-   "public_max": 2035
-  },
-  "runner_proof": {
-   "selftest_run": 38618062409,
-   "run_number": 11,
-   "sha": "2cfd653",
-   "conclusion": "success",
-   "url": "https://github.com/zainkhan122/thequizwire/actions/runs/38618062409",
-   "qa": {
-    "lufs": -14.58,
-    "true_peak": -1.79,
-    "video_mbps": 8.97,
-    "asr_match": 0.96,
-    "duration_s": 43.5
-   },
-   "job_minutes_per_episode": 7.5,
-   "render_s": 150,
-   "runner": "ubuntu-latest 2 vCPU / 7 GB"
-  }
+  "id": "2.1",
+  "name": "Scorecard importer",
+  "status": "in progress",
+  "exit_check": "tools/studio_import.py reproduces PLAN_V2 §1.2 from docs/data/studio_*.csv → docs/SCORECARD.md"
  },
  "repo": {
   "slug": "zainkhan122/thequizwire",

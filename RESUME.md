@@ -1,7 +1,7 @@
 # RESUME.md — where this repo is and what happens next
 
 _Updated 2026-10-15 (Plan v2 session; Phase 1 ended 2026-10-14). Owner decisions: free tools only · phases per session · four feed series · Kokoro
-`am_michael` · disputed borders shown with controller/claimant plates · **no videos until the owner says go**._
+`am_michael` · disputed borders shown with controller/claimant plates · **v2 approved and production unlocked 2026-10-15 ("make videos")**._
 
 ## Now
 **Phase 1 is complete and proven on a real runner (2026-10-14).** `selftest` #11 is green end to end on the private-repo
@@ -61,7 +61,7 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 | date | decision | by |
 |---|---|---|
 | 2026-10-14 | New repo `quizwire` for all four feed topics (not a geo-only repo, not the history repo) | owner |
-| 2026-10-15 | Format v2 "Guess it → See it" (reveal-first, 28–35 s, 3 options, 1.5-s beat, loop end), 2/day, series order Geo → Wild → Sports → Body — proposed from the Studio export; awaiting owner approval + "make videos" | agent (proposal) |
+| 2026-10-15 | Format v2 "Guess it → See it" (reveal-first, 28–35 s, 3 options, 1.5-s beat, loop end), 2/day, series order Geo → Wild → Sports → Body — **approved**; owner said "make videos" (production unlocked, v2 only) | owner |
 | 2026-10-14 | Narrator Kokoro `am_michael` | owner |
 | 2026-10-14 | Sensitive borders included and labelled with controller + claimants (policy + registry + geolint P4) | owner |
 | 2026-10-14 | Phase 1 = tools/system only; no episode production | owner |
