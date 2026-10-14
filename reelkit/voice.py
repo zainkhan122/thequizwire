@@ -346,7 +346,7 @@ def check_plan(V):
         if not l.get("direction"):
             W.append(f"{l['id']}: no direction")
         last = i == len(V["lines"]) - 1
-        if not last:
+        if not last and l.get("silence") is None:        # silence lines (countdown/hold) are the pause; no band applies
             lo, hi = TONES[l["tone"]]["after"]
             if not lo <= l["pause_after"] <= hi:
                 F.append(f"{l['id']}: pause_after {l['pause_after']}s outside {l['tone']} range {lo}–{hi}")

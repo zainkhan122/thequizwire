@@ -81,6 +81,9 @@ def main():
         dis = copy_ep(ROOT / "tests/fixtures/ep-disputed", tmp)
         expect_ok(tpl, "_template")
         expect_ok(dis, "ep-disputed")
+        for ep in (tpl, dis):
+            r = run(["python3", str(RK / "voice.py"), "check", str(ep), "--plan-only"])
+            say(r.returncode == 0, f"{ep.name}: voice plan gate (tones, pauses, climax, arc)", "" if r.returncode == 0 else (r.stdout + r.stderr)[-600:])
 
         # negative 1: zoomed Kashmir scene with no disputed entries → geolint P4
         nod = copy_ep(ROOT / "tests/fixtures/ep-disputed", tmp, "ep-nodisp")
