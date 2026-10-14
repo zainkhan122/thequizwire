@@ -1,0 +1,53 @@
+{
+ "now": "Phase 1 built (2026-10-14): quiz pipeline, map engine (d3-geo/Natural Earth, disputed-border plates), Kokoro am_michael TTS stages, procedural score, gates quizlint/geolint/factcheck/provenance, maptile clip engine (CI docker), CI workflows, docs. tests/selftest.py green offline. No episodes produced (owner instruction). Repo not yet pushed (needs owner's repo + PAT).",
+ "phase": 1,
+ "next": [
+  "Owner: create public repo (default zainkhan122/quizwire; edit .repo if different) + fine-grained PAT → ~/.cache/secrets/gh_token; then source bootstrap.sh && bash tools/sync.sh 'phase 1'",
+  "Run Actions → selftest once: toolchain, Kokoro smoke, _template render, animator --help → fix reds, fill docs/MAPTILE.md 'CLI (verified)'",
+  "Phase 2 on owner's go: Geo Blitz #10 pilot via tools/new_episode.py → research ledger → cloud.py render --wait → owner uploads from POST_KIT",
+  "Phase 2 engines: callouts/counter (Body & Brain), strip/compare (Sports Sprint), compare + GBIF range layer (Wild Files), raster globe, geofacts.py"
+ ],
+ "owner_rules": [
+  "Free tools only: public-repo GitHub Actions + the Arena sandbox",
+  "Work in phases; one phase per session; sync before the sandbox times out",
+  "Four feed series (Geo Blitz, Body & Brain, Sports Sprint, Wild Files); numbering continues from the feed",
+  "Narrator: Kokoro am_michael",
+  "Sensitive/disputed borders are shown and labelled with who administers and who claims them (docs/BORDER_POLICY.md)",
+  "Do not make videos until told; Phase 1 = tools and system only",
+  "Repo is the SSOT; media in Releases, never git; no auto-posting; every fact sourced; readable text"
+ ],
+ "blockers": [
+  "GitHub repo + PAT not yet provided (first push + CI proof wait on it)"
+ ],
+ "secrets": {
+  "github": "not yet provided — store only at ~/.cache/secrets/gh_token (chmod 600)"
+ },
+ "series": {
+  "geo-blitz": {
+   "active": true,
+   "next_number": 10
+  },
+  "body-brain": {
+   "active": true,
+   "next_number": 4
+  },
+  "sports-sprint": {
+   "active": true,
+   "next_number": 9
+  },
+  "wild-files": {
+   "active": true,
+   "next_number": 7
+  },
+  "cosmic-quiz": {
+   "active": false,
+   "next_number": 5
+  },
+  "time-vault": {
+   "active": false,
+   "next_number": 5
+  }
+ },
+ "updated_at": "2026-10-14T15:15:32Z",
+ "episodes": {}
+}

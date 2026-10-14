@@ -1,0 +1,42 @@
+# ---- media never goes in git: it lives in GitHub Release assets (see reelkit/media.py + media.json) ----
+*.mp4
+*.mov
+*.webm
+*.mp3
+*.wav
+*.m4a
+*.flac
+*.ogg
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.gif
+*.onnx
+*.pt
+*.safetensors
+*.zip
+*.tar
+*.tar.gz
+!docs/img/*.png
+!docs/img/*.jpg
+
+# ---- build + caches (builds go to ~/.cache/build, outside the repo) ----
+out/
+hf/
+snaps/
+renders/
+__pycache__/
+*.pyc
+node_modules/
+.cache/
+.venv/
+
+# ---- secrets: never committed ----
+.env
+*.token
+*token*.txt
+secrets/
+
+# clip cache index lock (reelkit/clipcache.py)
+reelkit/cache/*.lock

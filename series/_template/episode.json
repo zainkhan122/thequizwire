@@ -1,0 +1,25 @@
+{
+ "id": "_template",
+ "format": "quiz",
+ "series": "geo-blitz",
+ "number": 0,
+ "title": "Which is the largest peninsula in the world?",
+ "difficulty": "MEDIUM",
+ "seed": 2026,
+ "quiz": {
+  "question": "Which is the largest peninsula in the world?",
+  "options": ["Arabian Peninsula", "Indian Peninsula", "Scandinavian Peninsula", "Iberian Peninsula"],
+  "correct": 0,
+  "countdown": 3,
+  "answer_line": "The Arabian Peninsula",
+  "answer_sub": "about 3.2 million km²"
+ },
+ "hook_type": "superlative",
+ "promise": {"min_motion": 0.70},
+ "credits": [],
+ "post": {
+  "title": "Largest peninsula in the world? 🌍 Geo Blitz #0",
+  "description": "Which is the largest peninsula in the world? Answer in 3… 2… 1 — then see it on an honest, equal-area map.",
+  "hashtags": ["#GKshorts", "#usagk", "#thequizwire", "#1min", "#shorts", "#geography"]
+ }
+}

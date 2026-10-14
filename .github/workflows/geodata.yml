@@ -1,0 +1,22 @@
+# Warm the shared geodata cache (Natural Earth 50m/10m via world-atlas + NE disputed areas) once a week, so render runners
+# restore it from actions/cache instead of hitting GitHub raw/unpkg on every episode. Manual run allowed.
+name: geodata
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 3 * * 1'
+jobs:
+  warm:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/geodata
+          key: geodata-${{ hashFiles('reelkit/geodata.py') }}-${{ github.run_number }}
+          restore-keys: geodata-${{ hashFiles('reelkit/geodata.py') }}-
+      - name: Fetch
+        run: python3 reelkit/geodata.py fetch --all
+      - name: Verify
+        run: python3 reelkit/geodata.py check

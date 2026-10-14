@@ -1,0 +1,109 @@
+{
+ "version": 1,
+ "episode": "_template",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.0
+ },
+ "intent": "A quick, confident quizmaster: curious on the question, playful on the countdown, satisfied on the reveal, genuinely interested in the one fact that makes the answer stick.",
+ "pacing_profile": "brisk question, clean option list, three silent seconds, a warm reveal, two short story beats, one-line call to action",
+ "pause_policy": "Pause only at the marked ellipses; the countdown is real silence (ticks come from score.py).",
+ "start_hold": 0.35,
+ "end_hold": 2.4,
+ "sample_line": "v05",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "tense",
+   "energy": 4,
+   "pause_after": 0.35,
+   "direction": "lean in, like a dare",
+   "text": "Most people get this wrong. Which is the largest peninsula in the world?",
+   "cues": {
+    "which": "which"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "even, each option its own beat",
+   "text": "A, the Arabian Peninsula. B, the Indian Peninsula. C, the Scandinavian Peninsula. Or D, the Iberian Peninsula.",
+   "cues": {
+    "a": "a",
+    "b": "b",
+    "c": "c",
+    "d": "d"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 2,
+   "pause_after": 0.2,
+   "direction": "silence — the ring counts",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the answer lands, then the number",
+   "text": "It's A… the Arabian Peninsula. Around three point two million square kilometres.",
+   "cues": {
+    "answer": "arabian",
+    "number": "three"
+   }
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "show, don't boast",
+   "text": "Seven countries share it, and Saudi Arabia covers most of that land.",
+   "cues": {
+    "seven": "seven",
+    "saudi": "saudi"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "the map is honest, say so",
+   "text": "On this equal-area map, that is bigger than India's peninsula and Scandinavia put together.",
+   "cues": {
+    "bigger": "bigger"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "warm, direct to camera",
+   "text": "What was your first guess? Tell me in the comments, and follow for tomorrow's question."
+  }
+ ]
+}

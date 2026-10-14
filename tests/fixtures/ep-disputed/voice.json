@@ -1,0 +1,11 @@
+{"version": 1, "episode": "ep-disputed", "backend": "kokoro", "voice": "Kokoro am_michael", "kokoro_fallback": {"voice": "am_michael", "speed": 1.0},
+ "intent": "fixture", "pacing_profile": "fixture", "pause_policy": "fixture", "start_hold": 0.35, "end_hold": 2.4, "sample_line": "v04",
+ "lines": [
+  {"id": "v01", "scene": "s01", "role": "hook", "tone": "tense", "energy": 4, "pause_after": 0.35, "direction": "dare", "text": "Everyone says Himalayas. K2, the world's second-highest peak, stands in which mountain range?"},
+  {"id": "v02", "scene": "s02", "role": "options", "tone": "neutral", "energy": 3, "pause_after": 0.3, "direction": "even", "text": "A, the Himalayas. B, the Karakoram. C, the Hindu Kush. Or D, the Pamirs.", "cues": {"a": "a"}},
+  {"id": "v03", "scene": "s03", "role": "countdown", "tone": "neutral", "energy": 2, "pause_after": 0.2, "direction": "silence", "silence": 3.0, "text": ""},
+  {"id": "v04", "scene": "s04", "role": "reveal", "tone": "revelatory", "energy": 4, "pause_after": 0.45, "direction": "land it", "text": "It's B… the Karakoram. Eight thousand six hundred and eleven metres, on the Pakistan–China border.", "cues": {"answer": "karakoram"}},
+  {"id": "v05", "scene": "s05", "role": "story", "tone": "resolute", "energy": 3, "pause_after": 0.4, "direction": "careful, factual", "text": "The peak rises in Gilgit-Baltistan, administered by Pakistan and claimed by India, part of the wider Kashmir dispute.", "cues": {"gilgit": "gilgit-baltistan"}},
+  {"id": "v06", "scene": "s06", "role": "story", "tone": "neutral", "energy": 3, "pause_after": 0.4, "direction": "plain", "text": "Across the Line of Control lies Indian-administered Jammu and Kashmir, which Pakistan claims; further east, China administers Aksai Chin, which India claims."},
+  {"id": "v07", "scene": "s07", "role": "cta", "tone": "tender", "energy": 3, "pause_after": 0.0, "direction": "warm", "text": "What was your first guess? Tell me in the comments, and follow for tomorrow's question."}
+ ]}

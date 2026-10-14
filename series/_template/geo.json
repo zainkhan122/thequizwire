@@ -1,0 +1,106 @@
+{
+ "version": 1,
+ "episode": "_template",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "projection": "equalEarth",
+   "projection_reason": "size comparison → equal-area (geolint rule P1)",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -20,
+     -12,
+     112,
+     62
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "ids": [
+      "682",
+      "887",
+      "512",
+      "784",
+      "634",
+      "414"
+     ],
+     "cls": "",
+     "id": "arabia",
+     "note": "Bahrain (048) is absent below 50m data; not highlighted at this zoom"
+    },
+    {
+     "kind": "highlight",
+     "ids": [
+      "356"
+     ],
+     "cls": "alt",
+     "id": "india"
+    },
+    {
+     "kind": "highlight",
+     "ids": [
+      "578",
+      "752"
+     ],
+     "cls": "alt",
+     "id": "scand"
+    }
+   ],
+   "pins": [
+    {
+     "id": "riyadh",
+     "lonlat": [
+      46.72,
+      24.69
+     ],
+     "label": "Riyadh",
+     "qid": "Q3692"
+    }
+   ],
+   "labels": [
+    {
+     "id": "arabian_sea",
+     "lonlat": [
+      63,
+      14
+     ],
+     "text": "Arabian Sea",
+     "cls": "sea"
+    },
+    {
+     "id": "red_sea",
+     "lonlat": [
+      38,
+      20
+     ],
+     "text": "Red Sea",
+     "cls": "sea"
+    }
+   ],
+   "scalebar": {
+    "km": 1000,
+    "lonlat": [
+     45,
+     20
+    ],
+    "at": [
+     40,
+     1100
+    ]
+   },
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ]
+  }
+ }
+}

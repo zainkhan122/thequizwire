@@ -1,0 +1,159 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1180
+   ],
+   "anchor": [
+    540,
+    600
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "a1",
+   "type": "answer",
+   "text": "The Karakoram",
+   "sub": "8,611 m — in Gilgit-Baltistan, on the China border",
+   "y": 960
+  },
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "WHO ADMINISTERS WHAT",
+   "text": "Pakistan administers Gilgit-Baltistan and Azad Kashmir; India administers Jammu and Kashmir; China administers Aksai Chin.",
+   "y": 1230
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     76,
+     34
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "card_in"
+  },
+  {
+   "at": "s02@a",
+   "do": "options_in"
+  },
+  {
+   "at": "s03",
+   "do": "countdown"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.6",
+   "args": {
+    "k": 1.6,
+    "lonlat": [
+     76.5,
+     35.9
+    ]
+   }
+  },
+  {
+   "at": "s04@answer",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "k2"
+   }
+  },
+  {
+   "at": "s04@answer",
+   "do": "answer_in",
+   "id": "a1"
+  },
+  {
+   "at": "s05",
+   "do": "card_out"
+  },
+  {
+   "at": "s05",
+   "do": "answer_out",
+   "id": "a1"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.4",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     76,
+     34.5
+    ]
+   }
+  },
+  {
+   "at": "s05@gilgit",
+   "do": "geo.disputed_in",
+   "stage": "stage_map",
+   "args": {
+    "did": "gb"
+   }
+  },
+  {
+   "at": "s05+0.4",
+   "do": "geo.disputed_in",
+   "stage": "stage_map",
+   "args": {
+    "did": "ak"
+   }
+  },
+  {
+   "at": "s05+0.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s06.end"
+  },
+  {
+   "at": "s06+0.2",
+   "do": "geo.disputed_in",
+   "stage": "stage_map",
+   "args": {
+    "did": "jk"
+   }
+  },
+  {
+   "at": "s06+1.0",
+   "do": "geo.disputed_in",
+   "stage": "stage_map",
+   "args": {
+    "did": "ac"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "end_in"
+  }
+ ]
+}

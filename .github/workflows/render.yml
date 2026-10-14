@@ -1,0 +1,121 @@
+# Cloud render — one runner per episode (public repo runner: 4 vCPU / 16 GB, free). QuizWire pipeline (reelkit/episode.sh):
+# pull → tts (Kokoro am_michael) → words → trim → plan → voice → geo → score → assets (maptile via docker) → build → static → quizlint → geolint → facts → provenance → check → textqa → render → encode → qa
+# Start: Actions → render → Run workflow, or `python3 reelkit/cloud.py render <episode_dir>` from any session.
+# Output: <Story-Title>.mp4 + <Story-Title>.jpg (names from episode.json via reelkit/naming.py) + POST_KIT.md + every gate report,
+# attached to a GitHub Release (does not grow the repo). `sha` pins the exact commit (cloud.py always sends it).
+name: render
+on:
+  workflow_dispatch:
+    inputs:
+      episodes:
+        description: 'Episode dirs, space separated (e.g. series/geo-blitz/ep10-largest-peninsula)'
+        required: true
+      tag:
+        description: 'Release tag (default: <episode>-r<run number>)'
+        required: false
+        default: ''
+      sha:
+        description: 'Exact commit to render (cloud.py sends local HEAD; empty = branch head)'
+        required: false
+        default: ''
+      crf:
+        description: 'Master CRF before the delivery encode'
+        required: false
+        default: '18'
+permissions:
+  contents: write
+concurrency:
+  group: render-${{ github.ref }}-${{ inputs.episodes }}
+  cancel-in-progress: false
+env:
+  PYTHONUNBUFFERED: "1"
+  HYPERFRAMES_NO_TELEMETRY: "1"
+  HYPERFRAMES_NO_UPDATE_CHECK: "1"
+  DO_NOT_TRACK: "1"
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      eps: ${{ steps.p.outputs.eps }}
+    steps:
+      - id: p
+        env:
+          EPS: ${{ inputs.episodes }}
+        run: python3 -c "import json,os; print('eps='+json.dumps(os.environ['EPS'].replace(',',' ').split()))" >> "$GITHUB_OUTPUT"
+  render:
+    needs: plan
+    name: render ${{ matrix.ep }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        ep: ${{ fromJSON(needs.plan.outputs.eps) }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+      WORKERS: "3"
+      CRF: ${{ inputs.crf }}
+      PRESET: medium
+      THREADS: "0"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.sha || github.sha }}
+      - name: Verify commit
+        env:
+          WANT: ${{ inputs.sha }}
+        run: |
+          GOT=$(git rev-parse HEAD); echo "rendering $GOT"
+          if [ -n "$WANT" ] && [ "$GOT" != "$WANT" ]; then echo "::error::checked out $GOT, asked for $WANT"; exit 1; fi
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/hyperframes
+            ~/.cache/pip
+            ~/.cache/huggingface
+            ~/.cache/kokoro
+            ~/.cache/geodata
+          key: tools-hf0.8.137-${{ runner.os }}-${{ hashFiles('reelkit/ci_setup.sh', 'reelkit/geodata.py') }}
+      - name: Toolchain
+        run: bash reelkit/ci_setup.sh
+      - name: Render pipeline (pull → tts → words → trim → plan → voice → geo → score → assets → build → static → quizlint → geolint → facts → provenance → check → textqa → render → encode → QA)
+        env:
+          RELEASE: "1"
+          GEOLINT_ONLINE: "1"
+        run: |
+          set -o pipefail
+          bash reelkit/episode.sh "${{ matrix.ep }}" 2>&1 | tee "$RUNNER_TEMP/pipeline.log"
+      - name: Gate failures → summary
+        if: failure()
+        run: |
+          { echo "### ❌ ${{ matrix.ep }}: pipeline failed"; echo '```';
+            grep -E "FAIL|##\[error\]|Traceback|Error:|error:" "$RUNNER_TEMP/pipeline.log" | grep -v "FAIL 0" | tail -40 || true;
+            echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          cp "$RUNNER_TEMP/pipeline.log" ~/.cache/build/pipeline.log 2>/dev/null || true
+      - name: Publish release
+        run: |
+          EP="${{ matrix.ep }}"; NAME="$(basename "$EP")"
+          TAG="${{ inputs.tag }}"; TAG="${TAG:-$NAME-r${{ github.run_number }}}"
+          STEM="$(python3 reelkit/naming.py stem "$EP")"; TITLE="$(python3 reelkit/naming.py title "$EP")"
+          cp "$EP/out/final.mp4" "$EP/out/$STEM.mp4"; cp "$EP/out/cover.jpg" "$EP/out/$STEM.jpg"   # delivery names = the question
+          # takes + word times generated on the runner go back to the media release so a re-render is byte-identical
+          python3 reelkit/media.py push "$EP" --include 'vo/*' || echo "::warning::media push skipped" 
+          FILES="$EP/out/$STEM.mp4 $EP/out/$STEM.jpg $(ls $EP/out/*.json | tr '\n' ' ')"   # every gate report travels with the release
+          NOTES=(); [ -f "$EP/POST_KIT.md" ] && { FILES="$FILES $EP/POST_KIT.md"; NOTES=(--notes-file "$EP/POST_KIT.md"); }
+          python3 reelkit/media.py publish "$TAG" $FILES --title "$TITLE (render #${{ github.run_number }})" "${NOTES[@]}"
+          echo "### $TITLE → release \`$TAG\` · \`$STEM.mp4\`" >> "$GITHUB_STEP_SUMMARY"
+          cat "$EP/out/qa.json" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: debug-${{ strategy.job-index }}
+          path: |
+            ~/.cache/build/*/snaps
+            ~/.cache/build/*/hf/index.html
+            ~/.cache/build/pipeline.log
+          if-no-files-found: ignore
+          retention-days: 5

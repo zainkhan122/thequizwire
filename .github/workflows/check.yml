@@ -1,0 +1,36 @@
+# Repo hygiene on every push: code compiles, shell parses, NO media/bloat in git, and every committed episode passes the
+# offline gates (quizlint, geolint, facts, provenance, voice plan) — the same checks reelkit/episode.sh runs before a render.
+name: check
+on:
+  push:
+  pull_request:
+jobs:
+  hygiene:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Python compiles
+        run: python3 -m compileall -q reelkit engine tools tests
+      - name: Shell parses
+        run: for f in $(git ls-files '*.sh'); do bash -n "$f"; done
+      - name: Size guard
+        run: python3 tools/repo_guard.py
+      - name: Map runtime unit tests (d3-geo projections, clipExtent, world-atlas ids)
+        run: node tests/test_geo_runtime.mjs
+      - name: Self-test (template + disputed-border fixture through plan → geo → compose → static → quizlint → geolint → facts → provenance)
+        run: python3 tests/selftest.py
+      - name: Committed episodes — offline gates
+        run: |
+          set -e
+          for q in $(git ls-files 'series/*/*/episode.json'); do
+            ep=$(dirname "$q"); case "$ep" in series/_template) continue;; esac; echo "== $ep"
+            python3 reelkit/plan.py "$ep" --estimate >/dev/null
+            python3 reelkit/quizlint.py "$ep"
+            python3 reelkit/voice.py check "$ep" --plan-only
+            python3 reelkit/factcheck.py "$ep" --hf /nonexistent
+            python3 reelkit/provenance.py "$ep" --hf /nonexistent
+          done

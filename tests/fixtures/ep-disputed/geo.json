@@ -1,0 +1,122 @@
+{
+ "version": 1,
+ "episode": "ep-disputed",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "projection": "conicEqualArea",
+   "parallels": [
+    30,
+    38
+   ],
+   "projection_reason": "regional scene with no size claim; equal-area keeps the plates' relative areas honest",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     70,
+     30,
+     82,
+     38
+    ]
+   },
+   "padding": 20,
+   "resolution": "110m",
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    }
+   ],
+   "pins": [
+    {
+     "id": "k2",
+     "lonlat": [
+      76.513,
+      35.881
+     ],
+     "label": "K2 · 8,611 m",
+     "qid": "Q43512"
+    }
+   ],
+   "labels": [],
+   "scalebar": {
+    "km": 100,
+    "lonlat": [
+     76,
+     34
+    ],
+    "at": [
+     40,
+     1100
+    ]
+   },
+   "disputed": [
+    {
+     "id": "gb",
+     "ne_name": "Gilgit-Baltistan",
+     "name": "Gilgit-Baltistan",
+     "controller": "Pakistan",
+     "claimants": [
+      "India"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#kashmir",
+     "label_at": [
+      74.4,
+      36.3
+     ]
+    },
+    {
+     "id": "jk",
+     "ne_name": "Jammu and Kashmir",
+     "name": "Jammu and Kashmir",
+     "controller": "India",
+     "claimants": [
+      "Pakistan"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#kashmir",
+     "label_at": [
+      75.3,
+      33.6
+     ]
+    },
+    {
+     "id": "ac",
+     "ne_name": "Aksai Chin",
+     "name": "Aksai Chin",
+     "controller": "China",
+     "claimants": [
+      "India"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#kashmir",
+     "label_at": [
+      79.3,
+      35.0
+     ]
+    },
+    {
+     "id": "ak",
+     "ne_name": "Azad Kashmir",
+     "name": "Azad Kashmir",
+     "controller": "Pakistan",
+     "claimants": [
+      "India"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#kashmir",
+     "label_at": [
+      73.6,
+      34.0
+     ]
+    }
+   ],
+   "sources": [
+    "Natural Earth"
+   ]
+  }
+ }
+}

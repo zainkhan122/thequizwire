@@ -1,0 +1,246 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1180
+   ],
+   "anchor": [
+    540,
+    600
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "a1",
+   "type": "answer",
+   "text": "The Arabian Peninsula",
+   "sub": "about 3.2 million km²",
+   "y": 960
+  },
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "SHARED BY 7 COUNTRIES",
+   "text": "Saudi Arabia covers most of the peninsula; Yemen, Oman, the UAE, Qatar, Bahrain and Kuwait share the rest.",
+   "y": 1230
+  },
+  {
+   "id": "f2",
+   "type": "fact",
+   "kicker": "HONEST MAP",
+   "text": "Equal-area projection: sizes compare truthfully — unlike Mercator.",
+   "y": 1300
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     45,
+     25
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "card_in"
+  },
+  {
+   "at": "s01+0.3",
+   "do": "geo.scalebar_in",
+   "stage": "stage_map"
+  },
+  {
+   "at": "s02@a",
+   "do": "options_in"
+  },
+  {
+   "at": "s03",
+   "do": "countdown"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.8",
+   "args": {
+    "k": 2.4,
+    "lonlat": [
+     47,
+     22
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+0.4",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "682",
+    "layer": "arabia"
+   }
+  },
+  {
+   "at": "s04+0.5",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "887",
+    "layer": "arabia"
+   }
+  },
+  {
+   "at": "s04+0.55",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "512",
+    "layer": "arabia"
+   }
+  },
+  {
+   "at": "s04+0.6",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "784",
+    "layer": "arabia"
+   }
+  },
+  {
+   "at": "s04+0.65",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "634",
+    "layer": "arabia"
+   }
+  },
+  {
+   "at": "s04+0.7",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "414",
+    "layer": "arabia"
+   }
+  },
+  {
+   "at": "s04@answer",
+   "do": "answer_in",
+   "id": "a1"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "arabian_sea"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "red_sea"
+   }
+  },
+  {
+   "at": "s05",
+   "do": "card_out"
+  },
+  {
+   "at": "s05",
+   "do": "answer_out",
+   "id": "a1"
+  },
+  {
+   "at": "s05@saudi",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "riyadh"
+   }
+  },
+  {
+   "at": "s05+0.2",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s05.end"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.6",
+   "args": {
+    "k": 1.15,
+    "lonlat": [
+     50,
+     28
+    ]
+   }
+  },
+  {
+   "at": "s06+0.3",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "356",
+    "layer": "india",
+    "opacity": 0.7
+   }
+  },
+  {
+   "at": "s06+0.5",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "578",
+    "layer": "scand",
+    "opacity": 0.7
+   }
+  },
+  {
+   "at": "s06+0.5",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "752",
+    "layer": "scand",
+    "opacity": 0.7
+   }
+  },
+  {
+   "at": "s06+0.2",
+   "do": "fact_in",
+   "id": "f2",
+   "until": "s06.end"
+  },
+  {
+   "at": "s07",
+   "do": "end_in"
+  }
+ ]
+}

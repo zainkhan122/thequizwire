@@ -1,0 +1,199 @@
+{
+ "version": 1,
+ "episode": "ep-disputed",
+ "topic": "K2 — Karakoram, Gilgit-Baltistan (Kashmir dispute) — disputed-border fixture",
+ "researched": "2026-10-14",
+ "policy_note": "Fixture ledger for the disputed-border path (docs/BORDER_POLICY.md). Sovereignty is never asserted: the VO and plates say administers / claims, dated as_of. Registry entry: docs/border_registry.json#kashmir.",
+ "sources": {
+  "britannica_k2": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "K2 (mountain, Asia)",
+   "url": "https://www.britannica.com/place/K2",
+   "date": "2025-01-01",
+   "notes": "8,611 m; Karakoram Range; Pakistan–China border; second highest"
+  },
+  "britannica_karakoram": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Karakoram Range",
+   "url": "https://www.britannica.com/place/Karakoram-Range",
+   "date": "2025-01-01"
+  },
+  "factbook_pak": {
+   "type": "primary",
+   "publisher": "CIA World Factbook",
+   "title": "Pakistan — Geography (highest point K2 8,611 m)",
+   "url": "https://www.cia.gov/the-world-factbook/countries/pakistan/",
+   "date": "2025-01-01"
+  },
+  "un_unmogip": {
+   "type": "primary",
+   "publisher": "United Nations Peacekeeping",
+   "title": "UNMOGIP — United Nations Military Observer Group in India and Pakistan (Line of Control)",
+   "url": "https://peacekeeping.un.org/en/mission/unmogip",
+   "date": "2025-01-01"
+  },
+  "crs_kashmir": {
+   "type": "scholarly",
+   "publisher": "U.S. Congressional Research Service",
+   "title": "Kashmir: Background, Recent Developments, and U.S. Policy",
+   "url": "https://crsreports.congress.gov/product/pdf/R/R45877",
+   "date": "2019-01-01",
+   "notes": "administration split: Pakistan (Gilgit-Baltistan, Azad Kashmir), India (Jammu & Kashmir, Ladakh), China (Aksai Chin)"
+  },
+  "ne_disputed": {
+   "type": "reference",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 — Breakaway, Disputed Areas (v5)",
+   "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-breakaway-disputed-areas/",
+   "date": "2022-01-01",
+   "notes": "polygons used on screen; BRK_NAME values Gilgit-Baltistan, Jammu and Kashmir, Aksai Chin, Azad Kashmir"
+  },
+  "wiki_k2": {
+   "type": "reference",
+   "publisher": "Wikipedia (pointer — follow its citations)",
+   "title": "K2",
+   "url": "https://en.wikipedia.org/wiki/K2",
+   "date": "2026-01-01"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "K2 stands in the Karakoram Range, not the Himalayas.",
+   "sources": [
+    "britannica_k2",
+    "britannica_karakoram",
+    "factbook_pak"
+   ],
+   "vo": [
+    "k2 the world's second-highest peak stands in which mountain range",
+    "it's b the karakoram"
+   ],
+   "screen": [
+    "The Karakoram"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "record",
+   "text": "K2 is 8,611 m high — the second-highest mountain on Earth — on the Pakistan–China border.",
+   "sources": [
+    "britannica_k2",
+    "factbook_pak",
+    "wiki_k2"
+   ],
+   "vo": [
+    "eight thousand six hundred and eleven metres on the pakistan china border"
+   ],
+   "screen": [
+    "8,611 m — in Gilgit-Baltistan, on the China border",
+    "K2 · 8,611 m"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Gilgit-Baltistan is administered by Pakistan and claimed by India as part of the Kashmir dispute.",
+   "sources": [
+    "crs_kashmir",
+    "un_unmogip",
+    "ne_disputed"
+   ],
+   "vo": [
+    "the peak rises in gilgit-baltistan administered by pakistan and claimed by india part of the wider kashmir dispute"
+   ],
+   "screen": [
+    "Gilgit-Baltistan",
+    "Administered by Pakistan",
+    "Azad Kashmir"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "Across the Line of Control, India administers Jammu and Kashmir (claimed by Pakistan); China administers Aksai Chin (claimed by India).",
+   "sources": [
+    "crs_kashmir",
+    "un_unmogip",
+    "ne_disputed"
+   ],
+   "vo": [
+    "across the line of control lies indian-administered jammu and kashmir which pakistan claims further east china administers aksai chin which india claims"
+   ],
+   "screen": [
+    "Pakistan administers Gilgit-Baltistan and Azad Kashmir; India administers Jammu and Kashmir; China administers Aksai Chin.",
+    "Jammu and Kashmir",
+    "Aksai Chin",
+    "Administered by India",
+    "Administered by China"
+   ]
+  }
+ ],
+ "myths": [
+  {
+   "myth": "K2 is in the Himalayas.",
+   "reality": "It is in the Karakoram, a separate range north-west of the Himalayas.",
+   "sources": [
+    "britannica_karakoram"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "\\b(owns?|belongs to|is part of (india|pakistan|china))\\b",
+   "why": "Sovereignty language is banned on disputed areas; say administers / claims (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "pakistan-occupied|indian-occupied|pok\\b|iok\\b",
+   "why": "Partisan terms — use administered by."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "^[ABCD]$",
+  "^[123]$",
+  "^What was your first guess",
+  "^Comment below",
+  "^WHO ADMINISTERS WHAT$",
+  "^Claimed by",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^Line of Control$"
+ ],
+ "landscape": {
+  "our_gap": "Feed quizzes never show the mountain on a map, let alone who administers the ground it stands on.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/@thequizwire-com/shorts",
+    "title": "Feed Geo Blitz #1–9",
+    "angle": "quiz card over stock b-roll",
+    "misses": "no map, no border context"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=k2+mountain+quiz",
+    "title": "K2 quiz Shorts",
+    "angle": "stock summit photo + text",
+    "misses": "wrong range in half of them"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=kashmir+map+explained",
+    "title": "Kashmir explainers",
+    "angle": "long-form, partisan maps",
+    "misses": "no neutral administered/claimed labelling"
+   }
+  ]
+ },
+ "vo_exempt": [
+  "^(a|b|c|or d), the .*\\.$",
+  "^what was your first guess",
+  "^tell me in the comments",
+  "^everyone says himalayas\\.$"
+ ]
+}

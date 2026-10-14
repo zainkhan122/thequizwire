@@ -1,0 +1,52 @@
+# Full toolchain self-test on a real runner (the only place with ffmpeg + chrome + docker): installs the toolchain,
+# synthesises one Kokoro take, builds the template episode end-to-end and renders it to prove the pipeline.
+# Nothing is published. Run manually or weekly; the first green run is the Phase-1 → Phase-2 hand-off.
+name: selftest
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 4 * * 1'
+env:
+  PYTHONUNBUFFERED: "1"
+  HYPERFRAMES_NO_TELEMETRY: "1"
+  HYPERFRAMES_NO_UPDATE_CHECK: "1"
+  DO_NOT_TRACK: "1"
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/hyperframes
+            ~/.cache/pip
+            ~/.cache/huggingface
+            ~/.cache/kokoro
+            ~/.cache/geodata
+          key: tools-hf0.8.137-${{ runner.os }}-${{ hashFiles('reelkit/ci_setup.sh', 'reelkit/geodata.py') }}
+      - name: Toolchain
+        run: bash reelkit/ci_setup.sh
+      - name: Kokoro smoke (am_michael, one sentence → wav + whisper round-trip)
+        run: python3 reelkit/tts_kokoro.py --selftest
+      - name: Template episode, every stage incl. render (RELEASE=0 so the estimated timeline is allowed)
+        run: |
+          set -o pipefail
+          GEOLINT_ONLINE=1 bash reelkit/episode.sh series/_template 2>&1 | tee "$RUNNER_TEMP/pipeline.log"
+      - name: Map animator image pulls (maptile engine prerequisite)
+        run: docker pull ghcr.io/versatiles-org/versatiles-map-animator:latest && docker run --rm ghcr.io/versatiles-org/versatiles-map-animator:latest --help 2>&1 | head -60 || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: selftest-${{ github.run_number }}
+          path: |
+            series/_template/out/*.json
+            series/_template/out/final.mp4
+            series/_template/out/cover.jpg
+            ~/.cache/build/_template/snaps
+          if-no-files-found: ignore
+          retention-days: 7
