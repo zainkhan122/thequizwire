@@ -1,10 +1,9 @@
 # Warm the shared geodata cache (Natural Earth 50m/10m via world-atlas + NE disputed areas) once a week, so render runners
 # restore it from actions/cache instead of hitting GitHub raw/unpkg on every episode. Manual run allowed.
+# Private repo: manual only (≈2 billable minutes). ci_setup.sh also warms the cache inside every render job.
 name: geodata
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '17 3 * * 1'
 jobs:
   warm:
     runs-on: ubuntu-latest

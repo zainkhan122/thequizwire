@@ -1,11 +1,10 @@
 # Full toolchain self-test on a real runner (the only place with ffmpeg + chrome + docker): installs the toolchain,
 # synthesises one Kokoro take, builds the template episode end-to-end and renders it to prove the pipeline.
 # Nothing is published. Run manually or weekly; the first green run is the Phase-1 → Phase-2 hand-off.
+# Private repo: manual only (≈25 billable minutes per run). Run after toolchain changes, not on a schedule.
 name: selftest
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '41 4 * * 1'
 env:
   PYTHONUNBUFFERED: "1"
   HYPERFRAMES_NO_TELEMETRY: "1"

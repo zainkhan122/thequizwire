@@ -4,6 +4,10 @@
   python3 reelkit/cloud.py status            last 5 render runs
   python3 reelkit/cloud.py fetch <tag> [DIR] download a release (<Story-Title>.mp4/.jpg, POST_KIT.md, gate reports)
   python3 reelkit/cloud.py why [RUN_ID]      gate failures of a run (default: the latest render run)
+  python3 reelkit/cloud.py minutes           this month's billable Actions minutes vs the private-repo budget (all workflows)
+Private repo: GitHub Free gives 2,000 Linux minutes per month. `render` refuses to dispatch when fewer than MIN_RESERVE minutes
+remain (override with --force); `minutes` shows the ledger. Minutes are summed from each run's timing endpoint (Actions: read),
+so no account-level billing permission is needed.
 Pushes must be done first (tools/sync.sh). The run is pinned to the local HEAD sha (workflow input `sha`), so a later
 push can never change what gets rendered. On failure, --wait prints the gate failures from the job log."""
 import argparse, datetime, json, os, re, sys, time, urllib.request
@@ -58,8 +62,44 @@ def wait_remote_head(slug, head, timeout=90):
         time.sleep(5)
 
 
+BUDGET_MIN = int(os.environ.get("ACTIONS_BUDGET_MIN", "2000"))     # GitHub Free, private repo, Linux runners
+MIN_RESERVE = int(os.environ.get("ACTIONS_MIN_RESERVE", "60"))     # keep this much for a `check` run + one fix render
+
+
+def minutes(slug, verbose=True):
+    """Billable minutes used this calendar month (UTC), summed over every workflow's completed runs."""
+    now = datetime.datetime.now(datetime.timezone.utc); month = now.strftime("%Y-%m")
+    info = req("GET", f"{API}/repos/{slug}")
+    if info is None:
+        if verbose: print(f"{slug}: not reachable (no token at ~/.cache/secrets/gh_token, or the repo does not exist yet) — ledger unavailable")
+        return 0.0, float(BUDGET_MIN), True
+    private = info.get("private", True)
+    used, rows, page = 0.0, [], 1
+    while True:
+        r = req("GET", f"{API}/repos/{slug}/actions/runs?created=>={month}-01&per_page=100&page={page}") or {"workflow_runs": []}
+        for run in r["workflow_runs"]:
+            if run["status"] != "completed": continue
+            t = req("GET", f"{API}/repos/{slug}/actions/runs/{run['id']}/timing") or {}
+            ms = sum(v.get("total_ms", 0) for v in (t.get("billable") or {}).values())
+            m = ms / 60000; used += m; rows.append((run["name"], run["run_number"], run["conclusion"], m))
+        if len(r["workflow_runs"]) < 100: break
+        page += 1
+    left = BUDGET_MIN - used
+    if verbose:
+        for name, num, concl, m in sorted(rows, key=lambda x: -x[3])[:12]: print(f"  {name:<9} #{num:<4} {concl or '':<9} {m:6.1f} min")
+        scope = "private repo — budget applies" if private else "public repo — minutes are free; ledger is informational"
+        print(f"{month}: used {used:.0f} of {BUDGET_MIN} min · {max(left, 0):.0f} left · {scope}")
+    return used, left, private
+
+
 def render(a):
     slug = repo_slug(); head = git("rev-parse", "HEAD")
+    used, left, private = minutes(slug, verbose=False)
+    need = 25 * len(a.episodes)
+    if private and left < MIN_RESERVE + need and not a.force:
+        sys.exit(f"budget guard: {left:.0f} min left this month, a render of {len(a.episodes)} episode(s) needs ≈{need} + {MIN_RESERVE} reserve "
+                 f"(python3 reelkit/cloud.py minutes · --force to override · budget resets on the 1st)")
+    print(f"minutes: {used:.0f} used · {left:.0f} left this month ({'private budget' if private else 'public, free'})")
     if git("status", "--porcelain", "--untracked-files=no"): print("! uncommitted changes are NOT rendered (runner uses origin/main)")
     wait_remote_head(slug, head); token_expiry_warning(slug)
     before = {r["id"] for r in runs(slug, 10)}
@@ -100,12 +140,13 @@ def fetch_tag(slug, tag, out):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); sp = ap.add_subparsers(dest="cmd", required=True)
     p = sp.add_parser("render"); p.add_argument("episodes", nargs="+"); p.add_argument("--tag"); p.add_argument("--crf", default=18)
-    p.add_argument("--wait", action="store_true"); p.add_argument("--download")
-    sp.add_parser("status"); w = sp.add_parser("why"); w.add_argument("run_id", nargs="?")
+    p.add_argument("--wait", action="store_true"); p.add_argument("--download"); p.add_argument("--force", action="store_true", help="dispatch even when the minutes budget guard says no")
+    sp.add_parser("status"); sp.add_parser("minutes"); w = sp.add_parser("why"); w.add_argument("run_id", nargs="?")
     p = sp.add_parser("fetch"); p.add_argument("tag"); p.add_argument("dir", nargs="?", default=".")
     a = ap.parse_args()
     if a.cmd == "render": render(a)
     elif a.cmd == "why": why(repo_slug(), a.run_id)
+    elif a.cmd == "minutes": minutes(repo_slug())
     elif a.cmd == "status":
         for r in runs(repo_slug()): print(f"#{r['run_number']} {r['status']:<10} {r['conclusion'] or '':<9} {r['created_at']} {r['display_title']} {r['html_url']}")
     else: fetch_tag(repo_slug(), a.tag, Path(a.dir))

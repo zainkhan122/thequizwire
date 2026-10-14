@@ -1,13 +1,24 @@
 # Repo hygiene on every push: code compiles, shell parses, NO media/bloat in git, and every committed episode passes the
 # offline gates (quizlint, geolint, facts, provenance, voice plan) — the same checks reelkit/episode.sh runs before a render.
+# Private repo budget: runs only on main, skips doc-only pushes, cancels a superseded run (≈2 billable minutes per run).
 name: check
 on:
   push:
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+      - 'docs/img/**'
+      - 'STATE.json'
   pull_request:
+    branches: [main]
+  workflow_dispatch:
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   hygiene:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
