@@ -165,7 +165,7 @@ CSS = f"""
 .answer{{position:absolute;left:60px;width:960px;text-align:center;z-index:75;visibility:hidden;opacity:0}}
 .amain{{display:inline-block;font-family:'Anton';font-size:64px;letter-spacing:.03em;color:{INK};background:{SAND};padding:14px 34px 8px;box-shadow:0 12px 30px rgba(0,0,0,.4)}}
 .asub{{margin-top:12px;font-family:'DM Serif';font-style:italic;font-size:38px;color:{CREAM};text-shadow:0 2px 12px rgba(0,0,0,.7)}}
-.fact{{position:absolute;left:60px;width:960px;z-index:70;visibility:hidden;opacity:0}}
+.fact{{position:absolute;left:60px;width:880px;z-index:70;visibility:hidden;opacity:0}}   /* right edge 940 < 960: clear of the Shorts action column */
 .fkick{{font-family:'Oswald';font-weight:700;font-size:28px;letter-spacing:.24em;color:{SAND};margin-bottom:10px}}
 .ftext{{font-family:'Oswald';font-weight:500;font-size:48px;line-height:1.2;color:{CREAM};background:rgba(11,22,32,.9);padding:22px 28px 18px;border-left:10px solid {RED}}}
 .endcard{{position:absolute;left:0;top:0;width:1080px;height:1920px;background:rgba(11,22,32,.97);text-align:center;padding-top:560px;z-index:90;visibility:hidden;opacity:0}}

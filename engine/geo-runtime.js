@@ -154,7 +154,7 @@
     const ui = el.querySelector(".geo-ui");
     const html = [];
     for (const p of C.pins) html.push(`<div class="geo-pin ${p.cls || ""}" id="${id}_pin_${p.id}" style="visibility:hidden;opacity:0"><div class="pinhead"></div>${p.label ? `<div class="pinlabel tu">${esc(p.label)}</div>` : ""}</div>`);
-    for (const l of C.labels) html.push(`<div class="geo-label tu ${l.cls || ""}" id="${id}_lbl_${l.id}" style="visibility:hidden;opacity:0">${l.html || esc(l.text || "")}</div>`);
+    for (const l of C.labels) html.push(`<div class="geo-label tu ${l.cls || ""}" id="${id}_lbl_${l.id}" style="visibility:hidden;opacity:0">${l.html || ("<span>" + esc(l.text || "") + "</span>")}</div>`);   // span = centred on the anchor (CSS translate(-50%,-50%)), like the SVG preview
     if (C.scalebar) html.push(`<div class="geo-scale tu" id="${id}_scale" data-km="${C.scalebar.km}"><div class="bar"></div><span>${C.scalebar.km.toLocaleString("en-US")} km at ${Math.round(C.scalebar.lat)}°</span></div>`);
     ui.innerHTML = html.join("");
     const S = { id, spec, data, C, W, H, el,
