@@ -209,6 +209,9 @@ def place(bus, x, t, gain=1.0, pan=0.0):
     """Add mono/stereo x into stereo bus at time t (s)."""
     k = int(round(t * SR))
     if k >= len(bus): return
+    if k < 0:                      # starts before 0 (e.g. a pad re-triggered 0.15 s ahead of a scene at t = 0): trim the head
+        x = x[-k:]; k = 0
+        if len(x) == 0: return
     if x.ndim == 1:
         l, r = np.cos((pan + 1) * np.pi / 4), np.sin((pan + 1) * np.pi / 4)
         x = np.stack([x * l * 1.414, x * r * 1.414], 1)

@@ -26,6 +26,7 @@ SEA, LAND, SAND, RED, CREAM, INK = "#0F2A3A", "#1D3A4A", "#E3A72F", "#C8102E", "
 RED_ON_DARK = "#FF4D4D"
 SAFE_TOP = 230
 LETTERS = "ABCD"
+DISTRACTOR = ' data-fc="distractor"'
 
 
 def f(x): return f"{x:.3f}"
@@ -141,6 +142,87 @@ class Quiz:
         self.J(f"tl.fromTo('#prog',{{scaleX:0}},{{scaleX:1,duration:{f(total)},ease:'none',immediateRender:false}},0);")
         return '<div class="progress"><div id="prog"></div></div>'
 
+    # ================================================================ v2 "Guess it → See it" (docs/PLAN_V2.md §2)
+    # Band layout (1190…1600): hook line 1190–1310 · chips 1325/1405/1485 (h 70) · captions 1215 (one line) ·
+    # fact plate 1350 · cta 1350 · credit 1548. Nothing wider than x 940. No card, no ring, no full-screen end card.
+    def hook(self, hid, question, keyword=None):
+        """The question as a caption on the visual (t = 0). `keyword` (one word/phrase from the question) is coloured."""
+        txt = esc(question)
+        if keyword and keyword.lower() in question.lower():
+            i = question.lower().index(keyword.lower()); txt = esc(question[:i]) + f'<b>{esc(question[i:i + len(keyword)])}</b>' + esc(question[i + len(keyword):])
+        return f'<div id="{hid}" class="hook tu" data-layout-allow-caption-zone="true" style="--acc:{self.accent}">{txt}</div>'
+
+    def hook_in(self, t, hid="hook", dur=0.25):
+        self.J(f"tl.fromTo('#{hid}',{{autoAlpha:0,y:24}},{{autoAlpha:1,y:0,duration:{f(dur)},ease:'power3.out',immediateRender:false}},{f(t)});")
+
+    def hook_out(self, t, hid="hook", dur=0.3):
+        self.J(f"tl.to('#{hid}',{{autoAlpha:0,y:-20,duration:{f(dur)},ease:'power2.in'}},{f(t)});")
+
+    def chips(self, cid, options, correct):
+        """Three compact option chips over the visual (v2 replaces the 2x2 card)."""
+        assert len(options) == 3 and 0 <= correct < 3, "v2 chips need exactly 3 options and a correct index"
+        self.cards[cid] = {"correct": correct, "options": options, "seconds": 1.5, "v2": True}
+        rows = "".join(
+            f'<div class="chip tu" id="{cid}_o{i}"{DISTRACTOR if i != correct else ""}><span class="let" data-fc="skip">{LETTERS[i]}</span><span class="otext">{esc(o)}</span></div>'
+            for i, o in enumerate(options))
+        return (f'<div id="{cid}" class="chips" data-layout-allow-caption-zone="true" style="--acc:{self.accent}">{rows}'
+                f'<div class="beatbar" id="{cid}_beat"><div class="beatfill" id="{cid}_fill"></div></div></div>')
+
+    def chips_in(self, t, cid=None, gap=0.1):
+        cid = cid or next(iter(self.cards))
+        self.J(f"tl.set('#{cid}',{{autoAlpha:1}},{f(t)});")
+        for i in range(3):
+            self.J(f"tl.fromTo('#{cid}_o{i}',{{autoAlpha:0,x:-30}},{{autoAlpha:1,x:0,duration:0.28,ease:'power2.out',immediateRender:false}},{f(t + i * gap)});")
+
+    def beat(self, t0, cid=None, seconds=1.5):
+        """The 1.5-s pulse that replaces the countdown: a thin bar drains under the chips, chips breathe once."""
+        cid = cid or next(iter(self.cards)); n = float(seconds)
+        self.J(f"tl.fromTo('#{cid}_beat',{{autoAlpha:0}},{{autoAlpha:1,duration:0.15,immediateRender:false}},{f(t0 - 0.15)});")
+        self.J(f"tl.fromTo('#{cid}_fill',{{scaleX:1}},{{scaleX:0,duration:{f(n)},ease:'none',immediateRender:false}},{f(t0)});")
+        for i in range(3):
+            self.J(f"tl.to('#{cid}_o{i}',{{scale:1.02,duration:{f(n / 2)},ease:'sine.inOut',yoyo:true,repeat:1}},{f(t0)});")
+        self.J(f"tl.to('#{cid}_beat',{{autoAlpha:0,duration:0.15}},{f(t0 + n)});")
+        return t0 + n
+
+    def reveal_chips(self, t, cid=None, correct=None):
+        cid = cid or next(iter(self.cards)); c = self.cards[cid]["correct"] if correct is None else correct
+        for i in range(3):
+            if i == c:
+                self.J(f"tl.to('#{cid}_o{i}',{{backgroundColor:'{SAND}',color:'{INK}',scale:1.04,duration:0.25,ease:'back.out(3)'}},{f(t)});")
+                self.J(f"tl.to('#{cid}_o{i} .let',{{backgroundColor:'{INK}',color:'{SAND}',duration:0.25}},{f(t)});")
+            else:
+                self.J(f"tl.to('#{cid}_o{i}',{{opacity:0.3,duration:0.3}},{f(t)});")
+
+    def chips_out(self, t, cid=None, dur=0.3):
+        cid = cid or next(iter(self.cards))
+        self.J(f"tl.to('#{cid}',{{autoAlpha:0,y:30,duration:{f(dur)},ease:'power2.in'}},{f(t)});")
+
+    def captions(self, groups):
+        """groups = [(gid, text)]: pre-split spoken phrases (≤ 4 words), one element each, shown by caption_show()."""
+        return "".join(f'<div id="{gid}" class="cap tu" data-layout-allow-caption-zone="true" data-tq-dwell="off">{esc(txt)}</div>' for gid, txt in groups)
+
+    def caption_show(self, gid, t0, t1):
+        self.J(f"tl.set('#{gid}',{{autoAlpha:1}},{f(t0)});")
+        self.J(f"tl.set('#{gid}',{{autoAlpha:0}},{f(t1)});")
+
+    def bug_in(self, t, dur=0.3):
+        self.J(f"tl.fromTo('#bug',{{autoAlpha:0,x:-20}},{{autoAlpha:1,x:0,duration:{f(dur)},ease:'power2.out',immediateRender:false}},{f(t)});")
+
+    def cta(self, tease, line="One map question a day · Subscribe"):
+        return (f'<div id="cta" class="cta" data-layout-allow-caption-zone="true"><div class="ctease tu">{esc(tease)}</div>'
+                f'<div class="cline tu" data-tq-dwell="off">{esc(line)}</div></div>')
+
+    def cta_in(self, t0, t1=None, dur=0.35):
+        self.J(f"tl.fromTo('#cta',{{autoAlpha:0,y:30}},{{autoAlpha:1,y:0,duration:{f(dur)},ease:'power3.out',immediateRender:false}},{f(t0)});")
+        if t1 is not None: self.J(f"tl.to('#cta',{{autoAlpha:0,duration:0.3,ease:'power2.in'}},{f(t1 - 0.3)});")
+
+    def credit_line(self, credit):
+        return f'<div id="credit2" class="credit2 tu" data-layout-allow-caption-zone="true" data-tq-dwell="off">{esc(credit)}</div>'
+
+    def credit_in(self, t0, t1=None):
+        self.J(f"tl.fromTo('#credit2',{{autoAlpha:0}},{{autoAlpha:1,duration:0.3,immediateRender:false}},{f(t0)});")
+        if t1 is not None: self.J(f"tl.to('#credit2',{{autoAlpha:0,duration:0.25}},{f(t1 - 0.25)});")
+
 
 CSS = f"""
 .bug{{position:absolute;left:40px;top:{SAFE_TOP}px;font-family:'Oswald';font-weight:600;font-size:30px;letter-spacing:.2em;color:{CREAM};background:{INK};padding:10px 20px 8px 16px;border-left:8px solid var(--acc,{SAND});z-index:80}}
@@ -175,4 +257,18 @@ CSS = f"""
 .credit{{position:absolute;left:60px;width:960px;top:1440px;font-family:'Oswald';font-size:26px;letter-spacing:.06em;line-height:1.35;color:rgba(239,230,210,.78)}}
 .progress{{position:absolute;left:0;bottom:0;width:1080px;height:8px;background:rgba(239,230,210,.18);z-index:95}}
 #prog{{width:1080px;height:8px;background:{RED};transform-origin:0 50%}}
+/* ---- v2 "Guess it → See it" ---- */
+.hook{{position:absolute;left:60px;top:1190px;width:880px;font-family:'Oswald';font-weight:600;font-size:52px;line-height:1.14;color:{CREAM};text-shadow:0 3px 18px rgba(0,0,0,.85),0 0 2px rgba(0,0,0,.9);z-index:72;visibility:hidden;opacity:0}}
+.hook b{{color:var(--acc,{SAND});font-weight:600}}
+.chips{{position:absolute;left:60px;top:1325px;width:880px;height:250px;z-index:70;visibility:hidden;opacity:0}}
+.chip{{position:absolute;left:0;width:880px;height:70px;background:rgba(11,22,32,.86);border:2px solid rgba(239,230,210,.26);border-radius:14px;color:{CREAM};font-family:'Oswald';font-weight:500;font-size:34px;line-height:66px;white-space:nowrap;overflow:hidden;visibility:hidden;opacity:0;transform-origin:50% 50%}}
+.chip:nth-child(1){{top:0}} .chip:nth-child(2){{top:80px}} .chip:nth-child(3){{top:160px}}
+.chip .let{{display:inline-block;width:48px;height:48px;line-height:48px;margin:0 16px 0 12px;text-align:center;border-radius:50%;background:var(--acc,{SAND});color:{INK};font-weight:700;font-size:28px;vertical-align:middle;position:relative;top:-2px}}
+.beatbar{{position:absolute;left:0;top:240px;width:880px;height:6px;background:rgba(239,230,210,.18);border-radius:3px;visibility:hidden;opacity:0}}
+.beatfill{{width:880px;height:6px;background:#4FD1E0;border-radius:3px;transform-origin:0 50%}}
+.cap{{position:absolute;left:60px;top:1215px;width:880px;text-align:center;font-family:'Oswald';font-weight:600;font-size:58px;line-height:1.1;color:{CREAM};text-shadow:0 3px 18px rgba(0,0,0,.9),0 0 3px rgba(0,0,0,.9);z-index:72;visibility:hidden;opacity:0}}
+.cta{{position:absolute;left:60px;top:1350px;width:880px;text-align:center;z-index:70;visibility:hidden;opacity:0}}
+.ctease{{font-family:'DM Serif';font-style:italic;font-size:44px;color:{CREAM};text-shadow:0 2px 12px rgba(0,0,0,.8)}}
+.cline{{margin-top:14px;font-family:'Oswald';font-weight:600;font-size:34px;letter-spacing:.1em;color:{SAND};text-shadow:0 2px 12px rgba(0,0,0,.8)}}
+.credit2{{position:absolute;left:60px;top:1548px;width:880px;font-family:'Oswald';font-size:22px;letter-spacing:.04em;line-height:1.2;color:rgba(239,230,210,.72);text-shadow:0 1px 6px rgba(0,0,0,.9);z-index:70;visibility:hidden;opacity:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
 """

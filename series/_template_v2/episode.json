@@ -1,0 +1,40 @@
+{
+ "id": "_template_v2",
+ "format": "quiz-v2",
+ "series": "geo-blitz",
+ "number": 0,
+ "title": "Which is the largest peninsula on Earth?",
+ "difficulty": "MEDIUM",
+ "seed": 2026,
+ "quiz": {
+  "question": "Which is the largest peninsula on Earth?",
+  "keyword": "largest peninsula",
+  "options": [
+   "Arabian Peninsula",
+   "Indian Peninsula",
+   "Scandinavian Peninsula"
+  ],
+  "correct": 0,
+  "beat": 1.5,
+  "answer_line": "The Arabian Peninsula",
+  "answer_sub": "about 3.2 million km²",
+  "tease": "Tomorrow: the country with the most neighbours.",
+  "cta_line": "One map question a day · Subscribe"
+ },
+ "hook_type": "superlative",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [],
+ "post": {
+  "title": "Which is the LARGEST peninsula on Earth? 🌍",
+  "description": "Which is the largest peninsula on Earth? Guess first — then see it on an honest, equal-area map.\n\nWhat was your first guess?\n\nGeo Blitz #0",
+  "hashtags": [
+   "#GKshorts",
+   "#thequizwire",
+   "#shorts",
+   "#geography",
+   "#maps"
+  ]
+ }
+}

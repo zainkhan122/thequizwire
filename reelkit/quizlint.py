@@ -17,6 +17,15 @@ FAIL (exit 1)
                  kenburns plate .25, colour 0) — a quiz card over a static plate is the "mass-produced" look we refuse
   Q7 release     timeline.json is estimated (--release) · mix.wav missing in hf/assets (--release)
 WARN: total < 35 s, hashtags missing the house set, VO does not read the question/options, number < registry next_number.
+
+v2 (episode.json "format": "quiz-v2", docs/PLAN_V2.md §2) replaces Q1/Q2's card rules and adds:
+  Q9  hook       `hook_in` at ≤ 0.3 s; no card_in/options_in/countdown/end_in; `bug_in` (if any) ≥ 2.0 s — nothing but the
+                 question and the moving visual in the first two seconds
+  Q10 beat       the countdown line is a `silence` of 1.0–1.5 s and exactly one `beat` action sits on it
+  Q11 reveal     a visual-state change (geo.highlight_in / cam_to / pin_in / route_draw / chart.*) within 1.5 s of `reveal`
+  Q12 loop       the last `hook_in` is ≥ end-2.0 and a final `geo.cam_to` (until ≥ end-0.4) returns to the t=0 `geo.cam_set`
+  Q13 length     exactly 3 options · total 22–40 s (FAIL) / 26–36 s (else WARN) · question ≤ 76 chars · option ≤ 26 chars ·
+                 fact ≤ 80 chars (short plates under word-timed captions) · chips_out → fact_in hand-off ≥ 0.45 s
 """
 import argparse, json, re, sys
 from pathlib import Path
@@ -43,8 +52,9 @@ def main():
     series = next((s for s in reg["series"] if s["slug"] == E.get("series")), None)
     # ---- Q1
     q = E.get("quiz", {})
-    if len(q.get("options", [])) != 4: F.append("Q1: quiz needs exactly 4 options")
-    if not isinstance(q.get("correct"), int) or not 0 <= q.get("correct", -1) < 4: F.append("Q1: quiz.correct must be 0–3")
+    v2 = E.get("format") == "quiz-v2"; n_opt = 3 if v2 else 4
+    if len(q.get("options", [])) != n_opt: F.append(f"{'Q13' if v2 else 'Q1'}: quiz needs exactly {n_opt} options")
+    if not isinstance(q.get("correct"), int) or not 0 <= q.get("correct", -1) < n_opt: F.append(f"Q1: quiz.correct must be 0–{n_opt - 1}")
     else:
         co = norm(q["options"][q["correct"]]); al = norm(q.get("answer_line", ""))
         key = [w for w in co.split() if w not in ("the", "of", "a", "an", "peninsula", "river", "mountain", "ocean", "sea", "desert", "lake", "island", "islands", "country")] or co.split()
@@ -58,14 +68,17 @@ def main():
     seq = [r for i, r in enumerate(roles) if i == 0 or r != roles[i - 1]]
     if seq != ORDER: F.append(f"Q2: roles {seq} must read {ORDER} (story may repeat)")
     cd = [l for l in V["lines"] if l.get("role") == "countdown"]
-    if not cd or cd[0].get("silence") is None or float(cd[0]["silence"]) < 2: F.append("Q2: the countdown line must be a `silence` ≥ 2 s (the ring counts, nobody talks)")
+    if v2:
+        if not cd or cd[0].get("silence") is None or not 1.0 <= float(cd[0]["silence"]) <= 1.5: F.append("Q10: the beat line must be a `silence` of 1.0–1.5 s (v2 has no countdown)")
+    elif not cd or cd[0].get("silence") is None or float(cd[0]["silence"]) < 2: F.append("Q2: the countdown line must be a `silence` ≥ 2 s (the ring counts, nobody talks)")
     if len(cd) > 1: F.append("Q2: more than one countdown line")
     # ---- Q4 copy
-    if len(q.get("question", "")) > 90: F.append(f"Q4: question is {len(q['question'])} chars (> 90 — 3 lines at 46 px)")
+    q_max, o_max, f_max = (76, 26, 80) if v2 else (90, 24, 140)
+    if len(q.get("question", "")) > q_max: F.append(f"Q4: question is {len(q['question'])} chars (> {q_max})")
     for o in q.get("options", []):
-        if len(o) > 24: F.append(f"Q4: option '{o}' is {len(o)} chars (> 24, single line)")
+        if len(o) > o_max: F.append(f"Q4: option '{o}' is {len(o)} chars (> {o_max}, single line)")
     for el in X.get("elements", []):
-        if el.get("type") == "fact" and len(el.get("text", "")) > 140: F.append(f"Q4: fact {el['id']} is {len(el['text'])} chars (> 140)")
+        if el.get("type") == "fact" and len(el.get("text", "")) > f_max: F.append(f"Q4: fact {el['id']} is {len(el['text'])} chars (> {f_max})")
         if el.get("kicker") and len(el["kicker"]) > 28: F.append(f"Q4: kicker '{el['kicker']}' > 28 chars")
     # ---- VO reads the card
     vo_all = norm(" ".join(l.get("text", "") for l in V["lines"]))
@@ -76,7 +89,10 @@ def main():
     story_share = None; motion = None
     if T:
         total = T["total"]; SC = {s["id"]: s for s in T["scenes"]}
-        if total > 60.0: F.append(f"Q3: total {total} s > 60 s")
+        if v2:
+            if not 22.0 <= total <= 40.0: F.append(f"Q13: total {total} s outside 22–40 s")
+            elif not 26.0 <= total <= 36.0: W.append(f"Q13: total {total} s outside the 26–36 s target")
+        elif total > 60.0: F.append(f"Q3: total {total} s > 60 s")
         elif total < 35: W.append(f"total {total} s < 35 s (thin for a reveal + story)")
         story = sum(s["end"] - s["start"] for s in T["scenes"] if s.get("role") == "story"); story_share = story / total
         if story_share < 0.25: F.append(f"Q3: story share {story_share:.0%} of runtime (< 25 %)")
@@ -98,11 +114,18 @@ def main():
         stages = {s["id"]: s for s in X.get("stage", [])}; elements = {e["id"]: e for e in X.get("elements", [])}
         used_stage, elem_in, n_cd, t_cd_end, t_reveal, cam_moves = set(), set(), 0, None, None, {}
         t_card_out, facts = [], []                      # Q8: the caption band hands over, never crossfades
+        v2b = {"hook_in": [], "bug_in": [], "beat": [], "visual": [], "cam_to": [], "cam_set": None, "banned": []}
         for b in X.get("beats", []):
             try: t = tt(b["at"]); t1 = tt(b["until"]) if "until" in b else None
             except (KeyError, ValueError) as e: F.append(f"Q5: beat {b} — unknown time reference {e}"); continue
             do = b.get("do", "")
-            if do == "card_out": t_card_out.append(t)
+            if do in ("card_out", "chips_out"): t_card_out.append(t)
+            if v2:
+                if do in v2b: v2b[do].append(t)
+                if do in ("card_in", "options_in", "countdown", "end_in"): v2b["banned"].append(do)
+                if do in ("geo.highlight_in", "geo.cam_to", "geo.pin_in", "geo.route_draw", "geo.spin") or do.startswith("chart."): v2b["visual"].append(t)
+                if do == "geo.cam_to": v2b["cam_to"].append((t, t1, b.get("args", {})))
+                if do == "geo.cam_set" and v2b["cam_set"] is None: v2b["cam_set"] = (t, b.get("args", {}))
             if do == "fact_in":
                 for tc in t_card_out:
                     if 0 <= t - tc < 0.45: F.append(f"Q8: fact_in at {t:.2f}s starts {t - tc:.2f}s after card_out — give the card 0.45 s to leave (crossfades in the band read as occluded text in `hyperframes check`)")
@@ -118,13 +141,29 @@ def main():
                 if b["id"] not in elements: F.append(f"Q5: beat {do} references unknown element {b['id']}")
                 elif do.endswith("_in") or do == "counter_run" or do.startswith("chart."): elem_in.add(b["id"])
                 if do == "fact_in" and t1 is None: F.append(f"Q5: fact_in {b['id']} needs `until`")
-            if do == "countdown":
-                n_cd += 1; t_cd_end = t + float(q.get("countdown", 3))
+            if do == "countdown" or (v2 and do == "beat"):
+                n_cd += 1; t_cd_end = t + float(q.get("beat", 1.5) if v2 else q.get("countdown", 3))
             if do == "reveal": t_reveal = t
             if t1 is not None and t1 < t: F.append(f"Q5: beat {do} `until` before `at`")
-        if n_cd != 1: F.append(f"Q2: {n_cd} countdown beats (need exactly 1)")
+        if n_cd != 1: F.append(f"{'Q10' if v2 else 'Q2'}: {n_cd} {'beat' if v2 else 'countdown'} beats (need exactly 1)")
         if t_reveal is None: F.append("Q2: no reveal beat")
-        elif t_cd_end is not None and t_reveal + 0.01 < t_cd_end: F.append(f"Q2: reveal at {t_reveal:.2f}s before the countdown ends at {t_cd_end:.2f}s")
+        elif t_cd_end is not None and t_reveal + 0.01 < t_cd_end: F.append(f"Q2: reveal at {t_reveal:.2f}s before the {'beat' if v2 else 'countdown'} ends at {t_cd_end:.2f}s")
+        if v2:
+            # Q9 hook
+            if not v2b["hook_in"] or min(v2b["hook_in"]) > 0.3: F.append("Q9: `hook_in` must happen at ≤ 0.3 s (the question is the first thing on screen)")
+            if v2b["banned"]: F.append(f"Q9: v2 must not use {sorted(set(v2b['banned']))} (no card, no countdown ring, no full-screen end card)")
+            if any(tb < 2.0 for tb in v2b["bug_in"]): F.append("Q9: `bug_in` before 2.0 s — no chrome before the question lands")
+            # Q11 visual reveal
+            if t_reveal is not None and not any(t_reveal - 0.2 <= tv <= t_reveal + 1.5 for tv in v2b["visual"]):
+                F.append(f"Q11: no visual-state change within 1.5 s of the reveal at {t_reveal:.2f}s (highlight/cam/pin/route/chart)")
+            # Q12 loop
+            if not v2b["hook_in"] or max(v2b["hook_in"]) < total - 2.0: F.append("Q12: the hook must return for the loop (last `hook_in` ≥ end-2.0)")
+            if v2b["cam_set"] and any(st.get("type") == "geo" for st in stages.values()):
+                last = max(v2b["cam_to"], key=lambda c: c[1] or c[0]) if v2b["cam_to"] else None
+                a0 = v2b["cam_set"][1]
+                if not last or (last[1] or last[0]) < total - 0.4: F.append("Q12: the final `geo.cam_to` must run until ≥ end-0.4 (loop frame)")
+                elif abs(float(last[2].get("k", 1)) - float(a0.get("k", 1))) > 0.02 or [round(float(x), 2) for x in last[2].get("lonlat", [])] != [round(float(x), 2) for x in a0.get("lonlat", [])]:
+                    F.append(f"Q12: the final camera {last[2]} does not match the opening cam_set {a0} (last frame must equal the first)")
         for sid, st in stages.items():
             if sid not in used_stage and st["type"] in ("geo", "chart"): F.append(f"Q5: stage {sid} ({st['type']}) has no beats")
             if st["type"] == "geo" and cam_moves.get(sid, 0) == 0: F.append(f"Q5: map stage {sid} never moves (no cam_to/highlight/pin beats) — a static map is a plate")

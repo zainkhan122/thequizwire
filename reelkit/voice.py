@@ -447,7 +447,7 @@ def check_plan(V):
             if not lo <= l["pause_after"] <= hi:
                 F.append(f"{l['id']}: pause_after {l['pause_after']}s outside {l['tone']} range {lo}–{hi}")
         try:
-            marks(l["text"], l.get("pauses"))
+            marks(l.get("text", ""), l.get("pauses"))
         except SystemExit as e:
             F.append(f"{l['id']}: {e}")
     if not END_HOLD[0] <= V.get("end_hold", 0) <= END_HOLD[1]:

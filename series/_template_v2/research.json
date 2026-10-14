@@ -1,0 +1,191 @@
+{
+ "version": 1,
+ "episode": "_template_v2",
+ "topic": "Largest peninsula in the world (Arabian Peninsula)",
+ "researched": "2026-10-14",
+ "policy_note": "Template ledger. Every quiz needs: the answer (core), every on-screen number (record), each story beat (detail), framing lines (framing) — all traced to ≥ 2 independent publishers. Replace everything for a real episode.",
+ "sources": {
+  "britannica_arabia": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Arabia (peninsula, Asia)",
+   "url": "https://www.britannica.com/place/Arabia-peninsula-Asia",
+   "date": "2025-01-01",
+   "notes": "largest peninsula; about 1,250,000 sq mi"
+  },
+  "natgeo_peninsula": {
+   "type": "reference",
+   "publisher": "National Geographic Education",
+   "title": "Peninsula",
+   "url": "https://education.nationalgeographic.org/resource/peninsula/",
+   "date": "2024-01-01"
+  },
+  "factbook_sau": {
+   "type": "primary",
+   "publisher": "CIA World Factbook",
+   "title": "Saudi Arabia — Geography",
+   "url": "https://www.cia.gov/the-world-factbook/countries/saudi-arabia/",
+   "date": "2025-01-01"
+  },
+  "un_m49": {
+   "type": "primary",
+   "publisher": "United Nations Statistics Division",
+   "title": "Standard country or area codes (M49) — Western Asia",
+   "url": "https://unstats.un.org/unsd/methodology/m49/",
+   "date": "2025-01-01"
+  },
+  "usgs_projections": {
+   "type": "primary",
+   "publisher": "U.S. Geological Survey",
+   "title": "Map Projections (Professional Paper 1395, Snyder)",
+   "url": "https://pubs.usgs.gov/pp/1395/report.pdf",
+   "date": "1987-01-01",
+   "notes": "equal-area vs conformal properties"
+  },
+  "wiki_arabian": {
+   "type": "reference",
+   "publisher": "Wikipedia (pointer — follow its citations)",
+   "title": "Arabian Peninsula",
+   "url": "https://en.wikipedia.org/wiki/Arabian_Peninsula",
+   "date": "2026-01-01"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "record",
+   "text": "The Arabian Peninsula is the largest peninsula in the world.",
+   "sources": [
+    "britannica_arabia",
+    "natgeo_peninsula",
+    "wiki_arabian"
+   ],
+   "vo": [
+    "which is the largest peninsula on earth",
+    "arabian peninsula"
+   ],
+   "screen": [
+    "The Arabian Peninsula",
+    "Arabian Peninsula"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "record",
+   "text": "Its area is about 3.2 million km² (Britannica: about 1,250,000 square miles ≈ 3.24 million km²).",
+   "sources": [
+    "britannica_arabia",
+    "wiki_arabian"
+   ],
+   "vo": [
+    "around three point two million square kilometres",
+    "three point two million square kilometres"
+   ],
+   "screen": [
+    "about 3.2 million km²",
+    "3.2 MILLION KM²"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "detail",
+   "text": "Seven countries lie on the peninsula — Saudi Arabia, Yemen, Oman, the UAE, Qatar, Bahrain and Kuwait — and Saudi Arabia occupies most of it.",
+   "sources": [
+    "britannica_arabia",
+    "factbook_sau",
+    "un_m49"
+   ],
+   "vo": [
+    "seven countries share it and saudi arabia covers most of that land"
+   ],
+   "screen": [
+    "SHARED BY 7 COUNTRIES",
+    "Saudi Arabia takes most of it."
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "framing",
+   "text": "An equal-area projection preserves relative sizes; Mercator (conformal) inflates areas away from the equator.",
+   "sources": [
+    "usgs_projections"
+   ],
+   "vo": [
+    "on this equal-area map that is bigger than india's peninsula and scandinavia put together"
+   ],
+   "screen": [
+    "HONEST MAP",
+    "Equal-area: sizes compare truthfully."
+   ]
+  }
+ ],
+ "myths": [
+  {
+   "myth": "India is the largest peninsula.",
+   "reality": "The Indian peninsula is smaller by area than Arabia.",
+   "sources": [
+    "britannica_arabia"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "^[ABCD]$",
+  "^What was your first guess",
+  "^Comment below",
+  "^Arabian Sea$",
+  "^Red Sea$",
+  "^Riyadh$",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^Indian Peninsula$",
+  "^Scandinavian Peninsula$",
+  "^Iberian Peninsula$",
+  "^One map question a day",
+  "^Tomorrow: the country with the most neighbours",
+  "^Indian Peninsula$",
+  "^Scandinavian Peninsula$"
+ ],
+ "landscape": {
+  "our_gap": "Nobody in the feed shows the comparison on an equal-area map; the honest-map beat is the differentiator.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/@thequizwire-com/shorts",
+    "title": "Feed Geo Blitz #1–9",
+    "angle": "quiz card over stock b-roll",
+    "misses": "no map, no scale, no sources"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=geography+quiz+shorts",
+    "title": "Typical GK quiz Shorts",
+    "angle": "text + countdown + stock footage",
+    "misses": "no visual proof of the answer"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=map+explainer",
+    "title": "Map explainer channels",
+    "angle": "long-form Mercator maps",
+    "misses": "no quiz hook; area-distorting projections"
+   }
+  ]
+ },
+ "vo_exempt": [
+  "^arabian, indian, or scandinavian\\?$",
+  "^tomorrow: the country with the most neighbours",
+  "^subscribe, and guess it first"
+ ]
+}

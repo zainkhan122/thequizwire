@@ -15,6 +15,8 @@ visuals.json
   time expr  = "s03" (scene start) · "s03+0.4" · "s03-0.5" (before scene end) · "s03.end" · "s03@cue" (voice.json cue word)
                · "end" / "end-2.5" (composition end) · a bare number
   actions    = quiz: card_in card_out options_in countdown reveal answer_in answer_out fact_in end_in
+               quiz v2 (episode.json format "quiz-v2", docs/PLAN_V2.md): hook_in hook_out chips_in beat reveal chips_out bug_in
+               cta_in credit_in (+ "captions": {roles, max_words, max_chars, hold} → word-timed captions from timeline words)
                geo.<Scene method> (needs "stage"; "until" gives t1 for cam_to/spin/route_draw)
                chart.<Charts method>_in / counter_run (needs "id"; "until" for counter_run)
                fx.flash
@@ -136,22 +138,65 @@ class Composer:
             if do == "chart.counter_run": m(t, t1 if t1 is not None else t + float(b.get("dur", 1.5)), b["id"], **args)
             else: m(t, b["id"], **args)
         elif do == "fx.flash": self.FX.flash(t, **args)
-        elif do in ("card_in", "card_out", "options_in", "reveal", "countdown"): getattr(self.Q, do)(t, **args)
+        elif do == "reveal": (self.Q.reveal_chips if self.v2 else self.Q.reveal)(t, **args)
+        elif do in ("card_in", "card_out", "options_in", "countdown"): getattr(self.Q, do)(t, **args)
+        elif do in ("hook_in", "hook_out", "chips_in", "chips_out", "bug_in"): getattr(self.Q, do)(t, **args)        # v2
+        elif do == "beat": self.Q.beat(t, seconds=float(self.E["quiz"].get("beat", 1.5)), **args)                   # v2
+        elif do == "cta_in": self.Q.cta_in(t, t1, **args)                                                             # v2
+        elif do == "credit_in": self.Q.credit_in(t, t1, **args)                                                       # v2
         elif do in ("answer_in", "answer_out"): getattr(self.Q, do)(t, b["id"], **args)
         elif do == "fact_in": self.Q.fact_in(t, t1, b["id"], **args)
         elif do == "end_in": self.Q.end_in(t, getattr(self, "clip_ids", []))
         else: raise ValueError(f"beat: unknown action {do}")
 
+    # ---------------------------------------------------------------- v2 captions (docs/PLAN_V2.md §2: word-timed, ≤ 4 words)
+    def caption_groups(self):
+        cfg = self.V.get("captions", {})
+        if cfg is False or cfg.get("off"): return []
+        roles = set(cfg.get("roles", ["reveal", "story", "cta"])); max_w = int(cfg.get("max_words", 4)); max_c = int(cfg.get("max_chars", 26))
+        hold = float(cfg.get("hold", 0.12)); groups, cur, k = [], [], 0
+        scene_role = {s["id"]: s.get("role") for s in self.TL["scenes"]}
+        words = [w for w in self.TL.get("words", []) if scene_role.get(w.get("scene")) in roles]
+
+        def flush():
+            nonlocal cur, k
+            if cur:
+                k += 1; groups.append((f"cap{k:02d}", " ".join(w["w"] for w in cur), cur[0]["s"], cur[-1]["e"])); cur = []
+        for w in words:
+            if cur and (w["scene"] != cur[-1]["scene"] or len(cur) >= max_w or len(" ".join(x["w"] for x in cur + [w])) > max_c or (w["s"] - cur[-1]["e"]) > 0.6):
+                flush()
+            cur.append(w)
+            if w["w"].rstrip('"\'')[-1:] in ".?!…": flush()
+        flush()
+        out = []
+        for i, (gid, txt, s, e) in enumerate(groups):
+            nxt = groups[i + 1][2] if i + 1 < len(groups) else self.TOTAL
+            out.append((gid, txt, round(s, 3), round(min(e + hold, nxt - 0.02, self.TOTAL), 3)))
+        return out
+
     def run(self):
         E, Q = self.E, self.Q
         q = E["quiz"]
+        self.v2 = E.get("format") == "quiz-v2"
         # chrome
-        self.body.append(Q.bug()); self.body.append(Q.badge(E.get("difficulty", "MEDIUM")))
+        self.body.append(Q.bug())
+        if not self.v2: self.body.append(Q.badge(E.get("difficulty", "MEDIUM")))
         for st in self.V.get("stage", []): self.stage(st)
-        self.body.append(Q.card("q1", q["question"], q["options"], q["correct"], seconds=q.get("countdown", 3)))
-        for el in self.V.get("elements", []): self.element(el)
         credit = " · ".join(dict.fromkeys(([f"Map data: {self.G.credits()}"] if self.G.scenes else []) + self.credit_bits + ["Voice: AI (Kokoro) · thequizwire.com"]))
-        self.body.append(Q.end_card(credit))
+        if self.v2:
+            self.J("tl.set('#bug',{autoAlpha:0},0);")                                   # Q9: no chrome before the question lands
+            self.body.append(Q.hook("hook", q["question"], q.get("keyword")))
+            self.body.append(Q.chips("q1", q["options"], q["correct"]))
+            caps = self.caption_groups()
+            self.body.append(Q.captions([(g, t) for g, t, _, _ in caps]))
+            for g, _, t0, t1 in caps: Q.caption_show(g, t0, t1)
+            self.body.append(Q.cta(q.get("tease", "Tomorrow: a new question"), q.get("cta_line", "One map question a day · Subscribe")))
+            self.body.append(Q.credit_line(credit))
+            self.caption_count = len(caps)
+        else:
+            self.body.append(Q.card("q1", q["question"], q["options"], q["correct"], seconds=q.get("countdown", 3)))
+        for el in self.V.get("elements", []): self.element(el)
+        if not self.v2: self.body.append(Q.end_card(credit))
         self.body.append(Q.progress(self.TOTAL))
         self.body.append(self.FX.overlays())
         for b in self.V.get("beats", []): self.beat(b)
@@ -210,7 +255,7 @@ tl.seek(0);
         (hf / "meta.json").write_text(json.dumps({"id": self.E["id"], "name": title, "estimated_timeline": bool(self.TL.get("estimated"))}) + "\n")
         (hf / "package.json").write_text(json.dumps({"name": self.E["id"], "private": True, "type": "module",
                                                       "scripts": {"check": "npx --yes hyperframes@0.8.137 check", "render": "npx --yes hyperframes@0.8.137 render"}}, indent=2) + "\n")
-        return {"index_kb": len(doc) // 1024, "ops": len(self.js), "stages": len(self.stages), "total": self.TOTAL, "estimated": bool(self.TL.get("estimated"))}
+        return {"index_kb": len(doc) // 1024, "ops": len(self.js), "stages": len(self.stages), "total": self.TOTAL, "estimated": bool(self.TL.get("estimated")), "captions": getattr(self, "caption_count", 0)}
 
 
 def main():

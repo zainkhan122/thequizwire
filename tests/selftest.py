@@ -7,7 +7,7 @@ tests/selftest.py — proves the offline half of the QuizWire toolchain on any m
 
 What it proves
   1. node tests/test_geo_runtime.mjs — d3-geo projections, clipExtent, world-atlas ids, bbox winding
-  2. series/_template and tests/fixtures/ep-disputed (Kashmir, disputed-border path) each pass
+  2. series/_template, series/_template_v2 (Plan v2) and tests/fixtures/ep-disputed (Kashmir, disputed-border path) each pass
      plan --estimate → geodata prep → compose → hfstatic → quizlint → geolint → factcheck → provenance
      (copies are built in a temp dir; the fixtures in git stay byte-identical)
   3. negative cases — the gates FAIL when they must:
@@ -78,8 +78,10 @@ def main():
     tmp = Path(tempfile.mkdtemp(prefix="qw-selftest-"))
     try:
         tpl = copy_ep(ROOT / "series/_template", tmp)
+        tp2 = copy_ep(ROOT / "series/_template_v2", tmp)
         dis = copy_ep(ROOT / "tests/fixtures/ep-disputed", tmp)
         expect_ok(tpl, "_template")
+        expect_ok(tp2, "_template_v2 (Guess it → See it)")
         expect_ok(dis, "ep-disputed")
         # voice gate token normaliser: script words vs whisper digits must compare equal (decimals, scales, UK/US spelling)
         sys.path.insert(0, str(RK)); import voice as _voice
@@ -104,7 +106,7 @@ def main():
             fake2 = [{"w": w, "s": round(i * .3, 3), "e": round(i * .3 + .3, 3)} for i, w in enumerate(heard2.split())]
             got2 = _voice.script_words(line2, fake2)
             say([w["w"] for w in got2] == line2.split(), f"voice script_words: hyphenated word once, heard as “{heard2.split()[2]}”", " ".join(w["w"] for w in got2))
-        for ep in (tpl, dis):
+        for ep in (tpl, tp2, dis):
             r = run(["python3", str(RK / "voice.py"), "check", str(ep), "--plan-only"])
             say(r.returncode == 0, f"{ep.name}: voice plan gate (tones, pauses, climax, arc)", "" if r.returncode == 0 else (r.stdout + r.stderr)[-600:])
 
@@ -128,6 +130,24 @@ def main():
                 if b.get("do") == "fact_in" and b["at"].startswith("s05"): b["at"] = "s05+0.1"
         edit_json(xf / "visuals.json", break_handoff)
         expect_fail(xf, "quizlint", "plan quizlint", "Q8")
+
+        # negative 2c (v2): chrome before the question lands → Q9; loop camera not matching the opening → Q12
+        v9 = copy_ep(ROOT / "series/_template_v2", tmp, "ep-v2-hook")
+        def break_hook(v):
+            for b in v["beats"]:
+                if b.get("do") == "hook_in" and b["at"] == 0: b["at"] = 0.8
+                if b.get("do") == "bug_in": b["at"] = "s01"
+        edit_json(v9 / "visuals.json", break_hook)
+        expect_fail(v9, "quizlint", "plan quizlint", "Q9")
+        v12 = copy_ep(ROOT / "series/_template_v2", tmp, "ep-v2-loop")
+        def break_loop(v):
+            for b in v["beats"]:
+                if b.get("do") == "geo.cam_to" and str(b["at"]).startswith("end-"): b["args"]["k"] = 1.6
+        edit_json(v12 / "visuals.json", break_loop)
+        expect_fail(v12, "quizlint", "plan quizlint", "Q12")
+        v13 = copy_ep(ROOT / "series/_template_v2", tmp, "ep-v2-beat")
+        edit_json(v13 / "voice.json", lambda v: [l.__setitem__("silence", 3.0) for l in v["lines"] if l.get("role") == "countdown"])
+        expect_fail(v13, "quizlint", "plan quizlint", "Q10")
 
         # negative 3: an unsourced sentence in the narration → factcheck coverage; sovereignty wording → guardrail
         unf = copy_ep(ROOT / "tests/fixtures/ep-disputed", tmp, "ep-unsourced")

@@ -5,7 +5,13 @@
 name: selftest
 on:
   workflow_dispatch:
+    inputs:
+      template:
+        description: template episode to render (series/<name>)
+        default: _template_v2
+        required: false
 env:
+  TPL: ${{ github.event.inputs.template || '_template_v2' }}
   PYTHONUNBUFFERED: "1"
   HYPERFRAMES_NO_TELEMETRY: "1"
   HYPERFRAMES_NO_UPDATE_CHECK: "1"
@@ -35,9 +41,9 @@ jobs:
       - name: Template episode, every stage incl. render (RELEASE=0 so the estimated timeline is allowed)
         run: |
           set -o pipefail
-          GEOLINT_ONLINE=1 bash reelkit/episode.sh series/_template 2>&1 | tee "$RUNNER_TEMP/pipeline.log"
-          bash reelkit/episode.sh series/_template snap 2>&1 | tee -a "$RUNNER_TEMP/pipeline.log"
-          grep -E "^== \[|rendered in|text units|dead-zone|\"pass\"" "$RUNNER_TEMP/pipeline.log" | sed 's/^/  /' > series/_template/out/pipeline_summary.txt || true
+          GEOLINT_ONLINE=1 bash reelkit/episode.sh "series/$TPL" 2>&1 | tee "$RUNNER_TEMP/pipeline.log"
+          bash reelkit/episode.sh "series/$TPL" snap 2>&1 | tee -a "$RUNNER_TEMP/pipeline.log"
+          grep -E "^== \[|rendered in|text units|dead-zone|\"pass\"" "$RUNNER_TEMP/pipeline.log" | sed 's/^/  /' > "series/$TPL/out/pipeline_summary.txt" || true
       - name: Map animator image pulls (maptile engine prerequisite)
         run: docker pull ghcr.io/versatiles-org/versatiles-map-animator:latest && docker run --rm ghcr.io/versatiles-org/versatiles-map-animator:latest --help 2>&1 | head -60 || true
       - uses: actions/upload-artifact@v4
@@ -45,9 +51,9 @@ jobs:
         with:
           name: selftest-${{ github.run_number }}
           path: |
-            series/_template/out/*.json
-            series/_template/out/final.mp4
-            series/_template/out/cover.jpg
-            /home/runner/.cache/build/_template/snaps
+            series/${{ env.TPL }}/out/*.json
+            series/${{ env.TPL }}/out/final.mp4
+            series/${{ env.TPL }}/out/cover.jpg
+            /home/runner/.cache/build/${{ env.TPL }}/snaps
           if-no-files-found: ignore
           retention-days: 7
