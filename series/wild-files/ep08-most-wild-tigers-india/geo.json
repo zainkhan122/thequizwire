@@ -1,0 +1,176 @@
+{
+ "version": 1,
+ "episode": "ep08-most-wild-tigers-india",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "projection": "equalEarth",
+   "projection_reason": "three countries across Asia compared by count; equal-area so Russia's size is honest (geolint P1)",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     60,
+     -12,
+     150,
+     58
+    ]
+   },
+   "padding": 6,
+   "resolution": "110m",
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "356"
+     ],
+     "cls": "",
+     "note": "India (356)"
+    },
+    {
+     "kind": "highlight",
+     "id": "alt",
+     "ids": [
+      "643",
+      "360"
+     ],
+     "cls": "alt",
+     "note": "Russia (643), Indonesia (360) — the distractors"
+    }
+   ],
+   "pins": [
+    {
+     "id": "corbett",
+     "lonlat": [
+      78.8,
+      29.53
+     ],
+     "label": "Corbett · 260"
+    },
+    {
+     "id": "sundarbans",
+     "lonlat": [
+      89.0,
+      21.95
+     ],
+     "label": "Sundarbans · 100"
+    },
+    {
+     "id": "amur",
+     "lonlat": [
+      135.5,
+      45.5
+     ],
+     "label": "Amur tigers ≈ 750"
+    }
+   ],
+   "labels": [
+    {
+     "id": "bengal",
+     "lonlat": [
+      88,
+      13
+     ],
+     "text": "Bay of Bengal",
+     "cls": "sea"
+    },
+    {
+     "id": "sumatra",
+     "lonlat": [
+      101,
+      -2
+     ],
+     "text": "Sumatra"
+    }
+   ],
+   "disputed": [
+    {
+     "id": "jk",
+     "ne_name": "Jammu and Kashmir",
+     "name": "Jammu and Kashmir",
+     "controller": "India",
+     "claimants": [
+      "Pakistan"
+     ],
+     "note": "Line of Control (1972) separates it from Pakistani-administered areas",
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#kashmir",
+     "label_at": [
+      75.3,
+      33.6
+     ]
+    },
+    {
+     "id": "ak",
+     "ne_name": "Azad Kashmir",
+     "name": "Azad Kashmir",
+     "controller": "Pakistan",
+     "claimants": [
+      "India"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#kashmir",
+     "label_at": [
+      73.6,
+      34.0
+     ]
+    },
+    {
+     "id": "gb",
+     "ne_name": "Gilgit-Baltistan",
+     "name": "Gilgit-Baltistan",
+     "controller": "Pakistan",
+     "claimants": [
+      "India"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#kashmir",
+     "label_at": [
+      74.4,
+      36.3
+     ]
+    },
+    {
+     "id": "ac",
+     "ne_name": "Aksai Chin",
+     "name": "Aksai Chin",
+     "controller": "China",
+     "claimants": [
+      "India"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#kashmir",
+     "label_at": [
+      79.3,
+      35.0
+     ]
+    },
+    {
+     "id": "ar",
+     "ne_name": "Arunachal Pradesh",
+     "name": "Arunachal Pradesh",
+     "controller": "India",
+     "claimants": [
+      "China"
+     ],
+     "note": "McMahon Line (1914) is the de facto boundary",
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#arunachal",
+     "label_at": [
+      94.5,
+      28.0
+     ]
+    }
+   ],
+   "sources": [
+    "Natural Earth"
+   ]
+  }
+ }
+}

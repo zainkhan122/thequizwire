@@ -1,0 +1,267 @@
+{
+ "version": 1,
+ "episode": "ep08-most-wild-tigers-india",
+ "topic": "Which country has the most wild tigers? (India)",
+ "researched": "2026-10-15",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "sources": {
+  "pib_2023_tigers": {
+   "type": "primary",
+   "publisher": "Press Information Bureau, Government of India (MoEFCC / NTCA–WII)",
+   "title": "All India Tiger Estimation 2022: Release of the detailed Report",
+   "url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1943922&reg=48&lang=2",
+   "date": "2023-07-29",
+   "notes": "Status of Tigers 2022: average estimate 3,682 (upper limit 3,925), 6.1 %/yr growth; 'almost 75 % of the world's wild tigers'; Corbett highest reserve abundance (260)"
+  },
+  "pib_2026_tigers": {
+   "type": "primary",
+   "publisher": "Press Information Bureau, Government of India",
+   "title": "India Leads the Wilderness in Tiger Conservation",
+   "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2290233&reg=48&lang=1",
+   "date": "2026-07-28",
+   "notes": "AITE 2022 = 3,682; 'more than doubled since 2006'; recent global estimates ≈ 5,711 wild tigers worldwide"
+  },
+  "wiki_tiger_reserves": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Tiger reserves of India",
+   "url": "https://en.wikipedia.org/wiki/Tiger_reserves_of_India",
+   "date": "2026-10-05",
+   "notes": "58 tiger reserves as of 2025 (84,500 km²); 1,411 tigers in 2006 → 3,682 in 2022; about 70 % of the global wild population"
+  },
+  "wiki_tiger": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Tiger",
+   "url": "https://en.wikipedia.org/wiki/Tiger",
+   "date": "2026-10-01",
+   "notes": "global wild population 3,726–5,578 as of 2022 (IUCN); Endangered since 1986"
+  },
+  "wiki_siberian": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Siberian tiger",
+   "url": "https://en.wikipedia.org/wiki/Siberian_tiger",
+   "date": "2026-10-01",
+   "notes": "as of 2022 about 756 Siberian (Amur) tigers incl. 200 cubs in the Russian Far East; Sikhote-Alin, Primorsky Krai"
+  },
+  "wiki_corbett": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Jim Corbett National Park",
+   "url": "https://en.wikipedia.org/wiki/Jim_Corbett_National_Park",
+   "date": "2026-10-01",
+   "notes": "260 tigers in the 2022 census; India's first national park (1936), Uttarakhand"
+  },
+  "ht_2023": {
+   "type": "press",
+   "publisher": "Hindustan Times",
+   "title": "India's tiger count tops 3,600, Madhya Pradesh leads at 785",
+   "url": "https://www.hindustantimes.com/india-news/indias-tiger-population-soars-to-3-682-exceeding-expectations-in-latest-census-analysis-101690655161747.html",
+   "date": "2023-07-30",
+   "notes": "3,682 (range 3,167–3,925); 53 reserves then; Corbett 260; MP 785"
+  },
+  "toi_2023": {
+   "type": "press",
+   "publisher": "The Times of India",
+   "title": "Pegged at 3,167 in April, India's tiger population now placed at 3,682",
+   "url": "https://timesofindia.indiatimes.com/india/pegged-at-3167-in-april-indias-tiger-population-now-placed-at-3682/articleshow/102238974.cms",
+   "date": "2023-07-30",
+   "notes": "3,682 up from 2,967 in 2018; Corbett 260, Bandipur 150, Nagarhole 141; Sundarbans 101"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 – Countries (public domain)",
+   "url": "https://www.naturalearthdata.com/downloads/",
+   "date": "2025-01-01",
+   "notes": "map geometry (110m); India 356, Russia 643, Indonesia 360"
+  },
+  "border_registry": {
+   "type": "primary",
+   "publisher": "Natural Earth 10m admin-0 disputed areas (via docs/border_registry.json)",
+   "title": "Disputed areas: Kashmir parts, Arunachal Pradesh",
+   "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/",
+   "date": "2025-01-01",
+   "notes": "Jammu and Kashmir admin India/claimed Pakistan; Azad Kashmir & Gilgit-Baltistan admin Pakistan/claimed India; Aksai Chin admin China/claimed India; Arunachal Pradesh admin India/claimed China"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "India has the most wild tigers: 3,682 (2022 All India Tiger Estimation average; range 3,167–3,925). With the global wild population put at 3,726–5,578 (IUCN 2022) or ≈ 5,711 (2026 estimate), India alone exceeds the rest of the world combined.",
+   "sources": [
+    "pib_2023_tigers",
+    "pib_2026_tigers",
+    "wiki_tiger",
+    "ht_2023",
+    "toi_2023",
+    "wiki_tiger_reserves"
+   ],
+   "vo": [
+    "which country has the most wild tigers",
+    "it's india",
+    "about thirty-seven hundred, more than the rest of the world combined"
+   ],
+   "screen": [
+    "India",
+    "wild tigers · 2022"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "record",
+   "text": "India has 58 tiger reserves (2025); Corbett Tiger Reserve has the highest abundance of any reserve, 260 tigers (2022); Sundarbans about 100.",
+   "sources": [
+    "wiki_tiger_reserves",
+    "pib_2023_tigers",
+    "wiki_corbett",
+    "toi_2023"
+   ],
+   "vo": [
+    "fifty-eight reserves hold them",
+    "corbett alone has two hundred and sixty"
+   ],
+   "screen": [
+    "58 TIGER RESERVES",
+    "Corbett alone: 260 tigers.",
+    "Corbett · 260",
+    "Sundarbans · 100"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "record",
+   "text": "Russia's Amur (Siberian) tiger population was about 750 (756 incl. cubs) in 2022, in the Russian Far East.",
+   "sources": [
+    "wiki_siberian",
+    "pib_2026_tigers"
+   ],
+   "vo": [
+    "russia's amur tigers number about seven hundred and fifty"
+   ],
+   "screen": [
+    "RUSSIA · AMUR TIGERS",
+    "About 750 in the Far East.",
+    "Amur tigers ≈ 750",
+    "Russia"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "India's tiger estimate rose from 1,411 (2006) to 3,682 (2022) — more than doubled.",
+   "sources": [
+    "wiki_tiger_reserves",
+    "pib_2026_tigers",
+    "pib_2023_tigers"
+   ],
+   "vo": [
+    "back in two thousand six, india had just fourteen hundred",
+    "more than doubled since"
+   ],
+   "screen": [
+    "2006 → 2022",
+    "1,411 → 3,682. More than doubled."
+   ]
+  },
+  {
+   "id": "C05",
+   "weight": "framing",
+   "text": "Border policy plates (the India close-up shows Kashmir and Arunachal Pradesh): each disputed part is labelled with who administers it and who claims it, per docs/BORDER_POLICY.md. No sovereignty asserted.",
+   "sources": [
+    "border_registry",
+    "natural_earth"
+   ],
+   "vo": [],
+   "screen": [
+    "Jammu and Kashmir",
+    "Administered by India",
+    "Claimed by Pakistan",
+    "Azad Kashmir",
+    "Gilgit-Baltistan",
+    "Administered by Pakistan",
+    "Claimed by India",
+    "Aksai Chin",
+    "Administered by China",
+    "Arunachal Pradesh",
+    "Claimed by China",
+    "Line of Control (1972) separates it from Pakistani-administered areas",
+    "McMahon Line (1914) is the de facto boundary"
+   ]
+  }
+ ],
+ "myths": [
+  {
+   "myth": "India has 75 % of the world's tigers.",
+   "reality": "That was the 2023 line against a ~4,500–5,000 global estimate; newer global figures (5,574–5,711) put India's share nearer two thirds — still more than the rest of the world combined.",
+   "sources": [
+    "pib_2026_tigers",
+    "wiki_tiger"
+   ]
+  },
+  {
+   "myth": "Indonesia (Sumatra) has thousands of tigers.",
+   "reality": "The Sumatran tiger population is in the low hundreds; Russia's Amur tigers ≈ 750.",
+   "sources": [
+    "wiki_siberian",
+    "wiki_tiger"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^One question a day",
+  "^Next:",
+  "^Tomorrow:",
+  "^Bay of Bengal$",
+  "^Sumatra$",
+  "^Indonesia$",
+  "^0$"
+ ],
+ "landscape": {
+  "our_gap": "Feed versions put 'India' over a stock tiger. We count up the official 3,682 on the map, show where the reserves are and compare Russia's 750 honestly.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/@thequizwire-com/shorts",
+    "title": "Feed Wild Files (own channel, v1)",
+    "angle": "card over b-roll",
+    "misses": "no map, no source"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=country+with+most+tigers+shorts",
+    "title": "Search: most tigers shorts",
+    "angle": "stock + text",
+    "misses": "stale 2018 numbers; no reserve map"
+   },
+   {
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2290233&reg=48&lang=1",
+    "title": "PIB explainer",
+    "angle": "government text",
+    "misses": "not a video"
+   }
+  ]
+ },
+ "vo_exempt": [
+  "^russia, india, or indonesia\\?$",
+  "^tomorrow[,:]? the penguins that live on the equator",
+  "^subscribe and guess first"
+ ]
+}
