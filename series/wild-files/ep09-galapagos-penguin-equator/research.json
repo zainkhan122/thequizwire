@@ -1,0 +1,212 @@
+{
+ "version": 1,
+ "episode": "ep09-galapagos-penguin-equator",
+ "topic": "Where do penguins live on the equator? (Galápagos penguin)",
+ "researched": "2026-10-15",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "sources": {
+  "iucn_galapagos_penguin": {
+   "type": "primary",
+   "publisher": "IUCN Red List of Threatened Species",
+   "title": "Spheniscus mendiculus (Galápagos Penguin)",
+   "url": "https://www.iucnredlist.org/species/22697825/182729677",
+   "date": "2020-01-01",
+   "notes": "Endangered; population about 1,200 mature individuals; endemic to the Galápagos (Ecuador), mostly Fernandina and western Isabela; range map/assessment: breeding mainly Fernandina and Isabela, the latter straddling the equator"
+  },
+  "wiki_galapagos_penguin": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Galápagos penguin",
+   "url": "https://en.wikipedia.org/wiki/Gal%C3%A1pagos_penguin",
+   "date": "2026-10-01",
+   "notes": "the only penguin found north of the equator; most on Fernandina and the west coast of Isabela; Humboldt and Cromwell Currents keep it alive at tropical latitude; northern tip of Isabela crosses the equator so some live in the Northern Hemisphere; ~1,200 mature as of 2018; 48–50 cm, 2–4 kg; IUCN Endangered"
+  },
+  "wiki_isabela": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Isabela Island (Galápagos)",
+   "url": "https://en.wikipedia.org/wiki/Isabela_Island_(Gal%C3%A1pagos)",
+   "date": "2026-10-01",
+   "notes": "largest Galápagos island; the equator crosses its northern part (Volcán Wolf / Ecuador volcano area)"
+  },
+  "gct_penguin": {
+   "type": "press",
+   "publisher": "Galápagos Conservation Trust",
+   "title": "Galápagos penguin",
+   "url": "https://galapagosconservation.org.uk/species/galapagos-penguin/",
+   "date": "2025-01-01",
+   "notes": "only penguin species found north of the equator; one of the rarest penguins; population swings with El Niño"
+  },
+  "earth_org_penguin": {
+   "type": "press",
+   "publisher": "Earth.Org",
+   "title": "Galapagos Penguin: Endangered Animals Spotlight",
+   "url": "https://earth.org/?endangered-species=galapagos-penguin-endangered-animals-spotlight",
+   "date": "2024-07-03",
+   "notes": "IUCN Endangered; population approximately 1,200; endemic to the Galápagos"
+  },
+  "penguinsg": {
+   "type": "press",
+   "publisher": "Penguin Specialist Group (penguinsg.org)",
+   "title": "Galapagos Penguin",
+   "url": "https://www.penguinsg.org/copy-of-fiordland-penguin",
+   "date": "2025-01-01",
+   "notes": "likely the rarest penguin; Endangered (IUCN 2020); breeds mostly on northern/eastern Fernandina and south-western Isabela"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 – Countries 10m (public domain)",
+   "url": "https://www.naturalearthdata.com/downloads/",
+   "date": "2025-01-01",
+   "notes": "island geometry; Ecuador 218; the equator drawn at 0°"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The Galápagos penguin (Spheniscus mendiculus), endemic to the Galápagos Islands of Ecuador, is the only penguin species found north of the equator.",
+   "sources": [
+    "wiki_galapagos_penguin",
+    "iucn_galapagos_penguin",
+    "gct_penguin"
+   ],
+   "vo": [
+    "where do penguins live on the equator",
+    "it's the galápagos",
+    "the only penguin north of the equator lives here"
+   ],
+   "screen": [
+    "Galápagos Islands",
+    "Equator 0°"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "The northern tip of Isabela Island crosses the equator, so some Galápagos penguins live in the Northern Hemisphere — the only penguins to do so. Most live on Fernandina and western Isabela.",
+   "sources": [
+    "wiki_galapagos_penguin",
+    "wiki_isabela",
+    "penguinsg",
+    "iucn_galapagos_penguin",
+    "natural_earth"
+   ],
+   "vo": [
+    "isabela's northern tip crosses the line, so some nest in the northern hemisphere"
+   ],
+   "screen": [
+    "ISABELA ISLAND",
+    "Its northern tip crosses 0°.",
+    "Isabela · 0°",
+    "Fernandina"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "detail",
+   "text": "The cool Humboldt and Cromwell Currents let the species survive at a tropical latitude.",
+   "sources": [
+    "wiki_galapagos_penguin",
+    "gct_penguin"
+   ],
+   "vo": [
+    "cold humboldt and cromwell currents keep the water cool"
+   ],
+   "screen": [
+    "HUMBOLDT + CROMWELL",
+    "Cold currents on the equator."
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "record",
+   "text": "IUCN lists the species as Endangered with about 1,200 mature individuals — one of the rarest penguins.",
+   "sources": [
+    "iucn_galapagos_penguin",
+    "wiki_galapagos_penguin",
+    "earth_org_penguin",
+    "penguinsg"
+   ],
+   "vo": [
+    "about twelve hundred adults remain, one of the rarest penguins alive"
+   ],
+   "screen": [
+    "ENDANGERED · IUCN",
+    "About 1,200 mature birds.",
+    "adults left · IUCN"
+   ]
+  }
+ ],
+ "myths": [
+  {
+   "myth": "Penguins only live in Antarctica / cold places.",
+   "reality": "Most species live on temperate coasts; the Galápagos penguin lives on the equator thanks to cold currents.",
+   "sources": [
+    "wiki_galapagos_penguin"
+   ]
+  },
+  {
+   "myth": "Penguins live in the Arctic.",
+   "reality": "No penguin lives in the Arctic; the Galápagos penguin is the only one that reaches the Northern Hemisphere, by a few kilometres.",
+   "sources": [
+    "wiki_galapagos_penguin"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^One question a day",
+  "^Next:",
+  "^Tomorrow:",
+  "^Pacific Ocean$",
+  "^Hawaii$",
+  "^Maldives$",
+  "^0$"
+ ],
+ "landscape": {
+  "our_gap": "Feed versions show a stock penguin over 'Galápagos'. We draw the equator across Isabela, pin where the colonies are and put the IUCN count on screen.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/@thequizwire-com/shorts",
+    "title": "Feed Wild Files (own channel, v1)",
+    "angle": "card over b-roll",
+    "misses": "no map"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=galapagos+penguin+equator+shorts",
+    "title": "Search: galapagos penguin equator shorts",
+    "angle": "footage + text",
+    "misses": "equator never shown crossing the island"
+   },
+   {
+    "url": "https://galapagosconservation.org.uk/species/galapagos-penguin/",
+    "title": "GCT species page",
+    "angle": "reference",
+    "misses": "not a video"
+   }
+  ]
+ },
+ "vo_exempt": [
+  "^hawaii, the galápagos, or the maldives\\?$",
+  "^tomorrow[,:]? the state where basketball was born",
+  "^subscribe and guess first"
+ ]
+}

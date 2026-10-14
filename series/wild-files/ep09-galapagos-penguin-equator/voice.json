@@ -1,0 +1,130 @@
+{
+ "version": 1,
+ "episode": "ep09-galapagos-penguin-equator",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.0
+ },
+ "intent": "A quick, confident quizmaster: curious on the question, playful on the countdown, satisfied on the reveal, genuinely interested in the one fact that makes the answer stick.",
+ "pacing_profile": "question on the map at zero, three quick options, a 1.5-s beat, a warm reveal, three short see-it beats, a tease and a loop",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "tense",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "straight in, like a dare",
+   "text": "Where do penguins live on the equator?",
+   "cues": {
+    "where": "where"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Hawaii, the Galápagos, or the Maldives?",
+   "cues": {
+    "a": "hawaii",
+    "b": "galápagos",
+    "c": "maldives"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 1.5,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "It's the Galápagos: the only penguin north of the equator lives here.",
+   "cues": {
+    "answer": "galápagos",
+    "only": "only",
+    "here": "here"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "count it out",
+   "text": "Isabela's northern tip crosses the line, so some nest in the northern hemisphere.",
+   "cues": {
+    "isabela": "isabela's",
+    "line": "line",
+    "nest": "nest"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "let the comparison land",
+   "text": "Cold Humboldt and Cromwell currents keep the water cool.",
+   "cues": {
+    "cold": "cold",
+    "currents": "currents"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.4,
+   "direction": "the number people repeat",
+   "text": "About twelve hundred adults remain, one of the rarest penguins alive.",
+   "cues": {
+    "twelve": "twelve",
+    "rarest": "rarest"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "a promise, not a plea",
+   "text": "Tomorrow, the state where basketball was born. Subscribe and guess first.",
+   "cues": {
+    "subscribe": "subscribe"
+   }
+  }
+ ],
+ "title": "Where do PENGUINS live on the equator?"
+}

@@ -1,0 +1,41 @@
+{
+ "id": "ep09-galapagos-penguin-equator",
+ "format": "quiz-v2",
+ "series": "wild-files",
+ "number": 9,
+ "title": "Where do PENGUINS live on the equator?",
+ "difficulty": "MEDIUM",
+ "seed": 1009,
+ "quiz": {
+  "question": "Where do PENGUINS live on the equator?",
+  "keyword": "PENGUINS",
+  "options": [
+   "Hawaii",
+   "Galápagos Islands",
+   "Maldives"
+  ],
+  "correct": 1,
+  "beat": 1.5,
+  "answer_line": "The Galápagos Islands",
+  "answer_sub": "the only penguin north of the equator",
+  "tease": "Tomorrow: the state where basketball was born.",
+  "cta_line": "One question a day · Subscribe"
+ },
+ "hook_type": "misconception",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Where do PENGUINS live on the equator?",
+  "description": "Where do PENGUINS live on the equator? Guess first — then see the line cross Isabela Island.\n\nWhat was your first guess?\n\nSources: IUCN Red List (Spheniscus mendiculus), Wikipedia (Galápagos penguin, Isabela Island), Galápagos Conservation Trust, Earth.org.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #9",
+  "hashtags": [
+   "#GKshorts",
+   "#thequizwire",
+   "#shorts",
+   "#wildfiles"
+  ]
+ }
+}

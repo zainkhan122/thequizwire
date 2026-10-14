@@ -109,7 +109,7 @@
       "active": true,
       "color": "#8FD694",
       "feed_last_number": 6,
-      "next_number": 9,
+      "next_number": 10,
       "engines": [
         "compare",
         "bars",

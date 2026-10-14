@@ -1,0 +1,333 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1180
+   ],
+   "anchor": [
+    540,
+    600
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "cnt",
+   "type": "counter",
+   "start": 0,
+   "end": 1200,
+   "x": 40,
+   "y": 850,
+   "w": 520,
+   "label": "adults left · IUCN",
+   "fmt": "int",
+   "z": 40
+  },
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "ISABELA ISLAND",
+   "text": "Its northern tip crosses 0°.",
+   "y": 1350
+  },
+  {
+   "id": "f2",
+   "type": "fact",
+   "kicker": "HUMBOLDT + CROMWELL",
+   "text": "Cold currents on the equator.",
+   "y": 1350
+  },
+  {
+   "id": "f3",
+   "type": "fact",
+   "kicker": "ENDANGERED · IUCN",
+   "text": "About 1,200 mature birds.",
+   "y": 1350
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     -90.6,
+     -0.4
+    ]
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 1.05,
+    "lonlat": [
+     -90.6,
+     -0.4
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s02+0.2",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s03",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "218",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s04+0.2",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "galapagos"
+   }
+  },
+  {
+   "at": "s04+0.5",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "pacific"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 1.1,
+    "lonlat": [
+     -90.8,
+     -0.3
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 1.12,
+    "lonlat": [
+     -90.8,
+     -0.3
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04@only",
+   "do": "geo.route_draw",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "rid": "equator",
+    "layer": "eq"
+   }
+  },
+  {
+   "at": "s04@here",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "equator"
+   }
+  },
+  {
+   "at": "s04+2.0",
+   "do": "chips_out"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.4",
+   "args": {
+    "k": 1.7,
+    "lonlat": [
+     -91.3,
+     0.0
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 1.74,
+    "lonlat": [
+     -91.3,
+     0.0
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@isabela",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "isabela"
+   }
+  },
+  {
+   "at": "s05@nest",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "fernandina"
+   }
+  },
+  {
+   "at": "s05+0.3",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s05.end"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 1.2,
+    "lonlat": [
+     -90.9,
+     -0.4
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-1.8",
+   "args": {
+    "k": 1.24,
+    "lonlat": [
+     -90.8,
+     -0.45
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06+0.3",
+   "do": "fact_in",
+   "id": "f2",
+   "until": "s06.end"
+  },
+  {
+   "at": "s07@twelve",
+   "do": "chart.counter_run",
+   "id": "cnt",
+   "until": "s07.end",
+   "args": {}
+  },
+  {
+   "at": "s07+0.3",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s07.end"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.9"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.8",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "end-1.8",
+   "do": "hide",
+   "id": "cnt"
+  },
+  {
+   "at": "end-1.8",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.2",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     -90.6,
+     -0.4
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "end-1.4",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

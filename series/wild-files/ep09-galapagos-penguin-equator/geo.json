@@ -1,0 +1,122 @@
+{
+ "version": 1,
+ "episode": "ep09-galapagos-penguin-equator",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "projection": "mercator",
+   "projection_reason": "island close-up on the equator (≈ 4° wide): conformal keeps island shapes true and the equator a straight line; no size claim is made (geolint P1)",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -92.4,
+     -1.7,
+     -88.9,
+     1.0
+    ]
+   },
+   "padding": 6,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "218"
+     ],
+     "cls": "",
+     "note": "Ecuador (218) — the Galápagos polygons"
+    },
+    {
+     "kind": "route",
+     "id": "eq",
+     "cls": "river",
+     "note": "the equator (0° latitude)",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "equator",
+        "properties": {
+         "name": "Equator"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           -93.5,
+           0
+          ],
+          [
+           -88.0,
+           0
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "pins": [
+    {
+     "id": "isabela",
+     "lonlat": [
+      -91.37,
+      0.05
+     ],
+     "label": "Isabela · 0°"
+    },
+    {
+     "id": "fernandina",
+     "lonlat": [
+      -91.55,
+      -0.37
+     ],
+     "label": "Fernandina"
+    }
+   ],
+   "labels": [
+    {
+     "id": "pacific",
+     "lonlat": [
+      -89.6,
+      -1.3
+     ],
+     "text": "Pacific Ocean",
+     "cls": "sea"
+    },
+    {
+     "id": "equator",
+     "lonlat": [
+      -89.3,
+      0.12
+     ],
+     "text": "Equator 0°"
+    },
+    {
+     "id": "galapagos",
+     "lonlat": [
+      -90.3,
+      0.75
+     ],
+     "text": "Galápagos Islands"
+    }
+   ],
+   "scalebar": {
+    "km": 50,
+    "at_lat": 0
+   },
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ]
+  }
+ }
+}
