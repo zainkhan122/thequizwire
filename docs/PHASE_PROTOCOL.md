@@ -35,7 +35,7 @@ If the sandbox dies at any point: the last checkpoint + `RESUME.md` restore the 
 | if the step… | then |
 |---|---|
 | takes > 3 min of compute (render, whisper, TTS batch, docker, big downloads) | it is **not a sandbox step** — it is a CI job dispatched with `cloud.py` or a workflow; the sandbox only dispatches and later reads results |
-| must wait on CI (15–25 min) | dispatch, write the run id into `STATE.json`, **do other steps or end the phase**; poll with short calls (`cloud.py status`, ≤ 60 s each) — never one long blocking call |
+| must wait on CI (≈ 9–10 min per render/selftest) | dispatch, write the run id into `STATE.json`, **do other steps or end the phase**; poll with short calls (`cloud.py status`, ≤ 60 s each) — never one long blocking call |
 | downloads data (geodata, models) | split by resolution/file; each fetch ≤ 10 MB per call; cache under `~/.cache` and verify with a `check` command |
 | edits many episodes or many files mechanically | write a small script under `tools/` and run it per directory, committing per batch |
 | is exploratory (unknown CLI, unknown API) | first a probe step (`--help`, `curl -I`, one tiny request) with a 20-s timeout, then the real step |
@@ -61,15 +61,15 @@ next        : Phase N.M+1 — <name> (needs: <owner input or nothing>)
 | phase | goal | entry | exit check | agent | CI |
 |---|---|---|---|---|---|
 | **1.5 Connect** | repo on GitHub, `check` green | owner: private repo + PAT (scopes in OPERATING_MODEL §7) | `tools/sync.sh` pushed; `check` run = success | 10 min | 3 min |
-| **1.6 Runner proof** | toolchain proven on a real runner (≈25 of the month's 2,000 min) | 1.5 | `selftest` workflow success: Kokoro smoke OK, `_template` `final.mp4` artifact exists, animator `--help` captured | 10 min + polls | 25 min |
-| 1.6.x Fixes | each red item from 1.6 | 1.6 red | the failing step green on re-run | ≤ 15 min each | ≤ 25 min each |
+| **1.6 Runner proof** | toolchain proven on a real runner (≈ 9 min per attempt; 11 attempts ≈ 70 min of the month's 2,000) | 1.5 | `selftest` workflow success: Kokoro smoke OK, `_template` `final.mp4` artifact exists, animator `--help` captured | 10 min + polls | 25 min |
+| 1.6.x Fixes | each red item from 1.6 | 1.6 red | the failing step green on re-run | ≤ 15 min each | ≤ 10 min each |
 | **1.7 Actuals** | OPERATING_MODEL §3 timings + MAPTILE "CLI (verified)" filled from the run | 1.6 green | docs updated, committed | 10 min | — |
 | **2.1 Pilot research** (owner's go) | Geo Blitz #10 topic + ledger (≥ 5 sources, claims, guardrails, landscape) | 1.7 | `factcheck --hf /nonexistent` on the scaffold passes the brief checks | 15 min | — |
 | **2.2 Pilot authoring** | voice/geo/visuals written; offline gates green; map previews shown to owner | 2.1 | `episode.sh <ep> preflight` → all OK; `docs/img/<ep>_*.png` | 15 min | — |
-| **2.3 Pilot render** | first Release | 2.2 synced | `cloud.py render --wait` success; `qa.json` pass; owner can download | 10 min + polls | 25 min |
-| **2.4 Pilot review** | owner feedback → fixes → v2 if needed | 2.3 | owner approves or a v2 tag is green | 15 min | 25 min |
+| **2.3 Pilot render** | first Release | 2.2 synced | `cloud.py render --wait` success; `qa.json` pass; owner can download | 10 min + polls | 10 min |
+| **2.4 Pilot review** | owner feedback → fixes → v2 if needed | 2.3 | owner approves or a v2 tag is green | 15 min | 10 min |
 | 2.5+ Series engines | `callouts`/`counter` (Body & Brain), `strip`/`compare` (Sports), `compare` + GBIF range (Wild Files) — one engine per phase, each with a selftest extension | 2.4 | `tests/selftest.py` covers the engine; a fixture episode passes preflight | 15 min each | selftest run |
-| 3.x Batch | one episode per phase per series, rotating hooks | engines ready | Release per episode | 15 min each | 25 min each |
+| 3.x Batch | one episode per phase per series, rotating hooks | engines ready | Release per episode | 15 min each | 10 min each |
 
 ## 8 · What "done" never means
 - "Done" never means "ran in my head" — every exit check is a command with output pasted in the report.

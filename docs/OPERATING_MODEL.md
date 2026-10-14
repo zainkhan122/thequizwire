@@ -39,14 +39,14 @@ Rule of thumb: **the sandbox is the brain, Actions are the muscle, Releases are 
 
 | stage | where | what | input → output | sandbox time | CI time |
 |---|---|---|---|---|---|
-| `pull` | CI | restore takes/clips from Releases | `media.json` → `vo/`, `clips/` | — | 10 s |
-| `tts` | CI | Kokoro `am_michael` takes per `voice.json` line | → `vo/<id>.wav` | (audition only) | ~1–2 min / 50 s VO |
-| `words` | CI | whisper word times | `vo/` → `words.json` | — | ~1 min |
-| `trim` | CI | silence-trim takes | `vo/` → trimmed | — | 10 s |
+| `pull` | CI | restore takes/clips from Releases | `media.json` → `vo/`, `clips/` | — | < 1 s (no media yet) · ~10 s with takes |
+| `tts` | CI | Kokoro `am_michael` takes per `voice.json` line | → `vo/<id>.wav` | (audition only) | **82 s** for 6 lines / 37 s of VO (measured) |
+| `words` | CI | whisper word times | `vo/` → `words.json` | — | **13 s** (measured) |
+| `trim` | CI | silence-trim takes | `vo/` → trimmed | — | **< 1 s** |
 | `plan` | S→CI | timeline | `voice.json` (+`words.json`) → `timeline.json` (`--estimate` in S) | < 1 s | < 1 s |
-| `voice` | CI | performance gate (fidelity, pace, pauses) | takes ↔ plan | — | ~1 min |
-| `geo` | S→CI | Natural Earth prep per scene | `geo.json` → `build/geo/<scene>.json` | 1–2 s | 2 s |
-| `score` | S→CI | mix (S: peak-normalised preview · CI: mastered) | takes + timeline → `mix.wav`, `mix_report.json` | 12 s | 30 s |
+| `voice` | CI | performance gate (fidelity, pace, pauses) | takes ↔ plan | — | **19 s** incl. the small.en second opinion |
+| `geo` | S→CI | Natural Earth prep per scene | `geo.json` → `build/geo/<scene>.json` | 1–2 s | < 1 s |
+| `score` | S→CI | mix (S: peak-normalised preview · CI: mastered) | takes + timeline → `mix.wav`, `mix_report.json` | 12 s | **17 s** (mastered) |
 | `assets` | CI | `clips.py gen` (maptile docker, archive trims, cached) | `clips.json` → `clips/*.mp4` | lint only | 0–8 min per new clip, cached after |
 | `build` | S→CI | `engine/compose.py` → HyperFrames project | all JSON → `hf/index.html` | < 1 s | < 1 s |
 | `static` | S→CI | browser-less composition run | `hf/` → OK/FAIL | 1 s | 1 s |
@@ -54,18 +54,20 @@ Rule of thumb: **the sandbox is the brain, Actions are the muscle, Releases are 
 | `geolint` | S→CI | P1–P6 (CI: `--online` Wikidata, `--release`) | → `out/geolint.json` | < 1 s | 5–20 s |
 | `facts` | S→CI | ledger ↔ VO + screen (incl. map plates) | → `out/factcheck.json`, `sources.md` | < 1 s | < 1 s |
 | `provenance` | S→CI | licence/origin of every shipped file | → `out/provenance.json`, `credits.md` | < 1 s | < 1 s |
-| `planlint` | CI | motion promise, holds, fingerprint drift | → `out/planlint.json` | — | 10 s |
-| `check` | CI | `hyperframes check` + caption zone | — | — | 30 s |
-| `textqa` | CI | readability of every text unit (Chrome) | → `out/textqa.json` | — | 1–2 min |
-| `layout`/`snap` | CI | frame snapshots for review | → `snaps/*.jpg` | — | 1 min |
-| `render` | CI | HyperFrames frames → master | → `out/master.mp4` | — | 6–10 min |
-| `encode` | CI | delivery encode | → `out/final.mp4`, `cover.jpg` | — | 1 min |
-| `qa` | CI | loudness, bitrate, ASR of the final | → `out/qa.json` | — | 1 min |
+| `planlint` | CI | motion promise, holds, fingerprint drift | → `out/planlint.json` | — | skipped for quiz episodes (no shots.json) |
+| `check` | CI | `hyperframes check` + caption zone | — | — | **24 s** (Chrome) |
+| `textqa` | CI | readability of every text unit (Chrome) | → `out/textqa.json` | — | **24 s** (201 probes at 86 times) |
+| `layout`/`snap` | CI | frame snapshots for review | → `snaps/*.jpg` | — | ~40 s (7 frames + contact sheet) |
+| `render` | CI | HyperFrames frames → master | → `out/master.mp4` | — | **2 min 03 s – 2 min 30 s** for a 43.6-s quiz (software GL, 2 vCPU) |
+| `encode` | CI | delivery encode | → `out/final.mp4`, `cover.jpg` | — | **25 s** (ABR 10M) |
+| `qa` | CI | loudness, bitrate, ASR of the final | → `out/qa.json` | — | **19 s** |
 | publish | CI | Release `<tag>`: mp4 + jpg + reports + POST_KIT; takes → `media-<ep>` | — | — | 30 s |
 
-Budget: **sandbox ≈ 20 s per full offline pass; CI ≈ 30–40 min per episode on the 2-vCPU private-repo runner** (the stage times above are
-4-vCPU history figures — Phase 1.7 replaces them with measured actuals), up to 4 episodes in parallel. `ci_setup.sh` adds
-~1 min warm / ~6 min cold (cache key = `ci_setup.sh` + `geodata.py` hash).
+Budget (measured, selftest #9–#11 on 2026-10-14, 2-vCPU private-repo runner): **sandbox ≈ 20 s per full offline pass;
+CI ≈ 7.5 min of job time per 45-s quiz episode** — toolchain 72 s warm (~2.5 min cold) + Kokoro 82 s + whisper/voice 32 s +
+mix 17 s + check/textqa 48 s + render 2–2.5 min + encode/QA 44 s — so **≈ 8–10 billable minutes per `render` run** including
+checkout, cache restore and publish. The old 30–40-min estimate was 4× too pessimistic. Up to 4 episodes in parallel.
+`ci_setup.sh` cache key = `ci_setup.sh` + `geodata.py` hash.
 
 ## 4 · Hand-offs — what crosses the boundary, and only that
 
@@ -94,12 +96,12 @@ Budget: **sandbox ≈ 20 s per full offline pass; CI ≈ 30–40 min per episode
 
 | resource | limit | our use |
 |---|---|---|
-| Actions minutes (private repo, GitHub Free) | **2,000 / month** (Linux ×1) | ~30–40 min per episode render (2-vCPU runner) · ~1–2 min per `check` (main only, doc pushes skipped, superseded runs cancelled) · `selftest` ≈ 25 min **manual only** · `geodata` manual. Capacity ≈ 50–60 renders/month ≈ 1–2 per day incl. re-renders. If cadence must exceed that: flip the repo to public (unlimited) — nothing else changes. |
+| Actions minutes (private repo, GitHub Free) | **2,000 / month** (Linux ×1) | **≈ 8–10 min per episode render** (measured 2026-10-14; 2-vCPU runner) · ~1–2 min per `check` (main only, doc pushes skipped, superseded runs cancelled) · `selftest` ≈ 9 min **manual only** · `geodata` manual. Capacity ≈ 150–180 renders/month ≈ 5 per day incl. re-renders; `cloud.py render` refuses to dispatch below 12 min per episode + a 60-min reserve. If cadence must exceed that: flip the repo to public (unlimited, 4 vCPU) — nothing else changes. |
 | Job / workflow duration | 6 h / 35 days | render job `timeout-minutes: 60` |
 | Concurrent jobs | 20 | render matrix `max-parallel: 4` |
 | Actions cache | 10 GB per repo (LRU, 7-day eviction) | ~1.3 GB: hyperframes + Chrome, pip (faster-whisper/ctranslate2), whisper `base.en`, Kokoro 90 MB, geodata 9 MB |
 | Artifacts / packages storage | 500 MB (private repo) | failure debug bundles + selftest artifact, 5–7 day retention → a few hundred MB at peak |
-| Releases | 2 GB per asset | mp4 ≈ 20–40 MB, takes ≈ 5 MB per episode, clips ≈ 10 MB each |
+| Releases | 2 GB per asset | mp4 ≈ 50 MB (ABR 10M, 45 s), takes ≈ 5 MB per episode, clips ≈ 10 MB each |
 | Sandbox snapshot | 128 MB / 10 k files | repo ≈ 2.5 MB; builds and caches stay in `~/.cache` |
 | Sandbox tool call | times out | ≤ 3 min per call; long waits are polled, not blocked on (`PHASE_PROTOCOL.md`) |
 
@@ -116,6 +118,6 @@ Budget: **sandbox ≈ 20 s per full offline pass; CI ≈ 30–40 min per episode
 ## 8 · What the next two phases look like under this model
 - **Phase 1.5 — Connect** (agent ≈ 10 min, CI ≈ 3 min): owner creates the **private** repo + PAT → agent stores the token, runs
   `bootstrap.sh`, `tools/sync.sh "phase 1"` → `check` workflow runs → agent reports green/red.
-- **Phase 1.6 — Runner proof** (agent ≈ 10 min, CI ≈ 25 min): agent dispatches `selftest` → polls → reads toolchain timings,
+- **Phase 1.6 — Runner proof** (agent ≈ 10 min per attempt, CI ≈ 9 min per attempt; took 11 attempts / 12 fixes): agent dispatches `selftest` → polls → reads toolchain timings,
   Kokoro smoke, template render artifact, map-animator `--help` → records actuals in §3, fills `docs/MAPTILE.md`, fixes any red in
   one small phase each. Only after this is green does Phase 2 (the first real episode) start — on the owner's go.

@@ -1,11 +1,9 @@
 {
- "now": "Phase 1.5 done (2026-10-14): private repo zainkhan122/thequizwire live, check workflow green (#2 @ f4ee206). Phase 1 system complete offline + hygiene CI. Next: selftest workflow = first real-runner proof. No episodes produced (owner instruction).",
- "phase": "1.6",
+ "now": "Phase 1.6 + 1.7 done (2026-10-14): selftest #11 green on the private-repo runner (Kokoro → whisper → mix → render → master → QA pass; final.mp4 artifact), measured ≈ 7.5 min job time per 45-s episode; docs carry actuals + verified animator CLI. No episodes produced (owner instruction). Next: Phase 2 only on the owner's go.",
+ "phase": "2.0-waiting",
  "next": [
-  "Phase 1.6 Runner proof: dispatch `selftest`, poll, read Kokoro smoke / template render artifact / animator --help; reds → 1.6.x",
-  "Phase 1.6 Runner proof: dispatch `selftest` workflow, poll, read Kokoro smoke / template render artifact / animator --help; reds → 1.6.x one per phase",
-  "Phase 1.7 Actuals: CI timings → docs/OPERATING_MODEL.md §3; animator CLI → docs/MAPTILE.md; adjust clips.py gen_maptile if needed",
-  "Phase 2.x only on owner's go: pilot Geo Blitz #10 (2.1 research → 2.2 authoring → 2.3 render → 2.4 review), then one engine per phase for the other series"
+  "Phase 2.x only on owner's go: pilot Geo Blitz #10 (2.1 research → 2.2 authoring → 2.3 render ≈ 10 min → 2.4 review), then one engine per phase for the other series",
+  "First maptile clip (Phase 2.x): measure the animator's runner cost, pin the image digest in clips.json"
  ],
  "owner_rules": [
   "Free tools only: public-repo GitHub Actions + the Arena sandbox",
@@ -48,24 +46,35 @@
    "next_number": 5
   }
  },
- "updated_at": "2026-10-14T17:27:40Z",
+ "updated_at": "2026-10-14T19:00:38Z",
  "episodes": {},
  "current_phase": {
-  "id": "1.6",
-  "name": "Runner proof",
-  "status": "ready to dispatch selftest workflow",
-  "exit_check": "selftest run success + final.mp4 artifact",
-  "selftest_run": {
-   "id": 38617165355,
-   "url": "https://github.com/zainkhan122/thequizwire/actions/runs/38617165355",
-   "dispatched": "2026-10-14T18:40:37Z",
-   "attempt": 10
+  "id": "2.0",
+  "name": "Waiting for the owner's go",
+  "status": "idle — Phase 1 complete and runner-proven",
+  "exit_check": "owner says 'make videos' → Phase 2.1",
+  "runner_proof": {
+   "selftest_run": 38618062409,
+   "run_number": 11,
+   "sha": "2cfd653",
+   "conclusion": "success",
+   "url": "https://github.com/zainkhan122/thequizwire/actions/runs/38618062409",
+   "qa": {
+    "lufs": -14.58,
+    "true_peak": -1.79,
+    "video_mbps": 8.97,
+    "asr_match": 0.96,
+    "duration_s": 43.5
+   },
+   "job_minutes_per_episode": 7.5,
+   "render_s": 150,
+   "runner": "ubuntu-latest 2 vCPU / 7 GB"
   }
  },
  "repo": {
   "slug": "zainkhan122/thequizwire",
   "visibility": "private",
   "first_push": "2026-10-14",
-  "check_green_sha": "f4ee206"
+  "check_green_sha": "f4ee206+ (every push since)"
  }
 }

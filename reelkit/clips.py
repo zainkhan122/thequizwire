@@ -55,9 +55,14 @@ URL_ENCODE = "libx264 veryfast crf16 yuv420p -an"   # part of the cache key for 
 SLOTS = ("subject", "motion", "scene", "spatial", "camera")
 ARCHIVE_FIELDS = ("licence", "provider", "source", "credit", "screen_credit")   # required on every url clip
 # maptile = cinematic basemap flyovers rendered by VersaTiles' map animator (MIT tool; data OSM ODbL + Copernicus/NASA
-# imagery). Runs ONLY on GitHub Actions (docker). Flags are passed through from clips.json (`args`) so the exact CLI of
-# the pinned image is declared per clip and verified on the first CI run (docs/MAPTILE.md), not guessed here.
+# imagery). Runs ONLY on GitHub Actions (docker). CLI verified on the runner 2026-10-14 (docs/MAPTILE.md): the trajectory
+# comes from the web editor as `--hash <payload>` or `--url <full /view URL>` (no JSON-file input); `--width` must be one
+# of 640/1280/1920/3840 (height follows the animation's aspect ratio, e.g. 9:16); `--fps`, `--quality high|standard|small`
+# or `--crf`, `--preset` (default slow), `--motion-blur N`, `--no-prewarm`, `--output` (required). clips.json `args` carry
+# the trajectory + taste flags; width/fps/output are managed here.
 MAPTILE_IMAGE = "ghcr.io/versatiles-org/versatiles-map-animator:latest"
+MAPTILE_WIDTHS = (640, 1280, 1920, 3840)                   # the renderer accepts only these
+MAPTILE_MANAGED = ("--output", "--width", "--height", "--fps", "--format")
 MAPTILE_CREDIT = "© OpenStreetMap contributors · VersaTiles · Contains modified Copernicus Sentinel data"
 OVERLAY = re.compile(r"\b(text|texts|caption|captions|title|titles|subtitle|subtitles|logo|logos|label|labels|watermark|watermarks|lettering|typography|words?)\b", re.I)
 NEGATION = re.compile(r"\b(no|not|never|without|don't|doesn't|nothing)\b", re.I)
@@ -110,8 +115,12 @@ def call_spec(c, ep, tpl=None):
         if c.get("max_h"): spec["max_h"] = int(c["max_h"])     # opt-in height cap for >4K sources (x264 memory); keeps 9:16 crop resolution
         return spec
     if e == "maptile":
-        return {"engine": "maptile", "image": c.get("docker_image", MAPTILE_IMAGE), "args": list(c["args"]), "seconds": float(c.get("seconds", 6)),
-                "width": int(c.get("width", 1080)), "height": int(c.get("height", 1920)), "fps": int(c.get("fps", 15)), "encode": URL_ENCODE}
+        want = int(c.get("width", 1080))
+        width = next((w for w in MAPTILE_WIDTHS if w >= want), MAPTILE_WIDTHS[-1])   # 1080 → 1280; compose scales to the stage
+        spec = {"engine": "maptile", "image": c.get("docker_image", MAPTILE_IMAGE), "args": list(c["args"]), "seconds": float(c.get("seconds", 6)),
+                "width": width, "fps": int(c.get("fps", 30)), "encode": URL_ENCODE}
+        if c.get("height"): spec["height"] = int(c["height"])            # normally omitted: the hash carries the aspect ratio
+        return spec
     if "seed" not in c: raise ValueError(f"{c['id']}: AI clips must pin a seed (cacheable + reproducible)")
     if e in ("wan", "wan14"):
         return {"engine": e, "space": SPACES[e], "api": "/generate_video", "seed": int(c["seed"]), "prompt": c["prompt"],
@@ -136,7 +145,14 @@ def lint_clip(c, tpl, generated):
     out, cid, e = [], c.get("id", "?"), c.get("engine")
     if e not in AI_ENGINES + ("url", "maptile"): return [("FAIL", f"{cid}: unknown engine {e!r}")]
     if e == "maptile":
-        if not isinstance(c.get("args"), list) or not c["args"]: out.append(("FAIL", f"{cid}: maptile clip needs `args` (the animator CLI flags, see docs/MAPTILE.md)"))
+        args = c.get("args")
+        if not isinstance(args, list) or not args: out.append(("FAIL", f"{cid}: maptile clip needs `args` (the animator CLI flags, see docs/MAPTILE.md)"))
+        else:
+            if not ({"--hash", "--url"} & set(args)): out.append(("FAIL", f"{cid}: maptile `args` need the editor trajectory: `--hash <payload>` or `--url <full /view URL>` (docs/MAPTILE.md)"))
+            for m in MAPTILE_MANAGED:
+                if m in args: out.append(("FAIL", f"{cid}: `{m}` is managed by clips.py (width ∈ {MAPTILE_WIDTHS}, fps, output) — drop it from `args`"))
+            if "--gpu" in args: out.append(("WARN", f"{cid}: `--gpu` has no effect on GitHub runners (software GL)"))
+        if c.get("width") and int(c["width"]) not in MAPTILE_WIDTHS: out.append(("WARN", f"{cid}: width {c['width']} is snapped up to one of {MAPTILE_WIDTHS}"))
         if float(c.get("seconds", 6)) > 8: out.append(("FAIL", f"{cid}: maptile hero clips are ≤ 8 s (plan §1.3)"))
         if not c.get("scene"): out.append(("FAIL", f"{cid}: maptile clip needs `scene`"))
         return out
@@ -287,8 +303,10 @@ def gen_maptile(spec, out):
         print("  ↷ maptile render deferred to CI (docker)"); return False
     if not shutil.which("docker"): print("  ✗ docker not available"); return False
     work = Path(tempfile.mkdtemp(dir=os.environ.get("TMPDIR"))); raw = work / "map.mp4"
-    cmd = ["docker", "run", "--rm", "-v", f"{work}:/out", spec["image"], *spec["args"],
-           "--width", str(spec["width"]), "--height", str(spec["height"]), "--fps", str(spec["fps"]), "--output", "/out/map.mp4"]
+    args = list(spec["args"])
+    if "--preset" not in args: args += ["--preset", "medium"]            # the image defaults to x264 `slow`: too dear on 2 vCPU
+    cmd = ["docker", "run", "--rm", "-v", f"{work}:/out", spec["image"], *args, "--width", str(spec["width"]),
+           *(["--height", str(spec["height"])] if spec.get("height") else []), "--fps", str(spec["fps"]), "--output", "/out/map.mp4"]
     r = subprocess.run(cmd, capture_output=True, text=True, timeout=1800)
     if r.returncode or not raw.exists():
         print(f"  ✗ maptile: animator failed ({r.returncode}): {(r.stderr or r.stdout).strip()[-400:]}"); return False
