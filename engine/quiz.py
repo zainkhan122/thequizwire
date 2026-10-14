@@ -270,5 +270,5 @@ CSS = f"""
 .cta{{position:absolute;left:60px;top:1350px;width:880px;text-align:center;z-index:70;visibility:hidden;opacity:0}}
 .ctease{{font-family:'DM Serif';font-style:italic;font-size:44px;color:{CREAM};text-shadow:0 2px 12px rgba(0,0,0,.8)}}
 .cline{{margin-top:14px;font-family:'Oswald';font-weight:600;font-size:34px;letter-spacing:.1em;color:{SAND};text-shadow:0 2px 12px rgba(0,0,0,.8)}}
-.credit2{{position:absolute;left:60px;top:1548px;width:880px;font-family:'Oswald';font-size:22px;letter-spacing:.04em;line-height:1.2;color:rgba(239,230,210,.72);text-shadow:0 1px 6px rgba(0,0,0,.9);z-index:70;visibility:hidden;opacity:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+.credit2{{position:absolute;left:60px;top:1546px;width:900px;font-family:'Oswald';font-size:20px;letter-spacing:.03em;line-height:1.3;color:rgba(239,230,210,.72);text-shadow:0 1px 6px rgba(0,0,0,.9);z-index:70;visibility:hidden;opacity:0;white-space:normal;overflow:visible}}
 """
