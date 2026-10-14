@@ -130,7 +130,7 @@ class Quiz:
     def end_in(self, t, clip_ids=()):
         # the stage (map / image clips) and the HUD leave BEFORE the end card arrives: no text may sit under the card
         # (hyperframes check: layout/text_occluded + content_overlap during the crossfade). Id selectors only (hfstatic).
-        for cid in [*clip_ids, "bug", "badge"]:
+        for cid in [*(f"{c}_in" for c in clip_ids), "bug", "badge"]:
             self.J(f"tl.to('#{cid}',{{autoAlpha:0,duration:0.3,ease:'power2.in'}},{f(max(0.0, t - 0.3))});")
         self.J(f"tl.fromTo('#endcard',{{autoAlpha:0}},{{autoAlpha:1,duration:0.4,immediateRender:false}},{f(t)});")
         self.J(f"tl.fromTo('#ecta',{{autoAlpha:0,y:30}},{{autoAlpha:1,y:0,duration:0.4,ease:'power3.out',immediateRender:false}},{f(t + 0.3)});")

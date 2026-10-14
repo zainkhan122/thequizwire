@@ -73,7 +73,10 @@ class Composer:
     # ---------------------------------------------------------------- build
     def clip(self, id_, start, end, inner, z=10, style=""):
         self.clip_ids = getattr(self, "clip_ids", []) + [id_]
-        self.body.append(f'<div id="{id_}" class="clip" data-start="{f(start)}" data-duration="{f(end - start)}" data-track-index="{z // 10}" style="z-index:{z};{style}">{inner}</div>')
+        # content lives in a child wrapper: the HyperFrames runtime owns the clip's visibility, so fades (end card)
+        # tween #<id>_in, never the clip element itself (lint/gsap_animates_clip_element)
+        self.body.append(f'<div id="{id_}" class="clip" data-start="{f(start)}" data-duration="{f(end - start)}" data-track-index="{z // 10}" style="z-index:{z};{style}">'
+                         f'<div id="{id_}_in" class="clipin">{inner}</div></div>')
 
     def stage(self, st):
         t0 = self.T(st.get("from", "s01")) if st.get("from") != "start" else 0.0
@@ -169,6 +172,7 @@ class Composer:
 *{{margin:0;padding:0;box-sizing:border-box}}
 html,body{{width:1080px;height:1920px;overflow:hidden;background:{INK}}}
 #root{{position:relative;width:1080px;height:1920px;overflow:hidden;background:{INK};color:{CREAM}}}
+.clipin{{position:absolute;left:0;top:0;width:100%;height:100%}}
 .clip{{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden}}
 .kb{{position:absolute;left:-108px;top:-201px;width:1296px;height:2322px;transform-origin:50% 50%}}
 .kb img{{position:absolute;left:0;top:0;width:1296px;height:2322px;object-fit:cover}}

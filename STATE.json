@@ -56,10 +56,10 @@
   "status": "ready to dispatch selftest workflow",
   "exit_check": "selftest run success + final.mp4 artifact",
   "selftest_run": {
-   "id": 38612858372,
-   "url": "https://github.com/zainkhan122/thequizwire/actions/runs/38612858372",
-   "dispatched": "2026-10-14T18:10:12Z",
-   "attempt": 6
+   "id": 38613709956,
+   "url": "https://github.com/zainkhan122/thequizwire/actions/runs/38613709956",
+   "dispatched": "2026-10-14T18:16:10Z",
+   "attempt": 7
   }
  },
  "repo": {
