@@ -22,15 +22,20 @@ What exists (all new unless noted; history-repo toolkit reused where it fit):
 
 ## Current phase
 ```
-Phase 1.6 — Runner proof
+Phase 1.6 — Runner proof (attempt 4 running)
 goal        : the full toolchain proven once on a real runner (ffmpeg, Chrome/HyperFrames, Kokoro am_michael, whisper, docker image)
-entry       : Phase 1.5 done — repo zainkhan122/thequizwire (private), `check` #2 green on f4ee206
-steps       : 1) dispatch the `selftest` workflow (API) and record the run id in STATE.json
-              2) poll in ≤ 60-s calls; when done, read: ci_setup timings, Kokoro selftest line, template pipeline log,
-                 artifact list (final.mp4?), animator --help text
+entry       : Phase 1.5 done — repo zainkhan122/thequizwire (private), `check` green
+proven      : toolchain installs (2.5 min cold / 1 min cached; runner = 2 vCPU · 7 GB) · Kokoro am_michael take + whisper round-trip ·
+              Kokoro takes for all 6 spoken lines · whisper word times · trim · real timeline (43.5 s)
+fixes       : 1.6.1 whisper fed arrays (PyAV 19) + 2-vCPU budget · 1.6.2 media.py pull no-op without release · 1.6.3 planlint only
+              with shots.json, voice check skips silence lines · 1.6.4 silence lines exempt from pause band, reveal = climax ·
+              1.6.5 voice number parser (decimals, "3 million", UK/US spelling) — all covered by tests/selftest.py --quick
+steps       : 1) attempt 4 = run id in STATE.json current_phase.selftest_run; poll in ≤ 60-s calls
+              2) when done read the job log: stages after `voice` (geo score assets build gates check textqa layout snap render
+                 encode qa) have never run on a runner before this attempt; artifact list (final.mp4?); animator --help text
               3) reds → Phase 1.6.x (one fix each); greens → Phase 1.7 Actuals (timings into OPERATING_MODEL §3, CLI into MAPTILE.md)
 exit check  : selftest run conclusion = success AND artifact contains series/_template/out/final.mp4
-rollback    : nothing (no repo changes in this phase)
+rollback    : git revert the 1.6.x commit that broke a gate (each is one commit)
 next        : Phase 1.7 — Actuals
 ```
 Operating model: `docs/OPERATING_MODEL.md` (agent authors + offline gates + orchestration; Actions do TTS/whisper/master/docker/
