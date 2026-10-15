@@ -48,7 +48,7 @@ def main():
     ap.add_argument("--v1", action="store_true", help="scaffold the old 4-option card format from series/_template")
     ap.add_argument("--v2", action="store_true", help="scaffold the flat v2 look (series/_template_v2) instead of v3")
     ap.add_argument("--keyword", help="v2: the word(s) of the question to colour in the hook (default: the capitalised word of the title)")
-    ap.add_argument("--tease", default="Tomorrow: TODO the next question in this series.", help="v2: the 'Tomorrow:' line (must be true)")
+    ap.add_argument("--tease", default="Tomorrow: TODO the next question in this series.", help="v2 only: the 'Tomorrow:' line (v3 has no next-video tease)")
     ap.add_argument("--correct", type=int, required=True, help="0-based index of the right option")
     ap.add_argument("--difficulty", default="MEDIUM", choices=["EASY", "MEDIUM", "HARD"])
     ap.add_argument("--slug", help="folder suffix (default: from the question)")
@@ -82,9 +82,11 @@ def main():
     if v2:
         kw = a.keyword or next((w for w in q.replace("?", "").split() if w.isupper() and len(w) > 2), None)
         E["format"] = "quiz-v2" if a.v2 else "quiz-v3"
-        E["quiz"] = {"question": q, "keyword": kw, "options": opts, "correct": a.correct, "beat": 1.5, **({} if a.v2 else {"option_meta": [{} for _ in opts], "banner": opts[a.correct][:16]}),
+        E["quiz"] = {"question": q, "keyword": kw, "options": opts, "correct": a.correct, "beat": 1.5 if a.v2 else 3.0,
+                     **({} if a.v2 else {"option_meta": [{} for _ in opts], "banner": opts[a.correct][:16],
+                                         "outro": {"headline": "DID YOU GET IT?", "tagline": "ONE MAP QUESTION A DAY" if use_map else "ONE QUESTION A DAY", "url": "thequizwire.com"}}),
                      "answer_line": opts[a.correct], "answer_sub": "TODO — one sourced number or place (≤ 40 chars)",
-                     "tease": a.tease, "cta_line": "One map question a day · Subscribe" if use_map else "One question a day · Subscribe"}
+                     **({"tease": a.tease, "cta_line": "One map question a day · Subscribe" if use_map else "One question a day · Subscribe"} if a.v2 else {})}
     else:
         E["quiz"] = {"question": q, "options": opts, "correct": a.correct, "countdown": S["defaults"]["countdown_seconds"],
                      "answer_line": opts[a.correct], "answer_sub": "TODO — one sourced number or place (≤ 60 chars)"}
@@ -107,7 +109,9 @@ def main():
             elif l["id"] == "v05": l["text"] = "TODO see-it beat one (one claim, shown on the visual)."; l["cues"] = {"seven": "todo", "saudi": "see-it"}
             elif l["id"] == "v06": l["text"] = "TODO see-it beat two."; l["cues"] = {"bigger": "todo"}
             elif l["id"] == "v07": l["text"] = "TODO payoff — the number people repeat."; l["cues"] = {"three": "todo"}
-            elif l["id"] == "v08": l["text"] = f"{re.sub(r'^Tomorrow:', 'Tomorrow,', a.tease)} Subscribe, and guess it first."; l["cues"] = {"subscribe": "subscribe"}   # Kokoro skips the colon pause; the screen keeps 'Tomorrow:'
+            elif l["id"] == "v08":
+                if a.v2: l["text"] = f"{re.sub(r'^Tomorrow:', 'Tomorrow,', a.tease)} Subscribe, and guess it first."; l["cues"] = {"subscribe": "subscribe"}   # Kokoro skips the colon pause
+                else: l["text"] = "Got it right? Hit like, and subscribe for a new map question every day."; l["cues"] = {"subscribe": "subscribe"}        # v3 outro: no next-video tease (owner 2026-10-15)
     else:
         read = f"{LETTERS[0]}, {opts[0]}. {LETTERS[1]}, {opts[1]}. {LETTERS[2]}, {opts[2]}. Or {LETTERS[3]}, {opts[3]}."
         for l in V["lines"]:

@@ -178,7 +178,7 @@ class Scene:
         self.G.J(f"tl.to('#{self.id}_{layer}_{rid}',{{opacity:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")
 
     def clear(self, t, dur=0.5):
-        """Loop-frame reset (Plan v2 Q12): fade every per-feature highlight/route path, pin and label of this scene (scalebar stays),
+        """Loop-frame reset (Plan v2 Q12): fade every per-feature highlight/route path, pin, label and scalebar of this scene,
         so the last frame matches the first. Policy plates (disputed) are kept — they must stay while the border is on screen."""
         for L in self.spec.get("layers", []):
             kind = L.get("kind")
@@ -194,6 +194,8 @@ class Scene:
         for p in self.spec.get("pins", []): self.pin_out(t, p["id"], dur=dur)
         for L in self.spec.get("labels", []):
             if not L.get("for"): self.label_out(t, L["id"], dur=dur)
+        if self.spec.get("scalebar"):                                       # the scalebar goes too (v3 outro dims the map over it)
+            self.G.J(f"tl.to('#{self.id}_scale',{{autoAlpha:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")
 
     def highlight_pulse(self, t, fid, dur=1.2, layer="highlight"):
         if self._layer(layer).get("lift"):                                  # lifted shapes pulse in size, not opacity

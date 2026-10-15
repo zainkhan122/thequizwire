@@ -384,7 +384,7 @@
    "at": "s07+1.4",
    "do": "geo.cam_to",
    "stage": "stage_world",
-   "until": "end-1.8",
+   "until": "s08+0.2",
    "args": {
     "k": 2.03,
     "lonlat": [
@@ -439,7 +439,7 @@
   {
    "at": "s08",
    "do": "cta_in",
-   "until": "end-1.9"
+   "until": "end-1.0"
   },
   {
    "at": "s08",
@@ -447,29 +447,29 @@
    "until": "end-0.2"
   },
   {
-   "at": "end-1.8",
+   "at": "s08",
    "do": "geo.clear",
    "stage": "stage_world",
    "args": {
-    "dur": 0.6
+    "dur": 0.25
    }
   },
   {
-   "at": "end-1.8",
+   "at": "s08+0.2",
    "do": "geo.cam_to",
    "stage": "stage_world",
-   "until": "end-0.2",
+   "until": "end-0.3",
    "args": {
     "k": 1.45,
     "lonlat": [
      150,
      8
     ],
-    "ease": "power2.inOut"
+    "ease": "power1.inOut"
    }
   },
   {
-   "at": "end-1.4",
+   "at": "end-1.0",
    "do": "hook_in"
   }
  ],

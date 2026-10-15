@@ -71,6 +71,12 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 | 2026-10-14 | Repo is **private** (GitHub Free: 2,000 Actions min/month); crons off, `check` main-only, `cloud.py` budget guard | owner |
 | 2026-10-14 | Vector maps (d3-geo + Natural Earth) are the default stage; VersaTiles flyovers are cached hero clips; Blue Marble globe deferred | agent |
 
+### V3.6d — DONE 2026-10-15 · branded outro replaces the "next video" tease (owner brief)
+- `engine/quiz.py` `outro3()/outro_in()`: logo + wordmark + tagline, LIKE/SUBSCRIBE buttons clicked by an arrow cursor (white→yellow, yellow→green "✓ SUBSCRIBED", bursts, bell wiggle), social row (FB · IG · X · Threads) + thequizwire.com pill; dim layer; holds then loop frame at `end-1.0`.
+- `reelkit/brand.py prep` (brand kit → build + media.json provenance: logo/cursor `own`, icons CC0); `brand/` allowed in repo_guard; stickers.py always fetches 👍🔔 for v3; `geo.clear` now also hides the scalebar.
+- Episodes ep13/ep14/template: `quiz.outro`, no `tease`/`cta_line`; v08 rewritten as the ask (no numerals); beats `geo.clear@s08`, `cam_to@s08+0.2→end-0.3`, `cta_in until end-1.0`, `hook_in@end-1.0`. All gates green; frames viewed `/tmp/snapo/sheet2.jpg`, `/tmp/snapo2/sheet.jpg`.
+- Local clean-up: removed `~/history`, `~/uploads` (CSVs already in docs/data), `~/geo-plan` (STYLE_ASSESSMENT moved to docs/); repo: dropped comps, v1 preview images, inactive series.
+
 ### V3.6c — DONE 2026-10-15 · 3-second think-time (owner: "too short to answer" → chose 3 s over 5 s)
 - Measured Geo #13: options on screen 4.5 s total, silent beat only 1.5 s. Now `quiz.beat` = countdown `silence` = 3.0 s → ≈ 6 s with the options up.
 - `engine/quiz.py` `beat3`: 200-px ring (y 1275) drains over `seconds`; digits 3·2·1 (130-px Lilita, ids `q1_d3..d1`) pop once per second; pills breathe per second; tease fades 0.25 s before the reveal. quizscore already ticks once per countdown second + riser.

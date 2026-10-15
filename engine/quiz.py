@@ -362,9 +362,70 @@ class Quiz:
     def character_out(self, t, cid, dur=0.3):
         self.J(f"tl.to('#{cid}',{{autoAlpha:0,scale:0.5,y:40,duration:{f(dur)},ease:'power2.in'}},{f(t)});")
 
-    def cta3(self, tease, line="One map question a day · Subscribe"):
-        return (f'<div id="cta" class="cta3" data-layout-allow-caption-zone="true" data-layout-allow-overlap="true"><div class="ctease3 tu">{esc(tease)}</div>'
-                f'<div class="cline3 tu" data-tq-dwell="off">{esc(line)}</div></div>')
+    # ---- v3 outro (owner brief 2026-10-15): no "next video" tease. Logo + wordmark, LIKE / SUBSCRIBE buttons that a cursor
+    #      actually clicks (yellow → green "SUBSCRIBED"), social row (Facebook · Instagram · X · Threads) + thequizwire.com.
+    #      Ids are fixed (hfstatic needs id selectors). Geometry (+150 px balance shift): logo 480–780 · name 800 · tagline 920 · head 986 · buttons 1080–1208 ·
+    #      socials 1240–1368 · url 1412–1504 · credit 1560. Everything is declared lower-third-safe (no word captions in the cta role).
+    OUTRO_SOCIAL = (("facebook", "#1877F2"), ("instagram", "#E1306C"), ("x", "#111111"), ("threads", "#101010"))
+
+    def outro3(self, headline="DID YOU GET IT?", url="thequizwire.com", tagline="ONE MAP QUESTION A DAY"):
+        soc = "".join(f'<div class="o-soc" id="o_s{i}" style="left:{196 + i * 180}px;background:{col}"{ALLOW}{CAPZ}><img src="assets/brand/{n}.svg" alt=""></div>'
+                      for i, (n, col) in enumerate(self.OUTRO_SOCIAL))
+        return (f'<div id="o_dim" class="o-dim"></div>'
+                f'<div id="outro" class="outro3" data-fc="skip"{ALLOW}{CAPZ}>'
+                f'<div class="o-logo" id="o_logo"{ALLOW}><img src="assets/brand/logo.png" alt=""></div>'
+                f'<div class="o-name tu" id="o_name" data-tq-dwell="off" data-fc="skip"{ALLOW}>TheQuizWire</div>'
+                f'<div class="o-tag tu" id="o_tag" data-tq-dwell="off" data-fc="skip"{ALLOW}>{esc(tagline)}</div>'
+                f'<div class="o-head tu" id="o_head" data-tq-dwell="off" data-fc="skip"{ALLOW}>{esc(headline)}</div>'
+                f'<div class="o-btn o-like" id="o_like"{ALLOW}{CAPZ}><img class="o-ico" id="o_thumb" src="assets/stickers/1f44d.svg" alt=""><span class="tu" data-tq-dwell="off" data-fc="skip"{ALLOW}>LIKE</span></div>'
+                f'<div class="o-btn o-sub" id="o_sub"{ALLOW}{CAPZ}><img class="o-ico" id="o_bell" src="assets/stickers/1f514.svg" alt=""><span class="tu" id="o_sublbl" data-tq-dwell="off" data-fc="skip"{ALLOW}>SUBSCRIBE</span>'
+                f'<span class="tu o-done" id="o_subdone" data-tq-dwell="off" data-fc="skip"{ALLOW}>✓ SUBSCRIBED</span></div>'
+                f'<div class="o-burst" id="o_burst"></div>'
+                f'<img class="o-cursor" id="o_cursor" src="assets/brand/cursor.svg" alt="">'
+                f'{soc}'
+                f'<div class="o-url tu" id="o_url" data-tq-dwell="off" data-fc="skip"{ALLOW}{CAPZ}>🌐 {esc(url)}</div>'
+                f'</div>')
+
+    def outro_in(self, t0, t1=None, **_):
+        """Choreography (≈ 3.4 s to settle, then holds until t1): dim → logo pop → wordmark → buttons → cursor clicks LIKE
+        (white → yellow, thumb bounce) → cursor clicks SUBSCRIBE (yellow → green, label swap, bell wiggle, burst) → socials
+        pop in one by one → url pill. Between clicks the cursor eases like a real hand; after the second click it leaves."""
+        J = self.J
+        J(f"tl.fromTo('#o_dim',{{autoAlpha:0}},{{autoAlpha:1,duration:0.4,immediateRender:false}},{f(t0 + 0.4)});")     # after geo.clear (0.25 s) has taken map text away
+        J(f"tl.set('#outro',{{autoAlpha:1}},{f(t0)});")
+        J(f"tl.fromTo('#o_logo',{{autoAlpha:0,scale:0.2,rotation:-25}},{{autoAlpha:1,scale:1,rotation:0,duration:0.55,ease:'back.out(1.8)',immediateRender:false}},{f(t0 + 0.05)});")
+        J(f"tl.to('#o_logo',{{y:-8,duration:1.1,ease:'sine.inOut',yoyo:true,repeat:-1}},{f(t0 + 0.7)});")
+        J(f"tl.fromTo('#o_name',{{autoAlpha:0,y:40,scale:0.9}},{{autoAlpha:1,y:0,scale:1,duration:0.4,ease:'back.out(1.6)',immediateRender:false}},{f(t0 + 0.3)});")
+        J(f"tl.fromTo('#o_tag',{{autoAlpha:0,y:16}},{{autoAlpha:1,y:0,duration:0.3,immediateRender:false}},{f(t0 + 0.5)});")
+        J(f"tl.fromTo('#o_head',{{autoAlpha:0,scale:0.8}},{{autoAlpha:1,scale:1,duration:0.35,ease:'back.out(2)',immediateRender:false}},{f(t0 + 0.6)});")
+        J(f"tl.fromTo('#o_like',{{autoAlpha:0,x:-70,scale:0.9}},{{autoAlpha:1,x:0,scale:1,duration:0.4,ease:'back.out(1.6)',immediateRender:false}},{f(t0 + 0.75)});")
+        J(f"tl.fromTo('#o_sub',{{autoAlpha:0,x:70,scale:0.9}},{{autoAlpha:1,x:0,scale:1,duration:0.4,ease:'back.out(1.6)',immediateRender:false}},{f(t0 + 0.85)});")
+        # cursor: enters from bottom-right, hovers LIKE, clicks, glides to SUBSCRIBE, clicks, leaves
+        J(f"tl.fromTo('#o_cursor',{{autoAlpha:0,x:360,y:380}},{{autoAlpha:1,x:0,y:0,duration:0.55,ease:'power2.out',immediateRender:false}},{f(t0 + 1.05)});")
+        tc1 = t0 + 1.7
+        J(f"tl.to('#o_cursor',{{scale:0.82,duration:0.08,ease:'power2.in',yoyo:true,repeat:1}},{f(tc1)});")
+        J(f"tl.to('#o_like',{{scale:0.92,duration:0.08,yoyo:true,repeat:1}},{f(tc1)});")
+        J(f"tl.to('#o_like',{{backgroundColor:'#FFD400',borderColor:'#FFD400',duration:0.2}},{f(tc1 + 0.1)});")
+        J(f"tl.fromTo('#o_thumb',{{rotation:0,scale:1}},{{rotation:-22,scale:1.35,duration:0.18,ease:'back.out(3)',yoyo:true,repeat:1,immediateRender:false}},{f(tc1 + 0.08)});")
+        J(f"tl.fromTo('#o_burst',{{autoAlpha:0.9,scale:0.4,x:0}},{{autoAlpha:0,scale:1.9,duration:0.5,ease:'power2.out',immediateRender:false}},{f(tc1 + 0.08)});")
+        J(f"tl.to('#o_cursor',{{x:470,y:0,duration:0.5,ease:'power2.inOut'}},{f(tc1 + 0.25)});")
+        tc2 = tc1 + 0.85
+        J(f"tl.to('#o_cursor',{{scale:0.82,duration:0.08,ease:'power2.in',yoyo:true,repeat:1}},{f(tc2)});")
+        J(f"tl.to('#o_sub',{{scale:0.92,duration:0.08,yoyo:true,repeat:1}},{f(tc2)});")
+        J(f"tl.to('#o_sub',{{backgroundColor:'#137A36',borderColor:'#ffffff',color:'#ffffff',duration:0.22}},{f(tc2 + 0.1)});")
+        J(f"tl.to('#o_sublbl',{{autoAlpha:0,y:-14,duration:0.16}},{f(tc2 + 0.1)});")
+        J(f"tl.fromTo('#o_subdone',{{autoAlpha:0,y:14}},{{autoAlpha:1,y:0,duration:0.2,ease:'back.out(2)',immediateRender:false}},{f(tc2 + 0.2)});")
+        J(f"tl.fromTo('#o_bell',{{rotation:0}},{{rotation:24,duration:0.09,ease:'sine.inOut',yoyo:true,repeat:5,immediateRender:false}},{f(tc2 + 0.1)});")
+        J(f"tl.fromTo('#o_burst',{{autoAlpha:0.9,scale:0.4,x:470}},{{autoAlpha:0,scale:2.0,x:470,duration:0.55,ease:'power2.out',immediateRender:false}},{f(tc2 + 0.08)});")
+        J(f"tl.to('#o_cursor',{{autoAlpha:0,x:560,y:140,duration:0.4,ease:'power2.in'}},{f(tc2 + 0.4)});")
+        for i in range(len(self.OUTRO_SOCIAL)):
+            J(f"tl.fromTo('#o_s{i}',{{autoAlpha:0,scale:0.2,y:30}},{{autoAlpha:1,scale:1,y:0,duration:0.38,ease:'back.out(2.2)',immediateRender:false}},{f(tc2 + 0.55 + i * 0.1)});")
+            J(f"tl.to('#o_s{i}',{{y:-6,duration:0.9,ease:'sine.inOut',yoyo:true,repeat:-1}},{f(tc2 + 1.0 + i * 0.12)});")
+        J(f"tl.fromTo('#o_url',{{autoAlpha:0,y:30}},{{autoAlpha:1,y:0,duration:0.4,ease:'back.out(1.5)',immediateRender:false}},{f(tc2 + 1.0)});")
+        J(f"tl.to('#o_sub',{{scale:1.04,duration:0.6,ease:'sine.inOut',yoyo:true,repeat:-1}},{f(tc2 + 1.2)});")
+        if t1 is not None:
+            J(f"tl.to('#outro',{{autoAlpha:0,duration:0.3,ease:'power2.in'}},{f(t1 - 0.3)});")
+            J(f"tl.to('#o_dim',{{autoAlpha:0,duration:0.3}},{f(t1 - 0.3)});")
 
     def credit3(self, credit):
         return f'<div id="credit2" class="credit3 tu" data-layout-allow-caption-zone="true" data-layout-allow-overlap="true" data-tq-dwell="off">{esc(credit)}</div>'
@@ -453,6 +514,22 @@ CSS = f"""
 .v3 .cap{{top:1500px;left:60px;width:900px;font-family:'Anton';font-weight:400;font-size:56px;letter-spacing:.02em;color:#fff;-webkit-text-stroke:1.5px #141414;paint-order:stroke fill;text-shadow:0 4px 0 rgba(0,0,0,.5),0 8px 20px rgba(0,0,0,.6)}}
 .v3 .sticker3{{position:absolute;filter:drop-shadow(0 14px 22px rgba(0,0,0,.6));transform:rotate(var(--rot,0deg));visibility:hidden;opacity:0}}
 .v3 .char3{{position:absolute;filter:drop-shadow(0 12px 18px rgba(0,0,0,.55));transform:rotate(var(--rot,0deg));visibility:hidden;opacity:0;overflow:visible}}
+.v3 .o-dim{{position:absolute;left:0;top:0;width:1080px;height:1920px;background:radial-gradient(ellipse at 50% 45%,rgba(6,14,30,.55) 0%,rgba(6,14,30,.86) 70%);z-index:60;visibility:hidden;opacity:0}}
+.v3 .outro3{{position:absolute;left:0;top:0;width:1080px;height:1920px;z-index:72;visibility:hidden;opacity:0}}
+.v3 .o-logo{{position:absolute;left:390px;top:480px;width:300px;height:300px;border-radius:50%;background:#fff;box-shadow:0 0 0 10px rgba(255,212,0,.95),0 18px 40px rgba(0,0,0,.6);overflow:hidden;visibility:hidden;opacity:0}}
+.v3 .o-logo img{{width:100%;height:100%;display:block}}
+.v3 .o-name{{position:absolute;left:40px;top:800px;width:1000px;text-align:center;font-family:'Lilita';font-size:104px;line-height:1;color:#fff;-webkit-text-stroke:3px #141414;paint-order:stroke fill;text-shadow:0 6px 0 rgba(0,0,0,.55),0 14px 30px rgba(0,0,0,.6);visibility:hidden;opacity:0}}
+.v3 .o-tag{{position:absolute;left:60px;top:920px;width:960px;text-align:center;font-family:'Oswald';font-weight:600;font-size:34px;letter-spacing:.3em;color:#FFD400;text-shadow:0 2px 0 rgba(0,0,0,.7),0 6px 16px rgba(0,0,0,.8);visibility:hidden;opacity:0}}
+.v3 .o-head{{position:absolute;left:60px;top:986px;width:960px;text-align:center;font-family:'Lilita';font-size:60px;line-height:1;color:#fff;-webkit-text-stroke:2px #141414;paint-order:stroke fill;text-shadow:0 4px 0 rgba(0,0,0,.55),0 10px 24px rgba(0,0,0,.6);visibility:hidden;opacity:0}}
+.v3 .o-btn{{position:absolute;top:1080px;width:420px;height:128px;border-radius:64px;display:flex;align-items:center;justify-content:center;gap:18px;font-family:'Lilita';font-size:54px;line-height:1;color:#141414;border:5px solid #fff;box-shadow:0 10px 0 rgba(0,0,0,.35),0 18px 36px rgba(0,0,0,.55);visibility:hidden;opacity:0}}
+.v3 .o-like{{left:100px;background:#ffffff}} .v3 .o-sub{{left:560px;background:#FFD400;border-color:#FFD400}}
+.v3 .o-btn .o-ico{{width:72px;height:72px;filter:drop-shadow(0 3px 4px rgba(0,0,0,.35))}}
+.v3 .o-btn .o-done{{position:absolute;left:0;top:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:48px;color:#fff;visibility:hidden;opacity:0}}
+.v3 .o-burst{{position:absolute;left:230px;top:1064px;width:160px;height:160px;border-radius:50%;border:10px solid #FFD400;box-shadow:0 0 30px rgba(255,212,0,.8);visibility:hidden;opacity:0;pointer-events:none}}
+.v3 .o-cursor{{position:absolute;left:270px;top:1110px;width:120px;height:120px;filter:drop-shadow(0 8px 10px rgba(0,0,0,.6));visibility:hidden;opacity:0;z-index:5}}
+.v3 .o-soc{{position:absolute;top:1240px;width:128px;height:128px;border-radius:50%;border:5px solid #fff;box-shadow:0 10px 24px rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;visibility:hidden;opacity:0}}
+.v3 .o-soc img{{width:68px;height:68px;filter:invert(1)}}
+.v3 .o-url{{position:absolute;left:190px;top:1412px;width:700px;height:92px;line-height:92px;text-align:center;border-radius:46px;background:#141414;border:4px solid #FFD400;font-family:'Oswald';font-weight:600;font-size:46px;letter-spacing:.08em;color:#FFD400;box-shadow:0 12px 30px rgba(0,0,0,.55);visibility:hidden;opacity:0}}
 .v3 .cta3{{position:absolute;left:60px;top:1250px;width:900px;text-align:center;z-index:70;visibility:hidden;opacity:0}}
 .v3 .ctease3{{font-family:'Lilita';font-size:66px;line-height:1.1;text-transform:uppercase;color:#FFD400;-webkit-text-stroke:2px #4a2b00;paint-order:stroke fill;text-shadow:0 6px 0 #7a4b00,0 14px 28px rgba(0,0,0,.6)}}
 .v3 .cline3{{margin-top:26px;font-family:'Oswald';font-weight:600;font-size:40px;letter-spacing:.12em;color:#fff;-webkit-text-stroke:1.2px #141414;paint-order:stroke fill;text-shadow:0 3px 0 rgba(0,0,0,.6),0 6px 16px rgba(0,0,0,.85)}}

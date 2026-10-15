@@ -4,7 +4,7 @@ Rules: no tracked media extensions outside the allow-list · no tracked file > 1
 import subprocess, sys
 from pathlib import Path
 MEDIA = {".mp4", ".mov", ".webm", ".mp3", ".wav", ".m4a", ".flac", ".ogg", ".jpg", ".jpeg", ".png", ".webp", ".gif", ".onnx", ".pt", ".safetensors", ".zip", ".tar", ".gz"}
-ALLOW = {"docs/img/"}                         # tiny doc images only
+ALLOW = {"docs/img/", "brand/"}               # tiny doc images · channel brand kit (logo ≤ 80 KB)
 MAX_FILE, MAX_TOTAL = 1_000_000, 15_000_000
 files = subprocess.run(["git", "ls-files", "-z"], capture_output=True, text=True).stdout.split("\0")
 bad, total = [], 0

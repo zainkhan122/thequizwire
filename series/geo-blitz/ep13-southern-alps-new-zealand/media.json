@@ -1,6 +1,60 @@
 {
  "files": {},
  "generated": {
+  "brand/cursor.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 224,
+   "credit": "thequizwire",
+   "kind": "image",
+   "licence": "own",
+   "provider": "thequizwire (hand-made)",
+   "source": "brand/cursor.svg"
+  },
+  "brand/facebook.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 542,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "brand/instagram.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 2101,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "brand/logo.png": {
+   "by": "reelkit/brand.py",
+   "bytes": 72010,
+   "credit": "TheQuizWire",
+   "kind": "image",
+   "licence": "own",
+   "provider": "TheQuizWire (channel brand, owner-supplied)",
+   "source": "youtube.com/@thequizwire-com avatar"
+  },
+  "brand/threads.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 1287,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "brand/x.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 252,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
   "geo/flags/ch.svg": {
    "by": "reelkit/flags.py",
    "bytes": 290,
@@ -75,6 +129,24 @@
   "stickers/1f3d4.svg": {
    "by": "reelkit/stickers.py",
    "bytes": 1911,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f44d.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1663,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f514.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 314,
    "credit": "Twemoji",
    "kind": "image",
    "licence": "CC-BY-4.0",

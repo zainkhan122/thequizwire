@@ -8,6 +8,7 @@ import json, pathlib, re, shutil, sys, urllib.request
 CACHE = pathlib.Path.home() / ".cache" / "stickers"
 CDN = "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/{cp}.svg"
 UA = "quizwire/1 (github zainkhan122/thequizwire)"
+OUTRO_EMOJI = {"1f44d", "1f514"}     # 👍 🔔 used by engine/quiz.py outro3
 LICENCE = {"licence": "CC-BY-4.0", "provider": "Twemoji (Twitter, Inc. and other contributors)", "credit": "Twemoji", "source": "https://github.com/twitter/twemoji"}
 
 
@@ -33,6 +34,8 @@ def prep(ep, build):
     ep, build = pathlib.Path(ep), pathlib.Path(build); want = set()
     for fn in ("visuals.json", "episode.json"):
         if (ep / fn).exists(): walk(json.loads((ep / fn).read_text()), want)
+    E = json.loads((ep / "episode.json").read_text()) if (ep / "episode.json").exists() else {}
+    if E.get("format") == "quiz-v3": want |= OUTRO_EMOJI                      # the v3 outro's like / bell stickers
     if not want: return []
     out = build / "stickers"; out.mkdir(parents=True, exist_ok=True)
     mp = ep / "media.json"; man = json.loads(mp.read_text()) if mp.exists() else {"files": {}}; gen = man.setdefault("generated", {})

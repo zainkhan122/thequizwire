@@ -155,7 +155,7 @@ class Composer:
         elif do == "beat": (self.Q.beat3 if getattr(self, "v3", False) else self.Q.beat)(t, seconds=float(self.E["quiz"].get("beat", 1.5)), **args)
         elif do in ("banner_in", "banner_out"): getattr(self.Q, do)(t, **args)                                        # v3
         elif do in ("sticker_in", "sticker_out", "character_in", "character_out"): getattr(self.Q, do)(t, b["id"], **args)   # v3
-        elif do == "cta_in": self.Q.cta_in(t, t1, **args)                                                             # v2
+        elif do == "cta_in": (self.Q.outro_in if getattr(self, "v3", False) else self.Q.cta_in)(t, t1, **args)          # v3 outro · v2 tease
         elif do == "credit_in": self.Q.credit_in(t, t1, **args)                                                       # v2
         elif do in ("answer_in", "answer_out"): getattr(self.Q, do)(t, b["id"], **args)
         elif do == "fact_in": (self.Q.fact3_in if getattr(self, "v3", False) else self.Q.fact_in)(t, t1, b["id"], **args)
@@ -199,11 +199,12 @@ class Composer:
         for st in self.V.get("stage", []): self.stage(st)
         if self.v3:
             self.body.append(Q.scrims())
-            bsrc = self.hf.parent / "stickers"; bdst = self.hf / "assets" / "stickers"          # Twemoji prepared by reelkit/stickers.py
-            if bsrc.exists():
-                bdst.mkdir(parents=True, exist_ok=True)
-                for fsvg in bsrc.glob("*.svg"):
-                    if not (bdst / fsvg.name).exists(): shutil.copy(fsvg, bdst / fsvg.name)
+            for sub, pat in (("stickers", "*.svg"), ("brand", "*.*")):                            # Twemoji (reelkit/stickers.py) · brand kit (reelkit/brand.py)
+                bsrc = self.hf.parent / sub; bdst = self.hf / "assets" / sub
+                if bsrc.exists():
+                    bdst.mkdir(parents=True, exist_ok=True)
+                    for fsrc in bsrc.glob(pat):
+                        if not (bdst / fsrc.name).exists(): shutil.copy(fsrc, bdst / fsrc.name)
         mapc = self.G.credits() if self.G.scenes else ""
         bits = [b for b in self.credit_bits if b not in mapc]                                   # "Natural Earth" is already in the map-data credit
         credit = " · ".join(dict.fromkeys(([f"Map data: {mapc}"] if mapc else []) + bits + ["Voice: AI (Kokoro) · thequizwire.com"]))
@@ -217,7 +218,8 @@ class Composer:
             caps = [(g, t, t0, t1) for g, t, t0, t1 in caps if not any(a - 0.05 <= (t0 + t1) / 2 <= z for a, z in busy)]   # one text block at a time: facts/CTA win
             self.body.append(Q.captions([(g, t) for g, t, _, _ in caps]))
             for g, _, t0, t1 in caps: Q.caption_show(g, t0, t1)
-            self.body.append(Q.cta3(q.get("tease", "Tomorrow: a new question"), q.get("cta_line", "One map question a day · Subscribe")))
+            o = q.get("outro", {})
+            self.body.append(Q.outro3(headline=o.get("headline", "DID YOU GET IT?"), url=o.get("url", "thequizwire.com"), tagline=o.get("tagline", "ONE MAP QUESTION A DAY")))
             self.body.append(Q.credit3(credit))
             self.caption_count = len(caps)
         elif self.v2:

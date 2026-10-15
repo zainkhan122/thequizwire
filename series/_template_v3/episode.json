@@ -18,8 +18,6 @@
   "beat": 3.0,
   "answer_line": "New Zealand",
   "answer_sub": "South Island",
-  "tease": "Tomorrow: the country with the most time zones",
-  "cta_line": "One map question a day · Subscribe",
   "option_meta": [
    {
     "flag": "ch"
@@ -32,7 +30,12 @@
    }
   ],
   "banner": "New Zealand",
-  "banner_sub": "✓  B was right"
+  "banner_sub": "✓  B was right",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "tagline": "ONE MAP QUESTION A DAY",
+   "url": "thequizwire.com"
+  }
  },
  "hook_type": "misconception",
  "promise": {
