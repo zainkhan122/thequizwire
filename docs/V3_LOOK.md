@@ -42,7 +42,7 @@ textqa runs here too. Actions minutes are for the final render only.
 | V3.6 | re-author the 10 pilot episodes' `visuals.json`/`geo.json` to v3 (scripts, voice, facts unchanged) with a local contact sheet each | 10 reviewed sheets |
 | V3.7 | one runner render (Geo #13) → owner look → then the batch | Release `pilot-v3-batch1` |
 
-## v3 authoring schema (what V3.3 shipped — `docs/comps/ep13v3/` is the worked example)
+## v3 authoring schema (what V3.3 shipped — `series/_template_v3/` (= Geo #13) is the worked example)
 **episode.json** `"format": "quiz-v3"`; `quiz.option_meta: [{"flag":"ch"},{"flag":"nz"},{"emoji":"1f3c6"}]` (icon circle per pill, optional);
 `quiz.banner` (big yellow answer, default = correct option; ≤ 11 chars 150 px · ≤ 16 → 118 px · else 92 px) · `quiz.banner_sub` (default "✓ B was right").
 Copy limits (quizlint Q4, v3): question ≤ 72 chars (100 px Lilita, auto 86/74), option ≤ 18, fact kicker ≤ 16 + text, kicker+text ≤ 46 (two 84-px Anton lines).

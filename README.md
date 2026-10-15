@@ -7,7 +7,7 @@ narration, a d3-geo / Natural Earth map engine, a procedural score, and nine qua
 
 > Phase 1 = tooling, engines, gates, templates, docs — **proven end to end on the private-repo runner on 2026-10-14**
 > (`selftest` #11: Kokoro → whisper → mastered mix → HyperFrames render → upload master → QA pass; ≈ 7.5 min of job time per
-> 45-s episode). Frames from that run: `docs/img/runner_proof_selftest11.jpg`. **No episodes have been produced yet** — by owner instruction.
+> 45-s episode). **No episodes have been produced yet** — by owner instruction.
 > `RESUME.md` says what to do next; `docs/PLAN.md` is the full phased plan; `docs/OPERATING_MODEL.md` says who does what and
 > `docs/PHASE_PROTOCOL.md` how every task is split into time-boxed phases.
 

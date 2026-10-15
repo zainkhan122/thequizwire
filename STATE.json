@@ -82,34 +82,6 @@
    ],
    "sources_doc": "docs/DATA_SOURCES.md#wild-files-wild-files--animals",
    "pitch": "Animal superlatives with honest scale comparisons and a range map (GBIF occurrence-derived, CC0/CC BY) instead of a stock clip."
-  },
-  {
-   "slug": "cosmic-quiz",
-   "name": "Cosmic Quiz",
-   "active": false,
-   "color": "#B48CFF",
-   "feed_last_number": 4,
-   "next_number": 5,
-   "engines": [
-    "compare",
-    "counter"
-   ],
-   "sources_doc": "docs/DATA_SOURCES.md#cosmic-quiz-cosmic-quiz-inactive-and-time-vault-time-vault-inactive",
-   "pitch": "Registered from the feed; not scheduled (needs a planet/scale engine pass before activation)."
-  },
-  {
-   "slug": "time-vault",
-   "name": "Time Vault",
-   "active": false,
-   "color": "#D9B27C",
-   "feed_last_number": 4,
-   "next_number": 5,
-   "engines": [
-    "strip",
-    "geo"
-   ],
-   "sources_doc": "docs/DATA_SOURCES.md#cosmic-quiz-cosmic-quiz-inactive-and-time-vault-time-vault-inactive",
-   "pitch": "Registered from the feed; not scheduled (history questions can reuse the strip + map engines when activated)."
   }
  ],
  "updated_at": "2026-10-15T07:42:48Z",

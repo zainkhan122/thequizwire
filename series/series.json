@@ -1,150 +1,122 @@
 {
-  "version": 1,
-  "channel": {
-    "name": "TheQuizWire",
-    "handle": "@thequizwire-com",
-    "site": "thequizwire.com",
-    "format": {
-      "w": 1080,
-      "h": 1920,
-      "fps": 30,
-      "lufs": -14,
-      "target_seconds": [
-        45,
-        60
-      ],
-      "max_seconds": 60
-    },
-    "description_tail": "What was your first guess? Do share in the comments below.\n\nLearn daily with thequizwire.com Quizzes and MCQs",
-    "hashtags": [
-      "#GKshorts",
-      "#usagk",
-      "#thequizwire",
-      "#1min",
-      "#shorts"
-    ],
-    "baseline": {
-      "captured": "2026-10-14",
-      "subscribers": 121,
-      "videos": 510,
-      "views": 162637,
-      "recent_median_views": 669
-    }
+ "version": 1,
+ "channel": {
+  "name": "TheQuizWire",
+  "handle": "@thequizwire-com",
+  "site": "thequizwire.com",
+  "format": {
+   "w": 1080,
+   "h": 1920,
+   "fps": 30,
+   "lufs": -14,
+   "target_seconds": [
+    45,
+    60
+   ],
+   "max_seconds": 60
   },
-  "defaults": {
-    "voice": {
-      "backend": "kokoro",
-      "voice": "am_michael",
-      "speed": 1.0,
-      "model": "kokoro-v1.0.int8.onnx"
-    },
-    "difficulty_levels": [
-      "EASY",
-      "MEDIUM",
-      "HARD"
-    ],
-    "structure": [
-      "hook",
-      "question",
-      "options",
-      "countdown",
-      "reveal",
-      "story",
-      "story",
-      "cta"
-    ],
-    "countdown_seconds": 3,
-    "publishing": "manual — the owner uploads; nothing in this repo posts"
+  "description_tail": "What was your first guess? Do share in the comments below.\n\nLearn daily with thequizwire.com Quizzes and MCQs",
+  "hashtags": [
+   "#GKshorts",
+   "#usagk",
+   "#thequizwire",
+   "#1min",
+   "#shorts"
+  ],
+  "baseline": {
+   "captured": "2026-10-14",
+   "subscribers": 121,
+   "videos": 510,
+   "views": 162637,
+   "recent_median_views": 669
+  }
+ },
+ "defaults": {
+  "voice": {
+   "backend": "kokoro",
+   "voice": "am_michael",
+   "speed": 1.0,
+   "model": "kokoro-v1.0.int8.onnx"
   },
-  "series": [
-    {
-      "slug": "geo-blitz",
-      "name": "Geo Blitz",
-      "active": true,
-      "color": "#E3A72F",
-      "feed_last_number": 9,
-      "next_number": 15,
-      "engines": [
-        "geo",
-        "globe",
-        "maptile"
-      ],
-      "sources_doc": "docs/DATA_SOURCES.md#geo-blitz-geo-blitz--maps",
-      "pitch": "One geography question, answered on a real, honest map: equal-area for size claims, a scale bar for distances, disputed borders shown with who administers and who claims them."
-    },
-    {
-      "slug": "body-brain",
-      "name": "Body & Brain",
-      "active": true,
-      "color": "#FF4D4D",
-      "feed_last_number": 3,
-      "next_number": 4,
-      "engines": [
-        "callouts",
-        "counter",
-        "bars"
-      ],
-      "sources_doc": "docs/DATA_SOURCES.md#body--brain-body-brain--anatomy-physiology-neuroscience",
-      "pitch": "Anatomy and neuroscience questions answered on public-domain anatomical plates with animated call-outs and a counted number."
-    },
-    {
-      "slug": "sports-sprint",
-      "name": "Sports Sprint",
-      "active": true,
-      "color": "#4FD1E0",
-      "feed_last_number": 8,
-      "next_number": 11,
-      "engines": [
-        "bars",
-        "compare",
-        "strip",
-        "geo"
-      ],
-      "sources_doc": "docs/DATA_SOURCES.md#sports-sprint-sports-sprint--records-rules-venues",
-      "pitch": "Records, rules and venues: bar races for records, procedural pitch/court diagrams, a timeline strip for firsts, and a map when the venue is the story."
-    },
-    {
-      "slug": "wild-files",
-      "name": "Wild Files",
-      "active": true,
-      "color": "#8FD694",
-      "feed_last_number": 6,
-      "next_number": 10,
-      "engines": [
-        "compare",
-        "bars",
-        "geo"
-      ],
-      "sources_doc": "docs/DATA_SOURCES.md#wild-files-wild-files--animals",
-      "pitch": "Animal superlatives with honest scale comparisons and a range map (GBIF occurrence-derived, CC0/CC BY) instead of a stock clip."
-    },
-    {
-      "slug": "cosmic-quiz",
-      "name": "Cosmic Quiz",
-      "active": false,
-      "color": "#B48CFF",
-      "feed_last_number": 4,
-      "next_number": 5,
-      "engines": [
-        "compare",
-        "counter"
-      ],
-      "sources_doc": "docs/DATA_SOURCES.md#cosmic-quiz-cosmic-quiz-inactive-and-time-vault-time-vault-inactive",
-      "pitch": "Registered from the feed; not scheduled (needs a planet/scale engine pass before activation)."
-    },
-    {
-      "slug": "time-vault",
-      "name": "Time Vault",
-      "active": false,
-      "color": "#D9B27C",
-      "feed_last_number": 4,
-      "next_number": 5,
-      "engines": [
-        "strip",
-        "geo"
-      ],
-      "sources_doc": "docs/DATA_SOURCES.md#cosmic-quiz-cosmic-quiz-inactive-and-time-vault-time-vault-inactive",
-      "pitch": "Registered from the feed; not scheduled (history questions can reuse the strip + map engines when activated)."
-    }
-  ]
+  "difficulty_levels": [
+   "EASY",
+   "MEDIUM",
+   "HARD"
+  ],
+  "structure": [
+   "hook",
+   "question",
+   "options",
+   "countdown",
+   "reveal",
+   "story",
+   "story",
+   "cta"
+  ],
+  "countdown_seconds": 3,
+  "publishing": "manual — the owner uploads; nothing in this repo posts"
+ },
+ "series": [
+  {
+   "slug": "geo-blitz",
+   "name": "Geo Blitz",
+   "active": true,
+   "color": "#E3A72F",
+   "feed_last_number": 9,
+   "next_number": 15,
+   "engines": [
+    "geo",
+    "globe",
+    "maptile"
+   ],
+   "sources_doc": "docs/DATA_SOURCES.md#geo-blitz-geo-blitz--maps",
+   "pitch": "One geography question, answered on a real, honest map: equal-area for size claims, a scale bar for distances, disputed borders shown with who administers and who claims them."
+  },
+  {
+   "slug": "body-brain",
+   "name": "Body & Brain",
+   "active": true,
+   "color": "#FF4D4D",
+   "feed_last_number": 3,
+   "next_number": 4,
+   "engines": [
+    "callouts",
+    "counter",
+    "bars"
+   ],
+   "sources_doc": "docs/DATA_SOURCES.md#body--brain-body-brain--anatomy-physiology-neuroscience",
+   "pitch": "Anatomy and neuroscience questions answered on public-domain anatomical plates with animated call-outs and a counted number."
+  },
+  {
+   "slug": "sports-sprint",
+   "name": "Sports Sprint",
+   "active": true,
+   "color": "#4FD1E0",
+   "feed_last_number": 8,
+   "next_number": 11,
+   "engines": [
+    "bars",
+    "compare",
+    "strip",
+    "geo"
+   ],
+   "sources_doc": "docs/DATA_SOURCES.md#sports-sprint-sports-sprint--records-rules-venues",
+   "pitch": "Records, rules and venues: bar races for records, procedural pitch/court diagrams, a timeline strip for firsts, and a map when the venue is the story."
+  },
+  {
+   "slug": "wild-files",
+   "name": "Wild Files",
+   "active": true,
+   "color": "#8FD694",
+   "feed_last_number": 6,
+   "next_number": 10,
+   "engines": [
+    "compare",
+    "bars",
+    "geo"
+   ],
+   "sources_doc": "docs/DATA_SOURCES.md#wild-files-wild-files--animals",
+   "pitch": "Animal superlatives with honest scale comparisons and a range map (GBIF occurrence-derived, CC0/CC BY) instead of a stock clip."
+  }
+ ]
 }

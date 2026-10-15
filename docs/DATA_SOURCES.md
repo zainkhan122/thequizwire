@@ -50,9 +50,6 @@ Engines: `bars`, `compare`, `strip` (timeline), `geo`.
 | Scale silhouettes: PhyloPic (CC0 subset only) | CC0 | `compare` engine |
 Engines: `compare`, `bars`, `geo` (range).
 
-## Cosmic Quiz (`cosmic-quiz`, inactive) and Time Vault (`time-vault`, inactive)
-NASA/JPL/ESA (PD / CC BY-SA 3.0 IGO for ESA — refused as visuals unless CC BY), NASA Planetary Fact Sheet (PD-USGov);
-history: Library of Congress, NARA, Europeana PD, Wikimedia Commons PD scans — same rules as the owner's history repo.
 
 ## Voice, music, fonts, code
 - Voice: Kokoro-82M `am_michael` (Apache-2.0 model; takes are `own-tts`; AI voice is disclosed in every description).

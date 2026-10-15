@@ -7,7 +7,7 @@ _Updated 2026-10-15 (Plan v2 session; Phase 1 ended 2026-10-14). Owner decisions
 **Phase 1 is complete and proven on a real runner (2026-10-14).** `selftest` #11 is green end to end on the private-repo
 runner (2 vCPU / 7 GB): toolchain → Kokoro `am_michael` takes → whisper → voice gate → mastered mix → HyperFrames render →
 upload master → QA pass (−14.6 LUFS, −1.8 dBTP, 9 Mbps, ASR match 0.96) → artifact `series/_template/out/final.mp4`
-(50 MB, 43.6 s) + 7 snapshots (`docs/img/runner_proof_selftest11.jpg`). The map-animator image pulls and its CLI is recorded
+(50 MB, 43.6 s). The map-animator image pulls and its CLI is recorded
 in `docs/MAPTILE.md`. Measured cost: **≈ 7.5 min of job time per 45-s episode** (render 2–2.5 min). No episode has been
 produced — by instruction; Phase 2 starts only on the owner's "make videos".
 
@@ -75,7 +75,7 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 - Measured Geo #13: options on screen 4.5 s total, silent beat only 1.5 s. Now `quiz.beat` = countdown `silence` = 3.0 s → ≈ 6 s with the options up.
 - `engine/quiz.py` `beat3`: 200-px ring (y 1275) drains over `seconds`; digits 3·2·1 (130-px Lilita, ids `q1_d3..d1`) pop once per second; pills breathe per second; tease fades 0.25 s before the reveal. quizscore already ticks once per countdown second + riser.
 - quizlint Q10 (v3): silence 2.5–3.5 s and `quiz.beat` equal; Q13 upper bound 44 s when `ESTIMATE=1` (estimates run ≈ 10 % long; real cap stays 40 s). Pills carry `data-layout-allow-caption-zone` (pill C dips 50 px into the band; HF check flagged the mid-exit at 9.55 s on ep14).
-- ep13, ep14, `_template_v3`, `docs/comps/ep13v3` set to 3.0; gates green for both (ESTIMATE totals 41.05 / 41.3 s → real ≈ 37 s). Frames viewed: `/tmp/snap13c/sheet.jpg` (3·2·1) and `/tmp/snap13d/sheet.jpg`.
+- ep13, ep14, `_template_v3`, set to 3.0; gates green for both (ESTIMATE totals 41.05 / 41.3 s → real ≈ 37 s). Frames viewed: `/tmp/snap13c/sheet.jpg` (3·2·1) and `/tmp/snap13d/sheet.jpg`.
 - Sandbox was restored mid-phase: toolchain re-bootstrapped; **token missing → commit is local, push pending the owner's PAT**.
 
 ### V3.6b — DONE 2026-10-15 · Geo #14 v3 (world-scale template) + Geo #13 runner-review tweaks
