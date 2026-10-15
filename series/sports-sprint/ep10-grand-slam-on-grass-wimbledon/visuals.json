@@ -24,7 +24,7 @@
    "type": "geo",
    "scene": "night",
    "from": "start",
-   "to": "s04-0.3",
+   "to": "s03.end-0.3",
    "box": [
     0,
     0,
