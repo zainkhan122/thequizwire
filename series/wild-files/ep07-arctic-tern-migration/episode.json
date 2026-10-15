@@ -1,6 +1,6 @@
 {
  "id": "ep07-arctic-tern-migration",
- "format": "quiz-v2",
+ "format": "quiz-v3",
  "series": "wild-files",
  "number": 7,
  "title": "Which bird migrates the FARTHEST?",
@@ -15,13 +15,22 @@
    "Barn swallow"
   ],
   "correct": 1,
-  "beat": 1.5,
+  "beat": 3.0,
   "answer_line": "The Arctic tern",
   "answer_sub": "about 70,900 km a year",
-  "tease": "Tomorrow: the country with the most wild tigers.",
-  "cta_line": "One question a day · Subscribe"
+  "option_meta": [
+   {},
+   {},
+   {}
+  ],
+  "banner": "ARCTIC TERN",
+  "banner_sub": "✓  B was right",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
  },
- "hook_type": "misconception",
+ "hook_type": "challenge",
  "promise": {
   "min_motion": 0.7
  },
@@ -29,13 +38,28 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Which bird migrates the FARTHEST?",
-  "description": "Which bird migrates the FARTHEST? Guess first — then watch the pole-to-pole loop drawn on the map.\n\nWhat was your first guess?\n\nSources: Egevang et al. 2010, PNAS (geolocator tracking); Wikipedia (Arctic tern, Bar-tailed godwit); Britannica; Audubon.\nMap data: Natural Earth (public domain). Route simplified from the published tracks. Voice: AI (Kokoro).\n\nWild Files #7",
+  "title": "Which bird migrates the FARTHEST? 🐦",
+  "description": "Which bird migrates the FARTHEST? Guess first — then watch its pole-to-pole track draw across the globe: about 70,900 km a year, 2.4 million km in a lifetime.\n\nWhat was your first guess? Do share in the comments below.\n\nSources: Egevang et al. 2010 (PNAS), Wikipedia (Arctic tern), Britannica, Audubon, NASA (Moon distance).\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #7",
   "hashtags": [
    "#GKshorts",
    "#thequizwire",
    "#shorts",
    "#wildfiles"
   ]
+ },
+ "variety": {
+  "question": "which-animal",
+  "hook": "challenge",
+  "opener": "globe-spin",
+  "reveal": "stamp",
+  "beats": [
+   "route",
+   "counter",
+   "pin",
+   "label",
+   "scalebar"
+  ],
+  "cast": "emoji-set:tern (bird, feather, moon, soap)",
+  "music": "bed:pad"
  }
 }

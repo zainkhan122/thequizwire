@@ -9,7 +9,7 @@ So the rule is: **fixed skeleton, rotated surface, enforced by a gate** — not 
 
 | axis | pool (✓ = engine supports today · ◌ = planned phase) | how it changes the video |
 |---|---|---|
-| `question` | `which-country` ✓ · `where-is` ✓ (pin/place answer) · `how-many` ✓ (numeric pills) · `bigger-or-smaller` ◌ (two-option face-off) · `true-or-false` ◌ · `odd-one-out` ◌ · `name-the-capital` ✓ · `which-flag` ✓ (flag pills, no names) | different pill content and phrasing |
+| `question` | `which-country` ✓ · `where-is` ✓ (pin/place answer) · `how-many` ✓ (numeric pills) · `bigger-or-smaller` ◌ (two-option face-off) · `true-or-false` ◌ · `odd-one-out` ◌ · `name-the-capital` ✓ · `which-flag` ✓ (flag pills, no names) · `which-animal` ✓ (Wild Files) · `which-record` ◌ (fastest/farthest/oldest) · `who-was-first` ◌ (Sports) · `which-body-part` ◌ (Body & Brain) | different pill content and phrasing |
 | `hook` (voice stem) | `question-first` ✓ · `fact-first` ✓ ("Only one country spans 12 time zones. Which?") · `challenge` ✓ ("90 % get this wrong") · `story` ✓ ("In 1877…") · `misconception` ✓ ("Everyone says Switzerland…") · `character-asks` ◌ (flag-ball speaks the line) | the first 2 s sound different |
 | `opener` (visual) | `wide-drift` ✓ · `world-rotated` ✓ (Pacific/Atlantic-centred) · `globe-spin` ✓ (orthographic, ep12) · `mystery-zoom-out` ◌ (k 3 close-up → pulls out) · `night-lights` ◌ (GIBS Black Marble) · `split-candidates` ◌ (two regions side by side) | the map you see before the options |
 | `reveal` | `flag-lift` ✓ · `fill-pulse` ✓ · `flash-cut` ✓ (fx.flash to a zoomed scene) · `border-draw` ✓ (route_draw around the outline) · `stamp` ◌ · `card-flip` ◌ (character flips the answer) | the moment of payoff |
@@ -44,3 +44,7 @@ the satellite look, the 3-s countdown, the branded outro.
 - While re-authoring the remaining 8 pilots: each picks a distinct fingerprint (table kept in `docs/SCORECARD.md`).
 - V3.8+: ◌ items above, one per phase, each landing with a pilot that uses it (night-lights with Wild #7, true-size overlay
   with Geo #10 Nile, globe-spin already in Geo #12, counter in Sports #10).
+
+
+### Reveal mechanics (engine)
+`banner_in` takes `style`: `pop` (default) · `stamp` (slams down, twist — pair with `fx.flash`) · `flip` (card turns up — use for `card-flip`) · `slide`. The map action still carries the reveal kind: `flag-lift`/`fill-pulse` = `highlight_in`, `border-draw` = `route_draw` of the outline, `flash-cut` = `fx.flash` + stage switch, `stamp`/`card-flip` = banner style when the answer is not a place.

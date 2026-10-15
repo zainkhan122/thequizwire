@@ -53,7 +53,7 @@ def num_word(tok):
 
 # ---- Q16 variety (docs/VARIETY.md): fixed skeleton, rotated surface. Pools are the single source of truth for authoring.
 VARIETY = {
-    "question": {"which-country", "where-is", "how-many", "bigger-or-smaller", "true-or-false", "odd-one-out", "name-the-capital", "which-flag"},
+    "question": {"which-country", "where-is", "how-many", "bigger-or-smaller", "true-or-false", "odd-one-out", "name-the-capital", "which-flag", "which-animal", "which-record", "who-was-first", "which-body-part"},
     "hook": {"question-first", "fact-first", "challenge", "story", "misconception", "character-asks"},
     "opener": {"wide-drift", "world-rotated", "globe-spin", "mystery-zoom-out", "night-lights", "split-candidates"},
     "reveal": {"flag-lift", "fill-pulse", "flash-cut", "border-draw", "stamp", "card-flip"},

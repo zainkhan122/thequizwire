@@ -52,7 +52,7 @@ class Charts:
     # ---------------------------------------------------------------- big counter
     def counter(self, cid, start, end, y=520, label="", fmt="int", x=60, w=960, suffix="", size=190):
         self.items[cid] = {"start": start, "end": end, "fmt": fmt, "suffix": suffix}
-        return (f'<div id="{cid}" class="chart counter" style="left:{x}px;top:{y}px;width:{w}px" data-layout-allow-overlap="true">'
+        return (f'<div id="{cid}" class="chart counter" style="left:{x}px;top:{y}px;width:{w}px" data-layout-allow-overlap="true" data-layout-allow-caption-zone="true">'
                 f'<div class="cnumber tu" id="{cid}_n" data-tq-dwell="off" data-layout-allow-overlap="true" data-layout-allow-occlusion="true" style="font-size:{int(size)}px">{self._fmt(start, fmt)}{esc(suffix)}</div>'
                 + (f'<div class="clabel2 tu" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">{esc(label)}</div>' if label else "") + "</div>")
 
@@ -63,6 +63,10 @@ class Charts:
         self.J(f"tl.fromTo('#{cid}',{{autoAlpha:0,y:30}},{{autoAlpha:1,y:0,duration:0.3,immediateRender:false}},{f(t0 - 0.2)});")
         self.J(f"{{const o={{v:{it['start']}}},e=document.getElementById('{cid}_n');"
                f"tl.to(o,{{v:{it['end']},duration:{f(t1 - t0)},ease:'{ease_s}',onUpdate:()=>{{const v=o.v;e.textContent={fmt_js}+'{esc(it['suffix'])}';}}}},{f(t0)});}}")
+
+    def out(self, t, cid, dur=0.3):
+        """Hide any chart (counter/bars/compare/strip) — e.g. before a fact takes the same band."""
+        self.J(f"tl.to('#{cid}',{{autoAlpha:0,y:-24,duration:{f(dur)},ease:'power2.in'}},{f(t)});")
 
     # ---------------------------------------------------------------- scale comparison (silhouette bars)
     def compare(self, sid, items, y=320, x=60, w=960, max_h=700, shapes=None):
@@ -152,6 +156,9 @@ CSS = f"""
 .counter{{text-align:center;background:rgba(11,22,32,.72);border-radius:18px;padding:14px 20px 18px;box-shadow:0 12px 40px rgba(0,0,0,.35)}}   /* legible over a map */
 .cnumber{{font-family:'Anton';font-size:190px;line-height:1;color:{SAND};text-shadow:0 10px 40px rgba(0,0,0,.5)}}
 .clabel2{{font-family:'Oswald';font-weight:500;font-size:42px;letter-spacing:.1em;text-transform:uppercase;color:{CREAM};margin-top:10px}}
+.v3 .counter{{background:none;padding:0;box-shadow:none}}
+.v3 .cnumber{{font-family:'Anton';line-height:1.3;color:#FFD400;letter-spacing:.01em;text-shadow:0 4px 0 #1b1b1b,0 12px 36px rgba(0,0,0,.55)}}
+.v3 .clabel2{{font-family:'Anton';font-weight:400;font-size:56px;letter-spacing:.04em;color:#fff;margin-top:2px;text-shadow:0 3px 0 #1b1b1b,0 10px 30px rgba(0,0,0,.5)}}
 .compare .ccol{{position:absolute;top:0;display:flex;align-items:flex-end;justify-content:center}}
 .compare .cstack{{transform-origin:50% 100%}}
 .compare .cblock{{background:{SAND};border-radius:10px 10px 0 0;opacity:.9}}

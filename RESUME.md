@@ -71,6 +71,13 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 | 2026-10-14 | Repo is **private** (GitHub Free: 2,000 Actions min/month); crons off, `check` main-only, `cloud.py` budget guard | owner |
 | 2026-10-14 | Vector maps (d3-geo + Natural Earth) are the default stage; VersaTiles flyovers are cached hero clips; Blue Marble globe deferred | agent |
 
+### V3.6i — DONE 2026-10-15 · Wild #7 Arctic tern in v3 (globe route + counter) · engine: banner styles, chart.out, counter v3
+- ep07 re-authored to quiz-v3: which-animal / challenge / globe-spin (Pacific → Atlantic) / **stamp** reveal (`banner_in style:"stamp"` + `fx.flash`) / beats route+counter+pin+label+scalebar / emoji-set:tern / "DID YOU GET IT?". 69 words, est. 38 s. Route = Egevang 2010 tracks on the orthographic globe (centre [-30,5] k 1.0 → both ends visible), counter 0 → 70,900 "km a year" in the fact band while the track draws.
+- Engine: `banner_in(style=pop|stamp|flip|slide)`; `chart.out {id}` hides any chart; counter restyled for v3 (yellow Anton, no pill, CAPZ-tagged, line-height 1.3); VARIETY question pool += which-animal / which-record / who-was-first / which-body-part (docs/VARIETY.md).
+- Gates: quizlint OK · geolint OK (distance claim → scalebar at the globe centre) · facts 4 claims FAIL 0 · provenance FAIL 0 · HF check 0 err · layout FAIL 0 · textqa 50 units FAIL 0 (sheet `review/wild07_v3_sheet.jpg`).
+- Lessons: run `plan` (ESTIMATE) + `geo` (stickers/brand prep) before `build` on a freshly re-authored episode; number words in the hook ("Tough one") count as claims; a chart left in the fact band kills fact contrast → `chart.out` first.
+- Next: V3.6j wild ep08 tigers + ep09 Galápagos penguin, then sports ep09–10, then cloud renders.
+
 ### V3.6h — DONE 2026-10-15 · Geo #12 Antarctica in v3 (orthographic globe) + v3 globe styling
 - ep12 re-authored to quiz-v3: which-country / question-first / **globe-spin** opener (hook k 1.7 [20,-10] → spin to the pole) / **fill-pulse** reveal (ice `#EAF6FF` lift) / beats pin+label / emoji-set:polar / "DAILY MAP QUIZ". 62 words, est. 35 s.
 - Engine: orthographic `apply()` now re-projects **lift groups** (clip+shadow+fill+outline paths share one `d`, `data-cx/cy` refreshed) — before, lifts on a spinning globe kept their mount-time shape (invisible). `svgOrigin` for lift pops is now lazy (`()=>GeoRT.centroid(...)`).

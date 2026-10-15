@@ -3,35 +3,30 @@
  "episode": "ep07-arctic-tern-migration",
  "policy": "docs/BORDER_POLICY.md",
  "scenes": {
-  "main": {
-   "projection": "equalEarth",
-   "projection_reason": "pole-to-pole route down the whole Atlantic; equal-area so the Southern Ocean leg is not inflated (geolint P1)",
+  "globe": {
+   "projection": "orthographic",
+   "projection_reason": "pole-to-pole track down the whole Atlantic in one view; orthographic shows the real globe so the Southern Ocean leg is not inflated (geolint P1) and the record reads as planetary",
    "fit": {
-    "type": "bbox",
-    "bbox": [
-     -80,
-     -76,
-     30,
-     82
-    ]
+    "type": "world"
    },
-   "padding": 8,
+   "padding": 60,
    "resolution": "110m",
    "layers": [
+    {
+     "kind": "sphere"
+    },
+    {
+     "kind": "graticule",
+     "step": [
+      20,
+      20
+     ]
+    },
     {
      "kind": "land"
     },
     {
      "kind": "borders"
-    },
-    {
-     "kind": "highlight",
-     "id": "hl",
-     "ids": [
-      "304"
-     ],
-     "cls": "",
-     "note": "Greenland (304) — breeding colony of the tracked birds"
     },
     {
      "kind": "route",
@@ -172,7 +167,8 @@
       -20.5,
       74.3
      ],
-     "label": "Greenland colony"
+     "label": "Greenland colony",
+     "side": "right"
     },
     {
      "id": "stop",
@@ -180,32 +176,24 @@
       -34,
       47
      ],
-     "label": "N. Atlantic stopover"
+     "label": "N. Atlantic stopover",
+     "side": "left"
     }
    ],
    "labels": [
     {
      "id": "atlantic",
      "lonlat": [
-      -30,
-      10
+      -16,
+      -19
      ],
      "text": "Atlantic",
      "cls": "sea"
     },
     {
-     "id": "weddell",
-     "lonlat": [
-      -12,
-      -65
-     ],
-     "text": "Weddell Sea",
-     "cls": "sea"
-    },
-    {
      "id": "africa",
      "lonlat": [
-      15,
+      12,
       8
      ],
      "text": "Africa"
@@ -214,14 +202,22 @@
      "id": "samerica",
      "lonlat": [
       -58,
-      -14
+      -12
      ],
      "text": "South America"
     }
    ],
    "scalebar": {
     "km": 2000,
-    "at_lat": 0
+    "lonlat": [
+     0,
+     0
+    ],
+    "at": [
+     60,
+     1130
+    ],
+    "note": "true at the globe centre (k 1.0); the bar is shown only while the camera holds that zoom"
    },
    "disputed": [],
    "sources": [

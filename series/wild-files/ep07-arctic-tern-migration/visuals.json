@@ -2,20 +2,20 @@
  "version": 1,
  "stage": [
   {
-   "id": "stage_map",
+   "id": "stage_globe",
    "type": "geo",
-   "scene": "main",
+   "scene": "globe",
    "from": "start",
    "to": "end",
    "box": [
     0,
     0,
     1080,
-    1180
+    1920
    ],
    "anchor": [
     540,
-    600
+    900
    ],
    "z": 10
   }
@@ -27,333 +27,59 @@
    "start": 0,
    "end": 70900,
    "x": 40,
-   "y": 850,
-   "w": 430,
+   "y": 1240,
+   "w": 1000,
    "label": "km a year",
    "fmt": "int",
-   "z": 40,
-   "size": 150
-  },
-  {
-   "id": "f1",
-   "type": "fact",
-   "kicker": "TRACKED · PNAS 2010",
-   "text": "Greenland → Antarctica → back.",
-   "y": 1350
+   "size": 140
   },
   {
    "id": "f2",
    "type": "fact",
-   "kicker": "2.4 MILLION KM IN A LIFETIME",
-   "text": "About 30 years of flying.",
-   "y": 1350
+   "kicker": "2.4 MILLION KM",
+   "text": "in a thirty-year life"
   },
   {
    "id": "f3",
    "type": "fact",
-   "kicker": "3 MOON ROUND TRIPS",
-   "text": "On a bird under 125 grams.",
-   "y": 1350
-  }
- ],
- "beats": [
-  {
-   "at": 0,
-   "do": "geo.cam_set",
-   "stage": "stage_map",
-   "args": {
-    "k": 1.0,
-    "lonlat": [
-     -25,
-     4
-    ]
-   }
+   "kicker": "3 MOON TRIPS",
+   "text": "on a bird under 125 g"
   },
   {
-   "at": 0,
-   "do": "hook_in"
+   "id": "st_bird",
+   "type": "sticker",
+   "emoji": "1f426",
+   "x": 850,
+   "y": 700,
+   "size": 220,
+   "rot": -8
   },
   {
-   "at": "s01",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s03.end",
-   "args": {
-    "k": 1.05,
-    "lonlat": [
-     -25,
-     4
-    ],
-    "ease": "none"
-   }
+   "id": "st_feather",
+   "type": "sticker",
+   "emoji": "1fab6",
+   "x": 240,
+   "y": 660,
+   "size": 200,
+   "rot": 12
   },
   {
-   "at": "s02",
-   "do": "chips_in"
+   "id": "st_moon",
+   "type": "sticker",
+   "emoji": "1f319",
+   "x": 240,
+   "y": 640,
+   "size": 210,
+   "rot": 0
   },
   {
-   "at": "s02+0.2",
-   "do": "bug_in"
-  },
-  {
-   "at": "s03",
-   "do": "beat"
-  },
-  {
-   "at": "s03",
-   "do": "hook_out"
-  },
-  {
-   "at": "s04",
-   "do": "reveal"
-  },
-  {
-   "at": "s04",
-   "do": "geo.highlight_in",
-   "stage": "stage_map",
-   "args": {
-    "fid": "304",
-    "layer": "hl",
-    "dur": 0.5
-   }
-  },
-  {
-   "at": "s04+1.2",
-   "do": "geo.pin_in",
-   "stage": "stage_map",
-   "args": {
-    "pid": "colony"
-   }
-  },
-  {
-   "at": "s04",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s04+1.2",
-   "args": {
-    "k": 1.25,
-    "lonlat": [
-     -28,
-     38
-    ],
-    "ease": "power2.inOut"
-   }
-  },
-  {
-   "at": "s04+1.2",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s04.end",
-   "args": {
-    "k": 1.27,
-    "lonlat": [
-     -28,
-     37
-    ],
-    "ease": "none"
-   }
-  },
-  {
-   "at": "s04@pole",
-   "do": "geo.route_draw",
-   "stage": "stage_map",
-   "until": "s04.end",
-   "args": {
-    "rid": "south",
-    "layer": "trk"
-   }
-  },
-  {
-   "at": "s06+0.4",
-   "do": "geo.label_in",
-   "stage": "stage_map",
-   "args": {
-    "lid": "weddell"
-   }
-  },
-  {
-   "at": "s04@pole",
-   "do": "chart.counter_run",
-   "id": "cnt",
-   "until": "s04.end",
-   "args": {}
-  },
-  {
-   "at": "s04+2.0",
-   "do": "chips_out"
-  },
-  {
-   "at": "s05",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s05+1.2",
-   "args": {
-    "k": 1.1,
-    "lonlat": [
-     -28,
-     20
-    ],
-    "ease": "power2.inOut"
-   }
-  },
-  {
-   "at": "s05+1.2",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s05.end",
-   "args": {
-    "k": 1.12,
-    "lonlat": [
-     -29,
-     18
-    ],
-    "ease": "none"
-   }
-  },
-  {
-   "at": "s05@trackers",
-   "do": "geo.pin_in",
-   "stage": "stage_map",
-   "args": {
-    "pid": "stop"
-   }
-  },
-  {
-   "at": "s05@south",
-   "do": "geo.label_in",
-   "stage": "stage_map",
-   "args": {
-    "lid": "africa"
-   }
-  },
-  {
-   "at": "s05@home",
-   "do": "geo.route_draw",
-   "stage": "stage_map",
-   "until": "s05.end",
-   "args": {
-    "rid": "north",
-    "layer": "trk"
-   }
-  },
-  {
-   "at": "s05@home",
-   "do": "geo.label_in",
-   "stage": "stage_map",
-   "args": {
-    "lid": "atlantic"
-   }
-  },
-  {
-   "at": "s05+0.3",
-   "do": "fact_in",
-   "id": "f1",
-   "until": "s05.end"
-  },
-  {
-   "at": "s05",
-   "do": "geo.pin_out",
-   "stage": "stage_map",
-   "args": {
-    "pid": "colony"
-   }
-  },
-  {
-   "at": "s06",
-   "do": "geo.pin_out",
-   "stage": "stage_map",
-   "args": {
-    "pid": "stop"
-   }
-  },
-  {
-   "at": "s06",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s06+1.2",
-   "args": {
-    "k": 1.0,
-    "lonlat": [
-     -25,
-     -18
-    ],
-    "ease": "power2.inOut"
-   }
-  },
-  {
-   "at": "s06+1.2",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "end-1.8",
-   "args": {
-    "k": 1.02,
-    "lonlat": [
-     -26,
-     -20
-    ],
-    "ease": "none"
-   }
-  },
-  {
-   "at": "s06",
-   "do": "geo.label_in",
-   "stage": "stage_map",
-   "args": {
-    "lid": "samerica"
-   }
-  },
-  {
-   "at": "s06+0.3",
-   "do": "fact_in",
-   "id": "f2",
-   "until": "s06.end"
-  },
-  {
-   "at": "s07+0.3",
-   "do": "fact_in",
-   "id": "f3",
-   "until": "s07.end"
-  },
-  {
-   "at": "s08",
-   "do": "cta_in",
-   "until": "end-1.9"
-  },
-  {
-   "at": "s08",
-   "do": "credit_in",
-   "until": "end-0.2"
-  },
-  {
-   "at": "end-1.8",
-   "do": "geo.clear",
-   "stage": "stage_map",
-   "args": {
-    "dur": 0.6
-   }
-  },
-  {
-   "at": "end-1.8",
-   "do": "hide",
-   "id": "cnt"
-  },
-  {
-   "at": "end-1.8",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "end-0.2",
-   "args": {
-    "k": 1.0,
-    "lonlat": [
-     -25,
-     4
-    ],
-    "ease": "power2.inOut"
-   }
-  },
-  {
-   "at": "end-1.4",
-   "do": "hook_in"
+   "id": "st_soap",
+   "type": "sticker",
+   "emoji": "1f9fc",
+   "x": 850,
+   "y": 1060,
+   "size": 200,
+   "rot": -10
   }
  ],
  "captions": {
@@ -364,5 +90,282 @@
   "max_words": 4,
   "max_chars": 26,
   "hold": 0.12
- }
+ },
+ "beats": [
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_globe",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     -165,
+     12
+    ]
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s01",
+   "do": "geo.spin",
+   "stage": "stage_globe",
+   "until": "s04",
+   "args": {
+    "lon": -125,
+    "lat": 10,
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s02+0.3",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04",
+   "do": "geo.spin",
+   "stage": "stage_globe",
+   "until": "s04+1.6",
+   "args": {
+    "lon": -30,
+    "lat": 5,
+    "k": 1.0,
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "fx.flash"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in",
+   "args": {
+    "style": "stamp"
+   }
+  },
+  {
+   "at": "s04+1.5",
+   "do": "sticker_in",
+   "id": "st_bird"
+  },
+  {
+   "at": "s04+1.8",
+   "do": "geo.route_draw",
+   "stage": "stage_globe",
+   "until": "s05+1.0",
+   "args": {
+    "rid": "south",
+    "layer": "trk"
+   }
+  },
+  {
+   "at": "s05+1.0",
+   "do": "geo.route_draw",
+   "stage": "stage_globe",
+   "until": "s05.end-0.2",
+   "args": {
+    "rid": "north",
+    "layer": "trk"
+   }
+  },
+  {
+   "at": "s04+2.0",
+   "do": "chart.counter_run",
+   "id": "cnt",
+   "until": "s05.end-0.2",
+   "args": {
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04+4.6",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04.end-0.3",
+   "do": "sticker_out",
+   "id": "st_bird"
+  },
+  {
+   "at": "s05",
+   "do": "geo.pin_in",
+   "stage": "stage_globe",
+   "args": {
+    "pid": "colony"
+   }
+  },
+  {
+   "at": "s05+0.3",
+   "do": "geo.scalebar_in",
+   "stage": "stage_globe"
+  },
+  {
+   "at": "s05+0.6",
+   "do": "geo.label_in",
+   "stage": "stage_globe",
+   "args": {
+    "lid": "africa"
+   }
+  },
+  {
+   "at": "s05@home",
+   "do": "geo.pin_in",
+   "stage": "stage_globe",
+   "args": {
+    "pid": "stop"
+   }
+  },
+  {
+   "at": "s05+1.2",
+   "do": "geo.label_in",
+   "stage": "stage_globe",
+   "args": {
+    "lid": "atlantic"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.label_out",
+   "stage": "stage_globe",
+   "args": {
+    "lid": "africa"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.pin_out",
+   "stage": "stage_globe",
+   "args": {
+    "pid": "stop"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_globe",
+   "until": "s07.end",
+   "args": {
+    "k": 1.12,
+    "lonlat": [
+     -34,
+     2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06+0.2",
+   "do": "geo.label_in",
+   "stage": "stage_globe",
+   "args": {
+    "lid": "samerica"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "chart.out",
+   "id": "cnt"
+  },
+  {
+   "at": "s06+0.4",
+   "do": "fact_in",
+   "id": "f2",
+   "until": "s06.end"
+  },
+  {
+   "at": "s06+0.6",
+   "do": "sticker_in",
+   "id": "st_feather"
+  },
+  {
+   "at": "s06.end-0.3",
+   "do": "sticker_out",
+   "id": "st_feather"
+  },
+  {
+   "at": "s07+0.4",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s07.end"
+  },
+  {
+   "at": "s07+0.3",
+   "do": "sticker_in",
+   "id": "st_moon"
+  },
+  {
+   "at": "s07@soap",
+   "do": "sticker_in",
+   "id": "st_soap"
+  },
+  {
+   "at": "s07.end-0.3",
+   "do": "sticker_out",
+   "id": "st_moon"
+  },
+  {
+   "at": "s07.end-0.3",
+   "do": "sticker_out",
+   "id": "st_soap"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_globe",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_globe",
+   "until": "end-0.3",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     -165,
+     12
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ]
 }

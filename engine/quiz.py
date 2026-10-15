@@ -311,8 +311,17 @@ class Quiz:
         return (f'<div id="banner" class="banner3 tu {size}" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">{esc(text)}</div>'
                 f'<div id="bannersub" class="bannersub tu" data-layout-allow-overlap="true" data-layout-allow-occlusion="true" data-tq-dwell="off" data-fc="skip">{esc(sub)}</div>')
 
-    def banner_in(self, t, dur=0.45):
-        self.J(f"tl.fromTo('#banner',{{autoAlpha:0,scale:0.6,y:40}},{{autoAlpha:1,scale:1,y:0,duration:{f(dur)},ease:'back.out(1.8)',immediateRender:false}},{f(t)});")
+    def banner_in(self, t, dur=0.45, style="pop"):
+        """style: pop (scale-up) · stamp (slams down from 1.9×, slight twist) · flip (card turns up on its X axis) · slide (rides in from the left)."""
+        if style == "stamp":
+            self.J(f"tl.fromTo('#banner',{{autoAlpha:0,scale:1.9,rotation:-7}},{{autoAlpha:1,scale:1,rotation:-2,duration:{f(dur * 0.8)},ease:'power4.in',immediateRender:false}},{f(t)});")
+            self.J(f"tl.to('#banner',{{rotation:0,scale:1.03,duration:0.12,ease:'power1.out'}},{f(t + dur * 0.8)});tl.to('#banner',{{scale:1,duration:0.2,ease:'power2.out'}},{f(t + dur * 0.8 + 0.12)});")
+        elif style == "flip":
+            self.J(f"tl.fromTo('#banner',{{autoAlpha:0,rotationX:-95,transformPerspective:900,transformOrigin:'50% 100%'}},{{autoAlpha:1,rotationX:0,duration:{f(dur + 0.15)},ease:'back.out(1.4)',immediateRender:false}},{f(t)});")
+        elif style == "slide":
+            self.J(f"tl.fromTo('#banner',{{autoAlpha:0,x:-260,skewX:-8}},{{autoAlpha:1,x:0,skewX:0,duration:{f(dur)},ease:'power3.out',immediateRender:false}},{f(t)});")
+        else:
+            self.J(f"tl.fromTo('#banner',{{autoAlpha:0,scale:0.6,y:40}},{{autoAlpha:1,scale:1,y:0,duration:{f(dur)},ease:'back.out(1.8)',immediateRender:false}},{f(t)});")
         self.J(f"tl.fromTo('#bannersub',{{autoAlpha:0,y:20}},{{autoAlpha:1,y:0,duration:0.3,ease:'power2.out',immediateRender:false}},{f(t + 0.25)});")
 
     def banner_out(self, t, dur=0.3):

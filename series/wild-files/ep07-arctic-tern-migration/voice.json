@@ -22,7 +22,7 @@
    "energy": 4,
    "pause_after": 0.3,
    "direction": "straight in, like a dare",
-   "text": "Which bird migrates the farthest?",
+   "text": "Experts only. Which bird migrates the farthest?",
    "cues": {
     "which": "which"
    }
@@ -50,7 +50,7 @@
    "energy": 1,
    "pause_after": 0.1,
    "direction": "silence — the bar drains",
-   "silence": 1.5,
+   "silence": 3.0,
    "text": ""
   },
   {
@@ -61,7 +61,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "It's the Arctic tern: pole to pole, about seventy-one thousand kilometres a year.",
+   "text": "It's the Arctic tern: pole to pole, seventy-one thousand kilometres a year.",
    "cues": {
     "answer": "tern",
     "pole": "pole",
@@ -77,7 +77,7 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "count it out",
-   "text": "Trackers on Greenland terns traced it: south past Africa, home mid-Atlantic.",
+   "text": "Greenland trackers traced it: south past Africa, home up the mid-Atlantic.",
    "cues": {
     "trackers": "trackers",
     "south": "south",
@@ -120,7 +120,7 @@
    "energy": 3,
    "pause_after": 0.0,
    "direction": "a promise, not a plea",
-   "text": "Tomorrow, the country with the most wild tigers. Subscribe and guess first.",
+   "text": "Knew it? Like and subscribe for more wild facts.",
    "cues": {
     "subscribe": "subscribe"
    }

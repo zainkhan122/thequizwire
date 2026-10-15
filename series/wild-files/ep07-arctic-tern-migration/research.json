@@ -76,12 +76,11 @@
    "vo": [
     "which bird migrates the farthest",
     "it's the arctic tern",
-    "pole to pole, about seventy-one thousand kilometres a year"
+    "pole to pole, seventy-one thousand kilometres a year"
    ],
    "screen": [
-    "Arctic tern",
+    "ARCTIC TERN",
     "km a year",
-    "Weddell Sea",
     "Greenland colony"
    ]
   },
@@ -94,12 +93,11 @@
     "wiki_arctic_tern"
    ],
    "vo": [
-    "trackers on greenland terns traced it",
-    "south past africa, home mid-atlantic"
+    "greenland trackers traced it",
+    "south past africa, home up the mid-atlantic"
    ],
    "screen": [
-    "TRACKED · PNAS 2010",
-    "Greenland → Antarctica → back.",
+    "Greenland colony",
     "N. Atlantic stopover"
    ]
   },
@@ -118,9 +116,9 @@
     "three moon round trips"
    ],
    "screen": [
-    "2.4 MILLION KM IN A LIFETIME",
-    "About 30 years of flying.",
-    "3 MOON ROUND TRIPS"
+    "2.4 MILLION KM",
+    "in a thirty-year life",
+    "3 MOON TRIPS"
    ]
   },
   {
@@ -135,7 +133,7 @@
     "on a bird lighter than a bar of soap"
    ],
    "screen": [
-    "On a bird under 125 grams."
+    "on a bird under 125 g"
    ]
   }
  ],
