@@ -516,6 +516,8 @@ CSS = f"""
 .v3 .fact3{{position:absolute;left:60px;width:900px;text-align:center;font-family:'Anton';font-size:84px;line-height:1.08;text-transform:uppercase;color:#fff;
   text-shadow:0 5px 0 rgba(0,0,0,.6),0 12px 28px rgba(0,0,0,.7);z-index:72;visibility:hidden;opacity:0;white-space:normal}}
 .v3 .fact3.m{{font-size:74px}} .v3 .fact3.s{{font-size:64px}}
+.v3 .fact3::before{{content:"";position:absolute;left:-40px;right:-40px;top:-26px;bottom:-26px;z-index:-1;border-radius:48px;   /* soft dark plate: legible over sand/ice whatever the real voice timing */
+  background:radial-gradient(ellipse at center,rgba(0,0,0,.62) 0%,rgba(0,0,0,.42) 55%,rgba(0,0,0,0) 100%)}}
 .v3 .fact3 b{{color:#FFD400;font-weight:400}}
 .v3 .cap{{top:1500px;left:60px;width:900px;font-family:'Anton';font-weight:400;font-size:56px;letter-spacing:.02em;color:#fff;-webkit-text-stroke:1.5px #141414;paint-order:stroke fill;text-shadow:0 4px 0 rgba(0,0,0,.5),0 8px 20px rgba(0,0,0,.6)}}
 .v3 .sticker3{{position:absolute;filter:drop-shadow(0 14px 22px rgba(0,0,0,.6));transform:rotate(var(--rot,0deg));visibility:hidden;opacity:0}}
