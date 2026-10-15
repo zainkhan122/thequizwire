@@ -19,7 +19,7 @@ sandbox preview never blocks on a download (the fallback is flagged in meta so g
 
 Rules honoured: one paused timeline; fromTo has immediateRender:false; hidden elements get autoAlpha; no Date/random.
 """
-import json, html, shutil
+import json, html, shutil, re
 from pathlib import Path
 
 ENGINE = Path(__file__).resolve().parent
@@ -187,6 +187,9 @@ class Scene:
             fids = [str(x) for x in (L.get("ids") or [])]
             gj = L.get("geojson") or {}
             fids += [str(ft.get("id", i)) for i, ft in enumerate(gj.get("features", []))] if gj else []
+            if L.get("ne"):                                                 # Natural Earth name layers (geodata.ne_features): ids = group keys / name slugs
+                ne = L["ne"]; fids += list((ne.get("groups") or {}).keys()) or [re.sub(r"[^a-z0-9]+", "_", n.lower()).strip("_") for n in ne.get("names", [])]
+            if kind == "area" and L.get("static"): continue                 # static areas (lakes) stay on the loop frame too
             if L.get("perFeature") is False or not fids:
                 self.G.J(f"tl.to('#{self.id}_{lid}',{{opacity:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")
             for fid in fids:
@@ -204,10 +207,15 @@ class Scene:
         self.G.J(f"tl.fromTo('#{self.id}_{layer}_{fid}',{{opacity:0.55}},{{opacity:1,duration:{f(dur / 2)},ease:'sine.inOut',yoyo:true,repeat:1,immediateRender:false}},{f(t)});")
 
     def route_draw(self, t0, t1, rid, layer="route"):
-        """Draw-on for a route/line layer path via stroke-dash (length measured in the browser at load)."""
-        sel = f"#{self.id}_{layer}_{rid}"
-        self.G.J(f"{{const L=GeoRT.pathLength('{self.id}','{layer}_{rid}')||4000;"
-                 f"tl.fromTo('{sel}',{{strokeDasharray:L,strokeDashoffset:L,opacity:1}},{{strokeDashoffset:0,duration:{f(t1 - t0)},ease:'power1.inOut',immediateRender:false}},{f(t0)});}}")
+        """Draw-on for a route/line layer path via stroke-dash over a pathLength-normalised path (deterministic in every renderer)."""
+        sel = f"#{self.id}_{layer}_{rid}"                                   # route paths carry pathLength="1" (geo-runtime), so no length measuring at script time;
+        # opacity sits in BOTH var sets: a from-only property is tweened back to the CSS value (0) by GSAP, which hid every drawn route in the renderer
+        self.G.J(f"tl.fromTo('{sel}',{{strokeDasharray:'1 1',strokeDashoffset:1,opacity:1}},{{strokeDashoffset:0,opacity:1,duration:{f(t1 - t0)},ease:'power1.inOut',immediateRender:false}},{f(t0)});")
+
+    def disputed_out(self, t, did, dur=0.3):
+        """Fade a disputed outline and its policy plate (use before the outro / when the camera leaves the border)."""
+        self.G.J(f"tl.to('#{self.id}_disputed_{did}',{{opacity:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")
+        self.G.J(f"tl.to('#{self.id}_lbl_pl_{did}',{{autoAlpha:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")
 
     def disputed_in(self, t, did, dur=0.4):
         """Disputed boundary/area: dashed line fades in, then its policy plates (controller / claimants) pop.
@@ -253,7 +261,8 @@ CSS = f"""
 .geo .g-feature{{fill:none;stroke:{CREAM};stroke-width:2}}
 .geo .g-feature.faint{{stroke:rgba(239,230,210,.32);stroke-width:1.2;stroke-dasharray:6 5}}
 .geo .g-route{{fill:none;stroke:{SAND};stroke-width:4;stroke-linecap:round;opacity:0}}
-.geo .g-route.river{{stroke:{CYAN};stroke-width:5;stroke-linejoin:round}}   /* rivers read over a sand highlight */
+.geo .g-route.river{{stroke:#5FE3FF;stroke-width:7;stroke-linejoin:round;filter:drop-shadow(0 0 3px rgba(0,0,0,.9)) drop-shadow(0 0 1px rgba(0,0,0,.8))}}   /* rivers: bright over sand/orange fills, dark halo for contrast */
+.geo .g-area.lake{{fill:#0E4F8F;stroke:#9ADCFF;stroke-width:1.6}}   /* NE lakes drawn above country fills (geo.json layer {{kind:area, cls:lake, source:ne-lakes}}) */
 .geo .g-disputed{{fill:none;stroke:{CREAM};stroke-width:3;stroke-dasharray:10 8;stroke-linecap:round;opacity:0}}
 .geo .g-disputed.area{{fill:rgba(239,230,210,.16);stroke-width:2}}
 .geo .geo-pin{{position:absolute;width:0;height:0;transform-origin:0 0}}

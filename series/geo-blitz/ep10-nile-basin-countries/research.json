@@ -68,6 +68,54 @@
    "url": "https://infonile.org/en/2018/04/nile-basin-countries-need-a-deal-on-the-river-and-the-water/",
    "date": "2018-04-01",
    "notes": "more than 300 million people rely on the waters of the River Nile; basin > 10 % of Africa in 11 countries"
+  },
+  "nasa_bluemarble": {
+   "type": "primary",
+   "publisher": "NASA Earth Observatory / GIBS",
+   "title": "Blue Marble: Shaded Relief and Bathymetry",
+   "url": "https://earthobservatory.nasa.gov/features/BlueMarble",
+   "date": "2026-10-15",
+   "notes": "satellite basemap raster (public domain, U.S. Government work)"
+  },
+  "wikidata_cairo": {
+   "type": "reference",
+   "publisher": "Wikidata",
+   "title": "Cairo (Q85) · Khartoum (Q1963) · Jinja (Q210350) coordinates",
+   "url": "https://www.wikidata.org/wiki/Q85",
+   "date": "2026-10-15",
+   "notes": "pin coordinates checked against P625"
+  },
+  "border_registry": {
+   "type": "primary",
+   "publisher": "thequizwire docs/border_registry.json (Natural Earth · UNISFA)",
+   "title": "Border policy registry — abyei, ilemi, halaib_bir_tawil",
+   "url": "docs/border_registry.json",
+   "date": "2026-10",
+   "notes": "controller / claimant wording as shown on the plates"
+  },
+  "unisfa": {
+   "type": "primary",
+   "publisher": "United Nations",
+   "title": "UNISFA — United Nations Interim Security Force for Abyei",
+   "url": "https://unisfa.unmissions.org/",
+   "date": "2026-10-15",
+   "notes": "UN force patrolling the contested Abyei Area between Sudan and South Sudan"
+  },
+  "wiki_halaib": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Hala'ib Triangle",
+   "url": "https://en.wikipedia.org/wiki/Hala%27ib_Triangle",
+   "date": "2026-10-15",
+   "notes": "administered by Egypt, claimed by Sudan; Bir Tawil claimed by neither"
+  },
+  "wiki_ilemi": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Ilemi Triangle",
+   "url": "https://en.wikipedia.org/wiki/Ilemi_Triangle",
+   "date": "2026-10-15",
+   "notes": "administered by Kenya; claimed by South Sudan"
   }
  },
  "claims": [
@@ -88,8 +136,8 @@
     "eleven countries"
    ],
    "screen": [
-    "11",
-    "countries"
+    "11 COUNTRIES",
+    "11"
    ]
   },
   {
@@ -101,11 +149,12 @@
     "wiki_nile"
    ],
    "vo": [
-    "lake victoria to the mediterranean"
+    "from lake victoria to the mediterranean"
    ],
    "screen": [
     "Lake Victoria",
-    "Mediterranean"
+    "Mediterranean",
+    "Cairo"
    ]
   },
   {
@@ -122,7 +171,7 @@
    ],
    "screen": [
     "6,650 KM",
-    "The longest river in Africa."
+    "the longest river in Africa"
    ]
   },
   {
@@ -134,13 +183,11 @@
     "infonile_basin"
    ],
    "vo": [
-    "the white nile from the lakes",
-    "the blue nile from ethiopia",
-    "meeting at khartoum"
+    "two rivers make it: the white nile from the lakes, the blue nile from ethiopia, meeting at khartoum"
    ],
    "screen": [
     "TWO NILES",
-    "White + Blue Nile meet at Khartoum.",
+    "White + Blue meet at Khartoum",
     "White Nile",
     "Blue Nile",
     "Khartoum"
@@ -156,12 +203,9 @@
     "britannica_nile",
     "conversation_nile"
    ],
-   "vo": [
-    "the basin: a tenth of africa"
-   ],
-   "screen": [
-    "1/10 OF AFRICA"
-   ]
+   "vo": [],
+   "screen": [],
+   "note": "kept for the record; not spoken or shown in v3 (Mercator satellite scene — no area claims, geolint P1)"
   },
   {
    "id": "C06",
@@ -172,11 +216,49 @@
     "infonile_deal"
    ],
    "vo": [
-    "over three hundred million people rely on it"
+    "more than three hundred million people rely on its water"
    ],
    "screen": [
-    "300 million+ people rely on it."
+    "300 MILLION+",
+    "people rely on its water"
    ]
+  },
+  {
+   "id": "C07",
+   "weight": "framing",
+   "text": "Border policy plates (the basin view shows three contested boundaries): Abyei is contested between Sudan and South Sudan and patrolled by UNISFA; the Ilemi Triangle is administered by Kenya and claimed by South Sudan; the Halaib Triangle is administered by Egypt and claimed by Sudan. No sovereignty asserted.",
+   "sources": [
+    "border_registry",
+    "unisfa",
+    "wiki_halaib",
+    "wiki_ilemi"
+   ],
+   "vo": [],
+   "screen": [
+    "Abyei",
+    "Administered by joint/contested (UNISFA-patrolled)",
+    "Claimed by Sudan, South Sudan",
+    "Ilemi Triangle",
+    "Administered by Kenya",
+    "Claimed by South Sudan",
+    "Halaib Triangle",
+    "Administered by Egypt",
+    "Claimed by Sudan"
+   ]
+  },
+  {
+   "id": "C08",
+   "weight": "framing",
+   "text": "Hook framing: the Nile is popularly identified with Egypt (the downstream state, where it reaches the Mediterranean), but the basin is shared by eleven countries — the question's premise is the common misconception, not a factual assertion.",
+   "sources": [
+    "britannica_nile",
+    "sis_egypt_nile",
+    "nbi_home"
+   ],
+   "vo": [
+    "think the nile is just egypt's river"
+   ],
+   "screen": []
   }
  ],
  "myths": [

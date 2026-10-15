@@ -22,7 +22,7 @@
    "energy": 4,
    "pause_after": 0.3,
    "direction": "straight in, like a dare",
-   "text": "How many countries share the Nile basin?",
+   "text": "Think the Nile is just Egypt's river? How many countries share the Nile basin?",
    "cues": {
     "which": "how"
    }
@@ -50,7 +50,7 @@
    "energy": 1,
    "pause_after": 0.1,
    "direction": "silence — the bar drains",
-   "silence": 1.5,
+   "silence": 3.0,
    "text": ""
   },
   {
@@ -61,10 +61,9 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "It's eleven. Eleven countries, Lake Victoria to the Mediterranean.",
+   "text": "It's eleven. Eleven countries, from Lake Victoria to the Mediterranean.",
    "cues": {
     "answer": "eleven",
-    "number": "eleven",
     "victoria": "victoria",
     "med": "mediterranean"
    },
@@ -78,7 +77,7 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "count it out",
-   "text": "About six thousand six hundred and fifty kilometres, the longest river in Africa.",
+   "text": "About six thousand six hundred and fifty kilometres: the longest river in Africa.",
    "cues": {
     "six": "six",
     "longest": "longest"
@@ -92,7 +91,7 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "let the comparison land",
-   "text": "The White Nile from the lakes, the Blue Nile from Ethiopia, meeting at Khartoum.",
+   "text": "Two rivers make it: the White Nile from the lakes, the Blue Nile from Ethiopia, meeting at Khartoum.",
    "cues": {
     "white": "white",
     "blue": "blue",
@@ -107,10 +106,10 @@
    "energy": 4,
    "pause_after": 0.4,
    "direction": "the number people repeat",
-   "text": "The basin: a tenth of Africa. Over three hundred million people rely on it.",
+   "text": "More than three hundred million people rely on its water.",
    "cues": {
-    "tenth": "tenth",
-    "three": "three"
+    "three": "three",
+    "people": "people"
    }
   },
   {
@@ -121,7 +120,7 @@
    "energy": 3,
    "pause_after": 0.0,
    "direction": "a promise, not a plea",
-   "text": "Tomorrow, the capital a river split in two. Subscribe, and guess it first.",
+   "text": "Knew it? Hit like, and subscribe. A new map question lands every day.",
    "cues": {
     "subscribe": "subscribe"
    }

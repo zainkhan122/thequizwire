@@ -480,7 +480,7 @@ CSS = f"""
 /* ---- v3 "satellite quiz" (docs/V3_LOOK.md) ---- */
 .v3 .scrim{{position:absolute;left:0;width:1080px;z-index:20;pointer-events:none}}
 .v3 .scrim-top{{top:0;height:780px;background:linear-gradient(180deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.6) 55%,rgba(0,0,0,0) 100%)}}
-.v3 .scrim-bot{{top:1180px;height:740px;background:linear-gradient(0deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.72) 40%,rgba(0,0,0,.55) 72%,rgba(0,0,0,0) 100%)}}
+.v3 .scrim-bot{{top:1180px;height:740px;background:linear-gradient(0deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.78) 40%,rgba(0,0,0,.62) 72%,rgba(0,0,0,.3) 92%,rgba(0,0,0,0) 100%)}}   /* fact band (1250–1460) keeps ≥ 3:1 over bright terrain / colour fills */
 .v3 .bug{{left:48px;top:232px;font-family:'Lilita';font-weight:400;font-size:30px;letter-spacing:.1em;color:#fff;background:#C8102E;border:0;padding:14px 22px 12px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.4)}}
 .v3 .bug b{{color:#FFD400}}
 .v3 .hook3{{position:absolute;left:60px;top:300px;width:900px;text-align:center;font-family:'Lilita';font-size:100px;line-height:1.04;text-transform:uppercase;color:#fff;

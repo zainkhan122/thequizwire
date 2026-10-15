@@ -1,6 +1,6 @@
 {
  "id": "ep10-nile-basin-countries",
- "format": "quiz-v2",
+ "format": "quiz-v3",
  "series": "geo-blitz",
  "number": 10,
  "title": "How many countries share the NILE basin?",
@@ -15,11 +15,20 @@
    "15"
   ],
   "correct": 1,
-  "beat": 1.5,
+  "beat": 3.0,
   "answer_line": "11 countries",
   "answer_sub": "Lake Victoria → the Mediterranean",
-  "tease": "Tomorrow: the capital a river split in two.",
-  "cta_line": "One map question a day · Subscribe"
+  "option_meta": [
+   {},
+   {},
+   {}
+  ],
+  "banner": "11 COUNTRIES",
+  "banner_sub": "✓  B was right",
+  "outro": {
+   "headline": "1 FOR 1?",
+   "url": "thequizwire.com"
+  }
  },
  "hook_type": "misconception",
  "promise": {
@@ -29,13 +38,27 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "How many countries share the NILE basin?",
-  "description": "How many countries share the NILE basin? Guess first — then see all of them light up on the map.\n\nWhat was your first guess?\n\nSources: Britannica (Nile River), Nile Basin Initiative / InfoNile, Wikipedia (Nile), The Conversation.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #10",
+  "title": "How many countries share the NILE basin? 🌍",
+  "description": "How many countries share the NILE basin? Guess first — then watch all of them light up, and the river drawn from Lake Victoria to the Mediterranean.\n\nWhat was your first guess? Do share in the comments below.\n\nSources: Britannica (Nile River), Nile Basin Initiative / InfoNile, Egypt State Information Service, The Conversation, Wikipedia (Nile).\nMap data: Natural Earth (public domain) · NASA Blue Marble. Voice: AI (Kokoro).\n\nGeo Blitz #10",
   "hashtags": [
    "#GKshorts",
    "#thequizwire",
    "#shorts",
    "#geoblitz"
   ]
+ },
+ "variety": {
+  "question": "how-many",
+  "hook": "challenge",
+  "opener": "wide-drift",
+  "reveal": "fill-pulse",
+  "beats": [
+   "route",
+   "pin",
+   "label",
+   "scalebar"
+  ],
+  "cast": "flagball:eg-happy + emoji-set:river",
+  "music": "bed:pad"
  }
 }

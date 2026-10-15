@@ -180,7 +180,7 @@
              `<path class="lift-shadow" d="${p.d}" filter="url(#${id}_liftShadow)"></path>${body}<path class="lift-outline" d="${p.d}" vector-effect="non-scaling-stroke"></path></g>`;
     };
     const svgLayers = `<defs><filter id="${id}_liftShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity="0.6"></feDropShadow></filter></defs>` +
-      C.paths.map(p => p.lift ? liftMarkup(p) : `<path id="${id}_${p.id}" class="${p.cls.trim()}" d="${p.d}" vector-effect="non-scaling-stroke"></path>`).join("");
+      C.paths.map(p => p.lift ? liftMarkup(p) : `<path id="${id}_${p.id}" class="${p.cls.trim()}" d="${p.d}" vector-effect="non-scaling-stroke"${/\bg-route\b/.test(p.cls) ? ' pathLength="1"' : ""}></path>`).join("");
     let raster = "";
     if (data && data.basemap && spec.projection === "mercator") {          // v3: PD raster (Web Mercator tiles) aligned under the fitted projection
       const ref = spec.fit && spec.fit.bbox ? [(spec.fit.bbox[0] + spec.fit.bbox[2]) / 2, (spec.fit.bbox[1] + spec.fit.bbox[3]) / 2] : [0, 0];

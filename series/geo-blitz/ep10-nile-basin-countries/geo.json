@@ -3,19 +3,33 @@
  "episode": "ep10-nile-basin-countries",
  "policy": "docs/BORDER_POLICY.md",
  "scenes": {
-  "main": {
-   "projection": "equalEarth",
-   "projection_reason": "basin-share and 'a tenth of Africa' are size claims → equal-area (geolint P1)",
+  "africa": {
+   "projection": "mercator",
+   "projection_reason": "satellite raster (Web Mercator tiles); the script counts basin countries and gives a river length (scalebar, P2) — the 'tenth of Africa' area claim was dropped so no size comparison is made (P1)",
    "fit": {
     "type": "bbox",
     "bbox": [
-     -20,
-     -36,
-     56,
-     38
+     12,
+     -12,
+     45.5,
+     31.7
     ]
    },
    "padding": 20,
+   "resolution": "50m",
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 1.7,
+    "far": {
+     "bbox": [
+      -25,
+      -40,
+      60,
+      42
+     ],
+     "k_min": 0.3
+    }
+   },
    "layers": [
     {
      "kind": "land"
@@ -25,7 +39,7 @@
     },
     {
      "kind": "highlight",
-     "id": "nile",
+     "id": "basin",
      "ids": [
       "108",
       "646",
@@ -40,161 +54,64 @@
       "818"
      ],
      "cls": "",
-     "note": "the 11 Nile-basin states (Natural Earth admin-0 ISO numeric ids)"
+     "lift": "fill",
+     "color": "#F97316",
+     "note": "the 11 Nile-basin states (Natural Earth admin-0 ISO numeric ids), filled south→north at the reveal"
+    },
+    {
+     "kind": "area",
+     "id": "lakes",
+     "cls": "lake",
+     "source": "ne-lakes",
+     "ne": {
+      "file": "ne_50m_lakes",
+      "names": [
+       "Lake Victoria",
+       "Lake Kyoga",
+       "Lake Albert",
+       "Lake Tana",
+       "Lake Nasser"
+      ]
+     },
+     "note": "basin lakes drawn above the fills so Lake Victoria / Tana / Nasser stay readable (Natural Earth 50m, PD)",
+     "static": true
     },
     {
      "kind": "route",
      "id": "river",
      "cls": "river",
-     "geojson": {
-      "type": "FeatureCollection",
-      "features": [
-       {
-        "type": "Feature",
-        "id": "white",
-        "properties": {
-         "name": "White Nile → Nile (simplified course)"
-        },
-        "geometry": {
-         "type": "LineString",
-         "coordinates": [
-          [
-           33.2,
-           0.42
-          ],
-          [
-           32.6,
-           1.9
-          ],
-          [
-           31.5,
-           2.4
-          ],
-          [
-           32.05,
-           3.6
-          ],
-          [
-           31.6,
-           4.85
-          ],
-          [
-           31.55,
-           6.2
-          ],
-          [
-           31.65,
-           9.53
-          ],
-          [
-           32.8,
-           11.75
-          ],
-          [
-           32.66,
-           13.17
-          ],
-          [
-           32.53,
-           15.6
-          ],
-          [
-           33.98,
-           17.7
-          ],
-          [
-           33.32,
-           19.53
-          ],
-          [
-           31.8,
-           18.5
-          ],
-          [
-           30.47,
-           19.17
-          ],
-          [
-           31.35,
-           21.8
-          ],
-          [
-           32.9,
-           24.09
-          ],
-          [
-           32.64,
-           25.69
-          ],
-          [
-           31.18,
-           27.18
-          ],
-          [
-           31.24,
-           30.04
-          ],
-          [
-           30.42,
-           31.4
-          ]
-         ]
-        }
-       },
-       {
-        "type": "Feature",
-        "id": "blue",
-        "properties": {
-         "name": "Blue Nile (simplified course)"
-        },
-        "geometry": {
-         "type": "LineString",
-         "coordinates": [
-          [
-           37.39,
-           11.6
-          ],
-          [
-           37.59,
-           11.49
-          ],
-          [
-           37.9,
-           10.6
-          ],
-          [
-           37.0,
-           10.0
-          ],
-          [
-           36.0,
-           10.2
-          ],
-          [
-           35.1,
-           10.9
-          ],
-          [
-           34.4,
-           11.8
-          ],
-          [
-           33.6,
-           13.55
-          ],
-          [
-           32.53,
-           15.6
-          ]
-         ]
-        }
-       }
-      ]
+     "source": "ne-rivers",
+     "ne": {
+      "file": "ne_50m_rivers_lake_centerlines",
+      "flow": "north",
+      "groups": {
+       "white": [
+        "Victoria Nile",
+        "Albert Nile",
+        "Bahr el Jebel",
+        "El Bahr el Abyad"
+       ],
+       "blue": [
+        "El Bahr el Azraq"
+       ],
+       "nile": [
+        "Nile"
+       ]
+      }
      },
-     "note": "hand-simplified course from Jinja/Lake Tana to the delta (~20 + 9 vertices); for the drawn line only, not a measurement"
+     "note": "real Natural Earth 50m centrelines: White Nile (Jinja → Khartoum), Blue Nile (Tana → Khartoum), main Nile (Khartoum → delta); drawn south→north"
     }
    ],
    "pins": [
+    {
+     "id": "jinja",
+     "lonlat": [
+      33.2,
+      0.42
+     ],
+     "label": "Lake Victoria",
+     "qid": "Q210350"
+    },
     {
      "id": "khartoum",
      "lonlat": [
@@ -203,23 +120,33 @@
      ],
      "label": "Khartoum",
      "qid": "Q1963"
+    },
+    {
+     "id": "cairo",
+     "lonlat": [
+      31.24,
+      30.05
+     ],
+     "label": "Cairo",
+     "qid": "Q85",
+     "side": "left"
     }
    ],
    "labels": [
     {
      "id": "lake_victoria",
      "lonlat": [
-      31.5,
-      -4.3
+      35.4,
+      -0.2
      ],
      "text": "Lake Victoria",
-     "cls": "sea al"
+     "cls": "sea"
     },
     {
      "id": "med",
      "lonlat": [
-      29.3,
-      31.3
+      28.6,
+      32.2
      ],
      "text": "Mediterranean",
      "cls": "sea"
@@ -227,20 +154,20 @@
     {
      "id": "white_nile",
      "lonlat": [
-      31.0,
-      8.0
+      30.0,
+      10.8
      ],
      "text": "White Nile",
-     "cls": "sea ar"
+     "cls": "sea"
     },
     {
      "id": "blue_nile",
      "lonlat": [
-      35.0,
-      11.8
+      36.6,
+      12.6
      ],
      "text": "Blue Nile",
-     "cls": "sea al"
+     "cls": "sea"
     }
    ],
    "scalebar": {
@@ -250,11 +177,61 @@
      10
     ],
     "at": [
-     40,
-     1100
+     60,
+     1130
     ]
    },
-   "disputed": [],
+   "disputed": [
+    {
+     "id": "abyei",
+     "ne_name": "Abyei",
+     "name": "Abyei",
+     "controller": "joint/contested (UNISFA-patrolled)",
+     "claimants": [
+      "Sudan",
+      "South Sudan"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#abyei · UNISFA",
+     "label_at": [
+      23.2,
+      9.0
+     ],
+     "plate_cls": "small"
+    },
+    {
+     "id": "ilemi",
+     "ne_name": "Ilemi Triangle",
+     "name": "Ilemi Triangle",
+     "controller": "Kenya",
+     "claimants": [
+      "South Sudan"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#ilemi",
+     "label_at": [
+      40.6,
+      1.6
+     ],
+     "plate_cls": "small"
+    },
+    {
+     "id": "halaib",
+     "ne_name": "Halayib Triangle",
+     "name": "Halaib Triangle",
+     "controller": "Egypt",
+     "claimants": [
+      "Sudan"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#halaib_bir_tawil",
+     "label_at": [
+      41.8,
+      25.2
+     ],
+     "plate_cls": "small"
+    }
+   ],
    "sources": [
     "Natural Earth"
    ]

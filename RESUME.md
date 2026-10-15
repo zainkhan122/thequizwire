@@ -34,7 +34,7 @@ steps       : V3.1 ✓ basemap → V3.2 ✓ lifted highlight → V3.3 ✓ v3 UI 
               V3.6 re-author 10 episodes with local contact sheets → V3.7 one runner render for owner look → batch
 exit check  : owner approves the Geo #13 v3 render; 10/10 in Release pilot-v3-batch1; every episode has a reviewed sheet
 rollback    : v2 engine paths stay (format quiz-v2); pilot-v2-batch1 Release is NOT to be posted
-next        : V3.6 re-author the 10 pilots (start: geo ep13 = copy series/_template_v3 content over the episode; then ep10–12, 14, wild 07–09, sports 09–10); a local sheet per episode
+next        : V3.6 re-author the 10 pilots — done: geo ep13, ep14, ep10 (V3.6f); remaining: geo ep11 (Budapest: wide-drift/flag-lift/"CHALLENGE A FRIEND"), ep12 (Antarctica: globe-spin/fill-pulse/"DAILY MAP QUIZ", vector), wild 07–09, sports 09–10; a local sheet per episode
 ```
 Rule (new): nothing goes to Actions before a local contact sheet has been looked at. pilot-v2-batch1 (8/10 rendered) is shelved.
 Last completed: **Phase 1.7 Actuals** (2026-10-14) — measured CI timings in `docs/OPERATING_MODEL.md §3/§6`, verified animator CLI +
@@ -70,6 +70,12 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 | 2026-10-14 | Geo Blitz / Body & Brain / Sports Sprint / Wild Files active; Cosmic Quiz, Time Vault registered inactive | agent (from feed), to confirm |
 | 2026-10-14 | Repo is **private** (GitHub Free: 2,000 Actions min/month); crons off, `check` main-only, `cloud.py` budget guard | owner |
 | 2026-10-14 | Vector maps (d3-geo + Natural Earth) are the default stage; VersaTiles flyovers are cached hero clips; Blue Marble globe deferred | agent |
+
+### V3.6f — DONE 2026-10-15 · Geo #10 Nile basin re-authored in v3 (how-many · challenge hook · wide-drift · fill-pulse · route/pin/label/scalebar · eg flag-ball + river emoji set · outro "1 FOR 1?")
+- Mercator + Blue Marble; fit = the 11 basin states ([12,-12,45.5,31.7]); hook k 0.48 whole-Africa (`far` raster), 11 fills cascade south→north; "a tenth of Africa" dropped (P1); 6,650 km keeps the scalebar (P2).
+- **Border policy inside the basin:** Abyei (UNISFA-patrolled, Sudan/South Sudan), Ilemi (Kenya / South Sudan), Halaib (Egypt / Sudan) — small plates during the wide s07 beat, `geo.disputed_out` ×3 at s08 so the outro is clean; registry `halaib_bir_tawil.ne_names` += "Halayib Triangle" (NE spelling); framing claim C07.
+- **Engine fixes found by watching the sheet:** routes never showed in the renderer — GSAP tweens a from-only `opacity` back to the CSS 0 → `route_draw` now sets opacity in both var sets and draws over `pathLength="1"` (no length measuring at script time). New: `geodata.ne_features` — any Natural Earth file by feature name on a layer (`"source":"ne-rivers","ne":{file,groups|names,flow}`), used for real Nile centrelines (Victoria/Albert Nile · Bahr el Jebel · El Bahr el Abyad = white; El Bahr el Azraq = blue; Nile) and `ne_50m_lakes` (`kind:area, cls:lake, static:true`). River CSS: 7-px #5FE3FF with dark halo; bottom scrim slightly stronger (facts ≥ 4:1 over orange/sand).
+- Gates green (ESTIMATE): quizlint OK (Q16 chain ep10→ep13 valid), geolint OK, facts 0/0, provenance 0/0, HF check 0 errors, textqa 0 FAIL, layout 0 FAIL. Sheet `review/geo10_v3_sheet.jpg` (not in repo).
 
 ### V3.6e' — DONE 2026-10-15 · owner feedback on the outro: official transparent logo (brand/logo.png, 512 px) and tagline removed; block tightened 50 px (head 936 · buttons 1030 · socials 1190 · url 1362). `~/uploads` removed after import.
 

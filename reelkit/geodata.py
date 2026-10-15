@@ -69,6 +69,42 @@ def cmd_fetch(a):
     for n in NE_FILES: print("  ✓", ne_path(n))
 
 
+def _slug(x):
+    return re.sub(r"[^a-z0-9]+", "_", str(x).lower()).strip("_")
+
+
+def ne_features(spec_ne):
+    """Pull named features out of any Natural Earth GeoJSON (PD) into a FeatureCollection for a layer `source`.
+    geo.json layer: {"source": "ne-rivers", "ne": {"file": "ne_50m_rivers_lake_centerlines", "names": [...]}}            → one feature per name
+                    {"source": "ne-rivers", "ne": {"file": ..., "groups": {"white": ["Victoria Nile", "Bahr el Jebel"]}}}  → one merged MultiLineString per group
+    Line groups are ordered south→north and each segment oriented the same way, so a stroke-dash draw-on runs like a north-flowing river
+    (set "flow": "north"|"south"|"east"|"west"|"none"). Polygons (lakes) are kept as-is. Matching is on name / name_en / name_alt (case-insensitive)."""
+    src = json.loads(ne_path(spec_ne["file"]).read_text())
+    def names_of(f):
+        pr = f.get("properties") or {}
+        return {str(pr.get(k) or "").strip().lower() for k in ("name", "name_en", "name_alt", "name_long")} - {""}
+    groups = spec_ne.get("groups") or {_slug(n): [n] for n in spec_ne.get("names", [])}
+    flow = spec_ne.get("flow", "north"); out = []
+    for gid, want in groups.items():
+        w = {x.strip().lower() for x in want}
+        feats = [f for f in src["features"] if names_of(f) & w]
+        if not feats: sys.exit(f"geodata: ne '{spec_ne['file']}' has no feature named {want} (names are case-insensitive; check name_en)")
+        gtypes = {f["geometry"]["type"] for f in feats}
+        if gtypes <= {"LineString", "MultiLineString"}:
+            segs = []
+            for f in feats:
+                g = f["geometry"]; segs += [g["coordinates"]] if g["type"] == "LineString" else list(g["coordinates"])
+            ax, sign = {"north": (1, 1), "south": (1, -1), "east": (0, 1), "west": (0, -1)}.get(flow, (None, 1))
+            if ax is not None:
+                segs = [s if (s[-1][ax] - s[0][ax]) * sign >= 0 else list(reversed(s)) for s in segs]
+                segs.sort(key=lambda s: sign * min(c[ax] for c in s))
+            geom = {"type": "MultiLineString", "coordinates": [[[round(c[0], 4), round(c[1], 4)] for c in s] for s in segs]}
+        elif len(feats) == 1: geom = feats[0]["geometry"]
+        else: geom = {"type": "GeometryCollection", "geometries": [f["geometry"] for f in feats]}
+        out.append({"type": "Feature", "id": gid, "properties": {"name": want[0], "ne_names": sorted({n for f in feats for n in names_of(f)})}, "geometry": geom})
+    return {"type": "FeatureCollection", "features": out}
+
+
 def extra_atlas_path(name):
     a = EXTRA_ATLASES[name]; p = CACHE / a["pkg"] / a["file"]
     if not p.exists():
@@ -239,9 +275,12 @@ def prep(ep: Path, out: Path, fixtures=None, quiet=False):
         if (spec.get("fit") or {}).get("type") == "features" and spec.get("clip_to_fit"): ids = spec["fit"]["ids"]
         ft = filter_topo(topo, bbox=scene_bbox(spec), ids=ids) if (scene_bbox(spec) or ids) and spec.get("projection") != "orthographic" else topo
         data = {"topo": ft, "geo": dict(spec.get("geo", {})), "sources": ["Natural Earth"], "quality": f"ne-{res}", "resolution": res}
-        extras = []
+        extras, ne_extra = [], []
         for L in spec.get("layers", []):                                   # admin-1 layers: {"kind": "highlight", "source": "us-states", "ids": ["25"]}
             src = L.get("source")
+            if L.get("ne") and src and src not in data["geo"]:                   # any Natural Earth file (rivers, lakes, …) by feature name
+                data["geo"][src] = ne_features(L["ne"]); ne_extra.append(L["ne"]["file"])
+                continue
             if src in EXTRA_ATLASES and src not in data["geo"]:
                 xt = json.loads(extra_atlas_path(src).read_text())
                 data["geo"][src] = {"type": "FeatureCollection", "features": topo_features(xt, EXTRA_ATLASES[src]["object"], L.get("ids"))}
@@ -301,7 +340,8 @@ def prep(ep: Path, out: Path, fixtures=None, quiet=False):
         (out / f"{sid}.json").write_text(s)
         gen[f"geo/{sid}.json"] = {"kind": "data", "licence": "PD", "provider": "Natural Earth", "by": "reelkit/geodata.py",
                                   "source": f"world-atlas {WORLD_ATLAS_VER} {res}" + (" + ne_10m_admin_0_disputed_areas" if spec.get("disputed") else "")
-                                            + "".join(f" + {EXTRA_ATLASES[x]['pkg']} {EXTRA_ATLASES[x]['ver']} ({EXTRA_ATLASES[x]['licence']})" for x in extras),
+                                            + "".join(f" + {EXTRA_ATLASES[x]['pkg']} {EXTRA_ATLASES[x]['ver']} ({EXTRA_ATLASES[x]['licence']})" for x in extras)
+                                            + "".join(f" + {x}" for x in sorted(set(ne_extra))),
                                   "credit": " · ".join(["Natural Earth"] + [EXTRA_ATLASES[x]["credit"] for x in extras]), "bytes": len(s)}
         report[sid] = {"res": res, "kb": len(s) // 1024, "countries": len(ft["objects"].get("countries", {}).get("geometries", [])), "disputed": len(spec.get("disputed", []))}
         if not quiet: print(f"  ✓ {sid}: {res} · {len(s) // 1024} KB · {report[sid]['countries']} countries · {report[sid]['disputed']} disputed")

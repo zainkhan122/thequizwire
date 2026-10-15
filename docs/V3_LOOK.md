@@ -71,3 +71,8 @@ Authoring: `quiz.outro {headline, url}` (defaults shown above); beats `cta_in` a
 `hook_in` at `end-1.0`; `geo.clear` at `s08` (dur 0.25) and the return `cam_to` at `s08+0.2`→`end-0.3` with the hook camera (Q12).
 Assets: `brand/` (logo.png = owner-supplied transparent logo; cursor.svg own; 4 Simple Icons CC0) are copied by `reelkit/brand.py prep` and
 registered in media.json; the like/bell stickers are Twemoji 1f44d/1f514 (always fetched for v3). Engine: `engine/quiz.py` `outro3()` / `outro_in()`.
+
+## Rivers, lakes and other named Natural Earth features (added V3.6f)
+- Any layer may take its geometry from a Natural Earth GeoJSON by feature name: `{"kind":"route","id":"river","cls":"river","source":"ne-rivers","ne":{"file":"ne_50m_rivers_lake_centerlines","flow":"north","groups":{"white":["Victoria Nile","Albert Nile","Bahr el Jebel","El Bahr el Abyad"],"blue":["El Bahr el Azraq"],"nile":["Nile"]}}}`. `groups` merge segments into one drawable path per key (ordered/oriented along `flow`), `names` give one feature per name. Lakes: `{"kind":"area","id":"lakes","cls":"lake","static":true,"source":"ne-lakes","ne":{"file":"ne_50m_lakes","names":["Lake Victoria"]}}` (static areas survive `geo.clear`). Check NE spellings with `geodata.py` (e.g. the White Nile is "El Bahr el Abyad").
+- `geo.route_draw {rid, layer}` + `until` draws the path; routes carry `pathLength="1"`, so the draw-on is deterministic in every renderer. Rivers render 7 px #5FE3FF with a dark halo so they read over flag/colour fills.
+- Policy plates stay through `geo.clear` by design; call `geo.disputed_out {did}` before the outro when the plates are no longer needed on screen.
