@@ -71,6 +71,14 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 | 2026-10-14 | Repo is **private** (GitHub Free: 2,000 Actions min/month); crons off, `check` main-only, `cloud.py` budget guard | owner |
 | 2026-10-14 | Vector maps (d3-geo + Natural Earth) are the default stage; VersaTiles flyovers are cached hero clips; Blue Marble globe deferred | agent |
 
+### V3.6h — DONE 2026-10-15 · Geo #12 Antarctica in v3 (orthographic globe) + v3 globe styling
+- ep12 re-authored to quiz-v3: which-country / question-first / **globe-spin** opener (hook k 1.7 [20,-10] → spin to the pole) / **fill-pulse** reveal (ice `#EAF6FF` lift) / beats pin+label / emoji-set:polar / "DAILY MAP QUIZ". 62 words, est. 35 s.
+- Engine: orthographic `apply()` now re-projects **lift groups** (clip+shadow+fill+outline paths share one `d`, `data-cx/cy` refreshed) — before, lifts on a spinning globe kept their mount-time shape (invisible). `svgOrigin` for lift pops is now lazy (`()=>GeoRT.centroid(...)`).
+- v3 globe look (`engine/geo.py` CSS + `geo-runtime.js` defs): space `#040914`, ocean radial gradient `#1e5a9c→#061a3a` (`<radialGradient id=…_ocean>`), atmosphere drop-shadow on `.g-sphere`, dusk land `#3b5a49`, borders `rgba(255,255,255,.28)`, graticule .07, `.v3 .geo .g-highlight` ice fill.
+- Gates: quizlint OK · geolint OK · facts 4 claims FAIL 0 · provenance FAIL 0 · HF check 0 err · layout dead-zone FAIL 0 · textqa 25 units FAIL 0 (sheets `review/geo12_v3_sheet2.jpg`, `_sheet3.jpg`).
+- Lessons: on a pole-centred globe Δlon from the camera lon maps to clock position (0 = up, +90 = right, 180 = down); keep big labels off the white continent (label at lat −56 above it, `label_in` after `banner_out`); keep the pole centred (k ≤ 1.6) when a fact must sit on dark ocean.
+- Next: V3.6i wild ep07–09 re-author (v3, no tease), then sports ep09–10, then cloud renders of all 10.
+
 ### V3.6g — DONE 2026-10-15 · Geo #11 Budapest in v3 (name-the-capital · story hook · **mystery-zoom-out** opener (Alps close-up k 2 → Europe k 0.5) · flag-lift · route/label/pin · hu flag-ball "wow" + bridge emoji set · outro "CHALLENGE A FRIEND")
 - Reveal: Hungary flag lift at k 1.3 while the Natural Earth Danube (Donau + Danube segments, `flow:"chain"` from the source) draws west → east; on "Buda" the flag fades and the camera dives to k 3.2 over the city: title-weight `big` labels BUDA | PEST either side of the river (`cls:"big ar"/"big al"`), Danube label, Chain Bridge pin (1849), then k 1.1 with Vienna · Bratislava · Budapest · Belgrade pins (4 capitals). Lake Balaton as a static NE lake.
 - Kosovo plate dropped with the tighter fit bbox [12,44.5,24,50.5] (P4 centre rule; C05 removed) — the wide s07 shot keeps Kosovo under the caption scrim.

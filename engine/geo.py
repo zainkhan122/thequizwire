@@ -167,7 +167,7 @@ class Scene:
         """Fade a per-feature layer path in (highlight_<id>); CSS sets the colours. Lifted layers (v3 `lift`) pop in with a scale."""
         sel = f"#{self.id}_{layer}_{fid}"
         if self._layer(layer).get("lift"):
-            self.G.J(f"tl.fromTo('{sel}',{{opacity:0,scale:0.86,svgOrigin:GeoRT.centroid('{self.id}','{layer}_{fid}')}},{{opacity:1,scale:1,duration:{f(max(dur, 0.45))},ease:'back.out(1.6)',immediateRender:false}},{f(t)});")   # lifts are always solid
+            self.G.J(f"tl.fromTo('{sel}',{{opacity:0,scale:0.86,svgOrigin:()=>GeoRT.centroid('{self.id}','{layer}_{fid}')}},{{opacity:1,scale:1,duration:{f(max(dur, 0.45))},ease:'back.out(1.6)',immediateRender:false}},{f(t)});")   # lifts are always solid
             return
         self.G.J(f"tl.fromTo('{sel}',{{opacity:0}},{{opacity:{opacity},duration:{f(dur)},ease:'power2.out',immediateRender:false}},{f(t)});")
 
@@ -202,7 +202,7 @@ class Scene:
 
     def highlight_pulse(self, t, fid, dur=1.2, layer="highlight"):
         if self._layer(layer).get("lift"):                                  # lifted shapes pulse in size, not opacity
-            self.G.J(f"tl.fromTo('#{self.id}_{layer}_{fid}',{{scale:1,svgOrigin:GeoRT.centroid('{self.id}','{layer}_{fid}')}},{{scale:1.05,duration:{f(dur / 2)},ease:'sine.inOut',yoyo:true,repeat:1,immediateRender:false}},{f(t)});")
+            self.G.J(f"tl.fromTo('#{self.id}_{layer}_{fid}',{{scale:1,svgOrigin:()=>GeoRT.centroid('{self.id}','{layer}_{fid}')}},{{scale:1.05,duration:{f(dur / 2)},ease:'sine.inOut',yoyo:true,repeat:1,immediateRender:false}},{f(t)});")
             return
         self.G.J(f"tl.fromTo('#{self.id}_{layer}_{fid}',{{opacity:0.55}},{{opacity:1,duration:{f(dur / 2)},ease:'sine.inOut',yoyo:true,repeat:1,immediateRender:false}},{f(t)});")
 
@@ -243,6 +243,12 @@ CSS = f"""
 .geo.has-basemap .g-border{{stroke:rgba(255,255,255,.55);stroke-width:1.4}}
 .geo.has-basemap .geo-basemap{{image-rendering:auto}}
 .v3 .geo.has-basemap{{background:#07132a}}   /* beyond the raster: Blue Marble's deep-ocean tone, not the v2 sea */
+.v3 .geo{{background:#040914}}                                                                  /* vector globes float in near-black space */
+.v3 .geo .g-sphere{{filter:drop-shadow(0 0 34px rgba(90,170,255,.55)) drop-shadow(0 0 6px rgba(140,200,255,.5))}}   /* atmosphere */
+.v3 .geo .g-land{{fill:#3b5a49;stroke:rgba(190,220,200,.35);stroke-width:.8}}                  /* dusk land over the ocean gradient */
+.v3 .geo .g-border{{stroke:rgba(255,255,255,.28);stroke-width:1.1}}
+.v3 .geo .g-grat{{stroke:rgba(255,255,255,.07)}}
+.v3 .geo .g-highlight{{fill:rgba(234,246,255,.92);stroke:#fff;stroke-width:2}}
 .v3 .geo .geo-pin .pinhead{{left:-16px;top:-16px;width:32px;height:32px;border:5px solid #fff;background:#FF2D2D}}
 .v3 .geo .geo-pin .pinlabel{{font-size:42px;top:-30px;left:26px;background:rgba(10,16,28,.9);border-left:7px solid #FF2D2D;border-radius:0 10px 10px 0;padding:6px 18px 4px}}
 .v3 .geo .geo-pin.left .pinlabel{{right:26px;border-right:7px solid #FF2D2D;border-radius:10px 0 0 10px}}

@@ -3,14 +3,25 @@
  "episode": "ep12-coldest-desert-antarctica",
  "policy": "docs/BORDER_POLICY.md",
  "scenes": {
-  "main": {
+  "globe": {
    "projection": "orthographic",
-   "projection_reason": "a polar continent is unreadable on flat world maps; the globe shows its true shape — the area figure is quoted, not visually compared (geolint P1)",
+   "projection_reason": "a polar continent is unreadable on flat maps (and the Mercator raster cannot show it); the globe shows its true shape. The 14.2 million km² figure is quoted, never visually compared with another desert (geolint P1). Vector Natural Earth land — no raster on the orthographic globe yet.",
    "fit": {
     "type": "world"
    },
    "padding": 60,
+   "resolution": "110m",
    "layers": [
+    {
+     "kind": "sphere"
+    },
+    {
+     "kind": "graticule",
+     "step": [
+      20,
+      20
+     ]
+    },
     {
      "kind": "land"
     },
@@ -24,19 +35,12 @@
       "010"
      ],
      "cls": "",
-     "note": "Antarctica (ISO 010); no territorial claim is drawn or named (Antarctic Treaty art. IV)"
+     "lift": "fill",
+     "color": "#EAF6FF",
+     "note": "Antarctica (ISO 010) lifted in ice white; no territorial claim is drawn or named (Antarctic Treaty art. IV)"
     }
    ],
    "pins": [
-    {
-     "id": "vostok",
-     "lonlat": [
-      106.84,
-      -78.46
-     ],
-     "label": "Vostok Station",
-     "qid": "Q211014"
-    },
     {
      "id": "pole",
      "lonlat": [
@@ -45,23 +49,33 @@
      ],
      "label": "South Pole",
      "qid": "Q933"
+    },
+    {
+     "id": "vostok",
+     "lonlat": [
+      106.84,
+      -78.46
+     ],
+     "label": "Vostok Station",
+     "qid": "Q211014",
+     "side": "left"
     }
    ],
    "labels": [
     {
      "id": "antarctica",
      "lonlat": [
-      60,
-      -72
+      24,
+      -56
      ],
      "text": "Antarctica",
-     "cls": "sea"
+     "cls": "big"
     },
     {
      "id": "southern_ocean",
      "lonlat": [
-      -60,
-      -62
+      64,
+      -60
      ],
      "text": "Southern Ocean",
      "cls": "sea"

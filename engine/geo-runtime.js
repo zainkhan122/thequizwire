@@ -94,7 +94,7 @@
   function layerPaths(spec, data, proj) {
     const path = d3.geoPath(proj), out = [];
     for (const L of spec.layers || []) {
-      if (L.kind === "sphere") { out.push({ id: L.id || "sphere", cls: "g-sphere " + (L.cls || ""), d: path({ type: "Sphere" }) || "" }); continue; }
+      if (L.kind === "sphere") { out.push({ id: L.id || "sphere", cls: "g-sphere " + (L.cls || ""), d: path({ type: "Sphere" }) || "", sphere: true }); continue; }
       if (L.kind === "graticule") { out.push({ id: L.id || "grat", cls: "g-grat " + (L.cls || ""), d: path(d3.geoGraticule().step(L.step || [15, 15])()) || "" }); continue; }
       if (L.kind === "borders") {
         const topo = data.topo, obj = L.object || "countries";
@@ -179,8 +179,9 @@
       return `<g id="${pid}" class="${p.cls.trim()}" data-cx="${L.centroid[0].toFixed(1)}" data-cy="${L.centroid[1].toFixed(1)}"><defs><clipPath id="${pid}_clip"><path d="${p.d}"></path></clipPath></defs>` +
              `<path class="lift-shadow" d="${p.d}" filter="url(#${id}_liftShadow)"></path>${body}<path class="lift-outline" d="${p.d}" vector-effect="non-scaling-stroke"></path></g>`;
     };
-    const svgLayers = `<defs><filter id="${id}_liftShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity="0.6"></feDropShadow></filter></defs>` +
-      C.paths.map(p => p.lift ? liftMarkup(p) : `<path id="${id}_${p.id}" class="${p.cls.trim()}" d="${p.d}" vector-effect="non-scaling-stroke"${/\bg-route\b/.test(p.cls) ? ' pathLength="1"' : ""}></path>`).join("");
+    const svgLayers = `<defs><filter id="${id}_liftShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity="0.6"></feDropShadow></filter>` +
+      `<radialGradient id="${id}_ocean" cx="38%" cy="32%" r="78%"><stop offset="0" stop-color="#1e5a9c"></stop><stop offset="0.55" stop-color="#0c3366"></stop><stop offset="1" stop-color="#061a3a"></stop></radialGradient></defs>` +
+      C.paths.map(p => p.lift ? liftMarkup(p) : `<path id="${id}_${p.id}" class="${p.cls.trim()}" d="${p.d}" vector-effect="non-scaling-stroke"${/\bg-route\b/.test(p.cls) ? ' pathLength="1"' : ""}${p.sphere ? ` style="fill:url(#${id}_ocean)"` : ""}></path>`).join("");
     let raster = "";
     if (data && data.basemap && spec.projection === "mercator") {          // v3: PD raster (Web Mercator tiles) aligned under the fitted projection
       const ref = spec.fit && spec.fit.bbox ? [(spec.fit.bbox[0] + spec.fit.bbox[2]) / 2, (spec.fit.bbox[1] + spec.fit.bbox[3]) / 2] : [0, 0];
@@ -225,7 +226,13 @@
       const proj = S.C.proj, base = S.baseScale || (S.baseScale = proj.scale());
       proj.rotate([S.cam.lon, S.cam.lat, (S.spec.rotate || [0, 0, 0])[2] || 0]).scale(base * S.cam.k);
       const paths = layerPaths(S.spec, S.data, proj);
-      for (const p of paths) { const e = S.g.querySelector("#" + CSS.escape(id + "_" + p.id)); if (e) e.setAttribute("d", p.d); }
+      for (const p of paths) {
+        const e = S.g.querySelector("#" + CSS.escape(id + "_" + p.id)); if (!e) continue;
+        if (p.lift) {                                                       // lifted group: clip + shadow + fill + outline share one outline
+          e.querySelectorAll("path").forEach(q => q.setAttribute("d", p.d));
+          if (p.lift.centroid && isFinite(p.lift.centroid[0])) { e.setAttribute("data-cx", p.lift.centroid[0].toFixed(1)); e.setAttribute("data-cy", p.lift.centroid[1].toFixed(1)); }
+        } else e.setAttribute("d", p.d);
+      }
       const pts = points(S.spec, proj);
       pts.pins.forEach((p, i) => { const e = S.pinEls[i]; if (!e) return; e.style.left = p.mx + "px"; e.style.top = p.my + "px"; e.classList.toggle("back", !p.vis); });
       pts.labels.forEach((l, i) => { const e = S.lblEls[i]; if (!e) return; e.style.left = l.mx + "px"; e.style.top = l.my + "px"; e.classList.toggle("back", !l.vis); });
@@ -267,7 +274,8 @@
 
   function centroid(id, pathId) {   // "x y" in SVG user units for GSAP svgOrigin (lift pops scale about the feature)
     const S = scenes[id]; const e = S && S.g.querySelector("#" + CSS.escape(id + "_" + pathId));
-    return e && e.dataset && e.dataset.cx ? `${e.dataset.cx} ${e.dataset.cy}` : "0 0";
+    const cx = e && e.getAttribute ? e.getAttribute("data-cx") : null;
+    return cx ? `${cx} ${e.getAttribute("data-cy")}` : "0 0";
   }
   function cam(id) { return scenes[id].cam; }
   function setCam(id, v) { Object.assign(scenes[id].cam, camTarget(id, { ...v, duration: 0 })); apply(id); }

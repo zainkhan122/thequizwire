@@ -1,8 +1,8 @@
 {
  "now": "2026-10-15: V3 look rebuild. V3.1 basemap, V3.2 lifted flag highlight, V3.3 v3 UI (format quiz-v3: Lilita question, flag pills, timer ring, yellow answer banner, 84-px Anton facts, Twemoji stickers, flag-ball characters, far raster for off-answer hook) are committed and verified on local contact sheets (docs/img/v3_3_contact_sheet.jpg). Nothing dispatched to Actions yet.",
- "phase": "V3.6g done (geo ep11 Budapest v3) — pushed; next V3.6h geo ep12 Antarctica v3 (globe-spin, vector), then wild ep07–09, sports ep09–10",
+ "phase": "V3.6h done (Geo #12 Antarctica v3 globe, all gates green) · next V3.6i: wild ep07–09 re-author to v3 (no tease)",
  "next": [
-  "V3.6: re-author the 10 pilots to quiz-v3 — done geo ep13/ep14/ep10/ep11; next geo ep12 (globe-spin · fill-pulse · 'DAILY MAP QUIZ'; orthographic, no raster), wild ep07–09, sports ep09–10 — local contact sheet viewed for EACH before any dispatch",
+  "V3.6i: re-author series/wild-files/ep07–ep09 to quiz-v3 (variety blocks, 3-s beat, Subscribe+Like outro), run gates, commit per episode",
   "V3.7: dispatch Geo #13 only (cloud.py render --tag pilot-v3-geo13 --wait) → owner approval → batch pilot-v3-batch1",
   "pilot-v2-batch1 stays shelved; never post it"
  ],

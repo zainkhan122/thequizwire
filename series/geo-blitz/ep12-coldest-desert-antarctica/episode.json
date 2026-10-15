@@ -1,6 +1,6 @@
 {
  "id": "ep12-coldest-desert-antarctica",
- "format": "quiz-v2",
+ "format": "quiz-v3",
  "series": "geo-blitz",
  "number": 12,
  "title": "Which is the COLDEST desert on Earth?",
@@ -15,13 +15,22 @@
    "Sahara"
   ],
   "correct": 1,
-  "beat": 1.5,
+  "beat": 3.0,
   "answer_line": "Antarctica",
   "answer_sub": "a polar desert",
-  "tease": "Tomorrow: a mountain range called the Southern Alps.",
-  "cta_line": "One map question a day · Subscribe"
+  "option_meta": [
+   {},
+   {},
+   {}
+  ],
+  "banner": "ANTARCTICA",
+  "banner_sub": "✓  B was right",
+  "outro": {
+   "headline": "DAILY MAP QUIZ",
+   "url": "thequizwire.com"
+  }
  },
- "hook_type": "misconception",
+ "hook_type": "question-first",
  "promise": {
   "min_motion": 0.7
  },
@@ -29,13 +38,25 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Which is the COLDEST desert on Earth?",
-  "description": "Which is the COLDEST desert on Earth? Guess first — then see the globe turn to it.\n\nWhat was your first guess?\n\nSources: WMO World Weather & Climate Extremes Archive, NSIDC, Discovering Antarctica (BAS/RGS), Wikipedia (Antarctica).\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #12",
+  "title": "Which is the COLDEST desert on Earth? 🐧",
+  "description": "Which is the COLDEST desert on Earth? Guess first — then watch the globe turn to the answer, and see why a continent of ice counts as a desert.\n\nWhat was your first guess? Do share in the comments below.\n\nSources: Wikipedia (Antarctica), Discovering Antarctica (BAS/RGS), WMO Archive of Weather and Climate Extremes, NSIDC, Aurora Expeditions.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #12",
   "hashtags": [
    "#GKshorts",
    "#thequizwire",
    "#shorts",
    "#geoblitz"
   ]
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "globe-spin",
+  "reveal": "fill-pulse",
+  "beats": [
+   "pin",
+   "label"
+  ],
+  "cast": "emoji-set:polar (penguin, snowflake, droplet, thermometer)",
+  "music": "bed:pad"
  }
 }

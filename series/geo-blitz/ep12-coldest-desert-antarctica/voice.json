@@ -50,7 +50,7 @@
    "energy": 1,
    "pause_after": 0.1,
    "direction": "silence — the bar drains",
-   "silence": 1.5,
+   "silence": 3.0,
    "text": ""
   },
   {
@@ -61,7 +61,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "It's Antarctica. Desert means dry: the interior gets under fifty millimetres a year.",
+   "text": "It's Antarctica. Desert means dry: under fifty millimetres a year inland.",
    "cues": {
     "answer": "antarctica",
     "dry": "dry",
@@ -91,7 +91,7 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "let the comparison land",
-   "text": "Its ice is the planet's biggest store of fresh water.",
+   "text": "Its ice holds most of Earth's fresh water.",
    "cues": {
     "ice": "ice",
     "water": "water"
@@ -105,7 +105,7 @@
    "energy": 4,
    "pause_after": 0.4,
    "direction": "the number people repeat",
-   "text": "Earth's coldest air was measured here: minus eighty-nine point two degrees, at Vostok.",
+   "text": "Coldest air ever measured: minus eighty-nine point two degrees, at Vostok.",
    "cues": {
     "coldest": "coldest",
     "minus": "minus",
@@ -120,7 +120,7 @@
    "energy": 3,
    "pause_after": 0.0,
    "direction": "a promise, not a plea",
-   "text": "Tomorrow, a mountain range called the Southern Alps. Subscribe, and guess it first.",
+   "text": "Knew it? Like and subscribe for the daily map quiz.",
    "cues": {
     "subscribe": "subscribe"
    }

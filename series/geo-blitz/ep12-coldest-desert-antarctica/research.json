@@ -68,12 +68,13 @@
    "vo": [
     "which is the coldest desert on earth",
     "it's antarctica",
-    "desert means dry: the interior gets under fifty millimetres a year"
+    "desert means dry: under fifty millimetres a year inland"
    ],
    "screen": [
     "Antarctica",
-    "UNDER 50 MM A YEAR",
-    "Interior snowfall, water equivalent.",
+    "ANTARCTICA",
+    "UNDER 50 MM",
+    "a year, inland",
     "South Pole"
    ]
   },
@@ -91,7 +92,7 @@
    ],
    "screen": [
     "14.2 MILLION KM²",
-    "The largest desert of all."
+    "the largest desert of all"
    ]
   },
   {
@@ -103,9 +104,12 @@
     "nsidc_ice_sheets"
    ],
    "vo": [
-    "its ice is the planet's biggest store of fresh water"
+    "its ice holds most of earth's fresh water"
    ],
-   "screen": []
+   "screen": [
+    "FRESH WATER",
+    "most of it is locked in this ice"
+   ]
   },
   {
    "id": "C04",
@@ -117,11 +121,11 @@
     "discovering_antarctica"
    ],
    "vo": [
-    "earth's coldest air was measured here: minus eighty-nine point two degrees, at vostok"
+    "coldest air ever measured: minus eighty-nine point two degrees, at vostok"
    ],
    "screen": [
-    "−89.2 °C · VOSTOK, 1983",
-    "Coldest air ever measured on Earth.",
+    "−89.2 °C",
+    "coldest air ever measured, Vostok",
     "Vostok Station"
    ]
   }

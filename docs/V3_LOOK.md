@@ -77,3 +77,7 @@ registered in media.json; the like/bell stickers are Twemoji 1f44d/1f514 (always
 - `geo.route_draw {rid, layer}` + `until` draws the path; routes carry `pathLength="1"`, so the draw-on is deterministic in every renderer. Rivers render 7 px #5FE3FF with a dark halo so they read over flag/colour fills.
 - Policy plates stay through `geo.clear` by design; call `geo.disputed_out {did}` before the outro when the plates are no longer needed on screen.
 - Label classes (v3): `sea` italic serif (water, regions), `ink` plain, `big` title-weight yellow Lilita (city halves, landmarks); add `al`/`ar` to run the text east/west from the anchor.
+
+## Globe scenes (orthographic) — v3 style
+- Vector globe (no raster): space `#040914`, ocean radial gradient (`#1e5a9c` → `#061a3a`, highlight upper-left), atmosphere drop-shadow on the sphere, dusk land `#3b5a49`, faint borders/graticule. A raster globe (Blue Marble re-projected / GIBS EPSG:3031) is **planned, not built**.
+- Lifts work on the globe (re-projected every frame). Reference: Geo #12 — hook k 1.7 `[20,-10]`, spin to the pole `[20,-90]` k 1.5, ice `lift:"fill"` highlight, pole view k 1.5–1.77; Δlon from the camera lon = clock position (0 up, +90 right, 180 down, −90 left); keep labels within ~0.5 R of centre and off the lifted fill.
