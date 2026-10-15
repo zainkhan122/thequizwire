@@ -184,6 +184,30 @@
   },
   {
    "at": "s05",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "galapagos"
+   }
+  },
+  {
+   "at": "s05",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "pacific"
+   }
+  },
+  {
+   "at": "s05",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "equator"
+   }
+  },
+  {
+   "at": "s05",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s05+1.4",
@@ -231,6 +255,22 @@
    "do": "fact_in",
    "id": "f1",
    "until": "s05.end"
+  },
+  {
+   "at": "s06+0.3",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "pacific"
+   }
+  },
+  {
+   "at": "s06+0.5",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "equator"
+   }
   },
   {
    "at": "s06",

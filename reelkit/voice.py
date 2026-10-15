@@ -263,7 +263,8 @@ def measure(line: dict, y, words: list):
     syl = syllables(line["text"])
     m["dur"], m["syllables"], m["pace"] = round(dur, 2), syl, round(syl / max(artic, 0.1), 2)
     lo, hi = tone["pace"]
-    if not (lo * 0.85 <= m["pace"] <= hi * 1.15):
+    tol = 0.30 if syl <= 12 else 0.15                                  # quiz hooks (≤ 12 syllables, stressed keyword) are noisy: WARN sooner, FAIL later
+    if not (lo * (1 - tol) <= m["pace"] <= hi * (1 + tol)):
         fails.append(f"pace {m['pace']} syl/s far outside {line['tone']} band {lo}–{hi}")
     elif not (lo <= m["pace"] <= hi):
         warns.append(f"pace {m['pace']} syl/s outside {line['tone']} band {lo}–{hi}")
