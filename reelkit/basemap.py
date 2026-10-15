@@ -74,6 +74,10 @@ def stitch(bbox, width_px, out_path, layer="bluemarble", quality=86):
             c = (x - x0) * 256
             left, right = img.crop((c - 8, 0, c - 7, img.height)), img.crop((c + 3, 0, c + 4, img.height))   # the seam = last 4 columns of the x = n-1 tile
             for i in range(-7, 3): img.paste(left if i < 0 else right, (c + i, 0))
+    if layer == "night":                                                      # Black Marble ships dim: lift the city lights once, in the file
+        from PIL import ImageEnhance                                          # (no run-time CSS filter — SVG filters composite unreliably under UI glass)
+        img = ImageEnhance.Contrast(ImageEnhance.Brightness(img).enhance(1.75)).enhance(1.45)
+        img = ImageEnhance.Color(img).enhance(1.25)
     out_path = pathlib.Path(out_path); out_path.parent.mkdir(parents=True, exist_ok=True)
     q = quality
     while True:

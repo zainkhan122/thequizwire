@@ -113,8 +113,7 @@ class Scene:
         spec_js = _inline_json({k: v for k, v in self.spec.items() if k not in ("geo",)})
         spec_id = f"{self.id}_spec"     # JSON (not a JS literal) so factcheck/geolint can read every run-time label without a browser
         night = (self.spec.get("basemap") or {}).get("layer") == "night"       # Black Marble: lift the lights, black beyond the raster, quiet borders
-        style = (f'<style>#{self.id}{{background:#000}}#{self.id} .geo-basemap{{filter:brightness(1.75) contrast(1.45) saturate(1.25)}}'
-                 f'#{self.id} .g-border{{stroke:rgba(255,255,255,.22)}}</style>') if night else ""
+        style = (f'<style>#{self.id}{{background:#000}}#{self.id} .g-border{{stroke:rgba(255,255,255,.22)}}</style>') if night else ""   # lights are boosted in the raster itself (basemap.py)
         return (style + f'<div id="{self.id}" class="geo{" night" if night else ""}" data-quality="{self.data_quality}" style="left:{x}px;top:{y}px;width:{w}px;height:{h}px;z-index:{self.z}"></div>'
                 f'<script type="application/json" id="{spec_id}">{spec_js}</script>'
                 f'<script type="application/json" id="{data_id}">{_inline_json(self.data)}</script>'

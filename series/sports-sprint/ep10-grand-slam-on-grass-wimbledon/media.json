@@ -103,7 +103,7 @@
   },
   "geo/night2_basemap.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 1374076,
+   "bytes": 1837235,
    "credit": "NASA Black Marble",
    "kind": "image",
    "licence": "PD-USGov",
@@ -112,7 +112,7 @@
   },
   "geo/night_basemap.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 1374076,
+   "bytes": 1837235,
    "credit": "NASA Black Marble",
    "kind": "image",
    "licence": "PD-USGov",

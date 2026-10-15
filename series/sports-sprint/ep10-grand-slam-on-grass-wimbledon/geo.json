@@ -85,15 +85,6 @@
      "cls": "ink"
     },
     {
-     "id": "channel",
-     "lonlat": [
-      -1.2,
-      50.3
-     ],
-     "text": "English Channel",
-     "cls": "sea"
-    },
-    {
      "id": "north_sea",
      "lonlat": [
       3.0,

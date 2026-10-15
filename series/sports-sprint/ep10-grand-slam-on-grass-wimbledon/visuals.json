@@ -24,7 +24,7 @@
    "type": "geo",
    "scene": "night",
    "from": "start",
-   "to": "s04",
+   "to": "s04-0.3",
    "box": [
     0,
     0,
@@ -192,7 +192,7 @@
    "do": "reveal"
   },
   {
-   "at": "s03.end-0.1",
+   "at": "s03.end-0.4",
    "do": "fx.flash",
    "args": {
     "peak": 0.85,
@@ -347,14 +347,6 @@
    }
   },
   {
-   "at": "s06+1.2",
-   "do": "geo.label_in",
-   "stage": "stage_uk",
-   "args": {
-    "lid": "channel"
-   }
-  },
-  {
    "at": "s06+1.5",
    "do": "geo.scalebar_in",
    "stage": "stage_uk"
@@ -391,14 +383,6 @@
    "stage": "stage_uk",
    "args": {
     "lid": "north_sea"
-   }
-  },
-  {
-   "at": "s07",
-   "do": "geo.label_out",
-   "stage": "stage_uk",
-   "args": {
-    "lid": "channel"
    }
   },
   {
