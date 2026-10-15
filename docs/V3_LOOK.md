@@ -81,3 +81,6 @@ registered in media.json; the like/bell stickers are Twemoji 1f44d/1f514 (always
 ## Globe scenes (orthographic) — v3 style
 - Vector globe (no raster): space `#040914`, ocean radial gradient (`#1e5a9c` → `#061a3a`, highlight upper-left), atmosphere drop-shadow on the sphere, dusk land `#3b5a49`, faint borders/graticule. A raster globe (Blue Marble re-projected / GIBS EPSG:3031) is **planned, not built**.
 - Lifts work on the globe (re-projected every frame). Reference: Geo #12 — hook k 1.7 `[20,-10]`, spin to the pole `[20,-90]` k 1.5, ice `lift:"fill"` highlight, pole view k 1.5–1.77; Δlon from the camera lon = clock position (0 up, +90 right, 180 down, −90 left); keep labels within ~0.5 R of centre and off the lifted fill.
+
+## Night-lights opener (Black Marble)
+`basemap:{layer:"night", k_max ≥ 1.9, bbox covering the whole frame at hook zoom}` on a hook-only scene; the engine brightens the raster and blacks out the margins. Pair with `fx.flash` at `s03.end-0.1` and a Blue Marble scene for the reveal. Reference: Sports #10.

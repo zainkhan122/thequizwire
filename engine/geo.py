@@ -112,7 +112,10 @@ class Scene:
         data_id = f"{self.id}_data"
         spec_js = _inline_json({k: v for k, v in self.spec.items() if k not in ("geo",)})
         spec_id = f"{self.id}_spec"     # JSON (not a JS literal) so factcheck/geolint can read every run-time label without a browser
-        return (f'<div id="{self.id}" class="geo" data-quality="{self.data_quality}" style="left:{x}px;top:{y}px;width:{w}px;height:{h}px;z-index:{self.z}"></div>'
+        night = (self.spec.get("basemap") or {}).get("layer") == "night"       # Black Marble: lift the lights, black beyond the raster, quiet borders
+        style = (f'<style>#{self.id}{{background:#000}}#{self.id} .geo-basemap{{filter:brightness(1.75) contrast(1.45) saturate(1.25)}}'
+                 f'#{self.id} .g-border{{stroke:rgba(255,255,255,.22)}}</style>') if night else ""
+        return (style + f'<div id="{self.id}" class="geo{" night" if night else ""}" data-quality="{self.data_quality}" style="left:{x}px;top:{y}px;width:{w}px;height:{h}px;z-index:{self.z}"></div>'
                 f'<script type="application/json" id="{spec_id}">{spec_js}</script>'
                 f'<script type="application/json" id="{data_id}">{_inline_json(self.data)}</script>'
                 f'<script>GeoRT.mount("{self.id}", JSON.parse(document.getElementById("{spec_id}").textContent), JSON.parse(document.getElementById("{data_id}").textContent));</script>')
@@ -247,7 +250,7 @@ CSS = f"""
 .v3 .geo.has-basemap{{background:#07132a}}   /* beyond the raster: Blue Marble's deep-ocean tone, not the v2 sea */
 .v3 .geo{{background:#040914}}                                                                  /* vector globes float in near-black space */
 .v3 .geo .g-sphere{{filter:drop-shadow(0 0 34px rgba(90,170,255,.55)) drop-shadow(0 0 6px rgba(140,200,255,.5))}}   /* atmosphere */
-.v3 .geo .g-land{{fill:#3b5a49;stroke:rgba(190,220,200,.35);stroke-width:.8}}                  /* dusk land over the ocean gradient */
+.v3 .geo:not(.has-basemap) .g-land{{fill:#3b5a49;stroke:rgba(190,220,200,.35);stroke-width:.8}}                  /* dusk land over the ocean gradient */
 .v3 .geo .g-border{{stroke:rgba(255,255,255,.28);stroke-width:1.1}}
 .v3 .geo .g-grat{{stroke:rgba(255,255,255,.07)}}
 .v3 .geo .g-highlight{{fill:rgba(234,246,255,.92);stroke:#fff;stroke-width:2}}

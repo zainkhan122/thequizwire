@@ -2,327 +2,125 @@
  "version": 1,
  "stage": [
   {
-   "id": "stage_map",
+   "id": "stage_uk",
    "type": "geo",
-   "scene": "main",
+   "scene": "uk",
    "from": "start",
    "to": "end",
    "box": [
     0,
     0,
     1080,
-    1180
+    1920
    ],
    "anchor": [
     540,
-    600
+    900
    ],
    "z": 10
+  },
+  {
+   "id": "stage_night",
+   "type": "geo",
+   "scene": "night",
+   "from": "start",
+   "to": "s04",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 12
+  },
+  {
+   "id": "stage_night2",
+   "type": "geo",
+   "scene": "night2",
+   "from": "end-1.0",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 12
   }
  ],
  "elements": [
   {
    "id": "f1",
    "type": "fact",
-   "kicker": "1877 · WORPLE ROAD",
-   "text": "22 men, one event, 200 at the final.",
-   "y": 1350
+   "kicker": "WORPLE ROAD 1877",
+   "text": "22 men, one event, 200 watched"
   },
   {
    "id": "f2",
    "type": "fact",
-   "kicker": "THE OTHERS SWITCHED",
-   "text": "US Open 1975 · Australian Open 1988.",
-   "y": 1350
+   "kicker": "OTHERS SWITCHED",
+   "text": "US Open 1975 · Australia 1988"
   },
   {
    "id": "f3",
    "type": "fact",
    "kicker": "8 MM",
-   "text": "100% perennial ryegrass since 2001.",
-   "y": 1350
-  }
- ],
- "beats": [
-  {
-   "at": 0,
-   "do": "geo.cam_set",
-   "stage": "stage_map",
-   "args": {
-    "k": 1.0,
-    "lonlat": [
-     -3.5,
-     54.2
-    ]
-   }
+   "text": "perennial ryegrass since 2001"
   },
   {
-   "at": 0,
-   "do": "hook_in"
+   "id": "st_tennis",
+   "type": "sticker",
+   "emoji": "1f3be",
+   "x": 850,
+   "y": 700,
+   "size": 220,
+   "rot": -10
   },
   {
-   "at": "s01",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "args": {
-    "k": 1.05,
-    "lonlat": [
-     -3.4,
-     54.1
-    ],
-    "ease": "none"
-   },
-   "until": "s03.end"
+   "id": "st_trophy",
+   "type": "sticker",
+   "emoji": "1f3c6",
+   "x": 240,
+   "y": 640,
+   "size": 200,
+   "rot": 6
   },
   {
-   "at": "s01+0.3",
-   "do": "geo.scalebar_in",
-   "stage": "stage_map",
-   "args": {}
+   "id": "ch_us",
+   "type": "character",
+   "flag": "us",
+   "face": "sad",
+   "x": 250,
+   "y": 1040,
+   "size": 200,
+   "rot": -8
   },
   {
-   "at": "s02",
-   "do": "chips_in"
+   "id": "ch_au",
+   "type": "character",
+   "flag": "au",
+   "face": "sad",
+   "x": 840,
+   "y": 1040,
+   "size": 200,
+   "rot": 8
   },
   {
-   "at": "s02+0.2",
-   "do": "bug_in"
-  },
-  {
-   "at": "s03",
-   "do": "beat"
-  },
-  {
-   "at": "s03",
-   "do": "hook_out"
-  },
-  {
-   "at": "s04",
-   "do": "reveal"
-  },
-  {
-   "at": "s04",
-   "do": "geo.highlight_in",
-   "stage": "stage_map",
-   "args": {
-    "fid": "826",
-    "layer": "hl",
-    "dur": 0.5
-   }
-  },
-  {
-   "at": "s04",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "args": {
-    "k": 3.0,
-    "lonlat": [
-     -0.2,
-     51.6
-    ],
-    "ease": "power2.inOut"
-   },
-   "until": "s04+1.4"
-  },
-  {
-   "at": "s04+1.4",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "args": {
-    "k": 3.1,
-    "lonlat": [
-     -0.2,
-     51.6
-    ],
-    "ease": "none"
-   },
-   "until": "s04.end"
-  },
-  {
-   "at": "s04@wimbledon",
-   "do": "geo.pin_in",
-   "stage": "stage_map",
-   "args": {
-    "pid": "wimbledon"
-   }
-  },
-  {
-   "at": "s04@london",
-   "do": "geo.label_in",
-   "stage": "stage_map",
-   "args": {
-    "lid": "london"
-   }
-  },
-  {
-   "at": "s04+2.0",
-   "do": "chips_out"
-  },
-  {
-   "at": "s05",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "args": {
-    "k": 3.2,
-    "lonlat": [
-     -0.25,
-     51.55
-    ],
-    "ease": "none"
-   },
-   "until": "s05.end"
-  },
-  {
-   "at": "s05+0.3",
-   "do": "fact_in",
-   "id": "f1",
-   "until": "s05.end"
-  },
-  {
-   "at": "s06",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "args": {
-    "k": 1.1,
-    "lonlat": [
-     -3.0,
-     53.6
-    ],
-    "ease": "power2.inOut"
-   },
-   "until": "s06+1.4"
-  },
-  {
-   "at": "s06+1.4",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "args": {
-    "k": 1.12,
-    "lonlat": [
-     -2.9,
-     53.5
-    ],
-    "ease": "none"
-   },
-   "until": "s06.end"
-  },
-  {
-   "at": "s06",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "826",
-    "layer": "hl",
-    "dur": 1.2
-   }
-  },
-  {
-   "at": "s06+0.6",
-   "do": "geo.label_in",
-   "stage": "stage_map",
-   "args": {
-    "lid": "north_sea"
-   }
-  },
-  {
-   "at": "s06+0.8",
-   "do": "geo.label_in",
-   "stage": "stage_map",
-   "args": {
-    "lid": "channel"
-   }
-  },
-  {
-   "at": "s06+0.3",
-   "do": "fact_in",
-   "id": "f2",
-   "until": "s06.end"
-  },
-  {
-   "at": "s07",
-   "do": "geo.label_out",
-   "stage": "stage_map",
-   "args": {
-    "lid": "north_sea"
-   }
-  },
-  {
-   "at": "s07",
-   "do": "geo.label_out",
-   "stage": "stage_map",
-   "args": {
-    "lid": "channel"
-   }
-  },
-  {
-   "at": "s07",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "args": {
-    "k": 2.4,
-    "lonlat": [
-     -0.3,
-     51.7
-    ],
-    "ease": "power2.inOut"
-   },
-   "until": "s07+1.4"
-  },
-  {
-   "at": "s07+1.4",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "args": {
-    "k": 2.45,
-    "lonlat": [
-     -0.3,
-     51.7
-    ],
-    "ease": "none"
-   },
-   "until": "end-1.8"
-  },
-  {
-   "at": "s07+0.3",
-   "do": "fact_in",
-   "id": "f3",
-   "until": "s07.end"
-  },
-  {
-   "at": "s08",
-   "do": "cta_in",
-   "until": "end-1.9"
-  },
-  {
-   "at": "s08",
-   "do": "credit_in",
-   "until": "end-0.2"
-  },
-  {
-   "at": "end-1.8",
-   "do": "geo.clear",
-   "stage": "stage_map",
-   "args": {
-    "dur": 0.6
-   }
-  },
-  {
-   "at": "end-1.8",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "args": {
-    "k": 1.0,
-    "lonlat": [
-     -3.5,
-     54.2
-    ],
-    "ease": "power2.inOut"
-   },
-   "until": "end-0.2"
-  },
-  {
-   "at": "end-1.4",
-   "do": "hook_in"
+   "id": "st_cut",
+   "type": "sticker",
+   "emoji": "2702",
+   "x": 850,
+   "y": 700,
+   "size": 200,
+   "rot": -20
   }
  ],
  "captions": {
@@ -333,5 +131,389 @@
   "max_words": 4,
   "max_chars": 26,
   "hold": 0.12
- }
+ },
+ "beats": [
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_night",
+   "args": {
+    "k": 0.95,
+    "lonlat": [
+     9,
+     48
+    ]
+   }
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_uk",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     -2.5,
+     53.6
+    ]
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_night",
+   "until": "s04",
+   "args": {
+    "k": 1.02,
+    "lonlat": [
+     7,
+     48.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s02+0.3",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s03.end-0.1",
+   "do": "fx.flash",
+   "args": {
+    "peak": 0.85,
+    "out": 0.3
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_uk",
+   "until": "s04+1.8",
+   "args": {
+    "k": 3.0,
+    "lonlat": [
+     -0.25,
+     51.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.8",
+   "do": "geo.cam_to",
+   "stage": "stage_uk",
+   "until": "s05",
+   "args": {
+    "k": 3.05,
+    "lonlat": [
+     -0.25,
+     51.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.6",
+   "do": "banner_in",
+   "args": {
+    "style": "flip"
+   }
+  },
+  {
+   "at": "s04+4.6",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+2.0",
+   "do": "sticker_in",
+   "id": "st_tennis"
+  },
+  {
+   "at": "s04+2.2",
+   "do": "geo.pin_in",
+   "stage": "stage_uk",
+   "args": {
+    "pid": "wimbledon"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "geo.label_in",
+   "stage": "stage_uk",
+   "args": {
+    "lid": "london"
+   }
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_uk",
+   "until": "s06",
+   "args": {
+    "k": 3.2,
+    "lonlat": [
+     -0.3,
+     51.52
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05+0.4",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s05.end"
+  },
+  {
+   "at": "s05+0.6",
+   "do": "sticker_in",
+   "id": "st_trophy"
+  },
+  {
+   "at": "s05.end-0.3",
+   "do": "sticker_out",
+   "id": "st_trophy"
+  },
+  {
+   "at": "s05.end-0.3",
+   "do": "sticker_out",
+   "id": "st_tennis"
+  },
+  {
+   "at": "s06",
+   "do": "geo.label_out",
+   "stage": "stage_uk",
+   "args": {
+    "lid": "london"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_uk",
+   "until": "s06+1.4",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     -2.5,
+     53.3
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_uk",
+   "until": "s07",
+   "args": {
+    "k": 1.02,
+    "lonlat": [
+     -2.5,
+     53.3
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06+1.2",
+   "do": "geo.label_in",
+   "stage": "stage_uk",
+   "args": {
+    "lid": "north_sea"
+   }
+  },
+  {
+   "at": "s06+1.2",
+   "do": "geo.label_in",
+   "stage": "stage_uk",
+   "args": {
+    "lid": "channel"
+   }
+  },
+  {
+   "at": "s06+1.5",
+   "do": "geo.scalebar_in",
+   "stage": "stage_uk"
+  },
+  {
+   "at": "s06+0.4",
+   "do": "fact_in",
+   "id": "f2",
+   "until": "s06.end"
+  },
+  {
+   "at": "s06+0.6",
+   "do": "character_in",
+   "id": "ch_us"
+  },
+  {
+   "at": "s06+1.8",
+   "do": "character_in",
+   "id": "ch_au"
+  },
+  {
+   "at": "s06.end-0.3",
+   "do": "character_out",
+   "id": "ch_us"
+  },
+  {
+   "at": "s06.end-0.3",
+   "do": "character_out",
+   "id": "ch_au"
+  },
+  {
+   "at": "s07",
+   "do": "geo.label_out",
+   "stage": "stage_uk",
+   "args": {
+    "lid": "north_sea"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.label_out",
+   "stage": "stage_uk",
+   "args": {
+    "lid": "channel"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_uk",
+   "until": "s07+1.4",
+   "args": {
+    "k": 2.4,
+    "lonlat": [
+     -0.3,
+     51.6
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_uk",
+   "until": "s08+0.2",
+   "args": {
+    "k": 2.45,
+    "lonlat": [
+     -0.3,
+     51.6
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07+0.4",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s07.end"
+  },
+  {
+   "at": "s07+0.6",
+   "do": "sticker_in",
+   "id": "st_cut"
+  },
+  {
+   "at": "s07.end-0.3",
+   "do": "sticker_out",
+   "id": "st_cut"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_uk",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_uk",
+   "until": "end-1.0",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     -2.5,
+     53.6
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "end-1.0",
+   "do": "fx.flash",
+   "args": {
+    "peak": 0.8,
+    "out": 0.3
+   }
+  },
+  {
+   "at": "end-1.0",
+   "do": "geo.cam_set",
+   "stage": "stage_night2",
+   "args": {
+    "k": 0.95,
+    "lonlat": [
+     9,
+     48
+    ]
+   }
+  },
+  {
+   "at": "end-1.0",
+   "do": "geo.cam_to",
+   "stage": "stage_night2",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.95,
+    "lonlat": [
+     9,
+     48
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ]
 }

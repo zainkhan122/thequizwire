@@ -1,6 +1,6 @@
 {
  "id": "ep10-grand-slam-on-grass-wimbledon",
- "format": "quiz-v2",
+ "format": "quiz-v3",
  "series": "sports-sprint",
  "number": 10,
  "title": "Which Grand Slam is still played on GRASS?",
@@ -15,13 +15,22 @@
    "Australian Open"
   ],
   "correct": 0,
-  "beat": 1.5,
+  "beat": 3.0,
   "answer_line": "Wimbledon",
   "answer_sub": "London SW19 · since 1877",
-  "tease": "Tomorrow, another one.",
-  "cta_line": "One question a day · Subscribe"
+  "option_meta": [
+   {},
+   {},
+   {}
+  ],
+  "banner": "WIMBLEDON",
+  "banner_sub": "✓  A was right",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
  },
- "hook_type": "fact",
+ "hook_type": "challenge",
  "promise": {
   "min_motion": 0.7
  },
@@ -29,15 +38,26 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Which Grand Slam is still played on GRASS?",
-  "description": "Which Grand Slam is still played on GRASS? Guess first — then see it: London SW19, since 1877.\n\nWhat was your first guess?\n\nSports Sprint #10",
+  "title": "Which Grand Slam is still played on GRASS? 🎾",
+  "description": "Which Grand Slam is still played on GRASS? Guess first — then drop from Europe at night into south-west London: grass since 1877, 22 men at the first Championships, and courts cut to 8 mm.\n\nWhat was your first guess? Do share in the comments below.\n\nSources: wimbledon.com (History), Wikipedia (The Championships, Wimbledon; US Open; Australian Open; Grass court), The Guardian (2012, 2025), Britannica.\nMap data: Natural Earth (public domain) · imagery NASA Blue Marble / Black Marble. Voice: AI (Kokoro).\n\nSports Sprint #10",
   "hashtags": [
    "#GKshorts",
    "#thequizwire",
    "#shorts",
-   "#sportssprint",
-   "#wimbledon",
-   "#tennis"
+   "#sportssprint"
   ]
+ },
+ "variety": {
+  "question": "which-record",
+  "hook": "challenge",
+  "opener": "night-lights",
+  "reveal": "card-flip",
+  "beats": [
+   "pin",
+   "label",
+   "scalebar"
+  ],
+  "cast": "flagball:us-sad + au-sad + emoji-set:tennis (tennis, trophy, scissors)",
+  "music": "bed:pad"
  }
 }

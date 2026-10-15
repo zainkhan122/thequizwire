@@ -3,9 +3,46 @@
  "episode": "ep10-grand-slam-on-grass-wimbledon",
  "policy": "docs/BORDER_POLICY.md",
  "scenes": {
-  "main": {
-   "projection": "equalEarth",
-   "projection_reason": "regional close-up of Britain; no size claim, equal-area default (geolint P1)",
+  "night": {
+   "projection": "mercator",
+   "projection_reason": "night-lights opener over Europe (hook only); no claim is read off this map",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -12,
+     35,
+     32,
+     62
+    ]
+   },
+   "padding": 60,
+   "resolution": "110m",
+   "basemap": {
+    "layer": "night",
+    "k_max": 1.9,
+    "bbox": [
+     -16,
+     22,
+     36,
+     70
+    ],
+    "note": "k_max 1.9 ⇒ z6 (45 px/°) — crisp at k ≈ 1 (23 px/°); bbox covers the whole 9:16 frame at that zoom"
+   },
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    }
+   ],
+   "pins": [],
+   "labels": [],
+   "disputed": []
+  },
+  "uk": {
+   "projection": "mercator",
+   "projection_reason": "regional → city dive (Britain to SW19) on a satellite basemap; conformal keeps the coast and the city true, no size or distance claim is made (geolint P1)",
    "fit": {
     "type": "bbox",
     "bbox": [
@@ -15,7 +52,7 @@
      59.2
     ]
    },
-   "padding": 6,
+   "padding": 60,
    "resolution": "50m",
    "layers": [
     {
@@ -23,15 +60,6 @@
     },
     {
      "kind": "borders"
-    },
-    {
-     "kind": "highlight",
-     "id": "hl",
-     "ids": [
-      "826"
-     ],
-     "cls": "",
-     "note": "United Kingdom (NE admin-0 826)"
     }
    ],
    "pins": [
@@ -50,42 +78,102 @@
     {
      "id": "london",
      "lonlat": [
-      0.4,
-      51.78
+      0.05,
+      51.62
      ],
      "text": "London",
      "cls": "ink"
     },
     {
-     "id": "north_sea",
-     "lonlat": [
-      2.2,
-      55.6
-     ],
-     "text": "North Sea",
-     "cls": "sea"
-    },
-    {
      "id": "channel",
      "lonlat": [
-      -2.2,
-      49.9
+      -1.2,
+      50.3
      ],
      "text": "English Channel",
      "cls": "sea"
+    },
+    {
+     "id": "north_sea",
+     "lonlat": [
+      3.0,
+      54.2
+     ],
+     "text": "North Sea",
+     "cls": "sea ar"
     }
    ],
    "scalebar": {
     "km": 100,
     "lonlat": [
-     -4.0,
-     51.5
+     -2.5,
+     53.0
+    ],
+    "at": [
+     60,
+     1130
     ]
    },
    "disputed": [],
    "sources": [
     "Natural Earth"
-   ]
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 3.2,
+    "bbox": [
+     -6.5,
+     49.5,
+     3.0,
+     55.5
+    ],
+    "far": {
+     "bbox": [
+      -25,
+      36,
+      25,
+      64
+     ],
+     "k_min": 0.5
+    }
+   }
+  },
+  "night2": {
+   "projection": "mercator",
+   "projection_reason": "loop frame: the same night map returns under the re-asked question (separate scene because a stage id must be unique)",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -12,
+     35,
+     32,
+     62
+    ]
+   },
+   "padding": 60,
+   "resolution": "110m",
+   "basemap": {
+    "layer": "night",
+    "k_max": 1.9,
+    "bbox": [
+     -16,
+     22,
+     36,
+     70
+    ],
+    "note": "k_max 1.9 ⇒ z6 (45 px/°) — crisp at k ≈ 1 (23 px/°); bbox covers the whole 9:16 frame at that zoom"
+   },
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    }
+   ],
+   "pins": [],
+   "labels": [],
+   "disputed": []
   }
  }
 }

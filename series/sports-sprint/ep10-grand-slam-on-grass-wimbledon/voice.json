@@ -22,7 +22,7 @@
    "energy": 4,
    "pause_after": 0.3,
    "direction": "straight in, like a dare",
-   "text": "Which Grand Slam is still played on grass?",
+   "text": "Tennis fans, no cheating. Which Grand Slam is still played on grass?",
    "cues": {}
   },
   {
@@ -44,7 +44,7 @@
    "energy": 1,
    "pause_after": 0.1,
    "direction": "silence — the bar drains",
-   "silence": 1.5,
+   "silence": 3.0,
    "text": ""
   },
   {
@@ -114,7 +114,7 @@
    "energy": 3,
    "pause_after": 0.0,
    "direction": "a promise, not a plea",
-   "text": "Tomorrow, another one. Subscribe, and guess it first.",
+   "text": "Did you get it? Like and subscribe for more sport.",
    "cues": {}
   }
  ],
