@@ -107,7 +107,7 @@ def main():
     if T:
         total = T["total"]; SC = {s["id"]: s for s in T["scenes"]}
         if v2:
-            est = os.environ.get("ESTIMATE") == "1"; hi = 44.0 if est else 40.0     # ESTIMATE timelines run ≈ 10 % longer than Kokoro
+            est = bool(T.get("estimated")) or os.environ.get("ESTIMATE") == "1"; hi = 44.0 if est else 40.0     # estimated timelines run ≈ 10 % longer than Kokoro (ep13: 39.55 est → 35.3 real)
             if not 22.0 <= total <= hi: F.append(f"Q13: total {total} s outside 22–{hi:g} s{' (estimated timeline)' if est else ''}")
             elif not 26.0 <= total <= (39.6 if est else 36.0): W.append(f"Q13: total {total} s outside the 26–36 s target")
         elif total > 60.0: F.append(f"Q3: total {total} s > 60 s")
