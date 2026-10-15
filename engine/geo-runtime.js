@@ -181,7 +181,7 @@
     };
     const svgLayers = `<defs><filter id="${id}_liftShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity="0.6"></feDropShadow></filter>` +
       `<radialGradient id="${id}_ocean" cx="38%" cy="32%" r="78%"><stop offset="0" stop-color="#1e5a9c"></stop><stop offset="0.55" stop-color="#0c3366"></stop><stop offset="1" stop-color="#061a3a"></stop></radialGradient></defs>` +
-      C.paths.map(p => p.lift ? liftMarkup(p) : `<path id="${id}_${p.id}" class="${p.cls.trim()}" d="${p.d}" vector-effect="non-scaling-stroke"${/\bg-route\b/.test(p.cls) ? ' pathLength="1"' : ""}${p.sphere ? ` style="fill:url(#${id}_ocean)"` : ""}></path>`).join("");
+      C.paths.map(p => p.lift ? liftMarkup(p) : `<path id="${id}_${p.id}" class="${p.cls.trim()}" d="${p.d}" vector-effect="non-scaling-stroke"${/\b(g-route|draw)\b/.test(p.cls) ? ' pathLength="1"' : ""}${p.sphere ? ` style="fill:url(#${id}_ocean)"` : ""}></path>`).join("");
     let raster = "";
     if (data && data.basemap && spec.projection === "mercator") {          // v3: PD raster (Web Mercator tiles) aligned under the fitted projection
       const ref = spec.fit && spec.fit.bbox ? [(spec.fit.bbox[0] + spec.fit.bbox[2]) / 2, (spec.fit.bbox[1] + spec.fit.bbox[3]) / 2] : [0, 0];

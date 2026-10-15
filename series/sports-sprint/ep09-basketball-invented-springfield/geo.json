@@ -3,19 +3,19 @@
  "episode": "ep09-basketball-invented-springfield",
  "policy": "docs/BORDER_POLICY.md",
  "scenes": {
-  "main": {
-   "projection": "equalEarth",
-   "projection_reason": "regional close-up of the US Northeast; no size claim, equal-area default (geolint P1)",
+  "ne": {
+   "projection": "mercator",
+   "projection_reason": "state close-up (≈ 4° wide) on a satellite basemap; conformal keeps the coastline true and no size or distance claim is made (geolint P1)",
    "fit": {
     "type": "bbox",
     "bbox": [
-     -80.0,
-     38.6,
-     -66.8,
-     47.4
+     -73.6,
+     41.2,
+     -69.9,
+     42.9
     ]
    },
-   "padding": 6,
+   "padding": 60,
    "resolution": "50m",
    "layers": [
     {
@@ -37,10 +37,29 @@
       "23",
       "34",
       "42",
-      "25"
+      "25",
+      "18",
+      "39",
+      "26",
+      "17",
+      "21",
+      "54",
+      "51",
+      "24",
+      "10"
      ],
      "cls": "faint",
      "note": "state lines (US Census Bureau via us-atlas 3.0.1, ISC)"
+    },
+    {
+     "kind": "feature",
+     "id": "outline",
+     "source": "us-states",
+     "ids": [
+      "25"
+     ],
+     "cls": "draw",
+     "note": "Massachusetts outline for the border-draw reveal"
     },
     {
      "kind": "highlight",
@@ -49,7 +68,8 @@
      "ids": [
       "25"
      ],
-     "cls": "",
+     "lift": "fill",
+     "color": "rgba(255,212,0,.45)",
      "note": "Massachusetts (FIPS 25)"
     }
    ],
@@ -61,7 +81,8 @@
       42.1
      ],
      "label": "Springfield · 1891",
-     "qid": "Q49158"
+     "qid": "Q49158",
+     "side": "right"
     },
     {
      "id": "boston",
@@ -70,55 +91,70 @@
       42.36
      ],
      "label": "Boston",
-     "qid": "Q100"
-    },
-    {
-     "id": "nyc",
-     "lonlat": [
-      -74.0,
-      40.71
-     ],
-     "label": "New York",
-     "qid": "Q60"
+     "qid": "Q100",
+     "side": "right"
     }
    ],
    "labels": [
     {
-     "id": "ma",
+     "id": "atlantic",
      "lonlat": [
-      -72.5,
-      42.55
+      -71.0,
+      41.45
      ],
-     "text": "Massachusetts",
-     "cls": "ink"
+     "text": "Atlantic",
+     "cls": "sea"
     },
     {
-     "id": "ny",
+     "id": "cand_in",
      "lonlat": [
-      -75.6,
-      43.2
+      -85.0,
+      41.5
+     ],
+     "text": "Indiana"
+    },
+    {
+     "id": "cand_ny",
+     "lonlat": [
+      -77.5,
+      42.8
      ],
      "text": "New York"
     },
     {
-     "id": "atlantic",
+     "id": "cand_ma",
      "lonlat": [
-      -69.6,
-      40.2
+      -70.2,
+      42.0
      ],
-     "text": "Atlantic",
-     "cls": "sea"
+     "text": "Massachusetts",
+     "cls": "ar"
     }
    ],
-   "scalebar": {
-    "km": 100,
-    "at_lat": 42
-   },
    "disputed": [],
    "sources": [
     "Natural Earth",
     "US Census Bureau"
-   ]
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "bbox": [
+     -75,
+     40.6,
+     -68.5,
+     43.6
+    ],
+    "far": {
+     "bbox": [
+      -92,
+      33,
+      -64,
+      48
+     ],
+     "k_min": 0.2
+    }
+   }
   }
  }
 }

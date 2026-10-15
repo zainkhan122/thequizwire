@@ -1,6 +1,6 @@
 {
  "id": "ep09-basketball-invented-springfield",
- "format": "quiz-v2",
+ "format": "quiz-v3",
  "series": "sports-sprint",
  "number": 9,
  "title": "In which US state was BASKETBALL invented?",
@@ -15,13 +15,22 @@
    "New York"
   ],
   "correct": 1,
-  "beat": 1.5,
+  "beat": 3.0,
   "answer_line": "Massachusetts",
   "answer_sub": "Springfield, December 1891",
-  "tease": "Tomorrow: the only Grand Slam played on grass.",
-  "cta_line": "One question a day · Subscribe"
+  "option_meta": [
+   {},
+   {},
+   {}
+  ],
+  "banner": "MASSACHUSETTS",
+  "banner_sub": "✓  B was right",
+  "outro": {
+   "headline": "1 FOR 1?",
+   "url": "thequizwire.com"
+  }
  },
- "hook_type": "misconception",
+ "hook_type": "fact-first",
  "promise": {
   "min_motion": 0.7
  },
@@ -30,13 +39,25 @@
   "US Census Bureau"
  ],
  "post": {
-  "title": "In which US state was BASKETBALL invented?",
-  "description": "In which US state was BASKETBALL invented? Guess first — then see where the first peach baskets went up.\n\nWhat was your first guess?\n\nSources: Springfield College (Birthplace of Basketball), Naismith Memorial Basketball Hall of Fame, Wikipedia (History of basketball, Basketball court, Springfield, Massachusetts), Britannica.\nMap data: Natural Earth (public domain) · US Census Bureau via us-atlas (ISC). Voice: AI (Kokoro).\n\nSports Sprint #9",
+  "title": "In which US state was BASKETBALL invented? 🏀",
+  "description": "In which US state was BASKETBALL invented? Guess first — then watch the state outline draw itself and zoom to the gym where James Naismith hung two peach baskets in December 1891.\n\nWhat was your first guess? Do share in the comments below.\n\nSources: Springfield College (Birthplace of Basketball), Naismith Memorial Basketball Hall of Fame, Wikipedia (History of basketball, Basketball court), Britannica.\nMap data: Natural Earth + US Census Bureau (us-atlas) · imagery NASA Blue Marble. Voice: AI (Kokoro).\n\nSports Sprint #9",
   "hashtags": [
    "#GKshorts",
    "#thequizwire",
    "#shorts",
    "#sportssprint"
   ]
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "fact-first",
+  "opener": "split-candidates",
+  "reveal": "border-draw",
+  "beats": [
+   "pin",
+   "label"
+  ],
+  "cast": "emoji-set:hoops (basketball, peach, soccer ball, scroll)",
+  "music": "bed:pad"
  }
 }

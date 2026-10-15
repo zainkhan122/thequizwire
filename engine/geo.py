@@ -269,6 +269,7 @@ CSS = f"""
 .geo .g-area{{fill:rgba(227,167,47,.35);stroke:{SAND};stroke-width:1.4}}
 .geo .g-feature{{fill:none;stroke:{CREAM};stroke-width:2}}
 .geo .g-feature.faint{{stroke:rgba(239,230,210,.32);stroke-width:1.2;stroke-dasharray:6 5}}
+.geo .g-feature.draw{{fill:none;stroke:#FFD400;stroke-width:6;stroke-linejoin:round;stroke-linecap:round;opacity:0;filter:drop-shadow(0 0 4px rgba(0,0,0,.8))}}   /* border-draw reveal: route_draw on a feature outline (pathLength=1 like routes) */
 .geo .g-route{{fill:none;stroke:{SAND};stroke-width:4;stroke-linecap:round;opacity:0}}
 .geo .g-route.river{{stroke:#5FE3FF;stroke-width:7;stroke-linejoin:round;filter:drop-shadow(0 0 3px rgba(0,0,0,.9)) drop-shadow(0 0 1px rgba(0,0,0,.8))}}   /* rivers: bright over sand/orange fills, dark halo for contrast */
 .geo .g-area.lake{{fill:#0E4F8F;stroke:#9ADCFF;stroke-width:1.6}}   /* NE lakes drawn above country fills (geo.json layer {{kind:area, cls:lake, source:ne-lakes}}) */

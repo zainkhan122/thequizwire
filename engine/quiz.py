@@ -538,6 +538,6 @@ CSS = f"""
 .v3 .cta3{{position:absolute;left:60px;top:1250px;width:900px;text-align:center;z-index:70;visibility:hidden;opacity:0}}
 .v3 .ctease3{{font-family:'Lilita';font-size:66px;line-height:1.1;text-transform:uppercase;color:#FFD400;-webkit-text-stroke:2px #4a2b00;paint-order:stroke fill;text-shadow:0 6px 0 #7a4b00,0 14px 28px rgba(0,0,0,.6)}}
 .v3 .cline3{{margin-top:26px;font-family:'Oswald';font-weight:600;font-size:40px;letter-spacing:.12em;color:#fff;-webkit-text-stroke:1.2px #141414;paint-order:stroke fill;text-shadow:0 3px 0 rgba(0,0,0,.6),0 6px 16px rgba(0,0,0,.85)}}
-.v3 .credit3{{position:absolute;left:60px;top:1560px;width:900px;text-align:center;font-family:'Oswald';font-size:22px;letter-spacing:.06em;line-height:1.3;color:rgba(255,255,255,.8);text-shadow:0 1px 6px rgba(0,0,0,.9);z-index:70;visibility:hidden;opacity:0;white-space:normal}}
+.v3 .credit3{{position:absolute;left:60px;top:1534px;width:900px;text-align:center;font-family:'Oswald';font-size:22px;letter-spacing:.06em;line-height:1.3;color:rgba(255,255,255,.8);text-shadow:0 1px 6px rgba(0,0,0,.9);z-index:70;visibility:hidden;opacity:0;white-space:normal}}
 .v3 .progress{{display:none}}
 """

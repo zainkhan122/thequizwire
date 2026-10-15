@@ -71,6 +71,13 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 | 2026-10-14 | Repo is **private** (GitHub Free: 2,000 Actions min/month); crons off, `check` main-only, `cloud.py` budget guard | owner |
 | 2026-10-14 | Vector maps (d3-geo + Natural Earth) are the default stage; VersaTiles flyovers are cached hero clips; Blue Marble globe deferred | agent |
 
+### V3.6l — DONE 2026-10-15 · Sports #9 basketball/Massachusetts in v3 (split-candidates opener, border-draw reveal)
+- ep09 re-authored to quiz-v3: where-is / fact-first ("December, 1891, a cold gym…") / **split-candidates** (wide k 0.2 Northeast; Indiana / New York / Massachusetts labels pop with pills A/B/C between the hook text and the pills, then fade at the reveal) / **border-draw** (new `feature` layer `cls:"draw"` → `route_draw` of the state outline, then a yellow glaze `lift:"fill"`) / beats pin+label / emoji-set:hoops / "1 FOR 1?". 69 words, est. 36 s. us-atlas states incl. Indiana–Delaware lines for the wide view.
+- Engine: runtime adds `pathLength="1"` to `draw`-class feature paths; `.g-feature.draw` CSS; `.v3 .credit3` top 1534 (two-line credits stayed above the bottom-UI dead zone).
+- Gates: quizlint OK · geolint OK · facts 4 claims FAIL 0 · provenance FAIL 0 · HF 0 err · layout FAIL 0 · textqa FAIL 0 (sheets `review/sports09_v3_sheet*.jpg`).
+- Lessons: a mid-tone glaze kills both white and ink labels on it — put names on the banner/pins, not on a glazed state; glaze out before a city zoom (k 2) or the frame turns flat yellow; long credits wrap → keep the block ≤ 1595.
+- Next: V3.6m sports ep10 Wimbledon → V3.7 cloud renders of all 10 → owner review.
+
 ### V3.6k — DONE 2026-10-15 · Wild #9 Galápagos penguin in v3 (Andes → islands flight, equator line, currents)
 - ep09 re-authored to quiz-v3: where-is / misconception ("Penguins need ice, right? Not these.") / wide-drift over the Andes k 0.28 → 1,000-km flight west to the islands k 1.0 / fill-pulse (yellow glaze lift on the 50m Galápagos polygons; mainland Ecuador is clipped out by the scene bbox) / beats route (equator + schematic Humboldt/Cromwell arrows) + pin + label + scalebar / emoji-set:island / "TOO EASY?". 74 words, est. 37 s.
 - Gates: quizlint OK · geolint OK · facts 4 claims FAIL 0 · provenance FAIL 0 · HF 0 err · layout FAIL 0 · textqa FAIL 0 (sheets `review/wild09_v3_sheet*.jpg`).
