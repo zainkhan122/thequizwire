@@ -18,11 +18,11 @@
    "id": "v01",
    "scene": "s01",
    "role": "hook",
-   "tone": "tense",
+   "tone": "neutral",
    "energy": 4,
    "pause_after": 0.3,
    "direction": "straight in, like a dare",
-   "text": "Tennis fans, no cheating. Which Grand Slam is still played on grass?",
+   "text": "Tennis fans, no cheating now, which Grand Slam is still played on grass?",
    "cues": {}
   },
   {

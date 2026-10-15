@@ -61,7 +61,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "It's Budapest. The Danube splits it: Buda west, Pest east.",
+   "text": "It's Budapest. The Danube splits it. Buda west, Pest east.",
    "cues": {
     "answer": "budapest",
     "danube": "danube",
