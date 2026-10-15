@@ -270,6 +270,16 @@ def prep(ep: Path, out: Path, fixtures=None, quiet=False):
             gen[f"geo/{sid}_basemap.jpg"] = {"kind": "image", "licence": "PD-USGov", "provider": "NASA GIBS", "by": "reelkit/basemap.py",
                                              "source": f"{meta['layer']} z{meta['zoom']} ({meta['tiles']} tiles)", "credit": meta["credit"], "bytes": meta["bytes"]}
             if not quiet: print(f"  ✓ {sid}: basemap {meta['layer']} z{meta['zoom']} {meta['size'][0]}×{meta['size'][1]} · {meta['bytes'] // 1024} KB")
+        want = {L["flag"].lower() for L in spec.get("layers", []) if L.get("flag")}
+        for ch in spec.get("characters", []):                                 # flag-ball characters live in the scene spec too
+            if ch.get("flag"): want.add(ch["flag"].lower())
+        if want:
+            sys.path.insert(0, str(Path(__file__).resolve().parent)); import flags as _fl
+            data["flags"] = {}
+            for cc in sorted(want):
+                fp = _fl.ensure(cc, out / "flags"); data["flags"][cc] = f"flags/{fp.name}"
+                gen[f"geo/flags/{fp.name}"] = {"kind": "image", "by": "reelkit/flags.py", **_fl.LICENCE, "bytes": fp.stat().st_size}
+            data["sources"].append("flag-icons")
         s = json.dumps(data, separators=(",", ":"))
         (out / f"{sid}.json").write_text(s)
         gen[f"geo/{sid}.json"] = {"kind": "data", "licence": "PD", "provider": "Natural Earth", "by": "reelkit/geodata.py",

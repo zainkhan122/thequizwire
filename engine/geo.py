@@ -88,6 +88,11 @@ class Scene:
                 dst.parent.mkdir(parents=True, exist_ok=True)
                 if src.exists() and (not dst.exists() or dst.stat().st_mtime < src.stat().st_mtime): shutil.copy(src, dst)
                 d["basemap"]["src"] = f"assets/geo/{src.name}"
+            for cc, rel in list((d.get("flags") or {}).items()):          # flag-icons SVGs used by lifts / characters
+                src = self.G.data_dir / rel; dst = self.G.hf / "assets" / "geo" / "flags" / src.name
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                if src.exists() and not dst.exists(): shutil.copy(src, dst)
+                d["flags"][cc] = f"assets/geo/flags/{src.name}"
             return d, d.get("quality", "scene")
         # preview fallback: vendored world-atlas 110m (Natural Earth, public domain)
         topo = json.loads((ENGINE / "data" / "countries-110m.json").read_text())
@@ -149,9 +154,18 @@ class Scene:
     def label_out(self, t, lid, dur=0.2):
         self.G.J(f"tl.to('#{self.id}_lbl_{lid}',{{autoAlpha:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")
 
+    def _layer(self, lid):
+        for L in self.spec.get("layers", []):
+            if (L.get("id") or L.get("kind")) == lid: return L
+        return {}
+
     def highlight_in(self, t, fid, dur=0.5, layer="highlight", opacity=1):
-        """Fade a per-feature layer path in (highlight_<id>); CSS sets the colours."""
-        self.G.J(f"tl.fromTo('#{self.id}_{layer}_{fid}',{{opacity:0}},{{opacity:{opacity},duration:{f(dur)},ease:'power2.out',immediateRender:false}},{f(t)});")
+        """Fade a per-feature layer path in (highlight_<id>); CSS sets the colours. Lifted layers (v3 `lift`) pop in with a scale."""
+        sel = f"#{self.id}_{layer}_{fid}"
+        if self._layer(layer).get("lift"):
+            self.G.J(f"tl.fromTo('{sel}',{{opacity:0,scale:0.86,svgOrigin:GeoRT.centroid('{self.id}','{layer}_{fid}')}},{{opacity:1,scale:1,duration:{f(max(dur, 0.45))},ease:'back.out(1.6)',immediateRender:false}},{f(t)});")   # lifts are always solid
+            return
+        self.G.J(f"tl.fromTo('{sel}',{{opacity:0}},{{opacity:{opacity},duration:{f(dur)},ease:'power2.out',immediateRender:false}},{f(t)});")
 
     def highlight_out(self, t, fid, dur=0.4, layer="highlight"):
         self.G.J(f"tl.to('#{self.id}_{layer}_{fid}',{{opacity:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")
@@ -178,6 +192,9 @@ class Scene:
             if not L.get("for"): self.label_out(t, L["id"], dur=dur)
 
     def highlight_pulse(self, t, fid, dur=1.2, layer="highlight"):
+        if self._layer(layer).get("lift"):                                  # lifted shapes pulse in size, not opacity
+            self.G.J(f"tl.fromTo('#{self.id}_{layer}_{fid}',{{scale:1,svgOrigin:GeoRT.centroid('{self.id}','{layer}_{fid}')}},{{scale:1.05,duration:{f(dur / 2)},ease:'sine.inOut',yoyo:true,repeat:1,immediateRender:false}},{f(t)});")
+            return
         self.G.J(f"tl.fromTo('#{self.id}_{layer}_{fid}',{{opacity:0.55}},{{opacity:1,duration:{f(dur / 2)},ease:'sine.inOut',yoyo:true,repeat:1,immediateRender:false}},{f(t)});")
 
     def route_draw(self, t0, t1, rid, layer="route"):
@@ -214,6 +231,10 @@ CSS = f"""
 .geo .g-countries{{fill:{LAND};stroke:none}}
 .geo .g-border{{fill:none;stroke:rgba(239,230,210,.38);stroke-width:1.2;stroke-linejoin:round}}
 .geo .g-highlight{{fill:{SAND};stroke:{CREAM};stroke-width:1.6;opacity:0}}
+.geo .g-lift{{opacity:0}}                                                            /* v3 lifted highlight: shadow + flag/colour + white outline */
+.geo .g-lift .lift-shadow{{fill:#ffffff}}
+.geo .g-lift .lift-fill{{stroke:none}}
+.geo .g-lift .lift-outline{{fill:none;stroke:#ffffff;stroke-width:7;stroke-linejoin:round}}
 .geo .g-highlight.alt{{fill:{RED}}}
 .geo .g-area{{fill:rgba(227,167,47,.35);stroke:{SAND};stroke-width:1.4}}
 .geo .g-feature{{fill:none;stroke:{CREAM};stroke-width:2}}

@@ -105,6 +105,14 @@
         continue;
       }
       const fs = featuresOf(data, L);
+      if (L.kind === "highlight" && L.lift) {                                 // v3: lifted shape (flag or colour), one group per feature
+        const fb = spec.fit && spec.fit.bbox ? path.bounds(bboxFeature(spec.fit.bbox)) : [[0, 0], [spec.w, spec.h]];
+        const bw = fb[1][0] - fb[0][0], bh = fb[1][1] - fb[0][1];
+        const rect = { x: fb[0][0] - bw * 0.5, y: fb[0][1] - bh * 0.5, w: bw * 2, h: bh * 2 };
+        fs.forEach((f, i) => out.push({ id: (L.id || L.kind) + "_" + (f.id != null ? f.id : (f.properties && f.properties.id) || i), cls: "g-lift " + (L.cls || ""), d: path(f) || "",
+          lift: { kind: L.lift, flag: L.flag, color: L.color || "#C8102E", rect, centroid: path.centroid(f) }, props: f.properties || {} }));
+        continue;
+      }
       if (L.kind === "highlight" || L.kind === "disputed" || L.kind === "route" || L.kind === "area" || L.kind === "feature") {
         if (L.perFeature === false) out.push({ id: L.id, cls: "g-" + L.kind + " " + (L.cls || ""), d: path({ type: "FeatureCollection", features: fs }) || "" });
         else fs.forEach((f, i) => out.push({ id: (L.id || L.kind) + "_" + (f.id != null ? f.id : (f.properties && f.properties.id) || i), cls: "g-" + L.kind + " " + (L.cls || ""), d: path(f) || "", props: f.properties || {} }));
@@ -149,7 +157,15 @@
     const el = document.getElementById(id); if (!el) throw new Error("GeoRT.mount: no element #" + id);
     const C = compute(spec, data);
     const W = spec.w, H = spec.h;
-    const svgLayers = C.paths.map(p => `<path id="${id}_${p.id}" class="${p.cls.trim()}" d="${p.d}" vector-effect="non-scaling-stroke"></path>`).join("");
+    const liftMarkup = (p) => {
+      const pid = id + "_" + p.id, L = p.lift, r = L.rect, flag = L.flag && data && data.flags ? data.flags[L.flag.toLowerCase()] : null;
+      const body = flag ? `<image href="${flag}" x="${r.x}" y="${r.y}" width="${r.w}" height="${r.h}" preserveAspectRatio="xMidYMid slice" clip-path="url(#${pid}_clip)"></image>`
+                        : `<path class="lift-fill" d="${p.d}" style="fill:${L.color}"></path>`;
+      return `<g id="${pid}" class="${p.cls.trim()}" data-cx="${L.centroid[0].toFixed(1)}" data-cy="${L.centroid[1].toFixed(1)}"><defs><clipPath id="${pid}_clip"><path d="${p.d}"></path></clipPath></defs>` +
+             `<path class="lift-shadow" d="${p.d}" filter="url(#${id}_liftShadow)"></path>${body}<path class="lift-outline" d="${p.d}" vector-effect="non-scaling-stroke"></path></g>`;
+    };
+    const svgLayers = `<defs><filter id="${id}_liftShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity="0.6"></feDropShadow></filter></defs>` +
+      C.paths.map(p => p.lift ? liftMarkup(p) : `<path id="${id}_${p.id}" class="${p.cls.trim()}" d="${p.d}" vector-effect="non-scaling-stroke"></path>`).join("");
     let raster = "";
     if (data && data.basemap && spec.projection === "mercator") {          // v3: PD raster (Web Mercator tiles) aligned under the fitted projection
       const bm = data.basemap, bp = d3.geoMercator().scale(bm.scale).translate(bm.translate);
@@ -231,9 +247,13 @@
     return out;
   }
 
+  function centroid(id, pathId) {   // "x y" in SVG user units for GSAP svgOrigin (lift pops scale about the feature)
+    const S = scenes[id]; const e = S && S.g.querySelector("#" + CSS.escape(id + "_" + pathId));
+    return e && e.dataset && e.dataset.cx ? `${e.dataset.cx} ${e.dataset.cy}` : "0 0";
+  }
   function cam(id) { return scenes[id].cam; }
   function setCam(id, v) { Object.assign(scenes[id].cam, camTarget(id, { ...v, duration: 0 })); apply(id); }
   function pathLength(id, layerId) { const e = scenes[id].g.querySelector("#" + CSS.escape(id + "_" + layerId)); return e && e.getTotalLength ? e.getTotalLength() : 0; }
 
-  return { compute, mount, apply, cam, camTarget, setCam, focus, pathLength, bboxFeature, PROJ_KIND, scenes };
+  return { compute, mount, apply, cam, camTarget, setCam, focus, pathLength, centroid, bboxFeature, PROJ_KIND, scenes };
 });
