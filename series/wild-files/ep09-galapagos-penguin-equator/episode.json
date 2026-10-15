@@ -1,6 +1,6 @@
 {
  "id": "ep09-galapagos-penguin-equator",
- "format": "quiz-v2",
+ "format": "quiz-v3",
  "series": "wild-files",
  "number": 9,
  "title": "Where do PENGUINS live on the equator?",
@@ -15,11 +15,20 @@
    "Maldives"
   ],
   "correct": 1,
-  "beat": 1.5,
+  "beat": 3.0,
   "answer_line": "The Galápagos Islands",
   "answer_sub": "the only penguin north of the equator",
-  "tease": "Tomorrow: the state where basketball was born.",
-  "cta_line": "One question a day · Subscribe"
+  "option_meta": [
+   {},
+   {},
+   {}
+  ],
+  "banner": "GALÁPAGOS",
+  "banner_sub": "✓  B was right",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
  },
  "hook_type": "misconception",
  "promise": {
@@ -29,13 +38,27 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Where do PENGUINS live on the equator?",
-  "description": "Where do PENGUINS live on the equator? Guess first — then see the line cross Isabela Island.\n\nWhat was your first guess?\n\nSources: IUCN Red List (Spheniscus mendiculus), Wikipedia (Galápagos penguin, Isabela Island), Galápagos Conservation Trust, Earth.org.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #9",
+  "title": "Where do PENGUINS live on the equator? 🐧",
+  "description": "Where do PENGUINS live on the equator? Guess first — then fly 1,000 km west from the Andes to the answer and see the one island whose northern tip crosses 0°.\n\nWhat was your first guess? Do share in the comments below.\n\nSources: IUCN Red List (Galápagos penguin), Wikipedia (Galápagos penguin, Isabela Island), Galápagos Conservation Trust.\nMap data: Natural Earth (public domain) · imagery NASA Blue Marble. Voice: AI (Kokoro).\n\nWild Files #9",
   "hashtags": [
    "#GKshorts",
    "#thequizwire",
    "#shorts",
    "#wildfiles"
   ]
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "misconception",
+  "opener": "wide-drift",
+  "reveal": "fill-pulse",
+  "beats": [
+   "route",
+   "pin",
+   "label",
+   "scalebar"
+  ],
+  "cast": "emoji-set:island (penguin, desert island, wave, warning)",
+  "music": "bed:pad"
  }
 }

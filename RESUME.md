@@ -71,6 +71,12 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 | 2026-10-14 | Repo is **private** (GitHub Free: 2,000 Actions min/month); crons off, `check` main-only, `cloud.py` budget guard | owner |
 | 2026-10-14 | Vector maps (d3-geo + Natural Earth) are the default stage; VersaTiles flyovers are cached hero clips; Blue Marble globe deferred | agent |
 
+### V3.6k — DONE 2026-10-15 · Wild #9 Galápagos penguin in v3 (Andes → islands flight, equator line, currents)
+- ep09 re-authored to quiz-v3: where-is / misconception ("Penguins need ice, right? Not these.") / wide-drift over the Andes k 0.28 → 1,000-km flight west to the islands k 1.0 / fill-pulse (yellow glaze lift on the 50m Galápagos polygons; mainland Ecuador is clipped out by the scene bbox) / beats route (equator + schematic Humboldt/Cromwell arrows) + pin + label + scalebar / emoji-set:island / "TOO EASY?". 74 words, est. 37 s.
+- Gates: quizlint OK · geolint OK · facts 4 claims FAIL 0 · provenance FAIL 0 · HF 0 err · layout FAIL 0 · textqa FAIL 0 (sheets `review/wild09_v3_sheet*.jpg`).
+- Lessons: Hawaii-at-night hook was near-black → hooks need bright terrain (Andes); ESTIMATE cues only exist for a few words per line — check `timeline.json#cues` before using `@word`; `al`/`ar` label classes solve edge-margin failures on tight island scenes; fade a map label before a pin label lands next to it.
+- All three Wild Files pilots are now v3. Next: V3.6l sports ep09 (basketball, Springfield) + ep10 (Wimbledon) → then cloud renders of all 10 → owner review.
+
 ### V3.6j — DONE 2026-10-15 · Wild #8 India tigers in v3 (satellite close-up, flag-lift, 7 border plates)
 - ep08 re-authored to quiz-v3: which-country / story / **mystery-zoom-out** (Amur taiga k 1.2 → all of Asia k 0.5) / flag-lift India / beats counter+pin+second-highlight+label / emoji-set:tiger / "CHALLENGE A FRIEND". 72 words, est. 39.6 s. Fit = India bbox [62,4,100,38] so the hook centre is outside it (Q14); Blue Marble near [60,0,145,52] k_max 1.6 + far [40,−45,175,78].
 - Border policy: Kashmir (jk + ak/gb/ac grouped), Arunachal, **Sir Creek** and **Doklam** (no NE polygon → `geometry` marker boxes + plates; registry ids `sir_creek`, `doklam`). Plates placed by camera maths (k 1.4 @ [81,21.5] ⇒ 35 px/°); `disputed_out` now skips plate-less entries. Russia second highlight = translucent `lift:"fill"` `rgba(255,212,0,.42)`.

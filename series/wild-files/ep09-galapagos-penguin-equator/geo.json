@@ -3,9 +3,9 @@
  "episode": "ep09-galapagos-penguin-equator",
  "policy": "docs/BORDER_POLICY.md",
  "scenes": {
-  "main": {
+  "isles": {
    "projection": "mercator",
-   "projection_reason": "island close-up on the equator (≈ 4° wide): conformal keeps island shapes true and the equator a straight line; no size claim is made (geolint P1)",
+   "projection_reason": "island close-up on the equator (≈ 4° wide): conformal keeps the island shapes true; the hook flight from Hawaii is a camera move, no size or distance claim is made (geolint P1)",
    "fit": {
     "type": "bbox",
     "bbox": [
@@ -15,7 +15,7 @@
      1.0
     ]
    },
-   "padding": 6,
+   "padding": 60,
    "layers": [
     {
      "kind": "land"
@@ -29,8 +29,9 @@
      "ids": [
       "218"
      ],
-     "cls": "",
-     "note": "Ecuador (218) — the Galápagos polygons"
+     "lift": "fill",
+     "color": "rgba(255,212,0,.55)",
+     "note": "Ecuador (218) — only the Galápagos polygons fall inside the clipped scene bbox"
     },
     {
      "kind": "route",
@@ -62,6 +63,65 @@
        }
       ]
      }
+    },
+    {
+     "kind": "route",
+     "id": "cur",
+     "cls": "river",
+     "note": "schematic current arrows: Humboldt (from the SE) and Cromwell undercurrent (from the W along the equator) — direction only, not a surveyed path",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "humboldt",
+        "properties": {
+         "name": "Humboldt"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           -88.2,
+           -1.9
+          ],
+          [
+           -89.0,
+           -1.3
+          ],
+          [
+           -89.8,
+           -0.9
+          ]
+         ]
+        }
+       },
+       {
+        "type": "Feature",
+        "id": "cromwell",
+        "properties": {
+         "name": "Cromwell"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           -93.6,
+           -0.25
+          ],
+          [
+           -92.8,
+           -0.2
+          ],
+          [
+           -92.0,
+           -0.15
+          ]
+         ]
+        }
+       }
+      ]
+     }
     }
    ],
    "pins": [
@@ -71,7 +131,9 @@
       -91.37,
       0.05
      ],
-     "label": "Isabela · 0°"
+     "label": "Isabela · 0°",
+     "side": "right",
+     "qid": "Q624053"
     },
     {
      "id": "fernandina",
@@ -79,15 +141,17 @@
       -91.55,
       -0.37
      ],
-     "label": "Fernandina"
+     "label": "Fernandina",
+     "side": "left",
+     "qid": "Q836433"
     }
    ],
    "labels": [
     {
      "id": "pacific",
      "lonlat": [
-      -90.22,
-      -1.35
+      -90.0,
+      -1.15
      ],
      "text": "Pacific Ocean",
      "cls": "sea"
@@ -95,28 +159,66 @@
     {
      "id": "equator",
      "lonlat": [
-      -90.2,
-      0.14
+      -92.3,
+      0.12
      ],
-     "text": "Equator 0°"
+     "text": "Equator 0°",
+     "cls": "al"
     },
     {
-     "id": "galapagos",
+     "id": "humboldt",
      "lonlat": [
-      -91.6,
-      0.45
+      -89.6,
+      -1.6
      ],
-     "text": "Galápagos Islands"
+     "text": "Humboldt",
+     "cls": "sea ar"
+    },
+    {
+     "id": "cromwell",
+     "lonlat": [
+      -92.6,
+      -0.55
+     ],
+     "text": "Cromwell",
+     "cls": "sea al"
     }
    ],
    "scalebar": {
     "km": 50,
-    "at_lat": 0
+    "lonlat": [
+     -90.6,
+     -0.4
+    ],
+    "at": [
+     60,
+     1130
+    ]
    },
    "disputed": [],
    "sources": [
     "Natural Earth"
-   ]
+   ],
+   "resolution": "50m",
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 1.7,
+    "bbox": [
+     -94,
+     -3,
+     -87.5,
+     2.2
+    ],
+    "far": {
+     "bbox": [
+      -100,
+      -13,
+      -70,
+      9
+     ],
+     "k_min": 0.25
+    }
+   }
   }
  }
 }

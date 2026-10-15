@@ -78,7 +78,7 @@
     "the only penguin north of the equator lives here"
    ],
    "screen": [
-    "Galápagos Islands",
+    "GALÁPAGOS",
     "Equator 0°"
    ]
   },
@@ -97,8 +97,8 @@
     "isabela's northern tip crosses the line, so some nest in the northern hemisphere"
    ],
    "screen": [
-    "ISABELA ISLAND",
-    "Its northern tip crosses 0°.",
+    "ISABELA",
+    "its northern tip crosses 0°",
     "Isabela · 0°",
     "Fernandina"
    ]
@@ -115,8 +115,10 @@
     "cold humboldt and cromwell currents keep the water cool"
    ],
    "screen": [
-    "HUMBOLDT + CROMWELL",
-    "Cold currents on the equator."
+    "COLD CURRENTS",
+    "Humboldt + Cromwell keep it cool",
+    "Humboldt",
+    "Cromwell"
    ]
   },
   {
@@ -133,9 +135,8 @@
     "about twelve hundred adults remain, one of the rarest penguins alive"
    ],
    "screen": [
-    "ENDANGERED · IUCN",
-    "About 1,200 mature birds.",
-    "adults left · IUCN"
+    "ENDANGERED",
+    "about 1,200 adults left · IUCN"
    ]
   }
  ],

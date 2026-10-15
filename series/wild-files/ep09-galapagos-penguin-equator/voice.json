@@ -22,7 +22,7 @@
    "energy": 4,
    "pause_after": 0.3,
    "direction": "straight in, like a dare",
-   "text": "Where do penguins live on the equator?",
+   "text": "Penguins need ice, right? Not these. Where do penguins live on the equator?",
    "cues": {
     "where": "where"
    }
@@ -50,7 +50,7 @@
    "energy": 1,
    "pause_after": 0.1,
    "direction": "silence — the bar drains",
-   "silence": 1.5,
+   "silence": 3.0,
    "text": ""
   },
   {
@@ -120,7 +120,7 @@
    "energy": 3,
    "pause_after": 0.0,
    "direction": "a promise, not a plea",
-   "text": "Tomorrow, the state where basketball was born. Subscribe and guess first.",
+   "text": "Too easy? Like and subscribe, and we'll make it harder.",
    "cues": {
     "subscribe": "subscribe"
    }
