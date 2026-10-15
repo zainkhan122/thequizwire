@@ -25,7 +25,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: render-${{ github.ref }}-${{ inputs.episodes }}
+  group: render-${{ github.ref }}-${{ inputs.tag != '' && inputs.tag || github.run_id }}   # short key: a 10-episode path list is too long for a group name
   cancel-in-progress: false
 env:
   PYTHONUNBUFFERED: "1"
