@@ -1,6 +1,6 @@
 {
  "id": "ep08-most-wild-tigers-india",
- "format": "quiz-v2",
+ "format": "quiz-v3",
  "series": "wild-files",
  "number": 8,
  "title": "Which country has the most wild TIGERS?",
@@ -15,13 +15,22 @@
    "Indonesia"
   ],
   "correct": 1,
-  "beat": 1.5,
+  "beat": 3.0,
   "answer_line": "India",
   "answer_sub": "3,682 wild tigers (2022)",
-  "tease": "Tomorrow: the penguins that live on the equator.",
-  "cta_line": "One question a day · Subscribe"
+  "option_meta": [
+   {},
+   {},
+   {}
+  ],
+  "banner": "INDIA",
+  "banner_sub": "✓  B was right",
+  "outro": {
+   "headline": "CHALLENGE A FRIEND",
+   "url": "thequizwire.com"
+  }
  },
- "hook_type": "misconception",
+ "hook_type": "story",
  "promise": {
   "min_motion": 0.7
  },
@@ -29,13 +38,27 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Which country has the most wild TIGERS?",
-  "description": "Which country has the most wild TIGERS? Guess first — then watch the count climb on the map.\n\nWhat was your first guess?\n\nSources: NTCA/WII 'Status of Tigers 2022' via PIB (29 Jul 2023), PIB (Jul 2026), Wikipedia (Tiger, Tiger reserves of India, Siberian tiger, Jim Corbett National Park), Hindustan Times, Times of India.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #8",
+  "title": "Which country has the most wild TIGERS? 🐅",
+  "description": "Which country has the most wild TIGERS? Guess first — then watch the map fly to the answer: 3,682 wild tigers in 2022, more than the rest of the world combined, and how the count more than doubled since 2006.\n\nWhat was your first guess? Do share in the comments below.\n\nSources: Press Information Bureau (All India Tiger Estimation 2022), Wikipedia (Tiger reserves of India, Siberian tiger, Jim Corbett National Park), Hindustan Times, Times of India.\nMap data: Natural Earth (public domain) · imagery NASA Blue Marble. Voice: AI (Kokoro).\n\nWild Files #8",
   "hashtags": [
    "#GKshorts",
    "#thequizwire",
    "#shorts",
    "#wildfiles"
   ]
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "story",
+  "opener": "mystery-zoom-out",
+  "reveal": "flag-lift",
+  "beats": [
+   "counter",
+   "pin",
+   "second-highlight",
+   "label"
+  ],
+  "cast": "emoji-set:tiger (tiger, paw prints, evergreen, chart)",
+  "music": "bed:pad"
  }
 }

@@ -1,8 +1,8 @@
 {
  "now": "2026-10-15: V3 look rebuild. V3.1 basemap, V3.2 lifted flag highlight, V3.3 v3 UI (format quiz-v3: Lilita question, flag pills, timer ring, yellow answer banner, 84-px Anton facts, Twemoji stickers, flag-ball characters, far raster for off-answer hook) are committed and verified on local contact sheets (docs/img/v3_3_contact_sheet.jpg). Nothing dispatched to Actions yet.",
- "phase": "V3.6i done (Wild #7 v3) · next V3.6j: wild ep08 tigers + ep09 Galápagos penguin to v3",
+ "phase": "V3.6j done (Wild #8 v3) · next V3.6k: wild ep09 Galápagos penguin to v3",
  "next": [
-  "V3.6j: re-author series/wild-files/ep08 + ep09 to quiz-v3 (variety, 3-s beat, Subscribe+Like outro), gates, commit per episode",
+  "V3.6k: re-author series/wild-files/ep09 to quiz-v3, gates, commit; then sports ep09–10",
   "V3.7: dispatch Geo #13 only (cloud.py render --tag pilot-v3-geo13 --wait) → owner approval → batch pilot-v3-batch1",
   "pilot-v2-batch1 stays shelved; never post it"
  ],

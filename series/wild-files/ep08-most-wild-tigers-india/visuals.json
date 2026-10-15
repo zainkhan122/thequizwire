@@ -2,20 +2,20 @@
  "version": 1,
  "stage": [
   {
-   "id": "stage_map",
+   "id": "stage_india",
    "type": "geo",
-   "scene": "main",
+   "scene": "india",
    "from": "start",
    "to": "end",
    "box": [
     0,
     0,
     1080,
-    1180
+    1920
    ],
    "anchor": [
     540,
-    600
+    900
    ],
    "z": 10
   }
@@ -27,362 +27,65 @@
    "start": 0,
    "end": 3682,
    "x": 40,
-   "y": 850,
-   "w": 520,
+   "y": 1240,
+   "w": 1000,
    "label": "wild tigers · 2022",
    "fmt": "int",
-   "z": 40
+   "size": 140
   },
   {
    "id": "f1",
    "type": "fact",
-   "kicker": "58 TIGER RESERVES",
-   "text": "Corbett alone: 260 tigers.",
-   "y": 1350
+   "kicker": "58 RESERVES",
+   "text": "Corbett alone: 260 tigers"
   },
   {
    "id": "f2",
    "type": "fact",
-   "kicker": "RUSSIA · AMUR TIGERS",
-   "text": "About 750 in the Far East.",
-   "y": 1350
+   "kicker": "AMUR TIGERS",
+   "text": "about 750 in Russia's Far East"
   },
   {
    "id": "f3",
    "type": "fact",
    "kicker": "2006 → 2022",
-   "text": "1,411 → 3,682. More than doubled.",
-   "y": 1350
-  }
- ],
- "beats": [
-  {
-   "at": 0,
-   "do": "geo.cam_set",
-   "stage": "stage_map",
-   "args": {
-    "k": 1.0,
-    "lonlat": [
-     105,
-     24
-    ]
-   }
+   "text": "1,411 → 3,682, more than doubled"
   },
   {
-   "at": 0,
-   "do": "hook_in"
+   "id": "st_tiger",
+   "type": "sticker",
+   "emoji": "1f405",
+   "x": 850,
+   "y": 700,
+   "size": 230,
+   "rot": -6
   },
   {
-   "at": "s01",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s03.end",
-   "args": {
-    "k": 1.05,
-    "lonlat": [
-     105,
-     24
-    ],
-    "ease": "none"
-   }
+   "id": "st_paw",
+   "type": "sticker",
+   "emoji": "1f43e",
+   "x": 240,
+   "y": 1080,
+   "size": 190,
+   "rot": 14
   },
   {
-   "at": "s02",
-   "do": "chips_in"
+   "id": "st_tree",
+   "type": "sticker",
+   "emoji": "1f332",
+   "x": 250,
+   "y": 640,
+   "size": 200,
+   "rot": 0
   },
   {
-   "at": "s02+0.2",
-   "do": "bug_in"
-  },
-  {
-   "at": "s03",
-   "do": "beat"
-  },
-  {
-   "at": "s03",
-   "do": "hook_out"
-  },
-  {
-   "at": "s04",
-   "do": "reveal"
-  },
-  {
-   "at": "s04",
-   "do": "geo.highlight_in",
-   "stage": "stage_map",
-   "args": {
-    "fid": "356",
-    "layer": "hl",
-    "dur": 0.5
-   }
-  },
-  {
-   "at": "s04",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s04+1.4",
-   "args": {
-    "k": 1.6,
-    "lonlat": [
-     82,
-     22
-    ],
-    "ease": "power2.inOut"
-   }
-  },
-  {
-   "at": "s04+1.4",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s04.end",
-   "args": {
-    "k": 1.64,
-    "lonlat": [
-     82,
-     22
-    ],
-    "ease": "none"
-   }
-  },
-  {
-   "at": "s04@hundred",
-   "do": "chart.counter_run",
-   "id": "cnt",
-   "until": "s04.end",
-   "args": {}
-  },
-  {
-   "at": "s04+0.6",
-   "do": "geo.label_in",
-   "stage": "stage_map",
-   "args": {
-    "lid": "bengal"
-   }
-  },
-  {
-   "at": "s04+2.0",
-   "do": "chips_out"
-  },
-  {
-   "at": "s05",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s05.end",
-   "args": {
-    "k": 1.7,
-    "lonlat": [
-     84,
-     24
-    ],
-    "ease": "none"
-   }
-  },
-  {
-   "at": "s05@reserves",
-   "do": "geo.pin_in",
-   "stage": "stage_map",
-   "args": {
-    "pid": "sundarbans"
-   }
-  },
-  {
-   "at": "s05@corbett",
-   "do": "geo.pin_in",
-   "stage": "stage_map",
-   "args": {
-    "pid": "corbett"
-   }
-  },
-  {
-   "at": "s05+0.6",
-   "do": "geo.disputed_in",
-   "stage": "stage_map",
-   "args": {
-    "did": "jk"
-   }
-  },
-  {
-   "at": "s05+0.6",
-   "do": "geo.disputed_in",
-   "stage": "stage_map",
-   "args": {
-    "did": "ak"
-   }
-  },
-  {
-   "at": "s05+0.6",
-   "do": "geo.disputed_in",
-   "stage": "stage_map",
-   "args": {
-    "did": "gb"
-   }
-  },
-  {
-   "at": "s05+0.6",
-   "do": "geo.disputed_in",
-   "stage": "stage_map",
-   "args": {
-    "did": "ac"
-   }
-  },
-  {
-   "at": "s05+0.6",
-   "do": "geo.disputed_in",
-   "stage": "stage_map",
-   "args": {
-    "did": "ar"
-   }
-  },
-  {
-   "at": "s05+0.3",
-   "do": "fact_in",
-   "id": "f1",
-   "until": "s05.end"
-  },
-  {
-   "at": "s06",
-   "do": "geo.label_out",
-   "stage": "stage_map",
-   "args": {
-    "lid": "pl_jk"
-   }
-  },
-  {
-   "at": "s06",
-   "do": "geo.label_out",
-   "stage": "stage_map",
-   "args": {
-    "lid": "pl_ar"
-   }
-  },
-  {
-   "at": "s06",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s06+1.4",
-   "args": {
-    "k": 1.0,
-    "lonlat": [
-     105,
-     24
-    ],
-    "ease": "power2.inOut"
-   }
-  },
-  {
-   "at": "s06+1.4",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "end-1.8",
-   "args": {
-    "k": 1.04,
-    "lonlat": [
-     107,
-     24
-    ],
-    "ease": "none"
-   }
-  },
-  {
-   "at": "s06@russia",
-   "do": "geo.highlight_in",
-   "stage": "stage_map",
-   "args": {
-    "fid": "643",
-    "layer": "alt",
-    "dur": 0.6,
-    "opacity": 0.7
-   }
-  },
-  {
-   "at": "s06@amur",
-   "do": "geo.pin_in",
-   "stage": "stage_map",
-   "args": {
-    "pid": "amur"
-   }
-  },
-  {
-   "at": "s06+0.8",
-   "do": "geo.highlight_in",
-   "stage": "stage_map",
-   "args": {
-    "fid": "360",
-    "layer": "alt",
-    "dur": 0.6,
-    "opacity": 0.5
-   }
-  },
-  {
-   "at": "s06+0.8",
-   "do": "geo.label_in",
-   "stage": "stage_map",
-   "args": {
-    "lid": "sumatra"
-   }
-  },
-  {
-   "at": "s06+0.3",
-   "do": "fact_in",
-   "id": "f2",
-   "until": "s06.end"
-  },
-  {
-   "at": "s07@back",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "356",
-    "layer": "hl",
-    "dur": 1.2
-   }
-  },
-  {
-   "at": "s07+0.3",
-   "do": "fact_in",
-   "id": "f3",
-   "until": "s07.end"
-  },
-  {
-   "at": "s08",
-   "do": "cta_in",
-   "until": "end-1.9"
-  },
-  {
-   "at": "s08",
-   "do": "credit_in",
-   "until": "end-0.2"
-  },
-  {
-   "at": "end-1.8",
-   "do": "geo.clear",
-   "stage": "stage_map",
-   "args": {
-    "dur": 0.6
-   }
-  },
-  {
-   "at": "end-1.8",
-   "do": "hide",
-   "id": "cnt"
-  },
-  {
-   "at": "end-1.8",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "end-0.2",
-   "args": {
-    "k": 1.0,
-    "lonlat": [
-     105,
-     24
-    ],
-    "ease": "power2.inOut"
-   }
-  },
-  {
-   "at": "end-1.4",
-   "do": "hook_in"
+   "id": "st_chart",
+   "type": "sticker",
+   "emoji": "1f4c8",
+   "x": 840,
+   "y": 1060,
+   "size": 200,
+   "rot": -8
   }
  ],
  "captions": {
@@ -393,5 +96,476 @@
   "max_words": 4,
   "max_chars": 26,
   "hold": 0.12
- }
+ },
+ "beats": [
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_india",
+   "args": {
+    "k": 1.2,
+    "lonlat": [
+     135,
+     46
+    ]
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_india",
+   "until": "s03.end",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     108,
+     24
+    ],
+    "ease": "power2.out"
+   }
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s02+0.3",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_india",
+   "until": "s04+1.4",
+   "args": {
+    "k": 1.35,
+    "lonlat": [
+     80,
+     21
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_india",
+   "until": "s05.end",
+   "args": {
+    "k": 1.4,
+    "lonlat": [
+     81,
+     21.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+1.0",
+   "do": "geo.highlight_in",
+   "stage": "stage_india",
+   "args": {
+    "fid": "356",
+    "layer": "hl",
+    "dur": 0.7
+   }
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.3",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.5",
+   "do": "sticker_in",
+   "id": "st_tiger"
+  },
+  {
+   "at": "s04.end-0.3",
+   "do": "sticker_out",
+   "id": "st_tiger"
+  },
+  {
+   "at": "s04@hundred",
+   "do": "chart.counter_run",
+   "id": "cnt",
+   "until": "s04.end-0.2",
+   "args": {
+    "ease": "power2.out"
+   }
+  },
+  {
+   "at": "s04+1.8",
+   "do": "geo.label_in",
+   "stage": "stage_india",
+   "args": {
+    "lid": "bengal"
+   }
+  },
+  {
+   "at": "s05",
+   "do": "chart.out",
+   "id": "cnt"
+  },
+  {
+   "at": "s05@reserves",
+   "do": "geo.pin_in",
+   "stage": "stage_india",
+   "args": {
+    "pid": "sundarbans"
+   }
+  },
+  {
+   "at": "s05@corbett",
+   "do": "geo.pin_in",
+   "stage": "stage_india",
+   "args": {
+    "pid": "corbett"
+   }
+  },
+  {
+   "at": "s05+0.6",
+   "do": "geo.disputed_in",
+   "stage": "stage_india",
+   "args": {
+    "did": "jk"
+   }
+  },
+  {
+   "at": "s05+0.6",
+   "do": "geo.disputed_in",
+   "stage": "stage_india",
+   "args": {
+    "did": "ak"
+   }
+  },
+  {
+   "at": "s05+0.6",
+   "do": "geo.disputed_in",
+   "stage": "stage_india",
+   "args": {
+    "did": "gb"
+   }
+  },
+  {
+   "at": "s05+0.6",
+   "do": "geo.disputed_in",
+   "stage": "stage_india",
+   "args": {
+    "did": "ac"
+   }
+  },
+  {
+   "at": "s05+0.6",
+   "do": "geo.disputed_in",
+   "stage": "stage_india",
+   "args": {
+    "did": "ar"
+   }
+  },
+  {
+   "at": "s05+0.8",
+   "do": "geo.disputed_in",
+   "stage": "stage_india",
+   "args": {
+    "did": "sirc"
+   }
+  },
+  {
+   "at": "s05+0.8",
+   "do": "geo.disputed_in",
+   "stage": "stage_india",
+   "args": {
+    "did": "dokl"
+   }
+  },
+  {
+   "at": "s05+0.4",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s05.end"
+  },
+  {
+   "at": "s05+0.5",
+   "do": "sticker_in",
+   "id": "st_paw"
+  },
+  {
+   "at": "s05.end-0.3",
+   "do": "sticker_out",
+   "id": "st_paw"
+  },
+  {
+   "at": "s06",
+   "do": "geo.disputed_out",
+   "stage": "stage_india",
+   "args": {
+    "did": "jk"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.disputed_out",
+   "stage": "stage_india",
+   "args": {
+    "did": "ak"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.disputed_out",
+   "stage": "stage_india",
+   "args": {
+    "did": "gb"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.disputed_out",
+   "stage": "stage_india",
+   "args": {
+    "did": "ac"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.disputed_out",
+   "stage": "stage_india",
+   "args": {
+    "did": "ar"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.disputed_out",
+   "stage": "stage_india",
+   "args": {
+    "did": "sirc"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.disputed_out",
+   "stage": "stage_india",
+   "args": {
+    "did": "dokl"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.pin_out",
+   "stage": "stage_india",
+   "args": {
+    "pid": "corbett"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.pin_out",
+   "stage": "stage_india",
+   "args": {
+    "pid": "sundarbans"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.label_out",
+   "stage": "stage_india",
+   "args": {
+    "lid": "bengal"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_india",
+   "until": "s06+1.3",
+   "args": {
+    "k": 0.55,
+    "lonlat": [
+     108,
+     27
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_india",
+   "until": "s07",
+   "args": {
+    "k": 0.56,
+    "lonlat": [
+     110,
+     27
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@russia",
+   "do": "geo.highlight_in",
+   "stage": "stage_india",
+   "args": {
+    "fid": "643",
+    "layer": "alt",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s06@amur",
+   "do": "geo.pin_in",
+   "stage": "stage_india",
+   "args": {
+    "pid": "amur"
+   }
+  },
+  {
+   "at": "s06+0.4",
+   "do": "fact_in",
+   "id": "f2",
+   "until": "s06.end"
+  },
+  {
+   "at": "s06+0.6",
+   "do": "sticker_in",
+   "id": "st_tree"
+  },
+  {
+   "at": "s06.end-0.3",
+   "do": "sticker_out",
+   "id": "st_tree"
+  },
+  {
+   "at": "s07",
+   "do": "geo.highlight_out",
+   "stage": "stage_india",
+   "args": {
+    "fid": "643",
+    "layer": "alt",
+    "dur": 0.4
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.pin_out",
+   "stage": "stage_india",
+   "args": {
+    "pid": "amur"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_india",
+   "until": "s07+1.3",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     84,
+     20
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_india",
+   "until": "s08+0.2",
+   "args": {
+    "k": 1.02,
+    "lonlat": [
+     84,
+     20
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@back",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_india",
+   "args": {
+    "fid": "356",
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s07+0.4",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s07.end"
+  },
+  {
+   "at": "s07+0.6",
+   "do": "sticker_in",
+   "id": "st_chart"
+  },
+  {
+   "at": "s07.end-0.3",
+   "do": "sticker_out",
+   "id": "st_chart"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_india",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_india",
+   "until": "end-0.3",
+   "args": {
+    "k": 1.2,
+    "lonlat": [
+     135,
+     46
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ]
 }

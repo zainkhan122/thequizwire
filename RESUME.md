@@ -71,6 +71,13 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 | 2026-10-14 | Repo is **private** (GitHub Free: 2,000 Actions min/month); crons off, `check` main-only, `cloud.py` budget guard | owner |
 | 2026-10-14 | Vector maps (d3-geo + Natural Earth) are the default stage; VersaTiles flyovers are cached hero clips; Blue Marble globe deferred | agent |
 
+### V3.6j — DONE 2026-10-15 · Wild #8 India tigers in v3 (satellite close-up, flag-lift, 7 border plates)
+- ep08 re-authored to quiz-v3: which-country / story / **mystery-zoom-out** (Amur taiga k 1.2 → all of Asia k 0.5) / flag-lift India / beats counter+pin+second-highlight+label / emoji-set:tiger / "CHALLENGE A FRIEND". 72 words, est. 39.6 s. Fit = India bbox [62,4,100,38] so the hook centre is outside it (Q14); Blue Marble near [60,0,145,52] k_max 1.6 + far [40,−45,175,78].
+- Border policy: Kashmir (jk + ak/gb/ac grouped), Arunachal, **Sir Creek** and **Doklam** (no NE polygon → `geometry` marker boxes + plates; registry ids `sir_creek`, `doklam`). Plates placed by camera maths (k 1.4 @ [81,21.5] ⇒ 35 px/°); `disputed_out` now skips plate-less entries. Russia second highlight = translucent `lift:"fill"` `rgba(255,212,0,.42)`.
+- Gates: quizlint OK · geolint OK · facts 5 claims FAIL 0 · provenance FAIL 0 · HF 0 err · layout FAIL 0 · textqa FAIL 0 (sheets `review/wild08_v3_sheet*.jpg`).
+- Lessons: a flag lift needs `flag:"in"` on the highlight layer (else the lift fills red); `note` on a disputed entry prints on the plate — keep author notes in `author_note`; pin `side` must face away from the right action column.
+- Next: V3.6k wild ep09 Galápagos penguin → then sports ep09–10 → cloud renders of all 10.
+
 ### V3.6i — DONE 2026-10-15 · Wild #7 Arctic tern in v3 (globe route + counter) · engine: banner styles, chart.out, counter v3
 - ep07 re-authored to quiz-v3: which-animal / challenge / globe-spin (Pacific → Atlantic) / **stamp** reveal (`banner_in style:"stamp"` + `fx.flash`) / beats route+counter+pin+label+scalebar / emoji-set:tern / "DID YOU GET IT?". 69 words, est. 38 s. Route = Egevang 2010 tracks on the orthographic globe (centre [-30,5] k 1.0 → both ends visible), counter 0 → 70,900 "km a year" in the fact band while the track draws.
 - Engine: `banner_in(style=pop|stamp|flip|slide)`; `chart.out {id}` hides any chart; counter restyled for v3 (yellow Anton, no pill, CAPZ-tagged, line-height 1.3); VARIETY question pool += which-animal / which-record / who-was-first / which-body-part (docs/VARIETY.md).

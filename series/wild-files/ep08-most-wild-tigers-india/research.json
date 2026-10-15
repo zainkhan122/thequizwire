@@ -105,7 +105,7 @@
     "about thirty-seven hundred, more than the rest of the world combined"
    ],
    "screen": [
-    "India",
+    "INDIA",
     "wild tigers · 2022"
    ]
   },
@@ -124,8 +124,8 @@
     "corbett alone has two hundred and sixty"
    ],
    "screen": [
-    "58 TIGER RESERVES",
-    "Corbett alone: 260 tigers.",
+    "58 RESERVES",
+    "Corbett alone: 260 tigers",
     "Corbett · 260",
     "Sundarbans · 100"
    ]
@@ -142,10 +142,9 @@
     "russia's amur tigers number about seven hundred and fifty"
    ],
    "screen": [
-    "RUSSIA · AMUR TIGERS",
-    "About 750 in the Far East.",
-    "Amur tigers ≈ 750",
-    "Russia"
+    "AMUR TIGERS",
+    "about 750 in Russia's Far East",
+    "Amur tigers ≈ 750"
    ]
   },
   {
@@ -163,13 +162,13 @@
    ],
    "screen": [
     "2006 → 2022",
-    "1,411 → 3,682. More than doubled."
+    "1,411 → 3,682, more than doubled"
    ]
   },
   {
    "id": "C05",
    "weight": "framing",
-   "text": "Border policy plates (the India close-up shows Kashmir and Arunachal Pradesh): each disputed part is labelled with who administers it and who claims it, per docs/BORDER_POLICY.md. No sovereignty asserted.",
+   "text": "Border policy plates (the India close-up shows Kashmir and Arunachal Pradesh): each disputed part is labelled with who administers it and who claims it, per docs/BORDER_POLICY.md. No sovereignty asserted; Sir Creek (undemarcated India–Pakistan line) and Doklam (Bhutan, contested by China) are marked with plates too.",
    "sources": [
     "border_registry",
     "natural_earth"
@@ -183,7 +182,10 @@
     "Arunachal Pradesh",
     "Administered by India",
     "Claimed by China",
-    "McMahon Line (1914) is the de facto boundary"
+    "McMahon Line (1914) is the de facto boundary",
+    "Sir Creek",
+    "Doklam",
+    "Administered by Bhutan (contested by China)"
    ]
   }
  ],

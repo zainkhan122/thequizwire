@@ -1,22 +1,195 @@
 {
+ "episode": "ep08-most-wild-tigers-india",
  "files": {},
  "generated": {
-  "geo/main.json": {
+  "brand/cursor.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 224,
+   "credit": "thequizwire",
+   "kind": "image",
+   "licence": "own",
+   "provider": "thequizwire (hand-made)",
+   "source": "brand/cursor.svg"
+  },
+  "brand/facebook.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 542,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "brand/instagram.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 2101,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "brand/logo.png": {
+   "by": "reelkit/brand.py",
+   "bytes": 81177,
+   "credit": "TheQuizWire",
+   "kind": "image",
+   "licence": "own",
+   "provider": "TheQuizWire (channel brand, owner-supplied 2026-10-15)",
+   "source": "owner upload logo-The-Quiz-Wire-icon-transparent.png"
+  },
+  "brand/threads.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 1287,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "brand/x.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 252,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "geo/flags/in.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 1090,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/globe.json": {
    "by": "reelkit/geodata.py",
-   "bytes": 112788,
+   "bytes": 107850,
+   "credit": "Natural Earth",
+   "kind": "data",
+   "licence": "PD",
+   "provider": "Natural Earth",
+   "source": "world-atlas 2.0.2 110m"
+  },
+  "geo/india.json": {
+   "by": "reelkit/geodata.py",
+   "bytes": 86457,
    "credit": "Natural Earth",
    "kind": "data",
    "licence": "PD",
    "provider": "Natural Earth",
    "source": "world-atlas 2.0.2 110m + ne_10m_admin_0_disputed_areas"
   },
-  "mix.wav": {
-   "ai_voice": "Kokoro am_michael",
-   "by": "reelkit/quizscore.py (procedural bed/ticks/sting) + Kokoro VO takes",
-   "derived_from": "procedural reelkit/synth.py + Kokoro takes vo/*",
-   "kind": "mix",
-   "licence": "own",
-   "provider": "build"
+  "geo/india_basemap.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 687948,
+   "credit": "NASA Blue Marble",
+   "kind": "image",
+   "licence": "PD-USGov",
+   "provider": "NASA GIBS",
+   "source": "BlueMarble_ShadedRelief_Bathymetry z5 (56 tiles)"
+  },
+  "geo/india_basemap_far.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 243132,
+   "credit": "NASA Blue Marble",
+   "kind": "image",
+   "licence": "PD-USGov",
+   "provider": "NASA GIBS",
+   "source": "BlueMarble_ShadedRelief_Bathymetry z3 (20 tiles)"
+  },
+  "stickers/1f321.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1748,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f332.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1762,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f405.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1388,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f427.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1254,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f43e.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1495,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f44d.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1663,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f4a7.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 239,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f4c8.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 993,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f514.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 314,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/2744.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1445,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
   }
  }
 }

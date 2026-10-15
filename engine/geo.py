@@ -215,7 +215,9 @@ class Scene:
     def disputed_out(self, t, did, dur=0.3):
         """Fade a disputed outline and its policy plate (use before the outro / when the camera leaves the border)."""
         self.G.J(f"tl.to('#{self.id}_disputed_{did}',{{opacity:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")
-        self.G.J(f"tl.to('#{self.id}_lbl_pl_{did}',{{autoAlpha:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")
+        for L in self.spec.get("labels", []):                                   # plate-less entries (plate:false, grouped) have no label
+            if L.get("for") == did:
+                self.G.J(f"tl.to('#{self.id}_lbl_{L['id']}',{{autoAlpha:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")
 
     def disputed_in(self, t, did, dur=0.4):
         """Disputed boundary/area: dashed line fades in, then its policy plates (controller / claimants) pop.

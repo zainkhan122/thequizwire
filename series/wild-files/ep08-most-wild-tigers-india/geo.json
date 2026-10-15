@@ -3,19 +3,19 @@
  "episode": "ep08-most-wild-tigers-india",
  "policy": "docs/BORDER_POLICY.md",
  "scenes": {
-  "main": {
-   "projection": "equalEarth",
-   "projection_reason": "three countries across Asia compared by count; equal-area so Russia's size is honest (geolint P1)",
+  "india": {
+   "projection": "mercator",
+   "projection_reason": "country close-up (India) with a satellite basemap; no size comparison is made in the narration (counts, not areas), so Mercator's area distortion does not touch a claim (geolint P1)",
    "fit": {
     "type": "bbox",
     "bbox": [
-     60,
-     -12,
-     150,
-     58
+     62,
+     4,
+     100,
+     38
     ]
    },
-   "padding": 6,
+   "padding": 60,
    "resolution": "110m",
    "layers": [
     {
@@ -30,18 +30,20 @@
      "ids": [
       "356"
      ],
-     "cls": "",
-     "note": "India (356)"
+     "lift": "flag",
+     "note": "India (356) — the answer",
+     "flag": "in",
+     "cls": ""
     },
     {
      "kind": "highlight",
      "id": "alt",
      "ids": [
-      "643",
-      "360"
+      "643"
      ],
-     "cls": "alt",
-     "note": "Russia (643), Indonesia (360) — the distractors"
+     "lift": "fill",
+     "color": "rgba(255,212,0,.42)",
+     "note": "Russia (643) — the Amur beat"
     }
    ],
    "pins": [
@@ -51,7 +53,9 @@
       78.8,
       29.53
      ],
-     "label": "Corbett · 260"
+     "label": "Corbett · 260",
+     "side": "right",
+     "qid": "Q1026826"
     },
     {
      "id": "sundarbans",
@@ -59,7 +63,8 @@
       89.0,
       21.95
      ],
-     "label": "Sundarbans · 100"
+     "label": "Sundarbans · 100",
+     "side": "left"
     },
     {
      "id": "amur",
@@ -67,26 +72,19 @@
       135.5,
       45.5
      ],
-     "label": "Amur tigers ≈ 750"
+     "label": "Amur tigers ≈ 750",
+     "side": "left"
     }
    ],
    "labels": [
     {
      "id": "bengal",
      "lonlat": [
-      88,
-      13
+      87.5,
+      16.3
      ],
      "text": "Bay of Bengal",
      "cls": "sea"
-    },
-    {
-     "id": "sumatra",
-     "lonlat": [
-      101,
-      -2
-     ],
-     "text": "Sumatra"
     }
    ],
    "disputed": [
@@ -104,8 +102,8 @@
      "as_of": "2026-10",
      "source": "docs/border_registry.json#kashmir",
      "label_at": [
-      69.5,
-      33.0
+      73,
+      33.5
      ],
      "plate_cls": "small"
     },
@@ -172,15 +170,121 @@
      "as_of": "2026-10",
      "source": "docs/border_registry.json#arunachal",
      "label_at": [
-      97.0,
-      34.6
+      88,
+      33
      ],
      "plate_cls": "small"
+    },
+    {
+     "id": "sirc",
+     "name": "Sir Creek",
+     "controller": "India (east bank) and Pakistan (west bank); the line in the creek is undemarcated",
+     "claimants": [
+      "India",
+      "Pakistan"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#sir_creek",
+     "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+       [
+        [
+         68.7,
+         23.5
+        ],
+        [
+         69.0,
+         23.5
+        ],
+        [
+         69.0,
+         24.25
+        ],
+        [
+         68.7,
+         24.25
+        ],
+        [
+         68.7,
+         23.5
+        ]
+       ]
+      ]
+     },
+     "label_at": [
+      73.5,
+      20.5
+     ],
+     "plate_cls": "small",
+     "author_note": "no Natural Earth polygon — marker box on the creek; plate carries the policy text"
+    },
+    {
+     "id": "dokl",
+     "name": "Doklam",
+     "controller": "Bhutan (contested by China)",
+     "claimants": [
+      "China"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#doklam",
+     "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+       [
+        [
+         88.9,
+         27.2
+        ],
+        [
+         89.15,
+         27.2
+        ],
+        [
+         89.15,
+         27.4
+        ],
+        [
+         88.9,
+         27.4
+        ],
+        [
+         88.9,
+         27.2
+        ]
+       ]
+      ]
+     },
+     "label_at": [
+      84.5,
+      25.6
+     ],
+     "plate_cls": "small",
+     "author_note": "no Natural Earth polygon — marker box on the plateau"
     }
    ],
    "sources": [
     "Natural Earth"
-   ]
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 1.6,
+    "bbox": [
+     60,
+     0,
+     145,
+     52
+    ],
+    "far": {
+     "bbox": [
+      40,
+      -45,
+      175,
+      78
+     ],
+     "k_min": 0.3
+    }
+   }
   }
  }
 }
