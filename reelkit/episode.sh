@@ -50,7 +50,8 @@ has plan   && { log "timeline"
   elif [ "${ESTIMATE:-1}" = 1 ] && [ "${RELEASE:-0}" != 1 ]; then python3 "$REPO/reelkit/plan.py" "$EP" --estimate
   else echo "episode.sh: no words.json (run tts + words) and estimates are not allowed for a release" >&2; exit 1; fi; }
 has voice  && { log "voice gate (takes vs performance plan)"; python3 "$REPO/reelkit/voice.py" check "$EP" --report "$EP/out/voice.json"; }
-has geo    && { if [ -f "$EP/geo.json" ]; then log "map data (Natural Earth → $BUILD/geo)"; python3 "$REPO/reelkit/geodata.py" prep "$EP" --out "$BUILD/geo" ${GEO_FIXTURE:+--fixture "$GEO_FIXTURE"}; fi; }
+has geo    && { if [ -f "$EP/geo.json" ]; then log "map data (Natural Earth → $BUILD/geo)"; python3 "$REPO/reelkit/geodata.py" prep "$EP" --out "$BUILD/geo" ${GEO_FIXTURE:+--fixture "$GEO_FIXTURE"}; fi
+                python3 "$REPO/reelkit/stickers.py" prep "$EP" "$BUILD"; }
 has score  && { log "score + SFX + mix"; if [ -f "$EP/score.py" ]; then python3 "$EP/score.py" "$BUILD" "$BUILD"; else python3 "$REPO/reelkit/quizscore.py" "$EP" "$BUILD" "$BUILD"; fi; cp "$BUILD/mix_report.json" "$EP/out/" 2>/dev/null || true; }
 has assets && { if [ -f "$EP/clips.json" ] && python3 -c "import json,sys;sys.exit(0 if json.load(open('$EP/clips.json'))['clips'] else 1)"; then
   log "clips (cache-only gen + prep)"; python3 "$REPO/reelkit/clips.py" gen "$EP" --cache-only || log "some clips not cached (never spends GPU here)"; python3 "$REPO/reelkit/clips.py" prep "$EP" "$HF"; fi

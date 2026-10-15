@@ -88,6 +88,10 @@ class Scene:
                 dst.parent.mkdir(parents=True, exist_ok=True)
                 if src.exists() and (not dst.exists() or dst.stat().st_mtime < src.stat().st_mtime): shutil.copy(src, dst)
                 d["basemap"]["src"] = f"assets/geo/{src.name}"
+                if d["basemap"].get("far"):
+                    fsrc = self.G.data_dir / d["basemap"]["far"]["src"]; fdst = dst.parent / fsrc.name
+                    if fsrc.exists() and (not fdst.exists() or fdst.stat().st_mtime < fsrc.stat().st_mtime): shutil.copy(fsrc, fdst)
+                    d["basemap"]["far"]["src"] = f"assets/geo/{fsrc.name}"
             for cc, rel in list((d.get("flags") or {}).items()):          # flag-icons SVGs used by lifts / characters
                 src = self.G.data_dir / rel; dst = self.G.hf / "assets" / "geo" / "flags" / src.name
                 dst.parent.mkdir(parents=True, exist_ok=True)
@@ -228,6 +232,12 @@ CSS = f"""
 .geo.has-basemap .g-land,.geo.has-basemap .g-countries{{fill:none}}                    /* v3: the raster is the land */
 .geo.has-basemap .g-border{{stroke:rgba(255,255,255,.55);stroke-width:1.4}}
 .geo.has-basemap .geo-basemap{{image-rendering:auto}}
+.v3 .geo .geo-pin .pinhead{{left:-16px;top:-16px;width:32px;height:32px;border:5px solid #fff;background:#FF2D2D}}
+.v3 .geo .geo-pin .pinlabel{{font-size:42px;top:-30px;left:26px;background:rgba(10,16,28,.9);border-left:7px solid #FF2D2D;border-radius:0 10px 10px 0;padding:6px 18px 4px}}
+.v3 .geo .geo-pin.left .pinlabel{{right:26px;border-right:7px solid #FF2D2D;border-radius:10px 0 0 10px}}
+.v3 .geo .geo-label{{font-size:34px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.9)}}
+.v3 .geo .geo-label.sea{{font-size:36px;color:rgba(255,255,255,.85);text-shadow:0 2px 8px rgba(0,0,0,.9)}}
+.v3 .geo .geo-label.ink{{color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.8)}}
 .geo .g-countries{{fill:{LAND};stroke:none}}
 .geo .g-border{{fill:none;stroke:rgba(239,230,210,.38);stroke-width:1.2;stroke-linejoin:round}}
 .geo .g-highlight{{fill:{SAND};stroke:{CREAM};stroke-width:1.6;opacity:0}}

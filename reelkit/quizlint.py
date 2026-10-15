@@ -60,7 +60,7 @@ def main():
     series = next((s for s in reg["series"] if s["slug"] == E.get("series")), None)
     # ---- Q1
     q = E.get("quiz", {})
-    v2 = E.get("format") == "quiz-v2"; n_opt = 3 if v2 else 4
+    v2 = E.get("format") in ("quiz-v2", "quiz-v3"); n_opt = 3 if v2 else 4
     if len(q.get("options", [])) != n_opt: F.append(f"{'Q13' if v2 else 'Q1'}: quiz needs exactly {n_opt} options")
     if not isinstance(q.get("correct"), int) or not 0 <= q.get("correct", -1) < n_opt: F.append(f"Q1: quiz.correct must be 0–{n_opt - 1}")
     else:
@@ -81,13 +81,15 @@ def main():
     elif not cd or cd[0].get("silence") is None or float(cd[0]["silence"]) < 2: F.append("Q2: the countdown line must be a `silence` ≥ 2 s (the ring counts, nobody talks)")
     if len(cd) > 1: F.append("Q2: more than one countdown line")
     # ---- Q4 copy
-    q_max, o_max, f_max = (76, 26, 80) if v2 else (90, 24, 140)
+    v3 = E.get("format") == "quiz-v3"
+    q_max, o_max, f_max = (72, 18, 36) if v3 else (76, 26, 80) if v2 else (90, 24, 140)     # v3: 100-px question, 58-px pills, 84-px fact caption
     if len(q.get("question", "")) > q_max: F.append(f"Q4: question is {len(q['question'])} chars (> {q_max})")
     for o in q.get("options", []):
         if len(o) > o_max: F.append(f"Q4: option '{o}' is {len(o)} chars (> {o_max}, single line)")
     for el in X.get("elements", []):
         if el.get("type") == "fact" and len(el.get("text", "")) > f_max: F.append(f"Q4: fact {el['id']} is {len(el['text'])} chars (> {f_max})")
-        if el.get("kicker") and len(el["kicker"]) > 28: F.append(f"Q4: kicker '{el['kicker']}' > 28 chars")
+        if el.get("kicker") and len(el["kicker"]) > (16 if v3 else 28): F.append(f"Q4: kicker '{el['kicker']}' > {16 if v3 else 28} chars")
+        if v3 and el.get("type") == "fact" and len(el.get("kicker", "")) + len(el.get("text", "")) > 46: F.append(f"Q4: fact {el['id']} kicker+text > 46 chars (two 84-px lines)")
     # ---- VO reads the card
     vo_all = norm(" ".join(l.get("text", "") for l in V["lines"]))
     if norm(q.get("question", ""))[:40] not in vo_all: W.append("the VO does not read the question text (hook line should contain it)")

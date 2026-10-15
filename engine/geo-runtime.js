@@ -108,9 +108,15 @@
       if (L.kind === "highlight" && L.lift) {                                 // v3: lifted shape (flag or colour), one group per feature
         const fb = spec.fit && spec.fit.bbox ? path.bounds(bboxFeature(spec.fit.bbox)) : [[0, 0], [spec.w, spec.h]];
         const bw = fb[1][0] - fb[0][0], bh = fb[1][1] - fb[0][1];
-        const rect = { x: fb[0][0] - bw * 0.5, y: fb[0][1] - bh * 0.5, w: bw * 2, h: bh * 2 };
-        fs.forEach((f, i) => out.push({ id: (L.id || L.kind) + "_" + (f.id != null ? f.id : (f.properties && f.properties.id) || i), cls: "g-lift " + (L.cls || ""), d: path(f) || "",
-          lift: { kind: L.lift, flag: L.flag, color: L.color || "#C8102E", rect, centroid: path.centroid(f) }, props: f.properties || {} }));
+        const wide = { x: fb[0][0] - bw * 0.5, y: fb[0][1] - bh * 0.5, w: bw * 2, h: bh * 2 };
+        fs.forEach((f, i) => {
+          const b = path.bounds(f), fw = b[1][0] - b[0][0], fh = b[1][1] - b[0][1];
+          const sane = isFinite(fw) && isFinite(fh) && fw > 0 && fh > 0 && fw < bw * 3 && fh < bh * 3;        // antimeridian / world-spanning features fall back to the wide rect
+          const rect = sane ? { x: b[0][0], y: b[0][1], w: fw, h: fh } : wide;
+          const fit = L.flag_fit === "cover" || !sane ? "xMidYMid slice" : "none";                          // default: the flag is stretched into the shape (reference-channel look)
+          out.push({ id: (L.id || L.kind) + "_" + (f.id != null ? f.id : (f.properties && f.properties.id) || i), cls: "g-lift " + (L.cls || ""), d: path(f) || "",
+            lift: { kind: L.lift, flag: L.flag, color: L.color || "#C8102E", rect, fit, centroid: path.centroid(f) }, props: f.properties || {} });
+        });
         continue;
       }
       if (L.kind === "highlight" || L.kind === "disputed" || L.kind === "route" || L.kind === "area" || L.kind === "feature") {
@@ -159,7 +165,7 @@
     const W = spec.w, H = spec.h;
     const liftMarkup = (p) => {
       const pid = id + "_" + p.id, L = p.lift, r = L.rect, flag = L.flag && data && data.flags ? data.flags[L.flag.toLowerCase()] : null;
-      const body = flag ? `<image href="${flag}" x="${r.x}" y="${r.y}" width="${r.w}" height="${r.h}" preserveAspectRatio="xMidYMid slice" clip-path="url(#${pid}_clip)"></image>`
+      const body = flag ? `<image href="${flag}" x="${r.x}" y="${r.y}" width="${r.w}" height="${r.h}" preserveAspectRatio="${L.fit || "none"}" clip-path="url(#${pid}_clip)"></image>`
                         : `<path class="lift-fill" d="${p.d}" style="fill:${L.color}"></path>`;
       return `<g id="${pid}" class="${p.cls.trim()}" data-cx="${L.centroid[0].toFixed(1)}" data-cy="${L.centroid[1].toFixed(1)}"><defs><clipPath id="${pid}_clip"><path d="${p.d}"></path></clipPath></defs>` +
              `<path class="lift-shadow" d="${p.d}" filter="url(#${id}_liftShadow)"></path>${body}<path class="lift-outline" d="${p.d}" vector-effect="non-scaling-stroke"></path></g>`;
@@ -168,10 +174,13 @@
       C.paths.map(p => p.lift ? liftMarkup(p) : `<path id="${id}_${p.id}" class="${p.cls.trim()}" d="${p.d}" vector-effect="non-scaling-stroke"></path>`).join("");
     let raster = "";
     if (data && data.basemap && spec.projection === "mercator") {          // v3: PD raster (Web Mercator tiles) aligned under the fitted projection
-      const bm = data.basemap, bp = d3.geoMercator().scale(bm.scale).translate(bm.translate);
-      const f = C.proj.scale() / bm.scale, ref = spec.fit && spec.fit.bbox ? [(spec.fit.bbox[0] + spec.fit.bbox[2]) / 2, (spec.fit.bbox[1] + spec.fit.bbox[3]) / 2] : [0, 0];
-      const a = C.proj(ref), b = bp(ref), ox = a[0] - f * b[0], oy = a[1] - f * b[1];
-      raster = `<image id="${id}_basemap" class="geo-basemap" href="${bm.src}" width="${bm.size[0]}" height="${bm.size[1]}" transform="matrix(${f} 0 0 ${f} ${ox} ${oy})" preserveAspectRatio="none"></image>`;
+      const ref = spec.fit && spec.fit.bbox ? [(spec.fit.bbox[0] + spec.fit.bbox[2]) / 2, (spec.fit.bbox[1] + spec.fit.bbox[3]) / 2] : [0, 0];
+      const place = (bm, sfx) => {                                           // same Mercator, different scale: matrix() maps raster px → scene px
+        const bp = d3.geoMercator().scale(bm.scale).translate(bm.translate), f = C.proj.scale() / bm.scale;
+        const a = C.proj(ref), b = bp(ref), ox = a[0] - f * b[0], oy = a[1] - f * b[1];
+        return `<image id="${id}_basemap${sfx}" class="geo-basemap" href="${bm.src}" width="${bm.size[0]}" height="${bm.size[1]}" transform="matrix(${f} 0 0 ${f} ${ox} ${oy})" preserveAspectRatio="none"></image>`;
+      };
+      raster = (data.basemap.far ? place(data.basemap.far, "_far") : "") + place(data.basemap, "");
       el.classList.add("has-basemap");
     }
     el.innerHTML = `<svg class="geo-svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><g id="${id}_cam">${raster}${svgLayers}</g></svg><div class="geo-ui" id="${id}_ui"></div>`;
@@ -179,7 +188,7 @@
     const html = [];
     for (const p of C.pins) html.push(`<div class="geo-pin ${p.cls || ""}${p.side === "left" ? " left" : ""}" id="${id}_pin_${p.id}" style="visibility:hidden;opacity:0" data-layout-allow-overlap="true"><div class="pinhead"></div>${p.label ? `<div class="pinlabel tu" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">${esc(p.label)}</div>` : ""}</div>`);
     for (const l of C.labels) html.push(`<div class="geo-label tu ${l.cls || ""}" id="${id}_lbl_${l.id}" style="visibility:hidden;opacity:0" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">${l.html ? l.html.replace(/^<div class="plate"/, '<div class="plate" data-layout-allow-overlap="true" data-layout-allow-occlusion="true"') : ("<span data-layout-allow-overlap=\"true\" data-layout-allow-occlusion=\"true\">" + esc(l.text || "") + "</span>")}</div>`);   // span = centred on the anchor (CSS translate(-50%,-50%)), like the SVG preview
-    if (C.scalebar) html.push(`<div class="geo-scale tu" id="${id}_scale" data-km="${C.scalebar.km}"><div class="bar"></div><span>${C.scalebar.km.toLocaleString("en-US")} km at ${Math.round(C.scalebar.lat)}°</span></div>`);
+    if (C.scalebar) html.push(`<div class="geo-scale tu" id="${id}_scale" data-km="${C.scalebar.km}" data-layout-allow-overlap="true" data-layout-allow-occlusion="true"><div class="bar"></div><span>${C.scalebar.km.toLocaleString("en-US")} km at ${Math.round(C.scalebar.lat)}°</span></div>`);
     ui.innerHTML = html.join("");
     const S = { id, spec, data, C, W, H, el,
       anchor: spec.anchor || [W / 2, H / 2],
@@ -190,7 +199,7 @@
       pinEls: C.pins.map(p => el.querySelector("#" + id + "_pin_" + p.id)),
       lblEls: C.labels.map(l => el.querySelector("#" + id + "_lbl_" + l.id)),
       scaleEl: C.scalebar ? el.querySelector("#" + id + "_scale") : null };
-    if (spec.scalebar && spec.scalebar.at && S.scaleEl) { S.scaleEl.style.left = spec.scalebar.at[0] + "px"; S.scaleEl.style.top = spec.scalebar.at[1] + "px"; }
+    if (spec.scalebar && spec.scalebar.at && S.scaleEl) { S.scaleEl.style.left = spec.scalebar.at[0] + "px"; S.scaleEl.style.top = spec.scalebar.at[1] + "px"; S.scaleEl.style.bottom = "auto"; }
     scenes[id] = S;
     apply(id);
     return S;

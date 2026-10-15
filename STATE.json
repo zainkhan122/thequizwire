@@ -1,12 +1,11 @@
 {
- "now": "2026-10-15: Phase 3.1 pilot batch \u2014 all 10 v2 episodes authored and green offline (Geo #10\u2013#14, Wild #7\u2013#9, Sports #9\u2013#10). Render run #2 (38637028319, tag pilot-v2-batch1) proved the voice gate; its layout/factcheck failures on Geo #10\u2013#13 are fixed locally. Waiting on the owner's PAT to push + dispatch render run #3.",
+ "now": "2026-10-15: V3 look rebuild. V3.1 basemap, V3.2 lifted flag highlight, V3.3 v3 UI (format quiz-v3: Lilita question, flag pills, timer ring, yellow answer banner, 84-px Anton facts, Twemoji stickers, flag-ball characters, far raster for off-answer hook) are committed and verified on local contact sheets (docs/img/v3_3_contact_sheet.jpg). Nothing dispatched to Actions yet.",
  "phase": "V3-look-rebuild",
  "next": [
-  "Owner supplies PAT \u2192 bash bootstrap.sh \u2192 git push origin main",
-  "Re-poll run #2 (wild ep07\u201309 + geo ep14): python3 reelkit/cloud.py why 38637028319",
-  "Dispatch run #3 --tag pilot-v2-batch1 with geo ep10\u2013ep13 + sports ep09\u2013ep10 (+ any new run #2 failures); fix \u2192 re-dispatch until 10/10 in the Release",
-  "Posting plan (owner, manual): day1 Geo10+Wild7 \u00b7 day2 Geo11+Wild8 \u00b7 day3 Geo12+Wild9 \u00b7 day4 Geo13+Sports9 \u00b7 day5 Geo14+Sports10",
-  "Phase 3.2: score 7 days after the last upload with tools/studio_import.py against PLAN_V2 \u00a74 gates \u2192 3.3 iterate"
+  "V3.5: series/_template_v3 + quizlint v3 rules (no answer subject on screen before reveal; hook camera k<0.6 or off-bbox) + selftest green",
+  "V3.6: re-author the 10 pilots to quiz-v3 (geo ep10–14, wild ep07–09, sports ep09–10) — local contact sheet viewed for EACH before any dispatch",
+  "V3.7: dispatch Geo #13 only (cloud.py render --tag pilot-v3-geo13 --wait) → owner approval → batch pilot-v3-batch1",
+  "pilot-v2-batch1 stays shelved; never post it"
  ],
  "owner_rules": [
   "Free tools only: public-repo GitHub Actions + the Arena sandbox",
@@ -16,12 +15,12 @@
   "Sensitive/disputed borders are shown and labelled with who administers and who claims them (docs/BORDER_POLICY.md)",
   "Repo is the SSOT; media in Releases, never git; no auto-posting; every fact sourced; readable text",
   "Every task is done in time-boxed phases (docs/PHASE_PROTOCOL.md); the agent/Actions/owner split is fixed in docs/OPERATING_MODEL.md",
-  "Repo is private (GitHub Free): 2,000 Actions minutes/month \u2014 ledger `cloud.py minutes`, guard in `cloud.py render`, no crons",
-  "2026-10-15: owner approved PLAN_V2 and said 'make videos' \u2014 production (Phase 3.x) is unlocked; v2 format is the only format produced"
+  "Repo is private (GitHub Free): 2,000 Actions minutes/month — ledger `cloud.py minutes`, guard in `cloud.py render`, no crons",
+  "2026-10-15: owner approved PLAN_V2 and said 'make videos' — production (Phase 3.x) is unlocked; v2 format is the only format produced"
  ],
  "blockers": [],
  "secrets": {
-  "github": "fine-grained PAT (Contents/Actions/Workflows R/W, repo-scoped), expires 2027-01-12, stored only at ~/.cache/secrets/gh_token \u2014 ask the owner each new sandbox"
+  "github": "fine-grained PAT (Contents/Actions/Workflows R/W, repo-scoped), expires 2027-01-12, stored only at ~/.cache/secrets/gh_token — ask the owner each new sandbox"
  },
  "series": [
   {
@@ -120,7 +119,7 @@
   "id": "2.1",
   "name": "Scorecard importer",
   "status": "in progress",
-  "exit_check": "tools/studio_import.py reproduces PLAN_V2 \u00a71.2 from docs/data/studio_*.csv \u2192 docs/SCORECARD.md"
+  "exit_check": "tools/studio_import.py reproduces PLAN_V2 §1.2 from docs/data/studio_*.csv → docs/SCORECARD.md"
  },
  "repo": {
   "slug": "zainkhan122/thequizwire",

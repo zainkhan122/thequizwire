@@ -1,0 +1,410 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "500 KM",
+   "text": "of peaks down the South Island"
+  },
+  {
+   "id": "f2",
+   "type": "fact",
+   "kicker": "3,724 M",
+   "text": "Aoraki, the roof of New Zealand"
+  },
+  {
+   "id": "f4",
+   "type": "fact",
+   "kicker": "23 KM",
+   "text": "Tasman Glacier, the longest"
+  },
+  {
+   "id": "f3",
+   "type": "fact",
+   "kicker": "TWO PLATES",
+   "text": "collide along the Alpine Fault"
+  },
+  {
+   "id": "st_peak",
+   "type": "sticker",
+   "emoji": "1f3d4",
+   "x": 700,
+   "y": 560,
+   "size": 250,
+   "rot": 8
+  },
+  {
+   "id": "st_ice",
+   "type": "sticker",
+   "emoji": "1f9ca",
+   "x": 720,
+   "y": 600,
+   "size": 220,
+   "rot": -10
+  },
+  {
+   "id": "st_quake",
+   "type": "sticker",
+   "emoji": "1f30b",
+   "x": 700,
+   "y": 560,
+   "size": 240,
+   "rot": 6
+  },
+  {
+   "id": "kiwi",
+   "type": "character",
+   "flag": "nz",
+   "face": "wow",
+   "x": 840,
+   "y": 1050,
+   "size": 220,
+   "rot": -8
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.34,
+    "lonlat": [
+     150,
+     -25
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.38,
+    "lonlat": [
+     152,
+     -27
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.6",
+   "args": {
+    "k": 1.8,
+    "lonlat": [
+     170.3,
+     -43.6
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.6",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 1.9,
+    "lonlat": [
+     170.4,
+     -43.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "554",
+    "layer": "nz",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s04@five",
+   "do": "geo.route_draw",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "rid": "alps",
+    "layer": "line"
+   }
+  },
+  {
+   "at": "s04+1.7",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "south_island"
+   }
+  },
+  {
+   "at": "s04+1.9",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "tasman_sea"
+   }
+  },
+  {
+   "at": "s05@aoraki",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "aoraki"
+   }
+  },
+  {
+   "at": "s06@tasman",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "aoraki"
+   }
+  },
+  {
+   "at": "s06@tasman",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "tasman"
+   }
+  },
+  {
+   "at": "s06+0.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "554",
+    "layer": "nz"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.5",
+   "args": {
+    "k": 1.5,
+    "lonlat": [
+     170.6,
+     -43.3
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-1.8",
+   "args": {
+    "k": 1.55,
+    "lonlat": [
+     170.7,
+     -43.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@fault",
+   "do": "geo.route_draw",
+   "stage": "stage_map",
+   "until": "s07.end",
+   "args": {
+    "rid": "fault",
+    "layer": "line"
+   }
+  },
+  {
+   "at": "s07@fault",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "tasman"
+   }
+  },
+  {
+   "at": "s07+0.9",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "alpine_fault"
+   }
+  },
+  {
+   "at": "end-1.8",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "end-1.8",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.2",
+   "args": {
+    "k": 0.34,
+    "lonlat": [
+     150,
+     -25
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s02+0.3",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.6",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.6",
+   "do": "character_in",
+   "id": "kiwi"
+  },
+  {
+   "at": "s05+1.0",
+   "do": "character_out",
+   "id": "kiwi"
+  },
+  {
+   "at": "s04+2.5",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05+0.4",
+   "do": "fact_in",
+   "id": "f2",
+   "until": "s05.end"
+  },
+  {
+   "at": "s05+0.6",
+   "do": "sticker_in",
+   "id": "st_peak"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_peak"
+  },
+  {
+   "at": "s06+0.4",
+   "do": "fact_in",
+   "id": "f4",
+   "until": "s06.end"
+  },
+  {
+   "at": "s06+0.6",
+   "do": "sticker_in",
+   "id": "st_ice"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_ice"
+  },
+  {
+   "at": "s07+0.3",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s07.end"
+  },
+  {
+   "at": "s07+1.8",
+   "do": "sticker_in",
+   "id": "st_quake"
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_quake"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.9"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.4",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

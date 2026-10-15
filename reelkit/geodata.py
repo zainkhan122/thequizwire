@@ -266,13 +266,29 @@ def prep(ep: Path, out: Path, fixtures=None, quiet=False):
             pad = float(bm.get("pad_deg", 0.0)) or 0.35 * max(bb[2] - bb[0], bb[3] - bb[1])   # the 1080×1180 fit + camera pans show more than the bbox
             meta = _bm.stitch([bb[0] - pad, bb[1] - pad, bb[2] + pad, bb[3] + pad], width, out / f"{sid}_basemap.jpg", bm.get("layer", "bluemarble"))
             data["basemap"] = {"src": f"{sid}_basemap.jpg", **{k: meta[k] for k in ("scale", "translate", "size", "zoom", "credit", "layer")}}
+            far = bm.get("far")                                                 # v3 hook views: a coarse, wide raster under the detailed one (camera k < 1)
+            if far:
+                fb = far["bbox"]; kmin = float(far.get("k_min", 0.35))
+                ppd = spec.get("w", 1080) / max(bb[2] - bb[0], 1e-6)            # ≈ frame px per degree at k = 1 (lon-fitted scenes)
+                fw = int(min(max((fb[2] - fb[0]) * ppd * kmin * 1.15, 1200), 6000))
+                fmeta = _bm.stitch(fb, fw, out / f"{sid}_basemap_far.jpg", bm.get("layer", "bluemarble"))
+                data["basemap"]["far"] = {"src": f"{sid}_basemap_far.jpg", **{k: fmeta[k] for k in ("scale", "translate", "size", "zoom")}}
+                gen[f"geo/{sid}_basemap_far.jpg"] = {"kind": "image", "licence": "PD-USGov", "provider": "NASA GIBS", "by": "reelkit/basemap.py",
+                                                     "source": f"{fmeta['layer']} z{fmeta['zoom']} ({fmeta['tiles']} tiles)", "credit": fmeta["credit"], "bytes": fmeta["bytes"]}
+                if not quiet: print(f"  ✓ {sid}: far basemap z{fmeta['zoom']} {fmeta['size'][0]}×{fmeta['size'][1]} · {fmeta['bytes'] // 1024} KB")
             data["sources"].append(meta["credit"])
             gen[f"geo/{sid}_basemap.jpg"] = {"kind": "image", "licence": "PD-USGov", "provider": "NASA GIBS", "by": "reelkit/basemap.py",
                                              "source": f"{meta['layer']} z{meta['zoom']} ({meta['tiles']} tiles)", "credit": meta["credit"], "bytes": meta["bytes"]}
             if not quiet: print(f"  ✓ {sid}: basemap {meta['layer']} z{meta['zoom']} {meta['size'][0]}×{meta['size'][1]} · {meta['bytes'] // 1024} KB")
         want = {L["flag"].lower() for L in spec.get("layers", []) if L.get("flag")}
-        for ch in spec.get("characters", []):                                 # flag-ball characters live in the scene spec too
-            if ch.get("flag"): want.add(ch["flag"].lower())
+        def _walk(o):                                                          # flags of characters / option pills (visuals.json, episode.json)
+            if isinstance(o, dict):
+                if isinstance(o.get("flag"), str) and len(o["flag"]) <= 6: want.add(o["flag"].lower())
+                for v in o.values(): _walk(v)
+            elif isinstance(o, list):
+                for v in o: _walk(v)
+        for fn in ("visuals.json", "episode.json"):
+            if (ep / fn).exists(): _walk(json.loads((ep / fn).read_text()))
         if want:
             sys.path.insert(0, str(Path(__file__).resolve().parent)); import flags as _fl
             data["flags"] = {}

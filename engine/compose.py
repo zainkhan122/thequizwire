@@ -31,7 +31,7 @@ REPO = ENGINE.parent
 sys.path.insert(0, str(ENGINE))
 import fx, geo, quiz, charts  # noqa: E402
 
-FONTS = ["Anton-Regular.ttf", "Oswald.ttf", "DMSerifDisplay-Regular.ttf", "DMSerifDisplay-Italic.ttf", "SpecialElite-Regular.ttf"]
+FONTS = ["Anton-Regular.ttf", "Oswald.ttf", "DMSerifDisplay-Regular.ttf", "DMSerifDisplay-Italic.ttf", "SpecialElite-Regular.ttf", "LilitaOne-Regular.ttf"]
 INK, CREAM, SEA = "#0B1620", "#EFE6D2", "#0F2A3A"
 
 
@@ -117,7 +117,15 @@ class Composer:
     def element(self, el):
         k = el["type"]
         if k == "answer": self.body.append(self.Q.answer_plate(el["id"], el["text"], y=el.get("y", 980), sub=el.get("sub", "")))
-        elif k == "fact": self.body.append(self.Q.fact(el["id"], el["text"], y=el.get("y", 1230), kicker=el.get("kicker", "")))
+        elif k == "fact":
+            if getattr(self, "v3", False): self.body.append(self.Q.fact3(el["id"], el["text"], kicker=el.get("kicker", ""), y=el.get("y", 1250)))
+            else: self.body.append(self.Q.fact(el["id"], el["text"], y=el.get("y", 1230), kicker=el.get("kicker", "")))
+        elif k == "sticker":
+            src = f"assets/stickers/{el['emoji'].lower()}.svg" if el.get("emoji") else el["src"]
+            self.body.append(self.Q.sticker(el["id"], src, el["x"], el["y"], size=el.get("size", 240), rot=el.get("rot", 0), z=el.get("z", 60)))
+            if el.get("credit"): self.credit_bits.append(el["credit"])
+        elif k == "character":
+            self.body.append(self.Q.character(el["id"], el["flag"], face=el.get("face", "happy"), x=el["x"], y=el["y"], size=el.get("size", 200), rot=el.get("rot", 0), z=el.get("z", 62)))
         elif k in ("counter", "bars", "compare", "callouts", "strip"):
             args = {kk: vv for kk, vv in el.items() if kk not in ("id", "type", "z")}
             if k in ("bars", "compare"): args["rows" if k == "bars" else "items"] = [tuple(r) for r in args.pop("rows" if k == "bars" else "items")]
@@ -139,14 +147,18 @@ class Composer:
             if do == "chart.counter_run": m(t, t1 if t1 is not None else t + float(b.get("dur", 1.5)), b["id"], **args)
             else: m(t, b["id"], **args)
         elif do == "fx.flash": self.FX.flash(t, **args)
-        elif do == "reveal": (self.Q.reveal_chips if self.v2 else self.Q.reveal)(t, **args)
+        elif do == "reveal": (self.Q.reveal_pills if getattr(self, "v3", False) else self.Q.reveal_chips if self.v2 else self.Q.reveal)(t, **args)
         elif do in ("card_in", "card_out", "options_in", "countdown"): getattr(self.Q, do)(t, **args)
+        elif getattr(self, "v3", False) and do in ("hook_in", "hook_out", "chips_in", "chips_out"):                   # v3 aliases of the v2 verbs
+            {"hook_in": self.Q.hook3_in, "hook_out": self.Q.hook3_out, "chips_in": self.Q.pills_in, "chips_out": self.Q.pills_out}[do](t, **args)
         elif do in ("hook_in", "hook_out", "chips_in", "chips_out", "bug_in"): getattr(self.Q, do)(t, **args)        # v2
-        elif do == "beat": self.Q.beat(t, seconds=float(self.E["quiz"].get("beat", 1.5)), **args)                   # v2
+        elif do == "beat": (self.Q.beat3 if getattr(self, "v3", False) else self.Q.beat)(t, seconds=float(self.E["quiz"].get("beat", 1.5)), **args)
+        elif do in ("banner_in", "banner_out"): getattr(self.Q, do)(t, **args)                                        # v3
+        elif do in ("sticker_in", "sticker_out", "character_in", "character_out"): getattr(self.Q, do)(t, b["id"], **args)   # v3
         elif do == "cta_in": self.Q.cta_in(t, t1, **args)                                                             # v2
         elif do == "credit_in": self.Q.credit_in(t, t1, **args)                                                       # v2
         elif do in ("answer_in", "answer_out"): getattr(self.Q, do)(t, b["id"], **args)
-        elif do == "fact_in": self.Q.fact_in(t, t1, b["id"], **args)
+        elif do == "fact_in": (self.Q.fact3_in if getattr(self, "v3", False) else self.Q.fact_in)(t, t1, b["id"], **args)
         elif do == "hide": self.J(f"tl.to('#{b['id']}',{{autoAlpha:0,duration:{float(args.get('dur', 0.4))},ease:'power1.in'}},{t:.3f});")   # any element (counter, chart…)
         elif do == "end_in": self.Q.end_in(t, getattr(self, "clip_ids", []))
         else: raise ValueError(f"beat: unknown action {do}")
@@ -179,15 +191,36 @@ class Composer:
     def run(self):
         E, Q = self.E, self.Q
         q = E["quiz"]
-        self.v2 = E.get("format") == "quiz-v2"
+        self.v3 = E.get("format") == "quiz-v3"
+        self.v2 = E.get("format") == "quiz-v2" or self.v3
         # chrome
         self.body.append(Q.bug())
         if not self.v2: self.body.append(Q.badge(E.get("difficulty", "MEDIUM")))
         for st in self.V.get("stage", []): self.stage(st)
+        if self.v3:
+            self.body.append(Q.scrims())
+            bsrc = self.hf.parent / "stickers"; bdst = self.hf / "assets" / "stickers"          # Twemoji prepared by reelkit/stickers.py
+            if bsrc.exists():
+                bdst.mkdir(parents=True, exist_ok=True)
+                for fsvg in bsrc.glob("*.svg"):
+                    if not (bdst / fsvg.name).exists(): shutil.copy(fsvg, bdst / fsvg.name)
         mapc = self.G.credits() if self.G.scenes else ""
         bits = [b for b in self.credit_bits if b not in mapc]                                   # "Natural Earth" is already in the map-data credit
         credit = " · ".join(dict.fromkeys(([f"Map data: {mapc}"] if mapc else []) + bits + ["Voice: AI (Kokoro) · thequizwire.com"]))
-        if self.v2:
+        if self.v3:
+            self.J("tl.set('#bug',{autoAlpha:0},0);")
+            self.body.append(Q.hook3("hook", q["question"], q.get("keyword")))
+            self.body.append(Q.pills("q1", q["options"], q["correct"], meta=q.get("option_meta")))
+            self.body.append(Q.banner(q.get("banner") or q["options"][q["correct"]], q.get("banner_sub", f"✓  {quiz.LETTERS[q['correct']]} was right")))
+            caps = self.caption_groups()
+            busy = [(self.T(b["at"]), self.T(b["until"]) if "until" in b else self.TOTAL) for b in self.V.get("beats", []) if b.get("do") in ("fact_in", "cta_in")]
+            caps = [(g, t, t0, t1) for g, t, t0, t1 in caps if not any(a - 0.05 <= (t0 + t1) / 2 <= z for a, z in busy)]   # one text block at a time: facts/CTA win
+            self.body.append(Q.captions([(g, t) for g, t, _, _ in caps]))
+            for g, _, t0, t1 in caps: Q.caption_show(g, t0, t1)
+            self.body.append(Q.cta3(q.get("tease", "Tomorrow: a new question"), q.get("cta_line", "One map question a day · Subscribe")))
+            self.body.append(Q.credit3(credit))
+            self.caption_count = len(caps)
+        elif self.v2:
             self.J("tl.set('#bug',{autoAlpha:0},0);")                                   # Q9: no chrome before the question lands
             self.body.append(Q.hook("hook", q["question"], q.get("keyword")))
             self.body.append(Q.chips("q1", q["options"], q["correct"]))
@@ -218,6 +251,7 @@ class Composer:
 @font-face{{font-family:'DM Serif';src:url('fonts/DMSerifDisplay-Regular.ttf')}}
 @font-face{{font-family:'DM Serif';src:url('fonts/DMSerifDisplay-Italic.ttf');font-style:italic}}
 @font-face{{font-family:'Elite';src:url('fonts/SpecialElite-Regular.ttf')}}
+@font-face{{font-family:'Lilita';src:url('fonts/LilitaOne-Regular.ttf')}}
 *{{margin:0;padding:0;box-sizing:border-box}}
 html,body{{width:1080px;height:1920px;overflow:hidden;background:{INK}}}
 #root{{position:relative;width:1080px;height:1920px;overflow:hidden;background:{INK};color:{CREAM}}}
@@ -240,7 +274,7 @@ html,body{{width:1080px;height:1920px;overflow:hidden;background:{INK}}}
 <style>{css}</style>
 </head>
 <body>
-<div id="root" data-composition-id="main" data-start="0" data-duration="{f(self.TOTAL)}" data-width="1080" data-height="1920">
+<div id="root" class="{"v3" if getattr(self, "v3", False) else ""}" data-composition-id="main" data-start="0" data-duration="{f(self.TOTAL)}" data-width="1080" data-height="1920">
 {audio}
 {chr(10).join(self.body)}
 </div>

@@ -1,0 +1,94 @@
+{
+ "files": {},
+ "generated": {
+  "geo/flags/ch.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 290,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/flags/cl.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 552,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/flags/nz.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 2172,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/main.json": {
+   "by": "reelkit/geodata.py",
+   "bytes": 135758,
+   "credit": "Natural Earth",
+   "kind": "data",
+   "licence": "PD",
+   "provider": "Natural Earth",
+   "source": "world-atlas 2.0.2 10m"
+  },
+  "geo/main_basemap.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 369016,
+   "credit": "NASA Blue Marble",
+   "kind": "image",
+   "licence": "PD-USGov",
+   "provider": "NASA GIBS",
+   "source": "BlueMarble_ShadedRelief_Bathymetry z7 (117 tiles)"
+  },
+  "geo/main_basemap_far.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 432523,
+   "credit": "NASA Blue Marble",
+   "kind": "image",
+   "licence": "PD-USGov",
+   "provider": "NASA GIBS",
+   "source": "BlueMarble_ShadedRelief_Bathymetry z5 (80 tiles)"
+  },
+  "mix.wav": {
+   "ai_voice": "Kokoro am_michael",
+   "by": "reelkit/quizscore.py (procedural bed/ticks/sting) + Kokoro VO takes",
+   "derived_from": "procedural reelkit/synth.py + Kokoro takes vo/*",
+   "kind": "mix",
+   "licence": "own",
+   "provider": "build"
+  },
+  "stickers/1f30b.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 6140,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC BY 4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f3d4.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1911,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC BY 4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f9ca.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 2969,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC BY 4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  }
+ }
+}

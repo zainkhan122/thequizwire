@@ -223,6 +223,143 @@ class Quiz:
         self.J(f"tl.fromTo('#credit2',{{autoAlpha:0}},{{autoAlpha:1,duration:0.3,immediateRender:false}},{f(t0)});")
         if t1 is not None: self.J(f"tl.to('#credit2',{{autoAlpha:0,duration:0.25}},{f(t1 - 0.25)});")
 
+    # ================================================================ v3 "satellite quiz" (docs/V3_LOOK.md)
+    # Full-bleed map; UI floats on scrims. Safe zones: bug 232, hook 300–620 (x 60–960), pills 790–1240 (text ≤ x 900),
+    # ring 1330, tease 1510, answer banner 290/450, big fact 1250–1460 (x 60–960), word captions 1500, credit 1560.
+    YELLOW = "#FFD400"
+
+    def scrims(self):
+        return '<div id="scrimtop" class="scrim scrim-top" data-layout-allow-overlap="true"></div><div id="scrimbot" class="scrim scrim-bot" data-layout-allow-overlap="true"></div>'
+
+    def hook3(self, hid, question, keyword=None):
+        txt = esc(question)
+        if keyword and keyword.lower() in question.lower():
+            i = question.lower().index(keyword.lower()); txt = esc(question[:i]) + f'<b>{esc(question[i:i + len(keyword)])}</b>' + esc(question[i + len(keyword):])
+        n = len(question); size = "s" if n > 58 else "m" if n > 42 else ""
+        return f'<div id="{hid}" class="hook3 tu {size}" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">{txt}</div>'
+
+    def hook3_in(self, t, hid="hook", dur=0.4):
+        self.J(f"tl.fromTo('#{hid}',{{autoAlpha:0,scale:0.82,y:30}},{{autoAlpha:1,scale:1,y:0,duration:{f(dur)},ease:'back.out(1.5)',immediateRender:false}},{f(t)});")
+        if t > 0: self.J(f"tl.to('#scrimtop',{{opacity:1,duration:0.4}},{f(t - 0.2)});")
+
+    def hook3_out(self, t, hid="hook", dur=0.3):
+        self.J(f"tl.to('#{hid}',{{autoAlpha:0,y:-40,scale:0.96,duration:{f(dur)},ease:'power2.in'}},{f(t)});")
+
+    def pills(self, cid, options, correct, meta=None):
+        """Three option pills; meta[i] = {"flag": "nz"} | {"emoji": "1f3d4"} | {} (icon circle on the left of the label)."""
+        assert len(options) == 3 and 0 <= correct < 3, "v3 pills need exactly 3 options and a correct index"
+        self.cards[cid] = {"correct": correct, "options": options, "seconds": 1.5, "v2": True}
+        meta = meta or [{}] * 3
+        rows = []
+        for i, o in enumerate(options):
+            m = meta[i] if i < len(meta) else {}
+            icon = (f'<span class="pflag" style="background-image:url(assets/geo/flags/{m["flag"].lower()}.svg)"></span>' if m.get("flag")
+                    else f'<img class="pemo" src="assets/stickers/{m["emoji"]}.svg" alt="">' if m.get("emoji") else "")
+            rows.append(f'<div class="pill tu" id="{cid}_o{i}"{DISTRACTOR if i != correct else ""} data-layout-allow-overlap="true" data-layout-allow-occlusion="true">'
+                        f'<span class="let" data-fc="skip">{LETTERS[i]}</span>{icon}<span class="otext">{esc(o)}</span></div>')
+        return (f'<div id="{cid}" class="pills" data-layout-allow-overlap="true">{"".join(rows)}</div>'
+                f'<div class="ring3" id="{cid}_ring" data-layout-allow-overlap="true"><svg width="160" height="160" viewBox="0 0 160 160"><circle class="bg" cx="80" cy="80" r="70"></circle>'
+                f'<circle class="fg" id="{cid}_arc" cx="80" cy="80" r="70" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0"></circle></svg><div class="rq tu" data-tq-dwell="off">?</div></div>'
+                f'<div class="tease3 tu" id="{cid}_tease" data-tq-dwell="off" data-layout-allow-overlap="true">GUESS BEFORE THE TIMER ENDS</div>')
+
+    def pills_in(self, t, cid=None, gap=0.12):
+        cid = cid or next(iter(self.cards))
+        self.J(f"tl.set('#{cid}',{{autoAlpha:1}},{f(t)});")
+        for i in range(3):
+            self.J(f"tl.fromTo('#{cid}_o{i}',{{autoAlpha:0,x:-80,scale:0.9}},{{autoAlpha:1,x:0,scale:1,duration:0.38,ease:'back.out(1.4)',immediateRender:false}},{f(t + i * gap)});")
+
+    def beat3(self, t0, cid=None, seconds=1.5):
+        """Timer ring drains for `seconds`; pills breathe; the tease line shows."""
+        cid = cid or next(iter(self.cards)); n = float(seconds)
+        self.J(f"tl.fromTo('#{cid}_ring',{{autoAlpha:0,scale:0.6}},{{autoAlpha:1,scale:1,duration:0.3,ease:'back.out(2)',immediateRender:false}},{f(t0 - 0.3)});")
+        self.J(f"tl.fromTo('#{cid}_tease',{{autoAlpha:0,y:20}},{{autoAlpha:1,y:0,duration:0.3,immediateRender:false}},{f(t0 - 0.3)});")
+        self.J(f"tl.fromTo('#{cid}_arc',{{strokeDashoffset:0}},{{strokeDashoffset:100,duration:{f(n)},ease:'none',immediateRender:false}},{f(t0)});")
+        self.J(f"tl.fromTo('#{cid}_ring .rq',{{scale:1}},{{scale:1.18,duration:0.25,ease:'sine.inOut',yoyo:true,repeat:{max(1, int(n / 0.25) - 1)},immediateRender:false}},{f(t0)});")
+        for i in range(3):
+            self.J(f"tl.to('#{cid}_o{i}',{{scale:1.03,duration:{f(n / 2)},ease:'sine.inOut',yoyo:true,repeat:1}},{f(t0)});")
+        self.J(f"tl.to('#{cid}_ring',{{autoAlpha:0,scale:0.7,duration:0.2}},{f(t0 + n)});")
+        self.J(f"tl.to('#{cid}_tease',{{autoAlpha:0,duration:0.2}},{f(t0 + n)});")
+        return t0 + n
+
+    def reveal_pills(self, t, cid=None, correct=None):
+        cid = cid or next(iter(self.cards)); c = self.cards[cid]["correct"] if correct is None else correct
+        for i in range(3):
+            if i == c:
+                self.J(f"tl.to('#{cid}_o{i}',{{backgroundColor:'#137A36',borderColor:'#ffffff',scale:1.06,duration:0.3,ease:'back.out(3)'}},{f(t)});")
+                self.J(f"tl.to('#{cid}_o{i} .let',{{backgroundColor:'#ffffff',color:'#137A36',duration:0.3}},{f(t)});")
+            else:
+                self.J(f"tl.to('#{cid}_o{i}',{{opacity:0.32,scale:0.96,duration:0.3}},{f(t)});")
+
+    def pills_out(self, t, cid=None, dur=0.35):
+        cid = cid or next(iter(self.cards))
+        for i in range(3):
+            self.J(f"tl.to('#{cid}_o{i}',{{autoAlpha:0,x:90,duration:{f(dur)},ease:'power2.in'}},{f(t + i * 0.06)});")
+        self.J(f"tl.set('#{cid}',{{autoAlpha:0}},{f(t + dur + 0.2)});")
+
+    def banner(self, text, sub=""):
+        n = len(text); size = "s" if n > 16 else "m" if n > 11 else ""
+        return (f'<div id="banner" class="banner3 tu {size}" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">{esc(text)}</div>'
+                f'<div id="bannersub" class="bannersub tu" data-layout-allow-overlap="true" data-layout-allow-occlusion="true" data-tq-dwell="off">{esc(sub)}</div>')
+
+    def banner_in(self, t, dur=0.45):
+        self.J(f"tl.fromTo('#banner',{{autoAlpha:0,scale:0.6,y:40}},{{autoAlpha:1,scale:1,y:0,duration:{f(dur)},ease:'back.out(1.8)',immediateRender:false}},{f(t)});")
+        self.J(f"tl.fromTo('#bannersub',{{autoAlpha:0,y:20}},{{autoAlpha:1,y:0,duration:0.3,ease:'power2.out',immediateRender:false}},{f(t + 0.25)});")
+
+    def banner_out(self, t, dur=0.3):
+        self.J(f"tl.to('#banner, #bannersub',{{autoAlpha:0,y:-30,duration:{f(dur)},ease:'power2.in'}},{f(t)});")
+        self.J(f"tl.to('#scrimtop',{{opacity:0.35,duration:0.8,ease:'power1.inOut'}},{f(t)});")        # let the satellite breathe during the story
+
+    def fact3(self, fid, text, kicker="", y=1250):
+        k = f'<b>{esc(kicker)}</b> ' if kicker else ""
+        n = len(kicker) + len(text); size = "s" if n > 40 else "m" if n > 30 else ""
+        return f'<div id="{fid}" class="fact3 tu {size}" style="top:{y}px" data-layout-allow-caption-zone="true" data-layout-allow-overlap="true">{k}{esc(text)}</div>'
+
+    def fact3_in(self, t0, t1, fid, dur=0.4):
+        self.J(f"tl.fromTo('#{fid}',{{autoAlpha:0,y:50,scale:0.92}},{{autoAlpha:1,y:0,scale:1,duration:{f(dur)},ease:'back.out(1.4)',immediateRender:false}},{f(t0)});")
+        if t1 is not None: self.J(f"tl.to('#{fid}',{{autoAlpha:0,y:-20,duration:0.25,ease:'power1.in'}},{f(t1 - 0.25)});")
+
+    def sticker(self, sid, src, x, y, size=240, rot=0, z=60):
+        return (f'<img id="{sid}" class="sticker3" src="{src}" alt="" style="left:{x}px;top:{y}px;width:{size}px;height:{size}px;z-index:{z};--rot:{rot}deg" '
+                f'data-layout-allow-overlap="true">')
+
+    def sticker_in(self, t, sid, dur=0.45):
+        self.J(f"tl.fromTo('#{sid}',{{autoAlpha:0,scale:0.3,rotation:'-=25'}},{{autoAlpha:1,scale:1,rotation:'+=25',duration:{f(dur)},ease:'back.out(2)',immediateRender:false}},{f(t)});")
+
+    def sticker_out(self, t, sid, dur=0.25):
+        self.J(f"tl.to('#{sid}',{{autoAlpha:0,scale:0.6,duration:{f(dur)},ease:'power2.in'}},{f(t)});")
+
+    FACES = {
+        "think": '<ellipse cx="-30" cy="-18" rx="22" ry="26" fill="#fff"/><ellipse cx="30" cy="-18" rx="22" ry="26" fill="#fff"/><circle cx="-24" cy="-14" r="11"/><circle cx="36" cy="-14" r="11"/><path d="M-56 -56q26 -14 52 -4" stroke="#1b1b1b" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M8 -62q26 -8 50 10" stroke="#1b1b1b" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M-20 44q30 -14 52 6" stroke="#1b1b1b" stroke-width="9" fill="none" stroke-linecap="round"/>',
+        "wow": '<ellipse cx="-32" cy="-20" rx="24" ry="30" fill="#fff"/><ellipse cx="32" cy="-20" rx="24" ry="30" fill="#fff"/><circle cx="-30" cy="-16" r="12"/><circle cx="34" cy="-16" r="12"/><ellipse cx="0" cy="46" rx="26" ry="32" fill="#1b1b1b"/><ellipse cx="0" cy="56" rx="16" ry="14" fill="#e0505a"/>',
+        "happy": '<ellipse cx="-30" cy="-18" rx="22" ry="26" fill="#fff"/><ellipse cx="30" cy="-18" rx="22" ry="26" fill="#fff"/><circle cx="-26" cy="-14" r="11"/><circle cx="34" cy="-14" r="11"/><path d="M-44 30q44 50 88 0" stroke="#1b1b1b" stroke-width="10" fill="none" stroke-linecap="round"/>',
+        "sad": '<ellipse cx="-30" cy="-14" rx="22" ry="26" fill="#fff"/><ellipse cx="30" cy="-14" rx="22" ry="26" fill="#fff"/><circle cx="-26" cy="-8" r="11"/><circle cx="34" cy="-8" r="11"/><path d="M-56 -48q26 8 52 18" stroke="#1b1b1b" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M4 -30q26 -10 52 -18" stroke="#1b1b1b" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M-40 60q40 -40 80 0" stroke="#1b1b1b" stroke-width="10" fill="none" stroke-linecap="round"/>',
+        "angry": '<ellipse cx="-30" cy="-14" rx="22" ry="26" fill="#fff"/><ellipse cx="30" cy="-14" rx="22" ry="26" fill="#fff"/><circle cx="-24" cy="-8" r="11"/><circle cx="24" cy="-8" r="11"/><path d="M-58 -58q30 6 50 22" stroke="#1b1b1b" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M58 -58q-30 6 -50 22" stroke="#1b1b1b" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M-36 56q36 -30 72 0" stroke="#1b1b1b" stroke-width="10" fill="none" stroke-linecap="round"/>',
+        "cool": '<path d="M-66 -30h58v34h-58z M8 -30h58v34h-58z" fill="#1b1b1b"/><path d="M-70 -30h140" stroke="#1b1b1b" stroke-width="8"/><path d="M-40 34q40 40 80 0" stroke="#1b1b1b" stroke-width="10" fill="none" stroke-linecap="round"/>',
+    }
+
+    def character(self, cid, flag, face="happy", x=0, y=0, size=200, rot=0, z=62):
+        """Own flag-ball character (flag-icons circle + an expression)."""
+        eyes = self.FACES.get(face, self.FACES["happy"]); r = size / 2
+        return (f'<svg id="{cid}" class="char3" style="left:{x - r:.0f}px;top:{y - r:.0f}px;z-index:{z};--rot:{rot}deg" width="{size}" height="{size}" viewBox="-110 -110 220 220" data-layout-allow-overlap="true">'
+                f'<defs><clipPath id="{cid}_clip"><circle r="100"></circle></clipPath></defs>'
+                f'<g clip-path="url(#{cid}_clip)"><image href="assets/geo/flags/{flag.lower()}.svg" x="-150" y="-110" width="300" height="220" preserveAspectRatio="xMidYMid slice"></image></g>'
+                f'<circle r="100" fill="none" stroke="#ffffff" stroke-width="9"></circle><circle r="104" fill="none" stroke="rgba(0,0,0,.45)" stroke-width="3"></circle><g>{eyes}</g></svg>')
+
+    def character_in(self, t, cid, dur=0.5):
+        self.J(f"tl.fromTo('#{cid}',{{autoAlpha:0,scale:0.2,y:60}},{{autoAlpha:1,scale:1,y:0,duration:{f(dur)},ease:'back.out(2.2)',immediateRender:false}},{f(t)});")
+        self.J(f"tl.to('#{cid}',{{y:-10,duration:0.9,ease:'sine.inOut',yoyo:true,repeat:5}},{f(t + dur)});")
+
+    def character_out(self, t, cid, dur=0.3):
+        self.J(f"tl.to('#{cid}',{{autoAlpha:0,scale:0.5,y:40,duration:{f(dur)},ease:'power2.in'}},{f(t)});")
+
+    def cta3(self, tease, line="One map question a day · Subscribe"):
+        return (f'<div id="cta" class="cta3" data-layout-allow-caption-zone="true" data-layout-allow-overlap="true"><div class="ctease3 tu">{esc(tease)}</div>'
+                f'<div class="cline3 tu" data-tq-dwell="off">{esc(line)}</div></div>')
+
+    def credit3(self, credit):
+        return f'<div id="credit2" class="credit3 tu" data-layout-allow-caption-zone="true" data-layout-allow-overlap="true" data-tq-dwell="off">{esc(credit)}</div>'
+
+
 
 CSS = f"""
 .bug{{position:absolute;left:40px;top:{SAFE_TOP}px;font-family:'Oswald';font-weight:600;font-size:30px;letter-spacing:.2em;color:{CREAM};background:{INK};padding:10px 20px 8px 16px;border-left:8px solid var(--acc,{SAND});z-index:80}}
@@ -271,4 +408,44 @@ CSS = f"""
 .ctease{{font-family:'DM Serif';font-style:italic;font-size:44px;color:{CREAM};text-shadow:0 2px 12px rgba(0,0,0,.8)}}
 .cline{{margin-top:14px;font-family:'Oswald';font-weight:600;font-size:34px;letter-spacing:.1em;color:{SAND};text-shadow:0 2px 12px rgba(0,0,0,.8)}}
 .credit2{{position:absolute;left:60px;top:1546px;width:900px;font-family:'Oswald';font-size:20px;letter-spacing:.03em;line-height:1.3;color:rgba(239,230,210,.72);text-shadow:0 1px 6px rgba(0,0,0,.9);z-index:70;visibility:hidden;opacity:0;white-space:normal;overflow:visible}}
+
+/* ---- v3 "satellite quiz" (docs/V3_LOOK.md) ---- */
+.v3 .scrim{{position:absolute;left:0;width:1080px;z-index:20;pointer-events:none}}
+.v3 .scrim-top{{top:0;height:780px;background:linear-gradient(180deg,rgba(0,0,0,.74) 0%,rgba(0,0,0,.48) 55%,rgba(0,0,0,0) 100%)}}
+.v3 .scrim-bot{{top:1180px;height:740px;background:linear-gradient(0deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.72) 40%,rgba(0,0,0,.55) 72%,rgba(0,0,0,0) 100%)}}
+.v3 .bug{{left:48px;top:232px;font-family:'Lilita';font-weight:400;font-size:30px;letter-spacing:.1em;color:#fff;background:#C8102E;border:0;padding:14px 22px 12px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.4)}}
+.v3 .bug b{{color:#FFD400}}
+.v3 .hook3{{position:absolute;left:60px;top:300px;width:900px;text-align:center;font-family:'Lilita';font-size:100px;line-height:1.04;text-transform:uppercase;color:#fff;
+  -webkit-text-stroke:2px #141414;paint-order:stroke fill;text-shadow:0 7px 0 rgba(0,0,0,.55),0 16px 32px rgba(0,0,0,.6);z-index:72;visibility:hidden;opacity:0}}
+.v3 .hook3.m{{font-size:86px}} .v3 .hook3.s{{font-size:74px}}
+.v3 .hook3 b{{color:#FFD400;font-weight:400}}
+.v3 .pills{{position:absolute;left:70px;top:790px;width:940px;height:450px;z-index:70;visibility:hidden;opacity:0}}
+.v3 .pill{{position:absolute;left:0;width:940px;height:124px;display:flex;align-items:center;gap:26px;padding:0 34px 0 22px;background:rgba(10,16,28,.74);border:3px solid rgba(255,255,255,.4);border-radius:70px;
+  box-shadow:0 10px 30px rgba(0,0,0,.45);color:#fff;font-family:'Oswald';font-weight:600;font-size:58px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;visibility:hidden;opacity:0;transform-origin:50% 50%}}
+.v3 .pill:nth-child(1){{top:0}} .v3 .pill:nth-child(2){{top:150px}} .v3 .pill:nth-child(3){{top:300px}}
+.v3 .pill .let{{flex:0 0 76px;width:76px;height:76px;line-height:76px;margin:0;text-align:center;border-radius:50%;background:#fff;color:#0B1620;font-family:'Anton';font-weight:400;font-size:46px;top:0}}
+.v3 .pill .pflag{{flex:0 0 88px;width:88px;height:88px;border-radius:50%;background-size:cover;background-position:center;border:3px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.5)}}
+.v3 .pill .pemo{{flex:0 0 84px;width:84px;height:84px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.5))}}
+.v3 .pill .otext{{line-height:1}}
+.v3 .ring3{{position:absolute;left:460px;top:1330px;width:160px;height:160px;z-index:70;visibility:hidden;opacity:0}}
+.v3 .ring3 svg{{position:absolute;left:0;top:0;transform:rotate(-90deg)}}
+.v3 .ring3 circle{{fill:none;stroke-width:12}} .v3 .ring3 .bg{{stroke:rgba(255,255,255,.22)}} .v3 .ring3 .fg{{stroke:#FFD400;stroke-linecap:round}}
+.v3 .ring3 .rq{{position:absolute;left:0;top:0;width:160px;height:160px;line-height:160px;text-align:center;font-family:'Lilita';font-size:92px;color:#fff;text-shadow:0 4px 0 rgba(0,0,0,.5)}}
+.v3 .tease3{{position:absolute;left:60px;top:1512px;width:900px;text-align:center;font-family:'Oswald';font-weight:600;font-size:40px;letter-spacing:.2em;color:#FFD400;-webkit-text-stroke:1.2px #141414;paint-order:stroke fill;text-shadow:0 3px 0 rgba(0,0,0,.6),0 6px 16px rgba(0,0,0,.85);z-index:70;visibility:hidden;opacity:0}}
+.v3 .banner3{{position:absolute;left:40px;top:290px;width:1000px;text-align:center;font-family:'Lilita';font-size:150px;line-height:1;text-transform:uppercase;color:#FFD400;
+  -webkit-text-stroke:3px #4a2b00;paint-order:stroke fill;text-shadow:0 10px 0 #7a4b00,0 22px 40px rgba(0,0,0,.7);z-index:74;visibility:hidden;opacity:0;white-space:nowrap}}
+.v3 .banner3.m{{font-size:118px}} .v3 .banner3.s{{font-size:92px}}
+.v3 .bannersub{{position:absolute;left:60px;top:462px;width:960px;text-align:center;font-family:'Oswald';font-weight:600;font-size:52px;letter-spacing:.18em;text-transform:uppercase;color:#fff;-webkit-text-stroke:1.5px #141414;paint-order:stroke fill;text-shadow:0 4px 0 rgba(0,0,0,.6),0 8px 18px rgba(0,0,0,.85);z-index:74;visibility:hidden;opacity:0}}
+.v3 .fact3{{position:absolute;left:60px;width:900px;text-align:center;font-family:'Anton';font-size:84px;line-height:1.08;text-transform:uppercase;color:#fff;
+  text-shadow:0 5px 0 rgba(0,0,0,.6),0 12px 28px rgba(0,0,0,.7);z-index:72;visibility:hidden;opacity:0;white-space:normal}}
+.v3 .fact3.m{{font-size:74px}} .v3 .fact3.s{{font-size:64px}}
+.v3 .fact3 b{{color:#FFD400;font-weight:400}}
+.v3 .cap{{top:1500px;left:60px;width:900px;font-family:'Anton';font-weight:400;font-size:56px;letter-spacing:.02em;color:#fff;-webkit-text-stroke:1.5px #141414;paint-order:stroke fill;text-shadow:0 4px 0 rgba(0,0,0,.5),0 8px 20px rgba(0,0,0,.6)}}
+.v3 .sticker3{{position:absolute;filter:drop-shadow(0 14px 22px rgba(0,0,0,.6));transform:rotate(var(--rot,0deg));visibility:hidden;opacity:0}}
+.v3 .char3{{position:absolute;filter:drop-shadow(0 12px 18px rgba(0,0,0,.55));transform:rotate(var(--rot,0deg));visibility:hidden;opacity:0;overflow:visible}}
+.v3 .cta3{{position:absolute;left:60px;top:1250px;width:900px;text-align:center;z-index:70;visibility:hidden;opacity:0}}
+.v3 .ctease3{{font-family:'Lilita';font-size:66px;line-height:1.1;text-transform:uppercase;color:#FFD400;-webkit-text-stroke:2px #4a2b00;paint-order:stroke fill;text-shadow:0 6px 0 #7a4b00,0 14px 28px rgba(0,0,0,.6)}}
+.v3 .cline3{{margin-top:26px;font-family:'Oswald';font-weight:600;font-size:40px;letter-spacing:.12em;color:#fff;-webkit-text-stroke:1.2px #141414;paint-order:stroke fill;text-shadow:0 3px 0 rgba(0,0,0,.6),0 6px 16px rgba(0,0,0,.85)}}
+.v3 .credit3{{position:absolute;left:60px;top:1560px;width:900px;text-align:center;font-family:'Oswald';font-size:22px;letter-spacing:.06em;line-height:1.3;color:rgba(255,255,255,.8);text-shadow:0 1px 6px rgba(0,0,0,.9);z-index:70;visibility:hidden;opacity:0;white-space:normal}}
+.v3 .progress{{display:none}}
 """

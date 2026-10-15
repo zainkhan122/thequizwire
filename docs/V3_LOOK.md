@@ -34,10 +34,26 @@ textqa runs here too. Actions minutes are for the final render only.
 ## Build plan (phases ≤ 15 min, commit per step)
 | # | Phase | Output |
 |---|---|---|
-| V3.1 | basemap layer: `reelkit/basemap.py` in the `geo` stage (cache by bbox/zoom, ≤ 2 MB per scene), `engine/geo.py` `basemap:"bluemarble"` under the vector layers, antimeridian seam handled | raster under d3 Mercator, credit + provenance entry |
-| V3.2 | lifted highlight: `flag` / `fill` highlight kinds (clipPath flag image, white outline, shadow, pop/wipe tweens) | `geo.highlight_in` variants |
-| V3.3 | v3 UI: question/options/timer/reveal/caption components in `engine/quiz.py` + CSS; flag/icon circles in options | `format:"quiz-v3"` |
-| V3.4 | sticker layer (Twemoji by codepoint, Wikimedia cut-outs with licence fields) + word-by-word captions | `sticker_in`, `captions.words` |
+| V3.1 ✓ `5e808b4` | basemap layer: `reelkit/basemap.py` in the `geo` stage (cache by bbox/zoom, ≤ 2 MB per scene), `engine/geo.py` `basemap:"bluemarble"` under the vector layers, antimeridian seam handled | raster under d3 Mercator, credit + provenance entry |
+| V3.2 ✓ `6e02d59` | lifted highlight: `flag` / `fill` highlight kinds (clipPath flag image, white outline, shadow, pop/wipe tweens) | `geo.highlight_in` variants |
+| V3.3 ✓ | v3 UI: question/options/timer/reveal/caption components in `engine/quiz.py` + CSS; flag/icon circles in options; stickers + flag-ball characters landed here too | `format:"quiz-v3"` · `docs/img/v3_3_contact_sheet.jpg` |
+| V3.4 | Wikimedia photo cut-outs (licence fields) + word-by-word caption timing polish; sticker/character verbs already exist | `plate` cut-outs, `captions.words` |
 | V3.5 | template `series/_template_v3`, quizlint rules for v3 (no subject on screen before reveal, min type sizes), selftest | green offline + local snapshots |
 | V3.6 | re-author the 10 pilot episodes' `visuals.json`/`geo.json` to v3 (scripts, voice, facts unchanged) with a local contact sheet each | 10 reviewed sheets |
 | V3.7 | one runner render (Geo #13) → owner look → then the batch | Release `pilot-v3-batch1` |
+
+## v3 authoring schema (what V3.3 shipped — `docs/comps/ep13v3/` is the worked example)
+**episode.json** `"format": "quiz-v3"`; `quiz.option_meta: [{"flag":"ch"},{"flag":"nz"},{"emoji":"1f3c6"}]` (icon circle per pill, optional);
+`quiz.banner` (big yellow answer, default = correct option; ≤ 11 chars 150 px · ≤ 16 → 118 px · else 92 px) · `quiz.banner_sub` (default "✓ B was right").
+Copy limits (quizlint Q4, v3): question ≤ 72 chars (100 px Lilita, auto 86/74), option ≤ 18, fact kicker ≤ 16 + text, kicker+text ≤ 46 (two 84-px Anton lines).
+
+**geo.json** scene: `"projection":"mercator"`, `"basemap": {"layer":"bluemarble","k_max":2.0,"far":{"bbox":[100,-60,200,10],"k_min":0.3}}` — `far` = coarse wide raster so the
+hook camera can sit at k ≈ 0.3 **off the answer** (Australia for the NZ question). Highlight layer `"lift":"flag","flag":"nz"` (flag stretched into the shape; `"flag_fit":"cover"` to crop instead)
+or `"lift":"fill","color":"#C8102E"`. No `scalebar` on basemap scenes. **Map text safe zone y 700–1180** (hook/banner above, caption band below) at every visible camera.
+
+**visuals.json** stage `box [0,0,1080,1920]`, `anchor [540,900]` (full-bleed; the camera centres targets at y 900).
+Elements: `fact {kicker,text}` (84-px caption at y 1250, kicker yellow) · `sticker {emoji:"1f3d4", x, y, size, rot}` (Twemoji, CC-BY 4.0, fetched by `reelkit/stickers.py` in the geo stage;
+or `src` for a cut-out + `credit`) · `character {flag:"nz", face: think|wow|happy|sad|angry|cool, x, y, size, rot}` (flag-ball SVG, own).
+Verbs (v2 verbs keep their names): `hook_in/out` → pop; `chips_in/out` → pills; `beat` → timer ring + "GUESS BEFORE THE TIMER ENDS"; `reveal` → correct pill green; new: `banner_in/out`,
+`sticker_in/out {id}`, `character_in/out {id}`. Word captions (Anton 56 px, y 1500) auto-hide while a fact/CTA is on screen. Scrim-top dims to 35 % after `banner_out`, back to full at the loop `hook_in`.
+Flags for pills/characters/lifts are collected by `geodata.py prep` from geo.json + visuals.json + episode.json (`flag` keys ≤ 6 chars).

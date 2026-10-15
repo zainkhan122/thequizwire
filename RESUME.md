@@ -29,11 +29,12 @@ goal        : rebuild the visual format to the reference-channel standard (docs/
               flag/colour highlights, big type, stickers, hook that hides the answer — then re-render the 10 pilot episodes
 entry       : references and own frames actually watched (docs/img/reference_frames.png, v2_as_shipped_geo13.png);
               v3 comp approved? (docs/img/v3_direction.png) ; local HyperFrames+Chrome available (bash bootstrap.sh --browser)
-steps       : V3.1 basemap → V3.2 lifted highlight → V3.3 v3 UI → V3.4 stickers+word captions → V3.5 template+lint →
+steps       : V3.1 ✓ basemap → V3.2 ✓ lifted highlight → V3.3 ✓ v3 UI + stickers + flag-ball characters (docs/img/v3_3_contact_sheet.jpg)
+              → V3.4 photo cut-outs + caption polish (optional) → V3.5 template `_template_v3` + quizlint v3 rules + selftest →
               V3.6 re-author 10 episodes with local contact sheets → V3.7 one runner render for owner look → batch
 exit check  : owner approves the Geo #13 v3 render; 10/10 in Release pilot-v3-batch1; every episode has a reviewed sheet
 rollback    : v2 engine paths stay (format quiz-v2); pilot-v2-batch1 Release is NOT to be posted
-next        : owner's answer on the comp → V3.1
+next        : V3.5 template + lint (worked example: docs/comps/ep13v3 — build it with `ESTIMATE=1 bash reelkit/episode.sh <copy> geo build static check layout textqa`)
 ```
 Rule (new): nothing goes to Actions before a local contact sheet has been looked at. pilot-v2-batch1 (8/10 rendered) is shelved.
 Last completed: **Phase 1.7 Actuals** (2026-10-14) — measured CI timings in `docs/OPERATING_MODEL.md §3/§6`, verified animator CLI +
