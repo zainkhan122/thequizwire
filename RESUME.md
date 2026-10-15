@@ -27,12 +27,13 @@ What exists (all new unless noted; history-repo toolkit reused where it fit):
 Phase 3.1 — pilot batch of 10 v2 episodes (2026-10-15; owner: "V2 is approved. make videos")
 goal        : 10 v2 Shorts rendered on the runner into the `pilot-v2-batch1` Release (5 Geo, 3 Wild, 2 Sports); no auto-posting
 entry       : PLAN_V2 approved; v2 runner proof #15 green; all 10 episodes authored + green offline (quizlint/geolint/facts/provenance)
-steps       : run #1 38635751388 (voice gate false-fail → voice.py fixed) → run #2 38637028319 (voice passes; Geo #10–#13 failed on
-              HF layout collisions / caption coverage → fixed in b1dfabd + engine hardening) → run #3 (this commit) → fix → until 10/10
+steps       : run #1 38635751388 (voice gate false-fail → voice.py fixed) → run #2 38637028319 (HF layout collisions → b1dfabd)
+              → run #3 38709287870 (0 jobs: concurrency key from the 10-path input → d2234ed) → run #4 38710732256 = 3/10 SUCCESS
+              (Geo #12 #13 #14 in the Release) → 7 later-gate failures fixed in 3db2520 + 374b614 → run #5 38712751289 (7 episodes)
 exit check  : Release pilot-v2-batch1 holds 10 final.mp4 + POST_KIT; owner posts 2/day per the plan; 3.2 scores after 7 days
 rollback    : episodes stay in git; a failed render changes nothing public
-next        : owner PAT → `bash bootstrap.sh` → `git push` → `python3 reelkit/cloud.py why 38637028319` (wild #7–#9, geo #14) →
-              `python3 reelkit/cloud.py render <geo ep10..13> <sports ep09 ep10> --tag pilot-v2-batch1`
+next        : poll run #5 (`python3 reelkit/cloud.py status` / `why 38712751289`), fix anything left, re-dispatch the failures with
+              the same `--tag pilot-v2-batch1`; on 10/10 → `cloud.py fetch`, posting plan, STATE.json → 3.2-score
 ```
 Last completed: **Phase 1.7 Actuals** (2026-10-14) — measured CI timings in `docs/OPERATING_MODEL.md §3/§6`, verified animator CLI +
 `clips.py` width/flag rules in `docs/MAPTILE.md`, budget guard 12 min/episode, `render.yml` timeout 30 min.
