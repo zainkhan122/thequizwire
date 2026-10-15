@@ -30,12 +30,12 @@
   },
   "brand/logo.png": {
    "by": "reelkit/brand.py",
-   "bytes": 72010,
+   "bytes": 81177,
    "credit": "TheQuizWire",
    "kind": "image",
    "licence": "own",
-   "provider": "TheQuizWire (channel brand, owner-supplied)",
-   "source": "youtube.com/@thequizwire-com avatar"
+   "provider": "TheQuizWire (channel brand, owner-supplied 2026-10-15)",
+   "source": "owner upload logo-The-Quiz-Wire-icon-transparent.png"
   },
   "brand/threads.svg": {
    "by": "reelkit/brand.py",

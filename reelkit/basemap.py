@@ -15,7 +15,7 @@ Layers (all NASA, public domain — credit "NASA Blue Marble" / "NASA GIBS"):
 Limits: image ≤ 4096 × 6144 px and ≤ 6 MB; tiles outside |lat| 85 are clamped; longitudes may exceed ±180 (tiles wrap)
 so a bbox across the antimeridian stitches seamlessly; the 180° tile seam (a dark column in the source tiles) is blended.
 """
-import concurrent.futures, io, json, math, os, pathlib, sys, tempfile, urllib.request
+import concurrent.futures, io, json, math, os, pathlib, sys, tempfile, time, urllib.request
 
 LAYERS = {"bluemarble": ("BlueMarble_ShadedRelief_Bathymetry", "GoogleMapsCompatible_Level8", "jpeg", 8, "NASA Blue Marble"),
           "bmng": ("BlueMarble_NextGeneration", "GoogleMapsCompatible_Level8", "jpeg", 8, "NASA Blue Marble"),
@@ -59,8 +59,11 @@ def stitch(bbox, width_px, out_path, layer="bluemarble", quality=86):
             return t, ph
         if not p.exists():
             url = f"https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/{name}/default/{tms}/{z}/{y}/{xw}.{ext}"
-            try: p.write_bytes(urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=60).read())
-            except Exception as e: raise SystemExit(f"basemap: tile fetch failed: {url} ({e})")
+            for attempt in range(4):                                             # GIBS drops SSL connections now and then: retry with back-off
+                try: p.write_bytes(urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=60).read()); break
+                except Exception as e:
+                    if attempt == 3: raise SystemExit(f"basemap: tile fetch failed after 4 tries: {url} ({e})")
+                    time.sleep(1.5 * (attempt + 1))
         return t, p
 
     img = Image.new("RGB", ((x1 - x0 + 1) * 256, (y1 - y0 + 1) * 256))
