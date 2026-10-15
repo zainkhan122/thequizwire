@@ -325,7 +325,7 @@ def main():
             row = {"text": u["text"], "cls": u["cls"], "id": u["id"]}
             if u.get("fc") == "distractor":                 # quiz wrong answers: not claims (engine/quiz.py marks them)
                 row["status"] = "distractor"
-            elif u["cls"] in SPOKEN_UNITS or (len(un) > 3 and un in vo_all):
+            elif set(u["cls"].split()) & SPOKEN_UNITS or (len(un) > 3 and un in vo_all):   # class strings carry modifiers ("cap tu")
                 row["status"] = "spoken"
             elif any(rx.search(u["text"]) for rx in exempt):
                 row["status"] = "exempt"

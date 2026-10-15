@@ -28,7 +28,7 @@ RUNTIME = "geo-runtime.js"
 STUTTER_FPS = 12          # map-animation-skills doctrine: pins/labels pop on a 12 fps grid, camera moves stay smooth
 
 # palette (plan §2): sea / land / sand / red / cream
-SEA, LAND, SAND, RED, CREAM, INK = "#0F2A3A", "#1D3A4A", "#E3A72F", "#C8102E", "#EFE6D2", "#0B1620"
+SEA, LAND, SAND, RED, CREAM, INK, CYAN = "#0F2A3A", "#1D3A4A", "#E3A72F", "#C8102E", "#EFE6D2", "#0B1620", "#4FD1E0"
 
 
 def f(x): return f"{x:.3f}"
@@ -210,18 +210,22 @@ CSS = f"""
 .geo .g-feature{{fill:none;stroke:{CREAM};stroke-width:2}}
 .geo .g-feature.faint{{stroke:rgba(239,230,210,.32);stroke-width:1.2;stroke-dasharray:6 5}}
 .geo .g-route{{fill:none;stroke:{SAND};stroke-width:4;stroke-linecap:round;opacity:0}}
+.geo .g-route.river{{stroke:{CYAN};stroke-width:5;stroke-linejoin:round}}   /* rivers read over a sand highlight */
 .geo .g-disputed{{fill:none;stroke:{CREAM};stroke-width:3;stroke-dasharray:10 8;stroke-linecap:round;opacity:0}}
 .geo .g-disputed.area{{fill:rgba(239,230,210,.16);stroke-width:2}}
 .geo .geo-pin{{position:absolute;width:0;height:0;transform-origin:0 0}}
 .geo .geo-pin .pinhead{{position:absolute;left:-13px;top:-13px;width:26px;height:26px;border-radius:50%;background:{RED};border:4px solid {CREAM};box-shadow:0 4px 14px rgba(0,0,0,.45)}}
 .geo .geo-pin .pinlabel{{position:absolute;left:22px;top:-24px;white-space:nowrap;font-family:'Oswald';font-weight:600;font-size:36px;letter-spacing:.04em;color:{CREAM};background:{INK};padding:4px 14px 2px;border-left:6px solid {RED}}}
+.geo .geo-pin.left .pinlabel{{left:auto;right:22px;border-left:0;border-right:6px solid {RED}}}   /* pins {{"side": "left"}}: label runs west of the head (avoids a neighbour to the east) */
 .geo .geo-pin.back,.geo .geo-label.back{{visibility:hidden!important}}
 .geo .geo-label{{position:absolute;width:0;height:0}}
 .geo .geo-label .lbl,.geo .geo-label>span{{position:absolute;left:0;top:0;transform:translate(-50%,-50%);white-space:nowrap}}
+.geo .geo-label.al>span{{transform:translate(0,-50%)}}      /* cls "al": label starts at the anchor (runs east) */
+.geo .geo-label.ar>span{{transform:translate(-100%,-50%)}}  /* cls "ar": label ends at the anchor (runs west)  */
 .geo .geo-label{{font-family:'Oswald';font-weight:500;font-size:30px;letter-spacing:.14em;text-transform:uppercase;color:rgba(239,230,210,.85)}}
 .geo .geo-label.sea{{font-style:italic;font-family:'DM Serif';text-transform:none;letter-spacing:.06em;font-size:32px;color:rgba(239,230,210,.7)}}
 .geo .geo-label.policy{{text-transform:none;letter-spacing:.02em;font-size:30px;line-height:1.15;color:{CREAM}}}
-.geo .geo-label.policy .plate{{position:absolute;left:0;top:0;transform:translate(-50%,-50%);white-space:nowrap;background:rgba(11,22,32,.92);border:2px solid {CREAM};padding:10px 18px 8px;text-align:left}}
+.geo .geo-label.policy .plate{{position:absolute;left:0;top:0;transform:translate(-50%,-50%);white-space:normal;width:max-content;max-width:520px;background:rgba(11,22,32,.92);border:2px solid {CREAM};padding:10px 18px 8px;text-align:left}}   /* long controller strings wrap instead of running into the right-hand UI column */
 .geo .geo-label.policy .plate b{{display:block;font-weight:700;color:{SAND};font-size:26px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2px}}
 .geo .geo-label.policy .plate i{{display:block;font-style:normal;color:rgba(239,230,210,.8);font-size:26px;margin-top:4px}}
 .geo .geo-scale{{position:absolute;left:40px;bottom:36px;font-family:'Oswald';font-size:24px;letter-spacing:.08em;color:{CREAM};visibility:hidden;opacity:0}}

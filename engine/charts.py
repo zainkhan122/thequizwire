@@ -52,7 +52,7 @@ class Charts:
     # ---------------------------------------------------------------- big counter
     def counter(self, cid, start, end, y=520, label="", fmt="int", x=60, w=960, suffix=""):
         self.items[cid] = {"start": start, "end": end, "fmt": fmt, "suffix": suffix}
-        return (f'<div id="{cid}" class="chart counter" style="left:{x}px;top:{y}px;width:{w}px">'
+        return (f'<div id="{cid}" class="chart counter" style="left:{x}px;top:{y}px;width:{w}px" data-layout-allow-overlap="true">'
                 f'<div class="cnumber tu" id="{cid}_n" data-tq-dwell="off">{self._fmt(start, fmt)}{esc(suffix)}</div>'
                 + (f'<div class="clabel2 tu">{esc(label)}</div>' if label else "") + "</div>")
 
@@ -149,7 +149,7 @@ CSS = f"""
 .bars .bfill{{position:absolute;left:0;top:0;height:74px;background:{SAND};transform-origin:0 50%;border-radius:8px}}
 .bars .brow:first-child .bfill{{background:{RED}}}
 .bars .bval{{position:absolute;right:18px;top:48px;font-family:'Anton';font-size:44px;color:{CREAM};text-shadow:0 2px 8px rgba(0,0,0,.6)}}
-.counter{{text-align:center}}
+.counter{{text-align:center;background:rgba(11,22,32,.72);border-radius:18px;padding:14px 20px 18px;box-shadow:0 12px 40px rgba(0,0,0,.35)}}   /* legible over a map */
 .cnumber{{font-family:'Anton';font-size:190px;line-height:1;color:{SAND};text-shadow:0 10px 40px rgba(0,0,0,.5)}}
 .clabel2{{font-family:'Oswald';font-weight:500;font-size:42px;letter-spacing:.1em;text-transform:uppercase;color:{CREAM};margin-top:10px}}
 .compare .ccol{{position:absolute;top:0;display:flex;align-items:flex-end;justify-content:center}}

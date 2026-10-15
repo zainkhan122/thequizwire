@@ -177,7 +177,7 @@
    "do": "chips_out"
   },
   {
-   "at": "s04@five",
+   "at": "s04+2.5",
    "do": "fact_in",
    "id": "f1",
    "until": "s04.end"
@@ -195,6 +195,14 @@
    "do": "fact_in",
    "id": "f2",
    "until": "s05.end"
+  },
+  {
+   "at": "s06@tasman",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "aoraki"
+   }
   },
   {
    "at": "s06@tasman",
@@ -255,6 +263,14 @@
    "args": {
     "rid": "fault",
     "layer": "line"
+   }
+  },
+  {
+   "at": "s07@fault",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "tasman"
    }
   },
   {

@@ -209,17 +209,17 @@
     {
      "id": "lake_victoria",
      "lonlat": [
-      33.0,
-      -2.6
+      31.5,
+      -4.3
      ],
      "text": "Lake Victoria",
-     "cls": "sea"
+     "cls": "sea al"
     },
     {
      "id": "med",
      "lonlat": [
-      27.0,
-      33.6
+      29.3,
+      31.3
      ],
      "text": "Mediterranean",
      "cls": "sea"
@@ -227,20 +227,20 @@
     {
      "id": "white_nile",
      "lonlat": [
-      27.4,
+      31.0,
       8.0
      ],
      "text": "White Nile",
-     "cls": "sea"
+     "cls": "sea ar"
     },
     {
      "id": "blue_nile",
      "lonlat": [
-      40.6,
-      12.6
+      35.0,
+      11.8
      ],
      "text": "Blue Nile",
-     "cls": "sea"
+     "cls": "sea al"
     }
    ],
    "scalebar": {

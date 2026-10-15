@@ -27,7 +27,7 @@
    "start": 0,
    "end": 11,
    "x": 40,
-   "y": 850,
+   "y": 820,
    "w": 430,
    "label": "countries",
    "fmt": "int",
@@ -118,10 +118,10 @@
    "stage": "stage_map",
    "until": "s04+1.6",
    "args": {
-    "k": 1.9,
+    "k": 1.5,
     "lonlat": [
-     32,
-     13
+     32.0,
+     16.4
     ],
     "ease": "power2.inOut"
    }
@@ -132,10 +132,10 @@
    "stage": "stage_map",
    "until": "s05.end",
    "args": {
-    "k": 2.0,
+    "k": 1.55,
     "lonlat": [
-     32.5,
-     13.5
+     32.3,
+     16.6
     ],
     "ease": "none"
    }
@@ -334,6 +334,46 @@
    "do": "fact_in",
    "id": "f2",
    "until": "s06.end"
+  },
+  {
+   "at": "s07",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "med"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "lake_victoria"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "white_nile"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "blue_nile"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "khartoum"
+   }
   },
   {
    "at": "s07",

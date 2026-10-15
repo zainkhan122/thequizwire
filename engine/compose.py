@@ -184,7 +184,9 @@ class Composer:
         self.body.append(Q.bug())
         if not self.v2: self.body.append(Q.badge(E.get("difficulty", "MEDIUM")))
         for st in self.V.get("stage", []): self.stage(st)
-        credit = " · ".join(dict.fromkeys(([f"Map data: {self.G.credits()}"] if self.G.scenes else []) + self.credit_bits + ["Voice: AI (Kokoro) · thequizwire.com"]))
+        mapc = self.G.credits() if self.G.scenes else ""
+        bits = [b for b in self.credit_bits if b not in mapc]                                   # "Natural Earth" is already in the map-data credit
+        credit = " · ".join(dict.fromkeys(([f"Map data: {mapc}"] if mapc else []) + bits + ["Voice: AI (Kokoro) · thequizwire.com"]))
         if self.v2:
             self.J("tl.set('#bug',{autoAlpha:0},0);")                                   # Q9: no chrome before the question lands
             self.body.append(Q.hook("hook", q["question"], q.get("keyword")))

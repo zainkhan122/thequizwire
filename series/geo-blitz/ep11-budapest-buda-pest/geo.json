@@ -165,7 +165,8 @@
       48.21
      ],
      "label": "Vienna",
-     "qid": "Q1741"
+     "qid": "Q1741",
+     "side": "left"
     },
     {
      "id": "bratislava",
@@ -183,7 +184,8 @@
       44.82
      ],
      "label": "Belgrade",
-     "qid": "Q3711"
+     "qid": "Q3711",
+     "side": "left"
     },
     {
      "id": "chain_bridge",
@@ -199,8 +201,8 @@
     {
      "id": "buda",
      "lonlat": [
-      18.7,
-      47.52
+      18.62,
+      47.66
      ],
      "text": "Buda",
      "cls": "sea"
@@ -208,8 +210,8 @@
     {
      "id": "pest",
      "lonlat": [
-      19.42,
-      47.52
+      19.62,
+      47.3
      ],
      "text": "Pest",
      "cls": "sea"
@@ -222,6 +224,14 @@
      ],
      "text": "Danube",
      "cls": "sea"
+    },
+    {
+     "id": "budapest_lbl",
+     "lonlat": [
+      19.3,
+      47.05
+     ],
+     "text": "Budapest"
     }
    ],
    "disputed": [

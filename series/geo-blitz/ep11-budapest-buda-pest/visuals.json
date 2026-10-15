@@ -188,6 +188,30 @@
   },
   {
    "at": "s06@chain",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "budapest"
+   }
+  },
+  {
+   "at": "s06@chain",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "buda"
+   }
+  },
+  {
+   "at": "s06@chain",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "pest"
+   }
+  },
+  {
+   "at": "s06@chain",
    "do": "geo.pin_in",
    "stage": "stage_map",
    "args": {
@@ -226,6 +250,22 @@
      46.7
     ],
     "ease": "none"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "chain_bridge"
+   }
+  },
+  {
+   "at": "s07+0.3",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "budapest_lbl"
    }
   },
   {

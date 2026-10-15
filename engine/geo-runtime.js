@@ -153,8 +153,8 @@
     el.innerHTML = `<svg class="geo-svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><g id="${id}_cam">${svgLayers}</g></svg><div class="geo-ui" id="${id}_ui"></div>`;
     const ui = el.querySelector(".geo-ui");
     const html = [];
-    for (const p of C.pins) html.push(`<div class="geo-pin ${p.cls || ""}" id="${id}_pin_${p.id}" style="visibility:hidden;opacity:0"><div class="pinhead"></div>${p.label ? `<div class="pinlabel tu">${esc(p.label)}</div>` : ""}</div>`);
-    for (const l of C.labels) html.push(`<div class="geo-label tu ${l.cls || ""}" id="${id}_lbl_${l.id}" style="visibility:hidden;opacity:0">${l.html || ("<span>" + esc(l.text || "") + "</span>")}</div>`);   // span = centred on the anchor (CSS translate(-50%,-50%)), like the SVG preview
+    for (const p of C.pins) html.push(`<div class="geo-pin ${p.cls || ""}${p.side === "left" ? " left" : ""}" id="${id}_pin_${p.id}" style="visibility:hidden;opacity:0" data-layout-allow-overlap="true"><div class="pinhead"></div>${p.label ? `<div class="pinlabel tu">${esc(p.label)}</div>` : ""}</div>`);
+    for (const l of C.labels) html.push(`<div class="geo-label tu ${l.cls || ""}" id="${id}_lbl_${l.id}" style="visibility:hidden;opacity:0" data-layout-allow-overlap="true">${l.html || ("<span>" + esc(l.text || "") + "</span>")}</div>`);   // span = centred on the anchor (CSS translate(-50%,-50%)), like the SVG preview
     if (C.scalebar) html.push(`<div class="geo-scale tu" id="${id}_scale" data-km="${C.scalebar.km}"><div class="bar"></div><span>${C.scalebar.km.toLocaleString("en-US")} km at ${Math.round(C.scalebar.lat)}°</span></div>`);
     ui.innerHTML = html.join("");
     const S = { id, spec, data, C, W, H, el,
