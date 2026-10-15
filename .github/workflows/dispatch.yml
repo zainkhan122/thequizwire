@@ -1,0 +1,82 @@
+# Dispatch rendered episodes to Buffer queues (YouTube · Instagram · Facebook) — see docs/DISTRIBUTION.md.
+#   Actions → dispatch → Run workflow: episodes + the release tag that holds their renders; live=false is a full dry run
+#   (postkit + media hosting + payloads, no Buffer write). Also called by render.yml when its `dispatch` input is true.
+# Secrets: BUFFER_API_KEY (Buffer → Settings → API), MEDIA_TOKEN (fine-grained PAT: Contents read/write on the public
+# media repo). Buffer slots each post into the channel's own posting schedule (mode addToQueue) — no times are chosen here.
+name: dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      episodes:
+        description: 'Episode dirs, space separated'
+        required: true
+      tag:
+        description: 'Release tag holding the renders (e.g. pilot-v3-all)'
+        required: true
+      run:
+        description: 'Render run number (fallback: per-episode releases <episode>-r<run>)'
+        default: ''
+      live:
+        description: 'Write to Buffer (false = dry run)'
+        type: boolean
+        default: false
+      channels:
+        description: 'Channels (comma separated)'
+        default: 'youtube,instagram,facebook'
+  workflow_call:
+    inputs:
+      episodes: {type: string, required: true}
+      tag: {type: string, default: ''}
+      run: {type: string, default: ''}
+      live: {type: boolean, default: false}
+      channels: {type: string, default: 'youtube,instagram,facebook'}
+    secrets:
+      BUFFER_API_KEY: {required: false}
+      MEDIA_TOKEN: {required: false}
+permissions:
+  contents: write
+concurrency:
+  group: dispatch            # one dispatcher at a time: the ledger is the duplicate guard and must be read-modify-written serially
+  cancel-in-progress: false
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      GH_TOKEN: ${{ github.token }}
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      MEDIA_TOKEN: ${{ secrets.MEDIA_TOKEN }}
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Preflight
+        run: |
+          [ -n "$MEDIA_TOKEN" ] || { echo "::error::MEDIA_TOKEN secret missing (fine-grained PAT for the public media repo)"; exit 1; }
+          if [ "${{ inputs.live }}" = "true" ] && [ -z "$BUFFER_API_KEY" ]; then echo "::error::BUFFER_API_KEY secret missing"; exit 1; fi
+          python3 reelkit/mediahost.py setup
+          if [ -n "$BUFFER_API_KEY" ]; then python3 reelkit/buffer.py channels && python3 reelkit/buffer.py queue; fi
+      - name: Dispatch
+        run: |
+          LIVE=""; [ "${{ inputs.live }}" = "true" ] && LIVE="--live"
+          TAGOPT=""; [ -n "${{ inputs.tag }}" ] && TAGOPT="--tag ${{ inputs.tag }}"
+          RUNOPT=""; [ -n "${{ inputs.run }}" ] && RUNOPT="--run ${{ inputs.run }}"
+          bash reelkit/dispatch.sh $TAGOPT $RUNOPT $LIVE --channels "${{ inputs.channels }}" ${{ inputs.episodes }}
+      - name: Commit ledger + discovered ids
+        if: always()
+        run: |
+          git config user.name "quizwire-dispatch"; git config user.email "dispatch@users.noreply.github.com"
+          git add dispatch/ledger.json config/publishing.json 2>/dev/null || true
+          git diff --cached --quiet && { echo "ledger unchanged"; exit 0; }
+          git commit -m "dispatch: ${{ inputs.tag || format('run {0}', inputs.run) }} (${{ inputs.live && 'live' || 'dry-run' }}) [skip ci]"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break || sleep 5; done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dispatch-logs
+          path: |
+            series/*/*/out/postkit.json
+            series/*/*/out/*.log
+          if-no-files-found: ignore
+          retention-days: 14

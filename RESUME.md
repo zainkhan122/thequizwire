@@ -71,6 +71,22 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 | 2026-10-14 | Repo is **private** (GitHub Free: 2,000 Actions min/month); crons off, `check` main-only, `cloud.py` budget guard | owner |
 | 2026-10-14 | Vector maps (d3-geo + Natural Earth) are the default stage; VersaTiles flyovers are cached hero clips; Blue Marble globe deferred | agent |
 
+### D1–D4 — DONE 2026-10-16 · Distribution: rendered reel → Buffer queue (YT · IG · FB) + YouTube playlists
+- Owner ask: queue successful renders on Buffer (owner's time slots decide publish times), per-channel SEO copy, YouTube → series playlists.
+- Built: `config/publishing.json` (channel ids discovered by the workflow, caps, disclosure, per-series SEO sets) · `reelkit/postkit.py` (deterministic
+  YouTube/Instagram/Facebook copy + lint; 10/10 pilots clean) · `reelkit/buffer.py` (GraphQL client: channels/queue/plan/dispatch/status; `addToQueue` +
+  `automatic`; ledger `dispatch/ledger.json`; reconcile-by-media-URL; ambiguous-stop; dry-run default) · `reelkit/mediahost.py` (public media repo on
+  GitHub Pages, content-addressed URLs, probe = public/direct/https/video-mp4/ftyp, prune by retention) · `reelkit/yt_enrich.py` (YouTube Data API:
+  playlist create/insert + backend tags from Buffer's `externalLink`; device-code `auth`) · `reelkit/dispatch.sh` · workflows `dispatch.yml`
+  (manual or `workflow_call`; `live=false` = full dry run), `publish-sync.yml` (3×/day states → playlists → prune), `render.yml` input `dispatch`.
+- Facts that shaped it (Buffer docs + schema snapshot 2026-10-10 from the owner's yt-tts repo): no upload endpoint — media must be a public, direct,
+  stable HTTPS URL fetched at publish time; YouTube metadata has NO playlist/tags field → Data API worker; mutation errors are typed (LimitReached,
+  InvalidInput, DuplicateError…); 429 carries Retry-After.
+- Blocked on owner (docs/DISTRIBUTION.md §3): secrets `BUFFER_API_KEY`, `MEDIA_TOKEN` (+ create public repo `thequizwire-media`); optional
+  `YT_CLIENT_ID/SECRET/REFRESH_TOKEN` for playlists. The sandbox PAT cannot create repos (403) — setup is the owner's click.
+- Also this session: V3.7a runner blockers fixed (brand/logo.png was git-ignored → 6 renders failed; ep11 colon pause; sports#10 hook pace; ep14 Wallis
+  pin → Q489003); run #10 = all 10 pilots re-rendering to release `pilot-v3-all`.
+
 ### V3.6m — DONE 2026-10-15 · Sports #10 Wimbledon in v3 (NIGHT-LIGHTS opener, flash-cut dive to SW19) — all 10 pilots now v3
 - ep10 re-authored to quiz-v3: which-record / challenge / **night-lights** (NASA Black Marble `basemap.layer:"night"` over Europe, k 0.95; scene `night` = hook stage, `night2` = loop stage at end−1.0 — a scene can back only one stage because stage ids derive from the scene) / **card-flip** (`banner_in style:"flip"`) after an `fx.flash` cut from night Europe to the Blue Marble dive k 3.0 on SW19 / beats pin+label+scalebar / flag-balls us-sad + au-sad + emoji-set:tennis / "DID YOU GET IT?". 69 words, est. 40 s.
 - Engine: night scenes get `#geo_<id>{background:#000}` + `.geo-basemap{filter:brightness(1.75) contrast(1.45) saturate(1.25)}` + quiet borders; **regression fixed**: the V3.6h `.v3 .geo .g-land` dusk-land rule out-ranked `.has-basemap .g-land{fill:none}` and painted land over rasters — now `.v3 .geo:not(.has-basemap) .g-land`.

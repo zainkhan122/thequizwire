@@ -1,0 +1,48 @@
+# Post-publish sync — three times a day: refresh Buffer post states into dispatch/ledger.json, file newly published
+# YouTube Shorts into their series playlist (+ backend tags) via the owner's Google OAuth grant, prune hosted media
+# whose posts were all sent ≥ retention days ago. Each stage is skipped (not failed) when its secret is absent.
+name: publish-sync
+on:
+  schedule:
+    - cron: '23 1,9,17 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: dispatch                 # shares the dispatcher's lock: both read-modify-write the ledger
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      MEDIA_TOKEN: ${{ secrets.MEDIA_TOKEN }}
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Buffer → ledger states
+        run: |
+          [ -f dispatch/ledger.json ] || { echo "no ledger yet"; exit 0; }
+          [ -n "$BUFFER_API_KEY" ] || { echo "::notice::BUFFER_API_KEY not set — skipping"; exit 0; }
+          python3 reelkit/buffer.py status --refresh | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: YouTube playlists + tags
+        run: |
+          [ -n "$YT_REFRESH_TOKEN" ] || { echo "::notice::YouTube OAuth not connected (YT_REFRESH_TOKEN) — playlists skipped; see docs/DISTRIBUTION.md §6"; exit 0; }
+          python3 reelkit/yt_enrich.py run | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Prune hosted media
+        run: |
+          [ -n "$MEDIA_TOKEN" ] || { echo "::notice::MEDIA_TOKEN not set — prune skipped"; exit 0; }
+          python3 reelkit/mediahost.py prune --apply | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Commit ledger
+        if: always()
+        run: |
+          git config user.name "quizwire-dispatch"; git config user.email "dispatch@users.noreply.github.com"
+          git add dispatch/ledger.json config/publishing.json 2>/dev/null || true
+          git diff --cached --quiet && { echo "nothing to commit"; exit 0; }
+          git commit -m "publish-sync: ledger refresh [skip ci]"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break || sleep 5; done

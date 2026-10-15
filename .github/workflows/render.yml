@@ -22,6 +22,10 @@ on:
         description: 'Master CRF before the delivery encode'
         required: false
         default: '18'
+      dispatch:
+        description: 'After a successful render, queue the episode on Buffer (YouTube · Instagram · Facebook)'
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -119,3 +123,15 @@ jobs:
             ~/.cache/build/pipeline.log
           if-no-files-found: ignore
           retention-days: 5
+  dispatch:
+    needs: render
+    if: ${{ inputs.dispatch == true && !cancelled() }}        # runs after the matrix even if some episodes failed: dispatch.sh skips unrendered ones
+    uses: ./.github/workflows/dispatch.yml
+    with:
+      episodes: ${{ inputs.episodes }}
+      tag: ${{ inputs.tag }}
+      run: ${{ github.run_number }}
+      live: true
+    secrets:
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      MEDIA_TOKEN: ${{ secrets.MEDIA_TOKEN }}

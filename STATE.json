@@ -1,9 +1,10 @@
 {
  "now": "2026-10-15: V3 look rebuild. V3.1 basemap, V3.2 lifted flag highlight, V3.3 v3 UI (format quiz-v3: Lilita question, flag pills, timer ring, yellow answer banner, 84-px Anton facts, Twemoji stickers, flag-ball characters, far raster for off-answer hook) are committed and verified on local contact sheets (docs/img/v3_3_contact_sheet.jpg). Nothing dispatched to Actions yet.",
- "phase": "V3.6m done — all 10 pilots authored in v3, gates green · next V3.7: cloud renders (pilot-v3-all) + review",
+ "phase": "D4 done — distribution layer built (Buffer queue + media host + YT playlists); waiting on owner secrets · V3.7 renders run #10 in flight",
  "next": [
-  "V3.7: python3 reelkit/cloud.py render <10 eps> --tag pilot-v3-all; fetch; frame-sheet review; owner review",
-  "V3.7: dispatch Geo #13 only (cloud.py render --tag pilot-v3-geo13 --wait) → owner approval → batch pilot-v3-batch1",
+  "owner: add BUFFER_API_KEY + MEDIA_TOKEN secrets, create public repo thequizwire-media (docs/DISTRIBUTION.md §3)",
+  "V3.7: review run #10 renders (frame sheets) → owner approval → Actions dispatch live=true tag pilot-v3-all",
+  "optional: YouTube OAuth (yt_enrich auth) for playlists + tags",
   "pilot-v2-batch1 stays shelved; never post it"
  ],
  "owner_rules": [
