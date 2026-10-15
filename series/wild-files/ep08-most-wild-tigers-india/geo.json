@@ -93,18 +93,21 @@
     {
      "id": "jk",
      "ne_name": "Jammu and Kashmir",
-     "name": "Jammu and Kashmir",
-     "controller": "India",
+     "name": "Kashmir",
+     "controller": "India, Pakistan and China, by sector",
      "claimants": [
-      "Pakistan"
+      "India",
+      "Pakistan",
+      "China"
      ],
-     "note": "Line of Control (1972) separates it from Pakistani-administered areas",
+     "note": "LoC 1972 · India: J&K, Ladakh · Pakistan: AJK, Gilgit-Baltistan · China: Aksai Chin",
      "as_of": "2026-10",
      "source": "docs/border_registry.json#kashmir",
      "label_at": [
-      75.3,
-      33.6
-     ]
+      69.5,
+      34.5
+     ],
+     "plate_cls": "small"
     },
     {
      "id": "ak",
@@ -116,9 +119,11 @@
      ],
      "as_of": "2026-10",
      "source": "docs/border_registry.json#kashmir",
+     "plate": false,
+     "plate_group": "jk",
      "label_at": [
-      73.6,
-      34.0
+      73.792156,
+      33.848664
      ]
     },
     {
@@ -131,9 +136,11 @@
      ],
      "as_of": "2026-10",
      "source": "docs/border_registry.json#kashmir",
+     "plate": false,
+     "plate_group": "jk",
      "label_at": [
-      74.4,
-      36.3
+      74.854045,
+      35.9976
      ]
     },
     {
@@ -146,9 +153,11 @@
      ],
      "as_of": "2026-10",
      "source": "docs/border_registry.json#kashmir",
+     "plate": false,
+     "plate_group": "jk",
      "label_at": [
-      79.3,
-      35.0
+      79.172747,
+      35.061522
      ]
     },
     {
@@ -163,9 +172,10 @@
      "as_of": "2026-10",
      "source": "docs/border_registry.json#arunachal",
      "label_at": [
-      94.5,
-      28.0
-     ]
+      97.0,
+      34.6
+     ],
+     "plate_cls": "small"
     }
    ],
    "sources": [

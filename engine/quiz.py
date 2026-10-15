@@ -43,7 +43,7 @@ class Quiz:
     # ---------------------------------------------------------------- chrome
     def bug(self):
         n = f' <b>#{self.number}</b>' if self.number else ""
-        return (f'<div id="bug" class="bug tu" data-tq-dwell="off" style="--acc:{self.accent}">'
+        return (f'<div id="bug" class="bug tu" data-tq-dwell="off" data-layout-allow-overlap="true" style="--acc:{self.accent}">'
                 f'<span class="dot"></span>{esc(self.series["name"]).upper()}{n}</div>')
 
     def badge(self, level="MEDIUM"):

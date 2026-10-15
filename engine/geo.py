@@ -228,6 +228,9 @@ CSS = f"""
 .geo .geo-label.policy .plate{{position:absolute;left:0;top:0;transform:translate(-50%,-50%);white-space:normal;width:max-content;max-width:520px;background:rgba(11,22,32,.92);border:2px solid {CREAM};padding:10px 18px 8px;text-align:left}}   /* long controller strings wrap instead of running into the right-hand UI column */
 .geo .geo-label.policy .plate b{{display:block;font-weight:700;color:{SAND};font-size:26px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2px}}
 .geo .geo-label.policy .plate i{{display:block;font-style:normal;color:rgba(239,230,210,.8);font-size:26px;margin-top:4px}}
+.geo .geo-label.policy.small{{font-size:22px}}                                  /* continental scale: plate_cls "small" */
+.geo .geo-label.policy.small .plate{{max-width:380px;padding:8px 12px 6px}}
+.geo .geo-label.policy.small .plate b{{font-size:20px}} .geo .geo-label.policy.small .plate i{{font-size:19px}}
 .geo .geo-scale{{position:absolute;left:40px;bottom:36px;font-family:'Oswald';font-size:24px;letter-spacing:.08em;color:{CREAM};visibility:hidden;opacity:0}}
 .geo .geo-scale .bar{{height:8px;background:{CREAM};border-left:3px solid {CREAM};border-right:3px solid {CREAM};margin-bottom:6px}}
 """
@@ -245,6 +248,7 @@ def policy_labels(disputed):
     """geo.json `disputed` entries -> `labels` entries (id = pl_<id>, for = <id>) ready for the scene spec."""
     out = []
     for d in disputed:
-        out.append({"id": f"pl_{d['id']}", "for": d["id"], "lonlat": d["label_at"], "cls": "policy",
+        if d.get("plate") is False: continue                      # outline only; its policy text lives on the plate named in `plate_group`
+        out.append({"id": f"pl_{d['id']}", "for": d["id"], "lonlat": d["label_at"], "cls": ("policy " + d["plate_cls"]).strip() if d.get("plate_cls") else "policy",
                     "html": policy_label_html(d["name"], d["controller"], d["claimants"], d.get("note", ""))})
     return out

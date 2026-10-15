@@ -171,7 +171,7 @@
    "args": {
     "k": 1.7,
     "lonlat": [
-     83,
+     84,
      24
     ],
     "ease": "none"
@@ -238,6 +238,22 @@
    "do": "fact_in",
    "id": "f1",
    "until": "s05.end"
+  },
+  {
+   "at": "s06",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "pl_jk"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "pl_ar"
+   }
   },
   {
    "at": "s06",

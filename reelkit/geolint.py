@@ -124,7 +124,14 @@ def main():
         # ---- border policy
         for d in sp.get("disputed", []):
             did = d.get("id", "?")
+            grouped = d.get("plate") is False
+            if grouped:
+                host = next((x for x in sp.get("disputed", []) if x.get("id") == d.get("plate_group") and x.get("plate") is not False), None)
+                if not host: F.append(f"{sid}: disputed '{did}' has plate:false but no `plate_group` pointing at an entry that carries a plate (P4)")
+                elif norm(d.get("controller", "")) and norm(d.get("controller", "")).split(" (")[0] not in norm(host.get("controller", "")):
+                    F.append(f"{sid}: group plate '{host.get('id')}' does not name '{did}' controller '{d.get('controller')}' (P4)")
             for k in ("id", "name", "controller", "claimants", "as_of", "source", "label_at"):
+                if grouped and k == "label_at": continue
                 if d.get(k) in (None, "", []) and not (k == "claimants" and d.get("claimants") == [] and d.get("no_claimant_ok")):
                     F.append(f"{sid}: disputed '{did}' missing {k} (P4)")
             if d.get("controller") and d.get("controller") in (d.get("claimants") or []): F.append(f"{sid}: disputed '{did}': controller also listed as claimant")
@@ -134,7 +141,7 @@ def main():
             except ValueError:
                 if d.get("as_of"): F.append(f"{sid}: disputed '{did}' as_of must be YYYY-MM")
             if built:
-                for need in (f"administered by {norm(d.get('controller', ''))}", "claimed by"):
+                for need in ((norm(d.get('controller', '')).split(" (")[0], "claimed by") if grouped else (f"administered by {norm(d.get('controller', ''))}", "claimed by")):
                     if d.get("controller") and need not in btext: F.append(f"{sid}: built composition lacks the plate text '{need}' for '{did}' (P4)")
             for r in REG["regions"]:
                 if d.get("ne_name", d.get("name")) in r.get("ne_names", []) or d.get("name") == r["name"]:

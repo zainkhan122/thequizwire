@@ -53,8 +53,8 @@ class Charts:
     def counter(self, cid, start, end, y=520, label="", fmt="int", x=60, w=960, suffix=""):
         self.items[cid] = {"start": start, "end": end, "fmt": fmt, "suffix": suffix}
         return (f'<div id="{cid}" class="chart counter" style="left:{x}px;top:{y}px;width:{w}px" data-layout-allow-overlap="true">'
-                f'<div class="cnumber tu" id="{cid}_n" data-tq-dwell="off">{self._fmt(start, fmt)}{esc(suffix)}</div>'
-                + (f'<div class="clabel2 tu">{esc(label)}</div>' if label else "") + "</div>")
+                f'<div class="cnumber tu" id="{cid}_n" data-tq-dwell="off" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">{self._fmt(start, fmt)}{esc(suffix)}</div>'
+                + (f'<div class="clabel2 tu" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">{esc(label)}</div>' if label else "") + "</div>")
 
     def counter_run(self, t0, t1, cid, ease="power2.out", steps=None):
         it = self.items[cid]

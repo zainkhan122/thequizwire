@@ -3,7 +3,7 @@
  "generated": {
   "geo/main.json": {
    "by": "reelkit/geodata.py",
-   "bytes": 112751,
+   "bytes": 112788,
    "credit": "Natural Earth",
    "kind": "data",
    "licence": "PD",
