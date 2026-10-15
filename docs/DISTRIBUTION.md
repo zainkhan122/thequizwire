@@ -33,7 +33,7 @@ Episodes whose MP4 is not in the release are skipped — a failed render never r
   post goes out* (Buffer fetches at publish time — a redirecting or expiring URL fails silently later). This repo is
   private (Release assets need a token; Pages is not available for private repos on Free), so media lives in
   `zainkhan122/thequizwire-media` (public, generated files only). Paths are content-addressed: a re-render gets a new URL,
-  a queued URL is never overwritten; `robots.txt` disallows `/media/`; prune removes files 14 days after every post using
+  a queued URL is never overwritten; `robots.txt` disallows `/media/`; prune removes files 2 days after every post using
   them was sent.
 * **Idempotent and honest.** `dispatch/ledger.json` (episode × channel → Buffer post id, state, due time) is the duplicate
   guard; before any write the dispatcher also scans the channel's posts for the same media URL and adopts a match. A
@@ -92,7 +92,7 @@ Buffer API docs (Hosting Media; createPost examples; YouTube/Instagram/Facebook 
 * To re-queue after a re-render: mark the old ledger rows `"state": "abandoned"` (and delete the Buffer post if it is still
   scheduled), then dispatch again — the new render has a new media URL.
 * Monthly budget: dispatch ≈ 2 min, sync ≈ 1 min × 3/day ≈ 90 min/month on the private-repo Actions allowance.
-* Media repo budget 900 MB (`media.max_site_bytes`); a Short is 6–12 MB, retention 14 days after sent → ~0.4 GB steady state at 2/day.
+* Media repo budget 900 MB (`media.max_site_bytes`); a 10 Mbps master is ~45 MB per 40 s, kept until every channel's post is sent + 2 days → ≤ 14 queued per channel × 45 MB ≈ 630 MB. GitHub Pages bandwidth: 3 fetches × 60 videos × 45 MB ≈ 8 GB/month of the 100 GB soft limit.
 
 ## 6. YouTube playlists and tags (gap in Buffer)
 

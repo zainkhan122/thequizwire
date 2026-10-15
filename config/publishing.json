@@ -7,9 +7,24 @@
   "secret_name": "BUFFER_API_KEY",
   "organization_id": "",
   "channels": {
-   "youtube":   {"enabled": true,  "buffer_id": "", "service_id": "", "name": ""},
-   "instagram": {"enabled": true,  "buffer_id": "", "service_id": "", "name": ""},
-   "facebook":  {"enabled": true,  "buffer_id": "", "service_id": "", "name": ""}
+   "youtube": {
+    "enabled": true,
+    "buffer_id": "",
+    "service_id": "",
+    "name": ""
+   },
+   "instagram": {
+    "enabled": true,
+    "buffer_id": "",
+    "service_id": "",
+    "name": ""
+   },
+   "facebook": {
+    "enabled": true,
+    "buffer_id": "",
+    "service_id": "",
+    "name": ""
+   }
   },
   "mode": "addToQueue",
   "scheduling_type": "automatic",
@@ -22,8 +37,9 @@
   "repo": "zainkhan122/thequizwire-media",
   "base_url": "https://zainkhan122.github.io/thequizwire-media",
   "secret_name": "MEDIA_TOKEN",
-  "retention_days_after_sent": 14,
-  "max_site_bytes": 900000000
+  "retention_days_after_sent": 2,
+  "max_site_bytes": 900000000,
+  "note": "Masters are 10 Mbps (~45 MB per 40 s); the file is needed only until Buffer has published every channel's post, then 2 days of grace. Budget: ≤ 14 queued posts/channel × 45 MB ≈ 630 MB < 900 MB."
  },
  "disclosure": {
   "youtube_is_ai_generated": false,
@@ -46,17 +62,114 @@
   "brand_hashtag": "#TheQuizWire"
  },
  "series": {
-  "geo-blitz":     {"name": "Geo Blitz",     "emoji": "🌍", "topic": "geography quiz",  "youtube_category": "27", "playlist": "Geo Blitz 🌍 Daily Geography Quiz",
-                    "hashtags": {"youtube": ["#GeographyQuiz", "#MapQuiz"], "instagram": ["#GeographyQuiz", "#MapQuiz", "#QuizReels"], "facebook": ["#GeographyQuiz"]},
-                    "keywords": ["geography quiz", "map quiz", "world geography", "general knowledge", "trivia"]},
-  "wild-files":    {"name": "Wild Files",    "emoji": "🐾", "topic": "animal quiz",     "youtube_category": "15", "playlist": "Wild Files 🐾 Animal Quiz",
-                    "hashtags": {"youtube": ["#AnimalQuiz", "#WildlifeFacts"], "instagram": ["#AnimalQuiz", "#WildlifeFacts", "#QuizReels"], "facebook": ["#AnimalQuiz"]},
-                    "keywords": ["animal quiz", "wildlife facts", "nature trivia", "general knowledge"]},
-  "sports-sprint": {"name": "Sports Sprint", "emoji": "🏆", "topic": "sports quiz",     "youtube_category": "17", "playlist": "Sports Sprint 🏆 Sports Quiz",
-                    "hashtags": {"youtube": ["#SportsQuiz", "#SportsTrivia"], "instagram": ["#SportsQuiz", "#SportsTrivia", "#QuizReels"], "facebook": ["#SportsQuiz"]},
-                    "keywords": ["sports quiz", "sports trivia", "sports history", "general knowledge"]},
-  "body-brain":    {"name": "Body & Brain",  "emoji": "🧠", "topic": "human body quiz", "youtube_category": "27", "playlist": "Body & Brain 🧠 Human Body Quiz",
-                    "hashtags": {"youtube": ["#HumanBodyQuiz", "#ScienceFacts"], "instagram": ["#HumanBodyQuiz", "#ScienceFacts", "#QuizReels"], "facebook": ["#ScienceQuiz"]},
-                    "keywords": ["human body quiz", "brain facts", "science trivia", "general knowledge"]}
+  "geo-blitz": {
+   "name": "Geo Blitz",
+   "emoji": "🌍",
+   "topic": "geography quiz",
+   "youtube_category": "27",
+   "playlist": "Geo Blitz 🌍 Daily Geography Quiz",
+   "hashtags": {
+    "youtube": [
+     "#GeographyQuiz",
+     "#MapQuiz"
+    ],
+    "instagram": [
+     "#GeographyQuiz",
+     "#MapQuiz",
+     "#QuizReels"
+    ],
+    "facebook": [
+     "#GeographyQuiz"
+    ]
+   },
+   "keywords": [
+    "geography quiz",
+    "map quiz",
+    "world geography",
+    "general knowledge",
+    "trivia"
+   ]
+  },
+  "wild-files": {
+   "name": "Wild Files",
+   "emoji": "🐾",
+   "topic": "animal quiz",
+   "youtube_category": "15",
+   "playlist": "Wild Files 🐾 Animal Quiz",
+   "hashtags": {
+    "youtube": [
+     "#AnimalQuiz",
+     "#WildlifeFacts"
+    ],
+    "instagram": [
+     "#AnimalQuiz",
+     "#WildlifeFacts",
+     "#QuizReels"
+    ],
+    "facebook": [
+     "#AnimalQuiz"
+    ]
+   },
+   "keywords": [
+    "animal quiz",
+    "wildlife facts",
+    "nature trivia",
+    "general knowledge"
+   ]
+  },
+  "sports-sprint": {
+   "name": "Sports Sprint",
+   "emoji": "🏆",
+   "topic": "sports quiz",
+   "youtube_category": "17",
+   "playlist": "Sports Sprint 🏆 Sports Quiz",
+   "hashtags": {
+    "youtube": [
+     "#SportsQuiz",
+     "#SportsTrivia"
+    ],
+    "instagram": [
+     "#SportsQuiz",
+     "#SportsTrivia",
+     "#QuizReels"
+    ],
+    "facebook": [
+     "#SportsQuiz"
+    ]
+   },
+   "keywords": [
+    "sports quiz",
+    "sports trivia",
+    "sports history",
+    "general knowledge"
+   ]
+  },
+  "body-brain": {
+   "name": "Body & Brain",
+   "emoji": "🧠",
+   "topic": "human body quiz",
+   "youtube_category": "27",
+   "playlist": "Body & Brain 🧠 Human Body Quiz",
+   "hashtags": {
+    "youtube": [
+     "#HumanBodyQuiz",
+     "#ScienceFacts"
+    ],
+    "instagram": [
+     "#HumanBodyQuiz",
+     "#ScienceFacts",
+     "#QuizReels"
+    ],
+    "facebook": [
+     "#ScienceQuiz"
+    ]
+   },
+   "keywords": [
+    "human body quiz",
+    "brain facts",
+    "science trivia",
+    "general knowledge"
+   ]
+  }
  }
 }
