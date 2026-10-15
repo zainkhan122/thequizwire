@@ -32,7 +32,7 @@
   "banner": "France",
   "banner_sub": "✓  C was right · 12 time zones",
   "outro": {
-   "headline": "DID YOU GET IT?",
+   "headline": "TOO EASY?",
    "tagline": "ONE MAP QUESTION A DAY",
    "url": "thequizwire.com"
   }
@@ -53,5 +53,18 @@
    "#shorts",
    "#geoblitz"
   ]
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "fact-first",
+  "opener": "world-rotated",
+  "reveal": "flash-cut",
+  "beats": [
+   "second-highlight",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:cool + emoji-set:time",
+  "music": "bed:pad"
  }
 }

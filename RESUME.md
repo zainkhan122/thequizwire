@@ -71,6 +71,11 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 | 2026-10-14 | Repo is **private** (GitHub Free: 2,000 Actions min/month); crons off, `check` main-only, `cloud.py` budget guard | owner |
 | 2026-10-14 | Vector maps (d3-geo + Natural Earth) are the default stage; VersaTiles flyovers are cached hero clips; Blue Marble globe deferred | agent |
 
+### V3.6e — DONE 2026-10-15 · variety system (owner: "how do we avoid template-like videos?")
+- `docs/VARIETY.md`: fixed skeleton + 8 rotated surface axes (question, hook, opener, reveal, beats, cast, music, outro) with pools; brand constants never rotate.
+- quizlint **Q16**: v3 episodes need `episode.json → variety`; FAIL when ≥ 4/8 axes equal the previous episode of the series, opener/reveal/outro or the hook's first two words repeat 3× in a row, or the emoji set equals the previous episode; WARN on question/hook repeats. Selftest negative `ep14-clone` → Q16.
+- ep13 (`misconception · wide-drift · flag-lift · pin/route/scalebar/label`), ep14 (`fact-first · world-rotated · flash-cut · second-highlight/pin/label`, outro "TOO EASY?").
+
 ### V3.6d — DONE 2026-10-15 · branded outro replaces the "next video" tease (owner brief)
 - `engine/quiz.py` `outro3()/outro_in()`: logo + wordmark + tagline, LIKE/SUBSCRIBE buttons clicked by an arrow cursor (white→yellow, yellow→green "✓ SUBSCRIBED", bursts, bell wiggle), social row (FB · IG · X · Threads) + thequizwire.com pill; dim layer; holds then loop frame at `end-1.0`.
 - `reelkit/brand.py prep` (brand kit → build + media.json provenance: logo/cursor `own`, icons CC0); `brand/` allowed in repo_guard; stickers.py always fetches 👍🔔 for v3; `geo.clear` now also hides the scalebar.

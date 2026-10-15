@@ -53,5 +53,19 @@
    "#shorts",
    "#geoblitz"
   ]
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "misconception",
+  "opener": "wide-drift",
+  "reveal": "flag-lift",
+  "beats": [
+   "pin",
+   "route",
+   "scalebar",
+   "label"
+  ],
+  "cast": "flagball:wow + emoji-set:mountain",
+  "music": "bed:pad"
  }
 }

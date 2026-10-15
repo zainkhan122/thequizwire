@@ -26,6 +26,7 @@ v2 (episode.json "format": "quiz-v2", docs/PLAN_V2.md §2) replaces Q1/Q2's card
   Q10 beat       v2: countdown `silence` 1.0–1.5 s · v3: 2.5–3.5 s (3-2-1 ring) and quiz.beat equals it; exactly one `beat` action sits on it
   Q11 reveal     a visual-state change (geo.highlight_in / cam_to / pin_in / route_draw / chart.*) within 1.5 s of `reveal`
   Q12 loop       the last `hook_in` is ≥ end-2.0 and a final `geo.cam_to` (until ≥ end-0.4) returns to the t=0 `geo.cam_set`
+  Q16 variety    v3: `variety` block in the pools (docs/VARIETY.md); ≥ 4/8 axes equal to the previous episode, 3-in-a-row opener/reveal/outro/hook stem, or the same emoji set → FAIL
   Q13 length     exactly 3 options · total 22–40 s (FAIL) / 26–36 s (else WARN) · question ≤ 76 chars · option ≤ 26 chars ·
                  fact ≤ 80 chars (short plates under word-timed captions) · chips_out → fact_in hand-off ≥ 0.45 s
 """
@@ -48,6 +49,58 @@ def num_word(tok):
     if not tok.isdigit() or int(tok) > 99: return tok
     n = int(tok)
     return _SMALL[n] if n < 20 else (_TENS[n // 10] + ("" if n % 10 == 0 else " " + _SMALL[n % 10]))
+
+
+# ---- Q16 variety (docs/VARIETY.md): fixed skeleton, rotated surface. Pools are the single source of truth for authoring.
+VARIETY = {
+    "question": {"which-country", "where-is", "how-many", "bigger-or-smaller", "true-or-false", "odd-one-out", "name-the-capital", "which-flag"},
+    "hook": {"question-first", "fact-first", "challenge", "story", "misconception", "character-asks"},
+    "opener": {"wide-drift", "world-rotated", "globe-spin", "mystery-zoom-out", "night-lights", "split-candidates"},
+    "reveal": {"flag-lift", "fill-pulse", "flash-cut", "border-draw", "stamp", "card-flip"},
+    "beats": {"pin", "route", "counter", "scalebar", "label", "second-highlight", "photo-cutout", "true-size-overlay", "timeline-strip", "before-after"},
+    "cast": None,      # free text: "flagball:wow", "emoji-set:mountain", "none", "photo-cutout"
+    "music": None,     # "bed:pad" … (seed is episode.seed)
+    "outro": {"DID YOU GET IT?", "TOO EASY?", "1 FOR 1?", "CHALLENGE A FRIEND", "DAILY MAP QUIZ"},
+}
+VARIETY_AXES = ["question", "hook", "opener", "reveal", "beats", "cast", "music", "outro"]
+
+
+def fingerprint(epdir):
+    """The eight axis values of an episode folder (None when it has no variety block)."""
+    try: E = json.loads((epdir / "episode.json").read_text())
+    except Exception: return None
+    v = E.get("variety")
+    if not isinstance(v, dict): return None
+    fp = {k: v.get(k) for k in VARIETY_AXES}
+    fp["outro"] = (E.get("quiz", {}).get("outro") or {}).get("headline", "DID YOU GET IT?")
+    fp["beats"] = tuple(sorted(v.get("beats") or []))
+    try:
+        vo = json.loads((epdir / "voice.json").read_text()); fp["_stem"] = " ".join(norm(vo["lines"][0]["text"]).split()[:2])
+    except Exception: fp["_stem"] = ""
+    em = set()
+    for fn in ("visuals.json", "episode.json"):
+        try: _walk_emoji(json.loads((epdir / fn).read_text()), em)
+        except Exception: pass
+    fp["_emoji"] = frozenset(em)
+    return fp
+
+
+def _walk_emoji(o, out):
+    if isinstance(o, dict):
+        if isinstance(o.get("emoji"), str): out.add(o["emoji"].lower())
+        for x in o.values(): _walk_emoji(x, out)
+    elif isinstance(o, list):
+        for x in o: _walk_emoji(x, out)
+
+
+def previous_episodes(ep, E, n=2):
+    """Episode folders of the same series with the largest numbers below this one (by folder prefix epNN)."""
+    out = []
+    for d in sorted(ep.parent.glob("ep[0-9][0-9]*")):
+        m = re.match(r"ep(\d+)", d.name)
+        if d.resolve() == ep.resolve() or not m: continue
+        if int(m.group(1)) < int(E.get("number", 0)): out.append((int(m.group(1)), d))
+    return [d for _, d in sorted(out)[-n:]][::-1]        # nearest first
 
 
 def main():
@@ -219,6 +272,34 @@ def main():
         W.append("no timeline.json — structure timing, beats and motion share not checked (run reelkit/plan.py)")
     tags = set(E.get("post", {}).get("hashtags", []))
     if not HOUSE_TAGS <= tags: W.append(f"post hashtags missing {sorted(HOUSE_TAGS - tags)}")
+    # ---- Q16 variety (v3 only; docs/VARIETY.md)
+    if E.get("format") == "quiz-v3" and ep.name not in ("_template_v3",):
+        v = E.get("variety")
+        if not isinstance(v, dict): F.append("Q16: episode.json needs a `variety` block (question/hook/opener/reveal/beats/cast/music) — docs/VARIETY.md")
+        else:
+            for k in VARIETY_AXES:
+                if k == "outro": continue
+                val = v.get(k)
+                if val in (None, "", []): F.append(f"Q16: variety.{k} missing"); continue
+                pool = VARIETY.get(k)
+                if pool and k != "beats" and val not in pool: F.append(f"Q16: variety.{k}='{val}' not in {sorted(pool)}")
+                if k == "beats":
+                    bad = [b for b in val if b not in VARIETY["beats"]]
+                    if bad: F.append(f"Q16: variety.beats {bad} not in {sorted(VARIETY['beats'])}")
+                    if len(set(val)) < 2: F.append("Q16: variety.beats needs ≥ 2 different see-it kinds")
+            if (E.get("quiz", {}).get("outro") or {}).get("headline", "DID YOU GET IT?") not in VARIETY["outro"]: F.append(f"Q16: outro.headline not in {sorted(VARIETY['outro'])}")
+            me = fingerprint(ep); prev = [fingerprint(d) for d in previous_episodes(ep, E)]; prev = [p for p in prev if p]
+            if me and prev:
+                p1 = prev[0]; same = [k for k in VARIETY_AXES if me.get(k) == p1.get(k)]
+                if len(same) >= 4: F.append(f"Q16: too close to the previous episode — {len(same)}/8 axes equal: {same}")
+                if me["_emoji"] and me["_emoji"] == p1["_emoji"]: F.append("Q16: same sticker/emoji set as the previous episode")
+                for k in ("question", "hook"):
+                    if me.get(k) == p1.get(k): W.append(f"Q16: variety.{k}='{me.get(k)}' repeats the previous episode")
+                if len(prev) >= 2:
+                    p2 = prev[1]
+                    for k in ("opener", "reveal", "outro"):
+                        if me.get(k) == p1.get(k) == p2.get(k): F.append(f"Q16: variety.{k}='{me.get(k)}' three episodes in a row")
+                    if me["_stem"] and me["_stem"] == p1["_stem"] == p2["_stem"]: F.append(f"Q16: hook line opens with '{me['_stem']}…' three episodes in a row")
     for w in W: print("  WARN ", w)
     for f in F: print("  FAIL ", f)
     extra = f" · story {story_share:.0%} · motion {motion:.0%}" if story_share is not None else ""

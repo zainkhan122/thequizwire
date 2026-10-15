@@ -154,6 +154,13 @@ def main():
         edit_json(v13 / "voice.json", lambda v: [l.__setitem__("silence", 3.0) for l in v["lines"] if l.get("role") == "countdown"])
         expect_fail(v13, "quizlint", "plan quizlint", "Q10")
 
+        # negative 2d (v3): a clone of the previous episode in the same series folder → Q16 variety (docs/VARIETY.md)
+        vdir = tmp / "variety"; vdir.mkdir()
+        copy_ep(ROOT / "series/geo-blitz/ep13-southern-alps-new-zealand", vdir)
+        v16 = copy_ep(ROOT / "series/geo-blitz/ep13-southern-alps-new-zealand", vdir, "ep14-clone")
+        edit_json(v16 / "episode.json", lambda e: e.__setitem__("number", 14))
+        expect_fail(v16, "quizlint", "plan quizlint", "Q16")
+
         # negative 3: an unsourced sentence in the narration → factcheck coverage; sovereignty wording → guardrail
         unf = copy_ep(ROOT / "tests/fixtures/ep-disputed", tmp, "ep-unsourced")
         def break_vo(v):
