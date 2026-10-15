@@ -23,13 +23,13 @@ Q15 (full-bleed map stage, banner_in, sticker/character warning) and tighter Q4 
 v2 (episode.json "format": "quiz-v2", docs/PLAN_V2.md §2) replaces Q1/Q2's card rules and adds:
   Q9  hook       `hook_in` at ≤ 0.3 s; no card_in/options_in/countdown/end_in; `bug_in` (if any) ≥ 2.0 s — nothing but the
                  question and the moving visual in the first two seconds
-  Q10 beat       the countdown line is a `silence` of 1.0–1.5 s and exactly one `beat` action sits on it
+  Q10 beat       v2: countdown `silence` 1.0–1.5 s · v3: 2.5–3.5 s (3-2-1 ring) and quiz.beat equals it; exactly one `beat` action sits on it
   Q11 reveal     a visual-state change (geo.highlight_in / cam_to / pin_in / route_draw / chart.*) within 1.5 s of `reveal`
   Q12 loop       the last `hook_in` is ≥ end-2.0 and a final `geo.cam_to` (until ≥ end-0.4) returns to the t=0 `geo.cam_set`
   Q13 length     exactly 3 options · total 22–40 s (FAIL) / 26–36 s (else WARN) · question ≤ 76 chars · option ≤ 26 chars ·
                  fact ≤ 80 chars (short plates under word-timed captions) · chips_out → fact_in hand-off ≥ 0.45 s
 """
-import argparse, json, re, sys
+import os, argparse, json, re, sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
@@ -79,7 +79,10 @@ def main():
     seq = [r for i, r in enumerate(roles) if i == 0 or r != roles[i - 1]]
     if seq != ORDER: F.append(f"Q2: roles {seq} must read {ORDER} (story may repeat)")
     cd = [l for l in V["lines"] if l.get("role") == "countdown"]
-    if v2:
+    if E.get("format") == "quiz-v3":
+        if not cd or cd[0].get("silence") is None or not 2.5 <= float(cd[0]["silence"]) <= 3.5: F.append("Q10: the v3 think-time line must be a `silence` of 2.5–3.5 s (3-2-1 ring; owner decision 2026-10-15)")
+        elif abs(float(q.get("beat", 1.5)) - float(cd[0]["silence"])) > 0.01: F.append(f"Q10: quiz.beat {q.get('beat')} must equal the countdown silence {cd[0]['silence']}")
+    elif v2:
         if not cd or cd[0].get("silence") is None or not 1.0 <= float(cd[0]["silence"]) <= 1.5: F.append("Q10: the beat line must be a `silence` of 1.0–1.5 s (v2 has no countdown)")
     elif not cd or cd[0].get("silence") is None or float(cd[0]["silence"]) < 2: F.append("Q2: the countdown line must be a `silence` ≥ 2 s (the ring counts, nobody talks)")
     if len(cd) > 1: F.append("Q2: more than one countdown line")
@@ -104,8 +107,9 @@ def main():
     if T:
         total = T["total"]; SC = {s["id"]: s for s in T["scenes"]}
         if v2:
-            if not 22.0 <= total <= 40.0: F.append(f"Q13: total {total} s outside 22–40 s")
-            elif not 26.0 <= total <= 36.0: W.append(f"Q13: total {total} s outside the 26–36 s target")
+            est = os.environ.get("ESTIMATE") == "1"; hi = 44.0 if est else 40.0     # ESTIMATE timelines run ≈ 10 % longer than Kokoro
+            if not 22.0 <= total <= hi: F.append(f"Q13: total {total} s outside 22–{hi:g} s{' (estimated timeline)' if est else ''}")
+            elif not 26.0 <= total <= (39.6 if est else 36.0): W.append(f"Q13: total {total} s outside the 26–36 s target")
         elif total > 60.0: F.append(f"Q3: total {total} s > 60 s")
         elif total < 35: W.append(f"total {total} s < 35 s (thin for a reveal + story)")
         story = sum(s["end"] - s["start"] for s in T["scenes"] if s.get("role") == "story"); story_share = story / total

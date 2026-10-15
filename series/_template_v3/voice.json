@@ -50,7 +50,7 @@
    "energy": 1,
    "pause_after": 0.1,
    "direction": "silence — the bar drains",
-   "silence": 1.5,
+   "silence": 3.0,
    "text": ""
   },
   {

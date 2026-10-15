@@ -15,7 +15,7 @@ with a flag or saturated fill and a thick white outline, big display type, stick
 | Highlight | country/region lifted: flag fill (`flag-icons`, MIT) or saturated colour, 9-px white outline, drop shadow, pop-in | flag-icons MIT; Natural Earth polygons |
 | Question | Anton 104 px, 2–3 lines, centred, keyword in #FFD400, top third over a dark scrim | Anton OFL |
 | Options | three 124-px pills with letter badge + **flag/icon circle** + 58-px label; correct pill turns green, others dim | flag-icons / Twemoji |
-| Timer | 150-px ring with a 3-2-1 count; "GUESS BEFORE THE TIMER ENDS" | — |
+| Timer | **3-s think-time after the options are read** (owner decision 2026-10-15): 200-px ring at y 1275 drains while 130-px digits 3·2·1 pop (tick per digit, riser); "GUESS BEFORE THE TIMER ENDS" at 1512 fades 0.25 s before the reveal. `quiz.beat` = countdown `silence` = 3.0 (quizlint Q10 2.5–3.5) | — |
 | Reveal | camera flies in (1.2 s), flag wipes on, outline flashes, 150-px yellow answer name + "✓ B WAS RIGHT" | — |
 | See-it beats | one 86-px caption (number in yellow) + one sticker/photo + one map action (pin, route, second highlight, counter) per beat | Twemoji CC-BY 4.0; Wikimedia PD/CC-BY cut-outs |
 | Captions | word-by-word 86-px Anton for the story lines (from `words.json`) | — |
@@ -54,6 +54,6 @@ or `"lift":"fill","color":"#C8102E"`. No `scalebar` on basemap scenes. **Map tex
 **visuals.json** stage `box [0,0,1080,1920]`, `anchor [540,900]` (full-bleed; the camera centres targets at y 900).
 Elements: `fact {kicker,text}` (84-px caption at y 1250, kicker yellow) · `sticker {emoji:"1f3d4", x, y, size, rot}` (Twemoji, CC-BY 4.0, fetched by `reelkit/stickers.py` in the geo stage;
 or `src` for a cut-out + `credit`) · `character {flag:"nz", face: think|wow|happy|sad|angry|cool, x, y, size, rot}` (flag-ball SVG, own).
-Verbs (v2 verbs keep their names): `hook_in/out` → pop; `chips_in/out` → pills; `beat` → timer ring + "GUESS BEFORE THE TIMER ENDS"; `reveal` → correct pill green; new: `banner_in/out`,
+Verbs (v2 verbs keep their names): `hook_in/out` → pop; `chips_in/out` → pills; `beat` → 3-s timer ring with 3·2·1 digits + "GUESS BEFORE THE TIMER ENDS"; `reveal` → correct pill green; new: `banner_in/out`,
 `sticker_in/out {id}`, `character_in/out {id}`. Word captions (Anton 56 px, y 1500) auto-hide while a fact/CTA is on screen. Scrim-top dims to 35 % after `banner_out`, back to full at the loop `hook_in`.
 Flags for pills/characters/lifts are collected by `geodata.py prep` from geo.json + visuals.json + episode.json (`flag` keys ≤ 6 chars).

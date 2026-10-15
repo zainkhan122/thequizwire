@@ -71,6 +71,13 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 | 2026-10-14 | Repo is **private** (GitHub Free: 2,000 Actions min/month); crons off, `check` main-only, `cloud.py` budget guard | owner |
 | 2026-10-14 | Vector maps (d3-geo + Natural Earth) are the default stage; VersaTiles flyovers are cached hero clips; Blue Marble globe deferred | agent |
 
+### V3.6c — DONE 2026-10-15 · 3-second think-time (owner: "too short to answer" → chose 3 s over 5 s)
+- Measured Geo #13: options on screen 4.5 s total, silent beat only 1.5 s. Now `quiz.beat` = countdown `silence` = 3.0 s → ≈ 6 s with the options up.
+- `engine/quiz.py` `beat3`: 200-px ring (y 1275) drains over `seconds`; digits 3·2·1 (130-px Lilita, ids `q1_d3..d1`) pop once per second; pills breathe per second; tease fades 0.25 s before the reveal. quizscore already ticks once per countdown second + riser.
+- quizlint Q10 (v3): silence 2.5–3.5 s and `quiz.beat` equal; Q13 upper bound 44 s when `ESTIMATE=1` (estimates run ≈ 10 % long; real cap stays 40 s). Pills carry `data-layout-allow-caption-zone` (pill C dips 50 px into the band; HF check flagged the mid-exit at 9.55 s on ep14).
+- ep13, ep14, `_template_v3`, `docs/comps/ep13v3` set to 3.0; gates green for both (ESTIMATE totals 41.05 / 41.3 s → real ≈ 37 s). Frames viewed: `/tmp/snap13c/sheet.jpg` (3·2·1) and `/tmp/snap13d/sheet.jpg`.
+- Sandbox was restored mid-phase: toolchain re-bootstrapped; **token missing → commit is local, push pending the owner's PAT**.
+
 ### V3.6b — DONE 2026-10-15 · Geo #14 v3 (world-scale template) + Geo #13 runner-review tweaks
 - Geo #14 "most time zones" re-authored in v3: Pacific-centred rotated world (mercator rotate −150, Blue Marble bbox [−30,−66,330,85]), Russia fill beat, Europe flash-stage with France flag lift, Tahiti/Wallis pins, clock sticker. All gates green (textqa 19 units PASS 18 WARN 1).
 - Engine: `mainBounds()` flag-lift rect (parts ≥ 20 % of the largest — France no longer stretched by Guiana); darker `.scrim-top` + 3-px hook stroke (loop-frame contrast 2.93 → PASS); `.v3 .geo.has-basemap` background deep navy beyond the raster; `ALLOW` attrs on hook/pill/fact children; basemap `MAX_W` 4864; quizlint Q14 skipped for ≥ 300° fits.

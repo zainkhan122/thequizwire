@@ -34,6 +34,7 @@ def esc(s): return html.escape(str(s))
 
 
 ALLOW = ' data-layout-allow-overlap="true" data-layout-allow-occlusion="true"'   # v3 UI floats over the map and under flashes on purpose
+CAPZ = ' data-layout-allow-caption-zone="true"'                                      # intentional lower-third copy (pills end at 1240; captions at 1500)
 
 
 class Quiz:
@@ -228,7 +229,7 @@ class Quiz:
 
     # ================================================================ v3 "satellite quiz" (docs/V3_LOOK.md)
     # Full-bleed map; UI floats on scrims. Safe zones: bug 232, hook 300–620 (x 60–960), pills 790–1240 (text ≤ x 900),
-    # ring 1330, tease 1510, answer banner 290/450, big fact 1250–1460 (x 60–960), word captions 1500, credit 1560.
+    # ring 1275–1475 (200 px), tease 1512, answer banner 290/450, big fact 1250–1460 (x 60–960), word captions 1500, credit 1560.
     YELLOW = "#FFD400"
 
     def scrims(self):
@@ -258,11 +259,13 @@ class Quiz:
             m = meta[i] if i < len(meta) else {}
             icon = (f'<span class="pflag" style="background-image:url(assets/geo/flags/{m["flag"].lower()}.svg)"></span>' if m.get("flag")
                     else f'<img class="pemo" src="assets/stickers/{m["emoji"]}.svg" alt="">' if m.get("emoji") else "")
-            rows.append(f'<div class="pill tu" id="{cid}_o{i}"{DISTRACTOR if i != correct else ""}{ALLOW}>'
-                        f'<span class="let" data-fc="skip"{ALLOW}>{LETTERS[i]}</span>{icon}<span class="otext"{ALLOW}>{esc(o)}</span></div>')
+            # pill C's bottom (≈ 1240) dips 50 px into the caption band (1190+); words sit at y 1500 so they never touch — declare it
+            rows.append(f'<div class="pill tu" id="{cid}_o{i}"{DISTRACTOR if i != correct else ""}{ALLOW}{CAPZ}>'
+                        f'<span class="let" data-fc="skip"{ALLOW}{CAPZ}>{LETTERS[i]}</span>{icon}<span class="otext"{ALLOW}{CAPZ}>{esc(o)}</span></div>')
         return (f'<div id="{cid}" class="pills" data-layout-allow-overlap="true">{"".join(rows)}</div>'
-                f'<div class="ring3" id="{cid}_ring" data-layout-allow-overlap="true"><svg width="160" height="160" viewBox="0 0 160 160"><circle class="bg" cx="80" cy="80" r="70"></circle>'
-                f'<circle class="fg" id="{cid}_arc" cx="80" cy="80" r="70" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0"></circle></svg><div class="rq tu" data-tq-dwell="off" data-fc="skip">?</div></div>'
+                f'<div class="ring3" id="{cid}_ring" data-layout-allow-overlap="true"><svg width="200" height="200" viewBox="0 0 200 200"><circle class="bg" cx="100" cy="100" r="88"></circle>'
+                f'<circle class="fg" id="{cid}_arc" cx="100" cy="100" r="88" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0"></circle></svg>'
+                + "".join(f'<div class="dg tu" id="{cid}_d{i}" data-tq-dwell="off" data-fc="skip"{ALLOW}>{i}</div>' for i in range(5, 0, -1)) + '</div>'
                 f'<div class="tease3 tu" id="{cid}_tease" data-tq-dwell="off" data-fc="skip" data-layout-allow-overlap="true">GUESS BEFORE THE TIMER ENDS</div>')
 
     def pills_in(self, t, cid=None, gap=0.12):
@@ -271,17 +274,21 @@ class Quiz:
         for i in range(3):
             self.J(f"tl.fromTo('#{cid}_o{i}',{{autoAlpha:0,x:-80,scale:0.9}},{{autoAlpha:1,x:0,scale:1,duration:0.38,ease:'back.out(1.4)',immediateRender:false}},{f(t + i * gap)});")
 
-    def beat3(self, t0, cid=None, seconds=1.5):
-        """Timer ring drains for `seconds`; pills breathe; the tease line shows."""
-        cid = cid or next(iter(self.cards)); n = float(seconds)
+    def beat3(self, t0, cid=None, seconds=3.0):
+        """The think-time: ring drains for `seconds` while big digits count down (3 · 2 · 1), pills breathe, tease line shows.
+        Digits 5…1 exist in the markup; only the last round(seconds) of them are animated (quizscore ticks once per digit)."""
+        cid = cid or next(iter(self.cards)); n = float(seconds); nd = max(1, int(round(n))); step = n / nd
         self.J(f"tl.fromTo('#{cid}_ring',{{autoAlpha:0,scale:0.6}},{{autoAlpha:1,scale:1,duration:0.3,ease:'back.out(2)',immediateRender:false}},{f(t0 - 0.3)});")
         self.J(f"tl.fromTo('#{cid}_tease',{{autoAlpha:0,y:20}},{{autoAlpha:1,y:0,duration:0.3,immediateRender:false}},{f(t0 - 0.3)});")
         self.J(f"tl.fromTo('#{cid}_arc',{{strokeDashoffset:0}},{{strokeDashoffset:100,duration:{f(n)},ease:'none',immediateRender:false}},{f(t0)});")
-        self.J(f"tl.fromTo('#{cid}_ring .rq',{{scale:1}},{{scale:1.18,duration:0.25,ease:'sine.inOut',yoyo:true,repeat:{max(1, int(n / 0.25) - 1)},immediateRender:false}},{f(t0)});")
+        for i in range(nd):
+            d = nd - i; ts = t0 + i * step
+            self.J(f"tl.fromTo('#{cid}_d{d}',{{autoAlpha:0,scale:1.6}},{{autoAlpha:1,scale:1,duration:0.22,ease:'back.out(2.5)',immediateRender:false}},{f(ts)});")
+            self.J(f"tl.to('#{cid}_d{d}',{{autoAlpha:0,scale:0.5,duration:0.12,ease:'power2.in'}},{f(ts + step - 0.12)});")
         for i in range(3):
-            self.J(f"tl.to('#{cid}_o{i}',{{scale:1.03,duration:{f(n / 2)},ease:'sine.inOut',yoyo:true,repeat:1}},{f(t0)});")
+            self.J(f"tl.to('#{cid}_o{i}',{{scale:1.03,duration:{f(step / 2)},ease:'sine.inOut',yoyo:true,repeat:{2 * nd - 1}}},{f(t0)});")
         self.J(f"tl.to('#{cid}_ring',{{autoAlpha:0,scale:0.7,duration:0.2}},{f(t0 + n)});")
-        self.J(f"tl.to('#{cid}_tease',{{autoAlpha:0,duration:0.2}},{f(t0 + n)});")
+        self.J(f"tl.to('#{cid}_tease',{{autoAlpha:0,duration:0.2}},{f(t0 + n - 0.25)});")     # gone before the reveal caption lands
         return t0 + n
 
     def reveal_pills(self, t, cid=None, correct=None):
@@ -430,10 +437,10 @@ CSS = f"""
 .v3 .pill .pflag{{flex:0 0 88px;width:88px;height:88px;border-radius:50%;background-size:cover;background-position:center;border:3px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.5)}}
 .v3 .pill .pemo{{flex:0 0 84px;width:84px;height:84px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.5))}}
 .v3 .pill .otext{{line-height:1}}
-.v3 .ring3{{position:absolute;left:460px;top:1330px;width:160px;height:160px;z-index:70;visibility:hidden;opacity:0}}
+.v3 .ring3{{position:absolute;left:440px;top:1275px;width:200px;height:200px;z-index:70;visibility:hidden;opacity:0}}
 .v3 .ring3 svg{{position:absolute;left:0;top:0;transform:rotate(-90deg)}}
-.v3 .ring3 circle{{fill:none;stroke-width:12}} .v3 .ring3 .bg{{stroke:rgba(255,255,255,.22)}} .v3 .ring3 .fg{{stroke:#FFD400;stroke-linecap:round}}
-.v3 .ring3 .rq{{position:absolute;left:0;top:0;width:160px;height:160px;line-height:160px;text-align:center;font-family:'Lilita';font-size:92px;color:#fff;text-shadow:0 4px 0 rgba(0,0,0,.5)}}
+.v3 .ring3 circle{{fill:none;stroke-width:14}} .v3 .ring3 .bg{{stroke:rgba(255,255,255,.22)}} .v3 .ring3 .fg{{stroke:#FFD400;stroke-linecap:round}}
+.v3 .ring3 .dg{{position:absolute;left:0;top:0;width:200px;height:200px;line-height:200px;text-align:center;font-family:'Lilita';font-size:130px;color:#fff;-webkit-text-stroke:2px #141414;paint-order:stroke fill;text-shadow:0 5px 0 rgba(0,0,0,.55),0 10px 22px rgba(0,0,0,.6);visibility:hidden;opacity:0}}
 .v3 .tease3{{position:absolute;left:60px;top:1512px;width:900px;text-align:center;font-family:'Oswald';font-weight:600;font-size:40px;letter-spacing:.2em;color:#FFD400;-webkit-text-stroke:1.2px #141414;paint-order:stroke fill;text-shadow:0 3px 0 rgba(0,0,0,.6),0 6px 16px rgba(0,0,0,.85);z-index:70;visibility:hidden;opacity:0}}
 .v3 .banner3{{position:absolute;left:40px;top:290px;width:1000px;text-align:center;font-family:'Lilita';font-size:150px;line-height:1;text-transform:uppercase;color:#FFD400;
   -webkit-text-stroke:3px #4a2b00;paint-order:stroke fill;text-shadow:0 10px 0 #7a4b00,0 22px 40px rgba(0,0,0,.7);z-index:74;visibility:hidden;opacity:0;white-space:nowrap}}
