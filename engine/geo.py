@@ -233,6 +233,7 @@ CSS = f"""
 .geo .geo-label.policy.small .plate{{max-width:380px;padding:8px 12px 6px}}
 .geo .geo-label.policy.small .plate b{{font-size:20px}} .geo .geo-label.policy.small .plate i{{font-size:19px}}
 .geo .geo-scale{{position:absolute;left:40px;bottom:36px;font-family:'Oswald';font-size:24px;letter-spacing:.08em;color:{CREAM};visibility:hidden;opacity:0;background:rgba(11,22,32,.72);padding:6px 10px 4px;border-radius:6px}}   /* readable over a sand highlight (textqa contrast) */
+.geo .geo-scale span{{display:block;line-height:36px;height:36px;white-space:nowrap}}   /* HF text_box_overflow: the tight global line-height clipped the 24-px text */
 .geo .geo-scale .bar{{height:8px;background:{CREAM};border-left:3px solid {CREAM};border-right:3px solid {CREAM};margin-bottom:6px}}
 """
 

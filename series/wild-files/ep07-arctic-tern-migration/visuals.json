@@ -118,7 +118,7 @@
    }
   },
   {
-   "at": "s04+0.2",
+   "at": "s04+1.2",
    "do": "geo.pin_in",
    "stage": "stage_map",
    "args": {
@@ -251,7 +251,7 @@
    "until": "s05.end"
   },
   {
-   "at": "s06",
+   "at": "s05",
    "do": "geo.pin_out",
    "stage": "stage_map",
    "args": {
