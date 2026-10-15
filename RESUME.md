@@ -24,17 +24,18 @@ What exists (all new unless noted; history-repo toolkit reused where it fit):
 
 ## Current phase
 ```
-Phase 3.1 — pilot batch of 10 v2 episodes (2026-10-15; owner: "V2 is approved. make videos")
-goal        : 10 v2 Shorts rendered on the runner into the `pilot-v2-batch1` Release (5 Geo, 3 Wild, 2 Sports); no auto-posting
-entry       : PLAN_V2 approved; v2 runner proof #15 green; all 10 episodes authored + green offline (quizlint/geolint/facts/provenance)
-steps       : run #1 38635751388 (voice gate false-fail → voice.py fixed) → run #2 38637028319 (HF layout collisions → b1dfabd)
-              → run #3 38709287870 (0 jobs: concurrency key from the 10-path input → d2234ed) → run #4 38710732256 = 3/10 SUCCESS
-              (Geo #12 #13 #14 in the Release) → 7 later-gate failures fixed in 3db2520 + 374b614 → run #5 38712751289 (7 episodes)
-exit check  : Release pilot-v2-batch1 holds 10 final.mp4 + POST_KIT; owner posts 2/day per the plan; 3.2 scores after 7 days
-rollback    : episodes stay in git; a failed render changes nothing public
-next        : poll run #5 (`python3 reelkit/cloud.py status` / `why 38712751289`), fix anything left, re-dispatch the failures with
-              the same `--tag pilot-v2-batch1`; on 10/10 → `cloud.py fetch`, posting plan, STATE.json → 3.2-score
+Phase V3 — owner rejected the v2 look (2026-10-15): "robotic, basic, answer map visible, tiny question text, poor animation"
+goal        : rebuild the visual format to the reference-channel standard (docs/V3_LOOK.md) — satellite basemap, lifted
+              flag/colour highlights, big type, stickers, hook that hides the answer — then re-render the 10 pilot episodes
+entry       : references and own frames actually watched (docs/img/reference_frames.png, v2_as_shipped_geo13.png);
+              v3 comp approved? (docs/img/v3_direction.png) ; local HyperFrames+Chrome available (bash bootstrap.sh --browser)
+steps       : V3.1 basemap → V3.2 lifted highlight → V3.3 v3 UI → V3.4 stickers+word captions → V3.5 template+lint →
+              V3.6 re-author 10 episodes with local contact sheets → V3.7 one runner render for owner look → batch
+exit check  : owner approves the Geo #13 v3 render; 10/10 in Release pilot-v3-batch1; every episode has a reviewed sheet
+rollback    : v2 engine paths stay (format quiz-v2); pilot-v2-batch1 Release is NOT to be posted
+next        : owner's answer on the comp → V3.1
 ```
+Rule (new): nothing goes to Actions before a local contact sheet has been looked at. pilot-v2-batch1 (8/10 rendered) is shelved.
 Last completed: **Phase 1.7 Actuals** (2026-10-14) — measured CI timings in `docs/OPERATING_MODEL.md §3/§6`, verified animator CLI +
 `clips.py` width/flag rules in `docs/MAPTILE.md`, budget guard 12 min/episode, `render.yml` timeout 30 min.
 Known, accepted `hyperframes check` warnings on quiz episodes: `lint/nested_structure_needs_subcomposition` (#stage_map → `_in`
