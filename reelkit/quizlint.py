@@ -18,6 +18,8 @@ FAIL (exit 1)
   Q7 release     timeline.json is estimated (--release) · mix.wav missing in hf/assets (--release)
 WARN: total < 35 s, hashtags missing the house set, VO does not read the question/options, number < registry next_number.
 
+v3 (format "quiz-v3", docs/V3_LOOK.md) adds Q14 (no camera on the answer's fit bbox before the reveal unless k ≤ 0.5),
+Q15 (full-bleed map stage, banner_in, sticker/character warning) and tighter Q4 copy limits (72 / 18 / kicker 16 + text ≤ 46).
 v2 (episode.json "format": "quiz-v2", docs/PLAN_V2.md §2) replaces Q1/Q2's card rules and adds:
   Q9  hook       `hook_in` at ≤ 0.3 s; no card_in/options_in/countdown/end_in; `bug_in` (if any) ≥ 2.0 s — nothing but the
                  question and the moving visual in the first two seconds
@@ -56,6 +58,7 @@ def main():
     E = json.loads((ep / "episode.json").read_text()); V = json.loads((ep / "voice.json").read_text())
     T = json.loads((ep / "timeline.json").read_text()) if (ep / "timeline.json").exists() else None
     X = json.loads((ep / "visuals.json").read_text()) if (ep / "visuals.json").exists() else {"stage": [], "elements": [], "beats": []}
+    GJ = json.loads((ep / "geo.json").read_text()) if (ep / "geo.json").exists() else {"scenes": {}}
     reg = json.loads((REPO / "series" / "series.json").read_text())
     series = next((s for s in reg["series"] if s["slug"] == E.get("series")), None)
     # ---- Q1
@@ -125,7 +128,7 @@ def main():
         stages = {s["id"]: s for s in X.get("stage", [])}; elements = {e["id"]: e for e in X.get("elements", [])}
         used_stage, elem_in, n_cd, t_cd_end, t_reveal, cam_moves = set(), set(), 0, None, None, {}
         t_card_out, facts = [], []                      # Q8: the caption band hands over, never crossfades
-        v2b = {"hook_in": [], "bug_in": [], "beat": [], "visual": [], "cam_to": [], "cam_set": None, "banned": []}
+        v2b = {"hook_in": [], "bug_in": [], "beat": [], "visual": [], "cam_to": [], "cam_set": None, "banned": [], "banner_in": []}
         for b in X.get("beats", []):
             try: t = tt(b["at"]); t1 = tt(b["until"]) if "until" in b else None
             except (KeyError, ValueError) as e: F.append(f"Q5: beat {b} — unknown time reference {e}"); continue
@@ -175,6 +178,21 @@ def main():
                 if not last or (last[1] or last[0]) < total - 0.4: F.append("Q12: the final `geo.cam_to` must run until ≥ end-0.4 (loop frame)")
                 elif abs(float(last[2].get("k", 1)) - float(a0.get("k", 1))) > 0.02 or [round(float(x), 2) for x in last[2].get("lonlat", [])] != [round(float(x), 2) for x in a0.get("lonlat", [])]:
                     F.append(f"Q12: the final camera {last[2]} does not match the opening cam_set {a0} (last frame must equal the first)")
+            if v3 and t_reveal is not None:
+                # Q14 (v3): the answer region must not be on screen before the reveal — every camera that is visible before
+                # t_reveal must sit outside the scene's fit bbox (the subject area) or be zoomed out to k ≤ 0.5.
+                def inside(ll, bb): return bb and ll and bb[0] <= float(ll[0]) <= bb[2] and bb[1] <= float(ll[1]) <= bb[3]
+                for st in stages.values():
+                    if st.get("type") != "geo": continue
+                    sc = GJ.get("scenes", {}).get(st.get("scene"), {}); bb = (sc.get("fit") or {}).get("bbox")
+                    if not bb or not any(L.get("kind") == "highlight" and L.get("lift") for L in sc.get("layers", [])): continue
+                    cams = ([(v2b["cam_set"][0], v2b["cam_set"][1])] if v2b["cam_set"] else []) + [(t, args) for t, _, args in v2b["cam_to"]]
+                    for tc, args in cams:
+                        if tc < t_reveal - 0.01 and float(args.get("k", 1)) > 0.5 and inside(args.get("lonlat"), bb):
+                            F.append(f"Q14: camera {args} at {tc:.2f}s shows the answer region before the reveal ({t_reveal:.2f}s) — hook cameras must be off the fit bbox or k ≤ 0.5")
+                    if st.get("box", [0, 0, 1080, 1180])[3] < 1900: F.append(f"Q15: v3 map stage {st['id']} must be full-bleed (box [0,0,1080,1920])")
+                if not v2b.get("banner_in"): F.append("Q15: v3 needs a `banner_in` beat (the big answer)")
+                if not any(e.get("type") in ("sticker", "character") for e in elements.values()): W.append("Q15: no sticker/character element — v3 see-it beats want one visual object each")
         for sid, st in stages.items():
             if sid not in used_stage and st["type"] in ("geo", "chart"): F.append(f"Q5: stage {sid} ({st['type']}) has no beats")
             if st["type"] == "geo" and cam_moves.get(sid, 0) == 0: F.append(f"Q5: map stage {sid} never moves (no cam_to/highlight/pin beats) — a static map is a plate")

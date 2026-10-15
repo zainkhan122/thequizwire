@@ -1,7 +1,7 @@
 """reelkit/basemap.py — public-domain raster basemaps (NASA GIBS, Web Mercator tiles) stitched per map scene.
 
 usage: python3 reelkit/basemap.py LON0,LAT0,LON1,LAT1 WIDTH_PX OUT.jpg [layer]
-       from basemap import stitch; meta = stitch(bbox, width_px, out_path, layer="bluemarble")
+       from basemap import os, tempfile, stitch; meta = stitch(bbox, width_px, out_path, layer="bluemarble")
 
 Picks the tile zoom whose px/° fits WIDTH_PX (the on-screen width the scene needs at its deepest camera), fetches the
 tiles (cached in ~/.cache/basemap), writes OUT.jpg and returns the d3-mercator parameters of the image's pixel grid:
@@ -15,7 +15,7 @@ Layers (all NASA, public domain — credit "NASA Blue Marble" / "NASA GIBS"):
 Limits: image ≤ 4096 × 6144 px and ≤ 6 MB; tiles outside |lat| 85 are clamped; longitudes may exceed ±180 (tiles wrap)
 so a bbox across the antimeridian stitches seamlessly; the 180° tile seam (a dark column in the source tiles) is blended.
 """
-import concurrent.futures, io, json, math, pathlib, sys, urllib.request
+import concurrent.futures, io, json, math, os, pathlib, sys, tempfile, urllib.request
 
 LAYERS = {"bluemarble": ("BlueMarble_ShadedRelief_Bathymetry", "GoogleMapsCompatible_Level8", "jpeg", 8, "NASA Blue Marble"),
           "bmng": ("BlueMarble_NextGeneration", "GoogleMapsCompatible_Level8", "jpeg", 8, "NASA Blue Marble"),
@@ -53,6 +53,10 @@ def stitch(bbox, width_px, out_path, layer="bluemarble", quality=86):
 
     def fetch(t):
         x, y = t; xw = x % n; p = cache / f"{y}_{xw}.{ext}"
+        if not p.exists() and os.environ.get("BASEMAP_OFFLINE"):                 # tests: flat ocean-blue placeholder, never the network
+            ph = pathlib.Path(tempfile.gettempdir()) / f"bm_placeholder_{z}_{y}_{xw}.{ext}"
+            if not ph.exists(): Image.new("RGB", (256, 256), (16, 34, 58)).save(ph, quality=60)
+            return t, ph
         if not p.exists():
             url = f"https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/{name}/default/{tms}/{z}/{y}/{xw}.{ext}"
             try: p.write_bytes(urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=60).read())

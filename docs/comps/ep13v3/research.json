@@ -96,8 +96,8 @@
    ],
    "screen": [
     "New Zealand",
-    "ABOUT 500 KM",
-    "Down the spine of the South Island.",
+    "500 KM",
+    "of peaks down the South Island",
     "South Island"
    ]
   },
@@ -115,8 +115,8 @@
     "highest: aoraki, mount cook, three thousand seven hundred and twenty-four metres"
    ],
    "screen": [
-    "AORAKI / MOUNT COOK",
-    "3,724 m — New Zealand's highest.",
+    "3,724 M",
+    "Aoraki, the roof of New Zealand",
     "Aoraki / Mount Cook"
    ]
   },
@@ -132,8 +132,8 @@
     "the tasman glacier, its longest, runs twenty-three kilometres"
    ],
    "screen": [
-    "TASMAN GLACIER · 23 KM",
-    "New Zealand's largest and longest.",
+    "23 KM",
+    "Tasman Glacier, the longest",
     "Tasman Glacier"
    ]
   },
@@ -150,8 +150,8 @@
     "it all rides the alpine fault, where the pacific and australian plates collide"
    ],
    "screen": [
-    "ALPINE FAULT",
-    "Pacific + Australian plates meet here.",
+    "TWO PLATES",
+    "collide along the Alpine Fault",
     "Alpine Fault"
    ]
   }

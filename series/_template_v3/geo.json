@@ -1,0 +1,241 @@
+{
+ "version": 1,
+ "episode": "ep13-southern-alps-new-zealand",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     165.5,
+     -47.8,
+     179.2,
+     -33.8
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "nz",
+     "ids": [
+      "554"
+     ],
+     "cls": "",
+     "note": "New Zealand",
+     "lift": "flag",
+     "flag": "nz"
+    },
+    {
+     "kind": "route",
+     "id": "line",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "alps",
+        "properties": {
+         "name": "Southern Alps main divide (simplified)"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           166.9,
+           -45.5
+          ],
+          [
+           167.8,
+           -44.9
+          ],
+          [
+           168.7,
+           -44.5
+          ],
+          [
+           169.6,
+           -44.0
+          ],
+          [
+           170.14,
+           -43.6
+          ],
+          [
+           170.9,
+           -43.15
+          ],
+          [
+           171.6,
+           -42.7
+          ],
+          [
+           172.3,
+           -42.25
+          ],
+          [
+           173.0,
+           -41.85
+          ],
+          [
+           173.5,
+           -41.6
+          ]
+         ]
+        }
+       },
+       {
+        "type": "Feature",
+        "id": "fault",
+        "properties": {
+         "name": "Alpine Fault (simplified)"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           167.0,
+           -45.1
+          ],
+          [
+           167.9,
+           -44.5
+          ],
+          [
+           168.8,
+           -44.05
+          ],
+          [
+           169.7,
+           -43.55
+          ],
+          [
+           170.4,
+           -43.15
+          ],
+          [
+           171.1,
+           -42.75
+          ],
+          [
+           171.8,
+           -42.35
+          ],
+          [
+           172.5,
+           -42.0
+          ],
+          [
+           173.2,
+           -41.7
+          ],
+          [
+           173.8,
+           -41.5
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "hand-simplified lines for drawing only; the fault runs just west of the divide"
+    }
+   ],
+   "pins": [
+    {
+     "id": "aoraki",
+     "lonlat": [
+      170.142,
+      -43.595
+     ],
+     "label": "Aoraki / Mount Cook",
+     "qid": "Q5059"
+    },
+    {
+     "id": "christchurch",
+     "lonlat": [
+      172.64,
+      -43.53
+     ],
+     "label": "Christchurch",
+     "qid": "Q79990"
+    },
+    {
+     "id": "tasman",
+     "lonlat": [
+      170.3,
+      -43.55
+     ],
+     "label": "Tasman Glacier",
+     "qid": "Q1140440"
+    }
+   ],
+   "labels": [
+    {
+     "id": "south_island",
+     "lonlat": [
+      169.4,
+      -44.75
+     ],
+     "text": "South Island",
+     "cls": "sea"
+    },
+    {
+     "id": "tasman_sea",
+     "lonlat": [
+      168.9,
+      -42.2
+     ],
+     "text": "Tasman Sea",
+     "cls": "sea"
+    },
+    {
+     "id": "alpine_fault",
+     "lonlat": [
+      168.3,
+      -42.9
+     ],
+     "text": "Alpine Fault",
+     "cls": "sea"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      100,
+      -60,
+      200,
+      10
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location/distance story; no size comparison is made (P1)",
+   "scalebar": {
+    "km": 200,
+    "lonlat": [
+     170,
+     -43
+    ],
+    "at": [
+     60,
+     1110
+    ]
+   }
+  }
+ }
+}

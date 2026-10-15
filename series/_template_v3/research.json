@@ -1,0 +1,222 @@
+{
+ "version": 1,
+ "episode": "ep13-southern-alps-new-zealand",
+ "topic": "In which country are the Southern Alps? (New Zealand)",
+ "researched": "2026-10-15",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "sources": {
+  "wiki_southern_alps": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Southern Alps",
+   "url": "https://en.wikipedia.org/wiki/Southern_Alps",
+   "date": "2026-10-01",
+   "notes": "mountain range along much of the length of New Zealand's South Island; runs approximately 500 km NE–SW; uplift continues on the Alpine Fault"
+  },
+  "britannica_southern_alps": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Southern Alps / Kā Tiritiri o te Moana",
+   "url": "https://www.britannica.com/place/Southern-Alps-Ka-Tiritiri-o-te-Moana",
+   "date": "2026-01-01",
+   "notes": "range on South Island, New Zealand, extending NE–SW along the island; highest point Aoraki/Mount Cook, 3,724 m"
+  },
+  "wiki_aoraki": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Aoraki / Mount Cook",
+   "url": "https://en.wikipedia.org/wiki/Aoraki_/_Mount_Cook",
+   "date": "2026-10-13",
+   "notes": "highest mountain in New Zealand; height listed as 3,724 m since 2014 (after the 1991 rock fall and later erosion); in the Southern Alps, South Island"
+  },
+  "doc_aoraki": {
+   "type": "primary",
+   "publisher": "New Zealand Department of Conservation",
+   "title": "Aoraki/Mount Cook National Park",
+   "url": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/canterbury/places/aoraki-mount-cook-national-park/",
+   "date": "2025-01-01",
+   "notes": "'At 3,724 m, New Zealand's tallest peak is known as Aoraki by Māori'; South Island; Tasman Glacier"
+  },
+  "wiki_south_island": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "South Island",
+   "url": "https://en.wikipedia.org/wiki/South_Island",
+   "date": "2026-10-02",
+   "notes": "divided along its length by the Southern Alps; Aoraki / Mount Cook 3,724 m; the Southern Alps include sixteen other points exceeding 3,000 m (→ 17 peaks over 3,000 m)"
+  },
+  "wiki_alpine_fault": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Alpine Fault",
+   "url": "https://en.wikipedia.org/wiki/Alpine_Fault",
+   "date": "2026-10-01",
+   "notes": "about 600 km long along the South Island; boundary between the Pacific plate and the Australian plate; the Southern Alps have been uplifted on the fault over the last 12 million years"
+  },
+  "gns_alpine_fault": {
+   "type": "primary",
+   "publisher": "GNS Science (New Zealand Crown Research Institute)",
+   "title": "Alpine Fault",
+   "url": "https://www.gns.cri.nz/our-science/natural-hazards-and-risks/earthquakes/major-faults-in-new-zealand/alpine-fault/",
+   "date": "2025-01-01",
+   "notes": "the Alpine Fault is the on-land boundary of the Australian and Pacific plates along the South Island's West Coast"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 – Countries (public domain)",
+   "url": "https://www.naturalearthdata.com/downloads/",
+   "date": "2025-01-01",
+   "notes": "map geometry; New Zealand = 554"
+  },
+  "wiki_tasman": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Tasman Glacier",
+   "url": "https://en.wikipedia.org/wiki/Tasman_Glacier",
+   "date": "2026-10-01",
+   "notes": "largest glacier in New Zealand; flows from the Southern Alps towards the Mackenzie Basin"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The Southern Alps are the mountain range running along the length of New Zealand's South Island, roughly 500 km NE–SW (Britannica gives about 480 km).",
+   "sources": [
+    "wiki_southern_alps",
+    "britannica_southern_alps",
+    "wiki_south_island",
+    "doc_aoraki"
+   ],
+   "vo": [
+    "in which country are the southern alps",
+    "it's new zealand",
+    "about five hundred kilometres down the south island"
+   ],
+   "screen": [
+    "New Zealand",
+    "500 KM",
+    "of peaks down the South Island",
+    "South Island"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "record",
+   "text": "Aoraki / Mount Cook, 3,724 m, is New Zealand's highest mountain (height revised in 2014 after the 1991 collapse and later erosion).",
+   "sources": [
+    "wiki_aoraki",
+    "doc_aoraki",
+    "wiki_south_island",
+    "britannica_southern_alps"
+   ],
+   "vo": [
+    "highest: aoraki, mount cook, three thousand seven hundred and twenty-four metres"
+   ],
+   "screen": [
+    "3,724 M",
+    "Aoraki, the roof of New Zealand",
+    "Aoraki / Mount Cook"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "record",
+   "text": "The Tasman Glacier is New Zealand's largest and longest glacier — about 23 km long (DOC: 23 km long, up to 3 km wide, 101 km²).",
+   "sources": [
+    "doc_aoraki",
+    "wiki_tasman"
+   ],
+   "vo": [
+    "the tasman glacier, its longest, runs twenty-three kilometres"
+   ],
+   "screen": [
+    "23 KM",
+    "Tasman Glacier, the longest",
+    "Tasman Glacier"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "record",
+   "text": "The range is uplifted along the Alpine Fault, the boundary between the Pacific and Australian tectonic plates.",
+   "sources": [
+    "wiki_alpine_fault",
+    "gns_alpine_fault",
+    "wiki_southern_alps"
+   ],
+   "vo": [
+    "it all rides the alpine fault, where the pacific and australian plates collide"
+   ],
+   "screen": [
+    "TWO PLATES",
+    "collide along the Alpine Fault",
+    "Alpine Fault"
+   ]
+  }
+ ],
+ "myths": [
+  {
+   "myth": "'Alps' means Europe.",
+   "reality": "New Zealand's Southern Alps are higher than any Australian peak and carry hundreds of glaciers.",
+   "sources": [
+    "wiki_southern_alps",
+    "doc_aoraki"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^One map question a day",
+  "^Tomorrow:",
+  "^Switzerland$",
+  "^Chile$",
+  "^Tasman Sea$",
+  "^Christchurch$"
+ ],
+ "landscape": {
+  "our_gap": "Feed quizzes answer 'New Zealand' over stock peaks; nobody draws the range down the island, drops the 3,724 m pin and then draws the fault that built it.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/@thequizwire-com/shorts",
+    "title": "Feed Geo Blitz (own channel, v1)",
+    "angle": "card over b-roll",
+    "misses": "no map, no fault, no sources"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=southern+alps+quiz+shorts",
+    "title": "Search results: Southern Alps quiz",
+    "angle": "text over footage",
+    "misses": "the range is never located"
+   },
+   {
+    "url": "https://www.youtube.com/@geomapunveiled25/shorts",
+    "title": "Geo Map Unveiled",
+    "angle": "satellite listicles",
+    "misses": "no question format"
+   }
+  ]
+ },
+ "vo_exempt": [
+  "^switzerland, new zealand, or chile\\?$",
+  "^tomorrow[,:]? the country with the most time zones",
+  "^subscribe, and guess it first"
+ ]
+}

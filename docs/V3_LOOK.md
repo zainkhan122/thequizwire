@@ -38,7 +38,7 @@ textqa runs here too. Actions minutes are for the final render only.
 | V3.2 ✓ `6e02d59` | lifted highlight: `flag` / `fill` highlight kinds (clipPath flag image, white outline, shadow, pop/wipe tweens) | `geo.highlight_in` variants |
 | V3.3 ✓ | v3 UI: question/options/timer/reveal/caption components in `engine/quiz.py` + CSS; flag/icon circles in options; stickers + flag-ball characters landed here too | `format:"quiz-v3"` · `docs/img/v3_3_contact_sheet.jpg` |
 | V3.4 | Wikimedia photo cut-outs (licence fields) + word-by-word caption timing polish; sticker/character verbs already exist | `plate` cut-outs, `captions.words` |
-| V3.5 | template `series/_template_v3`, quizlint rules for v3 (no subject on screen before reveal, min type sizes), selftest | green offline + local snapshots |
+| V3.5 ✓ | template `series/_template_v3` (= Geo #13 in v3), quizlint Q14 (no camera on the answer bbox before the reveal unless k ≤ 0.5) / Q15 (full-bleed stage, banner_in), `BASEMAP_OFFLINE=1` placeholder tiles for selftest, `tools/new_episode.py` scaffolds v3 by default | selftest green; full local chain on the example: HF check 0 errors, textqa 0 FAIL |
 | V3.6 | re-author the 10 pilot episodes' `visuals.json`/`geo.json` to v3 (scripts, voice, facts unchanged) with a local contact sheet each | 10 reviewed sheets |
 | V3.7 | one runner render (Geo #13) → owner look → then the batch | Release `pilot-v3-batch1` |
 

@@ -8,7 +8,7 @@ import json, pathlib, re, shutil, sys, urllib.request
 CACHE = pathlib.Path.home() / ".cache" / "stickers"
 CDN = "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/{cp}.svg"
 UA = "quizwire/1 (github zainkhan122/thequizwire)"
-LICENCE = {"licence": "CC BY 4.0", "provider": "Twemoji (Twitter, Inc. and other contributors)", "credit": "Twemoji", "source": "https://github.com/twitter/twemoji"}
+LICENCE = {"licence": "CC-BY-4.0", "provider": "Twemoji (Twitter, Inc. and other contributors)", "credit": "Twemoji", "source": "https://github.com/twitter/twemoji"}
 
 
 def fetch(cp):

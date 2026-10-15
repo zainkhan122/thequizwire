@@ -1,0 +1,54 @@
+{
+ "id": "_template_v3",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 0,
+ "title": "In which country are the SOUTHERN ALPS?",
+ "difficulty": "MEDIUM",
+ "seed": 1013,
+ "quiz": {
+  "question": "In which country are the SOUTHERN ALPS?",
+  "keyword": "SOUTHERN ALPS",
+  "options": [
+   "Switzerland",
+   "New Zealand",
+   "Chile"
+  ],
+  "correct": 1,
+  "beat": 1.5,
+  "answer_line": "New Zealand",
+  "answer_sub": "South Island",
+  "tease": "Tomorrow: the country with the most time zones",
+  "cta_line": "One map question a day · Subscribe",
+  "option_meta": [
+   {
+    "flag": "ch"
+   },
+   {
+    "flag": "nz"
+   },
+   {
+    "flag": "cl"
+   }
+  ],
+  "banner": "New Zealand",
+  "banner_sub": "✓  B was right"
+ },
+ "hook_type": "misconception",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "In which country are the SOUTHERN ALPS?",
+  "description": "In which country are the SOUTHERN ALPS? Guess first — then see the range drawn down the island.\n\nWhat was your first guess?\n\nSources: NZ Department of Conservation, GNS Science, Britannica (Southern Alps), Wikipedia (Southern Alps, Aoraki / Mount Cook, South Island, Alpine Fault).\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #13",
+  "hashtags": [
+   "#GKshorts",
+   "#thequizwire",
+   "#shorts",
+   "#geoblitz"
+  ]
+ }
+}

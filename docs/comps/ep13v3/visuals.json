@@ -396,6 +396,11 @@
   {
    "at": "end-1.4",
    "do": "hook_in"
+  },
+  {
+   "at": "s04+2.2",
+   "do": "geo.scalebar_in",
+   "stage": "stage_map"
   }
  ],
  "captions": {

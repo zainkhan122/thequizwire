@@ -39,7 +39,7 @@ ALLOWED = {
 }
 ATTRIBUTION = {"CC-BY-4.0", "CC-BY-3.0", "ODbL-1.0", "Copernicus"}
 REFUSED = re.compile(r"(?<![A-Za-z])SA(?![A-Za-z])|NC|ND|unknown|fair.?use|all.rights", re.I)
-KINDS = {"plate", "clip", "archive", "photo", "vo", "music", "sfx", "texture", "font", "code", "mix", "data"}
+KINDS = {"plate", "clip", "archive", "photo", "vo", "music", "sfx", "texture", "font", "code", "mix", "data", "image"}   # image = generated graphics (basemap rasters, flag/sticker SVGs)
 # vendored runtime JS shipped inside every composition (engine/vendor/LICENSES.md is the human-readable table)
 VENDOR_JS = {"gsap.min.js": "GSAP-Standard", "d3-geo.min.js": "ISC", "d3-array.min.js": "ISC", "topojson-client.min.js": "ISC", "geo-runtime.js": "own"}
 NEEDS_CREDIT = {"photo", "archive"}

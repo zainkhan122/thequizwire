@@ -259,8 +259,8 @@ class Quiz:
                         f'<span class="let" data-fc="skip">{LETTERS[i]}</span>{icon}<span class="otext">{esc(o)}</span></div>')
         return (f'<div id="{cid}" class="pills" data-layout-allow-overlap="true">{"".join(rows)}</div>'
                 f'<div class="ring3" id="{cid}_ring" data-layout-allow-overlap="true"><svg width="160" height="160" viewBox="0 0 160 160"><circle class="bg" cx="80" cy="80" r="70"></circle>'
-                f'<circle class="fg" id="{cid}_arc" cx="80" cy="80" r="70" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0"></circle></svg><div class="rq tu" data-tq-dwell="off">?</div></div>'
-                f'<div class="tease3 tu" id="{cid}_tease" data-tq-dwell="off" data-layout-allow-overlap="true">GUESS BEFORE THE TIMER ENDS</div>')
+                f'<circle class="fg" id="{cid}_arc" cx="80" cy="80" r="70" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0"></circle></svg><div class="rq tu" data-tq-dwell="off" data-fc="skip">?</div></div>'
+                f'<div class="tease3 tu" id="{cid}_tease" data-tq-dwell="off" data-fc="skip" data-layout-allow-overlap="true">GUESS BEFORE THE TIMER ENDS</div>')
 
     def pills_in(self, t, cid=None, gap=0.12):
         cid = cid or next(iter(self.cards))
@@ -299,7 +299,7 @@ class Quiz:
     def banner(self, text, sub=""):
         n = len(text); size = "s" if n > 16 else "m" if n > 11 else ""
         return (f'<div id="banner" class="banner3 tu {size}" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">{esc(text)}</div>'
-                f'<div id="bannersub" class="bannersub tu" data-layout-allow-overlap="true" data-layout-allow-occlusion="true" data-tq-dwell="off">{esc(sub)}</div>')
+                f'<div id="bannersub" class="bannersub tu" data-layout-allow-overlap="true" data-layout-allow-occlusion="true" data-tq-dwell="off" data-fc="skip">{esc(sub)}</div>')
 
     def banner_in(self, t, dur=0.45):
         self.J(f"tl.fromTo('#banner',{{autoAlpha:0,scale:0.6,y:40}},{{autoAlpha:1,scale:1,y:0,duration:{f(dur)},ease:'back.out(1.8)',immediateRender:false}},{f(t)});")

@@ -79,9 +79,12 @@ def main():
     try:
         tpl = copy_ep(ROOT / "series/_template", tmp)
         tp2 = copy_ep(ROOT / "series/_template_v2", tmp)
+        tp3 = copy_ep(ROOT / "series/_template_v3", tmp)
         dis = copy_ep(ROOT / "tests/fixtures/ep-disputed", tmp)
         expect_ok(tpl, "_template")
         expect_ok(tp2, "_template_v2 (Guess it → See it)")
+        os.environ["BASEMAP_OFFLINE"] = "1"
+        expect_ok(tp3, "_template_v3 (satellite quiz, offline basemap)")
         expect_ok(dis, "ep-disputed")
         # voice gate token normaliser: script words vs whisper digits must compare equal (decimals, scales, UK/US spelling)
         sys.path.insert(0, str(RK)); import voice as _voice

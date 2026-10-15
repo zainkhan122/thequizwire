@@ -25,7 +25,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TPL = ROOT / "series/_template"
-TPL2 = ROOT / "series/_template_v2"      # Plan v2 "Guess it → See it" (default since 2026-10-15)
+TPL2 = ROOT / "series/_template_v2"      # Plan v2 "Guess it → See it"
+TPL3 = ROOT / "series/_template_v3"      # v3 satellite quiz (default since 2026-10-15, docs/V3_LOOK.md)
 SERIES = ROOT / "series/series.json"
 LETTERS = "ABCD"
 
@@ -45,6 +46,7 @@ def main():
     ap.add_argument("question")
     ap.add_argument("--options", nargs="+", required=True, metavar="OPT", help="3 options (v2, default) or 4 with --v1")
     ap.add_argument("--v1", action="store_true", help="scaffold the old 4-option card format from series/_template")
+    ap.add_argument("--v2", action="store_true", help="scaffold the flat v2 look (series/_template_v2) instead of v3")
     ap.add_argument("--keyword", help="v2: the word(s) of the question to colour in the hook (default: the capitalised word of the title)")
     ap.add_argument("--tease", default="Tomorrow: TODO the next question in this series.", help="v2: the 'Tomorrow:' line (must be true)")
     ap.add_argument("--correct", type=int, required=True, help="0-based index of the right option")
@@ -69,7 +71,7 @@ def main():
     print(f"== {ser['name']} #{num} → {ep.relative_to(ROOT)}")
     if a.dry: return
 
-    shutil.copytree(TPL2 if v2 else TPL, ep, ignore=shutil.ignore_patterns("out", "__pycache__", "vo", "words.json", "README.md"))
+    shutil.copytree((TPL2 if a.v2 else TPL3) if v2 else TPL, ep, ignore=shutil.ignore_patterns("out", "__pycache__", "vo", "words.json", "README.md"))
     eid = ep.name
     use_map = a.series == "geo-blitz" or a.map
 
@@ -79,8 +81,8 @@ def main():
     E.update({"id": eid, "series": a.series, "number": num, "title": q, "difficulty": a.difficulty, "seed": 1000 + num, "hook_type": a.hook})
     if v2:
         kw = a.keyword or next((w for w in q.replace("?", "").split() if w.isupper() and len(w) > 2), None)
-        E["format"] = "quiz-v2"
-        E["quiz"] = {"question": q, "keyword": kw, "options": opts, "correct": a.correct, "beat": 1.5,
+        E["format"] = "quiz-v2" if a.v2 else "quiz-v3"
+        E["quiz"] = {"question": q, "keyword": kw, "options": opts, "correct": a.correct, "beat": 1.5, **({} if a.v2 else {"option_meta": [{} for _ in opts], "banner": opts[a.correct][:16]}),
                      "answer_line": opts[a.correct], "answer_sub": "TODO — one sourced number or place (≤ 40 chars)",
                      "tease": a.tease, "cta_line": "One map question a day · Subscribe" if use_map else "One question a day · Subscribe"}
     else:
