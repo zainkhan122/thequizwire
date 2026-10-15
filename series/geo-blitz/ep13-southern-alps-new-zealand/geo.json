@@ -4,8 +4,7 @@
  "policy": "docs/BORDER_POLICY.md",
  "scenes": {
   "main": {
-   "projection": "equalEarth",
-   "projection_reason": "a distance (range length) is quoted → scalebar; no area comparison; equal-area house style (geolint P1/P2)",
+   "projection": "mercator",
    "fit": {
     "type": "bbox",
     "bbox": [
@@ -30,7 +29,9 @@
       "554"
      ],
      "cls": "",
-     "note": "New Zealand"
+     "note": "New Zealand",
+     "lift": "flag",
+     "flag": "nz"
     },
     {
      "kind": "route",
@@ -181,8 +182,8 @@
     {
      "id": "south_island",
      "lonlat": [
-      168.6,
-      -45.9
+      169.4,
+      -44.75
      ],
      "text": "South Island",
      "cls": "sea"
@@ -190,8 +191,8 @@
     {
      "id": "tasman_sea",
      "lonlat": [
-      165.5,
-      -41.5
+      168.9,
+      -42.2
      ],
      "text": "Tasman Sea",
      "cls": "sea"
@@ -206,6 +207,24 @@
      "cls": "sea"
     }
    ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      100,
+      -60,
+      200,
+      10
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location/distance story; no size comparison is made (P1)",
    "scalebar": {
     "km": 200,
     "lonlat": [
@@ -213,14 +232,10 @@
      -43
     ],
     "at": [
-     40,
-     1100
+     60,
+     1110
     ]
-   },
-   "disputed": [],
-   "sources": [
-    "Natural Earth"
-   ]
+   }
   }
  }
 }

@@ -1,6 +1,6 @@
 {
  "id": "ep13-southern-alps-new-zealand",
- "format": "quiz-v2",
+ "format": "quiz-v3",
  "series": "geo-blitz",
  "number": 13,
  "title": "In which country are the SOUTHERN ALPS?",
@@ -18,8 +18,21 @@
   "beat": 1.5,
   "answer_line": "New Zealand",
   "answer_sub": "South Island",
-  "tease": "Tomorrow: the country with the most time zones.",
-  "cta_line": "One map question a day · Subscribe"
+  "tease": "Tomorrow: the country with the most time zones",
+  "cta_line": "One map question a day · Subscribe",
+  "option_meta": [
+   {
+    "flag": "ch"
+   },
+   {
+    "flag": "nz"
+   },
+   {
+    "flag": "cl"
+   }
+  ],
+  "banner": "New Zealand",
+  "banner_sub": "✓  B was right"
  },
  "hook_type": "misconception",
  "promise": {
