@@ -193,6 +193,14 @@
   },
   {
    "at": "s06",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ma"
+   }
+  },
+  {
+   "at": "s06",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s06+1.4",
