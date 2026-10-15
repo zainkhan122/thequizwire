@@ -33,7 +33,7 @@ Never render video, decode media, or install HyperFrames/Chrome in the sandbox (
 - **Minutes are a budget.** Private repo ⇒ 2,000 Linux-minutes/month. `cloud.py minutes` before planning renders; `selftest`/`geodata` are manual; never add a cron without the owner.
 - **Heavy work is CI work.** Anything > 3 min of compute (render, whisper, TTS batches, docker, big downloads) is dispatched to Actions, never run here (`docs/OPERATING_MODEL.md §3–4`).
 - **No media in git** (`tools/repo_guard.py`: no media extensions, no file > 1 MB, repo < 15 MB). `docs/img/*.png` previews are the only exception.
-- **No videos until the owner says so.** Phase 1 delivered tools only; Phase 2 starts with the owner's go and `docs/PLAN.md §4`.
+- **Production is unlocked (owner, 2026-10-15: "V2 is approved. make videos")** — only the v2 format of `docs/PLAN_V2.md`; nothing auto-posts.
 - **Four series, feed numbering** — `series/series.json` is the counter; only `tools/new_episode.py` bumps it. Cosmic Quiz / Time Vault stay inactive.
 - **Narrator is Kokoro `am_michael`** (speed per tone from `voice.json`); Arena `generate_speech` is not used for this channel.
 - **Borders:** `docs/BORDER_POLICY.md` — show the dispute, label controller + claimants, date it, never "owns". geolint P4 enforces; the registry is the SSOT.
@@ -42,6 +42,12 @@ Never render video, decode media, or install HyperFrames/Chrome in the sandbox (
 - **Data layout:** world-atlas ids are 3-char zero-padded ISO numeric strings (`"356"` India, `"586"` Pakistan); Bahrain exists only at 50m/10m; `engine/data/` ships 110m only, `~/.cache/geodata/` holds 50m/10m + NE disputed (offline fallback: `GEO_FIXTURE=tests/fixtures/ne_disputed_kashmir.geojson`).
 - **Compositions** are built by `engine/compose.py` from `visuals.json` — no per-episode build scripts. Time expressions: `s03`, `s03+0.4`, `s03.end`, `s03@cue`, `end-2`. Geo beats need `stage`; every element needs an `*_in`; facts need `until`.
 - **Layout:** stage y 0–1180, question card 1190–1600 (caption-safe band), nothing below 1600; `hfcheck --caption-zone` and textqa dead zones enforce it.
+- **Map text survives the runner only if it is safe at EVERY visible camera** (runs #2–#5 lessons, see `RESUME.md`): textqa dead zones are
+  top bar y < 210, right column x2 > 960 with y2 > 640, edges x < 40 / x2 > 1040, caption band 1190–1603; hits accumulate over the whole
+  time a label is shown, so `pin_out`/`label_out` BEFORE a camera move that would push it there, and `*_in` only after a travel settles.
+  Plain cream labels over a sand highlight fail contrast (< 3:1) → `cls:"ink"` — but an ink label must sit entirely on the highlighted
+  polygon (ink on dark land is 1.5:1). Counters: `size`/`w` so the number fits its box; policy plates ≥ 20 px below `#bug` (y 262).
+  Check cameras with `node reelkit/geopreview.mjs ~/.cache/build/<ep>/hf main out.png --k K --lonlat LON,LAT --show pins,labels,highlights`.
 - **Clips** (`clips.json`): `maptile` (VersaTiles docker, CI only, ≤ 8 s, `args` per docs/MAPTILE.md), `url` archive (licence fields required), Wan/LTX only if a clip is truly needed (history rules). Everything goes through the clip cache; a clip is generated once.
 - **Provenance allow-list** (`reelkit/provenance.py`): PD, PD-USGov, CC0, CC BY 3.0/4.0, OFL, Apache-2.0, ISC, MIT, BSD-3, ODbL (maps, attribution), Copernicus, own/own-ai/own-tts, GSAP-Standard. SA/NC/ND/unknown/fair-use refused.
 - **svgraster.py limits:** the browser-less PNG preview renders paths, circles, rects, text (basic) — no filters, gradients or foreignObject; it is a preview, not a frame check (HyperFrames snaps on CI are).
