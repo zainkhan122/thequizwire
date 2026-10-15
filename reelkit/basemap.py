@@ -21,7 +21,7 @@ LAYERS = {"bluemarble": ("BlueMarble_ShadedRelief_Bathymetry", "GoogleMapsCompat
           "bmng": ("BlueMarble_NextGeneration", "GoogleMapsCompatible_Level8", "jpeg", 8, "NASA Blue Marble"),
           "night": ("VIIRS_CityLights_2012", "GoogleMapsCompatible_Level8", "jpeg", 8, "NASA Black Marble")}
 CACHE = pathlib.Path.home() / ".cache" / "basemap"
-MAX_W, MAX_H, MAX_BYTES = 4096, 6144, 6_000_000
+MAX_W, MAX_H, MAX_BYTES = 4864, 6144, 6_000_000
 UA = "quizwire/1 (github zainkhan122/thequizwire)"
 
 

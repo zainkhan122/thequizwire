@@ -109,8 +109,17 @@
         const fb = spec.fit && spec.fit.bbox ? path.bounds(bboxFeature(spec.fit.bbox)) : [[0, 0], [spec.w, spec.h]];
         const bw = fb[1][0] - fb[0][0], bh = fb[1][1] - fb[0][1];
         const wide = { x: fb[0][0] - bw * 0.5, y: fb[0][1] - bh * 0.5, w: bw * 2, h: bh * 2 };
+        const mainBounds = (f) => {                                             // bounds of the main body: parts < 20 % of the largest polygon (far-flung islands,
+          const g = f.geometry || {};                                            // Guiana in France 250) do not stretch the flag across an ocean
+          if (g.type !== "MultiPolygon") return path.bounds(f);
+          const parts = g.coordinates.map(c => ({ type: "Feature", geometry: { type: "Polygon", coordinates: c } }));
+          const areas = parts.map(p => path.area(p)), amax = Math.max(...areas);
+          const keep = parts.filter((p, j) => areas[j] >= 0.2 * amax);
+          const bs = keep.map(p => path.bounds(p));
+          return [[Math.min(...bs.map(b => b[0][0])), Math.min(...bs.map(b => b[0][1]))], [Math.max(...bs.map(b => b[1][0])), Math.max(...bs.map(b => b[1][1]))]];
+        };
         fs.forEach((f, i) => {
-          const b = path.bounds(f), fw = b[1][0] - b[0][0], fh = b[1][1] - b[0][1];
+          const b = mainBounds(f), fw = b[1][0] - b[0][0], fh = b[1][1] - b[0][1];
           const sane = isFinite(fw) && isFinite(fh) && fw > 0 && fh > 0 && fw < bw * 3 && fh < bh * 3;        // antimeridian / world-spanning features fall back to the wide rect
           const rect = sane ? { x: b[0][0], y: b[0][1], w: fw, h: fh } : wide;
           const fit = L.flag_fit === "cover" || !sane ? "xMidYMid slice" : "none";                          // default: the flag is stretched into the shape (reference-channel look)

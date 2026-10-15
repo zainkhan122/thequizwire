@@ -33,6 +33,9 @@ def f(x): return f"{x:.3f}"
 def esc(s): return html.escape(str(s))
 
 
+ALLOW = ' data-layout-allow-overlap="true" data-layout-allow-occlusion="true"'   # v3 UI floats over the map and under flashes on purpose
+
+
 class Quiz:
     def __init__(self, J, series, number=None, accent=None):
         """series = series.json entry (needs name, slug, color); number = episode number for the bug."""
@@ -42,8 +45,8 @@ class Quiz:
 
     # ---------------------------------------------------------------- chrome
     def bug(self):
-        n = f' <b>#{self.number}</b>' if self.number else ""
-        return (f'<div id="bug" class="bug tu" data-tq-dwell="off" data-layout-allow-overlap="true" style="--acc:{self.accent}">'
+        n = f' <b data-layout-allow-occlusion="true" data-layout-allow-overlap="true">#{self.number}</b>' if self.number else ""
+        return (f'<div id="bug" class="bug tu" data-tq-dwell="off" data-layout-allow-overlap="true" data-layout-allow-occlusion="true" style="--acc:{self.accent}">'
                 f'<span class="dot"></span>{esc(self.series["name"]).upper()}{n}</div>')
 
     def badge(self, level="MEDIUM"):
@@ -234,7 +237,7 @@ class Quiz:
     def hook3(self, hid, question, keyword=None):
         txt = esc(question)
         if keyword and keyword.lower() in question.lower():
-            i = question.lower().index(keyword.lower()); txt = esc(question[:i]) + f'<b>{esc(question[i:i + len(keyword)])}</b>' + esc(question[i + len(keyword):])
+            i = question.lower().index(keyword.lower()); txt = esc(question[:i]) + f'<b{ALLOW}>{esc(question[i:i + len(keyword)])}</b>' + esc(question[i + len(keyword):])
         n = len(question); size = "s" if n > 58 else "m" if n > 42 else ""
         return f'<div id="{hid}" class="hook3 tu {size}" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">{txt}</div>'
 
@@ -255,8 +258,8 @@ class Quiz:
             m = meta[i] if i < len(meta) else {}
             icon = (f'<span class="pflag" style="background-image:url(assets/geo/flags/{m["flag"].lower()}.svg)"></span>' if m.get("flag")
                     else f'<img class="pemo" src="assets/stickers/{m["emoji"]}.svg" alt="">' if m.get("emoji") else "")
-            rows.append(f'<div class="pill tu" id="{cid}_o{i}"{DISTRACTOR if i != correct else ""} data-layout-allow-overlap="true" data-layout-allow-occlusion="true">'
-                        f'<span class="let" data-fc="skip">{LETTERS[i]}</span>{icon}<span class="otext">{esc(o)}</span></div>')
+            rows.append(f'<div class="pill tu" id="{cid}_o{i}"{DISTRACTOR if i != correct else ""}{ALLOW}>'
+                        f'<span class="let" data-fc="skip"{ALLOW}>{LETTERS[i]}</span>{icon}<span class="otext"{ALLOW}>{esc(o)}</span></div>')
         return (f'<div id="{cid}" class="pills" data-layout-allow-overlap="true">{"".join(rows)}</div>'
                 f'<div class="ring3" id="{cid}_ring" data-layout-allow-overlap="true"><svg width="160" height="160" viewBox="0 0 160 160"><circle class="bg" cx="80" cy="80" r="70"></circle>'
                 f'<circle class="fg" id="{cid}_arc" cx="80" cy="80" r="70" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0"></circle></svg><div class="rq tu" data-tq-dwell="off" data-fc="skip">?</div></div>'
@@ -310,7 +313,7 @@ class Quiz:
         self.J(f"tl.to('#scrimtop',{{opacity:0.35,duration:0.8,ease:'power1.inOut'}},{f(t)});")        # let the satellite breathe during the story
 
     def fact3(self, fid, text, kicker="", y=1250):
-        k = f'<b>{esc(kicker)}</b> ' if kicker else ""
+        k = f'<b{ALLOW}>{esc(kicker)}</b> ' if kicker else ""
         n = len(kicker) + len(text); size = "s" if n > 40 else "m" if n > 30 else ""
         return f'<div id="{fid}" class="fact3 tu {size}" style="top:{y}px" data-layout-allow-caption-zone="true" data-layout-allow-overlap="true">{k}{esc(text)}</div>'
 
@@ -411,12 +414,12 @@ CSS = f"""
 
 /* ---- v3 "satellite quiz" (docs/V3_LOOK.md) ---- */
 .v3 .scrim{{position:absolute;left:0;width:1080px;z-index:20;pointer-events:none}}
-.v3 .scrim-top{{top:0;height:780px;background:linear-gradient(180deg,rgba(0,0,0,.74) 0%,rgba(0,0,0,.48) 55%,rgba(0,0,0,0) 100%)}}
+.v3 .scrim-top{{top:0;height:780px;background:linear-gradient(180deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.6) 55%,rgba(0,0,0,0) 100%)}}
 .v3 .scrim-bot{{top:1180px;height:740px;background:linear-gradient(0deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.72) 40%,rgba(0,0,0,.55) 72%,rgba(0,0,0,0) 100%)}}
 .v3 .bug{{left:48px;top:232px;font-family:'Lilita';font-weight:400;font-size:30px;letter-spacing:.1em;color:#fff;background:#C8102E;border:0;padding:14px 22px 12px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.4)}}
 .v3 .bug b{{color:#FFD400}}
 .v3 .hook3{{position:absolute;left:60px;top:300px;width:900px;text-align:center;font-family:'Lilita';font-size:100px;line-height:1.04;text-transform:uppercase;color:#fff;
-  -webkit-text-stroke:2px #141414;paint-order:stroke fill;text-shadow:0 7px 0 rgba(0,0,0,.55),0 16px 32px rgba(0,0,0,.6);z-index:72;visibility:hidden;opacity:0}}
+  -webkit-text-stroke:3px #141414;paint-order:stroke fill;text-shadow:0 7px 0 rgba(0,0,0,.6),0 0 22px rgba(0,0,0,.9),0 16px 32px rgba(0,0,0,.7);z-index:72;visibility:hidden;opacity:0}}
 .v3 .hook3.m{{font-size:86px}} .v3 .hook3.s{{font-size:74px}}
 .v3 .hook3 b{{color:#FFD400;font-weight:400}}
 .v3 .pills{{position:absolute;left:70px;top:790px;width:940px;height:450px;z-index:70;visibility:hidden;opacity:0}}

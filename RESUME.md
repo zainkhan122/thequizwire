@@ -70,3 +70,10 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 | 2026-10-14 | Geo Blitz / Body & Brain / Sports Sprint / Wild Files active; Cosmic Quiz, Time Vault registered inactive | agent (from feed), to confirm |
 | 2026-10-14 | Repo is **private** (GitHub Free: 2,000 Actions min/month); crons off, `check` main-only, `cloud.py` budget guard | owner |
 | 2026-10-14 | Vector maps (d3-geo + Natural Earth) are the default stage; VersaTiles flyovers are cached hero clips; Blue Marble globe deferred | agent |
+
+### V3.6b — DONE 2026-10-15 · Geo #14 v3 (world-scale template) + Geo #13 runner-review tweaks
+- Geo #14 "most time zones" re-authored in v3: Pacific-centred rotated world (mercator rotate −150, Blue Marble bbox [−30,−66,330,85]), Russia fill beat, Europe flash-stage with France flag lift, Tahiti/Wallis pins, clock sticker. All gates green (textqa 19 units PASS 18 WARN 1).
+- Engine: `mainBounds()` flag-lift rect (parts ≥ 20 % of the largest — France no longer stretched by Guiana); darker `.scrim-top` + 3-px hook stroke (loop-frame contrast 2.93 → PASS); `.v3 .geo.has-basemap` background deep navy beyond the raster; `ALLOW` attrs on hook/pill/fact children; basemap `MAX_W` 4864; quizlint Q14 skipped for ≥ 300° fits.
+- Geo #13 after watching the runner render (`/home/user/review/geo13_v3_runner.mp4`): "South Island" label moved off the scalebar, scalebar → [60,1130], kiwi character → (205,800) off the Aoraki pin label. Template + comps synced; gates green.
+- Lessons (keep): `sNN-x` anchors to the END of sNN — use `sNN.end-x`; rotated-world Mercator shows nothing beyond rel ±180 — keep cameras with half-width 540/(2.9·k) ≤ 180 − |rel centre|; Paris↔Tahiti are 209° apart in this rotation → one pin per hemisphere per camera.
+- Next: V3.6c–j (geo ep10 Nile, ep11 Budapest, ep12 Antarctica; wild ep07–09; sports ep09–10), one episode per phase; then V3.7 batch render after the owner approves Geo #13.

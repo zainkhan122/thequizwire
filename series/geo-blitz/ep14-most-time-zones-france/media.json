@@ -1,6 +1,51 @@
 {
  "files": {},
  "generated": {
+  "geo/europe.json": {
+   "by": "reelkit/geodata.py",
+   "bytes": 274066,
+   "credit": "Natural Earth",
+   "kind": "data",
+   "licence": "PD",
+   "provider": "Natural Earth",
+   "source": "world-atlas 2.0.2 50m + ne_10m_admin_0_disputed_areas"
+  },
+  "geo/europe_basemap.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 1381563,
+   "credit": "NASA Blue Marble",
+   "kind": "image",
+   "licence": "PD-USGov",
+   "provider": "NASA GIBS",
+   "source": "BlueMarble_ShadedRelief_Bathymetry z6 (154 tiles)"
+  },
+  "geo/flags/fr.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 241,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/flags/ru.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 225,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/flags/us.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 648,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
   "geo/main.json": {
    "by": "reelkit/geodata.py",
    "bytes": 107850,
@@ -10,6 +55,24 @@
    "provider": "Natural Earth",
    "source": "world-atlas 2.0.2 110m"
   },
+  "geo/world.json": {
+   "by": "reelkit/geodata.py",
+   "bytes": 108144,
+   "credit": "Natural Earth",
+   "kind": "data",
+   "licence": "PD",
+   "provider": "Natural Earth",
+   "source": "world-atlas 2.0.2 110m"
+  },
+  "geo/world_basemap.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 1799863,
+   "credit": "NASA Blue Marble",
+   "kind": "image",
+   "licence": "PD-USGov",
+   "provider": "NASA GIBS",
+   "source": "BlueMarble_ShadedRelief_Bathymetry z4 (204 tiles)"
+  },
   "mix.wav": {
    "ai_voice": "Kokoro am_michael",
    "by": "reelkit/quizscore.py (procedural bed/ticks/sting) + Kokoro VO takes",
@@ -17,6 +80,33 @@
    "kind": "mix",
    "licence": "own",
    "provider": "build"
+  },
+  "stickers/1f30d.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1156,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f319.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 622,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/23f0.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1479,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
   }
  }
 }

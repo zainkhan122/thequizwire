@@ -76,6 +76,22 @@
    "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000034154511/",
    "date": "2017-03-06",
    "notes": "legal time of metropolitan France (UTC+1) and of each overseas collectivity: Guadeloupe/Martinique/St-Barth/St-Martin UTC−4, Guyane UTC−3, St-Pierre-et-Miquelon UTC−3, Mayotte UTC+3, La Réunion UTC+4, TAAF UTC+5, Polynésie UTC−10/−9:30/−9, Nouvelle-Calédonie UTC+11, Wallis-et-Futuna UTC+12, Clipperton UTC−8"
+  },
+  "britannica_gibraltar": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Gibraltar",
+   "url": "https://www.britannica.com/place/Gibraltar",
+   "date": "2026-10-15",
+   "notes": "British overseas territory on the southern coast of Spain; Spain has long claimed sovereignty (ceded to Britain under the Treaty of Utrecht, 1713)"
+  },
+  "border_registry": {
+   "type": "primary",
+   "publisher": "thequizwire border registry (docs/BORDER_POLICY.md)",
+   "title": "docs/border_registry.json#gibraltar",
+   "url": "https://github.com/zainkhan122/thequizwire/blob/main/docs/border_registry.json",
+   "date": "2026-10-01",
+   "notes": "controller / claimant wording as of 2026-10; no sovereignty asserted"
   }
  },
  "claims": [
@@ -98,8 +114,8 @@
    ],
    "screen": [
     "France",
-    "12",
-    "time zones"
+    "12 TIME ZONES",
+    "scattered across the oceans"
    ]
   },
   {
@@ -115,9 +131,8 @@
     "russia stretches across eleven, but all in one block"
    ],
    "screen": [
-    "RUSSIA · 11 ZONES",
-    "One block, UTC+2 to UTC+12.",
-    "Russia"
+    "RUSSIA: 11",
+    "but all in one block"
    ]
   },
   {
@@ -134,13 +149,10 @@
     "france runs from tahiti at minus ten to wallis and futuna at plus twelve"
    ],
    "screen": [
-    "FRANCE · UTC−10 TO UTC+12",
-    "Tahiti to Wallis and Futuna.",
+    "UTC−10 TO +12",
+    "Tahiti to Wallis and Futuna",
     "−10 Tahiti",
-    "−3 Guiana",
-    "+1 Paris",
-    "+4 Réunion",
-    "+5"
+    "+12 Wallis"
    ]
   },
   {
@@ -156,8 +168,23 @@
     "when paris wakes at seven, tahiti is still on yesterday evening"
    ],
    "screen": [
-    "PARIS 07:00 = TAHITI 20:00",
-    "The evening before."
+    "PARIS 07:00",
+    "= Tahiti 20:00, the day before"
+   ]
+  },
+  {
+   "id": "C05",
+   "weight": "framing",
+   "text": "Border policy plate (the Europe reveal shows Gibraltar's boundary): Gibraltar is a British overseas territory administered by the United Kingdom and claimed by Spain. No sovereignty asserted.",
+   "sources": [
+    "britannica_gibraltar",
+    "border_registry"
+   ],
+   "vo": [],
+   "screen": [
+    "Gibraltar",
+    "Administered by United Kingdom",
+    "Claimed by Spain"
    ]
   }
  ],

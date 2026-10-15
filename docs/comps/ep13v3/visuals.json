@@ -77,8 +77,8 @@
    "type": "character",
    "flag": "nz",
    "face": "wow",
-   "x": 840,
-   "y": 1050,
+   "x": 205,
+   "y": 800,
    "size": 220,
    "rot": -8
   }

@@ -259,11 +259,12 @@ def prep(ep: Path, out: Path, fixtures=None, quiet=False):
         if bm:
             bm = {"layer": bm} if isinstance(bm, str) else dict(bm)
             if spec.get("projection") != "mercator": sys.exit(f"geodata: {sid}: basemap needs \"projection\": \"mercator\" (raster tiles are Web Mercator)")
-            bb = (spec.get("fit") or {}).get("bbox")
-            if not bb: sys.exit(f"geodata: {sid}: basemap needs a bbox fit")
+            bb = bm.get("bbox") or (spec.get("fit") or {}).get("bbox")                 # basemap.bbox: explicit raster extent (world / rotated scenes)
+            if not bb and (spec.get("fit") or {}).get("type", "world") == "world": bb = [-180, -60, 180, 75]
+            if not bb: sys.exit(f"geodata: {sid}: basemap needs a bbox fit (or basemap.bbox)")
             sys.path.insert(0, str(Path(__file__).resolve().parent)); import basemap as _bm
             kmax = float(bm.get("k_max", 2.5)); width = int(spec.get("w", 1080) * kmax * 1.1)
-            pad = float(bm.get("pad_deg", 0.0)) or 0.35 * max(bb[2] - bb[0], bb[3] - bb[1])   # the 1080×1180 fit + camera pans show more than the bbox
+            pad = float(bm.get("pad_deg", 0.0)) or (0.0 if bm.get("bbox") else 0.35 * max(bb[2] - bb[0], bb[3] - bb[1]))   # the 1080×1180 fit + camera pans show more than the bbox
             meta = _bm.stitch([bb[0] - pad, bb[1] - pad, bb[2] + pad, bb[3] + pad], width, out / f"{sid}_basemap.jpg", bm.get("layer", "bluemarble"))
             data["basemap"] = {"src": f"{sid}_basemap.jpg", **{k: meta[k] for k in ("scale", "translate", "size", "zoom", "credit", "layer")}}
             far = bm.get("far")                                                 # v3 hook views: a coarse, wide raster under the detailed one (camera k < 1)

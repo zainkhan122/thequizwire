@@ -232,6 +232,7 @@ CSS = f"""
 .geo.has-basemap .g-land,.geo.has-basemap .g-countries{{fill:none}}                    /* v3: the raster is the land */
 .geo.has-basemap .g-border{{stroke:rgba(255,255,255,.55);stroke-width:1.4}}
 .geo.has-basemap .geo-basemap{{image-rendering:auto}}
+.v3 .geo.has-basemap{{background:#07132a}}   /* beyond the raster: Blue Marble's deep-ocean tone, not the v2 sea */
 .v3 .geo .geo-pin .pinhead{{left:-16px;top:-16px;width:32px;height:32px;border:5px solid #fff;background:#FF2D2D}}
 .v3 .geo .geo-pin .pinlabel{{font-size:42px;top:-30px;left:26px;background:rgba(10,16,28,.9);border-left:7px solid #FF2D2D;border-radius:0 10px 10px 0;padding:6px 18px 4px}}
 .v3 .geo .geo-pin.left .pinlabel{{right:26px;border-right:7px solid #FF2D2D;border-radius:10px 0 0 10px}}

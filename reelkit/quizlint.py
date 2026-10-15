@@ -185,7 +185,7 @@ def main():
                 for st in stages.values():
                     if st.get("type") != "geo": continue
                     sc = GJ.get("scenes", {}).get(st.get("scene"), {}); bb = (sc.get("fit") or {}).get("bbox")
-                    if not bb or not any(L.get("kind") == "highlight" and L.get("lift") for L in sc.get("layers", [])): continue
+                    if not bb or bb[2] - bb[0] >= 300 or not any(L.get("kind") == "highlight" and L.get("lift") for L in sc.get("layers", [])): continue   # world views give nothing away
                     cams = ([(v2b["cam_set"][0], v2b["cam_set"][1])] if v2b["cam_set"] else []) + [(t, args) for t, _, args in v2b["cam_to"]]
                     for tc, args in cams:
                         if tc < t_reveal - 0.01 and float(args.get("k", 1)) > 0.5 and inside(args.get("lonlat"), bb):

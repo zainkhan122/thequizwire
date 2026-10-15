@@ -3,18 +3,27 @@
  "episode": "ep14-most-time-zones-france",
  "policy": "docs/BORDER_POLICY.md",
  "scenes": {
-  "main": {
-   "projection": "equalEarth",
-   "projection_reason": "whole-world count of territories; equal-area keeps the overseas territories honest in size (geolint P1)",
+  "world": {
+   "projection": "mercator",
+   "rotate": [
+    -150,
+    0
+   ],
+   "projection_reason": "satellite raster (Web Mercator tiles); the claim is a count of time zones, no size comparison (P1); Pacific-centred so France's two extremes (Tahiti −10, Wallis +12) sit mid-frame",
    "fit": {
     "type": "world"
    },
-   "padding": 10,
-   "rotate": [
-    0,
-    0,
-    0
-   ],
+   "padding": 20,
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 3.0,
+    "bbox": [
+     -30,
+     -66,
+     330,
+     85
+    ]
+   },
    "layers": [
     {
      "kind": "land"
@@ -24,23 +33,14 @@
     },
     {
      "kind": "highlight",
-     "id": "fr",
-     "ids": [
-      "250",
-      "540",
-      "260"
-     ],
-     "cls": "",
-     "note": "France incl. Guiana (250), New Caledonia (540), TAAF (260) — the only French polygons in 110m data; French Polynesia, St Pierre & Miquelon, Wallis & Futuna, St Barthélemy, St Martin, Mayotte/Réunion/Antilles are carried by pins"
-    },
-    {
-     "kind": "highlight",
      "id": "ru",
      "ids": [
       "643"
      ],
-     "cls": "alt",
-     "note": "Russia (11 zones)"
+     "cls": "",
+     "lift": "fill",
+     "color": "#C8102E",
+     "note": "Russia (11 zones) — red fill in the story beat only"
     }
    ],
    "pins": [
@@ -54,122 +54,93 @@
      "qid": "Q42000"
     },
     {
-     "id": "marquesas",
-     "lonlat": [
-      -139.6,
-      -8.9
-     ],
-     "qid": "Q172697"
-    },
-    {
-     "id": "gambier",
-     "lonlat": [
-      -134.95,
-      -23.1
-     ],
-     "qid": "Q504043"
-    },
-    {
-     "id": "clipperton",
-     "lonlat": [
-      -109.2,
-      10.3
-     ],
-     "qid": "Q161258"
-    },
-    {
-     "id": "guadeloupe",
-     "lonlat": [
-      -61.55,
-      16.25
-     ],
-     "qid": "Q17012"
-    },
-    {
-     "id": "cayenne",
-     "lonlat": [
-      -52.33,
-      4.93
-     ],
-     "label": "−3 Guiana",
-     "qid": "Q44401"
-    },
-    {
-     "id": "paris",
-     "lonlat": [
-      2.35,
-      48.85
-     ],
-     "label": "+1 Paris",
-     "qid": "Q90"
-    },
-    {
-     "id": "mayotte",
-     "lonlat": [
-      45.2,
-      -12.8
-     ],
-     "qid": "Q17063"
-    },
-    {
-     "id": "reunion",
-     "lonlat": [
-      55.5,
-      -21.1
-     ],
-     "label": "+4 Réunion",
-     "qid": "Q17070"
-    },
-    {
-     "id": "kerguelen",
-     "lonlat": [
-      69.6,
-      -49.3
-     ],
-     "label": "+5"
-    },
-    {
-     "id": "noumea",
-     "lonlat": [
-      165.3,
-      -21.25
-     ],
-     "qid": "Q33788"
-    },
-    {
      "id": "wallis",
      "lonlat": [
       -176.2,
       -13.3
      ],
-     "qid": "Q35555"
+     "label": "+12 Wallis",
+     "qid": "Q35555",
+     "side": "left"
     }
    ],
    "labels": [
     {
      "id": "pacific",
      "lonlat": [
-      -120,
-      -35
+      -150,
+      -30
      ],
      "text": "Pacific",
      "cls": "sea"
-    },
-    {
-     "id": "indian",
-     "lonlat": [
-      92,
-      -35
-     ],
-     "text": "Indian Ocean",
-     "cls": "sea"
     }
    ],
+   "routes": [],
    "disputed": [],
    "sources": [
     "Natural Earth"
    ],
    "resolution": "110m"
+  },
+  "europe": {
+   "projection": "mercator",
+   "projection_reason": "satellite raster (Web Mercator tiles) for the reveal zoom on France; no size claim (P1)",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -12,
+     37.5,
+     20,
+     58
+    ]
+   },
+   "padding": 20,
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 1.8
+   },
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "fr",
+     "ids": [
+      "250"
+     ],
+     "cls": "",
+     "lift": "flag",
+     "flag": "fr",
+     "note": "metropolitan France + Guiana polygon (250) in 110m data; the overseas zones are carried by the world scene's pins"
+    }
+   ],
+   "pins": [],
+   "labels": [],
+   "routes": [],
+   "disputed": [
+    {
+     "id": "gibraltar",
+     "ne_name": "Gibraltar",
+     "name": "Gibraltar",
+     "controller": "United Kingdom",
+     "claimants": [
+      "Spain"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#gibraltar",
+     "label_at": [
+      -5.35,
+      36.14
+     ]
+    }
+   ],
+   "sources": [
+    "Natural Earth"
+   ]
   }
  }
 }
