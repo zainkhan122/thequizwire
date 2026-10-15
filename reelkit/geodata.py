@@ -78,7 +78,7 @@ def ne_features(spec_ne):
     geo.json layer: {"source": "ne-rivers", "ne": {"file": "ne_50m_rivers_lake_centerlines", "names": [...]}}            → one feature per name
                     {"source": "ne-rivers", "ne": {"file": ..., "groups": {"white": ["Victoria Nile", "Bahr el Jebel"]}}}  → one merged MultiLineString per group
     Line groups are ordered south→north and each segment oriented the same way, so a stroke-dash draw-on runs like a north-flowing river
-    (set "flow": "north"|"south"|"east"|"west"|"none"). Polygons (lakes) are kept as-is. Matching is on name / name_en / name_alt (case-insensitive)."""
+    (set "flow": "north"|"south"|"east"|"west"|"chain"|"none"; "chain" joins nearest ends starting at "start" [lon,lat]). Polygons (lakes) are kept as-is. Matching is on name / name_en / name_alt (case-insensitive)."""
     src = json.loads(ne_path(spec_ne["file"]).read_text())
     def names_of(f):
         pr = f.get("properties") or {}
@@ -95,7 +95,15 @@ def ne_features(spec_ne):
             for f in feats:
                 g = f["geometry"]; segs += [g["coordinates"]] if g["type"] == "LineString" else list(g["coordinates"])
             ax, sign = {"north": (1, 1), "south": (1, -1), "east": (0, 1), "west": (0, -1)}.get(flow, (None, 1))
-            if ax is not None:
+            if flow == "chain" and segs:                                   # greedy chaining from `start` (lon,lat): nearest free end joins the tail
+                st = spec_ne.get("start") or min((c for sg in segs for c in (sg[0], sg[-1])), key=lambda c: c[0])
+                d2 = lambda a, b: (a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2
+                rest, out_segs, tail = list(segs), [], st
+                while rest:
+                    sg, rev = min(((sg, rv) for sg in rest for rv in (False, True)), key=lambda x: d2(tail, x[0][-1] if x[1] else x[0][0]))
+                    rest.remove(sg); sg = list(reversed(sg)) if rev else sg; out_segs.append(sg); tail = sg[-1]
+                segs = out_segs
+            elif ax is not None:
                 segs = [s if (s[-1][ax] - s[0][ax]) * sign >= 0 else list(reversed(s)) for s in segs]
                 segs.sort(key=lambda s: sign * min(c[ax] for c in s))
             geom = {"type": "MultiLineString", "coordinates": [[[round(c[0], 4), round(c[1], 4)] for c in s] for s in segs]}

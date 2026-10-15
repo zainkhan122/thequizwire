@@ -4,18 +4,38 @@
  "policy": "docs/BORDER_POLICY.md",
  "scenes": {
   "main": {
-   "projection": "equalEarth",
-   "projection_reason": "no size or distance claim; a river course and city pins — equal-area keeps the house style honest (geolint P1)",
+   "projection": "mercator",
+   "projection_reason": "satellite raster (Web Mercator tiles); no size or distance claim — a river course, two bank labels and four city pins (geolint P1/P2)",
    "fit": {
     "type": "bbox",
     "bbox": [
-     8,
-     43.5,
-     28,
-     55
+     12,
+     44.5,
+     24,
+     50.5
     ]
    },
    "padding": 20,
+   "resolution": "50m",
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 3.2,
+    "bbox": [
+     6.5,
+     43,
+     31,
+     51.5
+    ],
+    "far": {
+     "bbox": [
+      -12,
+      28,
+      45,
+      66
+     ],
+     "k_min": 0.3
+    }
+   },
    "layers": [
     {
      "kind": "land"
@@ -30,122 +50,44 @@
       "348"
      ],
      "cls": "",
-     "note": "Hungary"
+     "lift": "flag",
+     "flag": "hu",
+     "note": "Hungary — lifted flag at the reveal, faded when the camera dives into Budapest"
+    },
+    {
+     "kind": "area",
+     "id": "lakes",
+     "cls": "lake",
+     "static": true,
+     "source": "ne-lakes",
+     "ne": {
+      "file": "ne_50m_lakes",
+      "names": [
+       "Lake Balaton"
+      ]
+     },
+     "note": "Balaton stays readable above the flag"
     },
     {
      "kind": "route",
      "id": "river",
      "cls": "river",
-     "geojson": {
-      "type": "FeatureCollection",
-      "features": [
-       {
-        "type": "Feature",
-        "id": "danube",
-        "properties": {
-         "name": "Danube (simplified course)"
-        },
-        "geometry": {
-         "type": "LineString",
-         "coordinates": [
-          [
-           8.5,
-           47.95
-          ],
-          [
-           9.99,
-           48.4
-          ],
-          [
-           12.1,
-           49.02
-          ],
-          [
-           13.43,
-           48.57
-          ],
-          [
-           14.29,
-           48.31
-          ],
-          [
-           16.37,
-           48.21
-          ],
-          [
-           17.11,
-           48.14
-          ],
-          [
-           18.12,
-           47.74
-          ],
-          [
-           18.74,
-           47.79
-          ],
-          [
-           18.97,
-           47.79
-          ],
-          [
-           19.13,
-           47.78
-          ],
-          [
-           19.05,
-           47.5
-          ],
-          [
-           18.93,
-           46.96
-          ],
-          [
-           18.68,
-           45.99
-          ],
-          [
-           19.0,
-           45.35
-          ],
-          [
-           19.85,
-           45.25
-          ],
-          [
-           20.45,
-           44.82
-          ],
-          [
-           22.5,
-           44.65
-          ],
-          [
-           22.88,
-           43.99
-          ],
-          [
-           25.97,
-           43.85
-          ],
-          [
-           28.05,
-           45.43
-          ],
-          [
-           28.8,
-           45.18
-          ],
-          [
-           29.65,
-           45.15
-          ]
-         ]
-        }
-       }
-      ]
+     "source": "ne-rivers",
+     "ne": {
+      "file": "ne_50m_rivers_lake_centerlines",
+      "flow": "chain",
+      "start": [
+       8.2,
+       48.0
+      ],
+      "groups": {
+       "danube": [
+        "Donau",
+        "Danube"
+       ]
+      }
      },
-     "note": "hand-simplified course Donaueschingen → delta (23 vertices); for the drawn line only"
+     "note": "Natural Earth 50m Danube centreline (Donau + Danube segments chained source → delta); drawn west → east"
     }
    ],
    "pins": [
@@ -157,6 +99,15 @@
      ],
      "label": "Budapest",
      "qid": "Q1781"
+    },
+    {
+     "id": "chain_bridge",
+     "lonlat": [
+      19.0436,
+      47.4989
+     ],
+     "label": "Chain Bridge",
+     "qid": "Q465534"
     },
     {
      "id": "vienna",
@@ -186,73 +137,38 @@
      "label": "Belgrade",
      "qid": "Q3711",
      "side": "left"
-    },
-    {
-     "id": "chain_bridge",
-     "lonlat": [
-      19.0436,
-      47.4989
-     ],
-     "label": "Chain Bridge",
-     "qid": "Q465534"
     }
    ],
    "labels": [
     {
      "id": "buda",
      "lonlat": [
-      18.62,
-      47.66
+      19.0,
+      47.63
      ],
      "text": "Buda",
-     "cls": "sea"
+     "cls": "big ar"
     },
     {
      "id": "pest",
      "lonlat": [
-      19.62,
-      47.3
+      19.09,
+      47.63
      ],
      "text": "Pest",
-     "cls": "sea"
+     "cls": "big al"
     },
     {
      "id": "danube",
      "lonlat": [
-      18.95,
-      46.55
+      19.16,
+      47.33
      ],
      "text": "Danube",
      "cls": "sea"
-    },
-    {
-     "id": "budapest_lbl",
-     "lonlat": [
-      19.3,
-      47.05
-     ],
-     "text": "Budapest",
-     "cls": "ink"
     }
    ],
-   "disputed": [
-    {
-     "id": "kosovo",
-     "ne_name": "Kosovo",
-     "name": "Kosovo",
-     "controller": "Republic of Kosovo (self-governing since 2008)",
-     "claimants": [
-      "Serbia"
-     ],
-     "note": "recognised by ~100 UN members, not by Serbia",
-     "as_of": "2026-10",
-     "source": "docs/border_registry.json#kosovo",
-     "label_at": [
-      20.9,
-      42.6
-     ]
-    }
-   ],
+   "disputed": [],
    "sources": [
     "Natural Earth"
    ]

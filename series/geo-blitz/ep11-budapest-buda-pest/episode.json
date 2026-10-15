@@ -1,6 +1,6 @@
 {
  "id": "ep11-budapest-buda-pest",
- "format": "quiz-v2",
+ "format": "quiz-v3",
  "series": "geo-blitz",
  "number": 11,
  "title": "Which capital is split into BUDA and PEST?",
@@ -15,13 +15,28 @@
    "Prague"
   ],
   "correct": 1,
-  "beat": 1.5,
+  "beat": 3.0,
   "answer_line": "Budapest",
   "answer_sub": "Buda west · Pest east",
-  "tease": "Tomorrow: the coldest desert on Earth.",
-  "cta_line": "One map question a day · Subscribe"
+  "option_meta": [
+   {
+    "flag": "at"
+   },
+   {
+    "flag": "hu"
+   },
+   {
+    "flag": "cz"
+   }
+  ],
+  "banner": "BUDAPEST",
+  "banner_sub": "✓  B was right",
+  "outro": {
+   "headline": "CHALLENGE A FRIEND",
+   "url": "thequizwire.com"
+  }
  },
- "hook_type": "misconception",
+ "hook_type": "story",
  "promise": {
   "min_motion": 0.7
  },
@@ -29,13 +44,26 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Which capital is split into BUDA and PEST?",
-  "description": "Which capital is split into BUDA and PEST? Guess first — then watch the Danube draw the line.\n\nWhat was your first guess?\n\nSources: Britannica (Budapest, Danube River), Wikipedia (Budapest, Széchenyi Chain Bridge), USF Educational Technology Clearinghouse.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #11",
+  "title": "Which capital is split into BUDA and PEST? 🌉",
+  "description": "Which capital is split into BUDA and PEST? Guess first — then watch the Danube draw the line between the two old towns, and link four capitals.\n\nWhat was your first guess? Do share in the comments below.\n\nSources: Britannica (Budapest, Danube River), Wikipedia (Budapest, Széchenyi Chain Bridge), USF Educational Technology Clearinghouse, UNESCO.\nMap data: Natural Earth (public domain) · NASA Blue Marble. Voice: AI (Kokoro).\n\nGeo Blitz #11",
   "hashtags": [
    "#GKshorts",
    "#thequizwire",
    "#shorts",
    "#geoblitz"
   ]
+ },
+ "variety": {
+  "question": "name-the-capital",
+  "hook": "story",
+  "opener": "mystery-zoom-out",
+  "reveal": "flag-lift",
+  "beats": [
+   "route",
+   "label",
+   "pin"
+  ],
+  "cast": "flagball:hu-wow + emoji-set:bridge",
+  "music": "bed:pad"
  }
 }

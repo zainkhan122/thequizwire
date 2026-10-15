@@ -84,6 +84,14 @@
    "url": "https://github.com/zainkhan122/thequizwire/blob/main/docs/border_registry.json",
    "date": "2026-10-01",
    "notes": "controller / claimant wording as of 2026-10; no sovereignty asserted"
+  },
+  "nasa_bluemarble": {
+   "type": "primary",
+   "publisher": "NASA Earth Observatory / GIBS",
+   "title": "Blue Marble: Shaded Relief and Bathymetry",
+   "url": "https://earthobservatory.nasa.gov/features/BlueMarble",
+   "date": "2026-10-15",
+   "notes": "satellite basemap raster (public domain, U.S. Government work)"
   }
  },
  "claims": [
@@ -100,9 +108,12 @@
    "vo": [
     "which capital is split into buda and pest",
     "it's budapest",
-    "the danube splits it: hilly buda west, flat pest east"
+    "the danube splits it: buda west, pest east",
+    "two old towns, one river"
    ],
    "screen": [
+    "BUDAPEST",
+    "Buda west · Pest east",
     "Budapest",
     "Buda",
     "Pest",
@@ -118,11 +129,11 @@
     "usf_pesth"
    ],
    "vo": [
-    "separate towns until eighteen seventy-three, when buda, óbuda and pest merged"
+    "separate towns until eighteen seventy-three, when they merged"
    ],
    "screen": [
     "1873",
-    "Buda + Óbuda + Pest become Budapest."
+    "Buda + Óbuda + Pest merge"
    ]
   },
   {
@@ -136,11 +147,11 @@
     "britannica_budapest"
    ],
    "vo": [
-    "the chain bridge joined them first, in eighteen forty-nine"
+    "the chain bridge first joined them in eighteen forty-nine"
    ],
    "screen": [
-    "1849 · CHAIN BRIDGE",
-    "First permanent bridge across it.",
+    "1849",
+    "the Chain Bridge joins them",
     "Chain Bridge"
    ]
   },
@@ -153,30 +164,14 @@
     "wiki_danube"
    ],
    "vo": [
-    "the same river links four capitals: vienna, bratislava, budapest and belgrade"
+    "the danube links four capitals: vienna, bratislava, budapest, belgrade"
    ],
    "screen": [
-    "4 CAPITALS ON THE DANUBE",
-    "Vienna · Bratislava · Budapest · Belgrade",
+    "4 CAPITALS",
+    "on one river: the Danube",
     "Vienna",
     "Bratislava",
     "Belgrade"
-   ]
-  },
-  {
-   "id": "C05",
-   "weight": "framing",
-   "text": "Border policy plate (the wide shot shows Kosovo's boundary): Kosovo is self-governing since its 2008 declaration of independence, recognised by about 100 UN members; Serbia claims it. No sovereignty asserted.",
-   "sources": [
-    "britannica_kosovo",
-    "border_registry"
-   ],
-   "vo": [],
-   "screen": [
-    "Kosovo",
-    "Administered by Republic of Kosovo (self-governing since 2008)",
-    "Claimed by Serbia",
-    "recognised by ~100 UN members, not by Serbia"
    ]
   }
  ],

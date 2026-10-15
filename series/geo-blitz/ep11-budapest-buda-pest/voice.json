@@ -22,7 +22,7 @@
    "energy": 4,
    "pause_after": 0.3,
    "direction": "straight in, like a dare",
-   "text": "Which capital is split into Buda and Pest?",
+   "text": "Two old towns, one river. Which capital is split into Buda and Pest?",
    "cues": {
     "which": "which"
    }
@@ -50,7 +50,7 @@
    "energy": 1,
    "pause_after": 0.1,
    "direction": "silence — the bar drains",
-   "silence": 1.5,
+   "silence": 3.0,
    "text": ""
   },
   {
@@ -61,7 +61,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "It's Budapest. The Danube splits it: hilly Buda west, flat Pest east.",
+   "text": "It's Budapest. The Danube splits it: Buda west, Pest east.",
    "cues": {
     "answer": "budapest",
     "danube": "danube",
@@ -78,7 +78,7 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "count it out",
-   "text": "Separate towns until eighteen seventy-three, when Buda, Óbuda and Pest merged.",
+   "text": "Separate towns until eighteen seventy-three, when they merged.",
    "cues": {
     "separate": "separate",
     "merged": "merged"
@@ -92,7 +92,7 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "let the comparison land",
-   "text": "The Chain Bridge joined them first, in eighteen forty-nine.",
+   "text": "The Chain Bridge first joined them in eighteen forty-nine.",
    "cues": {
     "chain": "chain",
     "bridge": "bridge"
@@ -106,7 +106,7 @@
    "energy": 4,
    "pause_after": 0.4,
    "direction": "the number people repeat",
-   "text": "The same river links four capitals: Vienna, Bratislava, Budapest and Belgrade.",
+   "text": "The Danube links four capitals: Vienna, Bratislava, Budapest, Belgrade.",
    "cues": {
     "four": "four",
     "vienna": "vienna",
@@ -123,7 +123,7 @@
    "energy": 3,
    "pause_after": 0.0,
    "direction": "a promise, not a plea",
-   "text": "Tomorrow, the coldest desert on Earth. Subscribe, and guess it first.",
+   "text": "Got it? Challenge a friend, then like and subscribe.",
    "cues": {
     "subscribe": "subscribe"
    }

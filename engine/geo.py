@@ -249,6 +249,7 @@ CSS = f"""
 .v3 .geo .geo-label{{font-size:34px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.9)}}
 .v3 .geo .geo-label.sea{{font-size:36px;color:rgba(255,255,255,.85);text-shadow:0 2px 8px rgba(0,0,0,.9)}}
 .v3 .geo .geo-label.ink{{color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.8)}}
+.v3 .geo .geo-label.big{{font-family:'Lilita';font-weight:400;font-size:64px;letter-spacing:.04em;text-transform:uppercase;color:#FFD400;-webkit-text-stroke:2px #141414;paint-order:stroke fill;text-shadow:0 4px 0 rgba(0,0,0,.6),0 8px 18px rgba(0,0,0,.8)}}   /* title-weight place names (city halves, regions) */
 .geo .g-countries{{fill:{LAND};stroke:none}}
 .geo .g-border{{fill:none;stroke:rgba(239,230,210,.38);stroke-width:1.2;stroke-linejoin:round}}
 .geo .g-highlight{{fill:{SAND};stroke:{CREAM};stroke-width:1.6;opacity:0}}

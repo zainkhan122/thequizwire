@@ -34,7 +34,7 @@ steps       : V3.1 ✓ basemap → V3.2 ✓ lifted highlight → V3.3 ✓ v3 UI 
               V3.6 re-author 10 episodes with local contact sheets → V3.7 one runner render for owner look → batch
 exit check  : owner approves the Geo #13 v3 render; 10/10 in Release pilot-v3-batch1; every episode has a reviewed sheet
 rollback    : v2 engine paths stay (format quiz-v2); pilot-v2-batch1 Release is NOT to be posted
-next        : V3.6 re-author the 10 pilots — done: geo ep13, ep14, ep10 (V3.6f); remaining: geo ep11 (Budapest: wide-drift/flag-lift/"CHALLENGE A FRIEND"), ep12 (Antarctica: globe-spin/fill-pulse/"DAILY MAP QUIZ", vector), wild 07–09, sports 09–10; a local sheet per episode
+next        : V3.6 re-author the 10 pilots — done: geo ep13, ep14, ep10 (V3.6f), ep11 (V3.6g); remaining: geo ep12 (Antarctica: globe-spin/fill-pulse/"DAILY MAP QUIZ", vector — orthographic cannot carry the raster), wild 07–09, sports 09–10; a local sheet per episode
 ```
 Rule (new): nothing goes to Actions before a local contact sheet has been looked at. pilot-v2-batch1 (8/10 rendered) is shelved.
 Last completed: **Phase 1.7 Actuals** (2026-10-14) — measured CI timings in `docs/OPERATING_MODEL.md §3/§6`, verified animator CLI +
@@ -70,6 +70,12 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 | 2026-10-14 | Geo Blitz / Body & Brain / Sports Sprint / Wild Files active; Cosmic Quiz, Time Vault registered inactive | agent (from feed), to confirm |
 | 2026-10-14 | Repo is **private** (GitHub Free: 2,000 Actions min/month); crons off, `check` main-only, `cloud.py` budget guard | owner |
 | 2026-10-14 | Vector maps (d3-geo + Natural Earth) are the default stage; VersaTiles flyovers are cached hero clips; Blue Marble globe deferred | agent |
+
+### V3.6g — DONE 2026-10-15 · Geo #11 Budapest in v3 (name-the-capital · story hook · **mystery-zoom-out** opener (Alps close-up k 2 → Europe k 0.5) · flag-lift · route/label/pin · hu flag-ball "wow" + bridge emoji set · outro "CHALLENGE A FRIEND")
+- Reveal: Hungary flag lift at k 1.3 while the Natural Earth Danube (Donau + Danube segments, `flow:"chain"` from the source) draws west → east; on "Buda" the flag fades and the camera dives to k 3.2 over the city: title-weight `big` labels BUDA | PEST either side of the river (`cls:"big ar"/"big al"`), Danube label, Chain Bridge pin (1849), then k 1.1 with Vienna · Bratislava · Budapest · Belgrade pins (4 capitals). Lake Balaton as a static NE lake.
+- Kosovo plate dropped with the tighter fit bbox [12,44.5,24,50.5] (P4 centre rule; C05 removed) — the wide s07 shot keeps Kosovo under the caption scrim.
+- Engine: `geodata.ne_features` `flow:"chain"` (+`start`) orders river segments by nearest ends; `.geo-label.big` (Lilita 64 yellow, stroke); countdown digits/tease carry `data-layout-allow-caption-zone` (HF layout flagged them when the beat landed on a sample time).
+- Gates green (ESTIMATE); sheets `review/geo11_v3_sheet.jpg`, `_sheet2.jpg`. Variety chain ep10 → ep11 valid (7/8 axes differ; only music `bed:pad` repeats).
 
 ### V3.6f — DONE 2026-10-15 · Geo #10 Nile basin re-authored in v3 (how-many · challenge hook · wide-drift · fill-pulse · route/pin/label/scalebar · eg flag-ball + river emoji set · outro "1 FOR 1?")
 - Mercator + Blue Marble; fit = the 11 basin states ([12,-12,45.5,31.7]); hook k 0.48 whole-Africa (`far` raster), 11 fills cascade south→north; "a tenth of Africa" dropped (P1); 6,650 km keeps the scalebar (P2).

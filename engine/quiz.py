@@ -265,8 +265,8 @@ class Quiz:
         return (f'<div id="{cid}" class="pills" data-layout-allow-overlap="true">{"".join(rows)}</div>'
                 f'<div class="ring3" id="{cid}_ring" data-layout-allow-overlap="true"><svg width="200" height="200" viewBox="0 0 200 200"><circle class="bg" cx="100" cy="100" r="88"></circle>'
                 f'<circle class="fg" id="{cid}_arc" cx="100" cy="100" r="88" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0"></circle></svg>'
-                + "".join(f'<div class="dg tu" id="{cid}_d{i}" data-tq-dwell="off" data-fc="skip"{ALLOW}>{i}</div>' for i in range(5, 0, -1)) + '</div>'
-                f'<div class="tease3 tu" id="{cid}_tease" data-tq-dwell="off" data-fc="skip" data-layout-allow-overlap="true">GUESS BEFORE THE TIMER ENDS</div>')
+                + "".join(f'<div class="dg tu" id="{cid}_d{i}" data-tq-dwell="off" data-fc="skip"{ALLOW}{CAPZ}>{i}</div>' for i in range(5, 0, -1)) + '</div>'
+                f'<div class="tease3 tu" id="{cid}_tease" data-tq-dwell="off" data-fc="skip" data-layout-allow-overlap="true"{CAPZ}>GUESS BEFORE THE TIMER ENDS</div>')   # countdown lives in the band on purpose (ring 1275–1475, tease 1512)
 
     def pills_in(self, t, cid=None, gap=0.12):
         cid = cid or next(iter(self.cards))
