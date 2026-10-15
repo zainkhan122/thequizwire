@@ -1,0 +1,76 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Anton;src:url(Anton-Regular.ttf)} @font-face{font-family:Oswald;src:url(Oswald.ttf)}
+html,body{margin:0;background:#000} #frame{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:Oswald,sans-serif;color:#fff}
+#map{position:absolute;left:0;top:0;transform-origin:0 0} #map img{display:block} #map svg{position:absolute;left:0;top:0;overflow:visible}
+.scrim-top{position:absolute;left:0;top:0;width:1080px;height:760px;background:linear-gradient(180deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.45) 55%,rgba(0,0,0,0) 100%)}
+.scrim-bot{position:absolute;left:0;bottom:0;width:1080px;height:700px;background:linear-gradient(0deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.35) 60%,rgba(0,0,0,0) 100%)}
+.bug{position:absolute;left:48px;top:232px;background:#C8102E;color:#fff;font:600 30px/1 Oswald;letter-spacing:.14em;padding:14px 20px;border-radius:10px;text-transform:uppercase}
+.q{position:absolute;left:60px;right:60px;top:330px;font:400 104px/1.04 Anton;text-transform:uppercase;text-align:center;text-shadow:0 6px 0 rgba(0,0,0,.55),0 14px 30px rgba(0,0,0,.6)}
+.q em{font-style:normal;color:#FFD400}
+.opts{position:absolute;left:70px;right:70px;top:790px;display:flex;flex-direction:column;gap:26px}
+.opt{display:flex;align-items:center;gap:30px;height:124px;background:rgba(10,16,28,.72);border:3px solid rgba(255,255,255,.35);border-radius:70px;padding:0 34px 0 22px;backdrop-filter:blur(6px);box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.opt .l{width:76px;height:76px;border-radius:50%;background:#fff;color:#0B1620;font:700 46px/76px Anton;text-align:center}
+.opt .f{width:88px;height:88px;border-radius:50%;background-size:cover;background-position:center;border:3px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.5)}
+.opt .t{font:600 58px/1 Oswald;letter-spacing:.02em}
+.opt.ok{background:#1E9E4A;border-color:#fff}
+.opt.dim{opacity:.38}
+.timer{position:absolute;left:0;right:0;top:1330px;text-align:center}
+.timer .ring{display:inline-block;width:150px;height:150px;border-radius:50%;border:10px solid rgba(255,255,255,.25);border-top-color:#FFD400;border-right-color:#FFD400;box-sizing:border-box;position:relative}
+.timer .n{position:absolute;left:0;right:0;top:22px;font:400 86px/1 Anton;color:#fff}
+.tease{position:absolute;left:0;right:0;top:1510px;text-align:center;font:600 40px/1 Oswald;letter-spacing:.2em;color:#FFD400;text-transform:uppercase}
+.cap{position:absolute;left:300px;right:40px;top:1270px;text-align:center;font:400 86px/1.05 Anton;text-transform:uppercase;text-shadow:0 5px 0 rgba(0,0,0,.6),0 12px 28px rgba(0,0,0,.7)}
+.cap b{color:#FFD400;font-weight:400}
+.big{position:absolute;left:60px;right:60px;top:300px;text-align:center;font:400 150px/1 Anton;color:#FFD400;text-shadow:0 8px 0 #7a4b00,0 18px 36px rgba(0,0,0,.7)}
+.sub{position:absolute;left:60px;right:60px;top:470px;text-align:center;font:600 54px/1 Oswald;letter-spacing:.18em;text-transform:uppercase;text-shadow:0 4px 14px rgba(0,0,0,.8)}
+.sticker{position:absolute;width:260px;height:260px;filter:drop-shadow(0 14px 22px rgba(0,0,0,.6))}
+.credit{position:absolute;left:0;right:0;top:1545px;text-align:center;font:500 26px/1 Oswald;letter-spacing:.12em;color:rgba(255,255,255,.75)}
+.pin{position:absolute;width:34px;height:34px;border-radius:50%;background:#FFD400;border:6px solid #fff;box-shadow:0 0 0 14px rgba(255,212,0,.35),0 6px 16px rgba(0,0,0,.6);transform:translate(-50%,-50%)}
+.pl{position:absolute;transform:translate(-50%,-100%);font:400 60px/1 Anton;color:#fff;text-shadow:0 4px 0 rgba(0,0,0,.7),0 10px 24px rgba(0,0,0,.8);white-space:nowrap;letter-spacing:.02em}
+</style></head><body>
+<div id="frame"></div>
+<script src="d3-array.min.js"></script><script src="d3-geo.min.js"></script><script src="topojson-client.min.js"></script>
+<script>
+const P = new URLSearchParams(location.search); const MODE = P.get("mode") || "hook";
+const F = document.getElementById("frame");
+function mapLayer(img, size, scale, translate, cssScale, offset){
+  const m = document.createElement("div"); m.id = "map"; m.style.transform = `translate(${offset[0]}px,${offset[1]}px) scale(${cssScale})`;
+  m.innerHTML = `<img src="${img}" width="${size[0]}" height="${size[1]}"><svg width="${size[0]}" height="${size[1]}"></svg>`;
+  F.appendChild(m); const proj = d3.geoMercator().scale(scale).translate(translate); return {m, proj, svg: m.querySelector("svg")};
+}
+if (MODE === "hook") {
+  // wide, un-centred view: nothing gives the answer away
+  const L = mapLayer("world_asia.jpg", [1536,1024], 325.94932345220167, [256,768], 1.9, [-1200, -40]);
+  F.insertAdjacentHTML("beforeend", `<div class="scrim-top"></div><div class="scrim-bot"></div>
+   <div class="bug">Geo Blitz · #13</div>
+   <div class="q">In which country<br>are the<br><em>Southern Alps?</em></div>
+   <div class="opts">
+     <div class="opt"><div class="l">A</div><div class="f" style="background-image:url(flag_ch.svg)"></div><div class="t">Switzerland</div></div>
+     <div class="opt"><div class="l">B</div><div class="f" style="background-image:url(flag_nz.svg)"></div><div class="t">New Zealand</div></div>
+     <div class="opt"><div class="l">C</div><div class="f" style="background-image:url(flag_cl.svg)"></div><div class="t">Chile</div></div>
+   </div>
+   <div class="timer"><div class="ring"><div class="n">3</div></div></div>
+   <div class="tease">Guess before the timer ends</div>
+   <img class="sticker" src="emoji_think.svg" style="left:700px;top:1290px;width:210px;height:210px;transform:rotate(12deg)">`);
+} else {
+  fetch("nz_topo.json").then(r=>r.json()).then(t=>{
+    const L = mapLayer("nz.jpg", [1280,1536], 2607.5945876176133, [-7168,-1280], 1.15, [-265, -150]);
+    const nz = topojson.feature(t, t.objects.countries); const path = d3.geoPath(L.proj);
+    const d = path(nz);
+    L.svg.innerHTML = `<defs><clipPath id="c"><path d="${d}"/></clipPath>
+      <filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity=".7"/></filter></defs>
+      <g filter="url(#sh)"><path d="${d}" fill="#fff" stroke="#fff" stroke-width="9" stroke-linejoin="round"/></g>
+      <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBpZD0iZmxhZy1pY29ucy1ueiIgdmlld0JveD0iMCAwIDY0MCA0ODAiPgogIDxkZWZzPgogICAgPGcgaWQ9Im56LWIiPgogICAgICA8ZyBpZD0ibnotYSI+CiAgICAgICAgPHBhdGggZD0iTTAtLjN2LjVsMS0uNXoiLz4KICAgICAgICA8cGF0aCBkPSJNLjIuMyAwLS4xbDEtLjJ6Ii8+CiAgICAgIDwvZz4KICAgICAgPHVzZSB4bGluazpocmVmPSIjbnotYSIgdHJhbnNmb3JtPSJzY2FsZSgtMSAxKSIvPgogICAgICA8dXNlIHhsaW5rOmhyZWY9IiNuei1hIiB0cmFuc2Zvcm09InJvdGF0ZSg3MiAwIDApIi8+CiAgICAgIDx1c2UgeGxpbms6aHJlZj0iI256LWEiIHRyYW5zZm9ybT0icm90YXRlKC03MiAwIDApIi8+CiAgICAgIDx1c2UgeGxpbms6aHJlZj0iI256LWEiIHRyYW5zZm9ybT0ic2NhbGUoLTEgMSlyb3RhdGUoNzIpIi8+CiAgICA8L2c+CiAgPC9kZWZzPgogIDxwYXRoIGZpbGw9IiMwMDI0N2QiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMGg2NDB2NDgwSDB6Ii8+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTExMSAzNi4xKXNjYWxlKC42NjgyNSkiPgogICAgPHVzZSB4bGluazpocmVmPSIjbnotYiIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTAwIDEyMClzY2FsZSg0NS40KSIvPgogICAgPHVzZSB4bGluazpocmVmPSIjbnotYiIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2NjMTQyYiIgdHJhbnNmb3JtPSJtYXRyaXgoMzAgMCAwIDMwIDkwMCAxMjApIi8+CiAgPC9nPgogIDxnIHRyYW5zZm9ybT0icm90YXRlKDgyIDUyNS4yIDExNC42KXNjYWxlKC42NjgyNSkiPgogICAgPHVzZSB4bGluazpocmVmPSIjbnotYiIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJyb3RhdGUoLTgyIDUxOSAtNDU3Ljcpc2NhbGUoNDAuNCkiLz4KICAgIDx1c2UgeGxpbms6aHJlZj0iI256LWIiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNjYzE0MmIiIHRyYW5zZm9ybT0icm90YXRlKC04MiA1MTkgLTQ1Ny43KXNjYWxlKDI1KSIvPgogIDwvZz4KICA8ZyB0cmFuc2Zvcm09InJvdGF0ZSg4MiA1MjUuMiAxMTQuNilzY2FsZSguNjY4MjUpIj4KICAgIDx1c2UgeGxpbms6aHJlZj0iI256LWIiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmZmYiIHRyYW5zZm9ybT0icm90YXRlKC04MiA2NjguNiAtMzI3Ljcpc2NhbGUoNDUuNCkiLz4KICAgIDx1c2UgeGxpbms6aHJlZj0iI256LWIiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNjYzE0MmIiIHRyYW5zZm9ybT0icm90YXRlKC04MiA2NjguNiAtMzI3Ljcpc2NhbGUoMzApIi8+CiAgPC9nPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTEgMzYuMSlzY2FsZSguNjY4MjUpIj4KICAgIDx1c2UgeGxpbms6aHJlZj0iI256LWIiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmZmYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDkwMCA0ODApc2NhbGUoNTAuNCkiLz4KICAgIDx1c2UgeGxpbms6aHJlZj0iI256LWIiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNjYzE0MmIiIHRyYW5zZm9ybT0ibWF0cml4KDM1IDAgMCAzNSA5MDAgNDgwKSIvPgogIDwvZz4KICA8cGF0aCBmaWxsPSIjMDEyMTY5IiBkPSJNMCAwaDMyMHYyNDBIMHoiLz4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJtMzcuNSAwIDEyMiA5MC41TDI4MSAwaDM5djMxbC0xMjAgODkuNSAxMjAgODlWMjQwaC00MGwtMTIwLTg5LjVMNDAuNSAyNDBIMHYtMzBsMTE5LjUtODlMMCAzMlYweiIvPgogIDxwYXRoIGZpbGw9IiNjODEwMmUiIGQ9Ik0yMTIgMTQwLjUgMzIwIDIyMHYyMGwtMTM1LjUtOTkuNXptLTkyIDEwIDMgMTcuNS05NiA3Mkgwek0zMjAgMHYxLjVsLTEyNC41IDk0IDEtMjJMMjk1IDB6TTAgMGwxMTkuNSA4OGgtMzBMMCAyMXoiLz4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTIwLjUgMHYyNDBoODBWMHpNMCA4MHY4MGgzMjBWODB6Ii8+CiAgPHBhdGggZmlsbD0iI2M4MTAyZSIgZD0iTTAgOTYuNXY0OGgzMjB2LTQ4ek0xMzYuNSAwdjI0MGg0OFYweiIvPgo8L3N2Zz4K" x="300" y="350" width="700" height="900" preserveAspectRatio="xMidYMid slice" clip-path="url(#c)"/>
+      <path d="${d}" fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="round"/>`;
+    const ao = L.proj([170.142, -43.595]);
+    F.insertAdjacentHTML("beforeend", `<div class="scrim-top" style="height:620px"></div><div class="scrim-bot"></div>
+      <div class="bug">Geo Blitz · #13</div>
+      <div class="big">New Zealand</div><div class="sub">✓ &nbsp;B was right</div>
+      <div class="pin" style="left:${ao[0]*1.15-265}px;top:${ao[1]*1.15-150}px"></div>
+      <div class="pl" style="left:${ao[0]*1.15-265+40}px;top:${ao[1]*1.15-150-50}px;transform:none">Aoraki / Mt Cook</div>
+      <img class="sticker" src="emoji_mountain.svg" style="left:60px;top:1230px;width:230px;height:230px">
+      <div class="cap"><b>3,724 m</b> — the roof<br>of New Zealand</div>
+      <div class="credit">NASA Blue Marble · Natural Earth · thequizwire</div>`);
+  });
+}
+</script></body></html>
