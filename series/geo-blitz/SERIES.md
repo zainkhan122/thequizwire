@@ -15,4 +15,8 @@ Numbering: feed #9 → next #10 (`series/series.json` is the counter; `tools/new
 See `docs/DATA_SOURCES.md` (Geo Blitz section). Every fact → `research.json` claim; every file → `media.json`.
 
 ## Episodes
-_none yet — Phase 2 starts here_
+- `ep10-nile-basin-countries` — How many countries share the NILE basin? → **11** (v2, Phase 3.1 pilot, green offline; media in the `pilot-v2-batch1` Release once run #3 passes)
+- `ep11-budapest-buda-pest` — Which capital is split into BUDA and PEST? → **Budapest** (v2, Phase 3.1 pilot, green offline; media in the `pilot-v2-batch1` Release once run #3 passes)
+- `ep12-coldest-desert-antarctica` — Which is the COLDEST desert on Earth? → **Antarctica** (v2, Phase 3.1 pilot, green offline; media in the `pilot-v2-batch1` Release once run #3 passes)
+- `ep13-southern-alps-new-zealand` — In which country are the SOUTHERN ALPS? → **New Zealand** (v2, Phase 3.1 pilot, green offline; media in the `pilot-v2-batch1` Release once run #3 passes)
+- `ep14-most-time-zones-france` — Which country has the MOST time zones? → **France** (v2, Phase 3.1 pilot, green offline; media in the `pilot-v2-batch1` Release once run #3 passes)

@@ -1,0 +1,238 @@
+{
+ "version": 1,
+ "episode": "ep10-grand-slam-on-grass-wimbledon",
+ "topic": "Which Grand Slam is still played on grass? (Wimbledon — London SW19, since 1877)",
+ "researched": "2026-10-15",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "sources": {
+  "wimbledon_history_1870s": {
+   "type": "primary",
+   "publisher": "AELTC (wimbledon.com)",
+   "title": "History — 1870s: The First Championships",
+   "url": "https://www.wimbledon.com/en_GB/about/history/1870s",
+   "date": "2026-10-15",
+   "notes": "first Championship meeting 1877 at the All England Croquet and Lawn Tennis Club, Worple Road, Wimbledon; one event (gentlemen's singles) won by Spencer Gore; total attendance for the final was 200; club founded for croquet 1868, one lawn given to lawn tennis 1875"
+  },
+  "wimbledon_history": {
+   "type": "primary",
+   "publisher": "AELTC (wimbledon.com)",
+   "title": "History — decade overview",
+   "url": "https://www.wimbledon.com/en_GB/about/history",
+   "date": "2026-10-15",
+   "notes": "inaugural Championships: entry of 22 men attracted by an announcement in The Field; crowd of 200 watch Spencer Gore become the first Champion; 1922 move from Worple Road to Church Road"
+  },
+  "wiki_wimbledon": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Wimbledon Championships",
+   "url": "https://en.wikipedia.org/wiki/The_Championships,_Wimbledon",
+   "date": "2026-10-15",
+   "notes": "held since 1877 on outdoor grass; the only major still played on grass; US Open abandoned grass in 1975 (green clay), Australian Open in 1988 (hard); courts 100% perennial ryegrass since 2001 (70/30 rye/fescue before)"
+  },
+  "wiki_us_open": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "US Open (tennis)",
+   "url": "https://en.wikipedia.org/wiki/US_Open_(tennis)",
+   "date": "2026-10-15",
+   "notes": "first held 1881 on grass at Newport; from 1975 played on clay instead of grass; since 1978 acrylic hard courts at Flushing Meadows"
+  },
+  "wiki_australian_open": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Australian Open",
+   "url": "https://en.wikipedia.org/wiki/Australian_Open",
+   "date": "2026-10-15",
+   "notes": "formerly on grass; switched to hard court (Rebound Ace) in 1988 with the move to Flinders Park"
+  },
+  "wiki_grass_court": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Grass court",
+   "url": "https://en.wikipedia.org/wiki/Grass_court",
+   "date": "2026-10-15",
+   "notes": "since 1988 Wimbledon is the only Grand Slam on grass; US Open last on grass 1974 (clay 1975–77); Australian Open last on grass January 1987"
+  },
+  "guardian_2025": {
+   "type": "press",
+   "publisher": "The Guardian",
+   "title": "'It makes water wetter': How Wimbledon keeps grass green in soaring temperatures",
+   "url": "https://www.theguardian.com/sport/2025/jul/02/it-makes-water-wetter-how-wimbledon-keeps-grass-green-in-soaring-temperatures",
+   "date": "2025-07-02",
+   "notes": "Neil Stubley, head of courts and horticulture: mowers set each morning, grass tailored to a precise 8mm; 20 full-time grounds staff"
+  },
+  "guardian_2012": {
+   "type": "press",
+   "publisher": "The Guardian",
+   "title": "Wimbledon 2012: Centre Court's grass whisperer faces final challenge",
+   "url": "https://www.theguardian.com/sport/2012/jun/23/wimbledon-centre-court-groundsman",
+   "date": "2012-06-23",
+   "notes": "head groundsman Eddie Seaward: the lawn is shaved to an 8mm stubble"
+  },
+  "britannica_us_open": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "U.S. Open (tennis)",
+   "url": "https://www.britannica.com/sports/US-Open-tennis",
+   "date": "2026-10-11",
+   "notes": "played on grass 1881–1974, clay 1975–1977, hard courts since 1978 (Flushing Meadows); author Chris Evert"
+  },
+  "tennis365_us_open": {
+   "type": "press",
+   "publisher": "Tennis365",
+   "title": "US Open facts and figures: from the various surfaces to the trophies",
+   "url": "https://www.tennis365.com/tennis-features/us-open-facts-and-figures-from-the-various-surfaces-to-the-trophies-and-a-few-records",
+   "date": "2020-08-30",
+   "notes": "grass 1881–1974, clay 1975–1977, hard from 1978; Connors won on all three"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Wimbledon is the only Grand Slam still played on grass; The Championships have been held at Wimbledon, south-west London (SW19), since 1877.",
+   "sources": [
+    "wimbledon_history_1870s",
+    "wimbledon_history",
+    "wiki_wimbledon",
+    "wiki_grass_court",
+    "guardian_2025"
+   ],
+   "vo": [
+    "which grand slam is still played on grass",
+    "it's wimbledon, in south-west london, on grass since eighteen seventy-seven"
+   ],
+   "screen": [
+    "Wimbledon",
+    "Wimbledon · SW19",
+    "London"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "detail",
+   "text": "The first Championships (1877, Worple Road) had an entry of 22 men, a single event (gentlemen's singles, won by Spencer Gore) and a final watched by 200 people.",
+   "sources": [
+    "wimbledon_history_1870s",
+    "wimbledon_history",
+    "wiki_wimbledon"
+   ],
+   "vo": [
+    "first championships: twenty-two men, one event, two hundred watching"
+   ],
+   "screen": [
+    "1877 · WORPLE ROAD",
+    "22 men, one event, 200 at the final."
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "detail",
+   "text": "The US Open left grass after 1974 (clay from 1975, hard courts from 1978); the Australian Open moved from grass to hard courts in 1988 (last grass edition January 1987).",
+   "sources": [
+    "wiki_us_open",
+    "britannica_us_open",
+    "tennis365_us_open",
+    "wiki_australian_open",
+    "wiki_grass_court",
+    "wiki_wimbledon"
+   ],
+   "vo": [
+    "the us open left grass in nineteen seventy-five, australia in nineteen eighty-eight"
+   ],
+   "screen": [
+    "THE OTHERS SWITCHED",
+    "US Open 1975 · Australian Open 1988."
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Wimbledon's courts have been sown with 100% perennial ryegrass since 2001 and are cut to 8 mm for The Championships.",
+   "sources": [
+    "wiki_wimbledon",
+    "guardian_2025",
+    "guardian_2012"
+   ],
+   "vo": [
+    "the courts: pure ryegrass, cut to eight millimetres"
+   ],
+   "screen": [
+    "8 MM",
+    "100% perennial ryegrass since 2001."
+   ]
+  }
+ ],
+ "myths": [
+  {
+   "myth": "All four Slams were once on grass.",
+   "reality": "The French Open has been on clay; the US and Australian Opens were on grass until 1974 and 1987.",
+   "sources": [
+    "wiki_wimbledon",
+    "wiki_grass_court"
+   ]
+  },
+  {
+   "myth": "Wimbledon's grass is a traditional seed mix.",
+   "reality": "Since 2001 the courts are 100% perennial ryegrass, chosen for durability.",
+   "sources": [
+    "wiki_wimbledon"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^SPORTS SPRINT",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^One question a day",
+  "^Next:",
+  "^Tomorrow:",
+  "^Tomorrow, another one",
+  "^North Sea$",
+  "^English Channel$",
+  "^US Open$",
+  "^Australian Open$"
+ ],
+ "landscape": {
+  "our_gap": "Feed versions cut to a Centre Court clip and the word 'Wimbledon'. We put SW19 on a real map, show how small 1877 was, and date exactly when the other Slams left grass.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/@thequizwire-com/shorts",
+    "title": "Feed Sports Sprint (own channel, v1)",
+    "angle": "card over b-roll",
+    "misses": "no map, no dates, no source"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=only+grand+slam+on+grass+shorts",
+    "title": "Search: only grand slam on grass shorts",
+    "angle": "highlight clips / talking head",
+    "misses": "never says when the others switched"
+   },
+   {
+    "url": "https://www.wimbledon.com/en_GB/about/history/1870s",
+    "title": "AELTC history page",
+    "angle": "reference",
+    "misses": "not a video"
+   }
+  ]
+ },
+ "vo_exempt": [
+  "^wimbledon, the us open, or the australian open\\?$",
+  "^tomorrow[,:]? another one",
+  "^subscribe, and guess it first"
+ ]
+}

@@ -1,0 +1,14 @@
+{
+ "files": {},
+ "generated": {
+  "geo/main.json": {
+   "by": "reelkit/geodata.py",
+   "bytes": 211413,
+   "credit": "Natural Earth",
+   "kind": "data",
+   "licence": "PD",
+   "provider": "Natural Earth",
+   "source": "world-atlas 2.0.2 50m"
+  }
+ }
+}

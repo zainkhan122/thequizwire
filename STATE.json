@@ -1,16 +1,12 @@
 {
- "now": "2026-10-15: owner approved Plan v2 and gave the go ('make videos'). Executing 2.1 → 2.8 (system work for the v2 template) then 3.1 pilot batch of 10 (5 Geo, 3 Wild, 2 Sports).",
- "phase": "2.1-go",
+ "now": "2026-10-15: Phase 3.1 pilot batch — all 10 v2 episodes authored and green offline (Geo #10–#14, Wild #7–#9, Sports #9–#10). Render run #2 (38637028319, tag pilot-v2-batch1) proved the voice gate; its layout/factcheck failures on Geo #10–#13 are fixed locally. Waiting on the owner's PAT to push + dispatch render run #3.",
+ "phase": "3.1-pilot-render",
  "next": [
-  "Phase 2.1 tools/studio_import.py + docs/SCORECARD.md (reproduce PLAN_V2 §1.2 from docs/data/studio_*.csv)",
-  "Phase 2.2 series/_template_v2 + series.json structure v2 + quizlint Q9–Q13",
-  "2.3 word-timed captions",
-  "2.4 flag-fill/glow/icons layer",
-  "2.5 Wild Files compare/counter",
-  "2.6 Sports strip",
-  "2.7 first maptile clip cost",
-  "2.8 v2 runner proof (selftest)",
-  "3.1 pilot batch of 10 only on the owner's 'make videos'; 3.2 score after 7 days against PLAN_V2 §4 gates"
+  "Owner supplies PAT → bash bootstrap.sh → git push origin main",
+  "Re-poll run #2 (wild ep07–09 + geo ep14): python3 reelkit/cloud.py why 38637028319",
+  "Dispatch run #3 --tag pilot-v2-batch1 with geo ep10–ep13 + sports ep09–ep10 (+ any new run #2 failures); fix → re-dispatch until 10/10 in the Release",
+  "Posting plan (owner, manual): day1 Geo10+Wild7 · day2 Geo11+Wild8 · day3 Geo12+Wild9 · day4 Geo13+Sports9 · day5 Geo14+Sports10",
+  "Phase 3.2: score 7 days after the last upload with tools/studio_import.py against PLAN_V2 §4 gates → 3.3 iterate"
  ],
  "owner_rules": [
   "Free tools only: public-repo GitHub Actions + the Arena sandbox",
@@ -27,33 +23,98 @@
  "secrets": {
   "github": "fine-grained PAT (Contents/Actions/Workflows R/W, repo-scoped), expires 2027-01-12, stored only at ~/.cache/secrets/gh_token — ask the owner each new sandbox"
  },
- "series": {
-  "geo-blitz": {
+ "series": [
+  {
+   "slug": "geo-blitz",
+   "name": "Geo Blitz",
    "active": true,
-   "next_number": 10
+   "color": "#E3A72F",
+   "feed_last_number": 9,
+   "next_number": 15,
+   "engines": [
+    "geo",
+    "globe",
+    "maptile"
+   ],
+   "sources_doc": "docs/DATA_SOURCES.md#geo-blitz-geo-blitz--maps",
+   "pitch": "One geography question, answered on a real, honest map: equal-area for size claims, a scale bar for distances, disputed borders shown with who administers and who claims them."
   },
-  "body-brain": {
+  {
+   "slug": "body-brain",
+   "name": "Body & Brain",
    "active": true,
-   "next_number": 4
+   "color": "#FF4D4D",
+   "feed_last_number": 3,
+   "next_number": 4,
+   "engines": [
+    "callouts",
+    "counter",
+    "bars"
+   ],
+   "sources_doc": "docs/DATA_SOURCES.md#body--brain-body-brain--anatomy-physiology-neuroscience",
+   "pitch": "Anatomy and neuroscience questions answered on public-domain anatomical plates with animated call-outs and a counted number."
   },
-  "sports-sprint": {
+  {
+   "slug": "sports-sprint",
+   "name": "Sports Sprint",
    "active": true,
-   "next_number": 9
+   "color": "#4FD1E0",
+   "feed_last_number": 8,
+   "next_number": 11,
+   "engines": [
+    "bars",
+    "compare",
+    "strip",
+    "geo"
+   ],
+   "sources_doc": "docs/DATA_SOURCES.md#sports-sprint-sports-sprint--records-rules-venues",
+   "pitch": "Records, rules and venues: bar races for records, procedural pitch/court diagrams, a timeline strip for firsts, and a map when the venue is the story."
   },
-  "wild-files": {
+  {
+   "slug": "wild-files",
+   "name": "Wild Files",
    "active": true,
-   "next_number": 7
+   "color": "#8FD694",
+   "feed_last_number": 6,
+   "next_number": 10,
+   "engines": [
+    "compare",
+    "bars",
+    "geo"
+   ],
+   "sources_doc": "docs/DATA_SOURCES.md#wild-files-wild-files--animals",
+   "pitch": "Animal superlatives with honest scale comparisons and a range map (GBIF occurrence-derived, CC0/CC BY) instead of a stock clip."
   },
-  "cosmic-quiz": {
+  {
+   "slug": "cosmic-quiz",
+   "name": "Cosmic Quiz",
    "active": false,
-   "next_number": 5
+   "color": "#B48CFF",
+   "feed_last_number": 4,
+   "next_number": 5,
+   "engines": [
+    "compare",
+    "counter"
+   ],
+   "sources_doc": "docs/DATA_SOURCES.md#cosmic-quiz-cosmic-quiz-inactive-and-time-vault-time-vault-inactive",
+   "pitch": "Registered from the feed; not scheduled (needs a planet/scale engine pass before activation)."
   },
-  "time-vault": {
+  {
+   "slug": "time-vault",
+   "name": "Time Vault",
    "active": false,
-   "next_number": 5
+   "color": "#D9B27C",
+   "feed_last_number": 4,
+   "next_number": 5,
+   "engines": [
+    "strip",
+    "geo"
+   ],
+   "sources_doc": "docs/DATA_SOURCES.md#cosmic-quiz-cosmic-quiz-inactive-and-time-vault-time-vault-inactive",
+   "pitch": "Registered from the feed; not scheduled (history questions can reuse the strip + map engines when activated)."
   }
- },
- "updated_at": "2026-10-14T19:56:17Z",
+ ],
+ "updated_at": "2026-10-15T07:42:48Z",
  "episodes": {},
  "current_phase": {
   "id": "2.1",

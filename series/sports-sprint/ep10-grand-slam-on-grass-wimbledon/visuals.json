@@ -1,0 +1,337 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1180
+   ],
+   "anchor": [
+    540,
+    600
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "1877 · WORPLE ROAD",
+   "text": "22 men, one event, 200 at the final.",
+   "y": 1350
+  },
+  {
+   "id": "f2",
+   "type": "fact",
+   "kicker": "THE OTHERS SWITCHED",
+   "text": "US Open 1975 · Australian Open 1988.",
+   "y": 1350
+  },
+  {
+   "id": "f3",
+   "type": "fact",
+   "kicker": "8 MM",
+   "text": "100% perennial ryegrass since 2001.",
+   "y": 1350
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     -3.5,
+     54.2
+    ]
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "args": {
+    "k": 1.05,
+    "lonlat": [
+     -3.4,
+     54.1
+    ],
+    "ease": "none"
+   },
+   "until": "s03.end"
+  },
+  {
+   "at": "s01+0.3",
+   "do": "geo.scalebar_in",
+   "stage": "stage_map",
+   "args": {}
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s02+0.2",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s03",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "826",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "args": {
+    "k": 3.0,
+    "lonlat": [
+     -0.2,
+     51.6
+    ],
+    "ease": "power2.inOut"
+   },
+   "until": "s04+1.4"
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "args": {
+    "k": 3.1,
+    "lonlat": [
+     -0.2,
+     51.6
+    ],
+    "ease": "none"
+   },
+   "until": "s04.end"
+  },
+  {
+   "at": "s04@wimbledon",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "wimbledon"
+   }
+  },
+  {
+   "at": "s04@london",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "london"
+   }
+  },
+  {
+   "at": "s04+2.0",
+   "do": "chips_out"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "args": {
+    "k": 3.2,
+    "lonlat": [
+     -0.25,
+     51.55
+    ],
+    "ease": "none"
+   },
+   "until": "s05.end"
+  },
+  {
+   "at": "s05+0.3",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s05.end"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "args": {
+    "k": 1.1,
+    "lonlat": [
+     -3.0,
+     53.6
+    ],
+    "ease": "power2.inOut"
+   },
+   "until": "s06+1.4"
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "args": {
+    "k": 1.12,
+    "lonlat": [
+     -2.9,
+     53.5
+    ],
+    "ease": "none"
+   },
+   "until": "s06.end"
+  },
+  {
+   "at": "s06",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "826",
+    "layer": "hl",
+    "dur": 1.2
+   }
+  },
+  {
+   "at": "s06+0.6",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "north_sea"
+   }
+  },
+  {
+   "at": "s06+0.8",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "channel"
+   }
+  },
+  {
+   "at": "s06+0.3",
+   "do": "fact_in",
+   "id": "f2",
+   "until": "s06.end"
+  },
+  {
+   "at": "s07",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "north_sea"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "channel"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "args": {
+    "k": 2.4,
+    "lonlat": [
+     -0.3,
+     51.7
+    ],
+    "ease": "power2.inOut"
+   },
+   "until": "s07+1.4"
+  },
+  {
+   "at": "s07+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "args": {
+    "k": 2.45,
+    "lonlat": [
+     -0.3,
+     51.7
+    ],
+    "ease": "none"
+   },
+   "until": "end-1.8"
+  },
+  {
+   "at": "s07+0.3",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s07.end"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.9"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.8",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "end-1.8",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     -3.5,
+     54.2
+    ],
+    "ease": "power2.inOut"
+   },
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.4",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

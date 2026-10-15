@@ -1,0 +1,43 @@
+{
+ "id": "ep10-grand-slam-on-grass-wimbledon",
+ "format": "quiz-v2",
+ "series": "sports-sprint",
+ "number": 10,
+ "title": "Which Grand Slam is still played on GRASS?",
+ "difficulty": "EASY",
+ "seed": 1010,
+ "quiz": {
+  "question": "Which Grand Slam is still played on GRASS?",
+  "keyword": "GRASS",
+  "options": [
+   "Wimbledon",
+   "US Open",
+   "Australian Open"
+  ],
+  "correct": 0,
+  "beat": 1.5,
+  "answer_line": "Wimbledon",
+  "answer_sub": "London SW19 · since 1877",
+  "tease": "Tomorrow, another one.",
+  "cta_line": "One question a day · Subscribe"
+ },
+ "hook_type": "fact",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which Grand Slam is still played on GRASS?",
+  "description": "Which Grand Slam is still played on GRASS? Guess first — then see it: London SW19, since 1877.\n\nWhat was your first guess?\n\nSports Sprint #10",
+  "hashtags": [
+   "#GKshorts",
+   "#thequizwire",
+   "#shorts",
+   "#sportssprint",
+   "#wimbledon",
+   "#tennis"
+  ]
+ }
+}

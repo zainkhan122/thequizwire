@@ -1,0 +1,90 @@
+{
+ "version": 1,
+ "episode": "ep10-grand-slam-on-grass-wimbledon",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "projection": "equalEarth",
+   "projection_reason": "regional close-up of Britain; no size claim, equal-area default (geolint P1)",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -11.0,
+     49.2,
+     3.4,
+     59.2
+    ]
+   },
+   "padding": 6,
+   "resolution": "50m",
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "826"
+     ],
+     "cls": "",
+     "note": "United Kingdom (NE admin-0 826)"
+    }
+   ],
+   "pins": [
+    {
+     "id": "wimbledon",
+     "lonlat": [
+      -0.2144,
+      51.4345
+     ],
+     "label": "Wimbledon · SW19",
+     "qid": "Q815369",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "london",
+     "lonlat": [
+      0.4,
+      51.78
+     ],
+     "text": "London"
+    },
+    {
+     "id": "north_sea",
+     "lonlat": [
+      2.2,
+      55.6
+     ],
+     "text": "North Sea",
+     "cls": "sea"
+    },
+    {
+     "id": "channel",
+     "lonlat": [
+      -2.2,
+      49.9
+     ],
+     "text": "English Channel",
+     "cls": "sea"
+    }
+   ],
+   "scalebar": {
+    "km": 100,
+    "lonlat": [
+     -4.0,
+     51.5
+    ]
+   },
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ]
+  }
+ }
+}

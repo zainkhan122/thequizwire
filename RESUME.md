@@ -24,16 +24,15 @@ What exists (all new unless noted; history-repo toolkit reused where it fit):
 
 ## Current phase
 ```
-Phase 2.0 — Plan v2 written (2026-10-15); system work 2.1–2.8 may start, production (3.x) still waits for "make videos"
-goal        : format pivot "Guess it → See it" per docs/PLAN_V2.md — reveal-first 28–35-s Shorts, 2/day, Geo → Wild → Sports → Body
-entry       : 60-day public audit (docs/CHANNEL_BASELINE.md) + Studio export (docs/data/studio_2026-09-16_10-13_*.csv):
-              stayed 57.6 %, AVD 24 s, 72 subs / 113k views, plateau ≈ 1,000–1,300 views per Short
-steps       : 2.1 tools/studio_import.py + docs/SCORECARD.md → 2.2 series/_template_v2 + quizlint Q9–Q13 → 2.3 word-timed captions →
-              2.4 flag-fill/glow/icons → 2.5 Wild Files compare/counter → 2.6 Sports strip → 2.7 first maptile clip (cost) →
-              2.8 v2 runner proof (selftest) → 3.1 pilot batch of 10 (owner's go) → 3.2 score after 7 days (gates in PLAN_V2 §4)
-exit check  : 2.8 — selftest renders _template_v2 on the runner with Q9–Q13 green; then owner's go gates 3.1
-rollback    : v1 template and gates stay untouched; v2 lives in new files/flags
-next        : Phase 2.1 (≤ 15 min) — importer reproduces PLAN_V2 §1.2 tables from the CSVs with one command
+Phase 3.1 — pilot batch of 10 v2 episodes (2026-10-15; owner: "V2 is approved. make videos")
+goal        : 10 v2 Shorts rendered on the runner into the `pilot-v2-batch1` Release (5 Geo, 3 Wild, 2 Sports); no auto-posting
+entry       : PLAN_V2 approved; v2 runner proof #15 green; all 10 episodes authored + green offline (quizlint/geolint/facts/provenance)
+steps       : run #1 38635751388 (voice gate false-fail → voice.py fixed) → run #2 38637028319 (voice passes; Geo #10–#13 failed on
+              HF layout collisions / caption coverage → fixed in b1dfabd + engine hardening) → run #3 (this commit) → fix → until 10/10
+exit check  : Release pilot-v2-batch1 holds 10 final.mp4 + POST_KIT; owner posts 2/day per the plan; 3.2 scores after 7 days
+rollback    : episodes stay in git; a failed render changes nothing public
+next        : owner PAT → `bash bootstrap.sh` → `git push` → `python3 reelkit/cloud.py why 38637028319` (wild #7–#9, geo #14) →
+              `python3 reelkit/cloud.py render <geo ep10..13> <sports ep09 ep10> --tag pilot-v2-batch1`
 ```
 Last completed: **Phase 1.7 Actuals** (2026-10-14) — measured CI timings in `docs/OPERATING_MODEL.md §3/§6`, verified animator CLI +
 `clips.py` width/flag rules in `docs/MAPTILE.md`, budget guard 12 min/episode, `render.yml` timeout 30 min.
