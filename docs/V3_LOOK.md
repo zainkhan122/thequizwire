@@ -61,13 +61,13 @@ Flags for pills/characters/lifts are collected by `geodata.py prep` from geo.jso
 ## Outro (V3.6d, owner brief 2026-10-15) — no "next video" tease
 The last scene (`s08`, cta role, ≈ 5–7 s) is a branded end card that *demonstrates* the ask instead of announcing tomorrow's question:
 1. map text clears (`geo.clear` at `s08`), the satellite dims (radial, 0.55–0.86) and the camera drifts back to the hook framing;
-2. the channel logo (white disc, yellow ring) pops with a spin, **TheQuizWire** wordmark (Lilita 104) and "ONE MAP QUESTION A DAY" follow;
+2. the channel logo (owner's transparent mark on a white disc, yellow ring) pops with a spin, the **TheQuizWire** wordmark (Lilita 104) follows (no tagline — owner 2026-10-15);
 3. "DID YOU GET IT?" + two buttons: **LIKE** (white) and **SUBSCRIBE** (yellow). An arrow cursor glides in, clicks LIKE (→ yellow, thumb bounce,
    burst ring), glides to SUBSCRIBE and clicks (→ green **✓ SUBSCRIBED**, bell wiggle, burst), then leaves;
 4. social row pops one by one — Facebook · Instagram · X · Threads (Simple Icons, CC0, brand-coloured discs) — and the **thequizwire.com** pill;
 5. everything holds (logo float, subscribe breathing) until `end-1.0`, then the hook frame returns for the loop.
 VO for v08 is the ask itself ("Got it right? Hit like, and subscribe for a new map question every day." — avoid numerals: factcheck counts them).
-Authoring: `quiz.outro {headline, tagline, url}` (defaults shown above); beats `cta_in` at `s08` until `end-1.0`, `credit_in` until `end-0.2`,
+Authoring: `quiz.outro {headline, url}` (defaults shown above); beats `cta_in` at `s08` until `end-1.0`, `credit_in` until `end-0.2`,
 `hook_in` at `end-1.0`; `geo.clear` at `s08` (dur 0.25) and the return `cam_to` at `s08+0.2`→`end-0.3` with the hook camera (Q12).
-Assets: `brand/` (logo.png = channel avatar, owner's mark; cursor.svg own; 4 Simple Icons CC0) are copied by `reelkit/brand.py prep` and
+Assets: `brand/` (logo.png = owner-supplied transparent logo; cursor.svg own; 4 Simple Icons CC0) are copied by `reelkit/brand.py prep` and
 registered in media.json; the like/bell stickers are Twemoji 1f44d/1f514 (always fetched for v3). Engine: `engine/quiz.py` `outro3()` / `outro_in()`.

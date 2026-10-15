@@ -362,20 +362,18 @@ class Quiz:
     def character_out(self, t, cid, dur=0.3):
         self.J(f"tl.to('#{cid}',{{autoAlpha:0,scale:0.5,y:40,duration:{f(dur)},ease:'power2.in'}},{f(t)});")
 
-    # ---- v3 outro (owner brief 2026-10-15): no "next video" tease. Logo + wordmark, LIKE / SUBSCRIBE buttons that a cursor
+    # ---- v3 outro (owner brief 2026-10-15): no "next video" tease. Logo + wordmark (no tagline), LIKE / SUBSCRIBE buttons that a cursor
     #      actually clicks (yellow → green "SUBSCRIBED"), social row (Facebook · Instagram · X · Threads) + thequizwire.com.
-    #      Ids are fixed (hfstatic needs id selectors). Geometry (+150 px balance shift): logo 480–780 · name 800 · tagline 920 · head 986 · buttons 1080–1208 ·
-    #      socials 1240–1368 · url 1412–1504 · credit 1560. Everything is declared lower-third-safe (no word captions in the cta role).
+    #      Ids are fixed (hfstatic needs id selectors). Geometry: logo 480–780 · name 800 · head 936 · buttons 1030–1158 · socials 1190–1318 · url 1362–1454 · credit 1560 (no tagline — owner). Everything is declared lower-third-safe (no word captions in the cta role).
     OUTRO_SOCIAL = (("facebook", "#1877F2"), ("instagram", "#E1306C"), ("x", "#111111"), ("threads", "#101010"))
 
-    def outro3(self, headline="DID YOU GET IT?", url="thequizwire.com", tagline="ONE MAP QUESTION A DAY"):
+    def outro3(self, headline="DID YOU GET IT?", url="thequizwire.com"):
         soc = "".join(f'<div class="o-soc" id="o_s{i}" style="left:{196 + i * 180}px;background:{col}"{ALLOW}{CAPZ}><img src="assets/brand/{n}.svg" alt=""></div>'
                       for i, (n, col) in enumerate(self.OUTRO_SOCIAL))
         return (f'<div id="o_dim" class="o-dim"></div>'
                 f'<div id="outro" class="outro3" data-fc="skip"{ALLOW}{CAPZ}>'
                 f'<div class="o-logo" id="o_logo"{ALLOW}><img src="assets/brand/logo.png" alt=""></div>'
                 f'<div class="o-name tu" id="o_name" data-tq-dwell="off" data-fc="skip"{ALLOW}>TheQuizWire</div>'
-                f'<div class="o-tag tu" id="o_tag" data-tq-dwell="off" data-fc="skip"{ALLOW}>{esc(tagline)}</div>'
                 f'<div class="o-head tu" id="o_head" data-tq-dwell="off" data-fc="skip"{ALLOW}>{esc(headline)}</div>'
                 f'<div class="o-btn o-like" id="o_like"{ALLOW}{CAPZ}><img class="o-ico" id="o_thumb" src="assets/stickers/1f44d.svg" alt=""><span class="tu" data-tq-dwell="off" data-fc="skip"{ALLOW}>LIKE</span></div>'
                 f'<div class="o-btn o-sub" id="o_sub"{ALLOW}{CAPZ}><img class="o-ico" id="o_bell" src="assets/stickers/1f514.svg" alt=""><span class="tu" id="o_sublbl" data-tq-dwell="off" data-fc="skip"{ALLOW}>SUBSCRIBE</span>'
@@ -396,7 +394,6 @@ class Quiz:
         J(f"tl.fromTo('#o_logo',{{autoAlpha:0,scale:0.2,rotation:-25}},{{autoAlpha:1,scale:1,rotation:0,duration:0.55,ease:'back.out(1.8)',immediateRender:false}},{f(t0 + 0.05)});")
         J(f"tl.to('#o_logo',{{y:-8,duration:1.1,ease:'sine.inOut',yoyo:true,repeat:-1}},{f(t0 + 0.7)});")
         J(f"tl.fromTo('#o_name',{{autoAlpha:0,y:40,scale:0.9}},{{autoAlpha:1,y:0,scale:1,duration:0.4,ease:'back.out(1.6)',immediateRender:false}},{f(t0 + 0.3)});")
-        J(f"tl.fromTo('#o_tag',{{autoAlpha:0,y:16}},{{autoAlpha:1,y:0,duration:0.3,immediateRender:false}},{f(t0 + 0.5)});")
         J(f"tl.fromTo('#o_head',{{autoAlpha:0,scale:0.8}},{{autoAlpha:1,scale:1,duration:0.35,ease:'back.out(2)',immediateRender:false}},{f(t0 + 0.6)});")
         J(f"tl.fromTo('#o_like',{{autoAlpha:0,x:-70,scale:0.9}},{{autoAlpha:1,x:0,scale:1,duration:0.4,ease:'back.out(1.6)',immediateRender:false}},{f(t0 + 0.75)});")
         J(f"tl.fromTo('#o_sub',{{autoAlpha:0,x:70,scale:0.9}},{{autoAlpha:1,x:0,scale:1,duration:0.4,ease:'back.out(1.6)',immediateRender:false}},{f(t0 + 0.85)});")
@@ -519,17 +516,16 @@ CSS = f"""
 .v3 .o-logo{{position:absolute;left:390px;top:480px;width:300px;height:300px;border-radius:50%;background:#fff;box-shadow:0 0 0 10px rgba(255,212,0,.95),0 18px 40px rgba(0,0,0,.6);overflow:hidden;visibility:hidden;opacity:0}}
 .v3 .o-logo img{{width:100%;height:100%;display:block}}
 .v3 .o-name{{position:absolute;left:40px;top:800px;width:1000px;text-align:center;font-family:'Lilita';font-size:104px;line-height:1;color:#fff;-webkit-text-stroke:3px #141414;paint-order:stroke fill;text-shadow:0 6px 0 rgba(0,0,0,.55),0 14px 30px rgba(0,0,0,.6);visibility:hidden;opacity:0}}
-.v3 .o-tag{{position:absolute;left:60px;top:920px;width:960px;text-align:center;font-family:'Oswald';font-weight:600;font-size:34px;letter-spacing:.3em;color:#FFD400;text-shadow:0 2px 0 rgba(0,0,0,.7),0 6px 16px rgba(0,0,0,.8);visibility:hidden;opacity:0}}
-.v3 .o-head{{position:absolute;left:60px;top:986px;width:960px;text-align:center;font-family:'Lilita';font-size:60px;line-height:1;color:#fff;-webkit-text-stroke:2px #141414;paint-order:stroke fill;text-shadow:0 4px 0 rgba(0,0,0,.55),0 10px 24px rgba(0,0,0,.6);visibility:hidden;opacity:0}}
-.v3 .o-btn{{position:absolute;top:1080px;width:420px;height:128px;border-radius:64px;display:flex;align-items:center;justify-content:center;gap:18px;font-family:'Lilita';font-size:54px;line-height:1;color:#141414;border:5px solid #fff;box-shadow:0 10px 0 rgba(0,0,0,.35),0 18px 36px rgba(0,0,0,.55);visibility:hidden;opacity:0}}
+.v3 .o-head{{position:absolute;left:60px;top:936px;width:960px;text-align:center;font-family:'Lilita';font-size:60px;line-height:1;color:#fff;-webkit-text-stroke:2px #141414;paint-order:stroke fill;text-shadow:0 4px 0 rgba(0,0,0,.55),0 10px 24px rgba(0,0,0,.6);visibility:hidden;opacity:0}}
+.v3 .o-btn{{position:absolute;top:1030px;width:420px;height:128px;border-radius:64px;display:flex;align-items:center;justify-content:center;gap:18px;font-family:'Lilita';font-size:54px;line-height:1;color:#141414;border:5px solid #fff;box-shadow:0 10px 0 rgba(0,0,0,.35),0 18px 36px rgba(0,0,0,.55);visibility:hidden;opacity:0}}
 .v3 .o-like{{left:100px;background:#ffffff}} .v3 .o-sub{{left:560px;background:#FFD400;border-color:#FFD400}}
 .v3 .o-btn .o-ico{{width:72px;height:72px;filter:drop-shadow(0 3px 4px rgba(0,0,0,.35))}}
 .v3 .o-btn .o-done{{position:absolute;left:0;top:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:48px;color:#fff;visibility:hidden;opacity:0}}
-.v3 .o-burst{{position:absolute;left:230px;top:1064px;width:160px;height:160px;border-radius:50%;border:10px solid #FFD400;box-shadow:0 0 30px rgba(255,212,0,.8);visibility:hidden;opacity:0;pointer-events:none}}
-.v3 .o-cursor{{position:absolute;left:270px;top:1110px;width:120px;height:120px;filter:drop-shadow(0 8px 10px rgba(0,0,0,.6));visibility:hidden;opacity:0;z-index:5}}
-.v3 .o-soc{{position:absolute;top:1240px;width:128px;height:128px;border-radius:50%;border:5px solid #fff;box-shadow:0 10px 24px rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;visibility:hidden;opacity:0}}
+.v3 .o-burst{{position:absolute;left:230px;top:1014px;width:160px;height:160px;border-radius:50%;border:10px solid #FFD400;box-shadow:0 0 30px rgba(255,212,0,.8);visibility:hidden;opacity:0;pointer-events:none}}
+.v3 .o-cursor{{position:absolute;left:270px;top:1060px;width:120px;height:120px;filter:drop-shadow(0 8px 10px rgba(0,0,0,.6));visibility:hidden;opacity:0;z-index:5}}
+.v3 .o-soc{{position:absolute;top:1190px;width:128px;height:128px;border-radius:50%;border:5px solid #fff;box-shadow:0 10px 24px rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;visibility:hidden;opacity:0}}
 .v3 .o-soc img{{width:68px;height:68px;filter:invert(1)}}
-.v3 .o-url{{position:absolute;left:190px;top:1412px;width:700px;height:92px;line-height:92px;text-align:center;border-radius:46px;background:#141414;border:4px solid #FFD400;font-family:'Oswald';font-weight:600;font-size:46px;letter-spacing:.08em;color:#FFD400;box-shadow:0 12px 30px rgba(0,0,0,.55);visibility:hidden;opacity:0}}
+.v3 .o-url{{position:absolute;left:190px;top:1362px;width:700px;height:92px;line-height:92px;text-align:center;border-radius:46px;background:#141414;border:4px solid #FFD400;font-family:'Oswald';font-weight:600;font-size:46px;letter-spacing:.08em;color:#FFD400;box-shadow:0 12px 30px rgba(0,0,0,.55);visibility:hidden;opacity:0}}
 .v3 .cta3{{position:absolute;left:60px;top:1250px;width:900px;text-align:center;z-index:70;visibility:hidden;opacity:0}}
 .v3 .ctease3{{font-family:'Lilita';font-size:66px;line-height:1.1;text-transform:uppercase;color:#FFD400;-webkit-text-stroke:2px #4a2b00;paint-order:stroke fill;text-shadow:0 6px 0 #7a4b00,0 14px 28px rgba(0,0,0,.6)}}
 .v3 .cline3{{margin-top:26px;font-family:'Oswald';font-weight:600;font-size:40px;letter-spacing:.12em;color:#fff;-webkit-text-stroke:1.2px #141414;paint-order:stroke fill;text-shadow:0 3px 0 rgba(0,0,0,.6),0 6px 16px rgba(0,0,0,.85)}}

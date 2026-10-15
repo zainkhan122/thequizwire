@@ -71,6 +71,8 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 | 2026-10-14 | Repo is **private** (GitHub Free: 2,000 Actions min/month); crons off, `check` main-only, `cloud.py` budget guard | owner |
 | 2026-10-14 | Vector maps (d3-geo + Natural Earth) are the default stage; VersaTiles flyovers are cached hero clips; Blue Marble globe deferred | agent |
 
+### V3.6e' — DONE 2026-10-15 · owner feedback on the outro: official transparent logo (brand/logo.png, 512 px) and tagline removed; block tightened 50 px (head 936 · buttons 1030 · socials 1190 · url 1362). `~/uploads` removed after import.
+
 ### V3.6e — DONE 2026-10-15 · variety system (owner: "how do we avoid template-like videos?")
 - `docs/VARIETY.md`: fixed skeleton + 8 rotated surface axes (question, hook, opener, reveal, beats, cast, music, outro) with pools; brand constants never rotate.
 - quizlint **Q16**: v3 episodes need `episode.json → variety`; FAIL when ≥ 4/8 axes equal the previous episode of the series, opener/reveal/outro or the hook's first two words repeat 3× in a row, or the emoji set equals the previous episode; WARN on question/hook repeats. Selftest negative `ep14-clone` → Q16.

@@ -3,7 +3,7 @@
     python3 reelkit/brand.py prep <episode_dir> <build_dir>   # brand/* → <build>/brand/* and media.json 'generated' entries
 
 Files (committed in brand/, all tiny):
-  logo.png        the channel avatar (TheQuizWire "Q" pin) — owner's own brand mark            licence own
+  logo.png        the owner-supplied transparent TheQuizWire "Q" pin (512 px, 8 % padding)       licence own
   facebook.svg instagram.svg x.svg threads.svg   Simple Icons (https://simpleicons.org, CC0 1.0)   licence CC0-1.0
   cursor.svg      hand-drawn arrow cursor for the "click → subscribed" animation                licence own
 Brand marks of third-party platforms are used only to indicate where the channel can be found (nominative use).
@@ -13,7 +13,7 @@ import json, pathlib, shutil, sys
 REPO = pathlib.Path(__file__).resolve().parents[1]
 SRC = REPO / "brand"
 META = {
-    "logo.png":      {"licence": "own", "provider": "TheQuizWire (channel brand, owner-supplied)", "credit": "TheQuizWire", "source": "youtube.com/@thequizwire-com avatar"},
+    "logo.png":      {"licence": "own", "provider": "TheQuizWire (channel brand, owner-supplied 2026-10-15)", "credit": "TheQuizWire", "source": "owner upload logo-The-Quiz-Wire-icon-transparent.png"},
     "cursor.svg":    {"licence": "own", "provider": "thequizwire (hand-made)", "credit": "thequizwire", "source": "brand/cursor.svg"},
 }
 SIMPLE = {"licence": "CC0-1.0", "provider": "Simple Icons", "credit": "Simple Icons", "source": "https://github.com/simple-icons/simple-icons"}

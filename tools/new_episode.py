@@ -84,7 +84,7 @@ def main():
         E["format"] = "quiz-v2" if a.v2 else "quiz-v3"
         E["quiz"] = {"question": q, "keyword": kw, "options": opts, "correct": a.correct, "beat": 1.5 if a.v2 else 3.0,
                      **({} if a.v2 else {"option_meta": [{} for _ in opts], "banner": opts[a.correct][:16],
-                                         "outro": {"headline": "DID YOU GET IT?", "tagline": "ONE MAP QUESTION A DAY" if use_map else "ONE QUESTION A DAY", "url": "thequizwire.com"}}),
+                                         "outro": {"headline": "DID YOU GET IT?", "url": "thequizwire.com"}}),
                      "answer_line": opts[a.correct], "answer_sub": "TODO — one sourced number or place (≤ 40 chars)",
                      **({"tease": a.tease, "cta_line": "One map question a day · Subscribe" if use_map else "One question a day · Subscribe"} if a.v2 else {})}
     else:

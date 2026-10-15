@@ -219,7 +219,7 @@ class Composer:
             self.body.append(Q.captions([(g, t) for g, t, _, _ in caps]))
             for g, _, t0, t1 in caps: Q.caption_show(g, t0, t1)
             o = q.get("outro", {})
-            self.body.append(Q.outro3(headline=o.get("headline", "DID YOU GET IT?"), url=o.get("url", "thequizwire.com"), tagline=o.get("tagline", "ONE MAP QUESTION A DAY")))
+            self.body.append(Q.outro3(headline=o.get("headline", "DID YOU GET IT?"), url=o.get("url", "thequizwire.com")))
             self.body.append(Q.credit3(credit))
             self.caption_count = len(caps)
         elif self.v2:
