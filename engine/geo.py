@@ -82,7 +82,13 @@ class Scene:
     def _load_data(self):
         p = self.G.data_dir / f"{self.sid}.json"
         if p.exists():
-            d = json.loads(p.read_text()); self.sources.update(d.get("sources", [])); return d, d.get("quality", "scene")
+            d = json.loads(p.read_text()); self.sources.update(d.get("sources", []))
+            if d.get("basemap"):                                            # v3 raster: ship it with the build, reference it relative to index.html
+                src = self.G.data_dir / d["basemap"]["src"]; dst = self.G.hf / "assets" / "geo" / src.name
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                if src.exists() and (not dst.exists() or dst.stat().st_mtime < src.stat().st_mtime): shutil.copy(src, dst)
+                d["basemap"]["src"] = f"assets/geo/{src.name}"
+            return d, d.get("quality", "scene")
         # preview fallback: vendored world-atlas 110m (Natural Earth, public domain)
         topo = json.loads((ENGINE / "data" / "countries-110m.json").read_text())
         geo = {}
@@ -202,6 +208,9 @@ CSS = f"""
 .geo .g-sphere{{fill:{SEA};stroke:none}}
 .geo .g-grat{{fill:none;stroke:rgba(239,230,210,.14);stroke-width:1}}
 .geo .g-land{{fill:{LAND};stroke:none}}
+.geo.has-basemap .g-land,.geo.has-basemap .g-countries{{fill:none}}                    /* v3: the raster is the land */
+.geo.has-basemap .g-border{{stroke:rgba(255,255,255,.55);stroke-width:1.4}}
+.geo.has-basemap .geo-basemap{{image-rendering:auto}}
 .geo .g-countries{{fill:{LAND};stroke:none}}
 .geo .g-border{{fill:none;stroke:rgba(239,230,210,.38);stroke-width:1.2;stroke-linejoin:round}}
 .geo .g-highlight{{fill:{SAND};stroke:{CREAM};stroke-width:1.6;opacity:0}}

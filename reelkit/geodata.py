@@ -255,6 +255,21 @@ def prep(ep: Path, out: Path, fixtures=None, quiet=False):
                 feats.append({"type": "Feature", "id": d["id"], "properties": {k: r.get(k) for k in ("name", "controller", "claimants", "ne_note")}, "geometry": r["geometry"]})
                 d.update({k: r[k] for k in ("controller", "claimants", "label_at") if k in r and k not in d})
             data["geo"]["disputed"] = {"type": "FeatureCollection", "features": feats}
+        bm = spec.get("basemap")                                           # v3: raster under the vector layers (Mercator scenes)
+        if bm:
+            bm = {"layer": bm} if isinstance(bm, str) else dict(bm)
+            if spec.get("projection") != "mercator": sys.exit(f"geodata: {sid}: basemap needs \"projection\": \"mercator\" (raster tiles are Web Mercator)")
+            bb = (spec.get("fit") or {}).get("bbox")
+            if not bb: sys.exit(f"geodata: {sid}: basemap needs a bbox fit")
+            sys.path.insert(0, str(Path(__file__).resolve().parent)); import basemap as _bm
+            kmax = float(bm.get("k_max", 2.5)); width = int(spec.get("w", 1080) * kmax * 1.1)
+            pad = float(bm.get("pad_deg", 0.0)) or 0.35 * max(bb[2] - bb[0], bb[3] - bb[1])   # the 1080×1180 fit + camera pans show more than the bbox
+            meta = _bm.stitch([bb[0] - pad, bb[1] - pad, bb[2] + pad, bb[3] + pad], width, out / f"{sid}_basemap.jpg", bm.get("layer", "bluemarble"))
+            data["basemap"] = {"src": f"{sid}_basemap.jpg", **{k: meta[k] for k in ("scale", "translate", "size", "zoom", "credit", "layer")}}
+            data["sources"].append(meta["credit"])
+            gen[f"geo/{sid}_basemap.jpg"] = {"kind": "image", "licence": "PD-USGov", "provider": "NASA GIBS", "by": "reelkit/basemap.py",
+                                             "source": f"{meta['layer']} z{meta['zoom']} ({meta['tiles']} tiles)", "credit": meta["credit"], "bytes": meta["bytes"]}
+            if not quiet: print(f"  ✓ {sid}: basemap {meta['layer']} z{meta['zoom']} {meta['size'][0]}×{meta['size'][1]} · {meta['bytes'] // 1024} KB")
         s = json.dumps(data, separators=(",", ":"))
         (out / f"{sid}.json").write_text(s)
         gen[f"geo/{sid}.json"] = {"kind": "data", "licence": "PD", "provider": "Natural Earth", "by": "reelkit/geodata.py",

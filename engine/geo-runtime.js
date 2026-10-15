@@ -150,7 +150,15 @@
     const C = compute(spec, data);
     const W = spec.w, H = spec.h;
     const svgLayers = C.paths.map(p => `<path id="${id}_${p.id}" class="${p.cls.trim()}" d="${p.d}" vector-effect="non-scaling-stroke"></path>`).join("");
-    el.innerHTML = `<svg class="geo-svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><g id="${id}_cam">${svgLayers}</g></svg><div class="geo-ui" id="${id}_ui"></div>`;
+    let raster = "";
+    if (data && data.basemap && spec.projection === "mercator") {          // v3: PD raster (Web Mercator tiles) aligned under the fitted projection
+      const bm = data.basemap, bp = d3.geoMercator().scale(bm.scale).translate(bm.translate);
+      const f = C.proj.scale() / bm.scale, ref = spec.fit && spec.fit.bbox ? [(spec.fit.bbox[0] + spec.fit.bbox[2]) / 2, (spec.fit.bbox[1] + spec.fit.bbox[3]) / 2] : [0, 0];
+      const a = C.proj(ref), b = bp(ref), ox = a[0] - f * b[0], oy = a[1] - f * b[1];
+      raster = `<image id="${id}_basemap" class="geo-basemap" href="${bm.src}" width="${bm.size[0]}" height="${bm.size[1]}" transform="matrix(${f} 0 0 ${f} ${ox} ${oy})" preserveAspectRatio="none"></image>`;
+      el.classList.add("has-basemap");
+    }
+    el.innerHTML = `<svg class="geo-svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><g id="${id}_cam">${raster}${svgLayers}</g></svg><div class="geo-ui" id="${id}_ui"></div>`;
     const ui = el.querySelector(".geo-ui");
     const html = [];
     for (const p of C.pins) html.push(`<div class="geo-pin ${p.cls || ""}${p.side === "left" ? " left" : ""}" id="${id}_pin_${p.id}" style="visibility:hidden;opacity:0" data-layout-allow-overlap="true"><div class="pinhead"></div>${p.label ? `<div class="pinlabel tu" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">${esc(p.label)}</div>` : ""}</div>`);
