@@ -1,0 +1,62 @@
+{
+ "schema_version": 1,
+ "note": "Distribution config. IDs here are NOT secrets (Buffer channel/org ids, playlist ids). Secrets live only in GitHub Actions secrets: BUFFER_API_KEY, MEDIA_TOKEN, and (for playlists) YT_CLIENT_ID / YT_CLIENT_SECRET / YT_REFRESH_TOKEN.",
+ "enabled": true,
+ "buffer": {
+  "endpoint": "https://api.buffer.com",
+  "secret_name": "BUFFER_API_KEY",
+  "organization_id": "",
+  "channels": {
+   "youtube":   {"enabled": true,  "buffer_id": "", "service_id": "", "name": ""},
+   "instagram": {"enabled": true,  "buffer_id": "", "service_id": "", "name": ""},
+   "facebook":  {"enabled": true,  "buffer_id": "", "service_id": "", "name": ""}
+  },
+  "mode": "addToQueue",
+  "scheduling_type": "automatic",
+  "queue_limit_per_channel": 14,
+  "request_spacing_seconds": 2.0,
+  "max_attempts": 4,
+  "discovered_at": ""
+ },
+ "media": {
+  "repo": "zainkhan122/thequizwire-media",
+  "base_url": "https://zainkhan122.github.io/thequizwire-media",
+  "secret_name": "MEDIA_TOKEN",
+  "retention_days_after_sent": 14,
+  "max_site_bytes": 900000000
+ },
+ "disclosure": {
+  "youtube_is_ai_generated": false,
+  "instagram_is_ai_generated": true,
+  "facebook_caption_line": "🎙️ AI narration",
+  "note": "Meta asks for a disclosure on realistic synthetic audio/video: the narration is a synthetic voice, so Instagram gets the native flag and Facebook (no native field in the Buffer API) a caption line. YouTube's altered-content disclosure targets realistic depictions of people/events; a narrated animated map is not one, so it stays false unless an episode uses realistic synthetic footage (override per episode with post.youtube_is_ai_generated)."
+ },
+ "youtube": {
+  "made_for_kids": false,
+  "notify_subscribers": true,
+  "privacy": "public",
+  "license": "youtube",
+  "embeddable": true,
+  "playlists_note": "Buffer's YouTube input has no playlist field (schema 2026-10-10). reelkit/yt_enrich.py files sent Shorts into the series playlist via the YouTube Data API once the owner connects Google OAuth (docs/DISTRIBUTION.md §6)."
+ },
+ "channel": {
+  "name": "TheQuizWire",
+  "site": "thequizwire.com",
+  "instagram_handle": "@thequizwire",
+  "brand_hashtag": "#TheQuizWire"
+ },
+ "series": {
+  "geo-blitz":     {"name": "Geo Blitz",     "emoji": "🌍", "topic": "geography quiz",  "youtube_category": "27", "playlist": "Geo Blitz 🌍 Daily Geography Quiz",
+                    "hashtags": {"youtube": ["#GeographyQuiz", "#MapQuiz"], "instagram": ["#GeographyQuiz", "#MapQuiz", "#QuizReels"], "facebook": ["#GeographyQuiz"]},
+                    "keywords": ["geography quiz", "map quiz", "world geography", "general knowledge", "trivia"]},
+  "wild-files":    {"name": "Wild Files",    "emoji": "🐾", "topic": "animal quiz",     "youtube_category": "15", "playlist": "Wild Files 🐾 Animal Quiz",
+                    "hashtags": {"youtube": ["#AnimalQuiz", "#WildlifeFacts"], "instagram": ["#AnimalQuiz", "#WildlifeFacts", "#QuizReels"], "facebook": ["#AnimalQuiz"]},
+                    "keywords": ["animal quiz", "wildlife facts", "nature trivia", "general knowledge"]},
+  "sports-sprint": {"name": "Sports Sprint", "emoji": "🏆", "topic": "sports quiz",     "youtube_category": "17", "playlist": "Sports Sprint 🏆 Sports Quiz",
+                    "hashtags": {"youtube": ["#SportsQuiz", "#SportsTrivia"], "instagram": ["#SportsQuiz", "#SportsTrivia", "#QuizReels"], "facebook": ["#SportsQuiz"]},
+                    "keywords": ["sports quiz", "sports trivia", "sports history", "general knowledge"]},
+  "body-brain":    {"name": "Body & Brain",  "emoji": "🧠", "topic": "human body quiz", "youtube_category": "27", "playlist": "Body & Brain 🧠 Human Body Quiz",
+                    "hashtags": {"youtube": ["#HumanBodyQuiz", "#ScienceFacts"], "instagram": ["#HumanBodyQuiz", "#ScienceFacts", "#QuizReels"], "facebook": ["#ScienceQuiz"]},
+                    "keywords": ["human body quiz", "brain facts", "science trivia", "general knowledge"]}
+ }
+}
