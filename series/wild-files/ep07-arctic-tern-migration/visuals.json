@@ -28,10 +28,11 @@
    "end": 70900,
    "x": 40,
    "y": 850,
-   "w": 520,
+   "w": 430,
    "label": "km a year",
    "fmt": "int",
-   "z": 40
+   "z": 40,
+   "size": 150
   },
   {
    "id": "f1",
@@ -130,10 +131,10 @@
    "stage": "stage_map",
    "until": "s04+1.2",
    "args": {
-    "k": 1.0,
+    "k": 1.25,
     "lonlat": [
-     -25,
-     4
+     -28,
+     38
     ],
     "ease": "power2.inOut"
    }
@@ -144,10 +145,10 @@
    "stage": "stage_map",
    "until": "s04.end",
    "args": {
-    "k": 1.02,
+    "k": 1.27,
     "lonlat": [
-     -25,
-     4
+     -28,
+     37
     ],
     "ease": "none"
    }
@@ -163,7 +164,7 @@
    }
   },
   {
-   "at": "s04@pole",
+   "at": "s06+0.4",
    "do": "geo.label_in",
    "stage": "stage_map",
    "args": {
@@ -185,12 +186,26 @@
    "at": "s05",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s05.end",
+   "until": "s05+1.2",
    "args": {
-    "k": 1.06,
+    "k": 1.1,
     "lonlat": [
      -28,
-     0
+     20
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 1.12,
+    "lonlat": [
+     -29,
+     18
     ],
     "ease": "none"
    }
@@ -237,14 +252,30 @@
   },
   {
    "at": "s06",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "colony"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "stop"
+   }
+  },
+  {
+   "at": "s06",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s06+1.2",
    "args": {
-    "k": 1.12,
+    "k": 1.0,
     "lonlat": [
-     -30,
-     -10
+     -25,
+     -18
     ],
     "ease": "power2.inOut"
    }
@@ -255,10 +286,10 @@
    "stage": "stage_map",
    "until": "end-1.8",
    "args": {
-    "k": 1.16,
+    "k": 1.02,
     "lonlat": [
-     -32,
-     -14
+     -26,
+     -20
     ],
     "ease": "none"
    }

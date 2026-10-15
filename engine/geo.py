@@ -223,6 +223,7 @@ CSS = f"""
 .geo .geo-label.al>span{{transform:translate(0,-50%)}}      /* cls "al": label starts at the anchor (runs east) */
 .geo .geo-label.ar>span{{transform:translate(-100%,-50%)}}  /* cls "ar": label ends at the anchor (runs west)  */
 .geo .geo-label{{font-family:'Oswald';font-weight:500;font-size:30px;letter-spacing:.14em;text-transform:uppercase;color:rgba(239,230,210,.85)}}
+.geo .geo-label.ink{{color:{INK};opacity:1;text-shadow:none}}   /* plain label over a sand highlight */
 .geo .geo-label.sea{{font-style:italic;font-family:'DM Serif';text-transform:none;letter-spacing:.06em;font-size:32px;color:rgba(239,230,210,.7)}}
 .geo .geo-label.policy{{text-transform:none;letter-spacing:.02em;font-size:30px;line-height:1.15;color:{CREAM}}}
 .geo .geo-label.policy .plate{{position:absolute;left:0;top:0;transform:translate(-50%,-50%);white-space:normal;width:max-content;max-width:520px;background:rgba(11,22,32,.92);border:2px solid {CREAM};padding:10px 18px 8px;text-align:left}}   /* long controller strings wrap instead of running into the right-hand UI column */
@@ -231,7 +232,7 @@ CSS = f"""
 .geo .geo-label.policy.small{{font-size:22px}}                                  /* continental scale: plate_cls "small" */
 .geo .geo-label.policy.small .plate{{max-width:380px;padding:8px 12px 6px}}
 .geo .geo-label.policy.small .plate b{{font-size:20px}} .geo .geo-label.policy.small .plate i{{font-size:19px}}
-.geo .geo-scale{{position:absolute;left:40px;bottom:36px;font-family:'Oswald';font-size:24px;letter-spacing:.08em;color:{CREAM};visibility:hidden;opacity:0}}
+.geo .geo-scale{{position:absolute;left:40px;bottom:36px;font-family:'Oswald';font-size:24px;letter-spacing:.08em;color:{CREAM};visibility:hidden;opacity:0;background:rgba(11,22,32,.72);padding:6px 10px 4px;border-radius:6px}}   /* readable over a sand highlight (textqa contrast) */
 .geo .geo-scale .bar{{height:8px;background:{CREAM};border-left:3px solid {CREAM};border-right:3px solid {CREAM};margin-bottom:6px}}
 """
 
@@ -239,9 +240,10 @@ CSS = f"""
 def policy_label_html(name, controller, claimants, note=""):
     """Disputed-border plate text per docs/BORDER_POLICY.md: name · Administered by X · Claimed by Y, Z (· note)."""
     cl = ", ".join(claimants) if isinstance(claimants, (list, tuple)) else str(claimants)
-    extra = f"<i>{html.escape(note)}</i>" if note else ""
-    return (f'<div class="plate"><b>{html.escape(name)}</b>Administered by {html.escape(controller)}'
-            f'<br>Claimed by {html.escape(cl)}{extra}</div>')
+    al = 'data-layout-allow-overlap="true" data-layout-allow-occlusion="true"'
+    extra = f"<i {al}>{html.escape(note)}</i>" if note else ""
+    return (f'<div class="plate" {al}><b {al}>{html.escape(name)}</b><span {al}>Administered by {html.escape(controller)}'
+            f'<br>Claimed by {html.escape(cl)}</span>{extra}</div>')
 
 
 def policy_labels(disputed):

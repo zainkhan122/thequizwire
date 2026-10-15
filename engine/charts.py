@@ -50,10 +50,10 @@ class Charts:
             self.J(f"tl.fromTo('#{bid}_v{i}',{{autoAlpha:0,x:-20}},{{autoAlpha:1,x:0,duration:0.3,immediateRender:false}},{f(t0 + dur * 0.55)});")
 
     # ---------------------------------------------------------------- big counter
-    def counter(self, cid, start, end, y=520, label="", fmt="int", x=60, w=960, suffix=""):
+    def counter(self, cid, start, end, y=520, label="", fmt="int", x=60, w=960, suffix="", size=190):
         self.items[cid] = {"start": start, "end": end, "fmt": fmt, "suffix": suffix}
         return (f'<div id="{cid}" class="chart counter" style="left:{x}px;top:{y}px;width:{w}px" data-layout-allow-overlap="true">'
-                f'<div class="cnumber tu" id="{cid}_n" data-tq-dwell="off" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">{self._fmt(start, fmt)}{esc(suffix)}</div>'
+                f'<div class="cnumber tu" id="{cid}_n" data-tq-dwell="off" data-layout-allow-overlap="true" data-layout-allow-occlusion="true" style="font-size:{int(size)}px">{self._fmt(start, fmt)}{esc(suffix)}</div>'
                 + (f'<div class="clabel2 tu" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">{esc(label)}</div>' if label else "") + "</div>")
 
     def counter_run(self, t0, t1, cid, ease="power2.out", steps=None):

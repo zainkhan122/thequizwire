@@ -196,8 +196,8 @@
     {
      "id": "weddell",
      "lonlat": [
-      -10,
-      -67
+      -12,
+      -65
      ],
      "text": "Weddell Sea",
      "cls": "sea"
@@ -205,8 +205,8 @@
     {
      "id": "africa",
      "lonlat": [
-      20,
-      5
+      15,
+      8
      ],
      "text": "Africa"
     },
