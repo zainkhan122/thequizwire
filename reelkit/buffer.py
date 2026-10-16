@@ -249,6 +249,7 @@ def verify_media(url):
 # ---------------------------------------------------------------- commands
 def cmd_channels(a):
     c = cfg(); found = []                                                     # (account, org_id, channel)
+    before = json.dumps(c["buffer"]["channels"], sort_keys=True)
     present = present_accounts(c)
     if not present: sys.exit(f"buffer: none of {accounts(c)} is set")
     for acc in present:
@@ -279,6 +280,8 @@ def cmd_channels(a):
             print(f"   ! {platform}: {len(hits)} channels — set buffer.channels.{platform}.buffer_id (+ account, organization_id) by hand")
         else:
             print(f"   ! {platform}: no connected channel in {'any account' if len(present) > 1 else present[0]}")
+    if json.dumps(c["buffer"]["channels"], sort_keys=True) == before:
+        print("buffer: channel ids unchanged"); return
     c["buffer"]["discovered_at"] = now(); save_cfg(c)
     print(f"buffer: config/publishing.json updated (ids only — commit it)")
 
