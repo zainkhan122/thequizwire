@@ -52,22 +52,32 @@ if [ ${#CAND[@]} -gt 0 ]; then
   done
 fi
 # ---- phase 2: wait for the hosted files (one Pages deploy; after the first timeout the rest are probed once), then queue
-WAIT="${MEDIA_WAIT:-900}"
+WAIT="${MEDIA_WAIT:-900}"; VERIFIED=()
 for EP in "${READY[@]}"; do
   NAME="$(basename "$EP")"; URL="$(cat "$EP/out/media_url.txt")"
-  echo "== $NAME → Buffer"
   if ! python3 "$REPO/reelkit/mediahost.py" verify "$URL" --wait "$WAIT" | tee -a "$EP/out/mediahost.log" | tail -1; then
     [ "$WAIT" != 0 ] && echo "::warning::$URL not live after ${WAIT}s — is GitHub Pages enabled on the media repo (Settings → Pages → main / root)? Files are pushed; rerun once the site answers."
-    WAIT=0; echo "   media not live"; echo "| $NAME | media not live | — | — | — | — | — |" >> "$SUMMARY"; FAILS=$((FAILS+1)); continue
+    WAIT=0; echo "   $NAME: media not live"; echo "| $NAME | media not live | — | — | — | — | — |" >> "$SUMMARY"; FAILS=$((FAILS+1)); continue
   fi
-  # shellcheck disable=SC2086
-  if python3 "$REPO/reelkit/buffer.py" dispatch "$EP" --media-url "$URL" $LIVE $CHANNELS | tee "$EP/out/dispatch.log"; then
-    row="| $NAME | ok |"; for p in youtube instagram facebook twitter threads; do
-      st="$(grep -E "^ +$p " "$EP/out/dispatch.log" | sed -E 's/^ +[a-z]+ +//' | head -1 | cut -c1-48)"; row="$row ${st:-—} |"; done
-    echo "$row" >> "$SUMMARY"
-  else
-    echo "   buffer FAIL"; echo "| $NAME | buffer FAIL | — | — | — | — | — |" >> "$SUMMARY"; FAILS=$((FAILS+1))
-  fi
+  VERIFIED+=("$EP")
 done
+# one buffer.py process for every verified episode: one post scan per Buffer account, then episode × channel (rate limits are tight)
+if [ ${#VERIFIED[@]} -gt 0 ]; then
+  LOG="${RUNNER_TEMP:-/tmp}/dispatch.log"
+  # shellcheck disable=SC2086
+  python3 "$REPO/reelkit/buffer.py" dispatch "${VERIFIED[@]}" $LIVE $CHANNELS 2>&1 | tee "$LOG"; RC=${PIPESTATUS[0]}
+  for EP in "${VERIFIED[@]}"; do
+    NAME="$(basename "$EP")"
+    awk -v n="== $NAME" '$0==n{f=1;next} /^== /{f=0} f' "$LOG" > "$EP/out/dispatch.log"
+    if grep -q "^buffer: $NAME " "$EP/out/dispatch.log"; then
+      row="| $NAME | ok |"; for p in youtube instagram facebook twitter threads; do
+        st="$(grep -E "^ +$p " "$EP/out/dispatch.log" | sed -E 's/^ +[a-z]+ +//' | head -1 | cut -c1-48)"; row="$row ${st:-—} |"; done
+      echo "$row" >> "$SUMMARY"; grep -qE "REJECTED|deferred" "$EP/out/dispatch.log" && FAILS=$((FAILS+1))
+    else
+      echo "   $NAME: buffer FAIL"; echo "| $NAME | buffer FAIL | — | — | — | — | — |" >> "$SUMMARY"; FAILS=$((FAILS+1))
+    fi
+  done
+  [ "$RC" = 0 ] || FAILS=$((FAILS+1))
+fi
 echo "dispatch: done · failures $FAILS"
 exit $(( FAILS > 0 ? 1 : 0 ))
