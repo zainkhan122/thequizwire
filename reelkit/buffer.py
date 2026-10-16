@@ -65,7 +65,10 @@ def present_accounts(c): return [a for a in accounts(c) if token(a, required=Fal
 def chan_cfg(c, platform): return c["buffer"]["channels"].get(platform) or {}
 
 
-def account_of(c, platform): return chan_cfg(c, platform).get("account") or accounts(c)[0]
+def account_of(c, platform):
+    """Secret name of the Buffer login that owns this channel; None when unknown (several accounts, channel not yet discovered through any)."""
+    acc = chan_cfg(c, platform).get("account")
+    return acc or (accounts(c)[0] if len(accounts(c)) == 1 else None)
 
 
 def org_of(c, platform): return chan_cfg(c, platform).get("organization_id") or c["buffer"].get("organization_id")
@@ -75,8 +78,8 @@ def groups(c, platforms):
     """{(account, organization_id): [(platform, channel_id), …]} for the configured channels of these platforms."""
     g = {}
     for p in platforms:
-        cid = chan_cfg(c, p).get("buffer_id")
-        if cid: g.setdefault((account_of(c, p), org_of(c, p)), []).append((p, cid))
+        cid = chan_cfg(c, p).get("buffer_id"); acc = account_of(c, p)
+        if cid and acc: g.setdefault((acc, org_of(c, p)), []).append((p, cid))
     return g
 
 
@@ -287,8 +290,11 @@ def cmd_channels(a):
 
 
 def cmd_queue(a):
-    c = cfg(); g = groups(c, [p for p, ch in c["buffer"]["channels"].items() if ch.get("enabled")])
+    c = cfg(); want = [p for p, ch in c["buffer"]["channels"].items() if ch.get("enabled")]
+    g = groups(c, want)
     if not g: sys.exit("buffer: no channel ids — run `buffer.py channels` first")
+    for p in want:
+        if chan_cfg(c, p).get("buffer_id") and not account_of(c, p): print(f"   {p:<10} account unknown — run `buffer.py channels` with every key present")
     for (acc, org), items in g.items():
         if not token(acc, required=False): print(f"   ({acc} not set — {', '.join(p for p, _ in items)} not checked)"); continue
         cl = Client(c, acc); ids = [cid for _, cid in items]
@@ -333,13 +339,16 @@ def cmd_dispatch(a):
         prev = ledger_entry(L, name, platform)
         if prev:
             print(f"   {platform:<10} already queued as {prev['post_id']} ({prev['state']}) — skip"); skipped += 1; continue
+        acc = account_of(c, platform)
         if not live:
-            print(f"   {platform:<10} DRY-RUN would create addToQueue post · text {len(payload['text'])} chars · channel {payload['channelId']}"); continue
+            print(f"   {platform:<10} DRY-RUN would create addToQueue post · text {len(payload['text'])} chars · channel {payload['channelId']} · via {acc or 'account unknown'}"); continue
+        if acc not in clients:
+            print(f"   {platform:<10} deferred: {'channel account unknown' if not acc else acc + ' secret not set'} — nothing sent"); continue
         same = [p for p in existing if p["channelId"] == payload["channelId"] and any(x.get("source") == a.media_url for x in p.get("assets") or [])]
         if same:                                                                       # a lost response from an earlier run: adopt it
             p = same[0]; print(f"   {platform:<10} found existing post {p['id']} ({p['status']}) with this media — adopting")
             L["posts"].append({"episode": name, "platform": platform, "post_id": p["id"], "channel_id": payload["channelId"], "state": p["status"],
-                               "media_url": a.media_url, "due_at": p.get("dueAt"), "created_at": p.get("createdAt"), "recorded_at": now(), "adopted": True, "account": account_of(c, platform)})
+                               "media_url": a.media_url, "due_at": p.get("dueAt"), "created_at": p.get("createdAt"), "recorded_at": now(), "adopted": True, "account": acc})
             save_ledger(L); skipped += 1; continue
         queued = sum(1 for p in existing if p["channelId"] == payload["channelId"] and p["status"] in ("scheduled", "sending"))
         cap = int(c["buffer"].get("queue_limit_per_channel", 14))
@@ -348,7 +357,7 @@ def cmd_dispatch(a):
         if lim.get(payload["channelId"], {}).get("isAtLimit"):
             print(f"   {platform:<10} Buffer daily posting limit reached — deferring"); continue
         try:
-            p = clients[account_of(c, platform)].create(payload)
+            p = clients[acc].create(payload)
         except Ambiguous as e:
             L["posts"].append({"episode": name, "platform": platform, "post_id": None, "channel_id": payload["channelId"], "state": "ambiguous",
                                "media_url": a.media_url, "recorded_at": now(), "error": str(e)}); save_ledger(L)
@@ -357,7 +366,7 @@ def cmd_dispatch(a):
             print(f"   {platform:<10} deferred: {e}"); continue
         L["posts"].append({"episode": name, "platform": platform, "post_id": p["id"], "channel_id": payload["channelId"], "state": p["status"],
                            "media_url": a.media_url, "due_at": p.get("dueAt"), "created_at": p.get("createdAt"), "recorded_at": now(),
-                           "title": kit["youtube"]["title"] if platform == "youtube" else None, "account": account_of(c, platform)})
+                           "title": kit["youtube"]["title"] if platform == "youtube" else None, "account": acc})
         save_ledger(L); created += 1
         print(f"   {platform:<10} queued → post {p['id']} · status {p['status']} · due {p.get('dueAt') or 'next free slot'}")
     print(f"buffer: {name} · {'LIVE' if live else 'dry-run'} · created {created} · skipped {skipped}")

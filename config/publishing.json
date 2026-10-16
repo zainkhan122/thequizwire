@@ -20,25 +20,25 @@
     "buffer_id": "695bfd29457dae6a34df0f74",
     "service_id": "17841478389937524",
     "name": "thequizwire",
-    "account": "",
-    "organization_id": ""
+    "account": "BUFFER_API_KEY_2",
+    "organization_id": "68b41881988548bc2aca9d88"
    },
    "facebook": {
     "enabled": true,
     "buffer_id": "695a159a457dae6a34d901bc",
     "service_id": "923321867531140",
     "name": "The QuizWire.Com",
-    "account": "",
-    "organization_id": ""
+    "account": "BUFFER_API_KEY_2",
+    "organization_id": "68b41881988548bc2aca9d88"
    },
    "twitter": {
     "enabled": true,
-    "buffer_id": "",
+    "buffer_id": "69f30e2a5c4c051afaf58634",
     "service_id": "",
-    "name": "",
+    "name": "thequizwire",
     "note": "X (Twitter) — Buffer service name is 'twitter'",
-    "account": "",
-    "organization_id": ""
+    "account": "BUFFER_API_KEY_2",
+    "organization_id": "68b41881988548bc2aca9d88"
    },
    "threads": {
     "enabled": true,
