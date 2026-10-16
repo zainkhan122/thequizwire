@@ -91,7 +91,7 @@ class Ambiguous(BufferError): pass     # a mutation may have landed: reconcile b
 
 class Client:
     def __init__(self, c, account="BUFFER_API_KEY"):
-        self.c, self.account, self.key = c, account, token(account)
+        self.c, self.account_name, self.key = c, account, token(account)
         self.endpoint = c["buffer"].get("endpoint", "https://api.buffer.com")
         self.spacing = float(c["buffer"].get("request_spacing_seconds", 2.0)); self.last = 0.0
         self.attempts = int(c["buffer"].get("max_attempts", 4)); self.n = 0
