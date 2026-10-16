@@ -19,7 +19,7 @@ Design (docs/DISTRIBUTION.md):
     reconciles first and continues. Rate limits (HTTP 429 / RATE_LIMIT_EXCEEDED) honour Retry-After up to 60 s inline.
 """
 import argparse, json, os, re, sys, time, urllib.error, urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -155,8 +155,12 @@ class Client:
 
     def channels(self, org): return self.gql(Q_CHANNELS, {"org": org})["channels"]
 
-    def posts(self, org, channel_ids, statuses, max_pages=6):
-        inp = {"organizationId": org, "filter": {"channelIds": channel_ids, "status": statuses}, "sort": [{"field": "createdAt", "direction": "desc"}]}
+    def posts(self, org, channel_ids, statuses, max_pages=6, since_days=None):
+        """Posts of these channels/statuses, newest first. since_days bounds the scan (Buffer's startDate = createdAt or dueAt
+        on/after that date) so channels with years of history stay cheap and complete."""
+        flt = {"channelIds": channel_ids, "status": statuses}
+        if since_days: flt["startDate"] = (datetime.now(timezone.utc) - timedelta(days=int(since_days))).isoformat(timespec="seconds")
+        inp = {"organizationId": org, "filter": flt, "sort": [{"field": "createdAt", "direction": "desc"}]}
         out, after = [], None
         for _ in range(max_pages):
             page = self.gql(Q_POSTS, {"input": inp, "after": after})["posts"]
@@ -330,8 +334,9 @@ def cmd_dispatch(a):
         if any(i.startswith("<") for i in ids): sys.exit("buffer: channel ids missing — run `buffer.py channels`")
         for (acc, org), items in groups(c, [r["platform"] for r in rows]).items():
             cl = clients[acc] = clients.get(acc) or Client(c, acc); gids = [cid for _, cid in items]
-            ex, complete = cl.posts(org, gids, ["scheduled", "sending", "sent", "needs_approval", "draft"])
-            if not complete: sys.exit("buffer: post scan incomplete (> 600 posts) — refusing to risk a duplicate")
+            win = int(c["buffer"].get("dedupe_window_days", 14))                   # a lost createPost response is minutes old, not months
+            ex, complete = cl.posts(org, gids, ["scheduled", "sending", "sent", "needs_approval", "draft"], max_pages=10, since_days=win)
+            if not complete: sys.exit(f"buffer: post scan incomplete (> 1000 posts in {win} days) — refusing to risk a duplicate; lower buffer.dedupe_window_days")
             existing += ex; lim.update({l["channelId"]: l for l in cl.limits(gids)})
     created, skipped = 0, 0
     for r in rows:

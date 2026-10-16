@@ -59,7 +59,8 @@
    "BUFFER_API_KEY",
    "BUFFER_API_KEY_2"
   ],
-  "accounts_note": "One Buffer login = one API key = one GitHub secret (Buffer Free allows 3 channels per login, so the channels live in two logins). Each channel records the account it was discovered through."
+  "accounts_note": "One Buffer login = one API key = one GitHub secret (Buffer Free allows 3 channels per login, so the channels live in two logins). Each channel records the account it was discovered through.",
+  "dedupe_window_days": 14
  },
  "media": {
   "repo": "zainkhan122/thequizwire-media",
