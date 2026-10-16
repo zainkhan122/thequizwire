@@ -8,8 +8,9 @@ on:
   workflow_dispatch:
     inputs:
       episodes:
-        description: 'Episode dirs, space separated'
-        required: true
+        description: 'Episode dirs, space separated (empty = preflight only: channel discovery, queue depth, media site check)'
+        required: false
+        default: ''
       tag:
         description: 'Release tag holding the renders (e.g. pilot-v3-all)'
         required: true
@@ -25,7 +26,7 @@ on:
         default: 'youtube,instagram,facebook,twitter'
   workflow_call:
     inputs:
-      episodes: {type: string, required: true}
+      episodes: {type: string, default: ''}
       tag: {type: string, default: ''}
       run: {type: string, default: ''}
       live: {type: boolean, default: false}
@@ -60,6 +61,7 @@ jobs:
           [ "$code" = 200 ] && echo "media site live (HTTP 200)" || echo "::warning::media site answers HTTP $code — if it stays 404 after this run, enable GitHub Pages on the media repo (Settings → Pages → Deploy from a branch → main / root)"
           if [ -n "$BUFFER_API_KEY" ]; then python3 reelkit/buffer.py channels && python3 reelkit/buffer.py queue; fi
       - name: Dispatch
+        if: inputs.episodes != ''
         run: |
           LIVE=""; [ "${{ inputs.live }}" = "true" ] && LIVE="--live"
           TAGOPT=""; [ -n "${{ inputs.tag }}" ] && TAGOPT="--tag ${{ inputs.tag }}"
