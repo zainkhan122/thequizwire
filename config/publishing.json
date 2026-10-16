@@ -5,25 +5,25 @@
  "buffer": {
   "endpoint": "https://api.buffer.com",
   "secret_name": "BUFFER_API_KEY",
-  "organization_id": "68b41881988548bc2aca9d88",
+  "organization_id": "6a6dd07b7abea359f22879b3",
   "channels": {
    "youtube": {
+    "enabled": true,
+    "buffer_id": "6a72ff4f99afb44349064208",
+    "service_id": "UCrg5L4o5vTs4Rt_VeVdHpzQ",
+    "name": "TheQuizWire"
+   },
+   "instagram": {
     "enabled": true,
     "buffer_id": "",
     "service_id": "",
     "name": ""
    },
-   "instagram": {
-    "enabled": true,
-    "buffer_id": "695bfd29457dae6a34df0f74",
-    "service_id": "17841478389937524",
-    "name": "thequizwire"
-   },
    "facebook": {
     "enabled": true,
-    "buffer_id": "695a159a457dae6a34d901bc",
-    "service_id": "923321867531140",
-    "name": "The QuizWire.Com"
+    "buffer_id": "",
+    "service_id": "",
+    "name": ""
    },
    "twitter": {
     "enabled": true,
@@ -38,7 +38,7 @@
   "queue_limit_per_channel": 14,
   "request_spacing_seconds": 2.0,
   "max_attempts": 4,
-  "discovered_at": "2026-10-16T09:31:21+00:00"
+  "discovered_at": "2026-10-16T09:32:05+00:00"
  },
  "media": {
   "repo": "zainkhan122/thequizwire-media",
