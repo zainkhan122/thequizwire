@@ -222,7 +222,10 @@ def cmd_channels(a):
     c = cfg(); cl = Client(c)
     acct = cl.account(); orgs = acct.get("organizations") or []
     if not orgs: sys.exit("buffer: the API key sees no organization")
-    org = c["buffer"].get("organization_id") or orgs[0]["id"]
+    org = c["buffer"].get("organization_id")
+    if org and org not in {o["id"] for o in orgs}:
+        print(f"buffer: pinned organization {org} is not visible to this API key (account changed?) — re-discovering"); org = None
+    org = org or orgs[0]["id"]
     if len(orgs) > 1 and not c["buffer"].get("organization_id"):
         print("buffer: several organizations — using the first; set buffer.organization_id to pick another:")
         for o in orgs: print(f"   {o['id']}  {o['name']}  ({o['channelCount']} channels)")
@@ -237,6 +240,8 @@ def cmd_channels(a):
         hits = [ch for ch in chans if ch["service"] == platform and not ch["isDisconnected"]]
         if entry.get("buffer_id") and any(ch["id"] == entry["buffer_id"] for ch in chans):
             continue                                                                   # pinned already; never silently re-point
+        if entry.get("buffer_id"):
+            print(f"   {platform}: previous channel {entry['buffer_id']} is no longer visible — clearing"); entry.update({"buffer_id": "", "service_id": "", "name": ""})
         if len(hits) == 1:
             entry.update({"buffer_id": hits[0]["id"], "service_id": hits[0]["serviceId"], "name": hits[0]["name"]})
         elif len(hits) > 1:
