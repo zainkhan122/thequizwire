@@ -17,7 +17,7 @@ Platform rules encoded here (2026 guidance, see docs/DISTRIBUTION.md §4 for the
            captions), 3–5 hashtags at the end; links are not clickable → sources go to the first comment.
   Facebook Reel description short; the question + a comment prompt; 1–3 hashtags; disclosure line for AI narration.
 Per-episode overrides live in episode.json#post: title, description (used as the YouTube body), hashtags (extra, any
-platform), tags (episode-specific hashtag words), youtube_is_ai_generated.
+platform), tags (episode-specific hashtag words), youtube_is_ai_generated. Platforms: youtube · instagram · facebook · twitter (X).
 """
 import argparse, json, re, sys
 from datetime import datetime, timezone
@@ -90,7 +90,7 @@ def hashtags_for(E, S, platform, limit):
     if not extra:
         extra = ["#" + tag_word(answer_text(E))] if answer_text(E) else []
     legacy = [h for h in post.get("hashtags", []) if h.lower() not in {"#shorts", "#gkshorts", "#usagk", "#1min", "#thequizwire"} and not h.lower().startswith("#" + E.get("series", "").replace("-", ""))]
-    base = {"youtube": ["#Shorts"], "instagram": [], "facebook": []}[platform]
+    base = {"youtube": ["#Shorts"], "instagram": [], "facebook": [], "twitter": []}[platform]
     pool = base + S["hashtags"].get(platform, []) + extra + legacy + [CFG["channel"]["brand_hashtag"]]
     seen, out = set(), []
     for h in pool:
@@ -166,16 +166,29 @@ def build(ep):
                 f"Daily {topic} · {site}", CFG["disclosure"]["facebook_caption_line"], "", " ".join(fb_tags)]
     fb = {"text": "\n".join(fb_lines), "firstComment": ig_first, "hashtags": fb_tags}
 
+    # ---- X (Twitter): one post, video attached; 280-char budget (X counts most emoji as 2); 1–2 hashtags; sources stay in the video credits
+    x_tags = hashtags_for(E, S, "twitter", 2)
+    x_text = "\n".join([f"{q_clean} {emoji}", "", f"Guess in {secs}, then watch the reveal. What was your first guess? 👇", "", " ".join(x_tags)])
+    if x_len(x_text) > 270:
+        x_text = "\n".join([f"{q_clean} {emoji}", "", "What was your first guess? 👇", " ".join(x_tags)])
+    x = {"text": x_text, "hashtags": x_tags, "isAiGenerated": bool(CFG["disclosure"].get("twitter_is_ai_generated", True))}
+
     kit = {"episode": Path(ep).name, "series": slug, "question": question, "answer": ans, "built_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-           "youtube": yt, "instagram": ig, "facebook": fb}
+           "youtube": yt, "instagram": ig, "facebook": fb, "twitter": x}
     kit["checks"] = check(kit)
     return kit
+
+
+def x_len(text):
+    """X's weighted length: URLs count 23, most emoji/CJK count 2, everything else 1 (close enough for a lint)."""
+    t = re.sub(r"https?://\S+|www\.\S+", "x" * 23, text)
+    return sum(2 if ord(ch) > 0x1100 else 1 for ch in t)
 
 
 # ---------------------------------------------------------------- lint
 def check(kit):
     F, W = [], []
-    yt, ig, fb = kit["youtube"], kit["instagram"], kit["facebook"]
+    yt, ig, fb, x = kit["youtube"], kit["instagram"], kit["facebook"], kit.get("twitter") or {"text": "", "hashtags": ["#x"]}
     t = yt["title"]
     if len(t) > 100: F.append(f"YT title {len(t)} chars > 100")
     elif len(t) > 85: W.append(f"YT title {len(t)} chars (aim ≤ 80 so feeds show it whole)")
@@ -194,7 +207,10 @@ def check(kit):
     if re.search(r"https?://|www\.", ig["caption"]): W.append("IG caption has a URL (not clickable; sources belong in the first comment)")
     if len(fb["text"]) > 1000: W.append("FB text > 1000 chars")
     if not 1 <= len(fb["hashtags"]) <= 3: F.append(f"FB hashtags {len(fb['hashtags'])} (want 1–3)")
-    for name, text in (("YT", yt["title"] + "\n" + yt["description"]), ("IG", ig["caption"]), ("FB", fb["text"])):
+    if x_len(x["text"]) > 280: F.append(f"X text {x_len(x['text'])} weighted chars > 280")
+    elif x_len(x["text"]) > 260: W.append(f"X text {x_len(x['text'])} weighted chars (aim ≤ 260)")
+    if not 1 <= len(x["hashtags"]) <= 2: F.append(f"X hashtags {len(x['hashtags'])} (want 1–2)")
+    for name, text in (("YT", yt["title"] + "\n" + yt["description"]), ("IG", ig["caption"]), ("FB", fb["text"]), ("X", x["text"])):
         if BANNED.search(text): F.append(f"{name}: tease of a next/tomorrow video (owner rule: no announcements)")
         for h in re.findall(r"#\S+", text):
             if not HASHTAG.match(h): F.append(f"{name}: malformed hashtag {h!r}")
@@ -208,7 +224,7 @@ def main():
     kit = build(a.episode)
     c = kit["checks"]
     if a.cmd in ("build", "show"):
-        for p in ("youtube", "instagram", "facebook"):
+        for p in ("youtube", "instagram", "facebook", "twitter"):
             body = kit[p].get("title", "") and f"TITLE: {kit[p]['title']}\n" or ""
             body += kit[p].get("description") or kit[p].get("caption") or kit[p].get("text")
             print(f"── {p.upper()} " + "─" * 60); print(body)
@@ -220,7 +236,7 @@ def main():
         print(f"postkit: wrote {out}")
     for w in c["warn"]: print(f"  WARN  {w}")
     for f in c["fail"]: print(f"  FAIL  {f}")
-    print(f"postkit: {kit['episode']} · YT {len(kit['youtube']['title'])}-char title · IG {len(kit['instagram']['caption'])} chars · FB {len(kit['facebook']['text'])} chars → FAIL {len(c['fail'])} WARN {len(c['warn'])}")
+    print(f"postkit: {kit['episode']} · YT {len(kit['youtube']['title'])}-char title · IG {len(kit['instagram']['caption'])} chars · FB {len(kit['facebook']['text'])} chars · X {x_len(kit['twitter']['text'])} → FAIL {len(c['fail'])} WARN {len(c['warn'])}")
     sys.exit(1 if c["fail"] else 0)
 
 

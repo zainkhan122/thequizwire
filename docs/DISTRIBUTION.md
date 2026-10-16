@@ -1,4 +1,4 @@
-# Distribution — rendered reel → Buffer queue → YouTube · Instagram · Facebook
+# Distribution — rendered reel → Buffer queue → YouTube · Instagram · Facebook · X
 
 Owner ask (2026-10-16): successful renders go to Buffer as **queued** posts; Buffer publishes them in the time slots
 already set per channel. Each channel gets its own SEO copy. YouTube Shorts land in their series playlist.
@@ -15,7 +15,7 @@ episode.sh → gates → final.mp4 ─▶ Release ─▶ postkit (SEO copy + lin
 | Step | Tool | What it does | Fails closed when |
 |---|---|---|---|
 | copy | `reelkit/postkit.py build <ep>` | per-channel title/description/caption/hashtags from `episode.json`, the three see-it facts and the research sources; lint (§4) | any lint FAIL |
-| host | `reelkit/mediahost.py push <ep>` | uploads `out/final.mp4` to the public media repo (GitHub Pages), path `media/<sha256:12>/<Stem>.mp4`, waits until the URL serves `video/mp4` | URL not live within 15 min |
+| host | `reelkit/mediahost.py push <ep> [<ep>…]` | `git push`es every `out/final.mp4` to the public media repo in ONE commit (blob-less sparse clone; the Contents API rejects our 45 MB files), path `media/<sha256:12>/<Stem>.mp4`; `dispatch.sh` then waits once for the Pages deploy and checks every URL serves `video/mp4` | URL not live within 15 min (is Pages enabled?) |
 | queue | `reelkit/buffer.py dispatch <ep> --media-url … --live` | one `createPost` per enabled channel, `mode: addToQueue`, `schedulingType: automatic`; records `dispatch/ledger.json` | postkit FAIL · media probe FAIL · queue cap · daily limit · ambiguous response |
 | sync | `reelkit/buffer.py status --refresh`, `reelkit/yt_enrich.py run`, `mediahost.py prune --apply` | post states, YouTube playlist/tags, retention | secret missing → stage skipped with a notice |
 
@@ -54,8 +54,9 @@ Episodes whose MP4 is not in the release are skipped — a failed render never r
    Actions → `BUFFER_API_KEY`. Do not paste it in chat; the workflow never prints it.
 2. **Media repo** — create the public repo `thequizwire-media` (empty, public, "Add a README" ticked). Then a fine-grained
    PAT (GitHub → Settings → Developer settings → Fine-grained tokens): repository access = only `thequizwire-media`,
-   permissions **Contents: Read and write**, **Pages: Read and write**, expiry ≤ 1 year → secret `MEDIA_TOKEN`.
-   (`mediahost.py setup`, run by the workflow, adds `.nojekyll`/`index.html`/`robots.txt` and enables Pages on `main`.)
+   permissions **Contents: Read and write** (+ **Pages: Read and write** if you want the job to switch Pages on itself), expiry ≤ 1 year → secret `MEDIA_TOKEN`.
+   (`mediahost.py setup`, run by the workflow, adds `.nojekyll`/`index.html`/`robots.txt` and enables Pages on `main`; without the Pages
+   permission it prints a warning and you enable Pages once by hand: media repo → Settings → Pages → *Deploy from a branch* → `main` / `(root)` → Save.)
 3. **Discover channels** — Actions → dispatch → Run workflow with any episode, `live=false`. The preflight step runs
    `buffer.py channels`, prints every connected channel (service · id · name · slots/week) and commits the YouTube,
    Instagram and Facebook ids into `config/publishing.json`. If a service has two channels, set `buffer_id` by hand.
@@ -109,3 +110,10 @@ skipped with a notice and nothing else is affected.
 `config/publishing.json` (ids, caps, disclosure, series SEO sets) · `reelkit/postkit.py` · `reelkit/buffer.py` ·
 `reelkit/mediahost.py` · `reelkit/yt_enrich.py` · `reelkit/dispatch.sh` · `.github/workflows/dispatch.yml` ·
 `.github/workflows/publish-sync.yml` · `render.yml` (`dispatch` input) · `dispatch/ledger.json` (generated, committed).
+
+## X (Twitter)
+
+The Buffer organisation also has X `@thequizwire`. `postkit.py` builds an X variant (question + CTA, ≤ 260 weighted chars, 1–2 hashtags:
+series + brand) and `buffer.py` queues it with the same MP4 (`metadata.twitter.isAiGenerated true`; X's video limit is 140 s / 512 MB, a
+35 s Short is fine). Channel key is `twitter` (Buffer's service name); disable with `buffer.channels.twitter.enabled=false` or leave it
+out of `--channels`.

@@ -4,7 +4,7 @@
   python3 reelkit/buffer.py channels                 # discover org + channels with the API key, write ids into config/publishing.json
   python3 reelkit/buffer.py queue                    # queue depth per channel (scheduled / daily limit)
   python3 reelkit/buffer.py plan     <ep> --media-url URL      # show the exact createPost payloads (no network)
-  python3 reelkit/buffer.py dispatch <ep> --media-url URL [--live] [--channels youtube,instagram,facebook]
+  python3 reelkit/buffer.py dispatch <ep> --media-url URL [--live] [--channels youtube,instagram,facebook,twitter]
   python3 reelkit/buffer.py status   [--refresh]     # ledger view; --refresh pulls each post's status from Buffer
 
 Design (docs/DISTRIBUTION.md):
@@ -189,6 +189,10 @@ def payloads(c, ep_dir, media_url, kit=None, channels=None):
             f = kit["facebook"]
             base.update({"text": f["text"], "assets": [{"video": {"url": media_url}}],
                          "metadata": {"facebook": {"type": "reel", "firstComment": f["firstComment"]}}})
+        elif platform == "twitter":                                           # X: single post + video; thread not needed
+            x = kit["twitter"]
+            base.update({"text": x["text"], "assets": [{"video": {"url": media_url}}],
+                         "metadata": {"twitter": {"isAiGenerated": bool(x.get("isAiGenerated", True))}}})
         else:
             raise SystemExit(f"buffer: unsupported platform {platform}")
         rows.append({"platform": platform, "payload": base})

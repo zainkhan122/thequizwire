@@ -22,14 +22,14 @@ on:
         default: false
       channels:
         description: 'Channels (comma separated)'
-        default: 'youtube,instagram,facebook'
+        default: 'youtube,instagram,facebook,twitter'
   workflow_call:
     inputs:
       episodes: {type: string, required: true}
       tag: {type: string, default: ''}
       run: {type: string, default: ''}
       live: {type: boolean, default: false}
-      channels: {type: string, default: 'youtube,instagram,facebook'}
+      channels: {type: string, default: 'youtube,instagram,facebook,twitter'}
     secrets:
       BUFFER_API_KEY: {required: false}
       MEDIA_TOKEN: {required: false}

@@ -24,6 +24,13 @@
     "buffer_id": "695a159a457dae6a34d901bc",
     "service_id": "923321867531140",
     "name": "The QuizWire.Com"
+   },
+   "twitter": {
+    "enabled": true,
+    "buffer_id": "",
+    "service_id": "",
+    "name": "",
+    "note": "X (Twitter) — Buffer service name is 'twitter'"
    }
   },
   "mode": "addToQueue",
@@ -45,7 +52,8 @@
   "youtube_is_ai_generated": false,
   "instagram_is_ai_generated": true,
   "facebook_caption_line": "🎙️ AI narration",
-  "note": "Meta asks for a disclosure on realistic synthetic audio/video: the narration is a synthetic voice, so Instagram gets the native flag and Facebook (no native field in the Buffer API) a caption line. YouTube's altered-content disclosure targets realistic depictions of people/events; a narrated animated map is not one, so it stays false unless an episode uses realistic synthetic footage (override per episode with post.youtube_is_ai_generated)."
+  "note": "Meta asks for a disclosure on realistic synthetic audio/video: the narration is a synthetic voice, so Instagram gets the native flag and Facebook (no native field in the Buffer API) a caption line. YouTube's altered-content disclosure targets realistic depictions of people/events; a narrated animated map is not one, so it stays false unless an episode uses realistic synthetic footage (override per episode with post.youtube_is_ai_generated). X gets the native isAiGenerated flag as well.",
+  "twitter_is_ai_generated": true
  },
  "youtube": {
   "made_for_kids": false,
@@ -80,6 +88,9 @@
     ],
     "facebook": [
      "#GeographyQuiz"
+    ],
+    "twitter": [
+     "#GeographyQuiz"
     ]
    },
    "keywords": [
@@ -108,6 +119,9 @@
     ],
     "facebook": [
      "#AnimalQuiz"
+    ],
+    "twitter": [
+     "#AnimalQuiz"
     ]
    },
    "keywords": [
@@ -135,6 +149,9 @@
     ],
     "facebook": [
      "#SportsQuiz"
+    ],
+    "twitter": [
+     "#SportsQuiz"
     ]
    },
    "keywords": [
@@ -161,6 +178,9 @@
      "#QuizReels"
     ],
     "facebook": [
+     "#ScienceQuiz"
+    ],
+    "twitter": [
      "#ScienceQuiz"
     ]
    },
