@@ -125,11 +125,17 @@ def cmd_setup(a):
     for path, data in ((".nojekyll", b""), ("index.html", INDEX_HTML.encode()), ("robots.txt", b"User-agent: *\nDisallow: /media/\n")):
         cur = contents(path)
         if not cur: put(path, data, f"mediahost: add {path}"); print(f"   added {path}")
-    pages = req("GET", f"{API}/repos/{slug()}/pages", ok404=True)
-    if not pages:
-        req("POST", f"{API}/repos/{slug()}/pages", {"source": {"branch": "main", "path": "/"}}); print("   Pages enabled (main, /)")
-    pages = req("GET", f"{API}/repos/{slug()}/pages", ok404=True) or {}
-    print(f"mediahost: {slug()} · pages {pages.get('status')} · {pages.get('html_url')} · base_url {CFG['base_url']}")
+    pages = None
+    try:
+        pages = req("GET", f"{API}/repos/{slug()}/pages", ok404=True)
+        if not pages:
+            req("POST", f"{API}/repos/{slug()}/pages", {"source": {"branch": "main", "path": "/"}}); print("   Pages enabled (main, /)")
+            pages = req("GET", f"{API}/repos/{slug()}/pages", ok404=True)
+    except SystemExit as e:                                                   # token without the Pages permission: say so, do not stop
+        print(f"::warning::Pages API not reachable with this token ({str(e)[-120:]}). If {CFG['base_url']} stays 404, enable Pages by hand: "
+              f"github.com/{slug()} → Settings → Pages → Deploy from a branch → main / (root)")
+    pages = pages or {}
+    print(f"mediahost: {slug()} · pages {pages.get('status') or 'unknown'} · {pages.get('html_url') or CFG['base_url']}")
 
 
 def cmd_push(a):
@@ -147,6 +153,8 @@ def cmd_push(a):
     idx["files"][rel] = {"episode": ep.name, "stem": stem, "size": f.stat().st_size, "sha256": digest, "url": url,
                          "pushed_at": idx["files"].get(rel, {}).get("pushed_at") or datetime.now(timezone.utc).isoformat(timespec="seconds")}
     save_index(idx, isha, f"media-index: {ep.name}")
+    if a.no_wait:
+        print(f"MEDIA_URL={url}"); return
     deadline = time.time() + int(a.wait)
     while True:
         ok, info = verify(url)
@@ -157,7 +165,12 @@ def cmd_push(a):
 
 
 def cmd_verify(a):
-    ok, info = verify(a.url); print(f"{'OK' if ok else 'FAIL'} {a.url} {info}"); sys.exit(0 if ok else 1)
+    deadline = time.time() + int(a.wait)
+    while True:
+        ok, info = verify(a.url)
+        if ok or time.time() > deadline: break
+        print(f"   waiting for Pages deploy… ({info})"); time.sleep(20)
+    print(f"{'OK' if ok else 'FAIL'} {a.url} {info}"); sys.exit(0 if ok else 1)
 
 
 def cmd_ls(a):
@@ -194,8 +207,8 @@ def cmd_prune(a):
 def main():
     ap = argparse.ArgumentParser(); sp = ap.add_subparsers(dest="cmd", required=True)
     sp.add_parser("setup"); sp.add_parser("ls")
-    p = sp.add_parser("push"); p.add_argument("episode"); p.add_argument("--file"); p.add_argument("--wait", default="900")
-    p = sp.add_parser("verify"); p.add_argument("url")
+    p = sp.add_parser("push"); p.add_argument("episode"); p.add_argument("--file"); p.add_argument("--wait", default="900"); p.add_argument("--no-wait", action="store_true", help="upload + index only; verify later with `verify`")
+    p = sp.add_parser("verify"); p.add_argument("url"); p.add_argument("--wait", default="0")
     p = sp.add_parser("prune"); p.add_argument("--apply", action="store_true")
     a = ap.parse_args()
     {"setup": cmd_setup, "push": cmd_push, "verify": cmd_verify, "ls": cmd_ls, "prune": cmd_prune}[a.cmd](a)

@@ -27,7 +27,8 @@ fetch_release() {  # $1 tag → dir (cached per tag); empty on failure
 }
 SUMMARY="${GITHUB_STEP_SUMMARY:-/dev/null}"
 echo "### Dispatch · release \`${TAG:-<episode>-r$RUN}\` · ${LIVE:-dry-run}" >> "$SUMMARY"; echo "| episode | media | youtube | instagram | facebook |" >> "$SUMMARY"; echo "|---|---|---|---|---|" >> "$SUMMARY"
-FAILS=0
+FAILS=0; READY=()
+# ---- phase 1: copy + upload every render (no waiting), so one Pages deploy covers them all
 for EP in "${EPS[@]}"; do
   NAME="$(basename "$EP")"; STEM="$(python3 "$REPO/reelkit/naming.py" stem "$EP")"
   echo "== $NAME"
@@ -39,8 +40,15 @@ for EP in "${EPS[@]}"; do
   mkdir -p "$EP/out"; cp "$MP4" "$EP/out/final.mp4"
   if ! python3 "$REPO/reelkit/postkit.py" build "$EP" > "$EP/out/postkit.log" 2>&1; then echo "   postkit FAIL"; tail -5 "$EP/out/postkit.log"; echo "| $NAME | postkit FAIL | — | — | — |" >> "$SUMMARY"; FAILS=$((FAILS+1)); continue; fi
   grep -E "WARN|FAIL" "$EP/out/postkit.log" | sed 's/^/   /'
-  URL="$(python3 "$REPO/reelkit/mediahost.py" push "$EP" | tee "$EP/out/mediahost.log" | sed -n 's/^MEDIA_URL=//p')"
+  URL="$(python3 "$REPO/reelkit/mediahost.py" push "$EP" --no-wait | tee "$EP/out/mediahost.log" | sed -n 's/^MEDIA_URL=//p')"
   if [ -z "$URL" ]; then echo "   mediahost FAIL"; tail -3 "$EP/out/mediahost.log"; echo "| $NAME | media FAIL | — | — | — |" >> "$SUMMARY"; FAILS=$((FAILS+1)); continue; fi
+  echo "$URL" > "$EP/out/media_url.txt"; READY+=("$EP")
+done
+# ---- phase 2: wait for the hosted files, then queue
+for EP in "${READY[@]}"; do
+  NAME="$(basename "$EP")"; URL="$(cat "$EP/out/media_url.txt")"
+  echo "== $NAME → Buffer"
+  if ! python3 "$REPO/reelkit/mediahost.py" verify "$URL" --wait 900 | tee -a "$EP/out/mediahost.log" | tail -1; then echo "   media not live"; echo "| $NAME | media not live | — | — | — |" >> "$SUMMARY"; FAILS=$((FAILS+1)); continue; fi
   # shellcheck disable=SC2086
   if python3 "$REPO/reelkit/buffer.py" dispatch "$EP" --media-url "$URL" $LIVE $CHANNELS | tee "$EP/out/dispatch.log"; then
     row="| $NAME | ok |"; for p in youtube instagram facebook; do
