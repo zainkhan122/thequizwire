@@ -17,7 +17,7 @@ Platform rules encoded here (2026 guidance, see docs/DISTRIBUTION.md §4 for the
            captions), 3–5 hashtags at the end; links are not clickable → sources go to the first comment.
   Facebook Reel description short; the question + a comment prompt; 1–3 hashtags; disclosure line for AI narration.
 Per-episode overrides live in episode.json#post: title, description (used as the YouTube body), hashtags (extra, any
-platform), tags (episode-specific hashtag words), youtube_is_ai_generated. Platforms: youtube · instagram · facebook · twitter (X).
+platform), tags (episode-specific hashtag words), youtube_is_ai_generated. Platforms: youtube · instagram · facebook · twitter (X) · threads.
 """
 import argparse, json, re, sys
 from datetime import datetime, timezone
@@ -90,12 +90,13 @@ def hashtags_for(E, S, platform, limit):
     if not extra:
         extra = ["#" + tag_word(answer_text(E))] if answer_text(E) else []
     legacy = [h for h in post.get("hashtags", []) if h.lower() not in {"#shorts", "#gkshorts", "#usagk", "#1min", "#thequizwire"} and not h.lower().startswith("#" + E.get("series", "").replace("-", ""))]
-    base = {"youtube": ["#Shorts"], "instagram": [], "facebook": [], "twitter": []}[platform]
+    base = {"youtube": ["#Shorts"], "instagram": [], "facebook": [], "twitter": [], "threads": []}[platform]
     pool = base + S["hashtags"].get(platform, []) + extra + legacy + [CFG["channel"]["brand_hashtag"]]
     seen, out = set(), []
     for h in pool:
         if HASHTAG.match(h) and h.lower() not in seen:
             seen.add(h.lower()); out.append(h)
+    if limit == 1: return out[:1]                        # single-tag networks (Threads): the series topic tag, not the brand
     if len(out) > limit:                                 # keep #Shorts/series/episode tags, drop legacy first, brand last
         keep = [h for h in out if h != CFG["channel"]["brand_hashtag"]][: limit - 1] + [CFG["channel"]["brand_hashtag"]]
         out = keep[:limit]
@@ -173,8 +174,14 @@ def build(ep):
         x_text = "\n".join([f"{q_clean} {emoji}", "", "What was your first guess? 👇", " ".join(x_tags)])
     x = {"text": x_text, "hashtags": x_tags, "isAiGenerated": bool(CFG["disclosure"].get("twitter_is_ai_generated", True))}
 
+    # ---- Threads: ≤ 500 chars, conversational; Threads turns only the FIRST hashtag into a topic tag, so exactly one
+    th_tags = hashtags_for(E, S, "threads", 1)
+    th_text = "\n".join([f"{q_clean} {emoji}", "", f"You get {secs}. Then the map reveals it, with three facts you can repeat at dinner.", "",
+                         "What was your first guess? 👇", "", " ".join(th_tags)])
+    th = {"text": th_text, "hashtags": th_tags}
+
     kit = {"episode": Path(ep).name, "series": slug, "question": question, "answer": ans, "built_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-           "youtube": yt, "instagram": ig, "facebook": fb, "twitter": x}
+           "youtube": yt, "instagram": ig, "facebook": fb, "twitter": x, "threads": th}
     kit["checks"] = check(kit)
     return kit
 
@@ -189,6 +196,9 @@ def x_len(text):
 def check(kit):
     F, W = [], []
     yt, ig, fb, x = kit["youtube"], kit["instagram"], kit["facebook"], kit.get("twitter") or {"text": "", "hashtags": ["#x"]}
+    th = kit.get("threads") or {"text": "", "hashtags": ["#x"]}
+    if len(th["text"]) > 500: F.append(f"Threads text {len(th['text'])} chars > 500")
+    if len(th["hashtags"]) != 1: F.append(f"Threads hashtags {len(th['hashtags'])} (want exactly 1 — only the first becomes a topic tag)")
     t = yt["title"]
     if len(t) > 100: F.append(f"YT title {len(t)} chars > 100")
     elif len(t) > 85: W.append(f"YT title {len(t)} chars (aim ≤ 80 so feeds show it whole)")
@@ -210,7 +220,7 @@ def check(kit):
     if x_len(x["text"]) > 280: F.append(f"X text {x_len(x['text'])} weighted chars > 280")
     elif x_len(x["text"]) > 260: W.append(f"X text {x_len(x['text'])} weighted chars (aim ≤ 260)")
     if not 1 <= len(x["hashtags"]) <= 2: F.append(f"X hashtags {len(x['hashtags'])} (want 1–2)")
-    for name, text in (("YT", yt["title"] + "\n" + yt["description"]), ("IG", ig["caption"]), ("FB", fb["text"]), ("X", x["text"])):
+    for name, text in (("YT", yt["title"] + "\n" + yt["description"]), ("IG", ig["caption"]), ("FB", fb["text"]), ("X", x["text"]), ("Threads", th["text"])):
         if BANNED.search(text): F.append(f"{name}: tease of a next/tomorrow video (owner rule: no announcements)")
         for h in re.findall(r"#\S+", text):
             if not HASHTAG.match(h): F.append(f"{name}: malformed hashtag {h!r}")
@@ -224,7 +234,7 @@ def main():
     kit = build(a.episode)
     c = kit["checks"]
     if a.cmd in ("build", "show"):
-        for p in ("youtube", "instagram", "facebook", "twitter"):
+        for p in ("youtube", "instagram", "facebook", "twitter", "threads"):
             body = kit[p].get("title", "") and f"TITLE: {kit[p]['title']}\n" or ""
             body += kit[p].get("description") or kit[p].get("caption") or kit[p].get("text")
             print(f"── {p.upper()} " + "─" * 60); print(body)

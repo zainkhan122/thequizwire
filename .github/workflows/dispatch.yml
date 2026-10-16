@@ -23,16 +23,17 @@ on:
         default: false
       channels:
         description: 'Channels (comma separated)'
-        default: 'youtube,instagram,facebook,twitter'
+        default: 'youtube,instagram,facebook,twitter,threads'
   workflow_call:
     inputs:
       episodes: {type: string, default: ''}
       tag: {type: string, default: ''}
       run: {type: string, default: ''}
       live: {type: boolean, default: false}
-      channels: {type: string, default: 'youtube,instagram,facebook,twitter'}
+      channels: {type: string, default: 'youtube,instagram,facebook,twitter,threads'}
     secrets:
       BUFFER_API_KEY: {required: false}
+      BUFFER_API_KEY_2: {required: false}
       MEDIA_TOKEN: {required: false}
 permissions:
   contents: write
@@ -46,6 +47,7 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      BUFFER_API_KEY_2: ${{ secrets.BUFFER_API_KEY_2 }}
       MEDIA_TOKEN: ${{ secrets.MEDIA_TOKEN }}
       PYTHONUNBUFFERED: "1"
     steps:

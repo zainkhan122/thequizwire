@@ -134,4 +134,5 @@ jobs:
       live: true
     secrets:
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      BUFFER_API_KEY_2: ${{ secrets.BUFFER_API_KEY_2 }}
       MEDIA_TOKEN: ${{ secrets.MEDIA_TOKEN }}

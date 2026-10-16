@@ -4,7 +4,7 @@
   python3 reelkit/buffer.py channels                 # discover org + channels with the API key, write ids into config/publishing.json
   python3 reelkit/buffer.py queue                    # queue depth per channel (scheduled / daily limit)
   python3 reelkit/buffer.py plan     <ep> --media-url URL      # show the exact createPost payloads (no network)
-  python3 reelkit/buffer.py dispatch <ep> --media-url URL [--live] [--channels youtube,instagram,facebook,twitter]
+  python3 reelkit/buffer.py dispatch <ep> --media-url URL [--live] [--channels youtube,instagram,facebook,twitter,threads]
   python3 reelkit/buffer.py status   [--refresh]     # ledger view; --refresh pulls each post's status from Buffer
 
 Design (docs/DISTRIBUTION.md):
@@ -45,13 +45,39 @@ def cfg(): return json.loads(CFG_PATH.read_text())
 def save_cfg(c): CFG_PATH.write_text(json.dumps(c, indent=1, ensure_ascii=False) + "\n")
 
 
-def token(required=True):
-    t = os.environ.get("BUFFER_API_KEY")
+def token(account="BUFFER_API_KEY", required=True):
+    """One Buffer login = one API key = one secret. Several accounts (Buffer Free allows 3 channels per login) are listed in
+    config buffer.accounts; each channel remembers the account it was discovered through."""
+    t = os.environ.get(account)
     if not t:
-        p = Path.home() / ".cache/secrets/buffer_token"
+        p = Path.home() / f".cache/secrets/{account.lower()}"
         t = p.read_text().strip() if p.exists() else None
-    if not t and required: sys.exit("buffer: no API key — set BUFFER_API_KEY (GitHub secret) or ~/.cache/secrets/buffer_token")
+    if not t and required: sys.exit(f"buffer: no API key — set {account} (GitHub secret) or ~/.cache/secrets/{account.lower()}")
     return t
+
+
+def accounts(c): return c["buffer"].get("accounts") or ["BUFFER_API_KEY"]
+
+
+def present_accounts(c): return [a for a in accounts(c) if token(a, required=False)]
+
+
+def chan_cfg(c, platform): return c["buffer"]["channels"].get(platform) or {}
+
+
+def account_of(c, platform): return chan_cfg(c, platform).get("account") or accounts(c)[0]
+
+
+def org_of(c, platform): return chan_cfg(c, platform).get("organization_id") or c["buffer"].get("organization_id")
+
+
+def groups(c, platforms):
+    """{(account, organization_id): [(platform, channel_id), …]} for the configured channels of these platforms."""
+    g = {}
+    for p in platforms:
+        cid = chan_cfg(c, p).get("buffer_id")
+        if cid: g.setdefault((account_of(c, p), org_of(c, p)), []).append((p, cid))
+    return g
 
 
 def redact(s, t):
@@ -64,8 +90,8 @@ class Ambiguous(BufferError): pass     # a mutation may have landed: reconcile b
 
 
 class Client:
-    def __init__(self, c, key=None):
-        self.c, self.key = c, key or token()
+    def __init__(self, c, account="BUFFER_API_KEY"):
+        self.c, self.account, self.key = c, account, token(account)
         self.endpoint = c["buffer"].get("endpoint", "https://api.buffer.com")
         self.spacing = float(c["buffer"].get("request_spacing_seconds", 2.0)); self.last = 0.0
         self.attempts = int(c["buffer"].get("max_attempts", 4)); self.n = 0
@@ -189,6 +215,9 @@ def payloads(c, ep_dir, media_url, kit=None, channels=None):
             f = kit["facebook"]
             base.update({"text": f["text"], "assets": [{"video": {"url": media_url}}],
                          "metadata": {"facebook": {"type": "reel", "firstComment": f["firstComment"]}}})
+        elif platform == "threads":                                           # Threads: text ≤ 500 + video; one topic tag
+            th = kit["threads"]
+            base.update({"text": th["text"], "assets": [{"video": {"url": media_url}}]})
         elif platform == "twitter":                                           # X: single post + video; thread not needed
             x = kit["twitter"]
             base.update({"text": x["text"], "assets": [{"video": {"url": media_url}}],
@@ -219,49 +248,52 @@ def verify_media(url):
 
 # ---------------------------------------------------------------- commands
 def cmd_channels(a):
-    c = cfg(); cl = Client(c)
-    acct = cl.account(); orgs = acct.get("organizations") or []
-    if not orgs: sys.exit("buffer: the API key sees no organization")
-    org = c["buffer"].get("organization_id")
-    if org and org not in {o["id"] for o in orgs}:
-        print(f"buffer: pinned organization {org} is not visible to this API key (account changed?) — re-discovering"); org = None
-    org = org or orgs[0]["id"]
-    if len(orgs) > 1 and not c["buffer"].get("organization_id"):
-        print("buffer: several organizations — using the first; set buffer.organization_id to pick another:")
-        for o in orgs: print(f"   {o['id']}  {o['name']}  ({o['channelCount']} channels)")
-    chans = cl.channels(org)
-    print(f"account {acct['email']} · organization {org} · {len(chans)} channel(s)")
-    for ch in chans:
-        flags = " ".join(f for f, on in (("DISCONNECTED", ch["isDisconnected"]), ("LOCKED", ch["isLocked"]), ("QUEUE-PAUSED", ch["isQueuePaused"])) if on)
-        slots = sum(len(d["times"]) for d in ch.get("postingSchedule") or [] if not d.get("paused"))
-        print(f"   {ch['service']:<10} {ch['id']}  {ch['name']!r:<32} tz {ch['timezone']}  {slots} slots/week  {flags}")
-    c["buffer"]["organization_id"] = org
+    c = cfg(); found = []                                                     # (account, org_id, channel)
+    present = present_accounts(c)
+    if not present: sys.exit(f"buffer: none of {accounts(c)} is set")
+    for acc in present:
+        cl = Client(c, acc); acct = cl.account(); orgs = acct.get("organizations") or []
+        if not orgs: print(f"buffer: {acc} ({acct.get('email')}) sees no organization"); continue
+        for o in orgs:
+            chans = cl.channels(o["id"])
+            print(f"account {acct['email']} ({acc}) · organization {o['id']} {o.get('name') or ''} · {len(chans)} channel(s)")
+            for ch in chans:
+                flags = " ".join(f for f, on in (("DISCONNECTED", ch["isDisconnected"]), ("LOCKED", ch["isLocked"]), ("QUEUE-PAUSED", ch["isQueuePaused"])) if on)
+                slots = sum(len(d["times"]) for d in ch.get("postingSchedule") or [] if not d.get("paused"))
+                print(f"   {ch['service']:<10} {ch['id']}  {ch['name']!r:<32} tz {ch['timezone']}  {slots} slots/week  {flags}")
+                found.append((acc, o["id"], ch))
+    missing = [a for a in accounts(c) if a not in present]
+    if missing: print(f"buffer: account secret(s) not set in this environment: {', '.join(missing)} — their channels cannot be discovered")
+    c["buffer"]["organization_id"] = found[0][1] if found else c["buffer"].get("organization_id", "")
     for platform, entry in c["buffer"]["channels"].items():
-        hits = [ch for ch in chans if ch["service"] == platform and not ch["isDisconnected"]]
-        if entry.get("buffer_id") and any(ch["id"] == entry["buffer_id"] for ch in chans):
-            continue                                                                   # pinned already; never silently re-point
+        vis = [(acc, org, ch) for acc, org, ch in found if ch["id"] == entry.get("buffer_id")]
+        if entry.get("buffer_id") and vis:
+            acc, org, ch = vis[0]; entry.update({"account": acc, "organization_id": org}); continue   # pinned and still visible
         if entry.get("buffer_id"):
-            print(f"   {platform}: previous channel {entry['buffer_id']} is no longer visible — clearing"); entry.update({"buffer_id": "", "service_id": "", "name": ""})
+            if missing: print(f"   {platform}: channel {entry['buffer_id']} not visible through the keys present — keeping it"); continue
+            print(f"   {platform}: previous channel {entry['buffer_id']} is no longer visible — clearing"); entry.update({"buffer_id": "", "service_id": "", "name": "", "account": "", "organization_id": ""})
+        hits = [(acc, org, ch) for acc, org, ch in found if ch["service"] == platform and not ch["isDisconnected"]]
         if len(hits) == 1:
-            entry.update({"buffer_id": hits[0]["id"], "service_id": hits[0]["serviceId"], "name": hits[0]["name"]})
+            acc, org, ch = hits[0]; entry.update({"buffer_id": ch["id"], "service_id": ch["serviceId"], "name": ch["name"], "account": acc, "organization_id": org})
         elif len(hits) > 1:
-            print(f"   ! {platform}: {len(hits)} channels — set buffer.channels.{platform}.buffer_id by hand")
+            print(f"   ! {platform}: {len(hits)} channels — set buffer.channels.{platform}.buffer_id (+ account, organization_id) by hand")
         else:
-            print(f"   ! {platform}: no connected channel")
+            print(f"   ! {platform}: no connected channel in {'any account' if len(present) > 1 else present[0]}")
     c["buffer"]["discovered_at"] = now(); save_cfg(c)
     print(f"buffer: config/publishing.json updated (ids only — commit it)")
 
 
 def cmd_queue(a):
-    c = cfg(); cl = Client(c)
-    ids = {p: ch["buffer_id"] for p, ch in c["buffer"]["channels"].items() if ch.get("buffer_id")}
-    if not ids: sys.exit("buffer: no channel ids — run `buffer.py channels` first")
-    org = c["buffer"]["organization_id"]
-    sched, complete = cl.posts(org, list(ids.values()), ["scheduled", "sending"])
-    lim = {l["channelId"]: l for l in cl.limits(list(ids.values()))}
-    for p, cid in ids.items():
-        n = sum(1 for x in sched if x["channelId"] == cid); l = lim.get(cid, {})
-        print(f"   {p:<10} queued {n:>3}{'' if complete else '+'}   today: scheduled {l.get('scheduled', '?')} sent {l.get('sent', '?')} limit {l.get('limit', '—')}{'  AT LIMIT' if l.get('isAtLimit') else ''}")
+    c = cfg(); g = groups(c, [p for p, ch in c["buffer"]["channels"].items() if ch.get("enabled")])
+    if not g: sys.exit("buffer: no channel ids — run `buffer.py channels` first")
+    for (acc, org), items in g.items():
+        if not token(acc, required=False): print(f"   ({acc} not set — {', '.join(p for p, _ in items)} not checked)"); continue
+        cl = Client(c, acc); ids = [cid for _, cid in items]
+        sched, complete = cl.posts(org, ids, ["scheduled", "sending"])
+        lim = {l["channelId"]: l for l in cl.limits(ids)}
+        for p, cid in items:
+            n = sum(1 for x in sched if x["channelId"] == cid); l = lim.get(cid, {})
+            print(f"   {p:<10} queued {n:>3}{'' if complete else '+'}   today: scheduled {l.get('scheduled', '?')} sent {l.get('sent', '?')} limit {l.get('limit', '—')}{'  AT LIMIT' if l.get('isAtLimit') else ''}")
 
 
 def cmd_plan(a):
@@ -283,13 +315,15 @@ def cmd_dispatch(a):
     else:
         size = verify_media(a.media_url); print(f"media ok: {a.media_url} ({(size or 0) / 1e6:.1f} MB)")
     L = load_ledger(); live = a.live and not a.dry_run
+    clients, existing, lim = {}, [], {}
     if live:
-        cl = Client(c); org = c["buffer"]["organization_id"]
         ids = [r["payload"]["channelId"] for r in rows]
         if any(i.startswith("<") for i in ids): sys.exit("buffer: channel ids missing — run `buffer.py channels`")
-        existing, complete = cl.posts(org, ids, ["scheduled", "sending", "sent", "needs_approval", "draft"])
-        if not complete: sys.exit("buffer: post scan incomplete (> 600 posts) — refusing to risk a duplicate")
-        lim = {l["channelId"]: l for l in cl.limits(ids)}
+        for (acc, org), items in groups(c, [r["platform"] for r in rows]).items():
+            cl = clients[acc] = clients.get(acc) or Client(c, acc); gids = [cid for _, cid in items]
+            ex, complete = cl.posts(org, gids, ["scheduled", "sending", "sent", "needs_approval", "draft"])
+            if not complete: sys.exit("buffer: post scan incomplete (> 600 posts) — refusing to risk a duplicate")
+            existing += ex; lim.update({l["channelId"]: l for l in cl.limits(gids)})
     created, skipped = 0, 0
     for r in rows:
         platform, payload = r["platform"], r["payload"]
@@ -302,7 +336,7 @@ def cmd_dispatch(a):
         if same:                                                                       # a lost response from an earlier run: adopt it
             p = same[0]; print(f"   {platform:<10} found existing post {p['id']} ({p['status']}) with this media — adopting")
             L["posts"].append({"episode": name, "platform": platform, "post_id": p["id"], "channel_id": payload["channelId"], "state": p["status"],
-                               "media_url": a.media_url, "due_at": p.get("dueAt"), "created_at": p.get("createdAt"), "recorded_at": now(), "adopted": True})
+                               "media_url": a.media_url, "due_at": p.get("dueAt"), "created_at": p.get("createdAt"), "recorded_at": now(), "adopted": True, "account": account_of(c, platform)})
             save_ledger(L); skipped += 1; continue
         queued = sum(1 for p in existing if p["channelId"] == payload["channelId"] and p["status"] in ("scheduled", "sending"))
         cap = int(c["buffer"].get("queue_limit_per_channel", 14))
@@ -311,7 +345,7 @@ def cmd_dispatch(a):
         if lim.get(payload["channelId"], {}).get("isAtLimit"):
             print(f"   {platform:<10} Buffer daily posting limit reached — deferring"); continue
         try:
-            p = cl.create(payload)
+            p = clients[account_of(c, platform)].create(payload)
         except Ambiguous as e:
             L["posts"].append({"episode": name, "platform": platform, "post_id": None, "channel_id": payload["channelId"], "state": "ambiguous",
                                "media_url": a.media_url, "recorded_at": now(), "error": str(e)}); save_ledger(L)
@@ -320,7 +354,7 @@ def cmd_dispatch(a):
             print(f"   {platform:<10} deferred: {e}"); continue
         L["posts"].append({"episode": name, "platform": platform, "post_id": p["id"], "channel_id": payload["channelId"], "state": p["status"],
                            "media_url": a.media_url, "due_at": p.get("dueAt"), "created_at": p.get("createdAt"), "recorded_at": now(),
-                           "title": kit["youtube"]["title"] if platform == "youtube" else None})
+                           "title": kit["youtube"]["title"] if platform == "youtube" else None, "account": account_of(c, platform)})
         save_ledger(L); created += 1
         print(f"   {platform:<10} queued → post {p['id']} · status {p['status']} · due {p.get('dueAt') or 'next free slot'}")
     print(f"buffer: {name} · {'LIVE' if live else 'dry-run'} · created {created} · skipped {skipped}")
@@ -329,9 +363,12 @@ def cmd_dispatch(a):
 def cmd_status(a):
     c = cfg(); L = load_ledger()
     if a.refresh:
-        cl = Client(c)
+        clients = {}
         for p in L["posts"]:
             if p.get("post_id") and p.get("state") not in ("sent",):
+                acc = p.get("account") or account_of(c, p["platform"])
+                if not token(acc, required=False): p["refresh_error"] = f"{acc} not set"; continue
+                cl = clients[acc] = clients.get(acc) or Client(c, acc)
                 try:
                     q = cl.post(p["post_id"]); p.update({"state": q["status"], "due_at": q.get("dueAt"), "sent_at": q.get("sentAt"), "external_link": q.get("externalLink"), "refreshed_at": now()})
                     if q.get("error"): p["error"] = q["error"].get("message")

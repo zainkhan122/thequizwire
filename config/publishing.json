@@ -11,26 +11,42 @@
     "enabled": true,
     "buffer_id": "6a72ff4f99afb44349064208",
     "service_id": "UCrg5L4o5vTs4Rt_VeVdHpzQ",
-    "name": "TheQuizWire"
+    "name": "TheQuizWire",
+    "account": "BUFFER_API_KEY",
+    "organization_id": "6a6dd07b7abea359f22879b3"
    },
    "instagram": {
     "enabled": true,
-    "buffer_id": "",
-    "service_id": "",
-    "name": ""
+    "buffer_id": "695bfd29457dae6a34df0f74",
+    "service_id": "17841478389937524",
+    "name": "thequizwire",
+    "account": "",
+    "organization_id": ""
    },
    "facebook": {
     "enabled": true,
-    "buffer_id": "",
-    "service_id": "",
-    "name": ""
+    "buffer_id": "695a159a457dae6a34d901bc",
+    "service_id": "923321867531140",
+    "name": "The QuizWire.Com",
+    "account": "",
+    "organization_id": ""
    },
    "twitter": {
     "enabled": true,
     "buffer_id": "",
     "service_id": "",
     "name": "",
-    "note": "X (Twitter) — Buffer service name is 'twitter'"
+    "note": "X (Twitter) — Buffer service name is 'twitter'",
+    "account": "",
+    "organization_id": ""
+   },
+   "threads": {
+    "enabled": true,
+    "buffer_id": "",
+    "service_id": "",
+    "name": "",
+    "account": "",
+    "organization_id": ""
    }
   },
   "mode": "addToQueue",
@@ -38,7 +54,12 @@
   "queue_limit_per_channel": 14,
   "request_spacing_seconds": 2.0,
   "max_attempts": 4,
-  "discovered_at": "2026-10-16T09:35:57+00:00"
+  "discovered_at": "2026-10-16T09:32:05+00:00",
+  "accounts": [
+   "BUFFER_API_KEY",
+   "BUFFER_API_KEY_2"
+  ],
+  "accounts_note": "One Buffer login = one API key = one GitHub secret (Buffer Free allows 3 channels per login, so the channels live in two logins). Each channel records the account it was discovered through."
  },
  "media": {
   "repo": "zainkhan122/thequizwire-media",
@@ -91,6 +112,9 @@
     ],
     "twitter": [
      "#GeographyQuiz"
+    ],
+    "threads": [
+     "#GeographyQuiz"
     ]
    },
    "keywords": [
@@ -122,6 +146,9 @@
     ],
     "twitter": [
      "#AnimalQuiz"
+    ],
+    "threads": [
+     "#AnimalQuiz"
     ]
    },
    "keywords": [
@@ -152,6 +179,9 @@
     ],
     "twitter": [
      "#SportsQuiz"
+    ],
+    "threads": [
+     "#SportsQuiz"
     ]
    },
    "keywords": [
@@ -181,6 +211,9 @@
      "#ScienceQuiz"
     ],
     "twitter": [
+     "#ScienceQuiz"
+    ],
+    "threads": [
      "#ScienceQuiz"
     ]
    },
