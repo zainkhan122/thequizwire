@@ -90,6 +90,7 @@ def redact(s, t):
 class BufferError(RuntimeError): pass
 class Deferred(BufferError): pass      # try again later (rate limit, 5xx on a query)
 class Ambiguous(BufferError): pass     # a mutation may have landed: reconcile before retrying
+class Rejected(BufferError): pass      # Buffer refused the input deterministically (nothing was created): fix the payload, rerun
 
 
 class Client:
@@ -179,7 +180,7 @@ class Client:
         kind, msg = res.get("__typename", "Unknown"), res.get("message", "")
         if kind in ("LimitReachedError", "PostLimitReachedError"): raise Deferred(f"posting limit reached: {msg}")
         if kind in ("InvalidInputError", "PostInvalidInputError", "UnauthorizedError", "NotFoundError", "PostChannelNotFoundError", "DuplicateError", "ChannelRefreshRequired"):
-            raise BufferError(f"{kind}: {msg}")
+            raise Rejected(f"{kind}: {msg}")
         raise Ambiguous(f"{kind}: {msg or 'unknown createPost result'}")
 
 
@@ -217,11 +218,12 @@ def payloads(c, ep_dir, media_url, kit=None, channels=None):
         elif platform == "instagram":
             g = kit["instagram"]
             base.update({"text": g["caption"], "assets": [{"video": {"url": media_url, "metadata": {"thumbnailOffset": int(g.get("thumbnailOffsetMs", 2000))}}}],
-                         "metadata": {"instagram": {"type": "reel", "shouldShareToFeed": bool(g["shouldShareToFeed"]), "firstComment": g["firstComment"], "isAiGenerated": bool(g["isAiGenerated"])}}})
+                         "metadata": {"instagram": {"type": "reel", "shouldShareToFeed": bool(g["shouldShareToFeed"]), "isAiGenerated": bool(g["isAiGenerated"]),
+                                                    **({"firstComment": g["firstComment"]} if g.get("firstComment") else {})}}})
         elif platform == "facebook":
             f = kit["facebook"]
             base.update({"text": f["text"], "assets": [{"video": {"url": media_url}}],
-                         "metadata": {"facebook": {"type": "reel", "firstComment": f["firstComment"]}}})
+                         "metadata": {"facebook": {"type": "reel", **({"firstComment": f["firstComment"]} if f.get("firstComment") else {})}}})
         elif platform == "threads":                                           # Threads: text ≤ 500 + video; one topic tag
             th = kit["threads"]
             base.update({"text": th["text"], "assets": [{"video": {"url": media_url}}]})
@@ -338,7 +340,7 @@ def cmd_dispatch(a):
             ex, complete = cl.posts(org, gids, ["scheduled", "sending", "sent", "needs_approval", "draft"], max_pages=10, since_days=win)
             if not complete: sys.exit(f"buffer: post scan incomplete (> 1000 posts in {win} days) — refusing to risk a duplicate; lower buffer.dedupe_window_days")
             existing += ex; lim.update({l["channelId"]: l for l in cl.limits(gids)})
-    created, skipped = 0, 0
+    created, skipped, failed = 0, 0, 0
     for r in rows:
         platform, payload = r["platform"], r["payload"]
         prev = ledger_entry(L, name, platform)
@@ -369,12 +371,17 @@ def cmd_dispatch(a):
             sys.exit(f"buffer: {platform}: {e} — ledger marked ambiguous; rerun reconciles before creating again")
         except Deferred as e:
             print(f"   {platform:<10} deferred: {e}"); continue
+        except Rejected as e:                                                          # nothing created; other channels go on; job exits 1
+            print(f"   {platform:<10} REJECTED: {e}")
+            L["posts"].append({"episode": name, "platform": platform, "post_id": None, "channel_id": payload["channelId"], "state": "error",
+                               "media_url": a.media_url, "recorded_at": now(), "error": str(e)[:300], "account": acc}); save_ledger(L); failed += 1; continue
         L["posts"].append({"episode": name, "platform": platform, "post_id": p["id"], "channel_id": payload["channelId"], "state": p["status"],
                            "media_url": a.media_url, "due_at": p.get("dueAt"), "created_at": p.get("createdAt"), "recorded_at": now(),
                            "title": kit["youtube"]["title"] if platform == "youtube" else None, "account": acc})
         save_ledger(L); created += 1
         print(f"   {platform:<10} queued → post {p['id']} · status {p['status']} · due {p.get('dueAt') or 'next free slot'}")
-    print(f"buffer: {name} · {'LIVE' if live else 'dry-run'} · created {created} · skipped {skipped}")
+    print(f"buffer: {name} · {'LIVE' if live else 'dry-run'} · created {created} · skipped {skipped} · rejected {failed}")
+    if failed: sys.exit(1)
 
 
 def cmd_status(a):

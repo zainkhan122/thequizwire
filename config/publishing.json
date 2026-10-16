@@ -60,7 +60,9 @@
    "BUFFER_API_KEY_2"
   ],
   "accounts_note": "One Buffer login = one API key = one GitHub secret (Buffer Free allows 3 channels per login, so the channels live in two logins). Each channel records the account it was discovered through.",
-  "dedupe_window_days": 14
+  "dedupe_window_days": 14,
+  "first_comment": false,
+  "first_comment_note": "Buffer's first comment (Instagram/Facebook) needs a paid plan; on Free the sources/credits line goes into the caption instead. Flip to true after upgrading."
  },
  "media": {
   "repo": "zainkhan122/thequizwire-media",

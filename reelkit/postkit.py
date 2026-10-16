@@ -64,7 +64,9 @@ def source_names(R, n=4):
         if not nm:
             m = re.search(r"https?://(?:www\.)?([^/]+)", s.get("url", "")); nm = m.group(1) if m else ""
         nm = re.sub(r"^(en\.)?wikipedia\.org$", "Wikipedia", nm)
-        if nm and nm not in names: names.append(nm)
+        nm = re.sub(r"\s*\([^)]*\)", "", nm).strip(" ,·")                      # drop parentheticals: "(MoEFCC / NTCA–WII)", "(via docs/…)"
+        if re.search(r"(?i)natural earth|nasa|gibs|blue marble|world-atlas|tz database|iana|thequizwire|docs/|registry", nm): continue   # base data / internal
+        if nm and nm.lower() not in {x.lower() for x in names}: names.append(nm)
     return names[:n]
 
 
@@ -154,9 +156,13 @@ def build(ep):
     hook = f"{q_clean} {emoji} You get {secs}… ⏱️"
     ig_lines = [hook, "", f"✅ The answer and three quick facts are in the reel — a daily {topic} from {brand}."]
     ig_lines += [f"• {b}" for b in bullets[:2]]
-    ig_lines += ["", "💬 What was your first guess? Comment before the reveal!", f"Follow {handle} for a new {topic} every day.", "", " ".join(ig_tags)]
+    first_comment = bool(CFG.get("buffer", {}).get("first_comment", False))          # Buffer: first comments need a paid plan
+    credits = "📚 Sources: " + (" · ".join(srcs[:3]) if srcs else "see the video credits") + " · Map: Natural Earth, NASA"
+    ig_lines += ["", "💬 What was your first guess? Comment before the reveal!", f"Follow {handle} for a new {topic} every day."]
+    if not first_comment: ig_lines += ["", credits]
+    ig_lines += ["", " ".join(ig_tags)]
     ig_caption = "\n".join(ig_lines)
-    ig_first = "📚 Sources: " + (" · ".join(srcs) if srcs else "see the video credits") + f"\n🗺️ Map data: Natural Earth · NASA Blue Marble · 🎙️ AI narration (Kokoro)\nMore quizzes: {site}"
+    ig_first = ("📚 Sources: " + (" · ".join(srcs) if srcs else "see the video credits") + f"\n🗺️ Map data: Natural Earth · NASA Blue Marble · 🎙️ AI narration (Kokoro)\nMore quizzes: {site}") if first_comment else ""
     ig = {"caption": ig_caption, "firstComment": ig_first, "hashtags": ig_tags, "shouldShareToFeed": True,
           "isAiGenerated": bool(CFG["disclosure"]["instagram_is_ai_generated"]), "thumbnailOffsetMs": 2000}
 
@@ -164,7 +170,9 @@ def build(ep):
     fb_tags = hashtags_for(E, S, "facebook", 3)
     fb_lines = [f"{q_clean} {emoji} Guess in {secs} — then watch the reveal!",
                 "✅ Answer + three quick facts inside. What was your first guess? 👇",
-                f"Daily {topic} · {site}", CFG["disclosure"]["facebook_caption_line"], "", " ".join(fb_tags)]
+                f"Daily {topic} · {site}", CFG["disclosure"]["facebook_caption_line"]]
+    if not first_comment: fb_lines += [credits]
+    fb_lines += ["", " ".join(fb_tags)]
     fb = {"text": "\n".join(fb_lines), "firstComment": ig_first, "hashtags": fb_tags}
 
     # ---- X (Twitter): one post, video attached; 280-char budget (X counts most emoji as 2); 1–2 hashtags; sources stay in the video credits
