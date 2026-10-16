@@ -56,6 +56,8 @@ jobs:
           [ -n "$MEDIA_TOKEN" ] || { echo "::error::MEDIA_TOKEN secret missing (fine-grained PAT for the public media repo)"; exit 1; }
           if [ "${{ inputs.live }}" = "true" ] && [ -z "$BUFFER_API_KEY" ]; then echo "::error::BUFFER_API_KEY secret missing"; exit 1; fi
           python3 reelkit/mediahost.py setup
+          code=$(curl -s -o /dev/null -w '%{http_code}' "$(python3 -c 'import json;print(json.load(open("config/publishing.json"))["media"]["base_url"])')/")
+          [ "$code" = 200 ] && echo "media site live (HTTP 200)" || echo "::warning::media site answers HTTP $code — if it stays 404 after this run, enable GitHub Pages on the media repo (Settings → Pages → Deploy from a branch → main / root)"
           if [ -n "$BUFFER_API_KEY" ]; then python3 reelkit/buffer.py channels && python3 reelkit/buffer.py queue; fi
       - name: Dispatch
         run: |
@@ -67,7 +69,7 @@ jobs:
         if: always()
         run: |
           git config user.name "quizwire-dispatch"; git config user.email "dispatch@users.noreply.github.com"
-          git add dispatch/ledger.json config/publishing.json 2>/dev/null || true
+          for f in dispatch/ledger.json config/publishing.json; do [ -f "$f" ] && git add "$f"; done; true
           git diff --cached --quiet && { echo "ledger unchanged"; exit 0; }
           git commit -m "dispatch: ${{ inputs.tag || format('run {0}', inputs.run) }} (${{ inputs.live && 'live' || 'dry-run' }}) [skip ci]"
           for i in 1 2 3; do git pull --rebase -q && git push -q && break || sleep 5; done

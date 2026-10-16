@@ -2,7 +2,8 @@
 """Public, stable media URLs for Buffer — a tiny GitHub Pages site in a separate PUBLIC repo (media only, no code).
 
   python3 reelkit/mediahost.py setup                       # create the public media repo (if missing) + enable Pages
-  python3 reelkit/mediahost.py push  <ep> [--file F] [--wait 900]   # upload out/final.mp4 → prints MEDIA_URL=https://…/media/<sha12>/<stem>.mp4
+  python3 reelkit/mediahost.py push  <ep> [<ep> …] [--no-wait|--wait 900]   # git-push out/final.mp4 of every episode in ONE commit
+                                                           #   → <ep>/out/media_url.txt + prints MEDIA_URL <ep> https://…/media/<sha12>/<stem>.mp4
   python3 reelkit/mediahost.py verify <url>                # public · direct · https · video/mp4 · ftyp
   python3 reelkit/mediahost.py prune [--apply]             # delete files whose posts were all sent ≥ retention days ago
   python3 reelkit/mediahost.py ls                          # list hosted files
@@ -13,8 +14,11 @@ that Buffer can fetch at publish time (its documented requirement). Paths are co
 re-render never overwrites a URL that is already queued.
 Token: MEDIA_TOKEN (fine-grained PAT, Contents: read/write on the media repo — the only secret the dispatch job needs
 besides BUFFER_API_KEY) → GH_TOKEN → ~/.cache/secrets/gh_token.
+Upload path: plain `git push` from a blob-less sparse clone (the Contents API answers 422 "file is too large" for our
+~45–50 MB masters, and the Git hard limit is 100 MB per file). All episodes of one dispatch go in ONE commit, so Pages
+deploys once. Small files (setup, media-index.json on prune) still go through the Contents API.
 """
-import argparse, base64, hashlib, json, os, sys, time, urllib.error, urllib.request
+import argparse, base64, hashlib, json, os, shutil, subprocess, sys, tempfile, time, urllib.error, urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -138,30 +142,79 @@ def cmd_setup(a):
     print(f"mediahost: {slug()} · pages {pages.get('status') or 'unknown'} · {pages.get('html_url') or CFG['base_url']}")
 
 
+def git(repo, *args, env=None, check=True, quiet=True):
+    r = subprocess.run(["git", "-C", str(repo), *args], env=env, text=True, capture_output=True)
+    if check and r.returncode:
+        sys.exit(f"mediahost: git {' '.join(args[:2])} failed:\n{(r.stderr or r.stdout)[-800:]}")
+    if not quiet and r.stdout.strip(): print(r.stdout.strip())
+    return r
+
+
+def git_workspace():
+    """Blob-less sparse clone of the media repo (root files only) with token auth via GIT_ASKPASS — never in a URL or log."""
+    work = Path(tempfile.mkdtemp(prefix="mediahost-", dir=os.environ.get("RUNNER_TEMP")))
+    ask = work / "askpass.sh"
+    ask.write_text('#!/bin/sh\ncase "$1" in *sername*) echo x-access-token;; *) printf %s "$MEDIAHOST_PUSH_TOKEN";; esac\n'); ask.chmod(0o700)
+    env = {**os.environ, "GIT_ASKPASS": str(ask), "MEDIAHOST_PUSH_TOKEN": token(), "GIT_TERMINAL_PROMPT": "0", "GIT_LFS_SKIP_SMUDGE": "1"}
+    repo = work / "repo"
+    r = subprocess.run(["git", "clone", "--quiet", "--depth", "1", "--filter=blob:none", "--sparse", "--branch", "main",
+                        f"https://github.com/{slug()}.git", str(repo)], env=env, text=True, capture_output=True)
+    if r.returncode: sys.exit(f"mediahost: clone of {slug()} failed (empty repo? run `mediahost.py setup` first):\n{r.stderr[-600:]}")
+    git(repo, "config", "user.name", "quizwire-dispatch", env=env); git(repo, "config", "user.email", "dispatch@users.noreply.github.com", env=env)
+    return repo, env
+
+
 def cmd_push(a):
-    ep = Path(a.episode); f = Path(a.file) if a.file else ep / "out/final.mp4"
-    if not f.exists(): sys.exit(f"mediahost: {f} missing (render first / fetch the release)")
-    if f.stat().st_size > 95_000_000: sys.exit("mediahost: file > 95 MB — GitHub contents limit")
-    digest = sha256(f); stem = stem_of(ep); rel = f"media/{digest[:12]}/{stem}.mp4"; url = f"{CFG['base_url'].rstrip('/')}/{rel}"
-    idx, isha = load_index()
-    total = sum(v.get("size", 0) for v in idx["files"].values())
-    if contents(rel):
-        print(f"already hosted: {rel}")
+    eps = [Path(e) for e in a.episode]
+    if a.file and len(eps) != 1: sys.exit("mediahost: --file needs exactly one episode")
+    plan = []                                                                 # (ep, src, rel, url, digest)
+    for ep in eps:
+        f = Path(a.file) if a.file else ep / "out/final.mp4"
+        if not f.exists(): sys.exit(f"mediahost: {f} missing (render first / fetch the release)")
+        if f.stat().st_size > 95_000_000: sys.exit(f"mediahost: {f} > 95 MB — GitHub's hard limit is 100 MB per file")
+        digest = sha256(f); stem = stem_of(ep); rel = f"media/{digest[:12]}/{stem}.mp4"
+        plan.append((ep, f, rel, f"{CFG['base_url'].rstrip('/')}/{rel}", digest))
+    repo, env = git_workspace()
+    ipath = repo / "media-index.json"
+    idx = json.loads(ipath.read_text()) if ipath.exists() else {"version": 1, "files": {}}
+    total = sum(v.get("size", 0) for v in idx["files"].values()); new = []
+    for ep, f, rel, url, digest in plan:
+        if rel in idx["files"] and git(repo, "cat-file", "-e", f"HEAD:{rel}", check=False).returncode == 0:
+            print(f"already hosted: {rel}")
+        else:
+            if total + f.stat().st_size > int(CFG.get("max_site_bytes", 900_000_000)): sys.exit("mediahost: site budget exceeded — run `mediahost.py prune --apply` first")
+            total += f.stat().st_size; new.append((ep, f, rel))
+        idx["files"][rel] = {"episode": ep.name, "stem": stem_of(ep), "size": f.stat().st_size, "sha256": digest, "url": url,
+                             "pushed_at": idx["files"].get(rel, {}).get("pushed_at") or datetime.now(timezone.utc).isoformat(timespec="seconds")}
+    if new:
+        git(repo, "sparse-checkout", "add", *sorted({str(Path(rel).parent) for _, _, rel in new}), env=env)
+        for ep, f, rel in new:
+            dst = repo / rel; dst.parent.mkdir(parents=True, exist_ok=True); shutil.copyfile(f, dst); git(repo, "add", rel, env=env)
+            print(f"   staged {rel} ({f.stat().st_size / 1e6:.1f} MB)")
+    ipath.write_text(json.dumps(idx, indent=1, ensure_ascii=False) + "\n"); git(repo, "add", "media-index.json", env=env)
+    if git(repo, "diff", "--cached", "--quiet", check=False).returncode == 0:
+        print("nothing new to push")
     else:
-        if total + f.stat().st_size > int(CFG.get("max_site_bytes", 900_000_000)): sys.exit("mediahost: site budget exceeded — run `mediahost.py prune --apply` first")
-        put(rel, f.read_bytes(), f"media: {ep.name}"); print(f"uploaded {rel} ({f.stat().st_size / 1e6:.1f} MB)")
-    idx["files"][rel] = {"episode": ep.name, "stem": stem, "size": f.stat().st_size, "sha256": digest, "url": url,
-                         "pushed_at": idx["files"].get(rel, {}).get("pushed_at") or datetime.now(timezone.utc).isoformat(timespec="seconds")}
-    save_index(idx, isha, f"media-index: {ep.name}")
-    if a.no_wait:
-        print(f"MEDIA_URL={url}"); return
-    deadline = time.time() + int(a.wait)
-    while True:
-        ok, info = verify(url)
-        if ok and (info is None or info == f.stat().st_size): break
-        if time.time() > deadline: sys.exit(f"mediahost: {url} not live after {a.wait}s ({info}) — Pages deploy pending? rerun later")
-        print(f"   waiting for Pages deploy… ({info})"); time.sleep(20)
-    print(f"live: {url}"); print(f"MEDIA_URL={url}")
+        git(repo, "commit", "-q", "-m", "media: " + ", ".join(ep.name for ep, *_ in plan)[:180], env=env)
+        for i in range(4):
+            r = git(repo, "push", "-q", "origin", "HEAD:main", env=env, check=False)
+            if r.returncode == 0: break
+            print(f"   push rejected (attempt {i + 1}): {r.stderr.strip()[-200:]}"); time.sleep(5)
+            git(repo, "pull", "--rebase", "-q", "origin", "main", env=env)
+        else: sys.exit("mediahost: push failed after 4 attempts")
+        print(f"pushed {len(new)} file(s) in one commit → {slug()}")
+    shutil.rmtree(repo.parent, ignore_errors=True)
+    for ep, f, rel, url, _ in plan:
+        (ep / "out").mkdir(parents=True, exist_ok=True); (ep / "out/media_url.txt").write_text(url + "\n")
+    if not a.no_wait:
+        deadline = time.time() + int(a.wait)
+        for ep, f, rel, url, _ in plan:
+            while True:
+                ok, info = verify(url)
+                if ok and (info is None or info == f.stat().st_size): print(f"live: {url}"); break
+                if time.time() > deadline: sys.exit(f"mediahost: {url} not live after {a.wait}s ({info}) — Pages enabled? deploy pending? rerun later")
+                print(f"   waiting for Pages deploy… ({info})"); time.sleep(20)
+    for ep, f, rel, url, _ in plan: print(f"MEDIA_URL {ep} {url}")
 
 
 def cmd_verify(a):
@@ -207,7 +260,7 @@ def cmd_prune(a):
 def main():
     ap = argparse.ArgumentParser(); sp = ap.add_subparsers(dest="cmd", required=True)
     sp.add_parser("setup"); sp.add_parser("ls")
-    p = sp.add_parser("push"); p.add_argument("episode"); p.add_argument("--file"); p.add_argument("--wait", default="900"); p.add_argument("--no-wait", action="store_true", help="upload + index only; verify later with `verify`")
+    p = sp.add_parser("push"); p.add_argument("episode", nargs="+"); p.add_argument("--file"); p.add_argument("--wait", default="900"); p.add_argument("--no-wait", action="store_true", help="upload + index only; verify later with `verify`")
     p = sp.add_parser("verify"); p.add_argument("url"); p.add_argument("--wait", default="0")
     p = sp.add_parser("prune"); p.add_argument("--apply", action="store_true")
     a = ap.parse_args()
