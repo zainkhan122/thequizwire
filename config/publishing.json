@@ -42,11 +42,11 @@
    },
    "threads": {
     "enabled": true,
-    "buffer_id": "",
-    "service_id": "",
-    "name": "",
-    "account": "",
-    "organization_id": ""
+    "buffer_id": "6a6dd3b24b2d03035f7e82e8",
+    "service_id": "27578086528557619",
+    "name": "thequizwire",
+    "account": "BUFFER_API_KEY",
+    "organization_id": "6a6dd07b7abea359f22879b3"
    }
   },
   "mode": "addToQueue",
@@ -54,7 +54,7 @@
   "queue_limit_per_channel": 14,
   "request_spacing_seconds": 2.0,
   "max_attempts": 4,
-  "discovered_at": "2026-10-16T09:32:05+00:00",
+  "discovered_at": "2026-10-16T09:37:37+00:00",
   "accounts": [
    "BUFFER_API_KEY",
    "BUFFER_API_KEY_2"
