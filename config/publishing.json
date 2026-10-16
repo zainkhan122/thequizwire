@@ -5,7 +5,7 @@
  "buffer": {
   "endpoint": "https://api.buffer.com",
   "secret_name": "BUFFER_API_KEY",
-  "organization_id": "",
+  "organization_id": "68b41881988548bc2aca9d88",
   "channels": {
    "youtube": {
     "enabled": true,
@@ -15,15 +15,15 @@
    },
    "instagram": {
     "enabled": true,
-    "buffer_id": "",
-    "service_id": "",
-    "name": ""
+    "buffer_id": "695bfd29457dae6a34df0f74",
+    "service_id": "17841478389937524",
+    "name": "thequizwire"
    },
    "facebook": {
     "enabled": true,
-    "buffer_id": "",
-    "service_id": "",
-    "name": ""
+    "buffer_id": "695a159a457dae6a34d901bc",
+    "service_id": "923321867531140",
+    "name": "The QuizWire.Com"
    }
   },
   "mode": "addToQueue",
@@ -31,7 +31,7 @@
   "queue_limit_per_channel": 14,
   "request_spacing_seconds": 2.0,
   "max_attempts": 4,
-  "discovered_at": ""
+  "discovered_at": "2026-10-16T09:10:43+00:00"
  },
  "media": {
   "repo": "zainkhan122/thequizwire-media",
