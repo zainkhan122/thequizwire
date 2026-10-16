@@ -130,6 +130,45 @@
    "recorded_at": "2026-10-16T09:51:58+00:00",
    "title": "Where do PENGUINS live on the equator? 🐧 | Animal Quiz",
    "account": "BUFFER_API_KEY"
+  },
+  {
+   "episode": "ep10-nile-basin-countries",
+   "platform": "instagram",
+   "post_id": "6ad1f466aa117851c0efbdfb",
+   "channel_id": "695bfd29457dae6a34df0f74",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/47eaf0bfc132/How-many-countries-share-the-NILE-basin.mp4",
+   "due_at": "2026-10-16T12:50:00.000Z",
+   "created_at": "2026-10-16T09:54:46.172Z",
+   "recorded_at": "2026-10-16T09:54:46+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY_2"
+  },
+  {
+   "episode": "ep10-nile-basin-countries",
+   "platform": "facebook",
+   "post_id": "6ad1f468bbb9ce09f669c68e",
+   "channel_id": "695a159a457dae6a34d901bc",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/47eaf0bfc132/How-many-countries-share-the-NILE-basin.mp4",
+   "due_at": "2026-10-16T12:50:00.000Z",
+   "created_at": "2026-10-16T09:54:48.173Z",
+   "recorded_at": "2026-10-16T09:54:48+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY_2"
+  },
+  {
+   "episode": "ep10-nile-basin-countries",
+   "platform": "twitter",
+   "post_id": "6ad1f46aaa117851c0efbe94",
+   "channel_id": "69f30e2a5c4c051afaf58634",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/47eaf0bfc132/How-many-countries-share-the-NILE-basin.mp4",
+   "due_at": "2026-10-16T12:50:00.000Z",
+   "created_at": "2026-10-16T09:54:50.166Z",
+   "recorded_at": "2026-10-16T09:54:50+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY_2"
   }
  ]
 }
