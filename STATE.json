@@ -1,10 +1,11 @@
 {
  "now": "2026-10-15: V3 look rebuild. V3.1 basemap, V3.2 lifted flag highlight, V3.3 v3 UI (format quiz-v3: Lilita question, flag pills, timer ring, yellow answer banner, 84-px Anton facts, Twemoji stickers, flag-ball characters, far raster for off-answer hook) are committed and verified on local contact sheets (docs/img/v3_3_contact_sheet.jpg). Nothing dispatched to Actions yet.",
- "phase": "V3.7 renders: 10/10 pilots in release pilot-v3-all (Wimbledon re-rendering in run #12 with the stage fix) · distribution layer built, waiting on owner secrets",
+ "phase": "D7 distribution LIVE: 10 pilots × 5 channels (YT, IG, FB, X, Threads) queued in Buffer on 2026-10-16; publish-sync tracks states; playlists pending YT_* secrets",
  "next": [
-  "owner: BUFFER_API_KEY + MEDIA_TOKEN secrets, public repo thequizwire-media (docs/DISTRIBUTION.md §3)",
-  "verify run #12 Wimbledon render (frames) → owner reviews pilot-v3-all → Actions dispatch live=true",
-  "optional: YouTube OAuth (yt_enrich auth) for playlists + tags"
+  "watch publish-sync runs (3×/day): ledger states scheduled→sent, externalLink",
+  "owner: YT OAuth secrets → playlists",
+  "author next batch (Body & Brain ep01–03, Geo ep15–16) with VARIETY.md",
+  "retire v1/v2 templates"
  ],
  "owner_rules": [
   "Free tools only: public-repo GitHub Actions + the Arena sandbox",
@@ -100,5 +101,20 @@
  },
  "note": "v2 pilot renders rejected by owner 2026-10-15; see docs/V3_LOOK.md",
  "updated": "2026-10-15",
- "notes": []
+ "notes": [],
+ "distribution": {
+  "dispatched_at": "2026-10-16",
+  "release": "pilot-v3-all",
+  "posts": 50,
+  "ledger": "dispatch/ledger.json",
+  "media_site": "https://zainkhan122.github.io/thequizwire-media",
+  "buffer_accounts": [
+   "BUFFER_API_KEY (support@ → youtube, threads)",
+   "BUFFER_API_KEY_2 (psychwisdomdaily@ → instagram, facebook, twitter)"
+  ],
+  "pending": [
+   "YT_CLIENT_ID/YT_CLIENT_SECRET/YT_REFRESH_TOKEN for playlists + backend tags (yt_enrich.py auth)",
+   "thin Buffer posting slots to the planned 2/day"
+  ]
+ }
 }

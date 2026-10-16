@@ -1,4 +1,6 @@
-# RESUME.md — where this repo is and what happens next
+# RESUME
+
+> **2026-10-16 D7 — LIVE.** 50 Buffer posts queued (10 pilots × YT/IG/FB/X/Threads), ledger `dispatch/ledger.json`. Two Buffer logins → two keys; no first comment on Free; 429s are slept through; media git-pushed to the public Pages repo. Next: publish-sync states, YT playlists need `YT_*` secrets, thin Buffer slots to 2/day..md — where this repo is and what happens next
 
 _Updated 2026-10-15 (Plan v2 session; Phase 1 ended 2026-10-14). Owner decisions: free tools only · phases per session · four feed series · Kokoro
 `am_michael` · disputed borders shown with controller/claimant plates · **v2 approved and production unlocked 2026-10-15 ("make videos")**._

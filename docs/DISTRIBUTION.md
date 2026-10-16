@@ -117,3 +117,19 @@ The Buffer organisation also has X `@thequizwire`. `postkit.py` builds an X vari
 series + brand) and `buffer.py` queues it with the same MP4 (`metadata.twitter.isAiGenerated true`; X's video limit is 140 s / 512 MB, a
 35 s Short is fine). Channel key is `twitter` (Buffer's service name); disable with `buffer.channels.twitter.enabled=false` or leave it
 out of `--channels`.
+
+## Two Buffer logins, Free-plan limits (learned on the first live dispatch, 2026-10-16)
+
+* **Channels live in two Buffer logins** (Buffer Free = 3 channels per login): `support@thequizwire.com` → YouTube *TheQuizWire* + Threads;
+  `psychwisdomdaily@gmail.com` → Instagram, Facebook, X. One API key per login: secrets `BUFFER_API_KEY` and `BUFFER_API_KEY_2`
+  (`config/publishing.json` → `buffer.accounts`). `buffer.py channels` discovers through every key present and records the
+  owning account per channel; queue/dispatch/status always use the owning key (a key never queries another login's channels).
+* **First comment is a paid feature** (`InvalidInputError: First comment requires a paid plan`) → `buffer.first_comment=false`:
+  the sources/credits line goes into the Instagram/Facebook caption (before the hashtags). Flip to `true` after upgrading.
+* **Rate limit**: ~10 createPost + scans within minutes on one key → HTTP 429 with `Retry-After` of 4–6 min. The client sleeps
+  through waits ≤ 8 min; `buffer.py dispatch` takes all episodes in ONE process (one post scan + limits query per account) and
+  the duplicate scan is bounded to `buffer.dedupe_window_days` (14) so logins with years of history stay cheap.
+* **Cadence is Buffer's posting schedule, not ours** (`addToQueue`): with 7–8 slots/day per channel the 10 pilots went out over
+  two days. Thin the slots in Buffer (Settings → Posting schedule); queued posts re-flow automatically.
+* **GitHub side**: the Contents API rejects ~45 MB files (422) → media is `git push`ed from a blob-less sparse clone, all episodes
+  in one commit (one Pages deploy); a `MEDIA_TOKEN` without the Pages permission cannot switch Pages on → enable once by hand.
