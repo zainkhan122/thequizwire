@@ -525,11 +525,11 @@
    "do": "hook_in"
   },
   {
-   "at": "end-1.0",
+   "at": "end-0.95",
    "do": "fx.flash",
    "args": {
-    "peak": 0.8,
-    "out": 0.3
+    "peak": 0.45,
+    "out": 0.25
    }
   },
   {
