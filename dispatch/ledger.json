@@ -419,23 +419,6 @@
   },
   {
    "episode": "ep14-most-time-zones-france",
-   "platform": "instagram",
-   "post_id": "6ad1f623bbb9ce09f66a7474",
-   "channel_id": "695bfd29457dae6a34df0f74",
-   "state": "error",
-   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/ccb0d1e5587d/Which-country-has-the-MOST-time-zones.mp4",
-   "due_at": "2026-10-16T16:02:00.000Z",
-   "created_at": "2026-10-16T10:02:11.603Z",
-   "recorded_at": "2026-10-16T10:02:11+00:00",
-   "title": null,
-   "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-17T19:18:58+00:00",
-   "error": "It looks like there was an issue with the media attached to this post. Please check to ensure the media meets all specifications."
-  },
-  {
-   "episode": "ep14-most-time-zones-france",
    "platform": "facebook",
    "post_id": "6ad1f624c0accac7dac8173c",
    "channel_id": "695a159a457dae6a34d901bc",
