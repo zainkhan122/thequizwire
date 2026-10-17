@@ -22,7 +22,7 @@
    "energy": 4,
    "pause_after": 0.3,
    "direction": "documentary open, date first",
-   "text": "April, eighteen ninety six. The Games are back after fifteen centuries. Where?",
+   "text": "April, 1896. The Games are back after fifteen centuries. Where?",
    "cues": {
     "april": "april",
     "where": "where"
@@ -91,7 +91,7 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "the fact people repeat",
-   "text": "Winners got silver, not gold. Gold only arrived in nineteen oh four.",
+   "text": "Winners got silver, not gold. Gold only arrived in 1904.",
    "cues": {
     "silver": "silver",
     "gold": "gold"
@@ -105,7 +105,7 @@
    "energy": 4,
    "pause_after": 0.4,
    "direction": "close the loop on the wrong answers",
-   "text": "Paris hosted next in nineteen hundred, then London in nineteen oh eight.",
+   "text": "Paris hosted next in 1900, then London in 1908.",
    "cues": {
     "paris": "paris",
     "london": "london"

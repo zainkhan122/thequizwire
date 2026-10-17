@@ -84,6 +84,38 @@
    "url": "https://www.jarniascyril.com/expatriation/moving-to-saudi-arabia-as-an-expat-complete-guide/geography-saudi-arabia-relief-climate-deserts-resources/",
    "date": "2026-01-28",
    "notes": "Rub al Khali dunes sometimes over 200 m high"
+  },
+  "unsc_497": {
+   "type": "primary",
+   "publisher": "UN Security Council",
+   "title": "Resolution 497 (1981) — Golan Heights",
+   "url": "https://digitallibrary.un.org/record/28222",
+   "date": "1981-12-17",
+   "notes": "Israeli annexation of the Golan Heights null and void; Syria claims the territory"
+  },
+  "ne_disputed": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 – Disputed areas (10m)",
+   "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/",
+   "date": "2024-01-01",
+   "notes": "West Bank, Gaza, Halayib Triangle, Bir Tawil polygons with administering/claimant notes"
+  },
+  "un_ochaopt": {
+   "type": "primary",
+   "publisher": "UN OCHA oPt",
+   "title": "Occupied Palestinian Territory — overview",
+   "url": "https://www.ochaopt.org/",
+   "date": "2026-10-01",
+   "notes": "West Bank under Israeli occupation with Palestinian Authority in Areas A/B; Gaza access controlled by Israel"
+  },
+  "bbc_bir_tawil": {
+   "type": "press",
+   "publisher": "BBC",
+   "title": "Bir Tawil: the land no country wants",
+   "url": "https://www.bbc.com/news/magazine-26476484",
+   "date": "2014-03-07",
+   "notes": "Bir Tawil claimed by neither Egypt nor Sudan; the Halaib Triangle is administered by Egypt and claimed by Sudan"
   }
  },
  "claims": [
@@ -106,7 +138,8 @@
     "Saudi Arabia",
     "ZERO RIVERS",
     "in the whole kingdom",
-    "not one permanent river"
+    "not one permanent river",
+    "Which country has NO rivers at all?"
    ]
   },
   {
@@ -176,6 +209,34 @@
     "TAP WATER",
     "desalinated sea + ancient aquifers"
    ]
+  },
+  {
+   "id": "c6",
+   "weight": "framing",
+   "text": "Border policy plates in the Arabia view: Golan Heights administered by Israel (occupied since 1967), claimed by Syria; West Bank under Israeli occupation with the Palestinian Authority in Areas A/B, claimed by the State of Palestine; Gaza contested with Israel controlling access; Halaib Triangle administered by Egypt, claimed by Sudan; Bir Tawil claimed by nobody",
+   "sources": [
+    "unsc_497",
+    "un_ochaopt",
+    "ne_disputed",
+    "bbc_bir_tawil",
+    "wiki_sa"
+   ],
+   "vo": [],
+   "screen": [
+    "Golan Heights",
+    "Administered by Israel (occupied since 1967)",
+    "Claimed by Syria",
+    "West Bank",
+    "Administered by Israel (occupation; Palestinian Authority in Areas A/B)",
+    "Claimed by State of Palestine",
+    "Gaza Strip",
+    "Administered by contested; Israel controls access (as of 2026-10)",
+    "Halaib Triangle",
+    "Administered by Egypt",
+    "Claimed by Sudan",
+    "Bir Tawil",
+    "Administered by nobody (terra nullius)"
+   ]
   }
  ],
  "myths": [
@@ -215,7 +276,8 @@
   "^0$",
   "^Riyadh$",
   "^Red Sea$",
-  "^Gulf$"
+  "^Gulf$",
+  "^Claimed by$"
  ],
  "landscape": {
   "our_gap": "Feed versions say 'Saudi Arabia' over a dune clip; nobody flies the satellite map from a dry wadi to the Empty Quarter with a km² count-up and explains where the water actually comes from.",

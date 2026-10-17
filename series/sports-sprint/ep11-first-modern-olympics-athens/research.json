@@ -92,6 +92,22 @@
    "url": "https://www.olympics.com/ioc/olympic-medals",
    "date": "2024-01-01",
    "notes": "Athens 1896 winners received a silver medal and an olive branch; gold, silver and bronze first awarded at St. Louis 1904"
+  },
+  "un_kosovo": {
+   "type": "primary",
+   "publisher": "International Court of Justice",
+   "title": "Advisory opinion on Kosovo’s declaration of independence (2010)",
+   "url": "https://www.icj-cij.org/case/141",
+   "date": "2010-07-22",
+   "notes": "Kosovo declared independence from Serbia in 2008; Serbia does not recognise it"
+  },
+  "wiki_kosovo": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Kosovo",
+   "url": "https://en.wikipedia.org/wiki/Kosovo",
+   "date": "2026-10-01",
+   "notes": "self-governing since 2008 declaration; claimed by Serbia; recognised by ~100 UN members"
   }
  },
  "claims": [
@@ -107,13 +123,13 @@
    "weight": "core",
    "vo": [
     "athens. the first modern olympics, in a stadium built entirely of marble",
-    "april, eighteen ninety six. the games are back after fifteen centuries. where"
+    "april, 1896. the games are back after fifteen centuries. where"
    ],
    "screen": [
     "ATHENS 1896",
     "Athens",
     "Athens · Panathenaic Stadium",
-    "April 1896 · 14 nations"
+    "Where were the FIRST modern Olympics held?"
    ]
   },
   {
@@ -160,7 +176,7 @@
    ],
    "weight": "detail",
    "vo": [
-    "winners got silver, not gold. gold only arrived in nineteen oh four"
+    "winners got silver, not gold. gold only arrived in 1904"
    ],
    "screen": [
     "SILVER FOR 1ST",
@@ -176,13 +192,28 @@
    ],
    "weight": "detail",
    "vo": [
-    "paris hosted next in nineteen hundred, then london in nineteen oh eight"
+    "paris hosted next in 1900, then london in 1908"
    ],
    "screen": [
     "NEXT HOSTS",
     "Paris 1900 · London 1908",
     "Paris 1900",
     "London 1908"
+   ]
+  },
+  {
+   "id": "c6",
+   "weight": "framing",
+   "text": "Border policy plate: Kosovo is self-governing since 2008 and claimed by Serbia",
+   "sources": [
+    "un_kosovo",
+    "wiki_kosovo"
+   ],
+   "vo": [],
+   "screen": [
+    "Kosovo",
+    "Administered by Republic of Kosovo (self-governing since 2008)",
+    "Claimed by Serbia"
    ]
   }
  ],

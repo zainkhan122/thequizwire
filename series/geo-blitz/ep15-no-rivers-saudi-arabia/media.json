@@ -57,7 +57,7 @@
   },
   "geo/arabia.json": {
    "by": "reelkit/geodata.py",
-   "bytes": 284641,
+   "bytes": 284578,
    "credit": "Natural Earth",
    "kind": "data",
    "licence": "PD",
