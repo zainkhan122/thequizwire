@@ -133,3 +133,16 @@ out of `--channels`.
   two days. Thin the slots in Buffer (Settings → Posting schedule); queued posts re-flow automatically.
 * **GitHub side**: the Contents API rejects ~45 MB files (422) → media is `git push`ed from a blob-less sparse clone, all episodes
   in one commit (one Pages deploy); a `MEDIA_TOKEN` without the Pages permission cannot switch Pages on → enable once by hand.
+
+## Best-time scheduling (2026-10-17)
+`config/publishing.json → buffer.scheduling` (`mode: best_times`) replaces plain queueing: each post is created with
+`mode: customScheduled` + `dueAt` = the next free slot from the per-platform `times` table in `audience_tz`
+(default America/New_York — the channel's hashtags target the US; change it once YouTube/IG analytics show the real
+audience). Slots already holding a scheduled/sent post (Buffer scan + ledger) are skipped, and a `min_gap_hours`
+spacing is kept per channel. `mode: queue` restores Buffer's own posting-plan slots.
+
+## Cover (2026-10-17)
+`dispatch.sh` renders `reelkit/cover.py` per episode (hook headline, series tint, sticker side rotate per episode;
+authors can pin them in `episode.json → post.cover`), burns it in as the first 0.3 s of `out/final.mp4` (so frame 0 —
+the auto-cover on IG/FB/X/Threads, `thumbnailOffset 0`) and attaches `<stem>_cover.jpg` to the release for the YouTube
+thumbnail (manual upload until the `YT_*` secrets exist; then `yt_enrich.py thumbnails.set`).

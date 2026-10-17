@@ -62,7 +62,36 @@
   "accounts_note": "One Buffer login = one API key = one GitHub secret (Buffer Free allows 3 channels per login, so the channels live in two logins). Each channel records the account it was discovered through.",
   "dedupe_window_days": 14,
   "first_comment": false,
-  "first_comment_note": "Buffer's first comment (Instagram/Facebook) needs a paid plan; on Free the sources/credits line goes into the caption instead. Flip to true after upgrading."
+  "first_comment_note": "Buffer's first comment (Instagram/Facebook) needs a paid plan; on Free the sources/credits line goes into the caption instead. Flip to true after upgrading.",
+  "scheduling": {
+   "mode": "best_times",
+   "audience_tz": "America/New_York",
+   "min_lead_minutes": 90,
+   "min_gap_hours": 3,
+   "note": "Posts are custom-scheduled (Buffer mode customScheduled + dueAt) into the next free best-performing slot per platform, in the audience timezone (channel hashtags target the US; change audience_tz if analytics say otherwise). Set mode to 'queue' to fall back to the channel's own Buffer slots. Times from 2025–26 platform studies: Shorts peak 12–15h & 19–21h local, Reels 11–13h & 19h, FB 13h & 19h, X 9h & 17h, Threads 10h & 19h; two slots/day = the 2/day cadence.",
+   "times": {
+    "youtube": [
+     "12:00",
+     "19:00"
+    ],
+    "instagram": [
+     "11:00",
+     "19:00"
+    ],
+    "facebook": [
+     "13:00",
+     "19:00"
+    ],
+    "twitter": [
+     "09:00",
+     "17:00"
+    ],
+    "threads": [
+     "10:00",
+     "19:00"
+    ]
+   }
+  }
  },
  "media": {
   "repo": "zainkhan122/thequizwire-media",

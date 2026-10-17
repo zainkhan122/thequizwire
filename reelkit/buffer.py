@@ -199,6 +199,40 @@ def ledger_entry(L, ep, platform):
     return None
 
 
+# ---------------------------------------------------------------- best-time scheduling
+def best_slot(c, platform, channel_id, taken, start=None):
+    """Next free best-performing slot for this channel (config buffer.scheduling): the per-platform local times in the
+    audience timezone, from `min_lead_minutes` ahead, skipping any time already holding a scheduled/sent post (`taken` =
+    set of ISO minutes per channel, from the Buffer scan + this run). Returns an aware UTC datetime, or None (= queue)."""
+    from zoneinfo import ZoneInfo
+    S = c["buffer"].get("scheduling") or {}
+    if S.get("mode") != "best_times": return None
+    tz = ZoneInfo(S.get("audience_tz", "America/New_York")); times = S.get("times", {}).get(platform) or S.get("times", {}).get("default") or []
+    if not times: return None
+    t0 = (start or datetime.now(timezone.utc)) + timedelta(minutes=int(S.get("min_lead_minutes", 90)))
+    day = t0.astimezone(tz).date()
+    for d in range(0, 21):
+        for hm in sorted(times):
+            h, m = (int(x) for x in hm.split(":"))
+            cand = datetime(day.year, day.month, day.day, h, m, tzinfo=tz) + timedelta(days=d)
+            cand_utc = cand.astimezone(timezone.utc)
+            if cand_utc < t0: continue
+            key = (channel_id, cand_utc.strftime("%Y-%m-%dT%H:%M"))
+            if key in taken: continue
+            if any(k[0] == channel_id and abs((datetime.strptime(k[1], "%Y-%m-%dT%H:%M").replace(tzinfo=timezone.utc) - cand_utc).total_seconds()) < 3600 * int(S.get("min_gap_hours", 3)) for k in taken): continue
+            taken.add(key); return cand_utc
+    return None
+
+
+def taken_slots(existing, ledger):
+    T = set()
+    for p in existing:
+        if p.get("dueAt") and p.get("status") in ("scheduled", "sending", "sent"): T.add((p["channelId"], p["dueAt"][:16]))
+    for p in ledger.get("posts", []):
+        if p.get("due_at") and p.get("state") in ("scheduled", "sending", "sent"): T.add((p.get("channel_id"), p["due_at"][:16]))
+    return T
+
+
 # ---------------------------------------------------------------- payloads
 def payloads(c, ep_dir, media_url, kit=None, channels=None):
     ep_dir = Path(ep_dir)
@@ -348,6 +382,7 @@ def cmd_dispatch(a):
             except Deferred as e:                                                      # this account is unavailable right now: defer its channels
                 down[acc] = str(e); print(f"   ({acc}: {e} — its channels are deferred to the next run)")
     cap = int(c["buffer"].get("queue_limit_per_channel", 14)); tot_created = tot_failed = 0
+    taken = taken_slots(existing, L)
     for name, kit, media_url, rows in jobs:
         print(f"== {name}")
         if a.no_verify and not live: print(f"   media (unverified, dry-run): {media_url}")
@@ -360,8 +395,10 @@ def cmd_dispatch(a):
             if prev:
                 print(f"   {platform:<10} already queued as {prev['post_id']} ({prev['state']}) — skip"); skipped += 1; continue
             acc = account_of(c, platform)
+            slot = best_slot(c, platform, payload["channelId"], taken)
+            if slot: payload["mode"] = "customScheduled"; payload["dueAt"] = slot.strftime("%Y-%m-%dT%H:%M:%SZ")
             if not live:
-                print(f"   {platform:<10} DRY-RUN would create addToQueue post · text {len(payload['text'])} chars · channel {payload['channelId']} · via {acc or 'account unknown'}"); continue
+                print(f"   {platform:<10} DRY-RUN would create {payload['mode']} post{' at ' + payload['dueAt'] if slot else ''} · text {len(payload['text'])} chars · channel {payload['channelId']} · via {acc or 'account unknown'}"); continue
             if acc not in clients or acc in down:
                 print(f"   {platform:<10} deferred: {'channel account unknown' if not acc else down.get(acc) or acc + ' secret not set'}"); continue
             same = [p for p in existing if p["channelId"] == payload["channelId"] and any(x.get("source") == media_url for x in p.get("assets") or [])]
