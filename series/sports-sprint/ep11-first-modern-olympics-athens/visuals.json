@@ -492,6 +492,11 @@
   {
    "at": "end-1.0",
    "do": "hook_in"
+  },
+  {
+   "at": "s06",
+   "do": "chart.out",
+   "id": "cnt"
   }
  ]
 }

@@ -89,7 +89,7 @@
    "x": 40,
    "y": 1240,
    "w": 1000,
-   "label": "m-high dunes",
+   "label": "m · dune height, Empty Quarter",
    "fmt": "int",
    "size": 140
   },
@@ -557,6 +557,11 @@
     ],
     "ease": "none"
    }
+  },
+  {
+   "at": "s07",
+   "do": "chart.out",
+   "id": "cnt"
   }
  ],
  "captions": {
