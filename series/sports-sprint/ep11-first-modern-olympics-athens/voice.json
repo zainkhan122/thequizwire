@@ -62,7 +62,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "Athens. The first modern Olympics, in a stadium built entirely of marble.",
+   "text": "Athens. The first modern Games, in a stadium built of marble.",
    "cues": {
     "answer": "athens",
     "marble": "marble"
@@ -77,7 +77,7 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "count it, then the sting",
-   "text": "Two hundred and forty one athletes, fourteen nations, and not a single woman.",
+   "text": "Two hundred and forty one athletes, fourteen nations, not a single woman.",
    "cues": {
     "hundred": "hundred",
     "woman": "woman"
@@ -119,7 +119,7 @@
    "energy": 3,
    "pause_after": 0.0,
    "direction": "a promise, not a plea",
-   "text": "Got it right? Like, subscribe, and challenge a friend.",
+   "text": "Got it? Like, subscribe, and challenge a friend.",
    "cues": {
     "subscribe": "subscribe"
    }

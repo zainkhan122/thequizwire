@@ -122,7 +122,7 @@
    ],
    "weight": "core",
    "vo": [
-    "athens. the first modern olympics, in a stadium built entirely of marble",
+    "athens. the first modern games, in a stadium built of marble",
     "april, 1896. the games are back after fifteen centuries. where"
    ],
    "screen": [
@@ -142,7 +142,7 @@
    ],
    "weight": "core",
    "vo": [
-    "two hundred and forty one athletes, fourteen nations, and not a single woman"
+    "two hundred and forty one athletes, fourteen nations, not a single woman"
    ],
    "screen": [
     "14 NATIONS",
@@ -160,7 +160,7 @@
    ],
    "weight": "detail",
    "vo": [
-    "athens. the first modern olympics, in a stadium built entirely of marble"
+    "athens. the first modern games, in a stadium built of marble"
    ],
    "screen": [
     "a stadium built of marble"
@@ -281,7 +281,7 @@
  },
  "vo_exempt": [
   "^paris, athens, or london\\?$",
-  "^got it right\\?",
+  "^got it\\?",
   "^like, subscribe, and challenge a friend"
  ]
 }
