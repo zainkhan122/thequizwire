@@ -78,9 +78,9 @@
       23.74,
       37.97
      ],
-     "label": "Athens · Panathenaic Stadium",
+     "label": "Panathenaic Stadium",
      "qid": "Q1524",
-     "side": "left"
+     "side": "right"
     },
     {
      "id": "paris",
@@ -100,7 +100,7 @@
      ],
      "label": "London 1908",
      "qid": "Q84",
-     "side": "left"
+     "side": "right"
     }
    ],
    "labels": [
