@@ -1,0 +1,40 @@
+# Daily production (owner decision 2026-10-17): every day pick 1–3 ready episodes from the authored backlog, render them
+# and dispatch to every channel at the best-performing slot per platform (config/publishing.json → buffer.scheduling),
+# with the per-channel SEO copy from reelkit/postkit.py. Authoring stays with the agent: it writes episodes and flips
+# `status: ready` once the gates pass and the frames were reviewed; this workflow only consumes the backlog.
+name: daily
+on:
+  schedule:
+    - cron: '0 7 * * *'          # 07:00 UTC = 12:00 PKT = 03:00 ET → renders done well before the first US slot
+  workflow_dispatch:
+    inputs:
+      min: {description: 'min episodes', default: '1'}
+      max: {description: 'max episodes', default: '3'}
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: daily
+  cancel-in-progress: false
+jobs:
+  pick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pick today's episodes
+        id: p
+        run: |
+          EPS="$(python3 tools/daily_pick.py --min "${{ inputs.min || '1' }}" --max "${{ inputs.max || '3' }}")"
+          echo "eps=$EPS" >> "$GITHUB_OUTPUT"
+          echo "### Daily pick $(date -u +%F): ${EPS:-— backlog empty}" >> "$GITHUB_STEP_SUMMARY"
+          [ -n "$EPS" ] || { echo "::warning::backlog empty — nothing to render today (author episodes with status: ready)"; exit 0; }
+          git config user.name quizwire-daily; git config user.email daily@users.noreply.github.com
+          git add dispatch/daily.json && git commit -qm "daily: plan $(date -u +%F) [skip ci]" && git push -q
+      - name: Render + dispatch (live, best-time slots)
+        if: steps.p.outputs.eps != ''
+        run: |
+          gh workflow run render.yml -f episodes="${{ steps.p.outputs.eps }}" -f tag="daily-$(date -u +%F)" -f dispatch=true -f sha="$(git rev-parse HEAD)"
+          echo "render.yml started for: ${{ steps.p.outputs.eps }}" >> "$GITHUB_STEP_SUMMARY"
