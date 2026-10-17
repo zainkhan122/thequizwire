@@ -1,5 +1,7 @@
 # RESUME
 
+> **E (2026-10-17) DONE:** daily production live — Geo #15 (no rivers, story hook + globe-spin) and Sports #11 (Athens 1896, date hook + stamp reveal) rendered (`daily-2026-10-17`), covers burned in as frame 0, 10 Buffer posts custom-scheduled at best-time slots (`buffer.scheduling`, audience tz America/New_York). cover-wire shipped in `dispatch.sh` (cover.py --burn, `<stem>_cover.jpg` on the release, IG thumbnailOffset 0). Next: Body & Brain #4 engine needs (`which-body-part`), `tools/feed.py`, YT thumbnails via API once `YT_*` secrets exist.
+
 > **2026-10-16 D8 — COVER APPROVED (style B, no timer ring).** `reelkit/cover.py` renders `<ep>/out/cover.png` (1080×1920) from frame 0 + brand system; 10 pilot covers delivered to the owner as a zip for manual YouTube upload. **UNCOMMITTED (PAT missing after sandbox restore).** Next phase `cover-wire`: (1) `episode.sh cover` stage after `encode` → `out/cover.png` + burn the cover in as the first 0.3 s of the master; (2) Buffer IG `thumbnailOffset` → 0; (3) `yt_enrich.py` `thumbnails.set` once `YT_*` secrets exist; (4) attach `<stem>_cover.jpg` to each release.
 > **2026-10-16 D7 — LIVE.** 50 Buffer posts queued (10 pilots × YT/IG/FB/X/Threads), ledger `dispatch/ledger.json`. Two Buffer logins → two keys; no first comment on Free; 429s are slept through; media git-pushed to the public Pages repo. Next: publish-sync states, YT playlists need `YT_*` secrets, thin Buffer slots to 2/day..md — where this repo is and what happens next
 
