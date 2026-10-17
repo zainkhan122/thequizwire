@@ -63,7 +63,7 @@
    "active": true,
    "color": "#E3A72F",
    "feed_last_number": 9,
-   "next_number": 15,
+   "next_number": 16,
    "engines": [
     "geo",
     "globe",
@@ -93,7 +93,7 @@
    "active": true,
    "color": "#4FD1E0",
    "feed_last_number": 8,
-   "next_number": 11,
+   "next_number": 12,
    "engines": [
     "bars",
     "compare",

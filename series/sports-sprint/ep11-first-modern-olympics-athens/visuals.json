@@ -1,0 +1,497 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_med",
+   "type": "geo",
+   "scene": "med",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f0",
+   "type": "fact",
+   "kicker": "ATHENS 1896",
+   "text": "a stadium built of marble"
+  },
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "14 NATIONS",
+   "text": "43 events · zero women"
+  },
+  {
+   "id": "f2",
+   "type": "fact",
+   "kicker": "SILVER FOR 1ST",
+   "text": "gold only arrived in 1904"
+  },
+  {
+   "id": "f3",
+   "type": "fact",
+   "kicker": "NEXT HOSTS",
+   "text": "Paris 1900 · London 1908"
+  },
+  {
+   "id": "cnt",
+   "type": "counter",
+   "start": 0,
+   "end": 241,
+   "x": 40,
+   "y": 1240,
+   "w": 1000,
+   "label": "athletes, all men",
+   "fmt": "int",
+   "size": 140
+  },
+  {
+   "id": "ch_gr",
+   "type": "character",
+   "flag": "gr",
+   "face": "happy",
+   "x": 830,
+   "y": 1060,
+   "size": 230,
+   "rot": -6
+  },
+  {
+   "id": "st_medal",
+   "type": "sticker",
+   "emoji": "1f3c5",
+   "x": 820,
+   "y": 600,
+   "size": 230,
+   "rot": 8
+  },
+  {
+   "id": "st_stadium",
+   "type": "sticker",
+   "emoji": "1f3df",
+   "x": 250,
+   "y": 620,
+   "size": 240,
+   "rot": -6
+  },
+  {
+   "id": "st_runner",
+   "type": "sticker",
+   "emoji": "1f3c3",
+   "x": 250,
+   "y": 600,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "st_second",
+   "type": "sticker",
+   "emoji": "1f948",
+   "x": 820,
+   "y": 600,
+   "size": 220,
+   "rot": 10
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ },
+ "beats": [
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_med",
+   "args": {
+    "k": 0.55,
+    "lonlat": [
+     -2.0,
+     39.5
+    ]
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_med",
+   "until": "s04",
+   "args": {
+    "k": 0.6,
+    "lonlat": [
+     2.0,
+     39.0
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s02+0.3",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_med",
+   "until": "s04+1.8",
+   "args": {
+    "k": 1.9,
+    "lonlat": [
+     23.0,
+     38.6
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.8",
+   "do": "geo.cam_to",
+   "stage": "stage_med",
+   "until": "s05",
+   "args": {
+    "k": 1.93,
+    "lonlat": [
+     23.1,
+     38.6
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.6",
+   "do": "geo.highlight_in",
+   "stage": "stage_med",
+   "args": {
+    "fid": "300",
+    "layer": "gr"
+   }
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.4",
+   "do": "banner_in",
+   "args": {
+    "style": "stamp"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "fx.flash",
+   "args": {
+    "peak": 0.7,
+    "out": 0.25
+   }
+  },
+  {
+   "at": "s04+4.6",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.8",
+   "do": "character_in",
+   "id": "ch_gr"
+  },
+  {
+   "at": "s04.end-0.3",
+   "do": "character_out",
+   "id": "ch_gr"
+  },
+  {
+   "at": "s04+2.4",
+   "do": "geo.pin_in",
+   "stage": "stage_med",
+   "args": {
+    "pid": "athens"
+   }
+  },
+  {
+   "at": "s04+2.7",
+   "do": "fact_in",
+   "id": "f0",
+   "until": "s04.end"
+  },
+  {
+   "at": "s04@marble",
+   "do": "sticker_in",
+   "id": "st_stadium"
+  },
+  {
+   "at": "s04.end-0.3",
+   "do": "sticker_out",
+   "id": "st_stadium"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_med",
+   "until": "s05+1.2",
+   "args": {
+    "k": 2.6,
+    "lonlat": [
+     23.6,
+     38.2
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.2",
+   "do": "geo.cam_to",
+   "stage": "stage_med",
+   "until": "s06",
+   "args": {
+    "k": 2.63,
+    "lonlat": [
+     23.65,
+     38.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05+0.3",
+   "do": "geo.label_in",
+   "stage": "stage_med",
+   "args": {
+    "lid": "aegean"
+   }
+  },
+  {
+   "at": "s05+0.4",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s05.end"
+  },
+  {
+   "at": "s05@hundred",
+   "do": "chart.counter_run",
+   "id": "cnt",
+   "until": "s05.end-0.2",
+   "args": {
+    "ease": "power2.out"
+   }
+  },
+  {
+   "at": "s05+0.6",
+   "do": "sticker_in",
+   "id": "st_runner"
+  },
+  {
+   "at": "s05.end-0.3",
+   "do": "sticker_out",
+   "id": "st_runner"
+  },
+  {
+   "at": "s06",
+   "do": "geo.label_out",
+   "stage": "stage_med",
+   "args": {
+    "lid": "aegean"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_med",
+   "until": "s06+1.2",
+   "args": {
+    "k": 1.5,
+    "lonlat": [
+     22.0,
+     38.8
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.2",
+   "do": "geo.cam_to",
+   "stage": "stage_med",
+   "until": "s07",
+   "args": {
+    "k": 1.52,
+    "lonlat": [
+     22.1,
+     38.8
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06+0.4",
+   "do": "fact_in",
+   "id": "f2",
+   "until": "s06.end"
+  },
+  {
+   "at": "s06@silver",
+   "do": "sticker_in",
+   "id": "st_second"
+  },
+  {
+   "at": "s06@gold",
+   "do": "sticker_out",
+   "id": "st_second"
+  },
+  {
+   "at": "s06@gold",
+   "do": "sticker_in",
+   "id": "st_medal"
+  },
+  {
+   "at": "s06.end-0.3",
+   "do": "sticker_out",
+   "id": "st_medal"
+  },
+  {
+   "at": "s07",
+   "do": "geo.pin_out",
+   "stage": "stage_med",
+   "args": {
+    "pid": "athens"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_med",
+   "until": "s07+1.4",
+   "args": {
+    "k": 0.62,
+    "lonlat": [
+     10.0,
+     45.0
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_med",
+   "until": "s08+0.2",
+   "args": {
+    "k": 0.63,
+    "lonlat": [
+     10.2,
+     45.0
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@paris",
+   "do": "geo.highlight_in",
+   "stage": "stage_med",
+   "args": {
+    "fid": "250",
+    "layer": "fr"
+   }
+  },
+  {
+   "at": "s07@paris",
+   "do": "geo.pin_in",
+   "stage": "stage_med",
+   "args": {
+    "pid": "paris"
+   }
+  },
+  {
+   "at": "s07@london",
+   "do": "geo.highlight_in",
+   "stage": "stage_med",
+   "args": {
+    "fid": "826",
+    "layer": "gb"
+   }
+  },
+  {
+   "at": "s07@london",
+   "do": "geo.pin_in",
+   "stage": "stage_med",
+   "args": {
+    "pid": "london"
+   }
+  },
+  {
+   "at": "s07+0.4",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s07.end"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_med",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_med",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.55,
+    "lonlat": [
+     -2.0,
+     39.5
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ]
+}

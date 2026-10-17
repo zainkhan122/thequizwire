@@ -1,0 +1,147 @@
+{
+ "version": 1,
+ "episode": "ep11-first-modern-olympics-athens",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "med": {
+   "projection": "mercator",
+   "projection_reason": "satellite raster (Web Mercator tiles); a regional → city dive on a conformal map, no size or distance claim (geolint P1). Hook camera drifts over the western Mediterranean / Iberia, away from Greece (Q14)",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     12,
+     33,
+     32,
+     45
+    ]
+   },
+   "padding": 20,
+   "resolution": "50m",
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 3.0,
+    "bbox": [
+     -14,
+     28,
+     40,
+     52
+    ]
+   },
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "gr",
+     "ids": [
+      "300"
+     ],
+     "cls": "",
+     "lift": "flag",
+     "flag": "gr",
+     "note": "Greece (ISO 300) flag-lifted at the reveal"
+    },
+    {
+     "kind": "highlight",
+     "id": "fr",
+     "ids": [
+      "250"
+     ],
+     "cls": "",
+     "lift": "fill",
+     "color": "#9AA7FF",
+     "note": "France — second highlight in the 1900 beat only"
+    },
+    {
+     "kind": "highlight",
+     "id": "gb",
+     "ids": [
+      "826"
+     ],
+     "cls": "",
+     "lift": "fill",
+     "color": "#FF9AA2",
+     "note": "United Kingdom — second highlight in the 1908 beat only"
+    }
+   ],
+   "pins": [
+    {
+     "id": "athens",
+     "lonlat": [
+      23.74,
+      37.97
+     ],
+     "label": "Athens · Panathenaic Stadium",
+     "qid": "Q1524",
+     "side": "left"
+    },
+    {
+     "id": "paris",
+     "lonlat": [
+      2.35,
+      48.86
+     ],
+     "label": "Paris 1900",
+     "qid": "Q90",
+     "side": "right"
+    },
+    {
+     "id": "london",
+     "lonlat": [
+      -0.13,
+      51.51
+     ],
+     "label": "London 1908",
+     "qid": "Q84",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "aegean",
+     "lonlat": [
+      25.3,
+      38.6
+     ],
+     "text": "Aegean Sea",
+     "cls": "sea ar"
+    },
+    {
+     "id": "med_sea",
+     "lonlat": [
+      18.0,
+      35.2
+     ],
+     "text": "Mediterranean Sea",
+     "cls": "sea"
+    }
+   ],
+   "routes": [],
+   "disputed": [
+    {
+     "id": "kosovo",
+     "ne_name": "Kosovo",
+     "name": "Kosovo",
+     "controller": "Republic of Kosovo (self-governing since 2008)",
+     "claimants": [
+      "Serbia"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#kosovo",
+     "label_at": [
+      20.9,
+      42.6
+     ],
+     "plate_cls": "small"
+    }
+   ]
+  }
+ }
+}

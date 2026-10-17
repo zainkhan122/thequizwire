@@ -1,0 +1,250 @@
+{
+ "version": 1,
+ "episode": "ep15-no-rivers-saudi-arabia",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "globe": {
+   "projection": "orthographic",
+   "projection_reason": "story opener on a turning globe (hook only, no claim read off it); the hook camera sits over the Pacific/Americas, away from the answer (Q14)",
+   "fit": {
+    "type": "world"
+   },
+   "padding": 60,
+   "resolution": "110m",
+   "sources": [
+    "Natural Earth"
+   ],
+   "layers": [
+    {
+     "kind": "sphere"
+    },
+    {
+     "kind": "graticule",
+     "step": [
+      20,
+      20
+     ]
+    },
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    }
+   ],
+   "pins": [],
+   "labels": [],
+   "routes": [],
+   "disputed": []
+  },
+  "arabia": {
+   "projection": "mercator",
+   "projection_reason": "satellite raster (Web Mercator tiles) for the reveal and the see-it beats; no size, area or distance claim is made or shown (geolint P1)",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     32,
+     12,
+     60,
+     34
+    ]
+   },
+   "padding": 20,
+   "resolution": "50m",
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.2
+   },
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "sa",
+     "ids": [
+      "682"
+     ],
+     "cls": "",
+     "lift": "flag",
+     "flag": "sa",
+     "note": "Saudi Arabia (ISO 682) flag-lifted at the reveal"
+    }
+   ],
+   "pins": [
+    {
+     "id": "riyadh",
+     "lonlat": [
+      46.72,
+      24.69
+     ],
+     "label": "Riyadh",
+     "qid": "Q3692",
+     "side": "right"
+    },
+    {
+     "id": "wadi_hamd",
+     "lonlat": [
+      38.2,
+      25.4
+     ],
+     "label": "Wadi al-Hamd (dry)",
+     "qid": "Q2543129",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "empty_quarter",
+     "lonlat": [
+      50.5,
+      20.0
+     ],
+     "text": "Rubʿ al Khali",
+     "cls": "ink"
+    },
+    {
+     "id": "red_sea",
+     "lonlat": [
+      37.0,
+      21.5
+     ],
+     "text": "Red Sea",
+     "cls": "sea ar"
+    },
+    {
+     "id": "gulf",
+     "lonlat": [
+      51.5,
+      26.8
+     ],
+     "text": "Gulf",
+     "cls": "sea"
+    }
+   ],
+   "routes": [],
+   "disputed": [
+    {
+     "id": "golan",
+     "ne_name": "Golan Heights",
+     "name": "Golan Heights",
+     "controller": "Israel (occupied since 1967)",
+     "claimants": [
+      "Syria"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#golan · UNSC 497",
+     "label_at": [
+      35.8,
+      33.0
+     ],
+     "plate_cls": "small"
+    },
+    {
+     "id": "west_bank",
+     "ne_name": "West Bank",
+     "name": "West Bank",
+     "controller": "Israel (occupation; Palestinian Authority in Areas A/B)",
+     "claimants": [
+      "State of Palestine"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#palestine",
+     "label_at": [
+      35.3,
+      31.9
+     ],
+     "plate_cls": "small"
+    },
+    {
+     "id": "gaza",
+     "ne_name": "Gaza",
+     "name": "Gaza Strip",
+     "controller": "contested (Israel controls access; as of 2026-10)",
+     "claimants": [
+      "State of Palestine"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#palestine",
+     "label_at": [
+      34.4,
+      31.4
+     ],
+     "plate_cls": "small"
+    },
+    {
+     "id": "halaib",
+     "ne_name": "Halayib Triangle",
+     "name": "Halaib Triangle",
+     "controller": "Egypt",
+     "claimants": [
+      "Sudan"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#halaib_bir_tawil",
+     "label_at": [
+      36.3,
+      22.3
+     ],
+     "plate_cls": "small"
+    },
+    {
+     "id": "bir_tawil",
+     "ne_name": "Bir Tawil",
+     "name": "Bir Tawil",
+     "controller": "claimed by neither Egypt nor Sudan (terra nullius)",
+     "claimants": [
+      "unclaimed by both Egypt and Sudan"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#halaib_bir_tawil",
+     "label_at": [
+      33.9,
+      21.7
+     ],
+     "plate_cls": "small"
+    }
+   ]
+  },
+  "globe2": {
+   "projection": "orthographic",
+   "projection_reason": "loop frame: the same globe returns under the re-asked question (separate scene because a stage id must be unique)",
+   "fit": {
+    "type": "world"
+   },
+   "padding": 60,
+   "resolution": "110m",
+   "sources": [
+    "Natural Earth"
+   ],
+   "layers": [
+    {
+     "kind": "sphere"
+    },
+    {
+     "kind": "graticule",
+     "step": [
+      20,
+      20
+     ]
+    },
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    }
+   ],
+   "pins": [],
+   "labels": [],
+   "routes": [],
+   "disputed": []
+  }
+ }
+}

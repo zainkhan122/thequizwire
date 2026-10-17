@@ -1,0 +1,129 @@
+{
+ "version": 1,
+ "episode": "ep15-no-rivers-saudi-arabia",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.0
+ },
+ "intent": "A storyteller who starts mid-thought: a huge, hot, empty land with a secret — then the quiz. Dry wit on the reveal, awe on the numbers.",
+ "pacing_profile": "story hook over a slowly turning globe, three quick options, a 3-s beat, a dry reveal, three see-it beats, CTA and loop",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "tense",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "a story, told like a secret",
+   "text": "A whole kingdom, and not a single river runs through it. Which country?",
+   "cues": {
+    "kingdom": "kingdom",
+    "which": "which"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Egypt, Saudi Arabia, or Mongolia?",
+   "cues": {
+    "a": "egypt",
+    "b": "saudi",
+    "c": "mongolia"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "Saudi Arabia. Not one permanent river in the entire country.",
+   "cues": {
+    "answer": "saudi",
+    "single": "permanent"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "explain the trick",
+   "text": "Water runs only in wadis: dry valleys that flood after rain.",
+   "cues": {
+    "wadis": "wadis",
+    "flood": "flood"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "let the number land",
+   "text": "In the Empty Quarter, dunes rise over two hundred metres, and nothing flows.",
+   "cues": {
+    "empty": "empty",
+    "hundred": "hundred"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.4,
+   "direction": "the twist people repeat",
+   "text": "So the taps run on desalinated sea water, and ancient groundwater.",
+   "cues": {
+    "sea": "sea",
+    "ancient": "ancient"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "a promise, not a plea",
+   "text": "Got it? Hit like and subscribe for the next map.",
+   "cues": {
+    "subscribe": "subscribe"
+   }
+  }
+ ],
+ "title": "Which country has NO rivers at all?"
+}

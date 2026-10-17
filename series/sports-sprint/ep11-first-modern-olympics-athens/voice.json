@@ -1,0 +1,129 @@
+{
+ "version": 1,
+ "episode": "ep11-first-modern-olympics-athens",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.0
+ },
+ "intent": "A sports commentator opening on a date, like a documentary: in 1896… Then quick, then the reveal with a grin, then three facts that make people say “really?”.",
+ "pacing_profile": "date-led story hook over a slow Mediterranean drift, three quick options, a 3-s beat, a warm reveal, three see-it beats, CTA and loop",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "tense",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "documentary open, date first",
+   "text": "April, eighteen ninety six. The Games are back after fifteen centuries. Where?",
+   "cues": {
+    "april": "april",
+    "where": "where"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Paris, Athens, or London?",
+   "cues": {
+    "a": "paris",
+    "b": "athens",
+    "c": "london"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "Athens. The first modern Olympics, in a stadium built entirely of marble.",
+   "cues": {
+    "answer": "athens",
+    "marble": "marble"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "count it, then the sting",
+   "text": "Two hundred and forty one athletes, fourteen nations, and not a single woman.",
+   "cues": {
+    "hundred": "hundred",
+    "woman": "woman"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "the fact people repeat",
+   "text": "Winners got silver, not gold. Gold only arrived in nineteen oh four.",
+   "cues": {
+    "silver": "silver",
+    "gold": "gold"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.4,
+   "direction": "close the loop on the wrong answers",
+   "text": "Paris hosted next in nineteen hundred, then London in nineteen oh eight.",
+   "cues": {
+    "paris": "paris",
+    "london": "london"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "a promise, not a plea",
+   "text": "Got it right? Like, subscribe, and challenge a friend.",
+   "cues": {
+    "subscribe": "subscribe"
+   }
+  }
+ ],
+ "title": "Where were the FIRST modern Olympics held?"
+}

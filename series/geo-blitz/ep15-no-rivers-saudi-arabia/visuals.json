@@ -1,0 +1,571 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_arabia",
+   "type": "geo",
+   "scene": "arabia",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  },
+  {
+   "id": "stage_globe",
+   "type": "geo",
+   "scene": "globe",
+   "from": "start",
+   "to": "s03.end-0.3",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 12
+  },
+  {
+   "id": "stage_globe2",
+   "type": "geo",
+   "scene": "globe2",
+   "from": "end-1.0",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 12
+  }
+ ],
+ "elements": [
+  {
+   "id": "f0",
+   "type": "fact",
+   "kicker": "ZERO RIVERS",
+   "text": "in the whole kingdom"
+  },
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "WADIS",
+   "text": "dry valleys that flood after rain"
+  },
+  {
+   "id": "f2",
+   "type": "fact",
+   "kicker": "EMPTY QUARTER",
+   "text": "dunes over 200 m · nothing flows"
+  },
+  {
+   "id": "f3",
+   "type": "fact",
+   "kicker": "TAP WATER",
+   "text": "desalinated sea + ancient aquifers"
+  },
+  {
+   "id": "cnt",
+   "type": "counter",
+   "start": 0,
+   "end": 200,
+   "x": 40,
+   "y": 1240,
+   "w": 1000,
+   "label": "m-high dunes",
+   "fmt": "int",
+   "size": 140
+  },
+  {
+   "id": "ch_sa",
+   "type": "character",
+   "flag": "sa",
+   "face": "cool",
+   "x": 830,
+   "y": 1060,
+   "size": 230,
+   "rot": -6
+  },
+  {
+   "id": "st_camel",
+   "type": "sticker",
+   "emoji": "1f42a",
+   "x": 820,
+   "y": 600,
+   "size": 240,
+   "rot": 8
+  },
+  {
+   "id": "st_drop",
+   "type": "sticker",
+   "emoji": "1f4a7",
+   "x": 250,
+   "y": 600,
+   "size": 200,
+   "rot": -10
+  },
+  {
+   "id": "st_desert",
+   "type": "sticker",
+   "emoji": "1f3dc",
+   "x": 250,
+   "y": 620,
+   "size": 230,
+   "rot": -6
+  },
+  {
+   "id": "st_tap",
+   "type": "sticker",
+   "emoji": "1f6b0",
+   "x": 820,
+   "y": 600,
+   "size": 220,
+   "rot": 6
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_globe",
+   "args": {
+    "k": 1.6,
+    "lonlat": [
+     -100,
+     15
+    ]
+   }
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_arabia",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     45,
+     23.5
+    ]
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s01",
+   "do": "geo.spin",
+   "stage": "stage_globe",
+   "until": "s04",
+   "args": {
+    "lon": -40,
+    "lat": 10,
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s02+0.3",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s03.end-0.4",
+   "do": "fx.flash",
+   "args": {
+    "peak": 0.9,
+    "out": 0.3
+   }
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_arabia",
+   "until": "s04+1.6",
+   "args": {
+    "k": 1.25,
+    "lonlat": [
+     45.5,
+     23.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.6",
+   "do": "geo.cam_to",
+   "stage": "stage_arabia",
+   "until": "s05",
+   "args": {
+    "k": 1.28,
+    "lonlat": [
+     45.8,
+     23.4
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.2",
+   "do": "geo.highlight_in",
+   "stage": "stage_arabia",
+   "args": {
+    "fid": "682",
+    "layer": "sa"
+   }
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.6",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.7",
+   "do": "character_in",
+   "id": "ch_sa"
+  },
+  {
+   "at": "s04.end-0.3",
+   "do": "character_out",
+   "id": "ch_sa"
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f0",
+   "until": "s04.end"
+  },
+  {
+   "at": "s04@single",
+   "do": "sticker_in",
+   "id": "st_drop"
+  },
+  {
+   "at": "s04.end-0.3",
+   "do": "sticker_out",
+   "id": "st_drop"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_arabia",
+   "until": "s05+1.4",
+   "args": {
+    "k": 1.9,
+    "lonlat": [
+     39.5,
+     25.0
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_arabia",
+   "until": "s06",
+   "args": {
+    "k": 1.93,
+    "lonlat": [
+     39.6,
+     25.0
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@wadis",
+   "do": "geo.pin_in",
+   "stage": "stage_arabia",
+   "args": {
+    "pid": "wadi_hamd"
+   }
+  },
+  {
+   "at": "s05+1.2",
+   "do": "geo.label_in",
+   "stage": "stage_arabia",
+   "args": {
+    "lid": "red_sea"
+   }
+  },
+  {
+   "at": "s05+0.4",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s05.end"
+  },
+  {
+   "at": "s05@flood",
+   "do": "sticker_in",
+   "id": "st_camel"
+  },
+  {
+   "at": "s05.end-0.3",
+   "do": "sticker_out",
+   "id": "st_camel"
+  },
+  {
+   "at": "s06",
+   "do": "geo.pin_out",
+   "stage": "stage_arabia",
+   "args": {
+    "pid": "wadi_hamd"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.label_out",
+   "stage": "stage_arabia",
+   "args": {
+    "lid": "red_sea"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_arabia",
+   "until": "s06+1.4",
+   "args": {
+    "k": 1.7,
+    "lonlat": [
+     50.0,
+     20.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_arabia",
+   "until": "s07",
+   "args": {
+    "k": 1.72,
+    "lonlat": [
+     50.3,
+     20.4
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@empty",
+   "do": "geo.label_in",
+   "stage": "stage_arabia",
+   "args": {
+    "lid": "empty_quarter"
+   }
+  },
+  {
+   "at": "s06+0.3",
+   "do": "fact_in",
+   "id": "f2",
+   "until": "s06.end"
+  },
+  {
+   "at": "s06@hundred",
+   "do": "chart.counter_run",
+   "id": "cnt",
+   "until": "s06.end-0.2",
+   "args": {
+    "ease": "power2.out"
+   }
+  },
+  {
+   "at": "s06+0.5",
+   "do": "sticker_in",
+   "id": "st_desert"
+  },
+  {
+   "at": "s06.end-0.3",
+   "do": "sticker_out",
+   "id": "st_desert"
+  },
+  {
+   "at": "s07",
+   "do": "geo.label_out",
+   "stage": "stage_arabia",
+   "args": {
+    "lid": "empty_quarter"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_arabia",
+   "until": "s07+1.4",
+   "args": {
+    "k": 2.1,
+    "lonlat": [
+     47.5,
+     25.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_arabia",
+   "until": "s08+0.2",
+   "args": {
+    "k": 2.13,
+    "lonlat": [
+     47.6,
+     25.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07+0.6",
+   "do": "geo.pin_in",
+   "stage": "stage_arabia",
+   "args": {
+    "pid": "riyadh"
+   }
+  },
+  {
+   "at": "s07+1.2",
+   "do": "geo.label_in",
+   "stage": "stage_arabia",
+   "args": {
+    "lid": "gulf"
+   }
+  },
+  {
+   "at": "s07+0.3",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s07.end"
+  },
+  {
+   "at": "s07@sea",
+   "do": "sticker_in",
+   "id": "st_tap"
+  },
+  {
+   "at": "s07.end-0.3",
+   "do": "sticker_out",
+   "id": "st_tap"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_arabia",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_arabia",
+   "until": "end-1.0",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     45,
+     23.5
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  },
+  {
+   "at": "end-1.0",
+   "do": "fx.flash",
+   "args": {
+    "peak": 0.8,
+    "out": 0.3
+   }
+  },
+  {
+   "at": "end-1.0",
+   "do": "geo.cam_set",
+   "stage": "stage_globe2",
+   "args": {
+    "k": 1.6,
+    "lonlat": [
+     -100,
+     15
+    ]
+   }
+  },
+  {
+   "at": "end-1.0",
+   "do": "geo.cam_to",
+   "stage": "stage_globe2",
+   "until": "end-0.3",
+   "args": {
+    "k": 1.6,
+    "lonlat": [
+     -100,
+     15
+    ],
+    "ease": "none"
+   }
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

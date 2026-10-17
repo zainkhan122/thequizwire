@@ -1,0 +1,247 @@
+{
+ "version": 1,
+ "episode": "ep15-no-rivers-saudi-arabia",
+ "topic": "Which country has no rivers at all? (Saudi Arabia — largest country with no permanent river)",
+ "researched": "2026-10-17",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "sources": {
+  "britannica_sa": {
+   "type": "reference",
+   "publisher": "Britannica",
+   "title": "Saudi Arabia — Drainage and soils",
+   "url": "https://www.britannica.com/place/Saudi-Arabia",
+   "date": "2026-10-17",
+   "notes": "virtually no permanent surface streams; wadis numerous; Rub al-Khali > 647,500 km², world’s largest sand area"
+  },
+  "wiki_sa": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Saudi Arabia",
+   "url": "https://en.wikipedia.org/wiki/Saudi_Arabia",
+   "date": "2026-10-16",
+   "notes": "land area ≈ 2,149,690 km²; largest country in the world without permanent rivers; Rub al Khali 647,500 km², largest contiguous sand desert"
+  },
+  "wiki_arabia": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Arabian Peninsula",
+   "url": "https://en.wikipedia.org/wiki/Arabian_Peninsula",
+   "date": "2026-10-13",
+   "notes": "few lakes or permanent rivers; drained by ephemeral wadis, dry except in the rainy season; ancient aquifers feed oases"
+  },
+  "geoworlds": {
+   "type": "press",
+   "publisher": "GeographyWorlds",
+   "title": "Saudi Arabia Geography",
+   "url": "https://geographyworlds.com/blog/saudi-arabia-geography/",
+   "date": "2025-01-15",
+   "notes": "no permanent rivers or lakes; relies on desalination (~5.6 million m³/day) and fossil groundwater; Rub al Khali ≈ 650,000 km²"
+  },
+  "envblog": {
+   "type": "press",
+   "publisher": "The Environmental Blog",
+   "title": "Countries With No Natural Rivers",
+   "url": "https://www.theenvironmentalblog.org/2025/08/countries-with-no-natural-rivers-freshwater-strategies/",
+   "date": "2025-08-06",
+   "notes": "area ~2.15 million km²; rainfall < 100 mm/yr; ~50 % desalinated, ~40 % fossil groundwater"
+  },
+  "toi": {
+   "type": "press",
+   "publisher": "Times of India",
+   "title": "Which country has no rivers at all?",
+   "url": "https://timesofindia.indiatimes.com/life-style/parenting/moments/curiosity-corner-which-country-has-no-rivers-at-all/articleshow/128356910.cms",
+   "date": "2026-02-15",
+   "notes": "Saudi Arabia has no rivers; annual rainfall often < 100 mm"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 – Countries (public domain)",
+   "url": "https://www.naturalearthdata.com/",
+   "date": "2024-01-01",
+   "notes": "base map, borders, disputed areas"
+  },
+  "fao_aquastat": {
+   "type": "primary",
+   "publisher": "FAO AQUASTAT",
+   "title": "Country profile – Saudi Arabia",
+   "url": "https://www.fao.org/aquastat/en/countries-and-basins/country-profiles/country/SAU",
+   "date": "2009-01-01",
+   "notes": "there are no permanent rivers or lakes; surface water is ephemeral wadi flow; water supply from non-renewable groundwater and desalination"
+  },
+  "britannica_rak": {
+   "type": "reference",
+   "publisher": "Britannica",
+   "title": "Rubʿ al-Khali",
+   "url": "https://www.britannica.com/place/Rub-al-Khali",
+   "date": "2026-10-01",
+   "notes": "largest continuous sand desert; dunes reach heights of about 250 m (800 ft)"
+  },
+  "jarnias": {
+   "type": "press",
+   "publisher": "Jarnias Cyril (expat guide)",
+   "title": "Geography of Saudi Arabia",
+   "url": "https://www.jarniascyril.com/expatriation/moving-to-saudi-arabia-as-an-expat-complete-guide/geography-saudi-arabia-relief-climate-deserts-resources/",
+   "date": "2026-01-28",
+   "notes": "Rub al Khali dunes sometimes over 200 m high"
+  }
+ },
+ "claims": [
+  {
+   "id": "c1",
+   "text": "Saudi Arabia has no permanent rivers (only ephemeral wadis)",
+   "sources": [
+    "fao_aquastat",
+    "britannica_sa",
+    "wiki_sa",
+    "envblog"
+   ],
+   "weight": "core",
+   "vo": [
+    "a whole kingdom, and not a single river runs through it. which country",
+    "saudi arabia",
+    "not one permanent river in the entire country"
+   ],
+   "screen": [
+    "Saudi Arabia",
+    "ZERO RIVERS",
+    "in the whole kingdom",
+    "not one permanent river"
+   ]
+  },
+  {
+   "id": "c2",
+   "text": "Dunes in the Rub al Khali rise over 200 m",
+   "sources": [
+    "britannica_rak",
+    "jarnias"
+   ],
+   "weight": "detail",
+   "vo": [
+    "in the empty quarter, dunes rise over two hundred metres, and nothing flows"
+   ],
+   "screen": [
+    "dunes over 200 m · nothing flows",
+    "m-high dunes"
+   ]
+  },
+  {
+   "id": "c3",
+   "text": "Water flows only in wadis, ephemeral valleys that run after rain",
+   "sources": [
+    "fao_aquastat",
+    "britannica_sa",
+    "wiki_arabia",
+    "toi"
+   ],
+   "weight": "detail",
+   "vo": [
+    "water runs only in wadis: dry valleys that flood after rain"
+   ],
+   "screen": [
+    "WADIS",
+    "dry valleys that flood after rain",
+    "Wadi al-Hamd (dry)"
+   ]
+  },
+  {
+   "id": "c4",
+   "text": "The Rub al Khali (Empty Quarter) is a vast contiguous sand desert in the south-east",
+   "sources": [
+    "britannica_sa",
+    "wiki_sa",
+    "britannica_rak"
+   ],
+   "weight": "detail",
+   "vo": [],
+   "screen": [
+    "EMPTY QUARTER",
+    "Rubʿ al Khali"
+   ]
+  },
+  {
+   "id": "c5",
+   "text": "Drinking water comes mainly from desalination and fossil (ancient) groundwater",
+   "sources": [
+    "fao_aquastat",
+    "geoworlds",
+    "envblog",
+    "wiki_arabia"
+   ],
+   "weight": "detail",
+   "vo": [
+    "so the taps run on desalinated sea water, and ancient groundwater"
+   ],
+   "screen": [
+    "TAP WATER",
+    "desalinated sea + ancient aquifers"
+   ]
+  }
+ ],
+ "myths": [
+  {
+   "myth": "Every country has at least one river.",
+   "reality": "About twenty countries have no permanent river; Saudi Arabia is by far the largest of them.",
+   "sources": [
+    "wiki_sa",
+    "envblog"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^One map question a day",
+  "^Next:",
+  "^Tomorrow:",
+  "^USA$",
+  "^Pacific$",
+  "^Indian Ocean$",
+  "^0$",
+  "^Riyadh$",
+  "^Red Sea$",
+  "^Gulf$"
+ ],
+ "landscape": {
+  "our_gap": "Feed versions say 'Saudi Arabia' over a dune clip; nobody flies the satellite map from a dry wadi to the Empty Quarter with a km² count-up and explains where the water actually comes from.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/@thequizwire-com/shorts",
+    "title": "Feed Geo Blitz (own channel, v1)",
+    "angle": "card over b-roll",
+    "misses": "no map, no pins, no sources"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=country+with+no+rivers+shorts",
+    "title": "Search results: country with no rivers",
+    "angle": "text over stock footage",
+    "misses": "no map, no wadis, no water source"
+   },
+   {
+    "url": "https://www.youtube.com/@geomapunveiled25/shorts",
+    "title": "Geo Map Unveiled",
+    "angle": "satellite listicles",
+    "misses": "no question format"
+   }
+  ]
+ },
+ "vo_exempt": [
+  "^egypt, saudi arabia, or mongolia\\?$",
+  "^got it\\? hit like and subscribe"
+ ]
+}

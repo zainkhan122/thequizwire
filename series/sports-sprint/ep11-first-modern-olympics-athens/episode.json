@@ -1,0 +1,69 @@
+{
+ "id": "ep11-first-modern-olympics-athens",
+ "format": "quiz-v3",
+ "series": "sports-sprint",
+ "number": 11,
+ "title": "Where were the FIRST modern Olympics held?",
+ "difficulty": "EASY",
+ "seed": 2011,
+ "quiz": {
+  "question": "Where were the FIRST modern Olympics held?",
+  "keyword": "FIRST",
+  "options": [
+   "Paris",
+   "Athens",
+   "London"
+  ],
+  "correct": 1,
+  "beat": 3.0,
+  "answer_line": "Athens",
+  "answer_sub": "April 1896 · 14 nations",
+  "option_meta": [
+   {
+    "flag": "fr"
+   },
+   {
+    "flag": "gr"
+   },
+   {
+    "flag": "gb"
+   }
+  ],
+  "banner": "ATHENS 1896",
+  "banner_sub": "✓  B was right",
+  "outro": {
+   "headline": "CHALLENGE A FRIEND",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "story",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Where were the FIRST modern Olympics held? 🏅",
+  "description": "Where were the FIRST modern Olympics held? Guess first — then drop into a marble stadium in April 1896: 14 nations, 241 athletes, 43 events, and no women at all.\n\nWhat was your first guess? Do share in the comments below.\n\nSources: olympics.com (Athens 1896), Wikipedia (1896 Summer Olympics; medal table), CBC Sports.\nMap data: Natural Earth (public domain) · imagery NASA Blue Marble. Voice: AI (Kokoro).\n\nSports Sprint #11",
+  "hashtags": [
+   "#GKshorts",
+   "#thequizwire",
+   "#shorts",
+   "#sportssprint"
+  ]
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "story",
+  "opener": "wide-drift",
+  "reveal": "flag-lift",
+  "beats": [
+   "pin",
+   "counter",
+   "second-highlight"
+  ],
+  "cast": "flagball:gr-happy + emoji-set:olympics (medal, stadium, runner)",
+  "music": "bed:pad"
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "id": "ep15-no-rivers-saudi-arabia",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 15,
+ "title": "Which country has NO rivers at all?",
+ "difficulty": "MEDIUM",
+ "seed": 1015,
+ "quiz": {
+  "question": "Which country has NO rivers at all?",
+  "keyword": "NO",
+  "options": [
+   "Egypt",
+   "Saudi Arabia",
+   "Mongolia"
+  ],
+  "correct": 1,
+  "beat": 3.0,
+  "answer_line": "Saudi Arabia",
+  "answer_sub": "not one permanent river",
+  "option_meta": [
+   {
+    "flag": "eg"
+   },
+   {
+    "flag": "sa"
+   },
+   {
+    "flag": "mn"
+   }
+  ],
+  "banner": "Saudi Arabia",
+  "banner_sub": "✓  B was right · zero rivers",
+  "outro": {
+   "headline": "1 FOR 1?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "story",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country has NO rivers at all?",
+  "description": "Which country has NO rivers at all? Guess first — then fly from a dry wadi to the Empty Quarter, where nothing flows at all.\n\nWhat was your first guess?\n\nSources: Britannica (Saudi Arabia: Drainage), Wikipedia (Saudi Arabia; Arabian Peninsula; Rub' al Khali), GeographyWorlds, The Environmental Blog.\nMap data: Natural Earth (public domain) · imagery NASA Blue Marble. Voice: AI (Kokoro).\n\nGeo Blitz #15",
+  "hashtags": [
+   "#GKshorts",
+   "#thequizwire",
+   "#shorts",
+   "#geoblitz"
+  ]
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "story",
+  "opener": "globe-spin",
+  "reveal": "flag-lift",
+  "beats": [
+   "label",
+   "pin",
+   "counter"
+  ],
+  "cast": "flagball:cool + emoji-set:desert",
+  "music": "bed:pad"
+ }
+}

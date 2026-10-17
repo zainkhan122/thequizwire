@@ -1,0 +1,256 @@
+{
+ "version": 1,
+ "episode": "ep11-first-modern-olympics-athens",
+ "topic": "Where were the first modern Olympics held? (Athens, 1896)",
+ "researched": "2026-10-17",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "sources": {
+  "ioc_1896": {
+   "type": "primary",
+   "publisher": "International Olympic Committee (olympics.com)",
+   "title": "Athens 1896 Summer Olympics",
+   "url": "https://www.olympics.com/en/olympic-games/athens-1896",
+   "date": "2023-09-26",
+   "notes": "6–15 April 1896; 241 athletes; 14 teams; 43 events; James Connolly first modern champion"
+  },
+  "wiki_1896": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "1896 Summer Olympics",
+   "url": "https://en.wikipedia.org/wiki/1896_Summer_Olympics",
+   "date": "2026-10-03",
+   "notes": "Athens, Greece; 14 nations; 241 athletes, all men; 43 events in 9 sports; Panathenaic Stadium; winners received silver, runners-up copper"
+  },
+  "wiki_medals": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "1896 Summer Olympics medal table",
+   "url": "https://en.wikipedia.org/wiki/1896_Summer_Olympics_medal_table",
+   "date": "2026-04-16",
+   "notes": "241 athletes, 14 nations, 43 events in nine sports"
+  },
+  "cbc_1896": {
+   "type": "press",
+   "publisher": "CBC Sports",
+   "title": "1896: Athens, Greece",
+   "url": "https://www.cbc.ca/sports/2.720/1896-athens-greece-1.1261176",
+   "date": "2012-06-19",
+   "notes": "14 countries, 241 athletes all men; women first competed in 1900 (Paris)"
+  },
+  "wiki_games": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Olympic Games",
+   "url": "https://en.wikipedia.org/wiki/Olympic_Games",
+   "date": "2026-10-07",
+   "notes": "first IOC Games at the Panathenaic Stadium, Athens, 1896; 14 nations, 241 athletes, 43 events"
+  },
+  "wiki_pana": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Panathenaic Stadium",
+   "url": "https://en.wikipedia.org/wiki/Panathenaic_Stadium",
+   "date": "2026-09-01",
+   "notes": "the only stadium in the world built entirely of marble; hosted the 1896 Games"
+  },
+  "wiki_medal_hist": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Olympic medal",
+   "url": "https://en.wikipedia.org/wiki/Olympic_medal",
+   "date": "2026-09-01",
+   "notes": "1896: silver for first, copper/bronze for second; gold–silver–bronze introduced at St. Louis 1904"
+  },
+  "wiki_1900": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "1900 Summer Olympics / 1908 Summer Olympics",
+   "url": "https://en.wikipedia.org/wiki/1900_Summer_Olympics",
+   "date": "2026-09-01",
+   "notes": "Paris 1900 second Games (first women competitors); London 1908 fourth Games"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 – Countries (public domain)",
+   "url": "https://www.naturalearthdata.com/",
+   "date": "2024-01-01",
+   "notes": "base map, borders, disputed areas"
+  },
+  "britannica_pana": {
+   "type": "reference",
+   "publisher": "Britannica",
+   "title": "Panathenaic Stadium",
+   "url": "https://www.britannica.com/place/Panathenaic-Stadium",
+   "date": "2026-10-01",
+   "notes": "ancient stadium rebuilt in white Pentelic marble for the 1896 Games"
+  },
+  "ioc_medals": {
+   "type": "primary",
+   "publisher": "International Olympic Committee (olympics.com)",
+   "title": "Olympic medals – history",
+   "url": "https://www.olympics.com/ioc/olympic-medals",
+   "date": "2024-01-01",
+   "notes": "Athens 1896 winners received a silver medal and an olive branch; gold, silver and bronze first awarded at St. Louis 1904"
+  }
+ },
+ "claims": [
+  {
+   "id": "c1",
+   "text": "The first modern Olympic Games were held in Athens, 6–15 April 1896",
+   "sources": [
+    "ioc_1896",
+    "wiki_1896",
+    "wiki_games",
+    "cbc_1896"
+   ],
+   "weight": "core",
+   "vo": [
+    "athens. the first modern olympics, in a stadium built entirely of marble",
+    "april, eighteen ninety six. the games are back after fifteen centuries. where"
+   ],
+   "screen": [
+    "ATHENS 1896",
+    "Athens",
+    "Athens · Panathenaic Stadium",
+    "April 1896 · 14 nations"
+   ]
+  },
+  {
+   "id": "c2",
+   "text": "241 athletes from 14 nations competed in 43 events; all were men",
+   "sources": [
+    "ioc_1896",
+    "wiki_1896",
+    "cbc_1896"
+   ],
+   "weight": "core",
+   "vo": [
+    "two hundred and forty one athletes, fourteen nations, and not a single woman"
+   ],
+   "screen": [
+    "14 NATIONS",
+    "43 events · zero women",
+    "athletes, all men"
+   ]
+  },
+  {
+   "id": "c3",
+   "text": "The main venue, the Panathenaic Stadium, is built entirely of marble",
+   "sources": [
+    "wiki_pana",
+    "britannica_pana",
+    "wiki_games"
+   ],
+   "weight": "detail",
+   "vo": [
+    "athens. the first modern olympics, in a stadium built entirely of marble"
+   ],
+   "screen": [
+    "a stadium built of marble"
+   ]
+  },
+  {
+   "id": "c4",
+   "text": "In 1896 winners received silver medals; gold–silver–bronze began in 1904",
+   "sources": [
+    "ioc_medals",
+    "wiki_1896",
+    "wiki_medal_hist"
+   ],
+   "weight": "detail",
+   "vo": [
+    "winners got silver, not gold. gold only arrived in nineteen oh four"
+   ],
+   "screen": [
+    "SILVER FOR 1ST",
+    "gold only arrived in 1904"
+   ]
+  },
+  {
+   "id": "c5",
+   "text": "Paris hosted the 1900 Games and London the 1908 Games",
+   "sources": [
+    "wiki_1900",
+    "cbc_1896"
+   ],
+   "weight": "detail",
+   "vo": [
+    "paris hosted next in nineteen hundred, then london in nineteen oh eight"
+   ],
+   "screen": [
+    "NEXT HOSTS",
+    "Paris 1900 · London 1908",
+    "Paris 1900",
+    "London 1908"
+   ]
+  }
+ ],
+ "myths": [
+  {
+   "myth": "The first modern Olympic winners received gold medals.",
+   "reality": "In 1896 winners got silver and runners-up copper; gold–silver–bronze started at St. Louis 1904.",
+   "sources": [
+    "wiki_1896",
+    "wiki_medal_hist"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^One map question a day",
+  "^Next:",
+  "^Tomorrow:",
+  "^USA$",
+  "^Pacific$",
+  "^Indian Ocean$",
+  "^0$",
+  "^SPORTS SPRINT",
+  "^Aegean Sea$",
+  "^Mediterranean Sea$"
+ ],
+ "landscape": {
+  "our_gap": "Feed versions show the Olympic rings over stadium footage; nobody drops onto Athens on a satellite map, counts the 241 men up, and then lights Paris and London as the next two hosts.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/@thequizwire-com/shorts",
+    "title": "Feed Sports Sprint (own channel, v1)",
+    "angle": "card over b-roll",
+    "misses": "no map, no numbers, no sources"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=first+modern+olympics+1896+shorts",
+    "title": "Search results: first modern Olympics",
+    "angle": "archive photos + narration",
+    "misses": "no quiz, no map"
+   },
+   {
+    "url": "https://www.olympics.com/en/olympic-games/athens-1896",
+    "title": "olympics.com Athens 1896 page",
+    "angle": "official stats page",
+    "misses": "not a video, no hook"
+   }
+  ]
+ },
+ "vo_exempt": [
+  "^paris, athens, or london\\?$",
+  "^got it right\\?",
+  "^like, subscribe, and challenge a friend"
+ ]
+}
