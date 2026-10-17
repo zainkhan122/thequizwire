@@ -127,7 +127,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-17T05:40:26+00:00"
+   "refreshed_at": "2026-10-17T13:01:30+00:00"
   },
   {
    "episode": "ep08-most-wild-tigers-india",
@@ -143,7 +143,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-17T05:40:28+00:00"
+   "refreshed_at": "2026-10-17T13:01:32+00:00"
   },
   {
    "episode": "ep09-galapagos-penguin-equator",
@@ -159,7 +159,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-17T05:40:30+00:00"
+   "refreshed_at": "2026-10-17T13:01:34+00:00"
   },
   {
    "episode": "ep10-nile-basin-countries",
@@ -431,7 +431,7 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-17T05:40:30+00:00",
+   "refreshed_at": "2026-10-17T13:01:34+00:00",
    "error": "It looks like there was an issue with the media attached to this post. Please check to ensure the media meets all specifications."
   },
   {
@@ -608,55 +608,55 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-17T05:40:32+00:00"
+   "refreshed_at": "2026-10-17T13:01:36+00:00"
   },
   {
    "episode": "ep07-arctic-tern-migration",
    "platform": "instagram",
    "post_id": "6ad1f63458fcf4d767df9576",
    "channel_id": "695bfd29457dae6a34df0f74",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/3b3ef16a1c19/Which-bird-migrates-the-FARTHEST.mp4",
    "due_at": "2026-10-17T09:34:00.000Z",
    "created_at": "2026-10-16T10:02:28.113Z",
    "recorded_at": "2026-10-16T10:02:28+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-17T05:40:32+00:00"
+   "sent_at": "2026-10-17T09:36:56.950Z",
+   "external_link": "https://www.instagram.com/reel/DelzHKYjkbd/",
+   "refreshed_at": "2026-10-17T13:01:36+00:00"
   },
   {
    "episode": "ep07-arctic-tern-migration",
    "platform": "facebook",
    "post_id": "6ad1f63658fcf4d767df987d",
    "channel_id": "695a159a457dae6a34d901bc",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/3b3ef16a1c19/Which-bird-migrates-the-FARTHEST.mp4",
    "due_at": "2026-10-17T09:34:00.000Z",
    "created_at": "2026-10-16T10:02:29.995Z",
    "recorded_at": "2026-10-16T10:02:30+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-17T05:40:34+00:00"
+   "sent_at": "2026-10-17T09:34:08.659Z",
+   "external_link": "https://www.facebook.com/reel/1408666080939471/",
+   "refreshed_at": "2026-10-17T13:01:38+00:00"
   },
   {
    "episode": "ep07-arctic-tern-migration",
    "platform": "twitter",
    "post_id": "6ad1f637aecfd112ce6d06bc",
    "channel_id": "69f30e2a5c4c051afaf58634",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/3b3ef16a1c19/Which-bird-migrates-the-FARTHEST.mp4",
    "due_at": "2026-10-17T09:34:00.000Z",
    "created_at": "2026-10-16T10:02:31.982Z",
    "recorded_at": "2026-10-16T10:02:32+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-17T05:40:36+00:00"
+   "sent_at": "2026-10-17T09:34:10.768Z",
+   "external_link": "https://x.com/2049746939164676096/status/2111390302736884186",
+   "refreshed_at": "2026-10-17T13:01:40+00:00"
   },
   {
    "episode": "ep07-arctic-tern-migration",
@@ -672,55 +672,55 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-17T05:40:36+00:00"
+   "refreshed_at": "2026-10-17T13:01:40+00:00"
   },
   {
    "episode": "ep08-most-wild-tigers-india",
    "platform": "instagram",
    "post_id": "6ad1f63bbbb9ce09f66a7edc",
    "channel_id": "695bfd29457dae6a34df0f74",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/f92fa3eb6aca/Which-country-has-the-most-wild-TIGERS.mp4",
    "due_at": "2026-10-17T12:50:00.000Z",
    "created_at": "2026-10-16T10:02:35.394Z",
    "recorded_at": "2026-10-16T10:02:35+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-17T05:40:38+00:00"
+   "sent_at": "2026-10-17T12:50:59.047Z",
+   "external_link": "https://www.instagram.com/reel/DemJb5AjoWT/",
+   "refreshed_at": "2026-10-17T13:01:42+00:00"
   },
   {
    "episode": "ep08-most-wild-tigers-india",
    "platform": "facebook",
    "post_id": "6ad1f63baa117851c0f045cc",
    "channel_id": "695a159a457dae6a34d901bc",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/f92fa3eb6aca/Which-country-has-the-most-wild-TIGERS.mp4",
    "due_at": "2026-10-17T12:50:00.000Z",
    "created_at": "2026-10-16T10:02:35.979Z",
    "recorded_at": "2026-10-16T10:02:36+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-17T05:40:40+00:00"
+   "sent_at": "2026-10-17T12:50:12.914Z",
+   "external_link": "https://www.facebook.com/reel/1120587200374342/",
+   "refreshed_at": "2026-10-17T13:01:44+00:00"
   },
   {
    "episode": "ep08-most-wild-tigers-india",
    "platform": "twitter",
    "post_id": "6ad1f63d13b2adf724a03220",
    "channel_id": "69f30e2a5c4c051afaf58634",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/f92fa3eb6aca/Which-country-has-the-most-wild-TIGERS.mp4",
    "due_at": "2026-10-17T12:50:00.000Z",
    "created_at": "2026-10-16T10:02:37.973Z",
    "recorded_at": "2026-10-16T10:02:38+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-17T05:40:42+00:00"
+   "sent_at": "2026-10-17T12:50:13.493Z",
+   "external_link": "https://x.com/2049746939164676096/status/2111439639089234198",
+   "refreshed_at": "2026-10-17T13:01:46+00:00"
   },
   {
    "episode": "ep08-most-wild-tigers-india",
@@ -736,7 +736,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-17T05:40:42+00:00"
+   "refreshed_at": "2026-10-17T13:01:46+00:00"
   },
   {
    "episode": "ep09-galapagos-penguin-equator",
@@ -752,7 +752,7 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-17T05:40:44+00:00"
+   "refreshed_at": "2026-10-17T13:01:48+00:00"
   },
   {
    "episode": "ep09-galapagos-penguin-equator",
@@ -768,7 +768,7 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-17T05:40:46+00:00"
+   "refreshed_at": "2026-10-17T13:01:50+00:00"
   },
   {
    "episode": "ep09-galapagos-penguin-equator",
@@ -784,7 +784,7 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-17T05:40:48+00:00"
+   "refreshed_at": "2026-10-17T13:01:52+00:00"
   },
   {
    "episode": "ep09-galapagos-penguin-equator",
@@ -800,7 +800,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-17T05:40:48+00:00"
+   "refreshed_at": "2026-10-17T13:01:52+00:00"
   }
  ]
 }
