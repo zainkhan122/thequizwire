@@ -118,48 +118,48 @@
    "platform": "youtube",
    "post_id": "6ad1f3af13b2adf7249f51cb",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/3b3ef16a1c19/Which-bird-migrates-the-FARTHEST.mp4",
    "due_at": "2026-10-17T13:01:00.000Z",
    "created_at": "2026-10-16T09:51:43.065Z",
    "recorded_at": "2026-10-16T09:51:43+00:00",
    "title": "Which bird migrates the FARTHEST? 🐦 | Animal Quiz",
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-17T13:01:30+00:00"
+   "sent_at": "2026-10-17T13:03:15.101Z",
+   "external_link": "https://www.youtube.com/shorts/17HuwomVQqs",
+   "refreshed_at": "2026-10-17T19:18:53+00:00"
   },
   {
    "episode": "ep08-most-wild-tigers-india",
    "platform": "youtube",
    "post_id": "6ad1f3b6bbb9ce09f669a6d9",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/f92fa3eb6aca/Which-country-has-the-most-wild-TIGERS.mp4",
    "due_at": "2026-10-17T13:25:00.000Z",
    "created_at": "2026-10-16T09:51:50.749Z",
    "recorded_at": "2026-10-16T09:51:50+00:00",
    "title": "Which country has the most wild TIGERS? 🐅 | Animal Quiz",
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-17T13:01:32+00:00"
+   "sent_at": "2026-10-17T13:25:04.220Z",
+   "external_link": "https://www.youtube.com/shorts/fctqWgJUWUs",
+   "refreshed_at": "2026-10-17T19:18:55+00:00"
   },
   {
    "episode": "ep09-galapagos-penguin-equator",
    "platform": "youtube",
    "post_id": "6ad1f3bd58fcf4d767dec37e",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/2ab6d6d77a9c/Where-do-PENGUINS-live-on-the-equator.mp4",
    "due_at": "2026-10-17T13:36:00.000Z",
    "created_at": "2026-10-16T09:51:57.898Z",
    "recorded_at": "2026-10-16T09:51:58+00:00",
    "title": "Where do PENGUINS live on the equator? 🐧 | Animal Quiz",
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-17T13:01:34+00:00"
+   "sent_at": "2026-10-17T13:36:05.934Z",
+   "external_link": "https://www.youtube.com/shorts/finC7MGdZLY",
+   "refreshed_at": "2026-10-17T19:18:57+00:00"
   },
   {
    "episode": "ep10-nile-basin-countries",
@@ -431,7 +431,7 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-17T13:01:34+00:00",
+   "refreshed_at": "2026-10-17T19:18:58+00:00",
    "error": "It looks like there was an issue with the media attached to this post. Please check to ensure the media meets all specifications."
   },
   {
@@ -599,16 +599,16 @@
    "platform": "threads",
    "post_id": "6ad1f632aecfd112ce6d04f1",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/c77493bd0ce6/Which-Grand-Slam-is-still-played-on-GRASS.mp4",
    "due_at": "2026-10-17T13:25:00.000Z",
    "created_at": "2026-10-16T10:02:26.574Z",
    "recorded_at": "2026-10-16T10:02:26+00:00",
    "title": null,
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-17T13:01:36+00:00"
+   "sent_at": "2026-10-17T13:25:44.840Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DemNcecCrqi",
+   "refreshed_at": "2026-10-17T19:18:59+00:00"
   },
   {
    "episode": "ep07-arctic-tern-migration",
@@ -663,16 +663,16 @@
    "platform": "threads",
    "post_id": "6ad1f638c0accac7dac81c23",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/3b3ef16a1c19/Which-bird-migrates-the-FARTHEST.mp4",
    "due_at": "2026-10-17T13:36:00.000Z",
    "created_at": "2026-10-16T10:02:32.494Z",
    "recorded_at": "2026-10-16T10:02:32+00:00",
    "title": null,
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-17T13:01:40+00:00"
+   "sent_at": "2026-10-17T13:36:46.085Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DemOtTYgevI",
+   "refreshed_at": "2026-10-17T19:19:01+00:00"
   },
   {
    "episode": "ep08-most-wild-tigers-india",
@@ -727,80 +727,80 @@
    "platform": "threads",
    "post_id": "6ad1f63eaa117851c0f04676",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/f92fa3eb6aca/Which-country-has-the-most-wild-TIGERS.mp4",
    "due_at": "2026-10-17T14:03:00.000Z",
    "created_at": "2026-10-16T10:02:38.326Z",
    "recorded_at": "2026-10-16T10:02:38+00:00",
    "title": null,
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-17T13:01:46+00:00"
+   "sent_at": "2026-10-17T14:04:26.835Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DemR3vHAe0X",
+   "refreshed_at": "2026-10-17T19:19:03+00:00"
   },
   {
    "episode": "ep09-galapagos-penguin-equator",
    "platform": "instagram",
    "post_id": "6ad1f64058fcf4d767df9b38",
    "channel_id": "695bfd29457dae6a34df0f74",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/2ab6d6d77a9c/Where-do-PENGUINS-live-on-the-equator.mp4",
    "due_at": "2026-10-17T13:21:00.000Z",
    "created_at": "2026-10-16T10:02:40.190Z",
    "recorded_at": "2026-10-16T10:02:40+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-17T13:01:48+00:00"
+   "sent_at": "2026-10-17T13:21:59.197Z",
+   "external_link": "https://www.instagram.com/reel/DemM_FnCstx/",
+   "refreshed_at": "2026-10-17T19:19:04+00:00"
   },
   {
    "episode": "ep09-galapagos-penguin-equator",
    "platform": "facebook",
    "post_id": "6ad1f64113b2adf724a03579",
    "channel_id": "695a159a457dae6a34d901bc",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/2ab6d6d77a9c/Where-do-PENGUINS-live-on-the-equator.mp4",
    "due_at": "2026-10-17T13:21:00.000Z",
    "created_at": "2026-10-16T10:02:41.949Z",
    "recorded_at": "2026-10-16T10:02:42+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-17T13:01:50+00:00"
+   "sent_at": "2026-10-17T13:21:13.354Z",
+   "external_link": "https://www.facebook.com/reel/1791362458837718/",
+   "refreshed_at": "2026-10-17T19:19:06+00:00"
   },
   {
    "episode": "ep09-galapagos-penguin-equator",
    "platform": "twitter",
    "post_id": "6ad1f644aa117851c0f04b78",
    "channel_id": "69f30e2a5c4c051afaf58634",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/2ab6d6d77a9c/Where-do-PENGUINS-live-on-the-equator.mp4",
    "due_at": "2026-10-17T13:21:00.000Z",
    "created_at": "2026-10-16T10:02:44.173Z",
    "recorded_at": "2026-10-16T10:02:44+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-17T13:01:52+00:00"
+   "sent_at": "2026-10-17T13:21:14.464Z",
+   "external_link": "https://x.com/2049746939164676096/status/2111447444659532260",
+   "refreshed_at": "2026-10-17T19:19:08+00:00"
   },
   {
    "episode": "ep09-galapagos-penguin-equator",
    "platform": "threads",
    "post_id": "6ad1f644bbb9ce09f66a8355",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/2ab6d6d77a9c/Where-do-PENGUINS-live-on-the-equator.mp4",
    "due_at": "2026-10-17T14:20:00.000Z",
    "created_at": "2026-10-16T10:02:44.755Z",
    "recorded_at": "2026-10-16T10:02:44+00:00",
    "title": null,
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-17T13:01:52+00:00"
+   "sent_at": "2026-10-17T14:20:44.698Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DemTvQJDRuo",
+   "refreshed_at": "2026-10-17T19:19:08+00:00"
   },
   {
    "episode": "ep15-no-rivers-saudi-arabia",
@@ -813,7 +813,10 @@
    "created_at": "2026-10-17T18:57:32.195Z",
    "recorded_at": "2026-10-17T18:57:32+00:00",
    "title": "Which country has NO rivers at all? 🌍 | Geography Quiz",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-17T19:19:10+00:00"
   },
   {
    "episode": "ep15-no-rivers-saudi-arabia",
@@ -826,7 +829,10 @@
    "created_at": "2026-10-17T18:57:32.600Z",
    "recorded_at": "2026-10-17T18:57:32+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-17T19:19:10+00:00"
   },
   {
    "episode": "ep15-no-rivers-saudi-arabia",
@@ -839,7 +845,10 @@
    "created_at": "2026-10-17T18:57:34.660Z",
    "recorded_at": "2026-10-17T18:57:34+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-17T19:19:12+00:00"
   },
   {
    "episode": "ep15-no-rivers-saudi-arabia",
@@ -852,7 +861,10 @@
    "created_at": "2026-10-17T18:57:36.629Z",
    "recorded_at": "2026-10-17T18:57:36+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-17T19:19:14+00:00"
   },
   {
    "episode": "ep15-no-rivers-saudi-arabia",
@@ -865,7 +877,10 @@
    "created_at": "2026-10-17T18:57:37.066Z",
    "recorded_at": "2026-10-17T18:57:37+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-17T19:19:14+00:00"
   },
   {
    "episode": "ep11-first-modern-olympics-athens",
@@ -878,7 +893,10 @@
    "created_at": "2026-10-17T18:57:39.509Z",
    "recorded_at": "2026-10-17T18:57:39+00:00",
    "title": "Where were the FIRST modern Olympics held? 🏅 | Sports Quiz",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-17T19:19:16+00:00"
   },
   {
    "episode": "ep11-first-modern-olympics-athens",
@@ -891,7 +909,10 @@
    "created_at": "2026-10-17T18:57:39.904Z",
    "recorded_at": "2026-10-17T18:57:40+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-17T19:19:16+00:00"
   },
   {
    "episode": "ep11-first-modern-olympics-athens",
@@ -904,7 +925,10 @@
    "created_at": "2026-10-17T18:57:41.998Z",
    "recorded_at": "2026-10-17T18:57:42+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-17T19:19:18+00:00"
   },
   {
    "episode": "ep11-first-modern-olympics-athens",
@@ -917,7 +941,10 @@
    "created_at": "2026-10-17T18:57:43.933Z",
    "recorded_at": "2026-10-17T18:57:44+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-17T19:19:20+00:00"
   },
   {
    "episode": "ep11-first-modern-olympics-athens",
@@ -930,7 +957,10 @@
    "created_at": "2026-10-17T18:57:44.404Z",
    "recorded_at": "2026-10-17T18:57:44+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-17T19:19:20+00:00"
   }
  ]
 }
