@@ -51,7 +51,15 @@
    "#thequizwire",
    "#shorts",
    "#sportssprint"
-  ]
+  ],
+  "cover": {
+   "headline_text": "April 1896. The Games are back after 1,500 years. Where?",
+   "highlight": [
+    "1896"
+   ],
+   "tint": "navy",
+   "sticker_side": "left"
+  }
  },
  "variety": {
   "question": "where-is",

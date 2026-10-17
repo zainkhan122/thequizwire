@@ -51,7 +51,16 @@
    "#thequizwire",
    "#shorts",
    "#geoblitz"
-  ]
+  ],
+  "cover": {
+   "headline_text": "A whole kingdom, and not ONE river runs through it. Which country?",
+   "highlight": [
+    "ONE",
+    "river"
+   ],
+   "tint": "series",
+   "sticker_side": "right"
+  }
  },
  "variety": {
   "question": "which-country",

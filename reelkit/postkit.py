@@ -164,7 +164,7 @@ def build(ep):
     ig_caption = "\n".join(ig_lines)
     ig_first = ("📚 Sources: " + (" · ".join(srcs) if srcs else "see the video credits") + f"\n🗺️ Map data: Natural Earth · NASA Blue Marble · 🎙️ AI narration (Kokoro)\nMore quizzes: {site}") if first_comment else ""
     ig = {"caption": ig_caption, "firstComment": ig_first, "hashtags": ig_tags, "shouldShareToFeed": True,
-          "isAiGenerated": bool(CFG["disclosure"]["instagram_is_ai_generated"]), "thumbnailOffsetMs": 2000}
+          "isAiGenerated": bool(CFG["disclosure"]["instagram_is_ai_generated"]), "thumbnailOffsetMs": 0}   # frame 0 = the burned-in cover (reelkit/cover.py --burn)
 
     # ---- Facebook (reel)
     fb_tags = hashtags_for(E, S, "facebook", 3)

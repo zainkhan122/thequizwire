@@ -54,6 +54,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Cover toolchain (Pillow + cairosvg; ffmpeg ships with the runner)
+        run: |
+          python3 -m pip install -q pillow cairosvg 2>/dev/null || python3 -m pip install -q --break-system-packages pillow cairosvg
+          command -v ffmpeg >/dev/null || sudo apt-get install -y -qq ffmpeg >/dev/null
+          python3 -c "import PIL, cairosvg; print('cover deps ok')"
       - name: Preflight
         run: |
           [ -n "$MEDIA_TOKEN" ] || { echo "::error::MEDIA_TOKEN secret missing (fine-grained PAT for the public media repo)"; exit 1; }

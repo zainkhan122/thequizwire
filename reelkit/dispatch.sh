@@ -38,7 +38,14 @@ for EP in "${EPS[@]}"; do
     REL="$(fetch_release "$T" || true)"; [ -n "$REL" ] && [ -f "$REL/$STEM.mp4" ] && { MP4="$REL/$STEM.mp4"; echo "   render: release $T"; break; }
   done
   if [ -z "$MP4" ]; then echo "   no $STEM.mp4 in release(s) — not rendered, skipping"; echo "| $NAME | not rendered | — | — | — | — | — |" >> "$SUMMARY"; continue; fi
-  mkdir -p "$EP/out"; cp "$MP4" "$EP/out/final.mp4"
+  mkdir -p "$EP/out"; cp "$MP4" "$EP/out/render.mp4"
+  # cover: design → first 0.3 s of the master (frame-0 cover on IG/FB/X/Threads) + JPG for the YouTube thumbnail
+  if python3 "$REPO/reelkit/cover.py" "$EP" --video "$EP/out/render.mp4" --jpg "$EP/out/${STEM}_cover.jpg" --burn "$EP/out/final.mp4" > "$EP/out/cover.log" 2>&1; then
+    echo "   cover: burned in ($(tail -1 "$EP/out/cover.log"))"
+    [ -n "${TAG:-}" ] && [ -n "${GH_TOKEN:-}" ] && gh release upload "$TAG" "$EP/out/${STEM}_cover.jpg" --clobber >/dev/null 2>&1 && echo "   cover: ${STEM}_cover.jpg attached to release $TAG"
+  else
+    echo "::warning::$NAME: cover failed — posting the plain render"; tail -3 "$EP/out/cover.log"; cp "$EP/out/render.mp4" "$EP/out/final.mp4"
+  fi
   if ! python3 "$REPO/reelkit/postkit.py" build "$EP" > "$EP/out/postkit.log" 2>&1; then echo "   postkit FAIL"; tail -5 "$EP/out/postkit.log"; echo "| $NAME | postkit FAIL | — | — | — | — | — |" >> "$SUMMARY"; FAILS=$((FAILS+1)); continue; fi
   grep -E "WARN|FAIL" "$EP/out/postkit.log" | sed 's/^/   /'
   rm -f "$EP/out/media_url.txt"; CAND+=("$EP")

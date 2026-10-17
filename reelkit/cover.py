@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 """Cover image (thumbnail) for an episode — 1080×1920 PNG built from the episode's own frame 0 + brand system.
 
-  python3 reelkit/cover.py <ep> [--style a|b|c] [--frame PNG] [--video MP4] [--out PNG] [--sheet]
+  python3 reelkit/cover.py <ep> [--style a|b|c] [--frame PNG] [--video MP4] [--out PNG] [--jpg JPG] [--burn MP4]
+
+Variety (so covers are not one template): the card headline is the episode's own HOOK line for story/fact/misconception/
+challenge hooks (else the question); sticker side, card tint (ink/navy/series), background crop and blur rotate per
+episode seed. Authors can pin any of these in episode.json → post.cover {headline: hook|question, sticker_side, tint,
+bg_anchor, blur, highlight:[words], headline_text: 'written hook (digits, dashes)'}.
 
 Why: Instagram/Facebook/X/Threads show frame 0 of a reel as its cover; YouTube picks a frame unless a thumbnail is set.
 The approved cover is (1) burned in as the first frames of the master (so every network's auto-cover IS the design) and
@@ -221,8 +226,39 @@ def context(ep, frame=None, video=None):
     cp = emoji_cp(emoji) if emoji else (stickers[0] if stickers else emoji_cp(pub.get("emoji", "❓")))
     bg = Image.open(frame).convert("RGB") if frame else frame0(ep, video)
     if bg is None: bg = Image.new("RGB", (W, H), DARK)
-    return {"E": E, "Q": Q, "S": S, "cp": cp, "bg": bg, "number": E.get("number", ""), "seed": int(E.get("seed", 1)),
+    hook = ""
+    vp = ep / "voice.json"
+    if vp.exists():
+        for l in json.loads(vp.read_text()).get("lines", []):
+            if l.get("role") == "hook": hook = (l.get("text") or "").strip(); break
+    seed = int(E.get("seed", 1)); rnd = random.Random(seed)
+    cv = dict((E.get("post") or {}).get("cover") or {})                       # authored overrides (post.cover) win over the seed
+    cv.setdefault("headline", "hook" if (E.get("hook_type") in ("story", "fact-first", "misconception", "challenge") and 24 <= len(hook) <= 90) else "question")
+    cv.setdefault("sticker_side", rnd.choice(["right", "left"]))
+    cv.setdefault("tint", rnd.choice(["ink", "ink", "series", "navy"]))
+    cv.setdefault("bg_anchor", rnd.choice([(0.5, 0.5), (0.35, 0.45), (0.65, 0.55), (0.5, 0.3)]))
+    cv.setdefault("blur", rnd.choice([5, 7, 9]))
+    cv.setdefault("highlight", [])
+    return {"E": E, "Q": Q, "S": S, "cp": cp, "bg": bg, "number": E.get("number", ""), "seed": seed, "hook": hook, "cover": cv,
             "options": Q.get("options", []), "meta": Q.get("option_meta") or [{} for _ in Q.get("options", [])]}
+
+
+def headline_of(C):
+    """What the card says. 'hook' = the episode's own opening line (its strong opening, not the generic question);
+    the quiz keyword (or post.cover.highlight words) go yellow. Falls back to the question."""
+    cv = C["cover"]
+    if cv.get("headline_text"):                                   # written form of the hook (numbers as digits, etc.)
+        text = cv["headline_text"]; kw = " ".join(cv["highlight"]) or (C["Q"].get("keyword") or "")
+        return text, kw
+    if cv["headline"] == "hook" and C["hook"]:
+        text = C["hook"].rstrip()
+        kw = " ".join(cv["highlight"]) if cv["highlight"] else (C["Q"].get("keyword") or "")
+        if not kw or not any(w.upper() in text.upper().split() for w in kw.split()):
+            # pick the most 'loaded' word of the hook: longest word that is not a stopword/number
+            cand = [w.strip(".,!?:;") for w in text.split() if w.strip(".,!?:;").lower() not in STOPWORDS and len(w) > 3]
+            kw = max(cand, key=len) if cand else ""
+        return text, kw
+    return C["Q"]["question"], C["Q"].get("keyword")
 
 
 # ---------------------------------------------------------------- styles
@@ -242,18 +278,23 @@ def style_a(C):
 
 def style_b(C):
     """APPROVED 2026-10-16 (owner): quiz card without the 3-second ring/sub-lines — question + the three options, nothing else."""
-    bg = cover_fit(C["bg"], 1.28).filter(ImageFilter.GaussianBlur(7)); im = bg.convert("RGBA"); darken(im, 0, H, 120, 170)
+    cv = C["cover"]
+    bg = cover_fit(C["bg"], 1.28, anchor=tuple(cv["bg_anchor"])).filter(ImageFilter.GaussianBlur(cv["blur"])); im = bg.convert("RGBA"); darken(im, 0, H, 120, 170)
     color = hex_rgb(C["S"]["color"])
+    card_fill = {"ink": (16, 17, 22, 222), "navy": (12, 22, 44, 226), "series": tuple(int(c * 0.22) for c in color) + (228,)}[cv["tint"]]
     cx0, cx1 = 64, W - 64
-    f, lines = fit_question(C["Q"]["question"], C["Q"].get("keyword"), 118, 820, 4)
+    text, kw = headline_of(C)
+    f, lines = fit_question(text, kw, 118, 820, 4)
     text_h = int(f.size * 1.02) * len(lines)
     card_h = 236 + text_h + 56 + 2 * 150 + 118 + 72                                       # chip/sticker head · question · 3 pills · padding
     cy0 = max(230, (H - card_h) // 2 - 80); cy1 = cy0 + card_h                            # card sits a little above centre, logo beneath
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(layer)        # translucent shapes are blended via a layer
-    d.rounded_rectangle((cx0, cy0, cx1, cy1), 60, fill=(16, 17, 22, 222), outline=(255, 255, 255, 60), width=3)
+    d.rounded_rectangle((cx0, cy0, cx1, cy1), 60, fill=card_fill, outline=(255, 255, 255, 60), width=3)
     d.rounded_rectangle((cx0 + 48, cy0, cx1 - 48, cy0 + 12), 6, fill=color + (255,))
     im.alpha_composite(layer)
-    series_chip(im, (cx0 + 52, cy0 + 56), C["S"], C["number"], color)
+    if cv["sticker_side"] == "left":
+        chip_w = int(anton(40).getlength(f"{C['S']['name'].upper()}  ·  #{C['number']}") + 64); series_chip(im, (cx1 - 52 - chip_w, cy0 + 56), C["S"], C["number"], color)
+    else: series_chip(im, (cx0 + 52, cy0 + 56), C["S"], C["number"], color)
     y = draw_question(im, lines, f, cy0 + 236, WHITE + (255,), YELLOW + (255,), 6, (10, 10, 12, 255), left=cx0 + 48, max_w=cx1 - cx0 - 96, line_h=1.02, shadow=False)
     y += 56
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(layer)
@@ -265,7 +306,8 @@ def style_b(C):
         if meta.get("flag"): fg = flag(meta["flag"]); layer.alpha_composite(fg, (tx, py + 28)); tx += fg.width + 22
         d.text((tx, py + 24), name, font=fo, fill=WHITE + (255,))
     im.alpha_composite(layer)
-    st = sticker(C["cp"], 250, rotate=12); im.alpha_composite(st, (W - st.width + 24, cy0 - 150))   # clears the first question line
+    if cv["sticker_side"] == "left": st = sticker(C["cp"], 250, rotate=-12); im.alpha_composite(st, (-24, cy0 - 150))
+    else: st = sticker(C["cp"], 250, rotate=12); im.alpha_composite(st, (W - st.width + 24, cy0 - 150))   # clears the first question line
     logo_bug(im, (W // 2, min(cy1 + 90, 1740)), 84, align="center")
     return im
 
@@ -322,16 +364,37 @@ STYLES = {"a": style_a, "b": style_b, "c": style_c}
 DEFAULT_STYLE = "b"          # owner-approved 2026-10-16 (quiz card, no timer ring); a/c kept as alternates
 
 
+def ffmpeg_exe():
+    try: import imageio_ffmpeg; return imageio_ffmpeg.get_ffmpeg_exe()
+    except ImportError: return "ffmpeg"
+
+
+def burn(video, cover, out, secs=0.3, fps=30):
+    """Prepend the cover as the first `secs` of the master (audio delayed to match) so frame 0 of the reel IS the cover
+    on Instagram/Facebook/X/Threads. Re-encodes (libx264 crf 18, AAC) with faststart; sizes stay within a few MB."""
+    ms = int(secs * 1000)
+    cmd = [ffmpeg_exe(), "-v", "error", "-y", "-loop", "1", "-framerate", str(fps), "-t", f"{secs}", "-i", str(cover), "-i", str(video),
+           "-filter_complex", f"[0:v]scale={W}:{H},format=yuv420p,setsar=1[c];[1:v]format=yuv420p,setsar=1[m];[c][m]concat=n=2:v=1:a=0[v];[1:a]adelay={ms}|{ms}[a]",
+           "-map", "[v]", "-map", "[a]", "-r", str(fps), "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p",
+           "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out)]
+    subprocess.run(cmd, check=True)
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("episode"); ap.add_argument("--style", default=DEFAULT_STYLE, choices=list(STYLES))
     ap.add_argument("--frame"); ap.add_argument("--video"); ap.add_argument("--out"); ap.add_argument("--all", action="store_true", help="render every style")
+    ap.add_argument("--jpg", help="also save a JPG copy (YouTube thumbnail, < 2 MB)")
+    ap.add_argument("--burn", help="write a copy of --video with the cover as its first 0.3 s to this path")
     a = ap.parse_args()
     C = context(a.episode, a.frame, a.video)
     for s in (STYLES if a.all else [a.style]):
         im = STYLES[s](C).convert("RGB")
         out = Path(a.out) if (a.out and not a.all) else Path(a.episode) / "out" / ("cover.png" if (s == DEFAULT_STYLE and not a.all) else f"cover_{s}.png")
         out.parent.mkdir(parents=True, exist_ok=True); im.save(out, optimize=True)
-        print(f"cover {s}: {out} ({im.width}×{im.height}) · sticker {C['cp']}")
+        print(f"cover {s}: {out} ({im.width}×{im.height}) · sticker {C['cp']} · headline={C['cover']['headline']} tint={C['cover']['tint']} sticker={C['cover']['sticker_side']}")
+        if a.jpg and not a.all: im.save(a.jpg, quality=92, optimize=True); print(f"  jpg → {a.jpg}")
+        if a.burn and not a.all and a.video: burn(a.video, out, a.burn); print(f"  burned → {a.burn}")
 
 
 if __name__ == "__main__":
