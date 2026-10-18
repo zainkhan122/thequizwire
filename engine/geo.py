@@ -289,6 +289,7 @@ CSS = f"""
 .geo .geo-label{{font-family:'Oswald';font-weight:500;font-size:30px;letter-spacing:.14em;text-transform:uppercase;color:rgba(239,230,210,.85)}}
 .geo .geo-label.ink{{color:{INK};opacity:1;text-shadow:none}}   /* plain label over a sand highlight */
 .geo .geo-label.sea{{font-style:italic;font-family:'DM Serif';text-transform:none;letter-spacing:.06em;font-size:32px;color:rgba(239,230,210,.7)}}
+.geo .geo-label.tag>span{{background:rgba(11,22,32,.9);border-left:5px solid {SAND};padding:6px 16px 4px;font-size:34px;letter-spacing:.1em;color:{CREAM};border-radius:4px}}   /* plated place/number label: legible over highlights and satellite alike (textqa) */
 .geo .geo-label.policy{{text-transform:none;letter-spacing:.02em;font-size:30px;line-height:1.15;color:{CREAM}}}
 .geo .geo-label.policy .plate{{position:absolute;left:0;top:0;transform:translate(-50%,-50%);white-space:normal;width:max-content;max-width:520px;background:rgba(11,22,32,.92);border:2px solid {CREAM};padding:10px 18px 8px;text-align:left}}   /* long controller strings wrap instead of running into the right-hand UI column */
 .geo .geo-label.policy .plate b{{display:block;font-weight:700;color:{SAND};font-size:26px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2px}}

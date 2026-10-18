@@ -760,7 +760,7 @@
       60
      ],
      "text": "Canada",
-     "cls": "big"
+     "cls": "tag"
     },
     {
      "id": "us",
@@ -769,7 +769,7 @@
       38.5
      ],
      "text": "United States",
-     "cls": "big"
+     "cls": "tag"
     },
     {
      "id": "alaska",
@@ -778,7 +778,7 @@
       65
      ],
      "text": "Alaska",
-     "cls": "big"
+     "cls": "tag"
     },
     {
      "id": "km",
@@ -787,7 +787,7 @@
       50.5
      ],
      "text": "8,891 km",
-     "cls": "big"
+     "cls": "tag"
     }
    ],
    "disputed": [],
