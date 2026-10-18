@@ -35,9 +35,15 @@ Applies to every episode marked `status: ready` from now on. Gates: `quizlint` Q
 |---|---|---|
 | `quizlint` **Q11** (FAIL for every episode not already `status: published`) | `episode.sh` preflight, CI `render.yml`, `tools/daily_pick.py` | < 85 spoken words (v3 format) · CTA > 8 words · greeting hook · `kokoro_fallback.speed` < 1.15 · missing/short `post.premise` or the word "quiz" in it · missing `post.bait` or a bait that spoils the answer · < 6 `post.keywords` · any link in `post.description` |
 | `postkit check` | CI render (post kit), `daily_pick.py` | title/description/hashtag rules per platform; ≤ 2 hashtags only at the end of the YouTube title |
-| `qa.py` on the rendered master | CI render `qa` stage (after encode) | pace < 140 wpm while speaking (target 150–175) · loudness off −14 ±1 · motion < 10 events/10 s (warning until F3 ships; `V4_MOTION_GATE=1` turns it into a FAIL) |
+| `qa.py` on the rendered master | CI render `qa` stage (after encode) | pace < 140 wpm while speaking (target 150–175) · loudness off −14 ±1 · motion < 6 events/10 s = FAIL (`V4_MOTION_MIN` raises the floor), < 10 = warning |
 | `tools/daily_pick.py` | `daily.yml` 07:00 UTC | never picks a `ready` episode that fails quizlint or postkit — it prints `SKIP <ep>` with the failing lines |
 | `tests/selftest.py` | before every commit, CI `selftest.yml` | the templates themselves must pass v4; an old-style copy (speed 1.0, no premise/bait) must be refused (`ep-v3-oldstyle`) |
 
 The templates (`series/_template`, `_template_v2`, `_template_v3`) are already v4-compliant, so every new episode starts from a
 passing example: `_template_v3` = 93 words, premise hook, 4-word follow, premise/bait/keywords filled, research anchors updated.
+
+## F3 (2026-10-18) — motion / opener / cover, now in the engine and the gates
+- **Hook lands word by word** (`engine/quiz.py hook3`): every word is a `.w` span popped in with a 60 ms stagger — automatic for all v3 episodes.
+- **Opener**: `visuals.json` must put a character or sticker on the stage at `at: 0` (template: UN-flag "think" mascot, leaves when the pills land). Q11 refuses an empty map at frame 0.
+- **Density**: Q11 refuses < 8 authored motion beats / 10 s and < 3 `geo.cam_to`; `qa.py` refuses a master under 6 measured events / 10 s.
+- **Cover style `d` = KEY FRAME** (`reelkit/cover.py --style d`): the cleanest frame of the first story beat (answer lifted/flag-filled), ≤ 3 giant yellow words top-left (`post.cover.words`, else `answer_sub`), sticker top-right. Owner decision pending on making it the default (it shows the answer, unlike style b).

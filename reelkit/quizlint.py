@@ -163,6 +163,18 @@ def main():
         if akey and all(w in norm(bait) for w in akey) and named < 2: G.append("Q11: post.bait spoils the answer (name all the options or none)")
     if len(P.get("keywords", [])) < 6: G.append(f"Q11: post.keywords has {len(P.get('keywords', []))} entries (need ≥ 6 search phrases for yt_enrich tags)")
     if re.search(r"https?://|www\.|thequizwire\.com", (P.get("description") or "")): G.append("Q11: post.description contains a link (0 % of winners link; site lives in the outro frame)")
+    # ---- Q11 motion density + opener (visuals.json): winners ≈27 motion events/10 s, we shipped 1.2. Static proxy = authored beats.
+    if E.get("format") == "quiz-v3":
+        MOTION = {"hook_in", "chips_in", "reveal", "banner_in", "fact_in", "sticker_in", "sticker_out", "character_in", "character_out",
+                  "geo.cam_to", "geo.pin_in", "geo.label_in", "geo.highlight_in", "geo.highlight_pulse", "geo.route_draw", "geo.disputed_in", "geo.spin", "fx.flash", "fx.pop", "counter"}
+        beats = X.get("beats", []); n_motion = sum(1 for b in beats if b.get("do") in MOTION or str(b.get("do", "")).startswith("fx."))
+        total_s = float((T or {}).get("total") or 36.0)
+        dens = n_motion / total_s * 10
+        if dens < 8: G.append(f"Q11: {n_motion} motion beats in {total_s:.0f} s = {dens:.1f}/10 s (v4 needs ≥ 8: pop-ins, pulses, camera moves, stickers)")
+        opener = [b for b in beats if b.get("do") in ("character_in", "sticker_in") and str(b.get("at")) in ("0", "0.0", "start")]
+        if not opener: G.append("Q11: no mascot/sticker on the stage at t=0 (v4 opener: frame 0 is the moving stage with a character, not an empty map)")
+        cams = [b for b in beats if b.get("do") == "geo.cam_to"]
+        if len(cams) < 3: G.append(f"Q11: only {len(cams)} camera moves — the camera must never rest (≥ 3 cam_to, the idle ones with ease 'none')")
     # ---- Q4 copy
     v3 = E.get("format") == "quiz-v3"
     q_max, o_max, f_max = (72, 18, 36) if v3 else (76, 26, 80) if v2 else (90, 24, 140)     # v3: 100-px question, 58-px pills, 84-px fact caption

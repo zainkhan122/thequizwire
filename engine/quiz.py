@@ -236,14 +236,22 @@ class Quiz:
         return '<div id="scrimtop" class="scrim scrim-top" data-layout-allow-overlap="true"></div><div id="scrimbot" class="scrim scrim-bot" data-layout-allow-overlap="true"></div>'
 
     def hook3(self, hid, question, keyword=None):
-        txt = esc(question)
-        if keyword and keyword.lower() in question.lower():
-            i = question.lower().index(keyword.lower()); txt = esc(question[:i]) + f'<b{ALLOW}>{esc(question[i:i + len(keyword)])}</b>' + esc(question[i + len(keyword):])
+        # v4 (decode 2026-10-18): the question lands word by word like the winners' captions — each word is a .w span the
+        # timeline pops in with a 60 ms stagger (hook3_in). Keyword words go yellow (<b>) exactly as before; spans are inline,
+        # so textqa/factcheck still read the whole .tu unit as one string (the HTML carries no extra text).
+        kw = [w.lower() for w in (keyword or "").split()] if keyword and keyword.lower() in question.lower() else []
+        parts = []
+        for w in question.split():
+            core = w.strip(".,!?:;…")
+            tag = "b" if kw and core.lower() in kw else None
+            parts.append(f'<span class="w"><{tag}{ALLOW}>{esc(w)}</{tag}></span>' if tag else f'<span class="w">{esc(w)}</span>')
+        txt = " ".join(parts)
         n = len(question); size = "s" if n > 58 else "m" if n > 42 else ""
         return f'<div id="{hid}" class="hook3 tu {size}" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">{txt}</div>'
 
     def hook3_in(self, t, hid="hook", dur=0.4):
-        self.J(f"tl.fromTo('#{hid}',{{autoAlpha:0,scale:0.82,y:30}},{{autoAlpha:1,scale:1,y:0,duration:{f(dur)},ease:'back.out(1.5)',immediateRender:false}},{f(t)});")
+        self.J(f"tl.fromTo('#{hid}',{{autoAlpha:0,scale:0.92,y:20}},{{autoAlpha:1,scale:1,y:0,duration:{f(dur * 0.6)},ease:'power2.out',immediateRender:false}},{f(t)});")
+        self.J(f"tl.fromTo('#{hid} .w',{{autoAlpha:0,y:26,scale:0.7}},{{autoAlpha:1,y:0,scale:1,duration:0.28,ease:'back.out(2)',stagger:0.06,immediateRender:false}},{f(t + 0.05)});")
         if t > 0: self.J(f"tl.to('#scrimtop',{{opacity:1,duration:0.4}},{f(t - 0.2)});")
 
     def hook3_out(self, t, hid="hook", dur=0.3):
@@ -492,6 +500,7 @@ CSS = f"""
 .v3 .scrim-bot{{top:1180px;height:740px;background:linear-gradient(0deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.78) 40%,rgba(0,0,0,.62) 72%,rgba(0,0,0,.3) 92%,rgba(0,0,0,0) 100%)}}   /* fact band (1250–1460) keeps ≥ 3:1 over bright terrain / colour fills */
 .v3 .bug{{left:48px;top:232px;font-family:'Lilita';font-weight:400;font-size:30px;letter-spacing:.1em;color:#fff;background:#C8102E;border:0;padding:14px 22px 12px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.4)}}
 .v3 .bug b{{color:#FFD400}}
+.v3 .hook3 .w{{display:inline-block;will-change:transform,opacity}}
 .v3 .hook3{{position:absolute;left:60px;top:300px;width:900px;text-align:center;font-family:'Lilita';font-size:100px;line-height:1.04;text-transform:uppercase;color:#fff;
   -webkit-text-stroke:3px #141414;paint-order:stroke fill;text-shadow:0 7px 0 rgba(0,0,0,.6),0 0 22px rgba(0,0,0,.9),0 16px 32px rgba(0,0,0,.7);z-index:72;visibility:hidden;opacity:0}}
 .v3 .hook3.m{{font-size:86px}} .v3 .hook3.s{{font-size:74px}}

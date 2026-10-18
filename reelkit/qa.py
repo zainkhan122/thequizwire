@@ -75,7 +75,9 @@ try:
         prev = g
     cap.release()
     res["motion_per_10s"] = round(cuts / max(1.0, res["duration"]) * 10, 1)
-    if res["motion_per_10s"] < 10: (fails if os.environ.get("V4_MOTION_GATE") == "1" else warns).append(f"motion {res['motion_per_10s']} events/10 s < 10 (winners ≈27) — V4_MOTION_GATE=1 makes this a FAIL once F3 ships")
+    floor = float(os.environ.get("V4_MOTION_MIN", "6"))                                  # hard floor now; raise via env as the look catches up
+    if res["motion_per_10s"] < floor: fails.append(f"motion {res['motion_per_10s']} events/10 s < {floor:g} (winners ≈27)")
+    elif res["motion_per_10s"] < 10: warns.append(f"motion {res['motion_per_10s']} events/10 s < 10 (winners ≈27) — add pop-ins/pulses/camera moves")
 except ImportError:
     warns.append("v4 pace/motion gate skipped (opencv missing)")
 res["pass"] = not fails; res["fails"] = fails; res["warnings"] = warns

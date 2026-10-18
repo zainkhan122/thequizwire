@@ -81,9 +81,33 @@
    "y": 800,
    "size": 220,
    "rot": -8
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6,
+   "note": "v4 opener: a thinking flag-ball on the stage from frame 0 (UN flag = no spoiler); leaves when the pills land"
   }
  ],
  "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
   {
    "at": 0,
    "do": "geo.cam_set",
@@ -401,6 +425,33 @@
    "at": "s04+2.2",
    "do": "geo.scalebar_in",
    "stage": "stage_map"
+  },
+  {
+   "at": "s05+0.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "554",
+    "layer": "nz"
+   }
+  },
+  {
+   "at": "s07+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "554",
+    "layer": "nz"
+   }
+  },
+  {
+   "at": "s08",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "554",
+    "layer": "nz"
+   }
   }
  ],
  "captions": {

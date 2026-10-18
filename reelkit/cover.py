@@ -92,6 +92,43 @@ def frame0(ep, video=None):
 
 
 # ---------------------------------------------------------------- drawing helpers
+def frame_at(ep, t, video=None):
+    """Frame at t seconds of the master (the winners' covers are a mid-video key frame, not frame 0)."""
+    v = Path(video) if video else Path(ep) / "out" / "final.mp4"
+    if not v.exists(): return None
+    out = CACHE / f"frame_{hashlib.sha1(f'{v.resolve()}@{t:.2f}'.encode()).hexdigest()[:10]}.png"
+    if not out.exists():
+        try: import imageio_ffmpeg; ff = imageio_ffmpeg.get_ffmpeg_exe()
+        except ImportError: ff = "ffmpeg"
+        subprocess.run([ff, "-loglevel", "error", "-y", "-ss", f"{t:.2f}", "-i", str(v), "-frames:v", "1", str(out)], check=True)
+    return Image.open(out).convert("RGB")
+
+
+def reveal_time(ep):
+    """Candidate key-frame times: the first story beat (answer lifted/flag-filled, question gone). Returns the scene start;
+    key_frame() then samples a few offsets and keeps the cleanest plate (no fact label in the lower band)."""
+    tp = Path(ep) / "timeline.json"
+    if not tp.exists(): return None
+    T = json.loads(tp.read_text()); V = json.loads((Path(ep) / "voice.json").read_text())
+    rid = next((l["scene"] for l in V.get("lines", []) if l.get("role") == "story"), None)
+    for sc in T.get("scenes", []):
+        if sc.get("id") == rid: return float(sc.get("t0", sc.get("start", 0)))
+    return float(T.get("total", 30)) * 0.45
+
+
+def key_frame(ep, t0, video=None):
+    """Sample t0 + {0.1 … 0.9} and keep the frame whose lower band (y 1150–1500) has the least text-like detail."""
+    import numpy as np
+    best, best_score = None, 1e9
+    for off in (0.1, 0.2, 0.3, 0.45, 0.6, 0.9):
+        im = frame_at(ep, t0 + off, video)
+        if im is None: continue
+        band = np.asarray(im.crop((0, 1150, W, 1500)).convert("L"), dtype="float32")
+        score = float(np.abs(np.diff(band, axis=1)).mean()) + float((band > 235).mean()) * 40 + off * 2.0   # edges + bright text; prefer the earliest clean plate (still the answer, not a later compare beat)
+        if score < best_score: best, best_score = im, score
+    return best
+
+
 def cover_fit(im, scale=1.0, anchor=(0.5, 0.5)):
     """Scale-to-cover the canvas (optionally zoomed) and crop around an anchor (fractions)."""
     s = max(W / im.width, H / im.height) * scale
@@ -239,7 +276,12 @@ def context(ep, frame=None, video=None):
     cv.setdefault("bg_anchor", rnd.choice([(0.5, 0.5), (0.35, 0.45), (0.65, 0.55), (0.5, 0.3)]))
     cv.setdefault("blur", rnd.choice([5, 7, 9]))
     cv.setdefault("highlight", [])
-    return {"E": E, "Q": Q, "S": S, "cp": cp, "bg": bg, "number": E.get("number", ""), "seed": seed, "hook": hook, "cover": cv,
+    key = None
+    try:
+        rt = reveal_time(ep)
+        key = frame_at(ep, float(cv["key_t"]), video) if cv.get("key_t") is not None else (key_frame(ep, rt, video) if rt is not None else None)
+    except Exception as e: print(f"cover: key frame unavailable ({e})", file=sys.stderr)
+    return {"E": E, "Q": Q, "S": S, "cp": cp, "bg": bg, "key": key, "number": E.get("number", ""), "seed": seed, "hook": hook, "cover": cv,
             "options": Q.get("options", []), "meta": Q.get("option_meta") or [{} for _ in Q.get("options", [])]}
 
 
@@ -360,7 +402,23 @@ def draw_question_c(im, lines, fnt, top):
     return y
 
 
-STYLES = {"a": style_a, "b": style_b, "c": style_c}
+def style_d(C):
+    """KEY FRAME (decode 2026-10-18): what the winning channels' thumbnails are — a mid-video frame with the answer already
+    lifted/flag-filled, no blur, no card, and ≤ 3 giant yellow words in the TOP band (authored post.cover.words; fallback
+    answer_sub ≤ 18 chars, else the answer). The frame's own chip/wordmark brand it; the sticker sits top-right."""
+    key = C.get("key") or C["bg"]
+    im = cover_fit(key, 1.0).convert("RGBA"); darken(im, 0, 620, 205, 0)
+    q = C["Q"]; sub = q.get("answer_sub") or ""
+    words = C["cover"].get("words") or (sub if 0 < len(sub) <= 18 else q["options"][q["correct"]])
+    words = str(words).upper().replace("ABOUT ", "").split()[:3]
+    n = len(" ".join(words)); size = 210 if n <= 9 else 170 if n <= 14 else 135
+    f = lilita(size); lines = wrap([(w, True, "") for w in words], f, 760)
+    draw_question(im, lines, f, 150, YELLOW + (255,), YELLOW + (255,), 14, (16, 16, 16, 255), align="left", left=60, max_w=760, line_h=0.96)
+    st = sticker(C["cp"], 250, rotate=10); im.alpha_composite(st, (W - 275, 120))
+    return im
+
+
+STYLES = {"a": style_a, "b": style_b, "c": style_c, "d": style_d}
 DEFAULT_STYLE = "b"          # owner-approved 2026-10-16 (quiz card, no timer ring); a/c kept as alternates
 
 
