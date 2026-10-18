@@ -1,0 +1,114 @@
+{
+ "version": 1,
+ "episode": "ep17-deepest-lake-baikal",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     100,
+     50,
+     112,
+     57
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "area",
+     "id": "lakes",
+     "cls": "lake",
+     "source": "ne-lakes",
+     "ne": {
+      "file": "ne_50m_lakes",
+      "names": [
+       "Lake Baikal"
+      ]
+     }
+    }
+   ],
+   "pins": [
+    {
+     "id": "olkhon",
+     "lonlat": [
+      107.4,
+      53.15
+     ],
+     "label": "Olkhon Island",
+     "qid": "Q756774"
+    },
+    {
+     "id": "listvyanka",
+     "lonlat": [
+      104.869,
+      51.854
+     ],
+     "label": "Angara outflow",
+     "qid": "Q335422"
+    }
+   ],
+   "labels": [
+    {
+     "id": "baikal",
+     "lonlat": [
+      109.8,
+      54.9
+     ],
+     "text": "Lake Baikal",
+     "cls": "tag",
+     "in": "s04@baikal",
+     "out": "s06"
+    },
+    {
+     "id": "ru",
+     "lonlat": [
+      103.5,
+      55.5
+     ],
+     "text": "Russia",
+     "cls": "tag",
+     "in": "s04+1.2",
+     "out": "s05"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      80,
+      42,
+      130,
+      65
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 100,
+    "lonlat": [
+     106,
+     52
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

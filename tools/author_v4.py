@@ -75,9 +75,10 @@ def build(S):
          "landscape": R0["landscape"], "sources": R0["sources"], "claims": R0["claims"]}
     # ---------------- geo.json
     g = S["geo"]
-    layers = [{"kind": "land"}, {"kind": "borders"},
-              {"kind": "highlight", "id": "hl", "ids": g["highlight_ids"], "cls": g.get("highlight_cls", ""), "note": g.get("highlight_note", "answer country")}]
-    if g.get("lift"): layers[2].update(lift=g["lift"], flag=g.get("lift_flag"))
+    layers = [{"kind": "land"}, {"kind": "borders"}]
+    if g["highlight_ids"]:
+        layers.append({"kind": "highlight", "id": "hl", "ids": g["highlight_ids"], "cls": g.get("highlight_cls", ""), "note": g.get("highlight_note", "answer country")})
+        if g.get("lift"): layers[-1].update(lift=g["lift"], flag=g.get("lift_flag"))
     for extra in g.get("extra_layers", []): layers.append(extra)
     res = {"resolution": g["resolution"]} if g.get("resolution") else {}
     G = {"version": 1, "episode": ep, "policy": "docs/BORDER_POLICY.md",
@@ -104,11 +105,10 @@ def build(S):
     for L in g.get("labels", []):
         B.append({"at": L.get("in", "s04+1.2"), "do": "geo.label_in", "stage": M, "args": {"lid": L["id"]}})
         if L.get("out"): B.append({"at": L["out"], "do": "geo.label_out", "stage": M, "args": {"lid": L["id"]}})
-    B += [cam("s05", "s05+1.3", cams["s05"], "power2.inOut"), cam("s05+1.3", "s05.end", cams["s05b"], "none"),
-          {"at": "s05+0.5", "do": "geo.highlight_pulse", "stage": M, "args": {"fid": g["highlight_ids"][0], "layer": "hl"}},
+    pulse = lambda at: ([{"at": at, "do": "geo.highlight_pulse", "stage": M, "args": {"fid": g["highlight_ids"][0], "layer": "hl"}}] if g["highlight_ids"] else [])
+    B += [cam("s05", "s05+1.3", cams["s05"], "power2.inOut"), cam("s05+1.3", "s05.end", cams["s05b"], "none")] + pulse("s05+0.5") + [
           cam("s06", "s06+1.3", cams["s06"], "power2.inOut"), cam("s06+1.3", "s06.end", cams["s06b"], "none"),
-          cam("s07", "s07+1.2", cams["s07"], "power2.inOut"), cam("s07+1.2", "s08+0.2", cams["s07b"], "none"),
-          {"at": "s07+0.4", "do": "geo.highlight_pulse", "stage": M, "args": {"fid": g["highlight_ids"][0], "layer": "hl"}},
+          cam("s07", "s07+1.2", cams["s07"], "power2.inOut"), cam("s07+1.2", "s08+0.2", cams["s07b"], "none")] + pulse("s07+0.4") + [
           {"at": "s08", "do": "geo.clear", "stage": M, "args": {"dur": 0.25}},
           cam("s08+0.2", "end-0.3", cams["start"], "power1.inOut"),
           {"at": "s04+0.8", "do": "geo.scalebar_in", "stage": M}]

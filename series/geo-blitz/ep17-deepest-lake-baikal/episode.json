@@ -1,0 +1,89 @@
+{
+ "id": "ep17-deepest-lake-baikal",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 17,
+ "title": "Where is the DEEPEST lake on Earth?",
+ "difficulty": "MEDIUM",
+ "seed": 2717,
+ "quiz": {
+  "question": "Where is the DEEPEST lake on Earth?",
+  "keyword": "DEEPEST",
+  "options": [
+   "Russia",
+   "Tanzania",
+   "USA"
+  ],
+  "correct": 0,
+  "beat": 3.0,
+  "answer_line": "Russia",
+  "answer_sub": "Baikal · 1,642 m",
+  "option_meta": [
+   {
+    "flag": "ru"
+   },
+   {
+    "flag": "tz"
+   },
+   {
+    "flag": "us"
+   }
+  ],
+  "banner": "Russia",
+  "banner_sub": "✓  A was right · Baikal · 1,642 m",
+  "outro": {
+   "headline": "CHALLENGE A FRIEND",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Where is the DEEPEST lake on Earth? 🌊",
+  "premise": "1,642 m deep and a fifth of Earth's fresh water in one lake",
+  "bait": "Russia, Tanzania or the USA — which did you pick? 👇",
+  "keywords": [
+   "deepest lake in the world",
+   "lake baikal",
+   "baikal depth 1642 m",
+   "siberia lake",
+   "lake tanganyika",
+   "crater lake",
+   "freshwater facts",
+   "geography quiz",
+   "map animation",
+   "unesco world heritage"
+  ],
+  "description": "1,642 m deep and a fifth of Earth's fresh water in one lake. Russia, Tanzania or the USA — which did you pick? 👇\n\nSources: UNESCO World Heritage Centre, NASA Earth Observatory, Britannica, Wikipedia.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #17",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "LakeBaikal",
+   "DeepestLake"
+  ],
+  "cover_emoji": "🌊"
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "counter",
+   "pin",
+   "counter",
+   "pin"
+  ],
+  "cast": "flagball:cool + emoji-set:water",
+  "music": "bed:deep"
+ },
+ "status": "draft"
+}

@@ -1,0 +1,475 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "1,642 M",
+   "text": "deep · Lake Baikal, Siberia"
+  },
+  {
+   "id": "f2",
+   "type": "fact",
+   "kicker": "~20%",
+   "text": "of Earth's unfrozen fresh water"
+  },
+  {
+   "id": "f3",
+   "type": "fact",
+   "kicker": "25 MILLION YRS",
+   "text": "the oldest lake alive"
+  },
+  {
+   "id": "f4",
+   "type": "fact",
+   "kicker": "336 IN · 1 OUT",
+   "text": "rivers · only the Angara leaves"
+  },
+  {
+   "id": "st_wave",
+   "type": "sticker",
+   "emoji": "1f30a",
+   "x": 760,
+   "y": 560,
+   "size": 230,
+   "rot": 8
+  },
+  {
+   "id": "st_seal",
+   "type": "sticker",
+   "emoji": "1f9ad",
+   "x": 740,
+   "y": 600,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "st_drop",
+   "type": "sticker",
+   "emoji": "1f4a7",
+   "x": 720,
+   "y": 560,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  },
+  {
+   "id": "cha",
+   "type": "character",
+   "flag": "ru",
+   "face": "cool",
+   "x": 230,
+   "y": 820,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "chb",
+   "type": "character",
+   "flag": "tz",
+   "face": "think",
+   "x": 850,
+   "y": 1000,
+   "size": 200,
+   "rot": 8
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.45,
+    "lonlat": [
+     88,
+     58
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     90,
+     57.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 0.9,
+    "lonlat": [
+     107,
+     53.6
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 0.95,
+    "lonlat": [
+     107.2,
+     53.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04@baikal",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "baikal"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "baikal"
+   }
+  },
+  {
+   "at": "s04+1.2",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ru"
+   }
+  },
+  {
+   "at": "s05",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ru"
+   }
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 1.1,
+    "lonlat": [
+     107.6,
+     53.4
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 1.15,
+    "lonlat": [
+     107.7,
+     53.3
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.3",
+   "args": {
+    "k": 1.6,
+    "lonlat": [
+     107.9,
+     53.2
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 1.7,
+    "lonlat": [
+     107.95,
+     53.15
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.2",
+   "args": {
+    "k": 1.6,
+    "lonlat": [
+     105.3,
+     51.9
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 1.7,
+    "lonlat": [
+     105.35,
+     51.9
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.45,
+    "lonlat": [
+     88,
+     58
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04+0.8",
+   "do": "geo.scalebar_in",
+   "stage": "stage_map"
+  },
+  {
+   "at": "s06@seal",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "olkhon"
+   }
+  },
+  {
+   "at": "s07@angara",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "olkhon"
+   }
+  },
+  {
+   "at": "s07@angara",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "listvyanka"
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.6",
+   "do": "character_in",
+   "id": "cha"
+  },
+  {
+   "at": "s04+1.9",
+   "do": "character_in",
+   "id": "chb"
+  },
+  {
+   "at": "s05+0.8",
+   "do": "character_out",
+   "id": "chb"
+  },
+  {
+   "at": "s05+1.0",
+   "do": "character_out",
+   "id": "cha"
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05+0.4",
+   "do": "fact_in",
+   "id": "f2",
+   "until": "s05.end"
+  },
+  {
+   "at": "s05+0.6",
+   "do": "sticker_in",
+   "id": "st_wave"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_wave"
+  },
+  {
+   "at": "s06+0.4",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s06.end"
+  },
+  {
+   "at": "s06+0.6",
+   "do": "sticker_in",
+   "id": "st_seal"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_seal"
+  },
+  {
+   "at": "s07+0.4",
+   "do": "fact_in",
+   "id": "f4",
+   "until": "s07.end"
+  },
+  {
+   "at": "s07+0.8",
+   "do": "sticker_in",
+   "id": "st_drop"
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_drop"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

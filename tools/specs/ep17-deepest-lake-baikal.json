@@ -1,0 +1,510 @@
+{
+ "id": "ep17-deepest-lake-baikal",
+ "series": "geo-blitz",
+ "number": 17,
+ "seed": 2717,
+ "question": "Where is the DEEPEST lake on Earth?",
+ "keyword": "DEEPEST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Russia",
+   "flag": "ru",
+   "cue": "russia"
+  },
+  {
+   "text": "Tanzania",
+   "flag": "tz",
+   "cue": "tanzania"
+  },
+  {
+   "text": "USA",
+   "flag": "us",
+   "cue": "usa",
+   "vo": "the USA"
+  }
+ ],
+ "correct": 0,
+ "answer_sub": "Baikal · 1,642 m",
+ "outro_headline": "CHALLENGE A FRIEND",
+ "cover_emoji": "🌊",
+ "post": {
+  "premise": "1,642 m deep and a fifth of Earth's fresh water in one lake",
+  "bait": "Russia, Tanzania or the USA — which did you pick? 👇",
+  "keywords": [
+   "deepest lake in the world",
+   "lake baikal",
+   "baikal depth 1642 m",
+   "siberia lake",
+   "lake tanganyika",
+   "crater lake",
+   "freshwater facts",
+   "geography quiz",
+   "map animation",
+   "unesco world heritage"
+  ],
+  "tags": [
+   "LakeBaikal",
+   "DeepestLake"
+  ],
+  "sources_line": "UNESCO World Heritage Centre, NASA Earth Observatory, Britannica, Wikipedia"
+ },
+ "variety": {
+  "question": "where-is",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "counter",
+   "pin",
+   "counter",
+   "pin"
+  ],
+  "cast": "flagball:cool + emoji-set:water",
+  "music": "bed:deep"
+ },
+ "intent": "A diver counting down the metres: slow numbers, then the staggering share of the world's water.",
+ "voice": {
+  "v01_cues": {
+   "where": "where",
+   "earth": "earth"
+  },
+  "v04": {
+   "text": "Russia: Lake Baikal in Siberia drops to one thousand six hundred and forty-two metres.",
+   "cues": {
+    "answer": "russia",
+    "baikal": "baikal",
+    "metres": "metres"
+   }
+  },
+  "v05": {
+   "text": "That one lake holds about a fifth of all the unfrozen fresh water on the planet.",
+   "cues": {
+    "fifth": "fifth",
+    "planet": "planet"
+   }
+  },
+  "v06": {
+   "text": "It is also the oldest, around twenty-five million years, with a seal found nowhere else.",
+   "cues": {
+    "oldest": "oldest",
+    "seal": "seal"
+   }
+  },
+  "v07": {
+   "text": "Over three hundred rivers flow in. Only one flows out: the Angara.",
+   "cues": {
+    "rivers": "rivers",
+    "angara": "angara"
+   }
+  },
+  "v08": {
+   "text": "A lake deeper than most seas. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "1,642 M",
+   "text": "deep · Lake Baikal, Siberia"
+  },
+  {
+   "kicker": "~20%",
+   "text": "of Earth's unfrozen fresh water"
+  },
+  {
+   "kicker": "25 MILLION YRS",
+   "text": "the oldest lake alive"
+  },
+  {
+   "kicker": "336 IN · 1 OUT",
+   "text": "rivers · only the Angara leaves"
+  }
+ ],
+ "stickers": [
+  {
+   "id": "st_wave",
+   "emoji": "1f30a",
+   "x": 760,
+   "y": 560,
+   "size": 230,
+   "rot": 8
+  },
+  {
+   "id": "st_seal",
+   "emoji": "1f9ad",
+   "x": 740,
+   "y": 600,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "st_drop",
+   "emoji": "1f4a7",
+   "x": 720,
+   "y": 560,
+   "size": 200,
+   "rot": 6
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "ru",
+   "face": "cool",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "tz",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "geo": {
+  "fit_bbox": [
+   100,
+   50,
+   112,
+   57
+  ],
+  "far_bbox": [
+   80,
+   42,
+   130,
+   65
+  ],
+  "resolution": "50m",
+  "highlight_ids": [],
+  "extra_layers": [
+   {
+    "kind": "area",
+    "id": "lakes",
+    "cls": "lake",
+    "source": "ne-lakes",
+    "ne": {
+     "file": "ne_50m_lakes",
+     "names": [
+      "Lake Baikal"
+     ]
+    }
+   }
+  ],
+  "labels": [
+   {
+    "id": "baikal",
+    "lonlat": [
+     109.8,
+     54.9
+    ],
+    "text": "Lake Baikal",
+    "cls": "tag",
+    "in": "s04@baikal",
+    "out": "s06"
+   },
+   {
+    "id": "ru",
+    "lonlat": [
+     103.5,
+     55.5
+    ],
+    "text": "Russia",
+    "cls": "tag",
+    "in": "s04+1.2",
+    "out": "s05"
+   }
+  ],
+  "pins": [
+   {
+    "id": "olkhon",
+    "lonlat": [
+     107.4,
+     53.15
+    ],
+    "label": "Olkhon Island",
+    "qid": "Q756774"
+   },
+   {
+    "id": "listvyanka",
+    "lonlat": [
+     104.869,
+     51.854
+    ],
+    "label": "Angara outflow",
+    "qid": "Q335422"
+   }
+  ],
+  "scalebar": {
+   "km": 100,
+   "lonlat": [
+    106,
+    52
+   ]
+  },
+  "cams": {
+   "start": [
+    0.45,
+    [
+     88,
+     58
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     90,
+     57.5
+    ]
+   ],
+   "s04": [
+    0.9,
+    [
+     107,
+     53.6
+    ]
+   ],
+   "s04b": [
+    0.95,
+    [
+     107.2,
+     53.5
+    ]
+   ],
+   "s05": [
+    1.1,
+    [
+     107.6,
+     53.4
+    ]
+   ],
+   "s05b": [
+    1.15,
+    [
+     107.7,
+     53.3
+    ]
+   ],
+   "s06": [
+    1.6,
+    [
+     107.9,
+     53.2
+    ]
+   ],
+   "s06b": [
+    1.7,
+    [
+     107.95,
+     53.15
+    ]
+   ],
+   "s07": [
+    1.6,
+    [
+     105.3,
+     51.9
+    ]
+   ],
+   "s07b": [
+    1.7,
+    [
+     105.35,
+     51.9
+    ]
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s06@seal",
+    "pid": "olkhon"
+   },
+   {
+    "at": "s07@angara",
+    "pid": "olkhon",
+    "out": true
+   },
+   {
+    "at": "s07@angara",
+    "pid": "listvyanka"
+   }
+  ]
+ },
+ "research": {
+  "topic": "Where is the deepest lake on Earth? (Lake Baikal, Russia — 1,642 m)",
+  "myths": [
+   {
+    "myth": "The Caspian Sea or Lake Superior is the deepest lake.",
+    "reality": "Baikal is deepest at 1,642 m; Tanganyika is second (1,470 m); Superior is 406 m; the Caspian's maximum is 1,025 m.",
+    "sources": [
+     "britannica_baikal",
+     "wiki_baikal"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Feed answers say 'Baikal' over a stock photo; nobody puts depth, the 20 % water share, the age, and the one outflow on the actual lake outline.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=deepest+lake+shorts",
+     "title": "Search: deepest lake shorts",
+     "angle": "depth comparisons",
+     "misses": "no map, no sources"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if map scenarios",
+     "misses": "no real-world lake facts"
+    },
+    {
+     "url": "https://www.youtube.com/@huhindustry/shorts",
+     "title": "HuhIndustry",
+     "angle": "fast fact chains",
+     "misses": "no quiz beat"
+    }
+   ]
+  },
+  "sources": {
+   "unesco_baikal": {
+    "type": "primary",
+    "publisher": "UNESCO World Heritage Centre",
+    "title": "Lake Baikal",
+    "url": "https://whc.unesco.org/en/list/754/",
+    "date": "2026-10-18",
+    "notes": "inscribed 1996; oldest (25 million years) and deepest (1,700 m) lake; 20% of the world's unfrozen freshwater reserve; endemic Baikal seal (nerpa)"
+   },
+   "nasa_eo": {
+    "type": "primary",
+    "publisher": "NASA Earth Observatory",
+    "title": "Lake Baikal, Russia",
+    "url": "https://earthobservatory.nasa.gov/images/8898/lake-baikal-russia",
+    "date": "2026-10-18",
+    "notes": "deepest lake, ~1,600+ m; holds about 20 percent of the world's unfrozen fresh surface water; ~25 million years old"
+   },
+   "britannica_baikal": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Lake Baikal",
+    "url": "https://www.britannica.com/place/Lake-Baikal",
+    "date": "2026-10-18",
+    "notes": "deepest continental body of water, max depth 1,620 m (5,315 ft) [older figure]; 336 rivers feed it, the Angara is the sole outlet; 25 million years old; Baikal seal endemic; one-fifth of Earth's fresh surface water"
+   },
+   "wiki_baikal": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Lake Baikal",
+    "url": "https://en.wikipedia.org/wiki/Lake_Baikal",
+    "date": "2026-10-18",
+    "notes": "max depth 1,642 m (5,387 ft); 23,615 km³ ≈ 22–23 % of the world's fresh surface water; 25–30 million years old; 330+ inflowing rivers, outflow only the Angara; Baikal seal; Olkhon largest island; UNESCO 1996"
+   },
+   "wiki_deep": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "List of lakes by depth",
+    "url": "https://en.wikipedia.org/wiki/List_of_lakes_by_depth",
+    "date": "2026-10-18",
+    "notes": "1 Baikal 1,642 m (Russia); 2 Tanganyika 1,470 m; 3 Caspian 1,025 m; Crater Lake (USA) 594 m deepest in the US"
+   },
+   "bbc_baikal": {
+    "type": "press",
+    "publisher": "BBC Future",
+    "title": "Lake Baikal: the world's oldest and deepest lake",
+    "url": "https://www.bbc.com/future/article/20230202-lake-baikal-the-worlds-deepest-lake",
+    "date": "2023-02-02",
+    "notes": "1,642 m deep; ~20% of unfrozen fresh water; 25 million years old; nerpa seal endemic; Angara the only outlet"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Lake Baikal in Siberia, Russia, is the deepest lake on Earth at 1,642 m; Tanganyika (1,470 m) is second.",
+    "sources": [
+     "nasa_eo",
+     "unesco_baikal",
+     "wiki_baikal",
+     "wiki_deep",
+     "bbc_baikal"
+    ],
+    "vo": [
+     "where is the deepest lake on earth",
+     "russia, tanzania, or the usa",
+     "russia: lake baikal in siberia drops to one thousand six hundred and forty-two metres"
+    ],
+    "screen": [
+     "1,642 M",
+     "deep · Lake Baikal, Siberia",
+     "Lake Baikal",
+     "Russia",
+     "Tanzania",
+     "USA"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Baikal holds about 20 % of the world's unfrozen fresh surface water (≈23,600 km³).",
+    "sources": [
+     "unesco_baikal",
+     "nasa_eo",
+     "wiki_baikal"
+    ],
+    "vo": [
+     "that one lake holds about a fifth of all the unfrozen fresh water on the planet"
+    ],
+    "screen": [
+     "~20%",
+     "of Earth's unfrozen fresh water"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "detail",
+    "text": "Baikal is the oldest lake, about 25 million years, with the endemic Baikal seal (nerpa); Olkhon is its largest island.",
+    "sources": [
+     "unesco_baikal",
+     "britannica_baikal",
+     "wiki_baikal"
+    ],
+    "vo": [
+     "it is also the oldest, around twenty-five million years, with a seal found nowhere else"
+    ],
+    "screen": [
+     "25 MILLION YRS",
+     "the oldest lake alive",
+     "Olkhon Island"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "About 336 rivers flow into Baikal; the Angara is the only outflow.",
+    "sources": [
+     "britannica_baikal",
+     "wiki_baikal",
+     "bbc_baikal"
+    ],
+    "vo": [
+     "over three hundred rivers flow in. only one flows out: the angara"
+    ],
+    "screen": [
+     "336 IN · 1 OUT",
+     "rivers · only the Angara leaves",
+     "Angara outflow"
+    ]
+   },
+   {
+    "id": "C05",
+    "weight": "framing",
+    "text": "At 1,642 m Baikal is deeper than the mean depth of most marginal seas (e.g. North Sea ~95 m, Baltic ~55 m).",
+    "sources": [
+     "wiki_baikal",
+     "wiki_deep"
+    ],
+    "vo": [
+     "a lake deeper than most seas"
+    ],
+    "screen": []
+   }
+  ]
+ }
+}
