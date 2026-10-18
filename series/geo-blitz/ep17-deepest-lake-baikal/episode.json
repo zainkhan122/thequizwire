@@ -17,7 +17,7 @@
   "correct": 0,
   "beat": 3.0,
   "answer_line": "Russia",
-  "answer_sub": "Baikal · 1,642 m",
+  "answer_sub": "1,642 m",
   "option_meta": [
    {
     "flag": "ru"
@@ -30,7 +30,7 @@
    }
   ],
   "banner": "Russia",
-  "banner_sub": "✓  A was right · Baikal · 1,642 m",
+  "banner_sub": "✓  A was right · 1,642 m",
   "outro": {
    "headline": "CHALLENGE A FRIEND",
    "url": "thequizwire.com"

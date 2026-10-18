@@ -25,7 +25,7 @@
   }
  ],
  "correct": 0,
- "answer_sub": "Baikal · 1,642 m",
+ "answer_sub": "1,642 m",
  "outro_headline": "CHALLENGE A FRIEND",
  "cover_emoji": "🌊",
  "post": {
@@ -199,7 +199,7 @@
     "text": "Lake Baikal",
     "cls": "tag",
     "in": "s04@baikal",
-    "out": "s06"
+    "out": "s05"
    },
    {
     "id": "ru",
@@ -300,15 +300,15 @@
    "s07": [
     1.6,
     [
-     105.3,
-     51.9
+     105.7,
+     52.25
     ]
    ],
    "s07b": [
     1.7,
     [
-     105.35,
-     51.9
+     105.75,
+     52.2
     ]
    ]
   },
