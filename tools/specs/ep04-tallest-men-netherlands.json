@@ -69,28 +69,28 @@
    "average": "average"
   },
   "v04": {
-   "text": "The Netherlands: the average Dutch man stands nearly one hundred and eighty-three centimetres, the tallest on Earth.",
+   "text": "The Netherlands. The average Dutch man is nearly 183 centimetres tall, the tallest on Earth.",
    "cues": {
     "answer": "netherlands",
     "tallest": "tallest"
    }
   },
   "v05": {
-   "text": "His great-grandfather, born in 1896, was around one hundred and sixty-nine: thirteen centimetres in a century.",
+   "text": "His great-grandfather was around 169. Thirteen centimetres gained in a single century.",
    "cues": {
-    "born": "born",
-    "thirteen": "thirteen"
+    "born": "around",
+    "thirteen": "gained"
    }
   },
   "v06": {
-   "text": "American men were third tallest in 1914, and thirty-seventh by 2014.",
+   "text": "American men were third tallest a century ago. Today they rank 37th.",
    "cues": {
     "american": "american",
-    "2014": "2014"
+    "2014": "today"
    }
   },
   "v07": {
-   "text": "And the growing has stopped: Dutch born after 1980 are no taller than their parents.",
+   "text": "And the growing has stopped. Dutch people born after 1980 are no taller than their parents.",
    "cues": {
     "stopped": "stopped",
     "parents": "parents"
@@ -399,7 +399,8 @@
     "vo": [
      "which country has the tallest people on average",
      "netherlands, germany, or the usa",
-     "the netherlands: the average dutch man stands nearly one hundred and eighty-three centimetres, the tallest on earth"
+     "the netherlands",
+     "the average dutch man is nearly 183 centimetres tall, the tallest on earth"
     ],
     "screen": [
      "182.5 CM",
@@ -418,7 +419,8 @@
      "bbc_2016"
     ],
     "vo": [
-     "his great-grandfather, born in 1896, was around one hundred and sixty-nine: thirteen centimetres in a century"
+     "his great-grandfather was around 169",
+     "thirteen centimetres gained in a single century"
     ],
     "screen": [
      "+13 CM",
@@ -434,7 +436,8 @@
      "bbc_2016"
     ],
     "vo": [
-     "american men were third tallest in 1914, and thirty-seventh by 2014"
+     "american men were third tallest a century ago",
+     "today they rank 37th"
     ],
     "screen": [
      "USA: 3RD → 37TH",
@@ -450,7 +453,7 @@
      "guardian_2021"
     ],
     "vo": [
-     "and the growing has stopped: dutch born after 1980 are no taller than their parents"
+     "dutch people born after 1980 are no taller than their parents"
     ],
     "screen": [
      "STOPPED",

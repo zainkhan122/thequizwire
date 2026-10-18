@@ -63,7 +63,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "The Netherlands: the average Dutch man stands nearly one hundred and eighty-three centimetres, the tallest on Earth.",
+   "text": "The Netherlands. The average Dutch man is nearly 183 centimetres tall, the tallest on Earth.",
    "cues": {
     "answer": "netherlands",
     "tallest": "tallest"
@@ -78,10 +78,10 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "count it out",
-   "text": "His great-grandfather, born in 1896, was around one hundred and sixty-nine: thirteen centimetres in a century.",
+   "text": "His great-grandfather was around 169. Thirteen centimetres gained in a single century.",
    "cues": {
-    "born": "born",
-    "thirteen": "thirteen"
+    "born": "around",
+    "thirteen": "gained"
    }
   },
   {
@@ -92,10 +92,10 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "let it land",
-   "text": "American men were third tallest in 1914, and thirty-seventh by 2014.",
+   "text": "American men were third tallest a century ago. Today they rank 37th.",
    "cues": {
     "american": "american",
-    "2014": "2014"
+    "2014": "today"
    }
   },
   {
@@ -106,7 +106,7 @@
    "energy": 4,
    "pause_after": 0.4,
    "direction": "the number people repeat",
-   "text": "And the growing has stopped: Dutch born after 1980 are no taller than their parents.",
+   "text": "And the growing has stopped. Dutch people born after 1980 are no taller than their parents.",
    "cues": {
     "stopped": "stopped",
     "parents": "parents"
