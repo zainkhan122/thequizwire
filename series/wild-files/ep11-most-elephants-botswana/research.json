@@ -1,0 +1,224 @@
+{
+ "version": 1,
+ "episode": "ep11-most-elephants-botswana",
+ "topic": "Which country has the most elephants? (Botswana — ~131,900 savanna elephants, KAZA survey 2022)",
+ "researched": "2026-10-18",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Kenya or South Africa has the most elephants.",
+   "reality": "Botswana holds ~130,000 — the top national population; Zimbabwe is second (~65,000); Kenya ~36,000; South Africa ~30,000 (KAZA 2022; national censuses).",
+   "sources": [
+    "kaza_2022",
+    "wiki_botswana_elephants"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Feed answers say 'Botswana' with a stock elephant; nobody shows the northern range on the map with the KAZA count, the 1-in-3 share and the IUCN status.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=most+elephants+country+shorts",
+    "title": "Search: most elephants country shorts",
+    "angle": "ranking lists",
+    "misses": "no map, no survey source"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if map scenarios",
+    "misses": "no wildlife facts"
+   },
+   {
+    "url": "https://www.youtube.com/@huhindustry/shorts",
+    "title": "HuhIndustry",
+    "angle": "fast fact chains",
+    "misses": "no quiz beat"
+   }
+  ]
+ },
+ "sources": {
+  "kaza_2022": {
+   "type": "primary",
+   "publisher": "KAZA TFCA Secretariat",
+   "title": "KAZA Elephant Survey 2022 — results",
+   "url": "https://www.kavangozambezi.org/kaza-elephant-survey-2022/",
+   "date": "2023-08-31",
+   "notes": "aerial survey Aug–Oct 2022: 227,900 elephants across KAZA; Botswana 131,909 (top national population); Zimbabwe 65,028"
+  },
+  "iucn_savanna": {
+   "type": "primary",
+   "publisher": "IUCN Red List",
+   "title": "Loxodonta africana — African Savanna Elephant",
+   "url": "https://www.iucnredlist.org/species/181008073/223031019",
+   "date": "2026-10-18",
+   "notes": "assessed 2020, published 2021: Endangered; population decline of at least 60% over three generations (~50 years)"
+  },
+  "unesco_okavango": {
+   "type": "primary",
+   "publisher": "UNESCO World Heritage Centre",
+   "title": "Okavango Delta",
+   "url": "https://whc.unesco.org/en/list/1432/",
+   "date": "2026-10-18",
+   "notes": "inscribed 2014; permanent marshland and seasonally flooded plains in the Kalahari; home to the world's largest population of elephants"
+  },
+  "wiki_botswana_elephants": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Elephants in Botswana",
+   "url": "https://en.wikipedia.org/wiki/Elephants_in_Botswana",
+   "date": "2026-10-18",
+   "notes": "≈130,000 elephants, about a third of Africa's total; concentrated in the north (Chobe, Okavango); KAZA 2022 count 131,909"
+  },
+  "wiki_botswana": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Botswana",
+   "url": "https://en.wikipedia.org/wiki/Botswana",
+   "date": "2026-10-18",
+   "notes": "population ~2.5 million (2022 census: 2,359,609; 2024 est. ~2.5 M)"
+  },
+  "britannica_chobe": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Chobe National Park",
+   "url": "https://www.britannica.com/place/Chobe-National-Park",
+   "date": "2026-10-18",
+   "notes": "northern Botswana; known for one of the largest concentrations of elephants in Africa"
+  },
+  "natgeo_elephants": {
+   "type": "press",
+   "publisher": "National Geographic",
+   "title": "Botswana has more elephants than any other country",
+   "url": "https://www.nationalgeographic.com/animals/article/botswana-elephants",
+   "date": "2026-10-18",
+   "notes": "~130,000 elephants, a third of Africa's remaining savanna elephants; Chobe and the Okavango"
+  },
+  "gec_2016": {
+   "type": "scholarly",
+   "publisher": "PeerJ — Great Elephant Census (Chase et al. 2016)",
+   "title": "Continent-wide survey reveals massive decline in African savannah elephants",
+   "url": "https://peerj.com/articles/2354/",
+   "date": "2016-08-31",
+   "notes": "352,271 savanna elephants in 18 surveyed countries (2014–15); Botswana ~130,000 = the largest share (~37%)"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Botswana has the top national elephant population: 131,909 counted in the 2022 KAZA aerial survey (~130,000).",
+   "sources": [
+    "kaza_2022",
+    "wiki_botswana_elephants",
+    "natgeo_elephants"
+   ],
+   "vo": [
+    "which country has the most elephants",
+    "botswana, kenya, or south africa",
+    "botswana: about one hundred and thirty thousand savanna elephants, more than any other country"
+   ],
+   "screen": [
+    "~130,000",
+    "savanna elephants in Botswana",
+    "Botswana",
+    "Kenya",
+    "South Africa"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "That is roughly a third of Africa's savanna elephants (352,271 counted in the 2014–15 Great Elephant Census), in a country of about 2.5 million people.",
+   "sources": [
+    "gec_2016",
+    "natgeo_elephants",
+    "wiki_botswana_elephants",
+    "wiki_botswana"
+   ],
+   "vo": [
+    "roughly a third of all africa's elephants, in a country of two and a half million people"
+   ],
+   "screen": [
+    "1 IN 3",
+    "of Africa's elephants · 2.5 M people"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "detail",
+   "text": "Botswana's elephants are concentrated in the north — Chobe National Park and the Okavango Delta (UNESCO 2014), an inland wetland on the edge of the Kalahari.",
+   "sources": [
+    "unesco_okavango",
+    "britannica_chobe",
+    "wiki_botswana_elephants"
+   ],
+   "vo": [
+    "most of them roam the north: chobe national park and the okavango delta, a wetland in the desert"
+   ],
+   "screen": [
+    "CHOBE · OKAVANGO",
+    "the northern elephant range",
+    "Chobe National Park",
+    "Okavango Delta"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "The African savanna elephant is listed Endangered by the IUCN (2021), with a decline of at least 60 % over ~50 years.",
+   "sources": [
+    "iucn_savanna",
+    "natgeo_elephants"
+   ],
+   "vo": [
+    "across africa the savanna elephant is listed as endangered, down more than half in fifty years"
+   ],
+   "screen": [
+    "ENDANGERED",
+    "down 60% in 50 years (IUCN)"
+   ]
+  },
+  {
+   "id": "C05",
+   "weight": "framing",
+   "text": "One country holds about a third of the continent's herd.",
+   "sources": [
+    "wiki_botswana_elephants",
+    "natgeo_elephants"
+   ],
+   "vo": [
+    "a third of the herd"
+   ],
+   "screen": [
+    "Kalahari"
+   ]
+  }
+ ]
+}

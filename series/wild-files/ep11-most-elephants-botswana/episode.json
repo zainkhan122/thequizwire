@@ -1,0 +1,89 @@
+{
+ "id": "ep11-most-elephants-botswana",
+ "format": "quiz-v3",
+ "series": "wild-files",
+ "number": 11,
+ "title": "Which country has the MOST elephants?",
+ "difficulty": "MEDIUM",
+ "seed": 4111,
+ "quiz": {
+  "question": "Which country has the MOST elephants?",
+  "keyword": "MOST",
+  "options": [
+   "Botswana",
+   "Kenya",
+   "South Africa"
+  ],
+  "correct": 0,
+  "beat": 3.0,
+  "answer_line": "Botswana",
+  "answer_sub": "~130,000 elephants",
+  "option_meta": [
+   {
+    "flag": "bw"
+   },
+   {
+    "flag": "ke"
+   },
+   {
+    "flag": "za"
+   }
+  ],
+  "banner": "Botswana",
+  "banner_sub": "✓  A was right · ~130,000 elephants",
+  "outro": {
+   "headline": "1 FOR 1?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country has the MOST elephants? 🐘",
+  "premise": "130,000 elephants in Botswana, a third of Africa's total",
+  "bait": "Botswana, Kenya or South Africa — which did you pick? 👇",
+  "keywords": [
+   "which country has the most elephants",
+   "botswana elephants",
+   "african elephant population",
+   "kaza elephant survey 2022",
+   "chobe national park",
+   "okavango delta",
+   "savanna elephant endangered",
+   "wildlife quiz",
+   "animal facts",
+   "map animation"
+  ],
+  "description": "130,000 elephants in Botswana, a third of Africa's total. Botswana, Kenya or South Africa — which did you pick? 👇\n\nSources: KAZA Elephant Survey 2022, IUCN Red List, UNESCO World Heritage Centre, Wikipedia.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #11",
+  "hashtags": [
+   "#AnimalQuiz",
+   "#WildlifeFacts",
+   "#thequizwire"
+  ],
+  "tags": [
+   "Elephants",
+   "Botswana"
+  ],
+  "cover_emoji": "🐘"
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "globe-spin",
+  "reveal": "flag-lift",
+  "beats": [
+   "counter",
+   "pin",
+   "counter",
+   "pin"
+  ],
+  "cast": "flagball:happy + emoji-set:savanna",
+  "music": "bed:warm"
+ },
+ "status": "draft"
+}

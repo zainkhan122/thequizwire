@@ -1,0 +1,113 @@
+{
+ "version": 1,
+ "episode": "ep11-most-elephants-botswana",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     19,
+     -27,
+     30,
+     -16
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "072"
+     ],
+     "cls": "",
+     "note": "Botswana",
+     "lift": "flag",
+     "flag": "bw"
+    }
+   ],
+   "pins": [
+    {
+     "id": "chobe",
+     "lonlat": [
+      24.4,
+      -18.65
+     ],
+     "label": "Chobe National Park",
+     "qid": "Q859389"
+    },
+    {
+     "id": "okavango",
+     "lonlat": [
+      22.9,
+      -19.4
+     ],
+     "label": "Okavango Delta",
+     "qid": "Q650872"
+    }
+   ],
+   "labels": [
+    {
+     "id": "bw",
+     "lonlat": [
+      24,
+      -23
+     ],
+     "text": "Botswana",
+     "cls": "tag",
+     "in": "s04+1.2",
+     "out": "s06"
+    },
+    {
+     "id": "kalahari",
+     "lonlat": [
+      22,
+      -24.5
+     ],
+     "text": "Kalahari",
+     "cls": "sea",
+     "in": "s04+1.4",
+     "out": "s06"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      5,
+      -36,
+      45,
+      0
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 200,
+    "lonlat": [
+     24,
+     -22
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}
