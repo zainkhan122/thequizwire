@@ -68,13 +68,13 @@
     {
      "id": "flores",
      "lonlat": [
-      121.3,
-      -9.1
+      120.2,
+      -9.05
      ],
      "text": "Flores",
      "cls": "tag",
      "in": "s04@flores",
-     "out": "s07"
+     "out": "s06"
     }
    ],
    "disputed": [],

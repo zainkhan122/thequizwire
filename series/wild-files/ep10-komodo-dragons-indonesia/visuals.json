@@ -206,7 +206,7 @@
    }
   },
   {
-   "at": "s07",
+   "at": "s06",
    "do": "geo.label_out",
    "stage": "stage_map",
    "args": {
