@@ -17,7 +17,7 @@
   "correct": 0,
   "beat": 3.0,
   "answer_line": "Greece",
-  "answer_sub": "Marathon → Athens, 1896",
+  "answer_sub": "Athens, 1896",
   "option_meta": [
    {
     "flag": "gr"
@@ -30,7 +30,7 @@
    }
   ],
   "banner": "Greece",
-  "banner_sub": "✓  A was right · Marathon → Athens, 1896",
+  "banner_sub": "✓  A was right · Athens, 1896",
   "outro": {
    "headline": "DID YOU GET IT?",
    "url": "thequizwire.com"
@@ -85,5 +85,5 @@
   "cast": "flagball:happy + emoji-set:running",
   "music": "bed:pad"
  },
- "status": "draft"
+ "status": "ready"
 }
