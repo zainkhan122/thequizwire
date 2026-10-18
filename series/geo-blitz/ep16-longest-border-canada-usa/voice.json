@@ -5,7 +5,7 @@
  "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
  "kokoro_fallback": {
   "voice": "am_michael",
-  "speed": 1.2
+  "speed": 1.3
  },
  "intent": "A surveyor's brag: one line, two oceans, no wall. Numbers land like mile markers.",
  "pacing_profile": "fact-first hook at pace, three option pairs, 3-s beat, the line draws itself on the reveal, three number beats, punchline + four-word follow",

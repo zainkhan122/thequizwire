@@ -64,6 +64,38 @@ try:
         res["wpm"] = round(spoken_s / (res["duration"] / 60))
         res["wpm_while_speaking"] = round(spoken_s / (speech_span / 60))
         if res["wpm_while_speaking"] < 140: fails.append(f"pace {res['wpm_while_speaking']} wpm < 140 (v4: 150–175)")
+    cap = cv2.VideoCapture(a.video); fps = cap.get(cv2.CAP_PROP_FPS) or 30; prev = None; cuts = 0; active = 0; n = 0; i = 0
+    while True:
+        ok, fr = cap.read()
+        if not ok: break
+        i += 1
+        if i % 3: continue
+        g = cv2.resize(cv2.cvtColor(fr, cv2.COLOR_BGR2GRAY), (48, 85)).astype("float32")
+        if prev is not None:
+            d = float(np.mean(np.abs(g - prev))); n += 1
+            if d > 18: cuts += 1                                                           # hard cut / flash (winners' style)
+            if d > 1.5: active += 1                                                        # visible change in this 0.1 s (our continuous-motion style)
+        prev = g
+    cap.release()
+    res["motion_per_10s"] = round(cuts / max(1.0, res["duration"]) * 10, 1)
+    res["motion_active_pct"] = round(100 * active / max(1, n))
+    floor = float(os.environ.get("V4_MOTION_MIN", "6")); afloor = float(os.environ.get("V4_ACTIVE_MIN", "55"))
+    # pass if the master is either cut-heavy (winners ≈27 cuts/10 s) or continuously moving (≥55 % of 0.1-s samples change; v3 ep15 = 45 %)
+    if res["motion_per_10s"] < floor and res["motion_active_pct"] < afloor:
+        fails.append(f"motion {res['motion_per_10s']} cuts/10 s < {floor:g} and only {res['motion_active_pct']}% of the frame-time moves (< {afloor:g}%) — static stage; add cam moves/pop-ins/pulses")
+    elif res["motion_active_pct"] < 70: warns.append(f"motion: {res['motion_active_pct']}% active (aim >= 70%, winners ~100%)")
+except ImportError:
+    res["asr_match"] = "skipped (faster-whisper not installed)"
+# ---- v4 delivery gates (decode 2026-10-18): pace and motion measured on the master itself, not on the plan
+try:
+    import numpy as np, cv2, os
+    if a.words:
+        W = json.load(open(a.words)); W = W["words"] if "words" in W else [w for k in sorted(W) for w in W[k]]
+        spoken_s = sum(1 for w in W if (w.get("w") or w.get("word")))
+        speech_span = max(0.1, (max(float(w.get("e", w.get("end", 0))) for w in W) - min(float(w.get("s", w.get("start", 0))) for w in W)))
+        res["wpm"] = round(spoken_s / (res["duration"] / 60))
+        res["wpm_while_speaking"] = round(spoken_s / (speech_span / 60))
+        if res["wpm_while_speaking"] < 140: fails.append(f"pace {res['wpm_while_speaking']} wpm < 140 (v4: 150–175)")
     cap = cv2.VideoCapture(a.video); fps = cap.get(cv2.CAP_PROP_FPS) or 30; prev = None; cuts = 0; i = 0
     while True:
         ok, fr = cap.read()

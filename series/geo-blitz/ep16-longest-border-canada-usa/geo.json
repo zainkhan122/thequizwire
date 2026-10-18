@@ -736,20 +736,20 @@
     {
      "id": "ibc_vista",
      "lonlat": [
-      -72.2,
-      45.01
+      -72.098,
+      45.006
      ],
-     "label": "6 m vista",
-     "qid": "Q1664016"
+     "label": "Derby Line · 6 m vista",
+     "qid": "Q1588452"
     },
     {
      "id": "estcourt",
      "lonlat": [
-      -69.23,
-      47.46
+      -69.228,
+      47.456
      ],
      "label": "Estcourt Station",
-     "qid": "Q3059437"
+     "qid": "Q639278"
     }
    ],
    "labels": [
