@@ -145,11 +145,11 @@ def main():
     G = W if legacy else F
     spoken = [l for l in V["lines"] if l.get("text")]
     n_words = sum(len(l["text"].split()) for l in spoken)
-    if E.get("format") == "quiz-v3" and n_words < 85: G.append(f"Q11: only {n_words} spoken words — v4 needs 90–110 words in 30–36 s (add a consequence/number beat)")
+    if E.get("format") == "quiz-v3" and not 72 <= n_words <= 88: G.append(f"Q11: {n_words} spoken words — v4 budget is 72–88 words at speed ≥ 1.2 (CI 2026-10-18: 93 words @1.15 = 44 s total; the 3-s beat + holds eat 8 s)")
     cta_l = [l for l in spoken if l.get("role") == "cta"]
     if cta_l and len(cta_l[-1]["text"].split()) > 8: G.append(f"Q11: spoken CTA is {len(cta_l[-1]['text'].split())} words — punchline first, CTA ≤ 8 words (the outro visual asks)")
     if spoken and re.search(r"\b(hi guys|welcome|hello everyone|in this video|today's question)\b", spoken[0]["text"], re.I): F.append("Q11: greeting in the hook — sentence one must be the premise")
-    if float((V.get("kokoro_fallback") or {}).get("speed", 1.0)) < 1.15: G.append("Q11: voice.json kokoro_fallback.speed must be ≥ 1.15 (winners ≈170 wpm; we were 116)")
+    if float((V.get("kokoro_fallback") or {}).get("speed", 1.0)) < 1.2: G.append("Q11: voice.json kokoro_fallback.speed must be ≥ 1.2 (winners ≈170 wpm; we were 116)")
     P = E.get("post", {})
     prem = (P.get("premise") or "").strip()
     if not 30 <= len(prem) <= 64: G.append(f"Q11: post.premise missing or {len(prem)} chars (need a 30–64-char premise statement for the heading)")
