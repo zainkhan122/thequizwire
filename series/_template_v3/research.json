@@ -76,13 +76,21 @@
    "url": "https://en.wikipedia.org/wiki/Tasman_Glacier",
    "date": "2026-10-01",
    "notes": "largest glacier in New Zealand; flows from the Southern Alps towards the Mackenzie Basin"
+  },
+  "wiki_kosciuszko": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Mount Kosciuszko",
+   "url": "https://en.wikipedia.org/wiki/Mount_Kosciuszko",
+   "date": "2026-10-18",
+   "notes": "2,228 m, highest mountain on mainland Australia"
   }
  },
  "claims": [
   {
    "id": "C01",
    "weight": "core",
-   "text": "The Southern Alps are the mountain range running along the length of New Zealand's South Island, roughly 500 km NE–SW (Britannica gives about 480 km).",
+   "text": "The Southern Alps are the mountain range running along the length of New Zealand's South Island, roughly 500 km NE–SW (Britannica gives about 480 km). The Southern Alps are in New Zealand, not Europe.",
    "sources": [
     "wiki_southern_alps",
     "britannica_southern_alps",
@@ -90,29 +98,33 @@
     "doc_aoraki"
    ],
    "vo": [
-    "in which country are the southern alps",
-    "it's new zealand",
-    "about five hundred kilometres down the south island"
+    "a range called the alps… nowhere near europe",
+    "five hundred kilometres of peaks",
+    "which country",
+    "it's new zealand: the southern alps run about five hundred kilometres down the south island"
    ],
    "screen": [
     "New Zealand",
     "500 KM",
     "of peaks down the South Island",
-    "South Island"
+    "South Island",
+    "In which country are the SOUTHERN ALPS?"
    ]
   },
   {
    "id": "C02",
    "weight": "record",
-   "text": "Aoraki / Mount Cook, 3,724 m, is New Zealand's highest mountain (height revised in 2014 after the 1991 collapse and later erosion).",
+   "text": "Aoraki / Mount Cook, 3,724 m, is New Zealand's highest mountain (height revised in 2014 after the 1991 collapse and later erosion). Australia's highest peak, Mount Kosciuszko, is 2,228 m, so Aoraki is taller than any Australian mountain.",
    "sources": [
     "wiki_aoraki",
     "doc_aoraki",
     "wiki_south_island",
-    "britannica_southern_alps"
+    "britannica_southern_alps",
+    "wiki_kosciuszko"
    ],
    "vo": [
-    "highest: aoraki, mount cook, three thousand seven hundred and twenty-four metres"
+    "highest: aoraki, mount cook, three thousand seven hundred and twenty-four metres",
+    "taller than anything in australia"
    ],
    "screen": [
     "3,724 M",
@@ -123,13 +135,14 @@
   {
    "id": "C03",
    "weight": "record",
-   "text": "The Tasman Glacier is New Zealand's largest and longest glacier — about 23 km long (DOC: 23 km long, up to 3 km wide, 101 km²).",
+   "text": "The Tasman Glacier is New Zealand's largest and longest glacier — about 23 km long (DOC: 23 km long, up to 3 km wide, 101 km²). Tasman Lake, the proglacial lake at its terminus, did not exist before the 1970s (DOC: formed from small meltwater ponds in the early 1970s).",
    "sources": [
     "doc_aoraki",
     "wiki_tasman"
    ],
    "vo": [
-    "the tasman glacier, its longest, runs twenty-three kilometres"
+    "the tasman glacier, its longest, runs twenty-three kilometres",
+    "into a lake that did not exist in 1970"
    ],
    "screen": [
     "23 KM",
@@ -140,14 +153,16 @@
   {
    "id": "C04",
    "weight": "record",
-   "text": "The range is uplifted along the Alpine Fault, the boundary between the Pacific and Australian tectonic plates.",
+   "text": "The range is uplifted along the Alpine Fault, the boundary between the Pacific and Australian tectonic plates. Uplift along the fault continues today (GNS Science: the Southern Alps are still rising).",
    "sources": [
     "wiki_alpine_fault",
     "gns_alpine_fault",
     "wiki_southern_alps"
    ],
    "vo": [
-    "it all rides the alpine fault, where the pacific and australian plates collide"
+    "it all rides the alpine fault, where the pacific and australian plates collide",
+    "lift the range every year",
+    "still rising"
    ],
    "screen": [
     "TWO PLATES",
@@ -216,7 +231,6 @@
  },
  "vo_exempt": [
   "^switzerland, new zealand, or chile\\?$",
-  "^tomorrow[,:]? the country with the most time zones",
-  "^subscribe, and guess it first"
+  "^follow for tomorrow's map"
  ]
 }

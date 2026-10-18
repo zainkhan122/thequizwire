@@ -14,6 +14,17 @@ from datetime import date
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
+def v4_ok(ep):
+    """Hard v4 gate before an episode can be picked: quizlint (incl. Q11 authoring rules) + postkit check must pass."""
+    import subprocess
+    for cmd in (["python3", str(ROOT / "reelkit/quizlint.py"), str(ep)], ["python3", str(ROOT / "reelkit/postkit.py"), "check", str(ep)]):
+        r = subprocess.run(cmd, capture_output=True, text=True)
+        if r.returncode != 0:
+            print(f"daily_pick: SKIP {ep.name} — {cmd[1].split('/')[-1]} failed:\n" + "\n".join(l for l in (r.stdout + r.stderr).splitlines() if "FAIL" in l)[:1500], file=sys.stderr)
+            return False
+    return True
+
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--date"); ap.add_argument("--min", type=int, default=1); ap.add_argument("--max", type=int, default=3); ap.add_argument("--dry", action="store_true")
     a = ap.parse_args(); day = a.date or date.today().isoformat()
@@ -27,6 +38,7 @@ def main():
         if "_template" in str(ej): continue
         E = json.loads(ej.read_text()); name = ej.parent.name
         if E.get("status") != "ready" or name in done or name in planned: continue
+        if not v4_ok(ej.parent): continue                                                   # v4 gates are mandatory for anything that ships
         ready.append((E["series"], int(E.get("number", 0)), str(ej.parent.relative_to(ROOT))))
     if not ready: print("", end=""); print("daily_pick: backlog empty — author more episodes (status: ready)", file=sys.stderr); return
     # series rotation: last-published order from the ledger (+ planned days), least recent first

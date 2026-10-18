@@ -103,8 +103,9 @@
    "tone": "tender",
    "energy": 3,
    "pause_after": 0.0,
-   "direction": "warm, direct to camera",
-   "text": "What was your first guess? Tell me in the comments, and follow for tomorrow's question."
+   "direction": "punchline first, CTA in four words — the outro visual does the asking",
+   "text": "Shown to scale. Follow for tomorrow's map.",
+   "cues": {}
   }
  ]
 }

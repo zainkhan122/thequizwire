@@ -1,8 +1,49 @@
 {
- "id": "ep-disputed", "format": "quiz", "series": "geo-blitz", "number": 0, "seed": 7,
- "title": "K2 stands in which mountain range?", "difficulty": "HARD",
- "quiz": {"question": "K2, the world's second-highest peak, stands in which mountain range?", "options": ["Himalayas", "Karakoram", "Hindu Kush", "Pamirs"], "correct": 1, "countdown": 3,
-          "answer_line": "The Karakoram", "answer_sub": "8,611 m — in Gilgit-Baltistan, on the China border"},
- "hook_type": "misconception", "promise": {"min_motion": 0.70}, "credits": [],
- "post": {"title": "K2 is NOT in the Himalayas 🏔️ Geo Blitz", "description": "fixture", "hashtags": ["#GKshorts", "#usagk", "#thequizwire", "#1min", "#shorts"]}
+ "id": "ep-disputed",
+ "format": "quiz",
+ "series": "geo-blitz",
+ "number": 0,
+ "seed": 7,
+ "title": "K2 stands in which mountain range?",
+ "difficulty": "HARD",
+ "quiz": {
+  "question": "K2, the world's second-highest peak, stands in which mountain range?",
+  "options": [
+   "Himalayas",
+   "Karakoram",
+   "Hindu Kush",
+   "Pamirs"
+  ],
+  "correct": 1,
+  "countdown": 3,
+  "answer_line": "The Karakoram",
+  "answer_sub": "8,611 m — in Gilgit-Baltistan, on the China border"
+ },
+ "hook_type": "misconception",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [],
+ "post": {
+  "title": "K2 is NOT in the Himalayas 🏔️ Geo Blitz",
+  "description": "fixture",
+  "hashtags": [
+   "#GKshorts",
+   "#usagk",
+   "#thequizwire",
+   "#1min",
+   "#shorts"
+  ],
+  "premise": "Kashmir: the border three countries draw differently",
+  "bait": "Which line did you expect to see? 👇",
+  "keywords": [
+   "Kashmir map",
+   "line of control",
+   "disputed border",
+   "India Pakistan border",
+   "map animation",
+   "geography facts"
+  ]
+ },
+ "legacy_v3": true
 }

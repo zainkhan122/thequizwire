@@ -5,10 +5,10 @@
  "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
  "kokoro_fallback": {
   "voice": "am_michael",
-  "speed": 1.0
+  "speed": 1.15
  },
  "intent": "A quick, confident quizmaster: curious on the question, playful on the countdown, satisfied on the reveal, genuinely interested in the one fact that makes the answer stick.",
- "pacing_profile": "question on the map at zero, three quick options, a 1.5-s beat, a warm reveal, three short see-it beats, a tease and a loop",
+ "pacing_profile": "premise hook at pace, three quick options, a 3-s ticking beat, a dry reveal, three consequence beats each with a place and a number, punchline + four-word follow",
  "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
  "start_hold": 0.0,
  "end_hold": 2.4,
@@ -18,11 +18,11 @@
    "id": "v01",
    "scene": "s01",
    "role": "hook",
-   "tone": "tense",
+   "tone": "urgent",
    "energy": 4,
    "pause_after": 0.3,
-   "direction": "straight in, like a dare",
-   "text": "In which country are the Southern Alps?",
+   "direction": "a claim with a number, fast, then the question",
+   "text": "A range called the Alps… nowhere near Europe. Five hundred kilometres of peaks. Which country?",
    "cues": {
     "which": "which"
    }
@@ -61,7 +61,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "It's New Zealand: about five hundred kilometres down the South Island.",
+   "text": "It's New Zealand: the Southern Alps run about five hundred kilometres down the South Island.",
    "cues": {
     "answer": "zealand",
     "five": "five",
@@ -77,7 +77,7 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "count it out",
-   "text": "Highest: Aoraki, Mount Cook, three thousand seven hundred and twenty-four metres.",
+   "text": "Highest: Aoraki, Mount Cook, three thousand seven hundred and twenty-four metres, taller than anything in Australia.",
    "cues": {
     "aoraki": "aoraki",
     "three": "three"
@@ -91,7 +91,7 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "let the comparison land",
-   "text": "The Tasman Glacier, its longest, runs twenty-three kilometres.",
+   "text": "The Tasman Glacier, its longest, runs twenty-three kilometres into a lake that did not exist in 1970.",
    "cues": {
     "tasman": "tasman",
     "glacier": "glacier"
@@ -105,7 +105,7 @@
    "energy": 4,
    "pause_after": 0.4,
    "direction": "the number people repeat",
-   "text": "It all rides the Alpine Fault, where the Pacific and Australian plates collide.",
+   "text": "It all rides the Alpine Fault, where the Pacific and Australian plates collide and lift the range every year.",
    "cues": {
     "fault": "fault",
     "plates": "plates"
@@ -118,10 +118,10 @@
    "tone": "tender",
    "energy": 3,
    "pause_after": 0.0,
-   "direction": "a promise, not a plea",
-   "text": "Got it right? Hit like, and subscribe for a new map question every day.",
+   "direction": "punchline, then four words — the outro visual asks",
+   "text": "Still rising. Follow for tomorrow's map.",
    "cues": {
-    "subscribe": "subscribe"
+    "subscribe": "follow"
    }
   }
  ],

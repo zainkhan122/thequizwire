@@ -29,3 +29,15 @@ Applies to every episode marked `status: ready` from now on. Gates: `quizlint` Q
 - Frame 0 = full satellite stage with the series mascot already on the map; question types in word by word over it.
 - On-screen text = one 1–3-word Anton label per beat; never the full sentence. `@thequizwire` watermark top-right on every frame.
 - Cover = key frame (flag-filled answer + mascot reaction) + ≤ 3 giant yellow words.
+
+## Enforcement — nothing ships without these (added 2026-10-18 on the owner's instruction)
+| gate | where it runs | what it refuses |
+|---|---|---|
+| `quizlint` **Q11** (FAIL for every episode not already `status: published`) | `episode.sh` preflight, CI `render.yml`, `tools/daily_pick.py` | < 85 spoken words (v3 format) · CTA > 8 words · greeting hook · `kokoro_fallback.speed` < 1.15 · missing/short `post.premise` or the word "quiz" in it · missing `post.bait` or a bait that spoils the answer · < 6 `post.keywords` · any link in `post.description` |
+| `postkit check` | CI render (post kit), `daily_pick.py` | title/description/hashtag rules per platform; ≤ 2 hashtags only at the end of the YouTube title |
+| `qa.py` on the rendered master | CI render `qa` stage (after encode) | pace < 140 wpm while speaking (target 150–175) · loudness off −14 ±1 · motion < 10 events/10 s (warning until F3 ships; `V4_MOTION_GATE=1` turns it into a FAIL) |
+| `tools/daily_pick.py` | `daily.yml` 07:00 UTC | never picks a `ready` episode that fails quizlint or postkit — it prints `SKIP <ep>` with the failing lines |
+| `tests/selftest.py` | before every commit, CI `selftest.yml` | the templates themselves must pass v4; an old-style copy (speed 1.0, no premise/bait) must be refused (`ep-v3-oldstyle`) |
+
+The templates (`series/_template`, `_template_v2`, `_template_v3`) are already v4-compliant, so every new episode starts from a
+passing example: `_template_v3` = 93 words, premise hook, 4-word follow, premise/bait/keywords filled, research anchors updated.

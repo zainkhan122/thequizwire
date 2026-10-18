@@ -139,13 +139,30 @@ def main():
         if not cd or cd[0].get("silence") is None or not 1.0 <= float(cd[0]["silence"]) <= 1.5: F.append("Q10: the beat line must be a `silence` of 1.0–1.5 s (v2 has no countdown)")
     elif not cd or cd[0].get("silence") is None or float(cd[0]["silence"]) < 2: F.append("Q2: the countdown line must be a `silence` ≥ 2 s (the ring counts, nobody talks)")
     if len(cd) > 1: F.append("Q2: more than one countdown line")
-    # ---- Q11 pace & CTA (decode 2026-10-18: winners ≈170 wpm / 100+ words, spoken CTA a few words or none, no greeting)
+    # ---- Q11 v4 authoring gate (decode 2026-10-18, docs/AUTHORING_V4.md). HARD for every episode that is not already published;
+    #      the 12 legacy pilots (status: published) only get warnings so history still lints.
+    legacy = E.get("status") == "published" or E.get("legacy_v3") is True      # legacy_v3: frozen test fixtures only
+    G = W if legacy else F
     spoken = [l for l in V["lines"] if l.get("text")]
     n_words = sum(len(l["text"].split()) for l in spoken)
-    if E.get("format") == "quiz-v3" and n_words < 85: W.append(f"Q11: only {n_words} spoken words — winners carry 90–110 words in 30–36 s at speed 1.15 (add one consequence/number beat)")
+    if E.get("format") == "quiz-v3" and n_words < 85: G.append(f"Q11: only {n_words} spoken words — v4 needs 90–110 words in 30–36 s (add a consequence/number beat)")
     cta_l = [l for l in spoken if l.get("role") == "cta"]
-    if cta_l and len(cta_l[-1]["text"].split()) > 8: W.append(f"Q11: spoken CTA is {len(cta_l[-1]['text'].split())} words — end on the punchline; CTA ≤ 8 words (the outro visual carries it)")
-    if spoken and re.search(r"\b(hi guys|welcome|hello everyone|in this video)\b", spoken[0]["text"], re.I): F.append("Q11: greeting in the hook — sentence one must be the premise")
+    if cta_l and len(cta_l[-1]["text"].split()) > 8: G.append(f"Q11: spoken CTA is {len(cta_l[-1]['text'].split())} words — punchline first, CTA ≤ 8 words (the outro visual asks)")
+    if spoken and re.search(r"\b(hi guys|welcome|hello everyone|in this video|today's question)\b", spoken[0]["text"], re.I): F.append("Q11: greeting in the hook — sentence one must be the premise")
+    if float((V.get("kokoro_fallback") or {}).get("speed", 1.0)) < 1.15: G.append("Q11: voice.json kokoro_fallback.speed must be ≥ 1.15 (winners ≈170 wpm; we were 116)")
+    P = E.get("post", {})
+    prem = (P.get("premise") or "").strip()
+    if not 30 <= len(prem) <= 64: G.append(f"Q11: post.premise missing or {len(prem)} chars (need a 30–64-char premise statement for the heading)")
+    elif re.search(r"\bquiz\b", prem, re.I): G.append("Q11: post.premise must not contain the word 'quiz' (keyword nouns first)")
+    bait = (P.get("bait") or "").strip()
+    if not bait: G.append("Q11: post.bait missing (one comment-bait line, no spoiler)")
+    else:
+        ans = norm(q["options"][q["correct"]]) if isinstance(q.get("correct"), int) and q.get("options") else ""
+        akey = [w for w in ans.split() if len(w) > 3]
+        named = sum(1 for o in q.get("options", []) if norm(o) and norm(o) in norm(bait))
+        if akey and all(w in norm(bait) for w in akey) and named < 2: G.append("Q11: post.bait spoils the answer (name all the options or none)")
+    if len(P.get("keywords", [])) < 6: G.append(f"Q11: post.keywords has {len(P.get('keywords', []))} entries (need ≥ 6 search phrases for yt_enrich tags)")
+    if re.search(r"https?://|www\.|thequizwire\.com", (P.get("description") or "")): G.append("Q11: post.description contains a link (0 % of winners link; site lives in the outro frame)")
     # ---- Q4 copy
     v3 = E.get("format") == "quiz-v3"
     q_max, o_max, f_max = (72, 18, 36) if v3 else (76, 26, 80) if v2 else (90, 24, 140)     # v3: 100-px question, 58-px pills, 84-px fact caption

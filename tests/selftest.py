@@ -128,6 +128,16 @@ def main():
         edit_json(bad / "episode.json", break_quiz)
         expect_fail(bad, "quizlint", "plan quizlint", "Q1")
 
+        # negative 2a-v4: an old-style episode (speed 1.0, long CTA, no premise/bait) must be REFUSED by quizlint Q11 unless published
+        v4 = copy_ep(ROOT / "series/_template_v3", tmp, "ep-v3-oldstyle")
+        def oldstyle(v):
+            v["kokoro_fallback"]["speed"] = 1.0
+        edit_json(v4 / "voice.json", oldstyle)
+        def nopremise(e):
+            e["status"] = "ready"; e["post"].pop("premise", None); e["post"].pop("bait", None)
+        edit_json(v4 / "episode.json", nopremise)
+        expect_fail(v4, "quizlint", "plan quizlint", "Q11")
+
         # negative 2b: fact card fading in while the question card is still leaving → quizlint Q8 (band crossfade)
         xf = copy_ep(ROOT / "series/_template", tmp, "ep-crossfade")
         def break_handoff(v):
