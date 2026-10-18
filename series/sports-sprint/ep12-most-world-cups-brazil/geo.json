@@ -1,0 +1,102 @@
+{
+ "version": 1,
+ "episode": "ep12-most-world-cups-brazil",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -82,
+     -56,
+     -34,
+     13
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "076"
+     ],
+     "cls": "",
+     "note": "Brazil",
+     "lift": "flag",
+     "flag": "br"
+    }
+   ],
+   "pins": [
+    {
+     "id": "tres",
+     "lonlat": [
+      -45.255,
+      -21.695
+     ],
+     "label": "Três Corações",
+     "qid": "Q1439211"
+    },
+    {
+     "id": "maracana",
+     "lonlat": [
+      -43.23,
+      -22.912
+     ],
+     "label": "Maracanã",
+     "qid": "Q155174"
+    }
+   ],
+   "labels": [
+    {
+     "id": "br",
+     "lonlat": [
+      -54,
+      -9
+     ],
+     "text": "Brazil",
+     "cls": "tag",
+     "in": "s04+1.2",
+     "out": "s06"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -100,
+      -60,
+      -20,
+      25
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 1000,
+    "lonlat": [
+     -55,
+     -15
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

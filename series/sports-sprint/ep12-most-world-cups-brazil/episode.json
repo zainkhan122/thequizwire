@@ -1,0 +1,89 @@
+{
+ "id": "ep12-most-world-cups-brazil",
+ "format": "quiz-v3",
+ "series": "sports-sprint",
+ "number": 12,
+ "title": "Which country has won the MOST World Cups?",
+ "difficulty": "EASY",
+ "seed": 3112,
+ "quiz": {
+  "question": "Which country has won the MOST World Cups?",
+  "keyword": "MOST",
+  "options": [
+   "Brazil",
+   "Germany",
+   "Italy"
+  ],
+  "correct": 0,
+  "beat": 3.0,
+  "answer_line": "Brazil",
+  "answer_sub": "5 World Cups",
+  "option_meta": [
+   {
+    "flag": "br"
+   },
+   {
+    "flag": "de"
+   },
+   {
+    "flag": "it"
+   }
+  ],
+  "banner": "Brazil",
+  "banner_sub": "✓  A was right · 5 World Cups",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country has won the MOST World Cups? 🏆",
+  "premise": "Five World Cups and the only team at every tournament",
+  "bait": "Brazil, Germany or Italy — which did you pick? 👇",
+  "keywords": [
+   "most world cups",
+   "brazil world cup titles",
+   "fifa world cup winners",
+   "pele 1958",
+   "maracanazo 1950",
+   "germany world cup",
+   "italy world cup",
+   "football quiz",
+   "sports trivia",
+   "map animation"
+  ],
+  "description": "Five World Cups and the only team at every tournament. Brazil, Germany or Italy — which did you pick? 👇\n\nSources: FIFA, Wikipedia (Brazil national football team), Britannica, Olympics.com.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nSports Sprint #12",
+  "hashtags": [
+   "#SportsQuiz",
+   "#SportsTrivia",
+   "#thequizwire"
+  ],
+  "tags": [
+   "WorldCup",
+   "Brazil"
+  ],
+  "cover_emoji": "🏆"
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "flag-lift",
+  "beats": [
+   "counter",
+   "pin",
+   "label",
+   "pin"
+  ],
+  "cast": "flagball:happy + emoji-set:football",
+  "music": "bed:pad"
+ },
+ "status": "draft"
+}

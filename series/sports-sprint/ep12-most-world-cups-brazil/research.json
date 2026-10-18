@@ -1,0 +1,213 @@
+{
+ "version": 1,
+ "episode": "ep12-most-world-cups-brazil",
+ "topic": "Which country has won the most FIFA World Cups? (Brazil, 5)",
+ "researched": "2026-10-18",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Germany has the most World Cup titles.",
+   "reality": "Germany and Italy have four each; Brazil has five (1958, 1962, 1970, 1994, 2002).",
+   "sources": [
+    "fifa_history",
+    "wiki_brazil"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Feed answers flash 'Brazil 5' over a stock photo; nobody puts the five years, the 22-of-22 record, Pelé's birthplace and the 1950 Maracanã on one moving map.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=most+world+cups+shorts",
+    "title": "Search: most World Cups shorts",
+    "angle": "list of winners",
+    "misses": "no map, no 1950"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if map scenarios",
+    "misses": "no sourced sport facts"
+   },
+   {
+    "url": "https://www.youtube.com/@huhindustry/shorts",
+    "title": "HuhIndustry",
+    "angle": "fast fact chains",
+    "misses": "no quiz beat, no sources"
+   }
+  ]
+ },
+ "sources": {
+  "fifa_history": {
+   "type": "primary",
+   "publisher": "FIFA",
+   "title": "FIFA World Cup — tournament history and winners",
+   "url": "https://www.fifa.com/en/tournaments/mens/worldcup",
+   "date": "2026-10-18",
+   "notes": "winners by edition: Brazil 1958, 1962, 1970, 1994, 2002 (5); Germany 4; Italy 4; 22 editions 1930–2022; 1950 final round decider Brazil 1–2 Uruguay at the Maracanã"
+  },
+  "wiki_brazil": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Brazil national football team",
+   "url": "https://en.wikipedia.org/wiki/Brazil_national_football_team",
+   "date": "2026-10-18",
+   "notes": "five World Cup titles (1958, 1962, 1970, 1994, 2002); the only team to have played in every World Cup (22 of 22, 1930–2022); 1950 'Maracanazo' defeat 1–2 to Uruguay at the Maracanã, official attendance 173,850, est. ~200,000"
+  },
+  "britannica_wc": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "World Cup (football)",
+   "url": "https://www.britannica.com/sports/World-Cup-football",
+   "date": "2026-10-18",
+   "notes": "Brazil has won a record five times; Germany and Italy four each; list of finals incl. 1950 Uruguay 2–1 Brazil in Rio de Janeiro"
+  },
+  "britannica_pele": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Pelé",
+   "url": "https://www.britannica.com/biography/Pele-Brazilian-athlete",
+   "date": "2026-10-18",
+   "notes": "born 23 October 1940, Três Corações, Minas Gerais; won the 1958 World Cup aged 17; three World Cup titles (1958, 1962, 1970)"
+  },
+  "olympics_pele": {
+   "type": "press",
+   "publisher": "Olympics.com",
+   "title": "Pelé: the only player to win three World Cups",
+   "url": "https://olympics.com/en/news/pele-world-cup-record-three-titles",
+   "date": "2026-10-18",
+   "notes": "1958 title at 17 years old; youngest World Cup winner; born in Três Corações"
+  },
+  "wiki_1950": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "1950 FIFA World Cup final",
+   "url": "https://en.wikipedia.org/wiki/1950_FIFA_World_Cup_final",
+   "date": "2026-10-18",
+   "notes": "16 July 1950, Maracanã, Rio de Janeiro; Uruguay 2–1 Brazil; official attendance 173,850, estimates ~200,000 — the 'Maracanazo'"
+  },
+  "wiki_wc": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "FIFA World Cup",
+   "url": "https://en.wikipedia.org/wiki/FIFA_World_Cup",
+   "date": "2026-10-18",
+   "notes": "22 tournaments 1930–2022; Brazil the only team at every edition; titles Brazil 5, Germany 4, Italy 4"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Brazil has won the FIFA World Cup five times (1958, 1962, 1970, 1994, 2002); Germany and Italy have four each.",
+   "sources": [
+    "fifa_history",
+    "wiki_brazil",
+    "britannica_wc"
+   ],
+   "vo": [
+    "which country has won the most world cups",
+    "brazil, germany, or italy",
+    "brazil: five titles, 1958, 1962, 1970, 1994 and 2002. nobody else has more than four"
+   ],
+   "screen": [
+    "5 TITLES",
+    "1958 to 2002",
+    "Brazil",
+    "Germany",
+    "Italy"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Brazil is the only team to have played at all 22 World Cups (1930–2022).",
+   "sources": [
+    "wiki_brazil",
+    "wiki_wc",
+    "fifa_history"
+   ],
+   "vo": [
+    "brazil is also the only team at all 22 world cups, never missing one since 1930"
+   ],
+   "screen": [
+    "22 OF 22",
+    "every World Cup since 1930"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "detail",
+   "text": "Pelé won his first World Cup in 1958 aged 17; he was born in Três Corações, Minas Gerais.",
+   "sources": [
+    "britannica_pele",
+    "olympics_pele"
+   ],
+   "vo": [
+    "pelé won his first at 17, a boy from três corações in minas gerais"
+   ],
+   "screen": [
+    "AGE 17",
+    "Pelé's first title, 1958",
+    "Três Corações"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Brazil lost the 1950 World Cup decider at home, 1–2 to Uruguay at the Maracanã, before a crowd of ~173,850 official / ~200,000 estimated.",
+   "sources": [
+    "wiki_1950",
+    "fifa_history",
+    "britannica_wc"
+   ],
+   "vo": [
+    "and the one that hurt: 1950, the final lost at home in the maracanã, nearly 200,000 watching"
+   ],
+   "screen": [
+    "1950",
+    "final lost at the Maracanã",
+    "Maracanã"
+   ]
+  },
+  {
+   "id": "C05",
+   "weight": "framing",
+   "text": "Brazil wears five stars above the crest, one per title; no national team has more.",
+   "sources": [
+    "wiki_brazil",
+    "britannica_wc"
+   ],
+   "vo": [
+    "nobody has more stars"
+   ],
+   "screen": []
+  }
+ ]
+}
