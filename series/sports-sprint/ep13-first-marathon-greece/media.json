@@ -1,0 +1,176 @@
+{
+ "files": {},
+ "generated": {
+  "brand/cursor.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 224,
+   "credit": "thequizwire",
+   "kind": "image",
+   "licence": "own",
+   "provider": "thequizwire (hand-made)",
+   "source": "brand/cursor.svg"
+  },
+  "brand/facebook.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 542,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "brand/instagram.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 2101,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "brand/logo.png": {
+   "by": "reelkit/brand.py",
+   "bytes": 81177,
+   "credit": "TheQuizWire",
+   "kind": "image",
+   "licence": "own",
+   "provider": "TheQuizWire (channel brand, owner-supplied 2026-10-15)",
+   "source": "owner upload logo-The-Quiz-Wire-icon-transparent.png"
+  },
+  "brand/threads.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 1287,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "brand/x.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 252,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "geo/flags/gb.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 504,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/flags/gr.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 868,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/flags/un.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 18702,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/flags/us.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 648,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/main.json": {
+   "by": "reelkit/geodata.py",
+   "bytes": 73493,
+   "credit": "Natural Earth",
+   "kind": "data",
+   "licence": "PD",
+   "provider": "Natural Earth",
+   "source": "world-atlas 2.0.2 50m"
+  },
+  "geo/main_basemap.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 45994,
+   "credit": "NASA Blue Marble",
+   "kind": "image",
+   "licence": "PD-USGov",
+   "provider": "NASA GIBS",
+   "source": "BlueMarble_ShadedRelief_Bathymetry z8 (4 tiles)"
+  },
+  "geo/main_basemap_far.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 576158,
+   "credit": "NASA Blue Marble",
+   "kind": "image",
+   "licence": "PD-USGov",
+   "provider": "NASA GIBS",
+   "source": "BlueMarble_ShadedRelief_Bathymetry z8 (64 tiles)"
+  },
+  "mix.wav": {
+   "ai_voice": "Kokoro am_michael",
+   "by": "reelkit/quizscore.py (procedural bed/ticks/sting) + Kokoro VO takes",
+   "derived_from": "procedural reelkit/synth.py + Kokoro takes vo/*",
+   "kind": "mix",
+   "licence": "own",
+   "provider": "build"
+  },
+  "stickers/1f3c3.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 6518,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f3f0.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1010,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f44d.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1663,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f514.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 314,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f947.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 665,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  }
+ },
+ "version": 1
+}

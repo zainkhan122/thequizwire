@@ -1,0 +1,210 @@
+{
+ "version": 1,
+ "episode": "ep13-first-marathon-greece",
+ "topic": "Where was the first marathon race run? (Greece — Marathon to Athens, 1896 Olympics)",
+ "researched": "2026-10-18",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The marathon has always been 42.195 km.",
+   "reality": "1896 was about 40 km; 42.195 km dates from London 1908 and was made the official distance by the IAAF in 1921.",
+   "sources": [
+    "world_athletics",
+    "wiki_marathon"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Feed answers say 'Greece' with a running photo; nobody draws the 1896 course, names the water-carrier winner, and jumps to Windsor to explain 42.195.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=why+is+a+marathon+42.195+km+shorts",
+    "title": "Search: why 42.195 km shorts",
+    "angle": "the royal-family story",
+    "misses": "no map, no 1896"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if map scenarios",
+    "misses": "no sport history"
+   },
+   {
+    "url": "https://www.youtube.com/@huhindustry/shorts",
+    "title": "HuhIndustry",
+    "angle": "fast fact chains",
+    "misses": "no quiz beat"
+   }
+  ]
+ },
+ "sources": {
+  "olympics_1896": {
+   "type": "primary",
+   "publisher": "Olympics.com (IOC)",
+   "title": "Athens 1896 — Marathon men results",
+   "url": "https://olympics.com/en/olympic-games/athens-1896/results/athletics/marathon-men",
+   "date": "2026-10-18",
+   "notes": "10 April 1896; Spyridon Louis (GRE) 2:58:50; course Marathon → Panathenaic Stadium, ~40 km"
+  },
+  "olympics_louis": {
+   "type": "primary",
+   "publisher": "Olympics.com (IOC)",
+   "title": "Spyridon Louis",
+   "url": "https://olympics.com/en/athletes/spyridon-louis",
+   "date": "2026-10-18",
+   "notes": "water carrier from Marousi; won the first Olympic marathon in 1896 in 2:58:50"
+  },
+  "world_athletics": {
+   "type": "primary",
+   "publisher": "World Athletics",
+   "title": "Marathon — discipline history",
+   "url": "https://worldathletics.org/disciplines/road-running/marathon",
+   "date": "2026-10-18",
+   "notes": "first run at the 1896 Olympics (~40 km); 42.195 km from London 1908 (Windsor Castle to the White City stadium); standardised by the IAAF in 1921"
+  },
+  "britannica_marathon": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "marathon (running race)",
+   "url": "https://www.britannica.com/sports/marathon-race",
+   "date": "2026-10-18",
+   "notes": "introduced at the 1896 Athens Olympics; distance ~40 km; set at 42,195 m in London 1908 (Windsor Castle start); official from 1921; Spyridon Louis first winner"
+  },
+  "wiki_marathon": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Marathon",
+   "url": "https://en.wikipedia.org/wiki/Marathon",
+   "date": "2026-10-18",
+   "notes": "1896 Olympic marathon 40 km Marathon→Athens won by Spyridon Louis 2:58:50; 1908 London 26 mi 385 yd = 42.195 km Windsor Castle to White City; IAAF adopted in 1921"
+  },
+  "wiki_1896": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Athletics at the 1896 Summer Olympics – Men's marathon",
+   "url": "https://en.wikipedia.org/wiki/Athletics_at_the_1896_Summer_Olympics_%E2%80%93_Men%27s_marathon",
+   "date": "2026-10-18",
+   "notes": "10 April 1896; ~40 km from Marathon to the Panathenaic Stadium; winner Spyridon Louis 2:58:50; 17 starters"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The first marathon race was run at the 1896 Athens Olympics, from the town of Marathon to the Panathenaic Stadium, about 40 km.",
+   "sources": [
+    "olympics_1896",
+    "world_athletics",
+    "wiki_1896",
+    "britannica_marathon"
+   ],
+   "vo": [
+    "where was the first marathon race run",
+    "greece, the united kingdom, or the usa",
+    "greece: at the 1896 athens olympics, from the town of marathon to the stadium, about forty kilometres"
+   ],
+   "screen": [
+    "1896",
+    "Marathon to Athens, ~40 km",
+    "Marathon",
+    "Panathenaic Stadium",
+    "Athens",
+    "Greece",
+    "United Kingdom",
+    "USA"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Spyridon Louis, a Greek water carrier, won in 2:58:50.",
+   "sources": [
+    "olympics_louis",
+    "olympics_1896",
+    "wiki_1896"
+   ],
+   "vo": [
+    "the winner was a greek water carrier, spyridon louis, in just under three hours"
+   ],
+   "screen": [
+    "2:58:50",
+    "Spyridon Louis, water carrier"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "detail",
+   "text": "At London 1908 the course ran 42.195 km (26 mi 385 yd) from Windsor Castle to the White City stadium.",
+   "sources": [
+    "world_athletics",
+    "britannica_marathon",
+    "wiki_marathon"
+   ],
+   "vo": [
+    "in london in 1908 the course was stretched to 42.195 kilometres, so it could start at windsor castle"
+   ],
+   "screen": [
+    "42.195 KM",
+    "London 1908, from Windsor Castle"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "42.195 km became the official marathon distance in 1921 (IAAF) and remains so.",
+   "sources": [
+    "world_athletics",
+    "britannica_marathon",
+    "wiki_marathon"
+   ],
+   "vo": [
+    "that odd distance became the official marathon in 1921, and it has never changed since"
+   ],
+   "screen": [
+    "1921",
+    "made the official distance"
+   ]
+  },
+  {
+   "id": "C05",
+   "weight": "framing",
+   "text": "The race was born in Greece (1896) and its distance fixed by the London 1908 course.",
+   "sources": [
+    "world_athletics",
+    "wiki_marathon"
+   ],
+   "vo": [
+    "born in greece, measured in london"
+   ],
+   "screen": [
+    "Aegean Sea"
+   ]
+  }
+ ]
+}

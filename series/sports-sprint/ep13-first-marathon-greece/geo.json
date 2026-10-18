@@ -1,0 +1,174 @@
+{
+ "version": 1,
+ "episode": "ep13-first-marathon-greece",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     23.4,
+     37.75,
+     24.3,
+     38.35
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "300"
+     ],
+     "cls": "",
+     "note": "Greece"
+    },
+    {
+     "kind": "route",
+     "id": "line",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "course",
+        "properties": {
+         "name": "1896 Olympic marathon course, Marathon → Panathenaic Stadium (schematic along the coast road)"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           23.962,
+           38.153
+          ],
+          [
+           23.99,
+           38.12
+          ],
+          [
+           24.02,
+           38.08
+          ],
+          [
+           24.02,
+           38.04
+          ],
+          [
+           23.98,
+           38.01
+          ],
+          [
+           23.93,
+           37.99
+          ],
+          [
+           23.87,
+           37.98
+          ],
+          [
+           23.81,
+           37.975
+          ],
+          [
+           23.76,
+           37.97
+          ],
+          [
+           23.741,
+           37.968
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic 1896 course for the draw-on; the distance is stated as a number"
+    }
+   ],
+   "pins": [
+    {
+     "id": "marathon",
+     "lonlat": [
+      23.962,
+      38.153
+     ],
+     "label": "Marathon",
+     "qid": "Q212150"
+    },
+    {
+     "id": "stadium",
+     "lonlat": [
+      23.741,
+      37.968
+     ],
+     "label": "Panathenaic Stadium",
+     "qid": "Q208811"
+    }
+   ],
+   "labels": [
+    {
+     "id": "athens",
+     "lonlat": [
+      23.72,
+      37.93
+     ],
+     "text": "Athens",
+     "cls": "tag",
+     "in": "s04@stadium",
+     "out": "s06"
+    },
+    {
+     "id": "aegean",
+     "lonlat": [
+      24.15,
+      37.9
+     ],
+     "text": "Aegean Sea",
+     "cls": "sea",
+     "in": "s04+1.2",
+     "out": "s06"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      19,
+      34,
+      29,
+      42
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 10,
+    "lonlat": [
+     23.8,
+     38.0
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,89 @@
+{
+ "id": "ep13-first-marathon-greece",
+ "format": "quiz-v3",
+ "series": "sports-sprint",
+ "number": 13,
+ "title": "Where was the FIRST marathon race run?",
+ "difficulty": "MEDIUM",
+ "seed": 3113,
+ "quiz": {
+  "question": "Where was the FIRST marathon race run?",
+  "keyword": "FIRST",
+  "options": [
+   "Greece",
+   "United Kingdom",
+   "USA"
+  ],
+  "correct": 0,
+  "beat": 3.0,
+  "answer_line": "Greece",
+  "answer_sub": "Marathon → Athens, 1896",
+  "option_meta": [
+   {
+    "flag": "gr"
+   },
+   {
+    "flag": "gb"
+   },
+   {
+    "flag": "us"
+   }
+  ],
+  "banner": "Greece",
+  "banner_sub": "✓  A was right · Marathon → Athens, 1896",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Where was the FIRST marathon race run? 🏃",
+  "premise": "The first marathon was 40 km; London 1908 made it 42.195",
+  "bait": "Greece, the UK or the USA — which did you pick? 👇",
+  "keywords": [
+   "first marathon",
+   "marathon history",
+   "1896 olympics marathon",
+   "spyridon louis",
+   "why is a marathon 42.195 km",
+   "london 1908 marathon",
+   "pheidippides",
+   "sports quiz",
+   "running facts",
+   "map animation"
+  ],
+  "description": "The first marathon was 40 km; London 1908 made it 42.195. Greece, the UK or the USA — which did you pick? 👇\n\nSources: Olympics.com, World Athletics, Britannica, Wikipedia.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nSports Sprint #13",
+  "hashtags": [
+   "#SportsQuiz",
+   "#SportsTrivia",
+   "#thequizwire"
+  ],
+  "tags": [
+   "Marathon",
+   "Olympics"
+  ],
+  "cover_emoji": "🏃"
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "question-first",
+  "opener": "split-candidates",
+  "reveal": "border-draw",
+  "beats": [
+   "route",
+   "pin",
+   "counter",
+   "pin"
+  ],
+  "cast": "flagball:happy + emoji-set:running",
+  "music": "bed:pad"
+ },
+ "status": "draft"
+}
