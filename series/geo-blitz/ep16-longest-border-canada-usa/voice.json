@@ -1,0 +1,130 @@
+{
+ "version": 1,
+ "episode": "ep16-longest-border-canada-usa",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.2
+ },
+ "intent": "A surveyor's brag: one line, two oceans, no wall. Numbers land like mile markers.",
+ "pacing_profile": "fact-first hook at pace, three option pairs, 3-s beat, the line draws itself on the reveal, three number beats, punchline + four-word follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "a number first, like a dare",
+   "text": "Eight thousand eight hundred and ninety-one kilometres… no wall. Where is the world's longest land border?",
+   "cues": {
+    "eight": "eight",
+    "where": "where"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Canada and the USA, Kazakhstan and Russia, or Argentina and Chile?",
+   "cues": {
+    "a": "canada",
+    "b": "kazakhstan",
+    "c": "argentina"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "Canada and the USA: one line from the Atlantic to the Pacific, then Alaska to the Arctic.",
+   "cues": {
+    "answer": "canada",
+    "atlantic": "atlantic",
+    "alaska": "alaska"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "count it out",
+   "text": "Alaska alone adds two thousand four hundred and seventy-five kilometres.",
+   "cues": {
+    "alaska": "alaska",
+    "two": "two"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "let the comparison land",
+   "text": "Through forest, a six metre strip is kept clear so the line stays visible.",
+   "cues": {
+    "forest": "forest",
+    "six": "six"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.4,
+   "direction": "the number people repeat",
+   "text": "Over eight thousand monuments mark it, some only forty-six centimetres apart.",
+   "cues": {
+    "monuments": "monuments",
+    "apart": "apart"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then four words — the outro visual asks",
+   "text": "Two oceans, one line. Follow for tomorrow's map.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ],
+ "title": "In which country are the SOUTHERN ALPS?"
+}

@@ -1,0 +1,234 @@
+{
+ "version": 1,
+ "episode": "ep16-longest-border-canada-usa",
+ "topic": "Where is the longest land border on Earth? (Canada – United States, 8,891 km)",
+ "researched": "2026-10-18",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "sources": {
+  "ibc_about": {
+   "type": "primary",
+   "publisher": "International Boundary Commission (Canada–US)",
+   "title": "About Us",
+   "url": "https://www.internationalboundarycommission.org/en/about.php",
+   "date": "2026-10-18",
+   "notes": "8,891 km (5,525 mi) from the St. Croix River on the Atlantic to the Strait of Juan de Fuca on the Pacific, and from Tongass Passage to the Arctic Ocean; 'the world's longest land border between two adjoining countries'; ~20 agreements; IBC since 1908"
+  },
+  "ibc_facts": {
+   "type": "primary",
+   "publisher": "International Boundary Commission (Canada–US)",
+   "title": "Boundary Facts",
+   "url": "https://www.internationalboundarycommission.org/en/the-boundary-and-you/interesting-facts.php",
+   "date": "2026-10-18",
+   "notes": "maintains the 8,891 km boundary; over 8,000 monuments and reference points; keeps a 6 metre (20 ft) clear vista; 2,172 km through forest requiring clearing; 5,528 boundary monuments; shortest distance between two monuments 46 cm; Atlantic–Pacific 6,416 km; Pacific–Arctic (Alaska) 2,475 km"
+  },
+  "cia_land": {
+   "type": "primary",
+   "publisher": "CIA World Factbook",
+   "title": "Land boundaries (2022 archive)",
+   "url": "https://www.cia.gov/the-world-factbook/about/archives/2022/field/land-boundaries",
+   "date": "2022-12-31",
+   "notes": "Canada: US 8,891 km (includes 2,475 km with Alaska); Kazakhstan–Russia 7,644 km; Argentina–Chile 6,691 km"
+  },
+  "wiki_border": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Canada–United States border",
+   "url": "https://en.wikipedia.org/wiki/Canada%E2%80%93United_States_border",
+   "date": "2026-10-11",
+   "notes": "8,891 km total: 6,416 km with the contiguous US, 2,475 km with Alaska; longest international border in the world by total length; the boundary vista is a 6 m (20 ft) deforested strip ('slash') maintained by the IBC; over 8,000 boundary monuments; 2,475 km Alaska"
+  },
+  "wiki_borders_list": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "List of countries and territories by number of land borders",
+   "url": "https://en.wikipedia.org/wiki/List_of_countries_and_territories_by_number_of_land_borders",
+   "date": "2026-10-10",
+   "notes": "Longest land border between two countries: Canada–United States 8,891 km; then Kazakhstan–Russia"
+  },
+  "statcan": {
+   "type": "reference",
+   "publisher": "Statistics Canada",
+   "title": "International perspective (Canada Year Book 2011)",
+   "url": "https://www150.statcan.gc.ca/n1/pub/11-402-x/2011000/chap/geo/geo01-eng.htm",
+   "date": "2018-01-17",
+   "notes": "world's longest international border at 8,890 km; compared with Russia–Kazakhstan and Chile–Argentina"
+  },
+  "worldatlas": {
+   "type": "reference",
+   "publisher": "WorldAtlas",
+   "title": "Countries With the Longest Land Borders",
+   "url": "https://www.worldatlas.com/articles/countries-with-the-longest-land-borders.html",
+   "date": "2019-08-01",
+   "notes": "1 Canada–US 8,893 km; 2 Kazakhstan–Russia 7,644; 3 Argentina–Chile 6,691"
+  },
+  "cbc_numbers": {
+   "type": "reference",
+   "publisher": "CBC News",
+   "title": "The Canada-U.S. border: by the numbers",
+   "url": "https://www.cbc.ca/news/canada/the-canada-u-s-border-by-the-numbers-1.999207",
+   "date": "2011-12-07",
+   "notes": "8,891 km across land and water; 2,477 km with Alaska alone; 119 crossings; 8,000+ monuments; a 6-metre vista"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The Canada–United States border is the longest land border between two countries: 8,891 km (5,525 mi), from the Atlantic to the Pacific and from the Pacific to the Arctic (Alaska). Runners-up: Kazakhstan–Russia 7,644 km, Argentina–Chile 6,691 km (CIA).",
+   "sources": [
+    "ibc_about",
+    "cia_land",
+    "wiki_border",
+    "wiki_borders_list",
+    "statcan"
+   ],
+   "vo": [
+    "eight thousand eight hundred and ninety-one kilometres… no wall",
+    "where is the world's longest land border",
+    "canada and the usa, kazakhstan and russia, or argentina and chile",
+    "canada and the usa: one line from the atlantic to the pacific, then alaska to the arctic"
+   ],
+   "screen": [
+    "Where is the LONGEST land border on Earth?",
+    "Canada–USA",
+    "Kazakhstan–Russia",
+    "Argentina–Chile",
+    "8,891 km",
+    "Canada",
+    "United States",
+    "Atlantic to Pacific"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "The Alaska–Canada section (Pacific to Arctic) is 2,475 km; the contiguous-US section is 6,416 km.",
+   "sources": [
+    "ibc_facts",
+    "cia_land",
+    "wiki_border",
+    "cbc_numbers"
+   ],
+   "vo": [
+    "alaska alone adds two thousand four hundred and seventy-five kilometres"
+   ],
+   "screen": [
+    "2,475 KM",
+    "Alaska alone",
+    "Alaska (USA)"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "The International Boundary Commission keeps a 6 m (20 ft) wide clear vista along the land boundary; 2,172 km of it runs through forest that must be cleared regularly.",
+   "sources": [
+    "ibc_facts",
+    "ibc_about",
+    "wiki_border"
+   ],
+   "vo": [
+    "through forest, a six metre strip is kept clear so the line stays visible"
+   ],
+   "screen": [
+    "6 M",
+    "a strip cut through forest",
+    "6 m vista"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "Over 8,000 monuments and reference points mark the boundary (5,528 boundary monuments); the shortest distance between two monuments is 46 cm (18 in).",
+   "sources": [
+    "ibc_facts",
+    "wiki_border",
+    "cbc_numbers"
+   ],
+   "vo": [
+    "over eight thousand monuments mark it, some only forty-six centimetres apart"
+   ],
+   "screen": [
+    "8,000+",
+    "monuments mark the line",
+    "Estcourt Station"
+   ]
+  },
+  {
+   "id": "C05",
+   "weight": "framing",
+   "text": "Not a single wall: the boundary is marked by monuments and cleared vistas, maintained cooperatively by the IBC since 1908; it is often called the longest undefended border.",
+   "sources": [
+    "ibc_about",
+    "cbc_numbers"
+   ],
+   "vo": [
+    "no wall",
+    "two oceans, one line"
+   ],
+   "screen": []
+  }
+ ],
+ "myths": [
+  {
+   "myth": "Russia has the longest border with one neighbour.",
+   "reality": "Russia has the most neighbours and the longest total border, but the longest single two-country border is Canada–US (8,891 km); Kazakhstan–Russia is second.",
+   "sources": [
+    "wiki_borders_list",
+    "cia_land"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  },
+  {
+   "never": "undefended",
+   "why": "Marketing phrase, not a measured fact; the IBC says 'cooperatively maintained'."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$"
+ ],
+ "landscape": {
+  "our_gap": "Feed answers say 'Canada–USA' over a stock photo; nobody draws the actual line ocean to ocean, adds the Alaska leg and the 6-metre cut through the forest.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=longest+border+in+the+world+shorts",
+    "title": "Search: longest border shorts",
+    "angle": "listicle over footage",
+    "misses": "the line is never drawn"
+   },
+   {
+    "url": "https://www.youtube.com/@histoboi/shorts",
+    "title": "Histoboi",
+    "angle": "flag-filled map facts, music only",
+    "misses": "no question, no sources"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if map scenarios, flag-filled shapes",
+    "misses": "no real-world fact, no sources"
+   }
+  ]
+ },
+ "vo_exempt": [
+  "^canada and the usa, kazakhstan and russia, or argentina and chile\\?$",
+  "^follow for tomorrow's map"
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "id": "ep16-longest-border-canada-usa",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 16,
+ "title": "Where is the LONGEST land border on Earth?",
+ "difficulty": "MEDIUM",
+ "seed": 2616,
+ "quiz": {
+  "question": "Where is the LONGEST land border on Earth?",
+  "keyword": "LONGEST",
+  "options": [
+   "Canada–USA",
+   "Kazakhstan–Russia",
+   "Argentina–Chile"
+  ],
+  "correct": 0,
+  "beat": 3.0,
+  "answer_line": "Canada–USA",
+  "answer_sub": "8,891 km",
+  "option_meta": [
+   {
+    "flag": "ca"
+   },
+   {
+    "flag": "kz"
+   },
+   {
+    "flag": "ar"
+   }
+  ],
+  "banner": "Canada–USA",
+  "banner_sub": "✓  A was right · 8,891 km",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "fact-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Where is the LONGEST land border on Earth? 🌍",
+  "premise": "The longest border on Earth: 8,891 km and no wall",
+  "bait": "Canada–USA, Kazakhstan–Russia or Argentina–Chile — which did you pick? 👇",
+  "keywords": [
+   "longest border in the world",
+   "Canada US border",
+   "8891 km",
+   "Alaska Yukon border",
+   "49th parallel",
+   "Kazakhstan Russia border",
+   "Argentina Chile border",
+   "map animation",
+   "geography facts",
+   "world borders"
+  ],
+  "description": "The longest border on Earth: 8,891 km and no wall. Canada–USA, Kazakhstan–Russia or Argentina–Chile? Guess first — then watch the line drawn from ocean to ocean.\n\nSources: International Boundary Commission, CIA World Factbook, Wikipedia (Canada–United States border).\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #16",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "CanadaUSBorder",
+   "LongestBorder"
+  ],
+  "cover_emoji": "🛂"
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "fact-first",
+  "opener": "world-rotated",
+  "reveal": "border-draw",
+  "beats": [
+   "route",
+   "counter",
+   "label",
+   "pin"
+  ],
+  "cast": "flagball:cool + emoji-set:border",
+  "music": "bed:pad"
+ },
+ "status": "draft"
+}
