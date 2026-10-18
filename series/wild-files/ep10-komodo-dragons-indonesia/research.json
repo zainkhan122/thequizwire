@@ -1,0 +1,215 @@
+{
+ "version": 1,
+ "episode": "ep10-komodo-dragons-indonesia",
+ "topic": "Where do Komodo dragons live in the wild? (Indonesia — Komodo, Rinca, Flores, Gili Motang, Padar)",
+ "researched": "2026-10-18",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Komodo dragons kill with bacteria-laden saliva.",
+   "reality": "A 2009 PNAS study (Fry et al.) showed venom glands in the lower jaw; the 'septic bite' idea is outdated.",
+   "sources": [
+    "pnas_fry",
+    "natgeo_komodo"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Feed answers say 'Indonesia' over a stock lizard photo; nobody shows the five islands as pins, the park, and the venom correction on one moving map.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=komodo+dragon+shorts",
+    "title": "Search: komodo dragon shorts",
+    "angle": "attack clips",
+    "misses": "no map, no range"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if map scenarios",
+    "misses": "no wildlife facts"
+   },
+   {
+    "url": "https://www.youtube.com/@huhindustry/shorts",
+    "title": "HuhIndustry",
+    "angle": "fast fact chains",
+    "misses": "no quiz beat, no sources"
+   }
+  ]
+ },
+ "sources": {
+  "iucn": {
+   "type": "primary",
+   "publisher": "IUCN Red List",
+   "title": "Varanus komodoensis — Komodo Dragon",
+   "url": "https://www.iucnredlist.org/species/22884/123633058",
+   "date": "2026-10-18",
+   "notes": "assessed 2019, published 2021: Endangered; range restricted to Komodo, Rinca, Flores, Gili Motang (and formerly Padar) in Indonesia; population estimate c. 3,458 incl. 1,383 mature individuals"
+  },
+  "unesco": {
+   "type": "primary",
+   "publisher": "UNESCO World Heritage Centre",
+   "title": "Komodo National Park",
+   "url": "https://whc.unesco.org/en/list/609/",
+   "date": "2026-10-18",
+   "notes": "park established 1980; World Heritage 1991; islands Komodo, Rinca, Padar; home of the Komodo monitor, world's largest living lizard, ~2.5–3 m, up to 70 kg, population ~5,700 (listing text) — park counts since: ~3,000"
+  },
+  "si_zoo": {
+   "type": "reference",
+   "publisher": "Smithsonian's National Zoo",
+   "title": "Komodo dragon",
+   "url": "https://nationalzoo.si.edu/animals/komodo-dragon",
+   "date": "2026-10-18",
+   "notes": "largest lizard; up to 3 m (10 ft) and 70 kg (150 lb); found only on Komodo, Rinca, Flores, Gili Motang in Indonesia; venom glands"
+  },
+  "pnas_fry": {
+   "type": "scholarly",
+   "publisher": "PNAS",
+   "title": "A central role for venom in predation by Varanus komodoensis (Fry et al. 2009)",
+   "url": "https://www.pnas.org/doi/10.1073/pnas.0810883106",
+   "date": "2009-06-02",
+   "notes": "MRI and histology show mandibular venom glands; venom causes hypotension and anticoagulation — replaces the bacteria hypothesis"
+  },
+  "natgeo_komodo": {
+   "type": "press",
+   "publisher": "National Geographic",
+   "title": "Komodo dragon",
+   "url": "https://www.nationalgeographic.com/animals/reptiles/facts/komodo-dragon",
+   "date": "2026-10-18",
+   "notes": "3 m, 70+ kg; venom confirmed 2009; islands of Indonesia's Lesser Sunda chain; endangered"
+  },
+  "wiki_komodo": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Komodo dragon",
+   "url": "https://en.wikipedia.org/wiki/Komodo_dragon",
+   "date": "2026-10-18",
+   "notes": "native to Komodo, Rinca, Flores, Gili Motang (Padar historically); max ~3 m, ~70 kg; Komodo National Park founded 1980; venom (Fry 2009); IUCN Endangered 2021; ~3,000 individuals in the park"
+  },
+  "wiki_park": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Komodo National Park",
+   "url": "https://en.wikipedia.org/wiki/Komodo_National_Park",
+   "date": "2026-10-18",
+   "notes": "founded 1980; UNESCO 1991; Komodo, Rinca, Padar + smaller islands; dragon population ~3,000 (2017–2022 park counts)"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Komodo dragons live in the wild only on a few islands of Indonesia's Lesser Sundas — Komodo, Rinca, Flores, Gili Motang (and formerly Padar).",
+   "sources": [
+    "iucn",
+    "si_zoo",
+    "wiki_komodo"
+   ],
+   "vo": [
+    "where do komodo dragons live in the wild",
+    "indonesia, australia, or philippines",
+    "indonesia: a few islands in the lesser sundas, komodo, rinca, flores, and nowhere else on earth"
+   ],
+   "screen": [
+    "5 ISLANDS",
+    "and nowhere else on Earth",
+    "Indonesia",
+    "Australia",
+    "Philippines",
+    "Komodo",
+    "Flores"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "It is the largest and heaviest living lizard: up to about 3 m long and around 70 kg.",
+   "sources": [
+    "unesco",
+    "si_zoo",
+    "natgeo_komodo"
+   ],
+   "vo": [
+    "the heaviest lizard alive: up to three metres long and around seventy kilograms"
+   ],
+   "screen": [
+    "3 M · 70 KG",
+    "the heaviest lizard alive"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "detail",
+   "text": "Komodo National Park was established in 1980 (UNESCO World Heritage 1991) and holds roughly 3,000 dragons.",
+   "sources": [
+    "unesco",
+    "wiki_park",
+    "iucn"
+   ],
+   "vo": [
+    "komodo national park, set up in 1980, guards roughly three thousand of them"
+   ],
+   "screen": [
+    "~3,000",
+    "in Komodo National Park",
+    "Komodo National Park"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "A 2009 PNAS study showed the bite delivers venom from mandibular glands; the species was listed Endangered by the IUCN (assessment 2019, published 2021).",
+   "sources": [
+    "pnas_fry",
+    "iucn",
+    "natgeo_komodo"
+   ],
+   "vo": [
+    "its bite carries venom, proven in 2009, and the species is now listed as endangered"
+   ],
+   "screen": [
+    "VENOM",
+    "proven 2009 · endangered"
+   ]
+  },
+  {
+   "id": "C05",
+   "weight": "framing",
+   "text": "The range is so small it fits one regency of Indonesia — 'a dragon with a postcode'.",
+   "sources": [
+    "iucn",
+    "wiki_komodo"
+   ],
+   "vo": [
+    "a dragon with a postcode"
+   ],
+   "screen": []
+  }
+ ]
+}

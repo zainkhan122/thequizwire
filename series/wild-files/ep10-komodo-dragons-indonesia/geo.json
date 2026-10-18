@@ -1,0 +1,111 @@
+{
+ "version": 1,
+ "episode": "ep10-komodo-dragons-indonesia",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "10m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     116,
+     -10.5,
+     123,
+     -7
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "360"
+     ],
+     "cls": "",
+     "note": "Indonesia (fill only — the dragons live on five islands, shown by pins)"
+    }
+   ],
+   "pins": [
+    {
+     "id": "komodo",
+     "lonlat": [
+      119.451,
+      -8.577
+     ],
+     "label": "Komodo",
+     "qid": "Q107640"
+    },
+    {
+     "id": "park",
+     "lonlat": [
+      119.577,
+      -8.652
+     ],
+     "label": "Komodo National Park",
+     "qid": "Q4520"
+    }
+   ],
+   "labels": [
+    {
+     "id": "idn",
+     "lonlat": [
+      120.6,
+      -7.5
+     ],
+     "text": "Indonesia",
+     "cls": "tag",
+     "in": "s04+1.2",
+     "out": "s05"
+    },
+    {
+     "id": "flores",
+     "lonlat": [
+      121.3,
+      -9.1
+     ],
+     "text": "Flores",
+     "cls": "tag",
+     "in": "s04@flores",
+     "out": "s07"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      100,
+      -16,
+      135,
+      2
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 100,
+    "lonlat": [
+     119,
+     -8.5
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}
