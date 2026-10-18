@@ -76,7 +76,7 @@
    }
   },
   "v05": {
-   "text": "His great-grandfather was around 169. Thirteen centimetres gained in a single century.",
+   "text": "His great grandfather stood around 169. That is 13 centimetres gained in one century.",
    "cues": {
     "born": "around",
     "thirteen": "gained"
@@ -419,8 +419,8 @@
      "bbc_2016"
     ],
     "vo": [
-     "his great-grandfather was around 169",
-     "thirteen centimetres gained in a single century"
+     "his great grandfather stood around 169",
+     "that is 13 centimetres gained in one century"
     ],
     "screen": [
      "+13 CM",

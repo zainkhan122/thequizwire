@@ -78,7 +78,7 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "count it out",
-   "text": "His great-grandfather was around 169. Thirteen centimetres gained in a single century.",
+   "text": "His great grandfather stood around 169. That is 13 centimetres gained in one century.",
    "cues": {
     "born": "around",
     "thirteen": "gained"

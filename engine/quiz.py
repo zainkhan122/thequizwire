@@ -521,7 +521,7 @@ CSS = f"""
 .v3 .banner3{{position:absolute;left:40px;top:290px;width:1000px;text-align:center;font-family:'Lilita';font-size:150px;line-height:1;text-transform:uppercase;color:#FFD400;
   -webkit-text-stroke:3px #4a2b00;paint-order:stroke fill;text-shadow:0 10px 0 #7a4b00,0 22px 40px rgba(0,0,0,.7);z-index:74;visibility:hidden;opacity:0;white-space:nowrap}}
 .v3 .banner3.m{{font-size:118px}} .v3 .banner3.s{{font-size:92px}}
-.v3 .bannersub{{position:absolute;left:60px;top:462px;width:960px;text-align:center;font-family:'Oswald';font-weight:600;font-size:52px;letter-spacing:.18em;text-transform:uppercase;color:#fff;-webkit-text-stroke:1.5px #141414;paint-order:stroke fill;text-shadow:0 4px 0 rgba(0,0,0,.6),0 8px 18px rgba(0,0,0,.85);z-index:74;visibility:hidden;opacity:0}}
+.v3 .bannersub{{position:absolute;left:60px;top:462px;width:960px;text-align:center;font-family:'Oswald';font-weight:600;font-size:52px;letter-spacing:.18em;text-transform:uppercase;color:#fff;-webkit-text-stroke:3px #141414;paint-order:stroke fill;text-shadow:0 0 6px #000,0 0 14px #000,0 4px 0 rgba(0,0,0,.8),0 8px 18px rgba(0,0,0,.9);z-index:74;visibility:hidden;opacity:0}}
 .v3 .fact3{{position:absolute;left:60px;width:900px;text-align:center;font-family:'Anton';font-size:84px;line-height:1.08;text-transform:uppercase;color:#fff;
   text-shadow:0 5px 0 rgba(0,0,0,.6),0 12px 28px rgba(0,0,0,.7);z-index:72;visibility:hidden;opacity:0;white-space:normal}}
 .v3 .fact3.m{{font-size:74px}} .v3 .fact3.s{{font-size:64px}}
