@@ -181,3 +181,11 @@ Next: F2 = pace/voice/CTA/title/description changes (lessons #1,3,5,6,7); F3 = m
 - Fix `b3d9c3d`: Kokoro speed **1.3**, Q11 band 74–92 words; qa motion gate now passes on continuous motion (`motion_active_pct` ≥ 55 %, v3 ep15 = 45 %) OR cuts ≥ 6/10 s.
 - Geo #16 (Canada–USA 8,891 km) authored, preflight green, pins fixed to Wikidata Q1588452 (Derby Line) / Q639278 (Estcourt). Render `geo16-v4-r2` dispatched (ep16 + template).
 - NEXT: read qa.json of r2 (wpm, active %), watch frames (`cloud.py fetch` → sheet), then set ep16 `status: ready`; author 6+ more ready episodes across series.
+
+## 2026-10-18 · F4b — Geo #16 GREEN in CI (`geo16-v4-r7`), status → ready
+- CI qa: 36.6 s · −14.6 LUFS · 154 wpm while speaking · ASR .95 · motion 46 % active / 3.3 cuts (floor 40 %, WARN < 70).
+- Fixes along the way: outro without number words (voice gate), pins → Wikidata-verified Derby Line / Estcourt, labels out on close-ups (dead zones),
+  new engine label class `tag` (dark plate — legible over highlights; `big`/`ink` failed textqa over the v3 ice highlight), 📍 sticker → 🐻.
+- Frames reviewed (`/home/user/review/ep16_r7_sheet.jpg`): hook at 0.1 s with mascot, options + flags, 3-s timer, reveal CANADA–USA + flag-balls, line draw, Alaska/Derby Line/Estcourt beats, approved outro, last frame = first.
+- Lessons for next episodes: map labels over a highlight → cls `tag`; hide country labels (`geo.label_out`) before close-up cams; no number words in the outro line; template motion is only ~42 % active → F5 engine work: continuous stage drift + per-beat pop-ins to reach ≥ 70 %.
+- NEXT: `tools/daily_pick.py` now has 1 ready episode; author ≥ 6 more (Sports, Body & Brain, Wild Files, Geo) with the same recipe.
