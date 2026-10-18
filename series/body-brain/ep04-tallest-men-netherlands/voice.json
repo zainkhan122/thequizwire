@@ -78,7 +78,7 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "count it out",
-   "text": "His great-grandfather, born in 1896, was around one hundred and sixty-nine: thirteen centimetres gained in a century.",
+   "text": "His great-grandfather, born in 1896, was around one hundred and sixty-nine: thirteen centimetres in a century.",
    "cues": {
     "born": "born",
     "thirteen": "thirteen"
@@ -92,10 +92,10 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "let it land",
-   "text": "American men were the third tallest in 1914. By 2014 they had slipped to thirty-seventh.",
+   "text": "American men were third tallest in 1914, and thirty-seventh by 2014.",
    "cues": {
     "american": "american",
-    "slipped": "slipped"
+    "thirty": "thirty"
    }
   },
   {
@@ -106,7 +106,7 @@
    "energy": 4,
    "pause_after": 0.4,
    "direction": "the number people repeat",
-   "text": "And the growing has stopped: Dutch children born after 1980 are no taller than their parents.",
+   "text": "And the growing has stopped: Dutch born after 1980 are no taller than their parents.",
    "cues": {
     "stopped": "stopped",
     "parents": "parents"

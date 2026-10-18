@@ -78,9 +78,9 @@
    }
   },
   "v05": {
-   "text": "The winner was a Greek water carrier named Louis, in just under three hours.",
+   "text": "A Greek water carrier named Louis won it, in just under three hours.",
    "cues": {
-    "winner": "winner",
+    "won": "won",
     "hours": "hours"
    }
   },
@@ -521,7 +521,7 @@
      "wiki_1896"
     ],
     "vo": [
-     "the winner was a greek water carrier named louis, in just under three hours"
+     "a greek water carrier named louis won it, in just under three hours"
     ],
     "screen": [
      "2:58:50",

@@ -79,9 +79,9 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "count it out",
-   "text": "The winner was a Greek water carrier named Louis, in just under three hours.",
+   "text": "A Greek water carrier named Louis won it, in just under three hours.",
    "cues": {
-    "winner": "winner",
+    "won": "won",
     "hours": "hours"
    }
   },

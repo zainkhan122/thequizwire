@@ -76,21 +76,21 @@
    }
   },
   "v05": {
-   "text": "His great-grandfather, born in 1896, was around one hundred and sixty-nine: thirteen centimetres gained in a century.",
+   "text": "His great-grandfather, born in 1896, was around one hundred and sixty-nine: thirteen centimetres in a century.",
    "cues": {
     "born": "born",
     "thirteen": "thirteen"
    }
   },
   "v06": {
-   "text": "American men were the third tallest in 1914. By 2014 they had slipped to thirty-seventh.",
+   "text": "American men were third tallest in 1914, and thirty-seventh by 2014.",
    "cues": {
     "american": "american",
-    "slipped": "slipped"
+    "thirty": "thirty"
    }
   },
   "v07": {
-   "text": "And the growing has stopped: Dutch children born after 1980 are no taller than their parents.",
+   "text": "And the growing has stopped: Dutch born after 1980 are no taller than their parents.",
    "cues": {
     "stopped": "stopped",
     "parents": "parents"
@@ -418,7 +418,7 @@
      "bbc_2016"
     ],
     "vo": [
-     "his great-grandfather, born in 1896, was around one hundred and sixty-nine: thirteen centimetres gained in a century"
+     "his great-grandfather, born in 1896, was around one hundred and sixty-nine: thirteen centimetres in a century"
     ],
     "screen": [
      "+13 CM",
@@ -434,7 +434,7 @@
      "bbc_2016"
     ],
     "vo": [
-     "american men were the third tallest in 1914. by 2014 they had slipped to thirty-seventh"
+     "american men were third tallest in 1914, and thirty-seventh by 2014"
     ],
     "screen": [
      "USA: 3RD → 37TH",
@@ -450,7 +450,7 @@
      "guardian_2021"
     ],
     "vo": [
-     "and the growing has stopped: dutch children born after 1980 are no taller than their parents"
+     "and the growing has stopped: dutch born after 1980 are no taller than their parents"
     ],
     "screen": [
      "STOPPED",

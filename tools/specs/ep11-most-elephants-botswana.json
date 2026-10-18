@@ -199,7 +199,7 @@
      24.4,
      -18.65
     ],
-    "label": "Chobe National Park",
+    "label": "Chobe",
     "qid": "Q859389"
    },
    {
@@ -265,15 +265,15 @@
    "s06": [
     1.6,
     [
-     24.3,
-     -19.2
+     25.0,
+     -19.3
     ]
    ],
    "s06b": [
     1.7,
     [
-     24.4,
-     -19.2
+     25.1,
+     -19.3
     ]
    ],
    "s07": [
@@ -464,7 +464,7 @@
     "screen": [
      "CHOBE · OKAVANGO",
      "the northern elephant range",
-     "Chobe National Park",
+     "Chobe",
      "Okavango Delta"
     ]
    },
