@@ -17,7 +17,7 @@
   "correct": 0,
   "beat": 3.0,
   "answer_line": "Botswana",
-  "answer_sub": "~130,000 elephants",
+  "answer_sub": "130,000 elephants",
   "option_meta": [
    {
     "flag": "bw"
@@ -30,7 +30,7 @@
    }
   ],
   "banner": "Botswana",
-  "banner_sub": "✓  A was right · ~130,000 elephants",
+  "banner_sub": "✓  A was right · 130,000 elephants",
   "outro": {
    "headline": "1 FOR 1?",
    "url": "thequizwire.com"

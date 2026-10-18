@@ -24,7 +24,7 @@
   }
  ],
  "correct": 0,
- "answer_sub": "~130,000 elephants",
+ "answer_sub": "130,000 elephants",
  "outro_headline": "1 FOR 1?",
  "cover_emoji": "🐘",
  "post": {
@@ -68,10 +68,10 @@
    "elephants": "elephants"
   },
   "v04": {
-   "text": "Botswana: about one hundred and thirty thousand savanna elephants, more than any other country.",
+   "text": "Botswana. About 130,000 savanna elephants, more than any other country on Earth.",
    "cues": {
     "answer": "botswana",
-    "thousand": "thousand",
+    "thousand": "savanna",
     "country": "country"
    }
   },
@@ -421,7 +421,8 @@
     "vo": [
      "which country has the most elephants",
      "botswana, kenya, or south africa",
-     "botswana: about one hundred and thirty thousand savanna elephants, more than any other country"
+     "botswana",
+     "about 130,000 savanna elephants, more than any other country on earth"
     ],
     "screen": [
      "~130,000",

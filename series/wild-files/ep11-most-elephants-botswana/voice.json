@@ -63,10 +63,10 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "Botswana: about one hundred and thirty thousand savanna elephants, more than any other country.",
+   "text": "Botswana. About 130,000 savanna elephants, more than any other country on Earth.",
    "cues": {
     "answer": "botswana",
-    "thousand": "thousand",
+    "thousand": "savanna",
     "country": "country"
    },
    "climax": true
