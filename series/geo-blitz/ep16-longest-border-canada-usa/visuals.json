@@ -280,8 +280,8 @@
    "args": {
     "k": 1.7,
     "lonlat": [
-     -71,
-     45.3
+     -71.0,
+     45.1
     ],
     "ease": "power2.inOut"
    }
@@ -294,8 +294,8 @@
    "args": {
     "k": 1.8,
     "lonlat": [
-     -70.5,
-     45.5
+     -70.7,
+     45.2
     ],
     "ease": "none"
    }
@@ -341,8 +341,8 @@
    "args": {
     "k": 1.6,
     "lonlat": [
-     -69.5,
-     46.8
+     -68.6,
+     47.3
     ],
     "ease": "power2.inOut"
    }
@@ -355,8 +355,8 @@
    "args": {
     "k": 1.65,
     "lonlat": [
-     -69.3,
-     46.9
+     -68.4,
+     47.35
     ],
     "ease": "none"
    }
@@ -519,6 +519,38 @@
   {
    "at": "end-1.0",
    "do": "hook_in"
+  },
+  {
+   "at": "s05",
+   "do": "geo.label_out",
+   "args": {
+    "lid": "ca"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s05",
+   "do": "geo.label_out",
+   "args": {
+    "lid": "us"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s05",
+   "do": "geo.label_out",
+   "args": {
+    "lid": "km"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s06",
+   "do": "geo.label_out",
+   "args": {
+    "lid": "alaska"
+   },
+   "stage": "stage_map"
   }
  ],
  "captions": {
