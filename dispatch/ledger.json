@@ -870,48 +870,48 @@
    "platform": "youtube",
    "post_id": "6ad3c523769b4579348eb318",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/938d45aa5904/Where-were-the-FIRST-modern-Olympics-held.mp4",
    "due_at": "2026-10-18T16:00:00.000Z",
    "created_at": "2026-10-17T18:57:39.509Z",
    "recorded_at": "2026-10-17T18:57:39+00:00",
    "title": "Where were the FIRST modern Olympics held? 🏅 | Sports Quiz",
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-18T13:22:12+00:00"
+   "sent_at": "2026-10-18T16:01:27.020Z",
+   "external_link": "https://www.youtube.com/shorts/at_okwENeS0",
+   "refreshed_at": "2026-10-18T19:28:22+00:00"
   },
   {
    "episode": "ep11-first-modern-olympics-athens",
    "platform": "instagram",
    "post_id": "6ad3c523e272c4918f9a30a8",
    "channel_id": "695bfd29457dae6a34df0f74",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/938d45aa5904/Where-were-the-FIRST-modern-Olympics-held.mp4",
    "due_at": "2026-10-18T15:00:00.000Z",
    "created_at": "2026-10-17T18:57:39.904Z",
    "recorded_at": "2026-10-17T18:57:40+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-18T13:22:12+00:00"
+   "sent_at": "2026-10-18T15:02:07.501Z",
+   "external_link": "https://www.instagram.com/reel/Deo9OyqjN6q/",
+   "refreshed_at": "2026-10-18T19:28:22+00:00"
   },
   {
    "episode": "ep11-first-modern-olympics-athens",
    "platform": "facebook",
    "post_id": "6ad3c526769b4579348eb35b",
    "channel_id": "695a159a457dae6a34d901bc",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/938d45aa5904/Where-were-the-FIRST-modern-Olympics-held.mp4",
    "due_at": "2026-10-18T17:00:00.000Z",
    "created_at": "2026-10-17T18:57:41.998Z",
    "recorded_at": "2026-10-17T18:57:42+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-18T13:22:14+00:00"
+   "sent_at": "2026-10-18T17:01:09.067Z",
+   "external_link": "https://www.facebook.com/reel/1174314495264819/",
+   "refreshed_at": "2026-10-18T19:28:24+00:00"
   },
   {
    "episode": "ep11-first-modern-olympics-athens",
@@ -934,16 +934,16 @@
    "platform": "threads",
    "post_id": "6ad3c5280a208cb32333cf89",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/938d45aa5904/Where-were-the-FIRST-modern-Olympics-held.mp4",
    "due_at": "2026-10-18T14:00:00.000Z",
    "created_at": "2026-10-17T18:57:44.404Z",
    "recorded_at": "2026-10-17T18:57:44+00:00",
    "title": null,
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-18T13:22:16+00:00"
+   "sent_at": "2026-10-18T14:01:36.991Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/Deo2Vx6AQKL",
+   "refreshed_at": "2026-10-18T19:28:24+00:00"
   },
   {
    "episode": "ep14-most-time-zones-france",
@@ -959,7 +959,7 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-18T13:22:18+00:00"
+   "refreshed_at": "2026-10-18T19:28:26+00:00"
   }
  ]
 }
