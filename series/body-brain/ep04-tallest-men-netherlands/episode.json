@@ -1,0 +1,89 @@
+{
+ "id": "ep04-tallest-men-netherlands",
+ "format": "quiz-v3",
+ "series": "body-brain",
+ "number": 4,
+ "title": "Which country has the TALLEST men?",
+ "difficulty": "EASY",
+ "seed": 2404,
+ "quiz": {
+  "question": "Which country has the TALLEST men?",
+  "keyword": "TALLEST",
+  "options": [
+   "Netherlands",
+   "Germany",
+   "USA"
+  ],
+  "correct": 0,
+  "beat": 3.0,
+  "answer_line": "Netherlands",
+  "answer_sub": "182.5 cm average",
+  "option_meta": [
+   {
+    "flag": "nl"
+   },
+   {
+    "flag": "de"
+   },
+   {
+    "flag": "us"
+   }
+  ],
+  "banner": "Netherlands",
+  "banner_sub": "✓  A was right · 182.5 cm average",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country has the TALLEST men? 📏",
+  "premise": "Dutch men average 182.5 cm, and Americans fell to 37th",
+  "bait": "Netherlands, Germany or the USA — which did you pick? 👇",
+  "keywords": [
+   "tallest people in the world",
+   "tallest country",
+   "dutch height",
+   "average height netherlands",
+   "ncd-risc height study",
+   "human body facts",
+   "why are dutch so tall",
+   "american height ranking",
+   "body quiz",
+   "map animation"
+  ],
+  "description": "Dutch men average 182.5 cm, and Americans fell to 37th. Netherlands, Germany or the USA — which did you pick? 👇\n\nSources: NCD-RisC (eLife 2016), Statistics Netherlands (CBS), BBC News, Wikipedia.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nBody & Brain #4",
+  "hashtags": [
+   "#BodyFacts",
+   "#BrainQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "TallestPeople",
+   "Netherlands"
+  ],
+  "cover_emoji": "📏"
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "night-lights",
+  "reveal": "card-flip",
+  "beats": [
+   "counter",
+   "label",
+   "counter",
+   "pin"
+  ],
+  "cast": "flagball:happy + emoji-set:measure",
+  "music": "bed:pulse"
+ },
+ "status": "draft"
+}

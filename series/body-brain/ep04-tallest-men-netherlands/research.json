@@ -1,0 +1,205 @@
+{
+ "version": 1,
+ "episode": "ep04-tallest-men-netherlands",
+ "topic": "Which country has the tallest men? (Netherlands — NCD-RisC 2016: 182.5 cm for the 1996 birth cohort)",
+ "researched": "2026-10-18",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Americans are the tallest people.",
+   "reality": "US men were 3rd tallest for the 1896 cohort (born 1896, measured 1914) and 37th for the 1996 cohort; Dutch men are tallest (NCD-RisC 2016).",
+   "sources": [
+    "ncdrisc",
+    "bbc_2016"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Feed answers say 'Netherlands' with a stock photo; nobody shows the century of growth, the US slide to 37th and the CBS 'growth stopped' finding on one map.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=tallest+country+shorts",
+    "title": "Search: tallest country shorts",
+    "angle": "ranking lists",
+    "misses": "no sources, no trend"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if map scenarios",
+    "misses": "no body facts"
+   },
+   {
+    "url": "https://www.youtube.com/@huhindustry/shorts",
+    "title": "HuhIndustry",
+    "angle": "fast fact chains",
+    "misses": "no quiz beat"
+   }
+  ]
+ },
+ "sources": {
+  "ncdrisc": {
+   "type": "scholarly",
+   "publisher": "NCD Risk Factor Collaboration — eLife",
+   "title": "A century of trends in adult human height",
+   "url": "https://elifesciences.org/articles/13410",
+   "date": "2016-07-26",
+   "notes": "1996 birth cohort: Dutch men tallest at 182.5 cm; Dutch men 1896 cohort ≈169 cm (+13 cm in a century); US men ranked 3rd (1896 cohort) → 37th (1996 cohort); Latvian women tallest (169.8 cm)"
+  },
+  "ncdrisc_site": {
+   "type": "primary",
+   "publisher": "NCD-RisC",
+   "title": "Height — country rankings (data download)",
+   "url": "https://ncdrisc.org/data-downloads-height.html",
+   "date": "2026-10-18",
+   "notes": "mean height by country and birth year; Netherlands men 182.5 cm (born 1996)"
+  },
+  "cbs_2021": {
+   "type": "primary",
+   "publisher": "Statistics Netherlands (CBS)",
+   "title": "Dutch still the tallest, but growth has stopped",
+   "url": "https://www.cbs.nl/en-gb/news/2021/37/dutch-still-the-tallest-but-growth-has-stopped",
+   "date": "2021-09-17",
+   "notes": "men born in 2001 average 182.9 cm, women 169.3 cm; height increase stopped for cohorts born after 1980; those born 2001 slightly shorter than those born 1980"
+  },
+  "bbc_2016": {
+   "type": "press",
+   "publisher": "BBC News",
+   "title": "Dutch men revealed as world's tallest",
+   "url": "https://www.bbc.com/news/science-environment-36888541",
+   "date": "2016-07-26",
+   "notes": "NCD-RisC study: Dutch men 183 cm tallest; Latvian women tallest; US men slid from 3rd to 37th between 1914 and 2014; Dutch gained ~13 cm"
+  },
+  "guardian_2021": {
+   "type": "press",
+   "publisher": "The Guardian",
+   "title": "Dutch people are getting shorter, statistics agency says",
+   "url": "https://www.theguardian.com/world/2021/sep/17/dutch-people-still-tallest-but-getting-shorter-statistics-agency",
+   "date": "2021-09-17",
+   "notes": "CBS: generation born 2001 shorter than 1980 generation; men 182.9 cm; growth stalled since 1980"
+  },
+  "wiki_height": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Average human height by country",
+   "url": "https://en.wikipedia.org/wiki/Average_human_height_by_country",
+   "date": "2026-10-18",
+   "notes": "Netherlands men 182.5 cm (NCD-RisC 2016, born 1996); CBS 2021 182.9 cm (born 2001); USA men 176.9 cm"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Dutch men are the tallest in the world: 182.5 cm average for the 1996 birth cohort (NCD-RisC 2016); CBS 2021: 182.9 cm for men born 2001.",
+   "sources": [
+    "ncdrisc",
+    "cbs_2021",
+    "bbc_2016",
+    "wiki_height"
+   ],
+   "vo": [
+    "which country has the tallest men",
+    "netherlands, germany, or the usa",
+    "the netherlands: the average dutch man stands one hundred and eighty-two and a half centimetres, the tallest on earth"
+   ],
+   "screen": [
+    "182.5 CM",
+    "average Dutch man, 1996 cohort",
+    "Netherlands",
+    "Germany",
+    "USA"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Dutch men of the 1896 birth cohort averaged about 169 cm; the gain over the century to the 1996 cohort is about 13 cm.",
+   "sources": [
+    "ncdrisc",
+    "bbc_2016"
+   ],
+   "vo": [
+    "his great-grandfather, born in 1896, was around one hundred and sixty-nine: thirteen centimetres gained in a century"
+   ],
+   "screen": [
+    "+13 CM",
+    "gained in one century"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "detail",
+   "text": "American men ranked 3rd tallest for the 1896 cohort (adults in 1914) and 37th for the 1996 cohort (adults in 2014).",
+   "sources": [
+    "ncdrisc",
+    "bbc_2016"
+   ],
+   "vo": [
+    "american men were the third tallest in 1914. by 2014 they had slipped to thirty-seventh"
+   ],
+   "screen": [
+    "USA: 3RD → 37TH",
+    "men, 1914 to 2014"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Statistics Netherlands (2021): height growth has stopped; Dutch born after 1980 are not taller than the 1980 cohort (those born 2001 slightly shorter).",
+   "sources": [
+    "cbs_2021",
+    "guardian_2021"
+   ],
+   "vo": [
+    "and the growing has stopped: dutch children born after 1980 are no taller than their parents"
+   ],
+   "screen": [
+    "STOPPED",
+    "no taller since the 1980 cohort",
+    "The Hague · CBS"
+   ]
+  },
+  {
+   "id": "C05",
+   "weight": "framing",
+   "text": "All numbers are national averages from measured surveys (NCD-RisC pooled studies; CBS health survey).",
+   "sources": [
+    "ncdrisc",
+    "cbs_2021"
+   ],
+   "vo": [
+    "tall story, true numbers"
+   ],
+   "screen": [
+    "North Sea"
+   ]
+  }
+ ]
+}

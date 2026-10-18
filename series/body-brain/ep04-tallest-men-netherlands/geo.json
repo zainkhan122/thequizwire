@@ -1,0 +1,104 @@
+{
+ "version": 1,
+ "episode": "ep04-tallest-men-netherlands",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -2,
+     49,
+     10,
+     55
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "528"
+     ],
+     "cls": "",
+     "note": "Netherlands",
+     "lift": "flag",
+     "flag": "nl"
+    }
+   ],
+   "pins": [
+    {
+     "id": "den_haag",
+     "lonlat": [
+      4.3,
+      52.08
+     ],
+     "label": "The Hague · CBS",
+     "qid": "Q36600"
+    }
+   ],
+   "labels": [
+    {
+     "id": "nl",
+     "lonlat": [
+      5.3,
+      52.3
+     ],
+     "text": "Netherlands",
+     "cls": "tag",
+     "in": "s04+1.2",
+     "out": "s06"
+    },
+    {
+     "id": "north_sea",
+     "lonlat": [
+      3.0,
+      54.0
+     ],
+     "text": "North Sea",
+     "cls": "sea",
+     "in": "s04+1.4",
+     "out": "s06"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -15,
+      40,
+      25,
+      62
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 100,
+    "lonlat": [
+     5,
+     52
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

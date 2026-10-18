@@ -114,7 +114,7 @@ def build(S):
           {"at": "s04+0.8", "do": "geo.scalebar_in", "stage": M}]
     for pb in g.get("pin_beats", []):
         B.append({"at": pb["at"], "do": "geo.pin_out" if pb.get("out") else "geo.pin_in", "stage": M, "args": {"pid": pb["pid"]}})
-    B += [{"at": 0, "do": "hook_in"}, {"at": "s02", "do": "chips_in"}, {"at": "s02+0.3", "do": "bug_in"}, {"at": "s03", "do": "beat"},
+    B += [{"at": 0, "do": "hook_in"}, {"at": "s02", "do": "chips_in"}, {"at": "s03", "do": "bug_in"}, {"at": "s03", "do": "beat"},
           {"at": "s04", "do": "reveal"}, {"at": "s04+0.9", "do": "hook_out"}, {"at": "s04+1.2", "do": "chips_out"},
           {"at": "s04+1.3", "do": "banner_in"}, {"at": "s04+4.4", "do": "banner_out"},
           {"at": "s04+1.6", "do": "character_in", "id": "cha"}, {"at": "s04+1.9", "do": "character_in", "id": "chb"},
