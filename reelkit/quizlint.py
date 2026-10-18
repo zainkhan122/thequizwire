@@ -139,6 +139,13 @@ def main():
         if not cd or cd[0].get("silence") is None or not 1.0 <= float(cd[0]["silence"]) <= 1.5: F.append("Q10: the beat line must be a `silence` of 1.0–1.5 s (v2 has no countdown)")
     elif not cd or cd[0].get("silence") is None or float(cd[0]["silence"]) < 2: F.append("Q2: the countdown line must be a `silence` ≥ 2 s (the ring counts, nobody talks)")
     if len(cd) > 1: F.append("Q2: more than one countdown line")
+    # ---- Q11 pace & CTA (decode 2026-10-18: winners ≈170 wpm / 100+ words, spoken CTA a few words or none, no greeting)
+    spoken = [l for l in V["lines"] if l.get("text")]
+    n_words = sum(len(l["text"].split()) for l in spoken)
+    if E.get("format") == "quiz-v3" and n_words < 85: W.append(f"Q11: only {n_words} spoken words — winners carry 90–110 words in 30–36 s at speed 1.15 (add one consequence/number beat)")
+    cta_l = [l for l in spoken if l.get("role") == "cta"]
+    if cta_l and len(cta_l[-1]["text"].split()) > 8: W.append(f"Q11: spoken CTA is {len(cta_l[-1]['text'].split())} words — end on the punchline; CTA ≤ 8 words (the outro visual carries it)")
+    if spoken and re.search(r"\b(hi guys|welcome|hello everyone|in this video)\b", spoken[0]["text"], re.I): F.append("Q11: greeting in the hook — sentence one must be the premise")
     # ---- Q4 copy
     v3 = E.get("format") == "quiz-v3"
     q_max, o_max, f_max = (72, 18, 36) if v3 else (76, 26, 80) if v2 else (90, 24, 140)     # v3: 100-px question, 58-px pills, 84-px fact caption

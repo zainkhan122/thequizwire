@@ -5,7 +5,7 @@
  "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
  "kokoro_fallback": {
   "voice": "am_michael",
-  "speed": 1.0
+  "speed": 1.15
  },
  "intent": "A quick, confident quizmaster: curious on the question, playful on the countdown, satisfied on the reveal, genuinely interested in the one fact that makes the answer stick.",
  "pacing_profile": "question on the map at zero, three quick options, a 1.5-s beat, a warm reveal, three short see-it beats, a tease and a loop",
@@ -115,8 +115,8 @@
    "tone": "tender",
    "energy": 3,
    "pause_after": 0.0,
-   "direction": "a promise, not a plea",
-   "text": "Tomorrow, the country with the most neighbours. Subscribe, and guess it first.",
+   "direction": "punchline first, CTA in four words — the outro visual does the asking",
+   "text": "Three point two million square kilometres. Follow for tomorrow's map.",
    "cues": {
     "subscribe": "subscribe"
    }

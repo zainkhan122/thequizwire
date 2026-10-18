@@ -124,22 +124,25 @@ def build(ep):
     topic = S["topic"]
 
     # ---- YouTube
-    yt_title = post.get("youtube_title") or f"{q_clean} {emoji} | {topic.title()}"
+    # Decode 2026-10-18: winners' headings are 45–60-char premise statements, keyword nouns first, no channel/"quiz" suffix,
+    # emoji at the end, 2 search hashtags inside the Shorts title. `post.premise` (authored) beats the bare question.
+    premise = (post.get("premise") or "").strip()
+    yt_title = post.get("youtube_title") or f"{premise or q_clean} {emoji}"
+    title_tags = [h for h in S["hashtags"].get("youtube", []) if h.lower() != "#shorts"][:2]
+    if title_tags and len(yt_title) + 1 + len(" ".join(title_tags)) <= 100: yt_title = f"{yt_title} {' '.join(title_tags)}"
     if len(yt_title) > 100: yt_title = f"{q_clean} {emoji}"
     if len(yt_title) > 100: yt_title = q_clean[:97].rstrip() + "…"
+    bait = (post.get("bait") or "Did you get it before the reveal? Tell me your first guess 👇").strip()   # never spoil the answer in copy
+    named = ", ".join(dict.fromkeys([o for o in E.get("quiz", {}).get("options", []) if o]))
     tease = (post.get("description") or "").split("\n")[0].strip()
     tease = "" if tease.lower().startswith(q_clean.lower()[:30]) and len(tease) < len(q_clean) + 10 else tease
     yt_tags = hashtags_for(E, S, "youtube", 5)
-    yt_lines = [f"{q_clean} You get {secs} to guess — then the map reveals it. {emoji}"]
-    if tease and not tease.lower().startswith(q_clean.lower()):
-        yt_lines.append(tease)
-    elif tease:
-        rest = tease[len(q_clean):].strip(" .—-")
-        if rest: yt_lines.append(rest[:1].upper() + rest[1:])
+    # line 1 = premise + every place named (keyword article, like the winners); line 2 = comment bait; NO links (0 % of winners link)
+    yt_lines = [f"{premise + ' — ' if premise else ''}{q_clean} {named}? The map animation reveals it in {secs}. {emoji}", bait]
+    if tease and not tease.lower().startswith(q_clean.lower()) and tease != premise: yt_lines.append(tease)
     if bullets:
         yt_lines += ["", f"✅ In this {topic} Short:"] + [f"• {b}" for b in bullets]
-    yt_lines += ["", "What was your first guess? Tell us in the comments 👇",
-                 f"🔔 Subscribe for a new {topic} every day · more quizzes at {site}"]
+    yt_lines += ["", f"🔔 A new {topic} every day — subscribe."]
     if srcs: yt_lines += ["", "📚 Sources: " + " · ".join(srcs)]
     yt_lines += ["🗺️ Map data: Natural Earth (public domain) · imagery NASA Blue Marble · Voice: AI narration (Kokoro)",
                  "", " ".join(yt_tags)]
@@ -153,39 +156,38 @@ def build(ep):
 
     # ---- Instagram (reel)
     ig_tags = hashtags_for(E, S, "instagram", 5)
-    hook = f"{q_clean} {emoji} You get {secs}… ⏱️"
-    ig_lines = [hook, "", f"✅ The answer and three quick facts are in the reel — a daily {topic} from {brand}."]
+    hook = f"{premise or q_clean} {emoji} You get {secs}… ⏱️"
+    ig_lines = [hook, bait, "", f"✅ {named} — the answer and three quick facts are in the reel."]
     ig_lines += [f"• {b}" for b in bullets[:2]]
     first_comment = bool(CFG.get("buffer", {}).get("first_comment", False))          # Buffer: first comments need a paid plan
     credits = "📚 Sources: " + (" · ".join(srcs[:3]) if srcs else "see the video credits") + " · Map: Natural Earth, NASA"
-    ig_lines += ["", "💬 What was your first guess? Comment before the reveal!", f"Follow {handle} for a new {topic} every day."]
+    ig_lines += ["", f"Follow {handle} for a new {topic} every day."]
     if not first_comment: ig_lines += ["", credits]
     ig_lines += ["", " ".join(ig_tags)]
     ig_caption = "\n".join(ig_lines)
-    ig_first = ("📚 Sources: " + (" · ".join(srcs) if srcs else "see the video credits") + f"\n🗺️ Map data: Natural Earth · NASA Blue Marble · 🎙️ AI narration (Kokoro)\nMore quizzes: {site}") if first_comment else ""
+    ig_first = ("📚 Sources: " + (" · ".join(srcs) if srcs else "see the video credits") + "\n🗺️ Map data: Natural Earth · NASA Blue Marble · 🎙️ AI narration (Kokoro)") if first_comment else ""
     ig = {"caption": ig_caption, "firstComment": ig_first, "hashtags": ig_tags, "shouldShareToFeed": True,
           "isAiGenerated": bool(CFG["disclosure"]["instagram_is_ai_generated"]), "thumbnailOffsetMs": 0}   # frame 0 = the burned-in cover (reelkit/cover.py --burn)
 
     # ---- Facebook (reel)
     fb_tags = hashtags_for(E, S, "facebook", 3)
-    fb_lines = [f"{q_clean} {emoji} Guess in {secs} — then watch the reveal!",
-                "✅ Answer + three quick facts inside. What was your first guess? 👇",
-                f"Daily {topic} · {site}", CFG["disclosure"]["facebook_caption_line"]]
+    fb_lines = [f"{premise or q_clean} {emoji} Guess in {secs} — then watch the reveal!", bait,
+                f"✅ {named} — answer + three quick facts inside. Daily {topic}.", CFG["disclosure"]["facebook_caption_line"]]
     if not first_comment: fb_lines += [credits]
     fb_lines += ["", " ".join(fb_tags)]
     fb = {"text": "\n".join(fb_lines), "firstComment": ig_first, "hashtags": fb_tags}
 
     # ---- X (Twitter): one post, video attached; 280-char budget (X counts most emoji as 2); 1–2 hashtags; sources stay in the video credits
     x_tags = hashtags_for(E, S, "twitter", 2)
-    x_text = "\n".join([f"{q_clean} {emoji}", "", f"Guess in {secs}, then watch the reveal. What was your first guess? 👇", "", " ".join(x_tags)])
+    x_text = "\n".join([f"{premise or q_clean} {emoji}", "", f"{named}? Guess in {secs}, then watch the reveal 👇", "", " ".join(x_tags)])
     if x_len(x_text) > 270:
         x_text = "\n".join([f"{q_clean} {emoji}", "", "What was your first guess? 👇", " ".join(x_tags)])
     x = {"text": x_text, "hashtags": x_tags, "isAiGenerated": bool(CFG["disclosure"].get("twitter_is_ai_generated", True))}
 
     # ---- Threads: ≤ 500 chars, conversational; Threads turns only the FIRST hashtag into a topic tag, so exactly one
     th_tags = hashtags_for(E, S, "threads", 1)
-    th_text = "\n".join([f"{q_clean} {emoji}", "", f"You get {secs}. Then the map reveals it, with three facts you can repeat at dinner.", "",
-                         "What was your first guess? 👇", "", " ".join(th_tags)])
+    th_text = "\n".join([f"{premise or q_clean} {emoji}", "", f"{named}. You get {secs}, then the map reveals it with three facts you can repeat at dinner.", "",
+                         bait, "", " ".join(th_tags)])
     th = {"text": th_text, "hashtags": th_tags}
 
     kit = {"episode": Path(ep).name, "series": slug, "question": question, "answer": ans, "built_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -211,7 +213,8 @@ def check(kit):
     if len(t) > 100: F.append(f"YT title {len(t)} chars > 100")
     elif len(t) > 85: W.append(f"YT title {len(t)} chars (aim ≤ 80 so feeds show it whole)")
     if len(t) < 30: W.append("YT title < 30 chars (looks low-effort)")
-    if "#" in t: F.append("YT title contains a hashtag (keep the title clean; hashtags go at the end of the description)")
+    body, *tail = re.split(r"\s+(?=#)", t, maxsplit=1)
+    if "#" in body or len(re.findall(r"#\w+", t)) > 2: F.append("YT title: at most 2 hashtags, only at the END (decode 2026-10-18: winners carry 2–3 search tags in Shorts titles)")
     if len(EMOJI.findall(t)) > 2: W.append("YT title has > 2 emoji")
     first = yt["description"].split("\n")[0]
     if len(first) > 120: W.append(f"YT description first line {len(first)} chars (the first ~100 are the search snippet)")

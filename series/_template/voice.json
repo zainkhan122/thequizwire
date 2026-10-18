@@ -5,7 +5,7 @@
  "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
  "kokoro_fallback": {
   "voice": "am_michael",
-  "speed": 1.0
+  "speed": 1.15
  },
  "intent": "A quick, confident quizmaster: curious on the question, playful on the countdown, satisfied on the reveal, genuinely interested in the one fact that makes the answer stick.",
  "pacing_profile": "brisk question, clean option list, three silent seconds, a warm reveal, two short story beats, one-line call to action",

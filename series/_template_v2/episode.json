@@ -35,6 +35,8 @@
    "#shorts",
    "#geography",
    "#maps"
-  ]
+  ],
+  "premise": "The largest peninsula on Earth is bigger than India's",
+  "bait": "Did you say Arabian, Indian or Scandinavian? Tell me 👇"
  }
 }
