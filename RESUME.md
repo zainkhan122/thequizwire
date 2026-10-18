@@ -175,3 +175,9 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 
 ## Card D1 — decode done (2026-10-18), commit 460f222 LOCAL ONLY (PAT missing → not pushed)
 Next: F2 = pace/voice/CTA/title/description changes (lessons #1,3,5,6,7); F3 = motion/opening/cover/watermark (#2,4,8,9,10); then author ≥7 ready episodes.
+
+## 2026-10-18 · F4a — first v4 episode (Geo Blitz #16) + CI-calibrated gates
+- `v4-smoke-2` (template @1.2): rendered 38.7 s, −14.65 LUFS, ASR .97 — but qa FAILED: 135 wpm while speaking (<140) and 0.0 hard cuts/10 s.
+- Fix `b3d9c3d`: Kokoro speed **1.3**, Q11 band 74–92 words; qa motion gate now passes on continuous motion (`motion_active_pct` ≥ 55 %, v3 ep15 = 45 %) OR cuts ≥ 6/10 s.
+- Geo #16 (Canada–USA 8,891 km) authored, preflight green, pins fixed to Wikidata Q1588452 (Derby Line) / Q639278 (Estcourt). Render `geo16-v4-r2` dispatched (ep16 + template).
+- NEXT: read qa.json of r2 (wpm, active %), watch frames (`cloud.py fetch` → sheet), then set ep16 `status: ready`; author 6+ more ready episodes across series.
