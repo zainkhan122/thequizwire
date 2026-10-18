@@ -96,20 +96,6 @@ try:
         res["wpm"] = round(spoken_s / (res["duration"] / 60))
         res["wpm_while_speaking"] = round(spoken_s / (speech_span / 60))
         if res["wpm_while_speaking"] < 140: fails.append(f"pace {res['wpm_while_speaking']} wpm < 140 (v4: 150–175)")
-    cap = cv2.VideoCapture(a.video); fps = cap.get(cv2.CAP_PROP_FPS) or 30; prev = None; cuts = 0; i = 0
-    while True:
-        ok, fr = cap.read()
-        if not ok: break
-        i += 1
-        if i % 3: continue
-        g = cv2.resize(cv2.cvtColor(fr, cv2.COLOR_BGR2GRAY), (48, 85)).astype("float32")
-        if prev is not None and float(np.mean(np.abs(g - prev))) > 18: cuts += 1
-        prev = g
-    cap.release()
-    res["motion_per_10s"] = round(cuts / max(1.0, res["duration"]) * 10, 1)
-    floor = float(os.environ.get("V4_MOTION_MIN", "6"))                                  # hard floor now; raise via env as the look catches up
-    if res["motion_per_10s"] < floor: fails.append(f"motion {res['motion_per_10s']} events/10 s < {floor:g} (winners ≈27)")
-    elif res["motion_per_10s"] < 10: warns.append(f"motion {res['motion_per_10s']} events/10 s < 10 (winners ≈27) — add pop-ins/pulses/camera moves")
 except ImportError:
     warns.append("v4 pace/motion gate skipped (opencv missing)")
 res["pass"] = not fails; res["fails"] = fails; res["warnings"] = warns

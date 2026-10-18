@@ -756,38 +756,38 @@
     {
      "id": "ca",
      "lonlat": [
-      -100,
-      58
+      -98,
+      60
      ],
      "text": "Canada",
-     "cls": "ink"
+     "cls": "big"
     },
     {
      "id": "us",
      "lonlat": [
-      -100,
-      40
+      -98,
+      38.5
      ],
      "text": "United States",
-     "cls": "ink"
+     "cls": "big"
     },
     {
      "id": "alaska",
      "lonlat": [
-      -152,
-      64
+      -153,
+      65
      ],
-     "text": "Alaska (USA)",
-     "cls": "ink"
+     "text": "Alaska",
+     "cls": "big"
     },
     {
      "id": "km",
      "lonlat": [
-      -108,
-      49.7
+      -104,
+      50.5
      ],
      "text": "8,891 km",
-     "cls": "ink"
+     "cls": "big"
     }
    ],
    "disputed": [],
