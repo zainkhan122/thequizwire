@@ -24,7 +24,7 @@
   }
  ],
  "correct": 0,
- "answer_sub": "5 islands only",
+ "answer_sub": "5 islands",
  "outro_headline": "1 FOR 1?",
  "cover_emoji": "🦎",
  "post": {
@@ -232,15 +232,15 @@
    "start": [
     0.45,
     [
-     112,
-     -4
+     134,
+     -13
     ]
    ],
    "s01": [
     0.5,
     [
-     113,
-     -4.5
+     132,
+     -12.5
     ]
    ],
    "s04": [

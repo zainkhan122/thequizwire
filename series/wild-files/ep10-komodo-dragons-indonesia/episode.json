@@ -17,7 +17,7 @@
   "correct": 0,
   "beat": 3.0,
   "answer_line": "Indonesia",
-  "answer_sub": "5 islands only",
+  "answer_sub": "5 islands",
   "option_meta": [
    {
     "flag": "id"
@@ -30,7 +30,7 @@
    }
   ],
   "banner": "Indonesia",
-  "banner_sub": "✓  A was right · 5 islands only",
+  "banner_sub": "✓  A was right · 5 islands",
   "outro": {
    "headline": "1 FOR 1?",
    "url": "thequizwire.com"
