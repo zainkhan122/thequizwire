@@ -198,22 +198,6 @@
    }
   },
   {
-   "at": "s04+1.4",
-   "do": "geo.label_in",
-   "stage": "stage_map",
-   "args": {
-    "lid": "kalahari"
-   }
-  },
-  {
-   "at": "s06",
-   "do": "geo.label_out",
-   "stage": "stage_map",
-   "args": {
-    "lid": "kalahari"
-   }
-  },
-  {
    "at": "s05",
    "do": "geo.cam_to",
    "stage": "stage_map",
@@ -243,6 +227,24 @@
   },
   {
    "at": "s05+0.5",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "072",
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s04+3.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "072",
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06+0.6",
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {

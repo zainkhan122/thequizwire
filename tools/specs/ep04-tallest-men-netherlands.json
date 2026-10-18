@@ -3,7 +3,7 @@
  "series": "body-brain",
  "number": 4,
  "seed": 2404,
- "question": "Which country has the TALLEST men?",
+ "question": "Which country has the TALLEST people on average?",
  "keyword": "TALLEST",
  "difficulty": "EASY",
  "options": [
@@ -66,7 +66,7 @@
  "voice": {
   "v01_cues": {
    "which": "which",
-   "men": "men"
+   "average": "average"
   },
   "v04": {
    "text": "The Netherlands: the average Dutch man stands nearly one hundred and eighty-three centimetres, the tallest on Earth.",
@@ -389,7 +389,7 @@
    {
     "id": "C01",
     "weight": "core",
-    "text": "Dutch men are the tallest in the world: 182.5 cm average for the 1996 birth cohort (NCD-RisC 2016); CBS 2021: 182.9 cm for men born 2001.",
+    "text": "The Netherlands has the tallest people on average (NCD-RisC 2016: men 182.5 cm for the 1996 cohort, the tallest; Dutch women 2nd after Latvia); CBS 2021: men 182.9 cm.",
     "sources": [
      "ncdrisc",
      "cbs_2021",
@@ -397,7 +397,7 @@
      "wiki_height"
     ],
     "vo": [
-     "which country has the tallest men",
+     "which country has the tallest people on average",
      "netherlands, germany, or the usa",
      "the netherlands: the average dutch man stands nearly one hundred and eighty-three centimetres, the tallest on earth"
     ],

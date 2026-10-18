@@ -190,17 +190,6 @@
     "cls": "tag",
     "in": "s04+1.2",
     "out": "s06"
-   },
-   {
-    "id": "kalahari",
-    "lonlat": [
-     22,
-     -24.5
-    ],
-    "text": "Kalahari",
-    "cls": "sea",
-    "in": "s04+1.4",
-    "out": "s06"
    }
   ],
   "pins": [
@@ -506,9 +495,7 @@
     "vo": [
      "a third of the herd"
     ],
-    "screen": [
-     "Kalahari"
-    ]
+    "screen": []
    }
   ]
  }

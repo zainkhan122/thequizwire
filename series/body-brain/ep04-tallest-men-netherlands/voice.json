@@ -13,7 +13,7 @@
  "start_hold": 0.0,
  "end_hold": 2.4,
  "sample_line": "v04",
- "title": "Which country has the TALLEST men?",
+ "title": "Which country has the TALLEST people on average?",
  "lines": [
   {
    "id": "v01",
@@ -23,10 +23,10 @@
    "energy": 4,
    "pause_after": 0.3,
    "direction": "the question, cold — curiosity comes from the map moving under it",
-   "text": "Which country has the tallest men?",
+   "text": "Which country has the tallest people on average?",
    "cues": {
     "which": "which",
-    "men": "men"
+    "average": "average"
    }
   },
   {

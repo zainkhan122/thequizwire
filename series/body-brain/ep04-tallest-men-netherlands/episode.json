@@ -3,11 +3,11 @@
  "format": "quiz-v3",
  "series": "body-brain",
  "number": 4,
- "title": "Which country has the TALLEST men?",
+ "title": "Which country has the TALLEST people on average?",
  "difficulty": "EASY",
  "seed": 2404,
  "quiz": {
-  "question": "Which country has the TALLEST men?",
+  "question": "Which country has the TALLEST people on average?",
   "keyword": "TALLEST",
   "options": [
    "Netherlands",
@@ -44,7 +44,7 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Which country has the TALLEST men? 📏",
+  "title": "Which country has the TALLEST people on average? 📏",
   "premise": "Dutch men average 182.5 cm, and Americans fell to 37th",
   "bait": "Netherlands, Germany or the USA — which did you pick? 👇",
   "keywords": [

@@ -63,7 +63,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "Brazil: five titles, 1958, 1962, 1970, 1994 and 2002. Nobody else has more than four.",
+   "text": "Brazil: five titles, the first in 1958, the latest in 2002. Nobody else has more than four.",
    "cues": {
     "answer": "brazil",
     "five": "five",
@@ -107,7 +107,7 @@
    "energy": 4,
    "pause_after": 0.4,
    "direction": "the number people repeat",
-   "text": "And the one that hurt: 1950, the final lost at home in the Maracanã, nearly 200,000 watching.",
+   "text": "And the one that hurt: 1950, the final lost at home in the Maracanã, two hundred thousand watching.",
    "cues": {
     "hurt": "hurt",
     "home": "home"

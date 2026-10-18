@@ -79,7 +79,7 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "count it out",
-   "text": "The winner was a Greek water carrier, Spyridon Louis, in just under three hours.",
+   "text": "The winner was a Greek water carrier named Louis, in just under three hours.",
    "cues": {
     "winner": "winner",
     "hours": "hours"

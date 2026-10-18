@@ -261,6 +261,24 @@
    }
   },
   {
+   "at": "s04+3.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "300",
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06+0.6",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "300",
+    "layer": "hl"
+   }
+  },
+  {
    "at": "s06",
    "do": "geo.cam_to",
    "stage": "stage_map",

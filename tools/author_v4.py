@@ -106,7 +106,7 @@ def build(S):
         B.append({"at": L.get("in", "s04+1.2"), "do": "geo.label_in", "stage": M, "args": {"lid": L["id"]}})
         if L.get("out"): B.append({"at": L["out"], "do": "geo.label_out", "stage": M, "args": {"lid": L["id"]}})
     pulse = lambda at: ([{"at": at, "do": "geo.highlight_pulse", "stage": M, "args": {"fid": g["highlight_ids"][0], "layer": "hl"}}] if g["highlight_ids"] else [])
-    B += [cam("s05", "s05+1.3", cams["s05"], "power2.inOut"), cam("s05+1.3", "s05.end", cams["s05b"], "none")] + pulse("s05+0.5") + [
+    B += [cam("s05", "s05+1.3", cams["s05"], "power2.inOut"), cam("s05+1.3", "s05.end", cams["s05b"], "none")] + pulse("s05+0.5") + pulse("s04+3.2") + pulse("s06+0.6") + [
           cam("s06", "s06+1.3", cams["s06"], "power2.inOut"), cam("s06+1.3", "s06.end", cams["s06b"], "none"),
           cam("s07", "s07+1.2", cams["s07"], "power2.inOut"), cam("s07+1.2", "s08+0.2", cams["s07b"], "none")] + pulse("s07+0.4") + [
           {"at": "s08", "do": "geo.clear", "stage": M, "args": {"dur": 0.25}},
