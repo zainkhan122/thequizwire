@@ -3,11 +3,11 @@
  "format": "quiz-v3",
  "series": "sports-sprint",
  "number": 12,
- "title": "Which country has won the MOST World Cups?",
+ "title": "Which country has the MOST World Cup titles?",
  "difficulty": "EASY",
  "seed": 3112,
  "quiz": {
-  "question": "Which country has won the MOST World Cups?",
+  "question": "Which country has the MOST World Cup titles?",
   "keyword": "MOST",
   "options": [
    "Brazil",
@@ -44,7 +44,7 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Which country has won the MOST World Cups? 🏆",
+  "title": "Which country has the MOST World Cup titles? 🏆",
   "premise": "Five World Cups and the only team at every tournament",
   "bait": "Brazil, Germany or Italy — which did you pick? 👇",
   "keywords": [

@@ -13,7 +13,7 @@
  "start_hold": 0.0,
  "end_hold": 2.4,
  "sample_line": "v04",
- "title": "Which country has won the MOST World Cups?",
+ "title": "Which country has the MOST World Cup titles?",
  "lines": [
   {
    "id": "v01",
@@ -23,10 +23,10 @@
    "energy": 4,
    "pause_after": 0.3,
    "direction": "the question, cold — curiosity comes from the map moving under it",
-   "text": "Which country has won the most World Cups?",
+   "text": "Which country has the most World Cup titles?",
    "cues": {
     "which": "which",
-    "cups": "cups"
+    "titles": "titles"
    }
   },
   {
@@ -93,10 +93,10 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "let it land",
-   "text": "Pelé won his first at 17, a boy from Três Corações in Minas Gerais.",
+   "text": "Pelé won his first at 17, still the youngest champion ever.",
    "cues": {
     "first": "first",
-    "boy": "boy"
+    "youngest": "youngest"
    }
   },
   {

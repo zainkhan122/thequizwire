@@ -3,7 +3,7 @@
  "series": "sports-sprint",
  "number": 12,
  "seed": 3112,
- "question": "Which country has won the MOST World Cups?",
+ "question": "Which country has the MOST World Cup titles?",
  "keyword": "MOST",
  "difficulty": "EASY",
  "options": [
@@ -64,7 +64,7 @@
  "voice": {
   "v01_cues": {
    "which": "which",
-   "cups": "cups"
+   "titles": "titles"
   },
   "v04": {
    "text": "Brazil: five titles, 1958, 1962, 1970, 1994 and 2002. Nobody else has more than four.",
@@ -82,10 +82,10 @@
    }
   },
   "v06": {
-   "text": "Pelé won his first at 17, a boy from Três Corações in Minas Gerais.",
+   "text": "Pelé won his first at 17, still the youngest champion ever.",
    "cues": {
     "first": "first",
-    "boy": "boy"
+    "youngest": "youngest"
    }
   },
   "v07": {
@@ -110,7 +110,7 @@
   },
   {
    "kicker": "AGE 17",
-   "text": "Pelé's first title, 1958"
+   "text": "Pelé, youngest champion, 1958"
   },
   {
    "kicker": "1950",
@@ -289,7 +289,7 @@
   },
   "pin_beats": [
    {
-    "at": "s06@boy",
+    "at": "s06@youngest",
     "pid": "tres"
    },
    {
@@ -410,7 +410,7 @@
      "britannica_wc"
     ],
     "vo": [
-     "which country has won the most world cups",
+     "which country has the most world cup titles",
      "brazil, germany, or italy",
      "brazil: five titles, 1958, 1962, 1970, 1994 and 2002. nobody else has more than four"
     ],
@@ -442,17 +442,17 @@
    {
     "id": "C03",
     "weight": "detail",
-    "text": "Pelé won his first World Cup in 1958 aged 17; he was born in Três Corações, Minas Gerais.",
+    "text": "Pelé won his first World Cup in 1958 aged 17 — the youngest World Cup winner; born in Três Corações, Minas Gerais.",
     "sources": [
      "britannica_pele",
      "olympics_pele"
     ],
     "vo": [
-     "pelé won his first at 17, a boy from três corações in minas gerais"
+     "pelé won his first at 17, still the youngest champion ever"
     ],
     "screen": [
      "AGE 17",
-     "Pelé's first title, 1958",
+     "Pelé, youngest champion, 1958",
      "Três Corações"
     ]
    },

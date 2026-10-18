@@ -37,7 +37,7 @@
    "id": "f3",
    "type": "fact",
    "kicker": "AGE 17",
-   "text": "Pelé's first title, 1958"
+   "text": "Pelé, youngest champion, 1958"
   },
   {
    "id": "f4",
@@ -327,7 +327,7 @@
    "stage": "stage_map"
   },
   {
-   "at": "s06@boy",
+   "at": "s06@youngest",
    "do": "geo.pin_in",
    "stage": "stage_map",
    "args": {
