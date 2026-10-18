@@ -21,11 +21,11 @@
    "tone": "urgent",
    "energy": 4,
    "pause_after": 0.3,
-   "direction": "a number first, like a dare",
-   "text": "Eight thousand eight hundred and ninety-one kilometres… no wall. Where is the world's longest land border?",
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Where is the longest land border on Earth?",
    "cues": {
-    "eight": "eight",
-    "where": "where"
+    "where": "where",
+    "earth": "earth"
    }
   },
   {
@@ -62,7 +62,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "Canada and the USA: one line from the Atlantic to the Pacific, then Alaska to the Arctic.",
+   "text": "Canada and the USA: eight thousand eight hundred and ninety-one kilometres, no wall, one line from the Atlantic to the Pacific, then Alaska to the Arctic.",
    "cues": {
     "answer": "canada",
     "atlantic": "atlantic",

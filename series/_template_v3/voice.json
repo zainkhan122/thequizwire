@@ -22,7 +22,7 @@
    "energy": 4,
    "pause_after": 0.3,
    "direction": "a claim with a number, fast, then the question",
-   "text": "A range called the Alps… nowhere near Europe. Five hundred kilometres of peaks. Which country?",
+   "text": "In which country are the Southern Alps?",
    "cues": {
     "which": "which"
    }
@@ -61,7 +61,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "It's New Zealand: the Southern Alps run five hundred kilometres down the South Island.",
+   "text": "It's New Zealand: a range called the Alps, nowhere near Europe, five hundred kilometres of peaks down the South Island.",
    "cues": {
     "answer": "zealand",
     "five": "five",

@@ -36,7 +36,7 @@
    "url": "thequizwire.com"
   }
  },
- "hook_type": "fact-first",
+ "hook_type": "question-first",
  "promise": {
   "min_motion": 0.7
  },
@@ -73,7 +73,7 @@
  },
  "variety": {
   "question": "where-is",
-  "hook": "fact-first",
+  "hook": "question-first",
   "opener": "world-rotated",
   "reveal": "border-draw",
   "beats": [
