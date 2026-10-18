@@ -167,12 +167,12 @@
    -7
   ],
   "far_bbox": [
-   100,
-   -16,
-   135,
-   2
+   95,
+   -30,
+   150,
+   10
   ],
-  "resolution": "10m",
+  "resolution": "50m",
   "highlight_ids": [
    "360"
   ],
