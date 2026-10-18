@@ -172,3 +172,6 @@ wrapper, needed so fades never tween the clip element) and `layout/container_ove
 - Geo #13 after watching the runner render (`/home/user/review/geo13_v3_runner.mp4`): "South Island" label moved off the scalebar, scalebar → [60,1130], kiwi character → (205,800) off the Aoraki pin label. Template + comps synced; gates green.
 - Lessons (keep): `sNN-x` anchors to the END of sNN — use `sNN.end-x`; rotated-world Mercator shows nothing beyond rel ±180 — keep cameras with half-width 540/(2.9·k) ≤ 180 − |rel centre|; Paris↔Tahiti are 209° apart in this rotation → one pin per hemisphere per camera.
 - Next: V3.6c–j (geo ep10 Nile, ep11 Budapest, ep12 Antarctica; wild ep07–09; sports ep09–10), one episode per phase; then V3.7 batch render after the owner approves Geo #13.
+
+## Card D1 — decode done (2026-10-18), commit 460f222 LOCAL ONLY (PAT missing → not pushed)
+Next: F2 = pace/voice/CTA/title/description changes (lessons #1,3,5,6,7); F3 = motion/opening/cover/watermark (#2,4,8,9,10); then author ≥7 ready episodes.
