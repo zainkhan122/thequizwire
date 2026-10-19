@@ -77,10 +77,10 @@
    "id": "st_ele",
    "type": "sticker",
    "emoji": "1f418",
-   "x": 760,
-   "y": 560,
+   "x": 190,
+   "y": 520,
    "size": 230,
-   "rot": -8
+   "rot": 8
   },
   {
    "id": "mascot",
