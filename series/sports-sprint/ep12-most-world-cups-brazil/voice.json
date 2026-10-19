@@ -79,7 +79,7 @@
    "energy": 4,
    "pause_after": 0.4,
    "direction": "commentator counting bars",
-   "text": "Germany four. Italy four. Brazil keeps going to five.",
+   "text": "Germany has four. Italy has four. Brazil keeps going, all the way to five.",
    "cues": {
     "germany": "germany",
     "five": "five"
@@ -93,7 +93,7 @@
    "energy": 4,
    "pause_after": 0.4,
    "direction": "the streak, counted fast",
-   "text": "And they are the only team at all 22 World Cups. Not one missed since 1930.",
+   "text": "And they are the only team to play at all 22 World Cups. Not one missed since 1930, not once.",
    "cues": {
     "only": "only",
     "missed": "missed"

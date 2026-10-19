@@ -554,7 +554,7 @@
    },
    "direction": "a person first",
    "energy": 3,
-   "tone": "tender",
+   "tone": "resolute",
    "card": {
     "kicker": "2:58:50",
     "text": "Spyridon Louis, water carrier"
@@ -585,7 +585,7 @@
     ]
    ],
    "pulse": 0.5,
-   "pause_after": 0.3
+   "pause_after": 0.35
   },
   {
    "vo": {
@@ -708,7 +708,7 @@
      "id": "years"
     }
    ],
-   "pause_after": 0.3
+   "pause_after": 0.35
   }
  ]
 }
