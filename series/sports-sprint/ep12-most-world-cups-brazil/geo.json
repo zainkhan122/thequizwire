@@ -37,15 +37,6 @@
    ],
    "pins": [
     {
-     "id": "tres",
-     "lonlat": [
-      -45.255,
-      -21.695
-     ],
-     "label": "Três Corações",
-     "qid": "Q1439211"
-    },
-    {
      "id": "maracana",
      "lonlat": [
       -43.23,

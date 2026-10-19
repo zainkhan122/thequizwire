@@ -89,9 +89,8 @@
   "opener": "wide-drift",
   "reveal": "flag-lift",
   "beats": [
+   "bars",
    "counter",
-   "pin",
-   "label",
    "pin"
   ],
   "cast": "flagball:happy + emoji-set:football",

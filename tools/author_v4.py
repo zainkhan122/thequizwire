@@ -116,6 +116,7 @@ def build(S):
         if b.get("sticker"):
             s_ = b["sticker"]; els.append({"id": s_["id"], "type": "sticker", "emoji": s_["emoji"], "x": s_.get("x", 740), "y": s_.get("y", 580), "size": s_.get("size", 220), "rot": s_.get("rot", 6)})
         for el in b.get("elements", []): els.append(el)                       # counters, bars, compare … (engine/charts.py)
+    els += S.get("extra_elements", [])                                        # e.g. a second mascot face used by a story beat
     els += [{"id": "mascot", "type": "character", "flag": "un", "face": ch.get("mascot_face", "think"), "x": 860, "y": 1480, "size": 210, "rot": 6},
             {"id": "cha", "type": "character", "flag": ch["a"]["flag"], "face": ch["a"]["face"], "x": ch["a"].get("x", 230), "y": ch["a"].get("y", 820), "size": 220, "rot": -8},
             {"id": "chb", "type": "character", "flag": ch["b"]["flag"], "face": ch["b"]["face"], "x": ch["b"].get("x", 850), "y": ch["b"].get("y", 1000), "size": 200, "rot": 8}]

@@ -2,7 +2,7 @@
  "version": 1,
  "episode": "ep12-most-world-cups-brazil",
  "topic": "Which country has won the most FIFA World Cups? (Brazil, 5)",
- "researched": "2026-10-18",
+ "researched": "2026-10-19",
  "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
  "myths": [
   {
@@ -134,14 +134,18 @@
    "vo": [
     "which country has the most world cup titles",
     "brazil, germany, or italy",
-    "brazil: five titles, the first in 1958, the latest in 2002. nobody else has more than four"
+    "brazil",
+    "five titles, from 1958 to 2002. nobody else has more than four",
+    "germany four. italy four. brazil keeps going to five"
    ],
    "screen": [
     "5 TITLES",
     "1958 to 2002",
     "Brazil",
     "Germany",
-    "Italy"
+    "Italy",
+    "5",
+    "4"
    ]
   },
   {
@@ -154,29 +158,22 @@
     "fifa_history"
    ],
    "vo": [
-    "brazil is also the only team at all 22 world cups, never missing one since 1930"
+    "and they are the only team at all 22 world cups. not one missed since 1930"
    ],
    "screen": [
-    "22 OF 22",
-    "every World Cup since 1930"
+    "22 World Cups, 22 appearances"
    ]
   },
   {
    "id": "C03",
    "weight": "detail",
-   "text": "Pelé won his first World Cup in 1958 aged 17 — the youngest World Cup winner; born in Três Corações, Minas Gerais.",
+   "text": "Pelé won his first World Cup in 1958 aged 17 — the youngest World Cup winner; born in Três Corações, Minas Gerais. (not spoken in this cut)",
    "sources": [
     "britannica_pele",
     "olympics_pele"
    ],
-   "vo": [
-    "pelé won his first at 17, still the youngest champion ever"
-   ],
-   "screen": [
-    "AGE 17",
-    "Pelé, youngest champion, 1958",
-    "Três Corações"
-   ]
+   "vo": [],
+   "screen": []
   },
   {
    "id": "C04",
@@ -188,7 +185,7 @@
     "britannica_wc"
    ],
    "vo": [
-    "and the one that hurt: 1950, the final lost at home in the maracanã, two hundred thousand watching"
+    "and the one that hurt. 1950, the final lost at home in the maracanã, two hundred thousand watching"
    ],
    "screen": [
     "1950",
