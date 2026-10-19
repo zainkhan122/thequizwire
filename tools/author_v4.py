@@ -27,6 +27,28 @@ SERIES_TAGS = {"geo-blitz": ["#GeographyQuiz", "#MapQuiz", "#thequizwire"], "spo
 def letters(i): return "ABC"[i]
 
 
+def story_beats(S):
+    """The explanation as a list of beats. New specs write `story: [...]` (2–5 beats, each its own shape); old specs are
+    converted from voice v05–v07 + facts[1:] + stickers so nothing already rendered changes."""
+    if S.get("story"): return S["story"]
+    vo, F, st, cams = S["voice"], S["facts"], S["stickers"], S["geo"]["cams"]
+    out = []
+    for i, key in enumerate(("v05", "v06", "v07")):
+        sk = f"s{5 + i:02d}"
+        out.append({"vo": vo[key], "card": F[i + 1], "sticker": {**st[i], "at": 0.6 if i < 2 else 0.8}, "cam": cams[sk], "cam_hold": cams[sk + "b"],
+                    "pulse": [0.5, 0.6, 0.4][i], "direction": ["count it out", "let it land", "the number people repeat"][i], "energy": [3, 3, 4][i], "tone": ["resolute", "neutral", "resolute"][i]})
+    return out
+
+
+def story_lines(S):
+    L = []
+    for i, b in enumerate(story_beats(S)):
+        n = 5 + i
+        L.append({"id": f"v{n:02d}", "scene": f"s{n:02d}", "role": "story", "tone": b.get("tone", "resolute"), "energy": b.get("energy", 3), "pause_after": b.get("pause_after", 0.4),
+                  "direction": b.get("direction", "say it like you just found out"), "text": b["vo"]["text"], "cues": b["vo"].get("cues", {})})
+    return L
+
+
 def build(S):
     ep = S["id"]; series = S["series"]; n = S["number"]; q = S["question"]
     opts = S["options"]; ci = S["correct"]; ans = opts[ci]["text"]
@@ -50,7 +72,7 @@ def build(S):
     opt_vo = ", ".join(o.get("vo", o["text"]) for o in opts[:-1]) + ", or " + opts[-1].get("vo", opts[-1]["text"]) + "?"
     V = {"version": 1, "episode": ep, "backend": "kokoro", "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
          "kokoro_fallback": {"voice": "am_michael", "speed": 1.3}, "intent": S["intent"],
-         "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, three one-line beats, punchline + short follow",
+         "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
          "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
          "start_hold": 0.0, "end_hold": 2.4, "sample_line": "v04", "title": q,
          "lines": [
@@ -62,10 +84,8 @@ def build(S):
              {"id": "v03", "scene": "s03", "role": "countdown", "tone": "neutral", "energy": 1, "pause_after": 0.1, "direction": "silence — the bar drains", "silence": 3.0, "text": ""},
              {"id": "v04", "scene": "s04", "role": "reveal", "tone": "revelatory", "energy": 4, "pause_after": 0.45, "direction": "the map answers with you",
               "text": vo["v04"]["text"], "cues": vo["v04"]["cues"], "climax": True},
-             {"id": "v05", "scene": "s05", "role": "story", "tone": "resolute", "energy": 3, "pause_after": 0.4, "direction": "count it out", "text": vo["v05"]["text"], "cues": vo["v05"]["cues"]},
-             {"id": "v06", "scene": "s06", "role": "story", "tone": "neutral", "energy": 3, "pause_after": 0.4, "direction": "let it land", "text": vo["v06"]["text"], "cues": vo["v06"]["cues"]},
-             {"id": "v07", "scene": "s07", "role": "story", "tone": "resolute", "energy": 4, "pause_after": 0.4, "direction": "the number people repeat", "text": vo["v07"]["text"], "cues": vo["v07"]["cues"]},
-             {"id": "v08", "scene": "s08", "role": "cta", "tone": "tender", "energy": 3, "pause_after": 0.0, "direction": "punchline, then a short follow — the outro visual asks",
+             ] + story_lines(S) + [
+             {"id": f"v{len(story_beats(S)) + 5:02d}", "scene": f"s{len(story_beats(S)) + 5:02d}", "role": "cta", "tone": "tender", "energy": 3, "pause_after": 0.0, "direction": "punchline, then a short follow — the outro visual asks",
               "text": vo["v08"]["text"], "cues": ({"follow": "follow"} if "follow" in vo["v08"]["text"].lower() else {})}]}
     # ---------------- research.json
     R0 = S["research"]
@@ -88,9 +108,14 @@ def build(S):
                              "projection_reason": g.get("projection_reason", "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"),
                              "scalebar": {"km": g["scalebar"]["km"], "lonlat": g["scalebar"]["lonlat"], "at": [60, 1130]}}}}
     # ---------------- visuals.json
-    ch = S["characters"]; st = S["stickers"]; F = S["facts"]; cams = g["cams"]
-    els = [{"id": f"f{i+1}", "type": "fact", "kicker": f["kicker"], "text": f["text"]} for i, f in enumerate(F)]
-    els += [{"id": s["id"], "type": "sticker", "emoji": s["emoji"], "x": s.get("x", 740), "y": s.get("y", 580), "size": s.get("size", 220), "rot": s.get("rot", 6)} for s in st]
+    ch = S["characters"]; st = S.get("stickers", []); F = S["facts"]; cams = g["cams"]
+    SB = story_beats(S); NS = len(SB); CTA = f"s{NS + 5:02d}"
+    els = [{"id": "f1", "type": "fact", "kicker": F[0]["kicker"], "text": F[0]["text"]}]
+    for i, b in enumerate(SB):
+        if b.get("card"): els.append({"id": f"f{i + 2}", "type": "fact", "kicker": b["card"]["kicker"], "text": b["card"]["text"]})
+        if b.get("sticker"):
+            s_ = b["sticker"]; els.append({"id": s_["id"], "type": "sticker", "emoji": s_["emoji"], "x": s_.get("x", 740), "y": s_.get("y", 580), "size": s_.get("size", 220), "rot": s_.get("rot", 6)})
+        for el in b.get("elements", []): els.append(el)                       # counters, bars, compare … (engine/charts.py)
     els += [{"id": "mascot", "type": "character", "flag": "un", "face": ch.get("mascot_face", "think"), "x": 860, "y": 1480, "size": 210, "rot": 6},
             {"id": "cha", "type": "character", "flag": ch["a"]["flag"], "face": ch["a"]["face"], "x": ch["a"].get("x", 230), "y": ch["a"].get("y", 820), "size": 220, "rot": -8},
             {"id": "chb", "type": "character", "flag": ch["b"]["flag"], "face": ch["b"]["face"], "x": ch["b"].get("x", 850), "y": ch["b"].get("y", 1000), "size": 200, "rot": 8}]
@@ -106,11 +131,25 @@ def build(S):
         B.append({"at": L.get("in", "s04+1.2"), "do": "geo.label_in", "stage": M, "args": {"lid": L["id"]}})
         if L.get("out"): B.append({"at": L["out"], "do": "geo.label_out", "stage": M, "args": {"lid": L["id"]}})
     pulse = lambda at: ([{"at": at, "do": "geo.highlight_pulse", "stage": M, "args": {"fid": g["highlight_ids"][0], "layer": "hl"}}] if g["highlight_ids"] else [])
-    B += [cam("s05", "s05+1.3", cams["s05"], "power2.inOut"), cam("s05+1.3", "s05.end", cams["s05b"], "none")] + pulse("s05+0.5") + pulse("s04+3.2") + pulse("s06+0.6") + [
-          cam("s06", "s06+1.3", cams["s06"], "power2.inOut"), cam("s06+1.3", "s06.end", cams["s06b"], "none"),
-          cam("s07", "s07+1.2", cams["s07"], "power2.inOut"), cam("s07+1.2", "s08+0.2", cams["s07b"], "none")] + pulse("s07+0.4") + [
-          {"at": "s08", "do": "geo.clear", "stage": M, "args": {"dur": 0.25}},
-          cam("s08+0.2", "end-0.3", cams["start"], "power1.inOut"),
+    B += pulse("s04+3.2") + [{"at": "s04+2.6", "do": "fact_in", "id": "f1", "until": "s04.end"}]
+    for i, b in enumerate(SB):
+        sc = f"s{5 + i:02d}"; nxt = f"s{6 + i:02d}"; last = i == NS - 1
+        if b.get("cam"):
+            glide = float(b.get("cam_dur", 1.3))
+            B.append(cam(sc, f"{sc}+{glide}", b["cam"], b.get("cam_ease", "power2.inOut")))
+            if b.get("cam_hold"): B.append(cam(f"{sc}+{glide}", f"{nxt}+0.2" if last else f"{sc}.end", b["cam_hold"], "none"))
+        if b.get("pulse") is not None and b.get("pulse") is not False: B += pulse(f"{sc}+{b['pulse']}")
+        if b.get("card"): B.append({"at": f"{sc}+{b.get('card_at', 0.4)}", "do": "fact_in", "id": f"f{i + 2}", "until": f"{sc}.end"})
+        if b.get("sticker"):
+            s_ = b["sticker"]; B += [{"at": f"{sc}+{s_.get('at', 0.6)}", "do": "sticker_in", "id": s_["id"]}, {"at": f"{sc}.end", "do": "sticker_out", "id": s_["id"]}]
+        for d in b.get("devices", []):                                        # free-form: any engine beat, times relative to this scene
+            d = dict(d); rel = lambda x: x.replace("@", sc, 1) if isinstance(x, str) else f"{sc}+{x}"   # "@+1.2" · "@.end" · "@@cue" → s06+1.2 · s06.end · s06@cue
+            d["at"] = rel(d.get("at", 0))
+            if "until" in d: d["until"] = rel(d["until"])
+            if d["do"].startswith("geo.") : d.setdefault("stage", M)
+            B.append(d)
+    B += [{"at": CTA, "do": "geo.clear", "stage": M, "args": {"dur": 0.25}},
+          cam(f"{CTA}+0.2", "end-0.3", cams["start"], "power1.inOut"),
           {"at": "s04+0.8", "do": "geo.scalebar_in", "stage": M}]
     for pb in g.get("pin_beats", []):
         B.append({"at": pb["at"], "do": "geo.pin_out" if pb.get("out") else "geo.pin_in", "stage": M, "args": {"pid": pb["pid"]}})
@@ -119,11 +158,7 @@ def build(S):
           {"at": "s04+1.3", "do": "banner_in"}, {"at": "s04+4.4", "do": "banner_out"},
           {"at": "s04+1.6", "do": "character_in", "id": "cha"}, {"at": "s04+1.9", "do": "character_in", "id": "chb"},
           {"at": "s05+0.8", "do": "character_out", "id": "chb"}, {"at": "s05+1.0", "do": "character_out", "id": "cha"},
-          {"at": "s04+2.6", "do": "fact_in", "id": "f1", "until": "s04.end"},
-          {"at": "s05+0.4", "do": "fact_in", "id": "f2", "until": "s05.end"}, {"at": "s05+0.6", "do": "sticker_in", "id": st[0]["id"]}, {"at": "s05.end", "do": "sticker_out", "id": st[0]["id"]},
-          {"at": "s06+0.4", "do": "fact_in", "id": "f3", "until": "s06.end"}, {"at": "s06+0.6", "do": "sticker_in", "id": st[1]["id"]}, {"at": "s06.end", "do": "sticker_out", "id": st[1]["id"]},
-          {"at": "s07+0.4", "do": "fact_in", "id": "f4", "until": "s07.end"}, {"at": "s07+0.8", "do": "sticker_in", "id": st[2]["id"]}, {"at": "s07.end", "do": "sticker_out", "id": st[2]["id"]},
-          {"at": "s08", "do": "cta_in", "until": "end-1.0"}, {"at": "s08", "do": "credit_in", "until": "end-0.2"}, {"at": "end-1.0", "do": "hook_in"}]
+          {"at": CTA, "do": "cta_in", "until": "end-1.0"}, {"at": CTA, "do": "credit_in", "until": "end-0.2"}, {"at": "end-1.0", "do": "hook_in"}]
     X = {"version": 3, "stage": [{"id": M, "type": "geo", "scene": "main", "from": "start", "to": "end", "box": [0, 0, 1080, 1920], "anchor": [540, 900], "z": 10}],
          "elements": els, "beats": B, "captions": {"roles": ["reveal", "story"], "max_words": 4, "max_chars": 26, "hold": 0.12}}
     MEDIA = {"version": 1, "files": {}, "generated": {}}
@@ -138,6 +173,10 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     tv = json.load(open(ROOT / "series/_template_v3/visuals.json")).get("version", 1)
     files = build(S); files["visuals.json"]["version"] = tv
+    prev = out / "episode.json"
+    if prev.exists():                                                        # --force keeps the review status; the content is what changes
+        try: files["episode.json"]["status"] = json.loads(prev.read_text()).get("status", "draft")
+        except Exception: pass
     for name, data in files.items(): (out / name).write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n")
     print(f"wrote {out} ({len(files)} files)")
 

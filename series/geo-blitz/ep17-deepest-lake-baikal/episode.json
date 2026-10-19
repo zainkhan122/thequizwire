@@ -89,9 +89,8 @@
   "reveal": "fill-pulse",
   "beats": [
    "counter",
-   "pin",
-   "counter",
-   "pin"
+   "compare",
+   "route"
   ],
   "cast": "flagball:cool + emoji-set:water",
   "music": "bed:deep"

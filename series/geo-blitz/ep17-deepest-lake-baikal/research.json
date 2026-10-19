@@ -2,7 +2,7 @@
  "version": 1,
  "episode": "ep17-deepest-lake-baikal",
  "topic": "Where is the deepest lake on Earth? (Lake Baikal, Russia — 1,642 m)",
- "researched": "2026-10-18",
+ "researched": "2026-10-19",
  "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
  "myths": [
   {
@@ -111,6 +111,14 @@
    "url": "https://www.bbc.com/future/article/20230202-lake-baikal-the-worlds-deepest-lake",
    "date": "2023-02-02",
    "notes": "1,642 m deep; ~20% of unfrozen fresh water; 25 million years old; nerpa seal endemic; Angara the only outlet"
+  },
+  "wiki_greatlakes": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Great Lakes",
+   "url": "https://en.wikipedia.org/wiki/Great_Lakes",
+   "date": "2026-10-19",
+   "notes": "total volume 22,671 km³ (5,439 cu mi); ~21% of the world's surface fresh water"
   }
  },
  "claims": [
@@ -128,51 +136,51 @@
    "vo": [
     "where is the deepest lake on earth",
     "russia, tanzania, or the usa",
-    "russia: lake baikal in siberia drops to one thousand six hundred and forty-two metres"
+    "russia",
+    "lake baikal, in siberia, drops to 1,642 metres"
    ],
    "screen": [
     "1,642 M",
-    "deep · Lake Baikal, Siberia",
     "Lake Baikal",
     "Russia",
     "Tanzania",
-    "USA"
+    "USA",
+    "metres straight down"
    ]
   },
   {
    "id": "C02",
    "weight": "core",
-   "text": "Baikal holds about 20 % of the world's unfrozen fresh surface water (≈23,600 km³).",
+   "text": "Baikal holds about 20 % of the world's unfrozen fresh surface water (≈23,600 km³). Volume ≈23,600 km³ vs the five Great Lakes ≈22,700 km³ combined.",
    "sources": [
     "unesco_baikal",
     "nasa_eo",
-    "wiki_baikal"
+    "wiki_baikal",
+    "wiki_greatlakes"
    ],
    "vo": [
-    "that one lake holds about a fifth of all the unfrozen fresh water on the planet"
+    "that one lake holds about a fifth of all the unfrozen fresh water on the planet, more than the five great lakes combined"
    ],
    "screen": [
-    "~20%",
-    "of Earth's unfrozen fresh water"
+    "Baikal",
+    "23,600 km³",
+    "Great Lakes ×5",
+    "22,700 km³"
    ]
   },
   {
    "id": "C03",
    "weight": "detail",
-   "text": "Baikal is the oldest lake, about 25 million years, with the endemic Baikal seal (nerpa); Olkhon is its largest island.",
+   "text": "Baikal's maximum depth of 1,642 m is just over one mile (1,609 m).",
    "sources": [
+    "wiki_baikal",
     "unesco_baikal",
-    "britannica_baikal",
-    "wiki_baikal"
+    "nasa_eo"
    ],
    "vo": [
-    "it is also the oldest, around twenty-five million years, with a seal found nowhere else"
+    "count it down. the water keeps going for more than a mile, straight down"
    ],
-   "screen": [
-    "25 MILLION YRS",
-    "the oldest lake alive",
-    "Olkhon Island"
-   ]
+   "screen": []
   },
   {
    "id": "C04",
@@ -184,7 +192,7 @@
     "bbc_baikal"
    ],
    "vo": [
-    "over three hundred rivers flow in. only one flows out: the angara"
+    "three hundred and thirty-six rivers flow in. only one flows out: the angara"
    ],
    "screen": [
     "336 IN · 1 OUT",

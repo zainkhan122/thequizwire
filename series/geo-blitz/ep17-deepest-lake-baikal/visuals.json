@@ -28,49 +28,41 @@
    "text": "deep · Lake Baikal, Siberia"
   },
   {
-   "id": "f2",
-   "type": "fact",
-   "kicker": "~20%",
-   "text": "of Earth's unfrozen fresh water"
+   "id": "depth",
+   "type": "counter",
+   "start": 0,
+   "end": 1642,
+   "y": 560,
+   "label": "metres straight down",
+   "fmt": "int",
+   "suffix": " m",
+   "size": 200
   },
   {
-   "id": "f3",
-   "type": "fact",
-   "kicker": "25 MILLION YRS",
-   "text": "the oldest lake alive"
+   "id": "vol",
+   "type": "compare",
+   "items": [
+    [
+     "Baikal",
+     23.6,
+     "23,600 km³"
+    ],
+    [
+     "Great Lakes ×5",
+     22.7,
+     "22,700 km³"
+    ]
+   ],
+   "y": 380,
+   "x": 90,
+   "w": 900,
+   "max_h": 520
   },
   {
    "id": "f4",
    "type": "fact",
    "kicker": "336 IN · 1 OUT",
    "text": "rivers · only the Angara leaves"
-  },
-  {
-   "id": "st_wave",
-   "type": "sticker",
-   "emoji": "1f30a",
-   "x": 760,
-   "y": 560,
-   "size": 230,
-   "rot": 8
-  },
-  {
-   "id": "st_seal",
-   "type": "sticker",
-   "emoji": "1f9ad",
-   "x": 740,
-   "y": 600,
-   "size": 220,
-   "rot": -8
-  },
-  {
-   "id": "st_drop",
-   "type": "sticker",
-   "emoji": "1f4a7",
-   "x": 720,
-   "y": 560,
-   "size": 200,
-   "rot": 6
   },
   {
    "id": "mascot",
@@ -204,10 +196,16 @@
    }
   },
   {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
    "at": "s05",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s05+1.3",
+   "until": "s05+3.0",
    "args": {
     "k": 1.1,
     "lonlat": [
@@ -218,7 +216,7 @@
    }
   },
   {
-   "at": "s05+1.3",
+   "at": "s05+3.0",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s05.end",
@@ -232,32 +230,60 @@
    }
   },
   {
+   "at": "s05+0.3",
+   "do": "chart.counter_run",
+   "id": "depth",
+   "until": "s05+3.4",
+   "args": {
+    "ease": "power1.in"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "hide",
+   "id": "depth"
+  },
+  {
    "at": "s06",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s06+1.3",
+   "until": "s06+1.2",
    "args": {
-    "k": 1.6,
+    "k": 1.0,
     "lonlat": [
-     107.7,
-     53.1
+     107.0,
+     53.6
     ],
     "ease": "power2.inOut"
    }
   },
   {
-   "at": "s06+1.3",
+   "at": "s06+1.2",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s06.end",
    "args": {
-    "k": 1.7,
+    "k": 1.02,
     "lonlat": [
-     107.75,
-     53.05
+     107.1,
+     53.55
     ],
     "ease": "none"
    }
+  },
+  {
+   "at": "s06+0.5",
+   "do": "chart.compare_in",
+   "id": "vol",
+   "args": {
+    "dur": 1.4,
+    "stagger": 0.7
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "hide",
+   "id": "vol"
   },
   {
    "at": "s07",
@@ -288,6 +314,30 @@
    }
   },
   {
+   "at": "s07+0.2",
+   "do": "fact_in",
+   "id": "f4",
+   "until": "s07.end"
+  },
+  {
+   "at": "s07@angara",
+   "do": "geo.pin_in",
+   "args": {
+    "pid": "listvyanka"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s07@angara",
+   "do": "geo.route_draw",
+   "until": "s07.end",
+   "args": {
+    "rid": "angara",
+    "layer": "river"
+   },
+   "stage": "stage_map"
+  },
+  {
    "at": "s08",
    "do": "geo.clear",
    "stage": "stage_map",
@@ -313,30 +363,6 @@
    "at": "s04+0.8",
    "do": "geo.scalebar_in",
    "stage": "stage_map"
-  },
-  {
-   "at": "s06@seal",
-   "do": "geo.pin_in",
-   "stage": "stage_map",
-   "args": {
-    "pid": "olkhon"
-   }
-  },
-  {
-   "at": "s07",
-   "do": "geo.pin_out",
-   "stage": "stage_map",
-   "args": {
-    "pid": "olkhon"
-   }
-  },
-  {
-   "at": "s07@angara",
-   "do": "geo.pin_in",
-   "stage": "stage_map",
-   "args": {
-    "pid": "listvyanka"
-   }
   },
   {
    "at": 0,
@@ -393,60 +419,6 @@
    "at": "s05+1.0",
    "do": "character_out",
    "id": "cha"
-  },
-  {
-   "at": "s04+2.6",
-   "do": "fact_in",
-   "id": "f1",
-   "until": "s04.end"
-  },
-  {
-   "at": "s05+0.4",
-   "do": "fact_in",
-   "id": "f2",
-   "until": "s05.end"
-  },
-  {
-   "at": "s05+0.6",
-   "do": "sticker_in",
-   "id": "st_wave"
-  },
-  {
-   "at": "s05.end",
-   "do": "sticker_out",
-   "id": "st_wave"
-  },
-  {
-   "at": "s06+0.4",
-   "do": "fact_in",
-   "id": "f3",
-   "until": "s06.end"
-  },
-  {
-   "at": "s06+0.6",
-   "do": "sticker_in",
-   "id": "st_seal"
-  },
-  {
-   "at": "s06.end",
-   "do": "sticker_out",
-   "id": "st_seal"
-  },
-  {
-   "at": "s07+0.4",
-   "do": "fact_in",
-   "id": "f4",
-   "until": "s07.end"
-  },
-  {
-   "at": "s07+0.8",
-   "do": "sticker_in",
-   "id": "st_drop"
-  },
-  {
-   "at": "s07.end",
-   "do": "sticker_out",
-   "id": "st_drop"
   },
   {
    "at": "s08",

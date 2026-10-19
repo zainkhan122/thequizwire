@@ -34,18 +34,52 @@
        "Lake Baikal"
       ]
      }
+    },
+    {
+     "kind": "route",
+     "id": "river",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "angara",
+        "properties": {
+         "name": "Angara, first reach out of Baikal (schematic)"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           104.869,
+           51.854
+          ],
+          [
+           104.78,
+           51.9
+          ],
+          [
+           104.62,
+           52.0
+          ],
+          [
+           104.45,
+           52.12
+          ],
+          [
+           104.3,
+           52.25
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic first 60 km of the Angara for the draw-on"
     }
    ],
    "pins": [
-    {
-     "id": "olkhon",
-     "lonlat": [
-      107.4,
-      53.15
-     ],
-     "label": "Olkhon Island",
-     "qid": "Q756774"
-    },
     {
      "id": "listvyanka",
      "lonlat": [

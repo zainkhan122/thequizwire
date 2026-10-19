@@ -27,6 +27,8 @@ v2 (episode.json "format": "quiz-v2", docs/PLAN_V2.md §2) replaces Q1/Q2's card
   Q11 reveal     a visual-state change (geo.highlight_in / cam_to / pin_in / route_draw / chart.*) within 1.5 s of `reveal`
   Q12 loop       the last `hook_in` is ≥ end-2.0 and a final `geo.cam_to` (until ≥ end-0.4) returns to the t=0 `geo.cam_set`
   Q17 hook=Q    v3: the first spoken line is the on-screen question verbatim (normalised) — heard and read together, no restated hook
+  Q19 brief     brief.md written (hook fact · show it · beat order · different from · swipe test · devices) — reelkit/shapelint.py
+  Q20 shape     explanation shape ≠ any other ready episode of the series; not three identical device sets — reelkit/shapelint.py
   Q18 copy      post.copy hand-written per channel (reelkit/postkit.py check): no answer/demonym/fact-number spoilers, no template sentences
   Q16 variety    v3: `variety` block in the pools (docs/VARIETY.md); ≥ 4/8 axes equal to the previous episode, 3-in-a-row opener/reveal/outro/hook stem, or the same emoji set → FAIL
   Q13 length     exactly 3 options · total 22–40 s (FAIL) / 26–36 s (else WARN) · question ≤ 76 chars · option ≤ 26 chars ·
@@ -59,7 +61,7 @@ VARIETY = {
     "hook": {"question-first", "fact-first", "challenge", "story", "misconception", "character-asks"},
     "opener": {"wide-drift", "world-rotated", "globe-spin", "mystery-zoom-out", "night-lights", "split-candidates"},
     "reveal": {"flag-lift", "fill-pulse", "flash-cut", "border-draw", "stamp", "card-flip"},
-    "beats": {"pin", "route", "counter", "scalebar", "label", "second-highlight", "photo-cutout", "true-size-overlay", "timeline-strip", "before-after"},
+    "beats": {"pin", "route", "counter", "scalebar", "label", "second-highlight", "photo-cutout", "true-size-overlay", "timeline-strip", "before-after", "compare", "bars", "erase", "flash", "spin"},
     "cast": None,      # free text: "flagball:wow", "emoji-set:mountain", "none", "photo-cutout"
     "music": None,     # "bed:pad" … (seed is episode.seed)
     "outro": {"DID YOU GET IT?", "TOO EASY?", "1 FOR 1?", "CHALLENGE A FRIEND", "DAILY MAP QUIZ"},
@@ -194,6 +196,12 @@ def main():
     if spoken and E.get("format") == "quiz-v3":
         hook_n, q_n = norm(spoken[0]["text"]), norm(q.get("question", ""))
         if hook_n != q_n: G.append(f"Q17: the hook line must be the on-screen question verbatim — VO '{spoken[0]['text']}' vs question '{q.get('question','')}'")
+    # ---- Q19/Q20 anti-template gates (owner 2026-10-19)
+    if "_template" not in str(ep):                                   # engine fixtures are exempt; every real episode is gated
+        try:
+            sys.path.insert(0, str(Path(__file__).resolve().parent)); import shapelint as _sl
+            _F, _W = _sl.run(ep); G += _F; W += _W
+        except Exception as ex: G.append(f"Q19: shapelint could not run ({ex})")
     # ---- Q18 per-channel copy gate (owner 2026-10-19): postkit's spoiler + template lints are a quizlint FAIL too
     try:
         sys.path.insert(0, str(Path(__file__).resolve().parent)); import postkit as _pk
