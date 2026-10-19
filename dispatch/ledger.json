@@ -975,7 +975,10 @@
    "account": "BUFFER_API_KEY",
    "refresh_error": "Buffer query failed (NOT_FOUND): Post not found for id: 6ad628dcf8ab1a796325e2b1",
    "recopied_at": "2026-10-19T16:56:48+00:00",
-   "replaced": "6ad628dcf8ab1a796325e2b1"
+   "replaced": "6ad628dcf8ab1a796325e2b1",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-19T21:35:33+00:00"
   },
   {
    "episode": "ep04-tallest-men-netherlands",
@@ -991,39 +994,39 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-19T16:32:17+00:00"
+   "refreshed_at": "2026-10-19T21:35:34+00:00"
   },
   {
    "episode": "ep04-tallest-men-netherlands",
    "platform": "facebook",
    "post_id": "6ad628dee15f9b60b3a5e563",
    "channel_id": "695a159a457dae6a34d901bc",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/b03f6320b170/Which-country-has-the-TALLEST-people-on-average.mp4",
    "due_at": "2026-10-19T17:00:00.000Z",
    "created_at": "2026-10-19T14:27:42.524Z",
    "recorded_at": "2026-10-19T14:27:42+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-19T16:32:19+00:00"
+   "sent_at": "2026-10-19T17:01:25.862Z",
+   "external_link": "https://www.facebook.com/reel/2187071848508410/",
+   "refreshed_at": "2026-10-19T21:35:35+00:00"
   },
   {
    "episode": "ep04-tallest-men-netherlands",
    "platform": "twitter",
    "post_id": "6ad628e0e21b24048f50110b",
    "channel_id": "69f30e2a5c4c051afaf58634",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/b03f6320b170/Which-country-has-the-TALLEST-people-on-average.mp4",
    "due_at": "2026-10-19T21:00:00.000Z",
    "created_at": "2026-10-19T14:27:44.451Z",
    "recorded_at": "2026-10-19T14:27:44+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-19T16:32:21+00:00"
+   "sent_at": "2026-10-19T21:00:48.423Z",
+   "external_link": "https://x.com/2049746939164676096/status/2112287873957281997",
+   "refreshed_at": "2026-10-19T21:35:37+00:00"
   },
   {
    "episode": "ep04-tallest-men-netherlands",
@@ -1039,7 +1042,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-19T16:32:21+00:00"
+   "refreshed_at": "2026-10-19T21:35:38+00:00"
   }
  ]
 }
