@@ -2,7 +2,7 @@
  "version": 1,
  "episode": "ep10-komodo-dragons-indonesia",
  "topic": "Where do Komodo dragons live in the wild? (Indonesia — Komodo, Rinca, Flores, Gili Motang, Padar)",
- "researched": "2026-10-18",
+ "researched": "2026-10-19",
  "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
  "myths": [
   {
@@ -143,25 +143,21 @@
     "Australia",
     "Philippines",
     "Komodo",
-    "Flores"
+    "Flores",
+    "Rinca"
    ]
   },
   {
    "id": "C02",
-   "weight": "core",
-   "text": "It is the largest and heaviest living lizard: up to about 3 m long and around 70 kg.",
+   "weight": "detail",
+   "text": "It is the largest and heaviest living lizard: up to about 3 m long and around 70 kg. (not used in this cut)",
    "sources": [
     "unesco",
     "si_zoo",
     "natgeo_komodo"
    ],
-   "vo": [
-    "the heaviest lizard alive: up to three metres long and around seventy kilograms"
-   ],
-   "screen": [
-    "3 M · 70 KG",
-    "the heaviest lizard alive"
-   ]
+   "vo": [],
+   "screen": []
   },
   {
    "id": "C03",
@@ -173,12 +169,12 @@
     "iucn"
    ],
    "vo": [
-    "komodo national park, set up in 1980, guards roughly three thousand of them"
+    "komodo, rinca, flores. the national park, set up in 1980, guards most of them"
    ],
    "screen": [
-    "~3,000",
-    "in Komodo National Park",
-    "Komodo National Park"
+    "Komodo National Park",
+    "Flores",
+    "Komodo"
    ]
   },
   {
@@ -210,6 +206,21 @@
     "a dragon with a postcode"
    ],
    "screen": []
+  },
+  {
+   "id": "C06",
+   "weight": "core",
+   "text": "IUCN Red List (2019 assessment, published 2021): total population about 3,458 individuals; Endangered.",
+   "sources": [
+    "iucn",
+    "wiki_komodo"
+   ],
+   "vo": [
+    "and there are only about 3,400 of them left in the wild. that is the whole species"
+   ],
+   "screen": [
+    "left in the wild"
+   ]
   }
  ]
 }

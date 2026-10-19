@@ -135,15 +135,6 @@
    "provider": "Twemoji (Twitter, Inc. and other contributors)",
    "source": "https://github.com/twitter/twemoji"
   },
-  "stickers/1f3f0.svg": {
-   "by": "reelkit/stickers.py",
-   "bytes": 1010,
-   "credit": "Twemoji",
-   "kind": "image",
-   "licence": "CC-BY-4.0",
-   "provider": "Twemoji (Twitter, Inc. and other contributors)",
-   "source": "https://github.com/twitter/twemoji"
-  },
   "stickers/1f44d.svg": {
    "by": "reelkit/stickers.py",
    "bytes": 1663,
@@ -156,15 +147,6 @@
   "stickers/1f514.svg": {
    "by": "reelkit/stickers.py",
    "bytes": 314,
-   "credit": "Twemoji",
-   "kind": "image",
-   "licence": "CC-BY-4.0",
-   "provider": "Twemoji (Twitter, Inc. and other contributors)",
-   "source": "https://github.com/twitter/twemoji"
-  },
-  "stickers/1f947.svg": {
-   "by": "reelkit/stickers.py",
-   "bytes": 665,
    "credit": "Twemoji",
    "kind": "image",
    "licence": "CC-BY-4.0",

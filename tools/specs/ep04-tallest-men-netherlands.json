@@ -64,8 +64,7 @@
   "opener": "night-lights",
   "reveal": "card-flip",
   "beats": [
-   "counter",
-   "label",
+   "compare",
    "counter",
    "pin"
   ],
@@ -114,44 +113,6 @@
   {
    "kicker": "182.5 CM",
    "text": "average Dutch man, 1996 cohort"
-  },
-  {
-   "kicker": "+13 CM",
-   "text": "gained in one century"
-  },
-  {
-   "kicker": "USA: 3RD → 37TH",
-   "text": "men, 1914 to 2014"
-  },
-  {
-   "kicker": "STOPPED",
-   "text": "no taller since the 1980 cohort"
-  }
- ],
- "stickers": [
-  {
-   "id": "st_ruler",
-   "emoji": "1f4cf",
-   "x": 760,
-   "y": 560,
-   "size": 230,
-   "rot": 8
-  },
-  {
-   "id": "st_bike",
-   "emoji": "1f6b2",
-   "x": 740,
-   "y": 600,
-   "size": 220,
-   "rot": -8
-  },
-  {
-   "id": "st_chart",
-   "emoji": "1f4c9",
-   "x": 720,
-   "y": 560,
-   "size": 210,
-   "rot": 6
   }
  ],
  "characters": {
@@ -303,12 +264,7 @@
     ]
    ]
   },
-  "pin_beats": [
-   {
-    "at": "s07@stopped",
-    "pid": "den_haag"
-   }
-  ]
+  "pin_beats": []
  },
  "research": {
   "topic": "Which country has the tallest men? (Netherlands — NCD-RisC 2016: 182.5 cm for the 1996 birth cohort)",
@@ -433,8 +389,10 @@
      "that is 13 centimetres gained in one century"
     ],
     "screen": [
-     "+13 CM",
-     "gained in one century"
+     "born 1896",
+     "born 1996",
+     "169 cm",
+     "182.5 cm"
     ]
    },
    {
@@ -450,8 +408,7 @@
      "today they rank 37th"
     ],
     "screen": [
-     "USA: 3RD → 37TH",
-     "men, 1914 to 2014"
+     "US men: world rank"
     ]
    },
    {
@@ -467,7 +424,7 @@
     ],
     "screen": [
      "STOPPED",
-     "no taller since the 1980 cohort",
+     "no taller since 1980",
      "The Hague · CBS"
     ]
    },
@@ -487,5 +444,194 @@
     ]
    }
   ]
- }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "His great grandfather stood around 169. That is 13 centimetres gained in one century.",
+    "cues": {
+     "grandfather": "grandfather",
+     "century": "century"
+    }
+   },
+   "direction": "then versus now, as shapes",
+   "energy": 3,
+   "tone": "resolute",
+   "cam": [
+    1.1,
+    [
+     5.6,
+     52.1
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.15,
+    [
+     5.7,
+     52.1
+    ]
+   ],
+   "pulse": 0.4,
+   "elements": [
+    {
+     "id": "then",
+     "type": "compare",
+     "items": [
+      [
+       "born 1896",
+       169,
+       "169 cm"
+      ],
+      [
+       "born 1996",
+       182.5,
+       "182.5 cm"
+      ]
+     ],
+     "y": 380,
+     "x": 90,
+     "w": 900,
+     "max_h": 520
+    }
+   ],
+   "devices": [
+    {
+     "at": "@+0.3",
+     "do": "chart.compare_in",
+     "id": "then",
+     "args": {
+      "dur": 1.2,
+      "stagger": 0.6
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "then"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "American men were third tallest a century ago. Today they rank 37th.",
+    "cues": {
+     "american": "american",
+     "today": "today"
+    }
+   },
+   "direction": "the rank falls while the camera leaves",
+   "energy": 4,
+   "tone": "revelatory",
+   "cam": [
+    0.7,
+    [
+     0,
+     51
+    ]
+   ],
+   "cam_dur": 2.6,
+   "cam_ease": "power1.inOut",
+   "cam_hold": [
+    0.72,
+    [
+     -1,
+     51
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "rank",
+     "type": "counter",
+     "start": 3,
+     "end": 37,
+     "y": 560,
+     "label": "US men: world rank",
+     "fmt": "raw",
+     "size": 210
+    }
+   ],
+   "devices": [
+    {
+     "at": "@+0.3",
+     "do": "chart.counter_run",
+     "id": "rank",
+     "until": "@+2.6",
+     "args": {
+      "ease": "power1.in"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "rank"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "And the growing has stopped. Dutch people born after 1980 are no taller than their parents.",
+    "cues": {
+     "stopped": "stopped",
+     "parents": "parents"
+    }
+   },
+   "direction": "flat, final",
+   "energy": 3,
+   "tone": "neutral",
+   "card": {
+    "kicker": "STOPPED",
+    "text": "no taller since 1980"
+   },
+   "card_at": 0.5,
+   "cam": [
+    1.6,
+    [
+     4.8,
+     52.1
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.65,
+    [
+     4.9,
+     52.1
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@stopped",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "den_haag"
+     }
+    },
+    {
+     "at": "@@stopped",
+     "do": "character_in",
+     "id": "think"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "think"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "think",
+   "type": "character",
+   "flag": "nl",
+   "face": "think",
+   "x": 820,
+   "y": 1180,
+   "size": 220,
+   "rot": -6
+  }
+ ]
 }

@@ -2,7 +2,7 @@
  "version": 1,
  "episode": "ep13-first-marathon-greece",
  "topic": "Where was the first marathon race run? (Greece — Marathon to Athens, 1896 Olympics)",
- "researched": "2026-10-18",
+ "researched": "2026-10-19",
  "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
  "myths": [
   {
@@ -167,11 +167,13 @@
     "wiki_marathon"
    ],
    "vo": [
-    "in london in 1908 the course was stretched to 42.195 kilometres, so it could start at windsor castle"
+    "but london 1908 stretched the course to 42.195 kilometres, so it could start at windsor castle"
    ],
    "screen": [
-    "42.195 KM",
-    "London 1908, from Windsor Castle"
+    "Athens 1896",
+    "London 1908",
+    "~40 km",
+    "42.195 km"
    ]
   },
   {
@@ -184,11 +186,10 @@
     "wiki_marathon"
    ],
    "vo": [
-    "that odd distance became the official marathon in 1921, and it has never changed since"
+    "that odd distance became official in 1921, and it has not changed since"
    ],
    "screen": [
-    "1921",
-    "made the official distance"
+    "years, same distance"
    ]
   },
   {

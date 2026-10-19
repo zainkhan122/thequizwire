@@ -2,7 +2,7 @@
  "version": 1,
  "episode": "ep11-most-elephants-botswana",
  "topic": "Which country has the most elephants? (Botswana — ~131,900 savanna elephants, KAZA survey 2022)",
- "researched": "2026-10-18",
+ "researched": "2026-10-19",
  "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
  "myths": [
   {
@@ -127,6 +127,14 @@
    "url": "https://peerj.com/articles/2354/",
    "date": "2016-08-31",
    "notes": "352,271 savanna elephants in 18 surveyed countries (2014–15); Botswana ~130,000 = the largest share (~37%)"
+  },
+  "worldbank_bw": {
+   "type": "primary",
+   "publisher": "World Bank",
+   "title": "Population, total — Botswana",
+   "url": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=BW",
+   "date": "2024",
+   "notes": "Botswana population ≈ 2.5 million (2023 estimate)"
   }
  },
  "claims": [
@@ -164,11 +172,13 @@
     "wiki_botswana"
    ],
    "vo": [
-    "roughly a third of all africa's elephants, in a country of two and a half million people"
+    "in a country of two and a half million people. one elephant for every nineteen of them"
    ],
    "screen": [
-    "1 IN 3",
-    "of Africa's elephants · 2.5 M people"
+    "Elephants",
+    "People",
+    "130,000",
+    "2.5 million"
    ]
   },
   {
@@ -181,30 +191,23 @@
     "wiki_botswana_elephants"
    ],
    "vo": [
-    "most of them roam the north, around the okavango delta, a wetland in the desert"
+    "most of them roam the north, around the okavango delta, a wetland in the middle of the desert"
    ],
    "screen": [
-    "CHOBE · OKAVANGO",
-    "the northern elephant range",
-    "Chobe",
-    "Okavango Delta"
+    "Okavango Delta",
+    "Chobe"
    ]
   },
   {
    "id": "C04",
    "weight": "detail",
-   "text": "The African savanna elephant is listed Endangered by the IUCN (2021), with a decline of at least 60 % over ~50 years.",
+   "text": "The African savanna elephant is listed Endangered by the IUCN (2021), with a decline of at least 60 % over ~50 years. (not used in this cut)",
    "sources": [
     "iucn_savanna",
     "natgeo_elephants"
    ],
-   "vo": [
-    "across africa the savanna elephant is listed as endangered, down more than half in fifty years"
-   ],
-   "screen": [
-    "ENDANGERED",
-    "down 60% in 50 years (IUCN)"
-   ]
+   "vo": [],
+   "screen": []
   },
   {
    "id": "C05",
@@ -217,6 +220,38 @@
    "vo": [
     "a third of the herd"
    ],
+   "screen": []
+  },
+  {
+   "id": "C06",
+   "weight": "core",
+   "text": "Great Elephant Census 2014–15 (Chase et al. 2016, PeerJ): Botswana 130,451; Zimbabwe 82,630; Tanzania 42,871 savanna elephants.",
+   "sources": [
+    "gec_2016",
+    "wiki_botswana_elephants",
+    "natgeo_elephants"
+   ],
+   "vo": [
+    "zimbabwe has about 83,000. tanzania about 43,000. botswana runs away with 130,000"
+   ],
+   "screen": [
+    "Botswana",
+    "Zimbabwe",
+    "Tanzania",
+    "130,451",
+    "82,630",
+    "42,871"
+   ]
+  },
+  {
+   "id": "C07",
+   "weight": "detail",
+   "text": "Botswana's population is about 2.5 million (2022 census ~2.4 million); 130,000 elephants ≈ 1 per 19 people.",
+   "sources": [
+    "wiki_botswana",
+    "worldbank_bw"
+   ],
+   "vo": [],
    "screen": []
   }
  ]

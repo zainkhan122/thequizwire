@@ -87,9 +87,8 @@
   "opener": "globe-spin",
   "reveal": "flag-lift",
   "beats": [
-   "counter",
-   "pin",
-   "counter",
+   "bars",
+   "compare",
    "pin"
   ],
   "cast": "flagball:happy + emoji-set:savanna",

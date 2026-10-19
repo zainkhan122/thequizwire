@@ -87,8 +87,7 @@
   "opener": "night-lights",
   "reveal": "card-flip",
   "beats": [
-   "counter",
-   "label",
+   "compare",
    "counter",
    "pin"
   ],

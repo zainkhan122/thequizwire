@@ -2,7 +2,7 @@
  "version": 1,
  "episode": "ep04-tallest-men-netherlands",
  "topic": "Which country has the tallest men? (Netherlands — NCD-RisC 2016: 182.5 cm for the 1996 birth cohort)",
- "researched": "2026-10-18",
+ "researched": "2026-10-19",
  "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
  "myths": [
   {
@@ -151,8 +151,10 @@
     "that is 13 centimetres gained in one century"
    ],
    "screen": [
-    "+13 CM",
-    "gained in one century"
+    "born 1896",
+    "born 1996",
+    "169 cm",
+    "182.5 cm"
    ]
   },
   {
@@ -168,8 +170,7 @@
     "today they rank 37th"
    ],
    "screen": [
-    "USA: 3RD → 37TH",
-    "men, 1914 to 2014"
+    "US men: world rank"
    ]
   },
   {
@@ -185,7 +186,7 @@
    ],
    "screen": [
     "STOPPED",
-    "no taller since the 1980 cohort",
+    "no taller since 1980",
     "The Hague · CBS"
    ]
   },

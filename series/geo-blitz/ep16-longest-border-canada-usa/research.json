@@ -109,11 +109,10 @@
     "cbc_numbers"
    ],
    "vo": [
-    "alaska alone adds two thousand four hundred and seventy-five kilometres"
+    "alaska alone adds 2,475 kilometres, all the way up to the arctic ocean"
    ],
    "screen": [
-    "2,475 KM",
-    "Alaska alone",
+    "Alaska to the Arctic",
     "Alaska"
    ]
   },
@@ -130,28 +129,22 @@
     "through forest, a six metre strip is kept clear so the line stays visible"
    ],
    "screen": [
-    "6 M",
+    "6 M WIDE",
     "a strip cut through forest",
     "Derby Line"
    ]
   },
   {
    "id": "C04",
-   "weight": "core",
-   "text": "Over 8,000 monuments and reference points mark the boundary (5,528 boundary monuments); the shortest distance between two monuments is 46 cm (18 in).",
+   "weight": "detail",
+   "text": "Over 8,000 monuments and reference points mark the boundary (5,528 boundary monuments); the shortest distance between two monuments is 46 cm (18 in). (not used in this cut)",
    "sources": [
     "ibc_facts",
     "wiki_border",
     "cbc_numbers"
    ],
-   "vo": [
-    "over eight thousand monuments mark it, some only forty-six centimetres apart"
-   ],
-   "screen": [
-    "8,000+",
-    "monuments mark the line",
-    "Estcourt Station"
-   ]
+   "vo": [],
+   "screen": []
   },
   {
    "id": "C05",
@@ -166,6 +159,26 @@
     "ocean to ocean, one unbroken line"
    ],
    "screen": []
+  },
+  {
+   "id": "C06",
+   "weight": "core",
+   "text": "Runner-up land borders: Kazakhstan–Russia 7,644 km and Argentina–Chile 6,691 km, i.e. 1,247 km and 2,200 km shorter than Canada–US (8,891 km).",
+   "vo": [
+    "second place, kazakhstan and russia, is more than 1,200 kilometres shorter"
+   ],
+   "screen": [
+    "Canada–USA",
+    "Kazakhstan–Russia",
+    "Argentina–Chile",
+    "8,891 km",
+    "7,644 km",
+    "6,691 km"
+   ],
+   "sources": [
+    "cia_land",
+    "wiki_borders_list"
+   ]
   }
  ],
  "myths": [

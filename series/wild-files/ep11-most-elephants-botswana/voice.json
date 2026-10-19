@@ -8,7 +8,7 @@
   "speed": 1.3
  },
  "intent": "A safari guide at dusk: unhurried, exact, proud of the herd.",
- "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, three one-line beats, punchline + short follow",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
  "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
  "start_hold": 0.0,
  "end_hold": 2.4,
@@ -76,41 +76,41 @@
    "scene": "s05",
    "role": "story",
    "tone": "resolute",
-   "energy": 3,
+   "energy": 4,
    "pause_after": 0.4,
-   "direction": "count it out",
-   "text": "Roughly a third of all Africa's elephants, in a country of two and a half million people.",
+   "direction": "bar race, the winner keeps going",
+   "text": "Zimbabwe has about 83,000. Tanzania about 43,000. Botswana runs away with 130,000.",
    "cues": {
-    "third": "third",
-    "people": "people"
+    "zimbabwe": "zimbabwe",
+    "botswana": "botswana"
    }
   },
   {
    "id": "v06",
    "scene": "s06",
    "role": "story",
-   "tone": "neutral",
+   "tone": "revelatory",
    "energy": 3,
-   "pause_after": 0.4,
-   "direction": "let it land",
-   "text": "Most of them roam the north, around the Okavango Delta, a wetland in the desert.",
+   "pause_after": 0.5,
+   "direction": "let the two blocks speak",
+   "text": "In a country of two and a half million people. One elephant for every nineteen of them.",
    "cues": {
-    "chobe": "north",
-    "okavango": "okavango"
+    "country": "country",
+    "nineteen": "nineteen"
    }
   },
   {
    "id": "v07",
    "scene": "s07",
    "role": "story",
-   "tone": "resolute",
-   "energy": 4,
+   "tone": "neutral",
+   "energy": 3,
    "pause_after": 0.4,
-   "direction": "the number people repeat",
-   "text": "Across Africa the savanna elephant is listed as endangered, down more than half in fifty years.",
+   "direction": "fly north, land on the delta",
+   "text": "Most of them roam the north, around the Okavango Delta, a wetland in the middle of the desert.",
    "cues": {
-    "endangered": "endangered",
-    "fifty": "fifty"
+    "north": "north",
+    "okavango": "okavango"
    }
   },
   {

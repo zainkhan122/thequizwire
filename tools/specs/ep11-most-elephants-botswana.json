@@ -63,9 +63,8 @@
   "opener": "globe-spin",
   "reveal": "flag-lift",
   "beats": [
-   "counter",
-   "pin",
-   "counter",
+   "bars",
+   "compare",
    "pin"
   ],
   "cast": "flagball:happy + emoji-set:savanna",
@@ -114,44 +113,6 @@
   {
    "kicker": "~130,000",
    "text": "savanna elephants in Botswana"
-  },
-  {
-   "kicker": "1 IN 3",
-   "text": "of Africa's elephants · 2.5 M people"
-  },
-  {
-   "kicker": "CHOBE · OKAVANGO",
-   "text": "the northern elephant range"
-  },
-  {
-   "kicker": "ENDANGERED",
-   "text": "down 60% in 50 years (IUCN)"
-  }
- ],
- "stickers": [
-  {
-   "id": "st_elephant",
-   "emoji": "1f418",
-   "x": 760,
-   "y": 560,
-   "size": 230,
-   "rot": 8
-  },
-  {
-   "id": "st_tree",
-   "emoji": "1f333",
-   "x": 740,
-   "y": 600,
-   "size": 220,
-   "rot": -8
-  },
-  {
-   "id": "st_warn",
-   "emoji": "26a0",
-   "x": 720,
-   "y": 560,
-   "size": 200,
-   "rot": 6
   }
  ],
  "characters": {
@@ -301,21 +262,7 @@
     ]
    ]
   },
-  "pin_beats": [
-   {
-    "at": "s06@chobe",
-    "pid": "chobe"
-   },
-   {
-    "at": "s06@okavango",
-    "pid": "okavango"
-   },
-   {
-    "at": "s07+0.3",
-    "pid": "chobe",
-    "out": true
-   }
-  ]
+  "pin_beats": []
  },
  "research": {
   "topic": "Which country has the most elephants? (Botswana — ~131,900 savanna elephants, KAZA survey 2022)",
@@ -416,6 +363,14 @@
     "url": "https://peerj.com/articles/2354/",
     "date": "2016-08-31",
     "notes": "352,271 savanna elephants in 18 surveyed countries (2014–15); Botswana ~130,000 = the largest share (~37%)"
+   },
+   "worldbank_bw": {
+    "type": "primary",
+    "publisher": "World Bank",
+    "title": "Population, total — Botswana",
+    "url": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=BW",
+    "date": "2024",
+    "notes": "Botswana population ≈ 2.5 million (2023 estimate)"
    }
   },
   "claims": [
@@ -453,11 +408,13 @@
      "wiki_botswana"
     ],
     "vo": [
-     "roughly a third of all africa's elephants, in a country of two and a half million people"
+     "in a country of two and a half million people. one elephant for every nineteen of them"
     ],
     "screen": [
-     "1 IN 3",
-     "of Africa's elephants · 2.5 M people"
+     "Elephants",
+     "People",
+     "130,000",
+     "2.5 million"
     ]
    },
    {
@@ -470,30 +427,23 @@
      "wiki_botswana_elephants"
     ],
     "vo": [
-     "most of them roam the north, around the okavango delta, a wetland in the desert"
+     "most of them roam the north, around the okavango delta, a wetland in the middle of the desert"
     ],
     "screen": [
-     "CHOBE · OKAVANGO",
-     "the northern elephant range",
-     "Chobe",
-     "Okavango Delta"
+     "Okavango Delta",
+     "Chobe"
     ]
    },
    {
     "id": "C04",
     "weight": "detail",
-    "text": "The African savanna elephant is listed Endangered by the IUCN (2021), with a decline of at least 60 % over ~50 years.",
+    "text": "The African savanna elephant is listed Endangered by the IUCN (2021), with a decline of at least 60 % over ~50 years. (not used in this cut)",
     "sources": [
      "iucn_savanna",
      "natgeo_elephants"
     ],
-    "vo": [
-     "across africa the savanna elephant is listed as endangered, down more than half in fifty years"
-    ],
-    "screen": [
-     "ENDANGERED",
-     "down 60% in 50 years (IUCN)"
-    ]
+    "vo": [],
+    "screen": []
    },
    {
     "id": "C05",
@@ -507,7 +457,233 @@
      "a third of the herd"
     ],
     "screen": []
+   },
+   {
+    "id": "C06",
+    "weight": "core",
+    "text": "Great Elephant Census 2014–15 (Chase et al. 2016, PeerJ): Botswana 130,451; Zimbabwe 82,630; Tanzania 42,871 savanna elephants.",
+    "sources": [
+     "gec_2016",
+     "wiki_botswana_elephants",
+     "natgeo_elephants"
+    ],
+    "vo": [
+     "zimbabwe has about 83,000. tanzania about 43,000. botswana runs away with 130,000"
+    ],
+    "screen": [
+     "Botswana",
+     "Zimbabwe",
+     "Tanzania",
+     "130,451",
+     "82,630",
+     "42,871"
+    ]
+   },
+   {
+    "id": "C07",
+    "weight": "detail",
+    "text": "Botswana's population is about 2.5 million (2022 census ~2.4 million); 130,000 elephants ≈ 1 per 19 people.",
+    "sources": [
+     "wiki_botswana",
+     "worldbank_bw"
+    ],
+    "vo": [],
+    "screen": []
    }
   ]
- }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Zimbabwe has about 83,000. Tanzania about 43,000. Botswana runs away with 130,000.",
+    "cues": {
+     "zimbabwe": "zimbabwe",
+     "botswana": "botswana"
+    }
+   },
+   "direction": "bar race, the winner keeps going",
+   "energy": 4,
+   "tone": "resolute",
+   "cam": [
+    1.0,
+    [
+     24.8,
+     -21.8
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.05,
+    [
+     24.9,
+     -21.9
+    ]
+   ],
+   "pulse": 0.3,
+   "elements": [
+    {
+     "id": "herd",
+     "type": "bars",
+     "rows": [
+      [
+       "Botswana",
+       130451,
+       "130,451"
+      ],
+      [
+       "Zimbabwe",
+       82630,
+       "82,630"
+      ],
+      [
+       "Tanzania",
+       42871,
+       "42,871"
+      ]
+     ],
+     "y": 420,
+     "x": 80,
+     "w": 880,
+     "unit": "",
+     "max_value": 130451
+    }
+   ],
+   "devices": [
+    {
+     "at": "@+0.2",
+     "do": "chart.bars_in",
+     "id": "herd",
+     "args": {
+      "dur": 1.1,
+      "stagger": 0.35
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "herd"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "In a country of two and a half million people. One elephant for every nineteen of them.",
+    "cues": {
+     "country": "country",
+     "nineteen": "nineteen"
+    }
+   },
+   "direction": "let the two blocks speak",
+   "energy": 3,
+   "tone": "revelatory",
+   "cam": [
+    1.1,
+    [
+     24.6,
+     -21.5
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.12,
+    [
+     24.7,
+     -21.6
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "ratio",
+     "type": "compare",
+     "items": [
+      [
+       "Elephants",
+       0.13,
+       "130,000"
+      ],
+      [
+       "People",
+       2.5,
+       "2.5 million"
+      ]
+     ],
+     "y": 380,
+     "x": 90,
+     "w": 900,
+     "max_h": 520
+    }
+   ],
+   "devices": [
+    {
+     "at": "@+0.3",
+     "do": "chart.compare_in",
+     "id": "ratio",
+     "args": {
+      "dur": 1.2,
+      "stagger": 0.6
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "ratio"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Most of them roam the north, around the Okavango Delta, a wetland in the middle of the desert.",
+    "cues": {
+     "north": "north",
+     "okavango": "okavango"
+    }
+   },
+   "direction": "fly north, land on the delta",
+   "energy": 3,
+   "tone": "neutral",
+   "sticker": {
+    "id": "st_ele",
+    "emoji": "1f418",
+    "x": 760,
+    "y": 560,
+    "size": 230,
+    "rot": -8,
+    "at": 1.6
+   },
+   "cam": [
+    1.6,
+    [
+     23.6,
+     -19.6
+    ]
+   ],
+   "cam_dur": 2.4,
+   "cam_ease": "power1.inOut",
+   "cam_hold": [
+    1.7,
+    [
+     23.5,
+     -19.5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@okavango",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "okavango"
+     }
+    },
+    {
+     "at": "@@north",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "chobe"
+     }
+    }
+   ]
+  }
+ ]
 }

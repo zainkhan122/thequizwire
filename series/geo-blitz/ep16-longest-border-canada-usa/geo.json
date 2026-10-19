@@ -741,15 +741,6 @@
      ],
      "label": "Derby Line",
      "qid": "Q1588452"
-    },
-    {
-     "id": "estcourt",
-     "lonlat": [
-      -69.228,
-      47.456
-     ],
-     "label": "Estcourt Station",
-     "qid": "Q639278"
     }
    ],
    "labels": [

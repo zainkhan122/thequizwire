@@ -67,9 +67,8 @@
   "reveal": "border-draw",
   "beats": [
    "route",
-   "pin",
-   "counter",
-   "pin"
+   "compare",
+   "counter"
   ],
   "cast": "flagball:happy + emoji-set:running",
   "music": "bed:pad"
@@ -117,44 +116,6 @@
   {
    "kicker": "1896",
    "text": "Marathon to Athens, ~40 km"
-  },
-  {
-   "kicker": "2:58:50",
-   "text": "Spyridon Louis, water carrier"
-  },
-  {
-   "kicker": "42.195 KM",
-   "text": "London 1908, from Windsor Castle"
-  },
-  {
-   "kicker": "1921",
-   "text": "made the official distance"
-  }
- ],
- "stickers": [
-  {
-   "id": "st_run",
-   "emoji": "1f3c3",
-   "x": 760,
-   "y": 560,
-   "size": 230,
-   "rot": 8
-  },
-  {
-   "id": "st_castle",
-   "emoji": "1f3f0",
-   "x": 740,
-   "y": 600,
-   "size": 220,
-   "rot": -8
-  },
-  {
-   "id": "st_medal",
-   "emoji": "1f947",
-   "x": 720,
-   "y": 560,
-   "size": 210,
-   "rot": 6
   }
  ],
  "characters": {
@@ -398,15 +359,6 @@
    {
     "at": "s04@stadium",
     "pid": "stadium"
-   },
-   {
-    "at": "s06",
-    "pid": "marathon",
-    "out": true
-   },
-   {
-    "at": "s07+0.6",
-    "pid": "marathon"
    }
   ]
  },
@@ -549,11 +501,13 @@
      "wiki_marathon"
     ],
     "vo": [
-     "in london in 1908 the course was stretched to 42.195 kilometres, so it could start at windsor castle"
+     "but london 1908 stretched the course to 42.195 kilometres, so it could start at windsor castle"
     ],
     "screen": [
-     "42.195 KM",
-     "London 1908, from Windsor Castle"
+     "Athens 1896",
+     "London 1908",
+     "~40 km",
+     "42.195 km"
     ]
    },
    {
@@ -566,11 +520,10 @@
      "wiki_marathon"
     ],
     "vo": [
-     "that odd distance became the official marathon in 1921, and it has never changed since"
+     "that odd distance became official in 1921, and it has not changed since"
     ],
     "screen": [
-     "1921",
-     "made the official distance"
+     "years, same distance"
     ]
    },
    {
@@ -589,5 +542,171 @@
     ]
    }
   ]
- }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "A Greek water carrier named Louis won it, in just under three hours.",
+    "cues": {
+     "carrier": "carrier",
+     "hours": "hours"
+    }
+   },
+   "direction": "a person first",
+   "energy": 3,
+   "tone": "tender",
+   "card": {
+    "kicker": "2:58:50",
+    "text": "Spyridon Louis, water carrier"
+   },
+   "card_at": 0.4,
+   "sticker": {
+    "id": "st_run",
+    "emoji": "1f3c3",
+    "x": 760,
+    "y": 560,
+    "size": 230,
+    "rot": 8,
+    "at": 0.6
+   },
+   "cam": [
+    1.4,
+    [
+     23.95,
+     38.03
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.45,
+    [
+     23.96,
+     38.03
+    ]
+   ],
+   "pulse": 0.5
+  },
+  {
+   "vo": {
+    "text": "But London 1908 stretched the course to 42.195 kilometres, so it could start at Windsor Castle.",
+    "cues": {
+     "london": "london",
+     "castle": "castle"
+    }
+   },
+   "direction": "the twist, show the two lengths",
+   "energy": 4,
+   "tone": "revelatory",
+   "cam": [
+    1.2,
+    [
+     23.85,
+     38.0
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.25,
+    [
+     23.86,
+     38.0
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "dist",
+     "type": "compare",
+     "items": [
+      [
+       "Athens 1896",
+       40,
+       "~40 km"
+      ],
+      [
+       "London 1908",
+       42.195,
+       "42.195 km"
+      ]
+     ],
+     "y": 380,
+     "x": 90,
+     "w": 900,
+     "max_h": 520
+    }
+   ],
+   "devices": [
+    {
+     "at": "@+0.3",
+     "do": "chart.compare_in",
+     "id": "dist",
+     "args": {
+      "dur": 1.4,
+      "stagger": 0.7
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "dist"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "That odd distance became official in 1921, and it has not changed since.",
+    "cues": {
+     "official": "official",
+     "changed": "changed"
+    }
+   },
+   "direction": "let the years run",
+   "energy": 3,
+   "tone": "resolute",
+   "cam": [
+    0.9,
+    [
+     23.85,
+     38.05
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    0.95,
+    [
+     23.86,
+     38.05
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "years",
+     "type": "counter",
+     "start": 1921,
+     "end": 2026,
+     "y": 560,
+     "label": "years, same distance",
+     "fmt": "raw",
+     "size": 200
+    }
+   ],
+   "devices": [
+    {
+     "at": "@+0.2",
+     "do": "chart.counter_run",
+     "id": "years",
+     "until": "@+2.8",
+     "args": {
+      "ease": "power1.in"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "years"
+    }
+   ]
+  }
+ ]
 }

@@ -28,49 +28,10 @@
    "text": "Atlantic to Pacific"
   },
   {
-   "id": "f2",
-   "type": "fact",
-   "kicker": "2,475 KM",
-   "text": "Alaska alone"
-  },
-  {
    "id": "f3",
    "type": "fact",
-   "kicker": "6 M",
+   "kicker": "6 M WIDE",
    "text": "a strip cut through forest"
-  },
-  {
-   "id": "f4",
-   "type": "fact",
-   "kicker": "8,000+",
-   "text": "monuments mark the line"
-  },
-  {
-   "id": "st_passport",
-   "type": "sticker",
-   "emoji": "1f6c2",
-   "x": 760,
-   "y": 560,
-   "size": 230,
-   "rot": 8
-  },
-  {
-   "id": "st_tree",
-   "type": "sticker",
-   "emoji": "1f332",
-   "x": 740,
-   "y": 600,
-   "size": 220,
-   "rot": -8
-  },
-  {
-   "id": "st_pin",
-   "type": "sticker",
-   "emoji": "1f43b",
-   "x": 720,
-   "y": 560,
-   "size": 210,
-   "rot": 6
   },
   {
    "id": "mascot",
@@ -101,6 +62,43 @@
    "y": 1000,
    "size": 200,
    "rot": 8
+  },
+  {
+   "id": "gap",
+   "type": "bars",
+   "rows": [
+    [
+     "Canada–USA",
+     8891,
+     "8,891 km"
+    ],
+    [
+     "Kazakhstan–Russia",
+     7644,
+     "7,644 km"
+    ],
+    [
+     "Argentina–Chile",
+     6691,
+     "6,691 km"
+    ]
+   ],
+   "y": 430,
+   "x": 80,
+   "w": 880,
+   "unit": "",
+   "max_value": 8891
+  },
+  {
+   "id": "ak",
+   "type": "counter",
+   "start": 0,
+   "end": 2475,
+   "y": 560,
+   "label": "Alaska to the Arctic",
+   "fmt": "int",
+   "suffix": " km",
+   "size": 200
   }
  ],
  "beats": [
@@ -233,12 +231,12 @@
    "stage": "stage_map",
    "until": "s05+1.3",
    "args": {
-    "k": 1.1,
+    "k": 0.86,
     "lonlat": [
-     -141,
-     63
+     -98,
+     51
     ],
-    "ease": "power2.inOut"
+    "ease": "power1.inOut"
    }
   },
   {
@@ -247,16 +245,16 @@
    "stage": "stage_map",
    "until": "s05.end",
    "args": {
-    "k": 1.15,
+    "k": 0.9,
     "lonlat": [
-     -140,
-     62.5
+     -97,
+     51
     ],
     "ease": "none"
    }
   },
   {
-   "at": "s05+0.3",
+   "at": "s06+0.3",
    "do": "geo.label_in",
    "stage": "stage_map",
    "args": {
@@ -264,7 +262,7 @@
    }
   },
   {
-   "at": "s05+0.5",
+   "at": "s06+0.5",
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {
@@ -278,10 +276,10 @@
    "stage": "stage_map",
    "until": "s06+1.3",
    "args": {
-    "k": 1.7,
+    "k": 1.1,
     "lonlat": [
-     -71.0,
-     45.1
+     -141,
+     63
     ],
     "ease": "power2.inOut"
    }
@@ -292,45 +290,20 @@
    "stage": "stage_map",
    "until": "s06.end",
    "args": {
-    "k": 1.8,
+    "k": 1.15,
     "lonlat": [
-     -70.7,
-     45.2
+     -140,
+     62.5
     ],
     "ease": "none"
    }
   },
   {
-   "at": "s06@forest",
+   "at": "s07@forest",
    "do": "geo.pin_in",
    "stage": "stage_map",
    "args": {
     "pid": "ibc_vista"
-   }
-  },
-  {
-   "at": "s07@monuments",
-   "do": "geo.pin_out",
-   "stage": "stage_map",
-   "args": {
-    "pid": "ibc_vista"
-   }
-  },
-  {
-   "at": "s07@monuments",
-   "do": "geo.pin_in",
-   "stage": "stage_map",
-   "args": {
-    "pid": "estcourt"
-   }
-  },
-  {
-   "at": "s07+0.4",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "124",
-    "layer": "pair"
    }
   },
   {
@@ -339,10 +312,10 @@
    "stage": "stage_map",
    "until": "s07+1.2",
    "args": {
-    "k": 1.6,
+    "k": 1.7,
     "lonlat": [
-     -68.6,
-     47.3
+     -71.0,
+     45.1
     ],
     "ease": "power2.inOut"
    }
@@ -353,10 +326,10 @@
    "stage": "stage_map",
    "until": "s08+0.2",
    "args": {
-    "k": 1.65,
+    "k": 1.8,
     "lonlat": [
-     -68.4,
-     47.35
+     -70.7,
+     45.2
     ],
     "ease": "none"
    }
@@ -459,54 +432,6 @@
    "until": "s04.end"
   },
   {
-   "at": "s05+0.4",
-   "do": "fact_in",
-   "id": "f2",
-   "until": "s05.end"
-  },
-  {
-   "at": "s05+0.6",
-   "do": "sticker_in",
-   "id": "st_pin"
-  },
-  {
-   "at": "s05.end",
-   "do": "sticker_out",
-   "id": "st_pin"
-  },
-  {
-   "at": "s06+0.4",
-   "do": "fact_in",
-   "id": "f3",
-   "until": "s06.end"
-  },
-  {
-   "at": "s06+0.6",
-   "do": "sticker_in",
-   "id": "st_tree"
-  },
-  {
-   "at": "s06.end",
-   "do": "sticker_out",
-   "id": "st_tree"
-  },
-  {
-   "at": "s07+0.4",
-   "do": "fact_in",
-   "id": "f4",
-   "until": "s07.end"
-  },
-  {
-   "at": "s07+0.8",
-   "do": "sticker_in",
-   "id": "st_passport"
-  },
-  {
-   "at": "s07.end",
-   "do": "sticker_out",
-   "id": "st_passport"
-  },
-  {
    "at": "s08",
    "do": "cta_in",
    "until": "end-1.0"
@@ -545,12 +470,46 @@
    "stage": "stage_map"
   },
   {
-   "at": "s06",
+   "at": "s07",
    "do": "geo.label_out",
    "args": {
     "lid": "alaska"
    },
    "stage": "stage_map"
+  },
+  {
+   "at": "s05+0.2",
+   "do": "chart.bars_in",
+   "id": "gap",
+   "args": {
+    "dur": 1.1,
+    "stagger": 0.35
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "hide",
+   "id": "gap"
+  },
+  {
+   "at": "s06+0.3",
+   "do": "chart.counter_run",
+   "id": "ak",
+   "until": "s06+2.6",
+   "args": {
+    "ease": "power1.in"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "hide",
+   "id": "ak"
+  },
+  {
+   "at": "s07+0.6",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s07.end"
   }
  ],
  "captions": {

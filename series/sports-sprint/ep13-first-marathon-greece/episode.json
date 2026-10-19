@@ -89,9 +89,8 @@
   "reveal": "border-draw",
   "beats": [
    "route",
-   "pin",
-   "counter",
-   "pin"
+   "compare",
+   "counter"
   ],
   "cast": "flagball:happy + emoji-set:running",
   "music": "bed:pad"

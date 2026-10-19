@@ -90,8 +90,7 @@
   "beats": [
    "counter",
    "pin",
-   "label",
-   "pin"
+   "flash"
   ],
   "cast": "flagball:cool + emoji-set:reptile",
   "music": "bed:bright"

@@ -51,6 +51,14 @@
      ],
      "label": "Komodo National Park",
      "qid": "Q4520"
+    },
+    {
+     "id": "rinca",
+     "lonlat": [
+      119.7,
+      -8.68
+     ],
+     "label": "Rinca"
     }
    ],
    "labels": [
@@ -73,8 +81,8 @@
      ],
      "text": "Flores",
      "cls": "tag",
-     "in": "s04@flores",
-     "out": "s06"
+     "in": "s06@park",
+     "out": "s07.end"
     }
    ],
    "disputed": [],

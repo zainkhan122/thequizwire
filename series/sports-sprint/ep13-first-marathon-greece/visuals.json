@@ -34,18 +34,6 @@
    "text": "Spyridon Louis, water carrier"
   },
   {
-   "id": "f3",
-   "type": "fact",
-   "kicker": "42.195 KM",
-   "text": "London 1908, from Windsor Castle"
-  },
-  {
-   "id": "f4",
-   "type": "fact",
-   "kicker": "1921",
-   "text": "made the official distance"
-  },
-  {
    "id": "st_run",
    "type": "sticker",
    "emoji": "1f3c3",
@@ -55,22 +43,34 @@
    "rot": 8
   },
   {
-   "id": "st_castle",
-   "type": "sticker",
-   "emoji": "1f3f0",
-   "x": 740,
-   "y": 600,
-   "size": 220,
-   "rot": -8
+   "id": "dist",
+   "type": "compare",
+   "items": [
+    [
+     "Athens 1896",
+     40,
+     "~40 km"
+    ],
+    [
+     "London 1908",
+     42.195,
+     "42.195 km"
+    ]
+   ],
+   "y": 380,
+   "x": 90,
+   "w": 900,
+   "max_h": 520
   },
   {
-   "id": "st_medal",
-   "type": "sticker",
-   "emoji": "1f947",
-   "x": 720,
+   "id": "years",
+   "type": "counter",
+   "start": 1921,
+   "end": 2026,
    "y": 560,
-   "size": 210,
-   "rot": 6
+   "label": "years, same distance",
+   "fmt": "raw",
+   "size": 200
   },
   {
    "id": "mascot",
@@ -224,10 +224,25 @@
    }
   },
   {
+   "at": "s04+3.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "300",
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
    "at": "s05",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s05+1.3",
+   "until": "s05+1.2",
    "args": {
     "k": 1.4,
     "lonlat": [
@@ -238,7 +253,7 @@
    }
   },
   {
-   "at": "s05+1.3",
+   "at": "s05+1.2",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s05.end",
@@ -261,28 +276,26 @@
    }
   },
   {
-   "at": "s04+3.2",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "300",
-    "layer": "hl"
-   }
+   "at": "s05+0.4",
+   "do": "fact_in",
+   "id": "f2",
+   "until": "s05.end"
   },
   {
-   "at": "s06+0.6",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "300",
-    "layer": "hl"
-   }
+   "at": "s05+0.6",
+   "do": "sticker_in",
+   "id": "st_run"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_run"
   },
   {
    "at": "s06",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s06+1.3",
+   "until": "s06+1.2",
    "args": {
     "k": 1.2,
     "lonlat": [
@@ -293,7 +306,7 @@
    }
   },
   {
-   "at": "s06+1.3",
+   "at": "s06+1.2",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s06.end",
@@ -305,6 +318,20 @@
     ],
     "ease": "none"
    }
+  },
+  {
+   "at": "s06+0.3",
+   "do": "chart.compare_in",
+   "id": "dist",
+   "args": {
+    "dur": 1.4,
+    "stagger": 0.7
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "hide",
+   "id": "dist"
   },
   {
    "at": "s07",
@@ -335,13 +362,18 @@
    }
   },
   {
-   "at": "s07+0.4",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
+   "at": "s07+0.2",
+   "do": "chart.counter_run",
+   "id": "years",
+   "until": "s07+2.8",
    "args": {
-    "fid": "300",
-    "layer": "hl"
+    "ease": "power1.in"
    }
+  },
+  {
+   "at": "s07.end",
+   "do": "hide",
+   "id": "years"
   },
   {
    "at": "s08",
@@ -384,22 +416,6 @@
    "stage": "stage_map",
    "args": {
     "pid": "stadium"
-   }
-  },
-  {
-   "at": "s06",
-   "do": "geo.pin_out",
-   "stage": "stage_map",
-   "args": {
-    "pid": "marathon"
-   }
-  },
-  {
-   "at": "s07+0.6",
-   "do": "geo.pin_in",
-   "stage": "stage_map",
-   "args": {
-    "pid": "marathon"
    }
   },
   {
@@ -457,60 +473,6 @@
    "at": "s05+1.0",
    "do": "character_out",
    "id": "cha"
-  },
-  {
-   "at": "s04+2.6",
-   "do": "fact_in",
-   "id": "f1",
-   "until": "s04.end"
-  },
-  {
-   "at": "s05+0.4",
-   "do": "fact_in",
-   "id": "f2",
-   "until": "s05.end"
-  },
-  {
-   "at": "s05+0.6",
-   "do": "sticker_in",
-   "id": "st_run"
-  },
-  {
-   "at": "s05.end",
-   "do": "sticker_out",
-   "id": "st_run"
-  },
-  {
-   "at": "s06+0.4",
-   "do": "fact_in",
-   "id": "f3",
-   "until": "s06.end"
-  },
-  {
-   "at": "s06+0.6",
-   "do": "sticker_in",
-   "id": "st_castle"
-  },
-  {
-   "at": "s06.end",
-   "do": "sticker_out",
-   "id": "st_castle"
-  },
-  {
-   "at": "s07+0.4",
-   "do": "fact_in",
-   "id": "f4",
-   "until": "s07.end"
-  },
-  {
-   "at": "s07+0.8",
-   "do": "sticker_in",
-   "id": "st_medal"
-  },
-  {
-   "at": "s07.end",
-   "do": "sticker_out",
-   "id": "st_medal"
   },
   {
    "at": "s08",
