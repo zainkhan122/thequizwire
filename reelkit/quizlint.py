@@ -197,7 +197,7 @@ def main():
         hook_n, q_n = norm(spoken[0]["text"]), norm(q.get("question", ""))
         if hook_n != q_n: G.append(f"Q17: the hook line must be the on-screen question verbatim — VO '{spoken[0]['text']}' vs question '{q.get('question','')}'")
     # ---- Q19/Q20 anti-template gates (owner 2026-10-19)
-    if "_template" not in str(ep):                                   # engine fixtures are exempt; every real episode is gated
+    if "_template" not in str(ep) and E.get("status") not in ("published", "sent", "archived"):   # fixtures and already-published pilots exempt; everything that can still ship is gated
         try:
             sys.path.insert(0, str(Path(__file__).resolve().parent)); import shapelint as _sl
             _F, _W = _sl.run(ep); G += _F; W += _W
