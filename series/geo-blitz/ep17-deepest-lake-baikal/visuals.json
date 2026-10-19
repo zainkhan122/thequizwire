@@ -230,10 +230,10 @@
    }
   },
   {
-   "at": "s05+0.3",
+   "at": "s05+1.2",
    "do": "chart.counter_run",
    "id": "depth",
-   "until": "s05+3.4",
+   "until": "s05+3.6",
    "args": {
     "ease": "power1.in"
    }
@@ -289,26 +289,26 @@
    "at": "s07",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s07+1.2",
+   "until": "s07+1.1",
    "args": {
-    "k": 1.6,
+    "k": 1.7,
     "lonlat": [
-     105.7,
-     52.25
+     104.2,
+     52.4
     ],
     "ease": "power2.inOut"
    }
   },
   {
-   "at": "s07+1.2",
+   "at": "s07+1.1",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s08+0.2",
    "args": {
-    "k": 1.7,
+    "k": 1.75,
     "lonlat": [
-     105.75,
-     52.2
+     104.15,
+     52.45
     ],
     "ease": "none"
    }
@@ -320,7 +320,7 @@
    "until": "s07.end"
   },
   {
-   "at": "s07@angara",
+   "at": "s07@rivers",
    "do": "geo.pin_in",
    "args": {
     "pid": "listvyanka"
@@ -328,7 +328,7 @@
    "stage": "stage_map"
   },
   {
-   "at": "s07@angara",
+   "at": "s07@one",
    "do": "geo.route_draw",
    "until": "s07.end",
    "args": {

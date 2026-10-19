@@ -171,7 +171,7 @@
        "type": "Feature",
        "id": "angara",
        "properties": {
-        "name": "Angara, first reach out of Baikal (schematic)"
+        "name": "Angara, Baikal → past Irkutsk (schematic)"
        },
        "geometry": {
         "type": "LineString",
@@ -181,20 +181,44 @@
           51.854
          ],
          [
-          104.78,
+          104.8,
           51.9
          ],
          [
-          104.62,
-          52.0
+          104.65,
+          51.98
          ],
          [
-          104.45,
-          52.12
+          104.5,
+          52.08
          ],
          [
-          104.3,
-          52.25
+          104.38,
+          52.18
+         ],
+         [
+          104.28,
+          52.29
+         ],
+         [
+          104.05,
+          52.42
+         ],
+         [
+          103.88,
+          52.55
+         ],
+         [
+          103.7,
+          52.72
+         ],
+         [
+          103.45,
+          52.95
+         ],
+         [
+          103.25,
+          53.2
          ]
         ]
        }
@@ -304,17 +328,17 @@
     ]
    ],
    "s07": [
-    1.6,
+    1.7,
     [
-     105.7,
-     52.25
+     104.2,
+     52.4
     ]
    ],
    "s07b": [
-    1.7,
+    1.75,
     [
-     105.75,
-     52.2
+     104.15,
+     52.45
     ]
    ]
   },
@@ -550,10 +574,10 @@
    ],
    "devices": [
     {
-     "at": "@+0.3",
+     "at": "@+1.2",
      "do": "chart.counter_run",
      "id": "depth",
-     "until": "@+3.4",
+     "until": "@+3.6",
      "args": {
       "ease": "power1.in"
      }
@@ -637,6 +661,7 @@
     "text": "Three hundred and thirty-six rivers flow in. Only one flows out: the Angara.",
     "cues": {
      "rivers": "rivers",
+     "one": "one",
      "angara": "angara"
     }
    },
@@ -649,31 +674,31 @@
    },
    "card_at": 0.2,
    "cam": [
-    1.6,
-    [
-     105.7,
-     52.25
-    ]
-   ],
-   "cam_dur": 1.2,
-   "cam_hold": [
     1.7,
     [
-     105.75,
-     52.2
+     104.2,
+     52.4
+    ]
+   ],
+   "cam_dur": 1.1,
+   "cam_hold": [
+    1.75,
+    [
+     104.15,
+     52.45
     ]
    ],
    "pulse": false,
    "devices": [
     {
-     "at": "@@angara",
+     "at": "@@rivers",
      "do": "geo.pin_in",
      "args": {
       "pid": "listvyanka"
      }
     },
     {
-     "at": "@@angara",
+     "at": "@@one",
      "do": "geo.route_draw",
      "until": "@.end",
      "args": {
