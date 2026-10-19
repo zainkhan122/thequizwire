@@ -106,93 +106,143 @@ def hashtags_for(E, S, platform, limit):
 
 
 # ---------------------------------------------------------------- copy
+# 2026-10-19 (owner): NO templates. Every channel's text is WRITTEN per episode by the author, in episode.json#post.copy:
+#   {"youtube_title": str, "youtube": str, "instagram": str, "facebook": str, "x": str, "threads": str, "spoilers": [str,...]}
+# Hashtags are written inline by the author (last line of each text). postkit only: appends the sources line (YouTube),
+# the AI-narration disclosure (Facebook), extracts the hashtags, and LINTS: spoiler gate, template-repeat gate, platform limits.
+DEMONYMS = {"netherlands": ["dutch", "holland", "hollander", "amsterdam"], "brazil": ["brazilian", "brasil", "seleção", "selecao", "pelé", "pele"],
+            "indonesia": ["indonesian", "komodo island", "flores", "rinca"], "botswana": ["batswana", "motswana", "okavango", "chobe", "gaborone"],
+            "russia": ["russian", "siberia", "siberian", "baikal", "irkutsk"], "greece": ["greek", "athens", "athenian", "marathon to athens"],
+            "canada": ["canadian", "ottawa"], "usa": ["american", "americans", "united states"], "united states": ["american", "americans"],
+            "germany": ["german"], "italy": ["italian"], "france": ["french"], "india": ["indian"], "australia": ["australian"],
+            "kenya": ["kenyan"], "south africa": ["south african"], "tanzania": ["tanzanian"], "philippines": ["filipino"], "united kingdom": ["british", "london"]}
+WORD = re.compile(r"[A-Za-z][A-Za-z'’-]+|\d[\d.,]*")
+
+
+def spoiler_terms(E, V, post):
+    """Everything that identifies the answer: the option itself, its demonyms/places, authored extras, numbers on the fact cards."""
+    ans = answer_text(E); terms = set()
+    for w in re.findall(r"[A-Za-z]{3,}", ans): terms.add(w.lower())
+    terms.add(ans.lower())
+    terms |= set(DEMONYMS.get(ans.lower(), []))
+    terms |= {str(t).lower() for t in post.get("copy", {}).get("spoilers", [])}
+    nums = set()
+    for el in V.get("elements", []):
+        if el.get("type") != "fact": continue
+        for n in re.findall(r"\d[\d.,]*", (el.get("kicker") or "") + " " + (el.get("text") or "")):
+            n = n.strip(".,")
+            if len(n) >= 2 and n not in {"10", "20", "30", "50", "100"}: nums.add(n)
+    return terms, nums
+
+
+def find_spoilers(text, terms, nums, allowed, options=(), answer=""):
+    """Return the spoiler hits in `text`, ignoring words that already appear in the question. Naming the answer is allowed
+    ONLY when every option is named in the same text (that is listing the choices, not revealing the pick); demonyms,
+    places and fact-card numbers are never allowed."""
+    low = text.lower(); hits = []
+    lists_all = bool(options) and all(o.lower() in low for o in options)
+    ans_words = {answer.lower()} | {w.lower() for w in re.findall(r"[A-Za-z]{3,}", answer)}
+    for t in sorted(terms, key=len, reverse=True):
+        if t in allowed: continue
+        if lists_all and t in ans_words: continue
+        if re.search(r"(?<![a-z])" + re.escape(t) + r"(?![a-z])", low) or re.search(r"#\w*" + re.escape(t.replace(" ", "")), low): hits.append(t)
+    for n in nums:
+        if re.search(r"(?<![\d.])" + re.escape(n) + r"(?![\d])", low): hits.append(n)
+    return sorted(set(hits))
+
+
+def sentences(text):
+    out = []
+    for line in text.split("\n"):
+        line = re.sub(r"#\w+", "", line)
+        for s_ in re.split(r"(?<=[.!?…])\s+", line):
+            n = re.sub(r"[^a-z0-9 ]", "", s_.lower()).strip()
+            if len(n) >= 25: out.append(n)
+    return out
+
+
+def other_episode_sentences(ep):
+    """Sentences used by every OTHER episode's authored copy (the template-repeat gate)."""
+    seen = {}
+    for e in (ROOT / "series").glob("*/*/episode.json"):
+        if e.parent.resolve() == Path(ep).resolve(): continue
+        try: c = json.loads(e.read_text()).get("post", {}).get("copy", {})
+        except Exception: continue
+        for k, v in c.items():
+            if isinstance(v, str):
+                for s_ in sentences(v): seen.setdefault(s_, e.parent.name)
+    return seen
+
+
+def tags_in(text): return [h for h in re.findall(r"#\w+", text)]
+
+
 def build(ep):
     E, V, R = load(ep)
     slug = E.get("series", "")
     S = CFG["series"].get(slug) or {"name": slug.title(), "emoji": "❓", "topic": "quiz", "youtube_category": "24", "playlist": slug, "hashtags": {}, "keywords": []}
-    post = E.get("post", {})
-    question = E["title"].strip()
-    emoji = EMOJI.search(post.get("title", "")) or EMOJI.search(question)
-    emoji = emoji.group(0) if emoji else S["emoji"]
-    q_clean = EMOJI.sub("", question).strip()
-    ans = answer_text(E)
-    bullets = facts(V)
-    srcs = source_names(R)
-    site, handle, brand = CFG["channel"]["site"], CFG["channel"]["instagram_handle"], CFG["channel"]["name"]
-    beat = E.get("quiz", {}).get("beat", 3)
-    secs = f"{int(beat)} seconds" if float(beat) == int(beat) else f"{beat} seconds"
-    topic = S["topic"]
+    post = E.get("post", {}); copy = post.get("copy") or {}
+    question = E["title"].strip(); q_clean = EMOJI.sub("", question).strip()
+    ans = answer_text(E); srcs = source_names(R)
+    _terms, _ = spoiler_terms(E, V, post)
+    srcs = [x for x in srcs if not any(re.search(r"(?<![a-z])" + re.escape(t) + r"(?![a-z])", x.lower()) for t in _terms)]
+    missing = [k for k in ("youtube_title", "youtube", "instagram", "facebook", "x", "threads") if not str(copy.get(k, "")).strip()]
+    g = lambda k: str(copy.get(k, "")).strip()
 
-    # ---- YouTube
-    # Decode 2026-10-18: winners' headings are 45–60-char premise statements, keyword nouns first, no channel/"quiz" suffix,
-    # emoji at the end, 2 search hashtags inside the Shorts title. `post.premise` (authored) beats the bare question.
-    premise = (post.get("premise") or "").strip()
-    yt_title = post.get("youtube_title") or f"{premise or q_clean} {emoji}"
-    title_tags = [h for h in S["hashtags"].get("youtube", []) if h.lower() != "#shorts"][:2]
-    if title_tags and len(yt_title) + 1 + len(" ".join(title_tags)) <= 100: yt_title = f"{yt_title} {' '.join(title_tags)}"
-    if len(yt_title) > 100: yt_title = f"{q_clean} {emoji}"
-    if len(yt_title) > 100: yt_title = q_clean[:97].rstrip() + "…"
-    bait = (post.get("bait") or "Did you get it before the reveal? Tell me your first guess 👇").strip()   # never spoil the answer in copy
-    named = ", ".join(dict.fromkeys([o for o in E.get("quiz", {}).get("options", []) if o]))
-    tease = (post.get("description") or "").split("\n")[0].strip()
-    tease = "" if tease.lower().startswith(q_clean.lower()[:30]) and len(tease) < len(q_clean) + 10 else tease
-    yt_tags = hashtags_for(E, S, "youtube", 5)
-    # line 1 = premise + every place named (keyword article, like the winners); line 2 = comment bait; NO links (0 % of winners link)
-    yt_lines = [f"{premise + ' — ' if premise else ''}{q_clean} {named}? The map animation reveals it in {secs}. {emoji}", bait]
-    if tease and not tease.lower().startswith(q_clean.lower()) and tease != premise: yt_lines.append(tease)
-    if bullets:
-        yt_lines += ["", f"✅ In this {topic} Short:"] + [f"• {b}" for b in bullets]
-    yt_lines += ["", f"🔔 A new {topic} every day — subscribe."]
-    if srcs: yt_lines += ["", "📚 Sources: " + " · ".join(srcs)]
-    yt_lines += ["🗺️ Map data: Natural Earth (public domain) · imagery NASA Blue Marble · Voice: AI narration (Kokoro)",
-                 "", " ".join(yt_tags)]
-    yt_desc = "\n".join(yt_lines)
+    # ---- YouTube: authored title + body; sources belong here (the only channel where a long description is read by search)
+    yt_title = g("youtube_title")
+    yt_body = g("youtube")
+    yt_tags = tags_in(yt_body)
+    body_wo = re.sub(r"(\s*#\w+)+\s*$", "", yt_body).rstrip()
+    yt_lines = [body_wo]
+    if srcs: yt_lines += ["", "Sources: " + " · ".join(srcs) + ". Map: Natural Earth, NASA Blue Marble. Narration: synthetic voice (Kokoro)."]
+    yt_lines += ["", " ".join(yt_tags)]
+    yt_desc = "\n".join(yt_lines).strip()
     yt = {"title": yt_title, "description": yt_desc, "hashtags": yt_tags, "categoryId": str(S["youtube_category"]),
           "madeForKids": CFG["youtube"]["made_for_kids"], "notifySubscribers": CFG["youtube"]["notify_subscribers"],
           "privacy": CFG["youtube"]["privacy"], "license": CFG["youtube"]["license"], "embeddable": CFG["youtube"]["embeddable"],
           "isAiGenerated": bool(post.get("youtube_is_ai_generated", CFG["disclosure"]["youtube_is_ai_generated"])),
-          "keywords": list(dict.fromkeys(S.get("keywords", []) + [ans.lower()] + [k.lower() for k in post.get("keywords", [])]))[:12],
+          "keywords": list(dict.fromkeys(S.get("keywords", []) + [k.lower() for k in post.get("keywords", [])]))[:12],   # keywords are metadata, not visible; the answer stays out anyway
           "playlist": S["playlist"]}
 
-    # ---- Instagram (reel)
-    ig_tags = hashtags_for(E, S, "instagram", 5)
-    hook = f"{premise or q_clean} {emoji} You get {secs}… ⏱️"
-    ig_lines = [hook, bait, "", f"✅ {named} — the answer and three quick facts are in the reel."]
-    ig_lines += [f"• {b}" for b in bullets[:2]]
-    first_comment = bool(CFG.get("buffer", {}).get("first_comment", False))          # Buffer: first comments need a paid plan
-    credits = "📚 Sources: " + (" · ".join(srcs[:3]) if srcs else "see the video credits") + " · Map: Natural Earth, NASA"
-    ig_lines += ["", f"Follow {handle} for a new {topic} every day."]
-    if not first_comment: ig_lines += ["", credits]
-    ig_lines += ["", " ".join(ig_tags)]
-    ig_caption = "\n".join(ig_lines)
-    ig_first = ("📚 Sources: " + (" · ".join(srcs) if srcs else "see the video credits") + "\n🗺️ Map data: Natural Earth · NASA Blue Marble · 🎙️ AI narration (Kokoro)") if first_comment else ""
-    ig = {"caption": ig_caption, "firstComment": ig_first, "hashtags": ig_tags, "shouldShareToFeed": True,
-          "isAiGenerated": bool(CFG["disclosure"]["instagram_is_ai_generated"]), "thumbnailOffsetMs": 0}   # frame 0 = the burned-in cover (reelkit/cover.py --burn)
+    # ---- Instagram: authored caption as written (hook in the first 125 chars is the author's job; lint warns)
+    ig_caption = g("instagram")
+    ig = {"caption": ig_caption, "firstComment": "", "hashtags": tags_in(ig_caption), "shouldShareToFeed": True,
+          "isAiGenerated": bool(CFG["disclosure"]["instagram_is_ai_generated"]), "thumbnailOffsetMs": 0}
 
-    # ---- Facebook (reel)
-    fb_tags = hashtags_for(E, S, "facebook", 3)
-    fb_lines = [f"{premise or q_clean} {emoji} Guess in {secs} — then watch the reveal!", bait,
-                f"✅ {named} — answer + three quick facts inside. Daily {topic}.", CFG["disclosure"]["facebook_caption_line"]]
-    if not first_comment: fb_lines += [credits]
-    fb_lines += ["", " ".join(fb_tags)]
-    fb = {"text": "\n".join(fb_lines), "firstComment": ig_first, "hashtags": fb_tags}
+    # ---- Facebook: authored text + the one line Meta asks for (synthetic narration)
+    fb_body = g("facebook"); fb_tags = tags_in(fb_body)
+    fb_wo = re.sub(r"(\s*#\w+)+\s*$", "", fb_body).rstrip()
+    fb_text = "\n".join([fb_wo, CFG["disclosure"]["facebook_caption_line"], " ".join(fb_tags)]).strip()
+    fb = {"text": fb_text, "firstComment": "", "hashtags": fb_tags}
 
-    # ---- X (Twitter): one post, video attached; 280-char budget (X counts most emoji as 2); 1–2 hashtags; sources stay in the video credits
-    x_tags = hashtags_for(E, S, "twitter", 2)
-    x_text = "\n".join([f"{premise or q_clean} {emoji}", "", f"{named}? Guess in {secs}, then watch the reveal 👇", "", " ".join(x_tags)])
-    if x_len(x_text) > 270:
-        x_text = "\n".join([f"{q_clean} {emoji}", "", "What was your first guess? 👇", " ".join(x_tags)])
-    x = {"text": x_text, "hashtags": x_tags, "isAiGenerated": bool(CFG["disclosure"].get("twitter_is_ai_generated", True))}
-
-    # ---- Threads: ≤ 500 chars, conversational; Threads turns only the FIRST hashtag into a topic tag, so exactly one
-    th_tags = hashtags_for(E, S, "threads", 1)
-    th_text = "\n".join([f"{premise or q_clean} {emoji}", "", f"{named}. You get {secs}, then the map reveals it with three facts you can repeat at dinner.", "",
-                         bait, "", " ".join(th_tags)])
-    th = {"text": th_text, "hashtags": th_tags}
+    # ---- X and Threads: as written
+    x_text = g("x"); th_text = g("threads")
+    x = {"text": x_text, "hashtags": tags_in(x_text), "isAiGenerated": bool(CFG["disclosure"].get("twitter_is_ai_generated", True))}
+    th = {"text": th_text, "hashtags": tags_in(th_text)}
 
     kit = {"episode": Path(ep).name, "series": slug, "question": question, "answer": ans, "built_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
            "youtube": yt, "instagram": ig, "facebook": fb, "twitter": x, "threads": th}
     kit["checks"] = check(kit)
+    F = kit["checks"]["fail"]
+    if missing: F.insert(0, f"post.copy missing authored text for: {', '.join(missing)} (owner 2026-10-19: no templates — write each channel by hand)")
+    # ---- spoiler gate (hard): the answer, its demonyms/places, authored extras and the fact-card numbers may not appear anywhere
+    terms, nums = spoiler_terms(E, V, post)
+    allowed = {w.lower() for w in re.findall(r"[A-Za-z]{3,}", q_clean)}
+    for name, text in (("YT title", yt_title), ("YT", yt_desc), ("IG", ig_caption), ("FB", fb_text), ("X", x_text), ("Threads", th_text)):
+        hits = find_spoilers(text, terms, nums, allowed, E.get("quiz", {}).get("options", []), ans)
+        if hits: F.append(f"SPOILER {name}: {hits} — the copy gives the answer away")
+    # ---- template gate (hard): no sentence reused from another episode; no two channels opening with the same line
+    seen = other_episode_sentences(ep)
+    for k in ("youtube", "instagram", "facebook", "x", "threads"):
+        for s_ in sentences(g(k)):
+            if s_ in seen: F.append(f"TEMPLATE {k}: '{s_[:60]}…' also used in {seen[s_]} — write it fresh")
+    firsts = {k: re.sub(r"[^a-z0-9 ]", "", g(k).split("\n")[0].lower()).strip() for k in ("youtube", "instagram", "facebook", "x", "threads")}
+    for a_ in firsts:
+        for b_ in firsts:
+            if a_ < b_ and firsts[a_] and firsts[a_] == firsts[b_]: F.append(f"TEMPLATE: {a_} and {b_} open with the same line — each channel gets its own opening")
+    for k in ("youtube", "instagram", "facebook", "x", "threads"):
+        if re.search(r"(?i)\b(guess in \d|watch the reveal|which did you pick|three quick facts|answer \+|you get \d)", g(k)): F.append(f"TEMPLATE {k}: stock quiz phrase — say it like a person")
     return kit
 
 
@@ -208,7 +258,7 @@ def check(kit):
     yt, ig, fb, x = kit["youtube"], kit["instagram"], kit["facebook"], kit.get("twitter") or {"text": "", "hashtags": ["#x"]}
     th = kit.get("threads") or {"text": "", "hashtags": ["#x"]}
     if len(th["text"]) > 500: F.append(f"Threads text {len(th['text'])} chars > 500")
-    if len(th["hashtags"]) != 1: F.append(f"Threads hashtags {len(th['hashtags'])} (want exactly 1 — only the first becomes a topic tag)")
+    if len(th["hashtags"]) > 1: F.append(f"Threads hashtags {len(th['hashtags'])} (want 0–1 — only the first becomes a topic tag)")
     t = yt["title"]
     if len(t) > 100: F.append(f"YT title {len(t)} chars > 100")
     elif len(t) > 85: W.append(f"YT title {len(t)} chars (aim ≤ 80 so feeds show it whole)")
@@ -219,15 +269,17 @@ def check(kit):
     first = yt["description"].split("\n")[0]
     if len(first) > 120: W.append(f"YT description first line {len(first)} chars (the first ~100 are the search snippet)")
     if len(yt["description"]) > 5000: F.append("YT description > 5000 chars")
-    if not 3 <= len(yt["hashtags"]) <= 5: F.append(f"YT hashtags {len(yt['hashtags'])} (want 3–5)")
+    if not 2 <= len(yt["hashtags"]) <= 5: F.append(f"YT hashtags {len(yt['hashtags'])} (want 2–5)")
     if not yt["description"].rstrip().endswith(" ".join(yt["hashtags"])): F.append("YT hashtags must be the last line of the description")
     if len(ig["caption"]) > 2200: F.append("IG caption > 2200 chars")
     hook = ig["caption"].split("\n")[0]
     if len(hook) > 125: W.append(f"IG hook line {len(hook)} chars (> 125 gets cut behind 'more')")
     if not 3 <= len(ig["hashtags"]) <= 5: F.append(f"IG hashtags {len(ig['hashtags'])} (want 3–5)")
+    if ig["caption"] and len(ig["caption"].split("\n")[0]) > 125: F.append("IG: the opening line must fit in 125 chars (what shows before 'more')")
     if re.search(r"https?://|www\.", ig["caption"]): W.append("IG caption has a URL (not clickable; sources belong in the first comment)")
     if len(fb["text"]) > 1000: W.append("FB text > 1000 chars")
     if not 1 <= len(fb["hashtags"]) <= 3: F.append(f"FB hashtags {len(fb['hashtags'])} (want 1–3)")
+    if len(fb["text"]) > 400: W.append(f"FB text {len(fb['text'])} chars (reel descriptions read best under ~300)")
     if x_len(x["text"]) > 280: F.append(f"X text {x_len(x['text'])} weighted chars > 280")
     elif x_len(x["text"]) > 260: W.append(f"X text {x_len(x['text'])} weighted chars (aim ≤ 260)")
     if not 1 <= len(x["hashtags"]) <= 2: F.append(f"X hashtags {len(x['hashtags'])} (want 1–2)")
@@ -236,6 +288,7 @@ def check(kit):
         for h in re.findall(r"#\S+", text):
             if not HASHTAG.match(h): F.append(f"{name}: malformed hashtag {h!r}")
     if not kit.get("answer"): F.append("no answer text (quiz.options/correct missing)")
+    if yt["title"] and not re.search(r"\?", yt["title"]) and not re.search(r"\b(which|where|who|what|how|why)\b", yt["title"], re.I): W.append("YT title is not a question (quiz titles that ask outperform statements for us)")
     return {"fail": F, "warn": W}
 
 

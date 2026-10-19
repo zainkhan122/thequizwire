@@ -27,6 +27,7 @@ v2 (episode.json "format": "quiz-v2", docs/PLAN_V2.md §2) replaces Q1/Q2's card
   Q11 reveal     a visual-state change (geo.highlight_in / cam_to / pin_in / route_draw / chart.*) within 1.5 s of `reveal`
   Q12 loop       the last `hook_in` is ≥ end-2.0 and a final `geo.cam_to` (until ≥ end-0.4) returns to the t=0 `geo.cam_set`
   Q17 hook=Q    v3: the first spoken line is the on-screen question verbatim (normalised) — heard and read together, no restated hook
+  Q18 copy      post.copy hand-written per channel (reelkit/postkit.py check): no answer/demonym/fact-number spoilers, no template sentences
   Q16 variety    v3: `variety` block in the pools (docs/VARIETY.md); ≥ 4/8 axes equal to the previous episode, 3-in-a-row opener/reveal/outro/hook stem, or the same emoji set → FAIL
   Q13 length     exactly 3 options · total 22–40 s (FAIL) / 26–36 s (else WARN) · question ≤ 76 chars · option ≤ 26 chars ·
                  fact ≤ 80 chars (short plates under word-timed captions) · chips_out → fact_in hand-off ≥ 0.45 s
@@ -193,6 +194,11 @@ def main():
     if spoken and E.get("format") == "quiz-v3":
         hook_n, q_n = norm(spoken[0]["text"]), norm(q.get("question", ""))
         if hook_n != q_n: G.append(f"Q17: the hook line must be the on-screen question verbatim — VO '{spoken[0]['text']}' vs question '{q.get('question','')}'")
+    # ---- Q18 per-channel copy gate (owner 2026-10-19): postkit's spoiler + template lints are a quizlint FAIL too
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent)); import postkit as _pk
+        for f_ in _pk.build(ep)["checks"]["fail"]: G.append(f"Q18: {f_}")
+    except Exception as ex: G.append(f"Q18: postkit could not build the copy ({ex})")
     for o in q.get("options", []):
         last = norm(o).split()[-1]
         if last not in vo_all and num_word(last) not in vo_all: W.append(f"option '{o}' is never spoken")

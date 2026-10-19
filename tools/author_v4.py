@@ -41,7 +41,7 @@ def build(S):
          "post": {"title": f"{q} {S.get('cover_emoji', SERIES_EMOJI[series])}", "premise": S["post"]["premise"], "bait": S["post"]["bait"],
                   "keywords": S["post"]["keywords"],
                   "description": f"{S['post']['premise']}. {S['post']['bait']}\n\nSources: {S['post']['sources_line']}.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\n{SERIES_LABEL[series]} #{n}",
-                  "hashtags": S["post"].get("hashtags", SERIES_TAGS[series]), "tags": S["post"]["tags"], "cover_emoji": S.get("cover_emoji", SERIES_EMOJI[series])},
+                  "hashtags": S["post"].get("hashtags", SERIES_TAGS[series]), "tags": S["post"]["tags"], "cover_emoji": S.get("cover_emoji", SERIES_EMOJI[series]), "copy": S["post"].get("copy", {})},
          "variety": {"question": S["variety"]["question"], "hook": "question-first", "opener": S["variety"]["opener"], "reveal": S["variety"]["reveal"],
                      "beats": S["variety"]["beats"], "cast": S["variety"]["cast"], "music": S["variety"].get("music", "bed:pad")},
          "status": "draft"}
