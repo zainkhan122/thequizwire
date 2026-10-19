@@ -31,7 +31,7 @@ class Charts:
     def bars(self, bid, rows, y=300, x=60, w=900, unit="", max_value=None, bar_h=74, gap=26):
         mx = max_value or max(r[1] for r in rows)
         self.items[bid] = {"rows": rows, "max": mx}
-        out = [f'<div id="{bid}" class="chart bars" style="left:{x}px;top:{y}px;width:{w}px">']
+        out = [f'<div id="{bid}" class="chart bars" style="left:{x}px;top:{y}px;width:{w}px;height:{len(rows) * (bar_h + gap + 40) - gap}px">']
         for i, (label, val, disp) in enumerate(rows):
             top = i * (bar_h + gap + 40)
             frac = max(0.04, val / mx)
@@ -156,7 +156,10 @@ CSS = f"""
 .counter{{text-align:center;background:rgba(11,22,32,.72);border-radius:18px;padding:14px 20px 18px;box-shadow:0 12px 40px rgba(0,0,0,.35)}}   /* legible over a map */
 .cnumber{{font-family:'Anton';font-size:190px;line-height:1;color:{SAND};text-shadow:0 10px 40px rgba(0,0,0,.5)}}
 .clabel2{{font-family:'Oswald';font-weight:500;font-size:42px;letter-spacing:.1em;text-transform:uppercase;color:{CREAM};margin-top:10px}}
-.v3 .counter{{background:none;padding:0;box-shadow:none}}
+.v3 .counter{{background:rgba(27,27,27,.84);border-radius:26px;padding:22px 24px 26px;box-shadow:0 14px 40px rgba(0,0,0,.4)}}
+.v3 .bars,.v3 .compare{{box-shadow:0 0 0 28px rgba(27,27,27,.84),0 14px 40px rgba(0,0,0,.4);background:rgba(27,27,27,.84);border-radius:6px}}
+.v3 .bars .bval{{color:#1b1b1b;text-shadow:none;background:rgba(255,255,255,.92);padding:0 10px;border-radius:6px;top:50px;font-size:40px;line-height:1.1}}
+.v3 .bars .bfill{{background:#FFD400}} .v3 .bars .brow:first-child .bfill{{background:#FF2D2D}}
 .v3 .cnumber{{font-family:'Anton';line-height:1.3;color:#FFD400;letter-spacing:.01em;text-shadow:0 4px 0 #1b1b1b,0 12px 36px rgba(0,0,0,.55)}}
 .v3 .clabel2{{font-family:'Anton';font-weight:400;font-size:56px;letter-spacing:.04em;color:#fff;margin-top:2px;text-shadow:0 3px 0 #1b1b1b,0 10px 30px rgba(0,0,0,.5)}}
 .compare .ccol{{position:absolute;top:0;display:flex;align-items:flex-end;justify-content:center}}
