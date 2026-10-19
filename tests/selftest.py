@@ -191,9 +191,11 @@ def main():
         # per-service metadata (reel types, YouTube title/category) and queue mode; nothing here touches the network
         r = run([sys.executable, str(RK / "postkit.py"), "build", str(tp3)])
         say(r.returncode == 0, "postkit: v3 template builds YouTube/Instagram/Facebook copy with FAIL 0", (r.stdout + r.stderr)[-300:])
-        eps = [d for d in (ROOT / "series").glob("*/ep*") if (d / "episode.json").exists() and json.loads((d / "episode.json").read_text()).get("format") == "quiz-v3"]
+        # 2026-10-19: copy is hand-written per episode (post.copy) and gated (spoiler/template). Already-published pilots
+        # without copy are archived (status != ready) and are not re-posted, so only shippable episodes must lint clean.
+        eps = [d for d in (ROOT / "series").glob("*/ep*") if (d / "episode.json").exists() and json.loads((d / "episode.json").read_text()).get("status") == "ready"]
         badk = [d.name for d in eps if run([sys.executable, str(RK / "postkit.py"), "check", str(d)]).returncode != 0]
-        say(not badk, f"postkit: {len(eps) - len(badk)}/{len(eps)} v3 episodes lint clean", str(badk))
+        say(not badk, f"postkit: {len(eps) - len(badk)}/{len(eps)} ready episodes lint clean (spoiler + template gates)", str(badk))
         r = run([sys.executable, str(RK / "buffer.py"), "plan", str(tp3), "--media-url", "https://example.github.io/m/x.mp4"])
         try:
             rows = {x["platform"]: x["payload"] for x in json.loads(r.stdout)}
