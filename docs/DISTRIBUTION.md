@@ -146,3 +146,11 @@ spacing is kept per channel. `mode: queue` restores Buffer's own posting-plan sl
 authors can pin them in `episode.json → post.cover`), burns it in as the first 0.3 s of `out/final.mp4` (so frame 0 —
 the auto-cover on IG/FB/X/Threads, `thumbnailOffset 0`) and attaches `<stem>_cover.jpg` to the release for the YouTube
 thumbnail (manual upload until the `YT_*` secrets exist; then `yt_enrich.py thumbnails.set`).
+
+
+## Rule (owner 2026-10-19): one cover per Short, set on YouTube
+YouTube picks a random frame for Shorts unless a thumbnail is set, and a random frame of a map quiz rarely makes sense.
+Every episode therefore ships its own style-B cover (`reelkit/cover.py`, `<stem>_cover.jpg` on the release and burned in as frame 0),
+and the cover MUST be set as the YouTube thumbnail: automatically via `tools/yt_enrich.py thumbnails.set` once the `YT_*` secrets exist,
+until then by hand in YouTube Studio from the cover zip the agent delivers with each batch. `dispatch.sh` fails an episode without a cover.
+Never alter or re-create posts that are already scheduled or sent; copy/cover rules apply to future videos only.
