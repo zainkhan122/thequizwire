@@ -171,6 +171,17 @@
     "cls": "tag",
     "in": "s06@park",
     "out": "s07.end"
+   },
+   {
+    "id": "park",
+    "lonlat": [
+     119.25,
+     -8.95
+    ],
+    "text": "Komodo National Park",
+    "cls": "tag",
+    "in": "s06@park",
+    "out": "s07.end"
    }
   ],
   "pins": [
@@ -182,15 +193,6 @@
     ],
     "label": "Komodo",
     "qid": "Q107640"
-   },
-   {
-    "id": "park",
-    "lonlat": [
-     119.577,
-     -8.652
-    ],
-    "label": "Komodo National Park",
-    "qid": "Q4520"
    },
    {
     "id": "rinca",
@@ -554,19 +556,19 @@
    "energy": 4,
    "tone": "resolute",
    "cam": [
-    1.6,
+    1.5,
     [
-     119.75,
-     -8.65
+     119.85,
+     -8.75
     ]
    ],
    "cam_dur": 3.0,
    "cam_ease": "power1.inOut",
    "cam_hold": [
-    1.62,
+    1.52,
     [
-     119.8,
-     -8.66
+     119.9,
+     -8.76
     ]
    ],
    "pulse": false,
@@ -576,13 +578,6 @@
      "do": "geo.pin_in",
      "args": {
       "pid": "rinca"
-     }
-    },
-    {
-     "at": "@@park",
-     "do": "geo.pin_in",
-     "args": {
-      "pid": "park"
      }
     },
     {
