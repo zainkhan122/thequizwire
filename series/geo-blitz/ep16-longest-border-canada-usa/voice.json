@@ -78,7 +78,7 @@
    "energy": 4,
    "pause_after": 0.4,
    "direction": "let the gap show",
-   "text": "Second place, Kazakhstan and Russia, is more than 1,200 kilometres shorter.",
+   "text": "Second place, Kazakhstan and Russia, is over 1,200 kilometres shorter.",
    "cues": {
     "second": "second",
     "shorter": "shorter"
@@ -92,7 +92,7 @@
    "energy": 4,
    "pause_after": 0.4,
    "direction": "count it out while flying north",
-   "text": "Alaska alone adds 2,475 kilometres, all the way up to the Arctic Ocean.",
+   "text": "Alaska alone adds 2,475 kilometres, up to the Arctic Ocean.",
    "cues": {
     "alaska": "alaska",
     "arctic": "arctic"

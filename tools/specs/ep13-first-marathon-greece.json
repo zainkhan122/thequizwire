@@ -520,7 +520,7 @@
      "wiki_marathon"
     ],
     "vo": [
-     "that odd distance became official in 1921, and it has not changed since"
+     "that odd distance became official in 1921, and it has not changed since. every marathon you have ever watched ran it"
     ],
     "screen": [
      "years, same distance"
@@ -584,7 +584,8 @@
      38.03
     ]
    ],
-   "pulse": 0.5
+   "pulse": 0.5,
+   "pause_after": 0.3
   },
   {
    "vo": {
@@ -654,7 +655,7 @@
   },
   {
    "vo": {
-    "text": "That odd distance became official in 1921, and it has not changed since.",
+    "text": "That odd distance became official in 1921, and it has not changed since. Every marathon you have ever watched ran it.",
     "cues": {
      "official": "official",
      "changed": "changed"
@@ -706,7 +707,8 @@
      "do": "hide",
      "id": "years"
     }
-   ]
+   ],
+   "pause_after": 0.3
   }
  ]
 }

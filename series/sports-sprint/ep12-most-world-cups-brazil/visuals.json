@@ -257,7 +257,7 @@
    }
   },
   {
-   "at": "s05+0.2",
+   "at": "s05+1.2",
    "do": "chart.bars_in",
    "id": "titles",
    "args": {

@@ -78,7 +78,7 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "then versus now, as shapes",
-   "text": "His great grandfather stood around 169. That is 13 centimetres gained in one century.",
+   "text": "His great grandfather stood around 169 centimetres. That is 13 centimetres gained in a single century.",
    "cues": {
     "grandfather": "grandfather",
     "century": "century"
@@ -92,7 +92,7 @@
    "energy": 4,
    "pause_after": 0.5,
    "direction": "the rank falls while the camera leaves",
-   "text": "American men were third tallest a century ago. Today they rank 37th.",
+   "text": "American men were the third tallest in the world a century ago. Today they rank 37th.",
    "cues": {
     "american": "american",
     "today": "today"
@@ -106,7 +106,7 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "flat, final",
-   "text": "And the growing has stopped. Dutch people born after 1980 are no taller than their parents.",
+   "text": "And the growing has stopped. Dutch people born after 1980 are no taller than their parents were.",
    "cues": {
     "stopped": "stopped",
     "parents": "parents"

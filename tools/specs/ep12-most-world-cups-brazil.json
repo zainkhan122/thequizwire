@@ -494,7 +494,7 @@
    ],
    "devices": [
     {
-     "at": "@+0.2",
+     "at": "@+1.2",
      "do": "chart.bars_in",
      "id": "titles",
      "args": {

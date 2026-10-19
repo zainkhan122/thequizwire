@@ -77,7 +77,7 @@
    "role": "story",
    "tone": "tender",
    "energy": 3,
-   "pause_after": 0.8,
+   "pause_after": 0.3,
    "direction": "a person first",
    "text": "A Greek water carrier named Louis won it, in just under three hours.",
    "cues": {
@@ -105,9 +105,9 @@
    "role": "story",
    "tone": "resolute",
    "energy": 3,
-   "pause_after": 0.4,
+   "pause_after": 0.3,
    "direction": "let the years run",
-   "text": "That odd distance became official in 1921, and it has not changed since.",
+   "text": "That odd distance became official in 1921, and it has not changed since. Every marathon you have ever watched ran it.",
    "cues": {
     "official": "official",
     "changed": "changed"
