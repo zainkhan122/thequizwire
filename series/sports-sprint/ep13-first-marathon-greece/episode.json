@@ -71,21 +71,15 @@
   ],
   "cover_emoji": "🏃",
   "copy": {
+   "comment_cta": "What was your first guess, honestly?",
+   "like_cta_youtube": "Drop a like if you knew it and subscribe for more sports quizzes.",
+   "like_cta_social": "Like and follow {handle}, a new sports quiz every day.",
    "spoilers": [
     "greek",
     "athens",
-    "athenian",
     "spyridon",
-    "louis",
-    "pheidippides",
-    "olympia"
-   ],
-   "youtube_title": "Where was the FIRST marathon race run? 🏃 #SportsQuiz #Olympics",
-   "youtube": "The first real marathon race wasn't the distance we run today, and it was won by a man who carried water for a living.\nGreece, the United Kingdom or the USA. Three seconds, then the map traces the original route and explains how the race got stretched to the odd number every runner now knows by heart.\nDid you know this one before the reveal?\n#SportsQuiz #Olympics #Marathon #Shorts",
-   "instagram": "Runners, where was the FIRST marathon race actually run? 🏃\nThree countries on screen, and three seconds on the clock. The winner of that first race was a water carrier, and the distance we run today was set years later for a royal family's convenience, which is the kind of fact I can't keep to myself.\nGuess, then watch the route draw itself.\nFollow @thequizwire for a daily quiz.\n#SportsQuiz #Olympics #Marathon #RunningMotivation #TheQuizWire",
-   "facebook": "Where was the first marathon race run? Greece, the United Kingdom or the USA?\nThe winner carried water for a living. Comment your pick before you watch, and tag someone who's training for one right now.\n#SportsQuiz #Marathon",
-   "x": "Where was the FIRST marathon race run? 🏃\n\nGreece, the United Kingdom or the USA. Harder than it sounds once you know the modern distance came later. Reply first.\n\n#Olympics #TheQuizWire",
-   "threads": "Runners will like this one. The first marathon race, which country?\n\nGreece, the United Kingdom or the USA. The modern distance didn't exist yet, and the winner was a water carrier. Pick a country, then watch the route draw itself. #SportsQuiz"
+    "louis"
+   ]
   }
  },
  "variety": {

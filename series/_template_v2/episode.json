@@ -48,18 +48,14 @@
    "peninsula size"
   ],
   "copy": {
-   "spoilers": [
-    "arabia",
-    "saudi",
-    "oman",
-    "yemen"
-   ],
-   "youtube_title": "Which is the LARGEST peninsula on Earth? 🧭 #GeographyQuiz #MapFacts",
-   "youtube": "Three peninsulas, one clear winner, and a surprising number of people who argue for the wrong one.\nYou get a short countdown, then the map draws the coastline and you see the scale for yourself.\nWhat did you answer?\n#GeographyQuiz #MapFacts #Shorts",
-   "instagram": "Three peninsulas. One is far larger than the rest 🧭\nI thought this was easy until I watched friends argue about it. Watch the coastline draw itself and see who was right.\nTell me your pick before the reveal.\nFollow @thequizwire for more map arguments.\n#GeographyQuiz #MapFacts #QuizReels #TheQuizWire",
-   "facebook": "Peninsula quiz. Three on screen, one is the biggest by a mile. Which?\nAnswer in the comments, then watch the coastline draw itself.\n#GeographyQuiz",
-   "x": "Which is the LARGEST peninsula on Earth? 🧭\n\nThree on screen. Commit to one before the coastline appears.\n\n#GeographyQuiz #TheQuizWire",
-   "threads": "Largest peninsula on Earth, three choices, no googling.\n\nThe map draws the coastline and the scale speaks for itself. #GeographyQuiz"
-  }
+   "comment_cta": "What was your first guess?",
+   "like_cta_youtube": "Like it and subscribe for more.",
+   "like_cta_social": "Like it and follow {handle} for more.",
+   "spoilers": []
+  },
+  "tags": [
+   "Peninsula",
+   "MapQuiz"
+  ]
  }
 }

@@ -47,18 +47,14 @@
    "peninsula size"
   ],
   "copy": {
-   "spoilers": [
-    "arabia",
-    "saudi",
-    "oman",
-    "yemen"
-   ],
-   "youtube_title": "Which is the LARGEST peninsula in the world? 🌍 #GeographyQuiz #MapFacts",
-   "youtube": "Four peninsulas, one of them bigger than the other three combined in most people's heads, and still half the room gets it wrong.\nThree seconds, then the map outlines it and I explain how big it really is.\nWhich one did you go for?\n#GeographyQuiz #MapFacts #Shorts",
-   "instagram": "Largest peninsula in the world, four options, three seconds 🌍\nIt's the kind of question that sounds obvious until the map draws the outline and you realise how much land we're talking about.\nGuess before the reveal.\nFollow @thequizwire if you like your geography with a timer on it.\n#GeographyQuiz #MapFacts #QuizReels #TheQuizWire",
-   "facebook": "Largest peninsula on the planet. Which one is it?\nComment your pick before you watch, then see the map outline it.\n#GeographyQuiz",
-   "x": "Which is the LARGEST peninsula in the world? 🌍\n\nFour options on screen. Reply before the map outlines it.\n\n#GeographyQuiz #TheQuizWire",
-   "threads": "Map question for the morning: the largest peninsula on Earth, which one?\n\nFour options, three seconds, then the outline appears and it's bigger than you think. #GeographyQuiz"
-  }
+   "comment_cta": "Did you get it?",
+   "like_cta_youtube": "Like and subscribe for a daily map quiz.",
+   "like_cta_social": "Follow {handle} for a daily map quiz.",
+   "spoilers": []
+  },
+  "tags": [
+   "Peninsula",
+   "MapQuiz"
+  ]
  }
 }
