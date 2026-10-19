@@ -5,6 +5,7 @@ on:
     inputs:
       episodes: {description: 'Episode dirs, space separated', required: true}
       live: {description: 'Write to Buffer (false = dry run)', type: boolean, default: false}
+      channels: {description: 'comma list of platforms (default all)', default: ''}
 permissions:
   contents: write
 concurrency: {group: dispatch, cancel-in-progress: false}
@@ -23,7 +24,8 @@ jobs:
           LIVE=""; [ "${{ inputs.live }}" = "true" ] && LIVE="--live"
           for EP in ${{ inputs.episodes }}; do
             python3 reelkit/postkit.py build "$EP" | tail -3
-            python3 reelkit/buffer.py recopy "$EP" $LIVE
+            CH=""; [ -n "${{ inputs.channels }}" ] && CH="--channels ${{ inputs.channels }}"
+            python3 reelkit/buffer.py recopy "$EP" $LIVE $CH
           done
       - name: Commit ledger
         if: always()

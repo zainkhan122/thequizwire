@@ -477,8 +477,10 @@ def cmd_recopy(a):
         mine = [p for p in L["posts"] if p.get("episode") == name and p.get("post_id")]
         if not mine: print(f"== {name}: no posts in the ledger"); continue
         print(f"== {name}")
+        only = set(a.channels.split(",")) if getattr(a, "channels", None) else None
         for prev in mine:
             platform, acc = prev["platform"], prev.get("account") or account_of(c, platform)
+            if only and platform not in only: continue
             if prev.get("state") not in ("scheduled", "draft", "needs_approval"):
                 print(f"   {platform:<10} {prev['post_id']} is {prev.get('state')} — cannot change (edit by hand on the network)"); continue
             row = payloads(c, ep, prev["media_url"], kit, [platform])[0]["payload"]
@@ -486,10 +488,16 @@ def cmd_recopy(a):
             if not row["dueAt"]: row["mode"] = c["buffer"].get("mode", "addToQueue"); row.pop("dueAt")
             if not live: print(f"   {platform:<10} DRY-RUN would replace {prev['post_id']} ({prev.get('due_at')}) · new text {len(row['text'])} chars"); continue
             cl = Client(c, acc)
-            cur = cl.post(prev["post_id"])
+            try: cur = cl.post(prev["post_id"])
+            except Exception: cur = None                                    # already gone (e.g. deleted by an earlier, interrupted run)
             if cur and cur.get("status") not in ("scheduled", "draft", "needs_approval"):
                 prev["state"] = cur.get("status"); save_ledger(L); print(f"   {platform:<10} now {cur.get('status')} on Buffer — left alone"); continue
-            cl.delete(prev["post_id"]); old = prev["post_id"]
+            due = datetime.strptime(row["dueAt"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc) if row.get("dueAt") else None
+            if due is None or due <= datetime.now(timezone.utc) + timedelta(minutes=3):   # slot already passed: next best slot for this channel
+                slot = best_slot(c, platform, prev["channel_id"], taken_slots([], L))
+                row["mode"] = "customScheduled"; row["dueAt"] = slot.strftime("%Y-%m-%dT%H:%M:%SZ"); print(f"   {platform:<10} slot {prev.get('due_at')} has passed → {row['dueAt']}")
+            if cur: cl.delete(prev["post_id"])
+            old = prev["post_id"]
             p = cl.create(row)
             prev.update({"post_id": p["id"], "state": p.get("status", "scheduled"), "due_at": p.get("dueAt"), "recopied_at": now(), "replaced": old}); save_ledger(L)
             print(f"   {platform:<10} {old} → {p['id']} at {p.get('dueAt')} ✓")
@@ -502,7 +510,7 @@ def main():
     p = sp.add_parser("dispatch"); p.add_argument("episode", nargs="+"); p.add_argument("--media-url"); p.add_argument("--channels")
     p.add_argument("--live", action="store_true"); p.add_argument("--dry-run", action="store_true"); p.add_argument("--no-verify", action="store_true", help="dry-run only: skip the media URL probe")
     p = sp.add_parser("status"); p.add_argument("--refresh", action="store_true")
-    p = sp.add_parser("recopy"); p.add_argument("episode", nargs="+"); p.add_argument("--live", action="store_true")
+    p = sp.add_parser("recopy"); p.add_argument("episode", nargs="+"); p.add_argument("--live", action="store_true"); p.add_argument("--channels", help="comma list; default all")
     a = ap.parse_args()
     {"channels": cmd_channels, "queue": cmd_queue, "plan": cmd_plan, "dispatch": cmd_dispatch, "status": cmd_status, "recopy": cmd_recopy}[a.cmd](a)
 
