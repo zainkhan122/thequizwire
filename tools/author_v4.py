@@ -44,7 +44,7 @@ def story_lines(S):
     L = []
     for i, b in enumerate(story_beats(S)):
         n = 5 + i
-        L.append({"id": f"v{n:02d}", "scene": f"s{n:02d}", "role": "story", "tone": b.get("tone", "resolute"), "energy": b.get("energy", 3), "pause_after": b.get("pause_after", 0.4),
+        L.append({"id": f"v{n:02d}", "scene": f"s{n:02d}", "role": "story", "tone": b.get("tone", "resolute"), "energy": b.get("energy", 3), "pause_after": b.get("pause_after", {"revelatory": 0.5, "tender": 0.8}.get(b.get("tone", ""), 0.4)),
                   "direction": b.get("direction", "say it like you just found out"), "text": b["vo"]["text"], "cues": b["vo"].get("cues", {})})
     return L
 

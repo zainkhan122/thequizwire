@@ -83,8 +83,8 @@ class Charts:
                     if shape else f'<div class="cblock" style="width:{col - 40:.0f}px;height:{h:.0f}px"></div>')
             out.append(f'<div class="ccol" id="{sid}_c{i}" style="left:{cx:.0f}px;width:{col:.0f}px;height:{max_h}px">'
                        f'<div class="cstack" id="{sid}_s{i}">{body}</div></div>'
-                       f'<div class="cval tu" id="{sid}_v{i}" style="left:{cx:.0f}px;width:{col:.0f}px;top:{max_h + 8}px">{esc(disp)}</div>'
-                       f'<div class="clab tu" style="left:{cx:.0f}px;width:{col:.0f}px;top:{max_h + 62}px">{esc(label)}</div>')
+                       f'<div class="cval tu" id="{sid}_v{i}" data-layout-allow-overlap="true" style="left:{cx:.0f}px;width:{col:.0f}px;top:{max_h + 8}px">{esc(disp)}</div>'
+                       f'<div class="clab tu" data-layout-allow-overlap="true" style="left:{cx:.0f}px;width:{col:.0f}px;top:{max_h + 62}px">{esc(label)}</div>')
         out.append(f'<div class="cbase" style="top:{max_h}px;width:{w}px"></div></div>')
         return "".join(out)
 
