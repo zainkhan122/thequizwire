@@ -205,7 +205,6 @@ def build(ep):
     yt_title = f"{q_clean} {emoji}"
     if len(yt_title) + 1 + len(" ".join(title_tags)) <= 100: yt_title = f"{yt_title} {' '.join(title_tags)}"
     yt_lines = [f"{q_clean} {emoji}", cta, like_yt]
-    if srcs: yt_lines += ["", "Sources: " + " · ".join(srcs) + ". Map: Natural Earth, NASA Blue Marble. Narration: synthetic voice (Kokoro)."]
     yt_lines += ["", " ".join(yt_tags)]
     yt = {"title": yt_title, "description": "\n".join(yt_lines), "hashtags": yt_tags, "categoryId": str(S["youtube_category"]),
           "madeForKids": CFG["youtube"]["made_for_kids"], "notifySubscribers": CFG["youtube"]["notify_subscribers"],
@@ -218,7 +217,7 @@ def build(ep):
     ig = {"caption": ig_caption, "firstComment": "", "hashtags": ig_tags, "shouldShareToFeed": True,
           "isAiGenerated": bool(CFG["disclosure"]["instagram_is_ai_generated"]), "thumbnailOffsetMs": 0}
     # ---- Facebook
-    fb_text = "\n".join([q_clean, cta, like_so.replace("{handle}", "TheQuizWire"), CFG["disclosure"]["facebook_caption_line"], " ".join(fb_tags)])
+    fb_text = "\n".join([q_clean, cta, like_so.replace("{handle}", "TheQuizWire"), " ".join(fb_tags)])   # owner 2026-10-19: no sources / AI-narration lines in copy (credits stay burned into the video)
     fb = {"text": fb_text, "firstComment": "", "hashtags": fb_tags}
     # ---- X
     x_text = "\n".join([f"{q_clean} {emoji}", "", cta, like_so.replace("{handle}", "@thequizwire"), "", " ".join(x_tags)])
