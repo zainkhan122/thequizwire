@@ -36,6 +36,9 @@ Q_LIMITS = "query($input: DailyPostingLimitsInput!) { dailyPostingLimits(input: 
 M_CREATE = "mutation($input: CreatePostInput!) { createPost(input: $input) { __typename ... on PostActionSuccess { post { " + POST_FIELDS + " } } ... on MutationError { message } } }"
 
 
+M_DELETE = "mutation($input: DeletePostInput!) { deletePost(input: $input) { __typename ... on MutationError { message } } }"
+
+
 def now(): return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
@@ -173,6 +176,11 @@ class Client:
     def post(self, pid): return self.gql(Q_POST, {"input": {"id": pid}})["post"]
 
     def limits(self, channel_ids): return self.gql(Q_LIMITS, {"input": {"channelIds": channel_ids}})["dailyPostingLimits"]
+
+    def delete(self, pid):
+        res = self.gql(M_DELETE, {"input": {"id": pid}}).get("deletePost") or {}
+        if res.get("message"): raise BufferError(f"deletePost {pid}: {res['message']}")
+        return True
 
     def create(self, payload):
         res = self.gql(M_CREATE, {"input": payload}, mutation=True).get("createPost") or {}
@@ -456,6 +464,37 @@ def cmd_status(a):
     print(f"ledger: {len(L['posts'])} record(s)")
 
 
+def cmd_recopy(a):
+    """Replace the text of every still-SCHEDULED post of an episode with the current postkit copy: delete + re-create at the
+    same dueAt on the same channel (Buffer's API has no updatePost). Sent posts are reported, not touched."""
+    c = cfg(); L = load_ledger(); live = a.live
+    for e in a.episode:
+        ep = Path(e); name = ep.name
+        kit_p = ep / "out/postkit.json"
+        if not kit_p.exists(): sys.exit(f"buffer: {kit_p} missing — run postkit.py build first")
+        kit = json.loads(kit_p.read_text())
+        if kit.get("checks", {}).get("fail"): sys.exit(f"buffer: {name}: postkit has FAILs: {kit['checks']['fail']}")
+        mine = [p for p in L["posts"] if p.get("episode") == name and p.get("post_id")]
+        if not mine: print(f"== {name}: no posts in the ledger"); continue
+        print(f"== {name}")
+        for prev in mine:
+            platform, acc = prev["platform"], prev.get("account") or account_of(c, platform)
+            if prev.get("state") not in ("scheduled", "draft", "needs_approval"):
+                print(f"   {platform:<10} {prev['post_id']} is {prev.get('state')} — cannot change (edit by hand on the network)"); continue
+            row = payloads(c, ep, prev["media_url"], kit, [platform])[0]["payload"]
+            row["mode"] = "customScheduled"; row["dueAt"] = prev["due_at"].replace(".000Z", "Z") if prev.get("due_at") else None
+            if not row["dueAt"]: row["mode"] = c["buffer"].get("mode", "addToQueue"); row.pop("dueAt")
+            if not live: print(f"   {platform:<10} DRY-RUN would replace {prev['post_id']} ({prev.get('due_at')}) · new text {len(row['text'])} chars"); continue
+            cl = Client(c, acc)
+            cur = cl.post(prev["post_id"])
+            if cur and cur.get("status") not in ("scheduled", "draft", "needs_approval"):
+                prev["state"] = cur.get("status"); save_ledger(L); print(f"   {platform:<10} now {cur.get('status')} on Buffer — left alone"); continue
+            cl.delete(prev["post_id"]); old = prev["post_id"]
+            p = cl.create(row)
+            prev.update({"post_id": p["id"], "state": p.get("status", "scheduled"), "due_at": p.get("dueAt"), "recopied_at": now(), "replaced": old}); save_ledger(L)
+            print(f"   {platform:<10} {old} → {p['id']} at {p.get('dueAt')} ✓")
+
+
 def main():
     ap = argparse.ArgumentParser(); sp = ap.add_subparsers(dest="cmd", required=True)
     sp.add_parser("channels"); sp.add_parser("queue")
@@ -463,8 +502,9 @@ def main():
     p = sp.add_parser("dispatch"); p.add_argument("episode", nargs="+"); p.add_argument("--media-url"); p.add_argument("--channels")
     p.add_argument("--live", action="store_true"); p.add_argument("--dry-run", action="store_true"); p.add_argument("--no-verify", action="store_true", help="dry-run only: skip the media URL probe")
     p = sp.add_parser("status"); p.add_argument("--refresh", action="store_true")
+    p = sp.add_parser("recopy"); p.add_argument("episode", nargs="+"); p.add_argument("--live", action="store_true")
     a = ap.parse_args()
-    {"channels": cmd_channels, "queue": cmd_queue, "plan": cmd_plan, "dispatch": cmd_dispatch, "status": cmd_status}[a.cmd](a)
+    {"channels": cmd_channels, "queue": cmd_queue, "plan": cmd_plan, "dispatch": cmd_dispatch, "status": cmd_status, "recopy": cmd_recopy}[a.cmd](a)
 
 
 if __name__ == "__main__":

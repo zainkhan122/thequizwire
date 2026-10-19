@@ -1,0 +1,32 @@
+name: recopy
+# Replace the text of still-scheduled Buffer posts with the current postkit copy (delete + re-create at the same slot).
+on:
+  workflow_dispatch:
+    inputs:
+      episodes: {description: 'Episode dirs, space separated', required: true}
+      live: {description: 'Write to Buffer (false = dry run)', type: boolean, default: false}
+permissions:
+  contents: write
+concurrency: {group: dispatch, cancel-in-progress: false}
+jobs:
+  recopy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      BUFFER_API_KEY_2: ${{ secrets.BUFFER_API_KEY_2 }}
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recopy
+        run: |
+          LIVE=""; [ "${{ inputs.live }}" = "true" ] && LIVE="--live"
+          for EP in ${{ inputs.episodes }}; do
+            python3 reelkit/postkit.py build "$EP" | tail -3
+            python3 reelkit/buffer.py recopy "$EP" $LIVE
+          done
+      - name: Commit ledger
+        if: always()
+        run: |
+          git config user.name "quizwire-dispatch"; git config user.email "dispatch@users.noreply.github.com"
+          git add dispatch/ledger.json && git commit -qm "recopy: ledger" && git pull --rebase -q && git push -q || echo "ledger unchanged"
