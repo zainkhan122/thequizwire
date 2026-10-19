@@ -629,7 +629,8 @@
      "do": "hide",
      "id": "vol"
     }
-   ]
+   ],
+   "pause_after": 0.5
   },
   {
    "vo": {
