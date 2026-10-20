@@ -24,15 +24,6 @@
      "kind": "borders"
     },
     {
-     "kind": "highlight",
-     "id": "hl",
-     "ids": [
-      "300"
-     ],
-     "cls": "",
-     "note": "Greece"
-    },
-    {
      "kind": "route",
      "id": "line",
      "cls": "river",

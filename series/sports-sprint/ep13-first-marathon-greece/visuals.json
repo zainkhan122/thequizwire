@@ -172,16 +172,6 @@
    }
   },
   {
-   "at": "s04+0.1",
-   "do": "geo.highlight_in",
-   "stage": "stage_map",
-   "args": {
-    "fid": "300",
-    "layer": "hl",
-    "dur": 0.5
-   }
-  },
-  {
    "at": "s04@marathon",
    "do": "geo.route_draw",
    "stage": "stage_map",
@@ -255,15 +245,6 @@
      38.03
     ],
     "ease": "none"
-   }
-  },
-  {
-   "at": "s05+0.5",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "300",
-    "layer": "hl"
    }
   },
   {

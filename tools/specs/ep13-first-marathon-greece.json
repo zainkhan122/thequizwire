@@ -147,10 +147,8 @@
    42
   ],
   "resolution": "50m",
-  "highlight_ids": [
-   "300"
-  ],
-  "highlight_note": "Greece",
+  "highlight_ids": [],
+  "highlight_note": "city-scale scene: no country fill (it would flood the frame); the course route is the reveal",
   "extra_layers": [
    {
     "kind": "route",
