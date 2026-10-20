@@ -111,12 +111,12 @@
   },
   "geo/main_basemap_far.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 287590,
+   "bytes": 340072,
    "credit": "NASA Blue Marble",
    "kind": "image",
    "licence": "PD-USGov",
    "provider": "NASA GIBS",
-   "source": "BlueMarble_ShadedRelief_Bathymetry z5 (25 tiles)"
+   "source": "BlueMarble_ShadedRelief_Bathymetry z5 (30 tiles)"
   },
   "mix.wav": {
    "ai_voice": "Kokoro am_michael",

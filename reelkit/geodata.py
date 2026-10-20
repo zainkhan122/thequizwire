@@ -316,8 +316,21 @@ def prep(ep: Path, out: Path, fixtures=None, quiet=False):
             data["basemap"] = {"src": f"{sid}_basemap.jpg", **{k: meta[k] for k in ("scale", "translate", "size", "zoom", "credit", "layer")}}
             far = bm.get("far")                                                 # v3 hook views: a coarse, wide raster under the detailed one (camera k < 1)
             if far:
-                fb = far["bbox"]; kmin = float(far.get("k_min", 0.35))
+                fb = list(far["bbox"]); kmin = float(far.get("k_min", 0.35))
                 ppd = spec.get("w", 1080) / max(bb[2] - bb[0], 1e-6)            # ≈ frame px per degree at k = 1 (lon-fitted scenes)
+                # Owner 2026-10-20: the opening zoom must never show bare background at the frame edges. Grow the far raster so the
+                # 1080×1920 viewport of EVERY camera in visuals.json (k, lonlat) stays inside it, with a 12 % margin.
+                import math as _m
+                cams = []
+                if (ep / "visuals.json").exists():
+                    for b in json.loads((ep / "visuals.json").read_text()).get("beats", []):
+                        a = b.get("args") or {}
+                        if b.get("do") in ("geo.cam_set", "geo.cam_to") and a.get("lonlat") and a.get("k"): cams.append((float(a["k"]), a["lonlat"]))
+                for k, (lon, lat) in cams:
+                    hw = 540 / (ppd * k) * 1.12; hh = 960 * _m.cos(_m.radians(min(abs(lat), 80))) / (ppd * k) * 1.12
+                    fb = [min(fb[0], lon - hw), min(fb[1], lat - hh), max(fb[2], lon + hw), max(fb[3], lat + hh)]
+                fb = [max(-180, fb[0]), max(-82, fb[1]), min(180, fb[2]), min(82, fb[3])]
+                if fb != list(far["bbox"]) and not quiet: print(f"  · {sid}: far bbox grown to cover every camera → {[round(v, 1) for v in fb]}")
                 fw = int(min(max((fb[2] - fb[0]) * ppd * kmin * 1.15, 1200), 6000))
                 fmeta = _bm.stitch(fb, fw, out / f"{sid}_basemap_far.jpg", bm.get("layer", "bluemarble"))
                 data["basemap"]["far"] = {"src": f"{sid}_basemap_far.jpg", **{k: fmeta[k] for k in ("scale", "translate", "size", "zoom")}}
