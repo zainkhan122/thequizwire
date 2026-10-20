@@ -1043,6 +1043,71 @@
    "sent_at": "2026-10-19T23:01:30.344Z",
    "external_link": "https://www.threads.com/@thequizwire/post/DesY6Nbgd47",
    "refreshed_at": "2026-10-20T06:07:01+00:00"
+  },
+  {
+   "episode": "ep10-komodo-dragons-indonesia",
+   "platform": "youtube",
+   "post_id": "6ad7613cfddc261c26fbda6e",
+   "channel_id": "6a72ff4f99afb44349064208",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/1ce6d8743346/Where-do-KOMODO-DRAGONS-live-in-the-wild.mp4",
+   "due_at": "2026-10-20T16:00:00.000Z",
+   "created_at": "2026-10-20T12:40:28.722Z",
+   "recorded_at": "2026-10-20T12:40:28+00:00",
+   "title": "Where do KOMODO DRAGONS live in the wild? 🦎 #AnimalQuiz #WildlifeFacts",
+   "account": "BUFFER_API_KEY"
+  },
+  {
+   "episode": "ep10-komodo-dragons-indonesia",
+   "platform": "instagram",
+   "post_id": "6ad7613dfddc261c26fbdaa2",
+   "channel_id": "695bfd29457dae6a34df0f74",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/1ce6d8743346/Where-do-KOMODO-DRAGONS-live-in-the-wild.mp4",
+   "due_at": "2026-10-20T15:00:00.000Z",
+   "created_at": "2026-10-20T12:40:29.221Z",
+   "recorded_at": "2026-10-20T12:40:29+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY_2"
+  },
+  {
+   "episode": "ep10-komodo-dragons-indonesia",
+   "platform": "facebook",
+   "post_id": "6ad7613ffddc261c26fbdb75",
+   "channel_id": "695a159a457dae6a34d901bc",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/1ce6d8743346/Where-do-KOMODO-DRAGONS-live-in-the-wild.mp4",
+   "due_at": "2026-10-20T17:00:00.000Z",
+   "created_at": "2026-10-20T12:40:31.300Z",
+   "recorded_at": "2026-10-20T12:40:31+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY_2"
+  },
+  {
+   "episode": "ep10-komodo-dragons-indonesia",
+   "platform": "twitter",
+   "post_id": "6ad7614110a659c35bdc771d",
+   "channel_id": "69f30e2a5c4c051afaf58634",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/1ce6d8743346/Where-do-KOMODO-DRAGONS-live-in-the-wild.mp4",
+   "due_at": "2026-10-20T21:00:00.000Z",
+   "created_at": "2026-10-20T12:40:33.270Z",
+   "recorded_at": "2026-10-20T12:40:33+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY_2"
+  },
+  {
+   "episode": "ep10-komodo-dragons-indonesia",
+   "platform": "threads",
+   "post_id": "6ad7614110a659c35bdc7756",
+   "channel_id": "6a6dd3b24b2d03035f7e82e8",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/1ce6d8743346/Where-do-KOMODO-DRAGONS-live-in-the-wild.mp4",
+   "due_at": "2026-10-20T23:00:00.000Z",
+   "created_at": "2026-10-20T12:40:33.771Z",
+   "recorded_at": "2026-10-20T12:40:33+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY"
   }
  ]
 }
