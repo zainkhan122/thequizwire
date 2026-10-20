@@ -48,3 +48,7 @@ the satellite look, the 3-s countdown, the branded outro.
 
 ### Reveal mechanics (engine)
 `banner_in` takes `style`: `pop` (default) · `stamp` (slams down, twist — pair with `fx.flash`) · `flip` (card turns up — use for `card-flip`) · `slide`. The map action still carries the reveal kind: `flag-lift`/`fill-pulse` = `highlight_in`, `border-draw` = `route_draw` of the outline, `flash-cut` = `fx.flash` + stage switch, `stamp`/`card-flip` = banner style when the answer is not a place.
+
+
+## 2026-10-20 — pools are executable
+Openers and reveals listed in `reelkit/quizlint.py` are only those `tools/author_v4.py` actually choreographs; shapelint Q21 fails an episode whose declared opener/reveal is not visible on the timeline. See `docs/EDITOR_FLOW.md`.

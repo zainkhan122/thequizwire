@@ -1,11 +1,11 @@
 {
- "now": "2026-10-15: V3 look rebuild. V3.1 basemap, V3.2 lifted flag highlight, V3.3 v3 UI (format quiz-v3: Lilita question, flag pills, timer ring, yellow answer banner, 84-px Anton facts, Twemoji stickers, flag-ball characters, far raster for off-answer hook) are committed and verified on local contact sheets (docs/img/v3_3_contact_sheet.jpg). Nothing dispatched to Actions yet.",
- "phase": "D7 distribution LIVE: 10 pilots × 5 channels (YT, IG, FB, X, Threads) queued in Buffer on 2026-10-16; publish-sync tracks states; playlists pending YT_* secrets",
+ "now": "2026-10-20: M1 shipped — human-editor flow (docs/EDITOR_FLOW.md): brief.md per episode (Q19), free-form story beats with per-need devices (Q20 anti-sameness), executed opener/reveal looks (Q21), chart plates, far raster auto-covers every camera. 7 backlog episodes re-authored; Wild #10 + Geo #17 scheduled 2026-10-20 under the new system.",
+ "phase": "M1 done; daily automation live on new-system episodes only. Next: M2 engine devices (moving sticker along a route, then-vs-now split, true-size overlay), Body & Brain which-body-part engine, YT thumbnails.set when YT_* secrets exist.",
  "next": [
-  "watch publish-sync runs (3×/day): ledger states scheduled→sent, externalLink",
-  "owner: YT OAuth secrets → playlists",
-  "author next batch (Body & Brain ep01–03, Geo ep15–16) with VARIETY.md",
-  "retire v1/v2 templates"
+  "frame-review every new render before status ready (openings 0–2 s, each story beat)",
+  "M2 devices",
+  "yt_enrich thumbnails.set",
+  "tools/feed.py"
  ],
  "owner_rules": [
   "Free tools only: public-repo GitHub Actions + the Arena sandbox",
