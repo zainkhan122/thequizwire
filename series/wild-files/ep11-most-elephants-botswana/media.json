@@ -93,7 +93,7 @@
   },
   "geo/main.json": {
    "by": "reelkit/geodata.py",
-   "bytes": 40920,
+   "bytes": 40922,
    "credit": "Natural Earth",
    "kind": "data",
    "licence": "PD",
@@ -111,12 +111,12 @@
   },
   "geo/main_basemap_far.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 158320,
+   "bytes": 300145,
    "credit": "NASA Blue Marble",
    "kind": "image",
    "licence": "PD-USGov",
    "provider": "NASA GIBS",
-   "source": "BlueMarble_ShadedRelief_Bathymetry z5 (20 tiles)"
+   "source": "BlueMarble_ShadedRelief_Bathymetry z5 (35 tiles)"
   },
   "mix.wav": {
    "ai_voice": "Kokoro am_michael",

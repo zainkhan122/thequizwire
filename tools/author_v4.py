@@ -13,6 +13,8 @@ research{topic, myths[], landscape{our_gap, existing[3]}, sources{...}, claims[]
 """
 import argparse, json, pathlib, sys, datetime
 
+OPENERS_REVEALS = {"opener": {"wide-drift", "mystery-zoom-out", "split-candidates", "night-lights"},            # each one changes the actual choreography (see build)
+                   "reveal": {"fill-pulse", "flag-lift", "colour-lift", "flash-cut", "route-draw", "feature-fill"}}   # feature-fill: a lake/park/river area layer appears (no country highlight)
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 SCREEN_EXEMPT = ["^GEO BLITZ", "^SPORTS SPRINT", "^BODY & BRAIN", "^WILD FILES", "^#\\d+$", "^(EASY|MEDIUM|HARD)$", "^THE ?QUIZ ?WIRE",
                  "km at \\d+°$", "^Map data:", "Voice: AI", "^TOO EASY\\?$", "^thequizwire\\.com$", "^GUESS BEFORE", "^A was right|^B was right|^C was right"]
@@ -96,43 +98,62 @@ def build(S):
     # ---------------- geo.json
     g = S["geo"]
     layers = [{"kind": "land"}, {"kind": "borders"}]
+    reveal = S["variety"].get("reveal", "fill-pulse"); opener = S["variety"].get("opener", "wide-drift")
+    if reveal not in OPENERS_REVEALS["reveal"]: sys.exit(f"author: variety.reveal '{reveal}' is not implemented — pick one of {sorted(OPENERS_REVEALS['reveal'])}")
+    if opener not in OPENERS_REVEALS["opener"]: sys.exit(f"author: variety.opener '{opener}' is not implemented — pick one of {sorted(OPENERS_REVEALS['opener'])}")
     if g["highlight_ids"]:
         layers.append({"kind": "highlight", "id": "hl", "ids": g["highlight_ids"], "cls": g.get("highlight_cls", ""), "note": g.get("highlight_note", "answer country")})
-        if g.get("lift"): layers[-1].update(lift=g["lift"], flag=g.get("lift_flag"))
+        if reveal == "flag-lift": layers[-1].update(lift="flag", flag=g.get("lift_flag") or opts[ci]["flag"])
+        elif reveal == "colour-lift": layers[-1].update(lift="color", color=g.get("lift_color", "#FFD400"))
+        elif g.get("lift"): layers[-1].update(lift=g["lift"], flag=g.get("lift_flag"))
     for extra in g.get("extra_layers", []): layers.append(extra)
     res = {"resolution": g["resolution"]} if g.get("resolution") else {}
     G = {"version": 1, "episode": ep, "policy": "docs/BORDER_POLICY.md",
          "scenes": {"main": {**res, "projection": "mercator", "fit": {"type": "bbox", "bbox": g["fit_bbox"]}, "padding": 20, "layers": layers,
                              "pins": g.get("pins", []), "labels": g.get("labels", []), "disputed": g.get("disputed", []), "sources": ["Natural Earth"],
-                             "basemap": {"layer": "bluemarble", "k_max": 2.0, "far": {"bbox": g["far_bbox"], "k_min": 0.3}},
+                             "basemap": {"layer": "night" if opener == "night-lights" else "bluemarble", "k_max": 2.0, "far": {"bbox": g["far_bbox"], "k_min": 0.3}},
                              "projection_reason": g.get("projection_reason", "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"),
                              "scalebar": {"km": g["scalebar"]["km"], "lonlat": g["scalebar"]["lonlat"], "at": [60, 1130]}}}}
     # ---------------- visuals.json
     ch = S["characters"]; st = S.get("stickers", []); F = S["facts"]; cams = g["cams"]
     SB = story_beats(S); NS = len(SB); CTA = f"s{NS + 5:02d}"
-    els = [{"id": "f1", "type": "fact", "kicker": F[0]["kicker"], "text": F[0]["text"]}]
+    els = [{"id": "f1", "type": "fact", "kicker": F[0]["kicker"], "text": F[0]["text"]}] if F else []
     for i, b in enumerate(SB):
         if b.get("card"): els.append({"id": f"f{i + 2}", "type": "fact", "kicker": b["card"]["kicker"], "text": b["card"]["text"]})
         if b.get("sticker"):
             s_ = b["sticker"]; els.append({"id": s_["id"], "type": "sticker", "emoji": s_["emoji"], "x": s_.get("x", 740), "y": s_.get("y", 580), "size": s_.get("size", 220), "rot": s_.get("rot", 6)})
         for el in b.get("elements", []): els.append(el)                       # counters, bars, compare … (engine/charts.py)
     els += S.get("extra_elements", [])                                        # e.g. a second mascot face used by a story beat
-    els += [{"id": "mascot", "type": "character", "flag": "un", "face": ch.get("mascot_face", "think"), "x": 860, "y": 1480, "size": 210, "rot": 6},
-            {"id": "cha", "type": "character", "flag": ch["a"]["flag"], "face": ch["a"]["face"], "x": ch["a"].get("x", 230), "y": ch["a"].get("y", 820), "size": 220, "rot": -8},
-            {"id": "chb", "type": "character", "flag": ch["b"]["flag"], "face": ch["b"]["face"], "x": ch["b"].get("x", 850), "y": ch["b"].get("y", 1000), "size": 200, "rot": 8}]
+    els += [{"id": "mascot", "type": "character", "flag": "un", "face": ch.get("mascot_face", "think"), "x": 860, "y": 1480, "size": 210, "rot": 6}]
+    cast = [k for k in ("a", "b") if ch.get(k)]                                # reaction flag-balls after the reveal are optional (characters.a / .b = null → none)
+    for k, (dx, dy, sz, rot) in zip(cast, [(230, 820, 220, -8), (850, 1000, 200, 8)]):
+        els.append({"id": "ch" + k, "type": "character", "flag": ch[k]["flag"], "face": ch[k]["face"], "x": ch[k].get("x", dx), "y": ch[k].get("y", dy), "size": sz, "rot": rot})
     M = "stage_map"
     def cam(at, until, c, ease): return {"at": at, "do": "geo.cam_to", "stage": M, "until": until, "args": {"k": c[0], "lonlat": c[1], "ease": ease}}
-    B = [{"at": 0, "do": "character_in", "id": "mascot", "args": {"dur": 0.01}}, {"at": "s02+0.2", "do": "character_out", "id": "mascot"},
-         {"at": 0, "do": "geo.cam_set", "stage": M, "args": {"k": cams["start"][0], "lonlat": cams["start"][1]}},
-         cam("s01", "s03.end", cams["s01"], "none"),
-         cam("s04", "s04+1.4", cams["s04"], "power2.inOut"), cam("s04+1.4", "s04.end", cams["s04b"], "none")]
+    B = [{"at": 0, "do": "character_in", "id": "mascot", "args": {"dur": 0.01}}, {"at": "s02+0.2", "do": "character_out", "id": "mascot"}]
+    k0, c0 = cams["start"]; k1, c1 = cams["s01"]; open_cam = cams["start"]
+    if opener == "mystery-zoom-out":                                          # start close on the region (k .5), pull out slowly until the beat ends
+        open_cam = [0.5, c1]
+        B += [{"at": 0, "do": "geo.cam_set", "stage": M, "args": {"k": 0.5, "lonlat": c1}}, cam("s01", "s03.end", [max(0.3, min(k0, 0.38)), c0], "power1.inOut")]
+    elif opener == "split-candidates":                                        # the camera visits each candidate as it is named (options[].lonlat)
+        if not all(o.get("lonlat") for o in opts): sys.exit("author: opener split-candidates needs options[].lonlat")
+        if g["fit_bbox"][2] - g["fit_bbox"][0] < 15: sys.exit("author: opener split-candidates needs a country/continent-scale fit_bbox (k is relative to the fit; a city-scale scene cannot show other countries)")
+        B += [{"at": 0, "do": "geo.cam_set", "stage": M, "args": {"k": k0, "lonlat": c0}}, cam("s01", "s02", cams["s01"], "none")]
+        for o, L in zip(opts, "abc"): B.append(cam(f"s02@{L}", f"s02@{L}+0.9", [0.5, o["lonlat"]], "power2.inOut"))
+        B.append(cam("s03", "s03.end", [0.42, c0], "power1.inOut"))
+    else:                                                                     # wide-drift (also night-lights): slow continuous drift under the question
+        B += [{"at": 0, "do": "geo.cam_set", "stage": M, "args": {"k": k0, "lonlat": c0}}, cam("s01", "s03.end", cams["s01"], "none")]
+    B += [cam("s04", "s04+1.4", cams["s04"], "power2.inOut"), cam("s04+1.4", "s04.end", cams["s04b"], "none")]
+    if reveal == "flash-cut": B.append({"at": "s04+0.05", "do": "fx.flash", "args": {}})
+    if reveal == "route-draw" and not any(b.get("do") == "geo.route_draw" and str(b.get("at", "")).startswith("s04") for b in g.get("extra_beats", [])):
+        sys.exit("author: reveal route-draw needs a geo.route_draw extra_beat at s04")
     for fid in g["highlight_ids"]: B.append({"at": "s04+0.1", "do": "geo.highlight_in", "stage": M, "args": {"fid": fid, "layer": "hl", "dur": 0.5}})
     B += g.get("extra_beats", [])
     for L in g.get("labels", []):
         B.append({"at": L.get("in", "s04+1.2"), "do": "geo.label_in", "stage": M, "args": {"lid": L["id"]}})
         if L.get("out"): B.append({"at": L["out"], "do": "geo.label_out", "stage": M, "args": {"lid": L["id"]}})
     pulse = lambda at: ([{"at": at, "do": "geo.highlight_pulse", "stage": M, "args": {"fid": g["highlight_ids"][0], "layer": "hl"}}] if g["highlight_ids"] else [])
-    B += pulse("s04+3.2") + [{"at": "s04+2.6", "do": "fact_in", "id": "f1", "until": "s04.end"}]
+    B += (pulse("s04+3.2") if reveal in ("fill-pulse",) else []) + ([{"at": "s04+2.6", "do": "fact_in", "id": "f1", "until": "s04.end"}] if F else [])
     for i, b in enumerate(SB):
         sc = f"s{5 + i:02d}"; nxt = f"s{6 + i:02d}"; last = i == NS - 1
         if b.get("cam"):
@@ -150,15 +171,15 @@ def build(S):
             if d["do"].startswith("geo.") : d.setdefault("stage", M)
             B.append(d)
     B += [{"at": CTA, "do": "geo.clear", "stage": M, "args": {"dur": 0.25}},
-          cam(f"{CTA}+0.2", "end-0.3", cams["start"], "power1.inOut"),
+          cam(f"{CTA}+0.2", "end-0.3", open_cam, "power1.inOut"),
           {"at": "s04+0.8", "do": "geo.scalebar_in", "stage": M}]
     for pb in g.get("pin_beats", []):
         B.append({"at": pb["at"], "do": "geo.pin_out" if pb.get("out") else "geo.pin_in", "stage": M, "args": {"pid": pb["pid"]}})
     B += [{"at": 0, "do": "hook_in"}, {"at": "s02", "do": "chips_in"}, {"at": "s03", "do": "bug_in"}, {"at": "s03", "do": "beat"},
           {"at": "s04", "do": "reveal"}, {"at": "s04+0.9", "do": "hook_out"}, {"at": "s04+1.2", "do": "chips_out"},
           {"at": "s04+1.3", "do": "banner_in"}, {"at": "s04+4.4", "do": "banner_out"},
-          {"at": "s04+1.6", "do": "character_in", "id": "cha"}, {"at": "s04+1.9", "do": "character_in", "id": "chb"},
-          {"at": "s05+0.8", "do": "character_out", "id": "chb"}, {"at": "s05+1.0", "do": "character_out", "id": "cha"},
+          *[{"at": f"s04+{round(1.6 + 0.3 * i, 1)}", "do": "character_in", "id": "ch" + k} for i, k in enumerate(cast)],
+          *[{"at": f"s05+{round(1.0 - 0.2 * i, 1)}", "do": "character_out", "id": "ch" + k} for i, k in enumerate(cast)],
           {"at": CTA, "do": "cta_in", "until": "end-1.0"}, {"at": CTA, "do": "credit_in", "until": "end-0.2"}, {"at": "end-1.0", "do": "hook_in"}]
     X = {"version": 3, "stage": [{"id": M, "type": "geo", "scene": "main", "from": "start", "to": "end", "box": [0, 0, 1080, 1920], "anchor": [540, 900], "z": 10}],
          "elements": els, "beats": B, "captions": {"roles": ["reveal", "story"], "max_words": 4, "max_chars": 26, "hold": 0.12}}

@@ -85,8 +85,8 @@
  "variety": {
   "question": "where-is",
   "hook": "question-first",
-  "opener": "mystery-zoom-out",
-  "reveal": "stamp",
+  "opener": "wide-drift",
+  "reveal": "fill-pulse",
   "beats": [
    "counter",
    "pin",

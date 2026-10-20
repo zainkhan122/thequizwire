@@ -84,8 +84,8 @@
  "variety": {
   "question": "where-is",
   "hook": "question-first",
-  "opener": "world-rotated",
-  "reveal": "border-draw",
+  "opener": "wide-drift",
+  "reveal": "route-draw",
   "beats": [
    "route",
    "counter",

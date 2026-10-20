@@ -75,7 +75,7 @@
     "Natural Earth"
    ],
    "basemap": {
-    "layer": "bluemarble",
+    "layer": "night",
     "k_max": 2.0,
     "far": {
      "bbox": [

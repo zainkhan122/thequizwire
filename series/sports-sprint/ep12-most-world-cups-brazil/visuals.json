@@ -205,15 +205,6 @@
    }
   },
   {
-   "at": "s04+3.2",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "076",
-    "layer": "hl"
-   }
-  },
-  {
    "at": "s04+2.6",
    "do": "fact_in",
    "id": "f1",
@@ -443,14 +434,14 @@
    "id": "chb"
   },
   {
-   "at": "s05+0.8",
-   "do": "character_out",
-   "id": "chb"
-  },
-  {
    "at": "s05+1.0",
    "do": "character_out",
    "id": "cha"
+  },
+  {
+   "at": "s05+0.8",
+   "do": "character_out",
+   "id": "chb"
   },
   {
    "at": "s08",

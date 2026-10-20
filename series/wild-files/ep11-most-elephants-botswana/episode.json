@@ -84,7 +84,7 @@
  "variety": {
   "question": "which-country",
   "hook": "question-first",
-  "opener": "globe-spin",
+  "opener": "mystery-zoom-out",
   "reveal": "flag-lift",
   "beats": [
    "bars",

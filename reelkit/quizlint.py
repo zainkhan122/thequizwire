@@ -59,8 +59,8 @@ def num_word(tok):
 VARIETY = {
     "question": {"which-country", "where-is", "how-many", "bigger-or-smaller", "true-or-false", "odd-one-out", "name-the-capital", "which-flag", "which-animal", "which-record", "who-was-first", "which-body-part"},
     "hook": {"question-first", "fact-first", "challenge", "story", "misconception", "character-asks"},
-    "opener": {"wide-drift", "world-rotated", "globe-spin", "mystery-zoom-out", "night-lights", "split-candidates"},
-    "reveal": {"flag-lift", "fill-pulse", "flash-cut", "border-draw", "stamp", "card-flip"},
+    "opener": {"wide-drift", "mystery-zoom-out", "split-candidates", "night-lights"},          # only what tools/author_v4.py really choreographs (shapelint Q21 verifies it on the timeline)
+    "reveal": {"flag-lift", "fill-pulse", "colour-lift", "flash-cut", "route-draw", "feature-fill"},
     "beats": {"pin", "route", "counter", "scalebar", "label", "second-highlight", "photo-cutout", "true-size-overlay", "timeline-strip", "before-after", "compare", "bars", "erase", "flash", "spin"},
     "cast": None,      # free text: "flagball:wow", "emoji-set:mountain", "none", "photo-cutout"
     "music": None,     # "bed:pad" … (seed is episode.seed)

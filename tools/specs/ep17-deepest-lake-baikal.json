@@ -62,8 +62,8 @@
  },
  "variety": {
   "question": "where-is",
-  "opener": "mystery-zoom-out",
-  "reveal": "fill-pulse",
+  "opener": "wide-drift",
+  "reveal": "feature-fill",
   "beats": [
    "counter",
    "compare",

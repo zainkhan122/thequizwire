@@ -411,14 +411,14 @@
    "id": "chb"
   },
   {
-   "at": "s05+0.8",
-   "do": "character_out",
-   "id": "chb"
-  },
-  {
    "at": "s05+1.0",
    "do": "character_out",
    "id": "cha"
+  },
+  {
+   "at": "s05+0.8",
+   "do": "character_out",
+   "id": "chb"
   },
   {
    "at": "s08",

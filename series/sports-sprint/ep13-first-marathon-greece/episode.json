@@ -85,8 +85,8 @@
  "variety": {
   "question": "who-was-first",
   "hook": "question-first",
-  "opener": "split-candidates",
-  "reveal": "border-draw",
+  "opener": "mystery-zoom-out",
+  "reveal": "route-draw",
   "beats": [
    "route",
    "compare",

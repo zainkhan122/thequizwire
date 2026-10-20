@@ -60,7 +60,7 @@
  },
  "variety": {
   "question": "which-country",
-  "opener": "globe-spin",
+  "opener": "mystery-zoom-out",
   "reveal": "flag-lift",
   "beats": [
    "bars",

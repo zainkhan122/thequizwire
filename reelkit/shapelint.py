@@ -85,10 +85,36 @@ def shape_check(ep, secs):
     return F, W
 
 
+def truth_check(ep):
+    """Q21: the declared opener / reveal (episode.json variety) must be visible on the timeline — a label is not a look."""
+    ep = Path(ep); F = []
+    try:
+        E = json.loads((ep / "episode.json").read_text()); V = json.loads((ep / "visuals.json").read_text()); G = json.loads((ep / "geo.json").read_text())
+    except Exception: return F
+    var = E.get("variety") or {}; B = V.get("beats", [])
+    cams = [(str(b.get("at")), b.get("args") or {}) for b in B if b.get("do") in ("geo.cam_to", "geo.cam_set")]
+    pre = [(at, a) for at, a in cams if not at.startswith(("s04", "s05", "s06", "s07", "s08", "s09", "end"))]
+    scene = next(iter((G.get("scenes") or {}).values()), {})
+    hl = [L for L in scene.get("layers", []) if L.get("kind") == "highlight"]
+    op = var.get("opener"); rv = var.get("reveal")
+    if op == "split-candidates" and sum(1 for at, _ in pre if at.startswith("s02@")) < 3: F.append("Q21: opener 'split-candidates' declared but the camera never visits the candidates during s02")
+    if op == "mystery-zoom-out":
+        ks = [float(a.get("k", 0)) for _, a in pre if a.get("k")]
+        if len(ks) < 2 or ks[0] <= ks[-1] + 0.05: F.append("Q21: opener 'mystery-zoom-out' declared but the pre-reveal camera does not pull out")
+    if op == "night-lights" and (scene.get("basemap") or {}).get("layer") != "night": F.append("Q21: opener 'night-lights' declared but the basemap is not the night layer")
+    if rv == "flag-lift" and not any(L.get("lift") == "flag" for L in hl): F.append("Q21: reveal 'flag-lift' declared but the highlight layer has no flag lift")
+    if rv == "colour-lift" and not any(L.get("lift") == "color" for L in hl): F.append("Q21: reveal 'colour-lift' declared but the highlight layer has no colour lift")
+    if rv == "fill-pulse" and not any(b.get("do") == "geo.highlight_pulse" and str(b.get("at", "")).startswith("s04") for b in B): F.append("Q21: reveal 'fill-pulse' declared but there is no highlight pulse at s04")
+    if rv == "flash-cut" and not any(b.get("do") == "fx.flash" and str(b.get("at", "")).startswith("s04") for b in B): F.append("Q21: reveal 'flash-cut' declared but there is no flash at s04")
+    if rv == "feature-fill" and not any(L.get("kind") == "area" for L in scene.get("layers", [])): F.append("Q21: reveal 'feature-fill' declared but the scene has no area layer")
+    if rv == "route-draw" and not any(b.get("do") == "geo.route_draw" and str(b.get("at", "")).startswith("s04") for b in B): F.append("Q21: reveal 'route-draw' declared but nothing draws at s04")
+    return F
+
+
 def run(ep):
     F1, secs = brief_check(ep)
     F2, W = shape_check(ep, secs) if (Path(ep) / "visuals.json").exists() else ([], [])
-    return F1 + F2, W
+    return F1 + F2 + truth_check(ep), W
 
 
 if __name__ == "__main__":

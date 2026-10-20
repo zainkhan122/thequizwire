@@ -62,7 +62,7 @@
  "variety": {
   "question": "which-country",
   "opener": "night-lights",
-  "reveal": "card-flip",
+  "reveal": "flag-lift",
   "beats": [
    "compare",
    "counter",
