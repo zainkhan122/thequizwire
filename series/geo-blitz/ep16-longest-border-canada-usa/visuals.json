@@ -120,10 +120,10 @@
    "do": "geo.cam_set",
    "stage": "stage_map",
    "args": {
-    "k": 0.5,
+    "k": 0.7,
     "lonlat": [
-     -100,
-     50
+     -92,
+     48
     ]
    }
   },
@@ -133,10 +133,10 @@
    "stage": "stage_map",
    "until": "s03.end",
    "args": {
-    "k": 0.56,
+    "k": 0.76,
     "lonlat": [
-     -102,
-     49
+     -94,
+     48
     ],
     "ease": "none"
    }
@@ -348,10 +348,10 @@
    "stage": "stage_map",
    "until": "end-0.3",
    "args": {
-    "k": 0.5,
+    "k": 0.7,
     "lonlat": [
-     -100,
-     50
+     -92,
+     48
     ],
     "ease": "power1.inOut"
    }
