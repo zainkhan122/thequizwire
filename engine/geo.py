@@ -219,7 +219,7 @@ class Scene:
         Position is sampled every frame from the SVG path in screen space, so it keeps following the path while the camera moves."""
         sel = f"{self.id}_{layer}_{rid}"; ox, oy = offset
         self.G.J("{const o={p:0},el=document.getElementById('%s'),path=document.getElementById('%s');"
-                 "const put=()=>{if(!path||!el)return;const L=path.getTotalLength();if(!L)return;const pt=path.getPointAtLength(o.p*L).matrixTransform(path.getScreenCTM());"
+                 "const put=()=>{if(!path||!el||!path.getPointAtLength||!path.getScreenCTM)return;const L=path.getTotalLength();if(!L)return;const pt=path.getPointAtLength(o.p*L).matrixTransform(path.getScreenCTM());"
                  "const st=el.closest('.stage3')||document.body,r=st.getBoundingClientRect(),sx=1080/r.width,sy=1920/r.height;"
                  "el.style.left=((pt.x-r.left)*sx-el.offsetWidth/2+%d)+'px';el.style.top=((pt.y-r.top)*sy-el.offsetHeight/2+%d)+'px';};"
                  "tl.to(o,{p:1,duration:%s,ease:'%s',onStart:put,onUpdate:put},%s);}" % (sid, sel, ox, oy, f(t1 - t0), ease, f(t0)))
