@@ -1049,48 +1049,48 @@
    "platform": "youtube",
    "post_id": "6ad7613cfddc261c26fbda6e",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/1ce6d8743346/Where-do-KOMODO-DRAGONS-live-in-the-wild.mp4",
    "due_at": "2026-10-20T16:00:00.000Z",
    "created_at": "2026-10-20T12:40:28.722Z",
    "recorded_at": "2026-10-20T12:40:28+00:00",
    "title": "Where do KOMODO DRAGONS live in the wild? 🦎 #AnimalQuiz #WildlifeFacts",
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-20T14:22:32+00:00"
+   "sent_at": "2026-10-20T16:01:30.296Z",
+   "external_link": "https://www.youtube.com/shorts/k20fCXNujT8",
+   "refreshed_at": "2026-10-20T20:40:51+00:00"
   },
   {
    "episode": "ep10-komodo-dragons-indonesia",
    "platform": "instagram",
    "post_id": "6ad7613dfddc261c26fbdaa2",
    "channel_id": "695bfd29457dae6a34df0f74",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/1ce6d8743346/Where-do-KOMODO-DRAGONS-live-in-the-wild.mp4",
    "due_at": "2026-10-20T15:00:00.000Z",
    "created_at": "2026-10-20T12:40:29.221Z",
    "recorded_at": "2026-10-20T12:40:29+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-20T14:22:32+00:00"
+   "sent_at": "2026-10-20T15:01:46.268Z",
+   "external_link": "https://www.instagram.com/reel/DeuGxXzAm_L/",
+   "refreshed_at": "2026-10-20T20:40:51+00:00"
   },
   {
    "episode": "ep10-komodo-dragons-indonesia",
    "platform": "facebook",
    "post_id": "6ad7613ffddc261c26fbdb75",
    "channel_id": "695a159a457dae6a34d901bc",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/1ce6d8743346/Where-do-KOMODO-DRAGONS-live-in-the-wild.mp4",
    "due_at": "2026-10-20T17:00:00.000Z",
    "created_at": "2026-10-20T12:40:31.300Z",
    "recorded_at": "2026-10-20T12:40:31+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-20T14:22:34+00:00"
+   "sent_at": "2026-10-20T17:01:25.673Z",
+   "external_link": "https://www.facebook.com/reel/1445997926978797/",
+   "refreshed_at": "2026-10-20T20:40:53+00:00"
   },
   {
    "episode": "ep10-komodo-dragons-indonesia",
@@ -1106,7 +1106,7 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-20T14:22:36+00:00"
+   "refreshed_at": "2026-10-20T20:40:55+00:00"
   },
   {
    "episode": "ep10-komodo-dragons-indonesia",
@@ -1122,7 +1122,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-20T14:22:36+00:00"
+   "refreshed_at": "2026-10-20T20:40:55+00:00"
   },
   {
    "episode": "ep17-deepest-lake-baikal",
@@ -1138,7 +1138,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-20T14:22:38+00:00"
+   "refreshed_at": "2026-10-20T20:40:57+00:00"
   },
   {
    "episode": "ep17-deepest-lake-baikal",
@@ -1154,7 +1154,7 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-20T14:22:38+00:00"
+   "refreshed_at": "2026-10-20T20:40:57+00:00"
   },
   {
    "episode": "ep17-deepest-lake-baikal",
@@ -1170,7 +1170,7 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-20T14:22:40+00:00"
+   "refreshed_at": "2026-10-20T20:40:59+00:00"
   },
   {
    "episode": "ep17-deepest-lake-baikal",
@@ -1186,7 +1186,7 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-20T14:22:42+00:00"
+   "refreshed_at": "2026-10-20T20:41:01+00:00"
   },
   {
    "episode": "ep17-deepest-lake-baikal",
@@ -1202,7 +1202,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-20T14:22:42+00:00"
+   "refreshed_at": "2026-10-20T20:41:01+00:00"
   }
  ]
 }
