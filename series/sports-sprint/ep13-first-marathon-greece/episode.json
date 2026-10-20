@@ -89,6 +89,7 @@
   "reveal": "route-draw",
   "beats": [
    "route",
+   "travel",
    "compare",
    "counter"
   ],

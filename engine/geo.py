@@ -214,6 +214,16 @@ class Scene:
         # opacity sits in BOTH var sets: a from-only property is tweened back to the CSS value (0) by GSAP, which hid every drawn route in the renderer
         self.G.J(f"tl.fromTo('{sel}',{{strokeDasharray:'1 1',strokeDashoffset:1,opacity:1}},{{strokeDashoffset:0,opacity:1,duration:{f(t1 - t0)},ease:'power1.inOut',immediateRender:false}},{f(t0)});")
 
+    def travel(self, t0, t1, rid, sid, layer="route", ease="power1.inOut", offset=(0, 0)):
+        """M2 device: move the screen element #sid (a sticker / character) along the route path rid, from start to end, between t0 and t1.
+        Position is sampled every frame from the SVG path in screen space, so it keeps following the path while the camera moves."""
+        sel = f"{self.id}_{layer}_{rid}"; ox, oy = offset
+        self.G.J("{const o={p:0},el=document.getElementById('%s'),path=document.getElementById('%s');"
+                 "const put=()=>{if(!path||!el)return;const L=path.getTotalLength();if(!L)return;const pt=path.getPointAtLength(o.p*L).matrixTransform(path.getScreenCTM());"
+                 "const st=el.closest('.stage3')||document.body,r=st.getBoundingClientRect(),sx=1080/r.width,sy=1920/r.height;"
+                 "el.style.left=((pt.x-r.left)*sx-el.offsetWidth/2+%d)+'px';el.style.top=((pt.y-r.top)*sy-el.offsetHeight/2+%d)+'px';};"
+                 "tl.to(o,{p:1,duration:%s,ease:'%s',onStart:put,onUpdate:put},%s);}" % (sid, sel, ox, oy, f(t1 - t0), ease, f(t0)))
+
     def disputed_out(self, t, did, dur=0.3):
         """Fade a disputed outline and its policy plate (use before the outro / when the camera leaves the border)."""
         self.G.J(f"tl.to('#{self.id}_disputed_{did}',{{opacity:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")

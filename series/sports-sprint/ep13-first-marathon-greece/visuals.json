@@ -34,15 +34,6 @@
    "text": "Spyridon Louis, water carrier"
   },
   {
-   "id": "st_run",
-   "type": "sticker",
-   "emoji": "1f3c3",
-   "x": 760,
-   "y": 560,
-   "size": 230,
-   "rot": 8
-  },
-  {
    "id": "dist",
    "type": "compare",
    "items": [
@@ -71,6 +62,15 @@
    "label": "years, same distance",
    "fmt": "raw",
    "size": 200
+  },
+  {
+   "id": "st_run",
+   "type": "sticker",
+   "emoji": "1f3c3",
+   "x": 760,
+   "y": 560,
+   "size": 150,
+   "rot": 0
   },
   {
    "id": "mascot",
@@ -182,6 +182,26 @@
    }
   },
   {
+   "at": "s04@marathon",
+   "do": "sticker_in",
+   "id": "st_run"
+  },
+  {
+   "at": "s04@marathon",
+   "do": "geo.travel",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "rid": "course",
+    "layer": "line",
+    "sid": "st_run",
+    "offset": [
+     0,
+     -60
+    ]
+   }
+  },
+  {
    "at": "s04@stadium",
    "do": "geo.label_in",
    "stage": "stage_map",
@@ -252,11 +272,6 @@
    "do": "fact_in",
    "id": "f2",
    "until": "s05.end"
-  },
-  {
-   "at": "s05+0.6",
-   "do": "sticker_in",
-   "id": "st_run"
   },
   {
    "at": "s05.end",

@@ -126,7 +126,7 @@ class Composer:
             if el.get("credit"): self.credit_bits.append(el["credit"])
         elif k == "character":
             self.body.append(self.Q.character(el["id"], el["flag"], face=el.get("face", "happy"), x=el["x"], y=el["y"], size=el.get("size", 200), rot=el.get("rot", 0), z=el.get("z", 62)))
-        elif k in ("counter", "bars", "compare", "callouts", "strip"):
+        elif k in ("counter", "bars", "compare", "callouts", "strip", "split", "erase"):
             args = {kk: vv for kk, vv in el.items() if kk not in ("id", "type", "z")}
             if k in ("bars", "compare"): args["rows" if k == "bars" else "items"] = [tuple(r) for r in args.pop("rows" if k == "bars" else "items")]
             if k == "callouts": args["points"] = [tuple(p) for p in args["points"]]
@@ -140,11 +140,11 @@ class Composer:
         t1 = self.T(b["until"]) if "until" in b else None
         if do.startswith("geo."):
             sc = self.stages[b["stage"]]; m = getattr(sc, do[4:])
-            if do in ("geo.cam_to", "geo.spin", "geo.route_draw", "geo.fade"): m(t, t1 if t1 is not None else t + float(b.get("dur", 1.2)), **args)
+            if do in ("geo.cam_to", "geo.spin", "geo.route_draw", "geo.fade", "geo.travel"): m(t, t1 if t1 is not None else t + float(b.get("dur", 1.2)), **args)
             else: m(t, **args)
         elif do.startswith("chart."):
             m = getattr(self.CH, do[6:])
-            if do == "chart.counter_run": m(t, t1 if t1 is not None else t + float(b.get("dur", 1.5)), b["id"], **args)
+            if do in ("chart.counter_run", "chart.erase_run"): m(t, t1 if t1 is not None else t + float(b.get("dur", 1.5)), b["id"], **args)
             else: m(t, b["id"], **args)
         elif do == "fx.flash": self.FX.flash(t, **args)
         elif do == "reveal": (self.Q.reveal_pills if getattr(self, "v3", False) else self.Q.reveal_chips if self.v2 else self.Q.reveal)(t, **args)

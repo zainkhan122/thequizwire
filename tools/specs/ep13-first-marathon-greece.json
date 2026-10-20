@@ -67,6 +67,7 @@
   "reveal": "route-draw",
   "beats": [
    "route",
+   "travel",
    "compare",
    "counter"
   ],
@@ -223,6 +224,26 @@
     "args": {
      "rid": "course",
      "layer": "line"
+    }
+   },
+   {
+    "at": "s04@marathon",
+    "do": "sticker_in",
+    "id": "st_run"
+   },
+   {
+    "at": "s04@marathon",
+    "do": "geo.travel",
+    "stage": "stage_map",
+    "until": "s04.end",
+    "args": {
+     "rid": "course",
+     "layer": "line",
+     "sid": "st_run",
+     "offset": [
+      0,
+      -60
+     ]
     }
    }
   ],
@@ -558,15 +579,6 @@
     "text": "Spyridon Louis, water carrier"
    },
    "card_at": 0.4,
-   "sticker": {
-    "id": "st_run",
-    "emoji": "1f3c3",
-    "x": 760,
-    "y": 560,
-    "size": 230,
-    "rot": 8,
-    "at": 0.6
-   },
    "cam": [
     1.4,
     [
@@ -583,7 +595,14 @@
     ]
    ],
    "pulse": 0.5,
-   "pause_after": 0.35
+   "pause_after": 0.35,
+   "devices": [
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_run"
+    }
+   ]
   },
   {
    "vo": {
@@ -707,6 +726,17 @@
     }
    ],
    "pause_after": 0.35
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_run",
+   "type": "sticker",
+   "emoji": "1f3c3",
+   "x": 760,
+   "y": 560,
+   "size": 150,
+   "rot": 0
   }
  ]
 }

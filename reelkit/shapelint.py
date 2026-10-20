@@ -19,9 +19,9 @@ SECTIONS = ["Hook fact", "Show it", "Beat order", "Different from", "Swipe test"
 PLACEHOLDER = re.compile(r"(?i)\b(todo|tbd|lorem|fill me|xxx)\b")
 DEVICE_OF = {"fact_in": "card", "sticker_in": "sticker", "chart.counter_run": "counter", "chart.bars_in": "bars", "chart.compare_in": "compare",
              "geo.pin_in": "pin", "geo.label_in": "label", "geo.route_draw": "route", "geo.highlight_out": "erase", "geo.spin": "spin",
-             "fx.flash": "flash", "geo.cam_to": "cam", "character_in": "character", "geo.disputed_in": "disputed", "geo.highlight_in": "highlight"}
+             "fx.flash": "flash", "geo.cam_to": "cam", "geo.travel": "travel", "chart.split_in": "split", "chart.erase_run": "erase", "character_in": "character", "geo.disputed_in": "disputed", "geo.highlight_in": "highlight"}
 DEVICE_WORDS = {"card": r"\bcard", "sticker": r"\bsticker", "counter": r"\bcounter", "bars": r"\bbar( |s\b|chart)", "compare": r"\bcompar", "pin": r"\bpin",
-                "label": r"\blabel", "route": r"\broute|\btrace", "erase": r"\berase|\bfall away|\bhighlight.out", "spin": r"\bspin|\bglobe",
+                "label": r"\blabel", "route": r"\broute|\btrace", "erase": r"\berase|\bfall away|\bhighlight.out", "spin": r"\bspin|\bglobe", "travel": r"\btravel|\brides?\b|\bruns along|\bmoves along", "split": r"\bsplit|then.vs.now|then-and-now",
                 "flash": r"\bflash", "character": r"\bmascot|\bcharacter|\bflag.?ball"}
 
 

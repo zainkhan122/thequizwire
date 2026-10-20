@@ -64,6 +64,31 @@ class Charts:
         self.J(f"{{const o={{v:{it['start']}}},e=document.getElementById('{cid}_n');"
                f"tl.to(o,{{v:{it['end']},duration:{f(t1 - t0)},ease:'{ease_s}',onUpdate:()=>{{const v=o.v;e.textContent={fmt_js}+'{esc(it['suffix'])}';}}}},{f(t0)});}}")
 
+    # ---------------------------------------------------------------- M2: then-vs-now split
+    def split(self, sid, left, right, y=380, h=620, label_left="THEN", label_right="NOW"):
+        """Two half-frame panels: left/right = {kicker, text}. split_in slides them in from each side; the divider snaps in last."""
+        def panel(side, P, lab):
+            return (f'<div class="spanel {side}" id="{sid}_{side}"><div class="slab tu">{esc(lab)}</div>'
+                    f'<div class="skick tu">{esc(P.get("kicker", ""))}</div><div class="stext tu">{esc(P.get("text", ""))}</div></div>')
+        return (f'<div id="{sid}" class="chart split" style="left:60px;top:{y}px;width:960px;height:{h}px">'
+                + panel("l", left, label_left) + panel("r", right, label_right) + f'<div class="sdiv" id="{sid}_d"></div></div>')
+
+    def split_in(self, t, sid, dur=0.7):
+        self.J(f"tl.set('#{sid}',{{autoAlpha:1}},{f(t)});")
+        self.J(f"tl.fromTo('#{sid}_l',{{xPercent:-110,autoAlpha:0}},{{xPercent:0,autoAlpha:1,duration:{f(dur)},ease:'power3.out',immediateRender:false}},{f(t)});")
+        self.J(f"tl.fromTo('#{sid}_r',{{xPercent:110,autoAlpha:0}},{{xPercent:0,autoAlpha:1,duration:{f(dur)},ease:'power3.out',immediateRender:false}},{f(t + 0.15)});")
+        self.J(f"tl.fromTo('#{sid}_d',{{scaleY:0}},{{scaleY:1,duration:0.35,ease:'power2.out',immediateRender:false}},{f(t + dur)});")
+
+    # ---------------------------------------------------------------- M2: reveal by erase (a plate with a word wipes away)
+    def erase(self, eid, text, y=560, h=420, color="#1b1b1b"):
+        return (f'<div id="{eid}" class="chart erase" style="left:0;top:{y}px;width:1080px;height:{h}px;background:{color}" data-layout-allow-overlap="true">'
+                f'<div class="etext tu" data-layout-allow-occlusion="true">{esc(text)}</div></div>')
+
+    def erase_run(self, t0, t1, eid, direction="left"):
+        a, b = {"left": ("inset(0 0 0 0)", "inset(0 0 0 100%)"), "right": ("inset(0 0 0 0)", "inset(0 100% 0 0)"), "up": ("inset(0 0 0 0)", "inset(0 0 100% 0)")}[direction]
+        self.J(f"tl.set('#{eid}',{{autoAlpha:1,clipPath:'{a}'}},{f(t0 - 0.3)});")
+        self.J(f"tl.to('#{eid}',{{clipPath:'{b}',duration:{f(t1 - t0)},ease:'power2.inOut'}},{f(t0)});")
+
     def out(self, t, cid, dur=0.3):
         """Hide any chart (counter/bars/compare/strip) — e.g. before a fact takes the same band."""
         self.J(f"tl.to('#{cid}',{{autoAlpha:0,y:-24,duration:{f(dur)},ease:'power2.in'}},{f(t)});")
@@ -169,6 +194,13 @@ CSS = f"""
 .compare .cbase{{position:absolute;left:0;height:4px;background:{CREAM}}}
 .compare .cval{{position:absolute;text-align:center;font-family:'Anton';font-size:48px;color:{SAND};visibility:hidden;opacity:0}}
 .compare .clab{{position:absolute;text-align:center;font-family:'Oswald';font-weight:500;font-size:32px;letter-spacing:.08em;text-transform:uppercase;color:{CREAM}}}
+.split .spanel{{position:absolute;top:0;width:46%;height:100%;border-radius:22px;background:rgba(27,27,27,.86);padding:26px 28px;box-sizing:border-box;visibility:hidden;opacity:0}}
+.split .spanel.l{{left:0}} .split .spanel.r{{right:0}}
+.split .slab{{font-family:'Oswald';font-weight:600;font-size:34px;letter-spacing:.14em;color:#FFD400}}
+.split .skick{{font-family:'Anton';font-size:120px;line-height:1.05;color:#fff;margin-top:18px}}
+.split .stext{{font-family:'Oswald';font-weight:500;font-size:38px;line-height:1.2;color:{CREAM};margin-top:14px}}
+.split .sdiv{{position:absolute;left:50%;top:6%;width:6px;height:88%;margin-left:-3px;background:#FFD400;transform-origin:50% 0}}
+.erase .etext{{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;font-family:'Anton';font-size:150px;line-height:1;color:#FFD400;text-shadow:0 6px 0 rgba(0,0,0,.5)}}
 .callouts .kplate{{position:absolute;font-family:'Oswald';font-weight:600;font-size:34px;color:{INK};background:{CREAM};padding:8px 18px 6px;border-left:8px solid {RED};white-space:nowrap;visibility:hidden;opacity:0}}
 .strip .sline{{position:absolute;left:60px;right:60px;top:20px;height:6px;background:{CREAM};transform-origin:0 50%}}
 .strip .snode{{position:absolute;top:0;width:0;visibility:hidden;opacity:0}}

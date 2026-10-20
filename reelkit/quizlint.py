@@ -61,7 +61,7 @@ VARIETY = {
     "hook": {"question-first", "fact-first", "challenge", "story", "misconception", "character-asks"},
     "opener": {"wide-drift", "mystery-zoom-out", "split-candidates", "night-lights"},          # only what tools/author_v4.py really choreographs (shapelint Q21 verifies it on the timeline)
     "reveal": {"flag-lift", "fill-pulse", "colour-lift", "flash-cut", "route-draw", "feature-fill"},
-    "beats": {"pin", "route", "counter", "scalebar", "label", "second-highlight", "photo-cutout", "true-size-overlay", "timeline-strip", "before-after", "compare", "bars", "erase", "flash", "spin"},
+    "beats": {"pin", "route", "counter", "scalebar", "label", "second-highlight", "photo-cutout", "true-size-overlay", "timeline-strip", "before-after", "compare", "bars", "erase", "flash", "spin", "travel", "split"},
     "cast": None,      # free text: "flagball:wow", "emoji-set:mountain", "none", "photo-cutout"
     "music": None,     # "bed:pad" … (seed is episode.seed)
     "outro": {"DID YOU GET IT?", "TOO EASY?", "1 FOR 1?", "CHALLENGE A FRIEND", "DAILY MAP QUIZ"},
