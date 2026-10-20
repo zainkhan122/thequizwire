@@ -166,7 +166,13 @@ def build(S):
             s_ = b["sticker"]; B += [{"at": f"{sc}+{s_.get('at', 0.6)}", "do": "sticker_in", "id": s_["id"]}, {"at": f"{sc}.end", "do": "sticker_out", "id": s_["id"]}]
         for d in b.get("devices", []):                                        # free-form: any engine beat, times relative to this scene
             d = dict(d); rel = lambda x: x.replace("@", sc, 1) if isinstance(x, str) else f"{sc}+{x}"   # "@+1.2" · "@.end" · "@@cue" → s06+1.2 · s06.end · s06@cue
-            d["at"] = rel(d.get("at", 0))
+            at = d.get("at", 0)
+            if i == 0 and cast and str(d["do"]).startswith("chart.") and isinstance(at, (int, float, str)):   # first beat: charts wait until the reaction flag-balls have left (s05+1.0)
+                try:
+                    v = float(str(at).replace("@+", "")) if str(at).startswith("@+") or not isinstance(at, str) else None
+                    if v is not None and v < 1.2: at = "@+1.2"
+                except ValueError: pass
+            d["at"] = rel(at)
             if "until" in d: d["until"] = rel(d["until"])
             if d["do"].startswith("geo.") : d.setdefault("stage", M)
             B.append(d)

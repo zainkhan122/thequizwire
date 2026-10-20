@@ -258,7 +258,7 @@
    }
   },
   {
-   "at": "s05+0.3",
+   "at": "s05+1.2",
    "do": "chart.compare_in",
    "id": "then",
    "args": {
