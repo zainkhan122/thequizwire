@@ -170,8 +170,8 @@ def main():
     # ---- Q11 motion density + opener (visuals.json): winners ≈27 motion events/10 s, we shipped 1.2. Static proxy = authored beats.
     if E.get("format") == "quiz-v3":
         MOTION = {"hook_in", "chips_in", "reveal", "banner_in", "fact_in", "sticker_in", "sticker_out", "character_in", "character_out",
-                  "geo.cam_to", "geo.pin_in", "geo.label_in", "geo.highlight_in", "geo.highlight_pulse", "geo.route_draw", "geo.disputed_in", "geo.spin", "fx.flash", "fx.pop", "counter"}
-        beats = X.get("beats", []); n_motion = sum(1 for b in beats if b.get("do") in MOTION or str(b.get("do", "")).startswith("fx."))
+                  "geo.cam_to", "geo.pin_in", "geo.label_in", "geo.highlight_in", "geo.highlight_pulse", "geo.route_draw", "geo.disputed_in", "geo.spin", "fx.flash", "fx.pop", "counter", "hide", "fact_out", "geo.label_out", "geo.pin_out"}
+        beats = X.get("beats", []); n_motion = sum(1 for b in beats if b.get("do") in MOTION or str(b.get("do", "")).startswith(("fx.", "chart.")))   # chart.* = counters rolling, bars racing, blocks rising
         total_s = float((T or {}).get("total") or 36.0)
         dens = n_motion / total_s * 10
         if dens < 8: G.append(f"Q11: {n_motion} motion beats in {total_s:.0f} s = {dens:.1f}/10 s (v4 needs ≥ 8: pop-ins, pulses, camera moves, stickers)")
