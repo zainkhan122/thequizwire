@@ -19,14 +19,14 @@ SECTIONS = ["Hook fact", "Show it", "Beat order", "Different from", "Swipe test"
 PLACEHOLDER = re.compile(r"(?i)\b(todo|tbd|lorem|fill me|xxx)\b")
 DEVICE_OF = {"fact_in": "card", "sticker_in": "sticker", "chart.counter_run": "counter", "chart.bars_in": "bars", "chart.compare_in": "compare",
              "geo.pin_in": "pin", "geo.label_in": "label", "geo.route_draw": "route", "geo.highlight_out": "erase", "geo.spin": "spin",
-             "fx.flash": "flash", "geo.cam_to": "cam", "geo.travel": "travel", "chart.split_in": "split", "chart.erase_run": "erase", "character_in": "character", "geo.disputed_in": "disputed", "geo.highlight_in": "highlight"}
+             "fx.flash": "flash", "geo.cam_to": "cam", "geo.travel": "travel", "photo_in": "photo", "geo.rise": "rise", "chart.split_in": "split", "chart.erase_run": "erase", "character_in": "character", "geo.disputed_in": "disputed", "geo.highlight_in": "highlight"}
 DEVICE_WORDS = {"card": r"\bcard", "sticker": r"\bsticker", "counter": r"\bcounter", "bars": r"\bbar( |s\b|chart)", "compare": r"\bcompar", "pin": r"\bpin",
-                "label": r"\blabel", "route": r"\broute|\btrace", "erase": r"\berase|\bfall away|\bhighlight.out", "spin": r"\bspin|\bglobe", "travel": r"\btravel|\brides?\b|\bruns along|\bmoves along", "split": r"\bsplit|then.vs.now|then-and-now",
+                "label": r"\blabel", "route": r"\broute|\btrace", "erase": r"\berase|\bfall away|\bhighlight.out", "spin": r"\bspin|\bglobe", "photo": r"\bphoto|\bpicture|\bfootage|\bstill\b", "rise": r"\brises?\b|\bpops? (up )?out of", "travel": r"\btravel|\brides?\b|\bruns along|\bmoves along", "split": r"\bsplit|then.vs.now|then-and-now",
                 "flash": r"\bflash", "character": r"\bmascot|\bcharacter|\bflag.?ball"}
 
 
 def brief_check(ep):
-    F = []
+    F, W = [], []
     p = Path(ep) / "brief.md"
     if not p.exists(): return [f"Q19: {p.name} missing — write the creative brief before authoring (docs/BRIEF.md)"], {}
     txt = p.read_text()
@@ -38,9 +38,21 @@ def brief_check(ep):
         if not m: F.append(f"Q19: brief section '## {name}' missing")
         elif len(re.sub(r"\s+", " ", body)) < 40: F.append(f"Q19: brief section '{name}' is not written ({len(body)} chars)")
         elif PLACEHOLDER.search(body): F.append(f"Q19: brief section '{name}' still has a placeholder")
+    # P2 (2026-10-21): real media is part of the thinking. "## Media" names the asset(s) (Commons file + why it is the right image) or
+    # says in a sentence why this Short is better without one. Episodes authored before P2 (no section) get a WARN until re-authored.
+    m = re.search(r"^##\s*Media.*?$([\s\S]*?)(?=^##\s|\Z)", txt, re.M); media = (m.group(1) if m else "").strip()
+    V = json.loads((Path(ep) / "visuals.json").read_text()) if (Path(ep) / "visuals.json").exists() else {}
+    has_photo = any(e.get("type") == "photo" for e in V.get("elements", []))
+    lp = Path(ep).resolve().parents[2] / "dispatch/ledger.json"
+    live = lp.exists() and any(x.get("episode") == Path(ep).name and x.get("state") in ("scheduled", "sent") for x in json.loads(lp.read_text()).get("posts", []))
+    sink = W if live else F                                           # already-shipped episodes are not re-gated on a rule written after them
+    if not m: sink.append("Q19: brief section '## Media' missing — name the real photo/footage (File:… on Commons) or say why none")
+    elif len(media) < 40: sink.append("Q19: brief 'Media' is not written")
+    elif has_photo and "file:" not in media.lower(): F.append("Q19: the episode uses a photo but the brief's Media section does not name the Commons file")
     sw = secs.get("Swipe test", "")
     stamps = re.findall(r"(\d{1,2})\s*s\b", sw)
     if len(set(stamps)) < 3: F.append("Q19: swipe test needs three timestamps (e.g. 8 s / 15 s / 22 s) each with what moves and why someone stays")
+    secs["_warn"] = W
     return F, secs
 
 
@@ -114,7 +126,7 @@ def truth_check(ep):
 def run(ep):
     F1, secs = brief_check(ep)
     F2, W = shape_check(ep, secs) if (Path(ep) / "visuals.json").exists() else ([], [])
-    return F1 + F2 + truth_check(ep), W
+    return F1 + F2 + truth_check(ep), W + secs.get("_warn", [])
 
 
 if __name__ == "__main__":

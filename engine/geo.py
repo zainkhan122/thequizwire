@@ -224,6 +224,16 @@ class Scene:
                  "el.style.left=((pt.x-r.left)*sx-el.offsetWidth/2+%d)+'px';el.style.top=((pt.y-r.top)*sy-el.offsetHeight/2+%d)+'px';};"
                  "tl.to(o,{p:1,duration:%s,ease:'%s',onStart:put,onUpdate:put},%s);}" % (sid, sel, ox, oy, f(t1 - t0), ease, f(t0)))
 
+    def rise(self, t, fid, eid, layer="highlight", dur=0.7, lift=0):
+        """P2 device: a photo / sticker / character RISES out of a map feature — bottom-centre of #eid is placed on the feature's
+        bounding-box centre (screen space, at that moment's camera) and it scales up from the ground like a pop-up book."""
+        self.G.J("{const el=document.getElementById('%s');const put=()=>{const g=document.getElementById('%s_%s_%s');if(!el||!g||!g.getBBox||!g.getScreenCTM)return;"
+                 "const bb=g.getBBox();const pt=new DOMPoint(bb.x+bb.width/2,bb.y+bb.height/2).matrixTransform(g.getScreenCTM());"
+                 "const st=el.closest('.stage3')||document.body,r=st.getBoundingClientRect();"
+                 "el.style.left=((pt.x-r.left)*1080/r.width-el.offsetWidth/2)+'px';el.style.top=((pt.y-r.top)*1920/r.height-el.offsetHeight-%d)+'px';};"
+                 "tl.call(put,[],%s);tl.fromTo(el,{autoAlpha:0,scaleY:0.05,scaleX:0.6,transformOrigin:'50%% 100%%'},{autoAlpha:1,scaleY:1,scaleX:1,duration:%s,ease:'back.out(1.7)',immediateRender:false},%s);}"
+                 % (eid, self.id, layer, fid, lift, f(t), f(dur), f(t + 0.02)))
+
     def disputed_out(self, t, did, dur=0.3):
         """Fade a disputed outline and its policy plate (use before the outro / when the camera leaves the border)."""
         self.G.J(f"tl.to('#{self.id}_disputed_{did}',{{opacity:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")

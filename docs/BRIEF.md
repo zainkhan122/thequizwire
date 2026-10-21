@@ -17,6 +17,11 @@ a globe spin, a camera flyover, a mascot reaction). Name the device and what the
 ## Beat order
 Beat 1 → beat 2 → beat 3 (2–5 beats). Why this order: escalation, contrast, payoff. Each beat = one idea.
 
+## Media
+The real thing. Name the Commons file(s) (`python3 reelkit/photos.py find "..."` lists CC0/PD/CC BY candidates), what the
+viewer sees in it, where it enters (rises out of the country · slides in · pops) and WHY this image beats a sticker here —
+or one sentence on why this Short is stronger with no photo. CC BY-SA / NC / ND files are refused by provenance.
+
 ## Different from
 One sentence: how this explanation differs in SHAPE from the last episodes of this series (not just in topic).
 
@@ -35,3 +40,7 @@ flag-ball characters with faces, `engine/fx.py` flash. In a spec, a story beat i
 - **travel** — a sticker/character rides along a route while it draws: element `{"id":"runner","type":"sticker","emoji":"1f3c3",...}` + beat `{"at":"@@cue","do":"geo.travel","until":"@.end","args":{"rid":"course","layer":"line","sid":"runner"}}` (pair with `geo.route_draw` on the same span).
 - **split** — then-vs-now panels: element `{"id":"tn","type":"split","left":{"kicker":"169 cm","text":"born 1896"},"right":{"kicker":"182.5 cm","text":"born 1996"},"label_left":"THEN","label_right":"NOW"}` + `{"at":"@+0.3","do":"chart.split_in","id":"tn"}` + `hide`.
 - **erase** — a plate with one word wipes away to reveal the map underneath: element `{"id":"myth","type":"erase","text":"BACTERIA?"}` + `{"at":"@+0.2","do":"chart.erase_run","id":"myth","until":"@+1.4","args":{"direction":"left"}}`.
+
+## P2 devices (2026-10-21)
+- **photo** — `"photo": {"id":"ph1","commons":"File:X.jpg","caption":"…","x":60,"y":430,"w":620,"h":430,"from":"up|left|right|pop","at":0.5}` on a story beat; fetched + licensed at build time by `reelkit/photos.py`, credit burned into the frame, slow push inside the frame.
+- **rise** — `"from":"rise","fid":"NLD"` makes the photo (or any element via `geo.rise` args fid/eid) pop up OUT of the country's shape like a pop-up book. Owner's suggestion 2026-10-21.

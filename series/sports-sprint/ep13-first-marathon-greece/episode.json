@@ -90,6 +90,7 @@
   "beats": [
    "route",
    "travel",
+   "photo",
    "compare",
    "counter"
   ],

@@ -24,3 +24,9 @@ route reveal → card+sticker → compare → year counter.
 
 ## Devices
 route + travel (runner rides the course on the reveal), card, sticker, pin, compare, counter, cam
+
+## Media
+`File:1896 Olympic marathon.jpg` (Burton Holmes, 1901, public domain) — the actual runners entering the Panathenaic Stadium in
+1896. It rises into the frame in beat 1 while the voice says "a Greek water carrier named Louis won it": the viewer sees the
+real race, not an icon of one. One photo only; the course route and the runner sticker already carry the reveal, and the
+compare block carries the twist — a second photo would compete with the numbers.

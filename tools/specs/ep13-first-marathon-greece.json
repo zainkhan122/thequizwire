@@ -68,6 +68,7 @@
   "beats": [
    "route",
    "travel",
+   "photo",
    "compare",
    "counter"
   ],
@@ -571,14 +572,14 @@
      "hours": "hours"
     }
    },
-   "direction": "a person first",
+   "direction": "a person first — the real 1896 photograph rises in, then the time card",
    "energy": 3,
    "tone": "resolute",
    "card": {
     "kicker": "2:58:50",
     "text": "Spyridon Louis, water carrier"
    },
-   "card_at": 0.4,
+   "card_at": 0.9,
    "cam": [
     1.4,
     [
@@ -602,7 +603,19 @@
      "do": "sticker_out",
      "id": "st_run"
     }
-   ]
+   ],
+   "photo": {
+    "id": "ph1896",
+    "commons": "File:1896 Olympic marathon.jpg",
+    "caption": "Athens, 10 April 1896",
+    "x": 60,
+    "y": 430,
+    "w": 620,
+    "h": 430,
+    "from": "up",
+    "at": 0.5,
+    "rot": -3
+   }
   },
   {
    "vo": {

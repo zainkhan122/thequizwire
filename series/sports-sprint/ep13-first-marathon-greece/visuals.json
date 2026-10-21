@@ -34,6 +34,18 @@
    "text": "Spyridon Louis, water carrier"
   },
   {
+   "id": "ph1896",
+   "type": "photo",
+   "commons": "File:1896 Olympic marathon.jpg",
+   "caption": "Athens, 10 April 1896",
+   "x": 60,
+   "y": 430,
+   "w": 620,
+   "h": 430,
+   "rot": -3,
+   "credit": "📷 Burton Holmes · Public domain"
+  },
+  {
    "id": "dist",
    "type": "compare",
    "items": [
@@ -268,10 +280,23 @@
    }
   },
   {
-   "at": "s05+0.4",
+   "at": "s05+0.9",
    "do": "fact_in",
    "id": "f2",
    "until": "s05.end"
+  },
+  {
+   "at": "s05+0.5",
+   "do": "photo_in",
+   "id": "ph1896",
+   "args": {
+    "frm": "up"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "photo_out",
+   "id": "ph1896"
   },
   {
    "at": "s05.end",

@@ -352,6 +352,21 @@ class Quiz:
     def sticker_in(self, t, sid, dur=0.45):
         self.J(f"tl.fromTo('#{sid}',{{autoAlpha:0,scale:0.3,rotation:'-=25'}},{{autoAlpha:1,scale:1,rotation:'+=25',duration:{f(dur)},ease:'back.out(2)',immediateRender:false}},{f(t)});")
 
+    def photo(self, pid, src, x, y, w=560, h=420, caption="", credit="", rot=0, z=58):
+        """P2 media device: a real photo in a frame (caption + on-screen credit). Slow push happens inside the frame (img scale)."""
+        cap = f'<div class="ph-cap tu" data-layout-allow-overlap="true">{esc(caption)}</div>' if caption else ""
+        cr = f'<div class="ph-credit tu" data-fc="skip" data-layout-allow-overlap="true" data-layout-allow-occlusion="true" data-tq-dwell="off">{esc(credit)}</div>' if credit else ""
+        return (f'<div id="{pid}" class="photo3" style="left:{x}px;top:{y}px;width:{w}px;height:{h}px;z-index:{z};--rot:{rot}deg" data-layout-allow-overlap="true">'
+                f'<img id="{pid}_img" src="{src}" alt="">{cap}{cr}</div>')
+
+    def photo_in(self, t, pid, dur=0.6, frm="pop", push=1.08, hold=4.0):
+        start = {"pop": "{autoAlpha:0,scale:0.4}", "left": "{autoAlpha:0,x:-420}", "right": "{autoAlpha:0,x:420}", "up": "{autoAlpha:0,y:260}"}[frm]
+        self.J(f"tl.fromTo('#{pid}',{start},{{autoAlpha:1,scale:1,x:0,y:0,duration:{f(dur)},ease:'back.out(1.5)',immediateRender:false}},{f(t)});")
+        self.J(f"tl.fromTo('#{pid}_img',{{scale:1}},{{scale:{push},duration:{f(hold)},ease:'none',immediateRender:false}},{f(t)});")
+
+    def photo_out(self, t, pid, dur=0.3):
+        self.J(f"tl.to('#{pid}',{{autoAlpha:0,scale:0.9,duration:{f(dur)},ease:'power2.in'}},{f(t)});")
+
     def sticker_out(self, t, sid, dur=0.25):
         self.J(f"tl.to('#{sid}',{{autoAlpha:0,scale:0.6,duration:{f(dur)},ease:'power2.in'}},{f(t)});")
 
@@ -529,6 +544,10 @@ CSS = f"""
   background:radial-gradient(ellipse at center,rgba(0,0,0,.62) 0%,rgba(0,0,0,.42) 55%,rgba(0,0,0,0) 100%)}}
 .v3 .fact3 b{{color:#FFD400;font-weight:400}}
 .v3 .cap{{top:1500px;left:60px;width:900px;font-family:'Anton';font-weight:400;font-size:56px;letter-spacing:.02em;color:#fff;-webkit-text-stroke:1.5px #141414;paint-order:stroke fill;text-shadow:0 4px 0 rgba(0,0,0,.5),0 8px 20px rgba(0,0,0,.6)}}
+.v3 .photo3{{position:absolute;overflow:hidden;border-radius:26px;border:6px solid #fff;box-shadow:0 18px 40px rgba(0,0,0,.55);transform:rotate(var(--rot,0deg));visibility:hidden;opacity:0;background:#000}}
+.v3 .photo3 img{{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;transform-origin:50% 50%}}
+.v3 .photo3 .ph-cap{{position:absolute;left:0;right:0;bottom:0;padding:14px 18px 34px;background:linear-gradient(transparent,rgba(0,0,0,.82));font-family:'Oswald';font-weight:600;font-size:36px;line-height:1.1;color:#fff}}
+.v3 .photo3 .ph-credit{{position:absolute;right:10px;bottom:6px;font-family:'Oswald';font-size:18px;color:rgba(255,255,255,.85)}}
 .v3 .sticker3{{position:absolute;filter:drop-shadow(0 14px 22px rgba(0,0,0,.6));transform:rotate(var(--rot,0deg));visibility:hidden;opacity:0}}
 .v3 .char3{{position:absolute;filter:drop-shadow(0 12px 18px rgba(0,0,0,.55));transform:rotate(var(--rot,0deg));visibility:hidden;opacity:0;overflow:visible}}
 .v3 .o-dim{{position:absolute;left:0;top:0;width:1080px;height:1920px;background:radial-gradient(ellipse at 50% 45%,rgba(6,14,30,.55) 0%,rgba(6,14,30,.86) 70%);z-index:60;visibility:hidden;opacity:0}}

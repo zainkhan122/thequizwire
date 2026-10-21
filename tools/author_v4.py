@@ -122,6 +122,9 @@ def build(S):
         if b.get("card"): els.append({"id": f"f{i + 2}", "type": "fact", "kicker": b["card"]["kicker"], "text": b["card"]["text"]})
         if b.get("sticker"):
             s_ = b["sticker"]; els.append({"id": s_["id"], "type": "sticker", "emoji": s_["emoji"], "x": s_.get("x", 740), "y": s_.get("y", 580), "size": s_.get("size", 220), "rot": s_.get("rot", 6)})
+        if b.get("photo"):                                                     # P2: a real photo of the subject (reelkit/photos.py fetches + licences it)
+            p_ = b["photo"]; els.append({"id": p_["id"], "type": "photo", "commons": p_["commons"], "caption": p_.get("caption", ""), "x": p_.get("x", 440), "y": p_.get("y", 420),
+                                         "w": p_.get("w", 580), "h": p_.get("h", 440), "rot": p_.get("rot", -3)})
         for el in b.get("elements", []): els.append(el)                       # counters, bars, compare … (engine/charts.py)
     els += S.get("extra_elements", [])                                        # e.g. a second mascot face used by a story beat
     els += [{"id": "mascot", "type": "character", "flag": "un", "face": ch.get("mascot_face", "think"), "x": 860, "y": 1480, "size": 210, "rot": 6}]
@@ -164,6 +167,14 @@ def build(S):
         if b.get("card"): B.append({"at": f"{sc}+{b.get('card_at', 0.4)}", "do": "fact_in", "id": f"f{i + 2}", "until": f"{sc}.end"})
         if b.get("sticker"):
             s_ = b["sticker"]; B += [{"at": f"{sc}+{s_.get('at', 0.6)}", "do": "sticker_in", "id": s_["id"]}, {"at": f"{sc}.end", "do": "sticker_out", "id": s_["id"]}]
+        if b.get("photo"):
+            p_ = b["photo"]; at = f"{sc}+{p_.get('at', 0.5)}"
+            if p_.get("from") == "rise":                                       # pops up out of the country (needs a highlight feature id)
+                B.append({"at": at, "do": "geo.rise", "stage": "stage_map", "args": {"fid": p_["fid"], "eid": p_["id"], "layer": p_.get("layer", "highlight")}})
+                B.append({"at": at, "do": "photo_in", "id": p_["id"], "args": {"frm": "pop", "dur": 0.01}})   # push-zoom only; rise owns the entrance
+            else:
+                B.append({"at": at, "do": "photo_in", "id": p_["id"], "args": {"frm": p_.get("from", "pop")}})
+            B.append({"at": f"{sc}.end", "do": "photo_out", "id": p_["id"]})
         for d in b.get("devices", []):                                        # free-form: any engine beat, times relative to this scene
             d = dict(d); rel = lambda x: x.replace("@", sc, 1) if isinstance(x, str) else f"{sc}+{x}"   # "@+1.2" · "@.end" · "@@cue" → s06+1.2 · s06.end · s06@cue
             at = d.get("at", 0)

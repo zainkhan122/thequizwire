@@ -120,6 +120,9 @@ class Composer:
         elif k == "fact":
             if getattr(self, "v3", False): self.body.append(self.Q.fact3(el["id"], el["text"], kicker=el.get("kicker", ""), y=el.get("y", 1250)))
             else: self.body.append(self.Q.fact(el["id"], el["text"], y=el.get("y", 1230), kicker=el.get("kicker", "")))
+        elif k == "photo":
+            self.body.append(self.Q.photo(el["id"], f"assets/photos/{el['id']}.jpg", el["x"], el["y"], w=el.get("w", 560), h=el.get("h", 420), caption=el.get("caption", ""), credit=el.get("credit", ""), rot=el.get("rot", 0), z=el.get("z", 58)))
+            if el.get("credit"): self.credit_bits.append(el["credit"])
         elif k == "sticker":
             src = f"assets/stickers/{el['emoji'].lower()}.svg" if el.get("emoji") else el["src"]
             self.body.append(self.Q.sticker(el["id"], src, el["x"], el["y"], size=el.get("size", 240), rot=el.get("rot", 0), z=el.get("z", 60)))
@@ -154,6 +157,7 @@ class Composer:
         elif do in ("hook_in", "hook_out", "chips_in", "chips_out", "bug_in"): getattr(self.Q, do)(t, **args)        # v2
         elif do == "beat": (self.Q.beat3 if getattr(self, "v3", False) else self.Q.beat)(t, seconds=float(self.E["quiz"].get("beat", 1.5)), **args)
         elif do in ("banner_in", "banner_out"): getattr(self.Q, do)(t, **args)                                        # v3
+        elif do in ("photo_in", "photo_out"): getattr(self.Q, do)(t, b["id"], **args)                                  # P2 media
         elif do in ("sticker_in", "sticker_out", "character_in", "character_out"): getattr(self.Q, do)(t, b["id"], **args)   # v3
         elif do == "cta_in": (self.Q.outro_in if getattr(self, "v3", False) else self.Q.cta_in)(t, t1, **args)          # v3 outro · v2 tease
         elif do == "credit_in": self.Q.credit_in(t, t1, **args)                                                       # v2
@@ -199,7 +203,7 @@ class Composer:
         for st in self.V.get("stage", []): self.stage(st)
         if self.v3:
             self.body.append(Q.scrims())
-            for sub, pat in (("stickers", "*.svg"), ("brand", "*.*")):                            # Twemoji (reelkit/stickers.py) · brand kit (reelkit/brand.py)
+            for sub, pat in (("stickers", "*.svg"), ("brand", "*.*"), ("photos", "*.jpg")):                            # Twemoji (reelkit/stickers.py) · brand kit (reelkit/brand.py)
                 bsrc = self.hf.parent / sub; bdst = self.hf / "assets" / sub
                 if bsrc.exists():
                     bdst.mkdir(parents=True, exist_ok=True)
