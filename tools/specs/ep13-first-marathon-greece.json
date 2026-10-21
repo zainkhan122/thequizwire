@@ -568,11 +568,12 @@
    "vo": {
     "text": "A Greek water carrier named Louis won it, in just under three hours.",
     "cues": {
+     "carrier": "carrier",
      "won": "won",
      "hours": "hours"
     }
    },
-   "direction": "a person first — the real 1896 photograph rises in, a flash on 'won', the time card lands on 'hours'",
+   "direction": "a person first — the real 1896 photograph rises in, an amphora pops on 'water carrier', a flash on 'won', the time card lands on 'hours'",
    "energy": 3,
    "tone": "resolute",
    "card": {
@@ -599,6 +600,11 @@
    "pause_after": 0.35,
    "devices": [
     {
+     "at": "@@carrier",
+     "do": "sticker_in",
+     "id": "st_jug"
+    },
+    {
      "at": "@@won",
      "do": "fx.flash",
      "args": {
@@ -615,6 +621,11 @@
      "at": "@.end",
      "do": "sticker_out",
      "id": "st_run"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_jug"
     }
    ],
    "photo": {
@@ -724,7 +735,7 @@
      "changed": "changed"
     }
    },
-   "direction": "let the years run, then THEN vs NOW split on 'changed'",
+   "direction": "let the years run, THEN vs NOW split on 'changed', the Greek ball comes back proud beside THEN",
    "energy": 3,
    "tone": "resolute",
    "cam": [
@@ -805,6 +816,16 @@
      "at": "@.end",
      "do": "hide",
      "id": "tn"
+    },
+    {
+     "at": "@@changed+0.8",
+     "do": "character_in",
+     "id": "cha"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "cha"
     }
    ],
    "pause_after": 0.35
@@ -828,6 +849,15 @@
    "y": 1040,
    "size": 170,
    "rot": 8
+  },
+  {
+   "id": "st_jug",
+   "type": "sticker",
+   "emoji": "1f3fa",
+   "x": 720,
+   "y": 640,
+   "size": 150,
+   "rot": -10
   }
  ]
 }

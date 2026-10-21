@@ -110,6 +110,15 @@
    "rot": 8
   },
   {
+   "id": "st_jug",
+   "type": "sticker",
+   "emoji": "1f3fa",
+   "x": 720,
+   "y": 640,
+   "size": 150,
+   "rot": -10
+  },
+  {
    "id": "mascot",
    "type": "character",
    "flag": "un",
@@ -318,6 +327,11 @@
    "id": "ph1896"
   },
   {
+   "at": "s05@carrier",
+   "do": "sticker_in",
+   "id": "st_jug"
+  },
+  {
    "at": "s05@won",
    "do": "fx.flash",
    "args": {
@@ -334,6 +348,11 @@
    "at": "s05.end",
    "do": "sticker_out",
    "id": "st_run"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_jug"
   },
   {
    "at": "s06",
@@ -458,6 +477,16 @@
    "at": "s07.end",
    "do": "hide",
    "id": "tn"
+  },
+  {
+   "at": "s07@changed+0.8",
+   "do": "character_in",
+   "id": "cha"
+  },
+  {
+   "at": "s07.end",
+   "do": "character_out",
+   "id": "cha"
   },
   {
    "at": "s08",

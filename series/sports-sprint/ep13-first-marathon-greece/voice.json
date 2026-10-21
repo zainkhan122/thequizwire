@@ -78,9 +78,10 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.35,
-   "direction": "a person first — the real 1896 photograph rises in, a flash on 'won', the time card lands on 'hours'",
+   "direction": "a person first — the real 1896 photograph rises in, an amphora pops on 'water carrier', a flash on 'won', the time card lands on 'hours'",
    "text": "A Greek water carrier named Louis won it, in just under three hours.",
    "cues": {
+    "carrier": "carrier",
     "won": "won",
     "hours": "hours"
    }
@@ -106,7 +107,7 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.35,
-   "direction": "let the years run, then THEN vs NOW split on 'changed'",
+   "direction": "let the years run, THEN vs NOW split on 'changed', the Greek ball comes back proud beside THEN",
    "text": "That odd distance became official in 1921, and it has not changed since. Every marathon you have ever watched ran it.",
    "cues": {
     "official": "official",
