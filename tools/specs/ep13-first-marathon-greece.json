@@ -778,8 +778,8 @@
      },
      "label_left": "THEN",
      "label_right": "NOW",
-     "y": 300,
-     "h": 440
+     "y": 270,
+     "h": 480
     }
    ],
    "devices": [
@@ -794,17 +794,17 @@
      "at": "@+0.2",
      "do": "chart.counter_run",
      "id": "years",
-     "until": "@@changed-0.2",
+     "until": "@@changed-0.7",
      "args": {
       "ease": "power1.in"
      }
     },
     {
-     "at": "@@changed-0.1",
+     "at": "@@changed-0.6",
      "do": "hide",
      "id": "years",
      "args": {
-      "dur": 0.2
+      "dur": 0.3
      }
     },
     {
