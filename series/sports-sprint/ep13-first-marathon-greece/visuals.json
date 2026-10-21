@@ -492,6 +492,22 @@
    }
   },
   {
+   "at": "s07@changed-0.5",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "marathon"
+   }
+  },
+  {
+   "at": "s07@changed-0.5",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "stadium"
+   }
+  },
+  {
    "at": "s08",
    "do": "geo.clear",
    "stage": "stage_map",

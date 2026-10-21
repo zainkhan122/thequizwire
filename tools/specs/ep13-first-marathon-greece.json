@@ -829,6 +829,22 @@
      "args": {
       "dur": 0.3
      }
+    },
+    {
+     "at": "@@changed-0.5",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "marathon"
+     }
+    },
+    {
+     "at": "@@changed-0.5",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "stadium"
+     }
     }
    ],
    "pause_after": 0.35
