@@ -65,9 +65,9 @@ class Charts:
                f"tl.to(o,{{v:{it['end']},duration:{f(t1 - t0)},ease:'{ease_s}',onUpdate:()=>{{const v=o.v;e.textContent={fmt_js}+'{esc(it['suffix'])}';}}}},{f(t0)});}}")
 
     # ---------------------------------------------------------------- M2: then-vs-now split
-    def split(self, sid, left, right, y=380, h=620, label_left="THEN", label_right="NOW", x=60, w=620):
+    def split(self, sid, left, right, y=310, h=540, label_left="THEN", label_right="NOW", x=60, w=620):
         """Then-vs-now: two stacked panels (top = left/THEN, bottom = right/NOW), each {kicker, text}, kept inside the left content
-        column (x < 694 — the right action column is reserved, see layout gates). split_in slides them in from opposite sides."""
+        column (x < 694 — the right action column is reserved, see layout gates) and below the series bug (top ≥ 300). split_in slides them in from opposite sides."""
         def panel(side, P, lab):
             A = ' data-layout-allow-overlap="true"'                                  # the panels are plates layered over the map by design (like photo frames)
             return (f'<div class="spanel {side}" id="{sid}_{side}"{A}><div class="slab tu" data-fc="skip"{A}>{esc(lab)}</div>'
