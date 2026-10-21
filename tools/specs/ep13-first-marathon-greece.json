@@ -700,6 +700,14 @@
    ],
    "devices": [
     {
+     "at": "@+0.1",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "stadium"
+     }
+    },
+    {
      "at": "@+0.3",
      "do": "chart.compare_in",
      "id": "dist",
@@ -769,7 +777,7 @@
      "start": 1921,
      "end": 2026,
      "y": 560,
-     "label": "years, same distance",
+     "label": "same distance, every year since",
      "fmt": "raw",
      "size": 200
     },
@@ -828,14 +836,6 @@
      "id": "tn",
      "args": {
       "dur": 0.3
-     }
-    },
-    {
-     "at": "@@changed-0.5",
-     "do": "geo.pin_out",
-     "stage": "stage_map",
-     "args": {
-      "pid": "stadium"
      }
     },
     {

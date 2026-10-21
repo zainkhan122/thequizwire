@@ -42,8 +42,7 @@
    "y": 230,
    "w": 620,
    "h": 360,
-   "rot": -3,
-   "credit": "📷 Burton Holmes · Public domain"
+   "rot": -3
   },
   {
    "id": "dist",
@@ -71,7 +70,7 @@
    "start": 1921,
    "end": 2026,
    "y": 560,
-   "label": "years, same distance",
+   "label": "same distance, every year since",
    "fmt": "raw",
    "size": 200
   },
@@ -402,6 +401,14 @@
    }
   },
   {
+   "at": "s06+0.1",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "stadium"
+   }
+  },
+  {
    "at": "s06+0.3",
    "do": "chart.compare_in",
    "id": "dist",
@@ -498,14 +505,6 @@
    "id": "tn",
    "args": {
     "dur": 0.3
-   }
-  },
-  {
-   "at": "s07@changed-0.5",
-   "do": "geo.pin_out",
-   "stage": "stage_map",
-   "args": {
-    "pid": "stadium"
    }
   },
   {
