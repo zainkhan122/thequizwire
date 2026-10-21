@@ -217,6 +217,14 @@ def main():
     if prev.exists():                                                        # --force keeps the review status; the content is what changes
         try: files["episode.json"]["status"] = json.loads(prev.read_text()).get("status", "draft")
         except Exception: pass
+    pm = out / "media.json"
+    if pm.exists():                                                          # media.json is a STORE (release manifest + provenance) — regenerate never wipes it
+        try:
+            old = json.loads(pm.read_text()); files["media.json"] = {**files["media.json"], **{k: old[k] for k in ("files", "release", "repo", "generated") if k in old}}
+            for e in files["visuals.json"].get("elements", []):             # photo credits were resolved by reelkit/photos.py fetch — keep them
+                if e.get("type") == "photo" and old.get("files", {}).get(f"media/photos/{e['id']}.jpg", {}).get("screen_credit"):
+                    e["credit"] = old["files"][f"media/photos/{e['id']}.jpg"]["screen_credit"]
+        except Exception: pass
     for name, data in files.items(): (out / name).write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n")
     print(f"wrote {out} ({len(files)} files)")
 
