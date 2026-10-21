@@ -546,7 +546,7 @@ CSS = f"""
 .v3 .cap{{top:1500px;left:60px;width:900px;font-family:'Anton';font-weight:400;font-size:56px;letter-spacing:.02em;color:#fff;-webkit-text-stroke:1.5px #141414;paint-order:stroke fill;text-shadow:0 4px 0 rgba(0,0,0,.5),0 8px 20px rgba(0,0,0,.6)}}
 .v3 .photo3{{position:absolute;overflow:hidden;border-radius:26px;border:6px solid #fff;box-shadow:0 18px 40px rgba(0,0,0,.55);transform:rotate(var(--rot,0deg));visibility:hidden;opacity:0;background:#000}}
 .v3 .photo3 img{{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;transform-origin:50% 50%}}
-.v3 .photo3 .ph-cap{{position:absolute;left:0;right:0;bottom:0;padding:14px 18px 34px;background:linear-gradient(transparent,rgba(0,0,0,.82));font-family:'Oswald';font-weight:600;font-size:36px;line-height:1.1;color:#fff}}
+.v3 .photo3 .ph-cap{{position:absolute;left:0;right:0;bottom:0;padding:70px 18px 34px;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.75) 45%,rgba(0,0,0,.95));text-shadow:0 2px 6px rgba(0,0,0,.9);font-family:'Oswald';font-weight:600;font-size:36px;line-height:1.1;color:#fff}}
 .v3 .photo3 .ph-credit{{position:absolute;right:10px;bottom:6px;font-family:'Oswald';font-size:18px;color:rgba(255,255,255,.85)}}
 .v3 .sticker3{{position:absolute;filter:drop-shadow(0 14px 22px rgba(0,0,0,.6));transform:rotate(var(--rot,0deg));visibility:hidden;opacity:0}}
 .v3 .char3{{position:absolute;filter:drop-shadow(0 12px 18px rgba(0,0,0,.55));transform:rotate(var(--rot,0deg));visibility:hidden;opacity:0;overflow:visible}}

@@ -600,6 +600,14 @@
    "pause_after": 0.35,
    "devices": [
     {
+     "at": "@+0.9",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "marathon"
+     }
+    },
+    {
      "at": "@@carrier",
      "do": "sticker_in",
      "id": "st_jug"
@@ -820,14 +828,6 @@
      "id": "tn",
      "args": {
       "dur": 0.3
-     }
-    },
-    {
-     "at": "@@changed-0.5",
-     "do": "geo.pin_out",
-     "stage": "stage_map",
-     "args": {
-      "pid": "marathon"
      }
     },
     {

@@ -338,6 +338,14 @@
    "id": "ph1896"
   },
   {
+   "at": "s05+0.9",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "marathon"
+   }
+  },
+  {
    "at": "s05@carrier",
    "do": "sticker_in",
    "id": "st_jug"
@@ -490,14 +498,6 @@
    "id": "tn",
    "args": {
     "dur": 0.3
-   }
-  },
-  {
-   "at": "s07@changed-0.5",
-   "do": "geo.pin_out",
-   "stage": "stage_map",
-   "args": {
-    "pid": "marathon"
    }
   },
   {
