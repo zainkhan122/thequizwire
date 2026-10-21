@@ -39,9 +39,9 @@
    "commons": "File:1896 Olympic marathon.jpg",
    "caption": "Athens, 10 April 1896",
    "x": 60,
-   "y": 430,
+   "y": 230,
    "w": 620,
-   "h": 430,
+   "h": 360,
    "rot": -3,
    "credit": "📷 Burton Holmes · Public domain"
   },
@@ -280,13 +280,13 @@
    }
   },
   {
-   "at": "s05+0.9",
+   "at": "s05+1.4",
    "do": "fact_in",
    "id": "f2",
    "until": "s05.end"
   },
   {
-   "at": "s05+0.5",
+   "at": "s05+1.1",
    "do": "photo_in",
    "id": "ph1896",
    "args": {

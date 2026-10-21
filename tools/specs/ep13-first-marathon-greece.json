@@ -579,7 +579,7 @@
     "kicker": "2:58:50",
     "text": "Spyridon Louis, water carrier"
    },
-   "card_at": 0.9,
+   "card_at": 1.4,
    "cam": [
     1.4,
     [
@@ -609,11 +609,11 @@
     "commons": "File:1896 Olympic marathon.jpg",
     "caption": "Athens, 10 April 1896",
     "x": 60,
-    "y": 430,
+    "y": 230,
     "w": 620,
-    "h": 430,
+    "h": 360,
     "from": "up",
-    "at": 0.5,
+    "at": 1.1,
     "rot": -3
    }
   },
