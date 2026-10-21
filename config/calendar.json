@@ -1,0 +1,16 @@
+[
+ {"date": "10-24", "name": "United Nations Day", "series": "geo-blitz", "angle": "where/why the UN sits where it does; member counts"},
+ {"date": "10-29", "name": "World Stroke Day", "series": "body-brain", "angle": "which side of the brain controls which hand"},
+ {"date": "11-05", "name": "World Tsunami Awareness Day", "series": "geo-blitz", "angle": "which ocean sees the most tsunamis"},
+ {"date": "11-14", "name": "World Diabetes Day", "series": "body-brain", "angle": "which organ makes insulin"},
+ {"date": "11-21", "name": "World Fisheries Day", "series": "wild-files", "angle": "biggest fish / most fish-eating nation"},
+ {"date": "12-05", "name": "World Soil Day", "series": "geo-blitz", "angle": "most fertile / biggest desert"},
+ {"date": "12-11", "name": "International Mountain Day", "series": "geo-blitz", "angle": "which country has the most 8000 m peaks"},
+ {"date": "01-01", "name": "New Year", "series": "geo-blitz", "angle": "which country sees the new year first"},
+ {"date": "02-06", "name": "Winter Olympics season (Milano-Cortina 2026 anniversary)", "series": "sports-sprint", "angle": "most winter golds"},
+ {"date": "03-03", "name": "World Wildlife Day", "series": "wild-files", "angle": "most endemic species"},
+ {"date": "04-07", "name": "World Health Day", "series": "body-brain", "angle": "longest-living nation"},
+ {"date": "06-08", "name": "World Oceans Day", "series": "geo-blitz", "angle": "deepest trench / largest ocean"},
+ {"date": "06-11", "name": "FIFA World Cup 2026 kick-off", "series": "sports-sprint", "angle": "host cities, most titles, first-ever match"},
+ {"date": "08-12", "name": "World Elephant Day", "series": "wild-files", "angle": "most elephants"}
+]

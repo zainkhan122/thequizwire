@@ -1,5 +1,7 @@
 # RESUME
 
+> **P1 DONE (2026-10-21) — topic decisions, not random picks:** `tools/signals.py` (YouTube suggest · Google Trends US/GB/IN/PK · Wikipedia top-read · `config/calendar.json` · our stems) → `topic.md` per episode (docs/TOPIC_GUIDELINES.md) → Q22 `reelkit/topiclint.py` (sections, source, stem ≠ last 5, shape ≠ last 2 in series, ship-by) → `daily_pick` orders by ship-by + series rotation (count stays random); `daily.yml` has a 09:30 UTC self-healing retry (`--if-unplanned`). Next: **P2 media stage** (real CC photos/clips as first-class scenes), P3 composed openers + motion-density gates, P4 per-Short copy, P5 re-author batch + show one.
+>
 > **M2 (2026-10-20) — new devices live:** `geo.travel` (a sticker rides a route in screen space, verified on Sports #13: the runner follows the 1896 course on the reveal, release `m2-travel-test2`), `chart.split` (then-vs-now panels) and `chart.erase` (a plate wipes away) — documented in `docs/BRIEF.md`; split/erase are engine-tested by hfstatic only, first real use should be frame-checked. Next ideas: true-size overlay, Body & Brain which-body-part engine, `tools/feed.py`, YT thumbnails.set.
 >
 > **M1 (2026-10-19) — ANTI-TEMPLATE EXPLANATIONS.** Owner: every short's explanation must be thought out on its own, like a human maker.

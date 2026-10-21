@@ -6,6 +6,7 @@ name: daily
 on:
   schedule:
     - cron: '0 7 * * *'          # 07:00 UTC = 12:00 PKT = 03:00 ET → renders done well before the first US slot
+    - cron: '30 9 * * *'         # self-healing retry: GitHub skipped the 07:00 run on 2026-10-21; daily_pick --if-unplanned makes this a no-op when 07:00 ran
   workflow_dispatch:
     inputs:
       min: {description: 'min episodes', default: '1'}
@@ -27,7 +28,7 @@ jobs:
       - name: Pick today's episodes
         id: p
         run: |
-          EPS="$(python3 tools/daily_pick.py --min "${{ inputs.min || '1' }}" --max "${{ inputs.max || '3' }}")"
+          EPS="$(python3 tools/daily_pick.py --if-unplanned --min "${{ inputs.min || '1' }}" --max "${{ inputs.max || '3' }}")"
           echo "eps=$EPS" >> "$GITHUB_OUTPUT"
           echo "### Daily pick $(date -u +%F): ${EPS:-— backlog empty}" >> "$GITHUB_STEP_SUMMARY"
           [ -n "$EPS" ] || { echo "::warning::backlog empty — nothing to render today (author episodes with status: ready)"; exit 0; }

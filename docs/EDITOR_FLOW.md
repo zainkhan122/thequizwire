@@ -1,4 +1,7 @@
-# Editor flow (how every Short is made since 2026-10-20)
+# Enforced human-editor order
+
+**Step 0 (P1, 2026-10-21): the topic decision.** `python3 tools/signals.py` → read `review/signals.md` → write `series/<series>/<ep>/topic.md` (docs/TOPIC_GUIDELINES.md): signal, why now, takeaway, question shape, distractors, search term, rejected alternatives, ship-by. quizlint Q22 (`reelkit/topiclint.py`) refuses anything without it; `daily_pick` schedules by ship-by, not by chance.
+
 
 No episode is produced from a template. The pipeline forces the order a human editor works in, and CI refuses anything that skips a step.
 
