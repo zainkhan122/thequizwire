@@ -735,7 +735,7 @@
      "changed": "changed"
     }
    },
-   "direction": "let the years run, THEN vs NOW split on 'changed', the Greek ball comes back proud beside THEN",
+   "direction": "let the years run, THEN vs NOW split on 'changed', an official medal pops beside NOW",
    "energy": 3,
    "tone": "resolute",
    "cam": [
@@ -815,16 +815,6 @@
      "id": "tn"
     },
     {
-     "at": "@@changed+0.8",
-     "do": "character_in",
-     "id": "cha"
-    },
-    {
-     "at": "@.end",
-     "do": "character_out",
-     "id": "cha"
-    },
-    {
      "at": "@.end-0.6",
      "do": "hide",
      "id": "tn",
@@ -847,6 +837,16 @@
      "args": {
       "pid": "stadium"
      }
+    },
+    {
+     "at": "@@changed+0.8",
+     "do": "sticker_in",
+     "id": "st_medal"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_medal"
     }
    ],
    "pause_after": 0.35
@@ -879,6 +879,15 @@
    "y": 640,
    "size": 150,
    "rot": -10
+  },
+  {
+   "id": "st_medal",
+   "type": "sticker",
+   "emoji": "1f3c5",
+   "x": 790,
+   "y": 560,
+   "size": 170,
+   "rot": 10
   }
  ]
 }
