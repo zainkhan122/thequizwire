@@ -1177,23 +1177,23 @@
    "platform": "twitter",
    "post_id": "6ad766c1892e8621b52b6038",
    "channel_id": "69f30e2a5c4c051afaf58634",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/f4d4713ad049/Where-is-the-DEEPEST-lake-on-Earth.mp4",
    "due_at": "2026-10-21T13:00:00.000Z",
    "created_at": "2026-10-20T13:04:01.458Z",
    "recorded_at": "2026-10-20T13:04:01+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-21T06:07:03+00:00"
+   "sent_at": "2026-10-21T13:03:24.986Z",
+   "external_link": "https://x.com/2049746939164676096/status/2112892510410272851",
+   "refreshed_at": "2026-10-21T14:32:22+00:00"
   },
   {
    "episode": "ep17-deepest-lake-baikal",
    "platform": "threads",
    "post_id": "6ad766c2a154249523d0b6e3",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "error",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/f4d4713ad049/Where-is-the-DEEPEST-lake-on-Earth.mp4",
    "due_at": "2026-10-21T14:00:00.000Z",
    "created_at": "2026-10-20T13:04:02.040Z",
@@ -1202,7 +1202,8 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-21T06:07:03+00:00"
+   "refreshed_at": "2026-10-21T14:32:22+00:00",
+   "error": "An unknown error has occurred. Please retry the post again, and get in touch if this persists."
   },
   {
    "episode": "ep12-most-world-cups-brazil",
@@ -1215,7 +1216,10 @@
    "created_at": "2026-10-21T11:00:40.446Z",
    "recorded_at": "2026-10-21T11:00:40+00:00",
    "title": "Which country has the MOST World Cup titles? 🏆 #SportsQuiz #SportsTrivia",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-21T14:32:24+00:00"
   },
   {
    "episode": "ep12-most-world-cups-brazil",
@@ -1228,7 +1232,10 @@
    "created_at": "2026-10-21T11:00:40.990Z",
    "recorded_at": "2026-10-21T11:00:41+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-21T14:32:24+00:00"
   },
   {
    "episode": "ep12-most-world-cups-brazil",
@@ -1241,7 +1248,10 @@
    "created_at": "2026-10-21T11:00:43.043Z",
    "recorded_at": "2026-10-21T11:00:43+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-21T14:32:26+00:00"
   },
   {
    "episode": "ep12-most-world-cups-brazil",
@@ -1254,7 +1264,10 @@
    "created_at": "2026-10-21T11:00:45.087Z",
    "recorded_at": "2026-10-21T11:00:45+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-21T14:32:28+00:00"
   },
   {
    "episode": "ep12-most-world-cups-brazil",
@@ -1267,7 +1280,10 @@
    "created_at": "2026-10-21T11:00:45.919Z",
    "recorded_at": "2026-10-21T11:00:46+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-21T14:32:28+00:00"
   },
   {
    "episode": "ep11-most-elephants-botswana",
@@ -1280,7 +1296,10 @@
    "created_at": "2026-10-21T11:00:47.997Z",
    "recorded_at": "2026-10-21T11:00:48+00:00",
    "title": "Which country has the MOST elephants? 🐘 #AnimalQuiz #WildlifeFacts",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-21T14:32:30+00:00"
   },
   {
    "episode": "ep11-most-elephants-botswana",
@@ -1293,7 +1312,10 @@
    "created_at": "2026-10-21T11:00:48.496Z",
    "recorded_at": "2026-10-21T11:00:48+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-21T14:32:30+00:00"
   },
   {
    "episode": "ep11-most-elephants-botswana",
@@ -1306,7 +1328,10 @@
    "created_at": "2026-10-21T11:00:50.558Z",
    "recorded_at": "2026-10-21T11:00:50+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-21T14:32:32+00:00"
   },
   {
    "episode": "ep11-most-elephants-botswana",
@@ -1319,7 +1344,10 @@
    "created_at": "2026-10-21T11:00:52.425Z",
    "recorded_at": "2026-10-21T11:00:52+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-21T14:32:34+00:00"
   },
   {
    "episode": "ep11-most-elephants-botswana",
@@ -1332,7 +1360,10 @@
    "created_at": "2026-10-21T11:00:52.924Z",
    "recorded_at": "2026-10-21T11:00:53+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-21T14:32:35+00:00"
   },
   {
    "episode": "ep16-longest-border-canada-usa",
@@ -1345,7 +1376,10 @@
    "created_at": "2026-10-21T11:00:55.238Z",
    "recorded_at": "2026-10-21T11:00:55+00:00",
    "title": "Where is the LONGEST land border on Earth? 🌍 #GeographyQuiz #MapQuiz",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-21T14:32:37+00:00"
   },
   {
    "episode": "ep16-longest-border-canada-usa",
@@ -1358,7 +1392,10 @@
    "created_at": "2026-10-21T11:00:56.010Z",
    "recorded_at": "2026-10-21T11:00:56+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-21T14:32:37+00:00"
   },
   {
    "episode": "ep16-longest-border-canada-usa",
@@ -1371,7 +1408,10 @@
    "created_at": "2026-10-21T11:00:57.826Z",
    "recorded_at": "2026-10-21T11:00:57+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-21T14:32:39+00:00"
   },
   {
    "episode": "ep16-longest-border-canada-usa",
@@ -1384,7 +1424,10 @@
    "created_at": "2026-10-21T11:00:59.754Z",
    "recorded_at": "2026-10-21T11:00:59+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-21T14:32:41+00:00"
   },
   {
    "episode": "ep16-longest-border-canada-usa",
@@ -1397,7 +1440,10 @@
    "created_at": "2026-10-21T11:01:00.513Z",
    "recorded_at": "2026-10-21T11:01:00+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-21T14:32:41+00:00"
   }
  ]
 }
