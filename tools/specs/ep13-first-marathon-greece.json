@@ -70,7 +70,7 @@
    "travel",
    "photo",
    "compare",
-   "counter"
+   "split"
   ],
   "cast": "flagball:happy + emoji-set:running",
   "music": "bed:pad"
@@ -568,18 +568,18 @@
    "vo": {
     "text": "A Greek water carrier named Louis won it, in just under three hours.",
     "cues": {
-     "carrier": "carrier",
+     "won": "won",
      "hours": "hours"
     }
    },
-   "direction": "a person first — the real 1896 photograph rises in, then the time card",
+   "direction": "a person first — the real 1896 photograph rises in, a flash on 'won', the time card lands on 'hours'",
    "energy": 3,
    "tone": "resolute",
    "card": {
     "kicker": "2:58:50",
     "text": "Spyridon Louis, water carrier"
    },
-   "card_at": 1.4,
+   "card_at": null,
    "cam": [
     1.4,
     [
@@ -598,6 +598,19 @@
    "pulse": 0.5,
    "pause_after": 0.35,
    "devices": [
+    {
+     "at": "@@won",
+     "do": "fx.flash",
+     "args": {
+      "peak": 0.5
+     }
+    },
+    {
+     "at": "@@hours",
+     "do": "fact_in",
+     "id": "f2",
+     "until": "@.end"
+    },
     {
      "at": "@.end",
      "do": "sticker_out",
@@ -622,10 +635,10 @@
     "text": "But London 1908 stretched the course to 42.195 kilometres, so it could start at Windsor Castle.",
     "cues": {
      "london": "london",
-     "castle": "castle"
+     "windsor": "windsor"
     }
    },
-   "direction": "the twist, show the two lengths",
+   "direction": "the twist: two lengths rise as blocks; the UK flag-ball arrives on 'London', a castle pops on 'Windsor'",
    "energy": 4,
    "tone": "revelatory",
    "cam": [
@@ -677,6 +690,26 @@
      }
     },
     {
+     "at": "@@london",
+     "do": "character_in",
+     "id": "chb"
+    },
+    {
+     "at": "@@windsor",
+     "do": "sticker_in",
+     "id": "st_castle"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "chb"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_castle"
+    },
+    {
      "at": "@.end",
      "do": "hide",
      "id": "dist"
@@ -691,7 +724,7 @@
      "changed": "changed"
     }
    },
-   "direction": "let the years run",
+   "direction": "let the years run, then THEN vs NOW split on 'changed'",
    "energy": 3,
    "tone": "resolute",
    "cam": [
@@ -720,22 +753,58 @@
      "label": "years, same distance",
      "fmt": "raw",
      "size": 200
+    },
+    {
+     "id": "tn",
+     "type": "split",
+     "left": {
+      "kicker": "~40 km",
+      "text": "Athens 1896"
+     },
+     "right": {
+      "kicker": "42.195 km",
+      "text": "official marathon distance in 1921"
+     },
+     "label_left": "THEN",
+     "label_right": "NOW",
+     "y": 380,
+     "h": 560
     }
    ],
    "devices": [
     {
+     "at": "@@official",
+     "do": "fx.flash",
+     "args": {
+      "peak": 0.4
+     }
+    },
+    {
      "at": "@+0.2",
      "do": "chart.counter_run",
      "id": "years",
-     "until": "@+2.8",
+     "until": "@@changed-0.2",
      "args": {
       "ease": "power1.in"
      }
     },
     {
+     "at": "@@changed-0.1",
+     "do": "hide",
+     "id": "years",
+     "args": {
+      "dur": 0.2
+     }
+    },
+    {
+     "at": "@@changed",
+     "do": "chart.split_in",
+     "id": "tn"
+    },
+    {
      "at": "@.end",
      "do": "hide",
-     "id": "years"
+     "id": "tn"
     }
    ],
    "pause_after": 0.35
@@ -750,6 +819,15 @@
    "y": 560,
    "size": 150,
    "rot": 0
+  },
+  {
+   "id": "st_castle",
+   "type": "sticker",
+   "emoji": "1f3f0",
+   "x": 800,
+   "y": 1040,
+   "size": 170,
+   "rot": 8
   }
  ]
 }

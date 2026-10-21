@@ -78,10 +78,10 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.35,
-   "direction": "a person first — the real 1896 photograph rises in, then the time card",
+   "direction": "a person first — the real 1896 photograph rises in, a flash on 'won', the time card lands on 'hours'",
    "text": "A Greek water carrier named Louis won it, in just under three hours.",
    "cues": {
-    "carrier": "carrier",
+    "won": "won",
     "hours": "hours"
    }
   },
@@ -92,11 +92,11 @@
    "tone": "revelatory",
    "energy": 4,
    "pause_after": 0.5,
-   "direction": "the twist, show the two lengths",
+   "direction": "the twist: two lengths rise as blocks; the UK flag-ball arrives on 'London', a castle pops on 'Windsor'",
    "text": "But London 1908 stretched the course to 42.195 kilometres, so it could start at Windsor Castle.",
    "cues": {
     "london": "london",
-    "castle": "castle"
+    "windsor": "windsor"
    }
   },
   {
@@ -106,7 +106,7 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.35,
-   "direction": "let the years run",
+   "direction": "let the years run, then THEN vs NOW split on 'changed'",
    "text": "That odd distance became official in 1921, and it has not changed since. Every marathon you have ever watched ran it.",
    "cues": {
     "official": "official",

@@ -29,6 +29,7 @@ v2 (episode.json "format": "quiz-v2", docs/PLAN_V2.md §2) replaces Q1/Q2's card
   Q17 hook=Q    v3: the first spoken line is the on-screen question verbatim (normalised) — heard and read together, no restated hook
   Q19 brief     brief.md written (hook fact · show it · beat order · different from · swipe test · devices) — reelkit/shapelint.py
   Q20 shape     explanation shape ≠ any other ready episode of the series; not three identical device sets — reelkit/shapelint.py
+  Q23 pace      explanation window: ≥ 15 visual events/10 s, no static span > 2.5 s, ≥ 1 real visual (photo/chart/route/rise/split), ≥ 2 events per sentence — reelkit/pacelint.py
   Q22 topic     topic.md: signal · why now · takeaway · question shape · distractors · search term · rejected · ship-by; stem ≠ last 5 — reelkit/topiclint.py
   Q18 copy      post.copy hand-written per channel (reelkit/postkit.py check): no answer/demonym/fact-number spoilers, no template sentences
   Q16 variety    v3: `variety` block in the pools (docs/VARIETY.md); ≥ 4/8 axes equal to the previous episode, 3-in-a-row opener/reveal/outro/hook stem, or the same emoji set → FAIL
@@ -207,6 +208,13 @@ def main():
             import topiclint as _tl
             _F, _W = _tl.run(ep); G += _F; W += _W
         except Exception as ex: G.append(f"Q22: topiclint could not run ({ex})")
+        try:                                                                   # Q23 pace: hard for anything that can still ship, WARN for live posts
+            import pacelint as _pl
+            _F, _W = _pl.run(ep)
+            _lp = Path(ep).resolve().parents[2] / "dispatch/ledger.json"
+            _live = _lp.exists() and any(x.get("episode") == Path(ep).name and x.get("state") in ("scheduled", "sent") for x in json.loads(_lp.read_text()).get("posts", []))
+            (W if _live else G).extend(_F); W += _W
+        except Exception as ex: G.append(f"Q23: pacelint could not run ({ex})")
     # ---- Q18 per-channel copy gate (owner 2026-10-19): postkit's spoiler + template lints are a quizlint FAIL too
     try:
         sys.path.insert(0, str(Path(__file__).resolve().parent)); import postkit as _pk

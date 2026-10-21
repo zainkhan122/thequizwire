@@ -44,3 +44,9 @@ flag-ball characters with faces, `engine/fx.py` flash. In a spec, a story beat i
 ## P2 devices (2026-10-21)
 - **photo** — `"photo": {"id":"ph1","commons":"File:X.jpg","caption":"…","x":60,"y":430,"w":620,"h":430,"from":"up|left|right|pop","at":0.5}` on a story beat; fetched + licensed at build time by `reelkit/photos.py`, credit burned into the frame, slow push inside the frame.
 - **rise** — `"from":"rise","fid":"NLD"` makes the photo (or any element via `geo.rise` args fid/eid) pop up OUT of the country's shape like a pop-up book. Owner's suggestion 2026-10-21.
+
+## P3 — pace is measured, not promised (2026-10-21)
+The quiz part (question · options with flags/symbols · timer · reveal) is fixed. The explanation is gated by `reelkit/pacelint.py` (Q23)
+on the resolved timeline: ≥ 15 visual events / 10 s, no span > 2.5 s without motion, at least one real visual (photo, chart, route,
+rise, split…), and every sentence with ≥ 2 moves. The gate prints the dead timestamps — fix that sentence with a move that
+belongs to it (a cue-timed `devices` line: `"at": "@@word"`), never with filler.

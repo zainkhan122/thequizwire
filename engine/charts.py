@@ -68,7 +68,7 @@ class Charts:
     def split(self, sid, left, right, y=380, h=620, label_left="THEN", label_right="NOW"):
         """Two half-frame panels: left/right = {kicker, text}. split_in slides them in from each side; the divider snaps in last."""
         def panel(side, P, lab):
-            return (f'<div class="spanel {side}" id="{sid}_{side}"><div class="slab tu">{esc(lab)}</div>'
+            return (f'<div class="spanel {side}" id="{sid}_{side}"><div class="slab tu" data-fc="skip">{esc(lab)}</div>'
                     f'<div class="skick tu">{esc(P.get("kicker", ""))}</div><div class="stext tu">{esc(P.get("text", ""))}</div></div>')
         return (f'<div id="{sid}" class="chart split" style="left:60px;top:{y}px;width:960px;height:{h}px">'
                 + panel("l", left, label_left) + panel("r", right, label_right) + f'<div class="sdiv" id="{sid}_d"></div></div>')

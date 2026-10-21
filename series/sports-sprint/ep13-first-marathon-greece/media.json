@@ -146,6 +146,15 @@
    "provider": "Twemoji (Twitter, Inc. and other contributors)",
    "source": "https://github.com/twitter/twemoji"
   },
+  "stickers/1f3f0.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1010,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
   "stickers/1f44d.svg": {
    "by": "reelkit/stickers.py",
    "bytes": 1663,

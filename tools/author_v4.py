@@ -164,7 +164,8 @@ def build(S):
             B.append(cam(sc, f"{sc}+{glide}", b["cam"], b.get("cam_ease", "power2.inOut")))
             if b.get("cam_hold"): B.append(cam(f"{sc}+{glide}", f"{nxt}+0.2" if last else f"{sc}.end", b["cam_hold"], "none"))
         if b.get("pulse") is not None and b.get("pulse") is not False: B += pulse(f"{sc}+{b['pulse']}")
-        if b.get("card"): B.append({"at": f"{sc}+{b.get('card_at', 0.4)}", "do": "fact_in", "id": f"f{i + 2}", "until": f"{sc}.end"})
+        if b.get("card") and b.get("card_at", 0.4) is not None:                # card_at null → the card is timed by a device line (e.g. on a cue)
+            B.append({"at": f"{sc}+{b.get('card_at', 0.4)}", "do": "fact_in", "id": f"f{i + 2}", "until": f"{sc}.end"})
         if b.get("sticker"):
             s_ = b["sticker"]; B += [{"at": f"{sc}+{s_.get('at', 0.6)}", "do": "sticker_in", "id": s_["id"]}, {"at": f"{sc}.end", "do": "sticker_out", "id": s_["id"]}]
         if b.get("photo"):

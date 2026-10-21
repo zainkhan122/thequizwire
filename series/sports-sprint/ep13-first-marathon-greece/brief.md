@@ -30,3 +30,8 @@ route + travel (runner rides the course on the reveal), card, sticker, pin, comp
 1896. It rises into the frame in beat 1 while the voice says "a Greek water carrier named Louis won it": the viewer sees the
 real race, not an icon of one. One photo only; the course route and the runner sticker already carry the reveal, and the
 compare block carries the twist — a second photo would compete with the numbers.
+
+## Pace (P3, 2026-10-21)
+Every sentence gets its own moves: s05 photo rises → flash on "won" → time card on "hours"; s06 the two lengths rise as blocks →
+UK flag-ball on "London" → castle pops on "Windsor"; s07 years run on "official" → counter gives way to a THEN / NOW split on
+"changed". Measured 15.4 events / 10 s with no static span (reelkit/pacelint.py).

@@ -76,6 +76,22 @@
    "size": 200
   },
   {
+   "id": "tn",
+   "type": "split",
+   "left": {
+    "kicker": "~40 km",
+    "text": "Athens 1896"
+   },
+   "right": {
+    "kicker": "42.195 km",
+    "text": "official marathon distance in 1921"
+   },
+   "label_left": "THEN",
+   "label_right": "NOW",
+   "y": 380,
+   "h": 560
+  },
+  {
    "id": "st_run",
    "type": "sticker",
    "emoji": "1f3c3",
@@ -83,6 +99,15 @@
    "y": 560,
    "size": 150,
    "rot": 0
+  },
+  {
+   "id": "st_castle",
+   "type": "sticker",
+   "emoji": "1f3f0",
+   "x": 800,
+   "y": 1040,
+   "size": 170,
+   "rot": 8
   },
   {
    "id": "mascot",
@@ -280,12 +305,6 @@
    }
   },
   {
-   "at": "s05+1.4",
-   "do": "fact_in",
-   "id": "f2",
-   "until": "s05.end"
-  },
-  {
    "at": "s05+1.1",
    "do": "photo_in",
    "id": "ph1896",
@@ -297,6 +316,19 @@
    "at": "s05.end",
    "do": "photo_out",
    "id": "ph1896"
+  },
+  {
+   "at": "s05@won",
+   "do": "fx.flash",
+   "args": {
+    "peak": 0.5
+   }
+  },
+  {
+   "at": "s05@hours",
+   "do": "fact_in",
+   "id": "f2",
+   "until": "s05.end"
   },
   {
    "at": "s05.end",
@@ -341,6 +373,26 @@
    }
   },
   {
+   "at": "s06@london",
+   "do": "character_in",
+   "id": "chb"
+  },
+  {
+   "at": "s06@windsor",
+   "do": "sticker_in",
+   "id": "st_castle"
+  },
+  {
+   "at": "s06.end",
+   "do": "character_out",
+   "id": "chb"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_castle"
+  },
+  {
    "at": "s06.end",
    "do": "hide",
    "id": "dist"
@@ -374,18 +426,38 @@
    }
   },
   {
+   "at": "s07@official",
+   "do": "fx.flash",
+   "args": {
+    "peak": 0.4
+   }
+  },
+  {
    "at": "s07+0.2",
    "do": "chart.counter_run",
    "id": "years",
-   "until": "s07+2.8",
+   "until": "s07@changed-0.2",
    "args": {
     "ease": "power1.in"
    }
   },
   {
+   "at": "s07@changed-0.1",
+   "do": "hide",
+   "id": "years",
+   "args": {
+    "dur": 0.2
+   }
+  },
+  {
+   "at": "s07@changed",
+   "do": "chart.split_in",
+   "id": "tn"
+  },
+  {
    "at": "s07.end",
    "do": "hide",
-   "id": "years"
+   "id": "tn"
   },
   {
    "at": "s08",
