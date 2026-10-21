@@ -1,6 +1,8 @@
 """reelkit/photos.py — real photos of the subject from Wikimedia Commons, with licence captured for provenance (P2, 2026-10-21).
 
-    python3 reelkit/photos.py prep <episode_dir> <build_dir>     # every {"type":"photo","commons":"File:X.jpg"} in visuals.json → <build>/photos/<id>.jpg
+    python3 reelkit/photos.py fetch <episode_dir>                # AUTHOR TIME: resolve + download every {"type":"photo"} into <ep>/media/photos/<id>.jpg,
+                                                                 #   write provenance into media.json; then `reelkit/media.py push <ep>` stores them in the release
+    python3 reelkit/photos.py prep <episode_dir> <build_dir>     # BUILD TIME (CI): copy <ep>/media/photos/* → <build>/photos (no network; Commons 429s shared runners)
     python3 reelkit/photos.py find "<search terms>" [--n 8]      # editor helper: candidate files with licence + size, SA/NC/ND filtered out
 
 Rules (reelkit/provenance.py): only CC0 / public domain / CC BY are usable (share-alike, NC, ND refused for monetised video);
@@ -50,12 +52,13 @@ def fetch(url):
         with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r: dst.write_bytes(r.read())
     return dst
 
-def prep(ep, build):
-    ep, build = pathlib.Path(ep), pathlib.Path(build); V = json.loads((ep / "visuals.json").read_text())
+def fetch_ep(ep):
+    """Author time: resolve on Commons, download, write provenance. Files land in <ep>/media/photos (media.py DEFAULT_GLOBS → release)."""
+    ep = pathlib.Path(ep); V = json.loads((ep / "visuals.json").read_text())
     photos = [e for e in V.get("elements", []) if e.get("type") == "photo"]
     if not photos: return []
-    out = build / "photos"; out.mkdir(parents=True, exist_ok=True)
-    mp = ep / "media.json"; man = json.loads(mp.read_text()) if mp.exists() else {"files": {}}; gen = man.setdefault("generated", {})
+    out = ep / "media" / "photos"; out.mkdir(parents=True, exist_ok=True)
+    mp = ep / "media.json"; man = json.loads(mp.read_text()) if mp.exists() else {"files": {}}; files = man.setdefault("files", {})
     I = infos([e["commons"] for e in photos])
     for e in photos:
         i = I.get(e["commons"]) or I.get(e["commons"].replace("_", " ")) or info(e["commons"]); lic = i["licence"]
@@ -64,9 +67,27 @@ def prep(ep, build):
         src = fetch(i["thumb"]); dst = out / f"{e['id']}.jpg"; shutil.copy(src, dst)
         short = re.split(r"[,(;/]", i["artist"])[0].strip()[:32] or "Wikimedia Commons"; screen = f"📷 {short} · {lic}"
         e["credit"] = screen                                                  # written into the frame by engine/quiz.py photo()
-        gen[f"photos/{e['id']}.jpg"] = {"kind": "photo", "licence": lic if lic.lower() != "public domain" else "PD", "provider": "Wikimedia Commons", "source": i["page"],
-                                         "credit": f"{i['artist']} — {lic} — {i['page']}", "screen_credit": screen, "licence_url": i["licence_url"], "bytes": dst.stat().st_size, "by": "reelkit/photos.py"}
+        files[f"media/photos/{e['id']}.jpg"] = {**files.get(f"media/photos/{e['id']}.jpg", {}), "kind": "photo", "licence": lic if lic.lower() != "public domain" else "PD",
+            "provider": "Wikimedia Commons", "source": i["page"], "credit": f"{i['artist']} — {lic} — {i['page']}", "screen_credit": screen, "licence_url": i["licence_url"],
+            "commons": i["title"], "by": "reelkit/photos.py"}
     (ep / "visuals.json").write_text(json.dumps(V, indent=1, ensure_ascii=False) + "\n")
+    mp.write_text(json.dumps(man, indent=1, ensure_ascii=False) + "\n")
+    print(f"photos: {len(photos)} fetched → {out} (now: python3 reelkit/media.py push {ep})"); return photos
+
+def prep(ep, build):
+    """Build time: copy the episode's photos into the build. No network — if a photo was never fetched, say so (fetch + media push)."""
+    ep, build = pathlib.Path(ep), pathlib.Path(build); V = json.loads((ep / "visuals.json").read_text())
+    photos = [e for e in V.get("elements", []) if e.get("type") == "photo"]
+    if not photos: return []
+    out = build / "photos"; out.mkdir(parents=True, exist_ok=True)
+    mp = ep / "media.json"; man = json.loads(mp.read_text()) if mp.exists() else {"files": {}}; gen = man.setdefault("generated", {})
+    for e in photos:
+        rel = f"media/photos/{e['id']}.jpg"; src = ep / rel
+        if not src.exists(): raise SystemExit(f"photos: {src} missing — run `python3 reelkit/photos.py fetch {ep}` then `python3 reelkit/media.py push {ep}`")
+        if not e.get("credit"): raise SystemExit(f"photos: {e['id']} has no credit — run photos.py fetch")
+        shutil.copy(src, out / src.name)
+        f_ = man.get("files", {}).get(rel, {})
+        gen[f"photos/{e['id']}.jpg"] = {k: f_[k] for k in ("kind", "licence", "provider", "source", "credit", "screen_credit") if k in f_} | {"derived_from": rel, "op": "copy", "by": "reelkit/photos.py", "bytes": src.stat().st_size}
     mp.write_text(json.dumps(man, indent=1, ensure_ascii=False) + "\n")
     print(f"photos: {len(photos)} → {out}"); return photos
 
@@ -80,4 +101,5 @@ def find(q, n=8):
 
 if __name__ == "__main__":
     if sys.argv[1] == "prep": prep(sys.argv[2], sys.argv[3])
+    elif sys.argv[1] == "fetch": fetch_ep(sys.argv[2])
     elif sys.argv[1] == "find": find(" ".join(a for a in sys.argv[2:] if not a.startswith("--")), int(sys.argv[sys.argv.index("--n") + 1]) if "--n" in sys.argv else 8)
