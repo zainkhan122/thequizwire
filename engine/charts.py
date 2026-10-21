@@ -65,20 +65,21 @@ class Charts:
                f"tl.to(o,{{v:{it['end']},duration:{f(t1 - t0)},ease:'{ease_s}',onUpdate:()=>{{const v=o.v;e.textContent={fmt_js}+'{esc(it['suffix'])}';}}}},{f(t0)});}}")
 
     # ---------------------------------------------------------------- M2: then-vs-now split
-    def split(self, sid, left, right, y=380, h=620, label_left="THEN", label_right="NOW"):
-        """Two half-frame panels: left/right = {kicker, text}. split_in slides them in from each side; the divider snaps in last."""
+    def split(self, sid, left, right, y=380, h=620, label_left="THEN", label_right="NOW", x=60, w=620):
+        """Then-vs-now: two stacked panels (top = left/THEN, bottom = right/NOW), each {kicker, text}, kept inside the left content
+        column (x < 694 — the right action column is reserved, see layout gates). split_in slides them in from opposite sides."""
         def panel(side, P, lab):
             A = ' data-layout-allow-overlap="true"'                                  # the panels are plates layered over the map by design (like photo frames)
             return (f'<div class="spanel {side}" id="{sid}_{side}"{A}><div class="slab tu" data-fc="skip"{A}>{esc(lab)}</div>'
                     f'<div class="skick tu"{A}>{esc(P.get("kicker", ""))}</div><div class="stext tu"{A}>{esc(P.get("text", ""))}</div></div>')
-        return (f'<div id="{sid}" class="chart split" style="left:60px;top:{y}px;width:960px;height:{h}px">'
+        return (f'<div id="{sid}" class="chart split" style="left:{x}px;top:{y}px;width:{w}px;height:{h}px">'
                 + panel("l", left, label_left) + panel("r", right, label_right) + f'<div class="sdiv" id="{sid}_d"></div></div>')
 
     def split_in(self, t, sid, dur=0.7):
         self.J(f"tl.set('#{sid}',{{autoAlpha:1}},{f(t)});")
         self.J(f"tl.fromTo('#{sid}_l',{{xPercent:-110,autoAlpha:0}},{{xPercent:0,autoAlpha:1,duration:{f(dur)},ease:'power3.out',immediateRender:false}},{f(t)});")
         self.J(f"tl.fromTo('#{sid}_r',{{xPercent:110,autoAlpha:0}},{{xPercent:0,autoAlpha:1,duration:{f(dur)},ease:'power3.out',immediateRender:false}},{f(t + 0.15)});")
-        self.J(f"tl.fromTo('#{sid}_d',{{scaleY:0}},{{scaleY:1,duration:0.35,ease:'power2.out',immediateRender:false}},{f(t + dur)});")
+        self.J(f"tl.fromTo('#{sid}_d',{{scaleX:0}},{{scaleX:1,duration:0.35,ease:'power2.out',immediateRender:false}},{f(t + dur)});")
 
     # ---------------------------------------------------------------- M2: reveal by erase (a plate with a word wipes away)
     def erase(self, eid, text, y=560, h=420, color="#1b1b1b"):
@@ -195,12 +196,12 @@ CSS = f"""
 .compare .cbase{{position:absolute;left:0;height:4px;background:{CREAM}}}
 .compare .cval{{position:absolute;text-align:center;font-family:'Anton';font-size:48px;color:{SAND};visibility:hidden;opacity:0}}
 .compare .clab{{position:absolute;text-align:center;font-family:'Oswald';font-weight:500;font-size:32px;letter-spacing:.08em;text-transform:uppercase;color:{CREAM}}}
-.split .spanel{{position:absolute;top:0;width:46%;height:100%;border-radius:22px;background:rgba(27,27,27,.86);padding:26px 28px;box-sizing:border-box;visibility:hidden;opacity:0}}
-.split .spanel.l{{left:0}} .split .spanel.r{{right:0}}
+.split .spanel{{position:absolute;left:0;width:100%;height:47%;border-radius:22px;background:rgba(27,27,27,.86);padding:22px 26px;box-sizing:border-box;visibility:hidden;opacity:0}}
+.split .spanel.l{{top:0}} .split .spanel.r{{bottom:0}}
 .split .slab{{font-family:'Oswald';font-weight:600;font-size:34px;letter-spacing:.14em;color:#FFD400}}
-.split .skick{{font-family:'Anton';font-size:120px;line-height:1.05;color:#fff;margin-top:18px}}
-.split .stext{{font-family:'Oswald';font-weight:500;font-size:38px;line-height:1.2;color:{CREAM};margin-top:14px}}
-.split .sdiv{{position:absolute;left:50%;top:6%;width:6px;height:88%;margin-left:-3px;background:#FFD400;transform-origin:50% 0}}
+.split .skick{{font-family:'Anton';font-size:104px;line-height:1.05;color:#fff;margin-top:10px}}
+.split .stext{{font-family:'Oswald';font-weight:500;font-size:36px;line-height:1.2;color:{CREAM};margin-top:8px}}
+.split .sdiv{{position:absolute;top:50%;left:6%;height:6px;width:88%;margin-top:-3px;background:#FFD400;transform-origin:0 50%}}
 .erase .etext{{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;font-family:'Anton';font-size:150px;line-height:1;color:#FFD400;text-shadow:0 6px 0 rgba(0,0,0,.5)}}
 .callouts .kplate{{position:absolute;font-family:'Oswald';font-weight:600;font-size:34px;color:{INK};background:{CREAM};padding:8px 18px 6px;border-left:8px solid {RED};white-space:nowrap;visibility:hidden;opacity:0}}
 .strip .sline{{position:absolute;left:60px;right:60px;top:20px;height:6px;background:{CREAM};transform-origin:0 50%}}

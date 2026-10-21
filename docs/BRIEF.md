@@ -38,7 +38,7 @@ flag-ball characters with faces, `engine/fx.py` flash. In a spec, a story beat i
 
 ## M2 devices (2026-10-20)
 - **travel** — a sticker/character rides along a route while it draws: element `{"id":"runner","type":"sticker","emoji":"1f3c3",...}` + beat `{"at":"@@cue","do":"geo.travel","until":"@.end","args":{"rid":"course","layer":"line","sid":"runner"}}` (pair with `geo.route_draw` on the same span).
-- **split** — then-vs-now panels: element `{"id":"tn","type":"split","left":{"kicker":"169 cm","text":"born 1896"},"right":{"kicker":"182.5 cm","text":"born 1996"},"label_left":"THEN","label_right":"NOW"}` + `{"at":"@+0.3","do":"chart.split_in","id":"tn"}` + `hide`.
+- **split** — then-vs-now stacked panels (THEN top, NOW bottom, left column): element `{"id":"tn","type":"split","left":{"kicker":"169 cm","text":"born 1896"},"right":{"kicker":"182.5 cm","text":"born 1996"},"label_left":"THEN","label_right":"NOW"}` + `{"at":"@+0.3","do":"chart.split_in","id":"tn"}` + `hide`.
 - **erase** — a plate with one word wipes away to reveal the map underneath: element `{"id":"myth","type":"erase","text":"BACTERIA?"}` + `{"at":"@+0.2","do":"chart.erase_run","id":"myth","until":"@+1.4","args":{"direction":"left"}}`.
 
 ## P2 devices (2026-10-21)

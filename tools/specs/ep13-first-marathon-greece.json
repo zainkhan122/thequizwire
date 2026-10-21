@@ -778,8 +778,10 @@
      },
      "label_left": "THEN",
      "label_right": "NOW",
-     "y": 270,
-     "h": 480
+     "y": 250,
+     "h": 560,
+     "x": 60,
+     "w": 620
     }
    ],
    "devices": [
