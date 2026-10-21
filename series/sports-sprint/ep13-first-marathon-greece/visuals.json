@@ -88,8 +88,8 @@
    },
    "label_left": "THEN",
    "label_right": "NOW",
-   "y": 380,
-   "h": 560
+   "y": 300,
+   "h": 440
   },
   {
    "id": "st_run",
@@ -474,11 +474,6 @@
    "id": "tn"
   },
   {
-   "at": "s07.end",
-   "do": "hide",
-   "id": "tn"
-  },
-  {
    "at": "s07@changed+0.8",
    "do": "character_in",
    "id": "cha"
@@ -487,6 +482,14 @@
    "at": "s07.end",
    "do": "character_out",
    "id": "cha"
+  },
+  {
+   "at": "s07.end-0.6",
+   "do": "hide",
+   "id": "tn",
+   "args": {
+    "dur": 0.3
+   }
   },
   {
    "at": "s08",

@@ -778,8 +778,8 @@
      },
      "label_left": "THEN",
      "label_right": "NOW",
-     "y": 380,
-     "h": 560
+     "y": 300,
+     "h": 440
     }
    ],
    "devices": [
@@ -813,11 +813,6 @@
      "id": "tn"
     },
     {
-     "at": "@.end",
-     "do": "hide",
-     "id": "tn"
-    },
-    {
      "at": "@@changed+0.8",
      "do": "character_in",
      "id": "cha"
@@ -826,6 +821,14 @@
      "at": "@.end",
      "do": "character_out",
      "id": "cha"
+    },
+    {
+     "at": "@.end-0.6",
+     "do": "hide",
+     "id": "tn",
+     "args": {
+      "dur": 0.3
+     }
     }
    ],
    "pause_after": 0.35
