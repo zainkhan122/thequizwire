@@ -51,7 +51,7 @@
       18.42,
       -33.93
      ],
-     "label": "Cape Town · Groote Schuur",
+     "label": "Groote Schuur",
      "qid": "Q5465"
     }
    ],
@@ -70,8 +70,8 @@
     {
      "id": "stanford",
      "lonlat": [
-      -100,
-      46
+      -80,
+      44
      ],
      "text": "Stanford · research",
      "cls": "tag",

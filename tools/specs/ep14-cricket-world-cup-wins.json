@@ -123,7 +123,7 @@
    }
   },
   "v05": {
-   "text": "India and the West Indies have won 2 each. Pakistan, Sri Lanka and England, 1 apiece.",
+   "text": "India and the West Indies have won 2 each. Pakistan, Sri Lanka and England have 1 title each.",
    "cues": {
     "india": "india",
     "pakistan": "pakistan"
@@ -442,7 +442,7 @@
      "wiki_cwc"
     ],
     "vo": [
-     "india and the west indies have won 2 each. pakistan, sri lanka and england, 1 apiece"
+     "india and the west indies have won 2 each. pakistan, sri lanka and england have 1 title each"
     ],
     "screen": [
      "India",
@@ -493,7 +493,7 @@
  "story": [
   {
    "vo": {
-    "text": "India and the West Indies have won 2 each. Pakistan, Sri Lanka and England, 1 apiece.",
+    "text": "India and the West Indies have won 2 each. Pakistan, Sri Lanka and England have 1 title each.",
     "cues": {
      "india": "india",
      "pakistan": "pakistan"

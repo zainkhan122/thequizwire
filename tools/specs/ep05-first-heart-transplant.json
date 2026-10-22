@@ -233,8 +233,8 @@
    {
     "id": "stanford",
     "lonlat": [
-     -100,
-     46
+     -80,
+     44
     ],
     "text": "Stanford · research",
     "cls": "tag",
@@ -249,7 +249,7 @@
      18.42,
      -33.93
     ],
-    "label": "Cape Town · Groote Schuur",
+    "label": "Groote Schuur",
     "qid": "Q5465"
    }
   ],
@@ -472,7 +472,7 @@
      "South Africa",
      "United States",
      "United Kingdom",
-     "Cape Town · Groote Schuur",
+     "Groote Schuur",
      "Christiaan Barnard, 1968"
     ]
    },

@@ -294,7 +294,7 @@
     "id": "north",
     "lonlat": [
      60,
-     70
+     68
     ],
     "text": "POLAR BEARS · Arctic only",
     "cls": "tag",
@@ -305,12 +305,12 @@
     "id": "south",
     "lonlat": [
      60,
-     -52
+     -44
     ],
     "text": "PENGUINS · south of the line",
     "cls": "tag",
     "in": "s04@penguin+0.6",
-    "out": "s07"
+    "out": "s05"
    },
    {
     "id": "eqlbl",
@@ -363,8 +363,8 @@
    {
     "id": "antarctica",
     "lonlat": [
-     -62,
-     -64.5
+     -60,
+     -62
     ],
     "label": "Antarctic Peninsula"
    },
@@ -396,31 +396,31 @@
   "scalebar": null,
   "cams": {
    "start": [
-    0.5,
+    0.6,
     [
      20,
-     15
+     -5
     ]
    ],
    "s01": [
-    0.52,
+    0.62,
     [
-     15,
-     12
+     18,
+     -6
     ]
    ],
    "s04": [
-    0.6,
+    0.7,
     [
      10,
-     12
+     -8
     ]
    ],
    "s04b": [
-    0.62,
+    0.72,
     [
      12,
-     11
+     -8.5
     ]
    ],
    "s05": [
@@ -452,17 +452,17 @@
     ]
    ],
    "s07": [
-    0.6,
+    0.7,
     [
      10,
-     10
+     -8
     ]
    ],
    "s07b": [
-    0.6,
+    0.7,
     [
      8,
-     10
+     -8
     ]
    ]
   },
@@ -710,6 +710,14 @@
      }
     },
     {
+     "at": "@+0.1",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "antarctica"
+     }
+    },
+    {
      "at": "@@touch",
      "do": "geo.pin_in",
      "stage": "stage_map",
@@ -869,6 +877,22 @@
      "stage": "stage_map",
      "args": {
       "pid": "boulders"
+     }
+    },
+    {
+     "at": "@+0.8",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "antarctica"
+     }
+    },
+    {
+     "at": "@+0.9",
+     "do": "geo.label_in",
+     "stage": "stage_map",
+     "args": {
+      "lid": "south"
      }
     },
     {

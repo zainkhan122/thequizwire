@@ -103,8 +103,8 @@
     {
      "id": "antarctica",
      "lonlat": [
-      -62,
-      -64.5
+      -60,
+      -62
      ],
      "label": "Antarctic Peninsula"
     },
@@ -138,7 +138,7 @@
      "id": "north",
      "lonlat": [
       60,
-      70
+      68
      ],
      "text": "POLAR BEARS · Arctic only",
      "cls": "tag",
@@ -149,12 +149,12 @@
      "id": "south",
      "lonlat": [
       60,
-      -52
+      -44
      ],
      "text": "PENGUINS · south of the line",
      "cls": "tag",
      "in": "s04@penguin+0.6",
-     "out": "s07"
+     "out": "s05"
     },
     {
      "id": "eqlbl",
