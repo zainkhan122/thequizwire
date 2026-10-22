@@ -1,1 +1,132 @@
-{"status":"draft","series":"wild-files","title":"Polar bears and penguins have NEVER met in the wild. True or false?","quiz":{"question":"Polar bears and penguins have NEVER met in the wild. True or false?"}}
+{
+ "id": "ep12-polar-bears-penguins",
+ "format": "quiz-v3",
+ "series": "wild-files",
+ "number": 12,
+ "title": "Polar bears and penguins have NEVER met in the wild. True or false?",
+ "difficulty": "EASY",
+ "seed": 4512,
+ "quiz": {
+  "question": "Polar bears and penguins have NEVER met in the wild. True or false?",
+  "keyword": "NEVER",
+  "options": [
+   "True",
+   "False",
+   "Only in Alaska"
+  ],
+  "correct": 0,
+  "beat": 3.0,
+  "answer_line": "True",
+  "answer_sub": "opposite ends of the planet",
+  "option_meta": [
+   {
+    "emoji": "2705"
+   },
+   {
+    "emoji": "274c"
+   },
+   {
+    "emoji": "1f43b"
+   }
+  ],
+  "banner": "True",
+  "banner_sub": "✓  A was right · opposite ends of the planet",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Polar bears and penguins have NEVER met in the wild. True or false? 🐧",
+  "premise": "Polar bears and penguins live at opposite ends of the planet",
+  "bait": "Every picture of them together was staged or drawn.",
+  "keywords": [
+   "do polar bears eat penguins",
+   "polar bears and penguins",
+   "animal facts",
+   "animal myths",
+   "where do penguins live",
+   "where do polar bears live",
+   "wildlife quiz",
+   "arctic vs antarctica"
+  ],
+  "description": "Polar bears and penguins live at opposite ends of the planet. Every picture of them together was staged or drawn.\n\nSources: IUCN Red List; WWF; Galápagos Conservancy; Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #12",
+  "hashtags": [
+   "#AnimalQuiz",
+   "#WildlifeFacts",
+   "#thequizwire"
+  ],
+  "tags": [
+   "AnimalFacts",
+   "PolarBear"
+  ],
+  "cover_emoji": "🐧",
+  "copy": {
+   "spoilers": [
+    "opposite ends"
+   ],
+   "youtube": {
+    "title": "Do polar bears eat penguins? True or false: they have NEVER met in the wild 🐧",
+    "description": "Every Christmas advert puts them on the same ice. The map says something else.\nOne of these animals lives only in the far north, the other only south of the equator — or right on it. Guess before the line draws across the globe.\nSubscribe for a wildlife quiz you can argue about every day.",
+    "tags": [
+     "#polarbear",
+     "#penguins",
+     "#animalfacts",
+     "#wildlifequiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Polar bears and penguins have NEVER met in the wild. True or false? 🐧🐻\nThe answer is a map fact, and the Christmas adverts have been lying to you for decades.\nWhich advert fooled you?",
+    "tags": [
+     "#polarbear",
+     "#penguins",
+     "#animalfacts",
+     "#arctic",
+     "#antarctica"
+    ]
+   },
+   "facebook": {
+    "text": "Polar bears and penguins have NEVER met in the wild — true, false, or only in Alaska?\nThink about where each one actually lives before you answer. Which advert fooled you?",
+    "tags": [
+     "#animalfacts",
+     "#penguins"
+    ]
+   },
+   "twitter": {
+    "text": "Polar bears and penguins have NEVER met in the wild. True or false?\nThe Christmas adverts have an answer. The map has a different one.",
+    "tags": [
+     "#AnimalFacts"
+    ]
+   },
+   "threads": {
+    "text": "Polar bears and penguins have NEVER met in the wild — true, false, or only in Alaska? It is a map question, not an animal one, and the adverts have been getting it wrong for decades. Answer before the line draws across the globe.",
+    "tags": [
+     "#animalfacts"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "true-or-false",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "route-draw",
+  "beats": [
+   "route",
+   "pin",
+   "label",
+   "photo"
+  ],
+  "cast": "emoji-set:polar + flagball:none",
+  "music": "bed:bright"
+ },
+ "status": "draft"
+}

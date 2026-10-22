@@ -1,0 +1,209 @@
+{
+ "version": 1,
+ "episode": "ep12-polar-bears-penguins",
+ "topic": "Polar bears (Ursus maritimus) live only in the Arctic; penguins live only in the Southern Hemisphere (Galápagos penguin reaches the equator); the two have never met in the wild",
+ "researched": "2026-10-22",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Polar bears eat penguins.",
+   "reality": "They never meet: polar bears are Arctic-only, penguins Southern-Hemisphere-only (the Galápagos penguin reaches the equator). Images of them together are composites or drawings.",
+   "sources": [
+    "iucn_polar",
+    "iucn_galapagos",
+    "wwf_penguins"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Animal-fact Shorts state the myth over stock footage; nobody draws the equator across a real map, pins the bears above it and the penguins below it, then flies to the Galápagos and to Alaska.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=do+polar+bears+eat+penguins",
+    "title": "Search: do polar bears eat penguins",
+    "angle": "talking-head myth clips",
+    "misses": "no map, no Galápagos detail"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=animal+facts+shorts",
+    "title": "Search: animal facts shorts",
+    "angle": "stock-footage fact lists",
+    "misses": "no quiz framing"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if scenarios",
+    "misses": "no sourced ranges"
+   }
+  ]
+ },
+ "sources": {
+  "iucn_polar": {
+   "type": "primary",
+   "publisher": "IUCN Red List",
+   "title": "Ursus maritimus (Polar Bear)",
+   "url": "https://www.iucnredlist.org/species/22823/14871490",
+   "date": "2026-10-22",
+   "notes": "circumpolar Arctic distribution: Canada, Greenland, Norway (Svalbard), Russia, United States (Alaska); no Southern Hemisphere range"
+  },
+  "britannica_polar": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "polar bear",
+   "url": "https://www.britannica.com/animal/polar-bear",
+   "date": "2026-10-22",
+   "notes": "found throughout the Arctic region; Churchill, Manitoba; Svalbard; Alaska's North Slope"
+  },
+  "iucn_galapagos": {
+   "type": "primary",
+   "publisher": "IUCN Red List",
+   "title": "Spheniscus mendiculus (Galápagos Penguin)",
+   "url": "https://www.iucnredlist.org/species/22697825/182729677",
+   "date": "2026-10-22",
+   "notes": "endemic to the Galápagos Islands, Ecuador; the only penguin whose range reaches the equator (northern tip of Isabela just north of 0°)"
+  },
+  "wwf_penguins": {
+   "type": "reference",
+   "publisher": "WWF",
+   "title": "Penguins — where do penguins live?",
+   "url": "https://www.worldwildlife.org/species/penguin",
+   "date": "2026-10-22",
+   "notes": "all 18 species live in the Southern Hemisphere, from Antarctica to South Africa (Boulders Beach), Australia (Phillip Island little penguins) and the Galápagos"
+  },
+  "britannica_penguin": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "penguin",
+   "url": "https://www.britannica.com/animal/penguin",
+   "date": "2026-10-22",
+   "notes": "penguins are confined to the Southern Hemisphere; the Galápagos penguin lives at the equator; none occur in the Arctic"
+  },
+  "wiki_penguin": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Penguin",
+   "url": "https://en.wikipedia.org/wiki/Penguin",
+   "date": "2026-10-22",
+   "notes": "live almost exclusively in the Southern Hemisphere; only the Galápagos penguin is found north of the equator (barely); no wild penguins in the Arctic"
+  },
+  "wiki_polar": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Polar bear",
+   "url": "https://en.wikipedia.org/wiki/Polar_bear",
+   "date": "2026-10-22",
+   "notes": "range: Arctic Ocean and surrounding land in five nations; Alaska populations (Chukchi, Southern Beaufort); Churchill 'polar bear capital'"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Polar bears live only in the Arctic (Canada, Greenland, Svalbard/Norway, Russia, Alaska); penguins live only in the Southern Hemisphere, the Galápagos penguin reaching the equator — so the two never meet in the wild.",
+   "sources": [
+    "iucn_polar",
+    "iucn_galapagos",
+    "wwf_penguins",
+    "britannica_penguin"
+   ],
+   "vo": [
+    "polar bears and penguins have never met in the wild. true or false",
+    "true, false, or only in alaska",
+    "true. polar bears live only around the arctic. every penguin lives south of the equator, or right on it",
+    "never met. never will. follow us"
+   ],
+   "screen": [
+    "OPPOSITE POLES",
+    "bears north · penguins south",
+    "POLAR BEARS · Arctic only",
+    "PENGUINS · south of the line",
+    "Equator",
+    "True",
+    "False",
+    "Only in Alaska",
+    "Svalbard",
+    "Churchill",
+    "Utqiaġvik, Alaska",
+    "Antarctic Peninsula",
+    "Boulders Beach",
+    "Phillip Island"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "The Galápagos penguin is the only penguin whose range touches the equator; the Galápagos are in the eastern Pacific, far from any polar bear.",
+   "sources": [
+    "iucn_galapagos",
+    "wiki_penguin",
+    "britannica_penguin"
+   ],
+   "vo": [
+    "the closest they come is the galápagos, where penguins touch the equator, an ocean away from any bear"
+   ],
+   "screen": [
+    "Galápagos · on the equator"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "detail",
+   "text": "Alaska has polar bears (Chukchi and Southern Beaufort populations) and no wild penguins.",
+   "sources": [
+    "iucn_polar",
+    "wiki_polar",
+    "wiki_penguin"
+   ],
+   "vo": [
+    "the christmas adverts are wrong. alaska has polar bears, but never a wild penguin"
+   ],
+   "screen": [
+    "Alaska · bears, no penguins"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Photographs: polar bears on Arctic sea ice (US Navy, PD) and Adélie penguins at Cape Royds, Antarctica (US State Dept, PD).",
+   "sources": [
+    "iucn_polar",
+    "wwf_penguins",
+    "wiki_polar"
+   ],
+   "vo": [
+    "as close as they will ever get: the top of the world, and the bottom"
+   ],
+   "screen": [
+    "Polar bears, Arctic Ocean",
+    "Adélie penguins, Antarctica"
+   ]
+  }
+ ]
+}

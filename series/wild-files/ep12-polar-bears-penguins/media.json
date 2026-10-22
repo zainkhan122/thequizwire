@@ -1,0 +1,223 @@
+{
+ "files": {
+  "media/photos/ph_bear.jpg": {
+   "by": "reelkit/photos.py",
+   "commons": "File:Polar bears near north pole.jpg",
+   "credit": "Chief Yeoman Alphonso Braggs, US-Navy \u2014 Public domain \u2014 https://commons.wikimedia.org/wiki/File:Polar_bears_near_north_pole.jpg",
+   "kind": "photo",
+   "licence": "PD",
+   "licence_url": "",
+   "provider": "Wikimedia Commons",
+   "screen_credit": "\ud83d\udcf7 Chief Yeoman Alphonso Braggs \u00b7 Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Polar_bears_near_north_pole.jpg"
+  },
+  "media/photos/ph_peng.jpg": {
+   "by": "reelkit/photos.py",
+   "commons": "File:A Rookery of Ad\u00e9lie Penguins Seen by Secretary Kerry in Cape Royds, Antarctica (30798302892).jpg",
+   "credit": "U.S. Department of State from United States \u2014 Public domain \u2014 https://commons.wikimedia.org/wiki/File:A_Rookery_of_Ad%C3%A9lie_Penguins_Seen_by_Secretary_Kerry_in_Cape_Royds,_Antarctica_(30798302892).jpg",
+   "kind": "photo",
+   "licence": "PD",
+   "licence_url": "",
+   "provider": "Wikimedia Commons",
+   "screen_credit": "\ud83d\udcf7 U.S. Department of State from Un \u00b7 Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:A_Rookery_of_Ad%C3%A9lie_Penguins_Seen_by_Secretary_Kerry_in_Cape_Royds,_Antarctica_(30798302892).jpg"
+  }
+ },
+ "generated": {
+  "brand/cursor.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 224,
+   "credit": "thequizwire",
+   "kind": "image",
+   "licence": "own",
+   "provider": "thequizwire (hand-made)",
+   "source": "brand/cursor.svg"
+  },
+  "brand/facebook.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 542,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "brand/instagram.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 2101,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "brand/logo.png": {
+   "by": "reelkit/brand.py",
+   "bytes": 81177,
+   "credit": "TheQuizWire",
+   "kind": "image",
+   "licence": "own",
+   "provider": "TheQuizWire (channel brand, owner-supplied 2026-10-15)",
+   "source": "owner upload logo-The-Quiz-Wire-icon-transparent.png"
+  },
+  "brand/threads.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 1287,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "brand/x.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 252,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "geo/flags/un.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 18702,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/main.json": {
+   "by": "reelkit/geodata.py",
+   "bytes": 106582,
+   "credit": "Natural Earth",
+   "kind": "data",
+   "licence": "PD",
+   "provider": "Natural Earth",
+   "source": "world-atlas 2.0.2 110m"
+  },
+  "geo/main_basemap.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 407070,
+   "credit": "NASA Blue Marble",
+   "kind": "image",
+   "licence": "PD-USGov",
+   "provider": "NASA GIBS",
+   "source": "BlueMarble_ShadedRelief_Bathymetry z2 (32 tiles)"
+  },
+  "geo/main_basemap_far.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 247780,
+   "credit": "NASA Blue Marble",
+   "kind": "image",
+   "licence": "PD-USGov",
+   "provider": "NASA GIBS",
+   "source": "BlueMarble_ShadedRelief_Bathymetry z2 (20 tiles)"
+  },
+  "mix.wav": {
+   "ai_voice": "Kokoro am_michael",
+   "by": "reelkit/quizscore.py (procedural bed/ticks/sting) + Kokoro VO takes",
+   "derived_from": "procedural reelkit/synth.py + Kokoro takes vo/*",
+   "kind": "mix",
+   "licence": "own",
+   "provider": "build"
+  },
+  "photos/ph_bear.jpg": {
+   "by": "reelkit/photos.py",
+   "bytes": 490484,
+   "credit": "Chief Yeoman Alphonso Braggs, US-Navy \u2014 Public domain \u2014 https://commons.wikimedia.org/wiki/File:Polar_bears_near_north_pole.jpg",
+   "derived_from": "media/photos/ph_bear.jpg",
+   "kind": "photo",
+   "licence": "PD",
+   "op": "copy",
+   "provider": "Wikimedia Commons",
+   "screen_credit": "\ud83d\udcf7 Chief Yeoman Alphonso Braggs \u00b7 Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Polar_bears_near_north_pole.jpg"
+  },
+  "photos/ph_peng.jpg": {
+   "by": "reelkit/photos.py",
+   "bytes": 875293,
+   "credit": "U.S. Department of State from United States \u2014 Public domain \u2014 https://commons.wikimedia.org/wiki/File:A_Rookery_of_Ad%C3%A9lie_Penguins_Seen_by_Secretary_Kerry_in_Cape_Royds,_Antarctica_(30798302892).jpg",
+   "derived_from": "media/photos/ph_peng.jpg",
+   "kind": "photo",
+   "licence": "PD",
+   "op": "copy",
+   "provider": "Wikimedia Commons",
+   "screen_credit": "\ud83d\udcf7 U.S. Department of State from Un \u00b7 Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:A_Rookery_of_Ad%C3%A9lie_Penguins_Seen_by_Secretary_Kerry_in_Cape_Royds,_Antarctica_(30798302892).jpg"
+  },
+  "stickers/1f384.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 2576,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f427.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1254,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f43b-200d-2744-fe0f.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1851,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f43b.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 791,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f44d.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1663,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f514.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 314,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/2705.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 482,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/274c.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 491,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  }
+ },
+ "version": 1
+}

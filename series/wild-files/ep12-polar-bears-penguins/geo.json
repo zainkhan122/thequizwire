@@ -1,0 +1,202 @@
+{
+ "version": 1,
+ "episode": "ep12-polar-bears-penguins",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -175,
+     -66,
+     179,
+     80
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "route",
+     "id": "eq",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "equator",
+        "properties": {
+         "name": "Equator"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           -175,
+           0
+          ],
+          [
+           -120,
+           0
+          ],
+          [
+           -60,
+           0
+          ],
+          [
+           0,
+           0
+          ],
+          [
+           60,
+           0
+          ],
+          [
+           120,
+           0
+          ],
+          [
+           179,
+           0
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "the equator, drawn on the reveal"
+    }
+   ],
+   "pins": [
+    {
+     "id": "svalbard",
+     "lonlat": [
+      15.6,
+      78.2
+     ],
+     "label": "Svalbard"
+    },
+    {
+     "id": "churchill",
+     "lonlat": [
+      -94.17,
+      58.77
+     ],
+     "label": "Churchill"
+    },
+    {
+     "id": "alaska",
+     "lonlat": [
+      -156.8,
+      71.3
+     ],
+     "label": "Utqiaġvik, Alaska"
+    },
+    {
+     "id": "antarctica",
+     "lonlat": [
+      -62,
+      -64.5
+     ],
+     "label": "Antarctic Peninsula"
+    },
+    {
+     "id": "boulders",
+     "lonlat": [
+      18.45,
+      -34.2
+     ],
+     "label": "Boulders Beach"
+    },
+    {
+     "id": "phillip",
+     "lonlat": [
+      145.2,
+      -38.5
+     ],
+     "label": "Phillip Island"
+    },
+    {
+     "id": "galapagos",
+     "lonlat": [
+      -90.5,
+      -0.5
+     ],
+     "label": "Galápagos · on the equator"
+    }
+   ],
+   "labels": [
+    {
+     "id": "north",
+     "lonlat": [
+      60,
+      70
+     ],
+     "text": "POLAR BEARS · Arctic only",
+     "cls": "tag",
+     "in": "s04@arctic+0.6",
+     "out": "s07"
+    },
+    {
+     "id": "south",
+     "lonlat": [
+      60,
+      -52
+     ],
+     "text": "PENGUINS · south of the line",
+     "cls": "tag",
+     "in": "s04@penguin+0.6",
+     "out": "s07"
+    },
+    {
+     "id": "eqlbl",
+     "lonlat": [
+      100,
+      4
+     ],
+     "text": "Equator",
+     "cls": "tag",
+     "in": "s04@equator+0.8",
+     "out": "s06"
+    },
+    {
+     "id": "ak",
+     "lonlat": [
+      -150,
+      68
+     ],
+     "text": "Alaska · bears, no penguins",
+     "cls": "tag",
+     "in": "s06@alaska",
+     "out": "s07"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -180,
+      -75,
+      180,
+      84
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

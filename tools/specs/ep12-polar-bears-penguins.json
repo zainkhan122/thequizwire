@@ -1,0 +1,950 @@
+{
+ "id": "ep12-polar-bears-penguins",
+ "series": "wild-files",
+ "number": 12,
+ "seed": 4512,
+ "question": "Polar bears and penguins have NEVER met in the wild. True or false?",
+ "keyword": "NEVER",
+ "difficulty": "EASY",
+ "options": [
+  {
+   "text": "True",
+   "emoji": "2705",
+   "cue": "true"
+  },
+  {
+   "text": "False",
+   "emoji": "274c",
+   "cue": "false"
+  },
+  {
+   "text": "Only in Alaska",
+   "emoji": "1f43b",
+   "cue": "alaska"
+  }
+ ],
+ "correct": 0,
+ "answer_sub": "opposite ends of the planet",
+ "outro_headline": "TOO EASY?",
+ "cover_emoji": "🐧",
+ "post": {
+  "premise": "Polar bears and penguins live at opposite ends of the planet",
+  "bait": "Every picture of them together was staged or drawn.",
+  "keywords": [
+   "do polar bears eat penguins",
+   "polar bears and penguins",
+   "animal facts",
+   "animal myths",
+   "where do penguins live",
+   "where do polar bears live",
+   "wildlife quiz",
+   "arctic vs antarctica"
+  ],
+  "tags": [
+   "AnimalFacts",
+   "PolarBear"
+  ],
+  "sources_line": "IUCN Red List; WWF; Galápagos Conservancy; Britannica",
+  "copy": {
+   "spoilers": [
+    "opposite ends"
+   ],
+   "youtube": {
+    "title": "Do polar bears eat penguins? True or false: they have NEVER met in the wild 🐧",
+    "description": "Every Christmas advert puts them on the same ice. The map says something else.\nOne of these animals lives only in the far north, the other only south of the equator — or right on it. Guess before the line draws across the globe.\nSubscribe for a wildlife quiz you can argue about every day.",
+    "tags": [
+     "#polarbear",
+     "#penguins",
+     "#animalfacts",
+     "#wildlifequiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Polar bears and penguins have NEVER met in the wild. True or false? 🐧🐻\nThe answer is a map fact, and the Christmas adverts have been lying to you for decades.\nWhich advert fooled you?",
+    "tags": [
+     "#polarbear",
+     "#penguins",
+     "#animalfacts",
+     "#arctic",
+     "#antarctica"
+    ]
+   },
+   "facebook": {
+    "text": "Polar bears and penguins have NEVER met in the wild — true, false, or only in Alaska?\nThink about where each one actually lives before you answer. Which advert fooled you?",
+    "tags": [
+     "#animalfacts",
+     "#penguins"
+    ]
+   },
+   "twitter": {
+    "text": "Polar bears and penguins have NEVER met in the wild. True or false?\nThe Christmas adverts have an answer. The map has a different one.",
+    "tags": [
+     "#AnimalFacts"
+    ]
+   },
+   "threads": {
+    "text": "Polar bears and penguins have NEVER met in the wild — true, false, or only in Alaska? It is a map question, not an animal one, and the adverts have been getting it wrong for decades. Answer before the line draws across the globe.",
+    "tags": [
+     "#animalfacts"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "true-or-false",
+  "hook": "misconception",
+  "opener": "wide-drift",
+  "reveal": "route-draw",
+  "beats": [
+   "route",
+   "pin",
+   "label",
+   "photo"
+  ],
+  "cast": "emoji-set:polar + flagball:none",
+  "music": "bed:bright",
+  "outro": "TOO EASY?"
+ },
+ "intent": "A friendly myth-buster: the whole world on screen, one line across the middle, bears pinned above it, penguins below.",
+ "voice": {
+  "v01_cues": {
+   "polar": "polar",
+   "true": "true"
+  },
+  "v04": {
+   "text": "True. Polar bears live only around the Arctic. Every penguin lives south of the equator, or right on it.",
+   "cues": {
+    "answer": "true",
+    "arctic": "arctic",
+    "penguin": "penguin",
+    "equator": "equator"
+   }
+  },
+  "v05": {
+   "text": "The closest they come is the Galápagos, where penguins touch the equator, an ocean away from any bear.",
+   "cues": {
+    "closest": "closest",
+    "touch": "touch",
+    "ocean": "ocean"
+   }
+  },
+  "v06": {
+   "text": "The Christmas adverts are wrong. Alaska has polar bears, but never a wild penguin.",
+   "cues": {
+    "adverts": "adverts",
+    "alaska": "alaska",
+    "wild": "wild"
+   }
+  },
+  "v07": {
+   "text": "As close as they will ever get: the top of the world, and the bottom.",
+   "cues": {
+    "close": "close",
+    "top": "top",
+    "bottom": "bottom"
+   }
+  },
+  "v08": {
+   "text": "Never met. Never will. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "OPPOSITE POLES",
+   "text": "bears north · penguins south"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": null,
+  "b": null
+ },
+ "geo": {
+  "fit_bbox": [
+   -175,
+   -66,
+   179,
+   80
+  ],
+  "far_bbox": [
+   -180,
+   -75,
+   180,
+   84
+  ],
+  "resolution": "110m",
+  "highlight_ids": [],
+  "highlight_note": "no country: the answer is a line (the equator) and two sets of pins",
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "eq",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "equator",
+       "properties": {
+        "name": "Equator"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -175,
+          0
+         ],
+         [
+          -120,
+          0
+         ],
+         [
+          -60,
+          0
+         ],
+         [
+          0,
+          0
+         ],
+         [
+          60,
+          0
+         ],
+         [
+          120,
+          0
+         ],
+         [
+          179,
+          0
+         ]
+        ]
+       }
+      }
+     ]
+    },
+    "note": "the equator, drawn on the reveal"
+   }
+  ],
+  "extra_beats": [
+   {
+    "at": "s04@equator-0.2",
+    "do": "geo.route_draw",
+    "stage": "stage_map",
+    "until": "s04.end",
+    "args": {
+     "rid": "equator",
+     "layer": "eq"
+    }
+   },
+   {
+    "at": "s04@arctic",
+    "do": "geo.pin_in",
+    "stage": "stage_map",
+    "args": {
+     "pid": "svalbard"
+    }
+   },
+   {
+    "at": "s04@arctic+0.25",
+    "do": "geo.pin_in",
+    "stage": "stage_map",
+    "args": {
+     "pid": "churchill"
+    }
+   },
+   {
+    "at": "s04@arctic+0.5",
+    "do": "geo.pin_in",
+    "stage": "stage_map",
+    "args": {
+     "pid": "alaska"
+    }
+   },
+   {
+    "at": "s04@penguin",
+    "do": "geo.pin_in",
+    "stage": "stage_map",
+    "args": {
+     "pid": "antarctica"
+    }
+   },
+   {
+    "at": "s04@penguin+0.25",
+    "do": "geo.pin_in",
+    "stage": "stage_map",
+    "args": {
+     "pid": "boulders"
+    }
+   },
+   {
+    "at": "s04@penguin+0.5",
+    "do": "geo.pin_in",
+    "stage": "stage_map",
+    "args": {
+     "pid": "phillip"
+    }
+   }
+  ],
+  "labels": [
+   {
+    "id": "north",
+    "lonlat": [
+     60,
+     70
+    ],
+    "text": "POLAR BEARS · Arctic only",
+    "cls": "tag",
+    "in": "s04@arctic+0.6",
+    "out": "s07"
+   },
+   {
+    "id": "south",
+    "lonlat": [
+     60,
+     -52
+    ],
+    "text": "PENGUINS · south of the line",
+    "cls": "tag",
+    "in": "s04@penguin+0.6",
+    "out": "s07"
+   },
+   {
+    "id": "eqlbl",
+    "lonlat": [
+     100,
+     4
+    ],
+    "text": "Equator",
+    "cls": "tag",
+    "in": "s04@equator+0.8",
+    "out": "s06"
+   },
+   {
+    "id": "ak",
+    "lonlat": [
+     -150,
+     68
+    ],
+    "text": "Alaska · bears, no penguins",
+    "cls": "tag",
+    "in": "s06@alaska",
+    "out": "s07"
+   }
+  ],
+  "pins": [
+   {
+    "id": "svalbard",
+    "lonlat": [
+     15.6,
+     78.2
+    ],
+    "label": "Svalbard"
+   },
+   {
+    "id": "churchill",
+    "lonlat": [
+     -94.17,
+     58.77
+    ],
+    "label": "Churchill"
+   },
+   {
+    "id": "alaska",
+    "lonlat": [
+     -156.8,
+     71.3
+    ],
+    "label": "Utqiaġvik, Alaska"
+   },
+   {
+    "id": "antarctica",
+    "lonlat": [
+     -62,
+     -64.5
+    ],
+    "label": "Antarctic Peninsula"
+   },
+   {
+    "id": "boulders",
+    "lonlat": [
+     18.45,
+     -34.2
+    ],
+    "label": "Boulders Beach"
+   },
+   {
+    "id": "phillip",
+    "lonlat": [
+     145.2,
+     -38.5
+    ],
+    "label": "Phillip Island"
+   },
+   {
+    "id": "galapagos",
+    "lonlat": [
+     -90.5,
+     -0.5
+    ],
+    "label": "Galápagos · on the equator"
+   }
+  ],
+  "scalebar": null,
+  "cams": {
+   "start": [
+    0.5,
+    [
+     20,
+     15
+    ]
+   ],
+   "s01": [
+    0.52,
+    [
+     15,
+     12
+    ]
+   ],
+   "s04": [
+    0.6,
+    [
+     10,
+     12
+    ]
+   ],
+   "s04b": [
+    0.62,
+    [
+     12,
+     11
+    ]
+   ],
+   "s05": [
+    1.0,
+    [
+     -75,
+     5
+    ]
+   ],
+   "s05b": [
+    1.02,
+    [
+     -74,
+     5.5
+    ]
+   ],
+   "s06": [
+    1.1,
+    [
+     -140,
+     50
+    ]
+   ],
+   "s06b": [
+    1.12,
+    [
+     -139,
+     49.5
+    ]
+   ],
+   "s07": [
+    0.6,
+    [
+     10,
+     10
+    ]
+   ],
+   "s07b": [
+    0.6,
+    [
+     8,
+     10
+    ]
+   ]
+  },
+  "pin_beats": []
+ },
+ "research": {
+  "topic": "Polar bears (Ursus maritimus) live only in the Arctic; penguins live only in the Southern Hemisphere (Galápagos penguin reaches the equator); the two have never met in the wild",
+  "myths": [
+   {
+    "myth": "Polar bears eat penguins.",
+    "reality": "They never meet: polar bears are Arctic-only, penguins Southern-Hemisphere-only (the Galápagos penguin reaches the equator). Images of them together are composites or drawings.",
+    "sources": [
+     "iucn_polar",
+     "iucn_galapagos",
+     "wwf_penguins"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Animal-fact Shorts state the myth over stock footage; nobody draws the equator across a real map, pins the bears above it and the penguins below it, then flies to the Galápagos and to Alaska.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=do+polar+bears+eat+penguins",
+     "title": "Search: do polar bears eat penguins",
+     "angle": "talking-head myth clips",
+     "misses": "no map, no Galápagos detail"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=animal+facts+shorts",
+     "title": "Search: animal facts shorts",
+     "angle": "stock-footage fact lists",
+     "misses": "no quiz framing"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if scenarios",
+     "misses": "no sourced ranges"
+    }
+   ]
+  },
+  "sources": {
+   "iucn_polar": {
+    "type": "primary",
+    "publisher": "IUCN Red List",
+    "title": "Ursus maritimus (Polar Bear)",
+    "url": "https://www.iucnredlist.org/species/22823/14871490",
+    "date": "2026-10-22",
+    "notes": "circumpolar Arctic distribution: Canada, Greenland, Norway (Svalbard), Russia, United States (Alaska); no Southern Hemisphere range"
+   },
+   "britannica_polar": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "polar bear",
+    "url": "https://www.britannica.com/animal/polar-bear",
+    "date": "2026-10-22",
+    "notes": "found throughout the Arctic region; Churchill, Manitoba; Svalbard; Alaska's North Slope"
+   },
+   "iucn_galapagos": {
+    "type": "primary",
+    "publisher": "IUCN Red List",
+    "title": "Spheniscus mendiculus (Galápagos Penguin)",
+    "url": "https://www.iucnredlist.org/species/22697825/182729677",
+    "date": "2026-10-22",
+    "notes": "endemic to the Galápagos Islands, Ecuador; the only penguin whose range reaches the equator (northern tip of Isabela just north of 0°)"
+   },
+   "wwf_penguins": {
+    "type": "reference",
+    "publisher": "WWF",
+    "title": "Penguins — where do penguins live?",
+    "url": "https://www.worldwildlife.org/species/penguin",
+    "date": "2026-10-22",
+    "notes": "all 18 species live in the Southern Hemisphere, from Antarctica to South Africa (Boulders Beach), Australia (Phillip Island little penguins) and the Galápagos"
+   },
+   "britannica_penguin": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "penguin",
+    "url": "https://www.britannica.com/animal/penguin",
+    "date": "2026-10-22",
+    "notes": "penguins are confined to the Southern Hemisphere; the Galápagos penguin lives at the equator; none occur in the Arctic"
+   },
+   "wiki_penguin": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Penguin",
+    "url": "https://en.wikipedia.org/wiki/Penguin",
+    "date": "2026-10-22",
+    "notes": "live almost exclusively in the Southern Hemisphere; only the Galápagos penguin is found north of the equator (barely); no wild penguins in the Arctic"
+   },
+   "wiki_polar": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Polar bear",
+    "url": "https://en.wikipedia.org/wiki/Polar_bear",
+    "date": "2026-10-22",
+    "notes": "range: Arctic Ocean and surrounding land in five nations; Alaska populations (Chukchi, Southern Beaufort); Churchill 'polar bear capital'"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Polar bears live only in the Arctic (Canada, Greenland, Svalbard/Norway, Russia, Alaska); penguins live only in the Southern Hemisphere, the Galápagos penguin reaching the equator — so the two never meet in the wild.",
+    "sources": [
+     "iucn_polar",
+     "iucn_galapagos",
+     "wwf_penguins",
+     "britannica_penguin"
+    ],
+    "vo": [
+     "polar bears and penguins have never met in the wild. true or false",
+     "true, false, or only in alaska",
+     "true. polar bears live only around the arctic. every penguin lives south of the equator, or right on it",
+     "never met. never will. follow us"
+    ],
+    "screen": [
+     "OPPOSITE POLES",
+     "bears north · penguins south",
+     "POLAR BEARS · Arctic only",
+     "PENGUINS · south of the line",
+     "Equator",
+     "True",
+     "False",
+     "Only in Alaska",
+     "Svalbard",
+     "Churchill",
+     "Utqiaġvik, Alaska",
+     "Antarctic Peninsula",
+     "Boulders Beach",
+     "Phillip Island"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "The Galápagos penguin is the only penguin whose range touches the equator; the Galápagos are in the eastern Pacific, far from any polar bear.",
+    "sources": [
+     "iucn_galapagos",
+     "wiki_penguin",
+     "britannica_penguin"
+    ],
+    "vo": [
+     "the closest they come is the galápagos, where penguins touch the equator, an ocean away from any bear"
+    ],
+    "screen": [
+     "Galápagos · on the equator"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "detail",
+    "text": "Alaska has polar bears (Chukchi and Southern Beaufort populations) and no wild penguins.",
+    "sources": [
+     "iucn_polar",
+     "wiki_polar",
+     "wiki_penguin"
+    ],
+    "vo": [
+     "the christmas adverts are wrong. alaska has polar bears, but never a wild penguin"
+    ],
+    "screen": [
+     "Alaska · bears, no penguins"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Photographs: polar bears on Arctic sea ice (US Navy, PD) and Adélie penguins at Cape Royds, Antarctica (US State Dept, PD).",
+    "sources": [
+     "iucn_polar",
+     "wwf_penguins",
+     "wiki_polar"
+    ],
+    "vo": [
+     "as close as they will ever get: the top of the world, and the bottom"
+    ],
+    "screen": [
+     "Polar bears, Arctic Ocean",
+     "Adélie penguins, Antarctica"
+    ]
+   }
+  ]
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "The closest they come is the Galápagos, where penguins touch the equator, an ocean away from any bear.",
+    "cues": {
+     "closest": "closest",
+     "touch": "touch",
+     "ocean": "ocean"
+    }
+   },
+   "direction": "camera slides to the eastern Pacific; the Galápagos pin lands exactly on the drawn line on 'touch'; the penguin sticker pops",
+   "energy": 3,
+   "tone": "resolute",
+   "cam": [
+    1.0,
+    [
+     -75,
+     5
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.02,
+    [
+     -74,
+     5.5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@+0.1",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "svalbard"
+     }
+    },
+    {
+     "at": "@+0.1",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "churchill"
+     }
+    },
+    {
+     "at": "@+0.1",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "phillip"
+     }
+    },
+    {
+     "at": "@+0.1",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "boulders"
+     }
+    },
+    {
+     "at": "@@touch",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "galapagos"
+     }
+    },
+    {
+     "at": "@@touch+0.3",
+     "do": "sticker_in",
+     "id": "st_peng"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_peng"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The Christmas adverts are wrong. Alaska has polar bears, but never a wild penguin.",
+    "cues": {
+     "adverts": "adverts",
+     "alaska": "alaska",
+     "wild": "wild"
+    }
+   },
+   "direction": "the Christmas-tree sticker pops and is crossed on 'wrong'; camera swings to Alaska, the tag lands, the bear sticker pops on 'wild'",
+   "energy": 4,
+   "tone": "revelatory",
+   "cam": [
+    1.1,
+    [
+     -140,
+     50
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_ease": "power1.inOut",
+   "cam_hold": [
+    1.12,
+    [
+     -139,
+     49.5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@+0.1",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "galapagos"
+     }
+    },
+    {
+     "at": "@@adverts",
+     "do": "sticker_in",
+     "id": "st_tree"
+    },
+    {
+     "at": "@@adverts+0.5",
+     "do": "sticker_in",
+     "id": "st_x"
+    },
+    {
+     "at": "@@alaska",
+     "do": "sticker_out",
+     "id": "st_tree"
+    },
+    {
+     "at": "@@alaska",
+     "do": "sticker_out",
+     "id": "st_x"
+    },
+    {
+     "at": "@@wild",
+     "do": "sticker_in",
+     "id": "st_bear"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_bear"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "As close as they will ever get: the top of the world, and the bottom.",
+    "cues": {
+     "close": "close",
+     "top": "top",
+     "bottom": "bottom"
+    }
+   },
+   "direction": "whole world again; the bear photograph slides in from the left on 'top', the penguin photograph from the right on 'bottom'",
+   "energy": 4,
+   "tone": "revelatory",
+   "cam": [
+    0.6,
+    [
+     10,
+     10
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.6,
+    [
+     8,
+     10
+    ]
+   ],
+   "pulse": false,
+   "photo": {
+    "id": "ph_bear",
+    "commons": "File:Polar bears near north pole.jpg",
+    "caption": "Polar bears, Arctic Ocean",
+    "from": "left",
+    "x": 60,
+    "y": 330,
+    "w": 520,
+    "h": 380,
+    "at": 1.0
+   },
+   "devices": [
+    {
+     "at": "@+0.2",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "svalbard"
+     }
+    },
+    {
+     "at": "@+0.35",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "churchill"
+     }
+    },
+    {
+     "at": "@+0.5",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "phillip"
+     }
+    },
+    {
+     "at": "@+0.6499999999999999",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "boulders"
+     }
+    },
+    {
+     "at": "@@bottom-0.2",
+     "do": "photo_in",
+     "id": "ph_peng",
+     "args": {
+      "frm": "right"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "photo_out",
+     "id": "ph_peng"
+    },
+    {
+     "at": "@@bottom+0.4",
+     "do": "sticker_in",
+     "id": "st_peng"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_peng"
+    }
+   ]
+  }
+ ],
+ "extra_photos": [
+  {
+   "id": "ph_peng",
+   "commons": "File:A Rookery of Adélie Penguins Seen by Secretary Kerry in Cape Royds, Antarctica (30798302892).jpg",
+   "caption": "Adélie penguins, Antarctica",
+   "x": 400,
+   "y": 1080,
+   "w": 520,
+   "h": 380,
+   "rot": 3
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_peng",
+   "type": "sticker",
+   "emoji": "1f427",
+   "x": 820,
+   "y": 1500,
+   "size": 190,
+   "rot": -8
+  },
+  {
+   "id": "st_tree",
+   "type": "sticker",
+   "emoji": "1f384",
+   "x": 280,
+   "y": 600,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "st_x",
+   "type": "sticker",
+   "emoji": "274c",
+   "x": 300,
+   "y": 620,
+   "size": 230,
+   "rot": 0
+  },
+  {
+   "id": "st_bear",
+   "type": "sticker",
+   "emoji": "1f43b-200d-2744-fe0f",
+   "x": 760,
+   "y": 560,
+   "size": 190,
+   "rot": 8
+  }
+ ]
+}

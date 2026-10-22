@@ -113,7 +113,7 @@ def build(S):
                              "pins": g.get("pins", []), "labels": g.get("labels", []), "disputed": g.get("disputed", []), "sources": ["Natural Earth"],
                              "basemap": {"layer": "night" if opener == "night-lights" else "bluemarble", "k_max": 2.0, "far": {"bbox": g["far_bbox"], "k_min": 0.3}},
                              "projection_reason": g.get("projection_reason", "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"),
-                             "scalebar": {"km": g["scalebar"]["km"], "lonlat": g["scalebar"]["lonlat"], "at": [60, 1130]}}}}
+                             **({"scalebar": {"km": g["scalebar"]["km"], "lonlat": g["scalebar"]["lonlat"], "at": [60, 1130]}} if g.get("scalebar") else {})}}}   # scalebar: null → none (world-scale Mercator: a bar would lie)
     # ---------------- visuals.json
     ch = S["characters"]; st = S.get("stickers", []); F = S["facts"]; cams = g["cams"]
     SB = story_beats(S); NS = len(SB); CTA = f"s{NS + 5:02d}"
@@ -126,6 +126,9 @@ def build(S):
             p_ = b["photo"]; els.append({"id": p_["id"], "type": "photo", "commons": p_["commons"], "caption": p_.get("caption", ""), "x": p_.get("x", 440), "y": p_.get("y", 420),
                                          "w": p_.get("w", 580), "h": p_.get("h", 440), "rot": p_.get("rot", -3)})
         for el in b.get("elements", []): els.append(el)                       # counters, bars, compare … (engine/charts.py)
+    for p_ in S.get("extra_photos", []):                                    # further photos driven by story devices (photo_in/photo_out), e.g. a left/right pair
+        els.append({"id": p_["id"], "type": "photo", "commons": p_["commons"], "caption": p_.get("caption", ""), "x": p_.get("x", 440), "y": p_.get("y", 420),
+                    "w": p_.get("w", 580), "h": p_.get("h", 440), "rot": p_.get("rot", -3)})
     els += S.get("extra_elements", [])                                        # e.g. a second mascot face used by a story beat
     els += [{"id": "mascot", "type": "character", "flag": "un", "face": ch.get("mascot_face", "think"), "x": 860, "y": 1480, "size": 210, "rot": 6}]
     cast = [k for k in ("a", "b") if ch.get(k)]                                # reaction flag-balls after the reveal are optional (characters.a / .b = null → none)
@@ -190,7 +193,7 @@ def build(S):
             B.append(d)
     B += [{"at": CTA, "do": "geo.clear", "stage": M, "args": {"dur": 0.25}},
           cam(f"{CTA}+0.2", "end-0.3", open_cam, "power1.inOut"),
-          {"at": "s04+0.8", "do": "geo.scalebar_in", "stage": M}]
+          *([{"at": "s04+0.8", "do": "geo.scalebar_in", "stage": M}] if g.get("scalebar") else [])]
     for pb in g.get("pin_beats", []):
         B.append({"at": pb["at"], "do": "geo.pin_out" if pb.get("out") else "geo.pin_in", "stage": M, "args": {"pid": pb["pid"]}})
     B += [{"at": 0, "do": "hook_in"}, {"at": "s02", "do": "chips_in"}, {"at": "s03", "do": "bug_in"}, {"at": "s03", "do": "beat"},
