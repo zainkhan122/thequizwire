@@ -83,6 +83,7 @@ jobs:
             ~/.cache/huggingface
             ~/.cache/kokoro
             ~/.cache/geodata
+            ~/.cache/ffmpeg
           key: tools-hf0.8.137-${{ runner.os }}-${{ hashFiles('reelkit/ci_setup.sh', 'reelkit/geodata.py') }}
       - name: Toolchain
         run: bash reelkit/ci_setup.sh

@@ -10,21 +10,33 @@ export HYPERFRAMES_NO_TELEMETRY=1 HYPERFRAMES_NO_UPDATE_CHECK=1 DO_NOT_TRACK=1 H
 C="$HOME/.cache"; mkdir -p "$C"/{kokoro,geodata,build,secrets,tmp}
 retry() { local n=0; until "$@"; do n=$((n+1)); [ $n -ge 3 ] && return 1; echo "  … retry $n/2: $*" >&2; sleep $((10*n)); done; }
 
-echo "== apt: ffmpeg + chrome-headless-shell libs"
+echo "== ffmpeg (static build, cached — apt on the hosted runners hung 3× on 2026-10-22)"
+FF="$C/ffmpeg"; mkdir -p "$FF"
+if ! "$FF/ffmpeg" -version >/dev/null 2>&1; then
+  if command -v ffmpeg >/dev/null; then ln -sf "$(command -v ffmpeg)" "$FF/ffmpeg"; ln -sf "$(command -v ffprobe)" "$FF/ffprobe"; echo "  runner image ffmpeg: $(ffmpeg -version | head -1)"
+  else
+    get_ff() { curl -fsSL --retry 3 -m 300 "$1" -o "$C/tmp/ff.tar.xz" && tar -xJf "$C/tmp/ff.tar.xz" -C "$C/tmp" && \
+               f=$(find "$C/tmp" -type f -name ffmpeg | head -1) && cp "$f" "$FF/ffmpeg" && cp "$(dirname "$f")/ffprobe" "$FF/ffprobe" && chmod +x "$FF"/ff*; }
+    get_ff https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz \
+      || get_ff https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz \
+      || { echo "ci_setup: could not fetch a static ffmpeg" >&2; exit 1; }
+    echo "  downloaded $("$FF/ffmpeg" -version | head -1)"
+  fi
+fi
+export PATH="$FF:$PATH"; [ -n "${GITHUB_PATH:-}" ] && echo "$FF" >> "$GITHUB_PATH"
+
+echo "== apt: chrome-headless-shell libs (only what the image lacks)"
 APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30"
-PKGS="ffmpeg libnspr4 libnss3 libatk1.0-0t64 libatk-bridge2.0-0t64 libxdamage1 libxkbcommon0 libasound2t64 libatspi2.0-0t64 libgbm1 \
+PKGS="libnspr4 libnss3 libatk1.0-0t64 libatk-bridge2.0-0t64 libxdamage1 libxkbcommon0 libasound2t64 libatspi2.0-0t64 libgbm1 \
   libxcomposite1 libxrandr2 libpango-1.0-0 libcairo2 libcups2t64 libdrm2 libxfixes3 fonts-liberation"
 MISSING=""; for p in $PKGS; do dpkg -s "$p" >/dev/null 2>&1 || MISSING="$MISSING $p"; done
-if [ -z "$MISSING" ]; then
-  echo "  all packages already on the runner image — apt skipped"          # 2026-10-22: two renders lost 30 min each in a hanging apt; skip when nothing is missing
+if [ -z "$MISSING" ]; then echo "  all libs already on the runner image — apt skipped"
 else
   echo "  missing:$MISSING"
   export DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a NEEDRESTART_SUSPEND=1
   retry timeout 240 sudo -E apt-get $APT update -qq
   retry timeout 420 sudo -E apt-get $APT install -y -qq --no-install-recommends $MISSING >/dev/null
 fi
-command -v ffmpeg >/dev/null || { echo "ci_setup: ffmpeg missing" >&2; exit 1; }
-
 echo "== hyperframes@$HFV + browser"
 retry npm i -g --silent "hyperframes@$HFV" >/dev/null
 retry hyperframes browser ensure >/dev/null
