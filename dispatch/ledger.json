@@ -1202,7 +1202,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-22T06:10:07+00:00",
+   "refreshed_at": "2026-10-22T14:33:51+00:00",
    "error": "An unknown error has occurred. Please retry the post again, and get in touch if this persists."
   },
   {
@@ -1338,32 +1338,32 @@
    "platform": "twitter",
    "post_id": "6ad89b640807acdda1233fc5",
    "channel_id": "69f30e2a5c4c051afaf58634",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/29235e1e0f19/Which-country-has-the-MOST-elephants.mp4",
    "due_at": "2026-10-22T13:00:00.000Z",
    "created_at": "2026-10-21T11:00:52.425Z",
    "recorded_at": "2026-10-21T11:00:52+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-22T06:10:15+00:00"
+   "sent_at": "2026-10-22T13:02:59.351Z",
+   "external_link": "https://x.com/2049746939164676096/status/2113254790754889806",
+   "refreshed_at": "2026-10-22T14:33:52+00:00"
   },
   {
    "episode": "ep11-most-elephants-botswana",
    "platform": "threads",
    "post_id": "6ad89b64dd065d615890fb92",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/29235e1e0f19/Which-country-has-the-MOST-elephants.mp4",
    "due_at": "2026-10-22T14:00:00.000Z",
    "created_at": "2026-10-21T11:00:52.924Z",
    "recorded_at": "2026-10-21T11:00:53+00:00",
    "title": null,
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-22T06:10:15+00:00"
+   "sent_at": "2026-10-22T14:03:51.133Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DezJxrUFPE3",
+   "refreshed_at": "2026-10-22T14:33:53+00:00"
   },
   {
    "episode": "ep16-longest-border-canada-usa",
@@ -1379,7 +1379,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-22T06:10:17+00:00"
+   "refreshed_at": "2026-10-22T14:33:55+00:00"
   },
   {
    "episode": "ep16-longest-border-canada-usa",
@@ -1395,7 +1395,7 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-22T06:10:17+00:00"
+   "refreshed_at": "2026-10-22T14:33:55+00:00"
   },
   {
    "episode": "ep16-longest-border-canada-usa",
@@ -1411,7 +1411,7 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-22T06:10:19+00:00"
+   "refreshed_at": "2026-10-22T14:33:57+00:00"
   },
   {
    "episode": "ep16-longest-border-canada-usa",
@@ -1427,7 +1427,7 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-22T06:10:21+00:00"
+   "refreshed_at": "2026-10-22T14:33:59+00:00"
   },
   {
    "episode": "ep16-longest-border-canada-usa",
@@ -1443,7 +1443,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-22T06:10:21+00:00"
+   "refreshed_at": "2026-10-22T14:34:00+00:00"
   },
   {
    "episode": "ep13-first-marathon-greece",
@@ -1456,7 +1456,10 @@
    "created_at": "2026-10-22T13:04:41.699Z",
    "recorded_at": "2026-10-22T13:04:41+00:00",
    "title": "Why is a marathon 26.2 miles? It starts with where the first one was run 🏃",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-22T14:34:02+00:00"
   },
   {
    "episode": "ep13-first-marathon-greece",
@@ -1469,7 +1472,10 @@
    "created_at": "2026-10-22T13:04:42.422Z",
    "recorded_at": "2026-10-22T13:04:42+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-22T14:34:02+00:00"
   },
   {
    "episode": "ep13-first-marathon-greece",
@@ -1482,7 +1488,10 @@
    "created_at": "2026-10-22T13:04:44.290Z",
    "recorded_at": "2026-10-22T13:04:44+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-22T14:34:04+00:00"
   },
   {
    "episode": "ep13-first-marathon-greece",
@@ -1495,7 +1504,10 @@
    "created_at": "2026-10-22T13:04:46.259Z",
    "recorded_at": "2026-10-22T13:04:46+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-22T14:34:06+00:00"
   },
   {
    "episode": "ep13-first-marathon-greece",
@@ -1508,7 +1520,10 @@
    "created_at": "2026-10-22T13:04:46.905Z",
    "recorded_at": "2026-10-22T13:04:47+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-22T14:34:06+00:00"
   }
  ]
 }
