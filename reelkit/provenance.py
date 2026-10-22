@@ -14,7 +14,7 @@ FAIL
   - AI media without a prompt or spec (unless marked legacy → WARN), or without ai/realistic flags
   - derived_from pointing at nothing; a clip spec (clips.json#id) that doesn't exist
   - built file (hf/assets, hf/fonts, *.js) with no provenance → nothing ships without an origin
-  - photo/archive whose screen_credit is not visible in the composition
+  - any credit/legal text in the composition (none allowed); photo/archive with an attribution licence
   - POST_KIT.md missing a credited author, or missing the AI disclosure while AI media is used
 WARN
   - legacy AI media (prompt not recorded), a generated clip whose clips.json prompt changed since generation,
@@ -43,6 +43,7 @@ KINDS = {"plate", "clip", "archive", "photo", "vo", "music", "sfx", "texture", "
 # vendored runtime JS shipped inside every composition (engine/vendor/LICENSES.md is the human-readable table)
 VENDOR_JS = {"gsap.min.js": "GSAP-Standard", "d3-geo.min.js": "ISC", "d3-array.min.js": "ISC", "topojson-client.min.js": "ISC", "geo-runtime.js": "own"}
 NEEDS_CREDIT = {"photo", "archive"}
+NO_ATTRIB = {"PD", "PD-USGov", "CC0-1.0", "own"}      # owner 2026-10-22: nothing legal/credit/source is shown in the video → shipped photos/archive must need no attribution
 
 
 def norm(s):
@@ -92,6 +93,8 @@ def main():
             F.append(f"{name}: licence '{lic}' not allowed" + (" (share-alike/NC/ND/unknown refused)" if REFUSED.search(lic) else f" — use one of {sorted(ALLOWED)}"))
         if (e.get("kind") in NEEDS_CREDIT or lic in ATTRIBUTION) and not e.get("credit"):
             F.append(f"{name}: needs a credit line")
+        if e.get("kind") in NEEDS_CREDIT and lic and lic not in NO_ATTRIB:
+            F.append(f"{name}: {e['kind']} licence '{lic}' needs attribution, but no credit text is allowed in the video — use PD / CC0 media")
         if e.get("kind") in NEEDS_CREDIT and not str(e.get("source", "")).startswith("http"):
             F.append(f"{name}: {e['kind']} needs an http(s) source URL")
         if e.get("kind") in ("plate", "clip", "vo") and "ai" not in e:
@@ -162,13 +165,8 @@ def main():
             audit.append({"file": rel, "provenance": src})
             if not src:
                 F.append(f"built file {rel} has no provenance (add it to media.json 'files' or 'generated')")
-        for k, e in files.items():
-            if e.get("kind") in NEEDS_CREDIT:
-                sc = e.get("screen_credit")
-                if not sc:
-                    F.append(f"{k}: {e['kind']} needs screen_credit (the on-screen credit text)")
-                elif norm(sc) not in text:
-                    F.append(f"{k}: on-screen credit not found in composition: “{sc}”")
+        for pat in (r"public domain", r"cc[ -]by", r"map data:", r"voice: ai", r"©"):          # owner 2026-10-22: no legal/credit/source text may reach the screen
+            if re.search(pat, text): F.append(f"credit/legal text found in the composition ({pat!r}) — the video must carry none")
     else:
         W.append(f"{hf}/index.html not built — output audit and on-screen credits not checked")
 

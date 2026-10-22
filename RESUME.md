@@ -205,7 +205,8 @@ Next: F2 = pace/voice/CTA/title/description changes (lessons #1,3,5,6,7); F3 = m
 - Lessons for next episodes: map labels over a highlight → cls `tag`; hide country labels (`geo.label_out`) before close-up cams; no number words in the outro line; template motion is only ~42 % active → F5 engine work: continuous stage drift + per-beat pop-ins to reach ≥ 70 %.
 - NEXT: `tools/daily_pick.py` now has 1 ready episode; author ≥ 6 more (Sports, Body & Brain, Wild Files, Geo) with the same recipe.
 
-## P5 card — 2026-10-22 · first "guidelines, not templates" Short rendered
+## P5 card — 2026-10-22
+- **RULE (owner 2026-10-22): NO legal/credit/sources/"Voice: AI" text in any video.** compose.py renders no credit line / photo credit; provenance FAILs on any such text and refuses attribution-licensed photos (PD/CC0 only — photos.py filters); geolint refuses OSM tiles. Credits kept only in the release credits.md. · first "guidelines, not templates" Short rendered
 - Geo Blitz #18 `ep18-newest-un-member` authored from `tools/specs/ep18-newest-un-member.json` + `brief.md`; render `p5-un-test9` SUCCESS (38.7 s, −14.7 LUFS, 143 wpm, all gates green). Awaiting owner verdict before status→ready / the other three briefs.
 - Lessons: spoken numerals ("193 on 14 July 2011", "1815") cost ~1 s each → keep long numbers on cards, say few in VO; geo.rise placement follows the country centroid → pick the wide-beat camera so the photo stays left of x≈690; fx.flash at a textqa probe instant FAILs contrast → use highlight_pulse; pins must `geo.pin_out` with their scene; Wikidata QIDs: look up, never guess.
 - Infra: hosted-runner apt hung 30 min ×3 → `ci_setup.sh` now uses a cached static ffmpeg and apt only for missing chrome libs (cache path `~/.cache/ffmpeg`). `hfstatic.mjs` stub gained `tl.call` (geo.rise). `postkit` `copy.not_spoilers` = distractor numbers released with a written reason.

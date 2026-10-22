@@ -12,7 +12,7 @@ import hashlib, json, pathlib, re, shutil, sys, urllib.parse, urllib.request
 API = "https://commons.wikimedia.org/w/api.php"
 UA = {"User-Agent": "thequizwire-photos/1.0 (github zainkhan122/thequizwire)"}
 CACHE = pathlib.Path.home() / ".cache" / "photos"
-OK = re.compile(r"^(cc0|public domain|pd|cc by( \d\.\d)?|cc-by(-\d\.\d)?|attribution)$", re.I)
+OK = re.compile(r"^(cc0|public domain|pd|pd-usgov)$", re.I)   # owner 2026-10-22: NO credit text in the video → only licence-free media (CC BY needs on-screen attribution → refused)
 BAD = re.compile(r"sa|nc|nd|share|noncommercial|fair", re.I)
 
 def api(**params):
@@ -62,7 +62,7 @@ def fetch_ep(ep):
     I = infos([e["commons"] for e in photos])
     for e in photos:
         i = I.get(e["commons"]) or I.get(e["commons"].replace("_", " ")) or info(e["commons"]); lic = i["licence"]
-        if not licence_ok(lic): raise SystemExit(f"photos: {e['id']} {i['title']} licence '{lic}' is not usable (CC0 / PD / CC BY only) — pick another file")
+        if not licence_ok(lic): raise SystemExit(f"photos: {e['id']} {i['title']} licence '{lic}' is not usable (CC0 / public domain only — no credits are shown in the video) — pick another file")
         if i["mime"] not in ("image/jpeg", "image/png"): raise SystemExit(f"photos: {e['id']} {i['title']} is {i['mime']} — jpeg/png only")
         src = fetch(i["thumb"]); dst = out / f"{e['id']}.jpg"; shutil.copy(src, dst)
         short = re.split(r"[,(;/]", i["artist"])[0].strip()[:32] or "Wikimedia Commons"; screen = f"📷 {short} · {lic}"

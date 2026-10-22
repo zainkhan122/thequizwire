@@ -121,7 +121,7 @@ class Composer:
             if getattr(self, "v3", False): self.body.append(self.Q.fact3(el["id"], el["text"], kicker=el.get("kicker", ""), y=el.get("y", 1250)))
             else: self.body.append(self.Q.fact(el["id"], el["text"], y=el.get("y", 1230), kicker=el.get("kicker", "")))
         elif k == "photo":
-            self.body.append(self.Q.photo(el["id"], f"assets/photos/{el['id']}.jpg", el["x"], el["y"], w=el.get("w", 560), h=el.get("h", 420), caption=el.get("caption", ""), credit=el.get("credit", ""), rot=el.get("rot", 0), z=el.get("z", 58)))
+            self.body.append(self.Q.photo(el["id"], f"assets/photos/{el['id']}.jpg", el["x"], el["y"], w=el.get("w", 560), h=el.get("h", 420), caption=el.get("caption", ""), credit="", rot=el.get("rot", 0), z=el.get("z", 58)))
             if el.get("credit"): self.credit_bits.append(el["credit"])
         elif k == "sticker":
             src = f"assets/stickers/{el['emoji'].lower()}.svg" if el.get("emoji") else el["src"]
@@ -160,7 +160,7 @@ class Composer:
         elif do in ("photo_in", "photo_out"): getattr(self.Q, do)(t, b["id"], **args)                                  # P2 media
         elif do in ("sticker_in", "sticker_out", "character_in", "character_out"): getattr(self.Q, do)(t, b["id"], **args)   # v3
         elif do == "cta_in": (self.Q.outro_in if getattr(self, "v3", False) else self.Q.cta_in)(t, t1, **args)          # v3 outro · v2 tease
-        elif do == "credit_in": self.Q.credit_in(t, t1, **args)                                                       # v2
+        elif do == "credit_in": pass                                      # no credit line on screen (owner 2026-10-22)                                                       # v2
         elif do in ("answer_in", "answer_out"): getattr(self.Q, do)(t, b["id"], **args)
         elif do == "fact_in": (self.Q.fact3_in if getattr(self, "v3", False) else self.Q.fact_in)(t, t1, b["id"], **args)
         elif do == "hide": self.J(f"tl.to('#{b['id']}',{{autoAlpha:0,duration:{float(args.get('dur', 0.4))},ease:'power1.in'}},{t:.3f});")   # any element (counter, chart…)
@@ -224,7 +224,7 @@ class Composer:
             for g, _, t0, t1 in caps: Q.caption_show(g, t0, t1)
             o = q.get("outro", {})
             self.body.append(Q.outro3(headline=o.get("headline", "DID YOU GET IT?"), url=o.get("url", "thequizwire.com")))
-            self.body.append(Q.credit3(credit))
+            # owner 2026-10-22: no legal/credit/source text in the video — credits live in out/credits.md (provenance --credits-md)
             self.caption_count = len(caps)
         elif self.v2:
             self.J("tl.set('#bug',{autoAlpha:0},0);")                                   # Q9: no chrome before the question lands
@@ -234,12 +234,11 @@ class Composer:
             self.body.append(Q.captions([(g, t) for g, t, _, _ in caps]))
             for g, _, t0, t1 in caps: Q.caption_show(g, t0, t1)
             self.body.append(Q.cta(q.get("tease", "Tomorrow: a new question"), q.get("cta_line", "One map question a day · Subscribe")))
-            self.body.append(Q.credit_line(credit))
             self.caption_count = len(caps)
         else:
             self.body.append(Q.card("q1", q["question"], q["options"], q["correct"], seconds=q.get("countdown", 3)))
         for el in self.V.get("elements", []): self.element(el)
-        if not self.v2: self.body.append(Q.end_card(credit))
+        if not (self.v2 or self.v3): self.body.append(Q.end_card(""))          # v1 legacy: no credit text either
         self.body.append(Q.progress(self.TOTAL))
         self.body.append(self.FX.overlays())
         for b in self.V.get("beats", []): self.beat(b)

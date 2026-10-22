@@ -14,7 +14,7 @@ FAIL (exit 1)
                           as_of / source; controller listed among claimants; the built index.html lacking the
                           "Administered by …" / "Claimed by …" plate text for it
   P5 data quality         built scene data is the 110m preview fallback (--release), or inline data > 400 KB
-  P6 credit               built composition without the "Natural Earth" credit (or "OpenStreetMap" when maptile clips exist)
+  P6 credit               no OSM/ODbL tiles (they would need on-screen attribution; the video carries no credit text — owner 2026-10-22)
 WARN: pins without `qid`, highlight ids that are not 3-char ISO numerics, as_of older than 18 months, registry
       regions whose Natural Earth note contradicts the registry (data drift).
 """
@@ -160,10 +160,10 @@ def main():
         if any(x == "preview-110m" for x in q): (F if a.release else W).append("built with the 110m preview fallback — run `reelkit/geodata.py prep` (P5)")
         for m in re.finditer(r'<script type="application/json" id="(geo_\w+_data)">([\s\S]*?)</script>', built):
             if len(m.group(2)) > 400_000: F.append(f"{m.group(1)}: {len(m.group(2)) // 1024} KB inline map data (> 400 KB) — tighten bbox/resolution (P5)")
-        if G["scenes"] and "natural earth" not in btext: F.append("no 'Natural Earth' credit in the composition (P6)")
+        # P6 (2026-10-22): no credit text in the video by owner policy — Natural Earth / NASA Blue Marble are public domain and need none.
         cj = ep / "clips.json"
-        if cj.exists() and any(c.get("engine") == "maptile" for c in json.loads(cj.read_text()).get("clips", [])) and "openstreetmap" not in btext:
-            F.append("maptile clip used but no '© OpenStreetMap contributors' credit on screen (P6)")
+        if cj.exists() and any(c.get("engine") == "maptile" for c in json.loads(cj.read_text()).get("clips", [])) :
+            F.append("maptile clip used — OSM tiles need on-screen attribution (ODbL) and the video carries no credit text; use the Blue Marble basemap (P6)")
     else:
         W.append(f"{hf}/index.html not built — plate text, credit and data quality not checked")
     for w in W: print("  WARN ", w)
