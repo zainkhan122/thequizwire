@@ -1,0 +1,143 @@
+{
+ "version": 1,
+ "episode": "ep18-newest-un-member",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -2,
+     -2,
+     42,
+     52
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "728"
+     ],
+     "cls": "",
+     "note": "South Sudan (answer) — flag lift on reveal",
+     "lift": "flag",
+     "flag": "ss"
+    },
+    {
+     "kind": "highlight",
+     "id": "others",
+     "ids": [
+      "499",
+      "756"
+     ],
+     "cls": "dim",
+     "note": "Montenegro and Switzerland — shown after the reveal, one per story beat"
+    }
+   ],
+   "pins": [
+    {
+     "id": "juba",
+     "lonlat": [
+      31.58,
+      4.85
+     ],
+     "label": "Juba",
+     "qid": "Q3875"
+    },
+    {
+     "id": "podgorica",
+     "lonlat": [
+      19.26,
+      42.44
+     ],
+     "label": "Podgorica",
+     "qid": "Q1664"
+    },
+    {
+     "id": "bern",
+     "lonlat": [
+      7.45,
+      46.95
+     ],
+     "label": "Bern",
+     "qid": "Q70"
+    }
+   ],
+   "labels": [
+    {
+     "id": "ssd",
+     "lonlat": [
+      30.0,
+      10.5
+     ],
+     "text": "South Sudan",
+     "cls": "tag",
+     "in": "s04@answer",
+     "out": "s05"
+    },
+    {
+     "id": "mne",
+     "lonlat": [
+      19.3,
+      44.4
+     ],
+     "text": "Montenegro · 2006",
+     "cls": "tag",
+     "in": "s05@montenegro",
+     "out": "s06"
+    },
+    {
+     "id": "che",
+     "lonlat": [
+      8.2,
+      49.0
+     ],
+     "text": "Switzerland · 2002",
+     "cls": "tag",
+     "in": "s06@switzerland",
+     "out": "s07"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -40,
+      -30,
+      80,
+      72
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 500,
+    "lonlat": [
+     20,
+     2
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

@@ -132,6 +132,10 @@ def spoiler_terms(E, V, post):
         for n in re.findall(r"\d[\d.,]*", (el.get("kicker") or "") + " " + (el.get("text") or "")):
             n = n.strip(".,")
             if len(n) >= 2 and n not in {"10", "20", "30", "50", "100"}: nums.add(n)
+    # P5: a fact-card number that belongs to a DISTRACTOR (e.g. Switzerland's 2002 when the answer is another country) may be
+    # released for the copy — only numbers, never answer words, and only with a written reason (recorded in the spec/topic.md).
+    for n, why in (post.get("copy", {}).get("not_spoilers") or {}).items():
+        if str(why).strip() and len(str(why)) >= 12: nums.discard(str(n))
     return terms, nums
 
 

@@ -1,1 +1,141 @@
-{"status":"draft","series":"geo-blitz","title":"Which of these joined the United Nations MOST recently?","quiz":{"question":"Which of these joined the United Nations MOST recently?"}}
+{
+ "id": "ep18-newest-un-member",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 18,
+ "title": "Which of these joined the United Nations MOST recently?",
+ "difficulty": "MEDIUM",
+ "seed": 4218,
+ "quiz": {
+  "question": "Which of these joined the United Nations MOST recently?",
+  "keyword": "MOST recently",
+  "options": [
+   "Switzerland",
+   "South Sudan",
+   "Montenegro"
+  ],
+  "correct": 1,
+  "beat": 3.0,
+  "answer_line": "South Sudan",
+  "answer_sub": "14 July 2011",
+  "option_meta": [
+   {
+    "flag": "ch"
+   },
+   {
+    "flag": "ss"
+   },
+   {
+    "flag": "me"
+   }
+  ],
+  "banner": "South Sudan",
+  "banner_sub": "✓  B was right · 14 July 2011",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which of these joined the United Nations MOST recently? 🇺🇳",
+  "premise": "The newest UN member is younger than Instagram",
+  "bait": "Most people would swear Switzerland was a founder.",
+  "keywords": [
+   "newest country in the world",
+   "united nations members",
+   "un day",
+   "south sudan independence",
+   "switzerland un 2002",
+   "montenegro 2006",
+   "geography quiz",
+   "how many countries in the un",
+   "world map quiz",
+   "map animation"
+  ],
+  "description": "The newest UN member is younger than Instagram. Most people would swear Switzerland was a founder.\n\nSources: United Nations (Member States; Growth in UN membership); Swiss FDFA; Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #18",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "UnitedNations",
+   "UNDay"
+  ],
+  "cover_emoji": "🇺🇳",
+  "copy": {
+   "spoilers": [
+    "sudanese",
+    "juba",
+    "2011",
+    "193rd"
+   ],
+   "youtube": {
+    "title": "Newest country in the world? Which of these joined the UN most recently 🇺🇳",
+    "description": "One of these three only joined the United Nations in 2002 — and most people would swear it was a founder.\nWhich one did you assume was the oldest member? Say it before the map lights up.\nSubscribe for a map quiz you can argue about every day.",
+    "tags": [
+     "#unitednations",
+     "#unday",
+     "#geographyquiz",
+     "#worldmap",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which of these joined the United Nations most recently? 🇺🇳\nSwitzerland, famous for staying out of everything, only joined in 2002. The newest member is younger than this app.\nWhich one did you pick — and which one surprised you?",
+    "tags": [
+     "#unitednations",
+     "#geography",
+     "#mapquiz",
+     "#worldfacts",
+     "#unday"
+    ]
+   },
+   "facebook": {
+    "text": "Which of these joined the United Nations most recently — Switzerland, South Sudan or Montenegro?\nOne of them waited until 2002 and needed a nationwide vote to do it. Did you know that one?",
+    "tags": [
+     "#unitednations",
+     "#geographyquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which of these joined the United Nations most recently?\nSwitzerland only got there in 2002 — by referendum. The newest member is younger than most memes.",
+    "tags": [
+     "#UNDay"
+    ]
+   },
+   "threads": {
+    "text": "Which of these joined the United Nations most recently — Switzerland, South Sudan or Montenegro? One of them is a country younger than Instagram, and Switzerland only joined in 2002 after a national vote. Guess before the map lights up.",
+    "tags": [
+     "#geography"
+    ]
+   },
+   "not_spoilers": {
+    "2002": "Switzerland's own year — a distractor fact used as bait; the answer's numbers (2011, 193) stay out"
+   }
+  }
+ },
+ "variety": {
+  "question": "which-record",
+  "hook": "question-first",
+  "opener": "split-candidates",
+  "reveal": "flag-lift",
+  "beats": [
+   "second-highlight",
+   "pin",
+   "counter",
+   "photo",
+   "rise"
+  ],
+  "cast": "flagball:happy + emoji-set:vote",
+  "music": "bed:bright"
+ },
+ "status": "draft"
+}

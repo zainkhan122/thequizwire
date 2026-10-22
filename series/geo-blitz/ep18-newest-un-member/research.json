@@ -1,0 +1,213 @@
+{
+ "version": 1,
+ "episode": "ep18-newest-un-member",
+ "topic": "Which of these joined the United Nations most recently? (South Sudan, 14 July 2011; Montenegro 28 June 2006; Switzerland 10 September 2002)",
+ "researched": "2026-10-22",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Switzerland was a founding member of the UN.",
+   "reality": "Switzerland stayed out on neutrality grounds and joined only on 10 September 2002, after a referendum on 3 March 2002.",
+   "sources": [
+    "swiss_fdfa",
+    "wiki_ch_un"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "UN Day explainers list '193 members' over a flag montage; nobody puts the three late joiners on one moving map with their dates and the newest flag rising out of the country.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=newest+country+in+the+world+shorts",
+    "title": "Search: newest country in the world shorts",
+    "angle": "South Sudan listicles",
+    "misses": "no comparison with other late joiners, no map"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=how+many+countries+in+the+un",
+    "title": "Search: how many countries in the UN",
+    "angle": "193 vs 195 debates",
+    "misses": "no quiz, no dates"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if map scenarios",
+    "misses": "no sourced dates"
+   }
+  ]
+ },
+ "sources": {
+  "un_growth": {
+   "type": "primary",
+   "publisher": "United Nations",
+   "title": "Growth in United Nations membership",
+   "url": "https://www.un.org/en/about-us/growth-in-un-membership",
+   "date": "2026-10-21",
+   "notes": "51 original members 1945; 193 today; 2002 Switzerland (10 Sep) and Timor-Leste; 2006 Montenegro (28 Jun); 2011 South Sudan (14 Jul)"
+  },
+  "un_members": {
+   "type": "primary",
+   "publisher": "United Nations",
+   "title": "Member States",
+   "url": "https://www.un.org/en/about-us/member-states",
+   "date": "2026-10-21",
+   "notes": "193 Member States with admission dates: Montenegro 28-06-2006, South Sudan 14-07-2011, Switzerland 10-09-2002"
+  },
+  "swiss_fdfa": {
+   "type": "primary",
+   "publisher": "Swiss Federal Department of Foreign Affairs",
+   "title": "Switzerland and the UN",
+   "url": "https://www.eda.admin.ch/eda/en/fdfa/foreign-policy/international-organizations/un/switzerland-un.html",
+   "date": "2026-10-21",
+   "notes": "popular vote 3 March 2002; Switzerland became the 190th UN member on 10 September 2002; neutrality recognised at the Congress of Vienna 1815"
+  },
+  "britannica_ss": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "South Sudan",
+   "url": "https://www.britannica.com/place/South-Sudan",
+   "date": "2026-10-21",
+   "notes": "independence 9 July 2011 after the January 2011 referendum; admitted to the UN 14 July 2011 as the 193rd member; capital Juba"
+  },
+  "wiki_members": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Member states of the United Nations",
+   "url": "https://en.wikipedia.org/wiki/Member_states_of_the_United_Nations",
+   "date": "2026-10-21",
+   "notes": "193 members; newest South Sudan 14 July 2011; Montenegro 28 June 2006; Switzerland 10 September 2002"
+  },
+  "wiki_ch_un": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Switzerland and the United Nations",
+   "url": "https://en.wikipedia.org/wiki/Switzerland_and_the_United_Nations",
+   "date": "2026-10-21",
+   "notes": "referendum 3 March 2002 (54.6 % yes); joined 10 September 2002; previously observer since 1948 on neutrality grounds"
+  },
+  "wiki_mne": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Montenegro",
+   "url": "https://en.wikipedia.org/wiki/Montenegro",
+   "date": "2026-10-21",
+   "notes": "independence referendum 21 May 2006; declared independence 3 June 2006; UN member 28 June 2006; capital Podgorica"
+  },
+  "wiki_ss": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "South Sudan",
+   "url": "https://en.wikipedia.org/wiki/South_Sudan",
+   "date": "2026-10-21",
+   "notes": "independence 9 July 2011; UN membership 14 July 2011 (193rd member); capital Juba"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "South Sudan is the most recent UN member: admitted 14 July 2011 as the 193rd member, five days after independence on 9 July 2011.",
+   "sources": [
+    "un_members",
+    "britannica_ss",
+    "wiki_ss"
+   ],
+   "vo": [
+    "which of these joined the united nations most recently",
+    "switzerland, south sudan, or montenegro",
+    "south sudan. it became member number 193 on 14 july 2011, just days after independence"
+   ],
+   "screen": [
+    "MEMBER 193",
+    "Joined 14 July 2011",
+    "South Sudan",
+    "Switzerland",
+    "Montenegro",
+    "Juba",
+    "Juba, 9 July 2011"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "detail",
+   "text": "Montenegro was admitted to the UN on 28 June 2006, after its independence referendum of 21 May 2006.",
+   "sources": [
+    "un_members",
+    "un_growth",
+    "wiki_mne"
+   ],
+   "vo": [
+    "montenegro joined in june 2006, just a month after its own independence vote"
+   ],
+   "screen": [
+    "2006",
+    "Montenegro · 28 June 2006",
+    "Montenegro · 2006",
+    "Podgorica"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "detail",
+   "text": "Switzerland, neutral since 1815, joined the UN only on 10 September 2002 after a referendum on 3 March 2002.",
+   "sources": [
+    "swiss_fdfa",
+    "un_growth",
+    "wiki_ch_un"
+   ],
+   "vo": [
+    "and switzerland, neutral since 1815, only joined the un in 2002, after a nationwide referendum"
+   ],
+   "screen": [
+    "2002",
+    "Switzerland · by referendum",
+    "Switzerland · 2002",
+    "Bern"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "The UN has 193 member states today (51 in 1945); no state has been admitted since South Sudan in 2011.",
+   "sources": [
+    "un_growth",
+    "un_members",
+    "wiki_members"
+   ],
+   "vo": [
+    "193 members today, and nobody at all has joined since south sudan"
+   ],
+   "screen": [
+    "UN member states",
+    "193"
+   ]
+  }
+ ]
+}

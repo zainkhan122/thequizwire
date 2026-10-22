@@ -65,7 +65,7 @@ const tween = (kind) => (target, a, b, c) => {
   }
   return tl;
 };
-const tl = { to: tween("to"), from: tween("from"), fromTo: tween("fromTo"), set: tween("set"), seek: () => tl, add: () => tl, duration: () => total };
+const tl = { to: tween("to"), from: tween("from"), fromTo: tween("fromTo"), set: tween("set"), seek: () => tl, add: () => tl, call: (fn, args, at) => { ops.push({ kind: "call", target: "fn", at: Number(at) || 0 }); return tl; }, duration: () => total };
 const gsap = { timeline: () => tl, to: tween("to"), set: tween("set"), registerPlugin: () => {} };
 
 // ---------- run: vendored libs (real), then inline scripts in document order
