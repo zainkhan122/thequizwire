@@ -1,14 +1,15 @@
 {
+ "version": 1,
  "files": {
   "media/photos/ph1896.jpg": {
    "by": "reelkit/photos.py",
    "commons": "File:1896 Olympic marathon.jpg",
-   "credit": "Burton Holmes, published 1901, book title The Burton Holmes Lectures (Volume 3): With Illustrations from Photographs by the Author, page 69, ISBN\u00a09781333405755. \u2014 Public domain \u2014 https://commons.wikimedia.org/wiki/File:1896_Olympic_marathon.jpg",
+   "credit": "Burton Holmes, published 1901, book title The Burton Holmes Lectures (Volume 3): With Illustrations from Photographs by the Author, page 69, ISBN 9781333405755. — Public domain — https://commons.wikimedia.org/wiki/File:1896_Olympic_marathon.jpg",
    "kind": "photo",
    "licence": "PD",
    "licence_url": "",
    "provider": "Wikimedia Commons",
-   "screen_credit": "\ud83d\udcf7 Burton Holmes \u00b7 Public domain",
+   "screen_credit": "📷 Burton Holmes · Public domain",
    "sha256": "df7cd7bae5a21daf8902fd2606707f1117a987547162d1535bfdf021bf26fe1f",
    "size": 314958,
    "source": "https://commons.wikimedia.org/wiki/File:1896_Olympic_marathon.jpg"
@@ -143,13 +144,13 @@
   "photos/ph1896.jpg": {
    "by": "reelkit/photos.py",
    "bytes": 314958,
-   "credit": "Burton Holmes, published 1901, book title The Burton Holmes Lectures (Volume 3): With Illustrations from Photographs by the Author, page 69, ISBN\u00a09781333405755. \u2014 Public domain \u2014 https://commons.wikimedia.org/wiki/File:1896_Olympic_marathon.jpg",
+   "credit": "Burton Holmes, published 1901, book title The Burton Holmes Lectures (Volume 3): With Illustrations from Photographs by the Author, page 69, ISBN 9781333405755. — Public domain — https://commons.wikimedia.org/wiki/File:1896_Olympic_marathon.jpg",
    "derived_from": "media/photos/ph1896.jpg",
    "kind": "photo",
    "licence": "PD",
    "op": "copy",
    "provider": "Wikimedia Commons",
-   "screen_credit": "\ud83d\udcf7 Burton Holmes \u00b7 Public domain",
+   "screen_credit": "📷 Burton Holmes · Public domain",
    "source": "https://commons.wikimedia.org/wiki/File:1896_Olympic_marathon.jpg"
   },
   "stickers/1f3c3.svg": {
@@ -208,6 +209,5 @@
   }
  },
  "release": "media-ep13-first-marathon-greece",
- "repo": "zainkhan122/thequizwire",
- "version": 1
+ "repo": "zainkhan122/thequizwire"
 }

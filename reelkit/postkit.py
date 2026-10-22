@@ -177,6 +177,95 @@ def other_episode_sentences(ep):
 def tags_in(text): return [h for h in re.findall(r"#\w+", text)]
 
 
+BOT = re.compile(r"(?i)\b(in this video|in today'?s video|don'?t forget to|smash (that|the) like|hit (that|the) (like|bell)|like share (and )?subscribe|"
+                 r"welcome back|hey guys|hi guys|you won'?t believe|mind[- ]?blowing|link in bio|check out our|follow for more daily)\b|[🔥👉💯]{2,}")
+LIMITS = {"youtube_title": 100, "youtube": 5000, "instagram": 2200, "facebook": 2200, "twitter": 280, "threads": 500}
+TAG_MAX = {"youtube": 5, "instagram": 5, "facebook": 3, "twitter": 2, "threads": 1}
+
+def topic_sections(ep):
+    tp = Path(ep) / "topic.md"
+    if not tp.exists(): return {}
+    out, cur = {}, None
+    for line in tp.read_text().splitlines():
+        m = re.match(r"##\s+(.*)", line)
+        if m: cur = m.group(1).strip(); out[cur] = ""
+        elif cur: out[cur] += line + "\n"
+    return {k: v.strip() for k, v in out.items()}
+
+def other_episode_copy(ep):
+    """Every other episode's v4 copy: sentences → episode, and per-platform tag sets (novelty gate)."""
+    sent, tagsets = {}, {}
+    for e in (ROOT / "series").glob("*/*/episode.json"):
+        if e.parent.resolve() == Path(ep).resolve(): continue
+        try: c = json.loads(e.read_text()).get("post", {}).get("copy", {})
+        except Exception: continue
+        if "youtube" not in c: continue
+        for plat, v in c.items():
+            if not isinstance(v, dict): continue
+            for k in ("title", "description", "caption", "text"):
+                for s_ in sentences(v.get(k, "")): sent.setdefault(s_, e.parent.name)
+            tagsets.setdefault(plat, []).append((tuple(sorted(t.lower() for t in v.get("tags", []))), e.parent.name))
+    return sent, tagsets
+
+def build_v4(ep, E, V, R, S, post, copy):
+    """P4 (owner 2026-10-21): the copy is WRITTEN per Short, per platform, by the editor at authoring time — guidelines, not a structure.
+    post.copy = {youtube:{title, description, tags}, instagram:{caption, tags}, facebook:{text, tags}, twitter:{text, tags}, threads:{text, tags},
+    spoilers:[…]}. The reasoning lives in topic.md '## Copy'. This function assembles, then LINTS: spoilers · limits · bot phrases · links ·
+    novelty (no sentence or tag set shared with another episode) · search term present · tags are topic tags, not the series pool."""
+    slug = E.get("series", ""); question = E["title"].strip(); q_clean = EMOJI.sub("", question).strip(); ans = answer_text(E)
+    g = lambda plat, k: str((copy.get(plat) or {}).get(k, "")).strip()
+    tags = lambda plat: [t if t.startswith("#") else "#" + t for t in (copy.get(plat) or {}).get("tags", [])]
+    def with_tags(text, plat): return (text + ("\n\n" + " ".join(tags(plat)) if tags(plat) else "")).strip()
+    yt = {"title": g("youtube", "title"), "description": with_tags(g("youtube", "description"), "youtube"), "hashtags": tags("youtube"), "categoryId": str(S["youtube_category"]),
+          "madeForKids": CFG["youtube"]["made_for_kids"], "notifySubscribers": CFG["youtube"]["notify_subscribers"], "privacy": CFG["youtube"]["privacy"],
+          "license": CFG["youtube"]["license"], "embeddable": CFG["youtube"]["embeddable"],
+          "isAiGenerated": bool(post.get("youtube_is_ai_generated", CFG["disclosure"]["youtube_is_ai_generated"])),
+          "keywords": list(dict.fromkeys([k.lower() for k in post.get("keywords", [])] + S.get("keywords", [])))[:12], "playlist": S["playlist"]}
+    ig = {"caption": with_tags(g("instagram", "caption"), "instagram"), "firstComment": "", "hashtags": tags("instagram"), "shouldShareToFeed": True,
+          "isAiGenerated": bool(CFG["disclosure"]["instagram_is_ai_generated"]), "thumbnailOffsetMs": 0}
+    fb = {"text": with_tags(g("facebook", "text"), "facebook"), "firstComment": "", "hashtags": tags("facebook")}
+    x = {"text": with_tags(g("twitter", "text"), "twitter"), "hashtags": tags("twitter"), "isAiGenerated": bool(CFG["disclosure"].get("twitter_is_ai_generated", True))}
+    th = {"text": with_tags(g("threads", "text"), "threads"), "hashtags": tags("threads")}
+    kit = {"episode": Path(ep).name, "series": slug, "question": question, "answer": ans, "built_at": datetime.now(timezone.utc).isoformat(timespec=("seconds")),
+           "copy_version": 4, "youtube": yt, "instagram": ig, "facebook": fb, "twitter": x, "threads": th}
+    kit["checks"] = check(kit); F, W = kit["checks"]["fail"], kit["checks"]["warn"]
+    texts = {"YT title": yt["title"], "YT": yt["description"], "IG": ig["caption"], "FB": fb["text"], "X": x["text"], "Threads": th["text"]}
+    for name, t in texts.items():
+        if not t: F.append(f"copy missing for {name} — write it (docs/COPY_GUIDELINES.md)")
+    # spoilers (hard, unchanged rule)
+    terms, nums = spoiler_terms(E, V, post); allowed = {w.lower() for w in re.findall(r"[A-Za-z]{3,}", q_clean)}
+    for name, t in texts.items():
+        hits = find_spoilers(t, terms, nums, allowed, E.get("quiz", {}).get("options", []), ans)
+        if hits: F.append(f"SPOILER {name}: {hits} — the copy gives the answer away")
+        if BOT.search(t): F.append(f"BOT phrase in {name}: '{BOT.search(t).group(0)}' — write like a person")
+        if re.search(r"https?://|www\.", t): F.append(f"link in {name} — links kill reach; the site lives in the outro")
+    if len(yt["title"]) > LIMITS["youtube_title"]: F.append(f"YT title {len(yt['title'])} chars > 100")
+    # the search term the topic brief recorded must appear in the YouTube title or the first 100 chars of the description
+    sec = topic_sections(ep); m = re.search(r'"([^"]{4,})"', sec.get("Search term", ""))
+    if m:
+        term = m.group(1).lower()
+        if term not in yt["title"].lower() and term not in yt["description"][:100].lower(): F.append(f"YT title/first line must carry the search term \"{term}\" from topic.md")
+    if len(sec.get("Copy", "")) < 80: F.append("topic.md '## Copy' missing or thin — say why this title, this comment question and these tags for this Short")
+    # tags: topic tags, not the series pool; counts per platform; at least one tag that is specific to this Short
+    pool = {h.lower() for plat_tags in S.get("hashtags", {}).values() for h in plat_tags} | {CFG["channel"]["brand_hashtag"].lower()}
+    for plat, mx in TAG_MAX.items():
+        tg = [t.lower() for t in tags(plat)]
+        if len(tg) > mx: F.append(f"{plat}: {len(tg)} tags > {mx}")
+        if plat == "threads" and len(tg) != 1: F.append("threads: exactly 1 tag (only the first becomes a topic tag)")
+        if tg and all(t in pool for t in tg): F.append(f"{plat}: every tag is a series-pool tag — add the tags of THIS subject")
+        if plat == "youtube" and "#shorts" not in tg: W.append("youtube: #shorts helps the Shorts shelf — consider it")
+    # novelty against every other v4 episode
+    sent, tagsets = other_episode_copy(ep)
+    for name, t in texts.items():
+        for s_ in sentences(t):
+            if s_ in sent and s_ != q_clean.lower(): F.append(f"{name}: sentence already used by {sent[s_]} — \"{s_[:60]}\"")
+    for plat in TAG_MAX:
+        mine = tuple(sorted(t.lower() for t in tags(plat)))
+        for other, who in tagsets.get(plat, []):
+            if mine and mine == other: F.append(f"{plat}: identical tag set to {who} — tags are per Short")
+    return kit
+
+
 def build(ep):
     """Owner 2026-10-19 (final): every channel = (1) the EXACT question · (2) a comment CTA ("Did you get it?" / "What was your
     first guess?" …) · (3) a Like + Subscribe/Follow CTA · (4) hashtags per platform. Nothing else, no facts, no premise.
@@ -186,6 +275,7 @@ def build(ep):
     slug = E.get("series", "")
     S = CFG["series"].get(slug) or {"name": slug.title(), "emoji": "❓", "topic": "quiz", "youtube_category": "24", "playlist": slug, "hashtags": {}, "keywords": []}
     post = E.get("post", {}); copy = post.get("copy") or {}
+    if "youtube" in copy: return build_v4(ep, E, V, R, S, post, copy)                      # P4: per-Short authored copy
     question = E["title"].strip(); q_clean = EMOJI.sub("", question).strip()
     emoji = (EMOJI.search(question) or EMOJI.search(post.get("title", "")))
     emoji = emoji.group(0) if emoji else post.get("cover_emoji") or S["emoji"]

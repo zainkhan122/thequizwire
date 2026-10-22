@@ -7,8 +7,8 @@ five live/ready episodes of the channel; the question shape differs from the pre
 import json, re, sys
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
-SECTIONS = ["Signal", "Why this, why now", "Viewer takeaway", "Question shape", "Options and why they fool", "Search term", "Rejected alternatives", "Ship by"]
-MIN = {"Signal": 30, "Why this, why now": 60, "Viewer takeaway": 30, "Question shape": 40, "Options and why they fool": 80, "Search term": 5, "Rejected alternatives": 40, "Ship by": 10}
+SECTIONS = ["Signal", "Why this, why now", "Viewer takeaway", "Question shape", "Options and why they fool", "Search term", "Rejected alternatives", "Ship by", "Copy"]
+MIN = {"Signal": 30, "Why this, why now": 60, "Viewer takeaway": 30, "Question shape": 40, "Options and why they fool": 80, "Search term": 5, "Rejected alternatives": 40, "Ship by": 10, "Copy": 80}
 SOURCE = re.compile(r"https?://|calendar:|comment:|suggest:|trends?:|wikipedia:|news:", re.I)
 
 def stem(q):

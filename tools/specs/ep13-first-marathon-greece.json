@@ -50,15 +50,53 @@
   ],
   "sources_line": "Olympics.com, World Athletics, Britannica, Wikipedia",
   "copy": {
-   "comment_cta": "What was your first guess, honestly?",
-   "like_cta_youtube": "Drop a like if you knew it and subscribe for more sports quizzes.",
-   "like_cta_social": "Like and follow {handle}, a new sports quiz every day.",
    "spoilers": [
     "greek",
     "athens",
     "spyridon",
-    "louis"
-   ]
+    "louis",
+    "hellas"
+   ],
+   "youtube": {
+    "title": "Why is a marathon 26.2 miles? It starts with where the first one was run 🏃",
+    "description": "The first Olympic marathon was shorter than 26.2 miles. The extra distance has nothing to do with where it began.\nThree countries, one map. Which one did you pick before the route drew itself?\nSubscribe if you want a sports map quiz like this every week.",
+    "tags": [
+     "#marathon",
+     "#olympichistory",
+     "#sportsquiz",
+     "#runningfacts",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Where was the first marathon run? 🏃\nThe answer is a line on a map — and the reason every marathon today is 26.2 miles is a different country entirely.\nTag the runner who tells everyone their finish time.",
+    "tags": [
+     "#marathon",
+     "#marathontraining",
+     "#runningcommunity",
+     "#olympics",
+     "#sportshistory"
+    ]
+   },
+   "facebook": {
+    "text": "Where was the first marathon run — and have you ever run one?\nThe original course was shorter than today's. The odd 26.2 miles we run now came later, from somewhere else. Your guess before the map reveals it?",
+    "tags": [
+     "#marathon",
+     "#runninghistory"
+    ]
+   },
+   "twitter": {
+    "text": "Where was the first marathon run?\nIt was shorter than today's race. The 26.2 miles you run now was decided in another country, for a very royal reason.",
+    "tags": [
+     "#marathon"
+    ]
+   },
+   "threads": {
+    "text": "Where was the first marathon run? The original course was shorter — and the 26.2 miles everybody runs today was set in a different country for a reason that still makes runners laugh. Guess before the map draws it.",
+    "tags": [
+     "#marathon"
+    ]
+   }
   }
  },
  "variety": {
