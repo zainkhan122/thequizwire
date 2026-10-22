@@ -12,10 +12,17 @@ retry() { local n=0; until "$@"; do n=$((n+1)); [ $n -ge 3 ] && return 1; echo "
 
 echo "== apt: ffmpeg + chrome-headless-shell libs"
 APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30"
-retry sudo apt-get $APT update -qq
-retry sudo DEBIAN_FRONTEND=noninteractive apt-get $APT install -y -qq ffmpeg libnspr4 libnss3 libatk1.0-0t64 libatk-bridge2.0-0t64 \
-  libxdamage1 libxkbcommon0 libasound2t64 libatspi2.0-0t64 libgbm1 libxcomposite1 libxrandr2 libpango-1.0-0 libcairo2 \
-  libcups2t64 libdrm2 libxfixes3 fonts-liberation >/dev/null
+PKGS="ffmpeg libnspr4 libnss3 libatk1.0-0t64 libatk-bridge2.0-0t64 libxdamage1 libxkbcommon0 libasound2t64 libatspi2.0-0t64 libgbm1 \
+  libxcomposite1 libxrandr2 libpango-1.0-0 libcairo2 libcups2t64 libdrm2 libxfixes3 fonts-liberation"
+MISSING=""; for p in $PKGS; do dpkg -s "$p" >/dev/null 2>&1 || MISSING="$MISSING $p"; done
+if [ -z "$MISSING" ]; then
+  echo "  all packages already on the runner image — apt skipped"          # 2026-10-22: two renders lost 30 min each in a hanging apt; skip when nothing is missing
+else
+  echo "  missing:$MISSING"
+  export DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a NEEDRESTART_SUSPEND=1
+  retry timeout 240 sudo -E apt-get $APT update -qq
+  retry timeout 420 sudo -E apt-get $APT install -y -qq --no-install-recommends $MISSING >/dev/null
+fi
 command -v ffmpeg >/dev/null || { echo "ci_setup: ffmpeg missing" >&2; exit 1; }
 
 echo "== hyperframes@$HFV + browser"
