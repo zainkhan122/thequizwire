@@ -293,11 +293,11 @@
    {
     "id": "north",
     "lonlat": [
-     60,
+     30,
      68
     ],
     "text": "POLAR BEARS · Arctic only",
-    "cls": "tag",
+    "cls": "tag ar",
     "in": "s04@arctic+0.6",
     "out": "s07"
    },
@@ -315,11 +315,11 @@
    {
     "id": "eqlbl",
     "lonlat": [
-     100,
+     45,
      4
     ],
     "text": "Equator",
-    "cls": "tag",
+    "cls": "tag ar",
     "in": "s04@equator+0.8",
     "out": "s06"
    },
@@ -382,7 +382,8 @@
      145.2,
      -38.5
     ],
-    "label": "Phillip Island"
+    "label": "Phillip Island",
+    "side": "left"
    },
    {
     "id": "galapagos",
