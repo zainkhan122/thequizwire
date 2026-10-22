@@ -63,7 +63,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "South Sudan. It became member number 193 on 14 July 2011, just days after independence.",
+   "text": "South Sudan. It became member number 193 on 14 July 2011, days after independence.",
    "cues": {
     "answer": "sudan",
     "member": "member",
@@ -93,7 +93,7 @@
    "energy": 4,
    "pause_after": 0.5,
    "direction": "the surprise: Switzerland fills, a flash on 'only', the ballot-box sticker pops on 'referendum', year card",
-   "text": "And Switzerland, neutral since 1815, only joined the UN in 2002, after a nationwide referendum.",
+   "text": "And Switzerland, neutral since 1815, only joined in 2002, after a nationwide referendum.",
    "cues": {
     "switzerland": "switzerland",
     "only": "only",

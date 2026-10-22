@@ -134,7 +134,7 @@
    "recently": "recently"
   },
   "v04": {
-   "text": "South Sudan. It became member number 193 on 14 July 2011, just days after independence.",
+   "text": "South Sudan. It became member number 193 on 14 July 2011, days after independence.",
    "cues": {
     "answer": "sudan",
     "member": "member",
@@ -149,7 +149,7 @@
    }
   },
   "v06": {
-   "text": "And Switzerland, neutral since 1815, only joined the UN in 2002, after a nationwide referendum.",
+   "text": "And Switzerland, neutral since 1815, only joined in 2002, after a nationwide referendum.",
    "cues": {
     "switzerland": "switzerland",
     "only": "only",
@@ -347,17 +347,17 @@
     ]
    ],
    "s07": [
-    0.8,
+    0.75,
     [
-     20,
-     25
+     37.5,
+     20
     ]
    ],
    "s07b": [
-    0.82,
+    0.77,
     [
-     20.5,
-     24.8
+     38,
+     19.8
     ]
    ]
   },
@@ -482,7 +482,7 @@
     "vo": [
      "which of these joined the united nations most recently",
      "switzerland, south sudan, or montenegro",
-     "south sudan. it became member number 193 on 14 july 2011, just days after independence"
+     "south sudan. it became member number 193 on 14 july 2011, days after independence"
     ],
     "screen": [
      "MEMBER 193",
@@ -523,7 +523,7 @@
      "wiki_ch_un"
     ],
     "vo": [
-     "and switzerland, neutral since 1815, only joined the un in 2002, after a nationwide referendum"
+     "and switzerland, neutral since 1815, only joined in 2002, after a nationwide referendum"
     ],
     "screen": [
      "2002",
@@ -586,6 +586,14 @@
    "pulse": false,
    "devices": [
     {
+     "at": "@+0.1",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "juba"
+     }
+    },
+    {
      "at": "@@montenegro",
      "do": "geo.highlight_in",
      "stage": "stage_map",
@@ -603,16 +611,24 @@
      }
     },
     {
-     "at": "@@vote",
+     "at": "@@montenegro+0.9",
      "do": "fact_in",
      "id": "f2",
      "until": "@.end"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "podgorica"
+     }
     }
    ]
   },
   {
    "vo": {
-    "text": "And Switzerland, neutral since 1815, only joined the UN in 2002, after a nationwide referendum.",
+    "text": "And Switzerland, neutral since 1815, only joined in 2002, after a nationwide referendum.",
     "cues": {
      "switzerland": "switzerland",
      "only": "only",
@@ -683,6 +699,14 @@
      "at": "@.end",
      "do": "sticker_out",
      "id": "st_vote"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "bern"
+     }
     }
    ]
   },
@@ -698,18 +722,18 @@
    "energy": 3,
    "tone": "resolute",
    "cam": [
-    0.8,
+    0.75,
     [
-     20,
-     25
+     37.5,
+     20
     ]
    ],
    "cam_dur": 1.4,
    "cam_hold": [
-    0.82,
+    0.77,
     [
-     20.5,
-     24.8
+     38,
+     19.8
     ]
    ],
    "pulse": false,
@@ -732,8 +756,8 @@
     "from": "rise",
     "fid": "728",
     "layer": "hl",
-    "w": 560,
-    "h": 400,
+    "w": 500,
+    "h": 370,
     "at": 1.9
    },
    "devices": [
