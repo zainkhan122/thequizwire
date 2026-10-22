@@ -63,10 +63,10 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "South Sudan. Member number 193 on 14 July 2011, days after declaring independence.",
+   "text": "South Sudan. It joined in July 2011, just days after declaring its independence.",
    "cues": {
     "answer": "sudan",
-    "member": "member",
+    "member": "joined",
     "independence": "independence"
    },
    "climax": true
