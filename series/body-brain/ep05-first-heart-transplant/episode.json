@@ -1,1 +1,139 @@
-{"status":"draft","series":"body-brain","title":"The FIRST human heart transplant happened in which country?","quiz":{"question":"The FIRST human heart transplant happened in which country?"}}
+{
+ "id": "ep05-first-heart-transplant",
+ "format": "quiz-v3",
+ "series": "body-brain",
+ "number": 5,
+ "title": "The FIRST human heart transplant happened in which country?",
+ "difficulty": "MEDIUM",
+ "seed": 4305,
+ "quiz": {
+  "question": "The FIRST human heart transplant happened in which country?",
+  "keyword": "FIRST",
+  "options": [
+   "United States",
+   "South Africa",
+   "United Kingdom"
+  ],
+  "correct": 1,
+  "beat": 3.0,
+  "answer_line": "South Africa",
+  "answer_sub": "Cape Town, 1967",
+  "option_meta": [
+   {
+    "flag": "us"
+   },
+   {
+    "flag": "za"
+   },
+   {
+    "flag": "gb"
+   }
+  ],
+  "banner": "South Africa",
+  "banner_sub": "✓  B was right · Cape Town, 1967",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "The FIRST human heart transplant happened in which country? ❤️",
+  "premise": "The first heart transplant was not in America",
+  "bait": "And the new heart beat with no nerves attached.",
+  "keywords": [
+   "first heart transplant",
+   "heart transplant history",
+   "medical history",
+   "human body facts",
+   "body quiz",
+   "anatomy facts",
+   "how does a transplanted heart beat",
+   "medical firsts"
+  ],
+  "description": "The first heart transplant was not in America. And the new heart beat with no nerves attached.\n\nSources: Britannica; Heart of Cape Town Museum; Stanford Medicine; StatPearls (NIH).\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nBody & Brain #5",
+  "hashtags": [
+   "#BodyFacts",
+   "#BrainQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "HeartTransplant",
+   "MedicalHistory"
+  ],
+  "cover_emoji": "❤️",
+  "copy": {
+   "spoilers": [
+    "cape town",
+    "barnard",
+    "groote schuur",
+    "washkansky",
+    "south african",
+    "africa"
+   ],
+   "youtube": {
+    "title": "First heart transplant: which country did it? Not where you think ❤️",
+    "description": "Most people say America. The first human heart transplant happened somewhere else.\nAnd the new heart kept beating with no nerves connecting it to the brain. Say your answer out loud before the map gives it away.\nSubscribe for a body quiz you can argue about every day.",
+    "tags": [
+     "#hearttransplant",
+     "#medicalhistory",
+     "#humanbody",
+     "#bodyquiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "The FIRST human heart transplant happened in which country? ❤️\nAlmost everyone guesses the United States. The real answer surprised the whole world at the time — and the transplanted heart beat with no nerves attached to the brain.\nWhich did you say out loud?",
+    "tags": [
+     "#hearttransplant",
+     "#medicalhistory",
+     "#anatomy",
+     "#sciencefacts",
+     "#bodyquiz"
+    ]
+   },
+   "facebook": {
+    "text": "The first human heart transplant happened in which country — United States, South Africa or United Kingdom?\nIt made front pages around the world. Does anyone remember the news?",
+    "tags": [
+     "#hearttransplant",
+     "#medicalhistory"
+    ]
+   },
+   "twitter": {
+    "text": "The FIRST human heart transplant happened in which country?\nNot the United States. And the new heart beat with no nerves attached to the brain.",
+    "tags": [
+     "#MedicalHistory"
+    ]
+   },
+   "threads": {
+    "text": "The first human heart transplant happened in which country — United States, South Africa or United Kingdom? Almost everyone picks America. The surgeon became famous overnight, and his patient's new heart beat with no nerve link to the brain at all.",
+    "tags": [
+     "#medicalhistory"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "question-first",
+  "opener": "split-candidates",
+  "reveal": "colour-lift",
+  "beats": [
+   "pin",
+   "counter",
+   "second-highlight",
+   "label",
+   "photo",
+   "rise"
+  ],
+  "cast": "flagball:happy + emoji-set:heart",
+  "music": "bed:bright"
+ },
+ "status": "draft"
+}

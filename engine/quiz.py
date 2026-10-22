@@ -367,6 +367,10 @@ class Quiz:
     def photo_out(self, t, pid, dur=0.3):
         self.J(f"tl.to('#{pid}',{{autoAlpha:0,scale:0.9,duration:{f(dur)},ease:'power2.in'}},{f(t)});")
 
+    def sticker_pulse(self, t, sid, beats=3, scale=1.18, period=0.55):
+        """Heartbeat throb: the sticker swells and relaxes `beats` times (P5 ep05: anatomical heart on 'pacemaker')."""
+        self.J(f"tl.to('#{sid}',{{scale:{f(scale)},duration:{f(period / 2)},ease:'power2.out',yoyo:true,repeat:{2 * beats - 1}}},{f(t)});")
+
     def sticker_out(self, t, sid, dur=0.25):
         self.J(f"tl.to('#{sid}',{{autoAlpha:0,scale:0.6,duration:{f(dur)},ease:'power2.in'}},{f(t)});")
 

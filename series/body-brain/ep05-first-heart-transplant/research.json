@@ -1,0 +1,218 @@
+{
+ "version": 1,
+ "episode": "ep05-first-heart-transplant",
+ "topic": "The first human heart transplant: Groote Schuur Hospital, Cape Town, South Africa, 3 December 1967 (Christiaan Barnard; patient Louis Washkansky lived 18 days)",
+ "researched": "2026-10-22",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The first heart transplant was performed in the United States.",
+   "reality": "US teams (Shumway, Lower) developed the technique, but the first human-to-human transplant was Barnard's in Cape Town on 3 December 1967; the first US adult transplant followed in January 1968 (Shumway, Stanford).",
+   "sources": [
+    "stanford_med",
+    "wiki_shumway",
+    "britannica_barnard"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Medical-history Shorts show a stock operating theatre and a date; nobody plays it as a map reveal with the three 'obvious' countries, the hospital pin, the 18-day counter and the no-nerves fact on one stage.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=first+heart+transplant+shorts",
+    "title": "Search: first heart transplant shorts",
+    "angle": "Barnard biography clips",
+    "misses": "no quiz framing, no map, no physiology"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=heart+transplant+facts",
+    "title": "Search: heart transplant facts",
+    "angle": "modern surgery explainers",
+    "misses": "no history, no place"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if body scenarios",
+    "misses": "no sourced dates"
+   }
+  ]
+ },
+ "sources": {
+  "britannica_barnard": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Christiaan Barnard",
+   "url": "https://www.britannica.com/biography/Christiaan-Barnard",
+   "date": "2026-10-22",
+   "notes": "first human heart transplant 3 December 1967, Groote Schuur Hospital, Cape Town; patient Louis Washkansky lived 18 days, died of pneumonia"
+  },
+  "hoct_museum": {
+   "type": "primary",
+   "publisher": "Heart of Cape Town Museum (Groote Schuur Hospital)",
+   "title": "The first heart transplant",
+   "url": "https://www.heartofcapetown.co.za/",
+   "date": "2026-10-22",
+   "notes": "museum on the site of the operation; Barnard's team; Washkansky; 3 December 1967"
+  },
+  "wiki_washkansky": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Louis Washkansky",
+   "url": "https://en.wikipedia.org/wiki/Louis_Washkansky",
+   "date": "2026-10-22",
+   "notes": "recipient of the first human heart transplant 3 Dec 1967; died 21 Dec 1967 of pneumonia, 18 days after surgery"
+  },
+  "wiki_barnard": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Christiaan Barnard",
+   "url": "https://en.wikipedia.org/wiki/Christiaan_Barnard",
+   "date": "2026-10-22",
+   "notes": "performed the world's first human-to-human heart transplant 3 December 1967 at Groote Schuur, Cape Town; became an international celebrity"
+  },
+  "stanford_med": {
+   "type": "primary",
+   "publisher": "Stanford Medicine",
+   "title": "Norman Shumway and the history of heart transplantation",
+   "url": "https://med.stanford.edu/news/all-news/2018/01/first-adult-heart-transplant-in-the-us-was-performed-50-years-ago.html",
+   "date": "2026-10-22",
+   "notes": "Shumway's lab developed the technique over a decade; first US adult heart transplant 6 January 1968 at Stanford, a month after Barnard"
+  },
+  "wiki_shumway": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Norman Shumway",
+   "url": "https://en.wikipedia.org/wiki/Norman_Shumway",
+   "date": "2026-10-22",
+   "notes": "Stanford surgeon, pioneer of heart transplantation research; first US adult heart transplant January 1968"
+  },
+  "statpearls_denerv": {
+   "type": "scholarly",
+   "publisher": "StatPearls (NCBI Bookshelf, NIH)",
+   "title": "Physiology, Cardiac Denervation / Heart transplant physiology",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK553147/",
+   "date": "2026-10-22",
+   "notes": "the transplanted heart is denervated — no autonomic nerve connection to the recipient's nervous system; rhythm is set by the donor sinoatrial node (intrinsic pacemaker)"
+  },
+  "cleveland_transplant": {
+   "type": "reference",
+   "publisher": "Cleveland Clinic",
+   "title": "Heart Transplant",
+   "url": "https://my.clevelandclinic.org/health/treatments/17087-heart-transplant",
+   "date": "2026-10-22",
+   "notes": "a transplanted heart has no nerve connections; it beats via its own SA node and responds to hormones rather than nerve signals"
+  },
+  "pmc_barnard50": {
+   "type": "scholarly",
+   "publisher": "Journal of Thoracic Disease (PMC, NIH)",
+   "title": "The first human heart transplant and further advances in cardiac transplantation at Groote Schuur Hospital",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5594151/",
+   "date": "2026-10-22",
+   "notes": "Brink & Hassoulas 2017: Washkansky operated 3 Dec 1967; good cardiac function; died day 18 of pneumonia (Pseudomonas) under heavy immunosuppression"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The first human-to-human heart transplant was performed by Christiaan Barnard at Groote Schuur Hospital, Cape Town, South Africa, on 3 December 1967; the recipient was Louis Washkansky.",
+   "sources": [
+    "britannica_barnard",
+    "hoct_museum",
+    "wiki_barnard",
+    "wiki_washkansky",
+    "pmc_barnard50"
+   ],
+   "vo": [
+    "the first human heart transplant happened in which country",
+    "united states, south africa, or united kingdom",
+    "south africa. cape town, december 1967: surgeon christiaan barnard gave louis washkansky a new heart"
+   ],
+   "screen": [
+    "3 DEC 1967",
+    "Groote Schuur Hospital, Cape Town",
+    "South Africa",
+    "United States",
+    "United Kingdom",
+    "Cape Town · Groote Schuur",
+    "Christiaan Barnard, 1968"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Washkansky lived 18 days after the operation and died of pneumonia on 21 December 1967; the transplanted heart was functioning.",
+   "sources": [
+    "pmc_barnard50",
+    "britannica_barnard",
+    "wiki_washkansky"
+   ],
+   "vo": [
+    "the patient lived 18 days. the heart worked; it was pneumonia that killed him"
+   ],
+   "screen": [
+    "days he lived",
+    "18"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "detail",
+   "text": "Norman Shumway's team at Stanford developed the surgical technique; Barnard performed the first human operation and became internationally famous; the first US adult transplant followed in January 1968.",
+   "sources": [
+    "stanford_med",
+    "wiki_shumway",
+    "wiki_barnard"
+   ],
+   "vo": [
+    "stanford had done the research, but barnard got there first, and was famous overnight"
+   ],
+   "screen": [
+    "Stanford · research"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "A transplanted heart is denervated — it has no nerve connection to the recipient's brain — and beats because of its own intrinsic pacemaker, the sinoatrial node.",
+   "sources": [
+    "statpearls_denerv",
+    "cleveland_transplant"
+   ],
+   "vo": [
+    "a transplanted heart has no nerves linking it to the brain. it beats on its own pacemaker, inside the muscle"
+   ],
+   "screen": [
+    "NO NERVES",
+    "its own pacemaker keeps the beat"
+   ]
+  }
+ ]
+}

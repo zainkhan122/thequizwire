@@ -158,7 +158,7 @@ class Composer:
         elif do == "beat": (self.Q.beat3 if getattr(self, "v3", False) else self.Q.beat)(t, seconds=float(self.E["quiz"].get("beat", 1.5)), **args)
         elif do in ("banner_in", "banner_out"): getattr(self.Q, do)(t, **args)                                        # v3
         elif do in ("photo_in", "photo_out"): getattr(self.Q, do)(t, b["id"], **args)                                  # P2 media
-        elif do in ("sticker_in", "sticker_out", "character_in", "character_out"): getattr(self.Q, do)(t, b["id"], **args)   # v3
+        elif do in ("sticker_in", "sticker_out", "sticker_pulse", "character_in", "character_out"): getattr(self.Q, do)(t, b["id"], **args)   # v3
         elif do == "cta_in": (self.Q.outro_in if getattr(self, "v3", False) else self.Q.cta_in)(t, t1, **args)          # v3 outro · v2 tease
         elif do == "credit_in": pass                                      # no credit line on screen (owner 2026-10-22)                                                       # v2
         elif do in ("answer_in", "answer_out"): getattr(self.Q, do)(t, b["id"], **args)

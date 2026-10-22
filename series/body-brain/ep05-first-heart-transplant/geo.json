@@ -1,0 +1,113 @@
+{
+ "version": 1,
+ "episode": "ep05-first-heart-transplant",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -125,
+     -40,
+     45,
+     62
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "710"
+     ],
+     "cls": "",
+     "note": "South Africa (answer) — colour lift on reveal",
+     "lift": "color",
+     "color": "#E53935"
+    },
+    {
+     "kind": "highlight",
+     "id": "others",
+     "ids": [
+      "840"
+     ],
+     "cls": "dim",
+     "note": "United States — lit when Stanford's research is mentioned"
+    }
+   ],
+   "pins": [
+    {
+     "id": "cape_town",
+     "lonlat": [
+      18.42,
+      -33.93
+     ],
+     "label": "Cape Town · Groote Schuur",
+     "qid": "Q5465"
+    }
+   ],
+   "labels": [
+    {
+     "id": "za",
+     "lonlat": [
+      24.5,
+      -23.0
+     ],
+     "text": "South Africa",
+     "cls": "tag",
+     "in": "s04@answer",
+     "out": "s06"
+    },
+    {
+     "id": "stanford",
+     "lonlat": [
+      -100,
+      46
+     ],
+     "text": "Stanford · research",
+     "cls": "tag",
+     "in": "s06@stanford",
+     "out": "s07"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -150,
+      -55,
+      60,
+      72
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 500,
+    "lonlat": [
+     20,
+     -36
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

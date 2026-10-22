@@ -67,7 +67,7 @@ def fetch_ep(ep):
         src = fetch(i["thumb"]); dst = out / f"{e['id']}.jpg"; shutil.copy(src, dst)
         short = re.split(r"[,(;/]", i["artist"])[0].strip()[:32] or "Wikimedia Commons"; screen = f"📷 {short} · {lic}"
         e["credit"] = screen                                                  # written into the frame by engine/quiz.py photo()
-        files[f"media/photos/{e['id']}.jpg"] = {**files.get(f"media/photos/{e['id']}.jpg", {}), "kind": "photo", "licence": lic if lic.lower() != "public domain" else "PD",
+        files[f"media/photos/{e['id']}.jpg"] = {**files.get(f"media/photos/{e['id']}.jpg", {}), "kind": "photo", "licence": {"public domain": "PD", "pd": "PD", "pd-usgov": "PD-USGov", "cc0": "CC0-1.0"}.get(lic.lower(), lic),
             "provider": "Wikimedia Commons", "source": i["page"], "credit": f"{i['artist']} — {lic} — {i['page']}", "screen_credit": screen, "licence_url": i["licence_url"],
             "commons": i["title"], "by": "reelkit/photos.py"}
     (ep / "visuals.json").write_text(json.dumps(V, indent=1, ensure_ascii=False) + "\n")

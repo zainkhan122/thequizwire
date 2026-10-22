@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep05-first-heart-transplant",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "Medical-history reveal told like a newsreel: place, date, the man, the number of days, then the body fact nobody knows.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "The FIRST human heart transplant happened in which country?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "The first human heart transplant happened in which country?",
+   "cues": {
+    "first": "first",
+    "country": "country"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "United States, South Africa, or United Kingdom?",
+   "cues": {
+    "a": "states",
+    "b": "africa",
+    "c": "kingdom"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "South Africa. Cape Town, December 1967: surgeon Christiaan Barnard gave Louis Washkansky a new heart.",
+   "cues": {
+    "answer": "africa",
+    "cape": "cape",
+    "barnard": "barnard"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "hold on Cape Town; the day counter climbs to 18 and stops dead on 'pneumonia'",
+   "text": "The patient lived 18 days. The heart worked; it was pneumonia that killed him.",
+   "cues": {
+    "lived": "lived",
+    "pneumonia": "pneumonia"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.5,
+   "direction": "pull out to the Atlantic: the United States lights up on 'Stanford', then Barnard's photograph rises out of South Africa on 'first'",
+   "text": "Stanford had done the research, but Barnard got there first, and was famous overnight.",
+   "cues": {
+    "stanford": "stanford",
+    "first": "first",
+    "famous": "famous"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.5,
+   "direction": "back to South Africa; the anatomical heart sticker lands on 'nerve', the brain on 'brain', the NO NERVES card on 'own', the heart pulses on 'pacemaker'",
+   "text": "A transplanted heart has no nerves linking it to the brain. It beats on its own pacemaker, inside the muscle.",
+   "cues": {
+    "nerve": "nerves",
+    "brain": "brain",
+    "own": "own",
+    "pacemaker": "pacemaker"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "Not where you thought. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}
