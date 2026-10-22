@@ -413,9 +413,12 @@
   },
   {
    "at": "s06@only",
-   "do": "fx.flash",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
    "args": {
-    "peak": 0.5
+    "fid": "756",
+    "layer": "others",
+    "dur": 0.9
    }
   },
   {

@@ -635,7 +635,7 @@
      "referendum": "referendum"
     }
    },
-   "direction": "the surprise: Switzerland fills, a flash on 'only', the ballot-box sticker pops on 'referendum', year card",
+   "direction": "the surprise: Switzerland fills, the country pulses on 'only', the ballot-box sticker pops on 'referendum', year card",
    "energy": 4,
    "tone": "revelatory",
    "card": {
@@ -679,9 +679,12 @@
     },
     {
      "at": "@@only",
-     "do": "fx.flash",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
      "args": {
-      "peak": 0.5
+      "fid": "756",
+      "layer": "others",
+      "dur": 0.9
      }
     },
     {

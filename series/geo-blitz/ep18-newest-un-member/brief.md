@@ -18,10 +18,10 @@ Ep16 (longest border) used a route line and a bar chart; ep17 (Baikal) used dept
 ## Swipe test
 - 1 s — question card lands while the satellite stage already drifts across the Mediterranean (no bare edges).
 - 6 s — camera darts to each candidate as it is read; the third jump lands on South Sudan with 3 s of silence.
-- 17 s — Switzerland fills and the screen flashes on "only joined in 2002" — the fact most viewers get wrong.
+- 17 s — Switzerland fills and Switzerland pulses on "only joined in 2002" — the fact most viewers get wrong.
 
 ## Devices
-candidate-hop opener (geo.cam_to per candidate) · geo.highlight_in with flag lift (answer) · geo.highlight_in on a second dim layer for Montenegro / Switzerland · geo.pin_in ×3 · fact cards ×4 · fx.flash · sticker 🗳️ · chart.counter_run 51→193 · geo.rise photo (PD, Commons) · flag-ball characters ss/ch + wow reaction.
+candidate-hop opener (geo.cam_to per candidate) · geo.highlight_in with flag lift (answer) · geo.highlight_in on a second dim layer for Montenegro / Switzerland · geo.pin_in ×3 · fact cards ×4 · geo.highlight_pulse · sticker 🗳️ · chart.counter_run 51→193 · geo.rise photo (PD, Commons) · flag-ball characters ss/ch + wow reaction.
 
 ## Media & Pace
 Photo: "File:U.S. Department of State - South Sudan Independence Day.jpg" (PD, US Government work), caption "Juba, 9 July 2011". Target 80–90 words, ≥ 17 motion events / 10 s, ≤ 38 s.
