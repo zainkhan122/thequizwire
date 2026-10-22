@@ -1,0 +1,131 @@
+{
+ "version": 1,
+ "episode": "ep14-cricket-world-cup-wins",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "Stadium-commentary energy: the number, then the whole field in one bar chart, then the two records.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "How many men's Cricket World Cups has Australia won?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "how many men's Cricket World Cups has Australia won?",
+   "cues": {
+    "how": "how",
+    "won": "won"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "3, 6, or 8?",
+   "cues": {
+    "a": "3",
+    "b": "6",
+    "c": "8"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "6. Australia has lifted the men's World Cup 6 times, far more than any other nation.",
+   "cues": {
+    "answer": "australia",
+    "times": "times",
+    "nation": "nation"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.4,
+   "direction": "the whole field as one bar chart, Australia's bar towering; rows stagger in as the countries are named",
+   "text": "India and the West Indies have won 2 each. Pakistan, Sri Lanka and England, 1 apiece.",
+   "cues": {
+    "india": "india",
+    "pakistan": "pakistan"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.4,
+   "direction": "camera tightens on Australia while the unbeaten-run counter races to 34 and the country pulses on 'defeat'",
+   "text": "And between 1999 and 2011 they went 34 World Cup matches in a row without a single defeat.",
+   "cues": {
+    "between": "between",
+    "defeat": "defeat"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "direction": "fly north-west to India: the country fills on 'India' (via 'ahmedabad' cue lead-in), pin drops, the crowd counter spins to 92,453",
+   "text": "The latest came in 2023, beating hosts India in Ahmedabad, in front of 92,000 people.",
+   "cues": {
+    "latest": "latest",
+    "ahmedabad": "ahmedabad",
+    "people": "people"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "6 and counting. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

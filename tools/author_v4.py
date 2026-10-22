@@ -58,7 +58,7 @@ def build(S):
     # ---------------- episode.json
     E = {"id": ep, "format": "quiz-v3", "series": series, "number": n, "title": q, "difficulty": S.get("difficulty", "MEDIUM"), "seed": S["seed"],
          "quiz": {"question": q, "keyword": S["keyword"], "options": [o["text"] for o in opts], "correct": ci, "beat": 3.0,
-                  "answer_line": ans, "answer_sub": S["answer_sub"], "option_meta": [{"flag": o["flag"]} for o in opts],
+                  "answer_line": ans, "answer_sub": S["answer_sub"], "option_meta": [({"flag": o["flag"]} if o.get("flag") else {"emoji": o["emoji"]} if o.get("emoji") else {}) for o in opts],   # number/text options may carry no icon
                   "banner": ans, "banner_sub": f"✓  {letters(ci)} was right · {S['answer_sub']}",
                   "outro": {"headline": S.get("outro_headline", "TOO EASY?"), "url": "thequizwire.com"}},
          "hook_type": "question-first", "promise": {"min_motion": 0.7}, "credits": ["Natural Earth"],
@@ -103,7 +103,7 @@ def build(S):
     if opener not in OPENERS_REVEALS["opener"]: sys.exit(f"author: variety.opener '{opener}' is not implemented — pick one of {sorted(OPENERS_REVEALS['opener'])}")
     if g["highlight_ids"]:
         layers.append({"kind": "highlight", "id": "hl", "ids": g["highlight_ids"], "cls": g.get("highlight_cls", ""), "note": g.get("highlight_note", "answer country")})
-        if reveal == "flag-lift": layers[-1].update(lift="flag", flag=g.get("lift_flag") or opts[ci]["flag"])
+        if reveal == "flag-lift": layers[-1].update(lift="flag", flag=g.get("lift_flag") or opts[ci].get("flag") or sys.exit("author: flag-lift needs geo.lift_flag when the answer option has no flag"))
         elif reveal == "colour-lift": layers[-1].update(lift="color", color=g.get("lift_color", "#FFD400"))
         elif g.get("lift"): layers[-1].update(lift=g["lift"], flag=g.get("lift_flag"))
     for extra in g.get("extra_layers", []): layers.append(extra)

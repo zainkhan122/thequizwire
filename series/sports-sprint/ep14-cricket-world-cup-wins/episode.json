@@ -1,1 +1,131 @@
-{"status":"draft","series":"sports-sprint","title":"How many men's Cricket World Cups has Australia won?","quiz":{"question":"How many men's Cricket World Cups has Australia won?"}}
+{
+ "id": "ep14-cricket-world-cup-wins",
+ "format": "quiz-v3",
+ "series": "sports-sprint",
+ "number": 14,
+ "title": "How many men's Cricket World Cups has Australia won?",
+ "difficulty": "MEDIUM",
+ "seed": 4414,
+ "quiz": {
+  "question": "How many men's Cricket World Cups has Australia won?",
+  "keyword": "How many",
+  "options": [
+   "3",
+   "6",
+   "8"
+  ],
+  "correct": 1,
+  "beat": 3.0,
+  "answer_line": "6",
+  "answer_sub": "1987 · 1999 · 2003 · 2007 · 2015 · 2023",
+  "option_meta": [
+   {},
+   {},
+   {}
+  ],
+  "banner": "6",
+  "banner_sub": "✓  B was right · 1987 · 1999 · 2003 · 2007 · 2015 · 2023",
+  "outro": {
+   "headline": "CHALLENGE A FRIEND",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "How many men's Cricket World Cups has Australia won? 🏏",
+  "premise": "Australia's World Cup haul beats everyone's top three combined",
+  "bait": "Including a run of 34 matches without defeat.",
+  "keywords": [
+   "cricket world cup winners list",
+   "cricket world cup history",
+   "australia cricket world cup",
+   "odi world cup winners",
+   "cricket quiz",
+   "sports quiz",
+   "world cup record",
+   "cricket facts"
+  ],
+  "description": "Australia's World Cup haul beats everyone's top three combined. Including a run of 34 matches without defeat.\n\nSources: ICC; ESPNcricinfo; Wikipedia.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nSports Sprint #14",
+  "hashtags": [
+   "#SportsQuiz",
+   "#SportsTrivia",
+   "#thequizwire"
+  ],
+  "tags": [
+   "Cricket",
+   "CricketWorldCup"
+  ],
+  "cover_emoji": "🏏",
+  "copy": {
+   "spoilers": [
+    "six",
+    "sixth",
+    "1987",
+    "2015",
+    "2023"
+   ],
+   "youtube": {
+    "title": "Cricket World Cup winners list: how many has Australia won? 🏏",
+    "description": "Australia's World Cup record is bigger than most fans remember.\nThere was a three-in-a-row era and a run of World Cup matches without defeat that lasted more than a decade. Guess the number before the chart lands.\nSubscribe for a sports quiz you can argue about every day.",
+    "tags": [
+     "#cricket",
+     "#cricketworldcup",
+     "#sportsquiz",
+     "#odi",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "How many men's Cricket World Cups has Australia won? 🏏\nThink back: the three-in-a-row years, the one everyone forgets, and the final in India. Pick a number before the chart drops.\nWhich final do you remember best?",
+    "tags": [
+     "#cricket",
+     "#cricketworldcup",
+     "#cricketlovers",
+     "#cricketfans",
+     "#sportsquiz"
+    ]
+   },
+   "facebook": {
+    "text": "How many men's Cricket World Cups has Australia won — 3, 6 or 8?\nThe answer includes a run of World Cup matches without defeat that lasted over a decade. Which final do you remember best?",
+    "tags": [
+     "#cricket",
+     "#cricketworldcup"
+    ]
+   },
+   "twitter": {
+    "text": "How many men's Cricket World Cups has Australia won?\nIncludes three in a row and a World Cup unbeaten run that lasted more than a decade. Guess before the chart lands.",
+    "tags": [
+     "#cricket"
+    ]
+   },
+   "threads": {
+    "text": "How many men's Cricket World Cups has Australia won — 3, 6 or 8? Most fans undercount it. There was a three-in-a-row era and an unbeaten World Cup run that lasted more than a decade. Say a number before the chart drops.",
+    "tags": [
+     "#cricket"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "how-many",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "flag-lift",
+  "beats": [
+   "bars",
+   "counter",
+   "second-highlight",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:happy + emoji-set:cricket",
+  "music": "bed:pulse"
+ },
+ "status": "draft"
+}

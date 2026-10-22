@@ -1,0 +1,205 @@
+{
+ "version": 1,
+ "episode": "ep14-cricket-world-cup-wins",
+ "topic": "Australia men's Cricket World Cup titles: 6 (1987, 1999, 2003, 2007, 2015, 2023); other winners India 2, West Indies 2, Pakistan 1, Sri Lanka 1, England 1; 34-match unbeaten World Cup run 1999–2011; 2023 final Ahmedabad, attendance 92,453",
+ "researched": "2026-10-22",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Australia has won every World Cup since 1999.",
+   "reality": "They won 1999, 2003 and 2007 in a row, then lost in 2011 (quarter-final) and 2019 (semi-final); titles followed in 2015 and 2023.",
+   "sources": [
+    "icc_history",
+    "wiki_cwc"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Cricket Shorts list winners in a text slide; nobody puts the whole winners' table on a moving map as a bar chart, then the unbeaten-run counter, then flies to the 2023 final.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=cricket+world+cup+winners+list+shorts",
+    "title": "Search: cricket world cup winners list shorts",
+    "angle": "text-slide lists",
+    "misses": "no map, no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=world+cup+history+cricket",
+    "title": "Search: world cup history cricket",
+    "angle": "long documentaries",
+    "misses": "no Short format"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if scenarios",
+    "misses": "no sport"
+   }
+  ]
+ },
+ "sources": {
+  "icc_history": {
+   "type": "primary",
+   "publisher": "International Cricket Council",
+   "title": "ICC Men's Cricket World Cup — history / past winners",
+   "url": "https://www.icc-cricket.com/tournaments/cricketworldcup/history",
+   "date": "2026-10-22",
+   "notes": "winners by edition: 1975 WI, 1979 WI, 1983 IND, 1987 AUS, 1992 PAK, 1996 SL, 1999 AUS, 2003 AUS, 2007 AUS, 2011 IND, 2015 AUS, 2019 ENG, 2023 AUS"
+  },
+  "wiki_cwc": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Cricket World Cup",
+   "url": "https://en.wikipedia.org/wiki/Cricket_World_Cup",
+   "date": "2026-10-22",
+   "notes": "Australia 6 titles; India 2; West Indies 2; Pakistan, Sri Lanka, England 1 each"
+  },
+  "cricinfo_records": {
+   "type": "primary",
+   "publisher": "ESPNcricinfo",
+   "title": "Records / World Cup / Team records",
+   "url": "https://www.espncricinfo.com/records/tournament/team-most-consecutive-wins/icc-cricket-world-cup",
+   "date": "2026-10-22",
+   "notes": "Australia: 34 consecutive World Cup matches undefeated (27 wins + no-result/tie), from the 1999 Super Six to the 2011 group stage (lost to Pakistan 19 Mar 2011)"
+  },
+  "wiki_aus_cwc": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Australia at the Cricket World Cup",
+   "url": "https://en.wikipedia.org/wiki/Australia_at_the_Cricket_World_Cup",
+   "date": "2026-10-22",
+   "notes": "six titles; unbeaten in 34 consecutive World Cup matches between 1999 and 2011"
+  },
+  "icc_2023_final": {
+   "type": "primary",
+   "publisher": "International Cricket Council",
+   "title": "2023 Men's Cricket World Cup final report",
+   "url": "https://www.icc-cricket.com/tournaments/cricketworldcup/matches/final",
+   "date": "2026-10-22",
+   "notes": "19 Nov 2023, Narendra Modi Stadium, Ahmedabad: Australia beat India by six wickets; attendance 92,453"
+  },
+  "wiki_2023_final": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "2023 Cricket World Cup final",
+   "url": "https://en.wikipedia.org/wiki/2023_Cricket_World_Cup_final",
+   "date": "2026-10-22",
+   "notes": "Ahmedabad, 19 November 2023; Australia won by 6 wickets; official attendance 92,453"
+  },
+  "guardian_2023": {
+   "type": "press",
+   "publisher": "The Guardian",
+   "title": "Australia stun India to win sixth Cricket World Cup",
+   "url": "https://www.theguardian.com/sport/2023/nov/19/india-v-australia-cricket-world-cup-final-2023",
+   "date": "2026-10-22",
+   "notes": "sixth title; 92,000-plus crowd in Ahmedabad silenced"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Australia has won the men's Cricket World Cup six times: 1987, 1999, 2003, 2007, 2015 and 2023 — the most of any nation.",
+   "sources": [
+    "icc_history",
+    "wiki_cwc",
+    "wiki_aus_cwc"
+   ],
+   "vo": [
+    "how many men's cricket world cups has australia won",
+    "3, 6, or 8",
+    "6. australia has lifted the men's world cup 6 times, far more than any other nation",
+    "6 and counting. follow us"
+   ],
+   "screen": [
+    "6 TITLES",
+    "1987 1999 2003 2007 2015 2023",
+    "Australia",
+    "3",
+    "6",
+    "8"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Other winners: India 2 (1983, 2011), West Indies 2 (1975, 1979), Pakistan 1 (1992), Sri Lanka 1 (1996), England 1 (2019).",
+   "sources": [
+    "icc_history",
+    "wiki_cwc"
+   ],
+   "vo": [
+    "india and the west indies have won 2 each. pakistan, sri lanka and england, 1 apiece"
+   ],
+   "screen": [
+    "India",
+    "West Indies",
+    "Pakistan",
+    "Sri Lanka",
+    "England",
+    "2",
+    "1"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "detail",
+   "text": "Between the 1999 and 2011 tournaments Australia went 34 consecutive World Cup matches without defeat.",
+   "sources": [
+    "cricinfo_records",
+    "wiki_aus_cwc"
+   ],
+   "vo": [
+    "and between 1999 and 2011 they went 34 world cup matches in a row without a single defeat"
+   ],
+   "screen": [
+    "World Cup matches unbeaten",
+    "34"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "The 2023 final was played in Ahmedabad on 19 November 2023; Australia beat hosts India in front of an official attendance of 92,453.",
+   "sources": [
+    "icc_2023_final",
+    "wiki_2023_final",
+    "guardian_2023"
+   ],
+   "vo": [
+    "the latest came in 2023, beating hosts india in ahmedabad, in front of 92,000 people"
+   ],
+   "screen": [
+    "Ahmedabad",
+    "2023 final · India v Australia",
+    "crowd at the 2023 final"
+   ]
+  }
+ ]
+}

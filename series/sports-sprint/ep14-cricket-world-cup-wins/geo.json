@@ -1,0 +1,113 @@
+{
+ "version": 1,
+ "episode": "ep14-cricket-world-cup-wins",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     55,
+     -48,
+     160,
+     32
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "036"
+     ],
+     "cls": "",
+     "note": "Australia (answer) — flag lift",
+     "lift": "flag",
+     "flag": "au"
+    },
+    {
+     "kind": "highlight",
+     "id": "others",
+     "ids": [
+      "356"
+     ],
+     "cls": "dim",
+     "note": "India — host and beaten finalist of 2023"
+    }
+   ],
+   "pins": [
+    {
+     "id": "ahmedabad",
+     "lonlat": [
+      72.57,
+      23.02
+     ],
+     "label": "Ahmedabad",
+     "qid": "Q1070"
+    }
+   ],
+   "labels": [
+    {
+     "id": "au",
+     "lonlat": [
+      134,
+      -19
+     ],
+     "text": "Australia",
+     "cls": "tag",
+     "in": "s04@answer",
+     "out": "s07"
+    },
+    {
+     "id": "final",
+     "lonlat": [
+      72.5,
+      28.5
+     ],
+     "text": "2023 final · India v Australia",
+     "cls": "tag",
+     "in": "s07@ahmedabad+0.3",
+     "out": "s08"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      20,
+      -60,
+      190,
+      50
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 1000,
+    "lonlat": [
+     120,
+     -44
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

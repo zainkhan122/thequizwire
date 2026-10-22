@@ -1,0 +1,794 @@
+{
+ "id": "ep14-cricket-world-cup-wins",
+ "series": "sports-sprint",
+ "number": 14,
+ "seed": 4414,
+ "question": "How many men's Cricket World Cups has Australia won?",
+ "keyword": "How many",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "3",
+   "cue": "3"
+  },
+  {
+   "text": "6",
+   "cue": "6"
+  },
+  {
+   "text": "8",
+   "cue": "8"
+  }
+ ],
+ "correct": 1,
+ "answer_sub": "1987 · 1999 · 2003 · 2007 · 2015 · 2023",
+ "outro_headline": "CHALLENGE A FRIEND",
+ "cover_emoji": "🏏",
+ "post": {
+  "premise": "Australia's World Cup haul beats everyone's top three combined",
+  "bait": "Including a run of 34 matches without defeat.",
+  "keywords": [
+   "cricket world cup winners list",
+   "cricket world cup history",
+   "australia cricket world cup",
+   "odi world cup winners",
+   "cricket quiz",
+   "sports quiz",
+   "world cup record",
+   "cricket facts"
+  ],
+  "tags": [
+   "Cricket",
+   "CricketWorldCup"
+  ],
+  "sources_line": "ICC; ESPNcricinfo; Wikipedia",
+  "copy": {
+   "spoilers": [
+    "six",
+    "sixth",
+    "1987",
+    "2015",
+    "2023"
+   ],
+   "youtube": {
+    "title": "Cricket World Cup winners list: how many has Australia won? 🏏",
+    "description": "Australia's World Cup record is bigger than most fans remember.\nThere was a three-in-a-row era and a run of World Cup matches without defeat that lasted more than a decade. Guess the number before the chart lands.\nSubscribe for a sports quiz you can argue about every day.",
+    "tags": [
+     "#cricket",
+     "#cricketworldcup",
+     "#sportsquiz",
+     "#odi",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "How many men's Cricket World Cups has Australia won? 🏏\nThink back: the three-in-a-row years, the one everyone forgets, and the final in India. Pick a number before the chart drops.\nWhich final do you remember best?",
+    "tags": [
+     "#cricket",
+     "#cricketworldcup",
+     "#cricketlovers",
+     "#cricketfans",
+     "#sportsquiz"
+    ]
+   },
+   "facebook": {
+    "text": "How many men's Cricket World Cups has Australia won — 3, 6 or 8?\nThe answer includes a run of World Cup matches without defeat that lasted over a decade. Which final do you remember best?",
+    "tags": [
+     "#cricket",
+     "#cricketworldcup"
+    ]
+   },
+   "twitter": {
+    "text": "How many men's Cricket World Cups has Australia won?\nIncludes three in a row and a World Cup unbeaten run that lasted more than a decade. Guess before the chart lands.",
+    "tags": [
+     "#cricket"
+    ]
+   },
+   "threads": {
+    "text": "How many men's Cricket World Cups has Australia won — 3, 6 or 8? Most fans undercount it. There was a three-in-a-row era and an unbeaten World Cup run that lasted more than a decade. Say a number before the chart drops.",
+    "tags": [
+     "#cricket"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "how-many",
+  "hook": "challenge",
+  "opener": "mystery-zoom-out",
+  "reveal": "flag-lift",
+  "beats": [
+   "bars",
+   "counter",
+   "second-highlight",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:happy + emoji-set:cricket",
+  "music": "bed:pulse",
+  "outro": "CHALLENGE A FRIEND"
+ },
+ "intent": "Stadium-commentary energy: the number, then the whole field in one bar chart, then the two records.",
+ "voice": {
+  "v01_cues": {
+   "how": "how",
+   "won": "won"
+  },
+  "v04": {
+   "text": "6. Australia has lifted the men's World Cup 6 times, far more than any other nation.",
+   "cues": {
+    "answer": "australia",
+    "times": "times",
+    "nation": "nation"
+   }
+  },
+  "v05": {
+   "text": "India and the West Indies have won 2 each. Pakistan, Sri Lanka and England, 1 apiece.",
+   "cues": {
+    "india": "india",
+    "pakistan": "pakistan"
+   }
+  },
+  "v06": {
+   "text": "And between 1999 and 2011 they went 34 World Cup matches in a row without a single defeat.",
+   "cues": {
+    "between": "between",
+    "defeat": "defeat"
+   }
+  },
+  "v07": {
+   "text": "The latest came in 2023, beating hosts India in Ahmedabad, in front of 92,000 people.",
+   "cues": {
+    "latest": "latest",
+    "ahmedabad": "ahmedabad",
+    "people": "people"
+   }
+  },
+  "v08": {
+   "text": "6 and counting. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "6 TITLES",
+   "text": "1987 1999 2003 2007 2015 2023"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "au",
+   "face": "happy",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "in",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "geo": {
+  "fit_bbox": [
+   55,
+   -48,
+   160,
+   32
+  ],
+  "far_bbox": [
+   20,
+   -60,
+   190,
+   50
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "036"
+  ],
+  "highlight_note": "Australia (answer) — flag lift",
+  "lift_flag": "au",
+  "extra_layers": [
+   {
+    "kind": "highlight",
+    "id": "others",
+    "ids": [
+     "356"
+    ],
+    "cls": "dim",
+    "note": "India — host and beaten finalist of 2023"
+   }
+  ],
+  "labels": [
+   {
+    "id": "au",
+    "lonlat": [
+     134,
+     -19
+    ],
+    "text": "Australia",
+    "cls": "tag",
+    "in": "s04@answer",
+    "out": "s07"
+   },
+   {
+    "id": "final",
+    "lonlat": [
+     72.5,
+     28.5
+    ],
+    "text": "2023 final · India v Australia",
+    "cls": "tag",
+    "in": "s07@ahmedabad+0.3",
+    "out": "s08"
+   }
+  ],
+  "pins": [
+   {
+    "id": "ahmedabad",
+    "lonlat": [
+     72.57,
+     23.02
+    ],
+    "label": "Ahmedabad",
+    "qid": "Q1070"
+   }
+  ],
+  "scalebar": {
+   "km": 1000,
+   "lonlat": [
+    120,
+    -44
+   ]
+  },
+  "cams": {
+   "start": [
+    0.5,
+    [
+     120,
+     -20
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     120,
+     -20
+    ]
+   ],
+   "s04": [
+    1.3,
+    [
+     134,
+     -27
+    ]
+   ],
+   "s04b": [
+    1.35,
+    [
+     134.5,
+     -27.5
+    ]
+   ],
+   "s05": [
+    1.1,
+    [
+     128,
+     -24
+    ]
+   ],
+   "s05b": [
+    1.12,
+    [
+     128.5,
+     -24.3
+    ]
+   ],
+   "s06": [
+    1.2,
+    [
+     130,
+     -26
+    ]
+   ],
+   "s06b": [
+    1.25,
+    [
+     130.5,
+     -26.5
+    ]
+   ],
+   "s07": [
+    1.2,
+    [
+     82,
+     14
+    ]
+   ],
+   "s07b": [
+    1.22,
+    [
+     81.5,
+     14.5
+    ]
+   ]
+  },
+  "pin_beats": []
+ },
+ "research": {
+  "topic": "Australia men's Cricket World Cup titles: 6 (1987, 1999, 2003, 2007, 2015, 2023); other winners India 2, West Indies 2, Pakistan 1, Sri Lanka 1, England 1; 34-match unbeaten World Cup run 1999–2011; 2023 final Ahmedabad, attendance 92,453",
+  "myths": [
+   {
+    "myth": "Australia has won every World Cup since 1999.",
+    "reality": "They won 1999, 2003 and 2007 in a row, then lost in 2011 (quarter-final) and 2019 (semi-final); titles followed in 2015 and 2023.",
+    "sources": [
+     "icc_history",
+     "wiki_cwc"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Cricket Shorts list winners in a text slide; nobody puts the whole winners' table on a moving map as a bar chart, then the unbeaten-run counter, then flies to the 2023 final.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=cricket+world+cup+winners+list+shorts",
+     "title": "Search: cricket world cup winners list shorts",
+     "angle": "text-slide lists",
+     "misses": "no map, no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=world+cup+history+cricket",
+     "title": "Search: world cup history cricket",
+     "angle": "long documentaries",
+     "misses": "no Short format"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if scenarios",
+     "misses": "no sport"
+    }
+   ]
+  },
+  "sources": {
+   "icc_history": {
+    "type": "primary",
+    "publisher": "International Cricket Council",
+    "title": "ICC Men's Cricket World Cup — history / past winners",
+    "url": "https://www.icc-cricket.com/tournaments/cricketworldcup/history",
+    "date": "2026-10-22",
+    "notes": "winners by edition: 1975 WI, 1979 WI, 1983 IND, 1987 AUS, 1992 PAK, 1996 SL, 1999 AUS, 2003 AUS, 2007 AUS, 2011 IND, 2015 AUS, 2019 ENG, 2023 AUS"
+   },
+   "wiki_cwc": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Cricket World Cup",
+    "url": "https://en.wikipedia.org/wiki/Cricket_World_Cup",
+    "date": "2026-10-22",
+    "notes": "Australia 6 titles; India 2; West Indies 2; Pakistan, Sri Lanka, England 1 each"
+   },
+   "cricinfo_records": {
+    "type": "primary",
+    "publisher": "ESPNcricinfo",
+    "title": "Records / World Cup / Team records",
+    "url": "https://www.espncricinfo.com/records/tournament/team-most-consecutive-wins/icc-cricket-world-cup",
+    "date": "2026-10-22",
+    "notes": "Australia: 34 consecutive World Cup matches undefeated (27 wins + no-result/tie), from the 1999 Super Six to the 2011 group stage (lost to Pakistan 19 Mar 2011)"
+   },
+   "wiki_aus_cwc": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Australia at the Cricket World Cup",
+    "url": "https://en.wikipedia.org/wiki/Australia_at_the_Cricket_World_Cup",
+    "date": "2026-10-22",
+    "notes": "six titles; unbeaten in 34 consecutive World Cup matches between 1999 and 2011"
+   },
+   "icc_2023_final": {
+    "type": "primary",
+    "publisher": "International Cricket Council",
+    "title": "2023 Men's Cricket World Cup final report",
+    "url": "https://www.icc-cricket.com/tournaments/cricketworldcup/matches/final",
+    "date": "2026-10-22",
+    "notes": "19 Nov 2023, Narendra Modi Stadium, Ahmedabad: Australia beat India by six wickets; attendance 92,453"
+   },
+   "wiki_2023_final": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "2023 Cricket World Cup final",
+    "url": "https://en.wikipedia.org/wiki/2023_Cricket_World_Cup_final",
+    "date": "2026-10-22",
+    "notes": "Ahmedabad, 19 November 2023; Australia won by 6 wickets; official attendance 92,453"
+   },
+   "guardian_2023": {
+    "type": "press",
+    "publisher": "The Guardian",
+    "title": "Australia stun India to win sixth Cricket World Cup",
+    "url": "https://www.theguardian.com/sport/2023/nov/19/india-v-australia-cricket-world-cup-final-2023",
+    "date": "2026-10-22",
+    "notes": "sixth title; 92,000-plus crowd in Ahmedabad silenced"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Australia has won the men's Cricket World Cup six times: 1987, 1999, 2003, 2007, 2015 and 2023 — the most of any nation.",
+    "sources": [
+     "icc_history",
+     "wiki_cwc",
+     "wiki_aus_cwc"
+    ],
+    "vo": [
+     "how many men's cricket world cups has australia won",
+     "3, 6, or 8",
+     "6. australia has lifted the men's world cup 6 times, far more than any other nation",
+     "6 and counting. follow us"
+    ],
+    "screen": [
+     "6 TITLES",
+     "1987 1999 2003 2007 2015 2023",
+     "Australia",
+     "3",
+     "6",
+     "8"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Other winners: India 2 (1983, 2011), West Indies 2 (1975, 1979), Pakistan 1 (1992), Sri Lanka 1 (1996), England 1 (2019).",
+    "sources": [
+     "icc_history",
+     "wiki_cwc"
+    ],
+    "vo": [
+     "india and the west indies have won 2 each. pakistan, sri lanka and england, 1 apiece"
+    ],
+    "screen": [
+     "India",
+     "West Indies",
+     "Pakistan",
+     "Sri Lanka",
+     "England",
+     "2",
+     "1"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "detail",
+    "text": "Between the 1999 and 2011 tournaments Australia went 34 consecutive World Cup matches without defeat.",
+    "sources": [
+     "cricinfo_records",
+     "wiki_aus_cwc"
+    ],
+    "vo": [
+     "and between 1999 and 2011 they went 34 world cup matches in a row without a single defeat"
+    ],
+    "screen": [
+     "World Cup matches unbeaten",
+     "34"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "The 2023 final was played in Ahmedabad on 19 November 2023; Australia beat hosts India in front of an official attendance of 92,453.",
+    "sources": [
+     "icc_2023_final",
+     "wiki_2023_final",
+     "guardian_2023"
+    ],
+    "vo": [
+     "the latest came in 2023, beating hosts india in ahmedabad, in front of 92,000 people"
+    ],
+    "screen": [
+     "Ahmedabad",
+     "2023 final · India v Australia",
+     "crowd at the 2023 final"
+    ]
+   }
+  ]
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "India and the West Indies have won 2 each. Pakistan, Sri Lanka and England, 1 apiece.",
+    "cues": {
+     "india": "india",
+     "pakistan": "pakistan"
+    }
+   },
+   "direction": "the whole field as one bar chart, Australia's bar towering; rows stagger in as the countries are named",
+   "energy": 4,
+   "tone": "resolute",
+   "cam": [
+    1.1,
+    [
+     128,
+     -24
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.12,
+    [
+     128.5,
+     -24.3
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "titles",
+     "type": "bars",
+     "rows": [
+      [
+       "Australia",
+       6,
+       "6"
+      ],
+      [
+       "India",
+       2,
+       "2"
+      ],
+      [
+       "West Indies",
+       2,
+       "2"
+      ],
+      [
+       "Pakistan",
+       1,
+       "1"
+      ],
+      [
+       "Sri Lanka",
+       1,
+       "1"
+      ],
+      [
+       "England",
+       1,
+       "1"
+      ]
+     ],
+     "y": 330,
+     "x": 70,
+     "w": 660,
+     "unit": "",
+     "max_value": 6,
+     "bar_h": 56,
+     "gap": 14
+    }
+   ],
+   "devices": [
+    {
+     "at": "@+1.2",
+     "do": "chart.bars_in",
+     "id": "titles",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.3
+     }
+    },
+    {
+     "at": "@.end-0.6",
+     "do": "hide",
+     "id": "titles",
+     "args": {
+      "dur": 0.3
+     }
+    },
+    {
+     "at": "@+0.4",
+     "do": "sticker_in",
+     "id": "st_bat"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_bat"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "And between 1999 and 2011 they went 34 World Cup matches in a row without a single defeat.",
+    "cues": {
+     "between": "between",
+     "defeat": "defeat"
+    }
+   },
+   "direction": "camera tightens on Australia while the unbeaten-run counter races to 34 and the country pulses on 'defeat'",
+   "energy": 4,
+   "tone": "resolute",
+   "cam": [
+    1.2,
+    [
+     130,
+     -26
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.25,
+    [
+     130.5,
+     -26.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "run",
+     "type": "counter",
+     "start": 0,
+     "end": 34,
+     "y": 330,
+     "label": "World Cup matches unbeaten",
+     "fmt": "int",
+     "size": 190
+    }
+   ],
+   "devices": [
+    {
+     "at": "@+0.2",
+     "do": "chart.counter_run",
+     "id": "run",
+     "until": "@@defeat-0.2",
+     "args": {
+      "ease": "power1.out"
+     }
+    },
+    {
+     "at": "@@defeat",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "036",
+      "layer": "hl",
+      "dur": 0.9
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "run",
+     "args": {
+      "dur": 0.25
+     }
+    },
+    {
+     "at": "@@between",
+     "do": "sticker_in",
+     "id": "st_cup"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_cup"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The latest came in 2023, beating hosts India in Ahmedabad, in front of 92,000 people.",
+    "cues": {
+     "latest": "latest",
+     "ahmedabad": "ahmedabad",
+     "people": "people"
+    }
+   },
+   "direction": "fly north-west to India: the country fills on 'India' (via 'ahmedabad' cue lead-in), pin drops, the crowd counter spins to 92,453",
+   "energy": 5,
+   "tone": "revelatory",
+   "cam": [
+    1.2,
+    [
+     82,
+     14
+    ]
+   ],
+   "cam_dur": 1.6,
+   "cam_ease": "power1.inOut",
+   "cam_hold": [
+    1.22,
+    [
+     81.5,
+     14.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "crowd",
+     "type": "counter",
+     "start": 0,
+     "end": 92453,
+     "y": 330,
+     "label": "crowd at the 2023 final",
+     "fmt": "int",
+     "size": 170
+    }
+   ],
+   "devices": [
+    {
+     "at": "@+1.2",
+     "do": "geo.highlight_in",
+     "stage": "stage_map",
+     "args": {
+      "fid": "356",
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@@ahmedabad",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "ahmedabad"
+     }
+    },
+    {
+     "at": "@@ahmedabad+0.2",
+     "do": "chart.counter_run",
+     "id": "crowd",
+     "until": "@@people+0.3",
+     "args": {
+      "ease": "power2.out"
+     }
+    },
+    {
+     "at": "@@people+0.4",
+     "do": "character_in",
+     "id": "wow"
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "crowd",
+     "args": {
+      "dur": 0.25
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "wow"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "wow",
+   "type": "character",
+   "flag": "au",
+   "face": "wow",
+   "x": 820,
+   "y": 1180,
+   "size": 220,
+   "rot": 6
+  },
+  {
+   "id": "st_bat",
+   "type": "sticker",
+   "emoji": "1f3cf",
+   "x": 820,
+   "y": 560,
+   "size": 170,
+   "rot": 12
+  },
+  {
+   "id": "st_cup",
+   "type": "sticker",
+   "emoji": "1f3c6",
+   "x": 800,
+   "y": 600,
+   "size": 180,
+   "rot": -8
+  }
+ ]
+}
