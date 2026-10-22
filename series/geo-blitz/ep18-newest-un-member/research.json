@@ -142,7 +142,7 @@
    "vo": [
     "which of these joined the united nations most recently",
     "switzerland, south sudan, or montenegro",
-    "south sudan. it became member number 193 on 14 july 2011, days after independence"
+    "south sudan. member number 193 on 14 july 2011, days after declaring independence"
    ],
    "screen": [
     "MEMBER 193",
@@ -157,14 +157,14 @@
   {
    "id": "C02",
    "weight": "detail",
-   "text": "Montenegro was admitted to the UN on 28 June 2006, after its independence referendum of 21 May 2006.",
+   "text": "Montenegro was admitted to the UN on 28 June 2006, a month after the 21 May 2006 referendum in which its voters chose independence from the state union with Serbia.",
    "sources": [
     "un_members",
     "un_growth",
     "wiki_mne"
    ],
    "vo": [
-    "montenegro joined in june 2006, just a month after its own independence vote"
+    "montenegro got there in june 2006, only a month after its people voted to leave the union with serbia"
    ],
    "screen": [
     "2006",
@@ -176,14 +176,14 @@
   {
    "id": "C03",
    "weight": "detail",
-   "text": "Switzerland, neutral since 1815, joined the UN only on 10 September 2002 after a referendum on 3 March 2002.",
+   "text": "Switzerland, neutral since 1815, stayed outside the UN until 10 September 2002, joining after voters approved membership in the referendum of 3 March 2002.",
    "sources": [
     "swiss_fdfa",
     "un_growth",
     "wiki_ch_un"
    ],
    "vo": [
-    "and switzerland, neutral since 1815, only joined in 2002, after a nationwide referendum"
+    "and switzerland, famously neutral, stayed out until 2002, when the swiss finally voted yes in a referendum"
    ],
    "screen": [
     "2002",
@@ -202,7 +202,7 @@
     "wiki_members"
    ],
    "vo": [
-    "193 members today, and nobody at all has joined since south sudan"
+    "that makes 193 members today, and not a single country has joined since south sudan"
    ],
    "screen": [
     "UN member states",
