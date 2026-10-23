@@ -1202,7 +1202,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-22T20:35:58+00:00",
+   "refreshed_at": "2026-10-23T06:05:34+00:00",
    "error": "An unknown error has occurred. Please retry the post again, and get in touch if this persists."
   },
   {
@@ -1418,80 +1418,80 @@
    "platform": "twitter",
    "post_id": "6ad89b6bbefea41f139be97e",
    "channel_id": "69f30e2a5c4c051afaf58634",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/f9edd4930fa9/Where-is-the-LONGEST-land-border-on-Earth.mp4",
    "due_at": "2026-10-22T21:00:00.000Z",
    "created_at": "2026-10-21T11:00:59.754Z",
    "recorded_at": "2026-10-21T11:00:59+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-22T20:36:04+00:00"
+   "sent_at": "2026-10-22T21:01:03.192Z",
+   "external_link": "https://x.com/2049746939164676096/status/2113375099340378153",
+   "refreshed_at": "2026-10-23T06:05:34+00:00"
   },
   {
    "episode": "ep16-longest-border-canada-usa",
    "platform": "threads",
    "post_id": "6ad89b6cfe0d0b6022829c09",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/f9edd4930fa9/Where-is-the-LONGEST-land-border-on-Earth.mp4",
    "due_at": "2026-10-22T23:00:00.000Z",
    "created_at": "2026-10-21T11:01:00.513Z",
    "recorded_at": "2026-10-21T11:01:00+00:00",
    "title": null,
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-22T20:36:04+00:00"
+   "sent_at": "2026-10-22T23:02:32.829Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/De0HbN2AXGr",
+   "refreshed_at": "2026-10-23T06:05:36+00:00"
   },
   {
    "episode": "ep13-first-marathon-greece",
    "platform": "youtube",
    "post_id": "6ada09e91cc831fdc3bbf9b7",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/74fb15972be7/Where-was-the-FIRST-marathon-race-run.mp4",
    "due_at": "2026-10-22T23:00:00.000Z",
    "created_at": "2026-10-22T13:04:41.699Z",
    "recorded_at": "2026-10-22T13:04:41+00:00",
    "title": "Why is a marathon 26.2 miles? It starts with where the first one was run 🏃",
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-22T20:36:06+00:00"
+   "sent_at": "2026-10-22T23:00:42.856Z",
+   "external_link": "https://www.youtube.com/shorts/P-LvBdeI4UU",
+   "refreshed_at": "2026-10-23T06:05:38+00:00"
   },
   {
    "episode": "ep13-first-marathon-greece",
    "platform": "instagram",
    "post_id": "6ada09eabf6d801ac6ebc044",
    "channel_id": "695bfd29457dae6a34df0f74",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/74fb15972be7/Where-was-the-FIRST-marathon-race-run.mp4",
    "due_at": "2026-10-22T23:00:00.000Z",
    "created_at": "2026-10-22T13:04:42.422Z",
    "recorded_at": "2026-10-22T13:04:42+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-22T20:36:06+00:00"
+   "sent_at": "2026-10-22T23:03:03.491Z",
+   "external_link": "https://www.instagram.com/reel/De0HT-5jSy0/",
+   "refreshed_at": "2026-10-23T06:05:38+00:00"
   },
   {
    "episode": "ep13-first-marathon-greece",
    "platform": "facebook",
    "post_id": "6ada09ece8cca8cdcc52062e",
    "channel_id": "695a159a457dae6a34d901bc",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/74fb15972be7/Where-was-the-FIRST-marathon-race-run.mp4",
    "due_at": "2026-10-22T23:00:00.000Z",
    "created_at": "2026-10-22T13:04:44.290Z",
    "recorded_at": "2026-10-22T13:04:44+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-22T20:36:08+00:00"
+   "sent_at": "2026-10-22T23:01:21.387Z",
+   "external_link": "https://www.facebook.com/reel/1425279722426521/",
+   "refreshed_at": "2026-10-23T06:05:40+00:00"
   },
   {
    "episode": "ep13-first-marathon-greece",
@@ -1507,7 +1507,7 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-22T20:36:10+00:00"
+   "refreshed_at": "2026-10-23T06:05:42+00:00"
   },
   {
    "episode": "ep13-first-marathon-greece",
@@ -1523,7 +1523,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-22T20:36:10+00:00"
+   "refreshed_at": "2026-10-23T06:05:42+00:00"
   }
  ]
 }
