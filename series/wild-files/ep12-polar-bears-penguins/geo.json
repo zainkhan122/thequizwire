@@ -122,7 +122,7 @@
       145.2,
       -38.5
      ],
-     "label": "Phillip Island",
+     "label": "Phillip Is.",
      "side": "left"
     },
     {
@@ -131,7 +131,7 @@
       -90.5,
       -0.5
      ],
-     "label": "Galápagos · on the equator"
+     "label": "Galápagos · equator"
     }
    ],
    "labels": [
@@ -144,7 +144,7 @@
      "text": "POLAR BEARS · Arctic only",
      "cls": "tag ar",
      "in": "s04@arctic+0.6",
-     "out": "s07"
+     "out": "s05"
     },
     {
      "id": "south",

@@ -78,7 +78,7 @@
    "tone": "resolute",
    "energy": 4,
    "pause_after": 0.4,
-   "direction": "the whole field as one bar chart, Australia's bar towering; rows stagger in as the countries are named",
+   "direction": "the whole field as one bar chart, Australia's bar towering; rows stagger in as the countries are named; the India flag-ball pops on 'India', Australia pulses again on 'Pakistan' to keep the eye on the gap",
    "text": "India and the West Indies have won 2 each. Pakistan, Sri Lanka and England have a single title each.",
    "cues": {
     "india": "india",
@@ -92,7 +92,7 @@
    "tone": "resolute",
    "energy": 4,
    "pause_after": 0.4,
-   "direction": "camera tightens on Australia while the unbeaten-run counter races to 34 and the country pulses on 'defeat'",
+   "direction": "camera tightens on Australia while the unbeaten-run counter races to 34 and the country pulses on 'defeat'; the happy Australia flag-ball lands on 'defeat' and the trophy pulses",
    "text": "And between 1999 and 2011 they went 34 World Cup matches in a row without a single defeat.",
    "cues": {
     "between": "between",
@@ -106,7 +106,7 @@
    "tone": "revelatory",
    "energy": 5,
    "pause_after": 0.5,
-   "direction": "fly north-west to India: the country fills on 'India' (via 'ahmedabad' cue lead-in), pin drops, the crowd counter spins to 92,453",
+   "direction": "fly north-west to India: the country fills on 'India' (via 'ahmedabad' cue lead-in), pin drops, the crowd counter spins to 92,453; trophy sticker rides in on 'latest' and pulses once the pin lands",
    "text": "The latest came in 2023, beating hosts India in Ahmedabad, in front of 92,000 people.",
    "cues": {
     "latest": "latest",

@@ -233,7 +233,7 @@
    }
   },
   {
-   "at": "s07",
+   "at": "s05",
    "do": "geo.label_out",
    "stage": "stage_map",
    "args": {
@@ -504,14 +504,6 @@
    }
   },
   {
-   "at": "s07+0.5",
-   "do": "geo.pin_in",
-   "stage": "stage_map",
-   "args": {
-    "pid": "phillip"
-   }
-  },
-  {
    "at": "s07+0.6499999999999999",
    "do": "geo.pin_in",
    "stage": "stage_map",
@@ -557,6 +549,14 @@
    "at": "s07.end",
    "do": "sticker_out",
    "id": "st_peng"
+  },
+  {
+   "at": "s07+0.9",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "north"
+   }
   },
   {
    "at": "s08",

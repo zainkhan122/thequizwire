@@ -499,7 +499,7 @@
      "pakistan": "pakistan"
     }
    },
-   "direction": "the whole field as one bar chart, Australia's bar towering; rows stagger in as the countries are named",
+   "direction": "the whole field as one bar chart, Australia's bar towering; rows stagger in as the countries are named; the India flag-ball pops on 'India', Australia pulses again on 'Pakistan' to keep the eye on the gap",
    "energy": 4,
    "tone": "resolute",
    "cam": [
@@ -590,6 +590,26 @@
      "at": "@.end",
      "do": "sticker_out",
      "id": "st_bat"
+    },
+    {
+     "at": "@@pakistan",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "036",
+      "layer": "hl",
+      "dur": 0.7
+     }
+    },
+    {
+     "at": "@@pakistan+0.3",
+     "do": "sticker_pulse",
+     "id": "st_bat"
+    },
+    {
+     "at": "@@india",
+     "do": "sticker_pulse",
+     "id": "st_bat"
     }
    ]
   },
@@ -601,7 +621,7 @@
      "defeat": "defeat"
     }
    },
-   "direction": "camera tightens on Australia while the unbeaten-run counter races to 34 and the country pulses on 'defeat'",
+   "direction": "camera tightens on Australia while the unbeaten-run counter races to 34 and the country pulses on 'defeat'; the happy Australia flag-ball lands on 'defeat' and the trophy pulses",
    "energy": 4,
    "tone": "resolute",
    "cam": [
@@ -669,6 +689,31 @@
      "at": "@.end",
      "do": "sticker_out",
      "id": "st_cup"
+    },
+    {
+     "at": "@@between+0.1",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "036",
+      "layer": "hl",
+      "dur": 0.7
+     }
+    },
+    {
+     "at": "@@defeat+0.3",
+     "do": "character_in",
+     "id": "cha"
+    },
+    {
+     "at": "@@defeat+0.6",
+     "do": "sticker_pulse",
+     "id": "st_cup"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "cha"
     }
    ]
   },
@@ -681,7 +726,7 @@
      "people": "people"
     }
    },
-   "direction": "fly north-west to India: the country fills on 'India' (via 'ahmedabad' cue lead-in), pin drops, the crowd counter spins to 92,453",
+   "direction": "fly north-west to India: the country fills on 'India' (via 'ahmedabad' cue lead-in), pin drops, the crowd counter spins to 92,453; trophy sticker rides in on 'latest' and pulses once the pin lands",
    "energy": 5,
    "tone": "revelatory",
    "cam": [
@@ -757,6 +802,31 @@
      "at": "@.end",
      "do": "character_out",
      "id": "wow"
+    },
+    {
+     "at": "@@latest",
+     "do": "sticker_in",
+     "id": "st_cup"
+    },
+    {
+     "at": "@@ahmedabad+0.5",
+     "do": "sticker_pulse",
+     "id": "st_cup"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_cup"
+    },
+    {
+     "at": "@@people",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "356",
+      "layer": "others",
+      "dur": 0.7
+     }
     }
    ]
   }

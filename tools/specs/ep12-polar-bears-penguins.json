@@ -299,7 +299,7 @@
     "text": "POLAR BEARS · Arctic only",
     "cls": "tag ar",
     "in": "s04@arctic+0.6",
-    "out": "s07"
+    "out": "s05"
    },
    {
     "id": "south",
@@ -382,7 +382,7 @@
      145.2,
      -38.5
     ],
-    "label": "Phillip Island",
+    "label": "Phillip Is.",
     "side": "left"
    },
    {
@@ -391,7 +391,7 @@
      -90.5,
      -0.5
     ],
-    "label": "Galápagos · on the equator"
+    "label": "Galápagos · equator"
    }
   ],
   "scalebar": null,
@@ -594,7 +594,7 @@
      "Utqiaġvik, Alaska",
      "Antarctic Peninsula",
      "Boulders Beach",
-     "Phillip Island"
+     "Phillip Is."
     ]
    },
    {
@@ -610,7 +610,7 @@
      "the closest they come is the galápagos, where penguins touch the equator, an ocean away from any bear"
     ],
     "screen": [
-     "Galápagos · on the equator"
+     "Galápagos · equator"
     ]
    },
    {
@@ -865,14 +865,6 @@
      }
     },
     {
-     "at": "@+0.5",
-     "do": "geo.pin_in",
-     "stage": "stage_map",
-     "args": {
-      "pid": "phillip"
-     }
-    },
-    {
      "at": "@+0.6499999999999999",
      "do": "geo.pin_in",
      "stage": "stage_map",
@@ -918,6 +910,14 @@
      "at": "@.end",
      "do": "sticker_out",
      "id": "st_peng"
+    },
+    {
+     "at": "@+0.9",
+     "do": "geo.label_in",
+     "stage": "stage_map",
+     "args": {
+      "lid": "north"
+     }
     }
    ]
   }

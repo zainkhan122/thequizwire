@@ -321,6 +321,26 @@
    "id": "st_bat"
   },
   {
+   "at": "s05@pakistan",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "036",
+    "layer": "hl",
+    "dur": 0.7
+   }
+  },
+  {
+   "at": "s05@pakistan+0.3",
+   "do": "sticker_pulse",
+   "id": "st_bat"
+  },
+  {
+   "at": "s05@india",
+   "do": "sticker_pulse",
+   "id": "st_bat"
+  },
+  {
    "at": "s06",
    "do": "geo.cam_to",
    "stage": "stage_map",
@@ -384,6 +404,31 @@
    "at": "s06.end",
    "do": "sticker_out",
    "id": "st_cup"
+  },
+  {
+   "at": "s06@between+0.1",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "036",
+    "layer": "hl",
+    "dur": 0.7
+   }
+  },
+  {
+   "at": "s06@defeat+0.3",
+   "do": "character_in",
+   "id": "cha"
+  },
+  {
+   "at": "s06@defeat+0.6",
+   "do": "sticker_pulse",
+   "id": "st_cup"
+  },
+  {
+   "at": "s06.end",
+   "do": "character_out",
+   "id": "cha"
   },
   {
    "at": "s07",
@@ -456,6 +501,31 @@
    "at": "s07.end",
    "do": "character_out",
    "id": "wow"
+  },
+  {
+   "at": "s07@latest",
+   "do": "sticker_in",
+   "id": "st_cup"
+  },
+  {
+   "at": "s07@ahmedabad+0.5",
+   "do": "sticker_pulse",
+   "id": "st_cup"
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_cup"
+  },
+  {
+   "at": "s07@people",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "356",
+    "layer": "others",
+    "dur": 0.7
+   }
   },
   {
    "at": "s08",
