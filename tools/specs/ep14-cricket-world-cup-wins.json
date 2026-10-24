@@ -273,15 +273,15 @@
    "s05": [
     1.1,
     [
-     128,
+     104,
      -24
     ]
    ],
    "s05b": [
-    1.12,
+    1.13,
     [
-     128.5,
-     -24.3
+     105,
+     -24.5
     ]
    ],
    "s06": [
@@ -499,22 +499,22 @@
      "pakistan": "pakistan"
     }
    },
-   "direction": "the whole field as one bar chart, Australia's bar towering; rows stagger in as the countries are named; the India flag-ball pops on 'India', Australia pulses again on 'Pakistan' to keep the eye on the gap",
+   "direction": "camera parks Australia at the right edge so the dark Indian Ocean sits under the bar chart; the whole field as one chart, Australia's bar towering; rows stagger in as the countries are named; the India flag-ball pops on 'India', Australia pulses again on 'Pakistan' to keep the eye on the gap",
    "energy": 4,
    "tone": "resolute",
    "cam": [
     1.1,
     [
-     128,
+     104,
      -24
     ]
    ],
    "cam_dur": 1.2,
    "cam_hold": [
-    1.12,
+    1.13,
     [
-     128.5,
-     -24.3
+     105,
+     -24.5
     ]
    ],
    "pulse": false,
