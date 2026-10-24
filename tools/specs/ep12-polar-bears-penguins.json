@@ -321,13 +321,13 @@
     "text": "Equator",
     "cls": "tag ar",
     "in": "s04@equator+0.8",
-    "out": "s06"
+    "out": "s05"
    },
    {
     "id": "ak",
     "lonlat": [
-     -150,
-     68
+     -148,
+     61
     ],
     "text": "Alaska · bears, no penguins",
     "cls": "tag",
