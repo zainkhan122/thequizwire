@@ -128,5 +128,10 @@
   "cast": "emoji-set:polar + flagball:none",
   "music": "bed:bright"
  },
- "status": "draft"
+ "status": "ready",
+ "review": {
+  "approved_by": "owner",
+  "date": "2026-10-24",
+  "render": "p5-ep12-r6"
+ }
 }
