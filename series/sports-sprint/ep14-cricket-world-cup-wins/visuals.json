@@ -104,18 +104,18 @@
    "id": "st_bat",
    "type": "sticker",
    "emoji": "1f3cf",
-   "x": 820,
-   "y": 560,
-   "size": 170,
+   "x": 850,
+   "y": 700,
+   "size": 150,
    "rot": 12
   },
   {
    "id": "st_cup",
    "type": "sticker",
    "emoji": "1f3c6",
-   "x": 800,
-   "y": 600,
-   "size": 180,
+   "x": 830,
+   "y": 760,
+   "size": 170,
    "rot": -8
   },
   {
