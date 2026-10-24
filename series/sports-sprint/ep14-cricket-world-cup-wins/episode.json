@@ -127,5 +127,10 @@
   "cast": "flagball:happy + emoji-set:cricket",
   "music": "bed:pulse"
  },
- "status": "draft"
+ "status": "ready",
+ "review": {
+  "approved_by": "owner",
+  "date": "2026-10-24",
+  "render": "p5-ep14-r8"
+ }
 }

@@ -51,7 +51,11 @@ def main():
     # ORDER = editorial, not random (docs/TOPIC_GUIDELINES.md): soonest "Ship by" first (the signal is cooling), then the series that
     # has waited longest, then episode number. Only the COUNT per day is random (cadence).
     ready.sort(key=lambda r: (r[3], last.get(r[0], ""), r[1]))
-    n = random.Random(day).randint(a.min, a.max)
+    # cadence (owner 2026-10-24): a random count that is never the same as the previous planned day's count, so the feed
+    # does not fall into a 1-1-1 or 3-3-3 rhythm; capped by what the backlog can actually supply
+    prev_days = sorted(d for d in plan["days"] if d < day); last_n = len(plan["days"][prev_days[-1]]) if prev_days else None
+    choices = [k for k in range(a.min, a.max + 1) if k != last_n] or [a.min]
+    n = min(random.Random(day).choice(choices), len(ready))
     urgent = [r for r in ready if r[3] <= day]                 # anything past its ship-by goes today regardless of rotation
     pick = [r[2] for r in urgent[:n]]; seen = {r[0] for r in urgent[:n]}
     for s, _, d, _ in ready:                                   # then one per series, then fill
