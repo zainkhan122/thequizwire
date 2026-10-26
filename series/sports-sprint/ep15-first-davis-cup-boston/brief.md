@@ -1,4 +1,4 @@
-# Brief — Sports Sprint #15 · Which city hosted the FIRST Davis Cup in 1900?
+# Brief — Sports Sprint #15 · Which city hosted the very FIRST Davis Cup?
 
 ## Hook fact
 The first Davis Cup tie was played 8–10 August 1900 at the Longwood Cricket Club in Boston after four Harvard players

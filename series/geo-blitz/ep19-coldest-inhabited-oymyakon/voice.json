@@ -63,7 +63,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "Russia. A tiny village deep in Siberia dropped below minus 67 degrees in 1933.",
+   "text": "Russia. A tiny village deep in eastern Siberia dropped below minus 67 degrees back in 1933.",
    "cues": {
     "answer": "russia",
     "village": "village",
@@ -80,7 +80,7 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "tight on the village: the Oymyakon pin is already there, Yakutsk pins to the west as the nearest city, a cold-face sticker pops on 'people', then the January counter falls 0 → −46 while the frost sticker lands",
-   "text": "Around 500 people live there, and a normal January averages minus 46.",
+   "text": "Around 500 people still live there today, and a perfectly normal January averages minus 46.",
    "cues": {
     "people": "people",
     "january": "january"
@@ -94,7 +94,7 @@
    "energy": 4,
    "pause_after": 0.4,
    "direction": "the scale: a 3-row bar chart grows over the dark Siberian interior — freezer, Oymyakon, Vostok — the ice-cube sticker pops on 'freezer', Russia pulses on 'colder', the penguin lands on 'vostok'",
-   "text": "Your freezer sits at minus 18. Only Antarctica goes colder, minus 89 at Vostok station.",
+   "text": "Your kitchen freezer sits at minus 18. Only Antarctica goes colder, minus 89 at Vostok station.",
    "cues": {
     "freezer": "freezer",
     "antarctica": "antarctica",
@@ -109,7 +109,7 @@
    "energy": 4,
    "pause_after": 0.5,
    "direction": "back to the village: the SCHOOL OPEN card slams in on 'school', the school sticker pops, the Oymyakon pin pulses, the cool Russia flag-ball reacts on 'older'",
-   "text": "And school stays open until minus 52. Older pupils keep going until minus 56.",
+   "text": "And the school stays open until minus 52. The older pupils keep going until minus 56.",
    "cues": {
     "school": "school",
     "older": "older"

@@ -1,4 +1,4 @@
-# Which city hosted the FIRST Davis Cup in 1900?
+# Which city hosted the very FIRST Davis Cup?
 
 ## Signal
 trends: Google Trends US/GB/IN 2026-10-26 https://trends.google.com/trending/rss?geo=GB — "alex de minaur" (500+, review/signals.md) — tennis is in feeds in the last indoor week

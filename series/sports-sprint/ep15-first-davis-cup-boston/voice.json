@@ -13,7 +13,7 @@
  "start_hold": 0.0,
  "end_hold": 2.4,
  "sample_line": "v04",
- "title": "Which city hosted the FIRST Davis Cup in 1900?",
+ "title": "Which city hosted the very FIRST Davis Cup?",
  "lines": [
   {
    "id": "v01",
@@ -23,7 +23,7 @@
    "energy": 4,
    "pause_after": 0.3,
    "direction": "the question, cold — curiosity comes from the map moving under it",
-   "text": "Which city hosted the first Davis Cup in 1900?",
+   "text": "Which city hosted the very first Davis Cup?",
    "cues": {
     "first": "first",
     "city": "city"

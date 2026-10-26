@@ -137,7 +137,7 @@
    "country": "country"
   },
   "v04": {
-   "text": "Russia. A tiny village deep in Siberia dropped below minus 67 degrees in 1933.",
+   "text": "Russia. A tiny village deep in eastern Siberia dropped below minus 67 degrees back in 1933.",
    "cues": {
     "answer": "russia",
     "village": "village",
@@ -146,14 +146,14 @@
    }
   },
   "v05": {
-   "text": "Around 500 people live there, and a normal January averages minus 46.",
+   "text": "Around 500 people still live there today, and a perfectly normal January averages minus 46.",
    "cues": {
     "people": "people",
     "january": "january"
    }
   },
   "v06": {
-   "text": "Your freezer sits at minus 18. Only Antarctica goes colder, minus 89 at Vostok station.",
+   "text": "Your kitchen freezer sits at minus 18. Only Antarctica goes colder, minus 89 at Vostok station.",
    "cues": {
     "freezer": "freezer",
     "antarctica": "antarctica",
@@ -161,7 +161,7 @@
    }
   },
   "v07": {
-   "text": "And school stays open until minus 52. Older pupils keep going until minus 56.",
+   "text": "And the school stays open until minus 52. The older pupils keep going until minus 56.",
    "cues": {
     "school": "school",
     "older": "older"
@@ -478,7 +478,7 @@
     "vo": [
      "the coldest inhabited place on earth is in which country",
      "canada, russia, or greenland",
-     "russia. a tiny village deep in siberia dropped below minus 67 degrees in 1933"
+     "russia. a tiny village deep in eastern siberia dropped below minus 67 degrees back in 1933"
     ],
     "screen": [
      "−67.7 °C",
@@ -500,7 +500,7 @@
      "loc_coldest"
     ],
     "vo": [
-     "around 500 people live there, and a normal january averages minus 46"
+     "around 500 people still live there today, and a perfectly normal january averages minus 46"
     ],
     "screen": [
      "January average",
@@ -518,7 +518,7 @@
      "wiki_vostok"
     ],
     "vo": [
-     "your freezer sits at minus 18. only antarctica goes colder, minus 89 at vostok station"
+     "your kitchen freezer sits at minus 18. only antarctica goes colder, minus 89 at vostok station"
     ],
     "screen": [
      "Your freezer",
@@ -539,7 +539,7 @@
      "mirror_school"
     ],
     "vo": [
-     "and school stays open until minus 52. older pupils keep going until minus 56"
+     "and the school stays open until minus 52. the older pupils keep going until minus 56"
     ],
     "screen": [
      "SCHOOL OPEN",
@@ -551,7 +551,7 @@
  "story": [
   {
    "vo": {
-    "text": "Around 500 people live there, and a normal January averages minus 46.",
+    "text": "Around 500 people still live there today, and a perfectly normal January averages minus 46.",
     "cues": {
      "people": "people",
      "january": "january"
@@ -639,7 +639,7 @@
   },
   {
    "vo": {
-    "text": "Your freezer sits at minus 18. Only Antarctica goes colder, minus 89 at Vostok station.",
+    "text": "Your kitchen freezer sits at minus 18. Only Antarctica goes colder, minus 89 at Vostok station.",
     "cues": {
      "freezer": "freezer",
      "antarctica": "antarctica",
@@ -752,7 +752,7 @@
   },
   {
    "vo": {
-    "text": "And school stays open until minus 52. Older pupils keep going until minus 56.",
+    "text": "And the school stays open until minus 52. The older pupils keep going until minus 56.",
     "cues": {
      "school": "school",
      "older": "older"
