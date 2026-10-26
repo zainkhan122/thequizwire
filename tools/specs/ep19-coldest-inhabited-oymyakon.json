@@ -241,8 +241,7 @@
      142.78,
      63.46
     ],
-    "label": "Oymyakon",
-    "qid": "Q207389"
+    "label": "Oymyakon"
    },
    {
     "id": "yakutsk",
@@ -251,7 +250,6 @@
      62.03
     ],
     "label": "Yakutsk",
-    "qid": "Q6625",
     "side": "left"
    }
   ],

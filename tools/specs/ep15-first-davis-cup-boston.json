@@ -169,7 +169,7 @@
    }
   },
   "v08": {
-   "text": "A student dare, still running. Follow us."
+   "text": "A student dare that never stopped. Follow us."
   }
  },
  "facts": [
@@ -315,8 +315,7 @@
      -71.13,
      42.33
     ],
-    "label": "Longwood",
-    "qid": "Q6674280"
+    "label": "Longwood"
    },
    {
     "id": "liverpool",
@@ -374,16 +373,16 @@
     ]
    ],
    "s06": [
-    1.3,
+    1.1,
     [
-     -72,
+     -86,
      40
     ]
    ],
    "s06b": [
-    1.35,
+    1.12,
     [
-     -71.5,
+     -85.5,
      40.3
     ]
    ],
@@ -726,17 +725,17 @@
    "energy": 3,
    "tone": "neutral",
    "cam": [
-    1.3,
+    1.1,
     [
-     -72,
+     -86,
      40
     ]
    ],
    "cam_dur": 1.3,
    "cam_hold": [
-    1.35,
+    1.12,
     [
-     -71.5,
+     -85.5,
      40.3
     ]
    ],
