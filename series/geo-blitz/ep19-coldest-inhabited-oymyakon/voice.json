@@ -63,7 +63,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "Russia. A tiny village deep in eastern Siberia dropped below minus 67 degrees back in 1933.",
+   "text": "Russia. A tiny village deep in eastern Siberia dropped below minus 67 degrees back in 1933, and that is still the record.",
    "cues": {
     "answer": "russia",
     "village": "village",
@@ -94,11 +94,11 @@
    "energy": 4,
    "pause_after": 0.4,
    "direction": "the scale: a 3-row bar chart grows over the dark Siberian interior — freezer, Oymyakon, Vostok — the ice-cube sticker pops on 'freezer', Russia pulses on 'colder', the penguin lands on 'vostok'",
-   "text": "Your kitchen freezer sits at minus 18. Only Antarctica goes colder, minus 89 at Vostok station.",
+   "text": "Your kitchen freezer sits at minus 18. Only Antarctica, where nobody actually lives, goes any colder.",
    "cues": {
     "freezer": "freezer",
     "antarctica": "antarctica",
-    "vostok": "vostok"
+    "vostok": "colder"
    }
   },
   {
@@ -109,10 +109,10 @@
    "energy": 4,
    "pause_after": 0.5,
    "direction": "back to the village: the SCHOOL OPEN card slams in on 'school', the school sticker pops, the Oymyakon pin pulses, the cool Russia flag-ball reacts on 'older'",
-   "text": "And the school stays open until minus 52. The older pupils keep going until minus 56.",
+   "text": "And the village school stays open until minus 52, which most of us would simply call a snow day.",
    "cues": {
     "school": "school",
-    "older": "older"
+    "older": "snow"
    }
   },
   {

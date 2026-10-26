@@ -137,7 +137,7 @@
    "country": "country"
   },
   "v04": {
-   "text": "Russia. A tiny village deep in eastern Siberia dropped below minus 67 degrees back in 1933.",
+   "text": "Russia. A tiny village deep in eastern Siberia dropped below minus 67 degrees back in 1933, and that is still the record.",
    "cues": {
     "answer": "russia",
     "village": "village",
@@ -153,18 +153,18 @@
    }
   },
   "v06": {
-   "text": "Your kitchen freezer sits at minus 18. Only Antarctica goes colder, minus 89 at Vostok station.",
+   "text": "Your kitchen freezer sits at minus 18. Only Antarctica, where nobody actually lives, goes any colder.",
    "cues": {
     "freezer": "freezer",
     "antarctica": "antarctica",
-    "vostok": "vostok"
+    "vostok": "colder"
    }
   },
   "v07": {
-   "text": "And the school stays open until minus 52. The older pupils keep going until minus 56.",
+   "text": "And the village school stays open until minus 52, which most of us would simply call a snow day.",
    "cues": {
     "school": "school",
-    "older": "older"
+    "older": "snow"
    }
   },
   "v08": {
@@ -478,7 +478,7 @@
     "vo": [
      "the coldest inhabited place on earth is in which country",
      "canada, russia, or greenland",
-     "russia. a tiny village deep in eastern siberia dropped below minus 67 degrees back in 1933"
+     "russia. a tiny village deep in eastern siberia dropped below minus 67 degrees back in 1933, and that is still the record"
     ],
     "screen": [
      "−67.7 °C",
@@ -518,7 +518,7 @@
      "wiki_vostok"
     ],
     "vo": [
-     "your kitchen freezer sits at minus 18. only antarctica goes colder, minus 89 at vostok station"
+     "your kitchen freezer sits at minus 18. only antarctica, where nobody actually lives, goes any colder"
     ],
     "screen": [
      "Your freezer",
@@ -532,14 +532,14 @@
    {
     "id": "C04",
     "weight": "detail",
-    "text": "Oymyakon's school stays open until −52 °C for the youngest pupils; older pupils attend until −56 °C.",
+    "text": "Oymyakon's school stays open until −52 °C for the youngest pupils.",
     "sources": [
      "bbc_school",
      "sciam_school",
      "mirror_school"
     ],
     "vo": [
-     "and the school stays open until minus 52. the older pupils keep going until minus 56"
+     "and the village school stays open until minus 52, which most of us would simply call a snow day"
     ],
     "screen": [
      "SCHOOL OPEN",
@@ -652,11 +652,11 @@
   },
   {
    "vo": {
-    "text": "Your kitchen freezer sits at minus 18. Only Antarctica goes colder, minus 89 at Vostok station.",
+    "text": "Your kitchen freezer sits at minus 18. Only Antarctica, where nobody actually lives, goes any colder.",
     "cues": {
      "freezer": "freezer",
      "antarctica": "antarctica",
-     "vostok": "vostok"
+     "vostok": "colder"
     }
    },
    "direction": "the scale: a 3-row bar chart grows over the dark Siberian interior — freezer, Oymyakon, Vostok — the ice-cube sticker pops on 'freezer', Russia pulses on 'colder', the penguin lands on 'vostok'",
@@ -775,10 +775,10 @@
   },
   {
    "vo": {
-    "text": "And the school stays open until minus 52. The older pupils keep going until minus 56.",
+    "text": "And the village school stays open until minus 52, which most of us would simply call a snow day.",
     "cues": {
      "school": "school",
-     "older": "older"
+     "older": "snow"
     }
    },
    "direction": "back to the village: the SCHOOL OPEN card slams in on 'school', the school sticker pops, the Oymyakon pin pulses, the cool Russia flag-ball reacts on 'older'",
