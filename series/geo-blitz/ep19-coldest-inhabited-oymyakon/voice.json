@@ -63,7 +63,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "Russia. A tiny village deep in eastern Siberia dropped below minus 67 degrees back in 1933, and that is still the record.",
+   "text": "Russia. A tiny village deep in eastern Siberia dropped below minus 67 degrees in 1933, still the record.",
    "cues": {
     "answer": "russia",
     "village": "village",
@@ -80,7 +80,7 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "tight on the village: the Oymyakon pin is already there, Yakutsk pins to the west as the nearest city, a cold-face sticker pops on 'people', then the January counter falls 0 → −46 while the frost sticker lands",
-   "text": "Around 500 people still live there today, and a perfectly normal January averages minus 46.",
+   "text": "Around 500 people still live there, and a perfectly normal January averages minus 46.",
    "cues": {
     "people": "people",
     "january": "january"
@@ -109,7 +109,7 @@
    "energy": 4,
    "pause_after": 0.5,
    "direction": "back to the village: the SCHOOL OPEN card slams in on 'school', the school sticker pops, the Oymyakon pin pulses, the cool Russia flag-ball reacts on 'older'",
-   "text": "And the village school stays open until minus 52, which most of us would simply call a snow day.",
+   "text": "And the village school stays open until minus 52, which most of us would call a snow day.",
    "cues": {
     "school": "school",
     "older": "snow"

@@ -137,7 +137,7 @@
    "country": "country"
   },
   "v04": {
-   "text": "Russia. A tiny village deep in eastern Siberia dropped below minus 67 degrees back in 1933, and that is still the record.",
+   "text": "Russia. A tiny village deep in eastern Siberia dropped below minus 67 degrees in 1933, still the record.",
    "cues": {
     "answer": "russia",
     "village": "village",
@@ -146,7 +146,7 @@
    }
   },
   "v05": {
-   "text": "Around 500 people still live there today, and a perfectly normal January averages minus 46.",
+   "text": "Around 500 people still live there, and a perfectly normal January averages minus 46.",
    "cues": {
     "people": "people",
     "january": "january"
@@ -161,7 +161,7 @@
    }
   },
   "v07": {
-   "text": "And the village school stays open until minus 52, which most of us would simply call a snow day.",
+   "text": "And the village school stays open until minus 52, which most of us would call a snow day.",
    "cues": {
     "school": "school",
     "older": "snow"
@@ -478,7 +478,7 @@
     "vo": [
      "the coldest inhabited place on earth is in which country",
      "canada, russia, or greenland",
-     "russia. a tiny village deep in eastern siberia dropped below minus 67 degrees back in 1933, and that is still the record"
+     "russia. a tiny village deep in eastern siberia dropped below minus 67 degrees in 1933, still the record"
     ],
     "screen": [
      "−67.7 °C",
@@ -500,7 +500,7 @@
      "loc_coldest"
     ],
     "vo": [
-     "around 500 people still live there today, and a perfectly normal january averages minus 46"
+     "around 500 people still live there, and a perfectly normal january averages minus 46"
     ],
     "screen": [
      "January average",
@@ -539,7 +539,7 @@
      "mirror_school"
     ],
     "vo": [
-     "and the village school stays open until minus 52, which most of us would simply call a snow day"
+     "and the village school stays open until minus 52, which most of us would call a snow day"
     ],
     "screen": [
      "SCHOOL OPEN",
@@ -551,7 +551,7 @@
  "story": [
   {
    "vo": {
-    "text": "Around 500 people still live there today, and a perfectly normal January averages minus 46.",
+    "text": "Around 500 people still live there, and a perfectly normal January averages minus 46.",
     "cues": {
      "people": "people",
      "january": "january"
@@ -775,7 +775,7 @@
   },
   {
    "vo": {
-    "text": "And the village school stays open until minus 52, which most of us would simply call a snow day.",
+    "text": "And the village school stays open until minus 52, which most of us would call a snow day.",
     "cues": {
      "school": "school",
      "older": "snow"
