@@ -634,6 +634,19 @@
      "at": "@.end",
      "do": "sticker_out",
      "id": "st_frost"
+    },
+    {
+     "at": "@@people+0.4",
+     "do": "sticker_pulse",
+     "id": "st_cold"
+    },
+    {
+     "at": "@+0.1",
+     "do": "geo.label_in",
+     "stage": "stage_map",
+     "args": {
+      "lid": "oym"
+     }
     }
    ]
   },
@@ -747,6 +760,16 @@
      "at": "@.end",
      "do": "sticker_out",
      "id": "st_peng"
+    },
+    {
+     "at": "@@freezer+0.5",
+     "do": "sticker_pulse",
+     "id": "st_ice"
+    },
+    {
+     "at": "@@antarctica+0.5",
+     "do": "sticker_pulse",
+     "id": "st_peng"
     }
    ]
   },
@@ -815,6 +838,21 @@
      "at": "@.end",
      "do": "character_out",
      "id": "brr"
+    },
+    {
+     "at": "@@school+0.9",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "643",
+      "layer": "hl",
+      "dur": 0.7
+     }
+    },
+    {
+     "at": "@@older+0.8",
+     "do": "sticker_pulse",
+     "id": "st_school"
     }
    ]
   }

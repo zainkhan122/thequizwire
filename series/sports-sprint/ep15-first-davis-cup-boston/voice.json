@@ -93,7 +93,7 @@
    "tone": "neutral",
    "energy": 3,
    "pause_after": 0.4,
-   "direction": "back to Boston: the real Library of Congress portrait of Dwight Davis rises out of the United States on 'davis', the trophy sticker pops on 'trophy', the Longwood pin pulses in again on 'name'",
+   "direction": "back to Boston: the real Library of Congress portrait of Dwight Davis slides in from the left on 'davis', over the ocean, the trophy sticker pops on 'trophy', the Longwood pin pulses in again on 'name'",
    "text": "Dwight Davis paid for the silver trophy out of his own pocket, and the cup still carries his name.",
    "cues": {
     "davis": "davis",

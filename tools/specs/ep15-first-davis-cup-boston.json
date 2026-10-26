@@ -123,8 +123,7 @@
    "route",
    "travel",
    "bars",
-   "photo",
-   "rise"
+   "photo"
   ],
   "cast": "flagball:happy + emoji-set:tennis",
   "music": "bed:bright",
@@ -721,7 +720,7 @@
      "name": "name"
     }
    },
-   "direction": "back to Boston: the real Library of Congress portrait of Dwight Davis rises out of the United States on 'davis', the trophy sticker pops on 'trophy', the Longwood pin pulses in again on 'name'",
+   "direction": "back to Boston: the real Library of Congress portrait of Dwight Davis slides in from the left on 'davis', over the ocean, the trophy sticker pops on 'trophy', the Longwood pin pulses in again on 'name'",
    "energy": 3,
    "tone": "neutral",
    "cam": [
@@ -740,17 +739,6 @@
     ]
    ],
    "pulse": false,
-   "photo": {
-    "id": "ph_davis",
-    "commons": "File:DAVIS, DWIGHT F. LCCN2016861164.jpg",
-    "caption": "Dwight F. Davis, Harvard 1900",
-    "from": "rise",
-    "fid": "840",
-    "layer": "hl",
-    "w": 420,
-    "h": 520,
-    "at": 0.6
-   },
    "devices": [
     {
      "at": "@+0.1",
@@ -782,6 +770,19 @@
      "at": "@.end",
      "do": "sticker_out",
      "id": "st_cup"
+    },
+    {
+     "at": "@@davis-0.2",
+     "do": "photo_in",
+     "id": "ph_davis",
+     "args": {
+      "frm": "left"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "photo_out",
+     "id": "ph_davis"
     }
    ]
   },
@@ -941,6 +942,18 @@
    "y": 1180,
    "size": 220,
    "rot": 6
+  }
+ ],
+ "extra_photos": [
+  {
+   "id": "ph_davis",
+   "commons": "File:DAVIS, DWIGHT F. LCCN2016861164.jpg",
+   "caption": "Dwight F. Davis, Harvard 1900",
+   "x": 90,
+   "y": 560,
+   "w": 420,
+   "h": 520,
+   "rot": -3
   }
  ]
 }

@@ -28,18 +28,6 @@
    "text": "Longwood Cricket Club · USA 3 – 0"
   },
   {
-   "id": "ph_davis",
-   "type": "photo",
-   "commons": "File:DAVIS, DWIGHT F. LCCN2016861164.jpg",
-   "caption": "Dwight F. Davis, Harvard 1900",
-   "x": 440,
-   "y": 420,
-   "w": 420,
-   "h": 520,
-   "rot": -3,
-   "credit": "📷 Harris &amp · Public domain"
-  },
-  {
    "id": "titles",
    "type": "bars",
    "rows": [
@@ -71,6 +59,18 @@
    "max_value": 32,
    "bar_h": 74,
    "gap": 20
+  },
+  {
+   "id": "ph_davis",
+   "type": "photo",
+   "commons": "File:DAVIS, DWIGHT F. LCCN2016861164.jpg",
+   "caption": "Dwight F. Davis, Harvard 1900",
+   "x": 90,
+   "y": 560,
+   "w": 420,
+   "h": 520,
+   "rot": -3,
+   "credit": "📷 Harris &amp · Public domain"
   },
   {
    "id": "st_ship",
@@ -430,30 +430,6 @@
    }
   },
   {
-   "at": "s06+0.6",
-   "do": "geo.rise",
-   "stage": "stage_map",
-   "args": {
-    "fid": "840",
-    "eid": "ph_davis",
-    "layer": "hl"
-   }
-  },
-  {
-   "at": "s06+0.6",
-   "do": "photo_in",
-   "id": "ph_davis",
-   "args": {
-    "frm": "pop",
-    "dur": 0.01
-   }
-  },
-  {
-   "at": "s06.end",
-   "do": "photo_out",
-   "id": "ph_davis"
-  },
-  {
    "at": "s06+0.1",
    "do": "geo.pin_out",
    "stage": "stage_map",
@@ -483,6 +459,19 @@
    "at": "s06.end",
    "do": "sticker_out",
    "id": "st_cup"
+  },
+  {
+   "at": "s06@davis-0.2",
+   "do": "photo_in",
+   "id": "ph_davis",
+   "args": {
+    "frm": "left"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "photo_out",
+   "id": "ph_davis"
   },
   {
    "at": "s07",
