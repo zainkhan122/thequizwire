@@ -1202,7 +1202,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-24T05:59:24+00:00",
+   "refreshed_at": "2026-10-26T21:40:08+00:00",
    "error": "An unknown error has occurred. Please retry the post again, and get in touch if this persists."
   },
   {
@@ -1610,130 +1610,160 @@
    "platform": "youtube",
    "post_id": "6adcabf2bd33ce99c3233efc",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/8955d739350c/How-many-mens-Cricket-World-Cups-has-Australia-won.mp4",
    "due_at": "2026-10-24T16:00:00.000Z",
    "created_at": "2026-10-24T13:00:34.124Z",
    "recorded_at": "2026-10-24T13:00:34+00:00",
    "title": "Cricket World Cup winners list: how many has Australia won? 🏏",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-10-24T16:00:48.957Z",
+   "external_link": "https://www.youtube.com/shorts/VcccGSf4BTY",
+   "refreshed_at": "2026-10-26T21:40:09+00:00"
   },
   {
    "episode": "ep14-cricket-world-cup-wins",
    "platform": "instagram",
    "post_id": "6adcabf28b3d437ddcbc61d1",
    "channel_id": "695bfd29457dae6a34df0f74",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/8955d739350c/How-many-mens-Cricket-World-Cups-has-Australia-won.mp4",
    "due_at": "2026-10-24T15:00:00.000Z",
    "created_at": "2026-10-24T13:00:34.750Z",
    "recorded_at": "2026-10-24T13:00:34+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": "2026-10-24T15:01:55.598Z",
+   "external_link": "https://www.instagram.com/reel/De4Z7mijZWo/",
+   "refreshed_at": "2026-10-26T21:40:10+00:00"
   },
   {
    "episode": "ep14-cricket-world-cup-wins",
    "platform": "facebook",
    "post_id": "6adcabf43d5b27036b8537ee",
    "channel_id": "695a159a457dae6a34d901bc",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/8955d739350c/How-many-mens-Cricket-World-Cups-has-Australia-won.mp4",
    "due_at": "2026-10-24T17:00:00.000Z",
    "created_at": "2026-10-24T13:00:36.915Z",
    "recorded_at": "2026-10-24T13:00:37+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": "2026-10-24T17:00:48.988Z",
+   "external_link": "https://www.facebook.com/reel/1428795949399262/",
+   "refreshed_at": "2026-10-26T21:40:12+00:00"
   },
   {
    "episode": "ep14-cricket-world-cup-wins",
    "platform": "twitter",
    "post_id": "6adcabf7bd33ce99c323425d",
    "channel_id": "69f30e2a5c4c051afaf58634",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/8955d739350c/How-many-mens-Cricket-World-Cups-has-Australia-won.mp4",
    "due_at": "2026-10-24T21:00:00.000Z",
    "created_at": "2026-10-24T13:00:39.102Z",
    "recorded_at": "2026-10-24T13:00:39+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": "2026-10-24T21:00:17.430Z",
+   "external_link": "https://x.com/2049746939164676096/status/2114099683240874384",
+   "refreshed_at": "2026-10-26T21:40:14+00:00"
   },
   {
    "episode": "ep14-cricket-world-cup-wins",
    "platform": "threads",
    "post_id": "6adcabf73d5b27036b853c2d",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/8955d739350c/How-many-mens-Cricket-World-Cups-has-Australia-won.mp4",
    "due_at": "2026-10-24T23:00:00.000Z",
    "created_at": "2026-10-24T13:00:39.962Z",
    "recorded_at": "2026-10-24T13:00:40+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-10-24T23:01:34.346Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/De5Q5tPjLXY",
+   "refreshed_at": "2026-10-26T21:40:14+00:00"
   },
   {
    "episode": "ep05-first-heart-transplant",
    "platform": "youtube",
    "post_id": "6adcabfabd33ce99c323468e",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/ec21e29c4903/The-FIRST-human-heart-transplant-happened-in-which-country.mp4",
    "due_at": "2026-10-24T23:00:00.000Z",
    "created_at": "2026-10-24T13:00:42.249Z",
    "recorded_at": "2026-10-24T13:00:42+00:00",
    "title": "First heart transplant: which country did it? Not where you think ❤️",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-10-24T23:00:36.286Z",
+   "external_link": "https://www.youtube.com/shorts/F1XeEDv2SMo",
+   "refreshed_at": "2026-10-26T21:40:16+00:00"
   },
   {
    "episode": "ep05-first-heart-transplant",
    "platform": "instagram",
    "post_id": "6adcabfae4be8a4d865c5027",
    "channel_id": "695bfd29457dae6a34df0f74",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/ec21e29c4903/The-FIRST-human-heart-transplant-happened-in-which-country.mp4",
    "due_at": "2026-10-24T23:00:00.000Z",
    "created_at": "2026-10-24T13:00:42.824Z",
    "recorded_at": "2026-10-24T13:00:43+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": "2026-10-24T23:01:17.857Z",
+   "external_link": "https://www.instagram.com/reel/De5Q417iZXE/",
+   "refreshed_at": "2026-10-26T21:40:16+00:00"
   },
   {
    "episode": "ep05-first-heart-transplant",
    "platform": "facebook",
    "post_id": "6adcabfce4be8a4d865c50f9",
    "channel_id": "695a159a457dae6a34d901bc",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/ec21e29c4903/The-FIRST-human-heart-transplant-happened-in-which-country.mp4",
    "due_at": "2026-10-24T23:00:00.000Z",
    "created_at": "2026-10-24T13:00:44.796Z",
    "recorded_at": "2026-10-24T13:00:44+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": "2026-10-24T23:00:44.519Z",
+   "external_link": "https://www.facebook.com/reel/1098106546332671/",
+   "refreshed_at": "2026-10-26T21:40:18+00:00"
   },
   {
    "episode": "ep05-first-heart-transplant",
    "platform": "twitter",
    "post_id": "6adcabfee4be8a4d865c5361",
    "channel_id": "69f30e2a5c4c051afaf58634",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/ec21e29c4903/The-FIRST-human-heart-transplant-happened-in-which-country.mp4",
    "due_at": "2026-10-25T13:00:00.000Z",
    "created_at": "2026-10-24T13:00:46.840Z",
    "recorded_at": "2026-10-24T13:00:47+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": "2026-10-25T13:01:18.621Z",
+   "external_link": "https://x.com/2049746939164676096/status/2114341531830149420",
+   "refreshed_at": "2026-10-26T21:40:20+00:00"
   },
   {
    "episode": "ep05-first-heart-transplant",
    "platform": "threads",
    "post_id": "6adcabffe4be8a4d865c5490",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/ec21e29c4903/The-FIRST-human-heart-transplant-happened-in-which-country.mp4",
    "due_at": "2026-10-25T14:00:00.000Z",
    "created_at": "2026-10-24T13:00:47.637Z",
    "recorded_at": "2026-10-24T13:00:47+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-10-25T14:03:31.701Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/De64AyzgbxT",
+   "refreshed_at": "2026-10-26T21:40:20+00:00"
   },
   {
    "episode": "ep12-polar-bears-penguins",
@@ -1746,7 +1776,10 @@
    "created_at": "2026-10-26T15:50:51.124Z",
    "recorded_at": "2026-10-26T15:50:51+00:00",
    "title": "Do polar bears eat penguins? True or false: they have NEVER met in the wild 🐧",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-26T21:40:22+00:00"
   },
   {
    "episode": "ep12-polar-bears-penguins",
@@ -1759,7 +1792,10 @@
    "created_at": "2026-10-26T15:50:51.632Z",
    "recorded_at": "2026-10-26T15:50:51+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-26T21:40:22+00:00"
   },
   {
    "episode": "ep12-polar-bears-penguins",
@@ -1772,20 +1808,26 @@
    "created_at": "2026-10-26T15:50:53.609Z",
    "recorded_at": "2026-10-26T15:50:53+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-26T21:40:24+00:00"
   },
   {
    "episode": "ep12-polar-bears-penguins",
    "platform": "twitter",
    "post_id": "6adf76dffbcc83d9686ade10",
    "channel_id": "69f30e2a5c4c051afaf58634",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/6ccf8e9079d1/Polar-bears-and-penguins-have-NEVER-met-in-the-wild-True-or-false.mp4",
    "due_at": "2026-10-26T21:00:00.000Z",
    "created_at": "2026-10-26T15:50:55.743Z",
    "recorded_at": "2026-10-26T15:50:55+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": "2026-10-26T21:00:36.820Z",
+   "external_link": "https://x.com/2049746939164676096/status/2114824540110860359",
+   "refreshed_at": "2026-10-26T21:40:26+00:00"
   },
   {
    "episode": "ep12-polar-bears-penguins",
@@ -1798,7 +1840,10 @@
    "created_at": "2026-10-26T15:50:56.313Z",
    "recorded_at": "2026-10-26T15:50:56+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-26T21:40:26+00:00"
   },
   {
    "episode": "ep15-first-davis-cup-boston",
@@ -1811,7 +1856,10 @@
    "created_at": "2026-10-26T16:56:08.041Z",
    "recorded_at": "2026-10-26T16:56:08+00:00",
    "title": "Davis Cup history: where was the FIRST Davis Cup played in 1900? 🎾",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-26T21:40:28+00:00"
   },
   {
    "episode": "ep15-first-davis-cup-boston",
@@ -1824,7 +1872,10 @@
    "created_at": "2026-10-26T16:56:08.509Z",
    "recorded_at": "2026-10-26T16:56:08+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-26T21:40:29+00:00"
   },
   {
    "episode": "ep15-first-davis-cup-boston",
@@ -1837,7 +1888,10 @@
    "created_at": "2026-10-26T16:56:10.503Z",
    "recorded_at": "2026-10-26T16:56:10+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-26T21:40:31+00:00"
   },
   {
    "episode": "ep15-first-davis-cup-boston",
@@ -1850,7 +1904,10 @@
    "created_at": "2026-10-26T16:56:12.541Z",
    "recorded_at": "2026-10-26T16:56:12+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-26T21:40:33+00:00"
   },
   {
    "episode": "ep15-first-davis-cup-boston",
@@ -1863,7 +1920,10 @@
    "created_at": "2026-10-26T16:56:12.934Z",
    "recorded_at": "2026-10-26T16:56:13+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-26T21:40:33+00:00"
   },
   {
    "episode": "ep19-coldest-inhabited-oymyakon",
@@ -1876,7 +1936,10 @@
    "created_at": "2026-10-26T17:11:48.131Z",
    "recorded_at": "2026-10-26T17:11:48+00:00",
    "title": "Coldest place on Earth where people live? 3 countries, 1 frozen village 🥶",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-26T21:40:35+00:00"
   },
   {
    "episode": "ep19-coldest-inhabited-oymyakon",
@@ -1889,7 +1952,10 @@
    "created_at": "2026-10-26T17:11:48.551Z",
    "recorded_at": "2026-10-26T17:11:48+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-26T21:40:35+00:00"
   },
   {
    "episode": "ep19-coldest-inhabited-oymyakon",
@@ -1902,7 +1968,10 @@
    "created_at": "2026-10-26T17:11:50.584Z",
    "recorded_at": "2026-10-26T17:11:50+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-26T21:40:37+00:00"
   },
   {
    "episode": "ep19-coldest-inhabited-oymyakon",
@@ -1915,7 +1984,10 @@
    "created_at": "2026-10-26T17:11:52.655Z",
    "recorded_at": "2026-10-26T17:11:52+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-26T21:40:39+00:00"
   },
   {
    "episode": "ep19-coldest-inhabited-oymyakon",
@@ -1928,7 +2000,10 @@
    "created_at": "2026-10-26T17:11:53.069Z",
    "recorded_at": "2026-10-26T17:11:53+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-26T21:40:39+00:00"
   }
  ]
 }
