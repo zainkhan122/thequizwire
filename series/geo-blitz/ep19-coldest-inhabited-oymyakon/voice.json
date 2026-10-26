@@ -1,0 +1,132 @@
+{
+ "version": 1,
+ "episode": "ep19-coldest-inhabited-oymyakon",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A weather reporter standing in the dark: calm numbers that keep getting more absurd, one shiver per sentence.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "The COLDEST inhabited place on Earth is in which country?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "The coldest inhabited place on Earth is in which country?",
+   "cues": {
+    "coldest": "coldest",
+    "country": "country"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Canada, Russia, or Greenland?",
+   "cues": {
+    "a": "canada",
+    "b": "russia",
+    "c": "greenland"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "Russia. The village of Oymyakon, deep in Siberia, hit minus 67.7 degrees in 1933.",
+   "cues": {
+    "answer": "russia",
+    "village": "village",
+    "siberia": "siberia",
+    "hit": "hit"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "tight on the village: the Oymyakon pin is already there, Yakutsk pins to the west as the nearest city, a cold-face sticker pops on 'people', then the January counter falls 0 → −46 while the frost sticker lands",
+   "text": "Around 500 people live there, and a normal January averages minus 46.",
+   "cues": {
+    "people": "people",
+    "january": "january"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.4,
+   "direction": "the scale: a 3-row bar chart grows over the dark Siberian interior — freezer, Oymyakon, Vostok — the ice-cube sticker pops on 'freezer', Russia pulses on 'colder', the penguin lands on 'vostok'",
+   "text": "Your freezer sits at minus 18. Only Antarctica goes colder, minus 89 at Vostok station.",
+   "cues": {
+    "freezer": "freezer",
+    "antarctica": "antarctica",
+    "vostok": "vostok"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.5,
+   "direction": "back to the village: the SCHOOL OPEN card slams in on 'school', the school sticker pops, the Oymyakon pin pulses, the cool Russia flag-ball reacts on 'older'",
+   "text": "And school stays open until minus 52. Older pupils keep going until minus 56.",
+   "cues": {
+    "school": "school",
+    "older": "older"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "Pack a second coat. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "version": 1,
+ "episode": "ep19-coldest-inhabited-oymyakon",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     40,
+     42,
+     180,
+     76
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "643"
+     ],
+     "cls": "",
+     "note": "Russia (answer) — fill pulse on the reveal; the village is a pin, not a shape"
+    }
+   ],
+   "pins": [
+    {
+     "id": "oymyakon",
+     "lonlat": [
+      142.78,
+      63.46
+     ],
+     "label": "Oymyakon",
+     "qid": "Q207389"
+    },
+    {
+     "id": "yakutsk",
+     "lonlat": [
+      129.73,
+      62.03
+     ],
+     "label": "Yakutsk",
+     "qid": "Q6625",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "oym",
+     "lonlat": [
+      142.8,
+      67.5
+     ],
+     "text": "Pole of Cold",
+     "cls": "tag",
+     "in": "s04@village+0.4",
+     "out": "s06"
+    },
+    {
+     "id": "sib",
+     "lonlat": [
+      100,
+      70
+     ],
+     "text": "SIBERIA",
+     "cls": "tag",
+     "in": "s04@siberia",
+     "out": "s05"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "night",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -60,
+      0,
+      200,
+      85
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 500,
+    "lonlat": [
+     60,
+     46
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

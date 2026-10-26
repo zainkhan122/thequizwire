@@ -1,0 +1,148 @@
+{
+ "id": "ep19-coldest-inhabited-oymyakon",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 19,
+ "title": "The COLDEST inhabited place on Earth is in which country?",
+ "difficulty": "MEDIUM",
+ "seed": 4219,
+ "quiz": {
+  "question": "The COLDEST inhabited place on Earth is in which country?",
+  "keyword": "COLDEST",
+  "options": [
+   "Canada",
+   "Russia",
+   "Greenland"
+  ],
+  "correct": 1,
+  "beat": 3.0,
+  "answer_line": "Russia",
+  "answer_sub": "Oymyakon · −67.7 °C",
+  "option_meta": [
+   {
+    "flag": "ca"
+   },
+   {
+    "flag": "ru"
+   },
+   {
+    "flag": "gl"
+   }
+  ],
+  "banner": "Russia",
+  "banner_sub": "✓  B was right · Oymyakon · −67.7 °C",
+  "outro": {
+   "headline": "1 FOR 1?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "The COLDEST inhabited place on Earth is in which country? 🥶",
+  "premise": "A village where school only closes below −52 °C",
+  "bait": "School there only closes below −52 °C.",
+  "keywords": [
+   "coldest place on earth",
+   "coldest inhabited place",
+   "coldest village in the world",
+   "polar vortex",
+   "siberia winter",
+   "oymyakon",
+   "geography quiz",
+   "world map quiz",
+   "extreme cold",
+   "coldest town"
+  ],
+  "description": "A village where school only closes below −52 °C. School there only closes below −52 °C.\n\nSources: WMO; Guinness World Records; Library of Congress; BBC.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #19",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "ColdestPlace",
+   "PolarVortex"
+  ],
+  "cover_emoji": "🥶",
+  "copy": {
+   "spoilers": [
+    "oymyakon",
+    "siberia",
+    "sakha",
+    "yakutia",
+    "russian",
+    "67.7"
+   ],
+   "youtube": {
+    "title": "Coldest place on Earth where people live? 3 countries, 1 frozen village 🥶",
+    "description": "Polar vortex on the forecast? This village laughs at it: the school only closes when it drops below −52 °C, and the record low is colder than your freezer by 50 degrees.\nCanada, Russia or Greenland — lock in your answer before the night map lights up.\nSubscribe for one map question you can argue about every day.",
+    "tags": [
+     "#coldestplaceonearth",
+     "#polarvortex",
+     "#geographyquiz",
+     "#worldmap",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "The coldest inhabited place on Earth is in which country? 🥶\nThe kids there still walk to school at −50 °C. Your freezer sits at −18. Canada, Greenland or Russia — which one would you bet on?\nAnswer in the comments before the reveal.",
+    "tags": [
+     "#coldestplaceonearth",
+     "#geography",
+     "#mapquiz",
+     "#extremeweather",
+     "#polarvortex"
+    ]
+   },
+   "facebook": {
+    "text": "The coldest inhabited place on Earth is in which country — Canada, Russia or Greenland?\nSchool there only closes below −52 °C. Tell us your pick before the map answers.",
+    "tags": [
+     "#coldestplaceonearth",
+     "#geographyquiz"
+    ]
+   },
+   "twitter": {
+    "text": "The coldest inhabited place on Earth is in which country?\nSchool only closes below −52 °C. Your freezer is −18. Canada, Russia or Greenland?",
+    "tags": [
+     "#PolarVortex"
+    ]
+   },
+   "threads": {
+    "text": "The coldest inhabited place on Earth is in which country — Canada, Russia or Greenland? A whole village lives through winters where −50 °C is a normal school day and your freezer at −18 would feel mild. Guess before the night map lights up.",
+    "tags": [
+     "#coldestplaceonearth"
+    ]
+   },
+   "not_spoilers": {
+    "52": "the school-closing threshold — a texture fact, not the answer; the record (−67.7) and the place name stay out",
+    "18": "household freezer temperature used as the comparison",
+    "50": "rounded gap freezer-to-record, no place named"
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "night-lights",
+  "reveal": "fill-pulse",
+  "beats": [
+   "pin",
+   "counter",
+   "bars",
+   "label"
+  ],
+  "cast": "flagball:cool + emoji-set:frost",
+  "music": "bed:deep"
+ },
+ "status": "ready",
+ "review": {
+  "authored": "2026-10-26",
+  "note": "P5 system; local preflight green; owner asked for same-day scheduling"
+ }
+}

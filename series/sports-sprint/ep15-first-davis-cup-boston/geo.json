@@ -1,0 +1,183 @@
+{
+ "version": 1,
+ "episode": "ep15-first-davis-cup-boston",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -100,
+     25,
+     20,
+     62
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "840"
+     ],
+     "cls": "",
+     "note": "United States (answer) — fill pulse; Boston is the pin"
+    },
+    {
+     "kind": "highlight",
+     "id": "others",
+     "ids": [
+      "826"
+     ],
+     "cls": "dim",
+     "note": "British Isles — lit as the visitors set sail"
+    },
+    {
+     "kind": "route",
+     "id": "sail",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "crossing",
+        "properties": {
+         "name": "Atlantic crossing"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           -3.0,
+           53.4
+          ],
+          [
+           -12,
+           52.5
+          ],
+          [
+           -25,
+           50
+          ],
+          [
+           -40,
+           46.5
+          ],
+          [
+           -55,
+           43.5
+          ],
+          [
+           -66,
+           42.2
+          ],
+          [
+           -70.9,
+           42.36
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "Liverpool to Boston, the 1900 steamship route, drawn as the visitors cross"
+    }
+   ],
+   "pins": [
+    {
+     "id": "longwood",
+     "lonlat": [
+      -71.13,
+      42.33
+     ],
+     "label": "Longwood",
+     "qid": "Q6674280"
+    },
+    {
+     "id": "liverpool",
+     "lonlat": [
+      -2.98,
+      53.41
+     ],
+     "label": "Liverpool",
+     "qid": "Q24826",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "bos",
+     "lonlat": [
+      -71,
+      45.2
+     ],
+     "text": "Boston",
+     "cls": "tag",
+     "in": "s04@answer",
+     "out": "s05"
+    },
+    {
+     "id": "uk",
+     "lonlat": [
+      -3,
+      57.5
+     ],
+     "text": "British Isles",
+     "cls": "tag",
+     "in": "s05@crossed",
+     "out": "s06"
+    },
+    {
+     "id": "atl",
+     "lonlat": [
+      -40,
+      38
+     ],
+     "text": "Atlantic",
+     "cls": "tag",
+     "in": "s05@crossed+0.6",
+     "out": "s06"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -150,
+      -10,
+      60,
+      80
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 1000,
+    "lonlat": [
+     -95,
+     28
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

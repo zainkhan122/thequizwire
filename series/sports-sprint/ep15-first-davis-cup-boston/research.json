@@ -1,0 +1,220 @@
+{
+ "version": 1,
+ "episode": "ep15-first-davis-cup-boston",
+ "topic": "First Davis Cup (International Lawn Tennis Challenge), 8–10 August 1900, Longwood Cricket Club, Boston: United States beat the British Isles 3–0; conceived by 4 Harvard players; Dwight F. Davis bought the sterling trophy; all-time titles USA 32, Australia 28, GB 10, France 10.",
+ "researched": "2026-10-26",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The Davis Cup began in England, the home of lawn tennis.",
+   "reality": "It began in Boston as an American challenge to the British; Britain won its first Cup only in 1903.",
+   "sources": [
+    "wiki_davis",
+    "hitc_first"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Davis Cup explainers cover the format change and the finals; none shows the 1900 Atlantic crossing on a map or the title count as a chart.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=davis+cup+history",
+    "title": "Search: davis cup history",
+    "angle": "ITF montages",
+    "misses": "no map, no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=davis+cup+2026",
+    "title": "Search: davis cup 2026",
+    "angle": "draw/preview talk",
+    "misses": "no origin story"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=dwight+davis",
+    "title": "Search: dwight davis",
+    "angle": "biography clips",
+    "misses": "long, no payoff"
+   }
+  ]
+ },
+ "sources": {
+  "itf_history": {
+   "type": "primary",
+   "publisher": "International Tennis Federation",
+   "title": "History - Davis Cup",
+   "url": "https://www.daviscup.com/en/about/history",
+   "date": "2026-10-26",
+   "notes": "honour roll: USA 32, Australia 28, France and Great Britain 10; competition founded 1900 by Dwight Davis, first tie USA v British Isles"
+  },
+  "lta_guide": {
+   "type": "reference",
+   "publisher": "Lawn Tennis Association",
+   "title": "Davis Cup 2026: Beginner's guide",
+   "url": "https://www.lta.org.uk/fan-zone/gb-teams/davis-cup/news/2026/beginners-guide-to-the-tournament/",
+   "date": "2026-10-26",
+   "notes": "USA most titles 32 (last 2007), Australia 28, GB and France 10 each"
+  },
+  "tennisfame": {
+   "type": "reference",
+   "publisher": "International Tennis Hall of Fame",
+   "title": "Dwight Davis",
+   "url": "https://www.tennisfame.com/hall-of-famers/inductees/dwight-davis",
+   "date": "2026-10-26",
+   "notes": "1899 Davis, Ward, Whitman, Wright proposed the competition; Davis bought and donated the trophy; USA 3–0 British Isles at Longwood Cricket Club, Boston"
+  },
+  "wiki_davis": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Davis Cup",
+   "url": "https://en.wikipedia.org/wiki/Davis_Cup",
+   "date": "2026-10-26",
+   "notes": "first match USA v British Isles, Longwood Cricket Club, Boston, 1900; Davis captain; US won first 3 matches; titles USA 32, Australia 28, GB 10, France 10"
+  },
+  "wiki_1900": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "1900 International Lawn Tennis Challenge",
+   "url": "https://en.wikipedia.org/wiki/1900_International_Lawn_Tennis_Challenge",
+   "date": "2026-10-26",
+   "notes": "conceived 1899 by 4 Harvard players; Davis designed format and bought the sterling silver trophy from Shreve, Crump & Low; USA 3 British Isles 0, Longwood, 8–10 August 1900, grass"
+  },
+  "wiki_longwood": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Longwood Cricket Club",
+   "url": "https://en.wikipedia.org/wiki/Longwood_Cricket_Club",
+   "date": "2026-10-26",
+   "notes": "Davis, a Harvard student, arranged for a British team to visit Longwood in 1900; Americans won 3–0"
+  },
+  "hitc_first": {
+   "type": "press",
+   "publisher": "HITC",
+   "title": "What happened when the first-ever Davis Cup took place 125 years ago",
+   "url": "https://www.hitc.com/what-happened-when-the-first-ever-davis-cup-took-place-125-years-ago/",
+   "date": "2026-10-26",
+   "notes": "Longwood Cricket Club, Boston, 1900; US squad Davis, Ward, Whitman; British squad Black, Gore, Roper Barrett"
+  },
+  "tennis_com": {
+   "type": "press",
+   "publisher": "Tennis.com",
+   "title": "Meet the man for whom the Davis Cup is named",
+   "url": "https://www.tennis.com/pro-game/2016/12/meet-man-whom-davis-cup-named/62419/",
+   "date": "2026-10-26",
+   "notes": "British team sailed across the Atlantic; 1,200 spectators; Davis, Whitman, Ward won 3–0"
+  },
+  "ap_sportlight": {
+   "type": "press",
+   "publisher": "Associated Press",
+   "title": "Sportlight - The first Davis Cup is held",
+   "url": "https://apnews.com/article/sports-history-e93f4e3a81e5ea20d94c45126a171761",
+   "date": "2026-10-26",
+   "notes": "10 Aug 1900: first Davis Cup, United States beat Britain 3–0"
+  },
+  "loc_photo": {
+   "type": "primary",
+   "publisher": "Library of Congress",
+   "title": "Davis, Dwight F. (Harris & Ewing photograph)",
+   "url": "https://www.loc.gov/pictures/item/2016861164/",
+   "date": "2026-10-26",
+   "notes": "portrait of Dwight F. Davis, founder of the Davis Cup, no known restrictions"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The first Davis Cup tie was played 8–10 August 1900 at the Longwood Cricket Club in Boston, after 4 Harvard players proposed a challenge to Britain; the United States won 3–0 on grass.",
+   "sources": [
+    "itf_history",
+    "wiki_1900",
+    "wiki_longwood",
+    "tennisfame",
+    "ap_sportlight",
+    "hitc_first"
+   ],
+   "vo": [
+    "which city hosted the first davis cup in 1900",
+    "london, paris, or boston",
+    "boston. in august 1900, 4 harvard students challenged britain to a tennis match at the longwood cricket club",
+    "the british team crossed the atlantic by steamship, and lost all 3 matches on grass"
+   ],
+   "screen": [
+    "1900",
+    "Longwood Cricket Club · USA 3 – 0",
+    "Boston",
+    "London",
+    "Paris",
+    "Longwood",
+    "British Isles",
+    "Atlantic",
+    "Liverpool"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "detail",
+   "text": "Dwight F. Davis designed the format and bought the sterling silver trophy himself; the competition carries his name.",
+   "sources": [
+    "wiki_1900",
+    "tennisfame",
+    "wiki_davis",
+    "loc_photo"
+   ],
+   "vo": [
+    "dwight davis paid for the silver trophy out of his own pocket, and the cup still carries his name"
+   ],
+   "screen": [
+    "Dwight Davis",
+    "Dwight F. Davis, Harvard 1900"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "detail",
+   "text": "All-time Davis Cup titles: United States 32, Australia 28, Great Britain 10, France 10.",
+   "sources": [
+    "itf_history",
+    "lta_guide",
+    "wiki_davis"
+   ],
+   "vo": [
+    "the united states has won it 32 times, australia 28. nobody else has reached 11"
+   ],
+   "screen": [
+    "United States",
+    "32",
+    "Australia",
+    "28",
+    "Great Britain",
+    "10",
+    "France"
+   ]
+  }
+ ]
+}

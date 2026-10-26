@@ -1,0 +1,239 @@
+{
+ "version": 1,
+ "episode": "ep19-coldest-inhabited-oymyakon",
+ "topic": "Coldest permanently inhabited place: Oymyakon, Sakha Republic, Russia — −67.7 °C on 6 February 1933 (WMO-recognised northern-hemisphere record); ~500 residents; January mean about −46 °C; school closes below −52 °C (grades 1–5), older pupils below −56 °C; Vostok −89.2 °C is the planet's record (uninhabited station).",
+ "researched": "2026-10-26",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Canada or Greenland must be coldest because they are nearer the pole.",
+   "reality": "Oymyakon sits in a Siberian valley basin that traps draining cold air; the continental interior gets colder than coastal Arctic Canada or Greenland's inhabited coast.",
+   "sources": [
+    "loc_coldest",
+    "wiki_oymyakon"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Cold-town Shorts show the frozen-eyelashes clip and stop; none puts the village on a night map next to a freezer and an Antarctic station on one scale.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=coldest+place+on+earth+shorts",
+    "title": "Search: coldest place on earth shorts",
+    "angle": "eyelash/frost clips",
+    "misses": "no map, no comparison scale"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=oymyakon",
+    "title": "Search: oymyakon",
+    "angle": "vlogs",
+    "misses": "no quiz, long"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=polar+vortex+explained",
+    "title": "Search: polar vortex explained",
+    "angle": "US weather explainers",
+    "misses": "no geography payoff"
+   }
+  ]
+ },
+ "sources": {
+  "wmo_asia": {
+   "type": "primary",
+   "publisher": "World Meteorological Organization",
+   "title": "WMO Region II (Asia): Lowest Temperature",
+   "url": "https://wmo.int/asu-map?map=Temp_014",
+   "date": "2026-10-26",
+   "notes": "−67.7 °C at Oimyakon on 6 February 1933; coldest place in the Northern Hemisphere per Russian climatologists"
+  },
+  "guinness": {
+   "type": "reference",
+   "publisher": "Guinness World Records",
+   "title": "Lowest temperature - inhabited",
+   "url": "https://www.guinnessworldrecords.com/world-records/lowest-temperature-inhabited",
+   "date": "2026-10-26",
+   "notes": "−67.7 °C Oymyakon 6 Feb 1933; 2018 est. pop. 500; January daily mean −46.4 °C; coldest permanently inhabited place"
+  },
+  "loc_coldest": {
+   "type": "reference",
+   "publisher": "Library of Congress",
+   "title": "Extremities of the Earth: The Coldest Place on Earth",
+   "url": "https://blogs.loc.gov/maps/2026/05/extremities-of-the-earth-the-coldest-place-on-earth/",
+   "date": "2026-10-26",
+   "notes": "Oymyakon recognised as coldest permanently inhabited place; −67.7 °C 1933; under 600 live there today; valley geography traps cold"
+  },
+  "wiki_oymyakon": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Oymyakon",
+   "url": "https://en.wikipedia.org/wiki/Oymyakon",
+   "date": "2026-10-26",
+   "notes": "Sakha Republic, Russia; coldest permanently inhabited settlement; −67.7 °C 6 Feb 1933; Indigirka River; Kolyma Highway"
+  },
+  "bbc_school": {
+   "type": "press",
+   "publisher": "BBC",
+   "title": "Siberian pupils go to school as temperatures hit -50C",
+   "url": "https://www.bbc.com/news/blogs-news-from-elsewhere-42107986",
+   "date": "2026-10-26",
+   "notes": "school closed for grades 1–5 below −52 °C; −50 °C school day Nov 2017"
+  },
+  "sciam_school": {
+   "type": "press",
+   "publisher": "Scientific American",
+   "title": "Welcome to the Coldest Town on Earth",
+   "url": "https://www.scientificamerican.com/article/oymyakon-the-coldest-town/",
+   "date": "2026-10-26",
+   "notes": "town's only school closes only below −52 °C"
+  },
+  "mirror_school": {
+   "type": "press",
+   "publisher": "The Mirror",
+   "title": "Children brave 'the world's coldest school run'",
+   "url": "https://www.mirror.co.uk/news/world-news/children-brave-the-worlds-coldest-23146746",
+   "date": "2026-10-26",
+   "notes": "closed for pupils 11 and under at −52 °C or lower; older pupils until −56 °C"
+  },
+  "wmo_global": {
+   "type": "primary",
+   "publisher": "World Meteorological Organization",
+   "title": "World: Lowest Temperature",
+   "url": "https://wmo.int/asu-map?map=Temp_015",
+   "date": "2026-10-26",
+   "notes": "−89.2 °C Vostok, Antarctica, 21 July 1983"
+  },
+  "wiki_vostok": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Vostok Station",
+   "url": "https://en.wikipedia.org/wiki/Vostok_Station",
+   "date": "2026-10-26",
+   "notes": "−89.2 °C on 21 July 1983, lowest reliably measured natural temperature on Earth"
+  },
+  "fda_freezer": {
+   "type": "primary",
+   "publisher": "US Food and Drug Administration",
+   "title": "Are You Storing Food Safely?",
+   "url": "https://www.fda.gov/consumers/consumer-updates/are-you-storing-food-safely",
+   "date": "2026-10-26",
+   "notes": "freezer should be at 0 °F (−18 °C)"
+  },
+  "usda_freezer": {
+   "type": "primary",
+   "publisher": "USDA Food Safety and Inspection Service",
+   "title": "Freezing and Food Safety",
+   "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/freezing-and-food-safety",
+   "date": "2026-10-26",
+   "notes": "keep freezer at 0 °F (−18 °C)"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The coldest permanently inhabited place on Earth is Oymyakon in the Sakha Republic, Russia, where −67.7 °C was recorded on 6 February 1933.",
+   "sources": [
+    "wmo_asia",
+    "guinness",
+    "loc_coldest",
+    "wiki_oymyakon"
+   ],
+   "vo": [
+    "the coldest inhabited place on earth is in which country",
+    "canada, russia, or greenland",
+    "russia. the village of oymyakon, deep in siberia, hit minus 67.7 degrees in 1933"
+   ],
+   "screen": [
+    "−67.7 °C",
+    "Oymyakon · 6 Feb 1933",
+    "Russia",
+    "Canada",
+    "Greenland",
+    "Oymyakon",
+    "Pole of Cold",
+    "SIBERIA"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "detail",
+   "text": "About 500 people live in Oymyakon; the January daily mean is about −46 °C.",
+   "sources": [
+    "guinness",
+    "loc_coldest"
+   ],
+   "vo": [
+    "around 500 people live there, and a normal january averages minus 46"
+   ],
+   "screen": [
+    "January average",
+    "Yakutsk"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "detail",
+   "text": "A household freezer runs at −18 °C; the lowest temperature measured on Earth is −89.2 °C at Vostok Station, Antarctica (21 July 1983).",
+   "sources": [
+    "fda_freezer",
+    "usda_freezer",
+    "wmo_global",
+    "wiki_vostok"
+   ],
+   "vo": [
+    "your freezer sits at minus 18. only antarctica goes colder, minus 89 at vostok station"
+   ],
+   "screen": [
+    "Your freezer",
+    "−18 °C",
+    "Oymyakon record",
+    "−67.7 °C",
+    "Vostok, Antarctica",
+    "−89.2 °C"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Oymyakon's school stays open until −52 °C for the youngest pupils; older pupils attend until −56 °C.",
+   "sources": [
+    "bbc_school",
+    "sciam_school",
+    "mirror_school"
+   ],
+   "vo": [
+    "and school stays open until minus 52. older pupils keep going until minus 56"
+   ],
+   "screen": [
+    "SCHOOL OPEN",
+    "until −52 °C"
+   ]
+  }
+ ]
+}

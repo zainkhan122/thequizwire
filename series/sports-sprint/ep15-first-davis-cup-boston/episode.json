@@ -1,0 +1,148 @@
+{
+ "id": "ep15-first-davis-cup-boston",
+ "format": "quiz-v3",
+ "series": "sports-sprint",
+ "number": 15,
+ "title": "Which city hosted the FIRST Davis Cup in 1900?",
+ "difficulty": "HARD",
+ "seed": 4315,
+ "quiz": {
+  "question": "Which city hosted the FIRST Davis Cup in 1900?",
+  "keyword": "FIRST",
+  "options": [
+   "London",
+   "Paris",
+   "Boston"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Boston",
+  "answer_sub": "Longwood Cricket Club · August 1900",
+  "option_meta": [
+   {
+    "flag": "gb"
+   },
+   {
+    "flag": "fr"
+   },
+   {
+    "flag": "us"
+   }
+  ],
+  "banner": "Boston",
+  "banner_sub": "✓  C was right · Longwood Cricket Club · August 1900",
+  "outro": {
+   "headline": "CHALLENGE A FRIEND",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which city hosted the FIRST Davis Cup in 1900? 🎾",
+  "premise": "Tennis's World Cup began as a student dare",
+  "bait": "It started as a dare between students.",
+  "keywords": [
+   "davis cup",
+   "davis cup history",
+   "first davis cup",
+   "davis cup 2026",
+   "tennis quiz",
+   "tennis history",
+   "sports quiz",
+   "world cup of tennis",
+   "dwight davis",
+   "tennis trivia"
+  ],
+  "description": "Tennis's World Cup began as a student dare. It started as a dare between students.\n\nSources: International Tennis Federation (daviscup.com); International Tennis Hall of Fame; LTA; AP.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nSports Sprint #15",
+  "hashtags": [
+   "#SportsQuiz",
+   "#SportsTrivia",
+   "#thequizwire"
+  ],
+  "tags": [
+   "DavisCup",
+   "TennisHistory"
+  ],
+  "cover_emoji": "🎾",
+  "copy": {
+   "spoilers": [
+    "longwood",
+    "harvard",
+    "massachusetts",
+    "american",
+    "bostonian"
+   ],
+   "youtube": {
+    "title": "Davis Cup history: where was the FIRST Davis Cup played in 1900? 🎾",
+    "description": "Before the Davis Cup finals this November, one question: the whole thing started with 4 university students, a silver bowl one of them paid for himself, and a British team that crossed the Atlantic by ship.\nLondon, Paris or Boston — say your answer before the map lights up.\nSubscribe for a sports question a day that you can argue about.",
+    "tags": [
+     "#daviscup",
+     "#tennishistory",
+     "#sportsquiz",
+     "#tennis",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which city hosted the FIRST Davis Cup in 1900? 🎾\nA silver bowl, 4 students and a British team that arrived by steamship. London, Paris or Boston?\nLock in your answer before the reveal.",
+    "tags": [
+     "#daviscup",
+     "#tennis",
+     "#tennishistory",
+     "#sportsquiz",
+     "#sportstrivia"
+    ]
+   },
+   "facebook": {
+    "text": "The FIRST Davis Cup in 1900 was played in which city — London, Paris or Boston?\nIt began as a challenge between university students and a British team that came over by ship. Guess before the map answers.",
+    "tags": [
+     "#daviscup",
+     "#sportsquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which city hosted the FIRST Davis Cup in 1900?\nFour students, one silver bowl, a British team arriving by steamship. London, Paris or Boston?",
+    "tags": [
+     "#DavisCup"
+    ]
+   },
+   "threads": {
+    "text": "The FIRST Davis Cup in 1900 was played in which city — London, Paris or Boston? The world's biggest team event in tennis started as a dare between university students, with a trophy one of them bought himself. Pick a city before the map lights up.",
+    "tags": [
+     "#tennis"
+    ]
+   },
+   "not_spoilers": {
+    "4": "number of students who proposed the challenge — texture, not an answer",
+    "1900": "year in the question itself"
+   }
+  }
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "fill-pulse",
+  "beats": [
+   "pin",
+   "route",
+   "travel",
+   "bars",
+   "photo",
+   "rise"
+  ],
+  "cast": "flagball:happy + emoji-set:tennis",
+  "music": "bed:bright"
+ },
+ "status": "ready",
+ "review": {
+  "authored": "2026-10-26",
+  "note": "P5 system; local preflight green; owner asked for same-day scheduling"
+ }
+}

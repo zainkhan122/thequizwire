@@ -1,0 +1,881 @@
+{
+ "id": "ep19-coldest-inhabited-oymyakon",
+ "series": "geo-blitz",
+ "number": 19,
+ "seed": 4219,
+ "question": "The COLDEST inhabited place on Earth is in which country?",
+ "keyword": "COLDEST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Canada",
+   "flag": "ca",
+   "cue": "canada",
+   "lonlat": [
+    -100,
+    62
+   ]
+  },
+  {
+   "text": "Russia",
+   "flag": "ru",
+   "cue": "russia",
+   "lonlat": [
+    105,
+    62
+   ]
+  },
+  {
+   "text": "Greenland",
+   "flag": "gl",
+   "cue": "greenland",
+   "lonlat": [
+    -42,
+    72
+   ]
+  }
+ ],
+ "correct": 1,
+ "answer_sub": "Oymyakon · −67.7 °C",
+ "outro_headline": "1 FOR 1?",
+ "cover_emoji": "🥶",
+ "post": {
+  "premise": "A village where school only closes below −52 °C",
+  "keywords": [
+   "coldest place on earth",
+   "coldest inhabited place",
+   "coldest village in the world",
+   "polar vortex",
+   "siberia winter",
+   "oymyakon",
+   "geography quiz",
+   "world map quiz",
+   "extreme cold",
+   "coldest town"
+  ],
+  "tags": [
+   "ColdestPlace",
+   "PolarVortex"
+  ],
+  "copy": {
+   "spoilers": [
+    "oymyakon",
+    "siberia",
+    "sakha",
+    "yakutia",
+    "russian",
+    "67.7"
+   ],
+   "youtube": {
+    "title": "Coldest place on Earth where people live? 3 countries, 1 frozen village 🥶",
+    "description": "Polar vortex on the forecast? This village laughs at it: the school only closes when it drops below −52 °C, and the record low is colder than your freezer by 50 degrees.\nCanada, Russia or Greenland — lock in your answer before the night map lights up.\nSubscribe for one map question you can argue about every day.",
+    "tags": [
+     "#coldestplaceonearth",
+     "#polarvortex",
+     "#geographyquiz",
+     "#worldmap",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "The coldest inhabited place on Earth is in which country? 🥶\nThe kids there still walk to school at −50 °C. Your freezer sits at −18. Canada, Greenland or Russia — which one would you bet on?\nAnswer in the comments before the reveal.",
+    "tags": [
+     "#coldestplaceonearth",
+     "#geography",
+     "#mapquiz",
+     "#extremeweather",
+     "#polarvortex"
+    ]
+   },
+   "facebook": {
+    "text": "The coldest inhabited place on Earth is in which country — Canada, Russia or Greenland?\nSchool there only closes below −52 °C. Tell us your pick before the map answers.",
+    "tags": [
+     "#coldestplaceonearth",
+     "#geographyquiz"
+    ]
+   },
+   "twitter": {
+    "text": "The coldest inhabited place on Earth is in which country?\nSchool only closes below −52 °C. Your freezer is −18. Canada, Russia or Greenland?",
+    "tags": [
+     "#PolarVortex"
+    ]
+   },
+   "threads": {
+    "text": "The coldest inhabited place on Earth is in which country — Canada, Russia or Greenland? A whole village lives through winters where −50 °C is a normal school day and your freezer at −18 would feel mild. Guess before the night map lights up.",
+    "tags": [
+     "#coldestplaceonearth"
+    ]
+   },
+   "not_spoilers": {
+    "52": "the school-closing threshold — a texture fact, not the answer; the record (−67.7) and the place name stay out",
+    "18": "household freezer temperature used as the comparison",
+    "50": "rounded gap freezer-to-record, no place named"
+   }
+  },
+  "bait": "School there only closes below −52 °C.",
+  "sources_line": "WMO; Guinness World Records; Library of Congress; BBC"
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "fact-first",
+  "opener": "night-lights",
+  "reveal": "fill-pulse",
+  "beats": [
+   "pin",
+   "counter",
+   "bars",
+   "label"
+  ],
+  "cast": "flagball:cool + emoji-set:frost",
+  "music": "bed:deep",
+  "outro": "1 FOR 1?"
+ },
+ "intent": "A weather reporter standing in the dark: calm numbers that keep getting more absurd, one shiver per sentence.",
+ "voice": {
+  "v01_cues": {
+   "coldest": "coldest",
+   "country": "country"
+  },
+  "v04": {
+   "text": "Russia. The village of Oymyakon, deep in Siberia, hit minus 67.7 degrees in 1933.",
+   "cues": {
+    "answer": "russia",
+    "village": "village",
+    "siberia": "siberia",
+    "hit": "hit"
+   }
+  },
+  "v05": {
+   "text": "Around 500 people live there, and a normal January averages minus 46.",
+   "cues": {
+    "people": "people",
+    "january": "january"
+   }
+  },
+  "v06": {
+   "text": "Your freezer sits at minus 18. Only Antarctica goes colder, minus 89 at Vostok station.",
+   "cues": {
+    "freezer": "freezer",
+    "antarctica": "antarctica",
+    "vostok": "vostok"
+   }
+  },
+  "v07": {
+   "text": "And school stays open until minus 52. Older pupils keep going until minus 56.",
+   "cues": {
+    "school": "school",
+    "older": "older"
+   }
+  },
+  "v08": {
+   "text": "Pack a second coat. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "−67.7 °C",
+   "text": "Oymyakon · 6 Feb 1933"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "ru",
+   "face": "cool",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "ca",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "geo": {
+  "fit_bbox": [
+   40,
+   42,
+   180,
+   76
+  ],
+  "far_bbox": [
+   -60,
+   0,
+   200,
+   85
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "643"
+  ],
+  "highlight_note": "Russia (answer) — fill pulse on the reveal; the village is a pin, not a shape",
+  "labels": [
+   {
+    "id": "oym",
+    "lonlat": [
+     142.8,
+     67.5
+    ],
+    "text": "Pole of Cold",
+    "cls": "tag",
+    "in": "s04@village+0.4",
+    "out": "s06"
+   },
+   {
+    "id": "sib",
+    "lonlat": [
+     100,
+     70
+    ],
+    "text": "SIBERIA",
+    "cls": "tag",
+    "in": "s04@siberia",
+    "out": "s05"
+   }
+  ],
+  "pins": [
+   {
+    "id": "oymyakon",
+    "lonlat": [
+     142.78,
+     63.46
+    ],
+    "label": "Oymyakon",
+    "qid": "Q207389"
+   },
+   {
+    "id": "yakutsk",
+    "lonlat": [
+     129.73,
+     62.03
+    ],
+    "label": "Yakutsk",
+    "qid": "Q6625",
+    "side": "left"
+   }
+  ],
+  "scalebar": {
+   "km": 500,
+   "lonlat": [
+    60,
+    46
+   ]
+  },
+  "cams": {
+   "start": [
+    0.5,
+    [
+     100,
+     55
+    ]
+   ],
+   "s01": [
+    0.55,
+    [
+     104,
+     56
+    ]
+   ],
+   "s04": [
+    0.9,
+    [
+     120,
+     58
+    ]
+   ],
+   "s04b": [
+    0.95,
+    [
+     124,
+     58.5
+    ]
+   ],
+   "s05": [
+    1.9,
+    [
+     140,
+     61
+    ]
+   ],
+   "s05b": [
+    2.0,
+    [
+     141,
+     61.5
+    ]
+   ],
+   "s06": [
+    1.2,
+    [
+     128,
+     58
+    ]
+   ],
+   "s06b": [
+    1.25,
+    [
+     129,
+     58.5
+    ]
+   ],
+   "s07": [
+    1.5,
+    [
+     138,
+     60
+    ]
+   ],
+   "s07b": [
+    1.55,
+    [
+     139,
+     60.5
+    ]
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s04@village",
+    "pid": "oymyakon"
+   }
+  ]
+ },
+ "research": {
+  "topic": "Coldest permanently inhabited place: Oymyakon, Sakha Republic, Russia — −67.7 °C on 6 February 1933 (WMO-recognised northern-hemisphere record); ~500 residents; January mean about −46 °C; school closes below −52 °C (grades 1–5), older pupils below −56 °C; Vostok −89.2 °C is the planet's record (uninhabited station).",
+  "myths": [
+   {
+    "myth": "Canada or Greenland must be coldest because they are nearer the pole.",
+    "reality": "Oymyakon sits in a Siberian valley basin that traps draining cold air; the continental interior gets colder than coastal Arctic Canada or Greenland's inhabited coast.",
+    "sources": [
+     "loc_coldest",
+     "wiki_oymyakon"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Cold-town Shorts show the frozen-eyelashes clip and stop; none puts the village on a night map next to a freezer and an Antarctic station on one scale.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=coldest+place+on+earth+shorts",
+     "title": "Search: coldest place on earth shorts",
+     "angle": "eyelash/frost clips",
+     "misses": "no map, no comparison scale"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=oymyakon",
+     "title": "Search: oymyakon",
+     "angle": "vlogs",
+     "misses": "no quiz, long"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=polar+vortex+explained",
+     "title": "Search: polar vortex explained",
+     "angle": "US weather explainers",
+     "misses": "no geography payoff"
+    }
+   ]
+  },
+  "sources": {
+   "wmo_asia": {
+    "type": "primary",
+    "publisher": "World Meteorological Organization",
+    "title": "WMO Region II (Asia): Lowest Temperature",
+    "url": "https://wmo.int/asu-map?map=Temp_014",
+    "date": "2026-10-26",
+    "notes": "−67.7 °C at Oimyakon on 6 February 1933; coldest place in the Northern Hemisphere per Russian climatologists"
+   },
+   "guinness": {
+    "type": "reference",
+    "publisher": "Guinness World Records",
+    "title": "Lowest temperature - inhabited",
+    "url": "https://www.guinnessworldrecords.com/world-records/lowest-temperature-inhabited",
+    "date": "2026-10-26",
+    "notes": "−67.7 °C Oymyakon 6 Feb 1933; 2018 est. pop. 500; January daily mean −46.4 °C; coldest permanently inhabited place"
+   },
+   "loc_coldest": {
+    "type": "reference",
+    "publisher": "Library of Congress",
+    "title": "Extremities of the Earth: The Coldest Place on Earth",
+    "url": "https://blogs.loc.gov/maps/2026/05/extremities-of-the-earth-the-coldest-place-on-earth/",
+    "date": "2026-10-26",
+    "notes": "Oymyakon recognised as coldest permanently inhabited place; −67.7 °C 1933; under 600 live there today; valley geography traps cold"
+   },
+   "wiki_oymyakon": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Oymyakon",
+    "url": "https://en.wikipedia.org/wiki/Oymyakon",
+    "date": "2026-10-26",
+    "notes": "Sakha Republic, Russia; coldest permanently inhabited settlement; −67.7 °C 6 Feb 1933; Indigirka River; Kolyma Highway"
+   },
+   "bbc_school": {
+    "type": "press",
+    "publisher": "BBC",
+    "title": "Siberian pupils go to school as temperatures hit -50C",
+    "url": "https://www.bbc.com/news/blogs-news-from-elsewhere-42107986",
+    "date": "2026-10-26",
+    "notes": "school closed for grades 1–5 below −52 °C; −50 °C school day Nov 2017"
+   },
+   "sciam_school": {
+    "type": "press",
+    "publisher": "Scientific American",
+    "title": "Welcome to the Coldest Town on Earth",
+    "url": "https://www.scientificamerican.com/article/oymyakon-the-coldest-town/",
+    "date": "2026-10-26",
+    "notes": "town's only school closes only below −52 °C"
+   },
+   "mirror_school": {
+    "type": "press",
+    "publisher": "The Mirror",
+    "title": "Children brave 'the world's coldest school run'",
+    "url": "https://www.mirror.co.uk/news/world-news/children-brave-the-worlds-coldest-23146746",
+    "date": "2026-10-26",
+    "notes": "closed for pupils 11 and under at −52 °C or lower; older pupils until −56 °C"
+   },
+   "wmo_global": {
+    "type": "primary",
+    "publisher": "World Meteorological Organization",
+    "title": "World: Lowest Temperature",
+    "url": "https://wmo.int/asu-map?map=Temp_015",
+    "date": "2026-10-26",
+    "notes": "−89.2 °C Vostok, Antarctica, 21 July 1983"
+   },
+   "wiki_vostok": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Vostok Station",
+    "url": "https://en.wikipedia.org/wiki/Vostok_Station",
+    "date": "2026-10-26",
+    "notes": "−89.2 °C on 21 July 1983, lowest reliably measured natural temperature on Earth"
+   },
+   "fda_freezer": {
+    "type": "primary",
+    "publisher": "US Food and Drug Administration",
+    "title": "Are You Storing Food Safely?",
+    "url": "https://www.fda.gov/consumers/consumer-updates/are-you-storing-food-safely",
+    "date": "2026-10-26",
+    "notes": "freezer should be at 0 °F (−18 °C)"
+   },
+   "usda_freezer": {
+    "type": "primary",
+    "publisher": "USDA Food Safety and Inspection Service",
+    "title": "Freezing and Food Safety",
+    "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/freezing-and-food-safety",
+    "date": "2026-10-26",
+    "notes": "keep freezer at 0 °F (−18 °C)"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The coldest permanently inhabited place on Earth is Oymyakon in the Sakha Republic, Russia, where −67.7 °C was recorded on 6 February 1933.",
+    "sources": [
+     "wmo_asia",
+     "guinness",
+     "loc_coldest",
+     "wiki_oymyakon"
+    ],
+    "vo": [
+     "the coldest inhabited place on earth is in which country",
+     "canada, russia, or greenland",
+     "russia. the village of oymyakon, deep in siberia, hit minus 67.7 degrees in 1933"
+    ],
+    "screen": [
+     "−67.7 °C",
+     "Oymyakon · 6 Feb 1933",
+     "Russia",
+     "Canada",
+     "Greenland",
+     "Oymyakon",
+     "Pole of Cold",
+     "SIBERIA"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "detail",
+    "text": "About 500 people live in Oymyakon; the January daily mean is about −46 °C.",
+    "sources": [
+     "guinness",
+     "loc_coldest"
+    ],
+    "vo": [
+     "around 500 people live there, and a normal january averages minus 46"
+    ],
+    "screen": [
+     "January average",
+     "Yakutsk"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "detail",
+    "text": "A household freezer runs at −18 °C; the lowest temperature measured on Earth is −89.2 °C at Vostok Station, Antarctica (21 July 1983).",
+    "sources": [
+     "fda_freezer",
+     "usda_freezer",
+     "wmo_global",
+     "wiki_vostok"
+    ],
+    "vo": [
+     "your freezer sits at minus 18. only antarctica goes colder, minus 89 at vostok station"
+    ],
+    "screen": [
+     "Your freezer",
+     "−18 °C",
+     "Oymyakon record",
+     "−67.7 °C",
+     "Vostok, Antarctica",
+     "−89.2 °C"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Oymyakon's school stays open until −52 °C for the youngest pupils; older pupils attend until −56 °C.",
+    "sources": [
+     "bbc_school",
+     "sciam_school",
+     "mirror_school"
+    ],
+    "vo": [
+     "and school stays open until minus 52. older pupils keep going until minus 56"
+    ],
+    "screen": [
+     "SCHOOL OPEN",
+     "until −52 °C"
+    ]
+   }
+  ]
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Around 500 people live there, and a normal January averages minus 46.",
+    "cues": {
+     "people": "people",
+     "january": "january"
+    }
+   },
+   "direction": "tight on the village: the Oymyakon pin is already there, Yakutsk pins to the west as the nearest city, a cold-face sticker pops on 'people', then the January counter falls 0 → −46 while the frost sticker lands",
+   "energy": 3,
+   "tone": "neutral",
+   "cam": [
+    1.9,
+    [
+     140,
+     61
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    2.0,
+    [
+     141,
+     61.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "jan",
+     "type": "counter",
+     "start": 0,
+     "end": -46,
+     "y": 330,
+     "label": "January average",
+     "fmt": "raw",
+     "size": 190,
+     "suffix": " °C"
+    }
+   ],
+   "devices": [
+    {
+     "at": "@+0.3",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "yakutsk"
+     }
+    },
+    {
+     "at": "@@people",
+     "do": "sticker_in",
+     "id": "st_cold"
+    },
+    {
+     "at": "@@january-0.2",
+     "do": "chart.counter_run",
+     "id": "jan",
+     "until": "@.end-0.7",
+     "args": {
+      "ease": "power2.out"
+     }
+    },
+    {
+     "at": "@@january+0.4",
+     "do": "sticker_in",
+     "id": "st_frost"
+    },
+    {
+     "at": "@.end-0.6",
+     "do": "hide",
+     "id": "jan",
+     "args": {
+      "dur": 0.25
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_cold"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_frost"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Your freezer sits at minus 18. Only Antarctica goes colder, minus 89 at Vostok station.",
+    "cues": {
+     "freezer": "freezer",
+     "antarctica": "antarctica",
+     "vostok": "vostok"
+    }
+   },
+   "direction": "the scale: a 3-row bar chart grows over the dark Siberian interior — freezer, Oymyakon, Vostok — the ice-cube sticker pops on 'freezer', Russia pulses on 'colder', the penguin lands on 'vostok'",
+   "energy": 4,
+   "tone": "resolute",
+   "cam": [
+    1.2,
+    [
+     128,
+     58
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.25,
+    [
+     129,
+     58.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "scale",
+     "type": "bars",
+     "rows": [
+      [
+       "Your freezer",
+       18,
+       "−18 °C"
+      ],
+      [
+       "Oymyakon record",
+       67.7,
+       "−67.7 °C"
+      ],
+      [
+       "Vostok, Antarctica",
+       89.2,
+       "−89.2 °C"
+      ]
+     ],
+     "y": 300,
+     "x": 70,
+     "w": 660,
+     "unit": "",
+     "max_value": 90,
+     "bar_h": 74,
+     "gap": 20
+    }
+   ],
+   "devices": [
+    {
+     "at": "@+0.2",
+     "do": "chart.bars_in",
+     "id": "scale",
+     "args": {
+      "dur": 0.8,
+      "stagger": 0.35
+     }
+    },
+    {
+     "at": "@@freezer",
+     "do": "sticker_in",
+     "id": "st_ice"
+    },
+    {
+     "at": "@@antarctica",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "643",
+      "layer": "hl",
+      "dur": 0.8
+     }
+    },
+    {
+     "at": "@@vostok",
+     "do": "sticker_in",
+     "id": "st_peng"
+    },
+    {
+     "at": "@@vostok+0.3",
+     "do": "sticker_pulse",
+     "id": "st_ice"
+    },
+    {
+     "at": "@.end-0.6",
+     "do": "hide",
+     "id": "scale",
+     "args": {
+      "dur": 0.3
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_ice"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_peng"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "And school stays open until minus 52. Older pupils keep going until minus 56.",
+    "cues": {
+     "school": "school",
+     "older": "older"
+    }
+   },
+   "direction": "back to the village: the SCHOOL OPEN card slams in on 'school', the school sticker pops, the Oymyakon pin pulses, the cool Russia flag-ball reacts on 'older'",
+   "energy": 4,
+   "tone": "revelatory",
+   "cam": [
+    1.5,
+    [
+     138,
+     60
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.55,
+    [
+     139,
+     60.5
+    ]
+   ],
+   "pulse": false,
+   "card": {
+    "kicker": "SCHOOL OPEN",
+    "text": "until −52 °C"
+   },
+   "card_at": 0.3,
+   "devices": [
+    {
+     "at": "@@school+0.3",
+     "do": "sticker_in",
+     "id": "st_school"
+    },
+    {
+     "at": "@@school+0.6",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "oymyakon"
+     }
+    },
+    {
+     "at": "@@older",
+     "do": "character_in",
+     "id": "brr"
+    },
+    {
+     "at": "@@older+0.4",
+     "do": "sticker_pulse",
+     "id": "st_school"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_school"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "brr"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_cold",
+   "type": "sticker",
+   "emoji": "1f976",
+   "x": 800,
+   "y": 600,
+   "size": 170,
+   "rot": -8
+  },
+  {
+   "id": "st_frost",
+   "type": "sticker",
+   "emoji": "2744",
+   "x": 830,
+   "y": 780,
+   "size": 150,
+   "rot": 10
+  },
+  {
+   "id": "st_ice",
+   "type": "sticker",
+   "emoji": "1f9ca",
+   "x": 850,
+   "y": 700,
+   "size": 150,
+   "rot": -10
+  },
+  {
+   "id": "st_peng",
+   "type": "sticker",
+   "emoji": "1f427",
+   "x": 830,
+   "y": 880,
+   "size": 160,
+   "rot": 6
+  },
+  {
+   "id": "st_school",
+   "type": "sticker",
+   "emoji": "1f3eb",
+   "x": 800,
+   "y": 620,
+   "size": 170,
+   "rot": -6
+  },
+  {
+   "id": "brr",
+   "type": "character",
+   "flag": "ru",
+   "face": "cool",
+   "x": 820,
+   "y": 1180,
+   "size": 220,
+   "rot": 6
+  }
+ ]
+}
