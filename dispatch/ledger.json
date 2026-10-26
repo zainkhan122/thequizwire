@@ -1734,6 +1734,71 @@
    "recorded_at": "2026-10-24T13:00:47+00:00",
    "title": null,
    "account": "BUFFER_API_KEY"
+  },
+  {
+   "episode": "ep12-polar-bears-penguins",
+   "platform": "youtube",
+   "post_id": "6adf76db79dbb5e6f42247db",
+   "channel_id": "6a72ff4f99afb44349064208",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/6ccf8e9079d1/Polar-bears-and-penguins-have-NEVER-met-in-the-wild-True-or-false.mp4",
+   "due_at": "2026-10-26T23:00:00.000Z",
+   "created_at": "2026-10-26T15:50:51.124Z",
+   "recorded_at": "2026-10-26T15:50:51+00:00",
+   "title": "Do polar bears eat penguins? True or false: they have NEVER met in the wild 🐧",
+   "account": "BUFFER_API_KEY"
+  },
+  {
+   "episode": "ep12-polar-bears-penguins",
+   "platform": "instagram",
+   "post_id": "6adf76dbfbcc83d9686add13",
+   "channel_id": "695bfd29457dae6a34df0f74",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/6ccf8e9079d1/Polar-bears-and-penguins-have-NEVER-met-in-the-wild-True-or-false.mp4",
+   "due_at": "2026-10-26T23:00:00.000Z",
+   "created_at": "2026-10-26T15:50:51.632Z",
+   "recorded_at": "2026-10-26T15:50:51+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY_2"
+  },
+  {
+   "episode": "ep12-polar-bears-penguins",
+   "platform": "facebook",
+   "post_id": "6adf76dd193f91a89cffe32c",
+   "channel_id": "695a159a457dae6a34d901bc",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/6ccf8e9079d1/Polar-bears-and-penguins-have-NEVER-met-in-the-wild-True-or-false.mp4",
+   "due_at": "2026-10-26T23:00:00.000Z",
+   "created_at": "2026-10-26T15:50:53.609Z",
+   "recorded_at": "2026-10-26T15:50:53+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY_2"
+  },
+  {
+   "episode": "ep12-polar-bears-penguins",
+   "platform": "twitter",
+   "post_id": "6adf76dffbcc83d9686ade10",
+   "channel_id": "69f30e2a5c4c051afaf58634",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/6ccf8e9079d1/Polar-bears-and-penguins-have-NEVER-met-in-the-wild-True-or-false.mp4",
+   "due_at": "2026-10-26T21:00:00.000Z",
+   "created_at": "2026-10-26T15:50:55.743Z",
+   "recorded_at": "2026-10-26T15:50:55+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY_2"
+  },
+  {
+   "episode": "ep12-polar-bears-penguins",
+   "platform": "threads",
+   "post_id": "6adf76e0fbcc83d9686ade45",
+   "channel_id": "6a6dd3b24b2d03035f7e82e8",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/6ccf8e9079d1/Polar-bears-and-penguins-have-NEVER-met-in-the-wild-True-or-false.mp4",
+   "due_at": "2026-10-26T23:00:00.000Z",
+   "created_at": "2026-10-26T15:50:56.313Z",
+   "recorded_at": "2026-10-26T15:50:56+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY"
   }
  ]
 }
