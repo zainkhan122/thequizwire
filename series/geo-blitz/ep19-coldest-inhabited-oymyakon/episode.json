@@ -140,9 +140,5 @@
   "cast": "flagball:cool + emoji-set:frost",
   "music": "bed:deep"
  },
- "status": "ready",
- "review": {
-  "authored": "2026-10-26",
-  "note": "P5 system; local preflight green; owner asked for same-day scheduling"
- }
+ "status": "ready"
 }

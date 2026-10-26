@@ -63,12 +63,12 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "Russia. The village of Oymyakon, deep in Siberia, hit minus 67.7 degrees in 1933.",
+   "text": "Russia. A tiny village deep in Siberia dropped below minus 67 degrees in 1933.",
    "cues": {
     "answer": "russia",
     "village": "village",
     "siberia": "siberia",
-    "hit": "hit"
+    "hit": "dropped"
    },
    "climax": true
   },

@@ -137,12 +137,12 @@
    "country": "country"
   },
   "v04": {
-   "text": "Russia. The village of Oymyakon, deep in Siberia, hit minus 67.7 degrees in 1933.",
+   "text": "Russia. A tiny village deep in Siberia dropped below minus 67 degrees in 1933.",
    "cues": {
     "answer": "russia",
     "village": "village",
     "siberia": "siberia",
-    "hit": "hit"
+    "hit": "dropped"
    }
   },
   "v05": {
@@ -480,7 +480,7 @@
     "vo": [
      "the coldest inhabited place on earth is in which country",
      "canada, russia, or greenland",
-     "russia. the village of oymyakon, deep in siberia, hit minus 67.7 degrees in 1933"
+     "russia. a tiny village deep in siberia dropped below minus 67 degrees in 1933"
     ],
     "screen": [
      "−67.7 °C",

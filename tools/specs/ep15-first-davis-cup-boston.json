@@ -329,13 +329,7 @@
     "side": "left"
    }
   ],
-  "scalebar": {
-   "km": 1000,
-   "lonlat": [
-    -95,
-    28
-   ]
-  },
+  "scalebar": null,
   "cams": {
    "start": [
     0.5,
