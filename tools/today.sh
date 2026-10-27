@@ -50,6 +50,7 @@ ship)
     bash reelkit/episode.sh "$e" preflight 2>&1 | grep -E "FAIL  |Traceback" | grep -v "FAIL 0" && { echo "preflight FAIL: $e"; exit 1; } || true
   done
   python3 tools/repo_guard.py >/dev/null && python3 tests/selftest.py --quick >/dev/null
+  git checkout -- dispatch/stats.json dispatch/stats_summary.json dispatch/stats.md config/publishing.json 2>/dev/null || true   # CI owns the stats files (publish-sync commits them); local snapshots only inform the agent
   git add -A; git diff --cached --quiet || git commit -qm "daily $DAY: authored episodes"; push
   PICK="$(python3 tools/daily_pick.py)"; git add dispatch/daily.json; git diff --cached --quiet || git commit -qm "daily: plan $DAY [skip ci]"; push
   echo "== plan $DAY: $PICK"
