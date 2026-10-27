@@ -202,9 +202,12 @@ def main():
             sc, metric = score_of(m); n_b += 1
             store["snapshots"].append({"t": t, "post_id": p["post_id"], "platform": p["platform"], "score": sc, "metric": metric, "source": "buffer",
                                        **{k: m.get(k) for k in ("views", "impressions", "reach", "reactions", "comments", "shares", "reposts", "saves") if m.get(k) is not None}})
-        missing_yt = [p for p in posts if p["platform"] == "youtube" and p["video_id"] and p["post_id"] not in got]
+        # Buffer refreshes YouTube counters with a lag; a fresh post reads 0 there for hours → the public page fills the gap
+        missing_yt = [p for p in posts if p["platform"] == "youtube" and p["video_id"] and (p["post_id"] not in got or score_of(got[p["post_id"]])[0] == 0)]
         pages = fetch_youtube_pages(missing_yt)
         for p in missing_yt:
+            if p["post_id"] in pages and p["post_id"] in got:                       # replace the 0 Buffer reading just appended
+                store["snapshots"] = [sn for sn in store["snapshots"] if not (sn["t"] == t and sn["post_id"] == p["post_id"])]
             if p["post_id"] in pages: store["snapshots"].append({"t": t, "post_id": p["post_id"], "platform": "youtube", "score": pages[p["post_id"]]["views"], "metric": "views", "source": "youtube-page"})
         STORE.write_text(json.dumps(store, indent=0) + "\n")
         print(f"stats: {n_b} posts from Buffer Insights, {len(pages)}/{len(missing_yt)} YouTube page fallbacks, of {len(posts)} sent posts", file=sys.stderr)
