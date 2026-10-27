@@ -1202,7 +1202,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-27T05:22:52+00:00",
+   "refreshed_at": "2026-10-27T15:25:13+00:00",
    "error": "An unknown error has occurred. Please retry the post again, and get in touch if this persists."
   },
   {
@@ -1859,23 +1859,23 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-27T05:22:54+00:00"
+   "refreshed_at": "2026-10-27T15:25:15+00:00"
   },
   {
    "episode": "ep15-first-davis-cup-boston",
    "platform": "instagram",
    "post_id": "6adf86280f72382ba977f0cc",
    "channel_id": "695bfd29457dae6a34df0f74",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/1c3bf90be731/Which-city-hosted-the-very-FIRST-Davis-Cup.mp4",
    "due_at": "2026-10-27T15:00:00.000Z",
    "created_at": "2026-10-26T16:56:08.509Z",
    "recorded_at": "2026-10-26T16:56:08+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-27T05:22:54+00:00"
+   "sent_at": "2026-10-27T15:04:47.135Z",
+   "external_link": "https://www.instagram.com/reel/DfAIq6kGwEa/",
+   "refreshed_at": "2026-10-27T15:25:15+00:00"
   },
   {
    "episode": "ep15-first-davis-cup-boston",
@@ -1891,39 +1891,39 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-27T05:22:56+00:00"
+   "refreshed_at": "2026-10-27T15:25:17+00:00"
   },
   {
    "episode": "ep15-first-davis-cup-boston",
    "platform": "twitter",
    "post_id": "6adf862cfd915805681e49a3",
    "channel_id": "69f30e2a5c4c051afaf58634",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/1c3bf90be731/Which-city-hosted-the-very-FIRST-Davis-Cup.mp4",
    "due_at": "2026-10-27T13:00:00.000Z",
    "created_at": "2026-10-26T16:56:12.541Z",
    "recorded_at": "2026-10-26T16:56:12+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-27T05:22:58+00:00"
+   "sent_at": "2026-10-27T13:02:34.112Z",
+   "external_link": "https://x.com/2049746939164676096/status/2115066624084504695",
+   "refreshed_at": "2026-10-27T15:25:19+00:00"
   },
   {
    "episode": "ep15-first-davis-cup-boston",
    "platform": "threads",
    "post_id": "6adf862c79c317817cfe2662",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/1c3bf90be731/Which-city-hosted-the-very-FIRST-Davis-Cup.mp4",
    "due_at": "2026-10-27T14:00:00.000Z",
    "created_at": "2026-10-26T16:56:12.934Z",
    "recorded_at": "2026-10-26T16:56:13+00:00",
    "title": null,
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-27T05:22:58+00:00"
+   "sent_at": "2026-10-27T14:03:25.937Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfABs-ilJoV",
+   "refreshed_at": "2026-10-27T15:25:19+00:00"
   },
   {
    "episode": "ep19-coldest-inhabited-oymyakon",
@@ -1939,7 +1939,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-27T05:23:00+00:00"
+   "refreshed_at": "2026-10-27T15:25:21+00:00"
   },
   {
    "episode": "ep19-coldest-inhabited-oymyakon",
@@ -1955,7 +1955,7 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-27T05:23:00+00:00"
+   "refreshed_at": "2026-10-27T15:25:21+00:00"
   },
   {
    "episode": "ep19-coldest-inhabited-oymyakon",
@@ -1971,7 +1971,7 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-27T05:23:02+00:00"
+   "refreshed_at": "2026-10-27T15:25:23+00:00"
   },
   {
    "episode": "ep19-coldest-inhabited-oymyakon",
@@ -1987,7 +1987,7 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-27T05:23:04+00:00"
+   "refreshed_at": "2026-10-27T15:25:25+00:00"
   },
   {
    "episode": "ep19-coldest-inhabited-oymyakon",
@@ -2003,7 +2003,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-27T05:23:04+00:00"
+   "refreshed_at": "2026-10-27T15:25:25+00:00"
   },
   {
    "episode": "ep06-most-stroke-deaths-china",
@@ -2016,7 +2016,10 @@
    "created_at": "2026-10-27T05:43:58.978Z",
    "recorded_at": "2026-10-27T05:43:59+00:00",
    "title": "Which country has the most stroke deaths? World Stroke Day quiz 🧠",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-27T15:25:27+00:00"
   },
   {
    "episode": "ep06-most-stroke-deaths-china",
@@ -2029,7 +2032,10 @@
    "created_at": "2026-10-27T05:43:59.378Z",
    "recorded_at": "2026-10-27T05:43:59+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-27T15:25:27+00:00"
   },
   {
    "episode": "ep06-most-stroke-deaths-china",
@@ -2042,7 +2048,10 @@
    "created_at": "2026-10-27T05:44:01.384Z",
    "recorded_at": "2026-10-27T05:44:01+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-27T15:25:29+00:00"
   },
   {
    "episode": "ep06-most-stroke-deaths-china",
@@ -2055,7 +2064,10 @@
    "created_at": "2026-10-27T05:44:03.394Z",
    "recorded_at": "2026-10-27T05:44:03+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-27T15:25:31+00:00"
   },
   {
    "episode": "ep06-most-stroke-deaths-china",
@@ -2068,7 +2080,10 @@
    "created_at": "2026-10-27T05:44:03.787Z",
    "recorded_at": "2026-10-27T05:44:03+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-27T15:25:31+00:00"
   }
  ]
 }

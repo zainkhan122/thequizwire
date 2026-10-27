@@ -1,45 +1,46 @@
-# Channel stats — 2026-10-27T05:23Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
+# Channel stats — 2026-10-27T15:25Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
 
 ## Per series, all channels (7-day movement — what is trending for us)
 - geo-blitz: 17 posts · +2882 in 7 d · 8657 total
-- sports-sprint: 12 posts · +2675 in 7 d · 6147 total
-- wild-files: 12 posts · +1789 in 7 d · 5057 total
+- sports-sprint: 13 posts · +2675 in 7 d · 6147 total
+- wild-files: 12 posts · +2222 in 7 d · 5490 total
 - body-brain: 4 posts · +1049 in 7 d · 2247 total
 
 ## youtube — 23 posts · metric views · buffer insights · 23/23 sent posts with metrics
 last 24 h:
-- ep12-polar-bears-penguins (wild-files): +0 · 0 total
+- ep12-polar-bears-penguins (wild-files): +433 · 433 total
 - ep14-most-time-zones-france (geo-blitz): +? · 1255 total
 - ep10-grand-slam-on-grass-wimbledon (sports-sprint): +? · 1219 total
 - ep15-no-rivers-saudi-arabia (geo-blitz): +? · 1212 total
 - ep04-tallest-men-netherlands (body-brain): +? · 1197 total
-series (7 d): geo-blitz +2868 (9) · sports-sprint +2658 (6) · wild-files +1778 (6) · body-brain +1045 (2)
+series (7 d): geo-blitz +2868 (9) · sports-sprint +2658 (6) · wild-files +2211 (6) · body-brain +1045 (2)
 hours (first-24 h by publish hour): none yet
 → slots: not enough first-24 h data (0/8) — researched defaults in use
 
-## instagram — 0 posts · metric — · buffer insights · 0/23 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
+## instagram — 0 posts · metric — · buffer insights · 0/24 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
 
 ## facebook — 0 posts · metric — · buffer insights · 0/23 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
 
-## threads — 22 posts · metric views · buffer insights · 22/22 sent posts with metrics
+## threads — 23 posts · metric views · buffer insights · 23/23 sent posts with metrics
 last 24 h:
 - ep12-polar-bears-penguins (wild-files): +0 · 0 total
+- ep15-first-davis-cup-boston (sports-sprint): +0 · 0 total
 - ep13-southern-alps-new-zealand (geo-blitz): +? · 15 total
 - ep18-newest-un-member (geo-blitz): +? · 11 total
 - ep14-cricket-world-cup-wins (sports-sprint): +? · 11 total
-- ep10-komodo-dragons-indonesia (wild-files): +? · 7 total
-series (7 d): sports-sprint +17 (6) · geo-blitz +14 (8) · wild-files +11 (6) · body-brain +4 (2)
+series (7 d): sports-sprint +17 (7) · geo-blitz +14 (8) · wild-files +11 (6) · body-brain +4 (2)
 hours (first-24 h by publish hour): none yet
 → slots: not enough first-24 h data (0/8) — researched defaults in use
 
-## twitter — 0 posts · metric — · buffer insights · 0/23 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
+## twitter — 0 posts · metric — · buffer insights · 0/24 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
 
 ## Every post
 
 | episode | channel | sent (local) | metric | total | 24 h | 7 d | first 24 h | reactions | comments |
 |---|---|---|---|---|---|---|---|---|---|
+| ep15-first-davis-cup-boston | threads | Tue 10:00 | views | 0 | 0 | 0 | None | 0 | 0 |
 | ep12-polar-bears-penguins | threads | Mon 19:00 | views | 0 | 0 | 0 | None | 0 | 0 |
-| ep12-polar-bears-penguins | youtube | Mon 19:00 | views | 0 | 0 | 0 | None | 0 | 0 |
+| ep12-polar-bears-penguins | youtube | Mon 19:00 | views | 433 | 433 | 433 | None | None | None |
 | ep05-first-heart-transplant | threads | Sun 10:00 | views | 4 | None | 4 | None | 0 | 0 |
 | ep14-cricket-world-cup-wins | threads | Sat 19:00 | views | 11 | None | 11 | None | 0 | 0 |
 | ep05-first-heart-transplant | youtube | Sat 19:00 | views | 1045 | None | 1045 | None | 85 | 0 |
