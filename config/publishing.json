@@ -90,6 +90,13 @@
      "10:00",
      "19:00"
     ]
+   },
+   "times_source": {
+    "youtube": "researched defaults (no per-channel counters yet)",
+    "instagram": "researched defaults (no per-channel counters yet)",
+    "facebook": "researched defaults (no per-channel counters yet)",
+    "twitter": "researched defaults (no per-channel counters yet)",
+    "threads": "researched defaults (no per-channel counters yet)"
    }
   }
  },
