@@ -1,34 +1,35 @@
-# Channel stats — 2026-10-27T05:12Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
+# Channel stats — 2026-10-27T05:15Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
 
 ## Per series, all channels (7-day movement — what is trending for us)
 - geo-blitz: 9 posts · +2870 in 7 d · 8617 total
 - sports-sprint: 6 posts · +2661 in 7 d · 6132 total
-- wild-files: 5 posts · +1778 in 7 d · 5043 total
+- wild-files: 6 posts · +1880 in 7 d · 5145 total
 - body-brain: 2 posts · +1049 in 7 d · 2246 total
 
-## youtube — 22 posts · metric views · secret BUFFER_API_KEY not set here
+## youtube — 23 posts · metric views · buffer insights · 0 posts with metrics
 last 24 h:
+- ep12-polar-bears-penguins (wild-files): +102 · 102 total
 - ep14-most-time-zones-france (geo-blitz): +? · 1255 total
 - ep10-grand-slam-on-grass-wimbledon (sports-sprint): +? · 1219 total
 - ep15-no-rivers-saudi-arabia (geo-blitz): +? · 1212 total
 - ep04-tallest-men-netherlands (body-brain): +? · 1197 total
-- ep09-basketball-invented-springfield (sports-sprint): +? · 1184 total
-series (7 d): geo-blitz +2870 (9) · sports-sprint +2661 (6) · wild-files +1778 (5) · body-brain +1049 (2)
+series (7 d): geo-blitz +2870 (9) · sports-sprint +2661 (6) · wild-files +1880 (6) · body-brain +1049 (2)
 hours (first-24 h by publish hour): none yet
 → slots: not enough first-24 h data (0/8) — researched defaults in use
 
-## instagram — 0 posts · metric — · secret BUFFER_API_KEY_2 not set here
+## instagram — 0 posts · metric — · buffer insights · 0 posts with metrics
 
-## facebook — 0 posts · metric — · secret BUFFER_API_KEY_2 not set here
+## facebook — 0 posts · metric — · buffer insights · 0 posts with metrics
 
-## threads — 0 posts · metric — · secret BUFFER_API_KEY not set here
+## threads — 0 posts · metric — · buffer insights · 0 posts with metrics
 
-## twitter — 0 posts · metric — · secret BUFFER_API_KEY_2 not set here
+## twitter — 0 posts · metric — · buffer insights · 0 posts with metrics
 
 ## Every post
 
 | episode | channel | sent (local) | metric | total | 24 h | 7 d | first 24 h | reactions | comments |
 |---|---|---|---|---|---|---|---|---|---|
+| ep12-polar-bears-penguins | youtube | Mon 19:00 | views | 102 | 102 | 102 | None | None | None |
 | ep05-first-heart-transplant | youtube | Sat 19:00 | views | 1049 | None | 1049 | None | None | None |
 | ep14-cricket-world-cup-wins | youtube | Sat 12:00 | views | 667 | None | 667 | None | None | None |
 | ep18-newest-un-member | youtube | Fri 12:00 | views | 841 | None | 841 | None | None | None |

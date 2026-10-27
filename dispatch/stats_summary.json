@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-27T05:12:36+00:00",
+ "generated_at": "2026-10-27T05:15:19+00:00",
  "audience_tz": "America/New_York",
- "posts": 22,
+ "posts": 23,
  "channels": {
   "youtube": {
-   "posts": 22,
+   "posts": 23,
    "source": "youtube-page",
-   "note": "secret BUFFER_API_KEY not set here",
+   "note": "buffer insights \u00b7 0 posts with metrics",
    "metric": "views",
    "best_hours": null,
    "hour_table": {},
@@ -25,10 +25,10 @@
      "median_24h": null
     },
     "wild-files": {
-     "posts": 5,
-     "d7": 1778,
-     "score": 5043,
-     "median_24h": null
+     "posts": 6,
+     "d7": 1880,
+     "score": 5145,
+     "median_24h": 102
     },
     "body-brain": {
      "posts": 2,
@@ -38,6 +38,13 @@
     }
    },
    "top_24h": [
+    {
+     "episode": "ep12-polar-bears-penguins",
+     "series": "wild-files",
+     "d24": 102,
+     "score": 102,
+     "metric": "views"
+    },
     {
      "episode": "ep14-most-time-zones-france",
      "series": "geo-blitz",
@@ -65,20 +72,13 @@
      "d24": null,
      "score": 1197,
      "metric": "views"
-    },
-    {
-     "episode": "ep09-basketball-invented-springfield",
-     "series": "sports-sprint",
-     "d24": null,
-     "score": 1184,
-     "metric": "views"
     }
    ]
   },
   "instagram": {
    "posts": 0,
    "source": null,
-   "note": "secret BUFFER_API_KEY_2 not set here",
+   "note": "buffer insights \u00b7 0 posts with metrics",
    "metric": null,
    "best_hours": null,
    "hour_table": {},
@@ -89,7 +89,7 @@
   "facebook": {
    "posts": 0,
    "source": null,
-   "note": "secret BUFFER_API_KEY_2 not set here",
+   "note": "buffer insights \u00b7 0 posts with metrics",
    "metric": null,
    "best_hours": null,
    "hour_table": {},
@@ -100,7 +100,7 @@
   "threads": {
    "posts": 0,
    "source": null,
-   "note": "secret BUFFER_API_KEY not set here",
+   "note": "buffer insights \u00b7 0 posts with metrics",
    "metric": null,
    "best_hours": null,
    "hour_table": {},
@@ -111,7 +111,7 @@
   "twitter": {
    "posts": 0,
    "source": null,
-   "note": "secret BUFFER_API_KEY_2 not set here",
+   "note": "buffer insights \u00b7 0 posts with metrics",
    "metric": null,
    "best_hours": null,
    "hour_table": {},
@@ -132,9 +132,9 @@
    "score": 6132
   },
   "wild-files": {
-   "posts": 5,
-   "d7": 1778,
-   "score": 5043
+   "posts": 6,
+   "d7": 1880,
+   "score": 5145
   },
   "body-brain": {
    "posts": 2,
@@ -143,6 +143,13 @@
   }
  },
  "top_24h": [
+  {
+   "episode": "ep12-polar-bears-penguins",
+   "series": "wild-files",
+   "d24": 102,
+   "score": 102,
+   "metric": "views"
+  },
   {
    "episode": "ep14-most-time-zones-france",
    "series": "geo-blitz",
@@ -170,13 +177,6 @@
    "d24": null,
    "score": 1197,
    "metric": "views"
-  },
-  {
-   "episode": "ep09-basketball-invented-springfield",
-   "series": "sports-sprint",
-   "d24": null,
-   "score": 1184,
-   "metric": "views"
   }
  ],
  "rows": [
@@ -194,7 +194,7 @@
    "comments": null,
    "shares": null,
    "saves": null,
-   "age_h": 256.9,
+   "age_h": 257.0,
    "d24": null,
    "d7": null,
    "first24": null,
@@ -236,7 +236,7 @@
    "comments": null,
    "shares": null,
    "saves": null,
-   "age_h": 256.1,
+   "age_h": 256.2,
    "d24": null,
    "d7": null,
    "first24": null,
@@ -278,7 +278,7 @@
    "comments": null,
    "shares": null,
    "saves": null,
-   "age_h": 255.1,
+   "age_h": 255.2,
    "d24": null,
    "d7": null,
    "first24": null,
@@ -383,7 +383,7 @@
    "comments": null,
    "shares": null,
    "saves": null,
-   "age_h": 231.6,
+   "age_h": 231.7,
    "d24": null,
    "d7": null,
    "first24": null,
@@ -551,7 +551,7 @@
    "comments": null,
    "shares": null,
    "saves": null,
-   "age_h": 109.1,
+   "age_h": 109.2,
    "d24": null,
    "d7": 1025,
    "first24": null,
@@ -641,6 +641,27 @@
    "first24": null,
    "sent_hour_local": 19,
    "sent_weekday": "Sat"
+  },
+  {
+   "post_id": "6adf76db79dbb5e6f42247db",
+   "platform": "youtube",
+   "video_id": "FClQ2lf4y4k",
+   "episode": "ep12-polar-bears-penguins",
+   "series": "wild-files",
+   "sent_at": "2026-10-26T23:00:29.709Z",
+   "score": 102,
+   "metric": "views",
+   "source": "youtube-page",
+   "reactions": null,
+   "comments": null,
+   "shares": null,
+   "saves": null,
+   "age_h": 6.2,
+   "d24": 102,
+   "d7": 102,
+   "first24": null,
+   "sent_hour_local": 19,
+   "sent_weekday": "Mon"
   }
  ]
 }
