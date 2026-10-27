@@ -75,7 +75,7 @@ T=os.environ["T"]
 for j in json.load(sys.stdin)["jobs"]:
     print(" ", j["name"], j["conclusion"])
     if j["conclusion"]=="failure" and j["name"].startswith("render"):
-        log=subprocess.run(["curl","-sL","-H","Authorization: Bearer "+T,f"https://api.github.com/repos/zainkhan122/thequizwire/actions/jobs/{j[\"id\"]}/logs"],capture_output=True,text=True).stdout
+        log=subprocess.run(["curl","-sL","-H","Authorization: Bearer "+T,"https://api.github.com/repos/zainkhan122/thequizwire/actions/jobs/%s/logs" % j["id"]],capture_output=True,text=True).stdout
         for line in log.splitlines():
             if ("FAIL  " in line or "pace " in line or "motion " in line) and "FAIL 0" not in line: print("     ", line[29:260])'
   exec "$0" status

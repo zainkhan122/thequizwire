@@ -217,7 +217,7 @@
    }
   },
   {
-   "at": "s06",
+   "at": "s05",
    "do": "geo.label_out",
    "stage": "stage_map",
    "args": {
@@ -238,6 +238,22 @@
    "stage": "stage_map",
    "args": {
     "lid": "us"
+   }
+  },
+  {
+   "at": "s07@day",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "cn2"
+   }
+  },
+  {
+   "at": "s08",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "cn2"
    }
   },
   {

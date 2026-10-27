@@ -53,7 +53,7 @@
      "text": "China",
      "cls": "tag",
      "in": "s04@answer",
-     "out": "s06"
+     "out": "s05"
     },
     {
      "id": "us",
@@ -65,6 +65,17 @@
      "cls": "tag",
      "in": "s05@states",
      "out": "s06"
+    },
+    {
+     "id": "cn2",
+     "lonlat": [
+      104,
+      36
+     ],
+     "text": "China",
+     "cls": "tag",
+     "in": "s07@day",
+     "out": "s08"
     }
    ],
    "disputed": [],
