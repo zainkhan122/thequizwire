@@ -40,7 +40,7 @@ jobs:
           echo "### Daily pick $(date -u +%F): ${EPS:-— backlog empty}" >> "$GITHUB_STEP_SUMMARY"
           [ -n "$EPS" ] || { echo "::warning::backlog empty — nothing to render today (author episodes with status: ready)"; exit 0; }
           git config user.name quizwire-daily; git config user.email daily@users.noreply.github.com
-          git add dispatch/daily.json dispatch/stats.json dispatch/stats_summary.json dispatch/stats.md config/publishing.json && git commit -qm "daily: plan $(date -u +%F) [skip ci]" && git push -q
+          git add dispatch/daily.json dispatch/stats.json dispatch/stats_summary.json dispatch/stats.md config/publishing.json && git commit -qm "daily: plan $(date -u +%F) [skip ci]" && for i in 1 2 3; do git pull --rebase -q -X theirs && git push -q && break || { git rebase --abort 2>/dev/null; sleep 5; }; done
       - name: Render + dispatch (live, best-time slots)
         if: steps.p.outputs.eps != ''
         run: |

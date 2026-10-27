@@ -81,7 +81,7 @@ jobs:
           for f in dispatch/ledger.json config/publishing.json; do [ -f "$f" ] && git add "$f"; done; true
           git diff --cached --quiet && { echo "ledger unchanged"; exit 0; }
           git commit -m "dispatch: ${{ inputs.tag || format('run {0}', inputs.run) }} (${{ inputs.live && 'live' || 'dry-run' }}) [skip ci]"
-          for i in 1 2 3; do git pull --rebase -q && git push -q && break || sleep 5; done
+          for i in 1 2 3; do git pull --rebase -q -X theirs && git push -q && break || { git rebase --abort 2>/dev/null; sleep 5; }; done   # -X theirs = keep the files this run generated
       - uses: actions/upload-artifact@v4
         if: always()
         with:
