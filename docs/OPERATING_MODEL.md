@@ -20,6 +20,7 @@ Rule of thumb: **the sandbox is the brain, Actions are the muscle, Releases are 
 | Strategy, series, topics, format rotation | proposes with evidence (`docs/PLAN.md`, `CHANNEL_BASELINE.md`) | — | decides |
 | Research, claims ledger (`research.json`), guardrails | **does** (web, Wikidata, Factbook; ≥ 2 publishers per claim) | re-checks links (`factcheck --online`) in the render job | may veto a topic |
 | Episode authoring (`episode/voice/geo/visuals/clips.json`) | **does** via `tools/new_episode.py` + editing; previews map scenes as PNG | — | reviews previews on request |
+| Channel stats + slots (`tools/stats.py` → `tools/slots.py`, Buffer Insights, every channel) | reads `dispatch/stats.md` in `today.sh prep` | publish-sync 3×/day + before every daily pick; commits `dispatch/stats*.json`, `config/publishing.json` times | — |
 | Offline gates (plan · geo · build · static · quizlint · geolint · facts · provenance · clips lint · selftest) | **runs in seconds, fixes, re-runs** before every commit | re-runs on every push (`check`) as the safety net | — |
 | TTS takes (Kokoro `am_michael`) | optional *auditions* only (`SETUP_TTS=1`, never canonical) | **canonical takes** (`tts` stage) → pushed to the `media-<ep>` Release so re-renders are identical | picks a voice direction if asked |
 | Word timing, voice performance check | — | **does** (whisper `words`, `voice check`) | — |

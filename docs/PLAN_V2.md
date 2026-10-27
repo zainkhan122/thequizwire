@@ -124,7 +124,7 @@ the answer at 4 s. Everything downstream is identical, so the A/B costs nothing 
 | subscribers / 1k views | 0.64 | ≥ 2.0 | end problem: change the CTA line / tease, add the series promise earlier |
 | likes / views | 12 % | ≥ 8 % (keep) | — |
 
-`tools/studio_import.py` (Phase 2.1) ingests the three Studio CSVs (`Table data`, `Chart data`, `Totals`) and writes
+`tools/studio_import.py` (Phase 2.1, **retired 2026-10-27 — `tools/stats.py` via Buffer Insights is the stats source now**) ingested the three Studio CSVs (`Table data`, `Chart data`, `Totals`) and writes
 `docs/SCORECARD.md` with these tables per format/series, so each batch is judged the same way with one command.
 
 ## 5 · Phases (each ≤ 15 min sandbox wall time, ≤ 3 min per tool call, commit per step, phase card in `RESUME.md`)
