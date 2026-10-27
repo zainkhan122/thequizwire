@@ -1,5 +1,8 @@
 # CHANNEL_BASELINE.md — TheQuizWire as found on 2026-10-14 (before any QuizWire-system upload)
 
+> **Frozen baseline (YouTube Studio export, Sept–Oct 2026).** Not updated by the pipeline. Live numbers for every channel come from Buffer Insights via `tools/stats.py` → `dispatch/stats.md` (the only stats source of truth since 2026-10-27).
+
+
 Measured from the public channel pages and RSS (no API key). Re-measure monthly with the same method and append a row.
 
 | captured | subscribers | videos | lifetime views | views/video | median views, last 19 Shorts | max |

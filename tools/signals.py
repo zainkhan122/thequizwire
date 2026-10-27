@@ -91,9 +91,9 @@ def main():
     if S.exists():
         st = json.loads(S.read_text())
         L += ["## Our channel — last 24 h / 7 d (dispatch/stats.md; what OUR viewers are rewarding)"]
-        for r in st.get("top_24h", [])[:5]: L.append(f"- {r['episode']} ({r['series']}): +{r['views_24h']} in 24 h · {r['views']} total")
-        for k, v in sorted(st.get("series", {}).items(), key=lambda kv: -(kv[1].get("views_7d") or 0)):
-            L.append(f"- series {k}: {v['videos']} videos · {v['views_7d']} views in 7 d · median 24 h {v['median_24h']}")
+        for r in st.get("top_24h", [])[:5]: L.append(f"- {r['episode']} ({r['series']}): +{r['d24']} in 24 h · {r['score']} total (YouTube {r.get('metric') or 'views'})")
+        for k, v in sorted(st.get("series", {}).items(), key=lambda kv: -(kv[1].get("d7") or 0)):
+            L.append(f"- series {k}: {v['posts']} posts across channels · +{v['d7']} in 7 d · {v['score']} total")
         L.append("")
     L += ["## Already ours (do not repeat the stem or the subject)"]
     for s, q, st in used: L.append(f"- {s} · {q} · `{stem(q)}` · {st}")
