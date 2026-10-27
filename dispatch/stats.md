@@ -1,9 +1,9 @@
-# Channel stats — 2026-10-27T05:19Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
+# Channel stats — 2026-10-27T05:20Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
 
 ## Per series, all channels (7-day movement — what is trending for us)
 - geo-blitz: 9 posts · +2870 in 7 d · 8617 total
 - sports-sprint: 6 posts · +2661 in 7 d · 6132 total
-- wild-files: 6 posts · +1884 in 7 d · 5149 total
+- wild-files: 6 posts · +1883 in 7 d · 5148 total
 - body-brain: 2 posts · +1049 in 7 d · 2246 total
 
 ## youtube — 23 posts · metric views · buffer insights · 0/0 sent posts with metrics
@@ -13,7 +13,7 @@ last 24 h:
 - ep10-grand-slam-on-grass-wimbledon (sports-sprint): +? · 1219 total
 - ep15-no-rivers-saudi-arabia (geo-blitz): +? · 1212 total
 - ep04-tallest-men-netherlands (body-brain): +? · 1197 total
-series (7 d): geo-blitz +2870 (9) · sports-sprint +2661 (6) · wild-files +1884 (6) · body-brain +1049 (2)
+series (7 d): geo-blitz +2870 (9) · sports-sprint +2661 (6) · wild-files +1883 (6) · body-brain +1049 (2)
 hours (first-24 h by publish hour): none yet
 → slots: not enough first-24 h data (0/8) — researched defaults in use
 
@@ -38,7 +38,7 @@ hours (first-24 h by publish hour): none yet
 | ep11-most-elephants-botswana | youtube | Wed 19:00 | views | 1004 | None | 1004 | None | None | None |
 | ep12-most-world-cups-brazil | youtube | Wed 12:00 | views | 1026 | None | 1026 | None | None | None |
 | ep17-deepest-lake-baikal | youtube | Tue 19:00 | views | 1004 | None | 1004 | None | None | None |
-| ep10-komodo-dragons-indonesia | youtube | Tue 12:00 | views | 775 | None | 775 | None | None | None |
+| ep10-komodo-dragons-indonesia | youtube | Tue 12:00 | views | 774 | None | 774 | None | None | None |
 | ep04-tallest-men-netherlands | youtube | Mon 19:00 | views | 1197 | None | None | None | None | None |
 | ep11-first-modern-olympics-athens | youtube | Sun 12:00 | views | 1068 | None | None | None | None | None |
 | ep15-no-rivers-saudi-arabia | youtube | Sat 19:00 | views | 1212 | None | None | None | None | None |

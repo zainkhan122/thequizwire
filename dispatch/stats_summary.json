@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-27T05:19:28+00:00",
+ "generated_at": "2026-10-27T05:20:33+00:00",
  "audience_tz": "America/New_York",
  "posts": 23,
  "channels": {
@@ -26,8 +26,8 @@
     },
     "wild-files": {
      "posts": 6,
-     "d7": 1884,
-     "score": 5149,
+     "d7": 1883,
+     "score": 5148,
      "median_24h": 105
     },
     "body-brain": {
@@ -133,8 +133,8 @@
   },
   "wild-files": {
    "posts": 6,
-   "d7": 1884,
-   "score": 5149
+   "d7": 1883,
+   "score": 5148
   },
   "body-brain": {
    "posts": 2,
@@ -236,7 +236,7 @@
    "comments": null,
    "shares": null,
    "saves": null,
-   "age_h": 256.2,
+   "age_h": 256.3,
    "d24": null,
    "d7": null,
    "first24": null,
@@ -278,7 +278,7 @@
    "comments": null,
    "shares": null,
    "saves": null,
-   "age_h": 255.2,
+   "age_h": 255.3,
    "d24": null,
    "d7": null,
    "first24": null,
@@ -460,7 +460,7 @@
    "episode": "ep10-komodo-dragons-indonesia",
    "series": "wild-files",
    "sent_at": "2026-10-20T16:01:30.296Z",
-   "score": 775,
+   "score": 774,
    "metric": "views",
    "source": "youtube-page",
    "reactions": null,
@@ -469,7 +469,7 @@
    "saves": null,
    "age_h": 157.3,
    "d24": null,
-   "d7": 775,
+   "d7": 774,
    "first24": null,
    "sent_hour_local": 12,
    "sent_weekday": "Tue"
