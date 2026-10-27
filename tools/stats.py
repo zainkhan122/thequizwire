@@ -59,33 +59,31 @@ def series_of(name):
 
 
 def fetch_buffer(posts):
-    """{post_id: {metric: value}} from Buffer Insights for the sent posts of every configured channel (one paginated
-    query per channel, personal keys only). Posts whose metrics Buffer cannot read yet come back without an entry."""
+    """{post_id: {metric: value}} from Buffer Insights for the ledger's sent posts, per channel (personal keys only).
+    One aliased GraphQL request per 25 posts (post(input:{id}) { metrics }), so a 3×/day sync stays far under Buffer's
+    daily request budget. Posts whose metrics Buffer cannot read come back without an entry (note says why)."""
     import buffer as B
     c = B.cfg(); got, notes = {}, {}
-    for (account, org), chans in B.groups(c, list(PLATFORMS)).items():
-        if not os.environ.get(account) and not (Path.home() / f".cache/secrets/{account.lower()}").exists():
-            for platform, _ in chans: notes[platform] = f"secret {account} not set here"
-            continue
-        cl = B.Client(c, account)
-        for platform, cid in chans:
-            inp = {"organizationId": org, "filter": {"channelIds": [cid], "status": ["sent"], "startDate": (NOW - timedelta(days=45)).isoformat(timespec="seconds")},
-                   "sort": [{"field": "createdAt", "direction": "desc"}]}
-            after, n, scope, seen, err1 = None, 0, None, 0, None
-            for _ in range(4):
-                st, _h, raw = cl._post({"query": Q_METRICS, "variables": {"input": inp, "after": after}})
-                try: body = json.loads(raw)
-                except Exception: body = {}
-                for e in body.get("errors") or []:
-                    code = ((e.get("extensions") or {}).get("code") or ""); err1 = err1 or f"{code} {e.get('message')}"[:120]
-                    if "SCOPE" in code.upper() or "insight" in (e.get("message") or "").lower(): scope = e.get("message") or code
-                page = ((body.get("data") or {}).get("posts") or {})
-                for ed in page.get("edges") or []:
-                    seen += 1; nd = ed["node"]; m = {x["type"]: x["value"] for x in (nd.get("metrics") or [])}
-                    if m: got[nd["id"]] = {**m, "metrics_updated_at": nd.get("metricsUpdatedAt")}; n += 1
-                if not page.get("pageInfo", {}).get("hasNextPage"): break
-                after = page["pageInfo"]["endCursor"]
-            notes[platform] = f"buffer insights · {n}/{seen} sent posts with metrics" + (f" · scope: {scope}" if scope else "") + (f" · http {st} {err1}" if (err1 or st != 200) else "")
+    by_platform = {}
+    for p in posts: by_platform.setdefault(p["platform"], []).append(p["post_id"])
+    for platform, ids in by_platform.items():
+        account = B.account_of(c, platform)
+        if not account or not (os.environ.get(account) or (Path.home() / f".cache/secrets/{account.lower()}").exists()):
+            notes[platform] = f"secret {account} not set here"; continue
+        cl = B.Client(c, account); n, err1, st = 0, None, 200
+        for i in range(0, len(ids), 25):
+            chunk = ids[i:i + 25]
+            q = "query { " + " ".join(f'p{k}: post(input: {{ id: "{pid}" }}) {{ id metrics {{ type value }} metricsUpdatedAt }}' for k, pid in enumerate(chunk)) + " }"
+            st, _h, raw = cl._post({"query": q})
+            try: body = json.loads(raw)
+            except Exception: body = {}
+            for e in body.get("errors") or []:
+                err1 = err1 or f"{(e.get('extensions') or {}).get('code', '')} {e.get('message')}"[:140]
+            for nd in (body.get("data") or {}).values():
+                if not nd: continue
+                m = {x["type"]: x["value"] for x in (nd.get("metrics") or [])}
+                if m: got[nd["id"]] = {**m, "metrics_updated_at": nd.get("metricsUpdatedAt")}; n += 1
+        notes[platform] = f"buffer insights · {n}/{len(ids)} sent posts with metrics" + (f" · http {st} {err1}" if (err1 or st != 200) else "")
     return got, notes
 
 
