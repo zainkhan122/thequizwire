@@ -1,0 +1,224 @@
+{
+ "version": 1,
+ "episode": "ep06-most-stroke-deaths-china",
+ "topic": "Stroke deaths by country: China ~2.6 million stroke deaths in 2021 (GBD 2021), about one third of the 7.3 million worldwide; USA 165,393 (2022, CDC/AHA); World Stroke Day 29 October; FAST signs",
+ "researched": "2026-10-27",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The United States, with its famous heart-disease problem, has the most stroke deaths.",
+   "reality": "The US recorded 165,393 stroke deaths in 2022; China recorded about 2.6 million in 2021 — roughly sixteen times more, from about four times the population.",
+   "sources": [
+    "cdc_mortality",
+    "cmj_gbd_china",
+    "lancet_gbd"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Stroke-awareness Shorts are talking-head FAST explainers; nobody shows the global scale on a map with the three obvious countries, two live counters and the FAST card at the end.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=world+stroke+day+shorts",
+    "title": "Search: world stroke day shorts",
+    "angle": "hospital awareness clips",
+    "misses": "no quiz, no numbers, no map"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=FAST+stroke+signs",
+    "title": "Search: FAST stroke signs",
+    "angle": "FAST acronym explainers",
+    "misses": "no scale, no country comparison"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if body scenarios",
+    "misses": "no sourced statistics"
+   }
+  ]
+ },
+ "sources": {
+  "lancet_gbd": {
+   "type": "scholarly",
+   "publisher": "The Lancet Neurology (GBD 2021 Stroke Collaborators)",
+   "title": "Global, regional, and national burden of stroke and its risk factors, 1990–2021",
+   "url": "https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(24)00369-7/fulltext",
+   "date": "2026-10-27",
+   "notes": "2021: 7.3 million stroke deaths worldwide (10.7% of all deaths); stroke the third most common cause of death after ischaemic heart disease and COVID-19"
+  },
+  "cmj_gbd_china": {
+   "type": "scholarly",
+   "publisher": "Chinese Medical Journal (PubMed 40908884)",
+   "title": "Burden and risk factors of stroke worldwide and in China: GBD 2021",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40908884/",
+   "date": "2026-10-27",
+   "notes": "2021: China 4.1 million incident strokes, 2.6 million stroke-related deaths vs 7.3 million worldwide (≈ 36%)"
+  },
+  "sr_china_gbd": {
+   "type": "scholarly",
+   "publisher": "Scientific Reports (Nature)",
+   "title": "Trends in stroke incidence and mortality in China, Japan, and South Korea (1990–2021)",
+   "url": "https://www.nature.com/articles/s41598-025-10840-2",
+   "date": "2026-10-27",
+   "notes": "GBD 2021: stroke third leading cause of death worldwide, 7.3 million deaths; China stroke deaths ≈ 2.59 million"
+  },
+  "cdc_mortality": {
+   "type": "primary",
+   "publisher": "CDC National Center for Health Statistics",
+   "title": "Mortality in the United States, 2023 (Data Brief 521)",
+   "url": "https://www.cdc.gov/nchs/products/databriefs/db521.htm",
+   "date": "2026-10-27",
+   "notes": "Cerebrovascular diseases (stroke): 165,393 deaths in 2022; 162,639 in 2023"
+  },
+  "aha_stats": {
+   "type": "primary",
+   "publisher": "American Heart Association",
+   "title": "2025 Heart Disease and Stroke Statistics Update — At a Glance",
+   "url": "https://www.heart.org/en/-/media/PHD-Files-2/Science-News/2/2025-Heart-and-Stroke-Stat-Update/2025-Statistics-At-A-Glance.pdf",
+   "date": "2026-10-27",
+   "notes": "Stroke caused 165,393 deaths in the United States in 2022"
+  },
+  "wso_day": {
+   "type": "primary",
+   "publisher": "World Stroke Organization",
+   "title": "World Stroke Day",
+   "url": "https://www.world-stroke.org/world-stroke-day-campaign/world-stroke-day",
+   "date": "2026-10-27",
+   "notes": "World Stroke Day is observed on 29 October each year"
+  },
+  "wiki_wsd": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "World Stroke Day",
+   "url": "https://en.wikipedia.org/wiki/World_Stroke_Day",
+   "date": "2026-10-27",
+   "notes": "annual awareness day on 29 October, established by the World Stroke Organization"
+  },
+  "nhs_fast": {
+   "type": "primary",
+   "publisher": "NHS",
+   "title": "Stroke — Symptoms",
+   "url": "https://www.nhs.uk/conditions/stroke/symptoms/",
+   "date": "2026-10-27",
+   "notes": "FAST: Face, Arms, Speech, Time to call emergency services"
+  },
+  "aha_fast": {
+   "type": "primary",
+   "publisher": "American Stroke Association",
+   "title": "Stroke Symptoms — F.A.S.T.",
+   "url": "https://www.stroke.org/en/about-stroke/stroke-symptoms",
+   "date": "2026-10-27",
+   "notes": "F.A.S.T. = Face drooping, Arm weakness, Speech difficulty, Time to call 911"
+  },
+  "worldbank_pop": {
+   "type": "primary",
+   "publisher": "World Bank",
+   "title": "Population, total — China, United States",
+   "url": "https://data.worldbank.org/indicator/SP.POP.TOTL",
+   "date": "2026-10-27",
+   "notes": "2023: China ≈ 1.41 billion, United States ≈ 335 million (≈ 4.2×)"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "China records the most stroke deaths of any country: about 2.6 million in 2021 (GBD 2021), roughly one third of the 7.3 million worldwide.",
+   "sources": [
+    "cmj_gbd_china",
+    "sr_china_gbd",
+    "lancet_gbd"
+   ],
+   "vo": [
+    "which country records the most stroke deaths every year",
+    "united states, india, or china",
+    "china. over 2 million stroke deaths every year, about 1 in 3 of the whole world's total"
+   ],
+   "screen": [
+    "China",
+    "United States",
+    "India",
+    "stroke deaths a year"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "The United States recorded 165,393 stroke deaths in 2022; China's ≈ 2.6 million is about sixteen times that figure.",
+   "sources": [
+    "cdc_mortality",
+    "aha_stats",
+    "cmj_gbd_china"
+   ],
+   "vo": [
+    "the united states loses about 165,000 a year. china's toll is 16 times that"
+   ],
+   "screen": [
+    "United States · 165,000",
+    "US stroke deaths a year"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Worldwide, stroke killed 7.3 million people in 2021 and was the third most common cause of death.",
+   "sources": [
+    "lancet_gbd",
+    "sr_china_gbd"
+   ],
+   "vo": [
+    "worldwide, stroke kills more than 7 million people every single year, the third most common cause of death on earth"
+   ],
+   "screen": [
+    "stroke deaths a year, worldwide"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "World Stroke Day is 29 October; the FAST test is Face, Arm, Speech, Time to call emergency services.",
+   "sources": [
+    "wso_day",
+    "wiki_wsd",
+    "nhs_fast",
+    "aha_fast"
+   ],
+   "vo": [
+    "world stroke day is october 29. remember fast: face, arm, speech, and time to call for help"
+   ],
+   "screen": [
+    "WORLD STROKE DAY",
+    "29 October, every year",
+    "FAST",
+    "face · arm · speech · time"
+   ]
+  }
+ ]
+}

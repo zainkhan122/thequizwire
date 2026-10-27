@@ -1,0 +1,133 @@
+{
+ "id": "ep06-most-stroke-deaths-china",
+ "format": "quiz-v3",
+ "series": "body-brain",
+ "number": 6,
+ "title": "Which country records the MOST stroke deaths every year?",
+ "difficulty": "MEDIUM",
+ "seed": 4306,
+ "quiz": {
+  "question": "Which country records the MOST stroke deaths every year?",
+  "keyword": "MOST",
+  "options": [
+   "United States",
+   "India",
+   "China"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "China",
+  "answer_sub": "about 1 in 3 worldwide",
+  "option_meta": [
+   {
+    "flag": "us"
+   },
+   {
+    "flag": "in"
+   },
+   {
+    "flag": "cn"
+   }
+  ],
+  "banner": "China",
+  "banner_sub": "✓  C was right · about 1 in 3 worldwide",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country records the MOST stroke deaths every year? 🧠",
+  "premise": "One country carries a third of the world's stroke deaths",
+  "bait": "Most people guess wrong by a factor of sixteen.",
+  "keywords": [
+   "stroke deaths by country",
+   "world stroke day",
+   "stroke facts",
+   "FAST stroke signs",
+   "human body facts",
+   "body quiz",
+   "stroke statistics",
+   "global health facts"
+  ],
+  "description": "One country carries a third of the world's stroke deaths. Most people guess wrong by a factor of sixteen.\n\nSources: The Lancet Neurology (GBD 2021); Chinese Medical Journal (GBD 2021 China); CDC; World Stroke Organization.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nBody & Brain #6",
+  "hashtags": [
+   "#BodyFacts",
+   "#BrainQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "WorldStrokeDay",
+   "StrokeFacts"
+  ],
+  "cover_emoji": "🧠",
+  "copy": {
+   "spoilers": [
+    "china",
+    "chinese",
+    "beijing"
+   ],
+   "youtube": {
+    "title": "Which country has the most stroke deaths? World Stroke Day quiz 🧠",
+    "description": "Three big countries. One of them carries about a third of all the world's stroke deaths every single year, sixteen times the US figure.\nSay your answer out loud before the map gives it away, then learn the four letters that save a life this World Stroke Day.\nFollow for one body fact a day that is worth an argument.",
+    "tags": [
+     "#worldstrokeday",
+     "#strokeawareness",
+     "#humanbody",
+     "#bodyquiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country records the MOST stroke deaths every year? 🧠\nUnited States, India or the other one? About a third of the world's stroke deaths happen in a single country, and the number is sixteen times the US toll.\nIt is World Stroke Day this week. Which did you pick?",
+    "tags": [
+     "#worldstrokeday",
+     "#strokeawareness",
+     "#healthfacts",
+     "#bodyquiz",
+     "#anatomy"
+    ]
+   },
+   "facebook": {
+    "text": "Which country records the most stroke deaths every year — United States, India or China?\nOne of them carries about a third of the world's total. World Stroke Day is this week: do you know the FAST signs?",
+    "tags": [
+     "#worldstrokeday",
+     "#strokeawareness"
+    ]
+   },
+   "twitter": {
+    "text": "Which country records the MOST stroke deaths every year?\nAbout one in three of the world's stroke deaths happen in one country. Sixteen times the US figure.",
+    "tags": [
+     "#WorldStrokeDay"
+    ]
+   },
+   "threads": {
+    "text": "Which country records the most stroke deaths every year — United States, India or China? About a third of the world's seven million stroke deaths happen in one of them, sixteen times the US toll. World Stroke Day is this week; the four FAST letters are at the end.",
+    "tags": [
+     "#worldstrokeday"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "fill-pulse",
+  "beats": [
+   "counter",
+   "second-highlight",
+   "label"
+  ],
+  "cast": "flagball:wow + emoji-set:brain",
+  "music": "bed:tense"
+ },
+ "status": "ready"
+}

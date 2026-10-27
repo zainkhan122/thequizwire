@@ -1,0 +1,90 @@
+{
+ "version": 1,
+ "episode": "ep06-most-stroke-deaths-china",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -130,
+     -10,
+     150,
+     60
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "156"
+     ],
+     "cls": "",
+     "note": "China (answer) — fill pulse on reveal"
+    },
+    {
+     "kind": "highlight",
+     "id": "others",
+     "ids": [
+      "840"
+     ],
+     "cls": "dim",
+     "note": "United States — lit for the comparison beat"
+    }
+   ],
+   "pins": [],
+   "labels": [
+    {
+     "id": "cn",
+     "lonlat": [
+      104,
+      36
+     ],
+     "text": "China",
+     "cls": "tag",
+     "in": "s04@answer",
+     "out": "s06"
+    },
+    {
+     "id": "us",
+     "lonlat": [
+      -98,
+      40
+     ],
+     "text": "United States · 165,000",
+     "cls": "tag",
+     "in": "s05@states",
+     "out": "s06"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -150,
+      -30,
+      160,
+      72
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

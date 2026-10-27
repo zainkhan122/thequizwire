@@ -12,6 +12,8 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 T="${GH_TOKEN:-$(cat "$HOME/.secrets/gh_token" 2>/dev/null || cat "$HOME/.cache/secrets/gh_token")}"
+export T
+git config user.name >/dev/null 2>&1 || { git config user.name thequizwire-agent; git config user.email agent@thequizwire.com; }
 API="https://api.github.com/repos/zainkhan122/thequizwire"
 gh_api() { curl -s -H "Authorization: Bearer $T" -H "Accept: application/vnd.github+json" "$@"; }
 push() { git pull -q --rebase "https://x-access-token:$T@github.com/zainkhan122/thequizwire.git" main && git push -q "https://x-access-token:$T@github.com/zainkhan122/thequizwire.git" HEAD:main; }
@@ -57,11 +59,16 @@ ship)
   SHA="$(git rev-parse HEAD)"
   gh_api -o /dev/null -w "render.yml dispatched (%{http_code})\n" -X POST "$API/actions/workflows/render.yml/dispatches" \
     -d "{\"ref\":\"main\",\"inputs\":{\"episodes\":\"$PICK\",\"tag\":\"daily-$DAY-$(date -u +%H%M)\",\"dispatch\":\"true\",\"sha\":\"$SHA\"}}"
-  sleep 40; R="$(gh_api "$API/actions/workflows/render.yml/runs?per_page=1" | python3 -c 'import json,sys;print(json.load(sys.stdin)["workflow_runs"][0]["id"])')"
-  for i in $(seq 1 20); do
+  sleep 30; R="$(gh_api "$API/actions/workflows/render.yml/runs?per_page=1" | python3 -c 'import json,sys;print(json.load(sys.stdin)["workflow_runs"][0]["id"])')"
+  echo "$R" > /tmp/today_run; echo "== render run $R started — poll with: tools/today.sh wait   (≤ 4 min per call; phase rule)"
+  ;;
+wait)
+  R="${2:-$(cat /tmp/today_run 2>/dev/null)}"; [ -n "$R" ] || { echo "no run id (pass one: tools/today.sh wait <run_id>)"; exit 1; }
+  for i in $(seq 1 8); do
     S="$(gh_api "$API/actions/runs/$R" | python3 -c 'import json,sys;r=json.load(sys.stdin);print(r["status"],r["conclusion"])')"
-    echo "$(date -u +%H:%M) run $R: $S"; case "$S" in completed*) break;; esac; sleep 90
+    echo "$(date -u +%H:%M) run $R: $S"; case "$S" in completed*) break;; esac; sleep 30
   done
+  case "$S" in completed*) ;; *) echo "still running — call tools/today.sh wait again"; exit 0;; esac
   gh_api "$API/actions/runs/$R/jobs" | python3 -c '
 import json,sys,subprocess,os
 T=os.environ["T"]
@@ -70,7 +77,7 @@ for j in json.load(sys.stdin)["jobs"]:
     if j["conclusion"]=="failure" and j["name"].startswith("render"):
         log=subprocess.run(["curl","-sL","-H","Authorization: Bearer "+T,f"https://api.github.com/repos/zainkhan122/thequizwire/actions/jobs/{j[\"id\"]}/logs"],capture_output=True,text=True).stdout
         for line in log.splitlines():
-            if ("FAIL  " in line or "pace " in line or "motion " in line) and "FAIL 0" not in line: print("     ", line[29:260])' 
+            if ("FAIL  " in line or "pace " in line or "motion " in line) and "FAIL 0" not in line: print("     ", line[29:260])'
   exec "$0" status
   ;;
 status)

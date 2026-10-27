@@ -1,0 +1,862 @@
+{
+ "id": "ep06-most-stroke-deaths-china",
+ "series": "body-brain",
+ "number": 6,
+ "seed": 4306,
+ "question": "Which country records the MOST stroke deaths every year?",
+ "keyword": "MOST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "United States",
+   "flag": "us",
+   "cue": "states",
+   "lonlat": [
+    -98,
+    39
+   ]
+  },
+  {
+   "text": "India",
+   "flag": "in",
+   "cue": "india",
+   "lonlat": [
+    79,
+    22
+   ]
+  },
+  {
+   "text": "China",
+   "flag": "cn",
+   "cue": "china",
+   "lonlat": [
+    104,
+    35
+   ]
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "about 1 in 3 worldwide",
+ "outro_headline": "TOO EASY?",
+ "cover_emoji": "🧠",
+ "post": {
+  "premise": "One country carries a third of the world's stroke deaths",
+  "bait": "Most people guess wrong by a factor of sixteen.",
+  "keywords": [
+   "stroke deaths by country",
+   "world stroke day",
+   "stroke facts",
+   "FAST stroke signs",
+   "human body facts",
+   "body quiz",
+   "stroke statistics",
+   "global health facts"
+  ],
+  "tags": [
+   "WorldStrokeDay",
+   "StrokeFacts"
+  ],
+  "sources_line": "The Lancet Neurology (GBD 2021); Chinese Medical Journal (GBD 2021 China); CDC; World Stroke Organization",
+  "copy": {
+   "spoilers": [
+    "china",
+    "chinese",
+    "beijing"
+   ],
+   "youtube": {
+    "title": "Which country has the most stroke deaths? World Stroke Day quiz 🧠",
+    "description": "Three big countries. One of them carries about a third of all the world's stroke deaths every single year, sixteen times the US figure.\nSay your answer out loud before the map gives it away, then learn the four letters that save a life this World Stroke Day.\nFollow for one body fact a day that is worth an argument.",
+    "tags": [
+     "#worldstrokeday",
+     "#strokeawareness",
+     "#humanbody",
+     "#bodyquiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country records the MOST stroke deaths every year? 🧠\nUnited States, India or the other one? About a third of the world's stroke deaths happen in a single country, and the number is sixteen times the US toll.\nIt is World Stroke Day this week. Which did you pick?",
+    "tags": [
+     "#worldstrokeday",
+     "#strokeawareness",
+     "#healthfacts",
+     "#bodyquiz",
+     "#anatomy"
+    ]
+   },
+   "facebook": {
+    "text": "Which country records the most stroke deaths every year — United States, India or China?\nOne of them carries about a third of the world's total. World Stroke Day is this week: do you know the FAST signs?",
+    "tags": [
+     "#worldstrokeday",
+     "#strokeawareness"
+    ]
+   },
+   "twitter": {
+    "text": "Which country records the MOST stroke deaths every year?\nAbout one in three of the world's stroke deaths happen in one country. Sixteen times the US figure.",
+    "tags": [
+     "#WorldStrokeDay"
+    ]
+   },
+   "threads": {
+    "text": "Which country records the most stroke deaths every year — United States, India or China? About a third of the world's seven million stroke deaths happen in one of them, sixteen times the US toll. World Stroke Day is this week; the four FAST letters are at the end.",
+    "tags": [
+     "#worldstrokeday"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "fill-pulse",
+  "beats": [
+   "counter",
+   "second-highlight",
+   "label"
+  ],
+  "cast": "flagball:wow + emoji-set:brain",
+  "music": "bed:tense",
+  "outro": "TOO EASY?"
+ },
+ "intent": "A World Stroke Day Short that stays a map story: three giants, one answer, the scale shown as counters that keep climbing, then the FAST card as the thing you actually take away.",
+ "voice": {
+  "v01_cues": {
+   "most": "most",
+   "country": "country"
+  },
+  "v04": {
+   "text": "China. Over 2 million stroke deaths every year, about 1 in 3 of the whole world's total.",
+   "cues": {
+    "answer": "china",
+    "million": "million",
+    "third": "3"
+   }
+  },
+  "v05": {
+   "text": "The United States loses about 165,000 a year. China's toll is 16 times that.",
+   "cues": {
+    "states": "states",
+    "thousand": "165,000",
+    "sixteen": "16"
+   }
+  },
+  "v06": {
+   "text": "Worldwide, stroke kills more than 7 million people every single year, the third most common cause of death on Earth.",
+   "cues": {
+    "worldwide": "worldwide",
+    "million": "million",
+    "killer": "earth"
+   }
+  },
+  "v07": {
+   "text": "World Stroke Day is October 29. Remember FAST: face, arm, speech, and time to call for help.",
+   "cues": {
+    "day": "day",
+    "fast": "fast",
+    "face": "face",
+    "time": "time"
+   }
+  },
+  "v08": {
+   "text": "Every second counts. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "WORLD STROKE DAY",
+   "text": "29 October, every year"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "cn",
+   "face": "wow",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "us",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "geo": {
+  "fit_bbox": [
+   -130,
+   -10,
+   150,
+   60
+  ],
+  "far_bbox": [
+   -150,
+   -30,
+   160,
+   72
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "156"
+  ],
+  "highlight_note": "China (answer) — fill pulse on reveal",
+  "lift_color": "#E53935",
+  "extra_layers": [
+   {
+    "kind": "highlight",
+    "id": "others",
+    "ids": [
+     "840"
+    ],
+    "cls": "dim",
+    "note": "United States — lit for the comparison beat"
+   }
+  ],
+  "labels": [
+   {
+    "id": "cn",
+    "lonlat": [
+     104,
+     36
+    ],
+    "text": "China",
+    "cls": "tag",
+    "in": "s04@answer",
+    "out": "s06"
+   },
+   {
+    "id": "us",
+    "lonlat": [
+     -98,
+     40
+    ],
+    "text": "United States · 165,000",
+    "cls": "tag",
+    "in": "s05@states",
+    "out": "s06"
+   }
+  ],
+  "pins": [],
+  "scalebar": null,
+  "cams": {
+   "start": [
+    0.45,
+    [
+     40,
+     25
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     40,
+     24
+    ]
+   ],
+   "s04": [
+    1.3,
+    [
+     104,
+     36
+    ]
+   ],
+   "s04b": [
+    1.35,
+    [
+     104.5,
+     36.5
+    ]
+   ],
+   "s05": [
+    0.5,
+    [
+     -178,
+     38
+    ]
+   ],
+   "s05b": [
+    0.52,
+    [
+     -177,
+     38
+    ]
+   ],
+   "s06": [
+    0.45,
+    [
+     40,
+     20
+    ]
+   ],
+   "s06b": [
+    0.47,
+    [
+     41,
+     20.5
+    ]
+   ],
+   "s07": [
+    1.3,
+    [
+     104,
+     36
+    ]
+   ],
+   "s07b": [
+    1.35,
+    [
+     104.5,
+     36.5
+    ]
+   ]
+  },
+  "pin_beats": []
+ },
+ "research": {
+  "topic": "Stroke deaths by country: China ~2.6 million stroke deaths in 2021 (GBD 2021), about one third of the 7.3 million worldwide; USA 165,393 (2022, CDC/AHA); World Stroke Day 29 October; FAST signs",
+  "myths": [
+   {
+    "myth": "The United States, with its famous heart-disease problem, has the most stroke deaths.",
+    "reality": "The US recorded 165,393 stroke deaths in 2022; China recorded about 2.6 million in 2021 — roughly sixteen times more, from about four times the population.",
+    "sources": [
+     "cdc_mortality",
+     "cmj_gbd_china",
+     "lancet_gbd"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Stroke-awareness Shorts are talking-head FAST explainers; nobody shows the global scale on a map with the three obvious countries, two live counters and the FAST card at the end.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=world+stroke+day+shorts",
+     "title": "Search: world stroke day shorts",
+     "angle": "hospital awareness clips",
+     "misses": "no quiz, no numbers, no map"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=FAST+stroke+signs",
+     "title": "Search: FAST stroke signs",
+     "angle": "FAST acronym explainers",
+     "misses": "no scale, no country comparison"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if body scenarios",
+     "misses": "no sourced statistics"
+    }
+   ]
+  },
+  "sources": {
+   "lancet_gbd": {
+    "type": "scholarly",
+    "publisher": "The Lancet Neurology (GBD 2021 Stroke Collaborators)",
+    "title": "Global, regional, and national burden of stroke and its risk factors, 1990–2021",
+    "url": "https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(24)00369-7/fulltext",
+    "date": "2026-10-27",
+    "notes": "2021: 7.3 million stroke deaths worldwide (10.7% of all deaths); stroke the third most common cause of death after ischaemic heart disease and COVID-19"
+   },
+   "cmj_gbd_china": {
+    "type": "scholarly",
+    "publisher": "Chinese Medical Journal (PubMed 40908884)",
+    "title": "Burden and risk factors of stroke worldwide and in China: GBD 2021",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40908884/",
+    "date": "2026-10-27",
+    "notes": "2021: China 4.1 million incident strokes, 2.6 million stroke-related deaths vs 7.3 million worldwide (≈ 36%)"
+   },
+   "sr_china_gbd": {
+    "type": "scholarly",
+    "publisher": "Scientific Reports (Nature)",
+    "title": "Trends in stroke incidence and mortality in China, Japan, and South Korea (1990–2021)",
+    "url": "https://www.nature.com/articles/s41598-025-10840-2",
+    "date": "2026-10-27",
+    "notes": "GBD 2021: stroke third leading cause of death worldwide, 7.3 million deaths; China stroke deaths ≈ 2.59 million"
+   },
+   "cdc_mortality": {
+    "type": "primary",
+    "publisher": "CDC National Center for Health Statistics",
+    "title": "Mortality in the United States, 2023 (Data Brief 521)",
+    "url": "https://www.cdc.gov/nchs/products/databriefs/db521.htm",
+    "date": "2026-10-27",
+    "notes": "Cerebrovascular diseases (stroke): 165,393 deaths in 2022; 162,639 in 2023"
+   },
+   "aha_stats": {
+    "type": "primary",
+    "publisher": "American Heart Association",
+    "title": "2025 Heart Disease and Stroke Statistics Update — At a Glance",
+    "url": "https://www.heart.org/en/-/media/PHD-Files-2/Science-News/2/2025-Heart-and-Stroke-Stat-Update/2025-Statistics-At-A-Glance.pdf",
+    "date": "2026-10-27",
+    "notes": "Stroke caused 165,393 deaths in the United States in 2022"
+   },
+   "wso_day": {
+    "type": "primary",
+    "publisher": "World Stroke Organization",
+    "title": "World Stroke Day",
+    "url": "https://www.world-stroke.org/world-stroke-day-campaign/world-stroke-day",
+    "date": "2026-10-27",
+    "notes": "World Stroke Day is observed on 29 October each year"
+   },
+   "wiki_wsd": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "World Stroke Day",
+    "url": "https://en.wikipedia.org/wiki/World_Stroke_Day",
+    "date": "2026-10-27",
+    "notes": "annual awareness day on 29 October, established by the World Stroke Organization"
+   },
+   "nhs_fast": {
+    "type": "primary",
+    "publisher": "NHS",
+    "title": "Stroke — Symptoms",
+    "url": "https://www.nhs.uk/conditions/stroke/symptoms/",
+    "date": "2026-10-27",
+    "notes": "FAST: Face, Arms, Speech, Time to call emergency services"
+   },
+   "aha_fast": {
+    "type": "primary",
+    "publisher": "American Stroke Association",
+    "title": "Stroke Symptoms — F.A.S.T.",
+    "url": "https://www.stroke.org/en/about-stroke/stroke-symptoms",
+    "date": "2026-10-27",
+    "notes": "F.A.S.T. = Face drooping, Arm weakness, Speech difficulty, Time to call 911"
+   },
+   "worldbank_pop": {
+    "type": "primary",
+    "publisher": "World Bank",
+    "title": "Population, total — China, United States",
+    "url": "https://data.worldbank.org/indicator/SP.POP.TOTL",
+    "date": "2026-10-27",
+    "notes": "2023: China ≈ 1.41 billion, United States ≈ 335 million (≈ 4.2×)"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "China records the most stroke deaths of any country: about 2.6 million in 2021 (GBD 2021), roughly one third of the 7.3 million worldwide.",
+    "sources": [
+     "cmj_gbd_china",
+     "sr_china_gbd",
+     "lancet_gbd"
+    ],
+    "vo": [
+     "which country records the most stroke deaths every year",
+     "united states, india, or china",
+     "china. over 2 million stroke deaths every year, about 1 in 3 of the whole world's total"
+    ],
+    "screen": [
+     "China",
+     "United States",
+     "India",
+     "stroke deaths a year"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "The United States recorded 165,393 stroke deaths in 2022; China's ≈ 2.6 million is about sixteen times that figure.",
+    "sources": [
+     "cdc_mortality",
+     "aha_stats",
+     "cmj_gbd_china"
+    ],
+    "vo": [
+     "the united states loses about 165,000 a year. china's toll is 16 times that"
+    ],
+    "screen": [
+     "United States · 165,000",
+     "US stroke deaths a year"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Worldwide, stroke killed 7.3 million people in 2021 and was the third most common cause of death.",
+    "sources": [
+     "lancet_gbd",
+     "sr_china_gbd"
+    ],
+    "vo": [
+     "worldwide, stroke kills more than 7 million people every single year, the third most common cause of death on earth"
+    ],
+    "screen": [
+     "stroke deaths a year, worldwide"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "core",
+    "text": "World Stroke Day is 29 October; the FAST test is Face, Arm, Speech, Time to call emergency services.",
+    "sources": [
+     "wso_day",
+     "wiki_wsd",
+     "nhs_fast",
+     "aha_fast"
+    ],
+    "vo": [
+     "world stroke day is october 29. remember fast: face, arm, speech, and time to call for help"
+    ],
+    "screen": [
+     "WORLD STROKE DAY",
+     "29 October, every year",
+     "FAST",
+     "face · arm · speech · time"
+    ]
+   }
+  ]
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "The United States loses about 165,000 a year. China's toll is 16 times that.",
+    "cues": {
+     "states": "states",
+     "thousand": "165,000",
+     "sixteen": "16"
+    }
+   },
+   "direction": "fly across the Pacific so both giants share the frame; the US lights up on 'States', its counter climbs to 165,000 and stops on 'thousand'; on 'sixteen' China pulses hard",
+   "energy": 3,
+   "tone": "resolute",
+   "cam": [
+    0.5,
+    [
+     -178,
+     38
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.52,
+    [
+     -177,
+     38
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "us_deaths",
+     "type": "counter",
+     "start": 0,
+     "end": 165000,
+     "y": 330,
+     "label": "US stroke deaths a year",
+     "fmt": "int",
+     "size": 170
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@states",
+     "do": "geo.highlight_in",
+     "stage": "stage_map",
+     "args": {
+      "fid": "840",
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@+0.3",
+     "do": "chart.counter_run",
+     "id": "us_deaths",
+     "until": "@@thousand+0.3",
+     "args": {
+      "ease": "power1.out"
+     }
+    },
+    {
+     "at": "@@thousand",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "840",
+      "dur": 0.6,
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@@thousand+0.2",
+     "do": "sticker_in",
+     "id": "st_us"
+    },
+    {
+     "at": "@@sixteen",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "156",
+      "dur": 0.9,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@sixteen",
+     "do": "character_in",
+     "id": "wow"
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "us_deaths",
+     "args": {
+      "dur": 0.25
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.highlight_out",
+     "stage": "stage_map",
+     "args": {
+      "fid": "840",
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "wow"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_us"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Worldwide, stroke kills more than 7 million people every single year, the third most common cause of death on Earth.",
+    "cues": {
+     "worldwide": "worldwide",
+     "million": "million",
+     "killer": "earth"
+    }
+   },
+   "direction": "pull out to the whole stage; the world counter runs to 7,300,000 and the globe sticker drops on 'Earth'",
+   "energy": 4,
+   "tone": "revelatory",
+   "cam": [
+    0.45,
+    [
+     40,
+     20
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.47,
+    [
+     41,
+     20.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "world_deaths",
+     "type": "counter",
+     "start": 0,
+     "end": 7300000,
+     "y": 330,
+     "label": "stroke deaths a year, worldwide",
+     "fmt": "int",
+     "size": 170
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@worldwide",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "156",
+      "dur": 0.8,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@+0.2",
+     "do": "chart.counter_run",
+     "id": "world_deaths",
+     "until": "@@million+0.4",
+     "args": {
+      "ease": "power1.out"
+     }
+    },
+    {
+     "at": "@@million+0.5",
+     "do": "character_in",
+     "id": "wow"
+    },
+    {
+     "at": "@@killer+0.4",
+     "do": "sticker_pulse",
+     "id": "st_globe"
+    },
+    {
+     "at": "@@killer",
+     "do": "sticker_in",
+     "id": "st_globe"
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "world_deaths",
+     "args": {
+      "dur": 0.25
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_globe"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "wow"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "World Stroke Day is October 29. Remember FAST: face, arm, speech, and time to call for help.",
+    "cues": {
+     "day": "day",
+     "fast": "fast",
+     "face": "face",
+     "time": "time"
+    }
+   },
+   "direction": "back onto China; the World Stroke Day card lands on 'Day', the brain sticker on 'FAST', the FAST card on 'face', the phone sticker on 'time'",
+   "energy": 4,
+   "tone": "tender",
+   "card": {
+    "kicker": "FAST",
+    "text": "face · arm · speech · time"
+   },
+   "card_at": null,
+   "cam": [
+    1.3,
+    [
+     104,
+     36
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    1.35,
+    [
+     104.5,
+     36.5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@day",
+     "do": "fact_in",
+     "id": "f1",
+     "until": "@@face-0.2"
+    },
+    {
+     "at": "@@fast",
+     "do": "sticker_in",
+     "id": "st_brain"
+    },
+    {
+     "at": "@@fast+0.4",
+     "do": "sticker_pulse",
+     "id": "st_brain"
+    },
+    {
+     "at": "@@face",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@face+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "156",
+      "dur": 0.8,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@time",
+     "do": "sticker_in",
+     "id": "st_phone"
+    },
+    {
+     "at": "@@time+0.3",
+     "do": "sticker_pulse",
+     "id": "st_phone"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_brain"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_phone"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_us",
+   "type": "sticker",
+   "emoji": "1f1fa-1f1f8",
+   "x": 760,
+   "y": 520,
+   "size": 150,
+   "rot": 8
+  },
+  {
+   "id": "st_globe",
+   "type": "sticker",
+   "emoji": "1f30d",
+   "x": 300,
+   "y": 620,
+   "size": 200,
+   "rot": -8
+  },
+  {
+   "id": "st_brain",
+   "type": "sticker",
+   "emoji": "1f9e0",
+   "x": 300,
+   "y": 620,
+   "size": 190,
+   "rot": -8
+  },
+  {
+   "id": "st_phone",
+   "type": "sticker",
+   "emoji": "1f4de",
+   "x": 760,
+   "y": 520,
+   "size": 170,
+   "rot": 8
+  },
+  {
+   "id": "wow",
+   "type": "character",
+   "flag": "cn",
+   "face": "wow",
+   "x": 820,
+   "y": 1180,
+   "size": 220,
+   "rot": 6
+  }
+ ]
+}

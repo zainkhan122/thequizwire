@@ -1,0 +1,134 @@
+{
+ "version": 1,
+ "episode": "ep06-most-stroke-deaths-china",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A World Stroke Day Short that stays a map story: three giants, one answer, the scale shown as counters that keep climbing, then the FAST card as the thing you actually take away.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Which country records the MOST stroke deaths every year?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Which country records the most stroke deaths every year?",
+   "cues": {
+    "most": "most",
+    "country": "country"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "United States, India, or China?",
+   "cues": {
+    "a": "states",
+    "b": "india",
+    "c": "china"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "China. Over 2 million stroke deaths every year, about 1 in 3 of the whole world's total.",
+   "cues": {
+    "answer": "china",
+    "million": "million",
+    "third": "3"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "fly across the Pacific so both giants share the frame; the US lights up on 'States', its counter climbs to 165,000 and stops on 'thousand'; on 'sixteen' China pulses hard",
+   "text": "The United States loses about 165,000 a year. China's toll is 16 times that.",
+   "cues": {
+    "states": "states",
+    "thousand": "165,000",
+    "sixteen": "16"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.5,
+   "direction": "pull out to the whole stage; the world counter runs to 7,300,000 and the globe sticker drops on 'Earth'",
+   "text": "Worldwide, stroke kills more than 7 million people every single year, the third most common cause of death on Earth.",
+   "cues": {
+    "worldwide": "worldwide",
+    "million": "million",
+    "killer": "earth"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "tender",
+   "energy": 4,
+   "pause_after": 0.8,
+   "direction": "back onto China; the World Stroke Day card lands on 'Day', the brain sticker on 'FAST', the FAST card on 'face', the phone sticker on 'time'",
+   "text": "World Stroke Day is October 29. Remember FAST: face, arm, speech, and time to call for help.",
+   "cues": {
+    "day": "day",
+    "fast": "fast",
+    "face": "face",
+    "time": "time"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "Every second counts. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}
