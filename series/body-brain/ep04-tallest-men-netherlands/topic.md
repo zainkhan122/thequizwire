@@ -28,5 +28,11 @@ C Sweden — the Scandinavian stereotype; actually ~181 cm, a close second-tier,
 - "Which country has the most doctors" (also in the suggest list) — strong search term, but the answer (Cuba/Austria depending on source) is contested across publishers → fails the two-publisher ledger rule.
 - "Which country has the shortest people" — real search demand, but it humiliates a nation on a reach-driven channel; not our tone.
 
+## Copy
+Retro-documented (episode shipped 2026-10-19 under postkit v2, before the Copy rule). Title = the question verbatim with the
+ruler emoji; description sells the texture (Dutch men 182.5 cm, Americans down to 37th) and names the three options as the
+bait, never the answer alone. Keywords: tallest people in the world, dutch height, average height netherlands. Spoiler note:
+the premise names the Netherlands — acceptable only because the post was already sent; new episodes keep the answer out.
+
 ## Ship by
 2026-10-28

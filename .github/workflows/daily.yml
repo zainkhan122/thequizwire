@@ -26,7 +26,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Channel stats first (what performed, which hours)
-        env: { BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}, BUFFER_API_KEY_2: ${{ secrets.BUFFER_API_KEY_2 }} }
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_API_KEY_2: ${{ secrets.BUFFER_API_KEY_2 }}
         run: |
           python3 tools/stats.py snapshot 2>&1 | tail -2 | tee -a "$GITHUB_STEP_SUMMARY"
           python3 tools/slots.py apply 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"

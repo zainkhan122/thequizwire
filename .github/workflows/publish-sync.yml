@@ -36,7 +36,9 @@ jobs:
           [ -n "$YT_REFRESH_TOKEN" ] || { echo "::notice::YouTube OAuth not connected (YT_REFRESH_TOKEN) — playlists skipped; see docs/DISTRIBUTION.md §6"; exit 0; }
           python3 reelkit/yt_enrich.py run | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Channel stats → slots
-        env: { BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}, BUFFER_API_KEY_2: ${{ secrets.BUFFER_API_KEY_2 }} }
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_API_KEY_2: ${{ secrets.BUFFER_API_KEY_2 }}
         run: |
           python3 tools/stats.py snapshot 2>&1 | tail -3 | tee -a "$GITHUB_STEP_SUMMARY"
           python3 tools/slots.py apply 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
