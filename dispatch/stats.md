@@ -1,4 +1,4 @@
-# Channel stats — 2026-10-27T05:16Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
+# Channel stats — 2026-10-27T05:18Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
 
 ## Per series, all channels (7-day movement — what is trending for us)
 - geo-blitz: 9 posts · +2870 in 7 d · 8617 total
