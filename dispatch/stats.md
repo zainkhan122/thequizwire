@@ -6,7 +6,7 @@
 - wild-files: 6 posts · +1880 in 7 d · 5145 total
 - body-brain: 2 posts · +1049 in 7 d · 2246 total
 
-## youtube — 23 posts · metric views · youtube-page
+## youtube — 23 posts · metric views · buffer insights · 0/0 sent posts with metrics
 last 24 h:
 - ep12-polar-bears-penguins (wild-files): +102 · 102 total
 - ep14-most-time-zones-france (geo-blitz): +? · 1255 total
@@ -17,13 +17,13 @@ series (7 d): geo-blitz +2870 (9) · sports-sprint +2661 (6) · wild-files +1880
 hours (first-24 h by publish hour): none yet
 → slots: not enough first-24 h data (0/8) — researched defaults in use
 
-## instagram — 0 posts · metric — · no data
+## instagram — 0 posts · metric — · buffer insights · 0/0 sent posts with metrics
 
-## facebook — 0 posts · metric — · no data
+## facebook — 0 posts · metric — · buffer insights · 0/0 sent posts with metrics
 
-## threads — 0 posts · metric — · no data
+## threads — 0 posts · metric — · buffer insights · 0/0 sent posts with metrics
 
-## twitter — 0 posts · metric — · no data
+## twitter — 0 posts · metric — · buffer insights · 0/0 sent posts with metrics
 
 ## Every post
 
