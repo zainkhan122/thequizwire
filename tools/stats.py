@@ -71,21 +71,21 @@ def fetch_buffer(posts):
         for platform, cid in chans:
             inp = {"organizationId": org, "filter": {"channelIds": [cid], "status": ["sent"], "startDate": (NOW - timedelta(days=45)).isoformat(timespec="seconds")},
                    "sort": [{"field": "createdAt", "direction": "desc"}]}
-            after, n, scope = None, 0, None
+            after, n, scope, seen, err1 = None, 0, None, 0, None
             for _ in range(4):
                 st, _h, raw = cl._post({"query": Q_METRICS, "variables": {"input": inp, "after": after}})
                 try: body = json.loads(raw)
                 except Exception: body = {}
                 for e in body.get("errors") or []:
-                    code = ((e.get("extensions") or {}).get("code") or "")
+                    code = ((e.get("extensions") or {}).get("code") or ""); err1 = err1 or f"{code} {e.get('message')}"[:120]
                     if "SCOPE" in code.upper() or "insight" in (e.get("message") or "").lower(): scope = e.get("message") or code
                 page = ((body.get("data") or {}).get("posts") or {})
                 for ed in page.get("edges") or []:
-                    nd = ed["node"]; m = {x["type"]: x["value"] for x in (nd.get("metrics") or [])}
+                    seen += 1; nd = ed["node"]; m = {x["type"]: x["value"] for x in (nd.get("metrics") or [])}
                     if m: got[nd["id"]] = {**m, "metrics_updated_at": nd.get("metricsUpdatedAt")}; n += 1
                 if not page.get("pageInfo", {}).get("hasNextPage"): break
                 after = page["pageInfo"]["endCursor"]
-            notes[platform] = f"buffer insights · {n} posts with metrics" + (f" · scope: {scope}" if scope else "")
+            notes[platform] = f"buffer insights · {n}/{seen} sent posts with metrics" + (f" · scope: {scope}" if scope else "") + (f" · http {st} {err1}" if (err1 or st != 200) else "")
     return got, notes
 
 
