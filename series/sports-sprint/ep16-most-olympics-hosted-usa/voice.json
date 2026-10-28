@@ -63,7 +63,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "The United States. 8 Games so far: 4 summer and 4 winter, from Saint Louis to Salt Lake City.",
+   "text": "United States. 8 Games so far: 4 summer and 4 winter, from St. Louis to Salt Lake City.",
    "cues": {
     "answer": "states",
     "summer": "summer",

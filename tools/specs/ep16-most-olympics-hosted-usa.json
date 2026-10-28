@@ -134,7 +134,7 @@
    "games": "games"
   },
   "v04": {
-   "text": "The United States. 8 Games so far: 4 summer and 4 winter, from Saint Louis to Salt Lake City.",
+   "text": "United States. 8 Games so far: 4 summer and 4 winter, from St. Louis to Salt Lake City.",
    "cues": {
     "answer": "states",
     "summer": "summer",
@@ -506,7 +506,7 @@
     "vo": [
      "which country has hosted the most olympic games",
      "france, united kingdom, or united states",
-     "the united states. 8 games so far: 4 summer and 4 winter, from saint louis to salt lake city"
+     "united states. 8 games so far: 4 summer and 4 winter, from st. louis to salt lake city"
     ],
     "screen": [
      "United States",
