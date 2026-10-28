@@ -1,0 +1,208 @@
+{
+ "version": 1,
+ "episode": "ep16-most-olympics-hosted-usa",
+ "topic": "Countries that have hosted the most Olympic Games: United States 8 (Summer 1904 St. Louis, 1932 & 1984 Los Angeles, 1996 Atlanta; Winter 1932 & 1980 Lake Placid, 1960 Squaw Valley, 2002 Salt Lake City), with LA 2028 and Salt Lake City 2034 awarded (→ 10); France 6 (1900, 1924, 2024 Paris; 1924 Chamonix, 1968 Grenoble, 1992 Albertville); UK 3 (London 1908, 1948, 2012)",
+ "researched": "2026-10-28",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "France or Britain, the old Olympic nations, have hosted the most Games.",
+   "reality": "France has 6 (3 Summer, 3 Winter) and Britain 3; the United States has 8 (4 Summer, 4 Winter), with Los Angeles 2028 and Salt Lake City 2034 already awarded.",
+   "sources": [
+    "wiki_hosts",
+    "olympics_hosts",
+    "ioc_la28",
+    "ioc_slc34"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Olympic Shorts are medal-table and record clips; nobody maps the host cities per country with the Winter Games counted, the pins dropping to a counter, and the two booked Games.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=olympic+host+cities",
+    "title": "Search: olympic host cities",
+    "angle": "host-city montages",
+    "misses": "no per-country count, no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=olympics+quiz+shorts",
+    "title": "Search: olympics quiz shorts",
+    "angle": "medal and athlete trivia",
+    "misses": "no map, no hosting angle"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if sports scenarios",
+    "misses": "no sourced history"
+   }
+  ]
+ },
+ "sources": {
+  "wiki_hosts": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "List of Olympic Games host cities",
+   "url": "https://en.wikipedia.org/wiki/List_of_Olympic_Games_host_cities",
+   "date": "2026-10-28",
+   "notes": "USA hosted 8 (4 Summer: 1904, 1932, 1984, 1996; 4 Winter: 1932, 1960, 1980, 2002), plus LA 2028 and Salt Lake City 2034 awarded; France 6 (1900, 1924, 2024; 1924, 1968, 1992); UK 3 (1908, 1948, 2012)"
+  },
+  "olympics_hosts": {
+   "type": "primary",
+   "publisher": "Olympics.com (IOC)",
+   "title": "Olympic Games — all editions",
+   "url": "https://olympics.com/en/olympic-games",
+   "date": "2026-10-28",
+   "notes": "official list of every Summer and Winter Games with host city and country"
+  },
+  "ioc_la28": {
+   "type": "primary",
+   "publisher": "International Olympic Committee",
+   "title": "Los Angeles 2028",
+   "url": "https://olympics.com/en/olympic-games/los-angeles-2028",
+   "date": "2026-10-28",
+   "notes": "LA elected host of the 2028 Summer Games (IOC Session 2017); third Los Angeles Games after 1932 and 1984"
+  },
+  "ioc_slc34": {
+   "type": "primary",
+   "publisher": "International Olympic Committee",
+   "title": "Salt Lake City-Utah 2034",
+   "url": "https://olympics.com/ioc/news/salt-lake-city-utah-elected-as-host-of-the-olympic-and-paralympic-winter-games-2034",
+   "date": "2026-10-28",
+   "notes": "Salt Lake City-Utah elected host of the 2034 Winter Games at the 142nd IOC Session, Paris, 24 July 2024; previously hosted 2002"
+  },
+  "wiki_paris24": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "2024 Summer Olympics",
+   "url": "https://en.wikipedia.org/wiki/2024_Summer_Olympics",
+   "date": "2026-10-28",
+   "notes": "Paris hosted for the third time (1900, 1924, 2024), equalling London (1908, 1948, 2012) as the only cities to host three Summer Games"
+  },
+  "wiki_london": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "2012 Summer Olympics",
+   "url": "https://en.wikipedia.org/wiki/2012_Summer_Olympics",
+   "date": "2026-10-28",
+   "notes": "London became the first city to host the modern Summer Games three times (1908, 1948, 2012)"
+  },
+  "britannica_hosts": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Olympic Games — host cities",
+   "url": "https://www.britannica.com/sports/Olympic-Games",
+   "date": "2026-10-28",
+   "notes": "chronology of Summer and Winter Games host cities, incl. St. Louis 1904, Lake Placid 1932/1980, Squaw Valley 1960, Atlanta 1996, Salt Lake City 2002, Chamonix 1924, Grenoble 1968, Albertville 1992"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The United States has hosted 8 Olympic Games: Summer 1904 (St. Louis), 1932 and 1984 (Los Angeles), 1996 (Atlanta); Winter 1932 and 1980 (Lake Placid), 1960 (Squaw Valley), 2002 (Salt Lake City) — more than any other country.",
+   "sources": [
+    "wiki_hosts",
+    "olympics_hosts",
+    "britannica_hosts"
+   ],
+   "vo": [
+    "which country has hosted the most olympic games",
+    "france, united kingdom, or united states",
+    "the united states. 8 games so far: 4 summer and 4 winter, from saint louis to salt lake city"
+   ],
+   "screen": [
+    "United States",
+    "France",
+    "United Kingdom",
+    "United States · 8",
+    "8 GAMES",
+    "4 Summer · 4 Winter",
+    "St. Louis 1904",
+    "Los Angeles 1932 · 1984 · 2028",
+    "Salt Lake City 2002 · 2034",
+    "Atlanta 1996",
+    "Lake Placid 1932 · 1980"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "France has hosted 6 Games (Paris 1900, 1924, 2024; Chamonix 1924, Grenoble 1968, Albertville 1992); the United Kingdom 3 (London 1908, 1948, 2012).",
+   "sources": [
+    "olympics_hosts",
+    "wiki_hosts",
+    "wiki_paris24",
+    "wiki_london",
+    "britannica_hosts"
+   ],
+   "vo": [
+    "france is second with 6 in total, including paris. britain has 3, all of them in london"
+   ],
+   "screen": [
+    "France · 6",
+    "United Kingdom · 3"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Los Angeles will host the 2028 Summer Games and Salt Lake City-Utah the 2034 Winter Games, taking the US total to 10.",
+   "sources": [
+    "ioc_la28",
+    "ioc_slc34",
+    "wiki_hosts"
+   ],
+   "vo": [
+    "los angeles hosts again in 2028, and salt lake city returns in 2034. that makes 10"
+   ],
+   "screen": [
+    "US Games by 2034"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "Los Angeles 2028 will make LA the third city to host three Summer Games, after London (1908, 1948, 2012) and Paris (1900, 1924, 2024).",
+   "sources": [
+    "ioc_la28",
+    "wiki_paris24",
+    "wiki_london"
+   ],
+   "vo": [
+    "los angeles then becomes only the third city ever to host 3 summer games, after london and paris"
+   ],
+   "screen": [
+    "3-TIME CITIES",
+    "London · Paris · LA 2028"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,614 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "2024/25 CENSUS",
+   "text": "about 17,200 lions in Tanzania"
+  },
+  {
+   "id": "africa_lions",
+   "type": "counter",
+   "start": 0,
+   "end": 23000,
+   "y": 330,
+   "label": "wild lions left in Africa",
+   "fmt": "int",
+   "size": 170
+  },
+  {
+   "id": "range_gone",
+   "type": "counter",
+   "start": 0,
+   "end": 94,
+   "y": 330,
+   "label": "of their old range, gone",
+   "fmt": "pct",
+   "size": 190
+  },
+  {
+   "id": "f4",
+   "type": "fact",
+   "kicker": "ASIATIC LIONS",
+   "text": "891 in Gujarat, India"
+  },
+  {
+   "id": "st_lion",
+   "type": "sticker",
+   "emoji": "1f981",
+   "x": 300,
+   "y": 620,
+   "size": 200,
+   "rot": -8
+  },
+  {
+   "id": "st_globe",
+   "type": "sticker",
+   "emoji": "1f30d",
+   "x": 760,
+   "y": 520,
+   "size": 170,
+   "rot": 8
+  },
+  {
+   "id": "wow",
+   "type": "character",
+   "flag": "tz",
+   "face": "sad",
+   "x": 820,
+   "y": 1180,
+   "size": 220,
+   "rot": 6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  },
+  {
+   "id": "cha",
+   "type": "character",
+   "flag": "tz",
+   "face": "wow",
+   "x": 230,
+   "y": 820,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "chb",
+   "type": "character",
+   "flag": "ke",
+   "face": "think",
+   "x": 850,
+   "y": 1000,
+   "size": 200,
+   "rot": 8
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     30,
+     -8
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.38,
+    "lonlat": [
+     30,
+     -8
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 1.9,
+    "lonlat": [
+     35,
+     -6
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 1.95,
+    "lonlat": [
+     35.5,
+     -6.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "834",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s04@answer",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "tz"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "tz"
+   }
+  },
+  {
+   "at": "s05@africa",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "za"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "za"
+   }
+  },
+  {
+   "at": "s05@kenya",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ke"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ke"
+   }
+  },
+  {
+   "at": "s07@gir",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "gir"
+   }
+  },
+  {
+   "at": "s08",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "gir"
+   }
+  },
+  {
+   "at": "s04+3.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "834",
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 1.1,
+    "lonlat": [
+     30,
+     -14
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 1.12,
+    "lonlat": [
+     30.5,
+     -14.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@africa",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "710",
+    "layer": "others"
+   }
+  },
+  {
+   "at": "s05@kenya",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "404",
+    "layer": "others"
+   }
+  },
+  {
+   "at": "s05@whole",
+   "do": "chart.counter_run",
+   "id": "africa_lions",
+   "until": "s05@lions+0.3",
+   "args": {
+    "ease": "power1.out"
+   }
+  },
+  {
+   "at": "s05@whole+0.3",
+   "do": "sticker_in",
+   "id": "st_lion"
+  },
+  {
+   "at": "s05@lions",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "834",
+    "dur": 0.8,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "hide",
+   "id": "africa_lions",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "geo.highlight_out",
+   "stage": "stage_map",
+   "args": {
+    "fid": "710",
+    "layer": "others"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "geo.highlight_out",
+   "stage": "stage_map",
+   "args": {
+    "fid": "404",
+    "layer": "others"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_lion"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 0.6,
+    "lonlat": [
+     20,
+     2
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 0.62,
+    "lonlat": [
+     21,
+     2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@vanished",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "834",
+    "dur": 0.8,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06+0.2",
+   "do": "chart.counter_run",
+   "id": "range_gone",
+   "until": "s06@percent+0.3",
+   "args": {
+    "ease": "power1.out"
+   }
+  },
+  {
+   "at": "s06@percent+0.4",
+   "do": "character_in",
+   "id": "wow"
+  },
+  {
+   "at": "s06@roamed",
+   "do": "sticker_in",
+   "id": "st_globe"
+  },
+  {
+   "at": "s06.end",
+   "do": "hide",
+   "id": "range_gone",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "character_out",
+   "id": "wow"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_globe"
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.3",
+   "args": {
+    "k": 0.7,
+    "lonlat": [
+     50,
+     5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 0.72,
+    "lonlat": [
+     51,
+     5.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@outside",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s07@asiatic-0.2"
+  },
+  {
+   "at": "s07@india",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "356",
+    "layer": "india"
+   }
+  },
+  {
+   "at": "s07@gir+0.3",
+   "do": "sticker_in",
+   "id": "st_lion"
+  },
+  {
+   "at": "s07@asiatic",
+   "do": "fact_in",
+   "id": "f4",
+   "until": "s07.end"
+  },
+  {
+   "at": "s07@asiatic+0.5",
+   "do": "sticker_pulse",
+   "id": "st_lion"
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_lion"
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     30,
+     -8
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.6",
+   "do": "character_in",
+   "id": "cha"
+  },
+  {
+   "at": "s04+1.9",
+   "do": "character_in",
+   "id": "chb"
+  },
+  {
+   "at": "s05+1.0",
+   "do": "character_out",
+   "id": "cha"
+  },
+  {
+   "at": "s05+0.8",
+   "do": "character_out",
+   "id": "chb"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

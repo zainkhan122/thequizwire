@@ -1,0 +1,150 @@
+{
+ "version": 1,
+ "episode": "ep16-most-olympics-hosted-usa",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -130,
+     22,
+     20,
+     62
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "840"
+     ],
+     "cls": "",
+     "note": "United States (answer) — colour lift on reveal",
+     "lift": "color",
+     "color": "#1E63D6"
+    },
+    {
+     "kind": "highlight",
+     "id": "others",
+     "ids": [
+      "250",
+      "826"
+     ],
+     "cls": "dim",
+     "note": "France and the United Kingdom — lit for the comparison beat"
+    }
+   ],
+   "pins": [
+    {
+     "id": "stl",
+     "lonlat": [
+      -90.2,
+      38.63
+     ],
+     "label": "St. Louis 1904",
+     "qid": "Q38022"
+    },
+    {
+     "id": "la",
+     "lonlat": [
+      -118.24,
+      34.05
+     ],
+     "label": "Los Angeles 1932 · 1984 · 2028",
+     "qid": "Q65"
+    },
+    {
+     "id": "slc",
+     "lonlat": [
+      -111.89,
+      40.76
+     ],
+     "label": "Salt Lake City 2002 · 2034",
+     "qid": "Q23337"
+    },
+    {
+     "id": "atl",
+     "lonlat": [
+      -84.39,
+      33.75
+     ],
+     "label": "Atlanta 1996",
+     "qid": "Q23556"
+    },
+    {
+     "id": "lp",
+     "lonlat": [
+      -73.98,
+      44.28
+     ],
+     "label": "Lake Placid 1932 · 1980",
+     "qid": "Q192700"
+    }
+   ],
+   "labels": [
+    {
+     "id": "fr",
+     "lonlat": [
+      2,
+      44
+     ],
+     "text": "France · 6",
+     "cls": "tag",
+     "in": "s05@france",
+     "out": "s06"
+    },
+    {
+     "id": "gb",
+     "lonlat": [
+      -3,
+      57
+     ],
+     "text": "United Kingdom · 3",
+     "cls": "tag",
+     "in": "s05@britain",
+     "out": "s06"
+    },
+    {
+     "id": "us",
+     "lonlat": [
+      -98,
+      42
+     ],
+     "text": "United States · 8",
+     "cls": "tag",
+     "in": "s04@answer",
+     "out": "s05"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -150,
+      5,
+      40,
+      72
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

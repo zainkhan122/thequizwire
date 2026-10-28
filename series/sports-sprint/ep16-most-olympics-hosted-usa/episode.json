@@ -1,0 +1,141 @@
+{
+ "id": "ep16-most-olympics-hosted-usa",
+ "format": "quiz-v3",
+ "series": "sports-sprint",
+ "number": 16,
+ "title": "Which country has HOSTED the most Olympic Games?",
+ "difficulty": "MEDIUM",
+ "seed": 4516,
+ "quiz": {
+  "question": "Which country has HOSTED the most Olympic Games?",
+  "keyword": "HOSTED",
+  "options": [
+   "France",
+   "United Kingdom",
+   "United States"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "United States",
+  "answer_sub": "8 Games, 10 by 2034",
+  "option_meta": [
+   {
+    "flag": "fr"
+   },
+   {
+    "flag": "gb"
+   },
+   {
+    "flag": "us"
+   }
+  ],
+  "banner": "United States",
+  "banner_sub": "✓  C was right · 8 Games, 10 by 2034",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country has HOSTED the most Olympic Games? 🏅",
+  "premise": "One country has hosted the Olympics eight times",
+  "bait": "Paris just hosted its third. That is not even close.",
+  "keywords": [
+   "most olympic games hosted",
+   "olympic host cities",
+   "olympics history",
+   "olympic facts",
+   "sports quiz",
+   "la 2028",
+   "winter olympics hosts",
+   "sports trivia"
+  ],
+  "description": "One country has hosted the Olympics eight times. Paris just hosted its third. That is not even close.\n\nSources: Olympics.com; International Olympic Committee; Wikipedia list of Olympic Games host cities.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nSports Sprint #16",
+  "hashtags": [
+   "#SportsQuiz",
+   "#SportsTrivia",
+   "#thequizwire"
+  ],
+  "tags": [
+   "Olympics",
+   "SportsTrivia"
+  ],
+  "cover_emoji": "🏅",
+  "copy": {
+   "spoilers": [
+    "united states",
+    "usa",
+    "america",
+    "american",
+    "los angeles",
+    "lake placid",
+    "salt lake",
+    "atlanta",
+    "st. louis",
+    "squaw valley"
+   ],
+   "youtube": {
+    "title": "Which country has hosted the most Olympic Games? Olympics quiz 🏅",
+    "description": "France, Britain or the third one? Paris just hosted for the third time, London has done it three times too, and neither is anywhere near the record.\nCount the Winter Games and one country runs away with it, with two more already booked. Guess before the pins drop.\nOne sports fact a day you can argue about — follow along.",
+    "tags": [
+     "#olympics",
+     "#sportsquiz",
+     "#sportstrivia",
+     "#olympichistory",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country has HOSTED the most Olympic Games? 🏅\nFrance, Britain or the other one? Paris 2024 was a third time, London has three too, and the record holder has more than double that, with two more Games already in the diary.\nWhich did you pick?",
+    "tags": [
+     "#olympics",
+     "#sportsquiz",
+     "#olympichistory",
+     "#sportstrivia",
+     "#sportsfacts"
+    ]
+   },
+   "facebook": {
+    "text": "Which country has hosted the most Olympic Games — France, Britain or the third option?\nCount summer and winter together and one of them is miles ahead. Which Games do you remember best?",
+    "tags": [
+     "#olympics",
+     "#sportsquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which country has HOSTED the most Olympic Games?\nParis has three. London has three. The record is more than double that, with two more already booked.",
+    "tags": [
+     "#Olympics"
+    ]
+   },
+   "threads": {
+    "text": "Which country has hosted the most Olympic Games — France, Britain or the third option? Paris 2024 made it three for France and London has three; the record holder has eight, with two more already on the calendar.",
+    "tags": [
+     "#olympics"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-record",
+  "hook": "question-first",
+  "opener": "split-candidates",
+  "reveal": "colour-lift",
+  "beats": [
+   "counter",
+   "pin",
+   "second-highlight",
+   "label"
+  ],
+  "cast": "flagball:happy + emoji-set:medal",
+  "music": "bed:tense"
+ },
+ "status": "ready"
+}

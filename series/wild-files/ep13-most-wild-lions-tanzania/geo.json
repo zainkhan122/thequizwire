@@ -1,0 +1,122 @@
+{
+ "version": 1,
+ "episode": "ep13-most-wild-lions-tanzania",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     5,
+     -38,
+     60,
+     15
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "834"
+     ],
+     "cls": "",
+     "note": "Tanzania (answer) — fill pulse on reveal"
+    },
+    {
+     "kind": "highlight",
+     "id": "others",
+     "ids": [
+      "710",
+      "404"
+     ],
+     "cls": "dim",
+     "note": "South Africa and Kenya — lit for the comparison beat"
+    },
+    {
+     "kind": "highlight",
+     "id": "india",
+     "ids": [
+      "356"
+     ],
+     "cls": "dim",
+     "note": "India — lit for the Gir beat"
+    }
+   ],
+   "pins": [],
+   "labels": [
+    {
+     "id": "tz",
+     "lonlat": [
+      35,
+      -4
+     ],
+     "text": "Tanzania",
+     "cls": "tag",
+     "in": "s04@answer",
+     "out": "s06"
+    },
+    {
+     "id": "za",
+     "lonlat": [
+      25,
+      -31
+     ],
+     "text": "South Africa · 3,284",
+     "cls": "tag",
+     "in": "s05@africa",
+     "out": "s06"
+    },
+    {
+     "id": "ke",
+     "lonlat": [
+      38,
+      3
+     ],
+     "text": "Kenya · 2,515",
+     "cls": "tag",
+     "in": "s05@kenya",
+     "out": "s06"
+    },
+    {
+     "id": "gir",
+     "lonlat": [
+      71,
+      24
+     ],
+     "text": "Gir · India",
+     "cls": "tag",
+     "in": "s07@gir",
+     "out": "s08"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -20,
+      -40,
+      100,
+      40
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

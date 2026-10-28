@@ -1,0 +1,136 @@
+{
+ "version": 1,
+ "episode": "ep16-most-olympics-hosted-usa",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A host-city map: the three countries everyone links with the Olympics, the real count once you add the Winter Games, the city pins dropping one by one, and the two already booked.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Which country has HOSTED the most Olympic Games?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Which country has hosted the most Olympic Games?",
+   "cues": {
+    "hosted": "hosted",
+    "games": "games"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "France, United Kingdom, or United States?",
+   "cues": {
+    "a": "france",
+    "b": "kingdom",
+    "c": "states"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "The United States. 8 Games so far: 4 summer and 4 winter, from Saint Louis to Salt Lake City.",
+   "cues": {
+    "answer": "states",
+    "summer": "summer",
+    "winter": "winter",
+    "louis": "louis",
+    "salt": "salt"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "pull back across the Atlantic so all three share the frame; France lights with its tag on 'France', Britain on 'Britain'; the host counter sits at 8 for the US while the others appear",
+   "text": "France is second with 6 in total, including Paris. Britain has 3, all of them in London.",
+   "cues": {
+    "france": "france",
+    "paris": "paris",
+    "britain": "britain",
+    "london": "london"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.5,
+   "direction": "back onto the US; LA pin pulses on 'Angeles', Salt Lake on 'Salt'; the counter runs 8 → 10 and the happy flag-ball pops on '10'",
+   "text": "Los Angeles hosts again in 2028, and Salt Lake City returns in 2034. That makes 10.",
+   "cues": {
+    "angeles": "angeles",
+    "salt": "salt",
+    "ten": "10"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "tender",
+   "energy": 4,
+   "pause_after": 0.8,
+   "direction": "wide Atlantic again; the THREE-TIME CITIES card lands on 'third'; London and Paris stickers drop on their names, the medal pulses",
+   "text": "Los Angeles then becomes only the third city ever to host 3 summer Games, after London and Paris.",
+   "cues": {
+    "third": "third",
+    "london": "london",
+    "paris": "paris"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "More than you thought. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

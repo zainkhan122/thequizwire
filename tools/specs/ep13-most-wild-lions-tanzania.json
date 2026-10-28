@@ -1,0 +1,852 @@
+{
+ "id": "ep13-most-wild-lions-tanzania",
+ "series": "wild-files",
+ "number": 13,
+ "seed": 4413,
+ "question": "Where do MOST of the world's wild lions live?",
+ "keyword": "MOST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Kenya",
+   "flag": "ke",
+   "cue": "kenya",
+   "lonlat": [
+    38,
+    1
+   ]
+  },
+  {
+   "text": "South Africa",
+   "flag": "za",
+   "cue": "africa",
+   "lonlat": [
+    25,
+    -29
+   ]
+  },
+  {
+   "text": "Tanzania",
+   "flag": "tz",
+   "cue": "tanzania",
+   "lonlat": [
+    35,
+    -6
+   ]
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "about 17,000 lions",
+ "outro_headline": "TOO EASY?",
+ "cover_emoji": "🦁",
+ "post": {
+  "premise": "One country holds most of the world's wild lions",
+  "bait": "Not the one with the famous safaris you are thinking of.",
+  "keywords": [
+   "most lions in the world",
+   "lion population by country",
+   "wild lions left",
+   "animal facts",
+   "safari countries",
+   "asiatic lion india",
+   "animal quiz",
+   "wildlife facts"
+  ],
+  "tags": [
+   "Lions",
+   "WildlifeFacts"
+  ],
+  "sources_line": "Tanzania Wildlife Research Institute 2024/25 census; IUCN Cat Specialist Group 2025; Gujarat Forest Department 2025",
+  "copy": {
+   "spoilers": [
+    "tanzania",
+    "tanzanian",
+    "serengeti",
+    "selous",
+    "nyerere",
+    "ruaha"
+   ],
+   "youtube": {
+    "title": "Where do most lions in the world live? Most people guess wrong 🦁",
+    "description": "Kenya, South Africa or the third one? One of them holds well over half of all the wild lions left on Earth, and the total left anywhere is smaller than a small town.\nGuess out loud before the map fills in, then see the only place outside Africa where lions still live.\nOne animal fact a day you can argue about — follow along.",
+    "tags": [
+     "#lions",
+     "#animalfacts",
+     "#wildlife",
+     "#animalquiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Where do MOST of the world's wild lions live? 🦁\nKenya, South Africa or the other safari giant? One country holds most of the world's remaining lions, and the global total would fit inside a small town.\nWhich did you pick?",
+    "tags": [
+     "#lions",
+     "#animalfacts",
+     "#wildlife",
+     "#safari",
+     "#animalquiz"
+    ]
+   },
+   "facebook": {
+    "text": "Where do most of the world's wild lions live — Kenya, South Africa or Tanzania?\nThe total left in the wild is smaller than most people think. Have you seen one in the wild?",
+    "tags": [
+     "#lions",
+     "#wildlife"
+    ]
+   },
+   "twitter": {
+    "text": "Where do MOST of the world's wild lions live?\nOne country holds most of them, and the world total would fit in a small town.",
+    "tags": [
+     "#Lions"
+    ]
+   },
+   "threads": {
+    "text": "Where do most of the world's wild lions live — Kenya, South Africa or Tanzania? One of them holds most of the species, the global total is smaller than a small town, and there is exactly one place outside Africa where lions still roam.",
+    "tags": [
+     "#lions"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "counter",
+   "second-highlight",
+   "label"
+  ],
+  "cast": "flagball:wow + emoji-set:lion",
+  "music": "bed:bright",
+  "outro": "TOO EASY?"
+ },
+ "intent": "The lion kingdom nobody names: three safari countries, one holds most of the world's lions — then the shock number of how few are left anywhere, and the one place outside Africa that still has them.",
+ "voice": {
+  "v01_cues": {
+   "most": "most",
+   "live": "live"
+  },
+  "v04": {
+   "text": "Tanzania. Its latest count found around 17,000 lions, more than every other country on Earth put together.",
+   "cues": {
+    "answer": "tanzania",
+    "count": "count",
+    "together": "together"
+   }
+  },
+  "v05": {
+   "text": "South Africa has about 3,000, Kenya fewer still. The whole of Africa holds only about 23,000 wild lions.",
+   "cues": {
+    "africa": "africa",
+    "kenya": "kenya",
+    "whole": "whole",
+    "lions": "lions"
+   }
+  },
+  "v06": {
+   "text": "Lions have vanished from 94 percent of the land they once roamed across Africa and Asia.",
+   "cues": {
+    "vanished": "vanished",
+    "percent": "percent",
+    "roamed": "roamed"
+   }
+  },
+  "v07": {
+   "text": "Outside Africa, only Gir, in India, still has them: 891 Asiatic lions, and nowhere else.",
+   "cues": {
+    "outside": "outside",
+    "gir": "gir",
+    "india": "india",
+    "asiatic": "asiatic"
+   }
+  },
+  "v08": {
+   "text": "Fewer than you thought. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "2024/25 CENSUS",
+   "text": "about 17,200 lions in Tanzania"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "tz",
+   "face": "wow",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "ke",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "geo": {
+  "fit_bbox": [
+   5,
+   -38,
+   60,
+   15
+  ],
+  "far_bbox": [
+   -20,
+   -40,
+   100,
+   40
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "834"
+  ],
+  "highlight_note": "Tanzania (answer) — fill pulse on reveal",
+  "lift_color": "#E0A000",
+  "extra_layers": [
+   {
+    "kind": "highlight",
+    "id": "others",
+    "ids": [
+     "710",
+     "404"
+    ],
+    "cls": "dim",
+    "note": "South Africa and Kenya — lit for the comparison beat"
+   },
+   {
+    "kind": "highlight",
+    "id": "india",
+    "ids": [
+     "356"
+    ],
+    "cls": "dim",
+    "note": "India — lit for the Gir beat"
+   }
+  ],
+  "labels": [
+   {
+    "id": "tz",
+    "lonlat": [
+     35,
+     -4
+    ],
+    "text": "Tanzania",
+    "cls": "tag",
+    "in": "s04@answer",
+    "out": "s06"
+   },
+   {
+    "id": "za",
+    "lonlat": [
+     25,
+     -31
+    ],
+    "text": "South Africa · 3,284",
+    "cls": "tag",
+    "in": "s05@africa",
+    "out": "s06"
+   },
+   {
+    "id": "ke",
+    "lonlat": [
+     38,
+     3
+    ],
+    "text": "Kenya · 2,515",
+    "cls": "tag",
+    "in": "s05@kenya",
+    "out": "s06"
+   },
+   {
+    "id": "gir",
+    "lonlat": [
+     71,
+     24
+    ],
+    "text": "Gir · India",
+    "cls": "tag",
+    "in": "s07@gir",
+    "out": "s08"
+   }
+  ],
+  "pins": [],
+  "scalebar": null,
+  "cams": {
+   "start": [
+    1.0,
+    [
+     30,
+     -8
+    ]
+   ],
+   "s01": [
+    0.95,
+    [
+     30,
+     -8
+    ]
+   ],
+   "s04": [
+    1.9,
+    [
+     35,
+     -6
+    ]
+   ],
+   "s04b": [
+    1.95,
+    [
+     35.5,
+     -6.5
+    ]
+   ],
+   "s05": [
+    1.1,
+    [
+     30,
+     -14
+    ]
+   ],
+   "s05b": [
+    1.12,
+    [
+     30.5,
+     -14.5
+    ]
+   ],
+   "s06": [
+    0.6,
+    [
+     20,
+     2
+    ]
+   ],
+   "s06b": [
+    0.62,
+    [
+     21,
+     2
+    ]
+   ],
+   "s07": [
+    0.7,
+    [
+     50,
+     5
+    ]
+   ],
+   "s07b": [
+    0.72,
+    [
+     51,
+     5.5
+    ]
+   ]
+  },
+  "pin_beats": []
+ },
+ "research": {
+  "topic": "Wild lion populations by country: Tanzania ~17,200 (TAWIRI national census 2024/25), South Africa 3,284, Kenya 2,515; Africa total ~22,000–25,000 (IUCN Cat Specialist Group 2025); lions occupy ~6% of historic range; India's Gir landscape 891 Asiatic lions (2025 census)",
+  "myths": [
+   {
+    "myth": "Kenya or South Africa, the famous safari destinations, have the most lions.",
+    "reality": "Tanzania's 2024/25 national census counted about 17,200 lions; South Africa follows with 3,284 and Kenya with 2,515.",
+    "sources": [
+     "citizen_tz",
+     "cat_tz",
+     "animalmap"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Lion Shorts are hunt clips and roar compilations; nobody plays the population map — three safari countries, the counts, how little range is left, and the single Indian forest outside Africa.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=lion+facts+shorts",
+     "title": "Search: lion facts shorts",
+     "angle": "behaviour and hunting clips",
+     "misses": "no countries, no counts"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=how+many+lions+are+left",
+     "title": "Search: how many lions are left",
+     "angle": "conservation explainers",
+     "misses": "no quiz, no country comparison"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "animal what-ifs",
+     "misses": "no sourced numbers"
+    }
+   ]
+  },
+  "sources": {
+   "citizen_tz": {
+    "type": "press",
+    "publisher": "The Citizen (Tanzania)",
+    "title": "Tanzania emerges as the top in lion and buffalo populations",
+    "url": "https://www.thecitizen.co.tz/tanzania/news/national/tanzania-emerges-as-the-top-in-lion-and-buffalo-populations-5499632",
+    "date": "2026-10-28",
+    "notes": "TAWIRI 2024/25 census: Tanzania ≈ 17,200 lions; South Africa 3,284; Botswana 3,064; Kenya 2,515; Zambia 2,349"
+   },
+   "cat_tz": {
+    "type": "press",
+    "publisher": "Conservation Action Trust",
+    "title": "Wildlife census shows Tanzania leads world in lion populations",
+    "url": "https://www.conservationaction.co.za/wildlife-census-shows-tanzania-leads-world-in-lion-populations/",
+    "date": "2026-10-28",
+    "notes": "TAWIRI census 2024/25: 17,200 lions, highest recorded by any country; 18.1% outside protected areas"
+   },
+   "iucn_lion": {
+    "type": "primary",
+    "publisher": "IUCN Red List",
+    "title": "Panthera leo",
+    "url": "https://www.iucnredlist.org/species/15951/231696234",
+    "date": "2026-10-28",
+    "notes": "Vulnerable; population decreasing; IUCN Cat Specialist Group 2025 estimate 22,000–25,000 adult and subadult lions in Africa"
+   },
+   "aa_lions": {
+    "type": "press",
+    "publisher": "Anadolu Agency",
+    "title": "FACTBOX — World Lion Day: How many lions remain in the wild?",
+    "url": "https://www.aa.com.tr/en/life/factbox-world-lion-day-how-many-lions-remain-in-the-wild/4023374",
+    "date": "2026-10-28",
+    "notes": "Lion Recovery Fund ≈ 23,000 wild lions in Africa (African Lion Database); IUCN Cat SG 22,000–25,000 in 2025"
+   },
+   "tt_range": {
+    "type": "press",
+    "publisher": "Türkiye Today",
+    "title": "World Lion Day: Only around 23,000 lions remain in wild across Africa",
+    "url": "https://www.turkiyetoday.com/lifestyle/world-lion-day-only-around-23000-lions-remain-in-wild-across-africa-3225858",
+    "date": "2026-10-28",
+    "notes": "IUCN Cat Specialist Group: lions occupied 566,675 km² in 2025 = 6.13% of historical range"
+   },
+   "animalmap": {
+    "type": "reference",
+    "publisher": "The Animal Map",
+    "title": "Lion 2025: facts, habitat, population",
+    "url": "https://theanimalmap.com/en/animals/lion",
+    "date": "2026-10-28",
+    "notes": "IUCN Cat SG 22,000–25,000 in Africa; Tanzania census 2024/25 ≈ 17,200; India 891 Asiatic lions (2025 census)"
+   },
+   "wiki_asiatic": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Asiatic lion",
+    "url": "https://en.wikipedia.org/wiki/Asiatic_lion",
+    "date": "2026-10-28",
+    "notes": "May 2025 survey: 891 lions across 35,000 km² of Gujarat (394 in Gir NP and adjoining areas); the only wild lions outside Africa"
+   },
+   "natgeo_gir": {
+    "type": "press",
+    "publisher": "National Geographic",
+    "title": "Can India's last lions be saved?",
+    "url": "https://www.nationalgeographic.com/animals/article/asiatic-lions-gir-national-park-india",
+    "date": "2026-10-28",
+    "notes": "2025 census: 891 Asiatic lions; Gir, Gujarat, the last wild lions outside Africa"
+   },
+   "gujarat_fd": {
+    "type": "primary",
+    "publisher": "Gujarat Forest Department",
+    "title": "16th Lion Population Estimation, May 2025",
+    "url": "https://forests.gujarat.gov.in/",
+    "date": "2026-10-28",
+    "notes": "891 Asiatic lions estimated across 35,000 km² of the Gir landscape in May 2025 (674 in 2020)"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Tanzania has the most wild lions of any country: about 17,200 in the 2024/25 TAWIRI national census, more than all other countries combined (Africa ≈ 22,000–25,000).",
+    "sources": [
+     "citizen_tz",
+     "cat_tz",
+     "iucn_lion",
+     "animalmap"
+    ],
+    "vo": [
+     "where do most of the world's wild lions live",
+     "kenya, south africa, or tanzania",
+     "tanzania. its latest count found around 17,000 lions, more than every other country on earth put together"
+    ],
+    "screen": [
+     "Tanzania",
+     "Kenya",
+     "South Africa",
+     "2024/25 CENSUS",
+     "about 17,200 lions in Tanzania"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "South Africa has about 3,284 lions and Kenya 2,515 (same census comparison); Africa holds roughly 22,000–25,000 wild lions (IUCN Cat SG 2025; Lion Recovery Fund ≈ 23,000).",
+    "sources": [
+     "citizen_tz",
+     "iucn_lion",
+     "aa_lions"
+    ],
+    "vo": [
+     "south africa has about 3,000, kenya fewer still. the whole of africa holds only about 23,000 wild lions"
+    ],
+    "screen": [
+     "South Africa · 3,284",
+     "Kenya · 2,515",
+     "wild lions left in Africa"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Lions occupy only about 6% of their historical range (IUCN Cat Specialist Group 2025: 6.13%), i.e. they have vanished from about 94% of it.",
+    "sources": [
+     "tt_range",
+     "iucn_lion"
+    ],
+    "vo": [
+     "lions have vanished from 94 percent of the land they once roamed across africa and asia"
+    ],
+    "screen": [
+     "of their old range, gone"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "core",
+    "text": "The only wild lions outside Africa are the Asiatic lions of the Gir landscape in Gujarat, India: 891 in the 2025 census.",
+    "sources": [
+     "gujarat_fd",
+     "wiki_asiatic",
+     "natgeo_gir",
+     "animalmap"
+    ],
+    "vo": [
+     "outside africa, only gir, in india, still has them: 891 asiatic lions, and nowhere else"
+    ],
+    "screen": [
+     "Gir · India",
+     "ASIATIC LIONS",
+     "891 in Gujarat, India"
+    ]
+   }
+  ]
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "South Africa has about 3,000, Kenya fewer still. The whole of Africa holds only about 23,000 wild lions.",
+    "cues": {
+     "africa": "africa",
+     "kenya": "kenya",
+     "whole": "whole",
+     "lions": "lions"
+    }
+   },
+   "direction": "pull back to show the three safari countries; South Africa and Kenya light dim with their counts on 'Africa' and 'Kenya'; the continent counter runs to 23,000 and stops on 'lions'",
+   "energy": 3,
+   "tone": "resolute",
+   "cam": [
+    1.1,
+    [
+     30,
+     -14
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    1.12,
+    [
+     30.5,
+     -14.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "africa_lions",
+     "type": "counter",
+     "start": 0,
+     "end": 23000,
+     "y": 330,
+     "label": "wild lions left in Africa",
+     "fmt": "int",
+     "size": 170
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@africa",
+     "do": "geo.highlight_in",
+     "stage": "stage_map",
+     "args": {
+      "fid": "710",
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@@kenya",
+     "do": "geo.highlight_in",
+     "stage": "stage_map",
+     "args": {
+      "fid": "404",
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@@whole",
+     "do": "chart.counter_run",
+     "id": "africa_lions",
+     "until": "@@lions+0.3",
+     "args": {
+      "ease": "power1.out"
+     }
+    },
+    {
+     "at": "@@whole+0.3",
+     "do": "sticker_in",
+     "id": "st_lion"
+    },
+    {
+     "at": "@@lions",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "834",
+      "dur": 0.8,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "africa_lions",
+     "args": {
+      "dur": 0.25
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.highlight_out",
+     "stage": "stage_map",
+     "args": {
+      "fid": "710",
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.highlight_out",
+     "stage": "stage_map",
+     "args": {
+      "fid": "404",
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_lion"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Lions have vanished from 94 percent of the land they once roamed across Africa and Asia.",
+    "cues": {
+     "vanished": "vanished",
+     "percent": "percent",
+     "roamed": "roamed"
+    }
+   },
+   "direction": "wide on the whole continent; the percent counter climbs to 94 and the sad flag-ball pops on 'roamed'",
+   "energy": 4,
+   "tone": "revelatory",
+   "cam": [
+    0.6,
+    [
+     20,
+     2
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.62,
+    [
+     21,
+     2
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "range_gone",
+     "type": "counter",
+     "start": 0,
+     "end": 94,
+     "y": 330,
+     "label": "of their old range, gone",
+     "fmt": "pct",
+     "size": 190
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@vanished",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "834",
+      "dur": 0.8,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@+0.2",
+     "do": "chart.counter_run",
+     "id": "range_gone",
+     "until": "@@percent+0.3",
+     "args": {
+      "ease": "power1.out"
+     }
+    },
+    {
+     "at": "@@percent+0.4",
+     "do": "character_in",
+     "id": "wow"
+    },
+    {
+     "at": "@@roamed",
+     "do": "sticker_in",
+     "id": "st_globe"
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "range_gone",
+     "args": {
+      "dur": 0.25
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "wow"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_globe"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Outside Africa, only Gir, in India, still has them: 891 Asiatic lions, and nowhere else.",
+    "cues": {
+     "outside": "outside",
+     "gir": "gir",
+     "india": "india",
+     "asiatic": "asiatic"
+    }
+   },
+   "direction": "fly north-east across the Arabian Sea; India lights on 'India', the Gir tag lands, the ASIATIC LIONS card on 'Asiatic', lion sticker throbs",
+   "energy": 4,
+   "tone": "tender",
+   "card": {
+    "kicker": "ASIATIC LIONS",
+    "text": "891 in Gujarat, India"
+   },
+   "card_at": null,
+   "cam": [
+    0.7,
+    [
+     50,
+     5
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.72,
+    [
+     51,
+     5.5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@outside",
+     "do": "fact_in",
+     "id": "f1",
+     "until": "@@asiatic-0.2"
+    },
+    {
+     "at": "@@india",
+     "do": "geo.highlight_in",
+     "stage": "stage_map",
+     "args": {
+      "fid": "356",
+      "layer": "india"
+     }
+    },
+    {
+     "at": "@@gir+0.3",
+     "do": "sticker_in",
+     "id": "st_lion"
+    },
+    {
+     "at": "@@asiatic",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@asiatic+0.5",
+     "do": "sticker_pulse",
+     "id": "st_lion"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_lion"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_lion",
+   "type": "sticker",
+   "emoji": "1f981",
+   "x": 300,
+   "y": 620,
+   "size": 200,
+   "rot": -8
+  },
+  {
+   "id": "st_globe",
+   "type": "sticker",
+   "emoji": "1f30d",
+   "x": 760,
+   "y": 520,
+   "size": 170,
+   "rot": 8
+  },
+  {
+   "id": "wow",
+   "type": "character",
+   "flag": "tz",
+   "face": "sad",
+   "x": 820,
+   "y": 1180,
+   "size": 220,
+   "rot": 6
+  }
+ ]
+}

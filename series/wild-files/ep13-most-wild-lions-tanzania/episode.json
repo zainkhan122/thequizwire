@@ -1,0 +1,136 @@
+{
+ "id": "ep13-most-wild-lions-tanzania",
+ "format": "quiz-v3",
+ "series": "wild-files",
+ "number": 13,
+ "title": "Where do MOST of the world's wild lions live?",
+ "difficulty": "MEDIUM",
+ "seed": 4413,
+ "quiz": {
+  "question": "Where do MOST of the world's wild lions live?",
+  "keyword": "MOST",
+  "options": [
+   "Kenya",
+   "South Africa",
+   "Tanzania"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Tanzania",
+  "answer_sub": "about 17,000 lions",
+  "option_meta": [
+   {
+    "flag": "ke"
+   },
+   {
+    "flag": "za"
+   },
+   {
+    "flag": "tz"
+   }
+  ],
+  "banner": "Tanzania",
+  "banner_sub": "✓  C was right · about 17,000 lions",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Where do MOST of the world's wild lions live? 🦁",
+  "premise": "One country holds most of the world's wild lions",
+  "bait": "Not the one with the famous safaris you are thinking of.",
+  "keywords": [
+   "most lions in the world",
+   "lion population by country",
+   "wild lions left",
+   "animal facts",
+   "safari countries",
+   "asiatic lion india",
+   "animal quiz",
+   "wildlife facts"
+  ],
+  "description": "One country holds most of the world's wild lions. Not the one with the famous safaris you are thinking of.\n\nSources: Tanzania Wildlife Research Institute 2024/25 census; IUCN Cat Specialist Group 2025; Gujarat Forest Department 2025.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #13",
+  "hashtags": [
+   "#AnimalQuiz",
+   "#WildlifeFacts",
+   "#thequizwire"
+  ],
+  "tags": [
+   "Lions",
+   "WildlifeFacts"
+  ],
+  "cover_emoji": "🦁",
+  "copy": {
+   "spoilers": [
+    "tanzania",
+    "tanzanian",
+    "serengeti",
+    "selous",
+    "nyerere",
+    "ruaha"
+   ],
+   "youtube": {
+    "title": "Where do most lions in the world live? Most people guess wrong 🦁",
+    "description": "Kenya, South Africa or the third one? One of them holds well over half of all the wild lions left on Earth, and the total left anywhere is smaller than a small town.\nGuess out loud before the map fills in, then see the only place outside Africa where lions still live.\nOne animal fact a day you can argue about — follow along.",
+    "tags": [
+     "#lions",
+     "#animalfacts",
+     "#wildlife",
+     "#animalquiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Where do MOST of the world's wild lions live? 🦁\nKenya, South Africa or the other safari giant? One country holds most of the world's remaining lions, and the global total would fit inside a small town.\nWhich did you pick?",
+    "tags": [
+     "#lions",
+     "#animalfacts",
+     "#wildlife",
+     "#safari",
+     "#animalquiz"
+    ]
+   },
+   "facebook": {
+    "text": "Where do most of the world's wild lions live — Kenya, South Africa or Tanzania?\nThe total left in the wild is smaller than most people think. Have you seen one in the wild?",
+    "tags": [
+     "#lions",
+     "#wildlife"
+    ]
+   },
+   "twitter": {
+    "text": "Where do MOST of the world's wild lions live?\nOne country holds most of them, and the world total would fit in a small town.",
+    "tags": [
+     "#Lions"
+    ]
+   },
+   "threads": {
+    "text": "Where do most of the world's wild lions live — Kenya, South Africa or Tanzania? One of them holds most of the species, the global total is smaller than a small town, and there is exactly one place outside Africa where lions still roam.",
+    "tags": [
+     "#lions"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "counter",
+   "second-highlight",
+   "label"
+  ],
+  "cast": "flagball:wow + emoji-set:lion",
+  "music": "bed:bright"
+ },
+ "status": "ready"
+}

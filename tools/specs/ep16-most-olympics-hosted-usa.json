@@ -1,0 +1,923 @@
+{
+ "id": "ep16-most-olympics-hosted-usa",
+ "series": "sports-sprint",
+ "number": 16,
+ "seed": 4516,
+ "question": "Which country has HOSTED the most Olympic Games?",
+ "keyword": "HOSTED",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "France",
+   "flag": "fr",
+   "cue": "france",
+   "lonlat": [
+    2,
+    46
+   ]
+  },
+  {
+   "text": "United Kingdom",
+   "flag": "gb",
+   "cue": "kingdom",
+   "lonlat": [
+    -2,
+    54
+   ]
+  },
+  {
+   "text": "United States",
+   "flag": "us",
+   "cue": "states",
+   "lonlat": [
+    -98,
+    39
+   ]
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "8 Games, 10 by 2034",
+ "outro_headline": "TOO EASY?",
+ "cover_emoji": "🏅",
+ "post": {
+  "premise": "One country has hosted the Olympics eight times",
+  "bait": "Paris just hosted its third. That is not even close.",
+  "keywords": [
+   "most olympic games hosted",
+   "olympic host cities",
+   "olympics history",
+   "olympic facts",
+   "sports quiz",
+   "la 2028",
+   "winter olympics hosts",
+   "sports trivia"
+  ],
+  "tags": [
+   "Olympics",
+   "SportsTrivia"
+  ],
+  "sources_line": "Olympics.com; International Olympic Committee; Wikipedia list of Olympic Games host cities",
+  "copy": {
+   "spoilers": [
+    "united states",
+    "usa",
+    "america",
+    "american",
+    "los angeles",
+    "lake placid",
+    "salt lake",
+    "atlanta",
+    "st. louis",
+    "squaw valley"
+   ],
+   "youtube": {
+    "title": "Which country has hosted the most Olympic Games? Olympics quiz 🏅",
+    "description": "France, Britain or the third one? Paris just hosted for the third time, London has done it three times too, and neither is anywhere near the record.\nCount the Winter Games and one country runs away with it, with two more already booked. Guess before the pins drop.\nOne sports fact a day you can argue about — follow along.",
+    "tags": [
+     "#olympics",
+     "#sportsquiz",
+     "#sportstrivia",
+     "#olympichistory",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country has HOSTED the most Olympic Games? 🏅\nFrance, Britain or the other one? Paris 2024 was a third time, London has three too, and the record holder has more than double that, with two more Games already in the diary.\nWhich did you pick?",
+    "tags": [
+     "#olympics",
+     "#sportsquiz",
+     "#olympichistory",
+     "#sportstrivia",
+     "#sportsfacts"
+    ]
+   },
+   "facebook": {
+    "text": "Which country has hosted the most Olympic Games — France, Britain or the third option?\nCount summer and winter together and one of them is miles ahead. Which Games do you remember best?",
+    "tags": [
+     "#olympics",
+     "#sportsquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which country has HOSTED the most Olympic Games?\nParis has three. London has three. The record is more than double that, with two more already booked.",
+    "tags": [
+     "#Olympics"
+    ]
+   },
+   "threads": {
+    "text": "Which country has hosted the most Olympic Games — France, Britain or the third option? Paris 2024 made it three for France and London has three; the record holder has eight, with two more already on the calendar.",
+    "tags": [
+     "#olympics"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-record",
+  "hook": "question-first",
+  "opener": "split-candidates",
+  "reveal": "colour-lift",
+  "beats": [
+   "counter",
+   "pin",
+   "second-highlight",
+   "label"
+  ],
+  "cast": "flagball:happy + emoji-set:medal",
+  "music": "bed:tense",
+  "outro": "TOO EASY?"
+ },
+ "intent": "A host-city map: the three countries everyone links with the Olympics, the real count once you add the Winter Games, the city pins dropping one by one, and the two already booked.",
+ "voice": {
+  "v01_cues": {
+   "hosted": "hosted",
+   "games": "games"
+  },
+  "v04": {
+   "text": "The United States. 8 Games so far: 4 summer and 4 winter, from Saint Louis to Salt Lake City.",
+   "cues": {
+    "answer": "states",
+    "summer": "summer",
+    "winter": "winter",
+    "louis": "louis",
+    "salt": "salt"
+   }
+  },
+  "v05": {
+   "text": "France is second with 6 in total, including Paris. Britain has 3, all of them in London.",
+   "cues": {
+    "france": "france",
+    "paris": "paris",
+    "britain": "britain",
+    "london": "london"
+   }
+  },
+  "v06": {
+   "text": "Los Angeles hosts again in 2028, and Salt Lake City returns in 2034. That makes 10.",
+   "cues": {
+    "angeles": "angeles",
+    "salt": "salt",
+    "ten": "10"
+   }
+  },
+  "v07": {
+   "text": "Los Angeles then becomes only the third city ever to host 3 summer Games, after London and Paris.",
+   "cues": {
+    "third": "third",
+    "london": "london",
+    "paris": "paris"
+   }
+  },
+  "v08": {
+   "text": "More than you thought. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "8 GAMES",
+   "text": "4 Summer · 4 Winter"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "us",
+   "face": "happy",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "fr",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "geo": {
+  "fit_bbox": [
+   -130,
+   22,
+   20,
+   62
+  ],
+  "far_bbox": [
+   -150,
+   5,
+   40,
+   72
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "840"
+  ],
+  "highlight_note": "United States (answer) — colour lift on reveal",
+  "lift_color": "#1E63D6",
+  "extra_layers": [
+   {
+    "kind": "highlight",
+    "id": "others",
+    "ids": [
+     "250",
+     "826"
+    ],
+    "cls": "dim",
+    "note": "France and the United Kingdom — lit for the comparison beat"
+   }
+  ],
+  "labels": [
+   {
+    "id": "fr",
+    "lonlat": [
+     2,
+     44
+    ],
+    "text": "France · 6",
+    "cls": "tag",
+    "in": "s05@france",
+    "out": "s06"
+   },
+   {
+    "id": "gb",
+    "lonlat": [
+     -3,
+     57
+    ],
+    "text": "United Kingdom · 3",
+    "cls": "tag",
+    "in": "s05@britain",
+    "out": "s06"
+   },
+   {
+    "id": "us",
+    "lonlat": [
+     -98,
+     42
+    ],
+    "text": "United States · 8",
+    "cls": "tag",
+    "in": "s04@answer",
+    "out": "s05"
+   }
+  ],
+  "pins": [
+   {
+    "id": "stl",
+    "lonlat": [
+     -90.2,
+     38.63
+    ],
+    "label": "St. Louis 1904",
+    "qid": "Q38022"
+   },
+   {
+    "id": "la",
+    "lonlat": [
+     -118.24,
+     34.05
+    ],
+    "label": "Los Angeles 1932 · 1984 · 2028",
+    "qid": "Q65"
+   },
+   {
+    "id": "slc",
+    "lonlat": [
+     -111.89,
+     40.76
+    ],
+    "label": "Salt Lake City 2002 · 2034",
+    "qid": "Q23337"
+   },
+   {
+    "id": "atl",
+    "lonlat": [
+     -84.39,
+     33.75
+    ],
+    "label": "Atlanta 1996",
+    "qid": "Q23556"
+   },
+   {
+    "id": "lp",
+    "lonlat": [
+     -73.98,
+     44.28
+    ],
+    "label": "Lake Placid 1932 · 1980",
+    "qid": "Q192700"
+   }
+  ],
+  "scalebar": null,
+  "cams": {
+   "start": [
+    0.5,
+    [
+     -50,
+     45
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     -50,
+     44
+    ]
+   ],
+   "s04": [
+    1.1,
+    [
+     -98,
+     40
+    ]
+   ],
+   "s04b": [
+    1.12,
+    [
+     -97,
+     40
+    ]
+   ],
+   "s05": [
+    0.5,
+    [
+     -45,
+     48
+    ]
+   ],
+   "s05b": [
+    0.52,
+    [
+     -44,
+     48
+    ]
+   ],
+   "s06": [
+    1.1,
+    [
+     -105,
+     40
+    ]
+   ],
+   "s06b": [
+    1.12,
+    [
+     -104,
+     40
+    ]
+   ],
+   "s07": [
+    0.5,
+    [
+     -50,
+     45
+    ]
+   ],
+   "s07b": [
+    0.52,
+    [
+     -49,
+     45
+    ]
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s04@louis",
+    "pid": "stl"
+   },
+   {
+    "at": "s04@salt",
+    "pid": "slc"
+   },
+   {
+    "at": "s04@summer",
+    "pid": "la"
+   },
+   {
+    "at": "s04@winter",
+    "pid": "lp"
+   }
+  ]
+ },
+ "research": {
+  "topic": "Countries that have hosted the most Olympic Games: United States 8 (Summer 1904 St. Louis, 1932 & 1984 Los Angeles, 1996 Atlanta; Winter 1932 & 1980 Lake Placid, 1960 Squaw Valley, 2002 Salt Lake City), with LA 2028 and Salt Lake City 2034 awarded (→ 10); France 6 (1900, 1924, 2024 Paris; 1924 Chamonix, 1968 Grenoble, 1992 Albertville); UK 3 (London 1908, 1948, 2012)",
+  "myths": [
+   {
+    "myth": "France or Britain, the old Olympic nations, have hosted the most Games.",
+    "reality": "France has 6 (3 Summer, 3 Winter) and Britain 3; the United States has 8 (4 Summer, 4 Winter), with Los Angeles 2028 and Salt Lake City 2034 already awarded.",
+    "sources": [
+     "wiki_hosts",
+     "olympics_hosts",
+     "ioc_la28",
+     "ioc_slc34"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Olympic Shorts are medal-table and record clips; nobody maps the host cities per country with the Winter Games counted, the pins dropping to a counter, and the two booked Games.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=olympic+host+cities",
+     "title": "Search: olympic host cities",
+     "angle": "host-city montages",
+     "misses": "no per-country count, no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=olympics+quiz+shorts",
+     "title": "Search: olympics quiz shorts",
+     "angle": "medal and athlete trivia",
+     "misses": "no map, no hosting angle"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if sports scenarios",
+     "misses": "no sourced history"
+    }
+   ]
+  },
+  "sources": {
+   "wiki_hosts": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "List of Olympic Games host cities",
+    "url": "https://en.wikipedia.org/wiki/List_of_Olympic_Games_host_cities",
+    "date": "2026-10-28",
+    "notes": "USA hosted 8 (4 Summer: 1904, 1932, 1984, 1996; 4 Winter: 1932, 1960, 1980, 2002), plus LA 2028 and Salt Lake City 2034 awarded; France 6 (1900, 1924, 2024; 1924, 1968, 1992); UK 3 (1908, 1948, 2012)"
+   },
+   "olympics_hosts": {
+    "type": "primary",
+    "publisher": "Olympics.com (IOC)",
+    "title": "Olympic Games — all editions",
+    "url": "https://olympics.com/en/olympic-games",
+    "date": "2026-10-28",
+    "notes": "official list of every Summer and Winter Games with host city and country"
+   },
+   "ioc_la28": {
+    "type": "primary",
+    "publisher": "International Olympic Committee",
+    "title": "Los Angeles 2028",
+    "url": "https://olympics.com/en/olympic-games/los-angeles-2028",
+    "date": "2026-10-28",
+    "notes": "LA elected host of the 2028 Summer Games (IOC Session 2017); third Los Angeles Games after 1932 and 1984"
+   },
+   "ioc_slc34": {
+    "type": "primary",
+    "publisher": "International Olympic Committee",
+    "title": "Salt Lake City-Utah 2034",
+    "url": "https://olympics.com/ioc/news/salt-lake-city-utah-elected-as-host-of-the-olympic-and-paralympic-winter-games-2034",
+    "date": "2026-10-28",
+    "notes": "Salt Lake City-Utah elected host of the 2034 Winter Games at the 142nd IOC Session, Paris, 24 July 2024; previously hosted 2002"
+   },
+   "wiki_paris24": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "2024 Summer Olympics",
+    "url": "https://en.wikipedia.org/wiki/2024_Summer_Olympics",
+    "date": "2026-10-28",
+    "notes": "Paris hosted for the third time (1900, 1924, 2024), equalling London (1908, 1948, 2012) as the only cities to host three Summer Games"
+   },
+   "wiki_london": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "2012 Summer Olympics",
+    "url": "https://en.wikipedia.org/wiki/2012_Summer_Olympics",
+    "date": "2026-10-28",
+    "notes": "London became the first city to host the modern Summer Games three times (1908, 1948, 2012)"
+   },
+   "britannica_hosts": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Olympic Games — host cities",
+    "url": "https://www.britannica.com/sports/Olympic-Games",
+    "date": "2026-10-28",
+    "notes": "chronology of Summer and Winter Games host cities, incl. St. Louis 1904, Lake Placid 1932/1980, Squaw Valley 1960, Atlanta 1996, Salt Lake City 2002, Chamonix 1924, Grenoble 1968, Albertville 1992"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The United States has hosted 8 Olympic Games: Summer 1904 (St. Louis), 1932 and 1984 (Los Angeles), 1996 (Atlanta); Winter 1932 and 1980 (Lake Placid), 1960 (Squaw Valley), 2002 (Salt Lake City) — more than any other country.",
+    "sources": [
+     "wiki_hosts",
+     "olympics_hosts",
+     "britannica_hosts"
+    ],
+    "vo": [
+     "which country has hosted the most olympic games",
+     "france, united kingdom, or united states",
+     "the united states. 8 games so far: 4 summer and 4 winter, from saint louis to salt lake city"
+    ],
+    "screen": [
+     "United States",
+     "France",
+     "United Kingdom",
+     "United States · 8",
+     "8 GAMES",
+     "4 Summer · 4 Winter",
+     "St. Louis 1904",
+     "Los Angeles 1932 · 1984 · 2028",
+     "Salt Lake City 2002 · 2034",
+     "Atlanta 1996",
+     "Lake Placid 1932 · 1980"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "France has hosted 6 Games (Paris 1900, 1924, 2024; Chamonix 1924, Grenoble 1968, Albertville 1992); the United Kingdom 3 (London 1908, 1948, 2012).",
+    "sources": [
+     "olympics_hosts",
+     "wiki_hosts",
+     "wiki_paris24",
+     "wiki_london",
+     "britannica_hosts"
+    ],
+    "vo": [
+     "france is second with 6 in total, including paris. britain has 3, all of them in london"
+    ],
+    "screen": [
+     "France · 6",
+     "United Kingdom · 3"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Los Angeles will host the 2028 Summer Games and Salt Lake City-Utah the 2034 Winter Games, taking the US total to 10.",
+    "sources": [
+     "ioc_la28",
+     "ioc_slc34",
+     "wiki_hosts"
+    ],
+    "vo": [
+     "los angeles hosts again in 2028, and salt lake city returns in 2034. that makes 10"
+    ],
+    "screen": [
+     "US Games by 2034"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "core",
+    "text": "Los Angeles 2028 will make LA the third city to host three Summer Games, after London (1908, 1948, 2012) and Paris (1900, 1924, 2024).",
+    "sources": [
+     "ioc_la28",
+     "wiki_paris24",
+     "wiki_london"
+    ],
+    "vo": [
+     "los angeles then becomes only the third city ever to host 3 summer games, after london and paris"
+    ],
+    "screen": [
+     "3-TIME CITIES",
+     "London · Paris · LA 2028"
+    ]
+   }
+  ]
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "France is second with 6 in total, including Paris. Britain has 3, all of them in London.",
+    "cues": {
+     "france": "france",
+     "paris": "paris",
+     "britain": "britain",
+     "london": "london"
+    }
+   },
+   "direction": "pull back across the Atlantic so all three share the frame; France lights with its tag on 'France', Britain on 'Britain'; the host counter sits at 8 for the US while the others appear",
+   "energy": 3,
+   "tone": "resolute",
+   "cam": [
+    0.5,
+    [
+     -45,
+     48
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.52,
+    [
+     -44,
+     48
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@france",
+     "do": "geo.highlight_in",
+     "stage": "stage_map",
+     "args": {
+      "fid": "250",
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@@paris",
+     "do": "sticker_in",
+     "id": "st_fr"
+    },
+    {
+     "at": "@@britain",
+     "do": "geo.highlight_in",
+     "stage": "stage_map",
+     "args": {
+      "fid": "826",
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@@london",
+     "do": "sticker_in",
+     "id": "st_gb"
+    },
+    {
+     "at": "@@london+0.4",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "840",
+      "dur": 0.8,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.highlight_out",
+     "stage": "stage_map",
+     "args": {
+      "fid": "250",
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.highlight_out",
+     "stage": "stage_map",
+     "args": {
+      "fid": "826",
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_fr"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_gb"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Los Angeles hosts again in 2028, and Salt Lake City returns in 2034. That makes 10.",
+    "cues": {
+     "angeles": "angeles",
+     "salt": "salt",
+     "ten": "10"
+    }
+   },
+   "direction": "back onto the US; LA pin pulses on 'Angeles', Salt Lake on 'Salt'; the counter runs 8 → 10 and the happy flag-ball pops on '10'",
+   "energy": 4,
+   "tone": "revelatory",
+   "cam": [
+    1.1,
+    [
+     -105,
+     40
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    1.12,
+    [
+     -104,
+     40
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "us_games",
+     "type": "counter",
+     "start": 8,
+     "end": 10,
+     "y": 330,
+     "label": "US Games by 2034",
+     "fmt": "int",
+     "size": 190
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@angeles",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "la"
+     }
+    },
+    {
+     "at": "@@angeles+0.35",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "la"
+     }
+    },
+    {
+     "at": "@@salt",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "slc"
+     }
+    },
+    {
+     "at": "@@salt+0.35",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "slc"
+     }
+    },
+    {
+     "at": "@@salt+0.6",
+     "do": "chart.counter_run",
+     "id": "us_games",
+     "until": "@@ten+0.3",
+     "args": {
+      "ease": "power1.out"
+     }
+    },
+    {
+     "at": "@@ten",
+     "do": "character_in",
+     "id": "wow"
+    },
+    {
+     "at": "@@ten+0.2",
+     "do": "sticker_in",
+     "id": "st_medal"
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "us_games",
+     "args": {
+      "dur": 0.25
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "wow"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_medal"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Los Angeles then becomes only the third city ever to host 3 summer Games, after London and Paris.",
+    "cues": {
+     "third": "third",
+     "london": "london",
+     "paris": "paris"
+    }
+   },
+   "direction": "wide Atlantic again; the THREE-TIME CITIES card lands on 'third'; London and Paris stickers drop on their names, the medal pulses",
+   "energy": 4,
+   "tone": "tender",
+   "card": {
+    "kicker": "3-TIME CITIES",
+    "text": "London · Paris · LA 2028"
+   },
+   "card_at": null,
+   "cam": [
+    0.5,
+    [
+     -50,
+     45
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.52,
+    [
+     -49,
+     45
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@third",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@third+0.3",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "la"
+     }
+    },
+    {
+     "at": "@@third+0.65",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "la"
+     }
+    },
+    {
+     "at": "@@london",
+     "do": "sticker_in",
+     "id": "st_gb"
+    },
+    {
+     "at": "@@paris",
+     "do": "sticker_in",
+     "id": "st_fr"
+    },
+    {
+     "at": "@@paris+0.4",
+     "do": "sticker_in",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@paris+0.8",
+     "do": "sticker_pulse",
+     "id": "st_medal"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_gb"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_fr"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_medal"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_fr",
+   "type": "sticker",
+   "emoji": "1f1eb-1f1f7",
+   "x": 760,
+   "y": 520,
+   "size": 150,
+   "rot": 8
+  },
+  {
+   "id": "st_gb",
+   "type": "sticker",
+   "emoji": "1f1ec-1f1e7",
+   "x": 300,
+   "y": 620,
+   "size": 150,
+   "rot": -8
+  },
+  {
+   "id": "st_medal",
+   "type": "sticker",
+   "emoji": "1f3c5",
+   "x": 540,
+   "y": 560,
+   "size": 190,
+   "rot": 0
+  },
+  {
+   "id": "wow",
+   "type": "character",
+   "flag": "us",
+   "face": "happy",
+   "x": 820,
+   "y": 1180,
+   "size": 220,
+   "rot": 6
+  }
+ ]
+}
