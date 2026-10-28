@@ -1202,7 +1202,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-28T06:54:27+00:00",
+   "refreshed_at": "2026-10-28T16:08:14+00:00",
    "error": "An unknown error has occurred. Please retry the post again, and get in touch if this persists."
   },
   {
@@ -2010,32 +2010,32 @@
    "platform": "youtube",
    "post_id": "6ae03a1e8f5aed9e2e3b1069",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/3fe5196952e9/Which-country-records-the-MOST-stroke-deaths-every-year.mp4",
    "due_at": "2026-10-28T16:00:00.000Z",
    "created_at": "2026-10-27T05:43:58.978Z",
    "recorded_at": "2026-10-27T05:43:59+00:00",
    "title": "Which country has the most stroke deaths? World Stroke Day quiz 🧠",
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-28T06:54:33+00:00"
+   "sent_at": "2026-10-28T16:03:15.766Z",
+   "external_link": "https://www.youtube.com/watch?v=sZWB2kyFiAo",
+   "refreshed_at": "2026-10-28T16:08:16+00:00"
   },
   {
    "episode": "ep06-most-stroke-deaths-china",
    "platform": "instagram",
    "post_id": "6ae03a1f913aa340c540f740",
    "channel_id": "695bfd29457dae6a34df0f74",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/3fe5196952e9/Which-country-records-the-MOST-stroke-deaths-every-year.mp4",
    "due_at": "2026-10-28T15:00:00.000Z",
    "created_at": "2026-10-27T05:43:59.378Z",
    "recorded_at": "2026-10-27T05:43:59+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-28T06:54:33+00:00"
+   "sent_at": "2026-10-28T15:05:15.857Z",
+   "external_link": "https://www.instagram.com/reel/DfCtjtjkxf1/",
+   "refreshed_at": "2026-10-28T16:08:16+00:00"
   },
   {
    "episode": "ep06-most-stroke-deaths-china",
@@ -2051,39 +2051,39 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-28T06:54:35+00:00"
+   "refreshed_at": "2026-10-28T16:08:18+00:00"
   },
   {
    "episode": "ep06-most-stroke-deaths-china",
    "platform": "twitter",
    "post_id": "6ae03a2305551cc35923f551",
    "channel_id": "69f30e2a5c4c051afaf58634",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/3fe5196952e9/Which-country-records-the-MOST-stroke-deaths-every-year.mp4",
    "due_at": "2026-10-28T13:00:00.000Z",
    "created_at": "2026-10-27T05:44:03.394Z",
    "recorded_at": "2026-10-27T05:44:03+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-28T06:54:37+00:00"
+   "sent_at": "2026-10-28T13:08:22.654Z",
+   "external_link": "https://x.com/2049746939164676096/status/2115430473975353738",
+   "refreshed_at": "2026-10-28T16:08:20+00:00"
   },
   {
    "episode": "ep06-most-stroke-deaths-china",
    "platform": "threads",
    "post_id": "6ae03a23a6170f32b17cc062",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/3fe5196952e9/Which-country-records-the-MOST-stroke-deaths-every-year.mp4",
    "due_at": "2026-10-28T14:00:00.000Z",
    "created_at": "2026-10-27T05:44:03.787Z",
    "recorded_at": "2026-10-27T05:44:03+00:00",
    "title": null,
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-28T06:54:37+00:00"
+   "sent_at": "2026-10-28T14:03:39.167Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfCmhw4iivU",
+   "refreshed_at": "2026-10-28T16:08:21+00:00"
   },
   {
    "episode": "ep16-most-olympics-hosted-usa",
@@ -2096,7 +2096,10 @@
    "created_at": "2026-10-28T13:43:07.740Z",
    "recorded_at": "2026-10-28T13:43:07+00:00",
    "title": "Which country has hosted the most Olympic Games? Olympics quiz 🏅",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-28T16:08:23+00:00"
   },
   {
    "episode": "ep16-most-olympics-hosted-usa",
@@ -2109,7 +2112,10 @@
    "created_at": "2026-10-28T13:43:08.382Z",
    "recorded_at": "2026-10-28T13:43:08+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-28T16:08:23+00:00"
   },
   {
    "episode": "ep16-most-olympics-hosted-usa",
@@ -2122,7 +2128,10 @@
    "created_at": "2026-10-28T13:43:10.313Z",
    "recorded_at": "2026-10-28T13:43:10+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-28T16:08:25+00:00"
   },
   {
    "episode": "ep16-most-olympics-hosted-usa",
@@ -2135,7 +2144,10 @@
    "created_at": "2026-10-28T13:43:12.292Z",
    "recorded_at": "2026-10-28T13:43:12+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-28T16:08:27+00:00"
   },
   {
    "episode": "ep16-most-olympics-hosted-usa",
@@ -2148,7 +2160,10 @@
    "created_at": "2026-10-28T13:43:12.846Z",
    "recorded_at": "2026-10-28T13:43:13+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-28T16:08:27+00:00"
   },
   {
    "episode": "ep13-most-wild-lions-tanzania",
@@ -2161,7 +2176,10 @@
    "created_at": "2026-10-28T14:01:24.440Z",
    "recorded_at": "2026-10-28T14:01:24+00:00",
    "title": "Where do most lions in the world live? Most people guess wrong 🦁",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-28T16:08:29+00:00"
   },
   {
    "episode": "ep13-most-wild-lions-tanzania",
@@ -2174,7 +2192,10 @@
    "created_at": "2026-10-28T14:01:24.986Z",
    "recorded_at": "2026-10-28T14:01:25+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-28T16:08:29+00:00"
   },
   {
    "episode": "ep13-most-wild-lions-tanzania",
@@ -2187,7 +2208,10 @@
    "created_at": "2026-10-28T14:01:26.992Z",
    "recorded_at": "2026-10-28T14:01:27+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-28T16:08:31+00:00"
   },
   {
    "episode": "ep13-most-wild-lions-tanzania",
@@ -2200,7 +2224,10 @@
    "created_at": "2026-10-28T14:01:28.964Z",
    "recorded_at": "2026-10-28T14:01:29+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-28T16:08:33+00:00"
   },
   {
    "episode": "ep13-most-wild-lions-tanzania",
@@ -2213,7 +2240,10 @@
    "created_at": "2026-10-28T14:01:29.438Z",
    "recorded_at": "2026-10-28T14:01:29+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-10-28T16:08:33+00:00"
   }
  ]
 }
