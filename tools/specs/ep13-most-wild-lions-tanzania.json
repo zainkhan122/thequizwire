@@ -129,7 +129,7 @@
    "live": "live"
   },
   "v04": {
-   "text": "Tanzania. Its latest count found around 17,000 lions, more than every other country on Earth put together.",
+   "text": "Tanzania. Its latest count found some 17,000 lions, more than all the other countries on Earth put together.",
    "cues": {
     "answer": "tanzania",
     "count": "count",
@@ -137,7 +137,7 @@
    }
   },
   "v05": {
-   "text": "South Africa has about 3,000 and Kenya even fewer. All of Africa holds only about 23,000 wild lions.",
+   "text": "South Africa has some 3,000 and Kenya even fewer. All of Africa holds just 23,000 wild lions.",
    "cues": {
     "africa": "africa",
     "kenya": "kenya",
@@ -146,7 +146,7 @@
    }
   },
   "v06": {
-   "text": "Lions have now gone from 94 percent of the land they once roamed.",
+   "text": "Lions have now gone from 94 percent of all the land they once roamed.",
    "cues": {
     "vanished": "gone",
     "percent": "percent",
@@ -163,7 +163,7 @@
    }
   },
   "v08": {
-   "text": "Fewer than you thought. Follow us."
+   "text": "Far fewer than you thought. Follow us."
   }
  },
  "facts": [
@@ -473,7 +473,7 @@
     "vo": [
      "where do most of the world's wild lions live",
      "kenya, south africa, or tanzania",
-     "tanzania. its latest count found around 17,000 lions, more than every other country on earth put together"
+     "tanzania. its latest count found some 17,000 lions, more than all the other countries on earth put together"
     ],
     "screen": [
      "Tanzania",
@@ -493,7 +493,7 @@
      "aa_lions"
     ],
     "vo": [
-     "south africa has about 3,000 and kenya even fewer. all of africa holds only about 23,000 wild lions"
+     "south africa has some 3,000 and kenya even fewer. all of africa holds just 23,000 wild lions"
     ],
     "screen": [
      "South Africa · 3,284",
@@ -510,7 +510,7 @@
      "iucn_lion"
     ],
     "vo": [
-     "lions have now gone from 94 percent of the land they once roamed"
+     "lions have now gone from 94 percent of all the land they once roamed"
     ],
     "screen": [
      "of their old range, gone"
@@ -540,7 +540,7 @@
  "story": [
   {
    "vo": {
-    "text": "South Africa has about 3,000 and Kenya even fewer. All of Africa holds only about 23,000 wild lions.",
+    "text": "South Africa has some 3,000 and Kenya even fewer. All of Africa holds just 23,000 wild lions.",
     "cues": {
      "africa": "africa",
      "kenya": "kenya",
@@ -653,11 +653,12 @@
      "do": "sticker_out",
      "id": "st_lion"
     }
-   ]
+   ],
+   "pause_after": 0.3
   },
   {
    "vo": {
-    "text": "Lions have now gone from 94 percent of the land they once roamed.",
+    "text": "Lions have now gone from 94 percent of all the land they once roamed.",
     "cues": {
      "vanished": "gone",
      "percent": "percent",
@@ -744,7 +745,8 @@
      "do": "sticker_out",
      "id": "st_globe"
     }
-   ]
+   ],
+   "pause_after": 0.3
   },
   {
    "vo": {
@@ -817,7 +819,8 @@
      "do": "sticker_out",
      "id": "st_lion"
     }
-   ]
+   ],
+   "pause_after": 0.3
   }
  ],
  "extra_elements": [

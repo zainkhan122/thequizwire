@@ -63,7 +63,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "Tanzania. Its latest count found around 17,000 lions, more than every other country on Earth put together.",
+   "text": "Tanzania. Its latest count found some 17,000 lions, more than all the other countries on Earth put together.",
    "cues": {
     "answer": "tanzania",
     "count": "count",
@@ -77,9 +77,9 @@
    "role": "story",
    "tone": "resolute",
    "energy": 3,
-   "pause_after": 0.4,
+   "pause_after": 0.3,
    "direction": "pull back to show the three safari countries; South Africa and Kenya light dim with their counts on 'Africa' and 'Kenya'; the continent counter runs to 23,000 and stops on 'lions'",
-   "text": "South Africa has about 3,000 and Kenya even fewer. All of Africa holds only about 23,000 wild lions.",
+   "text": "South Africa has some 3,000 and Kenya even fewer. All of Africa holds just 23,000 wild lions.",
    "cues": {
     "africa": "africa",
     "kenya": "kenya",
@@ -93,9 +93,9 @@
    "role": "story",
    "tone": "revelatory",
    "energy": 4,
-   "pause_after": 0.5,
+   "pause_after": 0.3,
    "direction": "wide on the whole continent; the percent counter climbs to 94 and the sad flag-ball pops on 'roamed'",
-   "text": "Lions have now gone from 94 percent of the land they once roamed.",
+   "text": "Lions have now gone from 94 percent of all the land they once roamed.",
    "cues": {
     "vanished": "gone",
     "percent": "percent",
@@ -108,7 +108,7 @@
    "role": "story",
    "tone": "tender",
    "energy": 4,
-   "pause_after": 0.8,
+   "pause_after": 0.3,
    "direction": "fly north-east across the Arabian Sea; India lights on 'India', the Gir tag lands, the ASIATIC LIONS card on 'Asiatic', lion sticker throbs",
    "text": "Outside Africa, only Gir, in India, still has any at all: nearly 900 Asiatic lions, and nowhere else.",
    "cues": {
@@ -126,7 +126,7 @@
    "energy": 3,
    "pause_after": 0.0,
    "direction": "punchline, then a short follow — the outro visual asks",
-   "text": "Fewer than you thought. Follow us.",
+   "text": "Far fewer than you thought. Follow us.",
    "cues": {
     "follow": "follow"
    }
