@@ -1,0 +1,136 @@
+{
+ "id": "ep20-coldest-capital-ulaanbaatar",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 20,
+ "title": "Where is the COLDEST capital city on Earth?",
+ "difficulty": "MEDIUM",
+ "seed": 4420,
+ "quiz": {
+  "question": "Where is the COLDEST capital city on Earth?",
+  "keyword": "COLDEST",
+  "options": [
+   "Canada",
+   "Kazakhstan",
+   "Mongolia"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Mongolia",
+  "answer_sub": "Ulaanbaatar · below 0 °C all year",
+  "option_meta": [
+   {
+    "flag": "ca"
+   },
+   {
+    "flag": "kz"
+   },
+   {
+    "flag": "mn"
+   }
+  ],
+  "banner": "Mongolia",
+  "banner_sub": "✓  C was right · Ulaanbaatar · below 0 °C all year",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Where is the COLDEST capital city on Earth? 🥶",
+  "premise": "The only capital city that averages below freezing",
+  "bait": "It is not in Canada, and it is not Moscow.",
+  "keywords": [
+   "coldest capital city in the world",
+   "coldest capital",
+   "ulaanbaatar weather",
+   "polar vortex",
+   "geography quiz",
+   "coldest city",
+   "mongolia facts",
+   "map animation"
+  ],
+  "description": "The only capital city that averages below freezing. It is not in Canada, and it is not Moscow.\n\nSources: WorldAtlas; Wikipedia (Ulaanbaatar, NOAA 1991–2020 normals); National Statistics Office of Mongolia; Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #20",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "ColdestCapital",
+   "GeographyQuiz"
+  ],
+  "cover_emoji": "🥶",
+  "copy": {
+   "spoilers": [
+    "mongolia",
+    "mongolian",
+    "ulaanbaatar",
+    "ulan bator"
+   ],
+   "youtube": {
+    "title": "Which country has the coldest capital city on Earth? Not Canada 🥶",
+    "description": "Canada, Kazakhstan or the third one? One capital city averages below freezing across the whole year, and it is the only one that does.\nGuess before the map fills in, then see the altitude that explains it and how much of the country lives there.\nOne map fact a day you can argue about — follow along.",
+    "tags": [
+     "#coldestcapital",
+     "#geographyquiz",
+     "#polarvortex",
+     "#worldmap",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Where is the COLDEST capital city on Earth? 🥶\nCanada, Kazakhstan or the other one? Only one national capital averages below freezing over a whole year, and January nights there go past minus 30.\nWhich did you pick?",
+    "tags": [
+     "#coldestcapital",
+     "#geographyquiz",
+     "#worldmap",
+     "#extremeweather",
+     "#travelfacts"
+    ]
+   },
+   "facebook": {
+    "text": "Where is the coldest capital city on Earth — Canada, Kazakhstan or Mongolia?\nOnly one capital averages below freezing across the whole year. Have you ever been anywhere near minus 30?",
+    "tags": [
+     "#coldestcapital",
+     "#geographyquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Where is the COLDEST capital city on Earth?\nOnly one national capital averages below freezing over the whole year. Not Ottawa, not Moscow.",
+    "tags": [
+     "#ColdestCapital",
+     "#GeographyQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Where is the coldest capital city on Earth — Canada, Kazakhstan or Mongolia? Only one national capital averages below freezing across a whole year, it sits higher than most ski resorts, and about half the country's people live in it.",
+    "tags": [
+     "#coldestcapital"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "question-first",
+  "opener": "split-candidates",
+  "reveal": "colour-lift",
+  "beats": [
+   "pin",
+   "counter",
+   "second-highlight",
+   "label"
+  ],
+  "cast": "flagball:cool + emoji-set:mountain",
+  "music": "bed:tense"
+ },
+ "status": "ready"
+}

@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep20-coldest-capital-ulaanbaatar",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "The capital nobody files under cold: three cold-country flags, one answer with a sub-zero yearly average, the altitude that explains it, and the fact that half a nation lives in it.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Where is the COLDEST capital city on Earth?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Where is the coldest capital city on Earth?",
+   "cues": {
+    "coldest": "coldest",
+    "earth": "earth"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Canada, Kazakhstan, or Mongolia?",
+   "cues": {
+    "a": "canada",
+    "b": "kazakhstan",
+    "c": "mongolia"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "Mongolia. Ulaanbaatar is the only capital on Earth whose average temperature, over the whole year, is below freezing.",
+   "cues": {
+    "answer": "mongolia",
+    "city": "ulaanbaatar",
+    "freezing": "freezing"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "the night counter drops to −30 on 'January'; pull back west so Kazakhstan shares the frame, it lights dim with the Astana pin and tag; a shrug sticker on 'Ottawa'",
+   "text": "January nights there pass minus 30. Astana, in Kazakhstan, is second; Ottawa is not close.",
+   "cues": {
+    "january": "january",
+    "astana": "astana",
+    "ottawa": "ottawa"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "push in on the city; the altitude counter climbs to 1,350 and the mountain sticker lands on 'height'; the tag on 'metres'; a pulse on 'ocean'",
+   "text": "The secret is height: the city sits over 1,300 metres up, on a plateau far from any ocean.",
+   "cues": {
+    "height": "height",
+    "metres": "metres",
+    "ocean": "ocean"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "settle on the country; the HALF THE NATION card on 'half', people sticker on 'million', a last pulse and the cool flag-ball on 'valley'",
+   "text": "And about half of all Mongolians live in it, more than 1,600,000 people in a single cold valley.",
+   "cues": {
+    "half": "half",
+    "million": "people",
+    "valley": "valley"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "Colder than you thought. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

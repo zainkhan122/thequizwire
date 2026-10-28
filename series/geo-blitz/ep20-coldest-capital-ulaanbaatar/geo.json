@@ -1,0 +1,123 @@
+{
+ "version": 1,
+ "episode": "ep20-coldest-capital-ulaanbaatar",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     40,
+     30,
+     130,
+     60
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "496"
+     ],
+     "cls": "",
+     "note": "Mongolia (answer) — fill pulse on reveal",
+     "lift": "color",
+     "color": "#2F80ED"
+    },
+    {
+     "kind": "highlight",
+     "id": "others",
+     "ids": [
+      "398"
+     ],
+     "cls": "dim",
+     "note": "Kazakhstan — lit for the runner-up"
+    }
+   ],
+   "pins": [
+    {
+     "id": "ub",
+     "lonlat": [
+      106.92,
+      47.92
+     ],
+     "label": "Ulaanbaatar",
+     "qid": "Q23430"
+    },
+    {
+     "id": "astana",
+     "lonlat": [
+      71.45,
+      51.17
+     ],
+     "label": "Astana",
+     "qid": "Q1520",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "mn",
+     "lonlat": [
+      103,
+      44
+     ],
+     "text": "Mongolia",
+     "cls": "tag",
+     "in": "s04@answer",
+     "out": "s05"
+    },
+    {
+     "id": "kz",
+     "lonlat": [
+      66,
+      50
+     ],
+     "text": "Astana · 2nd",
+     "cls": "tag",
+     "in": "s05@astana",
+     "out": "s06"
+    },
+    {
+     "id": "alt",
+     "lonlat": [
+      108,
+      50
+     ],
+     "text": "1,350 m up",
+     "cls": "tag",
+     "in": "s06@metres",
+     "out": "s07"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -140,
+      20,
+      160,
+      75
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

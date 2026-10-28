@@ -1,0 +1,206 @@
+{
+ "version": 1,
+ "episode": "ep20-coldest-capital-ulaanbaatar",
+ "topic": "Coldest national capital: Ulaanbaatar, Mongolia — the only capital with a sub-zero annual mean (≈ −0.4 to −1.3 °C depending on period); Astana second; altitude ~1,350 m; January nights below −30 °C; ~1.6 million people, about half of Mongolia's ~3.5 million",
+ "researched": "2026-10-28",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Ottawa or Moscow is the coldest capital.",
+   "reality": "Ulaanbaatar is the only national capital whose annual mean temperature is below 0 °C; Astana is second; Ottawa and Moscow both average several degrees above freezing.",
+   "sources": [
+    "worldatlas_cold",
+    "wiki_ub",
+    "wiki_astana"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Cold-city Shorts are 'coldest city' lists; nobody asks it as a capital question on a map with the three cold-country flags, the altitude tag and the half-the-nation fact.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=coldest+capital+city",
+    "title": "Search: coldest capital city",
+    "angle": "list videos",
+    "misses": "no quiz, no map, no why"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=ulaanbaatar+winter",
+    "title": "Search: ulaanbaatar winter",
+    "angle": "vlogs and smog footage",
+    "misses": "no comparison, no numbers"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if geography",
+    "misses": "no sourced climate data"
+   }
+  ]
+ },
+ "sources": {
+  "worldatlas_cold": {
+   "type": "reference",
+   "publisher": "WorldAtlas",
+   "title": "The Coldest Capital Cities In The World",
+   "url": "https://www.worldatlas.com/cities/the-coldest-capital-cities-in-the-world.html",
+   "date": "2026-10-28",
+   "notes": "Ulaanbaatar annual mean −0.8 °C, the only capital with a sub-zero average, at over 1,300 m; Astana second (4.2 °C)"
+  },
+  "wiki_ub": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Ulaanbaatar",
+   "url": "https://en.wikipedia.org/wiki/Ulaanbaatar",
+   "date": "2026-10-28",
+   "notes": "coldest national capital; elevation ~1,350 m; climate box (NOAA normals) annual mean below 0 °C, January mean around −21 °C with nightly lows below −30 °C; population ≈ 1.6–1.7 million, about half of Mongolia"
+  },
+  "noaa_normals": {
+   "type": "primary",
+   "publisher": "NOAA National Centers for Environmental Information",
+   "title": "WMO Climate Normals 1991–2020 — Ulaanbaatar (44292)",
+   "url": "https://www.ncei.noaa.gov/products/wmo-climate-normals",
+   "date": "2026-10-28",
+   "notes": "station normals for Ulaanbaatar: annual mean temperature below 0 °C; January mean minimum below −25 °C; station elevation ≈ 1,300 m"
+  },
+  "nso_mongolia": {
+   "type": "primary",
+   "publisher": "National Statistics Office of Mongolia",
+   "title": "Population of Mongolia / Ulaanbaatar",
+   "url": "https://www.1212.mn/en",
+   "date": "2026-10-28",
+   "notes": "Mongolia ≈ 3.5 million (2024); Ulaanbaatar ≈ 1.7 million — about half the national population"
+  },
+  "britannica_ub": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Ulaanbaatar",
+   "url": "https://www.britannica.com/place/Ulaanbaatar",
+   "date": "2026-10-28",
+   "notes": "capital of Mongolia on the Tuul River at about 1,350 m; extreme continental climate; largest city with roughly half the population"
+  },
+  "wiki_astana": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Astana",
+   "url": "https://en.wikipedia.org/wiki/Astana",
+   "date": "2026-10-28",
+   "notes": "second-coldest national capital after Ulaanbaatar; annual mean ≈ 3.5–4 °C"
+  },
+  "wiki_ottawa": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Ottawa",
+   "url": "https://en.wikipedia.org/wiki/Ottawa",
+   "date": "2026-10-28",
+   "notes": "annual mean ≈ 6.6 °C — well above freezing"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Ulaanbaatar, Mongolia, is the coldest national capital and the only one whose annual mean temperature is below 0 °C.",
+   "sources": [
+    "noaa_normals",
+    "worldatlas_cold",
+    "wiki_ub",
+    "britannica_ub"
+   ],
+   "vo": [
+    "where is the coldest capital city on earth",
+    "canada, kazakhstan, or mongolia",
+    "mongolia. ulaanbaatar is the only capital on earth whose average temperature, over the whole year, is below freezing"
+   ],
+   "screen": [
+    "Mongolia",
+    "Canada",
+    "Kazakhstan",
+    "Ulaanbaatar",
+    "BELOW 0 °C",
+    "yearly average · Ulaanbaatar"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "January nights in Ulaanbaatar fall below −30 °C; Astana, Kazakhstan, is the second-coldest capital; Ottawa's annual mean is around 6–7 °C.",
+   "sources": [
+    "noaa_normals",
+    "wiki_ub",
+    "wiki_astana",
+    "wiki_ottawa",
+    "worldatlas_cold"
+   ],
+   "vo": [
+    "january nights there pass minus 30. astana, in kazakhstan, is second; ottawa is not close"
+   ],
+   "screen": [
+    "Astana · 2nd",
+    "Astana",
+    "coldest January nights"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Ulaanbaatar sits at about 1,350 m above sea level on a continental plateau far from any ocean, which drives its extreme climate.",
+   "sources": [
+    "noaa_normals",
+    "britannica_ub",
+    "wiki_ub",
+    "worldatlas_cold"
+   ],
+   "vo": [
+    "the secret is height: the city sits over 1,300 metres up, on a plateau far from any ocean"
+   ],
+   "screen": [
+    "1,350 m up",
+    "metres above sea level"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "About half of Mongolia's ~3.5 million people live in Ulaanbaatar (≈ 1.6–1.7 million).",
+   "sources": [
+    "nso_mongolia",
+    "wiki_ub",
+    "britannica_ub"
+   ],
+   "vo": [
+    "and about half of all mongolians live in it, more than 1,600,000 people in a single cold valley"
+   ],
+   "screen": [
+    "HALF THE NATION",
+    "about 1.6 million people"
+   ]
+  }
+ ]
+}
