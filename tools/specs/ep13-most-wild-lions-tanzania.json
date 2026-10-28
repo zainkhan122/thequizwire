@@ -137,24 +137,24 @@
    }
   },
   "v05": {
-   "text": "South Africa has about 3,000, Kenya fewer. The whole of Africa holds only about 23,000 wild lions.",
+   "text": "South Africa has about 3,000 and Kenya even fewer. All of Africa holds only about 23,000 wild lions.",
    "cues": {
     "africa": "africa",
     "kenya": "kenya",
-    "whole": "whole",
+    "whole": "all",
     "lions": "lions"
    }
   },
   "v06": {
-   "text": "Lions have vanished from 94 percent of the land they once roamed.",
+   "text": "Lions have now gone from 94 percent of the land they once roamed.",
    "cues": {
-    "vanished": "vanished",
+    "vanished": "gone",
     "percent": "percent",
     "roamed": "roamed"
    }
   },
   "v07": {
-   "text": "Outside Africa, only Gir, in India, still has them: 891 Asiatic lions, and nowhere else.",
+   "text": "Outside Africa, only Gir, in India, still has any at all: nearly 900 Asiatic lions, and nowhere else.",
    "cues": {
     "outside": "outside",
     "gir": "gir",
@@ -493,7 +493,7 @@
      "aa_lions"
     ],
     "vo": [
-     "south africa has about 3,000, kenya fewer. the whole of africa holds only about 23,000 wild lions"
+     "south africa has about 3,000 and kenya even fewer. all of africa holds only about 23,000 wild lions"
     ],
     "screen": [
      "South Africa · 3,284",
@@ -510,7 +510,7 @@
      "iucn_lion"
     ],
     "vo": [
-     "lions have vanished from 94 percent of the land they once roamed"
+     "lions have now gone from 94 percent of the land they once roamed"
     ],
     "screen": [
      "of their old range, gone"
@@ -527,7 +527,7 @@
      "animalmap"
     ],
     "vo": [
-     "outside africa, only gir, in india, still has them: 891 asiatic lions, and nowhere else"
+     "outside africa, only gir, in india, still has any at all: nearly 900 asiatic lions, and nowhere else"
     ],
     "screen": [
      "Gir · India",
@@ -540,11 +540,11 @@
  "story": [
   {
    "vo": {
-    "text": "South Africa has about 3,000, Kenya fewer. The whole of Africa holds only about 23,000 wild lions.",
+    "text": "South Africa has about 3,000 and Kenya even fewer. All of Africa holds only about 23,000 wild lions.",
     "cues": {
      "africa": "africa",
      "kenya": "kenya",
-     "whole": "whole",
+     "whole": "all",
      "lions": "lions"
     }
    },
@@ -657,9 +657,9 @@
   },
   {
    "vo": {
-    "text": "Lions have vanished from 94 percent of the land they once roamed.",
+    "text": "Lions have now gone from 94 percent of the land they once roamed.",
     "cues": {
-     "vanished": "vanished",
+     "vanished": "gone",
      "percent": "percent",
      "roamed": "roamed"
     }
@@ -748,7 +748,7 @@
   },
   {
    "vo": {
-    "text": "Outside Africa, only Gir, in India, still has them: 891 Asiatic lions, and nowhere else.",
+    "text": "Outside Africa, only Gir, in India, still has any at all: nearly 900 Asiatic lions, and nowhere else.",
     "cues": {
      "outside": "outside",
      "gir": "gir",

@@ -79,11 +79,11 @@
    "energy": 3,
    "pause_after": 0.4,
    "direction": "pull back to show the three safari countries; South Africa and Kenya light dim with their counts on 'Africa' and 'Kenya'; the continent counter runs to 23,000 and stops on 'lions'",
-   "text": "South Africa has about 3,000, Kenya fewer. The whole of Africa holds only about 23,000 wild lions.",
+   "text": "South Africa has about 3,000 and Kenya even fewer. All of Africa holds only about 23,000 wild lions.",
    "cues": {
     "africa": "africa",
     "kenya": "kenya",
-    "whole": "whole",
+    "whole": "all",
     "lions": "lions"
    }
   },
@@ -95,9 +95,9 @@
    "energy": 4,
    "pause_after": 0.5,
    "direction": "wide on the whole continent; the percent counter climbs to 94 and the sad flag-ball pops on 'roamed'",
-   "text": "Lions have vanished from 94 percent of the land they once roamed.",
+   "text": "Lions have now gone from 94 percent of the land they once roamed.",
    "cues": {
-    "vanished": "vanished",
+    "vanished": "gone",
     "percent": "percent",
     "roamed": "roamed"
    }
@@ -110,7 +110,7 @@
    "energy": 4,
    "pause_after": 0.8,
    "direction": "fly north-east across the Arabian Sea; India lights on 'India', the Gir tag lands, the ASIATIC LIONS card on 'Asiatic', lion sticker throbs",
-   "text": "Outside Africa, only Gir, in India, still has them: 891 Asiatic lions, and nowhere else.",
+   "text": "Outside Africa, only Gir, in India, still has any at all: nearly 900 Asiatic lions, and nowhere else.",
    "cues": {
     "outside": "outside",
     "gir": "gir",
