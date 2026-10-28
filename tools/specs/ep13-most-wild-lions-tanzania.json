@@ -654,7 +654,7 @@
      "id": "st_lion"
     }
    ],
-   "pause_after": 0.3
+   "pause_after": 0.35
   },
   {
    "vo": {
@@ -667,7 +667,7 @@
    },
    "direction": "wide on the whole continent; the percent counter climbs to 94 and the sad flag-ball pops on 'roamed'",
    "energy": 4,
-   "tone": "revelatory",
+   "tone": "resolute",
    "cam": [
     0.6,
     [
@@ -746,7 +746,7 @@
      "id": "st_globe"
     }
    ],
-   "pause_after": 0.3
+   "pause_after": 0.35
   },
   {
    "vo": {
@@ -760,7 +760,7 @@
    },
    "direction": "fly north-east across the Arabian Sea; India lights on 'India', the Gir tag lands, the ASIATIC LIONS card on 'Asiatic', lion sticker throbs",
    "energy": 4,
-   "tone": "tender",
+   "tone": "resolute",
    "card": {
     "kicker": "ASIATIC LIONS",
     "text": "891 in Gujarat, India"
@@ -820,7 +820,7 @@
      "id": "st_lion"
     }
    ],
-   "pause_after": 0.3
+   "pause_after": 0.35
   }
  ],
  "extra_elements": [
