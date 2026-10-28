@@ -213,9 +213,9 @@
    "stage": "stage_map",
    "until": "s04+1.4",
    "args": {
-    "k": 1.1,
+    "k": 1.0,
     "lonlat": [
-     -98,
+     -90,
      40
     ],
     "ease": "power2.inOut"
@@ -227,9 +227,9 @@
    "stage": "stage_map",
    "until": "s04.end",
    "args": {
-    "k": 1.12,
+    "k": 1.02,
     "lonlat": [
-     -97,
+     -89.5,
      40
     ],
     "ease": "none"
