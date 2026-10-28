@@ -691,8 +691,9 @@
      "end": 94,
      "y": 330,
      "label": "of their old range, gone",
-     "fmt": "pct",
-     "size": 190
+     "fmt": "int",
+     "size": 190,
+     "suffix": "%"
     }
    ],
    "devices": [

@@ -49,7 +49,8 @@ ship)
   EPS="$(python3 tools/daily_pick.py --dry 2>/dev/null)"; [ -n "$EPS" ] || { echo "nothing ready — author first (tools/today.sh prep)"; exit 1; }
   for e in $EPS; do
     python3 tools/precheck.py "$e" || exit 1
-    bash reelkit/episode.sh "$e" preflight 2>&1 | grep -E "FAIL  |Traceback" | grep -v "FAIL 0" && { echo "preflight FAIL: $e"; exit 1; } || true
+    PF="$(bash reelkit/episode.sh "$e" preflight 2>&1 | grep -E "FAIL  |Traceback|Error" | grep -v "FAIL 0" || true)"
+    [ -z "$PF" ] || { echo "$PF"; echo "preflight FAIL: $e"; exit 1; }
   done
   python3 tools/repo_guard.py >/dev/null && python3 tests/selftest.py --quick >/dev/null
   git checkout -- dispatch/stats.json dispatch/stats_summary.json dispatch/stats.md config/publishing.json 2>/dev/null || true   # CI owns the stats files (publish-sync commits them); local snapshots only inform the agent
