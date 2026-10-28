@@ -399,9 +399,9 @@
    "stage": "stage_map",
    "until": "s06+1.3",
    "args": {
-    "k": 1.1,
+    "k": 1.0,
     "lonlat": [
-     -105,
+     -90,
      40
     ],
     "ease": "power2.inOut"
@@ -413,9 +413,9 @@
    "stage": "stage_map",
    "until": "s06.end",
    "args": {
-    "k": 1.12,
+    "k": 1.02,
     "lonlat": [
-     -104,
+     -89.5,
      40
     ],
     "ease": "none"
