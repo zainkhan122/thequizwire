@@ -1,0 +1,290 @@
+{
+ "version": 1,
+ "episode": "ep23-most-tsunamis-pacific",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -179,
+     -50,
+     179,
+     65
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "route",
+     "id": "ring",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "ring_w",
+        "properties": {
+         "name": "Ring of Fire — western arc (schematic)"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           170,
+           -45
+          ],
+          [
+           175,
+           -38
+          ],
+          [
+           172,
+           -20
+          ],
+          [
+           160,
+           -10
+          ],
+          [
+           150,
+           -5
+          ],
+          [
+           140,
+           0
+          ],
+          [
+           128,
+           2
+          ],
+          [
+           120,
+           -5
+          ],
+          [
+           105,
+           -8
+          ],
+          [
+           98,
+           -2
+          ],
+          [
+           96,
+           4
+          ],
+          [
+           122,
+           12
+          ],
+          [
+           124,
+           20
+          ],
+          [
+           128,
+           30
+          ],
+          [
+           138,
+           36
+          ],
+          [
+           143,
+           42
+          ],
+          [
+           152,
+           48
+          ],
+          [
+           158,
+           54
+          ],
+          [
+           165,
+           58
+          ],
+          [
+           178,
+           60
+          ],
+          [
+           -170,
+           58
+          ],
+          [
+           -160,
+           56
+          ],
+          [
+           -150,
+           60
+          ]
+         ]
+        }
+       },
+       {
+        "type": "Feature",
+        "id": "ring_e",
+        "properties": {
+         "name": "Ring of Fire — eastern arc (schematic)"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           -150,
+           60
+          ],
+          [
+           -140,
+           58
+          ],
+          [
+           -128,
+           50
+          ],
+          [
+           -124,
+           44
+          ],
+          [
+           -121,
+           37
+          ],
+          [
+           -115,
+           30
+          ],
+          [
+           -105,
+           20
+          ],
+          [
+           -95,
+           15
+          ],
+          [
+           -88,
+           12
+          ],
+          [
+           -80,
+           5
+          ],
+          [
+           -78,
+           -5
+          ],
+          [
+           -76,
+           -15
+          ],
+          [
+           -72,
+           -25
+          ],
+          [
+           -71,
+           -35
+          ],
+          [
+           -73,
+           -45
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic Ring of Fire, drawn in two arcs on the reveal (the Pacific is the answer, not a country)"
+    }
+   ],
+   "pins": [
+    {
+     "id": "aceh",
+     "lonlat": [
+      95.32,
+      5.55
+     ],
+     "label": "Banda Aceh",
+     "qid": "Q5779"
+    },
+    {
+     "id": "sendai",
+     "lonlat": [
+      140.87,
+      38.27
+     ],
+     "label": "Sendai · 2011",
+     "qid": "Q46747",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "pac",
+     "lonlat": [
+      -150,
+      0
+     ],
+     "text": "Pacific · Ring of Fire",
+     "cls": "tag",
+     "in": "s04@ring",
+     "out": "s05"
+    },
+    {
+     "id": "io",
+     "lonlat": [
+      85,
+      -10
+     ],
+     "text": "Indian Ocean · 2004",
+     "cls": "tag",
+     "in": "s05@indian",
+     "out": "s06"
+    },
+    {
+     "id": "jp",
+     "lonlat": [
+      146,
+      33
+     ],
+     "text": "Japan · hit most often",
+     "cls": "tag",
+     "in": "s06@japan",
+     "out": "s07"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -180,
+      -60,
+      180,
+      75
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

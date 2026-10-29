@@ -1,0 +1,135 @@
+{
+ "id": "ep23-most-tsunamis-pacific",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 23,
+ "title": "Which ocean produces the MOST tsunamis?",
+ "difficulty": "EASY",
+ "seed": 4423,
+ "quiz": {
+  "question": "Which ocean produces the MOST tsunamis?",
+  "keyword": "MOST",
+  "options": [
+   "Atlantic",
+   "Indian",
+   "Pacific"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Pacific",
+  "answer_sub": "≈ 7 in 10 tsunamis · the Ring of Fire",
+  "option_meta": [
+   {
+    "emoji": "1f30a"
+   },
+   {
+    "emoji": "1f30a"
+   },
+   {
+    "emoji": "1f30a"
+   }
+  ],
+  "banner": "Pacific",
+  "banner_sub": "✓  C was right · ≈ 7 in 10 tsunamis · the Ring of Fire",
+  "outro": {
+   "headline": "DAILY MAP QUIZ",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which ocean produces the MOST tsunamis? 🌊",
+  "premise": "Seven in ten tsunamis start in one ocean",
+  "bait": "But the deadliest one did not.",
+  "keywords": [
+   "which ocean has the most tsunamis",
+   "world tsunami awareness day",
+   "ring of fire",
+   "tsunami facts",
+   "2004 indian ocean tsunami",
+   "geography quiz",
+   "earthquake map",
+   "tsunami meaning"
+  ],
+  "description": "Seven in ten tsunamis start in one ocean. But the deadliest one did not.\n\nSources: NOAA NCEI Global Historical Tsunami Database; International Tsunami Information Center (UNESCO/IOC); USGS; United Nations.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #23",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "TsunamiAwarenessDay",
+   "GeographyQuiz"
+  ],
+  "cover_emoji": "🌊",
+  "copy": {
+   "spoilers": [
+    "pacific",
+    "ring of fire"
+   ],
+   "youtube": {
+    "title": "Which ocean has the most tsunamis? World Tsunami Awareness Day 🌊",
+    "description": "Atlantic, Indian or the third one? Seven in ten recorded tsunamis start in a single ocean, along one ring of earthquakes and volcanoes, yet the deadliest wave in history came from somewhere else.\nGuess before the map draws it, then see the ring, the 2004 wave, the country hit most often, and the one rule that saves lives.\nWhich ocean did you pick?",
+    "tags": [
+     "#tsunamiawarenessday",
+     "#geographyquiz",
+     "#tsunami",
+     "#worldmap",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which ocean produces the MOST tsunamis? 🌊\nAtlantic, Indian or the other one? Seven in ten recorded tsunamis start in a single ocean, along one ring of earthquakes and volcanoes, yet the deadliest wave in history came from somewhere else.\nWhich did you pick?",
+    "tags": [
+     "#tsunamiawarenessday",
+     "#geographyquiz",
+     "#tsunami",
+     "#worldmap",
+     "#earthscience"
+    ]
+   },
+   "facebook": {
+    "text": "Which ocean produces the most tsunamis — Atlantic, Indian or Pacific?\nSeven in ten start in one ocean, but the deadliest ever came from another. Do you know the one rule that saves lives?",
+    "tags": [
+     "#tsunamiawarenessday",
+     "#geographyquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which ocean produces the MOST tsunamis?\nSeven in ten recorded tsunamis start in one ocean. The deadliest in history did not.",
+    "tags": [
+     "#TsunamiAwarenessDay",
+     "#GeographyQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which ocean produces the most tsunamis — Atlantic, Indian or Pacific? Seven in ten start in one ocean along a single ring of quakes and volcanoes, the deadliest ever came from another, and the day the UN marks for it falls this week.",
+    "tags": [
+     "#tsunamiawarenessday"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "odd-one-out",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "route-draw",
+  "beats": [
+   "route",
+   "counter",
+   "pin",
+   "label",
+   "split"
+  ],
+  "cast": "emoji-set:wave + flagball:none",
+  "music": "bed:tense"
+ },
+ "status": "ready"
+}

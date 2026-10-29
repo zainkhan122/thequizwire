@@ -1,0 +1,1033 @@
+{
+ "id": "ep23-most-tsunamis-pacific",
+ "series": "geo-blitz",
+ "number": 23,
+ "seed": 4423,
+ "question": "Which ocean produces the MOST tsunamis?",
+ "keyword": "MOST",
+ "difficulty": "EASY",
+ "options": [
+  {
+   "text": "Atlantic",
+   "emoji": "1f30a",
+   "cue": "atlantic",
+   "lonlat": [
+    -35,
+    20
+   ]
+  },
+  {
+   "text": "Indian",
+   "emoji": "1f30a",
+   "cue": "indian",
+   "lonlat": [
+    78,
+    -15
+   ]
+  },
+  {
+   "text": "Pacific",
+   "emoji": "1f30a",
+   "cue": "pacific",
+   "lonlat": [
+    -160,
+    10
+   ]
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "≈ 7 in 10 tsunamis · the Ring of Fire",
+ "outro_headline": "DAILY MAP QUIZ",
+ "cover_emoji": "🌊",
+ "post": {
+  "premise": "Seven in ten tsunamis start in one ocean",
+  "bait": "But the deadliest one did not.",
+  "keywords": [
+   "which ocean has the most tsunamis",
+   "world tsunami awareness day",
+   "ring of fire",
+   "tsunami facts",
+   "2004 indian ocean tsunami",
+   "geography quiz",
+   "earthquake map",
+   "tsunami meaning"
+  ],
+  "tags": [
+   "TsunamiAwarenessDay",
+   "GeographyQuiz"
+  ],
+  "sources_line": "NOAA NCEI Global Historical Tsunami Database; International Tsunami Information Center (UNESCO/IOC); USGS; United Nations",
+  "copy": {
+   "spoilers": [
+    "pacific",
+    "ring of fire"
+   ],
+   "youtube": {
+    "title": "Which ocean has the most tsunamis? World Tsunami Awareness Day 🌊",
+    "description": "Atlantic, Indian or the third one? Seven in ten recorded tsunamis start in a single ocean, along one ring of earthquakes and volcanoes, yet the deadliest wave in history came from somewhere else.\nGuess before the map draws it, then see the ring, the 2004 wave, the country hit most often, and the one rule that saves lives.\nWhich ocean did you pick?",
+    "tags": [
+     "#tsunamiawarenessday",
+     "#geographyquiz",
+     "#tsunami",
+     "#worldmap",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which ocean produces the MOST tsunamis? 🌊\nAtlantic, Indian or the other one? Seven in ten recorded tsunamis start in a single ocean, along one ring of earthquakes and volcanoes, yet the deadliest wave in history came from somewhere else.\nWhich did you pick?",
+    "tags": [
+     "#tsunamiawarenessday",
+     "#geographyquiz",
+     "#tsunami",
+     "#worldmap",
+     "#earthscience"
+    ]
+   },
+   "facebook": {
+    "text": "Which ocean produces the most tsunamis — Atlantic, Indian or Pacific?\nSeven in ten start in one ocean, but the deadliest ever came from another. Do you know the one rule that saves lives?",
+    "tags": [
+     "#tsunamiawarenessday",
+     "#geographyquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which ocean produces the MOST tsunamis?\nSeven in ten recorded tsunamis start in one ocean. The deadliest in history did not.",
+    "tags": [
+     "#TsunamiAwarenessDay",
+     "#GeographyQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which ocean produces the most tsunamis — Atlantic, Indian or Pacific? Seven in ten start in one ocean along a single ring of quakes and volcanoes, the deadliest ever came from another, and the day the UN marks for it falls this week.",
+    "tags": [
+     "#tsunamiawarenessday"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "odd-one-out",
+  "hook": "fact-first",
+  "opener": "wide-drift",
+  "reveal": "route-draw",
+  "beats": [
+   "route",
+   "counter",
+   "pin",
+   "label",
+   "split"
+  ],
+  "cast": "emoji-set:wave + flagball:none",
+  "music": "bed:tense",
+  "outro": "DAILY MAP QUIZ"
+ },
+ "intent": "The World Tsunami Awareness Day map: the Pacific's Ring of Fire drawn as the reveal, the 2004 Indian Ocean counter as the twist, Japan as the place hit most often, and the one rule — long quake, high ground — as the takeaway.",
+ "voice": {
+  "v01_cues": {
+   "ocean": "ocean",
+   "most": "most"
+  },
+  "v04": {
+   "text": "The Pacific. About 7 in 10 tsunamis on record start there, along the ring of quakes around its rim.",
+   "cues": {
+    "answer": "pacific",
+    "record": "record",
+    "ring": "ring"
+   }
+  },
+  "v05": {
+   "text": "The deadliest, though, came from the Indian Ocean in 2004, and killed around 230,000 people.",
+   "cues": {
+    "deadliest": "deadliest",
+    "indian": "indian",
+    "killed": "killed"
+   }
+  },
+  "v06": {
+   "text": "Japan is hit more often than anywhere; its own word, harbour wave, is what the world uses.",
+   "cues": {
+    "japan": "japan",
+    "harbour": "harbour",
+    "world": "world"
+   }
+  },
+  "v07": {
+   "text": "The 5th of November is World Tsunami Awareness Day. The lesson: feel a long quake, head for high ground.",
+   "cues": {
+    "november": "november",
+    "lesson": "lesson",
+    "ground": "ground"
+   }
+  },
+  "v08": {
+   "text": "Long quake, high ground. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "7 IN 10",
+   "text": "tsunamis start in the Pacific"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": null,
+  "b": null
+ },
+ "geo": {
+  "fit_bbox": [
+   -179,
+   -50,
+   179,
+   65
+  ],
+  "far_bbox": [
+   -180,
+   -60,
+   180,
+   75
+  ],
+  "resolution": "110m",
+  "highlight_ids": [],
+  "highlight_note": "no country: the answer is an ocean, drawn as the Ring of Fire route",
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "ring",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "ring_w",
+       "properties": {
+        "name": "Ring of Fire — western arc (schematic)"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          170,
+          -45
+         ],
+         [
+          175,
+          -38
+         ],
+         [
+          172,
+          -20
+         ],
+         [
+          160,
+          -10
+         ],
+         [
+          150,
+          -5
+         ],
+         [
+          140,
+          0
+         ],
+         [
+          128,
+          2
+         ],
+         [
+          120,
+          -5
+         ],
+         [
+          105,
+          -8
+         ],
+         [
+          98,
+          -2
+         ],
+         [
+          96,
+          4
+         ],
+         [
+          122,
+          12
+         ],
+         [
+          124,
+          20
+         ],
+         [
+          128,
+          30
+         ],
+         [
+          138,
+          36
+         ],
+         [
+          143,
+          42
+         ],
+         [
+          152,
+          48
+         ],
+         [
+          158,
+          54
+         ],
+         [
+          165,
+          58
+         ],
+         [
+          178,
+          60
+         ],
+         [
+          -170,
+          58
+         ],
+         [
+          -160,
+          56
+         ],
+         [
+          -150,
+          60
+         ]
+        ]
+       }
+      },
+      {
+       "type": "Feature",
+       "id": "ring_e",
+       "properties": {
+        "name": "Ring of Fire — eastern arc (schematic)"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -150,
+          60
+         ],
+         [
+          -140,
+          58
+         ],
+         [
+          -128,
+          50
+         ],
+         [
+          -124,
+          44
+         ],
+         [
+          -121,
+          37
+         ],
+         [
+          -115,
+          30
+         ],
+         [
+          -105,
+          20
+         ],
+         [
+          -95,
+          15
+         ],
+         [
+          -88,
+          12
+         ],
+         [
+          -80,
+          5
+         ],
+         [
+          -78,
+          -5
+         ],
+         [
+          -76,
+          -15
+         ],
+         [
+          -72,
+          -25
+         ],
+         [
+          -71,
+          -35
+         ],
+         [
+          -73,
+          -45
+         ]
+        ]
+       }
+      }
+     ]
+    },
+    "note": "schematic Ring of Fire, drawn in two arcs on the reveal (the Pacific is the answer, not a country)"
+   }
+  ],
+  "labels": [
+   {
+    "id": "pac",
+    "lonlat": [
+     -150,
+     0
+    ],
+    "text": "Pacific · Ring of Fire",
+    "cls": "tag",
+    "in": "s04@ring",
+    "out": "s05"
+   },
+   {
+    "id": "io",
+    "lonlat": [
+     85,
+     -10
+    ],
+    "text": "Indian Ocean · 2004",
+    "cls": "tag",
+    "in": "s05@indian",
+    "out": "s06"
+   },
+   {
+    "id": "jp",
+    "lonlat": [
+     146,
+     33
+    ],
+    "text": "Japan · hit most often",
+    "cls": "tag",
+    "in": "s06@japan",
+    "out": "s07"
+   }
+  ],
+  "pins": [
+   {
+    "id": "aceh",
+    "lonlat": [
+     95.32,
+     5.55
+    ],
+    "label": "Banda Aceh",
+    "qid": "Q5779"
+   },
+   {
+    "id": "sendai",
+    "lonlat": [
+     140.87,
+     38.27
+    ],
+    "label": "Sendai · 2011",
+    "qid": "Q46747",
+    "side": "left"
+   }
+  ],
+  "scalebar": null,
+  "cams": {
+   "start": [
+    0.4,
+    [
+     0,
+     20
+    ]
+   ],
+   "s01": [
+    0.4,
+    [
+     2,
+     20
+    ]
+   ],
+   "s04": [
+    0.42,
+    [
+     -160,
+     10
+    ]
+   ],
+   "s04b": [
+    0.43,
+    [
+     -158,
+     10
+    ]
+   ],
+   "s05": [
+    0.9,
+    [
+     88,
+     0
+    ]
+   ],
+   "s05b": [
+    0.92,
+    [
+     88.5,
+     0.2
+    ]
+   ],
+   "s06": [
+    1.5,
+    [
+     140,
+     37
+    ]
+   ],
+   "s06b": [
+    1.53,
+    [
+     140.5,
+     37.2
+    ]
+   ],
+   "s07": [
+    0.45,
+    [
+     -170,
+     5
+    ]
+   ],
+   "s07b": [
+    0.46,
+    [
+     -168,
+     5
+    ]
+   ]
+  },
+  "extra_beats": [
+   {
+    "at": "s04@answer",
+    "do": "geo.route_draw",
+    "stage": "stage_map",
+    "until": "s04@ring+0.8",
+    "args": {
+     "rid": "ring_w",
+     "layer": "ring"
+    }
+   },
+   {
+    "at": "s04@answer+0.3",
+    "do": "geo.route_draw",
+    "stage": "stage_map",
+    "until": "s04@ring+1.0",
+    "args": {
+     "rid": "ring_e",
+     "layer": "ring"
+    }
+   }
+  ],
+  "pin_beats": []
+ },
+ "research": {
+  "topic": "Ocean with the most tsunamis: the Pacific — roughly 70 % of recorded tsunamis (NOAA NCEI/WDS Global Historical Tsunami Database; ITIC), generated along the Pacific Ring of Fire subduction zones; the deadliest tsunami on record was the 26 December 2004 Indian Ocean tsunami (~230,000 deaths, 14 countries); Japan records the most tsunamis of any country and gave the world the word (tsu = harbour, nami = wave); World Tsunami Awareness Day, 5 November, designated by the UN General Assembly in 2015",
+  "myths": [
+   {
+    "myth": "Tsunamis are an Indian Ocean problem because of 2004.",
+    "reality": "About 7 in 10 recorded tsunamis occur in the Pacific; the 2004 Indian Ocean tsunami was the deadliest, not the typical one.",
+    "sources": [
+     "noaa_ncei",
+     "itic",
+     "usgs_2004"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Tsunami Shorts are disaster footage; nobody asks the ocean question, draws the ring as the reveal, counts 2004, names the country hit most often and ends on the survival rule.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=world+tsunami+awareness+day",
+     "title": "Search: world tsunami awareness day",
+     "angle": "awareness clips",
+     "misses": "no map, no question"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=ring+of+fire+explained",
+     "title": "Search: ring of fire explained",
+     "angle": "long explainers",
+     "misses": "no quiz, no numbers"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if geography",
+     "misses": "no sourced data"
+    }
+   ]
+  },
+  "sources": {
+   "noaa_ncei": {
+    "type": "primary",
+    "publisher": "NOAA National Centers for Environmental Information",
+    "title": "NCEI/WDS Global Historical Tsunami Database",
+    "url": "https://www.ncei.noaa.gov/products/natural-hazards/tsunamis-earthquakes-volcanoes/tsunamis",
+    "date": "2026-10-29",
+    "notes": "the majority (about 70 %) of recorded tsunami events are in the Pacific Ocean basin; Japan has the most recorded events of any country"
+   },
+   "itic": {
+    "type": "primary",
+    "publisher": "International Tsunami Information Center (UNESCO/IOC–NOAA)",
+    "title": "Tsunami frequently asked questions",
+    "url": "http://itic.ioc-unesco.org/",
+    "date": "2026-10-29",
+    "notes": "approximately 70 % of all tsunamis occur in the Pacific Ocean, generated along the Ring of Fire; the word tsunami is Japanese for harbour wave"
+   },
+   "usgs_2004": {
+    "type": "primary",
+    "publisher": "U.S. Geological Survey",
+    "title": "M9.1 Sumatra–Andaman Islands earthquake and tsunami, 26 December 2004",
+    "url": "https://earthquake.usgs.gov/earthquakes/eventpage/official20041226005853450_30/executive",
+    "date": "2026-10-29",
+    "notes": "the deadliest tsunami in recorded history: about 227,900 killed across 14 countries"
+   },
+   "un_wtad": {
+    "type": "primary",
+    "publisher": "United Nations",
+    "title": "World Tsunami Awareness Day, 5 November",
+    "url": "https://www.un.org/en/observances/tsunami-awareness-day",
+    "date": "2026-10-29",
+    "notes": "designated by the UN General Assembly in December 2015; date chosen from the 1854 Japanese 'Inamura-no-hi' story; guidance: strong or long earthquake near the coast — move to high ground"
+   },
+   "britannica_tsunami": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Tsunami",
+    "url": "https://www.britannica.com/science/tsunami",
+    "date": "2026-10-29",
+    "notes": "most tsunamis are generated by earthquakes around the Pacific Rim; 2004 Indian Ocean tsunami killed more than 200,000; Japanese term 'harbour wave'"
+   },
+   "jma_2011": {
+    "type": "primary",
+    "publisher": "Japan Meteorological Agency / Reconstruction Agency",
+    "title": "2011 Great East Japan Earthquake and tsunami",
+    "url": "https://www.jma.go.jp/jma/en/2011_Earthquake/2011_Earthquake.html",
+    "date": "2026-10-29",
+    "notes": "11 March 2011 tsunami, Sendai/Tohoku coast; about 18,000 dead or missing"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "About 70 % of recorded tsunamis occur in the Pacific Ocean, generated along the Ring of Fire.",
+    "sources": [
+     "noaa_ncei",
+     "itic",
+     "britannica_tsunami"
+    ],
+    "vo": [
+     "which ocean produces the most tsunamis",
+     "atlantic, indian, or pacific",
+     "the pacific. about 7 in 10 tsunamis on record start there, along the ring of quakes around its rim"
+    ],
+    "screen": [
+     "Pacific",
+     "Atlantic",
+     "Indian",
+     "7 IN 10",
+     "tsunamis start in the Pacific",
+     "Pacific · Ring of Fire"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "The deadliest tsunami on record was the 26 December 2004 Indian Ocean tsunami, which killed around 230,000 people.",
+    "sources": [
+     "usgs_2004",
+     "britannica_tsunami",
+     "un_wtad"
+    ],
+    "vo": [
+     "the deadliest, though, came from the indian ocean in 2004, and killed around 230,000 people"
+    ],
+    "screen": [
+     "Indian Ocean · 2004",
+     "Banda Aceh",
+     "lives lost · 26 Dec 2004"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Japan records more tsunamis than any other country and gave the world the word tsunami, meaning harbour wave.",
+    "sources": [
+     "noaa_ncei",
+     "itic",
+     "britannica_tsunami",
+     "jma_2011"
+    ],
+    "vo": [
+     "japan is hit more often than anywhere; its own word, harbour wave, is what the world uses"
+    ],
+    "screen": [
+     "Japan · hit most often",
+     "Sendai · 2011",
+     "TSU · NAMI",
+     "harbour · wave",
+     "津波",
+     "the word the world uses"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "core",
+    "text": "World Tsunami Awareness Day is 5 November; the core safety message is to move to high ground after a strong or long earthquake near the coast.",
+    "sources": [
+     "un_wtad",
+     "itic"
+    ],
+    "vo": [
+     "the 5th of november is world tsunami awareness day. the lesson: feel a long quake, head for high ground"
+    ],
+    "screen": [
+     "5 NOV",
+     "World Tsunami Awareness Day"
+    ]
+   }
+  ]
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "The deadliest, though, came from the Indian Ocean in 2004, and killed around 230,000 people.",
+    "cues": {
+     "deadliest": "deadliest",
+     "indian": "indian",
+     "killed": "killed"
+    }
+   },
+   "direction": "swing west to the Indian Ocean; the tag on 'Indian'; the Banda Aceh pin drops; from 'killed' a counter climbs to 230,000 — slowly, this is a toll, not a stat — a candle sticker beside it",
+   "energy": 3,
+   "tone": "tender",
+   "pause_after": 0.8,
+   "cam": [
+    0.9,
+    [
+     88,
+     0
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.92,
+    [
+     88.5,
+     0.2
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "toll",
+     "type": "counter",
+     "start": 0,
+     "end": 230000,
+     "y": 330,
+     "label": "lives lost · 26 Dec 2004",
+     "fmt": "int",
+     "size": 170
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@indian+0.2",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "aceh"
+     }
+    },
+    {
+     "at": "@@deadliest",
+     "do": "sticker_in",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@indian",
+     "do": "sticker_out",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@killed-0.2",
+     "do": "chart.counter_run",
+     "id": "toll",
+     "until": "@.end-0.3",
+     "args": {
+      "ease": "power1.out"
+     }
+    },
+    {
+     "at": "@@killed+0.4",
+     "do": "sticker_in",
+     "id": "st_candle"
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "toll",
+     "args": {
+      "dur": 0.25
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_candle"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Japan is hit more often than anywhere; its own word, harbour wave, is what the world uses.",
+    "cues": {
+     "japan": "japan",
+     "harbour": "harbour",
+     "world": "world"
+    }
+   },
+   "direction": "push onto Japan; the tag on 'Japan'; the Sendai pin; on 'harbour' a TSU · NAMI split slides in — harbour on the left, wave on the right; the wave sticker on 'world'",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    1.5,
+    [
+     140,
+     37
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    1.53,
+    [
+     140.5,
+     37.2
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "word",
+     "type": "split",
+     "left": {
+      "kicker": "TSU · NAMI",
+      "text": "harbour · wave"
+     },
+     "right": {
+      "kicker": "津波",
+      "text": "the word the world uses"
+     },
+     "label_left": "JAPANESE",
+     "label_right": "EVERYWHERE",
+     "y": 310,
+     "h": 540,
+     "x": 60,
+     "w": 620
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@japan",
+     "do": "sticker_in",
+     "id": "st_jp"
+    },
+    {
+     "at": "@@japan+0.4",
+     "do": "sticker_pulse",
+     "id": "st_jp"
+    },
+    {
+     "at": "@@japan+0.2",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "sendai"
+     }
+    },
+    {
+     "at": "@@harbour",
+     "do": "chart.split_in",
+     "id": "word"
+    },
+    {
+     "at": "@@world",
+     "do": "sticker_in",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@world+0.4",
+     "do": "sticker_pulse",
+     "id": "st_wave"
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "word"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_wave"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_jp"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The 5th of November is World Tsunami Awareness Day. The lesson: feel a long quake, head for high ground.",
+    "cues": {
+     "november": "november",
+     "lesson": "lesson",
+     "ground": "ground"
+    }
+   },
+   "card": {
+    "kicker": "5 NOV",
+    "text": "World Tsunami Awareness Day"
+   },
+   "card_at": null,
+   "direction": "pull back out over the whole Pacific; the 5 NOV card on 'November'; the ring pulses again from 'lesson'; the mountain sticker lands on 'ground' and the siren sticker pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "cam": [
+    0.45,
+    [
+     -170,
+     5
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.46,
+    [
+     -168,
+     5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@november",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@november+0.4",
+     "do": "sticker_in",
+     "id": "st_cal"
+    },
+    {
+     "at": "@@lesson",
+     "do": "sticker_out",
+     "id": "st_cal"
+    },
+    {
+     "at": "@@lesson",
+     "do": "sticker_in",
+     "id": "st_siren"
+    },
+    {
+     "at": "@@lesson+0.4",
+     "do": "sticker_pulse",
+     "id": "st_siren"
+    },
+    {
+     "at": "@@ground",
+     "do": "sticker_in",
+     "id": "st_mtn"
+    },
+    {
+     "at": "@@ground+0.4",
+     "do": "sticker_pulse",
+     "id": "st_mtn"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_siren"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_mtn"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_candle",
+   "type": "sticker",
+   "emoji": "1f56f",
+   "x": 780,
+   "y": 560,
+   "size": 150,
+   "rot": 0
+  },
+  {
+   "id": "st_wave",
+   "type": "sticker",
+   "emoji": "1f30a",
+   "x": 780,
+   "y": 960,
+   "size": 170,
+   "rot": 8
+  },
+  {
+   "id": "st_siren",
+   "type": "sticker",
+   "emoji": "1f6a8",
+   "x": 300,
+   "y": 620,
+   "size": 170,
+   "rot": -8
+  },
+  {
+   "id": "st_mtn",
+   "type": "sticker",
+   "emoji": "26f0",
+   "x": 780,
+   "y": 560,
+   "size": 180,
+   "rot": 8
+  },
+  {
+   "id": "st_jp",
+   "type": "sticker",
+   "emoji": "1f5fe",
+   "x": 300,
+   "y": 620,
+   "size": 170,
+   "rot": -8
+  },
+  {
+   "id": "st_cal",
+   "type": "sticker",
+   "emoji": "1f4c5",
+   "x": 780,
+   "y": 560,
+   "size": 160,
+   "rot": 8
+  }
+ ]
+}

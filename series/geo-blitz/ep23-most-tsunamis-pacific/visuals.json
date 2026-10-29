@@ -1,0 +1,576 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "7 IN 10",
+   "text": "tsunamis start in the Pacific"
+  },
+  {
+   "id": "toll",
+   "type": "counter",
+   "start": 0,
+   "end": 230000,
+   "y": 330,
+   "label": "lives lost · 26 Dec 2004",
+   "fmt": "int",
+   "size": 170
+  },
+  {
+   "id": "word",
+   "type": "split",
+   "left": {
+    "kicker": "TSU · NAMI",
+    "text": "harbour · wave"
+   },
+   "right": {
+    "kicker": "津波",
+    "text": "the word the world uses"
+   },
+   "label_left": "JAPANESE",
+   "label_right": "EVERYWHERE",
+   "y": 310,
+   "h": 540,
+   "x": 60,
+   "w": 620
+  },
+  {
+   "id": "f4",
+   "type": "fact",
+   "kicker": "5 NOV",
+   "text": "World Tsunami Awareness Day"
+  },
+  {
+   "id": "st_candle",
+   "type": "sticker",
+   "emoji": "1f56f",
+   "x": 780,
+   "y": 560,
+   "size": 150,
+   "rot": 0
+  },
+  {
+   "id": "st_wave",
+   "type": "sticker",
+   "emoji": "1f30a",
+   "x": 780,
+   "y": 960,
+   "size": 170,
+   "rot": 8
+  },
+  {
+   "id": "st_siren",
+   "type": "sticker",
+   "emoji": "1f6a8",
+   "x": 300,
+   "y": 620,
+   "size": 170,
+   "rot": -8
+  },
+  {
+   "id": "st_mtn",
+   "type": "sticker",
+   "emoji": "26f0",
+   "x": 780,
+   "y": 560,
+   "size": 180,
+   "rot": 8
+  },
+  {
+   "id": "st_jp",
+   "type": "sticker",
+   "emoji": "1f5fe",
+   "x": 300,
+   "y": 620,
+   "size": 170,
+   "rot": -8
+  },
+  {
+   "id": "st_cal",
+   "type": "sticker",
+   "emoji": "1f4c5",
+   "x": 780,
+   "y": 560,
+   "size": 160,
+   "rot": 8
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.4,
+    "lonlat": [
+     0,
+     20
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.4,
+    "lonlat": [
+     2,
+     20
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 0.42,
+    "lonlat": [
+     -160,
+     10
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 0.43,
+    "lonlat": [
+     -158,
+     10
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04@answer",
+   "do": "geo.route_draw",
+   "stage": "stage_map",
+   "until": "s04@ring+0.8",
+   "args": {
+    "rid": "ring_w",
+    "layer": "ring"
+   }
+  },
+  {
+   "at": "s04@answer+0.3",
+   "do": "geo.route_draw",
+   "stage": "stage_map",
+   "until": "s04@ring+1.0",
+   "args": {
+    "rid": "ring_e",
+    "layer": "ring"
+   }
+  },
+  {
+   "at": "s04@ring",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "pac"
+   }
+  },
+  {
+   "at": "s05",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "pac"
+   }
+  },
+  {
+   "at": "s05@indian",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "io"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "io"
+   }
+  },
+  {
+   "at": "s06@japan",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "jp"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "jp"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.4",
+   "args": {
+    "k": 0.9,
+    "lonlat": [
+     88,
+     0
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 0.92,
+    "lonlat": [
+     88.5,
+     0.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@indian+0.2",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "aceh"
+   }
+  },
+  {
+   "at": "s05@deadliest",
+   "do": "sticker_in",
+   "id": "st_wave"
+  },
+  {
+   "at": "s05@indian",
+   "do": "sticker_out",
+   "id": "st_wave"
+  },
+  {
+   "at": "s05@killed-0.2",
+   "do": "chart.counter_run",
+   "id": "toll",
+   "until": "s05.end-0.3",
+   "args": {
+    "ease": "power1.out"
+   }
+  },
+  {
+   "at": "s05@killed+0.4",
+   "do": "sticker_in",
+   "id": "st_candle"
+  },
+  {
+   "at": "s05.end",
+   "do": "hide",
+   "id": "toll",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_candle"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.3",
+   "args": {
+    "k": 1.5,
+    "lonlat": [
+     140,
+     37
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 1.53,
+    "lonlat": [
+     140.5,
+     37.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@japan",
+   "do": "sticker_in",
+   "id": "st_jp"
+  },
+  {
+   "at": "s06@japan+0.4",
+   "do": "sticker_pulse",
+   "id": "st_jp"
+  },
+  {
+   "at": "s06@japan+0.2",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "sendai"
+   }
+  },
+  {
+   "at": "s06@harbour",
+   "do": "chart.split_in",
+   "id": "word"
+  },
+  {
+   "at": "s06@world",
+   "do": "sticker_in",
+   "id": "st_wave"
+  },
+  {
+   "at": "s06@world+0.4",
+   "do": "sticker_pulse",
+   "id": "st_wave"
+  },
+  {
+   "at": "s06.end",
+   "do": "chart.out",
+   "id": "word"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_wave"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_jp"
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.5",
+   "args": {
+    "k": 0.45,
+    "lonlat": [
+     -170,
+     5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 0.46,
+    "lonlat": [
+     -168,
+     5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@november",
+   "do": "fact_in",
+   "id": "f4",
+   "until": "s07.end"
+  },
+  {
+   "at": "s07@november+0.4",
+   "do": "sticker_in",
+   "id": "st_cal"
+  },
+  {
+   "at": "s07@lesson",
+   "do": "sticker_out",
+   "id": "st_cal"
+  },
+  {
+   "at": "s07@lesson",
+   "do": "sticker_in",
+   "id": "st_siren"
+  },
+  {
+   "at": "s07@lesson+0.4",
+   "do": "sticker_pulse",
+   "id": "st_siren"
+  },
+  {
+   "at": "s07@ground",
+   "do": "sticker_in",
+   "id": "st_mtn"
+  },
+  {
+   "at": "s07@ground+0.4",
+   "do": "sticker_pulse",
+   "id": "st_mtn"
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_siren"
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_mtn"
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.4,
+    "lonlat": [
+     0,
+     20
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}
