@@ -1,0 +1,123 @@
+{
+ "version": 1,
+ "episode": "ep07-most-diabetes-china",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     60,
+     5,
+     140,
+     55
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "156"
+     ],
+     "cls": "",
+     "note": "China (answer) — colour lift on reveal",
+     "lift": "color",
+     "color": "#C62828"
+    },
+    {
+     "kind": "highlight",
+     "id": "others",
+     "ids": [
+      "356"
+     ],
+     "cls": "dim",
+     "note": "India — lit as the runner-up"
+    }
+   ],
+   "pins": [
+    {
+     "id": "beijing",
+     "lonlat": [
+      116.41,
+      39.9
+     ],
+     "label": "Beijing",
+     "qid": "Q956"
+    },
+    {
+     "id": "toronto",
+     "lonlat": [
+      -79.39,
+      43.67
+     ],
+     "label": "Toronto",
+     "qid": "Q172",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "cn",
+     "lonlat": [
+      108,
+      30
+     ],
+     "text": "China",
+     "cls": "tag",
+     "in": "s04@answer",
+     "out": "s05"
+    },
+    {
+     "id": "in",
+     "lonlat": [
+      77,
+      17
+     ],
+     "text": "India · 2nd",
+     "cls": "tag",
+     "in": "s05@india",
+     "out": "s06"
+    },
+    {
+     "id": "to",
+     "lonlat": [
+      -84,
+      47
+     ],
+     "text": "Toronto · insulin, 1921",
+     "cls": "tag",
+     "in": "s07@birthday",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -130,
+      -10,
+      150,
+      65
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

@@ -1,0 +1,831 @@
+{
+ "id": "ep07-most-diabetes-china",
+ "series": "body-brain",
+ "number": 7,
+ "seed": 7307,
+ "question": "In which country do MOST people with diabetes live?",
+ "keyword": "MOST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "India",
+   "flag": "in",
+   "cue": "india",
+   "lonlat": [
+    79,
+    22
+   ]
+  },
+  {
+   "text": "United States",
+   "flag": "us",
+   "cue": "states",
+   "lonlat": [
+    -98,
+    39
+   ]
+  },
+  {
+   "text": "China",
+   "flag": "cn",
+   "cue": "china",
+   "lonlat": [
+    104,
+    35
+   ]
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "148 million adults · 1 in 4 worldwide",
+ "outro_headline": "DID YOU GET IT?",
+ "cover_emoji": "🩸",
+ "post": {
+  "premise": "One country holds a quarter of the world's diabetes",
+  "bait": "It is not the United States.",
+  "keywords": [
+   "which country has the most diabetes",
+   "diabetes by country",
+   "world diabetes day",
+   "diabetes statistics 2025",
+   "how many people have diabetes",
+   "health quiz",
+   "idf diabetes atlas",
+   "body facts"
+  ],
+  "tags": [
+   "WorldDiabetesDay",
+   "HealthQuiz"
+  ],
+  "sources_line": "IDF Diabetes Atlas, 11th edition (2025); CDC National Diabetes Statistics Report; WHO",
+  "copy": {
+   "spoilers": [
+    "china",
+    "chinese",
+    "148"
+   ],
+   "youtube": {
+    "title": "Which country has the most diabetes in the world? Not the USA 🩸",
+    "description": "India, the United States or the third one? One country is home to a quarter of every adult with diabetes on the planet, and about half of them do not know it yet.\nGuess before the map fills, then see the three countries side by side, the global count climb, and the birthday that gave World Diabetes Day its date.\nWhich flag did you pick?",
+    "tags": [
+     "#worlddiabetesday",
+     "#healthquiz",
+     "#diabetes",
+     "#bodyfacts",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "In which country do MOST people with diabetes live? 🩸\nIndia, the United States or the other one? One country is home to a quarter of every adult with diabetes on Earth, and about half of them do not know it yet.\nWhich did you pick?",
+    "tags": [
+     "#worlddiabetesday",
+     "#healthquiz",
+     "#diabetesawareness",
+     "#bodyfacts",
+     "#healthfacts"
+    ]
+   },
+   "facebook": {
+    "text": "In which country do most people with diabetes live — India, the United States or China?\nOne of them holds a quarter of all cases on Earth, and about half of those people do not know yet. When did you last check your sugar?",
+    "tags": [
+     "#worlddiabetesday",
+     "#healthquiz"
+    ]
+   },
+   "twitter": {
+    "text": "In which country do MOST people with diabetes live?\nOne country holds a quarter of every case on Earth, and about half of them do not know it yet. Not the USA.",
+    "tags": [
+     "#WorldDiabetesDay",
+     "#HealthQuiz"
+    ]
+   },
+   "threads": {
+    "text": "In which country do most people with diabetes live — India, the United States or China? One country holds a quarter of every adult case on Earth, about half of them undiagnosed, and World Diabetes Day falls on a doctor's birthday for a reason.",
+    "tags": [
+     "#worlddiabetesday"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "fact-first",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "compare",
+   "counter",
+   "pin",
+   "label",
+   "second-highlight"
+  ],
+  "cast": "flagball:think + emoji-set:health",
+  "music": "bed:pad",
+  "outro": "DID YOU GET IT?"
+ },
+ "intent": "The World Diabetes Day map: not the United States but China, home to a quarter of all adults with diabetes — three countries compared side by side, the global count climbing past half a billion with half undiagnosed, and the Toronto pin for the doctor whose birthday the day marks.",
+ "voice": {
+  "v01_cues": {
+   "most": "most",
+   "live": "live"
+  },
+  "v04": {
+   "text": "China. About 148 million adults there live with diabetes, 1 in 4 of all cases on Earth.",
+   "cues": {
+    "answer": "china",
+    "million": "million",
+    "earth": "earth"
+   }
+  },
+  "v05": {
+   "text": "India is second with about 90 million. The United States has 38 million.",
+   "cues": {
+    "india": "india",
+    "second": "second",
+    "states": "states"
+   }
+  },
+  "v06": {
+   "text": "Worldwide it is well over half a billion people, and around half of them do not yet know they have it.",
+   "cues": {
+    "worldwide": "worldwide",
+    "billion": "billion",
+    "know": "know"
+   }
+  },
+  "v07": {
+   "text": "The 14th of November is World Diabetes Day, the birthday of the doctor who helped discover insulin.",
+   "cues": {
+    "november": "november",
+    "birthday": "birthday",
+    "insulin": "insulin"
+   }
+  },
+  "v08": {
+   "text": "Check your sugar. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "1 IN 4",
+   "text": "of all adults with diabetes"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "cn",
+   "face": "think",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "us",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "geo": {
+  "fit_bbox": [
+   60,
+   5,
+   140,
+   55
+  ],
+  "far_bbox": [
+   -130,
+   -10,
+   150,
+   65
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "156"
+  ],
+  "highlight_note": "China (answer) — colour lift on reveal",
+  "lift_color": "#C62828",
+  "extra_layers": [
+   {
+    "kind": "highlight",
+    "id": "others",
+    "ids": [
+     "356"
+    ],
+    "cls": "dim",
+    "note": "India — lit as the runner-up"
+   }
+  ],
+  "labels": [
+   {
+    "id": "cn",
+    "lonlat": [
+     108,
+     30
+    ],
+    "text": "China",
+    "cls": "tag",
+    "in": "s04@answer",
+    "out": "s05"
+   },
+   {
+    "id": "in",
+    "lonlat": [
+     77,
+     17
+    ],
+    "text": "India · 2nd",
+    "cls": "tag",
+    "in": "s05@india",
+    "out": "s06"
+   },
+   {
+    "id": "to",
+    "lonlat": [
+     -84,
+     47
+    ],
+    "text": "Toronto · insulin, 1921",
+    "cls": "tag",
+    "in": "s07@birthday",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "beijing",
+    "lonlat": [
+     116.41,
+     39.9
+    ],
+    "label": "Beijing",
+    "qid": "Q956"
+   },
+   {
+    "id": "toronto",
+    "lonlat": [
+     -79.39,
+     43.67
+    ],
+    "label": "Toronto",
+    "qid": "Q172",
+    "side": "left"
+   }
+  ],
+  "scalebar": null,
+  "cams": {
+   "start": [
+    0.5,
+    [
+     20,
+     30
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     22,
+     30
+    ]
+   ],
+   "s04": [
+    1.3,
+    [
+     104,
+     35
+    ]
+   ],
+   "s04b": [
+    1.33,
+    [
+     104.5,
+     35.2
+    ]
+   ],
+   "s05": [
+    0.9,
+    [
+     92,
+     28
+    ]
+   ],
+   "s05b": [
+    0.92,
+    [
+     92.5,
+     28.2
+    ]
+   ],
+   "s06": [
+    0.5,
+    [
+     40,
+     30
+    ]
+   ],
+   "s06b": [
+    0.51,
+    [
+     41,
+     30
+    ]
+   ],
+   "s07": [
+    1.6,
+    [
+     -79,
+     44
+    ]
+   ],
+   "s07b": [
+    1.63,
+    [
+     -78.6,
+     44.2
+    ]
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s04@million",
+    "pid": "beijing"
+   }
+  ]
+ },
+ "research": {
+  "topic": "Country with the most adults living with diabetes: China — 148.0 million adults aged 20–79 (IDF Diabetes Atlas 11th ed., 2025, data for 2024), about 1 in 4 of the 589 million worldwide; India 89.8 million second; United States ≈ 38 million (CDC 38.4 M all ages, 2021); worldwide 11.1 % of adults, ~4 in 10 undiagnosed globally and about half in the Western Pacific; World Diabetes Day 14 November = Frederick Banting's birthday (insulin discovered in Toronto, 1921)",
+  "myths": [
+   {
+    "myth": "The United States has the most people with diabetes.",
+    "reality": "China has about 148 million adults with diabetes, India about 90 million; the United States has about 38 million.",
+    "sources": [
+     "idf_atlas",
+     "idf_wp_factsheet",
+     "cdc_ndsr"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Diabetes Shorts are symptom lists and diet tips; nobody asks the where question on a map, compares the three countries, counts the world and ties the date to the Toronto discovery.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=which+country+has+the+most+diabetes",
+     "title": "Search: which country has the most diabetes",
+     "angle": "ranking lists",
+     "misses": "no quiz, no map, no date hook"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=world+diabetes+day",
+     "title": "Search: world diabetes day",
+     "angle": "awareness clips",
+     "misses": "no numbers, no question"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if geography",
+     "misses": "no health"
+    }
+   ]
+  },
+  "sources": {
+   "idf_atlas": {
+    "type": "primary",
+    "publisher": "International Diabetes Federation",
+    "title": "IDF Diabetes Atlas, 11th edition (2025)",
+    "url": "https://diabetesatlas.org/",
+    "date": "2026-10-29",
+    "notes": "589 million adults (20–79) with diabetes in 2024, 11.1 % of adults; China 148.0 million (most), India 89.8 million (second); 4 in 10 undiagnosed worldwide"
+   },
+   "idf_wp_factsheet": {
+    "type": "primary",
+    "publisher": "International Diabetes Federation",
+    "title": "IDF Atlas 11th edition — Western Pacific factsheet",
+    "url": "https://diabetesatlas.org/resources/",
+    "date": "2026-10-29",
+    "notes": "China accounts for 1 in 4 of all adults living with diabetes worldwide; half of adults with diabetes in the region are undiagnosed"
+   },
+   "cdc_ndsr": {
+    "type": "primary",
+    "publisher": "U.S. Centers for Disease Control and Prevention",
+    "title": "National Diabetes Statistics Report",
+    "url": "https://www.cdc.gov/diabetes/php/data-research/index.html",
+    "date": "2026-10-29",
+    "notes": "38.4 million Americans of all ages have diabetes (11.6 % of the population), about 8.7 million undiagnosed"
+   },
+   "who_wdd": {
+    "type": "primary",
+    "publisher": "World Health Organization",
+    "title": "World Diabetes Day — 14 November",
+    "url": "https://www.who.int/campaigns/world-diabetes-day",
+    "date": "2026-10-29",
+    "notes": "marked on 14 November, the birthday of Sir Frederick Banting, who co-discovered insulin with Charles Best in 1921"
+   },
+   "britannica_banting": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Frederick Banting",
+    "url": "https://www.britannica.com/biography/Frederick-Banting",
+    "date": "2026-10-29",
+    "notes": "born 14 November 1891; discovered insulin with Charles Best at the University of Toronto in 1921; Nobel Prize 1923"
+   },
+   "medicaldialogues_idf": {
+    "type": "reference",
+    "publisher": "Medical Dialogues",
+    "title": "IDF Diabetes Atlas 11th edition — key takeaways from India",
+    "url": "https://medicaldialogues.in/diabetes-endocrinology/news/international-diabetes-federation-releases-diabetes-atlas-11th-edition-2025-top-10-key-takeaways-from-india-146394",
+    "date": "2026-10-29",
+    "notes": "India 89.8 million adults with diabetes in 2024, second only to China; 43 % undiagnosed"
+   },
+   "who_diabetes": {
+    "type": "primary",
+    "publisher": "World Health Organization",
+    "title": "Diabetes — fact sheet",
+    "url": "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+    "date": "2026-10-29",
+    "notes": "about 830 million people had diabetes in 2022 (all ages, 18+ at 14 %); more than half of adults with diabetes were not on medication; China and India hold the most people with diabetes"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "China has the most adults living with diabetes: about 148 million, roughly 1 in 4 of all cases worldwide (IDF 2025).",
+    "sources": [
+     "idf_atlas",
+     "idf_wp_factsheet",
+     "who_diabetes",
+     "medicaldialogues_idf"
+    ],
+    "vo": [
+     "in which country do most people with diabetes live",
+     "india, united states, or china",
+     "china. about 148 million adults there live with diabetes, 1 in 4 of all cases on earth"
+    ],
+    "screen": [
+     "China",
+     "India",
+     "United States",
+     "1 IN 4",
+     "of all adults with diabetes",
+     "Beijing"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "India is second with about 89.8 million adults; the United States has about 38 million people with diabetes.",
+    "sources": [
+     "idf_atlas",
+     "medicaldialogues_idf",
+     "cdc_ndsr"
+    ],
+    "vo": [
+     "india is second with about 90 million. the united states has 38 million"
+    ],
+    "screen": [
+     "India · 2nd",
+     "China",
+     "India",
+     "United States",
+     "148 M",
+     "90 M",
+     "38 M"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Worldwide about 589 million adults live with diabetes and a large share — around 4 in 10 globally, about half in the Western Pacific — are undiagnosed.",
+    "sources": [
+     "idf_atlas",
+     "idf_wp_factsheet",
+     "who_diabetes"
+    ],
+    "vo": [
+     "worldwide it is well over half a billion people, and around half of them do not yet know they have it"
+    ],
+    "screen": [
+     "million adults worldwide"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "core",
+    "text": "World Diabetes Day is 14 November, the birthday of Frederick Banting, who co-discovered insulin in Toronto in 1921.",
+    "sources": [
+     "who_wdd",
+     "britannica_banting"
+    ],
+    "vo": [
+     "the 14th of november is world diabetes day, the birthday of the doctor who helped discover insulin"
+    ],
+    "screen": [
+     "14 NOV",
+     "World Diabetes Day",
+     "Toronto · insulin, 1921",
+     "Toronto"
+    ]
+   }
+  ]
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "India is second with about 90 million. The United States has 38 million.",
+    "cues": {
+     "india": "india",
+     "second": "second",
+     "states": "states"
+    }
+   },
+   "direction": "pull back so China and India share the frame; India lights dim with its tag on 'India'; the three compare blocks rise on 'second' — China, India, United States; the flag-ball shrug on 'States'",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.4,
+   "cam": [
+    0.9,
+    [
+     92,
+     28
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.92,
+    [
+     92.5,
+     28.2
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "dia",
+     "type": "compare",
+     "items": [
+      [
+       "China",
+       148,
+       "148 M"
+      ],
+      [
+       "India",
+       90,
+       "90 M"
+      ],
+      [
+       "United States",
+       38,
+       "38 M"
+      ]
+     ],
+     "y": 380,
+     "x": 90,
+     "w": 900,
+     "max_h": 520
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@india",
+     "do": "geo.highlight_in",
+     "stage": "stage_map",
+     "args": {
+      "fid": "356",
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@@second",
+     "do": "chart.compare_in",
+     "id": "dia",
+     "args": {
+      "dur": 0.8,
+      "stagger": 0.3
+     }
+    },
+    {
+     "at": "@@states",
+     "do": "character_in",
+     "id": "hmm"
+    },
+    {
+     "at": "@@states+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "156",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "dia"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "hmm"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Worldwide it is well over half a billion people, and around half of them do not yet know they have it.",
+    "cues": {
+     "worldwide": "worldwide",
+     "billion": "billion",
+     "know": "know"
+    }
+   },
+   "direction": "pull right out to the world; the counter climbs to 589 million from 'worldwide'; the globe sticker on 'billion'; the question-mark sticker and a pulse on 'know'",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    0.5,
+    [
+     40,
+     30
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.51,
+    [
+     41,
+     30
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "world",
+     "type": "counter",
+     "start": 0,
+     "end": 589,
+     "y": 330,
+     "label": "million adults worldwide",
+     "fmt": "int",
+     "size": 180
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@worldwide",
+     "do": "chart.counter_run",
+     "id": "world",
+     "until": "@@billion+0.6",
+     "args": {
+      "ease": "power1.out"
+     }
+    },
+    {
+     "at": "@@billion",
+     "do": "sticker_in",
+     "id": "st_globe"
+    },
+    {
+     "at": "@@know",
+     "do": "sticker_in",
+     "id": "st_q"
+    },
+    {
+     "at": "@@know+0.2",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "156",
+      "dur": 0.8,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "world",
+     "args": {
+      "dur": 0.25
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_globe"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_q"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The 14th of November is World Diabetes Day, the birthday of the doctor who helped discover insulin.",
+    "cues": {
+     "november": "november",
+     "birthday": "birthday",
+     "insulin": "insulin"
+    }
+   },
+   "card": {
+    "kicker": "14 NOV",
+    "text": "World Diabetes Day"
+   },
+   "card_at": null,
+   "direction": "swing the camera across to Toronto; the 14 NOV card on 'November'; the Toronto pin and tag on 'birthday'; the syringe sticker and the thinking flag-ball on 'insulin'",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.5,
+   "cam": [
+    1.6,
+    [
+     -79,
+     44
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.63,
+    [
+     -78.6,
+     44.2
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@november",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@birthday",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "toronto"
+     }
+    },
+    {
+     "at": "@@insulin",
+     "do": "sticker_in",
+     "id": "st_syringe"
+    },
+    {
+     "at": "@@insulin+0.4",
+     "do": "sticker_pulse",
+     "id": "st_syringe"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_syringe"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "hmm",
+   "type": "character",
+   "flag": "us",
+   "face": "think",
+   "x": 820,
+   "y": 1180,
+   "size": 220,
+   "rot": 6
+  },
+  {
+   "id": "st_globe",
+   "type": "sticker",
+   "emoji": "1f30d",
+   "x": 300,
+   "y": 620,
+   "size": 190,
+   "rot": -8
+  },
+  {
+   "id": "st_q",
+   "type": "sticker",
+   "emoji": "2753",
+   "x": 780,
+   "y": 560,
+   "size": 160,
+   "rot": 8
+  },
+  {
+   "id": "st_syringe",
+   "type": "sticker",
+   "emoji": "1f489",
+   "x": 300,
+   "y": 620,
+   "size": 190,
+   "rot": -8
+  }
+ ]
+}

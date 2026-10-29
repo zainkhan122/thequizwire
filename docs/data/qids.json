@@ -19,5 +19,7 @@
  "boston": "Q100",
  "nyc": "Q60",
  "london": "Q84",
- "caracas": "Q1533"
+ "caracas": "Q1533",
+ "beijing": "Q956",
+ "toronto": "Q172"
 }

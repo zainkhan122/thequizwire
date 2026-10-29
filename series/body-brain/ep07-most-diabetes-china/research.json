@@ -1,0 +1,207 @@
+{
+ "version": 1,
+ "episode": "ep07-most-diabetes-china",
+ "topic": "Country with the most adults living with diabetes: China — 148.0 million adults aged 20–79 (IDF Diabetes Atlas 11th ed., 2025, data for 2024), about 1 in 4 of the 589 million worldwide; India 89.8 million second; United States ≈ 38 million (CDC 38.4 M all ages, 2021); worldwide 11.1 % of adults, ~4 in 10 undiagnosed globally and about half in the Western Pacific; World Diabetes Day 14 November = Frederick Banting's birthday (insulin discovered in Toronto, 1921)",
+ "researched": "2026-10-29",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The United States has the most people with diabetes.",
+   "reality": "China has about 148 million adults with diabetes, India about 90 million; the United States has about 38 million.",
+   "sources": [
+    "idf_atlas",
+    "idf_wp_factsheet",
+    "cdc_ndsr"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Diabetes Shorts are symptom lists and diet tips; nobody asks the where question on a map, compares the three countries, counts the world and ties the date to the Toronto discovery.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=which+country+has+the+most+diabetes",
+    "title": "Search: which country has the most diabetes",
+    "angle": "ranking lists",
+    "misses": "no quiz, no map, no date hook"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=world+diabetes+day",
+    "title": "Search: world diabetes day",
+    "angle": "awareness clips",
+    "misses": "no numbers, no question"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if geography",
+    "misses": "no health"
+   }
+  ]
+ },
+ "sources": {
+  "idf_atlas": {
+   "type": "primary",
+   "publisher": "International Diabetes Federation",
+   "title": "IDF Diabetes Atlas, 11th edition (2025)",
+   "url": "https://diabetesatlas.org/",
+   "date": "2026-10-29",
+   "notes": "589 million adults (20–79) with diabetes in 2024, 11.1 % of adults; China 148.0 million (most), India 89.8 million (second); 4 in 10 undiagnosed worldwide"
+  },
+  "idf_wp_factsheet": {
+   "type": "primary",
+   "publisher": "International Diabetes Federation",
+   "title": "IDF Atlas 11th edition — Western Pacific factsheet",
+   "url": "https://diabetesatlas.org/resources/",
+   "date": "2026-10-29",
+   "notes": "China accounts for 1 in 4 of all adults living with diabetes worldwide; half of adults with diabetes in the region are undiagnosed"
+  },
+  "cdc_ndsr": {
+   "type": "primary",
+   "publisher": "U.S. Centers for Disease Control and Prevention",
+   "title": "National Diabetes Statistics Report",
+   "url": "https://www.cdc.gov/diabetes/php/data-research/index.html",
+   "date": "2026-10-29",
+   "notes": "38.4 million Americans of all ages have diabetes (11.6 % of the population), about 8.7 million undiagnosed"
+  },
+  "who_wdd": {
+   "type": "primary",
+   "publisher": "World Health Organization",
+   "title": "World Diabetes Day — 14 November",
+   "url": "https://www.who.int/campaigns/world-diabetes-day",
+   "date": "2026-10-29",
+   "notes": "marked on 14 November, the birthday of Sir Frederick Banting, who co-discovered insulin with Charles Best in 1921"
+  },
+  "britannica_banting": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Frederick Banting",
+   "url": "https://www.britannica.com/biography/Frederick-Banting",
+   "date": "2026-10-29",
+   "notes": "born 14 November 1891; discovered insulin with Charles Best at the University of Toronto in 1921; Nobel Prize 1923"
+  },
+  "medicaldialogues_idf": {
+   "type": "reference",
+   "publisher": "Medical Dialogues",
+   "title": "IDF Diabetes Atlas 11th edition — key takeaways from India",
+   "url": "https://medicaldialogues.in/diabetes-endocrinology/news/international-diabetes-federation-releases-diabetes-atlas-11th-edition-2025-top-10-key-takeaways-from-india-146394",
+   "date": "2026-10-29",
+   "notes": "India 89.8 million adults with diabetes in 2024, second only to China; 43 % undiagnosed"
+  },
+  "who_diabetes": {
+   "type": "primary",
+   "publisher": "World Health Organization",
+   "title": "Diabetes — fact sheet",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+   "date": "2026-10-29",
+   "notes": "about 830 million people had diabetes in 2022 (all ages, 18+ at 14 %); more than half of adults with diabetes were not on medication; China and India hold the most people with diabetes"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "China has the most adults living with diabetes: about 148 million, roughly 1 in 4 of all cases worldwide (IDF 2025).",
+   "sources": [
+    "idf_atlas",
+    "idf_wp_factsheet",
+    "who_diabetes",
+    "medicaldialogues_idf"
+   ],
+   "vo": [
+    "in which country do most people with diabetes live",
+    "india, united states, or china",
+    "china. about 148 million adults there live with diabetes, 1 in 4 of all cases on earth"
+   ],
+   "screen": [
+    "China",
+    "India",
+    "United States",
+    "1 IN 4",
+    "of all adults with diabetes",
+    "Beijing"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "India is second with about 89.8 million adults; the United States has about 38 million people with diabetes.",
+   "sources": [
+    "idf_atlas",
+    "medicaldialogues_idf",
+    "cdc_ndsr"
+   ],
+   "vo": [
+    "india is second with about 90 million. the united states has 38 million"
+   ],
+   "screen": [
+    "India · 2nd",
+    "China",
+    "India",
+    "United States",
+    "148 M",
+    "90 M",
+    "38 M"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Worldwide about 589 million adults live with diabetes and a large share — around 4 in 10 globally, about half in the Western Pacific — are undiagnosed.",
+   "sources": [
+    "idf_atlas",
+    "idf_wp_factsheet",
+    "who_diabetes"
+   ],
+   "vo": [
+    "worldwide it is well over half a billion people, and around half of them do not yet know they have it"
+   ],
+   "screen": [
+    "million adults worldwide"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "World Diabetes Day is 14 November, the birthday of Frederick Banting, who co-discovered insulin in Toronto in 1921.",
+   "sources": [
+    "who_wdd",
+    "britannica_banting"
+   ],
+   "vo": [
+    "the 14th of november is world diabetes day, the birthday of the doctor who helped discover insulin"
+   ],
+   "screen": [
+    "14 NOV",
+    "World Diabetes Day",
+    "Toronto · insulin, 1921",
+    "Toronto"
+   ]
+  }
+ ]
+}

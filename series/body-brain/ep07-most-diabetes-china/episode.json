@@ -1,0 +1,136 @@
+{
+ "id": "ep07-most-diabetes-china",
+ "format": "quiz-v3",
+ "series": "body-brain",
+ "number": 7,
+ "title": "In which country do MOST people with diabetes live?",
+ "difficulty": "MEDIUM",
+ "seed": 7307,
+ "quiz": {
+  "question": "In which country do MOST people with diabetes live?",
+  "keyword": "MOST",
+  "options": [
+   "India",
+   "United States",
+   "China"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "China",
+  "answer_sub": "148 million adults · 1 in 4 worldwide",
+  "option_meta": [
+   {
+    "flag": "in"
+   },
+   {
+    "flag": "us"
+   },
+   {
+    "flag": "cn"
+   }
+  ],
+  "banner": "China",
+  "banner_sub": "✓  C was right · 148 million adults · 1 in 4 worldwide",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "In which country do MOST people with diabetes live? 🩸",
+  "premise": "One country holds a quarter of the world's diabetes",
+  "bait": "It is not the United States.",
+  "keywords": [
+   "which country has the most diabetes",
+   "diabetes by country",
+   "world diabetes day",
+   "diabetes statistics 2025",
+   "how many people have diabetes",
+   "health quiz",
+   "idf diabetes atlas",
+   "body facts"
+  ],
+  "description": "One country holds a quarter of the world's diabetes. It is not the United States.\n\nSources: IDF Diabetes Atlas, 11th edition (2025); CDC National Diabetes Statistics Report; WHO.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nBody & Brain #7",
+  "hashtags": [
+   "#BodyFacts",
+   "#BrainQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "WorldDiabetesDay",
+   "HealthQuiz"
+  ],
+  "cover_emoji": "🩸",
+  "copy": {
+   "spoilers": [
+    "china",
+    "chinese",
+    "148"
+   ],
+   "youtube": {
+    "title": "Which country has the most diabetes in the world? Not the USA 🩸",
+    "description": "India, the United States or the third one? One country is home to a quarter of every adult with diabetes on the planet, and about half of them do not know it yet.\nGuess before the map fills, then see the three countries side by side, the global count climb, and the birthday that gave World Diabetes Day its date.\nWhich flag did you pick?",
+    "tags": [
+     "#worlddiabetesday",
+     "#healthquiz",
+     "#diabetes",
+     "#bodyfacts",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "In which country do MOST people with diabetes live? 🩸\nIndia, the United States or the other one? One country is home to a quarter of every adult with diabetes on Earth, and about half of them do not know it yet.\nWhich did you pick?",
+    "tags": [
+     "#worlddiabetesday",
+     "#healthquiz",
+     "#diabetesawareness",
+     "#bodyfacts",
+     "#healthfacts"
+    ]
+   },
+   "facebook": {
+    "text": "In which country do most people with diabetes live — India, the United States or China?\nOne of them holds a quarter of all cases on Earth, and about half of those people do not know yet. When did you last check your sugar?",
+    "tags": [
+     "#worlddiabetesday",
+     "#healthquiz"
+    ]
+   },
+   "twitter": {
+    "text": "In which country do MOST people with diabetes live?\nOne country holds a quarter of every case on Earth, and about half of them do not know it yet. Not the USA.",
+    "tags": [
+     "#WorldDiabetesDay",
+     "#HealthQuiz"
+    ]
+   },
+   "threads": {
+    "text": "In which country do most people with diabetes live — India, the United States or China? One country holds a quarter of every adult case on Earth, about half of them undiagnosed, and World Diabetes Day falls on a doctor's birthday for a reason.",
+    "tags": [
+     "#worlddiabetesday"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "compare",
+   "counter",
+   "pin",
+   "label",
+   "second-highlight"
+  ],
+  "cast": "flagball:think + emoji-set:health",
+  "music": "bed:pad"
+ },
+ "status": "ready"
+}
