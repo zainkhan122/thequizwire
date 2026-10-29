@@ -1,47 +1,49 @@
-# Channel stats — 2026-10-29T13:53Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
+# Channel stats — 2026-10-29T16:14Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
 
 ## Per series, all channels (7-day movement — what is trending for us)
-- geo-blitz: 19 posts · +2800 in 7 d · 9581 total
-- sports-sprint: 16 posts · +2293 in 7 d · 6795 total
+- sports-sprint: 16 posts · +2297 in 7 d · 6799 total
+- geo-blitz: 19 posts · +1775 in 7 d · 9581 total
 - body-brain: 6 posts · +1370 in 7 d · 2568 total
-- wild-files: 12 posts · +690 in 7 d · 5748 total
+- wild-files: 14 posts · +690 in 7 d · 5752 total
 
-## youtube — 27 posts · metric views · buffer insights · 27/27 sent posts with metrics
+## youtube — 28 posts · metric views · buffer insights · 28/28 sent posts with metrics
 last 24 h:
 - ep15-first-davis-cup-boston (sports-sprint): +474 · 542 total
 - ep06-most-stroke-deaths-china (body-brain): +310 · 310 total
 - ep12-polar-bears-penguins (wild-files): +240 · 686 total
 - ep16-most-olympics-hosted-usa (sports-sprint): +95 · 95 total
 - ep19-coldest-inhabited-oymyakon (geo-blitz): +4 · 921 total
-series (7 d): geo-blitz +2786 (10) · sports-sprint +2276 (8) · body-brain +1363 (3) · wild-files +686 (6)
-hours (first-24 h by publish hour): 12:00 n=1 med 0 · 19:00 n=2 med 683.0
-→ slots: not enough first-24 h data (3/8) — researched defaults in use
+series (7 d): sports-sprint +2276 (8) · geo-blitz +1761 (10) · body-brain +1363 (3) · wild-files +689 (7)
+hours (first-24 h by publish hour): 12:00 n=2 med 155.0 · 19:00 n=2 med 683.0
+→ slots: not enough first-24 h data (4/8) — researched defaults in use
 
-## instagram — 0 posts · metric — · buffer insights · 0/27 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
+## instagram — 0 posts · metric — · buffer insights · 0/28 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
 
 ## facebook — 0 posts · metric — · buffer insights · 0/27 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
 
-## threads — 26 posts · metric views · buffer insights · 26/26 sent posts with metrics
+## threads — 27 posts · metric views · buffer insights · 27/27 sent posts with metrics
 last 24 h:
+- ep16-most-olympics-hosted-usa (sports-sprint): +4 · 4 total
 - ep06-most-stroke-deaths-china (body-brain): +3 · 3 total
+- ep13-most-wild-lions-tanzania (wild-files): +1 · 1 total
 - ep13-southern-alps-new-zealand (geo-blitz): +0 · 15 total
 - ep18-newest-un-member (geo-blitz): +0 · 11 total
-- ep14-cricket-world-cup-wins (sports-sprint): +0 · 11 total
-- ep10-komodo-dragons-indonesia (wild-files): +0 · 7 total
-series (7 d): sports-sprint +17 (8) · geo-blitz +14 (9) · body-brain +7 (3) · wild-files +4 (6)
-hours (first-24 h by publish hour): 10:00 n=1 med 0 · 19:00 n=2 med 0.0
-→ slots: not enough first-24 h data (3/8) — researched defaults in use
+series (7 d): sports-sprint +21 (8) · geo-blitz +14 (9) · body-brain +7 (3) · wild-files +1 (7)
+hours (first-24 h by publish hour): 10:00 n=2 med 1.5 · 19:00 n=2 med 0.0
+→ slots: not enough first-24 h data (4/8) — researched defaults in use
 
-## twitter — 0 posts · metric — · buffer insights · 0/27 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
+## twitter — 0 posts · metric — · buffer insights · 0/28 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
 
 ## Every post
 
 | episode | channel | sent (local) | metric | total | 24 h | 7 d | first 24 h | reactions | comments |
 |---|---|---|---|---|---|---|---|---|---|
-| ep16-most-olympics-hosted-usa | threads | Wed 19:00 | views | 0 | 0 | 0 | None | 0 | 0 |
+| ep13-most-wild-lions-tanzania | youtube | Thu 12:00 | views | 3 | 3 | 3 | None | None | None |
+| ep13-most-wild-lions-tanzania | threads | Thu 10:00 | views | 1 | 1 | 1 | None | 0 | 0 |
+| ep16-most-olympics-hosted-usa | threads | Wed 19:00 | views | 4 | 4 | 4 | None | 0 | 0 |
 | ep16-most-olympics-hosted-usa | youtube | Wed 19:00 | views | 95 | 95 | 95 | None | 4 | 0 |
-| ep06-most-stroke-deaths-china | youtube | Wed 12:00 | views | 310 | 310 | 310 | None | 12 | 0 |
-| ep06-most-stroke-deaths-china | threads | Wed 10:00 | views | 3 | 3 | 3 | None | 0 | 0 |
+| ep06-most-stroke-deaths-china | youtube | Wed 12:00 | views | 310 | 310 | 310 | 310 | 12 | 0 |
+| ep06-most-stroke-deaths-china | threads | Wed 10:00 | views | 3 | 3 | 3 | 3 | 0 | 0 |
 | ep19-coldest-inhabited-oymyakon | threads | Tue 19:00 | views | 0 | 0 | 0 | 0 | 0 | 0 |
 | ep19-coldest-inhabited-oymyakon | youtube | Tue 19:00 | views | 921 | 4 | 921 | 920 | 23 | 0 |
 | ep15-first-davis-cup-boston | youtube | Tue 12:00 | views | 542 | 474 | 542 | 0 | 14 | 0 |
@@ -57,8 +59,8 @@ hours (first-24 h by publish hour): 10:00 n=1 med 0 · 19:00 n=2 med 0.0
 | ep13-first-marathon-greece | threads | Fri 10:00 | views | 6 | 0 | 6 | None | 0 | 0 |
 | ep16-longest-border-canada-usa | threads | Thu 19:00 | views | 3 | 0 | 3 | None | 0 | 0 |
 | ep13-first-marathon-greece | youtube | Thu 19:00 | views | 967 | 0 | 967 | None | 117 | 0 |
-| ep16-longest-border-canada-usa | youtube | Thu 12:00 | views | 1025 | 0 | 1025 | None | 76 | 0 |
-| ep11-most-elephants-botswana | threads | Thu 10:00 | views | 4 | 0 | 4 | None | 0 | 0 |
+| ep16-longest-border-canada-usa | youtube | Thu 12:00 | views | 1025 | 0 | None | None | 76 | 0 |
+| ep11-most-elephants-botswana | threads | Thu 10:00 | views | 4 | 0 | None | None | 0 | 0 |
 | ep12-most-world-cups-brazil | threads | Wed 19:00 | views | 3 | 0 | None | None | 0 | 0 |
 | ep11-most-elephants-botswana | youtube | Wed 19:00 | views | 1005 | 0 | None | None | 79 | 0 |
 | ep12-most-world-cups-brazil | youtube | Wed 12:00 | views | 1026 | 0 | None | None | 48 | 0 |
