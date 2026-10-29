@@ -8,8 +8,16 @@ Q19 brief      <ep>/brief.md exists and every section is actually written (not t
                committed next to the episode so the owner can read WHY this short looks the way it does.
 Q20 shape      the explanation's structural fingerprint — number of story scenes and the device set used in each
                (fact card · sticker · counter · bars · compare · pin · label · route · highlight-out · spin · flash · cam) —
-               must differ from every other episode in the same series, and the scenes inside one episode must not all share
-               the same device set (the "three identical cards" smell). Devices named in the brief must be present.
+               must differ from every other ready/shipped episode of ANY series (global since 2026-10-28 — all four series
+               draw on one vocabulary, so a series-scoped compare let the same shape ship four times), and the scenes inside
+               one episode must not all share the same device set (the "three identical cards" smell). Devices named in the
+               brief must be present.
+Q24 balance    the "same circles" gate (audit 2026-10-28: sticker + card + cam + pin carried 29/29 explanations while
+               counter/compare/bars/split/route/rise/travel/spin/photo/disputed/erase/flash appeared in ≤ 16 each).
+               FAIL unless the explanation SHOWS its facts with ≥ 2 SHOW events of ≥ 2 different kinds, the SHOW-kind set
+               differs from the last 6 shipped/ready episodes (any series), and no SHOW kind used here already appears in
+               ≥ 5 of the last 8. WARN when a SHOW kind unused in the last 12 episodes exists (pick it next time) or when
+               sticker/card events outnumber SHOW events 3:1.
 """
 import json, re, sys
 from pathlib import Path
@@ -20,6 +28,7 @@ PLACEHOLDER = re.compile(r"(?i)\b(todo|tbd|lorem|fill me|xxx)\b")
 DEVICE_OF = {"fact_in": "card", "sticker_in": "sticker", "chart.counter_run": "counter", "chart.bars_in": "bars", "chart.compare_in": "compare",
              "geo.pin_in": "pin", "geo.label_in": "label", "geo.route_draw": "route", "geo.highlight_out": "erase", "geo.spin": "spin",
              "fx.flash": "flash", "geo.cam_to": "cam", "geo.travel": "travel", "photo_in": "photo", "geo.rise": "rise", "chart.split_in": "split", "chart.erase_run": "erase", "character_in": "character", "geo.disputed_in": "disputed", "geo.highlight_in": "highlight"}
+SHOW = {"counter", "bars", "compare", "split", "route", "rise", "travel", "spin", "photo", "disputed", "erase", "flash"}
 DEVICE_WORDS = {"card": r"\bcard", "sticker": r"\bsticker", "counter": r"\bcounter", "bars": r"\bbar( |s\b|chart)", "compare": r"\bcompar", "pin": r"\bpin",
                 "label": r"\blabel", "route": r"\broute|\btrace", "erase": r"\berase|\bfall away|\bhighlight.out", "spin": r"\bspin|\bglobe", "photo": r"\bphoto|\bpicture|\bfootage|\bstill\b", "rise": r"\brises?\b|\bpops? (up )?out of", "travel": r"\btravel|\brides?\b|\bruns along|\bmoves along", "split": r"\bsplit|then.vs.now|then-and-now",
                 "flash": r"\bflash", "character": r"\bmascot|\bcharacter|\bflag.?ball"}
@@ -86,14 +95,60 @@ def shape_check(ep, secs):
         if other.parent.resolve() == Path(ep).resolve() or "_template" in str(other): continue
         try:
             OE = json.loads((other.parent / "episode.json").read_text())
-            if OE.get("series") != E.get("series") or OE.get("status") not in ("ready", "sent", "scheduled", "published"): continue
+            if OE.get("status") not in ("ready", "sent", "scheduled", "published"): continue      # global: every series (2026-10-28)
             ofp = fingerprint(other.parent)
         except Exception: continue
-        if ofp and (len(ofp), tuple(ofp)) == mine: F.append(f"Q20: same explanation shape as {other.parent.name} {fp} — give this one its own structure")
+        if ofp and (len(ofp), tuple(ofp)) == mine: F.append(f"Q20: same explanation shape as {OE.get('series')}/{other.parent.name} {fp} — give this one its own structure")
     devs = secs.get("Devices", "").lower() if secs else ""
     used = set().union(*[set(x) for x in fp]) if fp else set()
     for d, rx in DEVICE_WORDS.items():
         if re.search(rx, devs) and d not in used and d != "character": W.append(f"Q20: brief promises '{d}' but the timeline never uses it")
+    return F, W
+
+
+def show_events(ep):
+    """SHOW device events in the explanation (s05+) → list of kinds, one per event."""
+    try: V = json.loads((Path(ep) / "visuals.json").read_text())
+    except Exception: return []
+    out = []
+    for b in V.get("beats", []):
+        m = re.match(r"s(\d\d)", str(b.get("at", "")))
+        if not m or int(m.group(1)) < 5: continue
+        d = DEVICE_OF.get(b.get("do"))
+        if d in SHOW: out.append(d)
+    return out
+
+
+def recent_episodes(ep, n):
+    """The last n ready/shipped episodes of any series before this one, newest first (by ledger order, then by mtime)."""
+    me = Path(ep).resolve(); rows = []
+    for v in (ROOT / "series").glob("*/ep*/visuals.json"):
+        d = v.parent
+        if d.resolve() == me or "_template" in str(d): continue
+        try: OE = json.loads((d / "episode.json").read_text())
+        except Exception: continue
+        if OE.get("status") not in ("ready", "sent", "scheduled", "published"): continue
+        rows.append((v.stat().st_mtime, d))
+    return [d for _, d in sorted(rows, reverse=True)[:n]]
+
+
+def balance_check(ep):
+    """Q24 — primitive balance across the whole catalogue, not inside one series."""
+    F, W = [], []
+    mine = show_events(ep); kinds = set(mine)
+    V = json.loads((Path(ep) / "visuals.json").read_text())
+    filler = sum(1 for b in V.get("beats", []) if b.get("do") in ("sticker_in", "fact_in") and re.match(r"s0[5-9]", str(b.get("at", ""))))
+    if len(mine) < 2 or len(kinds) < 2:
+        F.append(f"Q24: explanation SHOWS too little — {len(mine)} show event(s) {sorted(kinds)}; need ≥ 2 events of ≥ 2 kinds from {sorted(SHOW)}")
+    recent = recent_episodes(ep, 12); sets = [set(show_events(d)) for d in recent]
+    for d, s_ in zip(recent[:6], sets[:6]):
+        if kinds and s_ == kinds: F.append(f"Q24: same show-device set {sorted(kinds)} as {d.parent.name}/{d.name} — choose a different way to show it")
+    for k in sorted(kinds):
+        used = sum(1 for s_ in sets[:8] if k in s_)
+        if used >= 5: F.append(f"Q24: '{k}' already carries {used} of the last 8 episodes — show this fact another way ({sorted(SHOW - set().union(*sets[:8]) if sets else SHOW)} are fresh)")
+    unused = sorted(SHOW - set().union(*sets)) if sets else []
+    if unused and not (kinds & set(unused)): W.append(f"Q24: never used in the last 12 episodes: {unused} — consider one where the fact suits it")
+    if mine and filler > 3 * len(mine): W.append(f"Q24: {filler} sticker/card events vs {len(mine)} show events — the cards are doing the explaining")
     return F, W
 
 
@@ -126,7 +181,8 @@ def truth_check(ep):
 def run(ep):
     F1, secs = brief_check(ep)
     F2, W = shape_check(ep, secs) if (Path(ep) / "visuals.json").exists() else ([], [])
-    return F1 + F2 + truth_check(ep), W + secs.get("_warn", [])
+    F3, W3 = balance_check(ep) if (Path(ep) / "visuals.json").exists() else ([], [])
+    return F1 + F2 + F3 + truth_check(ep), W + W3 + secs.get("_warn", [])
 
 
 if __name__ == "__main__":

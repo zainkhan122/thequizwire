@@ -49,10 +49,22 @@
    "size": 180
   },
   {
-   "id": "f4",
-   "type": "fact",
-   "kicker": "HALF THE NATION",
-   "text": "about 1.6 million people"
+   "id": "halfsplit",
+   "type": "split",
+   "left": {
+    "kicker": "1.6 MILLION",
+    "text": "live in Ulaanbaatar"
+   },
+   "right": {
+    "kicker": "1.9 MILLION",
+    "text": "everyone else in Mongolia"
+   },
+   "label_left": "THE CITY",
+   "label_right": "THE REST",
+   "y": 310,
+   "h": 540,
+   "x": 60,
+   "w": 620
   },
   {
    "id": "st_cold",
@@ -82,15 +94,6 @@
    "rot": -6
   },
   {
-   "id": "st_people",
-   "type": "sticker",
-   "emoji": "1f465",
-   "x": 760,
-   "y": 520,
-   "size": 170,
-   "rot": 8
-  },
-  {
    "id": "wow",
    "type": "character",
    "flag": "mn",
@@ -99,6 +102,15 @@
    "y": 1180,
    "size": 220,
    "rot": 6
+  },
+  {
+   "id": "st_people",
+   "type": "sticker",
+   "emoji": "1f465",
+   "x": 800,
+   "y": 960,
+   "size": 170,
+   "rot": 8
   },
   {
    "id": "mascot",
@@ -538,9 +550,8 @@
   },
   {
    "at": "s07@half",
-   "do": "fact_in",
-   "id": "f4",
-   "until": "s07.end"
+   "do": "chart.split_in",
+   "id": "halfsplit"
   },
   {
    "at": "s07@half+0.3",
@@ -551,13 +562,8 @@
    }
   },
   {
-   "at": "s07@million",
+   "at": "s07@people+0.4",
    "do": "sticker_in",
-   "id": "st_people"
-  },
-  {
-   "at": "s07@million+0.5",
-   "do": "sticker_pulse",
    "id": "st_people"
   },
   {
@@ -571,19 +577,14 @@
    }
   },
   {
-   "at": "s07@valley",
-   "do": "sticker_in",
-   "id": "st_cold"
+   "at": "s07.end",
+   "do": "chart.out",
+   "id": "halfsplit"
   },
   {
    "at": "s07.end",
    "do": "sticker_out",
    "id": "st_people"
-  },
-  {
-   "at": "s07.end",
-   "do": "sticker_out",
-   "id": "st_cold"
   },
   {
    "at": "s08",

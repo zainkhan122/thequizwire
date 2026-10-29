@@ -2,7 +2,7 @@
  "version": 1,
  "episode": "ep20-coldest-capital-ulaanbaatar",
  "topic": "Coldest national capital: Ulaanbaatar, Mongolia — the only capital with a sub-zero annual mean (≈ −0.4 to −1.3 °C depending on period); Astana second; altitude ~1,350 m; January nights below −30 °C; ~1.6 million people, about half of Mongolia's ~3.5 million",
- "researched": "2026-10-28",
+ "researched": "2026-10-29",
  "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
  "myths": [
   {
@@ -198,8 +198,10 @@
     "and about half of all mongolians live in it, more than 1,600,000 people in a single cold valley"
    ],
    "screen": [
-    "HALF THE NATION",
-    "about 1.6 million people"
+    "1.6 MILLION",
+    "live in Ulaanbaatar",
+    "1.9 MILLION",
+    "everyone else in Mongolia"
    ]
   }
  ]

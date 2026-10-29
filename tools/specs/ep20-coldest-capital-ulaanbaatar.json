@@ -156,7 +156,7 @@
    "text": "And about half of all Mongolians live in it, more than 1,600,000 people in a single cold valley.",
    "cues": {
     "half": "half",
-    "million": "people",
+    "people": "people",
     "valley": "valley"
    }
   },
@@ -521,8 +521,10 @@
      "and about half of all mongolians live in it, more than 1,600,000 people in a single cold valley"
     ],
     "screen": [
-     "HALF THE NATION",
-     "about 1.6 million people"
+     "1.6 MILLION",
+     "live in Ulaanbaatar",
+     "1.9 MILLION",
+     "everyone else in Mongolia"
     ]
    }
   ]
@@ -755,7 +757,7 @@
     "text": "And about half of all Mongolians live in it, more than 1,600,000 people in a single cold valley.",
     "cues": {
      "half": "half",
-     "million": "people",
+     "people": "people",
      "valley": "valley"
     }
    },
@@ -763,11 +765,6 @@
    "energy": 4,
    "tone": "revelatory",
    "pause_after": 0.45,
-   "card": {
-    "kicker": "HALF THE NATION",
-    "text": "about 1.6 million people"
-   },
-   "card_at": null,
    "cam": [
     1.6,
     [
@@ -787,9 +784,8 @@
    "devices": [
     {
      "at": "@@half",
-     "do": "fact_in",
-     "id": "f4",
-     "until": "@.end"
+     "do": "chart.split_in",
+     "id": "halfsplit"
     },
     {
      "at": "@@half+0.3",
@@ -800,13 +796,8 @@
      }
     },
     {
-     "at": "@@million",
+     "at": "@@people+0.4",
      "do": "sticker_in",
-     "id": "st_people"
-    },
-    {
-     "at": "@@million+0.5",
-     "do": "sticker_pulse",
      "id": "st_people"
     },
     {
@@ -820,19 +811,34 @@
      }
     },
     {
-     "at": "@@valley",
-     "do": "sticker_in",
-     "id": "st_cold"
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "halfsplit"
     },
     {
      "at": "@.end",
      "do": "sticker_out",
      "id": "st_people"
-    },
+    }
+   ],
+   "elements": [
     {
-     "at": "@.end",
-     "do": "sticker_out",
-     "id": "st_cold"
+     "id": "halfsplit",
+     "type": "split",
+     "left": {
+      "kicker": "1.6 MILLION",
+      "text": "live in Ulaanbaatar"
+     },
+     "right": {
+      "kicker": "1.9 MILLION",
+      "text": "everyone else in Mongolia"
+     },
+     "label_left": "THE CITY",
+     "label_right": "THE REST",
+     "y": 310,
+     "h": 540,
+     "x": 60,
+     "w": 620
     }
    ]
   }
@@ -866,15 +872,6 @@
    "rot": -6
   },
   {
-   "id": "st_people",
-   "type": "sticker",
-   "emoji": "1f465",
-   "x": 760,
-   "y": 520,
-   "size": 170,
-   "rot": 8
-  },
-  {
    "id": "wow",
    "type": "character",
    "flag": "mn",
@@ -883,6 +880,15 @@
    "y": 1180,
    "size": 220,
    "rot": 6
+  },
+  {
+   "id": "st_people",
+   "type": "sticker",
+   "emoji": "1f465",
+   "x": 800,
+   "y": 960,
+   "size": 170,
+   "rot": 8
   }
  ]
 }

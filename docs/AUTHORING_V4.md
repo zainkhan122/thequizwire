@@ -47,3 +47,23 @@ passing example: `_template_v3` = 93 words, premise hook, 4-word follow, premise
 - **Opener**: `visuals.json` must put a character or sticker on the stage at `at: 0` (template: UN-flag "think" mascot, leaves when the pills land). Q11 refuses an empty map at frame 0.
 - **Density**: Q11 refuses < 8 authored motion beats / 10 s and < 3 `geo.cam_to`; `qa.py` refuses a master under 6 measured events / 10 s.
 - **Cover style `d` = KEY FRAME** (`reelkit/cover.py --style d`): the cleanest frame of the first story beat (answer lifted/flag-filled), ≤ 3 giant yellow words top-left (`post.cover.words`, else `answer_sub`), sticker top-right. Owner decision pending on making it the default (it shows the answer, unlike style b).
+
+
+## Show-device balance (Q24, 2026-10-28 audit)
+
+An audit of 29 episodes found the explanation window carried by the same four primitives every time (sticker, fact card,
+camera glide, pin) while the devices that actually SHOW a fact — `chart.counter_run`, `chart.compare_in`, `chart.bars_in`,
+`chart.split_in`, `geo.route_draw`, `geo.rise`, `geo.travel`, `geo.spin`, `photo_in`, `geo.disputed_in`, `geo.highlight_out`,
+`fx.flash` — appeared in a handful of episodes each (`split` once, `rise`/`travel` twice). `reelkit/shapelint.py` now gates it
+globally (all series), not per series:
+
+- every explanation needs **≥ 2 SHOW events of ≥ 2 kinds**; a card or a sticker is decoration, not a show device;
+- the SHOW-kind set must differ from each of the **last 6 ready/shipped episodes of any series**;
+- a kind already in **≥ 5 of the last 8** episodes is refused — show the fact another way;
+- WARN lists kinds unused in the last 12 — choose one of them when the fact suits it (a number that grows → counter;
+  two things of different size → compare/bars; then-vs-now or part-vs-rest → split; a path → route/travel; a place →
+  photo/rise; a change of status → erase; a sphere-scale fact → spin).
+
+Authoring path: every story beat accepts `elements` (any `engine/charts.py` chart) and free-form `devices` with
+`@+t` / `@@cue` timing — pick the device from the fact, write the reason in `brief.md ## Show it`, and `shapelint` checks
+the timeline matches the brief.

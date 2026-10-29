@@ -28,7 +28,8 @@ v2 (episode.json "format": "quiz-v2", docs/PLAN_V2.md §2) replaces Q1/Q2's card
   Q12 loop       the last `hook_in` is ≥ end-2.0 and a final `geo.cam_to` (until ≥ end-0.4) returns to the t=0 `geo.cam_set`
   Q17 hook=Q    v3: the first spoken line is the on-screen question verbatim (normalised) — heard and read together, no restated hook
   Q19 brief     brief.md written (hook fact · show it · beat order · different from · swipe test · devices) — reelkit/shapelint.py
-  Q20 shape     explanation shape ≠ any other ready episode of the series; not three identical device sets — reelkit/shapelint.py
+  Q20 shape     explanation shape ≠ any other ready/shipped episode of ANY series; not three identical device sets — reelkit/shapelint.py
+  Q24 balance   ≥ 2 SHOW events of ≥ 2 kinds (counter/bars/compare/split/route/rise/travel/spin/photo/disputed/erase/flash); SHOW set ≠ last 6 episodes; no kind in ≥ 5 of last 8 — reelkit/shapelint.py
   Q23 pace      explanation window: ≥ 15 visual events/10 s, no static span > 2.5 s, ≥ 1 real visual (photo/chart/route/rise/split), ≥ 2 events per sentence — reelkit/pacelint.py
   Q22 topic     topic.md: signal · why now · takeaway · question shape · distractors · search term · rejected · ship-by; stem ≠ last 5 — reelkit/topiclint.py
   Q18 copy      post.copy hand-written per channel (reelkit/postkit.py check): no answer/demonym/fact-number spoilers, no template sentences
