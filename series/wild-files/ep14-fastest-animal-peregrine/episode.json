@@ -1,0 +1,137 @@
+{
+ "id": "ep14-fastest-animal-peregrine",
+ "format": "quiz-v3",
+ "series": "wild-files",
+ "number": 14,
+ "title": "Which animal is the FASTEST on Earth?",
+ "difficulty": "MEDIUM",
+ "seed": 6314,
+ "quiz": {
+  "question": "Which animal is the FASTEST on Earth?",
+  "keyword": "FASTEST",
+  "options": [
+   "Cheetah",
+   "Sailfish",
+   "Peregrine falcon"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Peregrine falcon",
+  "answer_sub": "389 km/h in a hunting dive",
+  "option_meta": [
+   {
+    "emoji": "1f406"
+   },
+   {
+    "emoji": "1f41f"
+   },
+   {
+    "emoji": "1f985"
+   }
+  ],
+  "banner": "Peregrine falcon",
+  "banner_sub": "✓  C was right · 389 km/h in a hunting dive",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which animal is the FASTEST on Earth? 🦅",
+  "premise": "The fastest animal alive is not the one on land",
+  "bait": "The cheetah is not even close.",
+  "keywords": [
+   "fastest animal in the world",
+   "fastest animal on earth",
+   "peregrine falcon speed",
+   "peregrine falcon dive",
+   "animal facts",
+   "cheetah speed",
+   "wildlife quiz",
+   "animal quiz"
+  ],
+  "description": "The fastest animal alive is not the one on land. The cheetah is not even close.\n\nSources: Guinness World Records; Cornell Lab of Ornithology; National Geographic; U.S. Fish & Wildlife Service.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #14",
+  "hashtags": [
+   "#AnimalQuiz",
+   "#WildlifeFacts",
+   "#thequizwire"
+  ],
+  "tags": [
+   "FastestAnimal",
+   "AnimalQuiz"
+  ],
+  "cover_emoji": "🦅",
+  "copy": {
+   "spoilers": [
+    "peregrine",
+    "falcon",
+    "bird",
+    "389"
+   ],
+   "youtube": {
+    "title": "What is the fastest animal in the world? Not the cheetah 🏎️",
+    "description": "Cheetah, sailfish or the third one? One animal has been clocked at more than three times motorway speed, and the record was set over the United States with a skydiver alongside.\nGuess before the reveal, then see the speeds side by side and where the record was measured.\nWhich one did you pick?",
+    "tags": [
+     "#fastestanimal",
+     "#animalquiz",
+     "#wildlife",
+     "#animalfacts",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which animal is the FASTEST on Earth? 🏎️\nCheetah, sailfish or the other one? One of them has been clocked at more than three times motorway speed, and the record was set with a skydiver alongside.\nWhich did you pick?",
+    "tags": [
+     "#fastestanimal",
+     "#animalquiz",
+     "#wildlife",
+     "#animalfacts",
+     "#naturelovers"
+    ]
+   },
+   "facebook": {
+    "text": "Which animal is the fastest on Earth — cheetah, sailfish or peregrine falcon?\nOne of them has been clocked at more than three times motorway speed. Did you guess the land one?",
+    "tags": [
+     "#fastestanimal",
+     "#animalquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which animal is the FASTEST on Earth?\nOne has been clocked at more than three times motorway speed. It is not the cheetah.",
+    "tags": [
+     "#FastestAnimal",
+     "#AnimalQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which animal is the fastest on Earth — cheetah, sailfish or peregrine falcon? One of them has been clocked at more than three times motorway speed, the record was measured with a skydiver alongside, and it nearly went extinct sixty years ago.",
+    "tags": [
+     "#fastestanimal"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-animal",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "flash-cut",
+  "beats": [
+   "compare",
+   "rise",
+   "pin",
+   "label",
+   "flash"
+  ],
+  "cast": "emoji-set:speed + flagball:none",
+  "music": "bed:tense"
+ },
+ "status": "ready"
+}

@@ -1,0 +1,538 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "389 KM/H",
+   "text": "hunting dive · peregrine falcon"
+  },
+  {
+   "id": "speed",
+   "type": "compare",
+   "items": [
+    [
+     "Peregrine dive",
+     389,
+     "389 km/h"
+    ],
+    [
+     "Cheetah",
+     112,
+     "112 km/h"
+    ],
+    [
+     "Motorway car",
+     110,
+     "110 km/h"
+    ]
+   ],
+   "y": 380,
+   "x": 90,
+   "w": 900,
+   "max_h": 520
+  },
+  {
+   "id": "st_cheetah",
+   "type": "sticker",
+   "emoji": "1f406",
+   "x": 300,
+   "y": 960,
+   "size": 170,
+   "rot": -8
+  },
+  {
+   "id": "st_car",
+   "type": "sticker",
+   "emoji": "1f697",
+   "x": 760,
+   "y": 960,
+   "size": 150,
+   "rot": 8
+  },
+  {
+   "id": "st_falcon",
+   "type": "sticker",
+   "emoji": "1f985",
+   "x": 420,
+   "y": 700,
+   "size": 240,
+   "rot": -6
+  },
+  {
+   "id": "st_chute",
+   "type": "sticker",
+   "emoji": "1fa82",
+   "x": 780,
+   "y": 560,
+   "size": 170,
+   "rot": 8
+  },
+  {
+   "id": "st_skull",
+   "type": "sticker",
+   "emoji": "2620",
+   "x": 300,
+   "y": 620,
+   "size": 170,
+   "rot": -8
+  },
+  {
+   "id": "st_city",
+   "type": "sticker",
+   "emoji": "1f3d9",
+   "x": 300,
+   "y": 620,
+   "size": 190,
+   "rot": -6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     -60,
+     30
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     -58,
+     30
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     -98,
+     39
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 1.03,
+    "lonlat": [
+     -97.5,
+     39.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.05",
+   "do": "fx.flash",
+   "args": {}
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "840",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s06@washington",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "wa"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "wa"
+   }
+  },
+  {
+   "at": "s07@york",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ny"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ny"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.2",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     -98,
+     39
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 1.02,
+    "lonlat": [
+     -97.8,
+     39.3
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05+0.1",
+   "do": "chart.compare_in",
+   "id": "speed",
+   "args": {
+    "dur": 0.8,
+    "stagger": 0.3
+   }
+  },
+  {
+   "at": "s05@cheetah",
+   "do": "sticker_in",
+   "id": "st_cheetah"
+  },
+  {
+   "at": "s05@car",
+   "do": "sticker_in",
+   "id": "st_car"
+  },
+  {
+   "at": "s05@triples",
+   "do": "fx.flash",
+   "args": {}
+  },
+  {
+   "at": "s05@triples+0.1",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "840",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "speed"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_cheetah"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_car"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.3",
+   "args": {
+    "k": 2.0,
+    "lonlat": [
+     -120,
+     46
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 2.05,
+    "lonlat": [
+     -119.5,
+     46.3
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@frightful",
+   "do": "geo.rise",
+   "stage": "stage_map",
+   "args": {
+    "fid": "840",
+    "eid": "st_falcon",
+    "layer": "hl",
+    "dur": 0.7
+   }
+  },
+  {
+   "at": "s06@frightful",
+   "do": "sticker_in",
+   "id": "st_falcon"
+  },
+  {
+   "at": "s06@skydiver",
+   "do": "sticker_in",
+   "id": "st_chute"
+  },
+  {
+   "at": "s06@skydiver+0.4",
+   "do": "sticker_pulse",
+   "id": "st_falcon"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_falcon"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_chute"
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.4",
+   "args": {
+    "k": 0.55,
+    "lonlat": [
+     -38,
+     46
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 0.56,
+    "lonlat": [
+     -37,
+     46.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@pesticides",
+   "do": "sticker_in",
+   "id": "st_skull"
+  },
+  {
+   "at": "s07@skyscrapers",
+   "do": "sticker_out",
+   "id": "st_skull"
+  },
+  {
+   "at": "s07@skyscrapers",
+   "do": "sticker_in",
+   "id": "st_city"
+  },
+  {
+   "at": "s07@york",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "nyc"
+   }
+  },
+  {
+   "at": "s07@london",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "london"
+   }
+  },
+  {
+   "at": "s07@london+0.3",
+   "do": "sticker_pulse",
+   "id": "st_city"
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_city"
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     -60,
+     30
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04+0.8",
+   "do": "geo.scalebar_in",
+   "stage": "stage_map"
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

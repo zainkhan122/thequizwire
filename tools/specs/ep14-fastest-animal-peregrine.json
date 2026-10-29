@@ -1,0 +1,785 @@
+{
+ "id": "ep14-fastest-animal-peregrine",
+ "series": "wild-files",
+ "number": 14,
+ "seed": 6314,
+ "question": "Which animal is the FASTEST on Earth?",
+ "keyword": "FASTEST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Cheetah",
+   "emoji": "1f406",
+   "cue": "cheetah"
+  },
+  {
+   "text": "Sailfish",
+   "emoji": "1f41f",
+   "cue": "sailfish"
+  },
+  {
+   "text": "Peregrine falcon",
+   "emoji": "1f985",
+   "cue": "falcon"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "389 km/h in a hunting dive",
+ "outro_headline": "DID YOU GET IT?",
+ "cover_emoji": "🦅",
+ "post": {
+  "premise": "The fastest animal alive is not the one on land",
+  "bait": "The cheetah is not even close.",
+  "keywords": [
+   "fastest animal in the world",
+   "fastest animal on earth",
+   "peregrine falcon speed",
+   "peregrine falcon dive",
+   "animal facts",
+   "cheetah speed",
+   "wildlife quiz",
+   "animal quiz"
+  ],
+  "tags": [
+   "FastestAnimal",
+   "AnimalQuiz"
+  ],
+  "sources_line": "Guinness World Records; Cornell Lab of Ornithology; National Geographic; U.S. Fish & Wildlife Service",
+  "copy": {
+   "spoilers": [
+    "peregrine",
+    "falcon",
+    "bird",
+    "389"
+   ],
+   "youtube": {
+    "title": "What is the fastest animal in the world? Not the cheetah 🏎️",
+    "description": "Cheetah, sailfish or the third one? One animal has been clocked at more than three times motorway speed, and the record was set over the United States with a skydiver alongside.\nGuess before the reveal, then see the speeds side by side and where the record was measured.\nWhich one did you pick?",
+    "tags": [
+     "#fastestanimal",
+     "#animalquiz",
+     "#wildlife",
+     "#animalfacts",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which animal is the FASTEST on Earth? 🏎️\nCheetah, sailfish or the other one? One of them has been clocked at more than three times motorway speed, and the record was set with a skydiver alongside.\nWhich did you pick?",
+    "tags": [
+     "#fastestanimal",
+     "#animalquiz",
+     "#wildlife",
+     "#animalfacts",
+     "#naturelovers"
+    ]
+   },
+   "facebook": {
+    "text": "Which animal is the fastest on Earth — cheetah, sailfish or peregrine falcon?\nOne of them has been clocked at more than three times motorway speed. Did you guess the land one?",
+    "tags": [
+     "#fastestanimal",
+     "#animalquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which animal is the FASTEST on Earth?\nOne has been clocked at more than three times motorway speed. It is not the cheetah.",
+    "tags": [
+     "#FastestAnimal",
+     "#AnimalQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which animal is the fastest on Earth — cheetah, sailfish or peregrine falcon? One of them has been clocked at more than three times motorway speed, the record was measured with a skydiver alongside, and it nearly went extinct sixty years ago.",
+    "tags": [
+     "#fastestanimal"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-animal",
+  "hook": "challenge",
+  "opener": "wide-drift",
+  "reveal": "flash-cut",
+  "beats": [
+   "compare",
+   "rise",
+   "pin",
+   "label",
+   "flash"
+  ],
+  "cast": "emoji-set:speed + flagball:none",
+  "music": "bed:tense",
+  "outro": "DID YOU GET IT?"
+ },
+ "intent": "The land-speed trap: everyone says cheetah, but the peregrine's hunting dive triples it — shown as speed blocks against a motorway car, a falcon rising out of the US where the record was measured, and a city-to-city pin pair for the comeback.",
+ "voice": {
+  "v01_cues": {
+   "fastest": "fastest",
+   "earth": "earth"
+  },
+  "v04": {
+   "text": "The peregrine falcon. In a hunting dive it has been clocked at 389 kilometres an hour.",
+   "cues": {
+    "answer": "falcon",
+    "dive": "dive",
+    "hour": "hour"
+   }
+  },
+  "v05": {
+   "text": "A cheetah tops out near 112. A car on the motorway does 110. The falcon triples both.",
+   "cues": {
+    "cheetah": "cheetah",
+    "car": "car",
+    "triples": "triples"
+   }
+  },
+  "v06": {
+   "text": "That record dive was measured over Washington State, where a falcon named Frightful dived alongside a skydiver.",
+   "cues": {
+    "washington": "washington",
+    "frightful": "frightful",
+    "skydiver": "skydiver"
+   }
+  },
+  "v07": {
+   "text": "Pesticides nearly wiped them out in the 1960s. Today they nest on skyscrapers, from New York to London.",
+   "cues": {
+    "pesticides": "pesticides",
+    "skyscrapers": "skyscrapers",
+    "york": "york",
+    "london": "london"
+   }
+  },
+  "v08": {
+   "text": "Faster than you thought. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "389 KM/H",
+   "text": "hunting dive · peregrine falcon"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": null,
+  "b": null
+ },
+ "geo": {
+  "fit_bbox": [
+   -130,
+   20,
+   -60,
+   55
+  ],
+  "far_bbox": [
+   -170,
+   -10,
+   40,
+   75
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "840"
+  ],
+  "highlight_note": "United States — where the record dive was measured (no country is the answer)",
+  "lift_color": "#2F80ED",
+  "extra_layers": [],
+  "labels": [
+   {
+    "id": "wa",
+    "lonlat": [
+     -118,
+     50
+    ],
+    "text": "Washington State · record dive",
+    "cls": "tag",
+    "in": "s06@washington",
+    "out": "s07"
+   },
+   {
+    "id": "ny",
+    "lonlat": [
+     -72,
+     38
+    ],
+    "text": "New York",
+    "cls": "tag",
+    "in": "s07@york",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "nyc",
+    "lonlat": [
+     -74.01,
+     40.71
+    ],
+    "label": "New York",
+    "qid": "Q60",
+    "side": "left"
+   },
+   {
+    "id": "london",
+    "lonlat": [
+     -0.13,
+     51.51
+    ],
+    "label": "London",
+    "qid": "Q84"
+   }
+  ],
+  "scalebar": {
+   "km": 500,
+   "lonlat": [
+    -124,
+    27
+   ]
+  },
+  "cams": {
+   "start": [
+    0.5,
+    [
+     -60,
+     30
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     -58,
+     30
+    ]
+   ],
+   "s04": [
+    1.0,
+    [
+     -98,
+     39
+    ]
+   ],
+   "s04b": [
+    1.03,
+    [
+     -97.5,
+     39.2
+    ]
+   ],
+   "s05": [
+    1.0,
+    [
+     -98,
+     39
+    ]
+   ],
+   "s05b": [
+    1.02,
+    [
+     -97.8,
+     39.3
+    ]
+   ],
+   "s06": [
+    2.0,
+    [
+     -120,
+     46
+    ]
+   ],
+   "s06b": [
+    2.05,
+    [
+     -119.5,
+     46.3
+    ]
+   ],
+   "s07": [
+    0.55,
+    [
+     -38,
+     46
+    ]
+   ],
+   "s07b": [
+    0.56,
+    [
+     -37,
+     46.2
+    ]
+   ]
+  },
+  "pin_beats": []
+ },
+ "research": {
+  "topic": "Fastest animal: peregrine falcon (Falco peregrinus) — hunting stoop recorded at 389 km/h (242 mph) by falconer Ken Franklin's bird 'Frightful' diving alongside a skydiver over Washington State (National Geographic, 1999–2005); cheetah ~112 km/h (fastest land animal); peregrine populations crashed from DDT in the 1950s–60s, removed from the US endangered species list in 1999, now nesting on skyscrapers and bridges in cities worldwide",
+  "myths": [
+   {
+    "myth": "The cheetah is the fastest animal on Earth.",
+    "reality": "The cheetah is the fastest land animal (~112 km/h); the peregrine falcon's hunting dive, recorded at 389 km/h, is more than three times faster and is the fastest speed of any animal.",
+    "sources": [
+     "guinness_peregrine",
+     "cornell_peregrine",
+     "natgeo_frightful"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Speed Shorts are top-10 lists with stock footage; nobody asks it as a quiz, puts the speeds next to a motorway car on a map, and tells where the record was measured and how the bird came back from near-extinction.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=fastest+animal+in+the+world",
+     "title": "Search: fastest animal in the world",
+     "angle": "top-10 lists",
+     "misses": "no quiz, no map, no where"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=peregrine+falcon+dive",
+     "title": "Search: peregrine falcon dive",
+     "angle": "slow-motion footage",
+     "misses": "no comparison, no comeback story"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if geography",
+     "misses": "no wildlife"
+    }
+   ]
+  },
+  "sources": {
+   "guinness_peregrine": {
+    "type": "primary",
+    "publisher": "Guinness World Records",
+    "title": "Fastest bird (diving) / fastest animal",
+    "url": "https://www.guinnessworldrecords.com/world-records/fastest-bird-diving",
+    "date": "2026-10-29",
+    "notes": "peregrine falcon stoop recorded at 389 km/h (242 mph) — the fastest speed attained by any animal"
+   },
+   "cornell_peregrine": {
+    "type": "scholarly",
+    "publisher": "Cornell Lab of Ornithology — All About Birds",
+    "title": "Peregrine Falcon — life history",
+    "url": "https://www.allaboutbirds.org/guide/Peregrine_Falcon/overview",
+    "date": "2026-10-29",
+    "notes": "hunting stoops over 320 km/h; DDT crash and 1999 delisting; nests on skyscrapers and bridges in cities"
+   },
+   "natgeo_frightful": {
+    "type": "reference",
+    "publisher": "National Geographic",
+    "title": "Peregrine falcon 'Frightful' — the 242 mph dive",
+    "url": "https://www.nationalgeographic.com/animals/birds/facts/peregrine-falcon",
+    "date": "2026-10-29",
+    "notes": "falconer Ken Franklin's peregrine Frightful clocked at 242 mph (389 km/h) diving alongside a skydiver over Washington State"
+   },
+   "usfws_delist": {
+    "type": "primary",
+    "publisher": "U.S. Fish & Wildlife Service",
+    "title": "American Peregrine Falcon removed from the Endangered Species List (1999)",
+    "url": "https://www.fws.gov/",
+    "date": "2026-10-29",
+    "notes": "DDT caused eggshell thinning and near-extirpation in the eastern US by the mid-1960s; recovery led to delisting on 25 August 1999"
+   },
+   "wiki_cheetah": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Cheetah — speed",
+    "url": "https://en.wikipedia.org/wiki/Cheetah",
+    "date": "2026-10-29",
+    "notes": "fastest land animal, measured top speeds around 93–104 km/h in the wild and up to ~112 km/h; UK/EU motorway limit 110–112 km/h"
+   },
+   "rspb_london": {
+    "type": "reference",
+    "publisher": "RSPB",
+    "title": "Peregrines in cities",
+    "url": "https://www.rspb.org.uk/",
+    "date": "2026-10-29",
+    "notes": "peregrines breed on Tate Modern, the Houses of Parliament and other London landmarks"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The peregrine falcon is the fastest animal on Earth: its hunting dive has been recorded at 389 km/h.",
+    "sources": [
+     "guinness_peregrine",
+     "natgeo_frightful",
+     "cornell_peregrine"
+    ],
+    "vo": [
+     "which animal is the fastest on earth",
+     "cheetah, sailfish, or peregrine falcon",
+     "the peregrine falcon. in a hunting dive it has been clocked at 389 kilometres an hour"
+    ],
+    "screen": [
+     "Peregrine falcon",
+     "Cheetah",
+     "Sailfish",
+     "389 KM/H",
+     "hunting dive · peregrine falcon"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "The cheetah, the fastest land animal, tops out near 112 km/h; a motorway car does about 110 km/h; the falcon's dive is more than three times either.",
+    "sources": [
+     "wiki_cheetah",
+     "guinness_peregrine"
+    ],
+    "vo": [
+     "a cheetah tops out near 112. a car on the motorway does 110. the falcon triples both"
+    ],
+    "screen": [
+     "Peregrine dive",
+     "Cheetah",
+     "Motorway car",
+     "389 km/h",
+     "112 km/h",
+     "110 km/h"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "The 389 km/h record was measured over Washington State, USA, with the falcon Frightful diving alongside a skydiver.",
+    "sources": [
+     "natgeo_frightful",
+     "guinness_peregrine"
+    ],
+    "vo": [
+     "that record dive was measured over washington state, where a falcon named frightful dived alongside a skydiver"
+    ],
+    "screen": [
+     "Washington State · record dive"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "core",
+    "text": "DDT nearly wiped out peregrines in the 1950s–60s; after recovery they now nest on skyscrapers in cities such as New York and London.",
+    "sources": [
+     "usfws_delist",
+     "cornell_peregrine",
+     "rspb_london"
+    ],
+    "vo": [
+     "pesticides nearly wiped them out in the 1960s. today they nest on skyscrapers, from new york to london"
+    ],
+    "screen": [
+     "New York",
+     "London"
+    ]
+   }
+  ]
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "A cheetah tops out near 112. A car on the motorway does 110. The falcon triples both.",
+    "cues": {
+     "cheetah": "cheetah",
+     "car": "car",
+     "triples": "triples"
+    }
+   },
+   "direction": "hold on the US; three speed blocks rise on 'cheetah' — falcon, cheetah, motorway car — the cheetah sticker on 'cheetah', the car sticker on 'car', a flash and a pulse on 'triples'",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.4,
+   "cam": [
+    1.0,
+    [
+     -98,
+     39
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.02,
+    [
+     -97.8,
+     39.3
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "speed",
+     "type": "compare",
+     "items": [
+      [
+       "Peregrine dive",
+       389,
+       "389 km/h"
+      ],
+      [
+       "Cheetah",
+       112,
+       "112 km/h"
+      ],
+      [
+       "Motorway car",
+       110,
+       "110 km/h"
+      ]
+     ],
+     "y": 380,
+     "x": 90,
+     "w": 900,
+     "max_h": 520
+    }
+   ],
+   "devices": [
+    {
+     "at": "@+0.1",
+     "do": "chart.compare_in",
+     "id": "speed",
+     "args": {
+      "dur": 0.8,
+      "stagger": 0.3
+     }
+    },
+    {
+     "at": "@@cheetah",
+     "do": "sticker_in",
+     "id": "st_cheetah"
+    },
+    {
+     "at": "@@car",
+     "do": "sticker_in",
+     "id": "st_car"
+    },
+    {
+     "at": "@@triples",
+     "do": "fx.flash",
+     "args": {}
+    },
+    {
+     "at": "@@triples+0.1",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "840",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "speed"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_cheetah"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_car"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "That record dive was measured over Washington State, where a falcon named Frightful dived alongside a skydiver.",
+    "cues": {
+     "washington": "washington",
+     "frightful": "frightful",
+     "skydiver": "skydiver"
+    }
+   },
+   "direction": "push into the Pacific Northwest; the tag on 'Washington'; on 'Frightful' the falcon sticker RISES out of the United States like a pop-up; the parachute sticker on 'skydiver'",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    2.0,
+    [
+     -120,
+     46
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    2.05,
+    [
+     -119.5,
+     46.3
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@frightful",
+     "do": "geo.rise",
+     "stage": "stage_map",
+     "args": {
+      "fid": "840",
+      "eid": "st_falcon",
+      "layer": "hl",
+      "dur": 0.7
+     }
+    },
+    {
+     "at": "@@frightful",
+     "do": "sticker_in",
+     "id": "st_falcon"
+    },
+    {
+     "at": "@@skydiver",
+     "do": "sticker_in",
+     "id": "st_chute"
+    },
+    {
+     "at": "@@skydiver+0.4",
+     "do": "sticker_pulse",
+     "id": "st_falcon"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_falcon"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_chute"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Pesticides nearly wiped them out in the 1960s. Today they nest on skyscrapers, from New York to London.",
+    "cues": {
+     "pesticides": "pesticides",
+     "skyscrapers": "skyscrapers",
+     "york": "york",
+     "london": "london"
+    }
+   },
+   "direction": "pull out across the Atlantic; the skull sticker on 'pesticides'; the building sticker on 'skyscrapers'; New York pin + tag on 'York', London pin on 'London'",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.45,
+   "cam": [
+    0.55,
+    [
+     -38,
+     46
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.56,
+    [
+     -37,
+     46.2
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@pesticides",
+     "do": "sticker_in",
+     "id": "st_skull"
+    },
+    {
+     "at": "@@skyscrapers",
+     "do": "sticker_out",
+     "id": "st_skull"
+    },
+    {
+     "at": "@@skyscrapers",
+     "do": "sticker_in",
+     "id": "st_city"
+    },
+    {
+     "at": "@@york",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "nyc"
+     }
+    },
+    {
+     "at": "@@london",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "london"
+     }
+    },
+    {
+     "at": "@@london+0.3",
+     "do": "sticker_pulse",
+     "id": "st_city"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_city"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_cheetah",
+   "type": "sticker",
+   "emoji": "1f406",
+   "x": 300,
+   "y": 960,
+   "size": 170,
+   "rot": -8
+  },
+  {
+   "id": "st_car",
+   "type": "sticker",
+   "emoji": "1f697",
+   "x": 760,
+   "y": 960,
+   "size": 150,
+   "rot": 8
+  },
+  {
+   "id": "st_falcon",
+   "type": "sticker",
+   "emoji": "1f985",
+   "x": 420,
+   "y": 700,
+   "size": 240,
+   "rot": -6
+  },
+  {
+   "id": "st_chute",
+   "type": "sticker",
+   "emoji": "1fa82",
+   "x": 780,
+   "y": 560,
+   "size": 170,
+   "rot": 8
+  },
+  {
+   "id": "st_skull",
+   "type": "sticker",
+   "emoji": "2620",
+   "x": 300,
+   "y": 620,
+   "size": 170,
+   "rot": -8
+  },
+  {
+   "id": "st_city",
+   "type": "sticker",
+   "emoji": "1f3d9",
+   "x": 300,
+   "y": 620,
+   "size": 190,
+   "rot": -6
+  }
+ ]
+}

@@ -1,0 +1,193 @@
+{
+ "version": 1,
+ "episode": "ep14-fastest-animal-peregrine",
+ "topic": "Fastest animal: peregrine falcon (Falco peregrinus) — hunting stoop recorded at 389 km/h (242 mph) by falconer Ken Franklin's bird 'Frightful' diving alongside a skydiver over Washington State (National Geographic, 1999–2005); cheetah ~112 km/h (fastest land animal); peregrine populations crashed from DDT in the 1950s–60s, removed from the US endangered species list in 1999, now nesting on skyscrapers and bridges in cities worldwide",
+ "researched": "2026-10-29",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The cheetah is the fastest animal on Earth.",
+   "reality": "The cheetah is the fastest land animal (~112 km/h); the peregrine falcon's hunting dive, recorded at 389 km/h, is more than three times faster and is the fastest speed of any animal.",
+   "sources": [
+    "guinness_peregrine",
+    "cornell_peregrine",
+    "natgeo_frightful"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Speed Shorts are top-10 lists with stock footage; nobody asks it as a quiz, puts the speeds next to a motorway car on a map, and tells where the record was measured and how the bird came back from near-extinction.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=fastest+animal+in+the+world",
+    "title": "Search: fastest animal in the world",
+    "angle": "top-10 lists",
+    "misses": "no quiz, no map, no where"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=peregrine+falcon+dive",
+    "title": "Search: peregrine falcon dive",
+    "angle": "slow-motion footage",
+    "misses": "no comparison, no comeback story"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if geography",
+    "misses": "no wildlife"
+   }
+  ]
+ },
+ "sources": {
+  "guinness_peregrine": {
+   "type": "primary",
+   "publisher": "Guinness World Records",
+   "title": "Fastest bird (diving) / fastest animal",
+   "url": "https://www.guinnessworldrecords.com/world-records/fastest-bird-diving",
+   "date": "2026-10-29",
+   "notes": "peregrine falcon stoop recorded at 389 km/h (242 mph) — the fastest speed attained by any animal"
+  },
+  "cornell_peregrine": {
+   "type": "scholarly",
+   "publisher": "Cornell Lab of Ornithology — All About Birds",
+   "title": "Peregrine Falcon — life history",
+   "url": "https://www.allaboutbirds.org/guide/Peregrine_Falcon/overview",
+   "date": "2026-10-29",
+   "notes": "hunting stoops over 320 km/h; DDT crash and 1999 delisting; nests on skyscrapers and bridges in cities"
+  },
+  "natgeo_frightful": {
+   "type": "reference",
+   "publisher": "National Geographic",
+   "title": "Peregrine falcon 'Frightful' — the 242 mph dive",
+   "url": "https://www.nationalgeographic.com/animals/birds/facts/peregrine-falcon",
+   "date": "2026-10-29",
+   "notes": "falconer Ken Franklin's peregrine Frightful clocked at 242 mph (389 km/h) diving alongside a skydiver over Washington State"
+  },
+  "usfws_delist": {
+   "type": "primary",
+   "publisher": "U.S. Fish & Wildlife Service",
+   "title": "American Peregrine Falcon removed from the Endangered Species List (1999)",
+   "url": "https://www.fws.gov/",
+   "date": "2026-10-29",
+   "notes": "DDT caused eggshell thinning and near-extirpation in the eastern US by the mid-1960s; recovery led to delisting on 25 August 1999"
+  },
+  "wiki_cheetah": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Cheetah — speed",
+   "url": "https://en.wikipedia.org/wiki/Cheetah",
+   "date": "2026-10-29",
+   "notes": "fastest land animal, measured top speeds around 93–104 km/h in the wild and up to ~112 km/h; UK/EU motorway limit 110–112 km/h"
+  },
+  "rspb_london": {
+   "type": "reference",
+   "publisher": "RSPB",
+   "title": "Peregrines in cities",
+   "url": "https://www.rspb.org.uk/",
+   "date": "2026-10-29",
+   "notes": "peregrines breed on Tate Modern, the Houses of Parliament and other London landmarks"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The peregrine falcon is the fastest animal on Earth: its hunting dive has been recorded at 389 km/h.",
+   "sources": [
+    "guinness_peregrine",
+    "natgeo_frightful",
+    "cornell_peregrine"
+   ],
+   "vo": [
+    "which animal is the fastest on earth",
+    "cheetah, sailfish, or peregrine falcon",
+    "the peregrine falcon. in a hunting dive it has been clocked at 389 kilometres an hour"
+   ],
+   "screen": [
+    "Peregrine falcon",
+    "Cheetah",
+    "Sailfish",
+    "389 KM/H",
+    "hunting dive · peregrine falcon"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "The cheetah, the fastest land animal, tops out near 112 km/h; a motorway car does about 110 km/h; the falcon's dive is more than three times either.",
+   "sources": [
+    "wiki_cheetah",
+    "guinness_peregrine"
+   ],
+   "vo": [
+    "a cheetah tops out near 112. a car on the motorway does 110. the falcon triples both"
+   ],
+   "screen": [
+    "Peregrine dive",
+    "Cheetah",
+    "Motorway car",
+    "389 km/h",
+    "112 km/h",
+    "110 km/h"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "The 389 km/h record was measured over Washington State, USA, with the falcon Frightful diving alongside a skydiver.",
+   "sources": [
+    "natgeo_frightful",
+    "guinness_peregrine"
+   ],
+   "vo": [
+    "that record dive was measured over washington state, where a falcon named frightful dived alongside a skydiver"
+   ],
+   "screen": [
+    "Washington State · record dive"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "DDT nearly wiped out peregrines in the 1950s–60s; after recovery they now nest on skyscrapers in cities such as New York and London.",
+   "sources": [
+    "usfws_delist",
+    "cornell_peregrine",
+    "rspb_london"
+   ],
+   "vo": [
+    "pesticides nearly wiped them out in the 1960s. today they nest on skyscrapers, from new york to london"
+   ],
+   "screen": [
+    "New York",
+    "London"
+   ]
+  }
+ ]
+}
