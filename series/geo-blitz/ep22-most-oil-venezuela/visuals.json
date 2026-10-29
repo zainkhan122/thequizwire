@@ -1,0 +1,686 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "303 BILLION",
+   "text": "barrels of proven oil"
+  },
+  {
+   "id": "oilbars",
+   "type": "bars",
+   "rows": [
+    [
+     "Venezuela",
+     303,
+     "303 bn"
+    ],
+    [
+     "Saudi Arabia",
+     267,
+     "267 bn"
+    ],
+    [
+     "Iran",
+     209,
+     "209 bn"
+    ],
+    [
+     "Russia",
+     80,
+     "80 bn"
+    ]
+   ],
+   "y": 300,
+   "x": 70,
+   "w": 660,
+   "unit": "",
+   "max_value": 320,
+   "bar_h": 64,
+   "gap": 16
+  },
+  {
+   "id": "holdpump",
+   "type": "split",
+   "left": {
+    "kicker": "303 BILLION",
+    "text": "barrels in the ground"
+   },
+   "right": {
+    "kicker": "1 %",
+    "text": "of the world's daily output"
+   },
+   "label_left": "HOLDS",
+   "label_right": "PUMPS",
+   "y": 310,
+   "h": 540,
+   "x": 60,
+   "w": 620
+  },
+  {
+   "id": "st_oil",
+   "type": "sticker",
+   "emoji": "1f6e2",
+   "x": 800,
+   "y": 700,
+   "size": 160,
+   "rot": 8
+  },
+  {
+   "id": "st_shrug",
+   "type": "sticker",
+   "emoji": "1f937",
+   "x": 780,
+   "y": 940,
+   "size": 150,
+   "rot": 8
+  },
+  {
+   "id": "st_drop",
+   "type": "sticker",
+   "emoji": "1f4a7",
+   "x": 300,
+   "y": 620,
+   "size": 190,
+   "rot": -8
+  },
+  {
+   "id": "st_pump",
+   "type": "sticker",
+   "emoji": "26fd",
+   "x": 800,
+   "y": 960,
+   "size": 160,
+   "rot": 8
+  },
+  {
+   "id": "hmm",
+   "type": "character",
+   "flag": "ve",
+   "face": "think",
+   "x": 820,
+   "y": 1180,
+   "size": 220,
+   "rot": 6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  },
+  {
+   "id": "cha",
+   "type": "character",
+   "flag": "ve",
+   "face": "think",
+   "x": 230,
+   "y": 820,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "chb",
+   "type": "character",
+   "flag": "sa",
+   "face": "think",
+   "x": 850,
+   "y": 1000,
+   "size": 200,
+   "rot": 8
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     10,
+     25
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     12,
+     25
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s02@a",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02@a+0.9",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     45,
+     24
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s02@b",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02@b+0.9",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     90,
+     62
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s02@c",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02@c+0.9",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     -66,
+     8
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s03",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.42,
+    "lonlat": [
+     10,
+     25
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 1.6,
+    "lonlat": [
+     -66,
+     7
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 1.65,
+    "lonlat": [
+     -65.5,
+     7.3
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "862",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s04@answer",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ve"
+   }
+  },
+  {
+   "at": "s05",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ve"
+   }
+  },
+  {
+   "at": "s05@saudi",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "sa"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "sa"
+   }
+  },
+  {
+   "at": "s06@strip",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "belt"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "belt"
+   }
+  },
+  {
+   "at": "s04+3.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "862",
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.4",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     -10,
+     22
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 0.51,
+    "lonlat": [
+     -9,
+     22
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@saudi",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "682",
+    "layer": "others"
+   }
+  },
+  {
+   "at": "s05@billion-0.4",
+   "do": "chart.bars_in",
+   "id": "oilbars",
+   "args": {
+    "dur": 0.9,
+    "stagger": 0.3
+   }
+  },
+  {
+   "at": "s05@billion+0.5",
+   "do": "sticker_in",
+   "id": "st_oil"
+  },
+  {
+   "at": "s05@russia",
+   "do": "sticker_in",
+   "id": "st_shrug"
+  },
+  {
+   "at": "s05@russia+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "862",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "oilbars"
+  },
+  {
+   "at": "s05.end",
+   "do": "geo.highlight_out",
+   "stage": "stage_map",
+   "args": {
+    "fid": "682",
+    "layer": "others"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_oil"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_shrug"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.3",
+   "args": {
+    "k": 2.2,
+    "lonlat": [
+     -64.5,
+     8.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 2.25,
+    "lonlat": [
+     -64.2,
+     8.6
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@orinoco",
+   "do": "geo.route_draw",
+   "stage": "stage_map",
+   "until": "s06@river",
+   "args": {
+    "rid": "orinoco",
+    "layer": "belt"
+   }
+  },
+  {
+   "at": "s06@strip+0.3",
+   "do": "sticker_in",
+   "id": "st_drop"
+  },
+  {
+   "at": "s06@river",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "862",
+    "dur": 0.8,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06@river+0.2",
+   "do": "sticker_pulse",
+   "id": "st_drop"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_drop"
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.3",
+   "args": {
+    "k": 1.6,
+    "lonlat": [
+     -66,
+     7
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 1.65,
+    "lonlat": [
+     -65.5,
+     7.3
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@pumps",
+   "do": "chart.split_in",
+   "id": "holdpump"
+  },
+  {
+   "at": "s07@percent+0.3",
+   "do": "sticker_in",
+   "id": "st_pump"
+  },
+  {
+   "at": "s07@underground",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "862",
+    "dur": 0.8,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s07@underground",
+   "do": "character_in",
+   "id": "hmm"
+  },
+  {
+   "at": "s07.end",
+   "do": "chart.out",
+   "id": "holdpump"
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_pump"
+  },
+  {
+   "at": "s07.end",
+   "do": "character_out",
+   "id": "hmm"
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     10,
+     25
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04@earth",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "caracas"
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.6",
+   "do": "character_in",
+   "id": "cha"
+  },
+  {
+   "at": "s04+1.9",
+   "do": "character_in",
+   "id": "chb"
+  },
+  {
+   "at": "s05+1.0",
+   "do": "character_out",
+   "id": "cha"
+  },
+  {
+   "at": "s05+0.8",
+   "do": "character_out",
+   "id": "chb"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

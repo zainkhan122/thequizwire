@@ -1,0 +1,163 @@
+{
+ "version": 1,
+ "episode": "ep22-most-oil-venezuela",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -90,
+     -15,
+     110,
+     70
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "862"
+     ],
+     "cls": "",
+     "note": "Venezuela (answer) — fill pulse on reveal"
+    },
+    {
+     "kind": "highlight",
+     "id": "others",
+     "ids": [
+      "682"
+     ],
+     "cls": "dim",
+     "note": "Saudi Arabia — lit as the runner-up"
+    },
+    {
+     "kind": "route",
+     "id": "belt",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "orinoco",
+        "properties": {
+         "name": "Orinoco Belt (schematic, along the lower Orinoco)"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           -67.6,
+           7.9
+          ],
+          [
+           -66.5,
+           8.0
+          ],
+          [
+           -65.5,
+           8.1
+          ],
+          [
+           -64.5,
+           8.2
+          ],
+          [
+           -63.5,
+           8.3
+          ],
+          [
+           -62.5,
+           8.5
+          ],
+          [
+           -61.8,
+           8.6
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic line of the Orinoco heavy-oil belt (Faja del Orinoco) north of the river"
+    }
+   ],
+   "pins": [
+    {
+     "id": "caracas",
+     "lonlat": [
+      -66.9,
+      10.5
+     ],
+     "label": "Caracas",
+     "qid": "Q1533",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "ve",
+     "lonlat": [
+      -66,
+      4
+     ],
+     "text": "Venezuela",
+     "cls": "tag",
+     "in": "s04@answer",
+     "out": "s05"
+    },
+    {
+     "id": "sa",
+     "lonlat": [
+      46,
+      20
+     ],
+     "text": "Saudi Arabia · 2nd",
+     "cls": "tag",
+     "in": "s05@saudi",
+     "out": "s06"
+    },
+    {
+     "id": "belt",
+     "lonlat": [
+      -65,
+      10.4
+     ],
+     "text": "Orinoco Belt",
+     "cls": "tag",
+     "in": "s06@strip",
+     "out": "s07"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -150,
+      -40,
+      160,
+      80
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

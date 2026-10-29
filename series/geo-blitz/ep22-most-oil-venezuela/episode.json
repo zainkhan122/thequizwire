@@ -1,0 +1,137 @@
+{
+ "id": "ep22-most-oil-venezuela",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 22,
+ "title": "Where is the MOST oil in the world?",
+ "difficulty": "MEDIUM",
+ "seed": 4422,
+ "quiz": {
+  "question": "Where is the MOST oil in the world?",
+  "keyword": "MOST",
+  "options": [
+   "Saudi Arabia",
+   "Russia",
+   "Venezuela"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Venezuela",
+  "answer_sub": "303 billion barrels · Orinoco Belt",
+  "option_meta": [
+   {
+    "flag": "sa"
+   },
+   {
+    "flag": "ru"
+   },
+   {
+    "flag": "ve"
+   }
+  ],
+  "banner": "Venezuela",
+  "banner_sub": "✓  C was right · 303 billion barrels · Orinoco Belt",
+  "outro": {
+   "headline": "DAILY MAP QUIZ",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Where is the MOST oil in the world? 🛢️",
+  "premise": "The country sitting on the most oil pumps almost none of it",
+  "bait": "It is not Saudi Arabia, and it is not Russia.",
+  "keywords": [
+   "which country has the most oil",
+   "most oil reserves in the world",
+   "oil reserves by country",
+   "orinoco belt",
+   "geography quiz",
+   "opec reserves",
+   "world map quiz",
+   "oil facts"
+  ],
+  "description": "The country sitting on the most oil pumps almost none of it. It is not Saudi Arabia, and it is not Russia.\n\nSources: OPEC Annual Statistical Bulletin 2025; U.S. Energy Information Administration; Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #22",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "MostOil",
+   "GeographyQuiz"
+  ],
+  "cover_emoji": "🛢️",
+  "copy": {
+   "spoilers": [
+    "venezuela",
+    "venezuelan",
+    "orinoco",
+    "caracas"
+   ],
+   "youtube": {
+    "title": "Which country has the most oil reserves in the world? Not Saudi Arabia 🛢️",
+    "description": "Saudi Arabia, Russia or the third one? One country sits on more proven oil than any other on Earth, nearly all of it in a single belt along one river, and it pumps barely any of it.\nGuess before the map fills, then watch the bars, see the belt drawn, and the gap between what it holds and what it sells.\nWhich flag did you pick?",
+    "tags": [
+     "#mostoil",
+     "#geographyquiz",
+     "#oilreserves",
+     "#worldmap",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Where is the MOST oil in the world? 🛢️\nSaudi Arabia, Russia or the other one? One country sits on more proven oil than any other on Earth, nearly all of it along a single river, and it pumps barely any of it.\nWhich did you pick?",
+    "tags": [
+     "#mostoil",
+     "#geographyquiz",
+     "#oilreserves",
+     "#worldmap",
+     "#energyfacts"
+    ]
+   },
+   "facebook": {
+    "text": "Where is the most oil in the world — Saudi Arabia, Russia or Venezuela?\nOne of them sits on more proven oil than any other country, yet pumps barely any of it. Did you guess the obvious one?",
+    "tags": [
+     "#mostoil",
+     "#geographyquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Where is the MOST oil in the world?\nOne country sits on more proven oil than any other on Earth and pumps barely any of it. Not Saudi Arabia.",
+    "tags": [
+     "#MostOil",
+     "#GeographyQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Where is the most oil in the world — Saudi Arabia, Russia or Venezuela? One of them sits on more proven oil than any other country, nearly all of it in a single belt along one river, and it pumps barely one percent of the world's supply.",
+    "tags": [
+     "#mostoil"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "question-first",
+  "opener": "split-candidates",
+  "reveal": "fill-pulse",
+  "beats": [
+   "bars",
+   "second-highlight",
+   "route",
+   "split",
+   "label"
+  ],
+  "cast": "flagball:think + emoji-set:oil",
+  "music": "bed:deep"
+ },
+ "status": "ready"
+}

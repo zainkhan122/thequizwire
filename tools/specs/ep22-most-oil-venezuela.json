@@ -1,0 +1,913 @@
+{
+ "id": "ep22-most-oil-venezuela",
+ "series": "geo-blitz",
+ "number": 22,
+ "seed": 4422,
+ "question": "Where is the MOST oil in the world?",
+ "keyword": "MOST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Saudi Arabia",
+   "flag": "sa",
+   "cue": "saudi",
+   "lonlat": [
+    45,
+    24
+   ]
+  },
+  {
+   "text": "Russia",
+   "flag": "ru",
+   "cue": "russia",
+   "lonlat": [
+    90,
+    62
+   ]
+  },
+  {
+   "text": "Venezuela",
+   "flag": "ve",
+   "cue": "venezuela",
+   "lonlat": [
+    -66,
+    8
+   ]
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "303 billion barrels · Orinoco Belt",
+ "outro_headline": "DAILY MAP QUIZ",
+ "cover_emoji": "🛢️",
+ "post": {
+  "premise": "The country sitting on the most oil pumps almost none of it",
+  "bait": "It is not Saudi Arabia, and it is not Russia.",
+  "keywords": [
+   "which country has the most oil",
+   "most oil reserves in the world",
+   "oil reserves by country",
+   "orinoco belt",
+   "geography quiz",
+   "opec reserves",
+   "world map quiz",
+   "oil facts"
+  ],
+  "tags": [
+   "MostOil",
+   "GeographyQuiz"
+  ],
+  "sources_line": "OPEC Annual Statistical Bulletin 2025; U.S. Energy Information Administration; Britannica",
+  "copy": {
+   "spoilers": [
+    "venezuela",
+    "venezuelan",
+    "orinoco",
+    "caracas"
+   ],
+   "youtube": {
+    "title": "Which country has the most oil reserves in the world? Not Saudi Arabia 🛢️",
+    "description": "Saudi Arabia, Russia or the third one? One country sits on more proven oil than any other on Earth, nearly all of it in a single belt along one river, and it pumps barely any of it.\nGuess before the map fills, then watch the bars, see the belt drawn, and the gap between what it holds and what it sells.\nWhich flag did you pick?",
+    "tags": [
+     "#mostoil",
+     "#geographyquiz",
+     "#oilreserves",
+     "#worldmap",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Where is the MOST oil in the world? 🛢️\nSaudi Arabia, Russia or the other one? One country sits on more proven oil than any other on Earth, nearly all of it along a single river, and it pumps barely any of it.\nWhich did you pick?",
+    "tags": [
+     "#mostoil",
+     "#geographyquiz",
+     "#oilreserves",
+     "#worldmap",
+     "#energyfacts"
+    ]
+   },
+   "facebook": {
+    "text": "Where is the most oil in the world — Saudi Arabia, Russia or Venezuela?\nOne of them sits on more proven oil than any other country, yet pumps barely any of it. Did you guess the obvious one?",
+    "tags": [
+     "#mostoil",
+     "#geographyquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Where is the MOST oil in the world?\nOne country sits on more proven oil than any other on Earth and pumps barely any of it. Not Saudi Arabia.",
+    "tags": [
+     "#MostOil",
+     "#GeographyQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Where is the most oil in the world — Saudi Arabia, Russia or Venezuela? One of them sits on more proven oil than any other country, nearly all of it in a single belt along one river, and it pumps barely one percent of the world's supply.",
+    "tags": [
+     "#mostoil"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "misconception",
+  "opener": "split-candidates",
+  "reveal": "fill-pulse",
+  "beats": [
+   "bars",
+   "second-highlight",
+   "route",
+   "split",
+   "label"
+  ],
+  "cast": "flagball:think + emoji-set:oil",
+  "music": "bed:deep",
+  "outro": "DAILY MAP QUIZ"
+ },
+ "intent": "The oil misdirect: Saudi Arabia is the name, Russia the size, but Venezuela holds the most proven oil on Earth — shown as bars, located as a drawn belt along the Orinoco, and undercut by a split between what it holds and what it pumps.",
+ "voice": {
+  "v01_cues": {
+   "most": "most",
+   "world": "world"
+  },
+  "v04": {
+   "text": "Venezuela. More than 300 billion barrels of proven oil sit under it, more than any other country on Earth.",
+   "cues": {
+    "answer": "venezuela",
+    "barrels": "barrels",
+    "earth": "earth"
+   }
+  },
+  "v05": {
+   "text": "Saudi Arabia is second with about 267 billion. Russia is far down the list.",
+   "cues": {
+    "saudi": "saudi",
+    "billion": "billion",
+    "russia": "russia"
+   }
+  },
+  "v06": {
+   "text": "Nearly all of it lies in the Orinoco Belt, a strip of heavy, tar-like crude along a single river.",
+   "cues": {
+    "orinoco": "orinoco",
+    "strip": "strip",
+    "river": "river"
+   }
+  },
+  "v07": {
+   "text": "Yet it pumps barely 1 percent of the world's oil; the richest reserve on Earth mostly stays underground.",
+   "cues": {
+    "pumps": "pumps",
+    "percent": "percent",
+    "underground": "underground"
+   }
+  },
+  "v08": {
+   "text": "Richer than you thought. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "303 BILLION",
+   "text": "barrels of proven oil"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "ve",
+   "face": "think",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "sa",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "geo": {
+  "fit_bbox": [
+   -90,
+   -15,
+   110,
+   70
+  ],
+  "far_bbox": [
+   -150,
+   -40,
+   160,
+   80
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "862"
+  ],
+  "highlight_note": "Venezuela (answer) — fill pulse on reveal",
+  "lift_color": "#1b1b1b",
+  "extra_layers": [
+   {
+    "kind": "highlight",
+    "id": "others",
+    "ids": [
+     "682"
+    ],
+    "cls": "dim",
+    "note": "Saudi Arabia — lit as the runner-up"
+   },
+   {
+    "kind": "route",
+    "id": "belt",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "orinoco",
+       "properties": {
+        "name": "Orinoco Belt (schematic, along the lower Orinoco)"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -67.6,
+          7.9
+         ],
+         [
+          -66.5,
+          8.0
+         ],
+         [
+          -65.5,
+          8.1
+         ],
+         [
+          -64.5,
+          8.2
+         ],
+         [
+          -63.5,
+          8.3
+         ],
+         [
+          -62.5,
+          8.5
+         ],
+         [
+          -61.8,
+          8.6
+         ]
+        ]
+       }
+      }
+     ]
+    },
+    "note": "schematic line of the Orinoco heavy-oil belt (Faja del Orinoco) north of the river"
+   }
+  ],
+  "labels": [
+   {
+    "id": "ve",
+    "lonlat": [
+     -66,
+     4
+    ],
+    "text": "Venezuela",
+    "cls": "tag",
+    "in": "s04@answer",
+    "out": "s05"
+   },
+   {
+    "id": "sa",
+    "lonlat": [
+     46,
+     20
+    ],
+    "text": "Saudi Arabia · 2nd",
+    "cls": "tag",
+    "in": "s05@saudi",
+    "out": "s06"
+   },
+   {
+    "id": "belt",
+    "lonlat": [
+     -65,
+     10.4
+    ],
+    "text": "Orinoco Belt",
+    "cls": "tag",
+    "in": "s06@strip",
+    "out": "s07"
+   }
+  ],
+  "pins": [
+   {
+    "id": "caracas",
+    "lonlat": [
+     -66.9,
+     10.5
+    ],
+    "label": "Caracas",
+    "qid": "Q1533",
+    "side": "left"
+   }
+  ],
+  "scalebar": null,
+  "cams": {
+   "start": [
+    0.5,
+    [
+     10,
+     25
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     12,
+     25
+    ]
+   ],
+   "s04": [
+    1.6,
+    [
+     -66,
+     7
+    ]
+   ],
+   "s04b": [
+    1.65,
+    [
+     -65.5,
+     7.3
+    ]
+   ],
+   "s05": [
+    0.5,
+    [
+     -10,
+     22
+    ]
+   ],
+   "s05b": [
+    0.51,
+    [
+     -9,
+     22
+    ]
+   ],
+   "s06": [
+    2.2,
+    [
+     -64.5,
+     8.5
+    ]
+   ],
+   "s06b": [
+    2.25,
+    [
+     -64.2,
+     8.6
+    ]
+   ],
+   "s07": [
+    1.6,
+    [
+     -66,
+     7
+    ]
+   ],
+   "s07b": [
+    1.65,
+    [
+     -65.5,
+     7.3
+    ]
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s04@earth",
+    "pid": "caracas"
+   }
+  ]
+ },
+ "research": {
+  "topic": "Country with the most proven crude oil reserves: Venezuela — 303.2 billion barrels (OPEC ASB 2025, end-2024), ≈ 19 % of the world's 1,567 billion; Saudi Arabia 267.2 billion second; Iran, Canada, Iraq follow; Russia ≈ 80 billion; nearly all of Venezuela's reserves are extra-heavy crude in the Orinoco Belt; Venezuelan output ≈ 0.9–1.0 million b/d ≈ 1 % of world supply (~103 million b/d)",
+  "myths": [
+   {
+    "myth": "Saudi Arabia has the most oil in the world.",
+    "reality": "Saudi Arabia produces more, but Venezuela holds the most proven reserves — 303 billion barrels against Saudi Arabia's 267 billion (OPEC 2025).",
+    "sources": [
+     "opec_asb",
+     "eia_venezuela",
+     "britannica_orinoco"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Oil Shorts rank producers or retell the Venezuelan collapse; nobody asks the reserves question on a map, shows the bars, draws the belt and splits what is held against what is pumped.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=which+country+has+the+most+oil",
+     "title": "Search: which country has the most oil",
+     "angle": "ranking lists",
+     "misses": "no quiz, no map, no why"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=orinoco+belt",
+     "title": "Search: orinoco belt",
+     "angle": "news explainers",
+     "misses": "no question, long"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if geography",
+     "misses": "no sourced figures"
+    }
+   ]
+  },
+  "sources": {
+   "opec_asb": {
+    "type": "primary",
+    "publisher": "OPEC",
+    "title": "Annual Statistical Bulletin 2025 — proven crude oil reserves (end-2024)",
+    "url": "https://asb.opec.org/",
+    "date": "2026-10-29",
+    "notes": "Venezuela 303.221 billion barrels (world's most); Saudi Arabia 267.2; world total ≈ 1,567 billion"
+   },
+   "eia_venezuela": {
+    "type": "primary",
+    "publisher": "U.S. Energy Information Administration",
+    "title": "Country analysis — Venezuela",
+    "url": "https://www.eia.gov/international/analysis/country/VEN",
+    "date": "2026-10-29",
+    "notes": "holds the world's most proven crude reserves, mostly extra-heavy crude in the Orinoco Belt; production fell to under 1 million b/d from ~3 million in the late 1990s"
+   },
+   "eia_world": {
+    "type": "primary",
+    "publisher": "U.S. Energy Information Administration",
+    "title": "Short-Term Energy Outlook — world liquid fuels production",
+    "url": "https://www.eia.gov/outlooks/steo/",
+    "date": "2026-10-29",
+    "notes": "world petroleum and liquids production ≈ 103 million b/d in 2025 — Venezuela's ~0.9–1.0 million b/d is about 1 %"
+   },
+   "opec_prod": {
+    "type": "primary",
+    "publisher": "OPEC",
+    "title": "Monthly Oil Market Report — crude production by secondary sources",
+    "url": "https://www.opec.org/monthly-oil-market-report.html",
+    "date": "2026-10-29",
+    "notes": "Venezuela crude output ≈ 0.9–1.0 million b/d in 2025"
+   },
+   "reuters_ven": {
+    "type": "reference",
+    "publisher": "Reuters",
+    "title": "Venezuela oil output and exports (2025 coverage)",
+    "url": "https://www.reuters.com/business/energy/",
+    "date": "2026-10-29",
+    "notes": "output around 0.9–1.1 million b/d against ~103 million b/d global liquids supply — roughly 1 %"
+   },
+   "britannica_orinoco": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Orinoco Belt / Venezuela — resources",
+    "url": "https://www.britannica.com/place/Venezuela",
+    "date": "2026-10-29",
+    "notes": "the Orinoco Belt (Faja del Orinoco), a strip north of the lower Orinoco River, holds one of the world's great accumulations of extra-heavy crude and bitumen"
+   },
+   "wiki_reserves": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "List of countries by proven oil reserves",
+    "url": "https://en.wikipedia.org/wiki/List_of_countries_by_proven_oil_reserves",
+    "date": "2026-10-29",
+    "notes": "Venezuela 303 bn, Saudi Arabia 267 bn, Iran 209 bn, Canada 163 bn, Iraq 145 bn; Russia ≈ 80 bn (8th)"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Venezuela holds the most proven crude oil reserves of any country: about 303 billion barrels (OPEC 2025).",
+    "sources": [
+     "opec_asb",
+     "eia_venezuela",
+     "wiki_reserves"
+    ],
+    "vo": [
+     "where is the most oil in the world",
+     "saudi arabia, russia, or venezuela",
+     "venezuela. more than 300 billion barrels of proven oil sit under it, more than any other country on earth"
+    ],
+    "screen": [
+     "Venezuela",
+     "Saudi Arabia",
+     "Russia",
+     "303 BILLION",
+     "barrels of proven oil",
+     "Caracas"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Saudi Arabia is second with about 267 billion barrels; Russia, at roughly 80 billion, is outside the top five.",
+    "sources": [
+     "opec_asb",
+     "wiki_reserves"
+    ],
+    "vo": [
+     "saudi arabia is second with about 267 billion. russia is far down the list"
+    ],
+    "screen": [
+     "Saudi Arabia · 2nd",
+     "Venezuela",
+     "Saudi Arabia",
+     "Iran",
+     "Russia",
+     "303",
+     "267",
+     "209",
+     "80"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Nearly all of Venezuela's reserves are extra-heavy, tar-like crude in the Orinoco Belt, a strip along the lower Orinoco River.",
+    "sources": [
+     "eia_venezuela",
+     "britannica_orinoco"
+    ],
+    "vo": [
+     "nearly all of it lies in the orinoco belt, a strip of heavy, tar-like crude along a single river"
+    ],
+    "screen": [
+     "Orinoco Belt"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "core",
+    "text": "Venezuela produces under 1 million barrels a day — about 1 % of world supply — so most of its reserve stays in the ground.",
+    "sources": [
+     "eia_venezuela",
+     "eia_world",
+     "opec_prod",
+     "reuters_ven"
+    ],
+    "vo": [
+     "yet it pumps barely 1 percent of the world's oil; the richest reserve on earth mostly stays underground"
+    ],
+    "screen": [
+     "303 BILLION",
+     "barrels in the ground",
+     "1 %",
+     "of the world's daily output"
+    ]
+   }
+  ]
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Saudi Arabia is second with about 267 billion. Russia is far down the list.",
+    "cues": {
+     "saudi": "saudi",
+     "billion": "billion",
+     "russia": "russia"
+    }
+   },
+   "direction": "pull right out so Venezuela and Saudi Arabia share one frame; Saudi lights dim with its tag on 'Saudi'; the four-row bar chart grows on 'billion'; a shrug sticker on 'Russia'",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.4,
+   "cam": [
+    0.5,
+    [
+     -10,
+     22
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.51,
+    [
+     -9,
+     22
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "oilbars",
+     "type": "bars",
+     "rows": [
+      [
+       "Venezuela",
+       303,
+       "303 bn"
+      ],
+      [
+       "Saudi Arabia",
+       267,
+       "267 bn"
+      ],
+      [
+       "Iran",
+       209,
+       "209 bn"
+      ],
+      [
+       "Russia",
+       80,
+       "80 bn"
+      ]
+     ],
+     "y": 300,
+     "x": 70,
+     "w": 660,
+     "unit": "",
+     "max_value": 320,
+     "bar_h": 64,
+     "gap": 16
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@saudi",
+     "do": "geo.highlight_in",
+     "stage": "stage_map",
+     "args": {
+      "fid": "682",
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@@billion-0.4",
+     "do": "chart.bars_in",
+     "id": "oilbars",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.3
+     }
+    },
+    {
+     "at": "@@billion+0.5",
+     "do": "sticker_in",
+     "id": "st_oil"
+    },
+    {
+     "at": "@@russia",
+     "do": "sticker_in",
+     "id": "st_shrug"
+    },
+    {
+     "at": "@@russia+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "862",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "oilbars"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.highlight_out",
+     "stage": "stage_map",
+     "args": {
+      "fid": "682",
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_oil"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_shrug"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Nearly all of it lies in the Orinoco Belt, a strip of heavy, tar-like crude along a single river.",
+    "cues": {
+     "orinoco": "orinoco",
+     "strip": "strip",
+     "river": "river"
+    }
+   },
+   "direction": "push deep into eastern Venezuela; from 'Orinoco' the belt line draws itself east along the river; the tag on 'strip'; a tar-drop sticker and a pulse on 'river'",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    2.2,
+    [
+     -64.5,
+     8.5
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    2.25,
+    [
+     -64.2,
+     8.6
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@orinoco",
+     "do": "geo.route_draw",
+     "stage": "stage_map",
+     "until": "@@river",
+     "args": {
+      "rid": "orinoco",
+      "layer": "belt"
+     }
+    },
+    {
+     "at": "@@strip+0.3",
+     "do": "sticker_in",
+     "id": "st_drop"
+    },
+    {
+     "at": "@@river",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "862",
+      "dur": 0.8,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@river+0.2",
+     "do": "sticker_pulse",
+     "id": "st_drop"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_drop"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Yet it pumps barely 1 percent of the world's oil; the richest reserve on Earth mostly stays underground.",
+    "cues": {
+     "pumps": "pumps",
+     "percent": "percent",
+     "underground": "underground"
+    }
+   },
+   "direction": "settle back on the country; the HOLDS / PUMPS split slides in on 'pumps'; the pump sticker on 'percent'; the thinking flag-ball and a last pulse on 'underground'",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.5,
+   "cam": [
+    1.6,
+    [
+     -66,
+     7
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    1.65,
+    [
+     -65.5,
+     7.3
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "holdpump",
+     "type": "split",
+     "left": {
+      "kicker": "303 BILLION",
+      "text": "barrels in the ground"
+     },
+     "right": {
+      "kicker": "1 %",
+      "text": "of the world's daily output"
+     },
+     "label_left": "HOLDS",
+     "label_right": "PUMPS",
+     "y": 310,
+     "h": 540,
+     "x": 60,
+     "w": 620
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@pumps",
+     "do": "chart.split_in",
+     "id": "holdpump"
+    },
+    {
+     "at": "@@percent+0.3",
+     "do": "sticker_in",
+     "id": "st_pump"
+    },
+    {
+     "at": "@@underground",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "862",
+      "dur": 0.8,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@underground",
+     "do": "character_in",
+     "id": "hmm"
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "holdpump"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_pump"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "hmm"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_oil",
+   "type": "sticker",
+   "emoji": "1f6e2",
+   "x": 800,
+   "y": 700,
+   "size": 160,
+   "rot": 8
+  },
+  {
+   "id": "st_shrug",
+   "type": "sticker",
+   "emoji": "1f937",
+   "x": 780,
+   "y": 940,
+   "size": 150,
+   "rot": 8
+  },
+  {
+   "id": "st_drop",
+   "type": "sticker",
+   "emoji": "1f4a7",
+   "x": 300,
+   "y": 620,
+   "size": 190,
+   "rot": -8
+  },
+  {
+   "id": "st_pump",
+   "type": "sticker",
+   "emoji": "26fd",
+   "x": 800,
+   "y": 960,
+   "size": 160,
+   "rot": 8
+  },
+  {
+   "id": "hmm",
+   "type": "character",
+   "flag": "ve",
+   "face": "think",
+   "x": 820,
+   "y": 1180,
+   "size": 220,
+   "rot": 6
+  }
+ ]
+}

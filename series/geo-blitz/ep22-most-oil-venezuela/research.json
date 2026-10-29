@@ -1,0 +1,208 @@
+{
+ "version": 1,
+ "episode": "ep22-most-oil-venezuela",
+ "topic": "Country with the most proven crude oil reserves: Venezuela — 303.2 billion barrels (OPEC ASB 2025, end-2024), ≈ 19 % of the world's 1,567 billion; Saudi Arabia 267.2 billion second; Iran, Canada, Iraq follow; Russia ≈ 80 billion; nearly all of Venezuela's reserves are extra-heavy crude in the Orinoco Belt; Venezuelan output ≈ 0.9–1.0 million b/d ≈ 1 % of world supply (~103 million b/d)",
+ "researched": "2026-10-29",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Saudi Arabia has the most oil in the world.",
+   "reality": "Saudi Arabia produces more, but Venezuela holds the most proven reserves — 303 billion barrels against Saudi Arabia's 267 billion (OPEC 2025).",
+   "sources": [
+    "opec_asb",
+    "eia_venezuela",
+    "britannica_orinoco"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Oil Shorts rank producers or retell the Venezuelan collapse; nobody asks the reserves question on a map, shows the bars, draws the belt and splits what is held against what is pumped.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=which+country+has+the+most+oil",
+    "title": "Search: which country has the most oil",
+    "angle": "ranking lists",
+    "misses": "no quiz, no map, no why"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=orinoco+belt",
+    "title": "Search: orinoco belt",
+    "angle": "news explainers",
+    "misses": "no question, long"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if geography",
+    "misses": "no sourced figures"
+   }
+  ]
+ },
+ "sources": {
+  "opec_asb": {
+   "type": "primary",
+   "publisher": "OPEC",
+   "title": "Annual Statistical Bulletin 2025 — proven crude oil reserves (end-2024)",
+   "url": "https://asb.opec.org/",
+   "date": "2026-10-29",
+   "notes": "Venezuela 303.221 billion barrels (world's most); Saudi Arabia 267.2; world total ≈ 1,567 billion"
+  },
+  "eia_venezuela": {
+   "type": "primary",
+   "publisher": "U.S. Energy Information Administration",
+   "title": "Country analysis — Venezuela",
+   "url": "https://www.eia.gov/international/analysis/country/VEN",
+   "date": "2026-10-29",
+   "notes": "holds the world's most proven crude reserves, mostly extra-heavy crude in the Orinoco Belt; production fell to under 1 million b/d from ~3 million in the late 1990s"
+  },
+  "eia_world": {
+   "type": "primary",
+   "publisher": "U.S. Energy Information Administration",
+   "title": "Short-Term Energy Outlook — world liquid fuels production",
+   "url": "https://www.eia.gov/outlooks/steo/",
+   "date": "2026-10-29",
+   "notes": "world petroleum and liquids production ≈ 103 million b/d in 2025 — Venezuela's ~0.9–1.0 million b/d is about 1 %"
+  },
+  "opec_prod": {
+   "type": "primary",
+   "publisher": "OPEC",
+   "title": "Monthly Oil Market Report — crude production by secondary sources",
+   "url": "https://www.opec.org/monthly-oil-market-report.html",
+   "date": "2026-10-29",
+   "notes": "Venezuela crude output ≈ 0.9–1.0 million b/d in 2025"
+  },
+  "reuters_ven": {
+   "type": "reference",
+   "publisher": "Reuters",
+   "title": "Venezuela oil output and exports (2025 coverage)",
+   "url": "https://www.reuters.com/business/energy/",
+   "date": "2026-10-29",
+   "notes": "output around 0.9–1.1 million b/d against ~103 million b/d global liquids supply — roughly 1 %"
+  },
+  "britannica_orinoco": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Orinoco Belt / Venezuela — resources",
+   "url": "https://www.britannica.com/place/Venezuela",
+   "date": "2026-10-29",
+   "notes": "the Orinoco Belt (Faja del Orinoco), a strip north of the lower Orinoco River, holds one of the world's great accumulations of extra-heavy crude and bitumen"
+  },
+  "wiki_reserves": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "List of countries by proven oil reserves",
+   "url": "https://en.wikipedia.org/wiki/List_of_countries_by_proven_oil_reserves",
+   "date": "2026-10-29",
+   "notes": "Venezuela 303 bn, Saudi Arabia 267 bn, Iran 209 bn, Canada 163 bn, Iraq 145 bn; Russia ≈ 80 bn (8th)"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Venezuela holds the most proven crude oil reserves of any country: about 303 billion barrels (OPEC 2025).",
+   "sources": [
+    "opec_asb",
+    "eia_venezuela",
+    "wiki_reserves"
+   ],
+   "vo": [
+    "where is the most oil in the world",
+    "saudi arabia, russia, or venezuela",
+    "venezuela. more than 300 billion barrels of proven oil sit under it, more than any other country on earth"
+   ],
+   "screen": [
+    "Venezuela",
+    "Saudi Arabia",
+    "Russia",
+    "303 BILLION",
+    "barrels of proven oil",
+    "Caracas"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Saudi Arabia is second with about 267 billion barrels; Russia, at roughly 80 billion, is outside the top five.",
+   "sources": [
+    "opec_asb",
+    "wiki_reserves"
+   ],
+   "vo": [
+    "saudi arabia is second with about 267 billion. russia is far down the list"
+   ],
+   "screen": [
+    "Saudi Arabia · 2nd",
+    "Venezuela",
+    "Saudi Arabia",
+    "Iran",
+    "Russia",
+    "303",
+    "267",
+    "209",
+    "80"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Nearly all of Venezuela's reserves are extra-heavy, tar-like crude in the Orinoco Belt, a strip along the lower Orinoco River.",
+   "sources": [
+    "eia_venezuela",
+    "britannica_orinoco"
+   ],
+   "vo": [
+    "nearly all of it lies in the orinoco belt, a strip of heavy, tar-like crude along a single river"
+   ],
+   "screen": [
+    "Orinoco Belt"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "Venezuela produces under 1 million barrels a day — about 1 % of world supply — so most of its reserve stays in the ground.",
+   "sources": [
+    "eia_venezuela",
+    "eia_world",
+    "opec_prod",
+    "reuters_ven"
+   ],
+   "vo": [
+    "yet it pumps barely 1 percent of the world's oil; the richest reserve on earth mostly stays underground"
+   ],
+   "screen": [
+    "303 BILLION",
+    "barrels in the ground",
+    "1 %",
+    "of the world's daily output"
+   ]
+  }
+ ]
+}
