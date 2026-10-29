@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep17-first-olympic-gold-connolly",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "The first modern Olympic champion was not a Greek and not a runner: a Boston student who quit Harvard, crossed the Atlantic by cargo ship and won the triple jump on day one — shown as a jump against a bus and a drawn sea route.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Who won the FIRST gold medal of the modern Olympics?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Who won the first gold medal of the modern Olympics?",
+   "cues": {
+    "first": "first",
+    "olympics": "olympics"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Greece, France, or United States?",
+   "cues": {
+    "a": "greece",
+    "b": "france",
+    "c": "states"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "The United States. James Connolly, a Boston student, won the triple jump in Athens on 6 April 1896.",
+   "cues": {
+    "answer": "states",
+    "connolly": "connolly",
+    "athens": "athens"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "tight on Athens; the compare blocks rise on 'hopped' — Connolly's jump beside a London bus — the medal sticker on 'metres', the bus sticker and a Greece dim-light on 'bus'",
+   "text": "He hopped, skipped and jumped nearly 14 metres, further than a London bus is long.",
+   "cues": {
+    "hopped": "hopped",
+    "metres": "metres",
+    "bus": "bus"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "pull out to the whole Atlantic; Boston pin and tag on 'harvard'; the sad flag-ball on 'quit'; from 'ship' the freighter route draws east across the ocean to Athens with the ship sticker popping at Boston",
+   "text": "Harvard refused him leave to go, so he quit, and crossed the Atlantic by cargo ship to compete.",
+   "cues": {
+    "harvard": "harvard",
+    "quit": "quit",
+    "ship": "ship"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.5,
+   "direction": "back in on Athens; the 1,500 YEARS card on 'crowned'; the laurel sticker on 'years'; the stadium pin pulses and the happy flag-ball pops on 'dropout'",
+   "text": "No Olympic champion had been crowned for 1,500 years, and the man who ended the wait was a dropout.",
+   "cues": {
+    "crowned": "crowned",
+    "years": "years",
+    "dropout": "dropout"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "Did you know? Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

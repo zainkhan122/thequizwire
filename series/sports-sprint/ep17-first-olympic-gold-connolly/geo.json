@@ -1,0 +1,194 @@
+{
+ "version": 1,
+ "episode": "ep17-first-olympic-gold-connolly",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -110,
+     25,
+     40,
+     55
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "840"
+     ],
+     "cls": "",
+     "note": "United States (answer) — flag lift on reveal",
+     "lift": "flag",
+     "flag": "us"
+    },
+    {
+     "kind": "highlight",
+     "id": "others",
+     "ids": [
+      "300"
+     ],
+     "cls": "dim",
+     "note": "Greece — lit when Athens is named"
+    },
+    {
+     "kind": "route",
+     "id": "voyage",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "crossing",
+        "properties": {
+         "name": "Boston → Naples → Athens, 1896 (schematic)"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           -71.06,
+           42.36
+          ],
+          [
+           -60,
+           41
+          ],
+          [
+           -40,
+           38.5
+          ],
+          [
+           -20,
+           36.5
+          ],
+          [
+           -8,
+           35.9
+          ],
+          [
+           -5.5,
+           35.95
+          ],
+          [
+           0,
+           37.3
+          ],
+          [
+           8,
+           38
+          ],
+          [
+           12,
+           38.5
+          ],
+          [
+           16,
+           37.5
+          ],
+          [
+           20,
+           36.6
+          ],
+          [
+           23.6,
+           37.9
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic route of Connolly's crossing by freighter to Naples and on to Athens"
+    }
+   ],
+   "pins": [
+    {
+     "id": "stadium",
+     "lonlat": [
+      23.74,
+      37.97
+     ],
+     "label": "Panathenaic Stadium",
+     "qid": "Q208811"
+    },
+    {
+     "id": "boston",
+     "lonlat": [
+      -71.06,
+      42.36
+     ],
+     "label": "Boston",
+     "qid": "Q100",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "us",
+     "lonlat": [
+      -100,
+      34
+     ],
+     "text": "United States",
+     "cls": "tag",
+     "in": "s04@answer",
+     "out": "s05"
+    },
+    {
+     "id": "ath",
+     "lonlat": [
+      26,
+      36
+     ],
+     "text": "Athens · 1896",
+     "cls": "tag",
+     "in": "s05+0.2",
+     "out": "s06"
+    },
+    {
+     "id": "bos",
+     "lonlat": [
+      -75,
+      46
+     ],
+     "text": "Boston",
+     "cls": "tag",
+     "in": "s06@harvard",
+     "out": "s07"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -150,
+      0,
+      70,
+      75
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

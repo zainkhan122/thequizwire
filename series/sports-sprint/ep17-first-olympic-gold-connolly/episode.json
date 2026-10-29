@@ -1,0 +1,139 @@
+{
+ "id": "ep17-first-olympic-gold-connolly",
+ "format": "quiz-v3",
+ "series": "sports-sprint",
+ "number": 17,
+ "title": "Who won the FIRST gold medal of the modern Olympics?",
+ "difficulty": "HARD",
+ "seed": 5317,
+ "quiz": {
+  "question": "Who won the FIRST gold medal of the modern Olympics?",
+  "keyword": "FIRST",
+  "options": [
+   "Greece",
+   "France",
+   "United States"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "United States",
+  "answer_sub": "James Connolly · triple jump · Athens 1896",
+  "option_meta": [
+   {
+    "flag": "gr"
+   },
+   {
+    "flag": "fr"
+   },
+   {
+    "flag": "us"
+   }
+  ],
+  "banner": "United States",
+  "banner_sub": "✓  C was right · James Connolly · triple jump · Athens 1896",
+  "outro": {
+   "headline": "CHALLENGE A FRIEND",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Who won the FIRST gold medal of the modern Olympics? 🥇",
+  "premise": "The first modern Olympic champion was a college dropout",
+  "bait": "It was not a Greek, and it was not a runner.",
+  "keywords": [
+   "first olympic gold medal",
+   "olympics first gold medal",
+   "james connolly",
+   "olympic history",
+   "triple jump",
+   "sports quiz",
+   "olympic trivia",
+   "first modern olympics"
+  ],
+  "description": "The first modern Olympic champion was a college dropout. It was not a Greek, and it was not a runner.\n\nSources: International Olympic Committee (olympics.com); Olympedia; Britannica; Harvard Gazette.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nSports Sprint #17",
+  "hashtags": [
+   "#SportsQuiz",
+   "#SportsTrivia",
+   "#thequizwire"
+  ],
+  "tags": [
+   "OlympicHistory",
+   "SportsQuiz"
+  ],
+  "cover_emoji": "🥇",
+  "copy": {
+   "spoilers": [
+    "united states",
+    "usa",
+    "american",
+    "connolly",
+    "boston",
+    "harvard"
+   ],
+   "youtube": {
+    "title": "Who won the first Olympic gold medal of the modern Games? Not a Greek 🥇",
+    "description": "Greece, France or the third one? The first champion of the modern Games was crowned on day one in Athens, in an event most people would not guess, and he had to quit college to get there.\nGuess before the map reveals it, then see how far he jumped against a London bus and the ship route he took to the Games.\nWhich flag did you pick?",
+    "tags": [
+     "#olympichistory",
+     "#sportsquiz",
+     "#firstolympics",
+     "#olympics",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Who won the FIRST gold medal of the modern Olympics? 🥇\nGreece, France or the other one? The first champion in well over a thousand years was crowned on day one in Athens, in an event most people would never guess, by a man who had to quit college to go.\nWhich flag did you pick?",
+    "tags": [
+     "#olympichistory",
+     "#sportsquiz",
+     "#firstolympics",
+     "#olympics",
+     "#sportstrivia"
+    ]
+   },
+   "facebook": {
+    "text": "Who won the first gold medal of the modern Olympics — Greece, France or the United States?\nThe first champion in well over a thousand years had to quit college to get to Athens. Would you have taken that gamble?",
+    "tags": [
+     "#olympichistory",
+     "#sportsquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Who won the FIRST gold medal of the modern Olympics?\nDay one in Athens. Not a Greek, not a runner, and he had to quit college to be there.",
+    "tags": [
+     "#OlympicHistory",
+     "#SportsQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Who won the first gold medal of the modern Olympics — Greece, France or the United States? Day one in Athens: the first champion in well over a thousand years was a college dropout who crossed the Atlantic on a cargo ship, and his event was not a race.",
+    "tags": [
+     "#olympichistory"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "flag-lift",
+  "beats": [
+   "pin",
+   "compare",
+   "route",
+   "label",
+   "second-highlight"
+  ],
+  "cast": "flagball:happy + emoji-set:medal",
+  "music": "bed:pad"
+ },
+ "status": "ready"
+}

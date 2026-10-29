@@ -1,0 +1,194 @@
+{
+ "version": 1,
+ "episode": "ep17-first-olympic-gold-connolly",
+ "topic": "First champion of the modern Olympic Games: James Brendan Connolly (USA), triple jump (hop, step and jump), Panathenaic Stadium, Athens, 6 April 1896, 13.71 m; winners in 1896 received silver medals and an olive branch (retroactively counted as gold); he withdrew from Harvard after being refused leave; travelled by German freighter to Naples; first Olympic champion since the ancient Games ended in the late 4th century AD",
+ "researched": "2026-10-29",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "A Greek runner won the first modern Olympic title.",
+   "reality": "The first final decided in Athens 1896 was the triple jump on the opening day, won by American James Connolly; Spyridon Louis's marathon came on 10 April.",
+   "sources": [
+    "ioc_1896",
+    "olympedia_connolly",
+    "britannica_connolly"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "1896 Shorts retell the marathon or Coubertin; nobody asks who won the very first title, shows the jump against a bus, and draws the freighter route a dropout took to get there.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=olympics+first+gold+medal",
+    "title": "Search: olympics first gold medal",
+    "angle": "country-by-country firsts",
+    "misses": "no map, no story"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=athens+1896+olympics",
+    "title": "Search: athens 1896 olympics",
+    "angle": "documentary clips",
+    "misses": "no quiz, no single fact"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if geography",
+    "misses": "no sport"
+   }
+  ]
+ },
+ "sources": {
+  "ioc_1896": {
+   "type": "primary",
+   "publisher": "International Olympic Committee",
+   "title": "Athens 1896 Olympic Games — results and history",
+   "url": "https://olympics.com/en/olympic-games/athens-1896",
+   "date": "2026-10-29",
+   "notes": "opening day 6 April 1896; James Connolly (USA) first champion of the modern Games in the triple jump; winners received silver medals and olive branches"
+  },
+  "olympedia_connolly": {
+   "type": "primary",
+   "publisher": "Olympedia (OlyMADMen)",
+   "title": "James Connolly — athlete profile",
+   "url": "https://www.olympedia.org/athletes/73111",
+   "date": "2026-10-29",
+   "notes": "triple jump 13.71 m, 6 April 1896, Panathenaic Stadium; left Harvard to compete; also 2nd high jump, 3rd long jump"
+  },
+  "britannica_connolly": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "James Connolly — American athlete and writer",
+   "url": "https://www.britannica.com/biography/James-Connolly-American-athlete",
+   "date": "2026-10-29",
+   "notes": "first Olympic champion of the modern era; Harvard denied leave, he withdrew; travelled by freighter to Naples then train and boat to Athens"
+  },
+  "harvard_gazette": {
+   "type": "reference",
+   "publisher": "Harvard Gazette",
+   "title": "The first modern Olympic champion was a Harvard dropout",
+   "url": "https://news.harvard.edu/gazette/",
+   "date": "2026-10-29",
+   "notes": "Connolly, a South Boston son of Irish immigrants, withdrew from Harvard in 1896 after being refused leave; Harvard later offered an honorary degree, which he declined"
+  },
+  "tfl_bus": {
+   "type": "primary",
+   "publisher": "Transport for London",
+   "title": "New Routemaster — vehicle specification",
+   "url": "https://tfl.gov.uk/",
+   "date": "2026-10-29",
+   "notes": "the New Routemaster double-decker is 11.23 m long; Connolly's 13.71 m exceeds it"
+  },
+  "wiki_ancient": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Ancient Olympic Games",
+   "url": "https://en.wikipedia.org/wiki/Ancient_Olympic_Games",
+   "date": "2026-10-29",
+   "notes": "last recorded ancient Games AD 393 (traditional) — roughly 1,500 years before 1896"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "James Connolly of the United States won the first title of the modern Olympics, the triple jump, in Athens on 6 April 1896.",
+   "sources": [
+    "ioc_1896",
+    "olympedia_connolly",
+    "britannica_connolly"
+   ],
+   "vo": [
+    "who won the first gold medal of the modern olympics",
+    "greece, france, or united states",
+    "the united states. james connolly, a boston student, won the triple jump in athens on 6 april 1896"
+   ],
+   "screen": [
+    "United States",
+    "Greece",
+    "France",
+    "6 APRIL 1896",
+    "triple jump · Panathenaic Stadium",
+    "Athens · 1896",
+    "Panathenaic Stadium"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Connolly's winning triple jump measured 13.71 m — longer than a London double-decker bus (11.23 m).",
+   "sources": [
+    "olympedia_connolly",
+    "tfl_bus",
+    "ioc_1896"
+   ],
+   "vo": [
+    "he hopped, skipped and jumped nearly 14 metres, further than a london bus is long"
+   ],
+   "screen": [
+    "Connolly 1896",
+    "London bus",
+    "13.71 m",
+    "11.23 m"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Harvard refused Connolly leave of absence; he withdrew and travelled to Athens by freighter via Naples.",
+   "sources": [
+    "britannica_connolly",
+    "harvard_gazette",
+    "olympedia_connolly"
+   ],
+   "vo": [
+    "harvard refused him leave to go, so he quit, and crossed the atlantic by cargo ship to compete"
+   ],
+   "screen": [
+    "Boston"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "The ancient Games ended in the late 4th century AD, so 1896 crowned the first Olympic champion in roughly 1,500 years.",
+   "sources": [
+    "wiki_ancient",
+    "ioc_1896"
+   ],
+   "vo": [
+    "no olympic champion had been crowned for 1,500 years, and the man who ended the wait was a dropout"
+   ],
+   "screen": [
+    "1,500 YEARS",
+    "since the last ancient champion"
+   ]
+  }
+ ]
+}

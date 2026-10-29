@@ -1,0 +1,930 @@
+{
+ "id": "ep17-first-olympic-gold-connolly",
+ "series": "sports-sprint",
+ "number": 17,
+ "seed": 5317,
+ "question": "Who won the FIRST gold medal of the modern Olympics?",
+ "keyword": "FIRST",
+ "difficulty": "HARD",
+ "options": [
+  {
+   "text": "Greece",
+   "flag": "gr",
+   "cue": "greece",
+   "lonlat": [
+    22,
+    39
+   ]
+  },
+  {
+   "text": "France",
+   "flag": "fr",
+   "cue": "france",
+   "lonlat": [
+    2,
+    46
+   ]
+  },
+  {
+   "text": "United States",
+   "flag": "us",
+   "cue": "states",
+   "lonlat": [
+    -98,
+    39
+   ]
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "James Connolly · triple jump · Athens 1896",
+ "outro_headline": "CHALLENGE A FRIEND",
+ "cover_emoji": "🥇",
+ "post": {
+  "premise": "The first modern Olympic champion was a college dropout",
+  "bait": "It was not a Greek, and it was not a runner.",
+  "keywords": [
+   "first olympic gold medal",
+   "olympics first gold medal",
+   "james connolly",
+   "olympic history",
+   "triple jump",
+   "sports quiz",
+   "olympic trivia",
+   "first modern olympics"
+  ],
+  "tags": [
+   "OlympicHistory",
+   "SportsQuiz"
+  ],
+  "sources_line": "International Olympic Committee (olympics.com); Olympedia; Britannica; Harvard Gazette",
+  "copy": {
+   "spoilers": [
+    "united states",
+    "usa",
+    "american",
+    "connolly",
+    "boston",
+    "harvard"
+   ],
+   "youtube": {
+    "title": "Who won the first Olympic gold medal of the modern Games? Not a Greek 🥇",
+    "description": "Greece, France or the third one? The first champion of the modern Games was crowned on day one in Athens, in an event most people would not guess, and he had to quit college to get there.\nGuess before the map reveals it, then see how far he jumped against a London bus and the ship route he took to the Games.\nWhich flag did you pick?",
+    "tags": [
+     "#olympichistory",
+     "#sportsquiz",
+     "#firstolympics",
+     "#olympics",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Who won the FIRST gold medal of the modern Olympics? 🥇\nGreece, France or the other one? The first champion in well over a thousand years was crowned on day one in Athens, in an event most people would never guess, by a man who had to quit college to go.\nWhich flag did you pick?",
+    "tags": [
+     "#olympichistory",
+     "#sportsquiz",
+     "#firstolympics",
+     "#olympics",
+     "#sportstrivia"
+    ]
+   },
+   "facebook": {
+    "text": "Who won the first gold medal of the modern Olympics — Greece, France or the United States?\nThe first champion in well over a thousand years had to quit college to get to Athens. Would you have taken that gamble?",
+    "tags": [
+     "#olympichistory",
+     "#sportsquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Who won the FIRST gold medal of the modern Olympics?\nDay one in Athens. Not a Greek, not a runner, and he had to quit college to be there.",
+    "tags": [
+     "#OlympicHistory",
+     "#SportsQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Who won the first gold medal of the modern Olympics — Greece, France or the United States? Day one in Athens: the first champion in well over a thousand years was a college dropout who crossed the Atlantic on a cargo ship, and his event was not a race.",
+    "tags": [
+     "#olympichistory"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "story",
+  "opener": "wide-drift",
+  "reveal": "flag-lift",
+  "beats": [
+   "pin",
+   "compare",
+   "route",
+   "label",
+   "second-highlight"
+  ],
+  "cast": "flagball:happy + emoji-set:medal",
+  "music": "bed:pad",
+  "outro": "CHALLENGE A FRIEND"
+ },
+ "intent": "The first modern Olympic champion was not a Greek and not a runner: a Boston student who quit Harvard, crossed the Atlantic by cargo ship and won the triple jump on day one — shown as a jump against a bus and a drawn sea route.",
+ "voice": {
+  "v01_cues": {
+   "first": "first",
+   "olympics": "olympics"
+  },
+  "v04": {
+   "text": "The United States. James Connolly, a Boston student, won the triple jump in Athens on 6 April 1896.",
+   "cues": {
+    "answer": "states",
+    "connolly": "connolly",
+    "athens": "athens"
+   }
+  },
+  "v05": {
+   "text": "He hopped, skipped and jumped nearly 14 metres, further than a London bus is long.",
+   "cues": {
+    "hopped": "hopped",
+    "metres": "metres",
+    "bus": "bus"
+   }
+  },
+  "v06": {
+   "text": "Harvard refused him leave to go, so he quit, and crossed the Atlantic by cargo ship to compete.",
+   "cues": {
+    "harvard": "harvard",
+    "quit": "quit",
+    "ship": "ship"
+   }
+  },
+  "v07": {
+   "text": "No Olympic champion had been crowned for 1,500 years, and the man who ended the wait was a dropout.",
+   "cues": {
+    "crowned": "crowned",
+    "years": "years",
+    "dropout": "dropout"
+   }
+  },
+  "v08": {
+   "text": "Did you know? Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "6 APRIL 1896",
+   "text": "triple jump · Panathenaic Stadium"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "us",
+   "face": "happy",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "gr",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "geo": {
+  "fit_bbox": [
+   -110,
+   25,
+   40,
+   55
+  ],
+  "far_bbox": [
+   -150,
+   0,
+   70,
+   75
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "840"
+  ],
+  "highlight_note": "United States (answer) — flag lift on reveal",
+  "lift": "flag",
+  "lift_flag": "us",
+  "extra_layers": [
+   {
+    "kind": "highlight",
+    "id": "others",
+    "ids": [
+     "300"
+    ],
+    "cls": "dim",
+    "note": "Greece — lit when Athens is named"
+   },
+   {
+    "kind": "route",
+    "id": "voyage",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "crossing",
+       "properties": {
+        "name": "Boston → Naples → Athens, 1896 (schematic)"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -71.06,
+          42.36
+         ],
+         [
+          -60,
+          41
+         ],
+         [
+          -40,
+          38.5
+         ],
+         [
+          -20,
+          36.5
+         ],
+         [
+          -8,
+          35.9
+         ],
+         [
+          -5.5,
+          35.95
+         ],
+         [
+          0,
+          37.3
+         ],
+         [
+          8,
+          38
+         ],
+         [
+          12,
+          38.5
+         ],
+         [
+          16,
+          37.5
+         ],
+         [
+          20,
+          36.6
+         ],
+         [
+          23.6,
+          37.9
+         ]
+        ]
+       }
+      }
+     ]
+    },
+    "note": "schematic route of Connolly's crossing by freighter to Naples and on to Athens"
+   }
+  ],
+  "labels": [
+   {
+    "id": "us",
+    "lonlat": [
+     -100,
+     34
+    ],
+    "text": "United States",
+    "cls": "tag",
+    "in": "s04@answer",
+    "out": "s05"
+   },
+   {
+    "id": "ath",
+    "lonlat": [
+     26,
+     36
+    ],
+    "text": "Athens · 1896",
+    "cls": "tag",
+    "in": "s05+0.2",
+    "out": "s06"
+   },
+   {
+    "id": "bos",
+    "lonlat": [
+     -75,
+     46
+    ],
+    "text": "Boston",
+    "cls": "tag",
+    "in": "s06@harvard",
+    "out": "s07"
+   }
+  ],
+  "pins": [
+   {
+    "id": "stadium",
+    "lonlat": [
+     23.74,
+     37.97
+    ],
+    "label": "Panathenaic Stadium",
+    "qid": "Q208811"
+   },
+   {
+    "id": "boston",
+    "lonlat": [
+     -71.06,
+     42.36
+    ],
+    "label": "Boston",
+    "qid": "Q100",
+    "side": "left"
+   }
+  ],
+  "scalebar": null,
+  "cams": {
+   "start": [
+    0.5,
+    [
+     -30,
+     40
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     -28,
+     40
+    ]
+   ],
+   "s04": [
+    1.3,
+    [
+     -95,
+     38
+    ]
+   ],
+   "s04b": [
+    1.33,
+    [
+     -94.5,
+     38.3
+    ]
+   ],
+   "s05": [
+    2.2,
+    [
+     23.7,
+     38
+    ]
+   ],
+   "s05b": [
+    2.25,
+    [
+     23.9,
+     38.1
+    ]
+   ],
+   "s06": [
+    0.75,
+    [
+     -24,
+     40
+    ]
+   ],
+   "s06b": [
+    0.76,
+    [
+     -23,
+     40.2
+    ]
+   ],
+   "s07": [
+    2.0,
+    [
+     23.7,
+     38
+    ]
+   ],
+   "s07b": [
+    2.05,
+    [
+     23.9,
+     38.2
+    ]
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s04@athens",
+    "pid": "stadium"
+   }
+  ]
+ },
+ "research": {
+  "topic": "First champion of the modern Olympic Games: James Brendan Connolly (USA), triple jump (hop, step and jump), Panathenaic Stadium, Athens, 6 April 1896, 13.71 m; winners in 1896 received silver medals and an olive branch (retroactively counted as gold); he withdrew from Harvard after being refused leave; travelled by German freighter to Naples; first Olympic champion since the ancient Games ended in the late 4th century AD",
+  "myths": [
+   {
+    "myth": "A Greek runner won the first modern Olympic title.",
+    "reality": "The first final decided in Athens 1896 was the triple jump on the opening day, won by American James Connolly; Spyridon Louis's marathon came on 10 April.",
+    "sources": [
+     "ioc_1896",
+     "olympedia_connolly",
+     "britannica_connolly"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "1896 Shorts retell the marathon or Coubertin; nobody asks who won the very first title, shows the jump against a bus, and draws the freighter route a dropout took to get there.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=olympics+first+gold+medal",
+     "title": "Search: olympics first gold medal",
+     "angle": "country-by-country firsts",
+     "misses": "no map, no story"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=athens+1896+olympics",
+     "title": "Search: athens 1896 olympics",
+     "angle": "documentary clips",
+     "misses": "no quiz, no single fact"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if geography",
+     "misses": "no sport"
+    }
+   ]
+  },
+  "sources": {
+   "ioc_1896": {
+    "type": "primary",
+    "publisher": "International Olympic Committee",
+    "title": "Athens 1896 Olympic Games — results and history",
+    "url": "https://olympics.com/en/olympic-games/athens-1896",
+    "date": "2026-10-29",
+    "notes": "opening day 6 April 1896; James Connolly (USA) first champion of the modern Games in the triple jump; winners received silver medals and olive branches"
+   },
+   "olympedia_connolly": {
+    "type": "primary",
+    "publisher": "Olympedia (OlyMADMen)",
+    "title": "James Connolly — athlete profile",
+    "url": "https://www.olympedia.org/athletes/73111",
+    "date": "2026-10-29",
+    "notes": "triple jump 13.71 m, 6 April 1896, Panathenaic Stadium; left Harvard to compete; also 2nd high jump, 3rd long jump"
+   },
+   "britannica_connolly": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "James Connolly — American athlete and writer",
+    "url": "https://www.britannica.com/biography/James-Connolly-American-athlete",
+    "date": "2026-10-29",
+    "notes": "first Olympic champion of the modern era; Harvard denied leave, he withdrew; travelled by freighter to Naples then train and boat to Athens"
+   },
+   "harvard_gazette": {
+    "type": "reference",
+    "publisher": "Harvard Gazette",
+    "title": "The first modern Olympic champion was a Harvard dropout",
+    "url": "https://news.harvard.edu/gazette/",
+    "date": "2026-10-29",
+    "notes": "Connolly, a South Boston son of Irish immigrants, withdrew from Harvard in 1896 after being refused leave; Harvard later offered an honorary degree, which he declined"
+   },
+   "tfl_bus": {
+    "type": "primary",
+    "publisher": "Transport for London",
+    "title": "New Routemaster — vehicle specification",
+    "url": "https://tfl.gov.uk/",
+    "date": "2026-10-29",
+    "notes": "the New Routemaster double-decker is 11.23 m long; Connolly's 13.71 m exceeds it"
+   },
+   "wiki_ancient": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Ancient Olympic Games",
+    "url": "https://en.wikipedia.org/wiki/Ancient_Olympic_Games",
+    "date": "2026-10-29",
+    "notes": "last recorded ancient Games AD 393 (traditional) — roughly 1,500 years before 1896"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "James Connolly of the United States won the first title of the modern Olympics, the triple jump, in Athens on 6 April 1896.",
+    "sources": [
+     "ioc_1896",
+     "olympedia_connolly",
+     "britannica_connolly"
+    ],
+    "vo": [
+     "who won the first gold medal of the modern olympics",
+     "greece, france, or united states",
+     "the united states. james connolly, a boston student, won the triple jump in athens on 6 april 1896"
+    ],
+    "screen": [
+     "United States",
+     "Greece",
+     "France",
+     "6 APRIL 1896",
+     "triple jump · Panathenaic Stadium",
+     "Athens · 1896",
+     "Panathenaic Stadium"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Connolly's winning triple jump measured 13.71 m — longer than a London double-decker bus (11.23 m).",
+    "sources": [
+     "olympedia_connolly",
+     "tfl_bus",
+     "ioc_1896"
+    ],
+    "vo": [
+     "he hopped, skipped and jumped nearly 14 metres, further than a london bus is long"
+    ],
+    "screen": [
+     "Connolly 1896",
+     "London bus",
+     "13.71 m",
+     "11.23 m"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Harvard refused Connolly leave of absence; he withdrew and travelled to Athens by freighter via Naples.",
+    "sources": [
+     "britannica_connolly",
+     "harvard_gazette",
+     "olympedia_connolly"
+    ],
+    "vo": [
+     "harvard refused him leave to go, so he quit, and crossed the atlantic by cargo ship to compete"
+    ],
+    "screen": [
+     "Boston"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "The ancient Games ended in the late 4th century AD, so 1896 crowned the first Olympic champion in roughly 1,500 years.",
+    "sources": [
+     "wiki_ancient",
+     "ioc_1896"
+    ],
+    "vo": [
+     "no olympic champion had been crowned for 1,500 years, and the man who ended the wait was a dropout"
+    ],
+    "screen": [
+     "1,500 YEARS",
+     "since the last ancient champion"
+    ]
+   }
+  ]
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "He hopped, skipped and jumped nearly 14 metres, further than a London bus is long.",
+    "cues": {
+     "hopped": "hopped",
+     "metres": "metres",
+     "bus": "bus"
+    }
+   },
+   "direction": "tight on Athens; the compare blocks rise on 'hopped' — Connolly's jump beside a London bus — the medal sticker on 'metres', the bus sticker and a Greece dim-light on 'bus'",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    2.2,
+    [
+     23.7,
+     38
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    2.25,
+    [
+     23.9,
+     38.1
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "jump",
+     "type": "compare",
+     "items": [
+      [
+       "Connolly 1896",
+       13.71,
+       "13.71 m"
+      ],
+      [
+       "London bus",
+       11.23,
+       "11.23 m"
+      ]
+     ],
+     "y": 380,
+     "x": 90,
+     "w": 900,
+     "max_h": 520
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@hopped",
+     "do": "chart.compare_in",
+     "id": "jump",
+     "args": {
+      "dur": 0.8,
+      "stagger": 0.3
+     }
+    },
+    {
+     "at": "@@metres",
+     "do": "sticker_in",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@metres+0.4",
+     "do": "sticker_pulse",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@bus",
+     "do": "sticker_in",
+     "id": "st_bus"
+    },
+    {
+     "at": "@@bus+0.2",
+     "do": "geo.highlight_in",
+     "stage": "stage_map",
+     "args": {
+      "fid": "300",
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "jump"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_medal"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_bus"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.highlight_out",
+     "stage": "stage_map",
+     "args": {
+      "fid": "300",
+      "layer": "others"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Harvard refused him leave to go, so he quit, and crossed the Atlantic by cargo ship to compete.",
+    "cues": {
+     "harvard": "harvard",
+     "quit": "quit",
+     "ship": "ship"
+    }
+   },
+   "direction": "pull out to the whole Atlantic; Boston pin and tag on 'harvard'; the sad flag-ball on 'quit'; from 'ship' the freighter route draws east across the ocean to Athens with the ship sticker popping at Boston",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.4,
+   "cam": [
+    0.75,
+    [
+     -24,
+     40
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.76,
+    [
+     -23,
+     40.2
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@harvard",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "boston"
+     }
+    },
+    {
+     "at": "@@quit",
+     "do": "character_in",
+     "id": "sad"
+    },
+    {
+     "at": "@@ship-0.2",
+     "do": "sticker_in",
+     "id": "st_ship"
+    },
+    {
+     "at": "@@ship",
+     "do": "geo.route_draw",
+     "stage": "stage_map",
+     "until": "@.end-0.2",
+     "args": {
+      "rid": "crossing",
+      "layer": "voyage"
+     }
+    },
+    {
+     "at": "@@ship+0.8",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "840",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "sad"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_ship"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "boston"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "No Olympic champion had been crowned for 1,500 years, and the man who ended the wait was a dropout.",
+    "cues": {
+     "crowned": "crowned",
+     "years": "years",
+     "dropout": "dropout"
+    }
+   },
+   "card": {
+    "kicker": "1,500 YEARS",
+    "text": "since the last ancient champion"
+   },
+   "card_at": null,
+   "direction": "back in on Athens; the 1,500 YEARS card on 'crowned'; the laurel sticker on 'years'; the stadium pin pulses and the happy flag-ball pops on 'dropout'",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.5,
+   "cam": [
+    2.0,
+    [
+     23.7,
+     38
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    2.05,
+    [
+     23.9,
+     38.2
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@crowned",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@years",
+     "do": "sticker_in",
+     "id": "st_laurel"
+    },
+    {
+     "at": "@@years+0.4",
+     "do": "sticker_pulse",
+     "id": "st_laurel"
+    },
+    {
+     "at": "@@dropout",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "840",
+      "dur": 0.8,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@dropout",
+     "do": "character_in",
+     "id": "happy"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_laurel"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "happy"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_medal",
+   "type": "sticker",
+   "emoji": "1f947",
+   "x": 300,
+   "y": 620,
+   "size": 200,
+   "rot": -8
+  },
+  {
+   "id": "st_bus",
+   "type": "sticker",
+   "emoji": "1f68c",
+   "x": 760,
+   "y": 560,
+   "size": 170,
+   "rot": 8
+  },
+  {
+   "id": "st_ship",
+   "type": "sticker",
+   "emoji": "1f6a2",
+   "x": 300,
+   "y": 900,
+   "size": 150,
+   "rot": 0
+  },
+  {
+   "id": "st_laurel",
+   "type": "sticker",
+   "emoji": "1f3c5",
+   "x": 760,
+   "y": 560,
+   "size": 170,
+   "rot": 8
+  },
+  {
+   "id": "sad",
+   "type": "character",
+   "flag": "us",
+   "face": "sad",
+   "x": 820,
+   "y": 1180,
+   "size": 220,
+   "rot": 6
+  },
+  {
+   "id": "happy",
+   "type": "character",
+   "flag": "us",
+   "face": "happy",
+   "x": 820,
+   "y": 1180,
+   "size": 220,
+   "rot": 6
+  }
+ ]
+}
