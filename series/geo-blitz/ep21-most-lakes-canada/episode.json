@@ -1,0 +1,137 @@
+{
+ "id": "ep21-most-lakes-canada",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 21,
+ "title": "Where are MOST of the world's lakes?",
+ "difficulty": "MEDIUM",
+ "seed": 4421,
+ "quiz": {
+  "question": "Where are MOST of the world's lakes?",
+  "keyword": "MOST",
+  "options": [
+   "Russia",
+   "Finland",
+   "Canada"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Canada",
+  "answer_sub": "≈ 880,000 lakes · 62 % of the world's",
+  "option_meta": [
+   {
+    "flag": "ru"
+   },
+   {
+    "flag": "fi"
+   },
+   {
+    "flag": "ca"
+   }
+  ],
+  "banner": "Canada",
+  "banner_sub": "✓  C was right · ≈ 880,000 lakes · 62 % of the world's",
+  "outro": {
+   "headline": "1 FOR 1?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Where are MOST of the world's lakes? 🛶",
+  "premise": "One country holds more lakes than the rest of the planet",
+  "bait": "It is not Finland, the land of a thousand lakes.",
+  "keywords": [
+   "country with the most lakes",
+   "most lakes in the world",
+   "how many lakes in canada",
+   "geography quiz",
+   "great bear lake",
+   "great slave lake",
+   "world map quiz",
+   "ice age"
+  ],
+  "description": "One country holds more lakes than the rest of the planet. It is not Finland, the land of a thousand lakes.\n\nSources: Messager et al. 2016 (HydroLAKES, Nature Communications); Natural Resources Canada; Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #21",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "MostLakes",
+   "GeographyQuiz"
+  ],
+  "cover_emoji": "🛶",
+  "copy": {
+   "spoilers": [
+    "canada",
+    "canadian",
+    "canadians",
+    "great bear",
+    "great slave"
+   ],
+   "youtube": {
+    "title": "Most lakes in the world — where are they? Not Finland 🛶",
+    "description": "Russia, Finland or the third one? One country holds more lakes than every other nation on Earth combined, and the reason is a vanished sheet of ice.\nGuess before the map fills, then watch the bars grow, see the ice-age why, and take a canoe ride between two giant northern lakes.\nWhich one did you pick? Tell us below.",
+    "tags": [
+     "#mostlakes",
+     "#geographyquiz",
+     "#worldmap",
+     "#iceage",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Where are MOST of the world's lakes? 🛶\nRussia, Finland or the other one? One nation holds more than every other country combined, close to 900,000 of them, and the reason is a vanished sheet of ice.\nWhich did you pick?",
+    "tags": [
+     "#mostlakes",
+     "#geographyquiz",
+     "#worldmap",
+     "#lakelife",
+     "#travelfacts"
+    ]
+   },
+   "facebook": {
+    "text": "Where are most of the world's lakes — Russia, Finland or Canada?\nOne of them holds more lakes than the rest of the world combined. How many of them have you actually swum in?",
+    "tags": [
+     "#mostlakes",
+     "#geographyquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Where are MOST of the world's lakes?\nOne nation holds more lakes than the rest of the planet combined. Not Finland.",
+    "tags": [
+     "#MostLakes",
+     "#GeographyQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Where are most of the world's lakes — Russia, Finland or Canada? One of them holds more lakes than the rest of the world combined, thanks to an ice sheet that scraped the land bare, and two of its giants sit where almost nobody lives.",
+    "tags": [
+     "#mostlakes"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "bars",
+   "pin",
+   "travel",
+   "label"
+  ],
+  "cast": "flagball:wow + emoji-set:water",
+  "music": "bed:bright"
+ },
+ "status": "ready"
+}

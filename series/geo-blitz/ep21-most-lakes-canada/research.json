@@ -1,0 +1,186 @@
+{
+ "version": 1,
+ "episode": "ep21-most-lakes-canada",
+ "topic": "Country with the most lakes: Canada — ≈ 879,800 lakes above 0.1 sq km (HydroLAKES, Messager et al. 2016), about 62 % of the world's 1.42 million lakes of that size; Russia ≈ 201,200 second, USA ≈ 102,500; cause: Pleistocene glaciation; Great Bear (8th greatest) and Great Slave (10th greatest, deepest in North America) in the Northwest Territories",
+ "researched": "2026-10-29",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Finland, the land of a thousand lakes, has the most lakes.",
+   "reality": "Finland has ~188,000 lakes of all sizes but Canada has about 880,000 lakes above the sailing-size threshold — more than every other country combined by that count.",
+   "sources": [
+    "hydrolakes",
+    "nrcan_lakes",
+    "wiki_lakes"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Lake Shorts are 'top 10 greatest lakes' lists; nobody asks the count as a question, shows the bars, explains the ice, and rides between two lakes almost nobody has seen.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=country+with+the+most+lakes",
+    "title": "Search: country with the most lakes",
+    "angle": "list videos",
+    "misses": "no quiz, no map, no why"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=great+bear+lake",
+    "title": "Search: great bear lake",
+    "angle": "fishing vlogs",
+    "misses": "no scale, no comparison"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if geography",
+    "misses": "no sourced counts"
+   }
+  ]
+ },
+ "sources": {
+  "hydrolakes": {
+   "type": "scholarly",
+   "publisher": "Nature Communications",
+   "title": "Messager et al. 2016 — Estimating the volume and age of water stored in global lakes using a geo-statistical approach (HydroLAKES)",
+   "url": "https://www.nature.com/articles/ncomms13603",
+   "date": "2026-10-29",
+   "notes": "1.42 million lakes above 0.1 sq km worldwide; Canada ≈ 879,800 (≈ 62 %), Russia ≈ 201,200, USA ≈ 102,500"
+  },
+  "nrcan_lakes": {
+   "type": "primary",
+   "publisher": "Natural Resources Canada / Statistics Canada",
+   "title": "Canada's lakes and freshwater",
+   "url": "https://natural-resources.canada.ca/",
+   "date": "2026-10-29",
+   "notes": "Canada has more lake surface than any other country; nearly 9 % of its territory is fresh water; Great Bear and Great Slave are its two greatest lakes"
+  },
+  "wiki_lakes": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "List of countries by number of lakes",
+   "url": "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_lakes",
+   "date": "2026-10-29",
+   "notes": "HydroLAKES counts: Canada 879,800; Russia 201,200; USA 102,500; Finland ~56,000 above 0.1 sq km"
+  },
+  "britannica_gbl": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Great Bear Lake / Great Slave Lake",
+   "url": "https://www.britannica.com/place/Great-Bear-Lake",
+   "date": "2026-10-29",
+   "notes": "Great Bear Lake 31,328 sq km, greatest entirely within Canada; Great Slave Lake 28,568 sq km, deepest in North America (614 m); both in the Northwest Territories"
+  },
+  "usgs_glaciation": {
+   "type": "primary",
+   "publisher": "U.S. Geological Survey",
+   "title": "Glaciers and glacial landforms — origin of lake basins",
+   "url": "https://www.usgs.gov/",
+   "date": "2026-10-29",
+   "notes": "the Laurentide ice sheet covered nearly all of Canada; glacial scour and moraine damming created most of the lakes of the Canadian Shield"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Canada has the most lakes of any country: about 880,000 lakes above 0.1 sq km, more than the rest of the world combined (~62 % of 1.42 million).",
+   "sources": [
+    "hydrolakes",
+    "wiki_lakes",
+    "nrcan_lakes"
+   ],
+   "vo": [
+    "where are most of the world's lakes",
+    "russia, finland, or canada",
+    "canada. count every lake you could sail on, and canada holds more than the rest of the world combined"
+   ],
+   "screen": [
+    "Canada",
+    "Russia",
+    "Finland",
+    "MOST ON EARTH",
+    "more than the rest combined"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Canada ≈ 879,800 lakes; Russia ≈ 201,200 (second); USA ≈ 102,500; Finland far fewer at that size threshold.",
+   "sources": [
+    "hydrolakes",
+    "wiki_lakes"
+   ],
+   "vo": [
+    "nearly 880,000 lakes. russia, in second, has about 200,000. finland is not close"
+   ],
+   "screen": [
+    "Russia · 2nd",
+    "Canada",
+    "Russia",
+    "United States",
+    "879,800",
+    "201,200",
+    "102,500"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "The lakes are a legacy of the last ice age: the Laurentide ice sheet scoured the Canadian Shield and meltwater filled the hollows.",
+   "sources": [
+    "usgs_glaciation",
+    "nrcan_lakes",
+    "britannica_gbl"
+   ],
+   "vo": [
+    "why? ice. the last ice age scraped the land bare, and the meltwater filled every hollow it left"
+   ],
+   "screen": [
+    "ice age · 10,000 yrs ago"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "Great Bear Lake and Great Slave Lake, in the Northwest Territories, are among the ten greatest lakes on Earth.",
+   "sources": [
+    "britannica_gbl",
+    "nrcan_lakes"
+   ],
+   "vo": [
+    "great bear and great slave, far north, are giants, and most canadians have never seen them"
+   ],
+   "screen": [
+    "Great Bear Lake",
+    "Great Slave Lake"
+   ]
+  }
+ ]
+}
