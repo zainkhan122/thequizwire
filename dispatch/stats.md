@@ -1,4 +1,4 @@
-# Channel stats — 2026-10-29T07:12Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
+# Channel stats — 2026-10-29T13:53Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
 
 ## Per series, all channels (7-day movement — what is trending for us)
 - geo-blitz: 19 posts · +2800 in 7 d · 9581 total
@@ -11,8 +11,8 @@ last 24 h:
 - ep15-first-davis-cup-boston (sports-sprint): +474 · 542 total
 - ep06-most-stroke-deaths-china (body-brain): +310 · 310 total
 - ep12-polar-bears-penguins (wild-files): +240 · 686 total
-- ep19-coldest-inhabited-oymyakon (geo-blitz): +228 · 921 total
 - ep16-most-olympics-hosted-usa (sports-sprint): +95 · 95 total
+- ep19-coldest-inhabited-oymyakon (geo-blitz): +4 · 921 total
 series (7 d): geo-blitz +2786 (10) · sports-sprint +2276 (8) · body-brain +1363 (3) · wild-files +686 (6)
 hours (first-24 h by publish hour): 12:00 n=1 med 0 · 19:00 n=2 med 683.0
 → slots: not enough first-24 h data (3/8) — researched defaults in use
@@ -43,7 +43,7 @@ hours (first-24 h by publish hour): 10:00 n=1 med 0 · 19:00 n=2 med 0.0
 | ep06-most-stroke-deaths-china | youtube | Wed 12:00 | views | 310 | 310 | 310 | None | 12 | 0 |
 | ep06-most-stroke-deaths-china | threads | Wed 10:00 | views | 3 | 3 | 3 | None | 0 | 0 |
 | ep19-coldest-inhabited-oymyakon | threads | Tue 19:00 | views | 0 | 0 | 0 | 0 | 0 | 0 |
-| ep19-coldest-inhabited-oymyakon | youtube | Tue 19:00 | views | 921 | 228 | 921 | 920 | 23 | 0 |
+| ep19-coldest-inhabited-oymyakon | youtube | Tue 19:00 | views | 921 | 4 | 921 | 920 | 23 | 0 |
 | ep15-first-davis-cup-boston | youtube | Tue 12:00 | views | 542 | 474 | 542 | 0 | 14 | 0 |
 | ep15-first-davis-cup-boston | threads | Tue 10:00 | views | 0 | 0 | 0 | 0 | 0 | 0 |
 | ep12-polar-bears-penguins | threads | Mon 19:00 | views | 0 | 0 | 0 | 0 | 0 | 0 |
