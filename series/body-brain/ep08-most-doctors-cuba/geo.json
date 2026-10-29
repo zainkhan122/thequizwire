@@ -1,0 +1,103 @@
+{
+ "version": 1,
+ "episode": "ep08-most-doctors-cuba",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -90,
+     15,
+     -70,
+     28
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "192"
+     ],
+     "cls": "",
+     "note": "Cuba (answer) — fill pulse on reveal"
+    }
+   ],
+   "pins": [
+    {
+     "id": "havana",
+     "lonlat": [
+      -82.36,
+      23.14
+     ],
+     "label": "Havana",
+     "qid": "Q1563",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "cu",
+     "lonlat": [
+      -78,
+      18.5
+     ],
+     "text": "Cuba · 9.5 per 1,000",
+     "cls": "tag",
+     "in": "s04@answer",
+     "out": "s05"
+    },
+    {
+     "id": "isl",
+     "lonlat": [
+      -74,
+      24.5
+     ],
+     "text": "11 million people",
+     "cls": "tag",
+     "in": "s06@million",
+     "out": "s06.end"
+    },
+    {
+     "id": "abr",
+     "lonlat": [
+      -70,
+      13
+     ],
+     "text": "doctors in 50+ countries",
+     "cls": "tag",
+     "in": "s07@countries",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "night",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -130,
+      -10,
+      60,
+      65
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

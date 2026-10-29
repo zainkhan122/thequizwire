@@ -1,0 +1,642 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "9.5 PER 1,000",
+   "text": "doctors for every thousand people"
+  },
+  {
+   "id": "docbars",
+   "type": "bars",
+   "rows": [
+    [
+     "Cuba",
+     9.5,
+     "9.5"
+    ],
+    [
+     "Germany",
+     4.5,
+     "4.5"
+    ],
+    [
+     "United States",
+     3.7,
+     "3.7"
+    ]
+   ],
+   "y": 300,
+   "x": 70,
+   "w": 660,
+   "unit": "per 1,000",
+   "max_value": 10,
+   "bar_h": 64,
+   "gap": 16
+  },
+  {
+   "id": "docs",
+   "type": "counter",
+   "start": 106131,
+   "end": 75364,
+   "y": 330,
+   "label": "doctors on the island · 2021 → 2024",
+   "fmt": "int",
+   "size": 170
+  },
+  {
+   "id": "f4",
+   "type": "fact",
+   "kicker": "37,000 ABROAD",
+   "text": "doctors posted to other countries"
+  },
+  {
+   "id": "hmm",
+   "type": "character",
+   "flag": "us",
+   "face": "think",
+   "x": 820,
+   "y": 1180,
+   "size": 220,
+   "rot": 6
+  },
+  {
+   "id": "st_steth",
+   "type": "sticker",
+   "emoji": "1fa7a",
+   "x": 300,
+   "y": 620,
+   "size": 190,
+   "rot": -8
+  },
+  {
+   "id": "st_island",
+   "type": "sticker",
+   "emoji": "1f3dd",
+   "x": 780,
+   "y": 560,
+   "size": 160,
+   "rot": 8
+  },
+  {
+   "id": "st_exit",
+   "type": "sticker",
+   "emoji": "1f6aa",
+   "x": 780,
+   "y": 560,
+   "size": 160,
+   "rot": 8
+  },
+  {
+   "id": "st_plane",
+   "type": "sticker",
+   "emoji": "2708",
+   "x": 300,
+   "y": 620,
+   "size": 190,
+   "rot": -8
+  },
+  {
+   "id": "st_steth2",
+   "type": "sticker",
+   "emoji": "1fa7a",
+   "x": 780,
+   "y": 560,
+   "size": 150,
+   "rot": 10
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  },
+  {
+   "id": "cha",
+   "type": "character",
+   "flag": "cu",
+   "face": "happy",
+   "x": 230,
+   "y": 820,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "chb",
+   "type": "character",
+   "flag": "us",
+   "face": "think",
+   "x": 850,
+   "y": 1000,
+   "size": 200,
+   "rot": 8
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     -40,
+     30
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     -38,
+     30
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 2.0,
+    "lonlat": [
+     -79,
+     21.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 2.05,
+    "lonlat": [
+     -78.6,
+     21.7
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "192",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s04@answer",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "cu"
+   }
+  },
+  {
+   "at": "s05",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "cu"
+   }
+  },
+  {
+   "at": "s06@million",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "isl"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "isl"
+   }
+  },
+  {
+   "at": "s07@countries",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "abr"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "abr"
+   }
+  },
+  {
+   "at": "s04+3.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "192",
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     -40,
+     32
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 0.51,
+    "lonlat": [
+     -39,
+     32
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@germany+0.2",
+   "do": "chart.bars_in",
+   "id": "docbars",
+   "args": {
+    "dur": 0.9,
+    "stagger": 0.3
+   }
+  },
+  {
+   "at": "s05@germany+0.9",
+   "do": "sticker_in",
+   "id": "st_steth"
+  },
+  {
+   "at": "s05@states",
+   "do": "character_in",
+   "id": "hmm"
+  },
+  {
+   "at": "s05@hospitals+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "192",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05@states+0.4",
+   "do": "sticker_pulse",
+   "id": "st_steth"
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "docbars"
+  },
+  {
+   "at": "s05.end",
+   "do": "character_out",
+   "id": "hmm"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_steth"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 1.8,
+    "lonlat": [
+     -78,
+     21
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 1.83,
+    "lonlat": [
+     -77.6,
+     21.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@peak",
+   "do": "chart.counter_run",
+   "id": "docs",
+   "until": "s06@left+0.5",
+   "args": {
+    "ease": "power1.in"
+   }
+  },
+  {
+   "at": "s06@peak+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "192",
+    "dur": 0.6,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06@million",
+   "do": "sticker_in",
+   "id": "st_island"
+  },
+  {
+   "at": "s06@million+0.4",
+   "do": "sticker_pulse",
+   "id": "st_island"
+  },
+  {
+   "at": "s06@left",
+   "do": "sticker_out",
+   "id": "st_island"
+  },
+  {
+   "at": "s06@left+0.1",
+   "do": "sticker_in",
+   "id": "st_exit"
+  },
+  {
+   "at": "s06@left+0.5",
+   "do": "sticker_pulse",
+   "id": "st_exit"
+  },
+  {
+   "at": "s06.end",
+   "do": "hide",
+   "id": "docs",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_exit"
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.5",
+   "args": {
+    "k": 0.9,
+    "lonlat": [
+     -72,
+     14
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 0.92,
+    "lonlat": [
+     -71.5,
+     14.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@abroad",
+   "do": "fact_in",
+   "id": "f4",
+   "until": "s07.end"
+  },
+  {
+   "at": "s07@abroad+0.5",
+   "do": "sticker_in",
+   "id": "st_steth2"
+  },
+  {
+   "at": "s07@countries",
+   "do": "sticker_in",
+   "id": "st_plane"
+  },
+  {
+   "at": "s07@countries+0.4",
+   "do": "sticker_pulse",
+   "id": "st_plane"
+  },
+  {
+   "at": "s07@income",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "192",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_plane"
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_steth2"
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     -40,
+     30
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04@doctors",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "havana"
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.6",
+   "do": "character_in",
+   "id": "cha"
+  },
+  {
+   "at": "s04+1.9",
+   "do": "character_in",
+   "id": "chb"
+  },
+  {
+   "at": "s05+1.0",
+   "do": "character_out",
+   "id": "cha"
+  },
+  {
+   "at": "s05+0.8",
+   "do": "character_out",
+   "id": "chb"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

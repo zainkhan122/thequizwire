@@ -1,0 +1,137 @@
+{
+ "id": "ep08-most-doctors-cuba",
+ "format": "quiz-v3",
+ "series": "body-brain",
+ "number": 8,
+ "title": "Which nation has the MOST doctors per person?",
+ "difficulty": "MEDIUM",
+ "seed": 7408,
+ "quiz": {
+  "question": "Which nation has the MOST doctors per person?",
+  "keyword": "MOST",
+  "options": [
+   "Germany",
+   "United States",
+   "Cuba"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Cuba",
+  "answer_sub": "more than 9 doctors per 1,000 people",
+  "option_meta": [
+   {
+    "flag": "de"
+   },
+   {
+    "flag": "us"
+   },
+   {
+    "flag": "cu"
+   }
+  ],
+  "banner": "Cuba",
+  "banner_sub": "✓  C was right · more than 9 doctors per 1,000 people",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which nation has the MOST doctors per person? 🩺",
+  "premise": "A small island out-doctors every rich country",
+  "bait": "It is not the United States.",
+  "keywords": [
+   "which country has the most doctors",
+   "doctors per capita by country",
+   "doctors per 1000 people",
+   "healthcare quiz",
+   "world health statistics",
+   "body facts",
+   "medical facts",
+   "geography quiz"
+  ],
+  "description": "A small island out-doctors every rich country. It is not the United States.\n\nSources: World Bank World Development Indicators (physicians per 1,000); WHO Global Health Workforce Statistics; ONEI Cuba.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nBody & Brain #8",
+  "hashtags": [
+   "#BodyFacts",
+   "#BrainQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "HealthQuiz",
+   "DoctorsPerCapita"
+  ],
+  "cover_emoji": "🩺",
+  "copy": {
+   "spoilers": [
+    "cuba",
+    "cuban",
+    "havana",
+    "caribbean",
+    "island"
+   ],
+   "youtube": {
+    "title": "Which country has the most doctors per person? Not the USA 🩺",
+    "description": "Germany, the United States or the third one? The richest health systems on Earth are beaten, per head, by a country most people would never guess, and its doctors are now leaving by the tens of thousands.\nGuess before the map fills, then see the three nations as bars, watch one number fall, and learn where its doctors go.\nWhich flag did you pick?",
+    "tags": [
+     "#healthquiz",
+     "#doctors",
+     "#worldhealth",
+     "#bodyfacts",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which nation has the MOST doctors per person? 🩺\nGermany, the United States or the other one? The richest health systems on Earth lose, per head, to a country few would guess, and its doctors are now leaving in huge numbers.\nWhich did you pick?",
+    "tags": [
+     "#healthquiz",
+     "#doctors",
+     "#worldhealth",
+     "#bodyfacts",
+     "#medicalfacts"
+    ]
+   },
+   "facebook": {
+    "text": "Which nation has the most doctors per person — Germany, the United States or Cuba?\nThe answer trains far more physicians than it keeps, and the number at home is dropping fast. How long did you wait for your last appointment?",
+    "tags": [
+     "#healthquiz",
+     "#doctors"
+    ]
+   },
+   "twitter": {
+    "text": "Which nation has the MOST doctors per person?\nNot the one with the most hospitals, and not the one with the most money. Its doctors are now leaving by the tens of thousands.",
+    "tags": [
+     "#HealthQuiz",
+     "#Doctors"
+    ]
+   },
+   "threads": {
+    "text": "Which nation has the most doctors per person — Germany, the United States or Cuba? One of them trains physicians faster than it can keep them, posts them to dozens of other countries, and has watched the number at home shrink every year since the pandemic.",
+    "tags": [
+     "#healthquiz"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "night-lights",
+  "reveal": "fill-pulse",
+  "beats": [
+   "bars",
+   "counter",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:shrug + emoji-set:medical",
+  "music": "bed:pulse"
+ },
+ "status": "ready"
+}

@@ -1,0 +1,226 @@
+{
+ "version": 1,
+ "episode": "ep08-most-doctors-cuba",
+ "topic": "Country with the most physicians per person: Cuba — about 9.5 physicians per 1,000 people (World Bank WDI / WHO, data year 2021), the highest in the world; Germany ≈ 4.5 (2022), United States ≈ 3.7 (2022). ONEI (Cuban statistics office) counts fell from 106,131 physicians in 2021 to 94,066 (2022), 80,763 (2023) and 75,364 (2024) on an island of ~11 million; about 37,000 Cuban doctors worked abroad in 2023 and medical services are Cuba's largest source of foreign income.",
+ "researched": "2026-10-29",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The United States, with the highest health spending, has the most doctors per person.",
+   "reality": "The United States has about 3.7 physicians per 1,000 people, Germany 4.5; Cuba has about 9.5, the highest ratio recorded.",
+   "sources": [
+    "worldbank_phys",
+    "atlasbig",
+    "statranker"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Doctor Shorts are salary rankings and med-school tips; nobody asks the per-person question on a map, shows the three bars, lets the island's count fall on screen and follows its doctors abroad.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=which+country+has+the+most+doctors",
+    "title": "Search: which country has the most doctors",
+    "angle": "ranking lists",
+    "misses": "no quiz, no map, no fall"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=cuba+doctors",
+    "title": "Search: cuba doctors",
+    "angle": "politics explainers",
+    "misses": "no question, long form"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if geography",
+    "misses": "no health"
+   }
+  ]
+ },
+ "sources": {
+  "worldbank_phys": {
+   "type": "primary",
+   "publisher": "World Bank",
+   "title": "Physicians (per 1,000 people) — SH.MED.PHYS.ZS",
+   "url": "https://data.worldbank.org/indicator/SH.MED.PHYS.ZS",
+   "date": "2026-10-29",
+   "notes": "Cuba 9.5 (2021, latest), Germany 4.5 (2022), United States 3.7 (2022); world average ≈ 1.9"
+  },
+  "who_gho": {
+   "type": "primary",
+   "publisher": "World Health Organization",
+   "title": "Global Health Workforce Statistics — medical doctors per 10,000 population",
+   "url": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/medical-doctors-(per-10-000-population)",
+   "date": "2026-10-29",
+   "notes": "underlying series for the World Bank indicator; Cuba highest density"
+  },
+  "eatlas_esc": {
+   "type": "reference",
+   "publisher": "European Society of Cardiology Atlas",
+   "title": "Physicians (per 1,000 people) — World Bank WDI extract",
+   "url": "https://eatlas.escardio.org/Data/National-sociodemographic-characteristics/phys_1000_r-physicians-per-1-000-people",
+   "date": "2026-10-29",
+   "notes": "Germany 4.5 (2022), Switzerland 4.5, Czech Republic 4.4"
+  },
+  "atlasbig": {
+   "type": "reference",
+   "publisher": "AtlasBig",
+   "title": "Doctors per Capita by Country: 2026 Ranking and Map",
+   "url": "https://www.atlasbig.com/health/doctors-per-capita-by-country",
+   "date": "2026-10-29",
+   "notes": "Cuba 9.5 (2021) highest; United States 3.7 (2022), 39th; world average 1.9; source World Bank"
+  },
+  "statranker": {
+   "type": "reference",
+   "publisher": "StatRanker",
+   "title": "Top 100 Countries by Physicians per 1,000 People, 2025",
+   "url": "https://statranker.org/medical/global-healthcare-capacity-top-100-countries-by-physicians-per-1000-people-2025/",
+   "date": "2026-10-29",
+   "notes": "Cuba 9.5 per 1,000, highest for over two decades; surplus doctors deployed internationally"
+  },
+  "onei_yearbook": {
+   "type": "primary",
+   "publisher": "ONEI (Oficina Nacional de Estadística e Información, Cuba)",
+   "title": "Anuario Estadístico de Salud Pública y Asistencia Social",
+   "url": "https://www.onei.gob.cu/",
+   "date": "2026-10-29",
+   "notes": "physicians: 106,131 (2021), 94,066 (2022), 80,763 (2023), 75,364 (2024); 37,000 doctors abroad in 2023"
+  },
+  "cubaheadlines": {
+   "type": "press",
+   "publisher": "CubaHeadlines",
+   "title": "Cuba's Doctor Exodus: Over 30,000 Physicians Lost Since 2021",
+   "url": "https://www.cubaheadlines.com/articles/316006",
+   "date": "2026-10-29",
+   "notes": "ONEI: 106,131 doctors in 2021 → 75,364 in 2024; ~37,000 physicians abroad in 2023, a crucial revenue source"
+  },
+  "cibercuba": {
+   "type": "press",
+   "publisher": "CiberCuba",
+   "title": "Cuba loses more than 13,300 doctors in 2023",
+   "url": "https://en.cibercuba.com/noticias/2024-12-24-u1-e199894-s27061-nid294380-cuba-pierde-13300-medicos-2023-duro-golpe-al-sistema",
+   "date": "2026-10-29",
+   "notes": "ONEI yearbook: 94,066 (2022) → 80,763 (2023); ~37,000 doctors exported in 2023"
+  },
+  "wiki_medint": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Cuban medical internationalism",
+   "url": "https://en.wikipedia.org/wiki/Cuban_medical_internationalism",
+   "date": "2026-10-29",
+   "notes": "tens of thousands of Cuban health workers posted to 50+ countries; export of medical services is Cuba's largest source of foreign exchange, ahead of tourism"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Cuba has the most physicians per person: about 9.5 per 1,000 people (World Bank/WHO, 2021), the highest ratio in the world.",
+   "sources": [
+    "worldbank_phys",
+    "who_gho",
+    "atlasbig",
+    "statranker"
+   ],
+   "vo": [
+    "which nation has the most doctors per person",
+    "germany, united states, or cuba",
+    "cuba. more than 9 doctors for every 1,000 people, the highest ratio on earth"
+   ],
+   "screen": [
+    "Cuba",
+    "Germany",
+    "United States",
+    "9.5 PER 1,000",
+    "doctors for every thousand people",
+    "Havana",
+    "Cuba · 9.5 per 1,000"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Germany has about 4.5 physicians per 1,000 people and the United States about 3.7 (World Bank, 2022).",
+   "sources": [
+    "worldbank_phys",
+    "eatlas_esc",
+    "atlasbig"
+   ],
+   "vo": [
+    "germany has fewer than 5. the united states, for all its hospitals, has under 4"
+   ],
+   "screen": [
+    "Cuba",
+    "Germany",
+    "United States",
+    "9.5",
+    "4.5",
+    "3.7",
+    "per 1,000"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "ONEI counted 106,131 physicians in Cuba in 2021 (population ≈ 11 million), falling to 75,364 by 2024.",
+   "sources": [
+    "onei_yearbook",
+    "cubaheadlines",
+    "cibercuba"
+   ],
+   "vo": [
+    "at its peak the island had over 100,000 doctors for 11 million people. since then, tens of thousands have left"
+   ],
+   "screen": [
+    "doctors on the island · 2021 → 2024",
+    "11 million people"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "About 37,000 Cuban doctors worked abroad in 2023; medical services are Cuba's largest source of foreign income, with health workers posted to more than 50 countries.",
+   "sources": [
+    "onei_yearbook",
+    "cubaheadlines",
+    "cibercuba",
+    "wiki_medint"
+   ],
+   "vo": [
+    "cuba also sends doctors abroad: around 37,000 work in other countries, its main source of foreign income"
+   ],
+   "screen": [
+    "37,000 ABROAD",
+    "doctors posted to other countries",
+    "doctors in 50+ countries"
+   ]
+  }
+ ]
+}
