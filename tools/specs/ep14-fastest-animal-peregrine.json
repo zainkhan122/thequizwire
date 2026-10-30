@@ -547,8 +547,18 @@
      "id": "st_cheetah"
     },
     {
+     "at": "@@cheetah+0.4",
+     "do": "sticker_pulse",
+     "id": "st_cheetah"
+    },
+    {
      "at": "@@car",
      "do": "sticker_in",
+     "id": "st_car"
+    },
+    {
+     "at": "@@car+0.4",
+     "do": "sticker_pulse",
      "id": "st_car"
     },
     {
@@ -655,6 +665,16 @@
      "id": "st_falcon"
     },
     {
+     "at": "@@skydiver+0.9",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "840",
+      "dur": 0.6,
+      "layer": "hl"
+     }
+    },
+    {
      "at": "@.end",
      "do": "sticker_out",
      "id": "st_falcon"
@@ -703,6 +723,11 @@
      "id": "st_skull"
     },
     {
+     "at": "@@pesticides+0.4",
+     "do": "sticker_pulse",
+     "id": "st_skull"
+    },
+    {
      "at": "@@skyscrapers",
      "do": "sticker_out",
      "id": "st_skull"
@@ -723,6 +748,16 @@
      "stage": "stage_map",
      "args": {
       "pid": "nyc"
+     }
+    },
+    {
+     "at": "@@york+0.4",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "840",
+      "dur": 0.6,
+      "layer": "hl"
      }
     },
     {
