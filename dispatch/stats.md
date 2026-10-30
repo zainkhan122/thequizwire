@@ -1,7 +1,7 @@
-# Channel stats — 2026-10-30T13:04Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
+# Channel stats — 2026-10-30T15:59Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
 
 ## Per series, all channels (7-day movement — what is trending for us)
-- sports-sprint: 16 posts · +1926 in 7 d · 7401 total
+- sports-sprint: 16 posts · +1920 in 7 d · 7401 total
 - geo-blitz: 19 posts · +1886 in 7 d · 9704 total
 - body-brain: 6 posts · +1722 in 7 d · 2920 total
 - wild-files: 14 posts · +753 in 7 d · 5819 total
@@ -17,20 +17,20 @@ series (7 d): sports-sprint +1905 (8) · geo-blitz +1875 (10) · body-brain +171
 hours (first-24 h by publish hour): 12:00 n=2 med 155.0 · 19:00 n=3 med 591
 → slots: not enough first-24 h data (5/8) — researched defaults in use
 
-## instagram — 0 posts · metric — · buffer insights · 0/28 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
+## instagram — 0 posts · metric — · buffer insights · 0/29 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
 
 ## facebook — 0 posts · metric — · buffer insights · 0/28 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
 
 ## threads — 27 posts · metric views · buffer insights · 27/27 sent posts with metrics
 last 24 h:
-- ep16-most-olympics-hosted-usa (sports-sprint): +4 · 4 total
 - ep13-southern-alps-new-zealand (geo-blitz): +0 · 15 total
 - ep18-newest-un-member (geo-blitz): +0 · 11 total
 - ep14-cricket-world-cup-wins (sports-sprint): +0 · 11 total
 - ep10-komodo-dragons-indonesia (wild-files): +0 · 7 total
-series (7 d): sports-sprint +21 (8) · geo-blitz +11 (9) · body-brain +7 (3) · wild-files +1 (7)
-hours (first-24 h by publish hour): 10:00 n=2 med 1.5 · 19:00 n=3 med 0
-→ slots: not enough first-24 h data (5/8) — researched defaults in use
+- ep12-coldest-desert-antarctica (geo-blitz): +0 · 6 total
+series (7 d): sports-sprint +15 (8) · geo-blitz +11 (9) · body-brain +7 (3) · wild-files +1 (7)
+hours (first-24 h by publish hour): 10:00 n=3 med 0 · 19:00 n=3 med 0
+→ slots: not enough first-24 h data (6/8) — researched defaults in use
 
 ## twitter — 0 posts · metric — · buffer insights · 0/28 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
 
@@ -39,8 +39,8 @@ hours (first-24 h by publish hour): 10:00 n=2 med 1.5 · 19:00 n=3 med 0
 | episode | channel | sent (local) | metric | total | 24 h | 7 d | first 24 h | reactions | comments |
 |---|---|---|---|---|---|---|---|---|---|
 | ep13-most-wild-lions-tanzania | youtube | Thu 12:00 | views | 37 | 34 | 37 | None | 1 | 0 |
-| ep13-most-wild-lions-tanzania | threads | Thu 10:00 | views | 1 | 0 | 1 | None | 0 | 0 |
-| ep16-most-olympics-hosted-usa | threads | Wed 19:00 | views | 4 | 4 | 4 | 4 | 0 | 0 |
+| ep13-most-wild-lions-tanzania | threads | Thu 10:00 | views | 1 | 0 | 1 | 0 | 0 | 0 |
+| ep16-most-olympics-hosted-usa | threads | Wed 19:00 | views | 4 | 0 | 4 | 4 | 0 | 0 |
 | ep16-most-olympics-hosted-usa | youtube | Wed 19:00 | views | 591 | 496 | 591 | 591 | 27 | 0 |
 | ep06-most-stroke-deaths-china | youtube | Wed 12:00 | views | 661 | 351 | 661 | 310 | 35 | 0 |
 | ep06-most-stroke-deaths-china | threads | Wed 10:00 | views | 3 | 0 | 3 | 3 | 0 | 0 |
@@ -56,7 +56,7 @@ hours (first-24 h by publish hour): 10:00 n=2 med 1.5 · 19:00 n=3 med 0
 | ep14-cricket-world-cup-wins | youtube | Sat 12:00 | views | 672 | 0 | 672 | None | 7 | 0 |
 | ep18-newest-un-member | threads | Fri 19:00 | views | 11 | 0 | 11 | None | 0 | 0 |
 | ep18-newest-un-member | youtube | Fri 12:00 | views | 840 | 0 | 840 | None | 50 | 1 |
-| ep13-first-marathon-greece | threads | Fri 10:00 | views | 6 | 0 | 6 | None | 0 | 0 |
+| ep13-first-marathon-greece | threads | Fri 10:00 | views | 6 | 0 | None | None | 0 | 0 |
 | ep16-longest-border-canada-usa | threads | Thu 19:00 | views | 3 | 0 | None | None | 0 | 0 |
 | ep13-first-marathon-greece | youtube | Thu 19:00 | views | 967 | 0 | None | None | 117 | 0 |
 | ep16-longest-border-canada-usa | youtube | Thu 12:00 | views | 1025 | 0 | None | None | 76 | 0 |
