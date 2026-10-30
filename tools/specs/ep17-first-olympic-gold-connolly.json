@@ -332,8 +332,9 @@
      23.74,
      37.97
     ],
-    "label": "Panathenaic Stadium",
-    "qid": "Q208811"
+    "label": "Panathenaic",
+    "qid": "Q208811",
+    "side": "left"
    },
    {
     "id": "boston",
@@ -534,7 +535,8 @@
      "6 APRIL 1896",
      "triple jump · Panathenaic Stadium",
      "Athens · 1896",
-     "Panathenaic Stadium"
+     "Panathenaic Stadium",
+     "Panathenaic"
     ]
    },
    {

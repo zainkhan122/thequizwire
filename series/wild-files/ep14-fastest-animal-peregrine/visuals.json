@@ -355,8 +355,23 @@
    }
   },
   {
+   "at": "s06@washington+0.4",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "840",
+    "dur": 0.6,
+    "layer": "hl"
+   }
+  },
+  {
    "at": "s06@frightful",
    "do": "sticker_in",
+   "id": "st_falcon"
+  },
+  {
+   "at": "s06@frightful+0.5",
+   "do": "sticker_pulse",
    "id": "st_falcon"
   },
   {
@@ -416,6 +431,11 @@
    "at": "s07@skyscrapers",
    "do": "sticker_out",
    "id": "st_skull"
+  },
+  {
+   "at": "s07@skyscrapers+0.4",
+   "do": "sticker_pulse",
+   "id": "st_city"
   },
   {
    "at": "s07@skyscrapers",

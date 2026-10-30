@@ -122,8 +122,9 @@
       23.74,
       37.97
      ],
-     "label": "Panathenaic Stadium",
-     "qid": "Q208811"
+     "label": "Panathenaic",
+     "qid": "Q208811",
+     "side": "left"
     },
     {
      "id": "boston",
