@@ -32,8 +32,7 @@ the first flash-cut reveal in Wild Files — show-set {compare, rise, flash} app
 
 ## Devices
 wide-drift opener · flash-cut reveal + fill-pulse highlight · fact card ×1 · chart.compare_in (3 blocks) · fx.flash · geo.rise
-(falcon sticker out of the US) · tag labels ×2 · geo.pin_in ×2 (New York, London) · stickers 🐆 🚗 🦅 🪂 ☠️ 🏙 + sticker_pulse ×2 ·
-scalebar 500 km (the speeds are quoted in km/h, so the map carries a scale) · no flag-ball characters (animal answer).
+(falcon sticker out of the US) · tag labels ×2 · geo.pin_in ×2 (New York, London) · stickers 🐆 🚗 🦅 🪂 ☠️ 🏙 + sticker_pulse ×2· no flag-ball characters (animal answer).
 
 ## Media & Pace
 No photograph: peregrine footage on Commons is mostly CC BY-SA, and the compare chart plus the rising falcon sticker carry the

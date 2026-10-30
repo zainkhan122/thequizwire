@@ -28,7 +28,7 @@ CONFORMAL = {"mercator", "conicConformal", "stereographic"}
 EQUAL_AREA = {"equalEarth", "azimuthalEqualArea", "conicEqualArea", "albers"}
 KNOWN = CONFORMAL | EQUAL_AREA | {"naturalEarth1", "equirectangular", "orthographic"}
 SIZE_RE = re.compile(r"\b(largest|biggest|smallest|bigger|smaller|larger|area|km²|km2|square (kilomet|mile)|sq\.? ?(km|mi)|size|twice the size|as big as)\b", re.I)
-DIST_RE = re.compile(r"\b(\d[\d,\.]*\s?(km|kilomet\w*|miles?|mi)\b|how far|distance|farthest|furthest|longest (river|border|coastline|road))", re.I)
+DIST_RE = re.compile(r"\b(\d[\d,\.]*\s?(km|kilomet\w*|miles?|mi)\b(?!\s?(/|per |an |a )\s?h)|how far|distance|farthest|furthest|longest (river|border|coastline|road))", re.I)
 MAX_KM = 25.0
 
 

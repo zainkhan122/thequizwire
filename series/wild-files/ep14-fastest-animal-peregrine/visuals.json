@@ -526,11 +526,6 @@
    }
   },
   {
-   "at": "s04+0.8",
-   "do": "geo.scalebar_in",
-   "stage": "stage_map"
-  },
-  {
    "at": 0,
    "do": "hook_in"
   },

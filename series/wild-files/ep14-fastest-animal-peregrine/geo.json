@@ -95,18 +95,7 @@
      "k_min": 0.3
     }
    },
-   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
-   "scalebar": {
-    "km": 500,
-    "lonlat": [
-     -124,
-     27
-    ],
-    "at": [
-     60,
-     1130
-    ]
-   }
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
   }
  }
 }

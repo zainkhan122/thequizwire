@@ -230,13 +230,7 @@
     "qid": "Q84"
    }
   ],
-  "scalebar": {
-   "km": 500,
-   "lonlat": [
-    -124,
-    27
-   ]
-  },
+  "scalebar": null,
   "cams": {
    "start": [
     0.5,
