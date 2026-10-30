@@ -1,4 +1,4 @@
-# Channel stats — 2026-10-30T07:15Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
+# Channel stats — 2026-10-30T13:04Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
 
 ## Per series, all channels (7-day movement — what is trending for us)
 - sports-sprint: 16 posts · +1926 in 7 d · 7401 total
@@ -12,7 +12,7 @@ last 24 h:
 - ep06-most-stroke-deaths-china (body-brain): +351 · 661 total
 - ep19-coldest-inhabited-oymyakon (geo-blitz): +114 · 1035 total
 - ep15-first-davis-cup-boston (sports-sprint): +100 · 642 total
-- ep13-most-wild-lions-tanzania (wild-files): +37 · 37 total
+- ep13-most-wild-lions-tanzania (wild-files): +34 · 37 total
 series (7 d): sports-sprint +1905 (8) · geo-blitz +1875 (10) · body-brain +1715 (3) · wild-files +752 (7)
 hours (first-24 h by publish hour): 12:00 n=2 med 155.0 · 19:00 n=3 med 591
 → slots: not enough first-24 h data (5/8) — researched defaults in use
@@ -24,10 +24,10 @@ hours (first-24 h by publish hour): 12:00 n=2 med 155.0 · 19:00 n=3 med 591
 ## threads — 27 posts · metric views · buffer insights · 27/27 sent posts with metrics
 last 24 h:
 - ep16-most-olympics-hosted-usa (sports-sprint): +4 · 4 total
-- ep13-most-wild-lions-tanzania (wild-files): +1 · 1 total
 - ep13-southern-alps-new-zealand (geo-blitz): +0 · 15 total
 - ep18-newest-un-member (geo-blitz): +0 · 11 total
 - ep14-cricket-world-cup-wins (sports-sprint): +0 · 11 total
+- ep10-komodo-dragons-indonesia (wild-files): +0 · 7 total
 series (7 d): sports-sprint +21 (8) · geo-blitz +11 (9) · body-brain +7 (3) · wild-files +1 (7)
 hours (first-24 h by publish hour): 10:00 n=2 med 1.5 · 19:00 n=3 med 0
 → slots: not enough first-24 h data (5/8) — researched defaults in use
@@ -38,8 +38,8 @@ hours (first-24 h by publish hour): 10:00 n=2 med 1.5 · 19:00 n=3 med 0
 
 | episode | channel | sent (local) | metric | total | 24 h | 7 d | first 24 h | reactions | comments |
 |---|---|---|---|---|---|---|---|---|---|
-| ep13-most-wild-lions-tanzania | youtube | Thu 12:00 | views | 37 | 37 | 37 | None | 1 | 0 |
-| ep13-most-wild-lions-tanzania | threads | Thu 10:00 | views | 1 | 1 | 1 | None | 0 | 0 |
+| ep13-most-wild-lions-tanzania | youtube | Thu 12:00 | views | 37 | 34 | 37 | None | 1 | 0 |
+| ep13-most-wild-lions-tanzania | threads | Thu 10:00 | views | 1 | 0 | 1 | None | 0 | 0 |
 | ep16-most-olympics-hosted-usa | threads | Wed 19:00 | views | 4 | 4 | 4 | 4 | 0 | 0 |
 | ep16-most-olympics-hosted-usa | youtube | Wed 19:00 | views | 591 | 496 | 591 | 591 | 27 | 0 |
 | ep06-most-stroke-deaths-china | youtube | Wed 12:00 | views | 661 | 351 | 661 | 310 | 35 | 0 |
