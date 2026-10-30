@@ -54,6 +54,14 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Latest ledger (slot guard)
+        run: |
+          # The workflow sha can predate ledger commits from runs that finished minutes ago (10-30: two Shorts landed in the same
+          # 16:00Z slot because Buffer's posts(filter) returns nothing and the checked-out ledger was stale). Always schedule
+          # against main's current ledger.
+          git fetch -q origin main
+          git checkout -q origin/main -- dispatch/ledger.json config/publishing.json 2>/dev/null || true
+          python3 -c "import json;L=json.load(open('dispatch/ledger.json'));print('ledger posts:',len(L.get('posts',[])))"
       - name: Cover toolchain (Pillow + cairosvg; ffmpeg ships with the runner)
         run: |
           python3 -m pip install -q pillow cairosvg 2>/dev/null || python3 -m pip install -q --break-system-packages pillow cairosvg
