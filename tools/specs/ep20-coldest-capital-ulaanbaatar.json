@@ -137,7 +137,7 @@
    }
   },
   "v05": {
-   "text": "January nights there pass minus 30. Astana, in Kazakhstan, is second; Ottawa is not close.",
+   "text": "After dark in January it passes minus 30. Astana, in Kazakhstan, is second; Ottawa is not close.",
    "cues": {
     "january": "january",
     "astana": "astana",
@@ -482,7 +482,7 @@
      "worldatlas_cold"
     ],
     "vo": [
-     "january nights there pass minus 30. astana, in kazakhstan, is second; ottawa is not close"
+     "after dark in january it passes minus 30. astana, in kazakhstan, is second; ottawa is not close"
     ],
     "screen": [
      "Astana · 2nd",
@@ -532,7 +532,7 @@
  "story": [
   {
    "vo": {
-    "text": "January nights there pass minus 30. Astana, in Kazakhstan, is second; Ottawa is not close.",
+    "text": "After dark in January it passes minus 30. Astana, in Kazakhstan, is second; Ottawa is not close.",
     "cues": {
      "january": "january",
      "astana": "astana",
