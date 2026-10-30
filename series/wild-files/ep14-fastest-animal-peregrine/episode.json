@@ -12,11 +12,11 @@
   "options": [
    "Cheetah",
    "Sailfish",
-   "Peregrine falcon"
+   "Peregrine"
   ],
   "correct": 2,
   "beat": 3.0,
-  "answer_line": "Peregrine falcon",
+  "answer_line": "Peregrine",
   "answer_sub": "389 km/h in a hunting dive",
   "option_meta": [
    {
@@ -29,7 +29,7 @@
     "emoji": "1f985"
    }
   ],
-  "banner": "Peregrine falcon",
+  "banner": "Peregrine",
   "banner_sub": "✓  C was right · 389 km/h in a hunting dive",
   "outro": {
    "headline": "DID YOU GET IT?",
@@ -97,7 +97,7 @@
     ]
    },
    "facebook": {
-    "text": "Which animal is the fastest on Earth — cheetah, sailfish or peregrine falcon?\nOne of them has been clocked at more than three times motorway speed. Did you guess the land one?",
+    "text": "Which animal is the fastest on Earth — cheetah, sailfish or Peregrine?\nOne of them has been clocked at more than three times motorway speed. Did you guess the land one?",
     "tags": [
      "#fastestanimal",
      "#animalquiz"
@@ -111,7 +111,7 @@
     ]
    },
    "threads": {
-    "text": "Which animal is the fastest on Earth — cheetah, sailfish or peregrine falcon? One of them has been clocked at more than three times motorway speed, the record was measured with a skydiver alongside, and it nearly went extinct sixty years ago.",
+    "text": "Which animal is the fastest on Earth — cheetah, sailfish or Peregrine? One of them has been clocked at more than three times motorway speed, the record was measured with a skydiver alongside, and it nearly went extinct sixty years ago.",
     "tags": [
      "#fastestanimal"
     ]
