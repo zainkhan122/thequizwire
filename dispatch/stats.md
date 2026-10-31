@@ -1,19 +1,19 @@
-# Channel stats — 2026-10-31T07:04Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
+# Channel stats — 2026-10-31T13:14Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
 
 ## Per series, all channels (7-day movement — what is trending for us)
 - sports-sprint: 16 posts · +2189 in 7 d · 7670 total
 - body-brain: 6 posts · +1946 in 7 d · 3144 total
-- wild-files: 15 posts · +1818 in 7 d · 6888 total
-- geo-blitz: 21 posts · +1091 in 7 d · 9760 total
+- wild-files: 15 posts · +1834 in 7 d · 6904 total
+- geo-blitz: 21 posts · +1195 in 7 d · 9864 total
 
 ## youtube — 30 posts · metric views · buffer insights · 30/30 sent posts with metrics
 last 24 h:
-- ep14-fastest-animal-peregrine (wild-files): +824 · 824 total
+- ep14-fastest-animal-peregrine (wild-files): +840 · 840 total
 - ep16-most-olympics-hosted-usa (sports-sprint): +251 · 842 total
 - ep13-most-wild-lions-tanzania (wild-files): +241 · 278 total
 - ep06-most-stroke-deaths-china (body-brain): +224 · 885 total
-- ep20-coldest-capital-ulaanbaatar (geo-blitz): +55 · 55 total
-series (7 d): sports-sprint +2174 (8) · body-brain +1939 (3) · wild-files +1817 (8) · geo-blitz +1091 (11)
+- ep20-coldest-capital-ulaanbaatar (geo-blitz): +159 · 159 total
+series (7 d): sports-sprint +2174 (8) · body-brain +1939 (3) · wild-files +1833 (8) · geo-blitz +1195 (11)
 hours (first-24 h by publish hour): 12:00 n=3 med 34 · 19:00 n=3 med 591
 → slots: not enough first-24 h data (6/8) — researched defaults in use
 
@@ -39,8 +39,8 @@ hours (first-24 h by publish hour): 10:00 n=3 med 0 · 19:00 n=3 med 0
 | episode | channel | sent (local) | metric | total | 24 h | 7 d | first 24 h | reactions | comments |
 |---|---|---|---|---|---|---|---|---|---|
 | ep20-coldest-capital-ulaanbaatar | threads | Fri 19:00 | views | 0 | 0 | 0 | None | 0 | 0 |
-| ep14-fastest-animal-peregrine | youtube | Fri 19:00 | views | 824 | 824 | 824 | None | None | None |
-| ep20-coldest-capital-ulaanbaatar | youtube | Fri 12:00 | views | 55 | 55 | 55 | None | None | None |
+| ep14-fastest-animal-peregrine | youtube | Fri 19:00 | views | 840 | 840 | 840 | None | None | None |
+| ep20-coldest-capital-ulaanbaatar | youtube | Fri 12:00 | views | 159 | 159 | 159 | None | None | None |
 | ep13-most-wild-lions-tanzania | youtube | Thu 12:00 | views | 278 | 241 | 278 | 34 | 12 | 0 |
 | ep13-most-wild-lions-tanzania | threads | Thu 10:00 | views | 1 | 0 | 1 | 0 | 0 | 0 |
 | ep16-most-olympics-hosted-usa | threads | Wed 19:00 | views | 4 | 0 | 4 | 4 | 0 | 0 |
