@@ -277,17 +277,6 @@
     "out": "s05"
    },
    {
-    "id": "ru",
-    "lonlat": [
-     60,
-     66
-    ],
-    "text": "Russia · 2nd",
-    "cls": "tag",
-    "in": "s05@russia",
-    "out": "s06"
-   },
-   {
     "id": "ice",
     "lonlat": [
      -90,

@@ -236,22 +236,6 @@
    }
   },
   {
-   "at": "s05@russia",
-   "do": "geo.label_in",
-   "stage": "stage_map",
-   "args": {
-    "lid": "ru"
-   }
-  },
-  {
-   "at": "s06",
-   "do": "geo.label_out",
-   "stage": "stage_map",
-   "args": {
-    "lid": "ru"
-   }
-  },
-  {
    "at": "s06@scraped",
    "do": "geo.label_in",
    "stage": "stage_map",
