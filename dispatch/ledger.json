@@ -1202,7 +1202,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-31T07:04:16+00:00",
+   "refreshed_at": "2026-10-31T15:23:24+00:00",
    "error": "An unknown error has occurred. Please retry the post again, and get in touch if this persists."
   },
   {
@@ -2378,32 +2378,32 @@
    "platform": "twitter",
    "post_id": "6ae49f5f9394ea34c1179425",
    "channel_id": "69f30e2a5c4c051afaf58634",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/f1ba0300897e/Which-animal-is-the-FASTEST-on-Earth.mp4",
    "due_at": "2026-10-31T13:00:00.000Z",
    "created_at": "2026-10-30T13:45:03.414Z",
    "recorded_at": "2026-10-30T13:45:03+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-31T07:04:24+00:00"
+   "sent_at": "2026-10-31T13:01:28.726Z",
+   "external_link": "https://x.com/2049746939164676096/status/2116515901457498411",
+   "refreshed_at": "2026-10-31T15:23:24+00:00"
   },
   {
    "episode": "ep14-fastest-animal-peregrine",
    "platform": "threads",
    "post_id": "6ae49f5fd9c1092d26274523",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/f1ba0300897e/Which-animal-is-the-FASTEST-on-Earth.mp4",
    "due_at": "2026-10-31T14:00:00.000Z",
    "created_at": "2026-10-30T13:45:03.910Z",
    "recorded_at": "2026-10-30T13:45:04+00:00",
    "title": null,
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-31T07:04:24+00:00"
+   "sent_at": "2026-10-31T14:04:00.447Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfKU1XmjUQf",
+   "refreshed_at": "2026-10-31T15:23:26+00:00"
   }
  ]
 }
