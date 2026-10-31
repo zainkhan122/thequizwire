@@ -1,21 +1,21 @@
-# Channel stats — 2026-10-31T15:23Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
+# Channel stats — 2026-10-31T20:29Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
 
 ## Per series, all channels (7-day movement — what is trending for us)
-- sports-sprint: 16 posts · +2189 in 7 d · 7670 total
-- body-brain: 6 posts · +1946 in 7 d · 3144 total
-- wild-files: 16 posts · +1833 in 7 d · 6903 total
-- geo-blitz: 21 posts · +1205 in 7 d · 9874 total
+- wild-files: 16 posts · +2031 in 7 d · 7101 total
+- body-brain: 6 posts · +1981 in 7 d · 3180 total
+- sports-sprint: 16 posts · +1602 in 7 d · 7756 total
+- geo-blitz: 21 posts · +1243 in 7 d · 9912 total
 
 ## youtube — 30 posts · metric views · buffer insights · 30/30 sent posts with metrics
 last 24 h:
-- ep14-fastest-animal-peregrine (wild-files): +839 · 839 total
-- ep16-most-olympics-hosted-usa (sports-sprint): +251 · 842 total
-- ep13-most-wild-lions-tanzania (wild-files): +241 · 278 total
-- ep06-most-stroke-deaths-china (body-brain): +224 · 885 total
-- ep20-coldest-capital-ulaanbaatar (geo-blitz): +162 · 162 total
-series (7 d): sports-sprint +2174 (8) · body-brain +1939 (3) · wild-files +1832 (8) · geo-blitz +1198 (11)
-hours (first-24 h by publish hour): 12:00 n=3 med 34 · 19:00 n=3 med 591
-→ slots: not enough first-24 h data (6/8) — researched defaults in use
+- ep14-fastest-animal-peregrine (wild-files): +840 · 840 total
+- ep20-coldest-capital-ulaanbaatar (geo-blitz): +197 · 198 total
+- ep13-most-wild-lions-tanzania (wild-files): +194 · 472 total
+- ep16-most-olympics-hosted-usa (sports-sprint): +85 · 927 total
+- ep06-most-stroke-deaths-china (body-brain): +35 · 920 total
+series (7 d): wild-files +2030 (8) · body-brain +1974 (3) · sports-sprint +1587 (8) · geo-blitz +1236 (11)
+hours (first-24 h by publish hour): 12:00 n=4 med 97.5 · 19:00 n=3 med 591
+→ slots: not enough first-24 h data (7/8) — researched defaults in use
 
 ## instagram — 0 posts · metric — · buffer insights · 0/30 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
 
@@ -40,24 +40,24 @@ hours (first-24 h by publish hour): 10:00 n=3 med 0 · 19:00 n=3 med 0
 |---|---|---|---|---|---|---|---|---|---|
 | ep14-fastest-animal-peregrine | threads | Sat 10:00 | views | 0 | 0 | 0 | None | 0 | 0 |
 | ep20-coldest-capital-ulaanbaatar | threads | Fri 19:00 | views | 7 | 7 | 7 | None | 0 | 0 |
-| ep14-fastest-animal-peregrine | youtube | Fri 19:00 | views | 839 | 839 | 839 | None | None | None |
-| ep20-coldest-capital-ulaanbaatar | youtube | Fri 12:00 | views | 162 | 162 | 162 | None | None | None |
-| ep13-most-wild-lions-tanzania | youtube | Thu 12:00 | views | 278 | 241 | 278 | 34 | 12 | 0 |
+| ep14-fastest-animal-peregrine | youtube | Fri 19:00 | views | 840 | 840 | 840 | None | 22 | 0 |
+| ep20-coldest-capital-ulaanbaatar | youtube | Fri 12:00 | views | 198 | 197 | 198 | 161 | 16 | 0 |
+| ep13-most-wild-lions-tanzania | youtube | Thu 12:00 | views | 472 | 194 | 472 | 34 | 28 | 0 |
 | ep13-most-wild-lions-tanzania | threads | Thu 10:00 | views | 1 | 0 | 1 | 0 | 0 | 0 |
 | ep16-most-olympics-hosted-usa | threads | Wed 19:00 | views | 4 | 0 | 4 | 4 | 0 | 0 |
-| ep16-most-olympics-hosted-usa | youtube | Wed 19:00 | views | 842 | 251 | 842 | 591 | 44 | 0 |
-| ep06-most-stroke-deaths-china | youtube | Wed 12:00 | views | 885 | 224 | 885 | 310 | 57 | 0 |
+| ep16-most-olympics-hosted-usa | youtube | Wed 19:00 | views | 927 | 85 | 927 | 591 | 52 | 0 |
+| ep06-most-stroke-deaths-china | youtube | Wed 12:00 | views | 920 | 35 | 920 | 310 | 57 | 0 |
 | ep06-most-stroke-deaths-china | threads | Wed 10:00 | views | 3 | 0 | 3 | 3 | 0 | 0 |
 | ep19-coldest-inhabited-oymyakon | threads | Tue 19:00 | views | 0 | 0 | 0 | 0 | 0 | 0 |
-| ep19-coldest-inhabited-oymyakon | youtube | Tue 19:00 | views | 1036 | 1 | 1036 | 920 | 25 | 0 |
-| ep15-first-davis-cup-boston | youtube | Tue 12:00 | views | 659 | 17 | 659 | 0 | 16 | 0 |
+| ep19-coldest-inhabited-oymyakon | youtube | Tue 19:00 | views | 1038 | 2 | 1038 | 920 | 25 | 0 |
+| ep15-first-davis-cup-boston | youtube | Tue 12:00 | views | 660 | 1 | 660 | 0 | 16 | 0 |
 | ep15-first-davis-cup-boston | threads | Tue 10:00 | views | 0 | 0 | 0 | 0 | 0 | 0 |
 | ep12-polar-bears-penguins | threads | Mon 19:00 | views | 0 | 0 | 0 | 0 | 0 | 0 |
-| ep12-polar-bears-penguins | youtube | Mon 19:00 | views | 715 | 0 | 715 | 446 | 16 | 0 |
+| ep12-polar-bears-penguins | youtube | Mon 19:00 | views | 718 | 3 | 718 | 446 | 16 | 0 |
 | ep05-first-heart-transplant | threads | Sun 10:00 | views | 4 | 0 | 4 | None | 0 | 0 |
 | ep14-cricket-world-cup-wins | threads | Sat 19:00 | views | 11 | 0 | 11 | None | 0 | 0 |
 | ep05-first-heart-transplant | youtube | Sat 19:00 | views | 1054 | 0 | 1054 | None | 85 | 0 |
-| ep14-cricket-world-cup-wins | youtube | Sat 12:00 | views | 673 | 1 | 673 | None | 7 | 0 |
+| ep14-cricket-world-cup-wins | youtube | Sat 12:00 | views | 673 | 0 | None | None | 7 | 0 |
 | ep18-newest-un-member | threads | Fri 19:00 | views | 11 | 0 | None | None | 0 | 0 |
 | ep18-newest-un-member | youtube | Fri 12:00 | views | 840 | 0 | None | None | 50 | 1 |
 | ep13-first-marathon-greece | threads | Fri 10:00 | views | 6 | 0 | None | None | 0 | 0 |
@@ -66,13 +66,13 @@ hours (first-24 h by publish hour): 10:00 n=3 med 0 · 19:00 n=3 med 0
 | ep16-longest-border-canada-usa | youtube | Thu 12:00 | views | 1025 | 0 | None | None | 76 | 0 |
 | ep11-most-elephants-botswana | threads | Thu 10:00 | views | 4 | 0 | None | None | 0 | 0 |
 | ep12-most-world-cups-brazil | threads | Wed 19:00 | views | 3 | 0 | None | None | 0 | 0 |
-| ep11-most-elephants-botswana | youtube | Wed 19:00 | views | 1006 | 1 | None | None | 79 | 0 |
+| ep11-most-elephants-botswana | youtube | Wed 19:00 | views | 1006 | 0 | None | None | 79 | 0 |
 | ep12-most-world-cups-brazil | youtube | Wed 12:00 | views | 1026 | 0 | None | None | 48 | 0 |
 | ep10-komodo-dragons-indonesia | threads | Tue 19:00 | views | 7 | 0 | None | None | 1 | 0 |
 | ep17-deepest-lake-baikal | youtube | Tue 19:00 | views | 1004 | 0 | None | None | 124 | 2 |
-| ep10-komodo-dragons-indonesia | youtube | Tue 12:00 | views | 780 | 3 | None | None | 118 | 0 |
+| ep10-komodo-dragons-indonesia | youtube | Tue 12:00 | views | 780 | 0 | None | None | 118 | 0 |
 | ep04-tallest-men-netherlands | threads | Mon 19:00 | views | 1 | 0 | None | None | 0 | 0 |
-| ep04-tallest-men-netherlands | youtube | Mon 19:00 | views | 1197 | 0 | None | None | 69 | 1 |
+| ep04-tallest-men-netherlands | youtube | Mon 19:00 | views | 1198 | 1 | None | None | 69 | 1 |
 | ep11-first-modern-olympics-athens | youtube | Sun 12:00 | views | 1068 | 0 | None | None | 35 | 0 |
 | ep11-first-modern-olympics-athens | threads | Sun 10:00 | views | 1 | 0 | None | None | 0 | 0 |
 | ep15-no-rivers-saudi-arabia | threads | Sat 19:00 | views | 0 | 0 | None | None | 0 | 0 |
