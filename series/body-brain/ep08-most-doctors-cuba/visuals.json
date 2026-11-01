@@ -60,7 +60,7 @@
    "type": "counter",
    "start": 106131,
    "end": 75364,
-   "y": 330,
+   "y": 780,
    "label": "doctors at home, 2021→24",
    "fmt": "int",
    "size": 170
@@ -94,7 +94,7 @@
    "id": "st_island",
    "type": "sticker",
    "emoji": "1f3dd",
-   "x": 780,
+   "x": 820,
    "y": 560,
    "size": 160,
    "rot": 8
@@ -103,7 +103,7 @@
    "id": "st_exit",
    "type": "sticker",
    "emoji": "1f6aa",
-   "x": 780,
+   "x": 820,
    "y": 560,
    "size": 160,
    "rot": 8
