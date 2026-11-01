@@ -182,6 +182,15 @@ def write_md(S):
         L.append("series (7 d): " + " · ".join(f"{k} +{v['d7']} ({v['posts']})" for k, v in sorted(C["series"].items(), key=lambda kv: -kv[1]["d7"])))
         L.append("hours (first-24 h by publish hour): " + (" · ".join(f"{int(h):02d}:00 n={v['n']} med {v['median_first24']}" for h, v in C["hour_table"].items()) or "none yet"))
         L.append(f"→ slots: {C['best_hours'] or f'not enough first-24 h data ({C['videos_with_first24']}/{MIN_VIDEOS_FOR_HOURS}) — researched defaults in use'}")
+    # YouTube Data API worker (reelkit/yt_enrich.py): what is already enriched and today's quota — one line, so the daily summary surfaces it
+    try:
+        led = json.loads((ROOT / "dispatch/ledger.json").read_text()).get("posts", [])
+        yt = [p for p in led if p.get("platform") == "youtube" and p.get("state") == "sent"]
+        q = json.loads((ROOT / "dispatch/yt_quota.json").read_text()) if (ROOT / "dispatch/yt_quota.json").exists() else {}
+        L += ["", f"## YouTube API: {sum(1 for p in yt if p.get('yt_thumbnail_at'))}/{len(yt)} thumbnails · {sum(1 for p in yt if p.get('yt_series_item'))} series-playlist items · "
+                  f"{sum(1 for p in yt if p.get('yt_channel_item'))} channel-playlist items · {sum(1 for p in yt if p.get('yt_tags_at'))} tagged · quota {q.get('units', 0)} units on {q.get('date', '—')}"
+              + (f" · {sum(1 for p in yt if p.get('yt_thumbnail_error'))} thumbnail error(s)" if any(p.get('yt_thumbnail_error') for p in yt) else "")]
+    except Exception as e: L += ["", f"## YouTube API: (summary unavailable: {e})"]
     L += ["", "## Every post", "", "| episode | channel | sent (local) | metric | total | 24 h | 7 d | first 24 h | reactions | comments |", "|---|---|---|---|---|---|---|---|---|---|"]
     for r in sorted(S["rows"], key=lambda r: (r["sent_at"], r["platform"]), reverse=True):
         L.append(f"| {r['episode']} | {r['platform']} | {r['sent_weekday']} {r['sent_hour_local']:02d}:00 | {r['metric']} | {r['score']} | {r['d24']} | {r['d7']} | {r['first24']} | {r['reactions']} | {r['comments']} |")

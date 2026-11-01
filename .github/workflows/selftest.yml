@@ -36,6 +36,10 @@ jobs:
           key: tools-hf0.8.137-${{ runner.os }}-${{ hashFiles('reelkit/ci_setup.sh', 'reelkit/geodata.py') }}
       - name: Toolchain
         run: bash reelkit/ci_setup.sh
+      - name: YouTube worker offline (unit tests + dry-run plan on the committed ledger, no secrets)
+        run: |
+          python3 tests/test_yt_enrich.py
+          env -u YT_CLIENT_ID -u YT_CLIENT_SECRET -u YT_REFRESH_TOKEN python3 reelkit/yt_enrich.py run --dry-run | tail -2
       - name: Kokoro smoke (am_michael, one sentence → wav + whisper round-trip)
         run: python3 reelkit/tts_kokoro.py --selftest
       - name: Template episode, every stage incl. render (RELEASE=0 so the estimated timeline is allowed)

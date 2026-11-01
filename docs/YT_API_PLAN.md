@@ -1,6 +1,6 @@
 # YouTube Data API v3 — covers as thumbnails + Shorts into playlists
 
-Status 2026-11-01: PLAN (approved scope: thumbnails + playlists). Builds on `reelkit/yt_enrich.py`, which already does
+Status 2026-11-01: Phases B, C, E BUILT (`2dc35c4`, `9b38c35`, +guard rails). Phase A (owner OAuth) OPEN → then Phase D (first live run + backfill). Builds on `reelkit/yt_enrich.py`, which already does
 playlists + tags and is wired into `publish-sync.yml` but idle until the `YT_*` secrets exist.
 
 ## 0. What the official docs say (checked 2026-11-01, pages "last updated 2026-10-15")
@@ -62,7 +62,7 @@ where it needs a wide thumbnail and uses the vertical in the Shorts shelf.
 6. YouTube Studio → Settings → Channel → Feature eligibility: confirm **phone verified** (required for custom thumbnails).
 Done-check: `python3 reelkit/yt_enrich.py whoami` prints the channel title + playlist count (Phase B adds this command).
 
-### Phase B — worker: thumbnails + budget + whoami (agent)
+### Phase B — worker: thumbnails + budget + whoami (agent) — DONE
 - `yt_enrich.py`: add `set_thumbnail(video_id, jpg_bytes)` using the `/upload/` endpoint with `uploadType=media`,
   `Content-Type: image/jpeg`; `whoami` (channels.list mine, 1 unit); quota file + cap; `thumbnails_per_run`; the 10-minute
   processing guard; per-step ledger stamps; `playlistItems.list` pre-check; channel-wide playlist.
@@ -70,7 +70,7 @@ Done-check: `python3 reelkit/yt_enrich.py whoami` prints the channel title + pla
 - Unit tests with a fake HTTP layer (`tests/test_yt_enrich.py`): 429 path, cap path, idempotent rerun, oversize cover.
 - Dry run against the ledger: `python3 reelkit/yt_enrich.py run --dry-run` prints the plan and unit estimate.
 
-### Phase C — workflow + config (agent)
+### Phase C — workflow + config (agent) — DONE (covers are now hosted as `<media_url>_cover.jpg` sidecars for every new Short)
 - `publish-sync.yml`: pass `GH_TOKEN` to the step (release asset download); keep the "secrets missing → notice" early exit.
 - `config/publishing.json#youtube_api`: `{daily_units_cap: 6000, thumbnails_per_run: 12, min_age_minutes: 10,
   channel_playlist: "TheQuizWire · Daily Map Quiz"}`.
@@ -81,7 +81,7 @@ Done-check: `python3 reelkit/yt_enrich.py whoami` prints the channel title + pla
 - Backfill the ~30 already-live Shorts over the day's three runs (≤ 12 thumbnails each); verify 3 random videos in Studio.
 - Add to `dispatch/stats.md` a one-line "YT API: n thumbnails, n playlist items, units today".
 
-### Phase E — guard rails (agent)
+### Phase E — guard rails (agent) — DONE (selftest runs the unit tests + offline dry-run; publish-sync runs `whoami` first; stats.md carries a YouTube API line)
 - `reelkit/selftest.yml` case: `yt_enrich.py run --dry-run` on the committed ledger must exit 0 without secrets.
 - Alert path: if `whoami` fails with `invalid_grant` (revoked/expired token) → `::error` with the Phase A step-4 command, so
   the daily summary surfaces it instead of silently skipping.

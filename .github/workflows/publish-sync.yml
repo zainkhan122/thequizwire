@@ -36,6 +36,7 @@ jobs:
           [ -n "$YT_REFRESH_TOKEN" ] || { echo "::notice::YouTube OAuth not connected (YT_REFRESH_TOKEN) — thumbnails/playlists skipped; docs/YT_API_PLAN.md Phase A"; exit 0; }
           # cover regeneration fallback (old Shorts without a hosted cover) needs the cover toolchain; ffmpeg ships with the runner
           python3 -c "import PIL, cairosvg" 2>/dev/null || python3 -m pip install -q pillow cairosvg 2>/dev/null || python3 -m pip install -q --break-system-packages pillow cairosvg
+          python3 reelkit/yt_enrich.py whoami | tee -a "$GITHUB_STEP_SUMMARY"          # exits 1 with ::error + the Phase A fix on invalid_grant
           python3 reelkit/yt_enrich.py run | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Channel stats → slots
         env:
