@@ -186,6 +186,12 @@ def cmd_push(a):
             total += f.stat().st_size; new.append((ep, f, rel))
         idx["files"][rel] = {"episode": ep.name, "stem": stem_of(ep), "size": f.stat().st_size, "sha256": digest, "url": url,
                              "pushed_at": idx["files"].get(rel, {}).get("pushed_at") or datetime.now(timezone.utc).isoformat(timespec="seconds")}
+    for ep, f, rel, url, digest in plan:                                       # cover sidecar: <same dir>/<stem>_cover.jpg → YouTube thumbnail (yt_enrich)
+        cov = ep / f"out/{stem_of(ep)}_cover.jpg"
+        crel = rel[:-4] + "_cover.jpg"
+        if cov.exists() and cov.stat().st_size <= 2_000_000 and not (crel in idx["files"] and git(repo, "cat-file", "-e", f"HEAD:{crel}", check=False).returncode == 0):
+            new.append((ep, cov, crel)); idx["files"][crel] = {"episode": ep.name, "stem": stem_of(ep), "size": cov.stat().st_size, "sha256": sha256(cov), "url": url[:-4] + "_cover.jpg", "kind": "cover",
+                                                                "pushed_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
     if new:
         git(repo, "sparse-checkout", "add", *sorted({str(Path(rel).parent) for _, _, rel in new}), env=env)
         for ep, f, rel in new:

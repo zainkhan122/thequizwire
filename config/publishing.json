@@ -263,5 +263,15 @@
     "general knowledge"
    ]
   }
+ },
+ "youtube_api": {
+  "note": "YouTube Data API v3 worker (reelkit/yt_enrich.py, docs/YT_API_PLAN.md). Thumbnails + playlists + tags after Buffer publishes. Caps keep us inside the 10,000-unit default quota with room for manual Studio work.",
+  "daily_units_cap": 6000,
+  "thumbnails_per_run": 12,
+  "min_age_minutes": 10,
+  "max_cover_bytes": 2000000,
+  "thumbnails": true,
+  "channel_playlist": "TheQuizWire · Daily Map Quiz",
+  "channel_playlist_id": null
  }
 }

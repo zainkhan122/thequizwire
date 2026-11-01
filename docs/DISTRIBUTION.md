@@ -95,20 +95,24 @@ Buffer API docs (Hosting Media; createPost examples; YouTube/Instagram/Facebook 
 * Monthly budget: dispatch ≈ 2 min, sync ≈ 1 min × 3/day ≈ 90 min/month on the private-repo Actions allowance.
 * Media repo budget 900 MB (`media.max_site_bytes`); a 10 Mbps master is ~45 MB per 40 s, kept until every channel's post is sent + 2 days → ≤ 14 queued per channel × 45 MB ≈ 630 MB. GitHub Pages bandwidth: 3 fetches × 60 videos × 45 MB ≈ 8 GB/month of the 100 GB soft limit.
 
-## 6. YouTube playlists and tags (gap in Buffer)
+## 6. YouTube thumbnails, playlists and tags (gap in Buffer)
 
 Buffer's `YoutubePostMetadataInput` has `title, categoryId, privacy, madeForKids, notifySubscribers, embeddable, license,
-isAiGenerated` — **no playlist and no tags**. `reelkit/yt_enrich.py run` (in publish-sync) takes every ledger row that is
-`sent` on YouTube, resolves the video id from Buffer's `externalLink` (fallback: unique exact-title match among the last
-50 uploads), creates the series playlist on first use (titles in `config/publishing.json#series.*.playlist`; ids are
-written back), inserts the video, and adds backend tags (`postkit.youtube.keywords`) without touching title,
-description or privacy. ≈ 110 quota units per video of the 10,000/day default. Until the OAuth secrets exist the step is
-skipped with a notice and nothing else is affected.
+isAiGenerated` — **no thumbnail, no playlist, no tags**. `reelkit/yt_enrich.py run` (in publish-sync, 3×/day) takes every
+ledger row that is `sent` on YouTube, resolves the video id from Buffer's `externalLink` (fallback: unique exact-title match
+among the last 50 uploads) and, per video, idempotently: (1) sets the episode cover as the custom thumbnail
+(`thumbnails.set`, cover from the hosted sidecar `<media_url>_cover.jpg`, else the release asset, else regenerated),
+(2) inserts it into the series playlist and the channel-wide "TheQuizWire · Daily Map Quiz" playlist (checked with
+`playlistItems.list` first), (3) adds backend tags (`postkit.youtube.keywords`) without touching title, description or
+privacy. Each step stamps the ledger row (`yt_thumbnail_at`, `yt_series_item`, `yt_channel_item`, `yt_tags_at`).
+≈ 153 quota units per video; `config/publishing.json#youtube_api` caps the day at 6,000 units and thumbnails at 12 per run
+(`dispatch/yt_quota.json` tracks the day). Until the OAuth secrets exist the step is skipped with a notice. Full design,
+owner setup and run-book: `docs/YT_API_PLAN.md`.
 
 ## 7. Files
 
 `config/publishing.json` (ids, caps, disclosure, series SEO sets) · `reelkit/postkit.py` · `reelkit/buffer.py` ·
-`reelkit/mediahost.py` · `reelkit/yt_enrich.py` · `reelkit/dispatch.sh` · `.github/workflows/dispatch.yml` ·
+`reelkit/mediahost.py` · `reelkit/yt_enrich.py` (+ `tests/test_yt_enrich.py`) · `dispatch/yt_quota.json` (generated) · `reelkit/dispatch.sh` · `.github/workflows/dispatch.yml` ·
 `.github/workflows/publish-sync.yml` · `render.yml` (`dispatch` input) · `dispatch/ledger.json` (generated, committed).
 
 ## X (Twitter)

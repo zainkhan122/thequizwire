@@ -109,7 +109,7 @@ checkout, cache restore and publish. The old 30–40-min estimate was 4× too pe
 ## 7 · Security and trust boundaries
 - The PAT lives only at `~/.cache/secrets/gh_token` (chmod 600), is re-entered by the owner each new sandbox, and is used for
   git push, `workflow_dispatch`, Release uploads and reading run logs — nothing else. Scope: this repo only (Contents, Actions, Workflows).
-- Workflows use the ephemeral `GITHUB_TOKEN` (`permissions: contents: write` for Releases). No YouTube credentials exist anywhere.
+- Workflows use the ephemeral `GITHUB_TOKEN` (`permissions: contents: write` for Releases). YouTube credentials exist only as the owner's own OAuth grant in GitHub secrets (`YT_CLIENT_ID/SECRET/REFRESH_TOKEN`, scope `auth/youtube`), used solely by `publish-sync` → `reelkit/yt_enrich.py` for thumbnails, playlists and tags on already-published Shorts (`docs/YT_API_PLAN.md`). The agent never holds them; it only reads the step notices.
 - Private repo (owner decision 2026-10-14): ledgers, scripts and the topic backlog stay private. Still: no PII, no analytics exports
   in git — a repo can be flipped public later without a history rewrite only if nothing sensitive was ever committed.
 - Owner's PAT (fine-grained, this repo only): **Contents R/W** (push, Releases) · **Actions R/W** (dispatch, logs, timings for the
