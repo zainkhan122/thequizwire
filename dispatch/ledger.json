@@ -1202,7 +1202,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-10-31T20:29:13+00:00",
+   "refreshed_at": "2026-11-01T07:38:25+00:00",
    "error": "An unknown error has occurred. Please retry the post again, and get in touch if this persists."
   },
   {
@@ -2410,150 +2410,165 @@
    "platform": "youtube",
    "post_id": "6ae60c2b21c807e9d56f8845",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/6e2538efb265/Where-are-MOST-of-the-worlds-lakes.mp4",
    "due_at": "2026-10-31T23:00:00.000Z",
    "created_at": "2026-10-31T15:41:31.197Z",
    "recorded_at": "2026-10-31T15:41:31+00:00",
    "title": "Most lakes in the world — where are they? Not Finland 🛶",
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-31T20:29:15+00:00"
+   "sent_at": "2026-10-31T23:00:38.873Z",
+   "external_link": "https://www.youtube.com/shorts/0WXjocjGRSk",
+   "refreshed_at": "2026-11-01T07:38:27+00:00"
   },
   {
    "episode": "ep21-most-lakes-canada",
    "platform": "instagram",
    "post_id": "6ae60c2bf0984eef3318e171",
    "channel_id": "695bfd29457dae6a34df0f74",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/6e2538efb265/Where-are-MOST-of-the-worlds-lakes.mp4",
    "due_at": "2026-10-31T23:00:00.000Z",
    "created_at": "2026-10-31T15:41:31.683Z",
    "recorded_at": "2026-10-31T15:41:31+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-31T20:29:15+00:00"
+   "sent_at": "2026-10-31T23:01:53.881Z",
+   "external_link": "https://www.instagram.com/reel/DfLSfdnjC5z/",
+   "refreshed_at": "2026-11-01T07:38:27+00:00"
   },
   {
    "episode": "ep21-most-lakes-canada",
    "platform": "facebook",
    "post_id": "6ae60c2dcf3a3112f3adb353",
    "channel_id": "695a159a457dae6a34d901bc",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/6e2538efb265/Where-are-MOST-of-the-worlds-lakes.mp4",
    "due_at": "2026-10-31T23:00:00.000Z",
    "created_at": "2026-10-31T15:41:33.679Z",
    "recorded_at": "2026-10-31T15:41:33+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-31T20:29:17+00:00"
+   "sent_at": "2026-10-31T23:00:56.240Z",
+   "external_link": "https://www.facebook.com/reel/987393567163117/",
+   "refreshed_at": "2026-11-01T07:38:29+00:00"
   },
   {
    "episode": "ep21-most-lakes-canada",
    "platform": "twitter",
    "post_id": "6ae60c2fcf3a3112f3adb517",
    "channel_id": "69f30e2a5c4c051afaf58634",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/6e2538efb265/Where-are-MOST-of-the-worlds-lakes.mp4",
    "due_at": "2026-10-31T21:00:00.000Z",
    "created_at": "2026-10-31T15:41:35.778Z",
    "recorded_at": "2026-10-31T15:41:35+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-31T20:29:19+00:00"
+   "sent_at": "2026-10-31T21:00:23.382Z",
+   "external_link": "https://x.com/2049746939164676096/status/2116636423285539078",
+   "refreshed_at": "2026-11-01T07:38:31+00:00"
   },
   {
    "episode": "ep21-most-lakes-canada",
    "platform": "threads",
    "post_id": "6ae60c30ab019b90870e9c52",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/6e2538efb265/Where-are-MOST-of-the-worlds-lakes.mp4",
    "due_at": "2026-10-31T23:00:00.000Z",
    "created_at": "2026-10-31T15:41:36.211Z",
    "recorded_at": "2026-10-31T15:41:36+00:00",
    "title": null,
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-10-31T20:29:19+00:00"
+   "sent_at": "2026-10-31T23:01:28.175Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfLSdLikYAK",
+   "refreshed_at": "2026-11-01T07:38:31+00:00"
   },
   {
    "episode": "ep17-first-olympic-gold-connolly",
    "platform": "youtube",
    "post_id": "6ae49942d9c1092d26250edd",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/66ac06198c98/Who-won-the-FIRST-gold-medal-of-the-modern-Olympics.mp4",
    "due_at": "2026-10-30T16:00:00.000Z",
    "created_at": "2026-10-30T13:18:00.000Z",
    "recorded_at": "2026-11-01T04:50:00+00:00",
    "title": null,
    "account": "BUFFER_API_KEY",
-   "note": "restored 2026-11-01 from render run 41060229519 dispatch log — entries lost to a stale-ledger overwrite by the parallel ep20 run"
+   "note": "restored 2026-11-01 from render run 41060229519 dispatch log — entries lost to a stale-ledger overwrite by the parallel ep20 run",
+   "sent_at": "2026-10-30T16:01:04.958Z",
+   "external_link": "https://www.youtube.com/shorts/pZKMBRClWTY",
+   "refreshed_at": "2026-11-01T07:38:33+00:00"
   },
   {
    "episode": "ep17-first-olympic-gold-connolly",
    "platform": "instagram",
    "post_id": "6ae49943e266b27191e853b8",
    "channel_id": "695bfd29457dae6a34df0f74",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/66ac06198c98/Who-won-the-FIRST-gold-medal-of-the-modern-Olympics.mp4",
    "due_at": "2026-10-30T15:00:00.000Z",
    "created_at": "2026-10-30T13:18:00.000Z",
    "recorded_at": "2026-11-01T04:50:00+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "note": "restored 2026-11-01 from render run 41060229519 dispatch log — entries lost to a stale-ledger overwrite by the parallel ep20 run"
+   "note": "restored 2026-11-01 from render run 41060229519 dispatch log — entries lost to a stale-ledger overwrite by the parallel ep20 run",
+   "sent_at": "2026-10-30T15:01:48.196Z",
+   "external_link": "https://www.instagram.com/reel/DfH2vqpE3A7/",
+   "refreshed_at": "2026-11-01T07:38:33+00:00"
   },
   {
    "episode": "ep17-first-olympic-gold-connolly",
    "platform": "facebook",
    "post_id": "6ae4994579ddf9a28af6c4cf",
    "channel_id": "695a159a457dae6a34d901bc",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/66ac06198c98/Who-won-the-FIRST-gold-medal-of-the-modern-Olympics.mp4",
    "due_at": "2026-10-30T17:00:00.000Z",
    "created_at": "2026-10-30T13:18:00.000Z",
    "recorded_at": "2026-11-01T04:50:00+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "note": "restored 2026-11-01 from render run 41060229519 dispatch log — entries lost to a stale-ledger overwrite by the parallel ep20 run"
+   "note": "restored 2026-11-01 from render run 41060229519 dispatch log — entries lost to a stale-ledger overwrite by the parallel ep20 run",
+   "sent_at": "2026-10-30T17:01:25.440Z",
+   "external_link": "https://www.facebook.com/reel/1820178082518996/",
+   "refreshed_at": "2026-11-01T07:38:35+00:00"
   },
   {
    "episode": "ep17-first-olympic-gold-connolly",
    "platform": "twitter",
    "post_id": "6ae4994779ddf9a28af6c55c",
    "channel_id": "69f30e2a5c4c051afaf58634",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/66ac06198c98/Who-won-the-FIRST-gold-medal-of-the-modern-Olympics.mp4",
    "due_at": "2026-10-30T21:00:00.000Z",
    "created_at": "2026-10-30T13:18:00.000Z",
    "recorded_at": "2026-11-01T04:50:00+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "note": "restored 2026-11-01 from render run 41060229519 dispatch log — entries lost to a stale-ledger overwrite by the parallel ep20 run"
+   "note": "restored 2026-11-01 from render run 41060229519 dispatch log — entries lost to a stale-ledger overwrite by the parallel ep20 run",
+   "sent_at": "2026-10-30T21:00:57.931Z",
+   "external_link": "https://x.com/2049746939164676096/status/2116274180341498101",
+   "refreshed_at": "2026-11-01T07:38:37+00:00"
   },
   {
    "episode": "ep17-first-olympic-gold-connolly",
    "platform": "threads",
    "post_id": "6ae499479394ea34c1157a92",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/66ac06198c98/Who-won-the-FIRST-gold-medal-of-the-modern-Olympics.mp4",
    "due_at": "2026-10-30T23:00:00.000Z",
    "created_at": "2026-10-30T13:18:00.000Z",
    "recorded_at": "2026-11-01T04:50:00+00:00",
    "title": null,
    "account": "BUFFER_API_KEY",
-   "note": "restored 2026-11-01 from render run 41060229519 dispatch log — entries lost to a stale-ledger overwrite by the parallel ep20 run"
+   "note": "restored 2026-11-01 from render run 41060229519 dispatch log — entries lost to a stale-ledger overwrite by the parallel ep20 run",
+   "sent_at": "2026-10-30T23:01:15.121Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfItozaihR1",
+   "refreshed_at": "2026-11-01T07:38:37+00:00"
   },
   {
    "episode": "ep22-most-oil-venezuela",
@@ -2566,7 +2581,10 @@
    "created_at": "2026-11-01T04:56:43.576Z",
    "recorded_at": "2026-11-01T04:56:43+00:00",
    "title": "Which country has the most oil reserves in the world? Not Saudi Arabia 🛢️",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-11-01T07:38:39+00:00"
   },
   {
    "episode": "ep22-most-oil-venezuela",
@@ -2579,7 +2597,10 @@
    "created_at": "2026-11-01T04:56:43.997Z",
    "recorded_at": "2026-11-01T04:56:44+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-11-01T07:38:39+00:00"
   },
   {
    "episode": "ep22-most-oil-venezuela",
@@ -2592,7 +2613,10 @@
    "created_at": "2026-11-01T04:56:46.080Z",
    "recorded_at": "2026-11-01T04:56:46+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-11-01T07:38:41+00:00"
   },
   {
    "episode": "ep22-most-oil-venezuela",
@@ -2605,7 +2629,10 @@
    "created_at": "2026-11-01T04:56:48.037Z",
    "recorded_at": "2026-11-01T04:56:48+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-11-01T07:38:43+00:00"
   },
   {
    "episode": "ep22-most-oil-venezuela",
@@ -2618,7 +2645,10 @@
    "created_at": "2026-11-01T04:56:48.498Z",
    "recorded_at": "2026-11-01T04:56:48+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-11-01T07:38:43+00:00"
   },
   {
    "episode": "ep08-most-doctors-cuba",
@@ -2631,7 +2661,10 @@
    "created_at": "2026-11-01T05:15:00.875Z",
    "recorded_at": "2026-11-01T05:15:01+00:00",
    "title": "Which country has the most doctors per person? Not the USA 🩺",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-11-01T07:38:45+00:00"
   },
   {
    "episode": "ep08-most-doctors-cuba",
@@ -2644,7 +2677,10 @@
    "created_at": "2026-11-01T05:15:01.605Z",
    "recorded_at": "2026-11-01T05:15:01+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-11-01T07:38:46+00:00"
   },
   {
    "episode": "ep08-most-doctors-cuba",
@@ -2657,7 +2693,10 @@
    "created_at": "2026-11-01T05:15:03.537Z",
    "recorded_at": "2026-11-01T05:15:03+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-11-01T07:38:48+00:00"
   },
   {
    "episode": "ep08-most-doctors-cuba",
@@ -2670,7 +2709,10 @@
    "created_at": "2026-11-01T05:15:05.545Z",
    "recorded_at": "2026-11-01T05:15:05+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-11-01T07:38:50+00:00"
   },
   {
    "episode": "ep08-most-doctors-cuba",
@@ -2683,7 +2725,10 @@
    "created_at": "2026-11-01T05:15:06.022Z",
    "recorded_at": "2026-11-01T05:15:06+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-11-01T07:38:50+00:00"
   }
  ]
 }
