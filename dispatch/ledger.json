@@ -2554,6 +2554,71 @@
    "title": null,
    "account": "BUFFER_API_KEY",
    "note": "restored 2026-11-01 from render run 41060229519 dispatch log — entries lost to a stale-ledger overwrite by the parallel ep20 run"
+  },
+  {
+   "episode": "ep22-most-oil-venezuela",
+   "platform": "youtube",
+   "post_id": "6ae6c68b1ee172cd6ddc8316",
+   "channel_id": "6a72ff4f99afb44349064208",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/cc3ddd6ddf47/Where-is-the-MOST-oil-in-the-world.mp4",
+   "due_at": "2026-11-01T17:00:00.000Z",
+   "created_at": "2026-11-01T04:56:43.576Z",
+   "recorded_at": "2026-11-01T04:56:43+00:00",
+   "title": "Which country has the most oil reserves in the world? Not Saudi Arabia 🛢️",
+   "account": "BUFFER_API_KEY"
+  },
+  {
+   "episode": "ep22-most-oil-venezuela",
+   "platform": "instagram",
+   "post_id": "6ae6c68cab019b90873fc6ab",
+   "channel_id": "695bfd29457dae6a34df0f74",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/cc3ddd6ddf47/Where-is-the-MOST-oil-in-the-world.mp4",
+   "due_at": "2026-11-01T16:00:00.000Z",
+   "created_at": "2026-11-01T04:56:43.997Z",
+   "recorded_at": "2026-11-01T04:56:44+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY_2"
+  },
+  {
+   "episode": "ep22-most-oil-venezuela",
+   "platform": "facebook",
+   "post_id": "6ae6c68ef0984eef334a05b6",
+   "channel_id": "695a159a457dae6a34d901bc",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/cc3ddd6ddf47/Where-is-the-MOST-oil-in-the-world.mp4",
+   "due_at": "2026-11-01T18:00:00.000Z",
+   "created_at": "2026-11-01T04:56:46.080Z",
+   "recorded_at": "2026-11-01T04:56:46+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY_2"
+  },
+  {
+   "episode": "ep22-most-oil-venezuela",
+   "platform": "twitter",
+   "post_id": "6ae6c690cf3a3112f3ddab6c",
+   "channel_id": "69f30e2a5c4c051afaf58634",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/cc3ddd6ddf47/Where-is-the-MOST-oil-in-the-world.mp4",
+   "due_at": "2026-11-01T14:00:00.000Z",
+   "created_at": "2026-11-01T04:56:48.037Z",
+   "recorded_at": "2026-11-01T04:56:48+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY_2"
+  },
+  {
+   "episode": "ep22-most-oil-venezuela",
+   "platform": "threads",
+   "post_id": "6ae6c690ab019b90873fc72b",
+   "channel_id": "6a6dd3b24b2d03035f7e82e8",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/cc3ddd6ddf47/Where-is-the-MOST-oil-in-the-world.mp4",
+   "due_at": "2026-11-01T15:00:00.000Z",
+   "created_at": "2026-11-01T04:56:48.498Z",
+   "recorded_at": "2026-11-01T04:56:48+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY"
   }
  ]
 }
