@@ -8,7 +8,7 @@ United States 3.7 (2022).
 Night-lights opener over the Atlantic with the question; three flag options. Reveal: Cuba fills red with a pulse, the Havana pin on
 "doctors", the tag "Cuba · 9.5 per 1,000" and the 9.5 PER 1,000 card. Pull out over the Atlantic: three bars grow
 — 9.5 / 4.5 / 3.7 — with a stethoscope, the US flag-ball thinks on "States". Push back onto the island: a
-counter that starts at 106,131 and FALLS to 75,364 (doctors on the island, 2021 → 2024), the island sticker, then a door on "left".
+counter that starts at 106,131 and FALLS to 75,364 (doctors at home, 2021→24), the island sticker, then a door on "left".
 Pull out over the Caribbean: the 37,000 ABROAD card, the plane sticker, the "doctors in 50+ countries" tag, Cuba pulses once more.
 
 ## Beat order

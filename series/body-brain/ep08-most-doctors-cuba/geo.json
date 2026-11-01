@@ -41,16 +41,15 @@
       23.14
      ],
      "label": "Havana",
-     "qid": "Q1563",
-     "side": "left"
+     "qid": "Q1563"
     }
    ],
    "labels": [
     {
      "id": "cu",
      "lonlat": [
-      -75.5,
-      24.8
+      -83.5,
+      24.6
      ],
      "text": "Cuba · 9.5 per 1,000",
      "cls": "tag",
@@ -60,8 +59,8 @@
     {
      "id": "isl",
      "lonlat": [
-      -74,
-      24.5
+      -83.5,
+      25.2
      ],
      "text": "11 million people",
      "cls": "tag",
