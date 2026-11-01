@@ -1,21 +1,21 @@
-# Channel stats — 2026-10-31T20:29Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
+# Channel stats — 2026-11-01T04:46Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
 
 ## Per series, all channels (7-day movement — what is trending for us)
 - wild-files: 16 posts · +2031 in 7 d · 7101 total
-- body-brain: 6 posts · +1981 in 7 d · 3180 total
-- sports-sprint: 16 posts · +1602 in 7 d · 7756 total
+- sports-sprint: 16 posts · +1591 in 7 d · 7756 total
 - geo-blitz: 21 posts · +1243 in 7 d · 9912 total
+- body-brain: 6 posts · +927 in 7 d · 3180 total
 
 ## youtube — 30 posts · metric views · buffer insights · 30/30 sent posts with metrics
 last 24 h:
-- ep14-fastest-animal-peregrine (wild-files): +840 · 840 total
-- ep20-coldest-capital-ulaanbaatar (geo-blitz): +197 · 198 total
 - ep13-most-wild-lions-tanzania (wild-files): +194 · 472 total
+- ep20-coldest-capital-ulaanbaatar (geo-blitz): +143 · 198 total
 - ep16-most-olympics-hosted-usa (sports-sprint): +85 · 927 total
 - ep06-most-stroke-deaths-china (body-brain): +35 · 920 total
-series (7 d): wild-files +2030 (8) · body-brain +1974 (3) · sports-sprint +1587 (8) · geo-blitz +1236 (11)
-hours (first-24 h by publish hour): 12:00 n=4 med 97.5 · 19:00 n=3 med 591
-→ slots: not enough first-24 h data (7/8) — researched defaults in use
+- ep14-fastest-animal-peregrine (wild-files): +16 · 840 total
+series (7 d): wild-files +2030 (8) · sports-sprint +1587 (8) · geo-blitz +1236 (11) · body-brain +920 (3)
+hours (first-24 h by publish hour): 12:00 n=4 med 97.5 · 19:00 n=4 med 715.5
+→ slots: ['19:00', '12:00']
 
 ## instagram — 0 posts · metric — · buffer insights · 0/30 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
 
@@ -28,9 +28,9 @@ last 24 h:
 - ep18-newest-un-member (geo-blitz): +0 · 11 total
 - ep14-cricket-world-cup-wins (sports-sprint): +0 · 11 total
 - ep10-komodo-dragons-indonesia (wild-files): +0 · 7 total
-series (7 d): sports-sprint +15 (8) · geo-blitz +7 (10) · body-brain +7 (3) · wild-files +1 (8)
-hours (first-24 h by publish hour): 10:00 n=3 med 0 · 19:00 n=3 med 0
-→ slots: not enough first-24 h data (6/8) — researched defaults in use
+series (7 d): geo-blitz +7 (10) · body-brain +7 (3) · sports-sprint +4 (8) · wild-files +1 (8)
+hours (first-24 h by publish hour): 10:00 n=3 med 0 · 19:00 n=4 med 2.0
+→ slots: not enough first-24 h data (7/8) — researched defaults in use
 
 ## twitter — 0 posts · metric — · buffer insights · 0/30 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
 
@@ -39,9 +39,9 @@ hours (first-24 h by publish hour): 10:00 n=3 med 0 · 19:00 n=3 med 0
 | episode | channel | sent (local) | metric | total | 24 h | 7 d | first 24 h | reactions | comments |
 |---|---|---|---|---|---|---|---|---|---|
 | ep14-fastest-animal-peregrine | threads | Sat 10:00 | views | 0 | 0 | 0 | None | 0 | 0 |
-| ep20-coldest-capital-ulaanbaatar | threads | Fri 19:00 | views | 7 | 7 | 7 | None | 0 | 0 |
-| ep14-fastest-animal-peregrine | youtube | Fri 19:00 | views | 840 | 840 | 840 | None | 22 | 0 |
-| ep20-coldest-capital-ulaanbaatar | youtube | Fri 12:00 | views | 198 | 197 | 198 | 161 | 16 | 0 |
+| ep20-coldest-capital-ulaanbaatar | threads | Fri 19:00 | views | 7 | 7 | 7 | 7 | 0 | 0 |
+| ep14-fastest-animal-peregrine | youtube | Fri 19:00 | views | 840 | 16 | 840 | 840 | 22 | 0 |
+| ep20-coldest-capital-ulaanbaatar | youtube | Fri 12:00 | views | 198 | 143 | 198 | 161 | 16 | 0 |
 | ep13-most-wild-lions-tanzania | youtube | Thu 12:00 | views | 472 | 194 | 472 | 34 | 28 | 0 |
 | ep13-most-wild-lions-tanzania | threads | Thu 10:00 | views | 1 | 0 | 1 | 0 | 0 | 0 |
 | ep16-most-olympics-hosted-usa | threads | Wed 19:00 | views | 4 | 0 | 4 | 4 | 0 | 0 |
@@ -55,8 +55,8 @@ hours (first-24 h by publish hour): 10:00 n=3 med 0 · 19:00 n=3 med 0
 | ep12-polar-bears-penguins | threads | Mon 19:00 | views | 0 | 0 | 0 | 0 | 0 | 0 |
 | ep12-polar-bears-penguins | youtube | Mon 19:00 | views | 718 | 3 | 718 | 446 | 16 | 0 |
 | ep05-first-heart-transplant | threads | Sun 10:00 | views | 4 | 0 | 4 | None | 0 | 0 |
-| ep14-cricket-world-cup-wins | threads | Sat 19:00 | views | 11 | 0 | 11 | None | 0 | 0 |
-| ep05-first-heart-transplant | youtube | Sat 19:00 | views | 1054 | 0 | 1054 | None | 85 | 0 |
+| ep14-cricket-world-cup-wins | threads | Sat 19:00 | views | 11 | 0 | None | None | 0 | 0 |
+| ep05-first-heart-transplant | youtube | Sat 19:00 | views | 1054 | 0 | None | None | 85 | 0 |
 | ep14-cricket-world-cup-wins | youtube | Sat 12:00 | views | 673 | 0 | None | None | 7 | 0 |
 | ep18-newest-un-member | threads | Fri 19:00 | views | 11 | 0 | None | None | 0 | 0 |
 | ep18-newest-un-member | youtube | Fri 12:00 | views | 840 | 0 | None | None | 50 | 1 |
