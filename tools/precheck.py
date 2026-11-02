@@ -81,6 +81,13 @@ def main():
         dens = n / (w1 - w0) * 10
         if dens < 16: F.append(f"P1 explanation pace {dens:.1f}/10 s locally — CI timeline is ~5 % longer; need ≥ 16 here")
     except Exception as ex: F.append(f"P1 could not measure pace ({ex})")
+    # placelint: the CI layout / occlusion / motion / ASR gates, approximated from the spec (reelkit/placelint.py)
+    try:
+        import placelint as PL
+        spec = ROOT / "tools/specs" / (ep.name + ".json")
+        if spec.exists():
+            pf, pw = PL.check(json.loads(spec.read_text())); F += pf; W += pw
+    except Exception as ex: F.append(f"placelint crashed ({ex})")
     for w in W: print("  WARN ", w)
     for f in F: print("  FAIL ", f)
     print(f"precheck: {ep.name} → {'FAIL ' + str(len(F)) if F else 'ok'} (numerals {numerals}, words ≈ {total})")

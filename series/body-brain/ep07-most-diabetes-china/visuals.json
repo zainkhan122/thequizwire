@@ -288,10 +288,10 @@
    "stage": "stage_map",
    "until": "s05.end",
    "args": {
-    "k": 0.92,
+    "k": 0.972,
     "lonlat": [
-     92.5,
-     28.2
+     94.5,
+     28.8
     ],
     "ease": "none"
    }
@@ -340,6 +340,14 @@
    "id": "hmm"
   },
   {
+   "at": "s05.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "beijing"
+   }
+  },
+  {
    "at": "s06",
    "do": "geo.cam_to",
    "stage": "stage_map",
@@ -359,10 +367,10 @@
    "stage": "stage_map",
    "until": "s06.end",
    "args": {
-    "k": 0.51,
+    "k": 0.54,
     "lonlat": [
-     41,
-     30
+     37.5,
+     30.8
     ],
     "ease": "none"
    }
@@ -434,10 +442,10 @@
    "stage": "stage_map",
    "until": "s08+0.2",
    "args": {
-    "k": 1.63,
+    "k": 1.728,
     "lonlat": [
-     -78.6,
-     44.2
+     -76.5,
+     44.8
     ],
     "ease": "none"
    }

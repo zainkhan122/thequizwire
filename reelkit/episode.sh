@@ -25,9 +25,9 @@ NAME="$(basename "$EP")"
 BUILD="${BUILD:-$HOME/.cache/build/$NAME}"; HF="$BUILD/hf"
 STAGES="${*:-pull tts words trim plan voice geo score assets build static quizlint geolint facts provenance check textqa render encode qa}"
 _st=""; for _w in $STAGES; do [ "$_w" = lint ] && _w=check
-  if [ "$_w" = preflight ]; then _w="plan geo score build static quizlint geolint facts provenance"; command -v hyperframes >/dev/null 2>&1 && _w="$_w check layout"; fi
+  if [ "$_w" = preflight ]; then _w="plan geo score build static quizlint geolint facts provenance"; command -v hyperframes >/dev/null 2>&1 && _w="$_w check layout" || _w="$_w placelint"; fi
   _st="$_st $_w"; done; STAGES=" $_st "
-KNOWN="pull tts words trim plan voice geo score assets build static quizlint geolint facts provenance planlint check textqa layout snap render encode qa"
+KNOWN="pull tts words trim plan voice geo score assets build static quizlint geolint facts provenance planlint placelint check textqa layout snap render encode qa"
 for _w in $STAGES; do [[ " $KNOWN " == *" $_w "* ]] || { echo "episode.sh: unknown stage '$_w' (known: $KNOWN)" >&2; exit 2; }; done
 FPS="${FPS:-30}"; CRF="${CRF:-18}"; WORKERS="${WORKERS:-auto}"; REL=""; [ "${RELEASE:-0}" = 1 ] && REL="--release"
 export HYPERFRAMES_NO_TELEMETRY=1 HYPERFRAMES_NO_UPDATE_CHECK=1 DO_NOT_TRACK=1 HYPERFRAMES_SKIP_SKILLS=1
@@ -62,6 +62,7 @@ has build  && { log "composition"; if [ -f "$EP/build.py" ]; then python3 "$EP/b
   [ -f "$HF/assets/mix.wav" ] && ! grep -q 'id="mix"' "$HF/index.html" && { if [ -f "$EP/build.py" ]; then python3 "$EP/build.py" "$HF"; else python3 "$REPO/engine/compose.py" "$EP" "$HF" >/dev/null; fi; } || true; }
 has static && { log "browser-less composition run (selectors · runtime · determinism)"; node "$REPO/reelkit/hfstatic.mjs" "$HF"; }
 has quizlint && { log "quiz format gate"; python3 "$REPO/reelkit/quizlint.py" "$EP" --hf "$HF" $REL --report "$EP/out/quizlint.json"; }
+has placelint && { log "offline layout/occlusion/motion/ASR pre-gate (no browser)"; python3 "$REPO/reelkit/placelint.py" "$EP"; }
 has geolint  && { log "map honesty + border policy gate"; ONL=""; [ "${GEOLINT_ONLINE:-0}" = 1 ] && ONL="--online"; python3 "$REPO/reelkit/geolint.py" "$EP" --hf "$HF" $REL $ONL --report "$EP/out/geolint.json"; }
 has facts  && { log "fact gate (claims ledger ↔ narration + on-screen text)"; python3 "$REPO/reelkit/factcheck.py" "$EP" --hf "$HF" --report "$EP/out/factcheck.json" --sources-md "$EP/out/sources.md"; }
 has provenance && { log "provenance gate (origin + licence of every shipped file, credits, AI disclosure)"; python3 "$REPO/reelkit/provenance.py" "$EP" --hf "$HF" --report "$EP/out/provenance.json" --credits-md "$EP/out/credits.md"; }
