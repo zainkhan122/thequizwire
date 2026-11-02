@@ -1,0 +1,93 @@
+{
+ "version": 1,
+ "episode": "ep18-most-world-cup-goals-mbappe",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -95,
+     22,
+     25,
+     58
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "250"
+     ],
+     "cls": "",
+     "note": "France (metropolitan)",
+     "lift": "flag",
+     "flag": "fr"
+    }
+   ],
+   "pins": [
+    {
+     "id": "hardrock",
+     "lonlat": [
+      -80.24,
+      25.96
+     ],
+     "label": "Hard Rock Stadium",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "fr",
+     "lonlat": [
+      2.5,
+      46.8
+     ],
+     "text": "France · 22",
+     "cls": "tag",
+     "in": "s04@france",
+     "out": "s05"
+    },
+    {
+     "id": "mia",
+     "lonlat": [
+      -80.2,
+      28.6
+     ],
+     "text": "Miami · 18 Jul 2026",
+     "cls": "tag",
+     "in": "s06@miami+0.3",
+     "out": "s07"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -110,
+      10,
+      40,
+      70
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

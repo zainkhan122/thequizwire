@@ -1,0 +1,222 @@
+{
+ "version": 1,
+ "episode": "ep18-most-world-cup-goals-mbappe",
+ "topic": "Most goals in men's FIFA World Cup history: Kylian Mbappé, 22, after the 2026 tournament (10 in 2026, Golden Boot); passed Lionel Messi (21) with two goals in the third-place playoff v England in Miami Gardens on 18 July 2026 (England won 6–4); Messi passed Miroslav Klose's 16 (held since 2014) in June 2026 and led for about a month; Ronaldo (Brazil) 15",
+ "researched": "2026-11-02",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Klose still holds the World Cup scoring record with 16.",
+   "reality": "The 2026 tournament rewrote it: Messi passed 16 in June, finished on 21; Mbappé finished on 22 and is now the all-time leader.",
+   "sources": [
+    "ap_record",
+    "espn_report",
+    "espn_messi"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Feed clips still recite 'Klose 16' or argue Messi v Ronaldo; nobody shows the post-2026 table, the Miami stadium and the 12-years-v-26-days contrast on one map.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=most+world+cup+goals+shorts",
+    "title": "Search: most world cup goals shorts",
+    "angle": "ranking lists",
+    "misses": "mostly pre-2026, no map"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=world+cup+records+2026",
+    "title": "Search: world cup records 2026",
+    "angle": "highlight compilations",
+    "misses": "no quiz, no numbers on screen"
+   },
+   {
+    "url": "https://www.youtube.com/@huhindustry/shorts",
+    "title": "HuhIndustry",
+    "angle": "fast facts",
+    "misses": "no sourced sport facts"
+   }
+  ]
+ },
+ "sources": {
+  "ap_record": {
+   "type": "press",
+   "publisher": "Associated Press (via CW39)",
+   "title": "Kylian Mbappé passes Lionel Messi for career World Cup scoring record with 22 goals",
+   "url": "https://cw39.com/sports/world-cup-2026/france-mbappe-beats-messi-goal-count/",
+   "date": "2026-11-02",
+   "notes": "18 July 2026, third-place match v England in Miami Gardens; goals in the 48th and 66th minutes; passed Messi's 21"
+  },
+  "espn_report": {
+   "type": "press",
+   "publisher": "ESPN",
+   "title": "France 4-6 England, FIFA World Cup third-place match, 18 Jul 2026",
+   "url": "https://www.espn.com/soccer/report/_/gameId/760516",
+   "date": "2026-11-02",
+   "notes": "England 6–4; Mbappé 48', 66'; 22 career World Cup goals, 10 in the 2026 tournament, two more than Messi"
+  },
+  "espn_messi": {
+   "type": "press",
+   "publisher": "ESPN",
+   "title": "FIFA World Cup 2026 stats: Messi's all-time record 18; Mbappé equals Klose with 16",
+   "url": "https://www.espn.com/soccer/story/_/id/49145571/",
+   "date": "2026-11-02",
+   "notes": "23 June 2026: Messi passed Klose's men's record of 16 with a brace v Austria"
+  },
+  "usatoday_final": {
+   "type": "press",
+   "publisher": "USA Today",
+   "title": "Spain wins World Cup, outlasting Messi and Argentina in extra time",
+   "url": "https://www.usatoday.com/story/sports/soccer/worldcup/2026/07/19/argentina-spain-world-cup-live-score-final-lineups-messi-watch-highlights/90970500007/",
+   "date": "2026-11-02",
+   "notes": "19 July 2026 final Spain 1–0 Argentina; Messi finished with 8 goals in 2026 and 21 in his World Cup career"
+  },
+  "wtk_table": {
+   "type": "reference",
+   "publisher": "WTK Sports",
+   "title": "Most World Cup goals all time, final after 2026",
+   "url": "https://wtksports.com/articles/most-world-cup-goals-all-time-messi-klose-ronaldo",
+   "date": "2026-11-02",
+   "notes": "Mbappé 22, Messi 21, Klose 16, Ronaldo 15; Klose's 16 set in 2014"
+  },
+  "fifa_alltime": {
+   "type": "primary",
+   "publisher": "FIFA",
+   "title": "FIFA World Cup all-time leading scorers (published 19 Jul 2026)",
+   "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/fifa-world-cup-all-time-leading-scorers",
+   "date": "2026-11-02",
+   "notes": "Mbappé 22 goals in 22 matches (2018: 4, 2022: 8, 2026: 10), overtook Messi; Klose former leader; Ronaldo one behind Klose"
+  },
+  "fifa_boot": {
+   "type": "primary",
+   "publisher": "FIFA",
+   "title": "Mbappé claims adidas Golden Boot, FIFA World Cup 2026",
+   "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/adidas-golden-boot-race-top-scorer",
+   "date": "2026-11-02",
+   "notes": "ten goals in 2026; double in the 6–4 Bronze final defeat by England in Miami; now all-time leading scorer; aged 27; Messi ended on eight"
+  },
+  "fifa_prog": {
+   "type": "primary",
+   "publisher": "FIFA",
+   "title": "Top goalscorer in FIFA World Cup history progression",
+   "url": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/top-goalscorer-progression",
+   "date": "2026-11-02",
+   "notes": "Klose (2014–2026) 16; Messi (16 June to 18 July 2026) 21; Mbappé (since 18 July 2026) 22"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Kylian Mbappé holds the men's World Cup career scoring record with 22 goals after the 2026 tournament, aged 27.",
+   "sources": [
+    "fifa_alltime",
+    "fifa_boot",
+    "ap_record"
+   ],
+   "vo": [
+    "who has scored the most world cup goals ever",
+    "klose, messi, or mbappé",
+    "mbappé. 22 world cup goals for france, and he is still only 27",
+    "22 and counting. follow us"
+   ],
+   "screen": [
+    "Mbappé",
+    "Klose",
+    "Messi",
+    "22 GOALS",
+    "the men's World Cup record",
+    "France · 22",
+    "22"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Final table after 2026: Mbappé 22, Messi 21, Klose 16, Ronaldo 15.",
+   "sources": [
+    "fifa_alltime",
+    "fifa_prog",
+    "wtk_table"
+   ],
+   "vo": [
+    "messi finished on 21. klose had 16, ronaldo 15. mbappé went past them all in 2026"
+   ],
+   "screen": [
+    "Mbappé",
+    "Messi",
+    "Klose",
+    "Ronaldo",
+    "22",
+    "21",
+    "16",
+    "15"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Mbappé passed Messi with two goals in the third-place playoff v England in Miami Gardens on 18 July 2026, a match France lost 6–4; he finished 2026 with 10 goals.",
+   "sources": [
+    "fifa_boot",
+    "ap_record",
+    "espn_report"
+   ],
+   "vo": [
+    "the record fell in miami, in the third-place game against england: a brace, in a match france actually lost"
+   ],
+   "screen": [
+    "Hard Rock Stadium",
+    "Miami · 18 Jul 2026",
+    "goals in the 2026 tournament"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Klose's 16 stood from 2014 until Messi passed it in June 2026; Messi's reign at the top lasted about a month (FIFA: 16 June to 18 July 2026).",
+   "sources": [
+    "fifa_prog",
+    "espn_messi",
+    "ap_record"
+   ],
+   "vo": [
+    "klose had held it for 12 years. messi took it in june. it lasted about a month"
+   ],
+   "screen": [
+    "12 YEARS",
+    "Klose, 2014 to 2026",
+    "1 MONTH",
+    "Messi, June to July 2026",
+    "KLOSE",
+    "MESSI"
+   ]
+  }
+ ]
+}

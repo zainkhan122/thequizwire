@@ -1,0 +1,852 @@
+{
+ "id": "ep18-most-world-cup-goals-mbappe",
+ "series": "sports-sprint",
+ "number": 18,
+ "seed": 3418,
+ "question": "Who has scored the MOST World Cup goals ever?",
+ "keyword": "MOST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Klose",
+   "flag": "de",
+   "cue": "klose"
+  },
+  {
+   "text": "Messi",
+   "flag": "ar",
+   "cue": "messi"
+  },
+  {
+   "text": "Mbappé",
+   "flag": "fr",
+   "cue": "mbappé"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "22 goals",
+ "outro_headline": "DID YOU GET IT?",
+ "cover_emoji": "⚽",
+ "post": {
+  "premise": "The World Cup scoring record changed hands twice in one month",
+  "bait": "Klose, Messi or Mbappé — which did you pick? 👇",
+  "keywords": [
+   "most world cup goals",
+   "world cup all time top scorer",
+   "mbappe world cup goals",
+   "messi world cup goals",
+   "klose record",
+   "world cup 2026 records",
+   "football quiz",
+   "sports trivia",
+   "world cup stats"
+  ],
+  "tags": [
+   "WorldCup",
+   "FootballQuiz"
+  ],
+  "sources_line": "ESPN, AP, FIFA",
+  "copy": {
+   "spoilers": [
+    "mbappé",
+    "mbappe",
+    "france",
+    "french",
+    "22"
+   ],
+   "youtube": {
+    "title": "Who has the most World Cup goals ever? 2026 changed the answer ⚽",
+    "description": "Klose, Messi or Mbappé? For twelve years the answer never moved. Then the 2026 World Cup rewrote it twice in a single month, and the last change came in a game the record-breaker lost.\nGuess before the flag lifts, then see the full table, the stadium where it happened, and how long each man held the crown.\nWho did you pick?",
+    "tags": [
+     "#worldcup",
+     "#footballquiz",
+     "#worldcup2026",
+     "#soccer",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Who has scored the MOST World Cup goals ever? ⚽\nKlose, Messi or Mbappé? For twelve years the answer never moved. Then the 2026 World Cup rewrote it twice in one month.\nWhich did you pick?",
+    "tags": [
+     "#worldcup",
+     "#footballquiz",
+     "#worldcup2026",
+     "#soccer",
+     "#sportstrivia"
+    ]
+   },
+   "facebook": {
+    "text": "Who has scored the most World Cup goals ever — Klose, Messi or Mbappé?\nThe record stood for twelve years, then changed hands twice in a month. Guess before the flag lifts.",
+    "tags": [
+     "#worldcup",
+     "#footballquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Who has scored the MOST World Cup goals ever?\nKlose, Messi or Mbappé? The record stood for twelve years, then changed hands twice in a month.",
+    "tags": [
+     "#WorldCup",
+     "#FootballQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Who has scored the most World Cup goals ever — Klose, Messi or Mbappé? The record stood for twelve years, then the 2026 tournament rewrote it twice in a single month, the last time in a game the new holder lost.",
+    "tags": [
+     "#worldcup"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-record",
+  "hook": "fact-first",
+  "opener": "wide-drift",
+  "reveal": "flag-lift",
+  "beats": [
+   "bars",
+   "pin",
+   "counter",
+   "split"
+  ],
+  "cast": "flagball:fr + emoji-set:football",
+  "music": "bed:stadium",
+  "outro": "DAILY SPORTS QUIZ"
+ },
+ "intent": "A record book being rewritten live: the table, the stadium, then the clock on how long each man held it.",
+ "voice": {
+  "v01_cues": {
+   "who": "who",
+   "most": "most"
+  },
+  "v04": {
+   "text": "Mbappé. 22 World Cup goals for France, and he is still only 27.",
+   "cues": {
+    "answer": "mbappé",
+    "france": "france",
+    "only": "only"
+   }
+  },
+  "v05": {
+   "text": "Messi finished on 21. Klose had 16, Ronaldo 15. Mbappé went past them all in 2026.",
+   "cues": {
+    "messi": "messi",
+    "klose": "klose",
+    "ronaldo": "ronaldo",
+    "went": "went"
+   }
+  },
+  "v06": {
+   "text": "The record fell in Miami, in the third-place game against England: a brace, in a match France actually lost.",
+   "cues": {
+    "miami": "miami",
+    "england": "england",
+    "brace": "brace",
+    "lost": "lost"
+   }
+  },
+  "v07": {
+   "text": "Klose had held it for 12 years. Messi took it in June. It lasted about a month.",
+   "cues": {
+    "held": "held",
+    "june": "june",
+    "month": "month"
+   }
+  },
+  "v08": {
+   "text": "22 and counting. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "22 GOALS",
+   "text": "the men's World Cup record"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "fr",
+   "face": "happy",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "ar",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "research": {
+  "topic": "Most goals in men's FIFA World Cup history: Kylian Mbappé, 22, after the 2026 tournament (10 in 2026, Golden Boot); passed Lionel Messi (21) with two goals in the third-place playoff v England in Miami Gardens on 18 July 2026 (England won 6–4); Messi passed Miroslav Klose's 16 (held since 2014) in June 2026 and led for about a month; Ronaldo (Brazil) 15",
+  "myths": [
+   {
+    "myth": "Klose still holds the World Cup scoring record with 16.",
+    "reality": "The 2026 tournament rewrote it: Messi passed 16 in June, finished on 21; Mbappé finished on 22 and is now the all-time leader.",
+    "sources": [
+     "ap_record",
+     "espn_report",
+     "espn_messi"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Feed clips still recite 'Klose 16' or argue Messi v Ronaldo; nobody shows the post-2026 table, the Miami stadium and the 12-years-v-26-days contrast on one map.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=most+world+cup+goals+shorts",
+     "title": "Search: most world cup goals shorts",
+     "angle": "ranking lists",
+     "misses": "mostly pre-2026, no map"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=world+cup+records+2026",
+     "title": "Search: world cup records 2026",
+     "angle": "highlight compilations",
+     "misses": "no quiz, no numbers on screen"
+    },
+    {
+     "url": "https://www.youtube.com/@huhindustry/shorts",
+     "title": "HuhIndustry",
+     "angle": "fast facts",
+     "misses": "no sourced sport facts"
+    }
+   ]
+  },
+  "sources": {
+   "ap_record": {
+    "type": "press",
+    "publisher": "Associated Press (via CW39)",
+    "title": "Kylian Mbappé passes Lionel Messi for career World Cup scoring record with 22 goals",
+    "url": "https://cw39.com/sports/world-cup-2026/france-mbappe-beats-messi-goal-count/",
+    "date": "2026-11-02",
+    "notes": "18 July 2026, third-place match v England in Miami Gardens; goals in the 48th and 66th minutes; passed Messi's 21"
+   },
+   "espn_report": {
+    "type": "press",
+    "publisher": "ESPN",
+    "title": "France 4-6 England, FIFA World Cup third-place match, 18 Jul 2026",
+    "url": "https://www.espn.com/soccer/report/_/gameId/760516",
+    "date": "2026-11-02",
+    "notes": "England 6–4; Mbappé 48', 66'; 22 career World Cup goals, 10 in the 2026 tournament, two more than Messi"
+   },
+   "espn_messi": {
+    "type": "press",
+    "publisher": "ESPN",
+    "title": "FIFA World Cup 2026 stats: Messi's all-time record 18; Mbappé equals Klose with 16",
+    "url": "https://www.espn.com/soccer/story/_/id/49145571/",
+    "date": "2026-11-02",
+    "notes": "23 June 2026: Messi passed Klose's men's record of 16 with a brace v Austria"
+   },
+   "usatoday_final": {
+    "type": "press",
+    "publisher": "USA Today",
+    "title": "Spain wins World Cup, outlasting Messi and Argentina in extra time",
+    "url": "https://www.usatoday.com/story/sports/soccer/worldcup/2026/07/19/argentina-spain-world-cup-live-score-final-lineups-messi-watch-highlights/90970500007/",
+    "date": "2026-11-02",
+    "notes": "19 July 2026 final Spain 1–0 Argentina; Messi finished with 8 goals in 2026 and 21 in his World Cup career"
+   },
+   "wtk_table": {
+    "type": "reference",
+    "publisher": "WTK Sports",
+    "title": "Most World Cup goals all time, final after 2026",
+    "url": "https://wtksports.com/articles/most-world-cup-goals-all-time-messi-klose-ronaldo",
+    "date": "2026-11-02",
+    "notes": "Mbappé 22, Messi 21, Klose 16, Ronaldo 15; Klose's 16 set in 2014"
+   },
+   "fifa_alltime": {
+    "type": "primary",
+    "publisher": "FIFA",
+    "title": "FIFA World Cup all-time leading scorers (published 19 Jul 2026)",
+    "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/fifa-world-cup-all-time-leading-scorers",
+    "date": "2026-11-02",
+    "notes": "Mbappé 22 goals in 22 matches (2018: 4, 2022: 8, 2026: 10), overtook Messi; Klose former leader; Ronaldo one behind Klose"
+   },
+   "fifa_boot": {
+    "type": "primary",
+    "publisher": "FIFA",
+    "title": "Mbappé claims adidas Golden Boot, FIFA World Cup 2026",
+    "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/adidas-golden-boot-race-top-scorer",
+    "date": "2026-11-02",
+    "notes": "ten goals in 2026; double in the 6–4 Bronze final defeat by England in Miami; now all-time leading scorer; aged 27; Messi ended on eight"
+   },
+   "fifa_prog": {
+    "type": "primary",
+    "publisher": "FIFA",
+    "title": "Top goalscorer in FIFA World Cup history progression",
+    "url": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/top-goalscorer-progression",
+    "date": "2026-11-02",
+    "notes": "Klose (2014–2026) 16; Messi (16 June to 18 July 2026) 21; Mbappé (since 18 July 2026) 22"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Kylian Mbappé holds the men's World Cup career scoring record with 22 goals after the 2026 tournament, aged 27.",
+    "sources": [
+     "fifa_alltime",
+     "fifa_boot",
+     "ap_record"
+    ],
+    "vo": [
+     "who has scored the most world cup goals ever",
+     "klose, messi, or mbappé",
+     "mbappé. 22 world cup goals for france, and he is still only 27",
+     "22 and counting. follow us"
+    ],
+    "screen": [
+     "Mbappé",
+     "Klose",
+     "Messi",
+     "22 GOALS",
+     "the men's World Cup record",
+     "France · 22",
+     "22"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Final table after 2026: Mbappé 22, Messi 21, Klose 16, Ronaldo 15.",
+    "sources": [
+     "fifa_alltime",
+     "fifa_prog",
+     "wtk_table"
+    ],
+    "vo": [
+     "messi finished on 21. klose had 16, ronaldo 15. mbappé went past them all in 2026"
+    ],
+    "screen": [
+     "Mbappé",
+     "Messi",
+     "Klose",
+     "Ronaldo",
+     "22",
+     "21",
+     "16",
+     "15"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Mbappé passed Messi with two goals in the third-place playoff v England in Miami Gardens on 18 July 2026, a match France lost 6–4; he finished 2026 with 10 goals.",
+    "sources": [
+     "fifa_boot",
+     "ap_record",
+     "espn_report"
+    ],
+    "vo": [
+     "the record fell in miami, in the third-place game against england: a brace, in a match france actually lost"
+    ],
+    "screen": [
+     "Hard Rock Stadium",
+     "Miami · 18 Jul 2026",
+     "goals in the 2026 tournament"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Klose's 16 stood from 2014 until Messi passed it in June 2026; Messi's reign at the top lasted about a month (FIFA: 16 June to 18 July 2026).",
+    "sources": [
+     "fifa_prog",
+     "espn_messi",
+     "ap_record"
+    ],
+    "vo": [
+     "klose had held it for 12 years. messi took it in june. it lasted about a month"
+    ],
+    "screen": [
+     "12 YEARS",
+     "Klose, 2014 to 2026",
+     "1 MONTH",
+     "Messi, June to July 2026",
+     "KLOSE",
+     "MESSI"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -95,
+   22,
+   25,
+   58
+  ],
+  "far_bbox": [
+   -110,
+   10,
+   40,
+   70
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "250"
+  ],
+  "highlight_note": "France (metropolitan)",
+  "labels": [
+   {
+    "id": "fr",
+    "lonlat": [
+     2.5,
+     46.8
+    ],
+    "text": "France · 22",
+    "cls": "tag",
+    "in": "s04@france",
+    "out": "s05"
+   },
+   {
+    "id": "mia",
+    "lonlat": [
+     -80.2,
+     28.6
+    ],
+    "text": "Miami · 18 Jul 2026",
+    "cls": "tag",
+    "in": "s06@miami+0.3",
+    "out": "s07"
+   }
+  ],
+  "pins": [
+   {
+    "id": "hardrock",
+    "lonlat": [
+     -80.24,
+     25.96
+    ],
+    "label": "Hard Rock Stadium",
+    "side": "left"
+   }
+  ],
+  "scalebar": null,
+  "lift": "flag",
+  "lift_flag": "fr",
+  "pin_beats": [],
+  "cams": {
+   "start": [
+    0.5,
+    [
+     -30,
+     40
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     -27,
+     40
+    ]
+   ],
+   "s04": [
+    2.2,
+    [
+     2.5,
+     46.8
+    ]
+   ],
+   "s04b": [
+    2.4,
+    [
+     3.5,
+     46.2
+    ]
+   ],
+   "s05": [
+    0.8,
+    [
+     -20,
+     42
+    ]
+   ],
+   "s05b": [
+    0.9,
+    [
+     -17,
+     41
+    ]
+   ],
+   "s06": [
+    2.6,
+    [
+     -80.3,
+     26.2
+    ]
+   ],
+   "s06b": [
+    2.9,
+    [
+     -80.0,
+     26.0
+    ]
+   ],
+   "s07": [
+    0.7,
+    [
+     -35,
+     42
+    ]
+   ],
+   "s07b": [
+    0.8,
+    [
+     -32,
+     41
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Messi finished on 21. Klose had 16, Ronaldo 15. Mbappé went past them all in 2026.",
+    "cues": {
+     "messi": "messi",
+     "klose": "klose",
+     "ronaldo": "ronaldo",
+     "went": "went"
+    }
+   },
+   "direction": "pull back over the Atlantic; the table slides in row by row — Mbappé's red bar on top, Messi one short; the football sticker drops on 'walked'",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.4,
+   "cam": [
+    0.8,
+    [
+     -20,
+     42
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.9,
+    [
+     -17,
+     41
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "goals",
+     "type": "bars",
+     "rows": [
+      [
+       "Mbappé",
+       22,
+       "22"
+      ],
+      [
+       "Messi",
+       21,
+       "21"
+      ],
+      [
+       "Klose",
+       16,
+       "16"
+      ],
+      [
+       "Ronaldo",
+       15,
+       "15"
+      ]
+     ],
+     "y": 300,
+     "x": 70,
+     "w": 660,
+     "unit": "",
+     "max_value": 24,
+     "bar_h": 64,
+     "gap": 16
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@messi-0.3",
+     "do": "chart.bars_in",
+     "id": "goals",
+     "args": {
+      "dur": 1.0,
+      "stagger": 0.3
+     }
+    },
+    {
+     "at": "@@ronaldo",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "250",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@went+0.2",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "250",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@went",
+     "do": "sticker_in",
+     "id": "st_ball"
+    },
+    {
+     "at": "@@went+0.4",
+     "do": "sticker_pulse",
+     "id": "st_ball"
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "goals"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_ball"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The record fell in Miami, in the third-place game against England: a brace, in a match France actually lost.",
+    "cues": {
+     "miami": "miami",
+     "england": "england",
+     "brace": "brace",
+     "lost": "lost"
+    }
+   },
+   "direction": "fly across the ocean to Miami; the stadium pin on 'Miami', the date tag; on 'goals' a counter ticks to 10 — his tournament total — the bronze sticker on 'lost', because the record came in a defeat",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.4,
+   "cam": [
+    2.6,
+    [
+     -80.3,
+     26.2
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    2.9,
+    [
+     -80.0,
+     26.0
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "ten",
+     "type": "counter",
+     "start": 0,
+     "end": 10,
+     "y": 330,
+     "label": "goals in the 2026 tournament",
+     "fmt": "int",
+     "size": 170
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@miami",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "hardrock"
+     }
+    },
+    {
+     "at": "@@miami+0.2",
+     "do": "fx.flash",
+     "args": {}
+    },
+    {
+     "at": "@@brace-0.2",
+     "do": "chart.counter_run",
+     "id": "ten",
+     "until": "@@brace+1.4",
+     "args": {
+      "steps": 10
+     }
+    },
+    {
+     "at": "@@lost",
+     "do": "sticker_in",
+     "id": "st_bronze"
+    },
+    {
+     "at": "@@lost+0.4",
+     "do": "sticker_pulse",
+     "id": "st_bronze"
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "ten"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_bronze"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "hardrock"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Klose had held it for 12 years. Messi took it in June. It lasted about a month.",
+    "cues": {
+     "held": "held",
+     "june": "june",
+     "month": "month"
+    }
+   },
+   "direction": "back out wide; a THEN/NOW split — 12 YEARS for Klose on the left, 1 MONTH for Messi on the right; hourglass sticker on 'month'; the sad Argentine flag-ball",
+   "energy": 3,
+   "tone": "tender",
+   "pause_after": 0.5,
+   "cam": [
+    0.7,
+    [
+     -35,
+     42
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.8,
+    [
+     -32,
+     41
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "reign",
+     "type": "split",
+     "left": {
+      "kicker": "12 YEARS",
+      "text": "Klose, 2014 to 2026"
+     },
+     "right": {
+      "kicker": "1 MONTH",
+      "text": "Messi, June to July 2026"
+     },
+     "label_left": "KLOSE",
+     "label_right": "MESSI",
+     "y": 310,
+     "h": 540,
+     "x": 60,
+     "w": 620
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@held",
+     "do": "chart.split_in",
+     "id": "reign"
+    },
+    {
+     "at": "@@june+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "250",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@month",
+     "do": "sticker_in",
+     "id": "st_hour"
+    },
+    {
+     "at": "@@month+0.4",
+     "do": "sticker_pulse",
+     "id": "st_hour"
+    },
+    {
+     "at": "@@june",
+     "do": "character_in",
+     "id": "sad"
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "reign"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_hour"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "sad"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_ball",
+   "type": "sticker",
+   "emoji": "26bd",
+   "x": 840,
+   "y": 700,
+   "size": 170,
+   "rot": -8
+  },
+  {
+   "id": "st_bronze",
+   "type": "sticker",
+   "emoji": "1f949",
+   "x": 840,
+   "y": 700,
+   "size": 170,
+   "rot": 8
+  },
+  {
+   "id": "st_hour",
+   "type": "sticker",
+   "emoji": "23f3",
+   "x": 840,
+   "y": 700,
+   "size": 160,
+   "rot": -6
+  },
+  {
+   "id": "sad",
+   "type": "character",
+   "flag": "ar",
+   "face": "sad",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

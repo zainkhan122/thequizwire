@@ -1,0 +1,138 @@
+{
+ "id": "ep18-most-world-cup-goals-mbappe",
+ "format": "quiz-v3",
+ "series": "sports-sprint",
+ "number": 18,
+ "title": "Who has scored the MOST World Cup goals ever?",
+ "difficulty": "MEDIUM",
+ "seed": 3418,
+ "quiz": {
+  "question": "Who has scored the MOST World Cup goals ever?",
+  "keyword": "MOST",
+  "options": [
+   "Klose",
+   "Messi",
+   "Mbappé"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Mbappé",
+  "answer_sub": "22 goals",
+  "option_meta": [
+   {
+    "flag": "de"
+   },
+   {
+    "flag": "ar"
+   },
+   {
+    "flag": "fr"
+   }
+  ],
+  "banner": "Mbappé",
+  "banner_sub": "✓  C was right · 22 goals",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Who has scored the MOST World Cup goals ever? ⚽",
+  "premise": "The World Cup scoring record changed hands twice in one month",
+  "bait": "Klose, Messi or Mbappé — which did you pick? 👇",
+  "keywords": [
+   "most world cup goals",
+   "world cup all time top scorer",
+   "mbappe world cup goals",
+   "messi world cup goals",
+   "klose record",
+   "world cup 2026 records",
+   "football quiz",
+   "sports trivia",
+   "world cup stats"
+  ],
+  "description": "The World Cup scoring record changed hands twice in one month. Klose, Messi or Mbappé — which did you pick? 👇\n\nSources: ESPN, AP, FIFA.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nSports Sprint #18",
+  "hashtags": [
+   "#SportsQuiz",
+   "#SportsTrivia",
+   "#thequizwire"
+  ],
+  "tags": [
+   "WorldCup",
+   "FootballQuiz"
+  ],
+  "cover_emoji": "⚽",
+  "copy": {
+   "spoilers": [
+    "mbappé",
+    "mbappe",
+    "france",
+    "french",
+    "22"
+   ],
+   "youtube": {
+    "title": "Who has the most World Cup goals ever? 2026 changed the answer ⚽",
+    "description": "Klose, Messi or Mbappé? For twelve years the answer never moved. Then the 2026 World Cup rewrote it twice in a single month, and the last change came in a game the record-breaker lost.\nGuess before the flag lifts, then see the full table, the stadium where it happened, and how long each man held the crown.\nWho did you pick?",
+    "tags": [
+     "#worldcup",
+     "#footballquiz",
+     "#worldcup2026",
+     "#soccer",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Who has scored the MOST World Cup goals ever? ⚽\nKlose, Messi or Mbappé? For twelve years the answer never moved. Then the 2026 World Cup rewrote it twice in one month.\nWhich did you pick?",
+    "tags": [
+     "#worldcup",
+     "#footballquiz",
+     "#worldcup2026",
+     "#soccer",
+     "#sportstrivia"
+    ]
+   },
+   "facebook": {
+    "text": "Who has scored the most World Cup goals ever — Klose, Messi or Mbappé?\nThe record stood for twelve years, then changed hands twice in a month. Guess before the flag lifts.",
+    "tags": [
+     "#worldcup",
+     "#footballquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Who has scored the MOST World Cup goals ever?\nKlose, Messi or Mbappé? The record stood for twelve years, then changed hands twice in a month.",
+    "tags": [
+     "#WorldCup",
+     "#FootballQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Who has scored the most World Cup goals ever — Klose, Messi or Mbappé? The record stood for twelve years, then the 2026 tournament rewrote it twice in a single month, the last time in a game the new holder lost.",
+    "tags": [
+     "#worldcup"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-record",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "flag-lift",
+  "beats": [
+   "bars",
+   "pin",
+   "counter",
+   "split"
+  ],
+  "cast": "flagball:fr + emoji-set:football",
+  "music": "bed:stadium"
+ },
+ "status": "ready"
+}
