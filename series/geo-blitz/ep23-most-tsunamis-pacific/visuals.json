@@ -342,6 +342,14 @@
    "id": "st_candle"
   },
   {
+   "at": "s05.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "aceh"
+   }
+  },
+  {
    "at": "s06",
    "do": "geo.cam_to",
    "stage": "stage_map",
@@ -416,6 +424,14 @@
    "at": "s06.end",
    "do": "sticker_out",
    "id": "st_jp"
+  },
+  {
+   "at": "s06.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "sendai"
+   }
   },
   {
    "at": "s07",

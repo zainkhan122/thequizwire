@@ -787,6 +787,14 @@
      "at": "@.end",
      "do": "sticker_out",
      "id": "st_candle"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "aceh"
+     }
     }
    ]
   },
@@ -887,6 +895,14 @@
      "at": "@.end",
      "do": "sticker_out",
      "id": "st_jp"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "sendai"
+     }
     }
    ]
   },
