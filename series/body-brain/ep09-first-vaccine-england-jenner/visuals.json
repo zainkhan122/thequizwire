@@ -383,7 +383,7 @@
    }
   },
   {
-   "at": "s06+@@killed",
+   "at": "s06+5.2",
    "do": "fact_in",
    "id": "f3",
    "until": "s06.end"
@@ -490,20 +490,30 @@
    }
   },
   {
-   "at": "s07-0.2",
+   "at": "s07+0.1",
+   "do": "sticker_in",
+   "id": "st_syr2"
+  },
+  {
+   "at": "s07@declared",
+   "do": "sticker_out",
+   "id": "st_syr2"
+  },
+  {
+   "at": "s07+0.1",
    "do": "geo.route_draw",
    "stage": "stage_map",
-   "until": "s07@geneva+0.6",
+   "until": "s07@declared",
    "args": {
     "rid": "to_geneva",
     "layer": "spread"
    }
   },
   {
-   "at": "s07-0.2",
+   "at": "s07+0.1",
    "do": "geo.travel",
    "stage": "stage_map",
-   "until": "s07@geneva+0.6",
+   "until": "s07@declared",
    "args": {
     "rid": "to_geneva",
     "layer": "spread",

@@ -87,7 +87,7 @@
    "title": "Riedel S. Edward Jenner and the history of smallpox and vaccination. Proc Bayl Univ Med Cent 2005;18(1):21–25",
    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1200696/",
    "date": "2026-11-04",
-   "notes": "14 May 1796: Jenner inoculated James Phipps, aged 8, with matter from Sarah Nelmes's cowpox lesion; challenged with smallpox in July 1796 without effect; 'vaccine' from vacca; variolation in China and Turkey predates it; smallpox case fatality about 30 %"
+   "notes": "14 May 1796: Jenner inoculated James Phipps, aged 8, with matter from Sarah Nelmes's cowpox lesion; challenged with smallpox in July 1796 without effect; 'vaccine' from vacca; variolation in China and Turkey predates it; smallpox case fatality about 30 %; WHO declared global eradication of smallpox in 1980"
   },
   "jenner_museum": {
    "type": "primary",
@@ -103,7 +103,7 @@
    "title": "Edward Jenner — English surgeon",
    "url": "https://www.britannica.com/biography/Edward-Jenner",
    "date": "2026-11-04",
-   "notes": "born Berkeley 1749; 14 May 1796 vaccination of James Phipps; Inquiry published 1798"
+   "notes": "born Berkeley 1749; 14 May 1796 vaccination of James Phipps; Inquiry published 1798; smallpox declared eradicated by the WHO in 1980"
   },
   "who_eradication": {
    "type": "primary",
@@ -183,7 +183,9 @@
    "text": "In 1980 the World Health Assembly in Geneva declared smallpox eradicated — the only human disease ever eradicated.",
    "sources": [
     "who_smallpox",
-    "who_eradication"
+    "who_eradication",
+    "riedel_2005",
+    "britannica_jenner"
    ],
    "vo": [
     "in 1980, the who in geneva declared smallpox eradicated, the only human disease ever wiped out"
@@ -191,8 +193,7 @@
    "screen": [
     "Geneva · WHO 1980",
     "Geneva",
-    "1980",
-    "smallpox declared eradicated"
+    "1980"
    ]
   }
  ]
