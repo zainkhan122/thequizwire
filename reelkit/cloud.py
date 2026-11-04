@@ -140,7 +140,9 @@ def fetch_tag(slug, tag, out):
     if not rel: sys.exit(f"no release {tag}")
     out.mkdir(parents=True, exist_ok=True)
     for name, asset in assets_of(slug, rel).items():
+        if name.endswith(".part") or asset.get("state") != "uploaded": print(f"  · skipping {name} ({asset.get('state')}) — orphan of an interrupted upload"); continue
         data = req("GET", asset["url"], headers={"Accept": "application/octet-stream"}, raw=True)
+        if data is None: print(f"  · {name}: 404 on download — skipped"); continue      # 2026-11-04: a cancelled run left a .part asset and dispatch fetched nothing
         (out / name).write_bytes(data); print(f"  ↓ {out / name} ({len(data)/1e6:.1f} MB)")
 
 if __name__ == "__main__":
