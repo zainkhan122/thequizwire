@@ -1,0 +1,137 @@
+{
+ "id": "ep15-longest-living-animal-greenland-shark",
+ "format": "quiz-v3",
+ "series": "wild-files",
+ "number": 15,
+ "title": "Which of these animals lives the LONGEST?",
+ "difficulty": "MEDIUM",
+ "seed": 3515,
+ "quiz": {
+  "question": "Which of these animals lives the LONGEST?",
+  "keyword": "LONGEST",
+  "options": [
+   "Bowhead whale",
+   "Giant tortoise",
+   "Greenland shark"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Greenland shark",
+  "answer_sub": "about 400 years",
+  "option_meta": [
+   {
+    "emoji": "1f40b"
+   },
+   {
+    "emoji": "1f422"
+   },
+   {
+    "emoji": "1f988"
+   }
+  ],
+  "banner": "Greenland shark",
+  "banner_sub": "✓  C was right · about 400 years",
+  "outro": {
+   "headline": "CHALLENGE A FRIEND",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which of these animals lives the LONGEST? 🦈",
+  "premise": "A vertebrate that can be born in the 1600s and still be swimming",
+  "bait": "Whale, tortoise or shark — which did you pick? 👇",
+  "keywords": [
+   "longest living animal",
+   "greenland shark age",
+   "longest lived vertebrate",
+   "how old can a shark get",
+   "bowhead whale lifespan",
+   "oldest animal",
+   "animal facts",
+   "wildlife quiz",
+   "arctic ocean"
+  ],
+  "description": "A vertebrate that can be born in the 1600s and still be swimming. Whale, tortoise or shark — which did you pick? 👇\n\nSources: Nielsen et al., Science 2016; NOAA Fisheries; Guinness World Records.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #15",
+  "hashtags": [
+   "#AnimalQuiz",
+   "#WildlifeFacts",
+   "#thequizwire"
+  ],
+  "tags": [
+   "AnimalFacts",
+   "WildlifeQuiz"
+  ],
+  "cover_emoji": "🦈",
+  "copy": {
+   "spoilers": [
+    "shark",
+    "greenland",
+    "400",
+    "392"
+   ],
+   "youtube": {
+    "title": "Which is the longest living animal? One was born before the USA existed 🦈",
+    "description": "Bowhead whale, giant tortoise or the third one? One of these can live about four centuries, is not an adult until around 150, and scientists worked out its age by reading the lens of its eye.\nGuess before the map lights up, then see the age table, how slowly it grows, and the date it may have been born.\nWhich did you pick?",
+    "tags": [
+     "#animalfacts",
+     "#wildlifequiz",
+     "#ocean",
+     "#arctic",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which of these animals lives the LONGEST? 🐋🐢🦈\nOne of them can live about four centuries, is not an adult until around 150, and had its age read from the lens of its eye.\nWhich did you pick?",
+    "tags": [
+     "#animalfacts",
+     "#wildlifequiz",
+     "#ocean",
+     "#arctic",
+     "#naturelovers"
+    ]
+   },
+   "facebook": {
+    "text": "Which lives the longest — a bowhead whale, a giant tortoise or a Greenland shark?\nOne of them can live about four centuries and may have been born before the United States existed. Pick yours, then watch the Arctic light up.",
+    "tags": [
+     "#animalfacts",
+     "#wildlifequiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which of these animals lives the LONGEST?\nBowhead whale, giant tortoise or Greenland shark? One can live about four centuries and is not an adult until around 150.",
+    "tags": [
+     "#AnimalFacts",
+     "#WildlifeQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which of these animals lives the longest — bowhead whale, giant tortoise or Greenland shark? One of them can live about four centuries, is not an adult until around 150, and may have been born before the United States existed.",
+    "tags": [
+     "#longestlivinganimal"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-animal",
+  "hook": "question-first",
+  "opener": "night-lights",
+  "reveal": "colour-lift",
+  "beats": [
+   "compare",
+   "counter",
+   "label",
+   "split"
+  ],
+  "cast": "emoji-set:arctic + flagball:none",
+  "music": "bed:deep"
+ },
+ "status": "ready"
+}

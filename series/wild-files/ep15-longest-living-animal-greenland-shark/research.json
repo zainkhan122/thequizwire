@@ -1,0 +1,194 @@
+{
+ "version": 1,
+ "episode": "ep15-longest-living-animal-greenland-shark",
+ "topic": "Longest-lived vertebrate: the Greenland shark (Somniosus microcephalus). Nielsen et al., Science 2016, dated 28 females by eye-lens radiocarbon: the largest (502 cm) 392 ± 120 years (95.4 % range 272–512), sexual maturity at least 156 ± 22 years, growth about 1 cm a year; bowhead whale can live more than 200 years (NOAA Fisheries); Jonathan the Seychelles giant tortoise is the oldest known living land animal at about 190 (Guinness). Even the low estimate (272 years before 2016 = 1744) predates the United States (1776).",
+ "researched": "2026-11-04",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Tortoises are the longest-lived animals with a backbone.",
+   "reality": "Giant tortoises reach about 190; the bowhead whale passes 200; the Greenland shark was dated to roughly 400 years, with a range of 272 to 512.",
+   "sources": [
+    "science_2016",
+    "noaa_bowhead",
+    "guinness_jonathan"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Feed clips say 'a 500-year-old shark' over stock footage; nobody shows the age table against whale and tortoise, the 150-year adolescence, or that even the cautious estimate predates 1776 — on a map of where it lives.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=greenland+shark+400+years+shorts",
+    "title": "Search: greenland shark 400 years shorts",
+    "angle": "single-fact wow clips",
+    "misses": "no range, no comparison, no map"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=longest+living+animal",
+    "title": "Search: longest living animal",
+    "angle": "top-10 lists incl. sponges and clams",
+    "misses": "no question, no sourcing"
+   },
+   {
+    "url": "https://www.youtube.com/@huhindustry/shorts",
+    "title": "HuhIndustry",
+    "angle": "fast facts",
+    "misses": "no sourced numbers"
+   }
+  ]
+ },
+ "sources": {
+  "science_2016": {
+   "type": "scholarly",
+   "publisher": "Science (AAAS)",
+   "title": "Eye lens radiocarbon reveals centuries of longevity in the Greenland shark (Somniosus microcephalus) — Nielsen et al., Science 353(6300):702–704, 12 Aug 2016",
+   "url": "https://www.science.org/doi/10.1126/science.aaf1703",
+   "date": "2026-11-04",
+   "notes": "28 females; largest (502 cm) 392 ± 120 years; age at sexual maturity at least 156 ± 22 years; longest-lived vertebrate known"
+  },
+  "au_pure": {
+   "type": "scholarly",
+   "publisher": "Aarhus University research portal",
+   "title": "Eye lens radiocarbon reveals centuries of longevity in the Greenland shark — abstract record",
+   "url": "https://pure.au.dk/portal/en/publications/eye-lens-radiocarbon-reveals-centuries-of-longevity-in-the-greenl/",
+   "date": "2026-11-04",
+   "notes": "abstract: 392 ± 120 years for the 502 cm animal; maturity at least 156 ± 22 years; growth about 1 cm per year reported in the paper"
+  },
+  "noaa_bowhead": {
+   "type": "primary",
+   "publisher": "NOAA Fisheries",
+   "title": "Bowhead whale — species directory",
+   "url": "https://www.fisheries.noaa.gov/species/bowhead-whale",
+   "date": "2026-11-04",
+   "notes": "bowhead whales can live more than 200 years; among the longest-lived mammals"
+  },
+  "guinness_jonathan": {
+   "type": "reference",
+   "publisher": "Guinness World Records",
+   "title": "Oldest living land animal — Jonathan, Seychelles giant tortoise",
+   "url": "https://www.guinnessworldrecords.com/world-records/oldest-living-land-animal",
+   "date": "2026-11-04",
+   "notes": "Jonathan, about 190 years old in 2022, the oldest known living land animal and oldest chelonian ever recorded"
+  },
+  "britannica_gs": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Greenland shark",
+   "url": "https://www.britannica.com/animal/Greenland-shark",
+   "date": "2026-11-04",
+   "notes": "Arctic and North Atlantic; cold, deep water; very slow growth; longest-lived vertebrate following the 2016 study"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The Greenland shark is the longest-lived vertebrate known: the largest female in the 2016 study was dated at 392 ± 120 years (range 272–512).",
+   "sources": [
+    "science_2016",
+    "au_pure",
+    "britannica_gs"
+   ],
+   "vo": [
+    "which of these animals lives the longest",
+    "bowhead whale, giant tortoise, or greenland shark",
+    "the greenland shark. a single female was dated at roughly 400 years old",
+    "older than nations. follow us"
+   ],
+   "screen": [
+    "Greenland shark",
+    "Bowhead whale",
+    "Giant tortoise",
+    "~400 YEARS",
+    "longest-lived vertebrate known",
+    "Greenland shark · ~400 yr",
+    "392"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "The bowhead whale can live more than 200 years and the oldest known tortoise is about 190; the shark's age was read from radiocarbon in the eye lens.",
+   "sources": [
+    "noaa_bowhead",
+    "guinness_jonathan",
+    "science_2016"
+   ],
+   "vo": [
+    "that beats the bowhead whale at 200, and any tortoise. its age was read in the lens of its eye"
+   ],
+   "screen": [
+    "Bowhead whale",
+    "Giant tortoise",
+    "200",
+    "190",
+    "Greenland shark"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Greenland sharks grow about 1 cm a year in cold Arctic water and reach sexual maturity at about 150 years (at least 156 ± 22).",
+   "sources": [
+    "science_2016",
+    "au_pure",
+    "britannica_gs"
+   ],
+   "vo": [
+    "it grows about 1 centimetre a year in freezing water, and is not an adult until around 150"
+   ],
+   "screen": [
+    "years before it is an adult",
+    "Arctic waters · near freezing",
+    "150"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Even the low end of the estimate (272 years before 2016, i.e. born by about 1744) predates the United States' founding in 1776.",
+   "sources": [
+    "science_2016",
+    "au_pure"
+   ],
+   "vo": [
+    "so a shark off greenland today may have been born before the united states existed"
+   ],
+   "screen": [
+    "1744",
+    "born by, at the low estimate",
+    "1776",
+    "the United States is founded",
+    "SHARK",
+    "UNITED STATES"
+   ]
+  }
+ ]
+}

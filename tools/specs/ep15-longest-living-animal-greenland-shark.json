@@ -1,0 +1,822 @@
+{
+ "id": "ep15-longest-living-animal-greenland-shark",
+ "series": "wild-files",
+ "number": 15,
+ "seed": 3515,
+ "question": "Which of these animals lives the LONGEST?",
+ "keyword": "LONGEST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Bowhead whale",
+   "emoji": "1f40b",
+   "cue": "bowhead"
+  },
+  {
+   "text": "Giant tortoise",
+   "emoji": "1f422",
+   "cue": "tortoise"
+  },
+  {
+   "text": "Greenland shark",
+   "emoji": "1f988",
+   "cue": "greenland"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "about 400 years",
+ "outro_headline": "CHALLENGE A FRIEND",
+ "cover_emoji": "🦈",
+ "post": {
+  "premise": "A vertebrate that can be born in the 1600s and still be swimming",
+  "bait": "Whale, tortoise or shark — which did you pick? 👇",
+  "keywords": [
+   "longest living animal",
+   "greenland shark age",
+   "longest lived vertebrate",
+   "how old can a shark get",
+   "bowhead whale lifespan",
+   "oldest animal",
+   "animal facts",
+   "wildlife quiz",
+   "arctic ocean"
+  ],
+  "tags": [
+   "AnimalFacts",
+   "WildlifeQuiz"
+  ],
+  "sources_line": "Nielsen et al., Science 2016; NOAA Fisheries; Guinness World Records",
+  "copy": {
+   "spoilers": [
+    "shark",
+    "greenland",
+    "400",
+    "392"
+   ],
+   "youtube": {
+    "title": "Which is the longest living animal? One was born before the USA existed 🦈",
+    "description": "Bowhead whale, giant tortoise or the third one? One of these can live about four centuries, is not an adult until around 150, and scientists worked out its age by reading the lens of its eye.\nGuess before the map lights up, then see the age table, how slowly it grows, and the date it may have been born.\nWhich did you pick?",
+    "tags": [
+     "#animalfacts",
+     "#wildlifequiz",
+     "#ocean",
+     "#arctic",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which of these animals lives the LONGEST? 🐋🐢🦈\nOne of them can live about four centuries, is not an adult until around 150, and had its age read from the lens of its eye.\nWhich did you pick?",
+    "tags": [
+     "#animalfacts",
+     "#wildlifequiz",
+     "#ocean",
+     "#arctic",
+     "#naturelovers"
+    ]
+   },
+   "facebook": {
+    "text": "Which lives the longest — a bowhead whale, a giant tortoise or a Greenland shark?\nOne of them can live about four centuries and may have been born before the United States existed. Pick yours, then watch the Arctic light up.",
+    "tags": [
+     "#animalfacts",
+     "#wildlifequiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which of these animals lives the LONGEST?\nBowhead whale, giant tortoise or Greenland shark? One can live about four centuries and is not an adult until around 150.",
+    "tags": [
+     "#AnimalFacts",
+     "#WildlifeQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which of these animals lives the longest — bowhead whale, giant tortoise or Greenland shark? One of them can live about four centuries, is not an adult until around 150, and may have been born before the United States existed.",
+    "tags": [
+     "#longestlivinganimal"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-animal",
+  "hook": "fact-first",
+  "opener": "night-lights",
+  "reveal": "colour-lift",
+  "beats": [
+   "compare",
+   "counter",
+   "label",
+   "split"
+  ],
+  "cast": "emoji-set:arctic + flagball:none",
+  "music": "bed:deep",
+  "outro": "CHALLENGE A FRIEND"
+ },
+ "intent": "A naturalist slowing the clock down: the age, how it was read, how slowly the animal grows, then the date that makes it real.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "longest": "longest"
+  },
+  "v04": {
+   "text": "The Greenland shark. A single female was dated at roughly 400 years old.",
+   "cues": {
+    "answer": "greenland",
+    "female": "female",
+    "roughly": "roughly"
+   }
+  },
+  "v05": {
+   "text": "That beats the bowhead whale at 200, and any tortoise. Its age was read in the lens of its eye.",
+   "cues": {
+    "beats": "beats",
+    "tortoise": "tortoise",
+    "lens": "lens"
+   }
+  },
+  "v06": {
+   "text": "It grows about 1 centimetre a year in freezing water, and is not an adult until around 150.",
+   "cues": {
+    "grows": "grows",
+    "water": "water",
+    "adult": "adult"
+   }
+  },
+  "v07": {
+   "text": "So a shark off Greenland today may have been born before the United States existed.",
+   "cues": {
+    "shark": "shark",
+    "born": "born",
+    "existed": "existed"
+   }
+  },
+  "v08": {
+   "text": "Older than nations. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "~400 YEARS",
+   "text": "longest-lived vertebrate known"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": null,
+  "b": null
+ },
+ "research": {
+  "topic": "Longest-lived vertebrate: the Greenland shark (Somniosus microcephalus). Nielsen et al., Science 2016, dated 28 females by eye-lens radiocarbon: the largest (502 cm) 392 ± 120 years (95.4 % range 272–512), sexual maturity at least 156 ± 22 years, growth about 1 cm a year; bowhead whale can live more than 200 years (NOAA Fisheries); Jonathan the Seychelles giant tortoise is the oldest known living land animal at about 190 (Guinness). Even the low estimate (272 years before 2016 = 1744) predates the United States (1776).",
+  "myths": [
+   {
+    "myth": "Tortoises are the longest-lived animals with a backbone.",
+    "reality": "Giant tortoises reach about 190; the bowhead whale passes 200; the Greenland shark was dated to roughly 400 years, with a range of 272 to 512.",
+    "sources": [
+     "science_2016",
+     "noaa_bowhead",
+     "guinness_jonathan"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Feed clips say 'a 500-year-old shark' over stock footage; nobody shows the age table against whale and tortoise, the 150-year adolescence, or that even the cautious estimate predates 1776 — on a map of where it lives.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=greenland+shark+400+years+shorts",
+     "title": "Search: greenland shark 400 years shorts",
+     "angle": "single-fact wow clips",
+     "misses": "no range, no comparison, no map"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=longest+living+animal",
+     "title": "Search: longest living animal",
+     "angle": "top-10 lists incl. sponges and clams",
+     "misses": "no question, no sourcing"
+    },
+    {
+     "url": "https://www.youtube.com/@huhindustry/shorts",
+     "title": "HuhIndustry",
+     "angle": "fast facts",
+     "misses": "no sourced numbers"
+    }
+   ]
+  },
+  "sources": {
+   "science_2016": {
+    "type": "scholarly",
+    "publisher": "Science (AAAS)",
+    "title": "Eye lens radiocarbon reveals centuries of longevity in the Greenland shark (Somniosus microcephalus) — Nielsen et al., Science 353(6300):702–704, 12 Aug 2016",
+    "url": "https://www.science.org/doi/10.1126/science.aaf1703",
+    "date": "2026-11-04",
+    "notes": "28 females; largest (502 cm) 392 ± 120 years; age at sexual maturity at least 156 ± 22 years; longest-lived vertebrate known"
+   },
+   "au_pure": {
+    "type": "scholarly",
+    "publisher": "Aarhus University research portal",
+    "title": "Eye lens radiocarbon reveals centuries of longevity in the Greenland shark — abstract record",
+    "url": "https://pure.au.dk/portal/en/publications/eye-lens-radiocarbon-reveals-centuries-of-longevity-in-the-greenl/",
+    "date": "2026-11-04",
+    "notes": "abstract: 392 ± 120 years for the 502 cm animal; maturity at least 156 ± 22 years; growth about 1 cm per year reported in the paper"
+   },
+   "noaa_bowhead": {
+    "type": "primary",
+    "publisher": "NOAA Fisheries",
+    "title": "Bowhead whale — species directory",
+    "url": "https://www.fisheries.noaa.gov/species/bowhead-whale",
+    "date": "2026-11-04",
+    "notes": "bowhead whales can live more than 200 years; among the longest-lived mammals"
+   },
+   "guinness_jonathan": {
+    "type": "reference",
+    "publisher": "Guinness World Records",
+    "title": "Oldest living land animal — Jonathan, Seychelles giant tortoise",
+    "url": "https://www.guinnessworldrecords.com/world-records/oldest-living-land-animal",
+    "date": "2026-11-04",
+    "notes": "Jonathan, about 190 years old in 2022, the oldest known living land animal and oldest chelonian ever recorded"
+   },
+   "britannica_gs": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Greenland shark",
+    "url": "https://www.britannica.com/animal/Greenland-shark",
+    "date": "2026-11-04",
+    "notes": "Arctic and North Atlantic; cold, deep water; very slow growth; longest-lived vertebrate following the 2016 study"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The Greenland shark is the longest-lived vertebrate known: the largest female in the 2016 study was dated at 392 ± 120 years (range 272–512).",
+    "sources": [
+     "science_2016",
+     "au_pure",
+     "britannica_gs"
+    ],
+    "vo": [
+     "which of these animals lives the longest",
+     "bowhead whale, giant tortoise, or greenland shark",
+     "the greenland shark. a single female was dated at roughly 400 years old",
+     "older than nations. follow us"
+    ],
+    "screen": [
+     "Greenland shark",
+     "Bowhead whale",
+     "Giant tortoise",
+     "~400 YEARS",
+     "longest-lived vertebrate known",
+     "Greenland shark · ~400 yr",
+     "392"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "The bowhead whale can live more than 200 years and the oldest known tortoise is about 190; the shark's age was read from radiocarbon in the eye lens.",
+    "sources": [
+     "noaa_bowhead",
+     "guinness_jonathan",
+     "science_2016"
+    ],
+    "vo": [
+     "that beats the bowhead whale at 200, and any tortoise. its age was read in the lens of its eye"
+    ],
+    "screen": [
+     "Bowhead whale",
+     "Giant tortoise",
+     "200",
+     "190",
+     "Greenland shark"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Greenland sharks grow about 1 cm a year in cold Arctic water and reach sexual maturity at about 150 years (at least 156 ± 22).",
+    "sources": [
+     "science_2016",
+     "au_pure",
+     "britannica_gs"
+    ],
+    "vo": [
+     "it grows about 1 centimetre a year in freezing water, and is not an adult until around 150"
+    ],
+    "screen": [
+     "years before it is an adult",
+     "Arctic waters · near freezing",
+     "150"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Even the low end of the estimate (272 years before 2016, i.e. born by about 1744) predates the United States' founding in 1776.",
+    "sources": [
+     "science_2016",
+     "au_pure"
+    ],
+    "vo": [
+     "so a shark off greenland today may have been born before the united states existed"
+    ],
+    "screen": [
+     "1744",
+     "born by, at the low estimate",
+     "1776",
+     "the United States is founded",
+     "SHARK",
+     "UNITED STATES"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -75,
+   55,
+   20,
+   84
+  ],
+  "far_bbox": [
+   -110,
+   35,
+   60,
+   88
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "304"
+  ],
+  "highlight_note": "Greenland — the shark's namesake range; the answer is an animal, not a country",
+  "lift_color": "#2F80ED",
+  "labels": [
+   {
+    "id": "gs",
+    "lonlat": [
+     -40,
+     74
+    ],
+    "text": "Greenland shark · ~400 yr",
+    "cls": "tag",
+    "in": "s04@answer+0.6",
+    "out": "s05"
+   },
+   {
+    "id": "arc",
+    "lonlat": [
+     -20,
+     79
+    ],
+    "text": "Arctic waters · near freezing",
+    "cls": "tag",
+    "in": "s06@water",
+    "out": "s07"
+   }
+  ],
+  "pins": [],
+  "scalebar": null,
+  "pin_beats": [],
+  "cams": {
+   "start": [
+    0.5,
+    [
+     -60,
+     30
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     -58,
+     31
+    ]
+   ],
+   "s04": [
+    1.0,
+    [
+     -40,
+     70
+    ]
+   ],
+   "s04b": [
+    1.1,
+    [
+     -38,
+     69
+    ]
+   ],
+   "s05": [
+    0.7,
+    [
+     -30,
+     66
+    ]
+   ],
+   "s05b": [
+    0.8,
+    [
+     -27,
+     65
+    ]
+   ],
+   "s06": [
+    1.4,
+    [
+     -20,
+     76
+    ]
+   ],
+   "s06b": [
+    1.55,
+    [
+     -17,
+     75
+    ]
+   ],
+   "s07": [
+    0.75,
+    [
+     -45,
+     62
+    ]
+   ],
+   "s07b": [
+    0.85,
+    [
+     -42,
+     61
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "That beats the bowhead whale at 200, and any tortoise. Its age was read in the lens of its eye.",
+    "cues": {
+     "beats": "beats",
+     "tortoise": "tortoise",
+     "lens": "lens"
+    }
+   },
+   "direction": "ease back over the North Atlantic; three columns rise — the shark's twice the whale's; the whale sticker on 'beats', the eye sticker on 'lens'",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.4,
+   "cam": [
+    0.7,
+    [
+     -30,
+     66
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.8,
+    [
+     -27,
+     65
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "ages",
+     "type": "compare",
+     "items": [
+      [
+       "Greenland shark",
+       392,
+       "392 yr"
+      ],
+      [
+       "Bowhead whale",
+       200,
+       "200 yr"
+      ],
+      [
+       "Giant tortoise",
+       190,
+       "190 yr"
+      ]
+     ],
+     "y": 320,
+     "x": 60,
+     "w": 900,
+     "max_h": 520
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@tortoise+0.5",
+     "do": "sticker_pulse",
+     "id": "st_whale"
+    },
+    {
+     "at": "@@beats-0.3",
+     "do": "chart.compare_in",
+     "id": "ages",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.25
+     }
+    },
+    {
+     "at": "@@beats",
+     "do": "sticker_in",
+     "id": "st_whale"
+    },
+    {
+     "at": "@@beats+0.4",
+     "do": "sticker_pulse",
+     "id": "st_whale"
+    },
+    {
+     "at": "@@tortoise",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "304",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@lens",
+     "do": "sticker_out",
+     "id": "st_whale"
+    },
+    {
+     "at": "@@lens",
+     "do": "sticker_in",
+     "id": "st_eye"
+    },
+    {
+     "at": "@@lens+0.4",
+     "do": "sticker_pulse",
+     "id": "st_eye"
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "ages"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_eye"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "It grows about 1 centimetre a year in freezing water, and is not an adult until around 150.",
+    "cues": {
+     "grows": "grows",
+     "water": "water",
+     "adult": "adult"
+    }
+   },
+   "direction": "push north-east into the Arctic sea between Greenland and Svalbard; the ruler sticker on 'grows', the Arctic tag on 'water', the snowflake sticker; from 'adult' a counter creeps to 150",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.5,
+   "cam": [
+    1.4,
+    [
+     -20,
+     76
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.55,
+    [
+     -17,
+     75
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "grow",
+     "type": "counter",
+     "start": 0,
+     "end": 150,
+     "y": 330,
+     "label": "years before it is an adult",
+     "fmt": "int",
+     "size": 170
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@adult+0.8",
+     "do": "sticker_pulse",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@grows+0.6",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "304",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@grows",
+     "do": "sticker_in",
+     "id": "st_ruler"
+    },
+    {
+     "at": "@@grows+0.4",
+     "do": "sticker_pulse",
+     "id": "st_ruler"
+    },
+    {
+     "at": "@@water+0.3",
+     "do": "sticker_out",
+     "id": "st_ruler"
+    },
+    {
+     "at": "@@water+0.3",
+     "do": "sticker_in",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@water+0.7",
+     "do": "sticker_pulse",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@adult-0.2",
+     "do": "chart.counter_run",
+     "id": "grow",
+     "until": "@@adult+1.3",
+     "args": {
+      "steps": 15
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "grow"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_snow"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "So a shark off Greenland today may have been born before the United States existed.",
+    "cues": {
+     "shark": "shark",
+     "born": "born",
+     "existed": "existed"
+    }
+   },
+   "direction": "drift back to Greenland's coast; the shark sticker on 'swimming'; a SHARK / USA split on 'born' — 1744 against 1776; the Greenland highlight pulses on 'existed'",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.6,
+   "cam": [
+    0.75,
+    [
+     -45,
+     62
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.85,
+    [
+     -42,
+     61
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "born",
+     "type": "split",
+     "left": {
+      "kicker": "1744",
+      "text": "born by, at the low estimate"
+     },
+     "right": {
+      "kicker": "1776",
+      "text": "the United States is founded"
+     },
+     "label_left": "SHARK",
+     "label_right": "UNITED STATES",
+     "y": 310,
+     "h": 540,
+     "x": 60,
+     "w": 620
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@born+0.6",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "304",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@shark",
+     "do": "sticker_in",
+     "id": "st_shark"
+    },
+    {
+     "at": "@@shark+0.4",
+     "do": "sticker_pulse",
+     "id": "st_shark"
+    },
+    {
+     "at": "@@born",
+     "do": "chart.split_in",
+     "id": "born"
+    },
+    {
+     "at": "@@existed",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "304",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@existed+0.3",
+     "do": "sticker_pulse",
+     "id": "st_shark"
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "born"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_shark"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_whale",
+   "type": "sticker",
+   "emoji": "1f40b",
+   "x": 840,
+   "y": 700,
+   "size": 170,
+   "rot": -8
+  },
+  {
+   "id": "st_eye",
+   "type": "sticker",
+   "emoji": "1f441",
+   "x": 840,
+   "y": 700,
+   "size": 160,
+   "rot": 6
+  },
+  {
+   "id": "st_ruler",
+   "type": "sticker",
+   "emoji": "1f4cf",
+   "x": 840,
+   "y": 700,
+   "size": 160,
+   "rot": -10
+  },
+  {
+   "id": "st_snow",
+   "type": "sticker",
+   "emoji": "2744",
+   "x": 840,
+   "y": 700,
+   "size": 160,
+   "rot": 0
+  },
+  {
+   "id": "st_shark",
+   "type": "sticker",
+   "emoji": "1f988",
+   "x": 840,
+   "y": 700,
+   "size": 180,
+   "rot": -8
+  }
+ ]
+}

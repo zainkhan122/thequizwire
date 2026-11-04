@@ -1,0 +1,83 @@
+{
+ "version": 1,
+ "episode": "ep15-longest-living-animal-greenland-shark",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -75,
+     55,
+     20,
+     84
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "304"
+     ],
+     "cls": "",
+     "note": "Greenland — the shark's namesake range; the answer is an animal, not a country",
+     "lift": "color",
+     "color": "#2F80ED"
+    }
+   ],
+   "pins": [],
+   "labels": [
+    {
+     "id": "gs",
+     "lonlat": [
+      -40,
+      74
+     ],
+     "text": "Greenland shark · ~400 yr",
+     "cls": "tag",
+     "in": "s04@answer+0.6",
+     "out": "s05"
+    },
+    {
+     "id": "arc",
+     "lonlat": [
+      -20,
+      79
+     ],
+     "text": "Arctic waters · near freezing",
+     "cls": "tag",
+     "in": "s06@water",
+     "out": "s07"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "night",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -110,
+      35,
+      60,
+      88
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}
