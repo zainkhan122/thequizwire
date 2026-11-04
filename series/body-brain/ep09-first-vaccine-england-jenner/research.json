@@ -1,0 +1,199 @@
+{
+ "version": 1,
+ "episode": "ep09-first-vaccine-england-jenner",
+ "topic": "The first vaccine: Edward Jenner, Berkeley, Gloucestershire, England — on 14 May 1796 he inoculated 8-year-old James Phipps with cowpox matter from milkmaid Sarah Nelmes's hand, later challenged him with smallpox without effect, and coined 'vaccine' from vacca (Latin, cow). Smallpox killed about 30 % of those infected; the WHO declared it eradicated in 1980, the only human disease eradicated. Earlier variolation (China, Ottoman Empire) used smallpox itself and is not a vaccine.",
+ "researched": "2026-11-04",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Louis Pasteur invented vaccination.",
+   "reality": "Pasteur developed later vaccines (rabies, 1885) and named the technique in Jenner's honour; the first vaccine was Jenner's cowpox inoculation of 1796 in England.",
+   "sources": [
+    "riedel_2005",
+    "britannica_jenner",
+    "jenner_museum"
+   ]
+  },
+  {
+   "myth": "China had vaccines centuries earlier.",
+   "reality": "China and the Ottoman world practised variolation — inoculation with smallpox itself, which was risky; Jenner's method used the harmless cowpox virus and is the first vaccine.",
+   "sources": [
+    "riedel_2005",
+    "who_smallpox"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Feed clips either praise Pasteur or show a needle over a stock photo; nobody puts Berkeley on the map, draws the line to Geneva and ties the Latin word to the result on screen.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=first+vaccine+in+history+shorts",
+    "title": "Search: first vaccine in history shorts",
+    "angle": "talking-head history",
+    "misses": "no map, no question"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=human+body+facts+shorts",
+    "title": "Search: human body facts shorts",
+    "angle": "rapid-fire facts",
+    "misses": "no sourcing, no story"
+   },
+   {
+    "url": "https://www.youtube.com/@huhindustry/shorts",
+    "title": "HuhIndustry",
+    "angle": "fast facts",
+    "misses": "no sourced numbers"
+   }
+  ]
+ },
+ "sources": {
+  "who_smallpox": {
+   "type": "primary",
+   "publisher": "World Health Organization",
+   "title": "Smallpox — health topic",
+   "url": "https://www.who.int/health-topics/smallpox",
+   "date": "2026-11-04",
+   "notes": "smallpox killed about 30 % of those infected; declared eradicated by the World Health Assembly in 1980; the only human disease eradicated"
+  },
+  "riedel_2005": {
+   "type": "scholarly",
+   "publisher": "Proceedings (Baylor University Medical Center), via PubMed Central",
+   "title": "Riedel S. Edward Jenner and the history of smallpox and vaccination. Proc Bayl Univ Med Cent 2005;18(1):21–25",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1200696/",
+   "date": "2026-11-04",
+   "notes": "14 May 1796: Jenner inoculated James Phipps, aged 8, with matter from Sarah Nelmes's cowpox lesion; challenged with smallpox in July 1796 without effect; 'vaccine' from vacca; variolation in China and Turkey predates it; smallpox case fatality about 30 %"
+  },
+  "jenner_museum": {
+   "type": "primary",
+   "publisher": "Dr Jenner's House, Museum and Garden, Berkeley",
+   "title": "Edward Jenner and vaccination",
+   "url": "https://jennermuseum.com/",
+   "date": "2026-11-04",
+   "notes": "Berkeley, Gloucestershire; the Temple of Vaccinia in Jenner's garden; James Phipps the gardener's son; Sarah Nelmes the milkmaid"
+  },
+  "britannica_jenner": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Edward Jenner — English surgeon",
+   "url": "https://www.britannica.com/biography/Edward-Jenner",
+   "date": "2026-11-04",
+   "notes": "born Berkeley 1749; 14 May 1796 vaccination of James Phipps; Inquiry published 1798"
+  },
+  "who_eradication": {
+   "type": "primary",
+   "publisher": "World Health Organization",
+   "title": "Commemorating smallpox eradication — a legacy of hope",
+   "url": "https://www.who.int/news/item/08-05-2020-commemorating-smallpox-eradication-a-legacy-of-hope-for-covid-19-and-other-diseases",
+   "date": "2026-11-04",
+   "notes": "8 May 1980: the 33rd World Health Assembly in Geneva officially declared the world free of smallpox"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The first vaccine was given in England: Edward Jenner, in Berkeley, Gloucestershire, on 14 May 1796.",
+   "sources": [
+    "riedel_2005",
+    "britannica_jenner",
+    "jenner_museum"
+   ],
+   "vo": [
+    "which country gave the world its first vaccine",
+    "france, china, or england",
+    "england. on 14 may 1796, edward jenner, a doctor in berkeley, gave the very first",
+    "a disease, gone. follow us"
+   ],
+   "screen": [
+    "England",
+    "France",
+    "China",
+    "14 MAY 1796",
+    "the first vaccination",
+    "Berkeley",
+    "Berkeley · 1796"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Jenner inoculated 8-year-old James Phipps with cowpox matter from milkmaid Sarah Nelmes's hand; he coined 'vaccine' from vacca, Latin for cow.",
+   "sources": [
+    "riedel_2005",
+    "britannica_jenner",
+    "jenner_museum"
+   ],
+   "vo": [
+    "he scratched cowpox from a milkmaid's hand into the arm of 8-year-old james phipps. cow, in latin, is vacca"
+   ],
+   "screen": [
+    "VACCA",
+    "Latin for cow",
+    "VACCINE",
+    "the word Jenner coined",
+    "LATIN",
+    "1796"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Jenner later exposed Phipps to smallpox with no effect; smallpox killed about 30 % of those it infected.",
+   "sources": [
+    "riedel_2005",
+    "who_smallpox"
+   ],
+   "vo": [
+    "weeks later he exposed the boy to smallpox on purpose. nothing happened. smallpox killed 3 in 10 of its victims"
+   ],
+   "screen": [
+    "3 IN 10",
+    "smallpox victims died"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "In 1980 the World Health Assembly in Geneva declared smallpox eradicated — the only human disease ever eradicated.",
+   "sources": [
+    "who_smallpox",
+    "who_eradication"
+   ],
+   "vo": [
+    "in 1980, the who in geneva declared smallpox eradicated, the only human disease ever wiped out"
+   ],
+   "screen": [
+    "Geneva · WHO 1980",
+    "Geneva",
+    "1980",
+    "smallpox declared eradicated"
+   ]
+  }
+ ]
+}

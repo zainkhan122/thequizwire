@@ -1,0 +1,673 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "14 MAY 1796",
+   "text": "the first vaccination"
+  },
+  {
+   "id": "word",
+   "type": "split",
+   "left": {
+    "kicker": "VACCA",
+    "text": "Latin for cow"
+   },
+   "right": {
+    "kicker": "VACCINE",
+    "text": "the word Jenner coined"
+   },
+   "label_left": "LATIN",
+   "label_right": "1796",
+   "y": 310,
+   "h": 540,
+   "x": 60,
+   "w": 620
+  },
+  {
+   "id": "f3",
+   "type": "fact",
+   "kicker": "3 IN 10",
+   "text": "smallpox victims died"
+  },
+  {
+   "id": "st_cow",
+   "type": "sticker",
+   "emoji": "1f404",
+   "x": 840,
+   "y": 700,
+   "size": 170,
+   "rot": -8
+  },
+  {
+   "id": "st_syr",
+   "type": "sticker",
+   "emoji": "1f489",
+   "x": 840,
+   "y": 700,
+   "size": 160,
+   "rot": 8
+  },
+  {
+   "id": "st_syr2",
+   "type": "sticker",
+   "emoji": "1f489",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "st_hour",
+   "type": "sticker",
+   "emoji": "23f3",
+   "x": 840,
+   "y": 700,
+   "size": 160,
+   "rot": -6
+  },
+  {
+   "id": "st_shield",
+   "type": "sticker",
+   "emoji": "1f6e1",
+   "x": 840,
+   "y": 700,
+   "size": 170,
+   "rot": 6
+  },
+  {
+   "id": "st_skull",
+   "type": "sticker",
+   "emoji": "1f480",
+   "x": 840,
+   "y": 700,
+   "size": 150,
+   "rot": -6
+  },
+  {
+   "id": "st_globe",
+   "type": "sticker",
+   "emoji": "1f30d",
+   "x": 840,
+   "y": 700,
+   "size": 170,
+   "rot": 8
+  },
+  {
+   "id": "relief",
+   "type": "character",
+   "flag": "gb",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  },
+  {
+   "id": "cha",
+   "type": "character",
+   "flag": "gb",
+   "face": "happy",
+   "x": 230,
+   "y": 820,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "chb",
+   "type": "character",
+   "flag": "fr",
+   "face": "think",
+   "x": 850,
+   "y": 1000,
+   "size": 200,
+   "rot": 8
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     9,
+     48
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.38,
+    "lonlat": [
+     10,
+     48
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 1.5,
+    "lonlat": [
+     -2.5,
+     52.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 1.62,
+    "lonlat": [
+     -2.0,
+     52.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "826",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s04@jenner",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "bk"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "bk"
+   }
+  },
+  {
+   "at": "s07@geneva+0.3",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "gv"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "gv"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 1.9,
+    "lonlat": [
+     -2.6,
+     51.9
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 2.05,
+    "lonlat": [
+     -2.2,
+     51.7
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@scratched",
+   "do": "sticker_in",
+   "id": "st_cow"
+  },
+  {
+   "at": "s05@scratched+0.4",
+   "do": "sticker_pulse",
+   "id": "st_cow"
+  },
+  {
+   "at": "s05@arm",
+   "do": "sticker_out",
+   "id": "st_cow"
+  },
+  {
+   "at": "s05@arm",
+   "do": "sticker_in",
+   "id": "st_syr"
+  },
+  {
+   "at": "s05@arm+0.4",
+   "do": "sticker_pulse",
+   "id": "st_syr"
+  },
+  {
+   "at": "s05@arm+0.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "826",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05@vacca-0.2",
+   "do": "chart.split_in",
+   "id": "word"
+  },
+  {
+   "at": "s05@vacca+0.6",
+   "do": "sticker_pulse",
+   "id": "st_syr"
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "word"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_syr"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 1.3,
+    "lonlat": [
+     -1.5,
+     52.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 1.42,
+    "lonlat": [
+     -1.0,
+     52.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06+@@killed",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s06.end"
+  },
+  {
+   "at": "s06@weeks",
+   "do": "sticker_in",
+   "id": "st_hour"
+  },
+  {
+   "at": "s06@weeks+0.4",
+   "do": "sticker_pulse",
+   "id": "st_hour"
+  },
+  {
+   "at": "s06@nothing",
+   "do": "sticker_out",
+   "id": "st_hour"
+  },
+  {
+   "at": "s06@nothing",
+   "do": "sticker_in",
+   "id": "st_shield"
+  },
+  {
+   "at": "s06@nothing+0.4",
+   "do": "sticker_pulse",
+   "id": "st_shield"
+  },
+  {
+   "at": "s06@nothing+0.2",
+   "do": "character_in",
+   "id": "relief"
+  },
+  {
+   "at": "s06@killed",
+   "do": "sticker_out",
+   "id": "st_shield"
+  },
+  {
+   "at": "s06@killed+0.3",
+   "do": "sticker_in",
+   "id": "st_skull"
+  },
+  {
+   "at": "s06@killed+0.7",
+   "do": "sticker_pulse",
+   "id": "st_skull"
+  },
+  {
+   "at": "s06@killed+0.5",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "826",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_skull"
+  },
+  {
+   "at": "s06.end",
+   "do": "character_out",
+   "id": "relief"
+  },
+  {
+   "at": "s06.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "berkeley"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.5",
+   "args": {
+    "k": 0.9,
+    "lonlat": [
+     2.0,
+     49.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     2.5,
+     49.0
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07-0.2",
+   "do": "geo.route_draw",
+   "stage": "stage_map",
+   "until": "s07@geneva+0.6",
+   "args": {
+    "rid": "to_geneva",
+    "layer": "spread"
+   }
+  },
+  {
+   "at": "s07-0.2",
+   "do": "geo.travel",
+   "stage": "stage_map",
+   "until": "s07@geneva+0.6",
+   "args": {
+    "rid": "to_geneva",
+    "layer": "spread",
+    "sid": "st_syr2",
+    "offset": [
+     0,
+     -50
+    ]
+   }
+  },
+  {
+   "at": "s07@geneva+0.4",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "geneva"
+   }
+  },
+  {
+   "at": "s07@declared",
+   "do": "sticker_in",
+   "id": "st_globe"
+  },
+  {
+   "at": "s07@declared+0.4",
+   "do": "sticker_pulse",
+   "id": "st_globe"
+  },
+  {
+   "at": "s07@only",
+   "do": "sticker_pulse",
+   "id": "st_globe"
+  },
+  {
+   "at": "s07@only+0.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "826",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_globe"
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "geneva"
+   }
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     9,
+     48
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04@gave",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "berkeley"
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.6",
+   "do": "character_in",
+   "id": "cha"
+  },
+  {
+   "at": "s04+1.9",
+   "do": "character_in",
+   "id": "chb"
+  },
+  {
+   "at": "s05+1.0",
+   "do": "character_out",
+   "id": "cha"
+  },
+  {
+   "at": "s05+0.8",
+   "do": "character_out",
+   "id": "chb"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

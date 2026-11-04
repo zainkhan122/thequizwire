@@ -1,0 +1,144 @@
+{
+ "version": 1,
+ "episode": "ep09-first-vaccine-england-jenner",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -12,
+     42,
+     14,
+     60
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "826"
+     ],
+     "cls": "",
+     "note": "United Kingdom (England has no separate 110m feature; the tag and pin name Berkeley, Gloucestershire)",
+     "lift": "flag",
+     "flag": "gb"
+    },
+    {
+     "kind": "route",
+     "id": "spread",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "to_geneva",
+        "properties": {
+         "name": "Berkeley to Geneva"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           -2.46,
+           51.69
+          ],
+          [
+           -0.5,
+           50.8
+          ],
+          [
+           2.0,
+           49.2
+          ],
+          [
+           4.0,
+           47.8
+          ],
+          [
+           6.14,
+           46.2
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic line from the village where it began to the city where the disease was declared gone"
+    }
+   ],
+   "pins": [
+    {
+     "id": "berkeley",
+     "lonlat": [
+      -2.4586,
+      51.6908
+     ],
+     "label": "Berkeley",
+     "side": "left"
+    },
+    {
+     "id": "geneva",
+     "lonlat": [
+      6.14,
+      46.2
+     ],
+     "label": "Geneva"
+    }
+   ],
+   "labels": [
+    {
+     "id": "bk",
+     "lonlat": [
+      -6.5,
+      53.2
+     ],
+     "text": "Berkeley · 1796",
+     "cls": "tag",
+     "in": "s04@jenner",
+     "out": "s06"
+    },
+    {
+     "id": "gv",
+     "lonlat": [
+      8.0,
+      45.2
+     ],
+     "text": "Geneva · WHO 1980",
+     "cls": "tag",
+     "in": "s07@geneva+0.3",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -30,
+      30,
+      40,
+      70
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

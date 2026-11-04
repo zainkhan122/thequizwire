@@ -1,0 +1,141 @@
+{
+ "id": "ep09-first-vaccine-england-jenner",
+ "format": "quiz-v3",
+ "series": "body-brain",
+ "number": 9,
+ "title": "Which country gave the world its FIRST vaccine?",
+ "difficulty": "MEDIUM",
+ "seed": 3209,
+ "quiz": {
+  "question": "Which country gave the world its FIRST vaccine?",
+  "keyword": "FIRST",
+  "options": [
+   "France",
+   "China",
+   "England"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "England",
+  "answer_sub": "Jenner · 14 May 1796",
+  "option_meta": [
+   {
+    "flag": "fr"
+   },
+   {
+    "flag": "cn"
+   },
+   {
+    "flag": "gb"
+   }
+  ],
+  "banner": "England",
+  "banner_sub": "✓  C was right · Jenner · 14 May 1796",
+  "outro": {
+   "headline": "1 FOR 1?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country gave the world its FIRST vaccine? 💉",
+  "premise": "A country doctor, a milkmaid's hand and an 8-year-old boy",
+  "bait": "France, China or England — which did you pick? 👇",
+  "keywords": [
+   "first vaccine in history",
+   "edward jenner",
+   "who invented the vaccine",
+   "smallpox vaccine 1796",
+   "cowpox milkmaid",
+   "smallpox eradicated 1980",
+   "medical history",
+   "health quiz",
+   "human body facts"
+  ],
+  "description": "A country doctor, a milkmaid's hand and an 8-year-old boy. France, China or England — which did you pick? 👇\n\nSources: WHO; Jenner Museum; Riedel 2005 (Proc Bayl Univ Med Cent); Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nBody & Brain #9",
+  "hashtags": [
+   "#BodyFacts",
+   "#BrainQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "MedicalHistory",
+   "HealthQuiz"
+  ],
+  "cover_emoji": "💉",
+  "copy": {
+   "spoilers": [
+    "england",
+    "english",
+    "jenner",
+    "berkeley",
+    "british",
+    "britain",
+    "uk"
+   ],
+   "youtube": {
+    "title": "Where was the first vaccine in history given? A milkmaid's hand started it 💉",
+    "description": "France, China or the third one? In 1796 a country doctor scratched pus from a milkmaid's hand into an 8-year-old's arm, then deliberately exposed the boy to smallpox. Nothing happened — and a disease that killed 3 in 10 of its victims was on its way out.\nGuess before the flag lifts, then see the village, the word he coined from Latin, and the day the WHO declared the disease gone.\nWhich country did you pick?",
+    "tags": [
+     "#medicalhistory",
+     "#healthquiz",
+     "#vaccine",
+     "#smallpox",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country gave the world its FIRST vaccine? 💉\nFrance, China or the other one? In 1796 a country doctor scratched pus from a milkmaid's hand into an 8-year-old's arm, then exposed the boy to smallpox on purpose. Nothing happened.\nWhich did you pick?",
+    "tags": [
+     "#medicalhistory",
+     "#healthquiz",
+     "#vaccine",
+     "#smallpox",
+     "#sciencefacts"
+    ]
+   },
+   "facebook": {
+    "text": "Which country gave the world its first vaccine — France, China or England?\nIt began with a milkmaid's hand, an 8-year-old boy and a doctor willing to take a terrible risk. Say your answer out loud before the flag lifts.",
+    "tags": [
+     "#medicalhistory",
+     "#healthquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which country gave the world its FIRST vaccine?\nFrance, China or England? It began in 1796 with a milkmaid's hand and an 8-year-old boy.",
+    "tags": [
+     "#MedicalHistory",
+     "#HealthQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which country gave the world its first vaccine — France, China or England? In 1796 a country doctor scratched cowpox from a milkmaid's hand into an 8-year-old's arm, then exposed the boy to smallpox on purpose. Nothing happened, and the word he coined for it came from the Latin for cow.",
+    "tags": [
+     "#medicalhistory"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "flag-lift",
+  "beats": [
+   "pin",
+   "split",
+   "label",
+   "route",
+   "travel"
+  ],
+  "cast": "flagball:gb + emoji-set:medicine",
+  "music": "bed:warm"
+ },
+ "status": "ready"
+}
