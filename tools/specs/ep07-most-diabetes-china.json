@@ -161,7 +161,7 @@
    }
   },
   "v08": {
-   "text": "Check your sugar. Follow us."
+   "text": "Check your sugar today. Follow us."
   }
  },
  "facts": [
@@ -518,7 +518,9 @@
      "britannica_banting"
     ],
     "vo": [
-     "the 14th of november is world diabetes day, the birthday of the doctor who helped discover insulin"
+     "the 14th of november is world diabetes day, the birthday of the doctor who helped discover insulin",
+     "check your sugar today. follow us",
+     "follow us"
     ],
     "screen": [
      "14 NOV",

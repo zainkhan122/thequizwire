@@ -93,7 +93,7 @@
    "role": "story",
    "tone": "revelatory",
    "energy": 4,
-   "pause_after": 0.4,
+   "pause_after": 0.55,
    "direction": "fly across the ocean to Miami; the stadium pin on 'Miami', the date tag; on 'goals' a counter ticks to 10 — his tournament total — the bronze sticker on 'lost', because the record came in a defeat",
    "text": "The record fell in Miami, in the third-place game against England: a brace, in a match France actually lost.",
    "cues": {
@@ -109,7 +109,7 @@
    "role": "story",
    "tone": "tender",
    "energy": 3,
-   "pause_after": 0.5,
+   "pause_after": 0.8,
    "direction": "back out wide; a THEN/NOW split — 12 YEARS for Klose on the left, 1 MONTH for Messi on the right; hourglass sticker on 'month'; the sad Argentine flag-ball",
    "text": "Klose had held it for 12 years. Messi took it in June. It lasted about a month.",
    "cues": {

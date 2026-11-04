@@ -134,6 +134,15 @@ def check(S):
         k0, k1 = cam[0], hold[0]; x0, y0 = screen(proj, cam, cam[1]); x1, y1 = screen(proj, cam, hold[1])
         px = math.hypot(x1 - x0, y1 - y0) * 1.0; ratio = max(k1, k0) / max(1e-9, min(k1, k0))
         if px < 40 and ratio < 1.04: Wn.append(f"L3 s0{5 + i} hold barely moves ({px:.0f} px, ×{ratio:.3f}) — QA wants ≥ 40 % of frame-time moving; drift ≥ 40 px or k ≥ ×1.04, or add pulses")
+    # V2 pause_after must sit inside the tone's range (reelkit/voice.py TONES) — CI voice gate FAILs otherwise (ep18, 11-03)
+    try:
+        sys.path.insert(0, str(ROOT / "reelkit")); from voice import TONES
+        for i, st in enumerate(S.get("story", [])):
+            t = st.get("tone"); pa = st.get("pause_after")
+            if t in TONES and pa is not None:
+                lo, hi = TONES[t]["after"]
+                if not (lo <= pa <= hi): F.append(f"V2 s0{5 + i}: pause_after {pa}s outside {t} range {lo}–{hi}")
+    except Exception as ex: Wn.append(f"V2 skipped ({ex})")
     # V1 ordinals
     for key, v in S.get("voice", {}).items():
         txt = v.get("text") if isinstance(v, dict) else None
