@@ -16,7 +16,7 @@ Argentine flag-ball on "June"; tender tone, wry line.
 ## Beat order
 1. s04 reveal — flag-lift France, tag, 22 GOALS card.
 2. s05 the table — chart.bars_in ×4 rows, highlight_pulse ×2, ⚽ sticker + pulse.
-3. s06 the night — pin + fx.flash Miami, date tag, chart.counter_run 0 → 10, 🥉 sticker + pulse.
+3. s06 the night — pin Miami, date tag, chart.counter_run 0 → 10, 🥉 sticker + pulse.
 4. s07 the clock — chart.split_in 12 YEARS / 1 MONTH, ⏳ sticker + pulse, sad flag-ball.
 
 ## Different from
@@ -31,7 +31,7 @@ reveal is a person's country rather than the answer itself — none of the last 
 - 18 s — four bars grow and the red one on top is not Messi's.
 
 ## Devices
-wide-drift opener · flag-lift reveal · tag labels ×2 · fact card · chart.bars_in · geo.highlight_pulse ×3 · geo.pin_in + fx.flash
+wide-drift opener · flag-lift reveal · tag labels ×2 · fact card · chart.bars_in · geo.highlight_pulse ×3 · geo.pin_in
 (Hard Rock Stadium) · chart.counter_run (10) · chart.split_in (12 YEARS / 1 MONTH) · stickers ⚽ 🥉 ⏳ + sticker_pulse ×3 ·
 flag-ball fr happy / ar think / ar sad.
 

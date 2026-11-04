@@ -470,14 +470,14 @@
     ]
    ],
    "s06": [
-    2.6,
+    2.4,
     [
      -80.3,
      26.2
     ]
    ],
    "s06b": [
-    2.9,
+    2.6,
     [
      -80.0,
      26.0
@@ -627,12 +627,12 @@
      "lost": "lost"
     }
    },
-   "direction": "fly across the ocean to Miami; the stadium pin on 'Miami', the date tag; on 'goals' a counter ticks to 10 — his tournament total — the bronze sticker on 'lost', because the record came in a defeat",
+   "direction": "fly across the ocean to Miami; the stadium pin on 'Miami' (no flash — the 11-04 contrast gate caught the whitened frame), the date tag; on 'goals' a counter ticks to 10 — his tournament total — the bronze sticker on 'lost', because the record came in a defeat",
    "energy": 4,
    "tone": "revelatory",
    "pause_after": 0.55,
    "cam": [
-    2.6,
+    2.4,
     [
      -80.3,
      26.2
@@ -640,7 +640,7 @@
    ],
    "cam_dur": 1.5,
    "cam_hold": [
-    2.9,
+    2.6,
     [
      -80.0,
      26.0
@@ -669,9 +669,14 @@
      }
     },
     {
-     "at": "@@miami+0.2",
-     "do": "fx.flash",
-     "args": {}
+     "at": "@@miami+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "250",
+      "dur": 0.7,
+      "layer": "hl"
+     }
     },
     {
      "at": "@@brace-0.2",

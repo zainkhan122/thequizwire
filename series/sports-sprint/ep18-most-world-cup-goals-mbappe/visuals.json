@@ -355,7 +355,7 @@
    "stage": "stage_map",
    "until": "s06+1.5",
    "args": {
-    "k": 2.6,
+    "k": 2.4,
     "lonlat": [
      -80.3,
      26.2
@@ -369,7 +369,7 @@
    "stage": "stage_map",
    "until": "s06.end",
    "args": {
-    "k": 2.9,
+    "k": 2.6,
     "lonlat": [
      -80.0,
      26.0
@@ -386,9 +386,14 @@
    }
   },
   {
-   "at": "s06@miami+0.2",
-   "do": "fx.flash",
-   "args": {}
+   "at": "s06@miami+0.5",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "250",
+    "dur": 0.7,
+    "layer": "hl"
+   }
   },
   {
    "at": "s06@brace-0.2",
