@@ -1,0 +1,897 @@
+{
+ "id": "ep19-most-medals-winter-olympics-2026-norway",
+ "series": "sports-sprint",
+ "number": 19,
+ "seed": 3719,
+ "question": "Which country topped the 2026 Winter Olympics medal table?",
+ "keyword": "2026",
+ "difficulty": "EASY",
+ "options": [
+  {
+   "text": "USA",
+   "flag": "us",
+   "cue": "usa",
+   "lonlat": [
+    -98,
+    39
+   ]
+  },
+  {
+   "text": "Italy",
+   "flag": "it",
+   "cue": "italy",
+   "lonlat": [
+    12.5,
+    42.5
+   ]
+  },
+  {
+   "text": "Norway",
+   "flag": "no",
+   "cue": "norway",
+   "lonlat": [
+    9,
+    61
+   ]
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "18 golds · 41 medals",
+ "outro_headline": "DID YOU GET IT?",
+ "cover_emoji": "⛷️",
+ "post": {
+  "premise": "A country of under six million out-skied the world again",
+  "bait": "USA, Italy or Norway — which did you pick? 👇",
+  "keywords": [
+   "2026 winter olympics medal table",
+   "milano cortina 2026 medals",
+   "who won the most medals winter olympics 2026",
+   "norway winter olympics",
+   "klaebo gold medals",
+   "team usa winter olympics record",
+   "sports quiz",
+   "olympics facts"
+  ],
+  "tags": [
+   "WinterOlympics",
+   "SportsQuiz"
+  ],
+  "sources_line": "Olympics.com; USA Today; Outlook India",
+  "copy": {
+   "spoilers": [
+    "norway",
+    "norwegian",
+    "klaebo",
+    "klæbo",
+    "18 golds",
+    "41"
+   ],
+   "youtube": {
+    "title": "Who topped the 2026 Winter Olympics medal table? A nation of 6 million ⛷️",
+    "description": "USA, Italy or the third one? Team USA set its own record and the hosts had their best Games ever, yet the table was won by a country of fewer than six million people — one of whose skiers took more golds than Canada.\nGuess before the flag lifts, then see the table, the host cities, and the skier who beat whole nations.\nWhich did you pick?",
+    "tags": [
+     "#winterolympics",
+     "#sportsquiz",
+     "#milanocortina2026",
+     "#skiing",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country topped the 2026 Winter Olympics medal table? ⛷️\nUSA, Italy or the other one? Team USA set its own record and the hosts had their best Games ever, yet the table was won by a country of fewer than six million people.\nWhich did you pick?",
+    "tags": [
+     "#winterolympics",
+     "#sportsquiz",
+     "#milanocortina2026",
+     "#skiing",
+     "#olympics"
+    ]
+   },
+   "facebook": {
+    "text": "Which country topped the 2026 Winter Olympics medal table — the USA, Italy or Norway?\nTeam USA set a record, the hosts had their best Games ever, and still a nation of fewer than six million won. Name it before the flag lifts.",
+    "tags": [
+     "#winterolympics",
+     "#sportsquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which country topped the 2026 Winter Olympics medal table?\nUSA, Italy or Norway? One of them has fewer than six million people — and one skier who out-golded Canada.",
+    "tags": [
+     "#WinterOlympics",
+     "#SportsQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which country topped the 2026 Winter Olympics medal table — the USA, Italy or Norway? Team USA set its own record and the hosts had their best Games ever, yet the table went to a nation of fewer than six million, with one skier who won more golds than Canada.",
+    "tags": [
+     "#milanocortina2026"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "challenge",
+  "opener": "split-candidates",
+  "reveal": "colour-lift",
+  "beats": [
+   "compare",
+   "pin",
+   "label",
+   "split",
+   "second-highlight"
+  ],
+  "cast": "flagball:no + emoji-set:winter",
+  "music": "bed:pulse",
+  "outro": "DID YOU GET IT?"
+ },
+ "intent": "A medal-ceremony announcer: the golds, the hosts' cities, the one skier, then the population punchline.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "table": "table"
+  },
+  "v04": {
+   "text": "Norway. 18 golds in Italy: the most any country has ever won at a single Winter Games.",
+   "cues": {
+    "answer": "norway",
+    "italy": "italy",
+    "most": "most"
+   }
+  },
+  "v05": {
+   "text": "The United States took 12 golds and 33 medals, its best ever. Italy, the hosts, 10. Norway: 41.",
+   "cues": {
+    "states": "states",
+    "hosts": "hosts",
+    "norway": "norway"
+   }
+  },
+  "v06": {
+   "text": "The Games ran from Milan to Cortina. A single Norwegian skier, Johannes Klaebo, won 6 golds, more than Canada did.",
+   "cues": {
+    "milan": "milan",
+    "cortina": "cortina",
+    "skier": "skier",
+    "canada": "canada"
+   }
+  },
+  "v07": {
+   "text": "A country of under 6 million people beat a country of 340 million. Snow helps.",
+   "cues": {
+    "country": "country",
+    "beat": "beat",
+    "snow": "snow"
+   }
+  },
+  "v08": {
+   "text": "Small country, big winter. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "18 GOLDS",
+   "text": "a Winter Games record"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "no",
+   "face": "happy",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "us",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "research": {
+  "topic": "Milano Cortina 2026 Winter Olympics (6–22 February 2026) final medal table: Norway 18 gold, 12 silver, 11 bronze, 41 total — the most golds by any nation at a single Winter Games; United States 12 gold / 33 total, its best ever; Italy (hosts) 10 gold / 30 total; Canada 5 gold / 21; Johannes Høsflot Klæbo (NOR) 6 golds. Norway population about 5.6–5.7 million; USA about 340 million.",
+  "myths": [
+   {
+    "myth": "The USA tops every medal table it enters.",
+    "reality": "Team USA set its own Winter record (12 golds, 33 medals) at Milano Cortina 2026 and still finished second to Norway's 18 golds and 41 medals.",
+    "sources": [
+     "usatoday_table",
+     "olympics_medals",
+     "outlook_table"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Feed clips show the podium or Klæbo's sprint; nobody puts the final table, the two host cities and the population contrast on one map.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=2026+winter+olympics+medal+table",
+     "title": "Search: 2026 winter olympics medal table",
+     "angle": "table read-outs",
+     "misses": "no map, no question"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=klaebo+milano+cortina",
+     "title": "Search: klaebo milano cortina",
+     "angle": "highlight reels",
+     "misses": "no numbers beyond his own"
+    },
+    {
+     "url": "https://www.youtube.com/@huhindustry/shorts",
+     "title": "HuhIndustry",
+     "angle": "fast facts",
+     "misses": "no sourced sport facts"
+    }
+   ]
+  },
+  "sources": {
+   "olympics_medals": {
+    "type": "primary",
+    "publisher": "International Olympic Committee — Olympics.com",
+    "title": "Milano Cortina 2026 — medal table",
+    "url": "https://www.olympics.com/en/olympic-games/milano-cortina-2026/medals",
+    "date": "2026-11-04",
+    "notes": "official final table: Norway 18–12–11 (41); United States 12–12–9 (33); Italy 10–6–14 (30); Canada 5–7–9 (21)"
+   },
+   "usatoday_table": {
+    "type": "press",
+    "publisher": "USA Today",
+    "title": "Olympic medals: the final medal count at the 2026 Winter Games",
+    "url": "https://www.usatoday.com/story/sports/olympics/2026/02/22/olympic-medal-count-final-2026-who-won/88812691007/",
+    "date": "2026-11-04",
+    "notes": "Norway 41 total (18 gold, 12 silver, 11 bronze); United States 33 (12, 12, 9); Italy 30 (10, 6, 14); Canada 21 (5, 7, 9); China 15 (5, 4, 6)"
+   },
+   "outlook_table": {
+    "type": "press",
+    "publisher": "Outlook India",
+    "title": "Milano Cortina 2026 final medal tally: Norway claims top spot",
+    "url": "https://www.outlookindia.com/sports/others/winter-olympics-2026-milano-cortina-final-medal-tally-check-full-standings",
+    "date": "2026-11-04",
+    "notes": "Norway 18 golds, the highest gold count by any country at a single Winter Games; Team USA record 12 golds and 33 medals; Klæbo six golds; Norway population about 5.7 million v USA 342 million"
+   },
+   "sportsbrackets": {
+    "type": "reference",
+    "publisher": "SportsBrackets",
+    "title": "2026 Winter Olympics final medal table",
+    "url": "https://sportsbrackets.net/2026/02/09/2026-winter-olympics-medal-table/",
+    "date": "2026-11-04",
+    "notes": "Norway record 18 golds and 41 total; USA national record 12 golds, second overall"
+   },
+   "ssb_pop": {
+    "type": "primary",
+    "publisher": "Statistics Norway (SSB)",
+    "title": "Population — Norway",
+    "url": "https://www.ssb.no/en/befolkning/folketall/statistikk/befolkning",
+    "date": "2026-11-04",
+    "notes": "Norway's population about 5.6 million (2025)"
+   },
+   "census_pop": {
+    "type": "primary",
+    "publisher": "U.S. Census Bureau",
+    "title": "U.S. and World Population Clock",
+    "url": "https://www.census.gov/popclock/",
+    "date": "2026-11-04",
+    "notes": "United States population about 341 million (2025)"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Norway topped the Milano Cortina 2026 medal table with 18 golds — the most by any nation at a single Winter Games — and 41 medals.",
+    "sources": [
+     "olympics_medals",
+     "usatoday_table",
+     "outlook_table"
+    ],
+    "vo": [
+     "which country topped the 2026 winter olympics medal table",
+     "usa, italy, or norway",
+     "norway. 18 golds in italy: the most any country has ever won at a single winter games",
+     "small country, big winter. follow us"
+    ],
+    "screen": [
+     "Norway",
+     "USA",
+     "Italy",
+     "18 GOLDS",
+     "a Winter Games record",
+     "Norway · 18 golds",
+     "18"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "The United States won 12 golds and 33 medals, its best Winter Games; hosts Italy 10 golds and 30 medals; Norway 41 medals.",
+    "sources": [
+     "olympics_medals",
+     "usatoday_table",
+     "sportsbrackets"
+    ],
+    "vo": [
+     "the united states took 12 golds and 33 medals, its best ever. italy, the hosts, 10. norway: 41"
+    ],
+    "screen": [
+     "Norway",
+     "USA",
+     "Italy",
+     "18",
+     "12",
+     "10",
+     "41",
+     "33",
+     "30"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "The Games were hosted by Milan and Cortina d'Ampezzo; Johannes Høsflot Klæbo won 6 golds, more than Canada's 5.",
+    "sources": [
+     "outlook_table",
+     "usatoday_table",
+     "olympics_medals"
+    ],
+    "vo": [
+     "the games ran from milan to cortina. a single norwegian skier, johannes klaebo, won 6 golds, more than canada did"
+    ],
+    "screen": [
+     "Milan",
+     "Cortina",
+     "6 GOLDS",
+     "Klaebo, one skier",
+     "5 GOLDS",
+     "Canada, one nation",
+     "KLAEBO",
+     "CANADA"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Norway has fewer than 6 million people; the United States about 340 million.",
+    "sources": [
+     "ssb_pop",
+     "census_pop",
+     "outlook_table"
+    ],
+    "vo": [
+     "a country of under 6 million people beat a country of 340 million. snow helps"
+    ],
+    "screen": [
+     "< 6 MILLION",
+     "people in Norway",
+     "340 MILLION",
+     "people in the USA"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -12,
+   36,
+   32,
+   72
+  ],
+  "far_bbox": [
+   -40,
+   25,
+   60,
+   80
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "578"
+  ],
+  "highlight_note": "Norway",
+  "extra_layers": [],
+  "labels": [
+   {
+    "id": "no",
+    "lonlat": [
+     20,
+     66
+    ],
+    "text": "Norway · 18 golds",
+    "cls": "tag",
+    "in": "s04@most",
+    "out": "s05"
+   }
+  ],
+  "pins": [
+   {
+    "id": "milan",
+    "lonlat": [
+     9.19,
+     45.46
+    ],
+    "label": "Milan",
+    "side": "left"
+   },
+   {
+    "id": "cortina",
+    "lonlat": [
+     12.14,
+     46.54
+    ],
+    "label": "Cortina"
+   }
+  ],
+  "scalebar": null,
+  "lift": "flag",
+  "lift_flag": "no",
+  "pin_beats": [],
+  "cams": {
+   "start": [
+    0.5,
+    [
+     15,
+     50
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     16,
+     50
+    ]
+   ],
+   "s04": [
+    1.0,
+    [
+     12,
+     63
+    ]
+   ],
+   "s04b": [
+    1.1,
+    [
+     13,
+     62
+    ]
+   ],
+   "s05": [
+    0.8,
+    [
+     10,
+     56
+    ]
+   ],
+   "s05b": [
+    0.9,
+    [
+     12,
+     55
+    ]
+   ],
+   "s06": [
+    2.2,
+    [
+     10.7,
+     46.0
+    ]
+   ],
+   "s06b": [
+    2.4,
+    [
+     11.0,
+     46.2
+    ]
+   ],
+   "s07": [
+    0.45,
+    [
+     -30,
+     50
+    ]
+   ],
+   "s07b": [
+    0.5,
+    [
+     -27,
+     50
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "The United States took 12 golds and 33 medals, its best ever. Italy, the hosts, 10. Norway: 41.",
+    "cues": {
+     "states": "states",
+     "hosts": "hosts",
+     "norway": "norway"
+    }
+   },
+   "direction": "ease back over the North Sea; three gold columns rise — Norway 18, USA 12, Italy 10 — the US flag-ball thinks on 'States'; the medal sticker on 'finished'",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "cam": [
+    0.8,
+    [
+     10,
+     56
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.9,
+    [
+     12,
+     55
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "golds",
+     "type": "compare",
+     "items": [
+      [
+       "Norway",
+       18,
+       "18 · 41 total"
+      ],
+      [
+       "USA",
+       12,
+       "12 · 33"
+      ],
+      [
+       "Italy",
+       10,
+       "10 · 30"
+      ]
+     ],
+     "y": 320,
+     "x": 60,
+     "w": 900,
+     "max_h": 520
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@states-0.3",
+     "do": "chart.compare_in",
+     "id": "golds",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.25
+     }
+    },
+    {
+     "at": "@@states",
+     "do": "character_in",
+     "id": "usthink"
+    },
+    {
+     "at": "@@hosts+0.2",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "578",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@norway",
+     "do": "sticker_in",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@norway+0.4",
+     "do": "sticker_pulse",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@norway+0.6",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "578",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "golds"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_medal"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "usthink"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The Games ran from Milan to Cortina. A single Norwegian skier, Johannes Klaebo, won 6 golds, more than Canada did.",
+    "cues": {
+     "milan": "milan",
+     "cortina": "cortina",
+     "skier": "skier",
+     "canada": "canada"
+    }
+   },
+   "direction": "dive onto northern Italy; the Milan pin, then Cortina; on 'skier' a KLAEBO / CANADA split — 6 golds, one man, against 5 golds, one nation; the skier sticker pulses on 'Canada'",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.5,
+   "cam": [
+    2.2,
+    [
+     10.7,
+     46.0
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    2.4,
+    [
+     11.0,
+     46.2
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "oneman",
+     "type": "split",
+     "left": {
+      "kicker": "6 GOLDS",
+      "text": "Klaebo, one skier"
+     },
+     "right": {
+      "kicker": "5 GOLDS",
+      "text": "Canada, one nation"
+     },
+     "label_left": "KLAEBO",
+     "label_right": "CANADA",
+     "y": 310,
+     "h": 540,
+     "x": 60,
+     "w": 620
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@milan",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "milan"
+     }
+    },
+    {
+     "at": "@@cortina",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "cortina"
+     }
+    },
+    {
+     "at": "@@skier",
+     "do": "sticker_in",
+     "id": "st_ski"
+    },
+    {
+     "at": "@@skier+0.4",
+     "do": "sticker_pulse",
+     "id": "st_ski"
+    },
+    {
+     "at": "@@skier+0.2",
+     "do": "chart.split_in",
+     "id": "oneman"
+    },
+    {
+     "at": "@@canada",
+     "do": "sticker_pulse",
+     "id": "st_ski"
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "oneman"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_ski"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "milan"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "cortina"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "A country of under 6 million people beat a country of 340 million. Snow helps.",
+    "cues": {
+     "country": "country",
+     "beat": "beat",
+     "snow": "snow"
+    }
+   },
+   "direction": "ease back so all of Norway sits in frame; the < 6 MILLION card lands early; on 'beat' the US flag-ball slumps in and a 340 MILLION card stacks above; snowflake on 'snow'; the Norwegian flag-ball grins",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.6,
+   "card": {
+    "kicker": "< 6 MILLION",
+    "text": "people in Norway"
+   },
+   "card_at": null,
+   "cam": [
+    0.6,
+    [
+     14,
+     65
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.65,
+    [
+     15,
+     65
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@+0.4",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@@beat"
+    },
+    {
+     "at": "@@country+0.2",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "578",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@beat",
+     "do": "character_in",
+     "id": "us_sad"
+    },
+    {
+     "at": "@@beat+0.2",
+     "do": "fact_in",
+     "id": "f_usa",
+     "until": "@.end"
+    },
+    {
+     "at": "@@beat+0.3",
+     "do": "character_in",
+     "id": "grin"
+    },
+    {
+     "at": "@@snow",
+     "do": "sticker_in",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@snow+0.4",
+     "do": "sticker_pulse",
+     "id": "st_snow"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_snow"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "grin"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "us_sad"
+    }
+   ],
+   "elements": [
+    {
+     "id": "f_usa",
+     "type": "fact",
+     "kicker": "340 MILLION",
+     "text": "people in the USA",
+     "y": 560
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_medal",
+   "type": "sticker",
+   "emoji": "1f947",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_ski",
+   "type": "sticker",
+   "emoji": "26f7",
+   "x": 840,
+   "y": 700,
+   "size": 175,
+   "rot": 6
+  },
+  {
+   "id": "st_snow",
+   "type": "sticker",
+   "emoji": "2744",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 0
+  },
+  {
+   "id": "usthink",
+   "type": "character",
+   "flag": "us",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "grin",
+   "type": "character",
+   "flag": "no",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "us_sad",
+   "type": "character",
+   "flag": "us",
+   "face": "sad",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  }
+ ]
+}

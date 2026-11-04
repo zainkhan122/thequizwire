@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep24-most-time-zones-france",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A clockmaker's tour of the planet: the table, then the two islands at either end of a French day, then the giant that refused to split its clock.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Which country has the MOST time zones?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Which country has the most time zones?",
+   "cues": {
+    "which": "which",
+    "most": "most"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Russia, USA, or France?",
+   "cues": {
+    "a": "russia",
+    "b": "usa",
+    "c": "france"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "France. Not the hexagon on the map, but its islands around the world: 12 time zones.",
+   "cues": {
+    "answer": "france",
+    "islands": "islands",
+    "zones": "zones"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.5,
+   "direction": "pull back to show Europe and Russia; the table builds with France on top; the Russian flag-ball shrugs on 'Russia', the clock sticker drops on 'France'",
+   "text": "Russia stretches 11 across a single landmass. The United States, with its islands, also 11. France: 12.",
+   "cues": {
+    "russia": "russia",
+    "states": "states",
+    "france": "france"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.5,
+   "direction": "swing across the Pacific; the Tahiti pin on 'Tahiti', the Wallis pin on 'Wallis'; a TAHITI / WALLIS split with the two UTC offsets; the sun sticker, then the moon on 'gap' — one country, dawn and dusk at once",
+   "text": "Its clocks run from Tahiti, at UTC minus 10, to Wallis and Futuna, at plus 12: a gap of 22 hours.",
+   "cues": {
+    "tahiti": "tahiti",
+    "wallis": "wallis",
+    "gap": "gap"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.6,
+   "direction": "fly west to China; it lights in the dim second colour on 'China'; the 1 CLOCK card and the China tag on 'single'; the alarm-clock sticker pulses on 'everywhere'",
+   "text": "And China, nearly as wide as the United States, picked a single clock: Beijing time, everywhere.",
+   "cues": {
+    "china": "china",
+    "single": "single",
+    "everywhere": "everywhere"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "12 clocks, same flag. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

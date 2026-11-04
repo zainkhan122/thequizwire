@@ -1,0 +1,210 @@
+{
+ "version": 1,
+ "episode": "ep19-most-medals-winter-olympics-2026-norway",
+ "topic": "Milano Cortina 2026 Winter Olympics (6–22 February 2026) final medal table: Norway 18 gold, 12 silver, 11 bronze, 41 total — the most golds by any nation at a single Winter Games; United States 12 gold / 33 total, its best ever; Italy (hosts) 10 gold / 30 total; Canada 5 gold / 21; Johannes Høsflot Klæbo (NOR) 6 golds. Norway population about 5.6–5.7 million; USA about 340 million.",
+ "researched": "2026-11-04",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The USA tops every medal table it enters.",
+   "reality": "Team USA set its own Winter record (12 golds, 33 medals) at Milano Cortina 2026 and still finished second to Norway's 18 golds and 41 medals.",
+   "sources": [
+    "usatoday_table",
+    "olympics_medals",
+    "outlook_table"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Feed clips show the podium or Klæbo's sprint; nobody puts the final table, the two host cities and the population contrast on one map.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=2026+winter+olympics+medal+table",
+    "title": "Search: 2026 winter olympics medal table",
+    "angle": "table read-outs",
+    "misses": "no map, no question"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=klaebo+milano+cortina",
+    "title": "Search: klaebo milano cortina",
+    "angle": "highlight reels",
+    "misses": "no numbers beyond his own"
+   },
+   {
+    "url": "https://www.youtube.com/@huhindustry/shorts",
+    "title": "HuhIndustry",
+    "angle": "fast facts",
+    "misses": "no sourced sport facts"
+   }
+  ]
+ },
+ "sources": {
+  "olympics_medals": {
+   "type": "primary",
+   "publisher": "International Olympic Committee — Olympics.com",
+   "title": "Milano Cortina 2026 — medal table",
+   "url": "https://www.olympics.com/en/olympic-games/milano-cortina-2026/medals",
+   "date": "2026-11-04",
+   "notes": "official final table: Norway 18–12–11 (41); United States 12–12–9 (33); Italy 10–6–14 (30); Canada 5–7–9 (21)"
+  },
+  "usatoday_table": {
+   "type": "press",
+   "publisher": "USA Today",
+   "title": "Olympic medals: the final medal count at the 2026 Winter Games",
+   "url": "https://www.usatoday.com/story/sports/olympics/2026/02/22/olympic-medal-count-final-2026-who-won/88812691007/",
+   "date": "2026-11-04",
+   "notes": "Norway 41 total (18 gold, 12 silver, 11 bronze); United States 33 (12, 12, 9); Italy 30 (10, 6, 14); Canada 21 (5, 7, 9); China 15 (5, 4, 6)"
+  },
+  "outlook_table": {
+   "type": "press",
+   "publisher": "Outlook India",
+   "title": "Milano Cortina 2026 final medal tally: Norway claims top spot",
+   "url": "https://www.outlookindia.com/sports/others/winter-olympics-2026-milano-cortina-final-medal-tally-check-full-standings",
+   "date": "2026-11-04",
+   "notes": "Norway 18 golds, the highest gold count by any country at a single Winter Games; Team USA record 12 golds and 33 medals; Klæbo six golds; Norway population about 5.7 million v USA 342 million"
+  },
+  "sportsbrackets": {
+   "type": "reference",
+   "publisher": "SportsBrackets",
+   "title": "2026 Winter Olympics final medal table",
+   "url": "https://sportsbrackets.net/2026/02/09/2026-winter-olympics-medal-table/",
+   "date": "2026-11-04",
+   "notes": "Norway record 18 golds and 41 total; USA national record 12 golds, second overall"
+  },
+  "ssb_pop": {
+   "type": "primary",
+   "publisher": "Statistics Norway (SSB)",
+   "title": "Population — Norway",
+   "url": "https://www.ssb.no/en/befolkning/folketall/statistikk/befolkning",
+   "date": "2026-11-04",
+   "notes": "Norway's population about 5.6 million (2025)"
+  },
+  "census_pop": {
+   "type": "primary",
+   "publisher": "U.S. Census Bureau",
+   "title": "U.S. and World Population Clock",
+   "url": "https://www.census.gov/popclock/",
+   "date": "2026-11-04",
+   "notes": "United States population about 341 million (2025)"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Norway topped the Milano Cortina 2026 medal table with 18 golds — the most by any nation at a single Winter Games — and 41 medals.",
+   "sources": [
+    "olympics_medals",
+    "usatoday_table",
+    "outlook_table"
+   ],
+   "vo": [
+    "which country topped the 2026 winter olympics medal table",
+    "usa, italy, or norway",
+    "norway. 18 golds in italy: the most any country has ever won at a single winter games",
+    "small country, big winter. follow us"
+   ],
+   "screen": [
+    "Norway",
+    "USA",
+    "Italy",
+    "18 GOLDS",
+    "a Winter Games record",
+    "Norway · 18 golds",
+    "18"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "The United States won 12 golds and 33 medals, its best Winter Games; hosts Italy 10 golds and 30 medals; Norway 41 medals.",
+   "sources": [
+    "olympics_medals",
+    "usatoday_table",
+    "sportsbrackets"
+   ],
+   "vo": [
+    "the united states took 12 golds and 33 medals, its best ever. italy, the hosts, 10. norway: 41"
+   ],
+   "screen": [
+    "Norway",
+    "USA",
+    "Italy",
+    "18",
+    "12",
+    "10",
+    "41",
+    "33",
+    "30"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "The Games were hosted by Milan and Cortina d'Ampezzo; Johannes Høsflot Klæbo won 6 golds, more than Canada's 5.",
+   "sources": [
+    "outlook_table",
+    "usatoday_table",
+    "olympics_medals"
+   ],
+   "vo": [
+    "the games ran from milan to cortina. a single norwegian skier, johannes klaebo, won 6 golds, more than canada did"
+   ],
+   "screen": [
+    "Milan",
+    "Cortina",
+    "6 GOLDS",
+    "Klaebo, one skier",
+    "5 GOLDS",
+    "Canada, one nation",
+    "KLAEBO",
+    "CANADA"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Norway has fewer than 6 million people; the United States about 340 million.",
+   "sources": [
+    "ssb_pop",
+    "census_pop",
+    "outlook_table"
+   ],
+   "vo": [
+    "a country of under 6 million people beat a country of 340 million. snow helps"
+   ],
+   "screen": [
+    "< 6 MILLION",
+    "people in Norway",
+    "340 MILLION",
+    "people in the USA"
+   ]
+  }
+ ]
+}

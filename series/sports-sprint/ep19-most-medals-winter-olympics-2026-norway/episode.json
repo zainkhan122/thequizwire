@@ -1,0 +1,139 @@
+{
+ "id": "ep19-most-medals-winter-olympics-2026-norway",
+ "format": "quiz-v3",
+ "series": "sports-sprint",
+ "number": 19,
+ "title": "Which country topped the 2026 Winter Olympics medal table?",
+ "difficulty": "EASY",
+ "seed": 3719,
+ "quiz": {
+  "question": "Which country topped the 2026 Winter Olympics medal table?",
+  "keyword": "2026",
+  "options": [
+   "USA",
+   "Italy",
+   "Norway"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Norway",
+  "answer_sub": "18 golds · 41 medals",
+  "option_meta": [
+   {
+    "flag": "us"
+   },
+   {
+    "flag": "it"
+   },
+   {
+    "flag": "no"
+   }
+  ],
+  "banner": "Norway",
+  "banner_sub": "✓  C was right · 18 golds · 41 medals",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country topped the 2026 Winter Olympics medal table? ⛷️",
+  "premise": "A country of under six million out-skied the world again",
+  "bait": "USA, Italy or Norway — which did you pick? 👇",
+  "keywords": [
+   "2026 winter olympics medal table",
+   "milano cortina 2026 medals",
+   "who won the most medals winter olympics 2026",
+   "norway winter olympics",
+   "klaebo gold medals",
+   "team usa winter olympics record",
+   "sports quiz",
+   "olympics facts"
+  ],
+  "description": "A country of under six million out-skied the world again. USA, Italy or Norway — which did you pick? 👇\n\nSources: Olympics.com; USA Today; Outlook India.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nSports Sprint #19",
+  "hashtags": [
+   "#SportsQuiz",
+   "#SportsTrivia",
+   "#thequizwire"
+  ],
+  "tags": [
+   "WinterOlympics",
+   "SportsQuiz"
+  ],
+  "cover_emoji": "⛷️",
+  "copy": {
+   "spoilers": [
+    "norway",
+    "norwegian",
+    "klaebo",
+    "klæbo",
+    "18 golds",
+    "41"
+   ],
+   "youtube": {
+    "title": "Who topped the 2026 Winter Olympics medal table? A nation of 6 million ⛷️",
+    "description": "USA, Italy or the third one? Team USA set its own record and the hosts had their best Games ever, yet the table was won by a country of fewer than six million people — one of whose skiers took more golds than Canada.\nGuess before the flag lifts, then see the table, the host cities, and the skier who beat whole nations.\nWhich did you pick?",
+    "tags": [
+     "#winterolympics",
+     "#sportsquiz",
+     "#milanocortina2026",
+     "#skiing",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country topped the 2026 Winter Olympics medal table? ⛷️\nUSA, Italy or the other one? Team USA set its own record and the hosts had their best Games ever, yet the table was won by a country of fewer than six million people.\nWhich did you pick?",
+    "tags": [
+     "#winterolympics",
+     "#sportsquiz",
+     "#milanocortina2026",
+     "#skiing",
+     "#olympics"
+    ]
+   },
+   "facebook": {
+    "text": "Which country topped the 2026 Winter Olympics medal table — the USA, Italy or Norway?\nTeam USA set a record, the hosts had their best Games ever, and still a nation of fewer than six million won. Name it before the flag lifts.",
+    "tags": [
+     "#winterolympics",
+     "#sportsquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which country topped the 2026 Winter Olympics medal table?\nUSA, Italy or Norway? One of them has fewer than six million people — and one skier who out-golded Canada.",
+    "tags": [
+     "#WinterOlympics",
+     "#SportsQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which country topped the 2026 Winter Olympics medal table — the USA, Italy or Norway? Team USA set its own record and the hosts had their best Games ever, yet the table went to a nation of fewer than six million, with one skier who won more golds than Canada.",
+    "tags": [
+     "#milanocortina2026"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "split-candidates",
+  "reveal": "colour-lift",
+  "beats": [
+   "compare",
+   "pin",
+   "label",
+   "split",
+   "second-highlight"
+  ],
+  "cast": "flagball:no + emoji-set:winter",
+  "music": "bed:pulse"
+ },
+ "status": "ready"
+}

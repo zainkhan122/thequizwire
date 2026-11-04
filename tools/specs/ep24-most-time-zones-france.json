@@ -1,0 +1,871 @@
+{
+ "id": "ep24-most-time-zones-france",
+ "series": "geo-blitz",
+ "number": 24,
+ "seed": 3624,
+ "question": "Which country has the MOST time zones?",
+ "keyword": "MOST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Russia",
+   "flag": "ru",
+   "cue": "russia"
+  },
+  {
+   "text": "USA",
+   "flag": "us",
+   "cue": "usa"
+  },
+  {
+   "text": "France",
+   "flag": "fr",
+   "cue": "france"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "12 time zones",
+ "outro_headline": "TOO EASY?",
+ "cover_emoji": "🕰️",
+ "post": {
+  "premise": "The widest country on the clock is not the widest on the map",
+  "bait": "Russia, USA or France — which did you pick? 👇",
+  "keywords": [
+   "which country has the most time zones",
+   "time zones by country",
+   "france time zones",
+   "russia 11 time zones",
+   "china one time zone",
+   "geography quiz",
+   "world map facts",
+   "utc explained"
+  ],
+  "tags": [
+   "GeographyQuiz",
+   "TimeZones"
+  ],
+  "sources_line": "timeanddate.com; Britannica",
+  "copy": {
+   "spoilers": [
+    "france",
+    "french",
+    "12",
+    "tahiti",
+    "réunion",
+    "reunion"
+   ],
+   "youtube": {
+    "title": "Which country has the most time zones? It's not the biggest one 🕰️",
+    "description": "Russia, the USA or the third one? The widest country on the map is not the widest on the clock: one nation's clocks sit 22 hours apart, and the country as wide as America chose a single time for everyone.\nGuess before the map lights up, then see the table, the two islands at either end of the day, and the one-clock giant.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#timezones",
+     "#worldmap",
+     "#geography",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country has the MOST time zones? 🕰️\nRussia, the USA or the other one? The widest country on the map is not the widest on the clock: one nation's clocks sit 22 hours apart.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#timezones",
+     "#worldmap",
+     "#geography",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country has the most time zones — Russia, the USA or France?\nThe widest country on the map is not the widest on the clock, and the one as wide as America keeps a single time. Call it before the map lights up.",
+    "tags": [
+     "#geographyquiz",
+     "#timezones"
+    ]
+   },
+   "twitter": {
+    "text": "Which country has the MOST time zones?\nRussia, the USA or France? One nation's clocks sit 22 hours apart — and it is not the biggest on the map.",
+    "tags": [
+     "#GeographyQuiz",
+     "#TimeZones"
+    ]
+   },
+   "threads": {
+    "text": "Which country has the most time zones — Russia, the USA or France? The widest country on the map is not the widest on the clock: one nation's clocks sit 22 hours apart, while the giant as wide as America keeps a single time for everyone.",
+    "tags": [
+     "#timezones"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "misconception",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "bars",
+   "pin",
+   "label",
+   "split",
+   "second-highlight"
+  ],
+  "cast": "flagball:fr + emoji-set:clocks",
+  "music": "bed:bright",
+  "outro": "TOO EASY?"
+ },
+ "intent": "A clockmaker's tour of the planet: the table, then the two islands at either end of a French day, then the giant that refused to split its clock.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "most": "most"
+  },
+  "v04": {
+   "text": "France. Not the hexagon on the map, but its islands around the world: 12 time zones.",
+   "cues": {
+    "answer": "france",
+    "islands": "islands",
+    "zones": "zones"
+   }
+  },
+  "v05": {
+   "text": "Russia stretches 11 across a single landmass. The United States, with its islands, also 11. France: 12.",
+   "cues": {
+    "russia": "russia",
+    "states": "states",
+    "france": "france"
+   }
+  },
+  "v06": {
+   "text": "Its clocks run from Tahiti, at UTC minus 10, to Wallis and Futuna, at plus 12: a gap of 22 hours.",
+   "cues": {
+    "tahiti": "tahiti",
+    "wallis": "wallis",
+    "gap": "gap"
+   }
+  },
+  "v07": {
+   "text": "And China, nearly as wide as the United States, picked a single clock: Beijing time, everywhere.",
+   "cues": {
+    "china": "china",
+    "single": "single",
+    "everywhere": "everywhere"
+   }
+  },
+  "v08": {
+   "text": "12 clocks, same flag. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "12 ZONES",
+   "text": "from UTC−10 to UTC+12"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "fr",
+   "face": "happy",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "ru",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "research": {
+  "topic": "Country with the most time zones: France, 12 (metropolitan France plus overseas departments and territories from French Polynesia at UTC−10 to Wallis and Futuna at UTC+12); Russia 11 (UTC+2 Kaliningrad to UTC+12 Kamchatka); United States 11 including territories (UTC−12 Baker Island to UTC+10 Guam, 6 across the 50 states); China spans about five geographic zones but uses one official time (UTC+8).",
+  "myths": [
+   {
+    "myth": "Russia has the most time zones because it is the widest country.",
+    "reality": "Russia has 11 across one landmass; France reaches 12 through overseas territories from Tahiti to Wallis and Futuna.",
+    "sources": [
+     "tad_france",
+     "tad_russia",
+     "britannica_tz"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Feed clips say 'France 12' as a one-liner; nobody draws the table, pins the two islands at either end of the French day and sets China's single clock against them on a moving map.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=which+country+has+the+most+time+zones",
+     "title": "Search: which country has the most time zones",
+     "angle": "one-line answer clips",
+     "misses": "no map of the territories"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=china+one+time+zone+explained",
+     "title": "Search: china one time zone explained",
+     "angle": "long explainers",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if geography",
+     "misses": "no sourced data"
+    }
+   ]
+  },
+  "sources": {
+   "tad_france": {
+    "type": "primary",
+    "publisher": "timeanddate.com",
+    "title": "Time zones in France",
+    "url": "https://www.timeanddate.com/time/zone/france",
+    "date": "2026-11-04",
+    "notes": "France and its dependencies use 12 time zones, from UTC−10 (Tahiti, French Polynesia) to UTC+12 (Wallis and Futuna); Paris UTC+1/+2"
+   },
+   "tad_russia": {
+    "type": "primary",
+    "publisher": "timeanddate.com",
+    "title": "Time zones in Russia",
+    "url": "https://www.timeanddate.com/time/zone/russia",
+    "date": "2026-11-04",
+    "notes": "Russia uses 11 time zones, UTC+2 (Kaliningrad) to UTC+12 (Kamchatka)"
+   },
+   "tad_usa": {
+    "type": "primary",
+    "publisher": "timeanddate.com",
+    "title": "Time zones in the United States",
+    "url": "https://www.timeanddate.com/time/zone/usa",
+    "date": "2026-11-04",
+    "notes": "the USA and its dependencies use 11 time zones (UTC−12 to UTC+10); 6 across the 50 states"
+   },
+   "tad_china": {
+    "type": "primary",
+    "publisher": "timeanddate.com",
+    "title": "Time zones in China",
+    "url": "https://www.timeanddate.com/time/zone/china",
+    "date": "2026-11-04",
+    "notes": "China uses a single time zone, China Standard Time UTC+8, although it spans five geographic zones"
+   },
+   "britannica_tz": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Time zone",
+    "url": "https://www.britannica.com/science/time-zone",
+    "date": "2026-11-04",
+    "notes": "standard time zones; countries spanning many zones (Russia 11) and China's single official zone"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "France has the most time zones of any country: 12, thanks to its overseas territories.",
+    "sources": [
+     "tad_france",
+     "britannica_tz",
+     "tad_russia"
+    ],
+    "vo": [
+     "which country has the most time zones",
+     "russia, usa, or france",
+     "france. not the hexagon on the map, but its islands around the world: 12 time zones",
+     "12 clocks, same flag. follow us"
+    ],
+    "screen": [
+     "France",
+     "Russia",
+     "USA",
+     "12 ZONES",
+     "from UTC−10 to UTC+12",
+     "France · 12 zones",
+     "12"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Russia uses 11 time zones across one landmass; the United States, including its territories, also 11.",
+    "sources": [
+     "tad_russia",
+     "tad_usa",
+     "britannica_tz"
+    ],
+    "vo": [
+     "russia stretches 11 across a single landmass. the united states, with its islands, also 11. france: 12"
+    ],
+    "screen": [
+     "Russia",
+     "USA",
+     "11",
+     "France"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "French clocks run from UTC−10 in Tahiti (French Polynesia) to UTC+12 in Wallis and Futuna — 22 hours apart.",
+    "sources": [
+     "tad_france",
+     "britannica_tz"
+    ],
+    "vo": [
+     "its clocks run from tahiti, at utc minus 10, to wallis and futuna, at plus 12: a gap of 22 hours"
+    ],
+    "screen": [
+     "UTC−10",
+     "Tahiti, French Polynesia",
+     "UTC+12",
+     "Wallis and Futuna",
+     "TAHITI",
+     "WALLIS",
+     "Tahiti",
+     "Wallis"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "China spans about five geographic time zones but uses a single official time, UTC+8 (Beijing time).",
+    "sources": [
+     "tad_china",
+     "britannica_tz"
+    ],
+    "vo": [
+     "and china, nearly as wide as the united states, picked a single clock: beijing time, everywhere"
+    ],
+    "screen": [
+     "1 CLOCK",
+     "all of China · UTC+8",
+     "China · 1 zone"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -170,
+   -50,
+   170,
+   70
+  ],
+  "far_bbox": [
+   -180,
+   -60,
+   180,
+   80
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "250"
+  ],
+  "highlight_note": "France (metropolitan + French Guiana in the 110m feature); the island territories are shown as pins",
+  "extra_layers": [
+   {
+    "kind": "highlight",
+    "id": "others",
+    "ids": [
+     "156"
+    ],
+    "cls": "dim",
+    "note": "China — the one-clock giant, lit in the last beat"
+   }
+  ],
+  "labels": [
+   {
+    "id": "fr",
+    "lonlat": [
+     2,
+     54
+    ],
+    "text": "France · 12 zones",
+    "cls": "tag",
+    "in": "s04@zones",
+    "out": "s05"
+   },
+   {
+    "id": "cn",
+    "lonlat": [
+     104,
+     22
+    ],
+    "text": "China · 1 zone",
+    "cls": "tag",
+    "in": "s07@single+0.3",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "tahiti",
+    "lonlat": [
+     -149.57,
+     -17.54
+    ],
+    "label": "Tahiti"
+   },
+   {
+    "id": "wallis",
+    "lonlat": [
+     -176.2,
+     -13.3
+    ],
+    "label": "Wallis",
+    "side": "left"
+   }
+  ],
+  "scalebar": null,
+  "pin_beats": [],
+  "cams": {
+   "start": [
+    0.42,
+    [
+     60,
+     10
+    ]
+   ],
+   "s01": [
+    0.42,
+    [
+     62,
+     10
+    ]
+   ],
+   "s04": [
+    1.2,
+    [
+     2,
+     46
+    ]
+   ],
+   "s04b": [
+    1.32,
+    [
+     3,
+     45
+    ]
+   ],
+   "s05": [
+    0.55,
+    [
+     20,
+     40
+    ]
+   ],
+   "s05b": [
+    0.62,
+    [
+     24,
+     38
+    ]
+   ],
+   "s06": [
+    0.7,
+    [
+     -165,
+     -12
+    ]
+   ],
+   "s06b": [
+    0.8,
+    [
+     -162,
+     -13
+    ]
+   ],
+   "s07": [
+    0.75,
+    [
+     100,
+     30
+    ]
+   ],
+   "s07b": [
+    0.85,
+    [
+     103,
+     32
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Russia stretches 11 across a single landmass. The United States, with its islands, also 11. France: 12.",
+    "cues": {
+     "russia": "russia",
+     "states": "states",
+     "france": "france"
+    }
+   },
+   "direction": "pull back to show Europe and Russia; the table builds with France on top; the Russian flag-ball shrugs on 'Russia', the clock sticker drops on 'France'",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "cam": [
+    0.55,
+    [
+     20,
+     40
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.62,
+    [
+     24,
+     38
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "zones",
+     "type": "bars",
+     "rows": [
+      [
+       "France",
+       12,
+       "12"
+      ],
+      [
+       "Russia",
+       11,
+       "11"
+      ],
+      [
+       "USA",
+       11,
+       "11"
+      ]
+     ],
+     "y": 300,
+     "x": 70,
+     "w": 660,
+     "unit": "",
+     "max_value": 13,
+     "bar_h": 70,
+     "gap": 18
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@russia-0.3",
+     "do": "chart.bars_in",
+     "id": "zones",
+     "args": {
+      "dur": 1.0,
+      "stagger": 0.3
+     }
+    },
+    {
+     "at": "@@russia",
+     "do": "character_in",
+     "id": "shrug"
+    },
+    {
+     "at": "@@states+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "250",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@france",
+     "do": "sticker_in",
+     "id": "st_clock"
+    },
+    {
+     "at": "@@france+0.4",
+     "do": "sticker_pulse",
+     "id": "st_clock"
+    },
+    {
+     "at": "@@france+0.6",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "250",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "zones"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_clock"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "shrug"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Its clocks run from Tahiti, at UTC minus 10, to Wallis and Futuna, at plus 12: a gap of 22 hours.",
+    "cues": {
+     "tahiti": "tahiti",
+     "wallis": "wallis",
+     "gap": "gap"
+    }
+   },
+   "direction": "swing across the Pacific; the Tahiti pin on 'Tahiti', the Wallis pin on 'Wallis'; a TAHITI / WALLIS split with the two UTC offsets; the sun sticker, then the moon on 'gap' — one country, dawn and dusk at once",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.5,
+   "cam": [
+    0.7,
+    [
+     -165,
+     -12
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.8,
+    [
+     -162,
+     -13
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "ends",
+     "type": "split",
+     "left": {
+      "kicker": "UTC−10",
+      "text": "Tahiti, French Polynesia"
+     },
+     "right": {
+      "kicker": "UTC+12",
+      "text": "Wallis and Futuna"
+     },
+     "label_left": "TAHITI",
+     "label_right": "WALLIS",
+     "y": 310,
+     "h": 540,
+     "x": 60,
+     "w": 620
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@tahiti",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "tahiti"
+     }
+    },
+    {
+     "at": "@@tahiti+0.2",
+     "do": "sticker_in",
+     "id": "st_sun"
+    },
+    {
+     "at": "@@tahiti+0.6",
+     "do": "sticker_pulse",
+     "id": "st_sun"
+    },
+    {
+     "at": "@@wallis",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "wallis"
+     }
+    },
+    {
+     "at": "@@wallis+0.2",
+     "do": "chart.split_in",
+     "id": "ends"
+    },
+    {
+     "at": "@@gap",
+     "do": "sticker_out",
+     "id": "st_sun"
+    },
+    {
+     "at": "@@gap",
+     "do": "sticker_in",
+     "id": "st_moon"
+    },
+    {
+     "at": "@@gap+0.4",
+     "do": "sticker_pulse",
+     "id": "st_moon"
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "ends"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_moon"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "tahiti"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "wallis"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "And China, nearly as wide as the United States, picked a single clock: Beijing time, everywhere.",
+    "cues": {
+     "china": "china",
+     "single": "single",
+     "everywhere": "everywhere"
+    }
+   },
+   "direction": "fly west to China; it lights in the dim second colour on 'China'; the 1 CLOCK card and the China tag on 'single'; the alarm-clock sticker pulses on 'everywhere'",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.6,
+   "card": {
+    "kicker": "1 CLOCK",
+    "text": "all of China · UTC+8"
+   },
+   "card_at": 3.0,
+   "cam": [
+    0.75,
+    [
+     100,
+     30
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.85,
+    [
+     103,
+     32
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@china",
+     "do": "geo.highlight_in",
+     "stage": "stage_map",
+     "args": {
+      "fid": "156",
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@@china+0.6",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "156",
+      "dur": 0.7,
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@@single",
+     "do": "sticker_in",
+     "id": "st_alarm"
+    },
+    {
+     "at": "@@single+0.4",
+     "do": "sticker_pulse",
+     "id": "st_alarm"
+    },
+    {
+     "at": "@@everywhere",
+     "do": "sticker_pulse",
+     "id": "st_alarm"
+    },
+    {
+     "at": "@@everywhere+0.2",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "156",
+      "dur": 0.7,
+      "layer": "others"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_alarm"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_clock",
+   "type": "sticker",
+   "emoji": "1f570",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_sun",
+   "type": "sticker",
+   "emoji": "2600",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_moon",
+   "type": "sticker",
+   "emoji": "1f319",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_alarm",
+   "type": "sticker",
+   "emoji": "23f0",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 8
+  },
+  {
+   "id": "shrug",
+   "type": "character",
+   "flag": "ru",
+   "face": "sad",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  }
+ ]
+}

@@ -1,0 +1,194 @@
+{
+ "version": 1,
+ "episode": "ep24-most-time-zones-france",
+ "topic": "Country with the most time zones: France, 12 (metropolitan France plus overseas departments and territories from French Polynesia at UTC−10 to Wallis and Futuna at UTC+12); Russia 11 (UTC+2 Kaliningrad to UTC+12 Kamchatka); United States 11 including territories (UTC−12 Baker Island to UTC+10 Guam, 6 across the 50 states); China spans about five geographic zones but uses one official time (UTC+8).",
+ "researched": "2026-11-04",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Russia has the most time zones because it is the widest country.",
+   "reality": "Russia has 11 across one landmass; France reaches 12 through overseas territories from Tahiti to Wallis and Futuna.",
+   "sources": [
+    "tad_france",
+    "tad_russia",
+    "britannica_tz"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Feed clips say 'France 12' as a one-liner; nobody draws the table, pins the two islands at either end of the French day and sets China's single clock against them on a moving map.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=which+country+has+the+most+time+zones",
+    "title": "Search: which country has the most time zones",
+    "angle": "one-line answer clips",
+    "misses": "no map of the territories"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=china+one+time+zone+explained",
+    "title": "Search: china one time zone explained",
+    "angle": "long explainers",
+    "misses": "no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if geography",
+    "misses": "no sourced data"
+   }
+  ]
+ },
+ "sources": {
+  "tad_france": {
+   "type": "primary",
+   "publisher": "timeanddate.com",
+   "title": "Time zones in France",
+   "url": "https://www.timeanddate.com/time/zone/france",
+   "date": "2026-11-04",
+   "notes": "France and its dependencies use 12 time zones, from UTC−10 (Tahiti, French Polynesia) to UTC+12 (Wallis and Futuna); Paris UTC+1/+2"
+  },
+  "tad_russia": {
+   "type": "primary",
+   "publisher": "timeanddate.com",
+   "title": "Time zones in Russia",
+   "url": "https://www.timeanddate.com/time/zone/russia",
+   "date": "2026-11-04",
+   "notes": "Russia uses 11 time zones, UTC+2 (Kaliningrad) to UTC+12 (Kamchatka)"
+  },
+  "tad_usa": {
+   "type": "primary",
+   "publisher": "timeanddate.com",
+   "title": "Time zones in the United States",
+   "url": "https://www.timeanddate.com/time/zone/usa",
+   "date": "2026-11-04",
+   "notes": "the USA and its dependencies use 11 time zones (UTC−12 to UTC+10); 6 across the 50 states"
+  },
+  "tad_china": {
+   "type": "primary",
+   "publisher": "timeanddate.com",
+   "title": "Time zones in China",
+   "url": "https://www.timeanddate.com/time/zone/china",
+   "date": "2026-11-04",
+   "notes": "China uses a single time zone, China Standard Time UTC+8, although it spans five geographic zones"
+  },
+  "britannica_tz": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Time zone",
+   "url": "https://www.britannica.com/science/time-zone",
+   "date": "2026-11-04",
+   "notes": "standard time zones; countries spanning many zones (Russia 11) and China's single official zone"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "France has the most time zones of any country: 12, thanks to its overseas territories.",
+   "sources": [
+    "tad_france",
+    "britannica_tz",
+    "tad_russia"
+   ],
+   "vo": [
+    "which country has the most time zones",
+    "russia, usa, or france",
+    "france. not the hexagon on the map, but its islands around the world: 12 time zones",
+    "12 clocks, same flag. follow us"
+   ],
+   "screen": [
+    "France",
+    "Russia",
+    "USA",
+    "12 ZONES",
+    "from UTC−10 to UTC+12",
+    "France · 12 zones",
+    "12"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Russia uses 11 time zones across one landmass; the United States, including its territories, also 11.",
+   "sources": [
+    "tad_russia",
+    "tad_usa",
+    "britannica_tz"
+   ],
+   "vo": [
+    "russia stretches 11 across a single landmass. the united states, with its islands, also 11. france: 12"
+   ],
+   "screen": [
+    "Russia",
+    "USA",
+    "11",
+    "France"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "French clocks run from UTC−10 in Tahiti (French Polynesia) to UTC+12 in Wallis and Futuna — 22 hours apart.",
+   "sources": [
+    "tad_france",
+    "britannica_tz"
+   ],
+   "vo": [
+    "its clocks run from tahiti, at utc minus 10, to wallis and futuna, at plus 12: a gap of 22 hours"
+   ],
+   "screen": [
+    "UTC−10",
+    "Tahiti, French Polynesia",
+    "UTC+12",
+    "Wallis and Futuna",
+    "TAHITI",
+    "WALLIS",
+    "Tahiti",
+    "Wallis"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "China spans about five geographic time zones but uses a single official time, UTC+8 (Beijing time).",
+   "sources": [
+    "tad_china",
+    "britannica_tz"
+   ],
+   "vo": [
+    "and china, nearly as wide as the united states, picked a single clock: beijing time, everywhere"
+   ],
+   "screen": [
+    "1 CLOCK",
+    "all of China · UTC+8",
+    "China · 1 zone"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "version": 1,
+ "episode": "ep19-most-medals-winter-olympics-2026-norway",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -12,
+     36,
+     32,
+     72
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "578"
+     ],
+     "cls": "",
+     "note": "Norway",
+     "lift": "color",
+     "color": "#FFD400"
+    }
+   ],
+   "pins": [
+    {
+     "id": "milan",
+     "lonlat": [
+      9.19,
+      45.46
+     ],
+     "label": "Milan",
+     "side": "left"
+    },
+    {
+     "id": "cortina",
+     "lonlat": [
+      12.14,
+      46.54
+     ],
+     "label": "Cortina"
+    }
+   ],
+   "labels": [
+    {
+     "id": "no",
+     "lonlat": [
+      20,
+      66
+     ],
+     "text": "Norway · 18 golds",
+     "cls": "tag",
+     "in": "s04@most",
+     "out": "s05"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -40,
+      25,
+      60,
+      80
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

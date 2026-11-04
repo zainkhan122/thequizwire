@@ -1,0 +1,108 @@
+{
+ "version": 1,
+ "episode": "ep24-most-time-zones-france",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -170,
+     -50,
+     170,
+     70
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "250"
+     ],
+     "cls": "",
+     "note": "France (metropolitan + French Guiana in the 110m feature); the island territories are shown as pins"
+    },
+    {
+     "kind": "highlight",
+     "id": "others",
+     "ids": [
+      "156"
+     ],
+     "cls": "dim",
+     "note": "China — the one-clock giant, lit in the last beat"
+    }
+   ],
+   "pins": [
+    {
+     "id": "tahiti",
+     "lonlat": [
+      -149.57,
+      -17.54
+     ],
+     "label": "Tahiti"
+    },
+    {
+     "id": "wallis",
+     "lonlat": [
+      -176.2,
+      -13.3
+     ],
+     "label": "Wallis",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "fr",
+     "lonlat": [
+      2,
+      54
+     ],
+     "text": "France · 12 zones",
+     "cls": "tag",
+     "in": "s04@zones",
+     "out": "s05"
+    },
+    {
+     "id": "cn",
+     "lonlat": [
+      104,
+      22
+     ],
+     "text": "China · 1 zone",
+     "cls": "tag",
+     "in": "s07@single+0.3",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -180,
+      -60,
+      180,
+      80
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

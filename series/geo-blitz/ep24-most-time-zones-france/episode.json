@@ -1,0 +1,139 @@
+{
+ "id": "ep24-most-time-zones-france",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 24,
+ "title": "Which country has the MOST time zones?",
+ "difficulty": "MEDIUM",
+ "seed": 3624,
+ "quiz": {
+  "question": "Which country has the MOST time zones?",
+  "keyword": "MOST",
+  "options": [
+   "Russia",
+   "USA",
+   "France"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "France",
+  "answer_sub": "12 time zones",
+  "option_meta": [
+   {
+    "flag": "ru"
+   },
+   {
+    "flag": "us"
+   },
+   {
+    "flag": "fr"
+   }
+  ],
+  "banner": "France",
+  "banner_sub": "✓  C was right · 12 time zones",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country has the MOST time zones? 🕰️",
+  "premise": "The widest country on the clock is not the widest on the map",
+  "bait": "Russia, USA or France — which did you pick? 👇",
+  "keywords": [
+   "which country has the most time zones",
+   "time zones by country",
+   "france time zones",
+   "russia 11 time zones",
+   "china one time zone",
+   "geography quiz",
+   "world map facts",
+   "utc explained"
+  ],
+  "description": "The widest country on the clock is not the widest on the map. Russia, USA or France — which did you pick? 👇\n\nSources: timeanddate.com; Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #24",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "GeographyQuiz",
+   "TimeZones"
+  ],
+  "cover_emoji": "🕰️",
+  "copy": {
+   "spoilers": [
+    "france",
+    "french",
+    "12",
+    "tahiti",
+    "réunion",
+    "reunion"
+   ],
+   "youtube": {
+    "title": "Which country has the most time zones? It's not the biggest one 🕰️",
+    "description": "Russia, the USA or the third one? The widest country on the map is not the widest on the clock: one nation's clocks sit 22 hours apart, and the country as wide as America chose a single time for everyone.\nGuess before the map lights up, then see the table, the two islands at either end of the day, and the one-clock giant.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#timezones",
+     "#worldmap",
+     "#geography",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country has the MOST time zones? 🕰️\nRussia, the USA or the other one? The widest country on the map is not the widest on the clock: one nation's clocks sit 22 hours apart.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#timezones",
+     "#worldmap",
+     "#geography",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country has the most time zones — Russia, the USA or France?\nThe widest country on the map is not the widest on the clock, and the one as wide as America keeps a single time. Call it before the map lights up.",
+    "tags": [
+     "#geographyquiz",
+     "#timezones"
+    ]
+   },
+   "twitter": {
+    "text": "Which country has the MOST time zones?\nRussia, the USA or France? One nation's clocks sit 22 hours apart — and it is not the biggest on the map.",
+    "tags": [
+     "#GeographyQuiz",
+     "#TimeZones"
+    ]
+   },
+   "threads": {
+    "text": "Which country has the most time zones — Russia, the USA or France? The widest country on the map is not the widest on the clock: one nation's clocks sit 22 hours apart, while the giant as wide as America keeps a single time for everyone.",
+    "tags": [
+     "#timezones"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "bars",
+   "pin",
+   "label",
+   "split",
+   "second-highlight"
+  ],
+  "cast": "flagball:fr + emoji-set:clocks",
+  "music": "bed:bright"
+ },
+ "status": "ready"
+}
