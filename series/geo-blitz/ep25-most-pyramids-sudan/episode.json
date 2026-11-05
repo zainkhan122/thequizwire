@@ -1,0 +1,144 @@
+{
+ "id": "ep25-most-pyramids-sudan",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 25,
+ "title": "Which country has the MOST pyramids?",
+ "difficulty": "MEDIUM",
+ "seed": 3625,
+ "quiz": {
+  "question": "Which country has the MOST pyramids?",
+  "keyword": "MOST",
+  "options": [
+   "Egypt",
+   "Mexico",
+   "Sudan"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Sudan",
+  "answer_sub": "200+ pyramids",
+  "option_meta": [
+   {
+    "flag": "eg"
+   },
+   {
+    "flag": "mx"
+   },
+   {
+    "flag": "sd"
+   }
+  ],
+  "banner": "Sudan",
+  "banner_sub": "✓  C was right · 200+ pyramids",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country has the MOST pyramids? 🏜️",
+  "premise": "The land of the pyramids is not the land with the most pyramids",
+  "bait": "Egypt, Mexico or Sudan — which did you pick? 👇",
+  "keywords": [
+   "which country has the most pyramids",
+   "most pyramids in the world",
+   "pyramids outside egypt",
+   "kingdom of kush",
+   "nubian pyramids",
+   "geography quiz",
+   "ancient history facts",
+   "nile river"
+  ],
+  "description": "The land of the pyramids is not the land with the most pyramids. Egypt, Mexico or Sudan — which did you pick? 👇\n\nSources: UNESCO; Britannica; National Geographic; Smithsonian.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #25",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "GeographyQuiz",
+   "Pyramids"
+  ],
+  "cover_emoji": "🏜️",
+  "copy": {
+   "spoilers": [
+    "sudan",
+    "sudanese",
+    "kush",
+    "kushite",
+    "meroe",
+    "meroë",
+    "nubia",
+    "nubian",
+    "200",
+    "255",
+    "khartoum"
+   ],
+   "youtube": {
+    "title": "Which country has the most pyramids? It's not Egypt 🏜️",
+    "description": "Egypt, Mexico or the third one? The country everyone pictures when they hear 'pyramid' is not the one with the most of them. Another nation on the same river has nearly twice as many, steeper and smaller, and its kings once ruled Egypt itself as pharaohs.\nGuess before the map lights up, then see the count, the royal site, and the long river journey between the two.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#pyramids",
+     "#ancienthistory",
+     "#geography",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country has the MOST pyramids? 🏜️\nEgypt, Mexico or the other one? The country everyone pictures is not the one with the most: a neighbour on the same river has nearly twice as many, and its kings once ruled Egypt as pharaohs.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#pyramids",
+     "#ancienthistory",
+     "#geography",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country has the most pyramids — Egypt, Mexico or Sudan?\nThe land everyone pictures is not the land with the most of them: a neighbour on the same river has nearly twice as many, steeper and smaller. Say it before the flash.",
+    "tags": [
+     "#geographyquiz",
+     "#pyramids"
+    ]
+   },
+   "twitter": {
+    "text": "Which country has the MOST pyramids?\nEgypt, Mexico or Sudan? One of them has nearly twice as many as the country you are picturing — and its kings once ruled Egypt.",
+    "tags": [
+     "#GeographyQuiz",
+     "#Pyramids"
+    ]
+   },
+   "threads": {
+    "text": "Which country has the most pyramids — Egypt, Mexico or Sudan? The land everyone pictures is not the land with the most of them: a neighbour on the same river has nearly twice as many, steeper and smaller, and its kings once ruled Egypt itself as pharaohs.",
+    "tags": [
+     "#pyramids"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "flash-cut",
+  "beats": [
+   "counter",
+   "pin",
+   "label",
+   "route",
+   "travel"
+  ],
+  "cast": "flagball:sd + emoji-set:desert",
+  "music": "bed:deep"
+ },
+ "status": "ready"
+}

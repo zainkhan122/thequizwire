@@ -1,0 +1,1040 @@
+{
+ "id": "ep25-most-pyramids-sudan",
+ "series": "geo-blitz",
+ "number": 25,
+ "seed": 3625,
+ "question": "Which country has the MOST pyramids?",
+ "keyword": "MOST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Egypt",
+   "flag": "eg",
+   "cue": "egypt"
+  },
+  {
+   "text": "Mexico",
+   "flag": "mx",
+   "cue": "mexico"
+  },
+  {
+   "text": "Sudan",
+   "flag": "sd",
+   "cue": "sudan"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "200+ pyramids",
+ "outro_headline": "TOO EASY?",
+ "cover_emoji": "🏜️",
+ "post": {
+  "premise": "The land of the pyramids is not the land with the most pyramids",
+  "bait": "Egypt, Mexico or Sudan — which did you pick? 👇",
+  "keywords": [
+   "which country has the most pyramids",
+   "most pyramids in the world",
+   "pyramids outside egypt",
+   "kingdom of kush",
+   "nubian pyramids",
+   "geography quiz",
+   "ancient history facts",
+   "nile river"
+  ],
+  "tags": [
+   "GeographyQuiz",
+   "Pyramids"
+  ],
+  "sources_line": "UNESCO; Britannica; National Geographic; Smithsonian",
+  "copy": {
+   "spoilers": [
+    "sudan",
+    "sudanese",
+    "kush",
+    "kushite",
+    "meroe",
+    "meroë",
+    "nubia",
+    "nubian",
+    "200",
+    "255",
+    "khartoum"
+   ],
+   "youtube": {
+    "title": "Which country has the most pyramids? It's not Egypt 🏜️",
+    "description": "Egypt, Mexico or the third one? The country everyone pictures when they hear 'pyramid' is not the one with the most of them. Another nation on the same river has nearly twice as many, steeper and smaller, and its kings once ruled Egypt itself as pharaohs.\nGuess before the map lights up, then see the count, the royal site, and the long river journey between the two.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#pyramids",
+     "#ancienthistory",
+     "#geography",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country has the MOST pyramids? 🏜️\nEgypt, Mexico or the other one? The country everyone pictures is not the one with the most: a neighbour on the same river has nearly twice as many, and its kings once ruled Egypt as pharaohs.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#pyramids",
+     "#ancienthistory",
+     "#geography",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country has the most pyramids — Egypt, Mexico or Sudan?\nThe land everyone pictures is not the land with the most of them: a neighbour on the same river has nearly twice as many, steeper and smaller. Say it before the flash.",
+    "tags": [
+     "#geographyquiz",
+     "#pyramids"
+    ]
+   },
+   "twitter": {
+    "text": "Which country has the MOST pyramids?\nEgypt, Mexico or Sudan? One of them has nearly twice as many as the country you are picturing — and its kings once ruled Egypt.",
+    "tags": [
+     "#GeographyQuiz",
+     "#Pyramids"
+    ]
+   },
+   "threads": {
+    "text": "Which country has the most pyramids — Egypt, Mexico or Sudan? The land everyone pictures is not the land with the most of them: a neighbour on the same river has nearly twice as many, steeper and smaller, and its kings once ruled Egypt itself as pharaohs.",
+    "tags": [
+     "#pyramids"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "misconception",
+  "opener": "wide-drift",
+  "reveal": "flash-cut",
+  "beats": [
+   "counter",
+   "pin",
+   "label",
+   "route",
+   "travel"
+  ],
+  "cast": "flagball:sd + emoji-set:desert",
+  "music": "bed:deep",
+  "outro": "TOO EASY?"
+ },
+ "intent": "A river journey in reverse: the count that beats Egypt, the kings who ruled Egypt, then the long Nile road from the forgotten pyramids to the famous ones.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "most": "most"
+  },
+  "v04": {
+   "text": "Sudan. The Kingdom of Kush built more than 200 pyramids along the Nile, nearly twice Egypt's count.",
+   "cues": {
+    "answer": "sudan",
+    "kush": "kush",
+    "nile": "nile"
+   }
+  },
+  "v05": {
+   "text": "Egypt has about 138. Sudan's are steeper and slimmer, up to 30 metres tall, and most stand at Meroe.",
+   "cues": {
+    "egypt": "egypt",
+    "steeper": "steeper",
+    "meroe": "meroe"
+   }
+  },
+  "v06": {
+   "text": "Kush was no copycat. From 744 BC its kings ruled Egypt itself as pharaohs, for nearly a century.",
+   "cues": {
+    "copycat": "copycat",
+    "ruled": "ruled",
+    "century": "century"
+   }
+  },
+  "v07": {
+   "text": "Meroe lies 200 kilometres north of Khartoum, and some 1600 kilometres up the Nile from Giza.",
+   "cues": {
+    "khartoum": "khartoum",
+    "giza": "giza",
+    "river": "nile"
+   }
+  },
+  "v08": {
+   "text": "More than Egypt. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "200+ PYRAMIDS",
+   "text": "built by the Kingdom of Kush"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "sd",
+   "face": "happy",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "eg",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "research": {
+  "topic": "Country with the most pyramids: Sudan (Kingdom of Kush / Nubian pyramids, 200+ at Meroë, Nuri, El-Kurru and Jebel Barkal) versus Egypt (about 138 known).",
+  "myths": [
+   {
+    "myth": "Egypt has the most pyramids because it has the most famous ones.",
+    "reality": "Egypt has about 138 known pyramids; Sudan's Kushite sites hold more than 200, most of them at Meroë.",
+    "sources": [
+     "unesco_meroe",
+     "natgeo_sudan",
+     "smithsonian_sudan"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Feed clips say 'Sudan has more pyramids' as a one-liner; nobody runs the Egyptian count against the Sudanese one, pins Meroë and then draws the Nile distance up to Giza on a moving map.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=which+country+has+the+most+pyramids",
+     "title": "Search: which country has the most pyramids",
+     "angle": "one-line answer clips",
+     "misses": "no map, no count"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=meroe+pyramids+sudan",
+     "title": "Search: meroe pyramids sudan",
+     "angle": "travel vlogs",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if geography",
+     "misses": "no sourced data"
+    }
+   ]
+  },
+  "sources": {
+   "unesco_meroe": {
+    "type": "primary",
+    "publisher": "UNESCO World Heritage Centre",
+    "title": "Archaeological Sites of the Island of Meroe",
+    "url": "https://whc.unesco.org/en/list/1336/",
+    "date": "2026-11-05",
+    "notes": "Meroë was the heartland of the Kingdom of Kush (8th century BC – 4th century AD); royal city with pyramids; about 200 km north-east of Khartoum"
+   },
+   "natgeo_sudan": {
+    "type": "reference",
+    "publisher": "National Geographic",
+    "title": "Sudan's forgotten pyramids",
+    "url": "https://www.nationalgeographic.com/history/article/sudan-nubia-pyramids",
+    "date": "2026-11-05",
+    "notes": "Sudan has more than 200 pyramids, more than Egypt; built by the Kushites; steeper and smaller than Egypt's"
+   },
+   "smithsonian_sudan": {
+    "type": "reference",
+    "publisher": "Smithsonian Magazine",
+    "title": "Why Sudan's remarkable ancient civilization has been overlooked by history",
+    "url": "https://www.smithsonianmag.com/travel/sudan-pyramids-nubia-meroe-180962557/",
+    "date": "2026-11-05",
+    "notes": "more than 200 pyramids in Sudan; Nubian pyramids at Meroë narrow and steep, up to about 30 m tall"
+   },
+   "britannica_kush": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Kush — ancient kingdom",
+    "url": "https://www.britannica.com/place/Kush",
+    "date": "2026-11-05",
+    "notes": "Kushite kings conquered Egypt and ruled as the 25th dynasty (c. 744–656 BC); capital moved to Meroë"
+   },
+   "britannica_pyramid": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Pyramids of Giza",
+    "url": "https://www.britannica.com/topic/Pyramids-of-Giza",
+    "date": "2026-11-05",
+    "notes": "Giza, on the west bank of the Nile near Cairo; the Great Pyramid 146.6 m originally"
+   },
+   "britannica_egypt_pyr": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Pyramid — architecture",
+    "url": "https://www.britannica.com/technology/pyramid-architecture",
+    "date": "2026-11-05",
+    "notes": "about 138 pyramids have been identified in Egypt; Nubian pyramids of Kush more numerous and steeper"
+   },
+   "unesco_memphis": {
+    "type": "primary",
+    "publisher": "UNESCO World Heritage Centre",
+    "title": "Memphis and its Necropolis – the Pyramid Fields from Giza to Dahshur",
+    "url": "https://whc.unesco.org/en/list/86/",
+    "date": "2026-11-05",
+    "notes": "the Egyptian pyramid fields of the Old Kingdom; Giza on the west bank of the Nile"
+   },
+   "border_registry": {
+    "type": "primary",
+    "publisher": "thequizwire docs/border_registry.json (Natural Earth · UNISFA)",
+    "title": "Border policy registry — abyei, halaib_bir_tawil",
+    "url": "docs/border_registry.json",
+    "date": "2026-11-05",
+    "notes": "controller / claimant wording as shown on the plates"
+   },
+   "unisfa": {
+    "type": "primary",
+    "publisher": "United Nations",
+    "title": "UNISFA — United Nations Interim Security Force for Abyei",
+    "url": "https://unisfa.unmissions.org/",
+    "date": "2026-11-05",
+    "notes": "UN force patrolling the contested Abyei Area between Sudan and South Sudan"
+   },
+   "wiki_halaib": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Hala'ib Triangle",
+    "url": "https://en.wikipedia.org/wiki/Hala%27ib_Triangle",
+    "date": "2026-11-05",
+    "notes": "administered by Egypt, claimed by Sudan; Bir Tawil claimed by neither"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Sudan has the most pyramids of any country: more than 200, built by the Kingdom of Kush along the Nile.",
+    "sources": [
+     "unesco_meroe",
+     "natgeo_sudan",
+     "smithsonian_sudan"
+    ],
+    "vo": [
+     "which country has the most pyramids",
+     "egypt, mexico, or sudan",
+     "sudan. the kingdom of kush built more than 200 pyramids along the nile, nearly twice egypt's count",
+     "more than egypt. follow us"
+    ],
+    "screen": [
+     "Sudan",
+     "Egypt",
+     "Mexico",
+     "200+ PYRAMIDS",
+     "built by the Kingdom of Kush",
+     "Sudan · 200+ pyramids"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Egypt has about 138 known pyramids; Sudan's Nubian pyramids are steeper and smaller, up to about 30 m tall, most of them at Meroë.",
+    "sources": [
+     "unesco_memphis",
+     "britannica_egypt_pyr",
+     "smithsonian_sudan",
+     "natgeo_sudan"
+    ],
+    "vo": [
+     "egypt has about 138. sudan's are steeper and slimmer, up to 30 metres tall, and most stand at meroe"
+    ],
+    "screen": [
+     "138",
+     "pyramids in Egypt",
+     "Meroe",
+     "Meroe · 200+"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Kushite kings ruled Egypt as pharaohs (the 25th dynasty) from about 744 BC for nearly a century.",
+    "sources": [
+     "britannica_kush",
+     "unesco_meroe"
+    ],
+    "vo": [
+     "kush was no copycat. from 744 bc its kings ruled egypt itself as pharaohs, for nearly a century"
+    ],
+    "screen": [
+     "744 BC",
+     "Kushite kings rule Egypt as pharaohs"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Meroë lies about 200 km north of Khartoum and roughly 1,600 km up the Nile from Giza.",
+    "sources": [
+     "unesco_meroe",
+     "britannica_pyramid"
+    ],
+    "vo": [
+     "meroe lies 200 kilometres north of khartoum, and some 1600 kilometres up the nile from giza"
+    ],
+    "screen": [
+     "Khartoum",
+     "Giza",
+     "Giza · 1600 km"
+    ]
+   },
+   {
+    "id": "C05",
+    "weight": "framing",
+    "text": "Border policy plates (the Nile view shows two contested boundaries): Abyei is contested between Sudan and South Sudan and patrolled by UNISFA; the Halaib Triangle is administered by Egypt and claimed by Sudan. No sovereignty asserted.",
+    "sources": [
+     "border_registry",
+     "unisfa",
+     "wiki_halaib"
+    ],
+    "vo": [],
+    "screen": [
+     "Abyei",
+     "Administered by joint/contested (UNISFA-patrolled)",
+     "Claimed by Sudan, South Sudan",
+     "Halaib Triangle",
+     "Administered by Egypt",
+     "Claimed by Sudan"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   20,
+   9,
+   44,
+   31.6
+  ],
+  "far_bbox": [
+   0,
+   -8,
+   65,
+   48
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "729"
+  ],
+  "highlight_note": "Sudan",
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "nile",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "to_giza",
+       "properties": {
+        "name": "Meroe to Giza along the Nile"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          33.75,
+          16.93
+         ],
+         [
+          33.3,
+          18.5
+         ],
+         [
+          31.6,
+          20.5
+         ],
+         [
+          31.2,
+          22.5
+         ],
+         [
+          32.9,
+          24.1
+         ],
+         [
+          32.6,
+          26.0
+         ],
+         [
+          31.3,
+          27.6
+         ],
+         [
+          30.9,
+          29.0
+         ],
+         [
+          31.13,
+          29.98
+         ]
+        ]
+       }
+      }
+     ]
+    },
+    "note": "schematic Nile line from the Kushite royal cemetery to the Giza plateau"
+   }
+  ],
+  "labels": [
+   {
+    "id": "sd",
+    "lonlat": [
+     36.0,
+     12.0
+    ],
+    "text": "Sudan · 200+ pyramids",
+    "cls": "tag",
+    "in": "s04@nile",
+    "out": "s05"
+   },
+   {
+    "id": "me",
+    "lonlat": [
+     36.5,
+     18.3
+    ],
+    "text": "Meroe · 200+",
+    "cls": "tag",
+    "in": "s05@meroe+0.2",
+    "out": "s06"
+   },
+   {
+    "id": "gz",
+    "lonlat": [
+     26.5,
+     30.8
+    ],
+    "text": "Giza · 1600 km",
+    "cls": "tag",
+    "in": "s07@giza+0.3",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "meroe",
+    "lonlat": [
+     33.75,
+     16.93
+    ],
+    "label": "Meroe"
+   },
+   {
+    "id": "khartoum",
+    "lonlat": [
+     32.53,
+     15.55
+    ],
+    "label": "Khartoum",
+    "side": "left"
+   },
+   {
+    "id": "giza",
+    "lonlat": [
+     31.13,
+     29.98
+    ],
+    "label": "Giza",
+    "side": "left"
+   }
+  ],
+  "scalebar": {
+   "km": 500,
+   "lonlat": [
+    21,
+    10.5
+   ]
+  },
+  "pin_beats": [],
+  "cams": {
+   "start": [
+    0.55,
+    [
+     34,
+     20
+    ]
+   ],
+   "s01": [
+    0.55,
+    [
+     33,
+     21
+    ]
+   ],
+   "s04": [
+    0.9,
+    [
+     30,
+     16
+    ]
+   ],
+   "s04b": [
+    1.0,
+    [
+     31,
+     16
+    ]
+   ],
+   "s05": [
+    1.3,
+    [
+     33,
+     18
+    ]
+   ],
+   "s05b": [
+    1.4,
+    [
+     34,
+     17.5
+    ]
+   ],
+   "s06": [
+    0.8,
+    [
+     31,
+     22
+    ]
+   ],
+   "s06b": [
+    0.9,
+    [
+     31.5,
+     21.5
+    ]
+   ],
+   "s07": [
+    0.7,
+    [
+     32,
+     23
+    ]
+   ],
+   "s07b": [
+    0.75,
+    [
+     32.5,
+     22.5
+    ]
+   ]
+  },
+  "disputed": [
+   {
+    "id": "abyei",
+    "ne_name": "Abyei",
+    "name": "Abyei",
+    "controller": "joint/contested (UNISFA-patrolled)",
+    "claimants": [
+     "Sudan",
+     "South Sudan"
+    ],
+    "as_of": "2026-11",
+    "source": "docs/border_registry.json#abyei · UNISFA",
+    "label_at": [
+     23.2,
+     9.6
+    ],
+    "plate_cls": "small"
+   },
+   {
+    "id": "halaib",
+    "ne_name": "Halayib Triangle",
+    "name": "Halaib Triangle",
+    "controller": "Egypt",
+    "claimants": [
+     "Sudan"
+    ],
+    "as_of": "2026-11",
+    "source": "docs/border_registry.json#halaib_bir_tawil",
+    "label_at": [
+     41.5,
+     24.5
+    ],
+    "plate_cls": "small"
+   }
+  ]
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Egypt has about 138. Sudan's are steeper and slimmer, up to 30 metres tall, and most stand at Meroe.",
+    "cues": {
+     "egypt": "egypt",
+     "steeper": "steeper",
+     "meroe": "meroe"
+    }
+   },
+   "direction": "tighten on Sudan; the Egypt counter runs to 138 on 'Egypt' while the Egyptian flag-ball thinks; a pyramid sticker on 'steeper'; the Meroe pin and tag drop on 'Meroe'",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "cam": [
+    1.3,
+    [
+     33,
+     18
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    1.4,
+    [
+     34,
+     17.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "egy",
+     "type": "counter",
+     "start": 0,
+     "end": 138,
+     "y": 330,
+     "label": "pyramids in Egypt",
+     "fmt": "int",
+     "size": 170
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@egypt-0.2",
+     "do": "chart.counter_run",
+     "id": "egy",
+     "until": "@@egypt+1.4",
+     "args": {
+      "steps": 12
+     }
+    },
+    {
+     "at": "@@egypt",
+     "do": "character_in",
+     "id": "eg_think"
+    },
+    {
+     "at": "@@steeper",
+     "do": "sticker_in",
+     "id": "st_pyr"
+    },
+    {
+     "at": "@@steeper+0.4",
+     "do": "sticker_pulse",
+     "id": "st_pyr"
+    },
+    {
+     "at": "@@steeper+0.6",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "729",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@meroe",
+     "do": "hide",
+     "id": "egy"
+    },
+    {
+     "at": "@@meroe",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "meroe"
+     }
+    },
+    {
+     "at": "@@meroe+0.5",
+     "do": "sticker_pulse",
+     "id": "st_pyr"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_pyr"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "eg_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Kush was no copycat. From 744 BC its kings ruled Egypt itself as pharaohs, for nearly a century.",
+    "cues": {
+     "copycat": "copycat",
+     "ruled": "ruled",
+     "century": "century"
+    }
+   },
+   "direction": "ease north so Sudan and Egypt share the frame; a crown sticker on 'copycat'; the 744 BC card on 'ruled'; Sudan pulses on 'century'; the Sudanese flag-ball grins",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "744 BC",
+    "text": "Kushite kings rule Egypt as pharaohs"
+   },
+   "card_at": null,
+   "cam": [
+    0.8,
+    [
+     31,
+     22
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.9,
+    [
+     31.5,
+     21.5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@copycat",
+     "do": "sticker_in",
+     "id": "st_crown"
+    },
+    {
+     "at": "@@copycat+0.4",
+     "do": "sticker_pulse",
+     "id": "st_crown"
+    },
+    {
+     "at": "@@ruled",
+     "do": "fact_in",
+     "id": "f3",
+     "until": "@.end"
+    },
+    {
+     "at": "@@ruled+0.2",
+     "do": "character_in",
+     "id": "grin"
+    },
+    {
+     "at": "@@century",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "729",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@century+0.3",
+     "do": "sticker_pulse",
+     "id": "st_crown"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_crown"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "grin"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Meroe lies 200 kilometres north of Khartoum, and some 1600 kilometres up the Nile from Giza.",
+    "cues": {
+     "khartoum": "khartoum",
+     "giza": "giza",
+     "river": "nile"
+    }
+   },
+   "direction": "pull out to the whole Nile; the Khartoum pin on 'Khartoum'; a camel sticker travels the river line from Meroe to Giza until 'Giza'; the Giza pin and tag land; the river sticker pulses at the end",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.6,
+   "cam": [
+    0.7,
+    [
+     32,
+     23
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.75,
+    [
+     32.5,
+     22.5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@khartoum",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "khartoum"
+     }
+    },
+    {
+     "at": "@@khartoum+0.6",
+     "do": "sticker_in",
+     "id": "st_camel"
+    },
+    {
+     "at": "@@khartoum+0.6",
+     "do": "geo.route_draw",
+     "stage": "stage_map",
+     "until": "@@giza",
+     "args": {
+      "rid": "to_giza",
+      "layer": "nile"
+     }
+    },
+    {
+     "at": "@@khartoum+0.6",
+     "do": "geo.travel",
+     "stage": "stage_map",
+     "until": "@@giza",
+     "args": {
+      "rid": "to_giza",
+      "layer": "nile",
+      "sid": "st_camel",
+      "offset": [
+       0,
+       -50
+      ]
+     }
+    },
+    {
+     "at": "@@giza",
+     "do": "sticker_out",
+     "id": "st_camel"
+    },
+    {
+     "at": "@@giza+0.2",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "giza"
+     }
+    },
+    {
+     "at": "@@river",
+     "do": "sticker_in",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@river+0.4",
+     "do": "sticker_pulse",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@river+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "729",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_wave"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "khartoum"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "giza"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "meroe"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_pyr",
+   "type": "sticker",
+   "emoji": "1f3db",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_crown",
+   "type": "sticker",
+   "emoji": "1f451",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 8
+  },
+  {
+   "id": "st_camel",
+   "type": "sticker",
+   "emoji": "1f42b",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "st_wave",
+   "type": "sticker",
+   "emoji": "1f30a",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "eg_think",
+   "type": "character",
+   "flag": "eg",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "grin",
+   "type": "character",
+   "flag": "sd",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

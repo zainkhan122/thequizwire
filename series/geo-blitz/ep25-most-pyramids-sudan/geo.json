@@ -1,0 +1,223 @@
+{
+ "version": 1,
+ "episode": "ep25-most-pyramids-sudan",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     20,
+     9,
+     44,
+     31.6
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "729"
+     ],
+     "cls": "",
+     "note": "Sudan"
+    },
+    {
+     "kind": "route",
+     "id": "nile",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "to_giza",
+        "properties": {
+         "name": "Meroe to Giza along the Nile"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           33.75,
+           16.93
+          ],
+          [
+           33.3,
+           18.5
+          ],
+          [
+           31.6,
+           20.5
+          ],
+          [
+           31.2,
+           22.5
+          ],
+          [
+           32.9,
+           24.1
+          ],
+          [
+           32.6,
+           26.0
+          ],
+          [
+           31.3,
+           27.6
+          ],
+          [
+           30.9,
+           29.0
+          ],
+          [
+           31.13,
+           29.98
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic Nile line from the Kushite royal cemetery to the Giza plateau"
+    }
+   ],
+   "pins": [
+    {
+     "id": "meroe",
+     "lonlat": [
+      33.75,
+      16.93
+     ],
+     "label": "Meroe"
+    },
+    {
+     "id": "khartoum",
+     "lonlat": [
+      32.53,
+      15.55
+     ],
+     "label": "Khartoum",
+     "side": "left"
+    },
+    {
+     "id": "giza",
+     "lonlat": [
+      31.13,
+      29.98
+     ],
+     "label": "Giza",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "sd",
+     "lonlat": [
+      36.0,
+      12.0
+     ],
+     "text": "Sudan · 200+ pyramids",
+     "cls": "tag",
+     "in": "s04@nile",
+     "out": "s05"
+    },
+    {
+     "id": "me",
+     "lonlat": [
+      36.5,
+      18.3
+     ],
+     "text": "Meroe · 200+",
+     "cls": "tag",
+     "in": "s05@meroe+0.2",
+     "out": "s06"
+    },
+    {
+     "id": "gz",
+     "lonlat": [
+      26.5,
+      30.8
+     ],
+     "text": "Giza · 1600 km",
+     "cls": "tag",
+     "in": "s07@giza+0.3",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [
+    {
+     "id": "abyei",
+     "ne_name": "Abyei",
+     "name": "Abyei",
+     "controller": "joint/contested (UNISFA-patrolled)",
+     "claimants": [
+      "Sudan",
+      "South Sudan"
+     ],
+     "as_of": "2026-11",
+     "source": "docs/border_registry.json#abyei · UNISFA",
+     "label_at": [
+      23.2,
+      9.6
+     ],
+     "plate_cls": "small"
+    },
+    {
+     "id": "halaib",
+     "ne_name": "Halayib Triangle",
+     "name": "Halaib Triangle",
+     "controller": "Egypt",
+     "claimants": [
+      "Sudan"
+     ],
+     "as_of": "2026-11",
+     "source": "docs/border_registry.json#halaib_bir_tawil",
+     "label_at": [
+      41.5,
+      24.5
+     ],
+     "plate_cls": "small"
+    }
+   ],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      0,
+      -8,
+      65,
+      48
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 500,
+    "lonlat": [
+     21,
+     10.5
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

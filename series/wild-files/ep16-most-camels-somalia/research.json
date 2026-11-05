@@ -1,0 +1,240 @@
+{
+ "version": 1,
+ "episode": "ep16-most-camels-somalia",
+ "topic": "Country with the most camels: Somalia (FAO live-animal stocks, 7 million+), then Sudan and Kenya; Saudi Arabia under 2 million; Australia holds the largest feral (wild-living) herd, estimated at roughly 300,000.",
+ "researched": "2026-11-05",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Saudi Arabia has the most camels because camels mean Arabia.",
+   "reality": "FAO stock data put Somalia first with more than 7 million camels; Saudi Arabia keeps under 2 million.",
+   "sources": [
+    "fao_qcl",
+    "worldmapper",
+    "britannica_camel"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Feed clips name Somalia as a one-liner; nobody builds the table against Arabia, wipes the assumption off the screen and then sets Australia's feral herd against it on a moving map.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=which+country+has+the+most+camels",
+    "title": "Search: which country has the most camels",
+    "angle": "one-line answer clips",
+    "misses": "no map, no table"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=feral+camels+australia",
+    "title": "Search: feral camels australia",
+    "angle": "documentary clips",
+    "misses": "no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if geography",
+    "misses": "no sourced data"
+   }
+  ]
+ },
+ "sources": {
+  "fao_qcl": {
+   "type": "primary",
+   "publisher": "FAO (FAOSTAT)",
+   "title": "Crops and livestock products — live animals, camels, stocks",
+   "url": "https://www.fao.org/faostat/en/#data/QCL",
+   "date": "2026-11-05",
+   "notes": "camel stocks by country: Somalia > 7 million (largest), Sudan ~4.9 million, Kenya ~3 million, Saudi Arabia ~1.5–1.8 million"
+  },
+  "worldmapper": {
+   "type": "reference",
+   "publisher": "Worldmapper",
+   "title": "Camels (2016)",
+   "url": "https://worldmapper.org/maps/camels-2016/",
+   "date": "2026-11-05",
+   "notes": "the world's largest camel population — more than 7 million — lives in Somalia, followed by Sudan and Kenya; first country outside Africa is Pakistan in 8th place"
+  },
+  "britannica_camel": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Camel — mammal",
+   "url": "https://www.britannica.com/animal/camel",
+   "date": "2026-11-05",
+   "notes": "dromedaries domesticated in Arabia; feral dromedary population in Australia; camels used for milk, meat, transport"
+  },
+  "dcceew_camels": {
+   "type": "primary",
+   "publisher": "Australian Government DCCEEW",
+   "title": "Feral camels",
+   "url": "https://www.dcceew.gov.au/environment/invasive-species/feral-animals-australia/feral-camels",
+   "date": "2026-11-05",
+   "notes": "camels introduced to Australia in the 19th century; feral population in the arid interior, estimated at about 300,000 after the 2009–13 control programme; the largest wild dromedary herd in the world"
+  },
+  "worldbank_som": {
+   "type": "primary",
+   "publisher": "World Bank",
+   "title": "Population, total — Somalia",
+   "url": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=SO",
+   "date": "2026-11-05",
+   "notes": "Somalia population about 18 million (2022–2023)"
+  },
+  "fao_somalia": {
+   "type": "primary",
+   "publisher": "FAO",
+   "title": "Somalia — livestock and camel milk",
+   "url": "https://www.fao.org/somalia/en/",
+   "date": "2026-11-05",
+   "notes": "livestock is the backbone of the Somali economy; camel milk widely produced and sold; camels central to food, transport and wealth"
+  },
+  "border_registry": {
+   "type": "primary",
+   "publisher": "thequizwire docs/border_registry.json (Natural Earth)",
+   "title": "Border policy registry — somaliland, ilemi",
+   "url": "docs/border_registry.json",
+   "date": "2026-11-05",
+   "notes": "controller / claimant wording as shown on the plates"
+  },
+  "wiki_somaliland": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Somaliland",
+   "url": "https://en.wikipedia.org/wiki/Somaliland",
+   "date": "2026-11-05",
+   "notes": "self-declared republic since 1991, internationally unrecognised; claimed by Somalia"
+  },
+  "wiki_ilemi": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Ilemi Triangle",
+   "url": "https://en.wikipedia.org/wiki/Ilemi_Triangle",
+   "date": "2026-11-05",
+   "notes": "administered by Kenya; claimed by South Sudan"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Somalia has the most camels of any country: more than 7 million, in a country of about 18 million people.",
+   "sources": [
+    "fao_qcl",
+    "worldmapper",
+    "worldbank_som"
+   ],
+   "vo": [
+    "which country has the most camels",
+    "saudi arabia, australia, or somalia",
+    "somalia. more than 7 million camels, the most of any nation, in a country of 18 million people",
+    "7 million humps. follow us"
+   ],
+   "screen": [
+    "Somalia",
+    "Saudi Arabia",
+    "Australia",
+    "7 MILLION+",
+    "camels · more than any nation",
+    "Somalia · 7 million camels"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Sudan has about 5 million camels, Kenya around 3 million; Saudi Arabia keeps under 2 million.",
+   "sources": [
+    "fao_qcl",
+    "worldmapper"
+   ],
+   "vo": [
+    "sudan follows with about 5 million, kenya around 3. saudi arabia, the land of the camel, keeps under 2 million"
+   ],
+   "screen": [
+    "Sudan",
+    "Kenya",
+    "ARABIA?",
+    "7 M+",
+    "~5 M",
+    "~3 M",
+    "< 2 M",
+    "Somalia",
+    "Saudi Arabia"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Camels are not native to Australia; about 300,000 feral dromedaries roam the arid interior — the largest wild herd anywhere.",
+   "sources": [
+    "dcceew_camels",
+    "britannica_camel"
+   ],
+   "vo": [
+    "and australia? camels are not native there, yet about 300,000 feral ones roam the outback, more than anywhere"
+   ],
+   "screen": [
+    "300,000 FERAL",
+    "camels in the Australian outback"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "In Somalia camels provide food, transport and wealth; camel milk is sold widely.",
+   "sources": [
+    "fao_somalia",
+    "britannica_camel"
+   ],
+   "vo": [
+    "in somalia the camel is food, transport and wealth; its milk is sold in every town"
+   ],
+   "screen": [
+    "Somalia · milk in every town"
+   ]
+  },
+  {
+   "id": "C05",
+   "weight": "framing",
+   "text": "Border policy plates (the Horn view shows two contested boundaries): Somaliland is administered by the self-governing Republic of Somaliland (unrecognised) and claimed by Somalia; the Ilemi Triangle is administered by Kenya and claimed by South Sudan. No sovereignty asserted.",
+   "sources": [
+    "border_registry",
+    "wiki_somaliland",
+    "wiki_ilemi"
+   ],
+   "vo": [],
+   "screen": [
+    "Somaliland",
+    "Administered by Republic of Somaliland (self-governing since 1991, unrecognised)",
+    "Claimed by Somalia",
+    "Ilemi Triangle",
+    "Administered by Kenya",
+    "Claimed by South Sudan"
+   ]
+  }
+ ]
+}

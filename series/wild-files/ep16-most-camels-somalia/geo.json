@@ -1,0 +1,114 @@
+{
+ "version": 1,
+ "episode": "ep16-most-camels-somalia",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     33,
+     -6,
+     60,
+     21
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "706"
+     ],
+     "cls": "",
+     "note": "Somalia (the 110m feature includes Somaliland; the disputed plate names the Republic of Somaliland as administrator)"
+    }
+   ],
+   "pins": [],
+   "labels": [
+    {
+     "id": "so",
+     "lonlat": [
+      50.5,
+      10.5
+     ],
+     "text": "Somalia · 7 million camels",
+     "cls": "tag",
+     "in": "s04@herd",
+     "out": "s05"
+    },
+    {
+     "id": "mk",
+     "lonlat": [
+      41.5,
+      1.8
+     ],
+     "text": "Somalia · milk in every town",
+     "cls": "tag",
+     "in": "s07@milk+0.2",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [
+    {
+     "id": "somaliland",
+     "ne_name": "Somaliland",
+     "name": "Somaliland",
+     "controller": "Republic of Somaliland (self-governing since 1991, unrecognised)",
+     "claimants": [
+      "Somalia"
+     ],
+     "as_of": "2026-11",
+     "source": "docs/border_registry.json#somaliland",
+     "label_at": [
+      46.0,
+      11.2
+     ],
+     "plate_cls": "small"
+    },
+    {
+     "id": "ilemi",
+     "ne_name": "Ilemi Triangle",
+     "name": "Ilemi Triangle",
+     "controller": "Kenya",
+     "claimants": [
+      "South Sudan"
+     ],
+     "as_of": "2026-11",
+     "source": "docs/border_registry.json#ilemi",
+     "label_at": [
+      37.5,
+      3.0
+     ],
+     "plate_cls": "small"
+    }
+   ],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      10,
+      -25,
+      80,
+      40
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

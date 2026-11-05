@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep16-most-camels-somalia",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "Wipe the assumption off the screen: the table that puts the Horn of Africa above Arabia, the word ARABIA erased, then the wild herd on the wrong continent and the milk in every Somali town.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Which country has the MOST camels?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Which country has the most camels?",
+   "cues": {
+    "which": "which",
+    "most": "most"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Saudi Arabia, Australia, or Somalia?",
+   "cues": {
+    "a": "saudi",
+    "b": "australia",
+    "c": "somalia"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "Somalia. More than 7 million camels, the most of any nation, in a country of 18 million people.",
+   "cues": {
+    "answer": "somalia",
+    "herd": "nation",
+    "people": "people"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.5,
+   "direction": "pull back over the Horn and Arabia; the ARABIA? plate waits at the bottom; bars build on 'Sudan' with Somalia on top; on 'Saudi' the ARABIA? plate wipes away and the Saudi flag-ball slumps; Somalia pulses",
+   "text": "Sudan follows with about 5 million, Kenya around 3. Saudi Arabia, the land of the camel, keeps under 2 million.",
+   "cues": {
+    "sudan": "sudan",
+    "kenya": "kenya",
+    "saudi": "saudi"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.5,
+   "direction": "drift south-east towards the Indian Ocean; the Australian flag-ball thinks on 'Australia'; the 300,000 FERAL card on 'feral'; a cactus-desert sticker on 'outback'",
+   "text": "And Australia? Camels are not native there, yet about 300,000 feral ones roam the outback, more than anywhere.",
+   "cues": {
+    "australia": "australia",
+    "feral": "feral",
+    "outback": "outback"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.6,
+   "direction": "push back onto Somalia; a meat-on-bone sticker on 'food' becomes a money bag on 'wealth' and a milk glass on 'milk' with the tag; the Somali flag-ball grins; Somalia pulses",
+   "text": "In Somalia the camel is food, transport and wealth; its milk is sold in every town.",
+   "cues": {
+    "food": "food",
+    "wealth": "wealth",
+    "milk": "milk"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "7 million humps. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

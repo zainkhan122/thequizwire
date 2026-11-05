@@ -1,0 +1,945 @@
+{
+ "id": "ep16-most-camels-somalia",
+ "series": "wild-files",
+ "number": 16,
+ "seed": 3516,
+ "question": "Which country has the MOST camels?",
+ "keyword": "MOST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Saudi Arabia",
+   "flag": "sa",
+   "cue": "saudi"
+  },
+  {
+   "text": "Australia",
+   "flag": "au",
+   "cue": "australia"
+  },
+  {
+   "text": "Somalia",
+   "flag": "so",
+   "cue": "somalia"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "about 7 million camels",
+ "outro_headline": "CHALLENGE A FRIEND",
+ "cover_emoji": "🐪",
+ "post": {
+  "premise": "The land of the camel is not where most camels live",
+  "bait": "Saudi Arabia, Australia or Somalia — which did you pick? 👇",
+  "keywords": [
+   "which country has the most camels",
+   "most camels in the world",
+   "camel population by country",
+   "feral camels australia",
+   "camel milk",
+   "animal facts",
+   "wildlife quiz",
+   "horn of africa"
+  ],
+  "tags": [
+   "AnimalFacts",
+   "WildlifeQuiz"
+  ],
+  "sources_line": "FAO; Worldmapper; Britannica; Australian Government DCCEEW",
+  "copy": {
+   "spoilers": [
+    "somalia",
+    "somali",
+    "7 million",
+    "7m",
+    "mogadishu",
+    "horn of africa"
+   ],
+   "youtube": {
+    "title": "Which country has the most camels? It's not Arabia 🐪",
+    "description": "Saudi Arabia, Australia or the third one? The land everyone pictures with camels keeps under two million of them. One country has the biggest herd on Earth — millions more than Arabia — while the biggest WILD herd roams a continent where camels are not even native.\nGuess before the map lights up, then see the table, the assumption wiped off the screen, and where camel milk is sold in every town.\nWhich did you pick?",
+    "tags": [
+     "#animalfacts",
+     "#wildlifequiz",
+     "#camel",
+     "#africa",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country has the MOST camels? 🐪\nSaudi Arabia, Australia or the other one? The land everyone pictures keeps under two million; one country has the biggest herd on Earth, and the biggest wild herd lives where camels are not even native.\nWhich did you pick?",
+    "tags": [
+     "#animalfacts",
+     "#wildlifequiz",
+     "#camel",
+     "#africa",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country has the most camels — Saudi Arabia, Australia or Somalia?\nThe land everyone pictures keeps under two million of them; one country has the biggest herd on Earth, and the biggest wild herd roams where camels are not native. Lock in your answer before the table builds.",
+    "tags": [
+     "#camels",
+     "#wildlife"
+    ]
+   },
+   "twitter": {
+    "text": "Which country has the MOST camels?\nSaudi Arabia, Australia or Somalia? The land everyone pictures keeps under two million — one of the others has the biggest herd on Earth.",
+    "tags": [
+     "#Camels",
+     "#AnimalQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which country has the most camels — Saudi Arabia, Australia or Somalia? The land everyone pictures keeps under two million of them; one country has the biggest herd on Earth, millions more, while the biggest wild herd roams a continent where camels are not even native.",
+    "tags": [
+     "#camels"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "misconception",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "bars",
+   "erase",
+   "label"
+  ],
+  "cast": "flagball:so + emoji-set:desert",
+  "music": "bed:bright",
+  "outro": "CHALLENGE A FRIEND"
+ },
+ "intent": "Wipe the assumption off the screen: the table that puts the Horn of Africa above Arabia, the word ARABIA erased, then the wild herd on the wrong continent and the milk in every Somali town.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "most": "most"
+  },
+  "v04": {
+   "text": "Somalia. More than 7 million camels, the most of any nation, in a country of 18 million people.",
+   "cues": {
+    "answer": "somalia",
+    "herd": "nation",
+    "people": "people"
+   }
+  },
+  "v05": {
+   "text": "Sudan follows with about 5 million, Kenya around 3. Saudi Arabia, the land of the camel, keeps under 2 million.",
+   "cues": {
+    "sudan": "sudan",
+    "kenya": "kenya",
+    "saudi": "saudi"
+   }
+  },
+  "v06": {
+   "text": "And Australia? Camels are not native there, yet about 300,000 feral ones roam the outback, more than anywhere.",
+   "cues": {
+    "australia": "australia",
+    "feral": "feral",
+    "outback": "outback"
+   }
+  },
+  "v07": {
+   "text": "In Somalia the camel is food, transport and wealth; its milk is sold in every town.",
+   "cues": {
+    "food": "food",
+    "wealth": "wealth",
+    "milk": "milk"
+   }
+  },
+  "v08": {
+   "text": "7 million humps. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "7 MILLION+",
+   "text": "camels · more than any nation"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "so",
+   "face": "happy",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "sa",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "research": {
+  "topic": "Country with the most camels: Somalia (FAO live-animal stocks, 7 million+), then Sudan and Kenya; Saudi Arabia under 2 million; Australia holds the largest feral (wild-living) herd, estimated at roughly 300,000.",
+  "myths": [
+   {
+    "myth": "Saudi Arabia has the most camels because camels mean Arabia.",
+    "reality": "FAO stock data put Somalia first with more than 7 million camels; Saudi Arabia keeps under 2 million.",
+    "sources": [
+     "fao_qcl",
+     "worldmapper",
+     "britannica_camel"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Feed clips name Somalia as a one-liner; nobody builds the table against Arabia, wipes the assumption off the screen and then sets Australia's feral herd against it on a moving map.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=which+country+has+the+most+camels",
+     "title": "Search: which country has the most camels",
+     "angle": "one-line answer clips",
+     "misses": "no map, no table"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=feral+camels+australia",
+     "title": "Search: feral camels australia",
+     "angle": "documentary clips",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if geography",
+     "misses": "no sourced data"
+    }
+   ]
+  },
+  "sources": {
+   "fao_qcl": {
+    "type": "primary",
+    "publisher": "FAO (FAOSTAT)",
+    "title": "Crops and livestock products — live animals, camels, stocks",
+    "url": "https://www.fao.org/faostat/en/#data/QCL",
+    "date": "2026-11-05",
+    "notes": "camel stocks by country: Somalia > 7 million (largest), Sudan ~4.9 million, Kenya ~3 million, Saudi Arabia ~1.5–1.8 million"
+   },
+   "worldmapper": {
+    "type": "reference",
+    "publisher": "Worldmapper",
+    "title": "Camels (2016)",
+    "url": "https://worldmapper.org/maps/camels-2016/",
+    "date": "2026-11-05",
+    "notes": "the world's largest camel population — more than 7 million — lives in Somalia, followed by Sudan and Kenya; first country outside Africa is Pakistan in 8th place"
+   },
+   "britannica_camel": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Camel — mammal",
+    "url": "https://www.britannica.com/animal/camel",
+    "date": "2026-11-05",
+    "notes": "dromedaries domesticated in Arabia; feral dromedary population in Australia; camels used for milk, meat, transport"
+   },
+   "dcceew_camels": {
+    "type": "primary",
+    "publisher": "Australian Government DCCEEW",
+    "title": "Feral camels",
+    "url": "https://www.dcceew.gov.au/environment/invasive-species/feral-animals-australia/feral-camels",
+    "date": "2026-11-05",
+    "notes": "camels introduced to Australia in the 19th century; feral population in the arid interior, estimated at about 300,000 after the 2009–13 control programme; the largest wild dromedary herd in the world"
+   },
+   "worldbank_som": {
+    "type": "primary",
+    "publisher": "World Bank",
+    "title": "Population, total — Somalia",
+    "url": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=SO",
+    "date": "2026-11-05",
+    "notes": "Somalia population about 18 million (2022–2023)"
+   },
+   "fao_somalia": {
+    "type": "primary",
+    "publisher": "FAO",
+    "title": "Somalia — livestock and camel milk",
+    "url": "https://www.fao.org/somalia/en/",
+    "date": "2026-11-05",
+    "notes": "livestock is the backbone of the Somali economy; camel milk widely produced and sold; camels central to food, transport and wealth"
+   },
+   "border_registry": {
+    "type": "primary",
+    "publisher": "thequizwire docs/border_registry.json (Natural Earth)",
+    "title": "Border policy registry — somaliland, ilemi",
+    "url": "docs/border_registry.json",
+    "date": "2026-11-05",
+    "notes": "controller / claimant wording as shown on the plates"
+   },
+   "wiki_somaliland": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Somaliland",
+    "url": "https://en.wikipedia.org/wiki/Somaliland",
+    "date": "2026-11-05",
+    "notes": "self-declared republic since 1991, internationally unrecognised; claimed by Somalia"
+   },
+   "wiki_ilemi": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Ilemi Triangle",
+    "url": "https://en.wikipedia.org/wiki/Ilemi_Triangle",
+    "date": "2026-11-05",
+    "notes": "administered by Kenya; claimed by South Sudan"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Somalia has the most camels of any country: more than 7 million, in a country of about 18 million people.",
+    "sources": [
+     "fao_qcl",
+     "worldmapper",
+     "worldbank_som"
+    ],
+    "vo": [
+     "which country has the most camels",
+     "saudi arabia, australia, or somalia",
+     "somalia. more than 7 million camels, the most of any nation, in a country of 18 million people",
+     "7 million humps. follow us"
+    ],
+    "screen": [
+     "Somalia",
+     "Saudi Arabia",
+     "Australia",
+     "7 MILLION+",
+     "camels · more than any nation",
+     "Somalia · 7 million camels"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Sudan has about 5 million camels, Kenya around 3 million; Saudi Arabia keeps under 2 million.",
+    "sources": [
+     "fao_qcl",
+     "worldmapper"
+    ],
+    "vo": [
+     "sudan follows with about 5 million, kenya around 3. saudi arabia, the land of the camel, keeps under 2 million"
+    ],
+    "screen": [
+     "Sudan",
+     "Kenya",
+     "ARABIA?",
+     "7 M+",
+     "~5 M",
+     "~3 M",
+     "< 2 M",
+     "Somalia",
+     "Saudi Arabia"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Camels are not native to Australia; about 300,000 feral dromedaries roam the arid interior — the largest wild herd anywhere.",
+    "sources": [
+     "dcceew_camels",
+     "britannica_camel"
+    ],
+    "vo": [
+     "and australia? camels are not native there, yet about 300,000 feral ones roam the outback, more than anywhere"
+    ],
+    "screen": [
+     "300,000 FERAL",
+     "camels in the Australian outback"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "In Somalia camels provide food, transport and wealth; camel milk is sold widely.",
+    "sources": [
+     "fao_somalia",
+     "britannica_camel"
+    ],
+    "vo": [
+     "in somalia the camel is food, transport and wealth; its milk is sold in every town"
+    ],
+    "screen": [
+     "Somalia · milk in every town"
+    ]
+   },
+   {
+    "id": "C05",
+    "weight": "framing",
+    "text": "Border policy plates (the Horn view shows two contested boundaries): Somaliland is administered by the self-governing Republic of Somaliland (unrecognised) and claimed by Somalia; the Ilemi Triangle is administered by Kenya and claimed by South Sudan. No sovereignty asserted.",
+    "sources": [
+     "border_registry",
+     "wiki_somaliland",
+     "wiki_ilemi"
+    ],
+    "vo": [],
+    "screen": [
+     "Somaliland",
+     "Administered by Republic of Somaliland (self-governing since 1991, unrecognised)",
+     "Claimed by Somalia",
+     "Ilemi Triangle",
+     "Administered by Kenya",
+     "Claimed by South Sudan"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   33,
+   -6,
+   60,
+   21
+  ],
+  "far_bbox": [
+   10,
+   -25,
+   80,
+   40
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "706"
+  ],
+  "highlight_note": "Somalia (the 110m feature includes Somaliland; the disputed plate names the Republic of Somaliland as administrator)",
+  "labels": [
+   {
+    "id": "so",
+    "lonlat": [
+     50.5,
+     10.5
+    ],
+    "text": "Somalia · 7 million camels",
+    "cls": "tag",
+    "in": "s04@herd",
+    "out": "s05"
+   },
+   {
+    "id": "mk",
+    "lonlat": [
+     41.5,
+     1.8
+    ],
+    "text": "Somalia · milk in every town",
+    "cls": "tag",
+    "in": "s07@milk+0.2",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [],
+  "scalebar": null,
+  "pin_beats": [],
+  "cams": {
+   "start": [
+    0.5,
+    [
+     62,
+     12
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     61,
+     12
+    ]
+   ],
+   "s04": [
+    1.1,
+    [
+     46,
+     6
+    ]
+   ],
+   "s04b": [
+    1.2,
+    [
+     46.5,
+     5.5
+    ]
+   ],
+   "s05": [
+    0.65,
+    [
+     42,
+     10
+    ]
+   ],
+   "s05b": [
+    0.7,
+    [
+     43,
+     9.5
+    ]
+   ],
+   "s06": [
+    0.6,
+    [
+     48,
+     6
+    ]
+   ],
+   "s06b": [
+    0.65,
+    [
+     49,
+     5.5
+    ]
+   ],
+   "s07": [
+    1.3,
+    [
+     46,
+     5
+    ]
+   ],
+   "s07b": [
+    1.4,
+    [
+     46.5,
+     4.5
+    ]
+   ]
+  },
+  "disputed": [
+   {
+    "id": "somaliland",
+    "ne_name": "Somaliland",
+    "name": "Somaliland",
+    "controller": "Republic of Somaliland (self-governing since 1991, unrecognised)",
+    "claimants": [
+     "Somalia"
+    ],
+    "as_of": "2026-11",
+    "source": "docs/border_registry.json#somaliland",
+    "label_at": [
+     46.0,
+     11.2
+    ],
+    "plate_cls": "small"
+   },
+   {
+    "id": "ilemi",
+    "ne_name": "Ilemi Triangle",
+    "name": "Ilemi Triangle",
+    "controller": "Kenya",
+    "claimants": [
+     "South Sudan"
+    ],
+    "as_of": "2026-11",
+    "source": "docs/border_registry.json#ilemi",
+    "label_at": [
+     37.5,
+     3.0
+    ],
+    "plate_cls": "small"
+   }
+  ]
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Sudan follows with about 5 million, Kenya around 3. Saudi Arabia, the land of the camel, keeps under 2 million.",
+    "cues": {
+     "sudan": "sudan",
+     "kenya": "kenya",
+     "saudi": "saudi"
+    }
+   },
+   "direction": "pull back over the Horn and Arabia; the ARABIA? plate waits at the bottom; bars build on 'Sudan' with Somalia on top; on 'Saudi' the ARABIA? plate wipes away and the Saudi flag-ball slumps; Somalia pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "cam": [
+    0.65,
+    [
+     42,
+     10
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.7,
+    [
+     43,
+     9.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "herd",
+     "type": "bars",
+     "rows": [
+      [
+       "Somalia",
+       7.2,
+       "7 M+"
+      ],
+      [
+       "Sudan",
+       4.9,
+       "~5 M"
+      ],
+      [
+       "Kenya",
+       3.1,
+       "~3 M"
+      ],
+      [
+       "Saudi Arabia",
+       1.7,
+       "< 2 M"
+      ]
+     ],
+     "y": 300,
+     "x": 70,
+     "w": 660,
+     "unit": "",
+     "max_value": 8,
+     "bar_h": 62,
+     "gap": 16
+    },
+    {
+     "id": "arabia",
+     "type": "erase",
+     "text": "ARABIA?",
+     "y": 1000,
+     "h": 260
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@sudan-0.3",
+     "do": "chart.bars_in",
+     "id": "herd",
+     "args": {
+      "dur": 1.0,
+      "stagger": 0.3
+     }
+    },
+    {
+     "at": "@@sudan",
+     "do": "sticker_in",
+     "id": "st_camel"
+    },
+    {
+     "at": "@@kenya",
+     "do": "sticker_pulse",
+     "id": "st_camel"
+    },
+    {
+     "at": "@@kenya+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "706",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@saudi",
+     "do": "chart.erase_run",
+     "id": "arabia",
+     "until": "@@saudi+1.2",
+     "args": {
+      "direction": "left"
+     }
+    },
+    {
+     "at": "@@saudi+0.2",
+     "do": "character_in",
+     "id": "sa_sad"
+    },
+    {
+     "at": "@@saudi+1.4",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "706",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "herd"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_camel"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "sa_sad"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "And Australia? Camels are not native there, yet about 300,000 feral ones roam the outback, more than anywhere.",
+    "cues": {
+     "australia": "australia",
+     "feral": "feral",
+     "outback": "outback"
+    }
+   },
+   "direction": "drift south-east towards the Indian Ocean; the Australian flag-ball thinks on 'Australia'; the 300,000 FERAL card on 'feral'; a cactus-desert sticker on 'outback'",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "300,000 FERAL",
+    "text": "camels in the Australian outback"
+   },
+   "card_at": null,
+   "cam": [
+    0.6,
+    [
+     48,
+     6
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.65,
+    [
+     49,
+     5.5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@australia",
+     "do": "character_in",
+     "id": "au_think"
+    },
+    {
+     "at": "@@feral",
+     "do": "fact_in",
+     "id": "f3",
+     "until": "@.end"
+    },
+    {
+     "at": "@@outback",
+     "do": "sticker_in",
+     "id": "st_desert"
+    },
+    {
+     "at": "@@outback+0.4",
+     "do": "sticker_pulse",
+     "id": "st_desert"
+    },
+    {
+     "at": "@@outback+0.8",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "706",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_desert"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "au_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "In Somalia the camel is food, transport and wealth; its milk is sold in every town.",
+    "cues": {
+     "food": "food",
+     "wealth": "wealth",
+     "milk": "milk"
+    }
+   },
+   "direction": "push back onto Somalia; a meat-on-bone sticker on 'food' becomes a money bag on 'wealth' and a milk glass on 'milk' with the tag; the Somali flag-ball grins; Somalia pulses",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.6,
+   "cam": [
+    1.3,
+    [
+     46,
+     5
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.4,
+    [
+     46.5,
+     4.5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@food",
+     "do": "sticker_in",
+     "id": "st_food"
+    },
+    {
+     "at": "@@food+0.4",
+     "do": "sticker_pulse",
+     "id": "st_food"
+    },
+    {
+     "at": "@@wealth",
+     "do": "sticker_out",
+     "id": "st_food"
+    },
+    {
+     "at": "@@wealth",
+     "do": "sticker_in",
+     "id": "st_money"
+    },
+    {
+     "at": "@@wealth+0.4",
+     "do": "sticker_pulse",
+     "id": "st_money"
+    },
+    {
+     "at": "@@wealth+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "706",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@milk",
+     "do": "sticker_out",
+     "id": "st_money"
+    },
+    {
+     "at": "@@milk",
+     "do": "sticker_in",
+     "id": "st_milk"
+    },
+    {
+     "at": "@@milk+0.4",
+     "do": "sticker_pulse",
+     "id": "st_milk"
+    },
+    {
+     "at": "@@milk+0.3",
+     "do": "character_in",
+     "id": "grin"
+    },
+    {
+     "at": "@@milk+0.8",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "706",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_milk"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "grin"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_camel",
+   "type": "sticker",
+   "emoji": "1f42a",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_desert",
+   "type": "sticker",
+   "emoji": "1f3dc",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_food",
+   "type": "sticker",
+   "emoji": "1f356",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_money",
+   "type": "sticker",
+   "emoji": "1f4b0",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 8
+  },
+  {
+   "id": "st_milk",
+   "type": "sticker",
+   "emoji": "1f95b",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "sa_sad",
+   "type": "character",
+   "flag": "sa",
+   "face": "sad",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "au_think",
+   "type": "character",
+   "flag": "au",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "grin",
+   "type": "character",
+   "flag": "so",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

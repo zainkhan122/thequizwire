@@ -1,0 +1,156 @@
+{
+ "version": 1,
+ "episode": "ep10-first-anaesthesia-boston-ether",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -100,
+     22,
+     8,
+     60
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "840"
+     ],
+     "cls": "",
+     "note": "United States",
+     "lift": "color",
+     "color": "#FFD400"
+    },
+    {
+     "kind": "route",
+     "id": "news",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "to_london",
+        "properties": {
+         "name": "Boston to London"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           -71.07,
+           42.36
+          ],
+          [
+           -60,
+           45.5
+          ],
+          [
+           -45,
+           49
+          ],
+          [
+           -30,
+           51.5
+          ],
+          [
+           -15,
+           52.5
+          ],
+          [
+           -0.12,
+           51.5
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic line for the news carried by ship from Boston to London"
+    }
+   ],
+   "pins": [
+    {
+     "id": "boston",
+     "lonlat": [
+      -71.07,
+      42.36
+     ],
+     "label": "Boston"
+    },
+    {
+     "id": "jefferson",
+     "lonlat": [
+      -83.57,
+      34.12
+     ],
+     "label": "Jefferson",
+     "side": "left"
+    },
+    {
+     "id": "london",
+     "lonlat": [
+      -0.12,
+      51.5
+     ],
+     "label": "London"
+    }
+   ],
+   "labels": [
+    {
+     "id": "bos",
+     "lonlat": [
+      -66,
+      38.5
+     ],
+     "text": "Boston · Ether Day 1846",
+     "cls": "tag",
+     "in": "s04@boston",
+     "out": "s06"
+    },
+    {
+     "id": "ldn",
+     "lonlat": [
+      -6,
+      47
+     ],
+     "text": "London · 21 Dec 1846",
+     "cls": "tag",
+     "in": "s07@london+0.3",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "night",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -130,
+      5,
+      40,
+      72
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

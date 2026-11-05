@@ -1,0 +1,976 @@
+{
+ "id": "ep10-first-anaesthesia-boston-ether",
+ "series": "body-brain",
+ "number": 10,
+ "seed": 3410,
+ "question": "Which country FIRST put a patient to sleep for surgery?",
+ "keyword": "FIRST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "England",
+   "flag": "gb",
+   "cue": "england"
+  },
+  {
+   "text": "France",
+   "flag": "fr",
+   "cue": "france"
+  },
+  {
+   "text": "USA",
+   "flag": "us",
+   "cue": "usa"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "Boston · 16 October 1846",
+ "outro_headline": "TOO EASY?",
+ "cover_emoji": "😴",
+ "post": {
+  "premise": "A dentist, a sponge of ether and a tumour cut out in silence",
+  "bait": "England, France or the USA — which did you pick? 👇",
+  "keywords": [
+   "first anaesthesia in history",
+   "who invented anesthesia",
+   "ether day 1846",
+   "first surgery without pain",
+   "history of anesthesia",
+   "medical history",
+   "health quiz",
+   "human body facts",
+   "crawford long ether"
+  ],
+  "tags": [
+   "MedicalHistory",
+   "HealthQuiz"
+  ],
+  "sources_line": "Massachusetts General Hospital; Linda Hall Library; Britannica; The Conversation",
+  "copy": {
+   "spoilers": [
+    "usa",
+    "america",
+    "american",
+    "united states",
+    "boston",
+    "massachusetts",
+    "georgia",
+    "morton",
+    "long",
+    "1846",
+    "1842",
+    "ether"
+   ],
+   "youtube": {
+    "title": "Where was the first surgery under anaesthesia? A dentist held the sponge 😴",
+    "description": "England, France or the third one? Before this day, surgery meant being held down. Then a dentist in a hospital amphitheatre put a patient to sleep, a surgeon cut a tumour from his neck, and the man felt nothing. Another doctor had quietly done it 4 years earlier and told no one.\nGuess before the map lights up, then see the city, the two rival dates, and how fast the news crossed the Atlantic.\nWhich flag did you back?",
+    "tags": [
+     "#medicalhistory",
+     "#healthquiz",
+     "#anesthesia",
+     "#surgery",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country FIRST put a patient to sleep for surgery? 😴\nEngland, France or the other one? A dentist held a sponge, a surgeon cut a tumour from a man's neck, and the man felt nothing — and another doctor had quietly done it 4 years earlier.\nWhich did you pick?",
+    "tags": [
+     "#medicalhistory",
+     "#healthquiz",
+     "#anesthesia",
+     "#surgery",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country first put a patient to sleep for surgery — England, France or the USA?\nA dentist held the sponge, a surgeon cut a tumour from a man's neck, and the man felt nothing; another doctor had quietly done it 4 years earlier. Lock in your answer before the map lights up.",
+    "tags": [
+     "#anesthesia",
+     "#surgeryhistory"
+    ]
+   },
+   "twitter": {
+    "text": "Which country FIRST put a patient to sleep for surgery?\nEngland, France or the USA? A dentist held the sponge, a surgeon cut, and the patient felt nothing — then the news crossed the Atlantic in weeks.",
+    "tags": [
+     "#Anesthesia",
+     "#MedicalFacts"
+    ]
+   },
+   "threads": {
+    "text": "Which country first put a patient to sleep for surgery — England, France or the USA? A dentist held a sponge, a surgeon cut a tumour from a man's neck, and the man felt nothing. Another doctor had quietly done it 4 years earlier and told no one, and within weeks the news had crossed the Atlantic.",
+    "tags": [
+     "#anesthesia"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "challenge",
+  "opener": "night-lights",
+  "reveal": "colour-lift",
+  "beats": [
+   "pin",
+   "split",
+   "route",
+   "travel"
+  ],
+  "cast": "flagball:us + emoji-set:hospital",
+  "music": "bed:deep",
+  "outro": "TOO EASY?"
+ },
+ "intent": "A single operating theatre, then the quiet rival four years earlier, then the news racing across the ocean: the day pain was switched off.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "first": "first"
+  },
+  "v04": {
+   "text": "The USA. On 16 October 1846, at Massachusetts General Hospital in Boston, a dentist put a patient to sleep with ether.",
+   "cues": {
+    "answer": "usa",
+    "boston": "boston",
+    "ether": "ether"
+   }
+  },
+  "v05": {
+   "text": "Morton held the sponge; surgeon John Warren cut a tumour from Gilbert Abbott's neck. He felt nothing.",
+   "cues": {
+    "morton": "morton",
+    "warren": "warren",
+    "nothing": "nothing"
+   }
+  },
+  "v06": {
+   "text": "But Crawford Long of Jefferson, Georgia had done it 4 years earlier, in 1842, unpublished.",
+   "cues": {
+    "jefferson": "jefferson",
+    "earlier": "earlier",
+    "published": "unpublished"
+   }
+  },
+  "v07": {
+   "text": "Within 2 months the news reached London, where Robert Liston amputated a leg under ether that December.",
+   "cues": {
+    "months": "months",
+    "london": "london",
+    "december": "december"
+   }
+  },
+  "v08": {
+   "text": "Pain, switched off. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "16 OCT 1846",
+   "text": "first public surgery under ether"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "us",
+   "face": "happy",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "gb",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "research": {
+  "topic": "First surgery under anaesthesia: the USA — the first public demonstration of ether anaesthesia at Massachusetts General Hospital, Boston, 16 October 1846 (Morton/Warren/Abbott); Crawford Long's earlier unpublished use in Jefferson, Georgia, 30 March 1842; Liston's first ether operation in London, 21 December 1846.",
+  "myths": [
+   {
+    "myth": "Anaesthesia was a British invention because Britain led 19th-century medicine.",
+    "reality": "The first public demonstration was in Boston in October 1846, and an American doctor in Georgia had used ether privately in 1842; London followed in December 1846.",
+    "sources": [
+     "mgh_etherdome",
+     "lindahall",
+     "conversation_long"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Feed clips tell the Ether Dome story as a talking head; nobody pins the theatre, sets the two rival American dates side by side and then draws the news crossing the Atlantic on a moving map.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=first+anesthesia+surgery+1846",
+     "title": "Search: first anesthesia surgery 1846",
+     "angle": "talking-head history",
+     "misses": "no map, no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=ether+dome+boston",
+     "title": "Search: ether dome boston",
+     "angle": "museum tours",
+     "misses": "no rival-date story"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if facts",
+     "misses": "no sourced data"
+    }
+   ]
+  },
+  "sources": {
+   "mgh_etherdome": {
+    "type": "primary",
+    "publisher": "Massachusetts General Hospital",
+    "title": "The Ether Dome at Mass General — Russell Museum",
+    "url": "https://www.massgeneral.org/museum/exhibits/ether-dome",
+    "date": "2026-11-05",
+    "notes": "William T. G. Morton made history on 16 October 1846 in MGH's surgical amphitheatre, now the Ether Dome, demonstrating the first public surgery using anaesthetic ether; John Collins Warren operated; 8,000+ operations performed there 1821–1868"
+   },
+   "lindahall": {
+    "type": "reference",
+    "publisher": "Linda Hall Library",
+    "title": "Scientist of the Day — Ether Dome, Massachusetts General Hospital",
+    "url": "https://www.lindahall.org/about/news/scientist-of-the-day/ether-dome/",
+    "date": "2026-11-05",
+    "notes": "16 October 1846: Warren removed a tumour from the neck of Boston housepainter Edward Gilbert Abbott while Morton administered sulfuric ether; Crawford Long had used ether in Georgia in 1842; the day became 'Ether Day'"
+   },
+   "conversation_long": {
+    "type": "reference",
+    "publisher": "The Conversation",
+    "title": "The surprising (and Long) story of the first use of ether in surgery",
+    "url": "https://theconversation.com/the-surprising-and-long-story-of-the-first-use-of-ether-in-surgery-113340",
+    "date": "2026-11-05",
+    "notes": "Crawford Long of Jefferson, Georgia, used ether on 30 March 1842 but did not publish until 1849; Morton's public demonstration at MGH on 16 October 1846 is the date history recorded"
+   },
+   "britannica_anes": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Anesthetic — history",
+    "url": "https://www.britannica.com/science/anesthetic",
+    "date": "2026-11-05",
+    "notes": "Long used ether in 1842 in Georgia; Morton's public demonstration in Boston in October 1846; ether used in London by Robert Liston on 21 December 1846"
+   },
+   "rcs_liston": {
+    "type": "reference",
+    "publisher": "Royal College of Surgeons of England",
+    "title": "Robert Liston and the first operation under ether in Britain",
+    "url": "https://www.rcseng.ac.uk/library-and-publications/library/blog/robert-liston-first-ether-anaesthetic/",
+    "date": "2026-11-05",
+    "notes": "Liston amputated a leg at University College Hospital, London, under ether on 21 December 1846 — the first such operation in Europe, about two months after Boston"
+   },
+   "ucl_liston": {
+    "type": "reference",
+    "publisher": "University College London",
+    "title": "Liston and the first anaesthetic in Europe",
+    "url": "https://www.ucl.ac.uk/culture/ucl-culture/history-ucl-anaesthesia",
+    "date": "2026-11-05",
+    "notes": "on 21 December 1846 Robert Liston performed the first operation under ether in Europe at UCH, London"
+   },
+   "long_1849": {
+    "type": "scholarly",
+    "publisher": "Southern Medical and Surgical Journal (1849) via NIH / PubMed Central",
+    "title": "An account of the first use of sulphuric ether by inhalation as an anaesthetic in surgical operations — C. W. Long, 1849",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2588985/",
+    "date": "2026-11-05",
+    "notes": "Long's own 1849 account: ether given to James Venable for removal of a neck tumour at Jefferson, Georgia, on 30 March 1842; not published until 1849"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The first public surgery under anaesthesia took place in the USA: Massachusetts General Hospital, Boston, 16 October 1846, with dentist William Morton giving ether.",
+    "sources": [
+     "mgh_etherdome",
+     "lindahall",
+     "britannica_anes"
+    ],
+    "vo": [
+     "which country first put a patient to sleep for surgery",
+     "england, france, or usa",
+     "the usa. on 16 october 1846, at massachusetts general hospital in boston, a dentist put a patient to sleep with ether",
+     "pain, switched off. follow us"
+    ],
+    "screen": [
+     "USA",
+     "England",
+     "France",
+     "16 OCT 1846",
+     "first public surgery under ether",
+     "Boston",
+     "Boston · Ether Day 1846"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Morton administered the ether while surgeon John Collins Warren removed a tumour from the neck of Edward Gilbert Abbott, who felt no pain.",
+    "sources": [
+     "lindahall",
+     "mgh_etherdome"
+    ],
+    "vo": [
+     "morton held the sponge; surgeon john warren cut a tumour from gilbert abbott's neck. he felt nothing"
+    ],
+    "screen": [
+     "NO PAIN",
+     "a neck tumour cut · he felt nothing"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Crawford Long of Jefferson, Georgia, had used ether for surgery on 30 March 1842, four years earlier, but did not publish at the time.",
+    "sources": [
+     "long_1849",
+     "conversation_long",
+     "britannica_anes",
+     "lindahall"
+    ],
+    "vo": [
+     "but crawford long of jefferson, georgia had done it 4 years earlier, in 1842, unpublished"
+    ],
+    "screen": [
+     "1842",
+     "Crawford Long, Jefferson, Georgia · unpublished",
+     "1846",
+     "Morton, Boston · the public demonstration",
+     "LONG",
+     "MORTON",
+     "Jefferson"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "News of ether crossed the Atlantic within about two months: Robert Liston amputated a leg under ether in London on 21 December 1846.",
+    "sources": [
+     "rcs_liston",
+     "ucl_liston",
+     "britannica_anes"
+    ],
+    "vo": [
+     "within 2 months the news reached london, where robert liston amputated a leg under ether that december"
+    ],
+    "screen": [
+     "London",
+     "London · 21 Dec 1846"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -100,
+   22,
+   8,
+   60
+  ],
+  "far_bbox": [
+   -130,
+   5,
+   40,
+   72
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "840"
+  ],
+  "highlight_note": "United States",
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "news",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "to_london",
+       "properties": {
+        "name": "Boston to London"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -71.07,
+          42.36
+         ],
+         [
+          -60,
+          45.5
+         ],
+         [
+          -45,
+          49
+         ],
+         [
+          -30,
+          51.5
+         ],
+         [
+          -15,
+          52.5
+         ],
+         [
+          -0.12,
+          51.5
+         ]
+        ]
+       }
+      }
+     ]
+    },
+    "note": "schematic line for the news carried by ship from Boston to London"
+   }
+  ],
+  "labels": [
+   {
+    "id": "bos",
+    "lonlat": [
+     -66,
+     38.5
+    ],
+    "text": "Boston · Ether Day 1846",
+    "cls": "tag",
+    "in": "s04@boston",
+    "out": "s06"
+   },
+   {
+    "id": "ldn",
+    "lonlat": [
+     -6,
+     47
+    ],
+    "text": "London · 21 Dec 1846",
+    "cls": "tag",
+    "in": "s07@london+0.3",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "boston",
+    "lonlat": [
+     -71.07,
+     42.36
+    ],
+    "label": "Boston"
+   },
+   {
+    "id": "jefferson",
+    "lonlat": [
+     -83.57,
+     34.12
+    ],
+    "label": "Jefferson",
+    "side": "left"
+   },
+   {
+    "id": "london",
+    "lonlat": [
+     -0.12,
+     51.5
+    ],
+    "label": "London"
+   }
+  ],
+  "scalebar": null,
+  "pin_beats": [
+   {
+    "at": "s04@boston",
+    "pid": "boston"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.5,
+    [
+     -45,
+     40
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     -44,
+     40
+    ]
+   ],
+   "s04": [
+    1.3,
+    [
+     -74,
+     40
+    ]
+   ],
+   "s04b": [
+    1.4,
+    [
+     -73.5,
+     40.5
+    ]
+   ],
+   "s05": [
+    1.7,
+    [
+     -72,
+     41
+    ]
+   ],
+   "s05b": [
+    1.8,
+    [
+     -71.5,
+     41.3
+    ]
+   ],
+   "s06": [
+    0.95,
+    [
+     -78,
+     38
+    ]
+   ],
+   "s06b": [
+    1.0,
+    [
+     -77.5,
+     38.3
+    ]
+   ],
+   "s07": [
+    0.55,
+    [
+     -40,
+     44
+    ]
+   ],
+   "s07b": [
+    0.6,
+    [
+     -38,
+     44.5
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Morton held the sponge; surgeon John Warren cut a tumour from Gilbert Abbott's neck. He felt nothing.",
+    "cues": {
+     "morton": "morton",
+     "warren": "warren",
+     "nothing": "nothing"
+    }
+   },
+   "direction": "tighten on Boston; a tooth sticker on 'Morton' becomes a scalpel on 'Warren'; the NO PAIN card on 'nothing' with a sleeping-face sticker; the US flag-ball relaxes",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "NO PAIN",
+    "text": "a neck tumour cut · he felt nothing"
+   },
+   "card_at": null,
+   "cam": [
+    1.7,
+    [
+     -72,
+     41
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    1.8,
+    [
+     -71.5,
+     41.3
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@morton",
+     "do": "sticker_in",
+     "id": "st_tooth"
+    },
+    {
+     "at": "@@morton+0.4",
+     "do": "sticker_pulse",
+     "id": "st_tooth"
+    },
+    {
+     "at": "@@warren",
+     "do": "sticker_out",
+     "id": "st_tooth"
+    },
+    {
+     "at": "@@warren",
+     "do": "sticker_in",
+     "id": "st_knife"
+    },
+    {
+     "at": "@@warren+0.4",
+     "do": "sticker_pulse",
+     "id": "st_knife"
+    },
+    {
+     "at": "@@warren+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "840",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@nothing",
+     "do": "sticker_out",
+     "id": "st_knife"
+    },
+    {
+     "at": "@@nothing",
+     "do": "fact_in",
+     "id": "f2",
+     "until": "@.end"
+    },
+    {
+     "at": "@@nothing+0.2",
+     "do": "sticker_in",
+     "id": "st_sleep"
+    },
+    {
+     "at": "@@nothing+0.6",
+     "do": "sticker_pulse",
+     "id": "st_sleep"
+    },
+    {
+     "at": "@@nothing+0.3",
+     "do": "character_in",
+     "id": "relief"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_sleep"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "relief"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "But Crawford Long of Jefferson, Georgia had done it 4 years earlier, in 1842, unpublished.",
+    "cues": {
+     "jefferson": "jefferson",
+     "earlier": "earlier",
+     "published": "unpublished"
+    }
+   },
+   "direction": "ease south-west so Boston and Georgia share the frame; the Jefferson pin on 'Jefferson'; the LONG / MORTON split of rival dates on 'earlier'; a shushing-face sticker on 'published'; the Boston pin leaves at the end",
+   "energy": 3,
+   "tone": "suspense",
+   "pause_after": 0.7,
+   "cam": [
+    0.95,
+    [
+     -78,
+     38
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.0,
+    [
+     -77.5,
+     38.3
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "rival",
+     "type": "split",
+     "left": {
+      "kicker": "1842",
+      "text": "Crawford Long, Jefferson, Georgia · unpublished"
+     },
+     "right": {
+      "kicker": "1846",
+      "text": "Morton, Boston · the public demonstration"
+     },
+     "label_left": "LONG",
+     "label_right": "MORTON",
+     "y": 310,
+     "h": 540,
+     "x": 60,
+     "w": 620
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@jefferson",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "jefferson"
+     }
+    },
+    {
+     "at": "@@earlier-0.2",
+     "do": "chart.split_in",
+     "id": "rival"
+    },
+    {
+     "at": "@@earlier+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "840",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@published",
+     "do": "sticker_in",
+     "id": "st_shh"
+    },
+    {
+     "at": "@@published+0.4",
+     "do": "sticker_pulse",
+     "id": "st_shh"
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "rival"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_shh"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "jefferson"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "boston"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Within 2 months the news reached London, where Robert Liston amputated a leg under ether that December.",
+    "cues": {
+     "months": "months",
+     "london": "london",
+     "december": "december"
+    }
+   },
+   "direction": "pull right out over the Atlantic; an envelope sticker rides the line from Boston to London until 'London'; the London pin and tag land; a flag-ball for Britain thinks; the US pulses on 'December'",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.6,
+   "cam": [
+    0.55,
+    [
+     -40,
+     44
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.6,
+    [
+     -38,
+     44.5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@+0.1",
+     "do": "sticker_in",
+     "id": "st_mail"
+    },
+    {
+     "at": "@+0.1",
+     "do": "geo.route_draw",
+     "stage": "stage_map",
+     "until": "@@london",
+     "args": {
+      "rid": "to_london",
+      "layer": "news"
+     }
+    },
+    {
+     "at": "@+0.1",
+     "do": "geo.travel",
+     "stage": "stage_map",
+     "until": "@@london",
+     "args": {
+      "rid": "to_london",
+      "layer": "news",
+      "sid": "st_mail",
+      "offset": [
+       0,
+       -50
+      ]
+     }
+    },
+    {
+     "at": "@@london",
+     "do": "sticker_out",
+     "id": "st_mail"
+    },
+    {
+     "at": "@@london+0.2",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "london"
+     }
+    },
+    {
+     "at": "@@london+0.4",
+     "do": "character_in",
+     "id": "gb_think"
+    },
+    {
+     "at": "@@december",
+     "do": "sticker_in",
+     "id": "st_leg"
+    },
+    {
+     "at": "@@december+0.4",
+     "do": "sticker_pulse",
+     "id": "st_leg"
+    },
+    {
+     "at": "@@december+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "840",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_leg"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "gb_think"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "london"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_tooth",
+   "type": "sticker",
+   "emoji": "1f9b7",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_knife",
+   "type": "sticker",
+   "emoji": "1fa7a",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 8
+  },
+  {
+   "id": "st_sleep",
+   "type": "sticker",
+   "emoji": "1f634",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_shh",
+   "type": "sticker",
+   "emoji": "1f92b",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_mail",
+   "type": "sticker",
+   "emoji": "2709",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "st_leg",
+   "type": "sticker",
+   "emoji": "1f9b5",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "relief",
+   "type": "character",
+   "flag": "us",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "gb_think",
+   "type": "character",
+   "flag": "gb",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  }
+ ]
+}

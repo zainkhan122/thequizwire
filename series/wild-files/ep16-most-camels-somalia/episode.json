@@ -1,0 +1,137 @@
+{
+ "id": "ep16-most-camels-somalia",
+ "format": "quiz-v3",
+ "series": "wild-files",
+ "number": 16,
+ "title": "Which country has the MOST camels?",
+ "difficulty": "MEDIUM",
+ "seed": 3516,
+ "quiz": {
+  "question": "Which country has the MOST camels?",
+  "keyword": "MOST",
+  "options": [
+   "Saudi Arabia",
+   "Australia",
+   "Somalia"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Somalia",
+  "answer_sub": "about 7 million camels",
+  "option_meta": [
+   {
+    "flag": "sa"
+   },
+   {
+    "flag": "au"
+   },
+   {
+    "flag": "so"
+   }
+  ],
+  "banner": "Somalia",
+  "banner_sub": "✓  C was right · about 7 million camels",
+  "outro": {
+   "headline": "CHALLENGE A FRIEND",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country has the MOST camels? 🐪",
+  "premise": "The land of the camel is not where most camels live",
+  "bait": "Saudi Arabia, Australia or Somalia — which did you pick? 👇",
+  "keywords": [
+   "which country has the most camels",
+   "most camels in the world",
+   "camel population by country",
+   "feral camels australia",
+   "camel milk",
+   "animal facts",
+   "wildlife quiz",
+   "horn of africa"
+  ],
+  "description": "The land of the camel is not where most camels live. Saudi Arabia, Australia or Somalia — which did you pick? 👇\n\nSources: FAO; Worldmapper; Britannica; Australian Government DCCEEW.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #16",
+  "hashtags": [
+   "#AnimalQuiz",
+   "#WildlifeFacts",
+   "#thequizwire"
+  ],
+  "tags": [
+   "AnimalFacts",
+   "WildlifeQuiz"
+  ],
+  "cover_emoji": "🐪",
+  "copy": {
+   "spoilers": [
+    "somalia",
+    "somali",
+    "7 million",
+    "7m",
+    "mogadishu",
+    "horn of africa"
+   ],
+   "youtube": {
+    "title": "Which country has the most camels? It's not Arabia 🐪",
+    "description": "Saudi Arabia, Australia or the third one? The land everyone pictures with camels keeps under two million of them. One country has the biggest herd on Earth — millions more than Arabia — while the biggest WILD herd roams a continent where camels are not even native.\nGuess before the map lights up, then see the table, the assumption wiped off the screen, and where camel milk is sold in every town.\nWhich did you pick?",
+    "tags": [
+     "#animalfacts",
+     "#wildlifequiz",
+     "#camel",
+     "#africa",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country has the MOST camels? 🐪\nSaudi Arabia, Australia or the other one? The land everyone pictures keeps under two million; one country has the biggest herd on Earth, and the biggest wild herd lives where camels are not even native.\nWhich did you pick?",
+    "tags": [
+     "#animalfacts",
+     "#wildlifequiz",
+     "#camel",
+     "#africa",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country has the most camels — Saudi Arabia, Australia or Somalia?\nThe land everyone pictures keeps under two million of them; one country has the biggest herd on Earth, and the biggest wild herd roams where camels are not native. Lock in your answer before the table builds.",
+    "tags": [
+     "#camels",
+     "#wildlife"
+    ]
+   },
+   "twitter": {
+    "text": "Which country has the MOST camels?\nSaudi Arabia, Australia or Somalia? The land everyone pictures keeps under two million — one of the others has the biggest herd on Earth.",
+    "tags": [
+     "#Camels",
+     "#AnimalQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which country has the most camels — Saudi Arabia, Australia or Somalia? The land everyone pictures keeps under two million of them; one country has the biggest herd on Earth, millions more, while the biggest wild herd roams a continent where camels are not even native.",
+    "tags": [
+     "#camels"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "bars",
+   "erase",
+   "label"
+  ],
+  "cast": "flagball:so + emoji-set:desert",
+  "music": "bed:bright"
+ },
+ "status": "ready"
+}

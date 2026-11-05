@@ -1,0 +1,145 @@
+{
+ "id": "ep10-first-anaesthesia-boston-ether",
+ "format": "quiz-v3",
+ "series": "body-brain",
+ "number": 10,
+ "title": "Which country FIRST put a patient to sleep for surgery?",
+ "difficulty": "MEDIUM",
+ "seed": 3410,
+ "quiz": {
+  "question": "Which country FIRST put a patient to sleep for surgery?",
+  "keyword": "FIRST",
+  "options": [
+   "England",
+   "France",
+   "USA"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "USA",
+  "answer_sub": "Boston · 16 October 1846",
+  "option_meta": [
+   {
+    "flag": "gb"
+   },
+   {
+    "flag": "fr"
+   },
+   {
+    "flag": "us"
+   }
+  ],
+  "banner": "USA",
+  "banner_sub": "✓  C was right · Boston · 16 October 1846",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country FIRST put a patient to sleep for surgery? 😴",
+  "premise": "A dentist, a sponge of ether and a tumour cut out in silence",
+  "bait": "England, France or the USA — which did you pick? 👇",
+  "keywords": [
+   "first anaesthesia in history",
+   "who invented anesthesia",
+   "ether day 1846",
+   "first surgery without pain",
+   "history of anesthesia",
+   "medical history",
+   "health quiz",
+   "human body facts",
+   "crawford long ether"
+  ],
+  "description": "A dentist, a sponge of ether and a tumour cut out in silence. England, France or the USA — which did you pick? 👇\n\nSources: Massachusetts General Hospital; Linda Hall Library; Britannica; The Conversation.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nBody & Brain #10",
+  "hashtags": [
+   "#BodyFacts",
+   "#BrainQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "MedicalHistory",
+   "HealthQuiz"
+  ],
+  "cover_emoji": "😴",
+  "copy": {
+   "spoilers": [
+    "usa",
+    "america",
+    "american",
+    "united states",
+    "boston",
+    "massachusetts",
+    "georgia",
+    "morton",
+    "long",
+    "1846",
+    "1842",
+    "ether"
+   ],
+   "youtube": {
+    "title": "Where was the first surgery under anaesthesia? A dentist held the sponge 😴",
+    "description": "England, France or the third one? Before this day, surgery meant being held down. Then a dentist in a hospital amphitheatre put a patient to sleep, a surgeon cut a tumour from his neck, and the man felt nothing. Another doctor had quietly done it 4 years earlier and told no one.\nGuess before the map lights up, then see the city, the two rival dates, and how fast the news crossed the Atlantic.\nWhich flag did you back?",
+    "tags": [
+     "#medicalhistory",
+     "#healthquiz",
+     "#anesthesia",
+     "#surgery",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country FIRST put a patient to sleep for surgery? 😴\nEngland, France or the other one? A dentist held a sponge, a surgeon cut a tumour from a man's neck, and the man felt nothing — and another doctor had quietly done it 4 years earlier.\nWhich did you pick?",
+    "tags": [
+     "#medicalhistory",
+     "#healthquiz",
+     "#anesthesia",
+     "#surgery",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country first put a patient to sleep for surgery — England, France or the USA?\nA dentist held the sponge, a surgeon cut a tumour from a man's neck, and the man felt nothing; another doctor had quietly done it 4 years earlier. Lock in your answer before the map lights up.",
+    "tags": [
+     "#anesthesia",
+     "#surgeryhistory"
+    ]
+   },
+   "twitter": {
+    "text": "Which country FIRST put a patient to sleep for surgery?\nEngland, France or the USA? A dentist held the sponge, a surgeon cut, and the patient felt nothing — then the news crossed the Atlantic in weeks.",
+    "tags": [
+     "#Anesthesia",
+     "#MedicalFacts"
+    ]
+   },
+   "threads": {
+    "text": "Which country first put a patient to sleep for surgery — England, France or the USA? A dentist held a sponge, a surgeon cut a tumour from a man's neck, and the man felt nothing. Another doctor had quietly done it 4 years earlier and told no one, and within weeks the news had crossed the Atlantic.",
+    "tags": [
+     "#anesthesia"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "question-first",
+  "opener": "night-lights",
+  "reveal": "colour-lift",
+  "beats": [
+   "pin",
+   "split",
+   "route",
+   "travel"
+  ],
+  "cast": "flagball:us + emoji-set:hospital",
+  "music": "bed:deep"
+ },
+ "status": "ready"
+}

@@ -1,0 +1,677 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "7 MILLION+",
+   "text": "camels · more than any nation"
+  },
+  {
+   "id": "herd",
+   "type": "bars",
+   "rows": [
+    [
+     "Somalia",
+     7.2,
+     "7 M+"
+    ],
+    [
+     "Sudan",
+     4.9,
+     "~5 M"
+    ],
+    [
+     "Kenya",
+     3.1,
+     "~3 M"
+    ],
+    [
+     "Saudi Arabia",
+     1.7,
+     "< 2 M"
+    ]
+   ],
+   "y": 300,
+   "x": 70,
+   "w": 660,
+   "unit": "",
+   "max_value": 8,
+   "bar_h": 62,
+   "gap": 16
+  },
+  {
+   "id": "arabia",
+   "type": "erase",
+   "text": "ARABIA?",
+   "y": 1000,
+   "h": 260
+  },
+  {
+   "id": "f3",
+   "type": "fact",
+   "kicker": "300,000 FERAL",
+   "text": "camels in the Australian outback"
+  },
+  {
+   "id": "st_camel",
+   "type": "sticker",
+   "emoji": "1f42a",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_desert",
+   "type": "sticker",
+   "emoji": "1f3dc",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_food",
+   "type": "sticker",
+   "emoji": "1f356",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_money",
+   "type": "sticker",
+   "emoji": "1f4b0",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 8
+  },
+  {
+   "id": "st_milk",
+   "type": "sticker",
+   "emoji": "1f95b",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "sa_sad",
+   "type": "character",
+   "flag": "sa",
+   "face": "sad",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "au_think",
+   "type": "character",
+   "flag": "au",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "grin",
+   "type": "character",
+   "flag": "so",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  },
+  {
+   "id": "cha",
+   "type": "character",
+   "flag": "so",
+   "face": "happy",
+   "x": 230,
+   "y": 820,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "chb",
+   "type": "character",
+   "flag": "sa",
+   "face": "think",
+   "x": 850,
+   "y": 1000,
+   "size": 200,
+   "rot": 8
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     61,
+     12
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.38,
+    "lonlat": [
+     62,
+     12
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 1.1,
+    "lonlat": [
+     46,
+     6
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 1.2,
+    "lonlat": [
+     46.5,
+     5.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "706",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s04@herd",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "so"
+   }
+  },
+  {
+   "at": "s05",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "so"
+   }
+  },
+  {
+   "at": "s07@milk+0.2",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "mk"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "mk"
+   }
+  },
+  {
+   "at": "s04+3.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "706",
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 0.65,
+    "lonlat": [
+     42,
+     10
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 0.7,
+    "lonlat": [
+     43,
+     9.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@sudan-0.3",
+   "do": "chart.bars_in",
+   "id": "herd",
+   "args": {
+    "dur": 1.0,
+    "stagger": 0.3
+   }
+  },
+  {
+   "at": "s05@sudan",
+   "do": "sticker_in",
+   "id": "st_camel"
+  },
+  {
+   "at": "s05@kenya",
+   "do": "sticker_pulse",
+   "id": "st_camel"
+  },
+  {
+   "at": "s05@kenya+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "706",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05@saudi",
+   "do": "chart.erase_run",
+   "id": "arabia",
+   "until": "s05@saudi+1.2",
+   "args": {
+    "direction": "left"
+   }
+  },
+  {
+   "at": "s05@saudi+0.2",
+   "do": "character_in",
+   "id": "sa_sad"
+  },
+  {
+   "at": "s05@saudi+1.4",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "706",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "herd"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_camel"
+  },
+  {
+   "at": "s05.end",
+   "do": "character_out",
+   "id": "sa_sad"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 0.6,
+    "lonlat": [
+     48,
+     6
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 0.65,
+    "lonlat": [
+     49,
+     5.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@australia",
+   "do": "character_in",
+   "id": "au_think"
+  },
+  {
+   "at": "s06@feral",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s06.end"
+  },
+  {
+   "at": "s06@outback",
+   "do": "sticker_in",
+   "id": "st_desert"
+  },
+  {
+   "at": "s06@outback+0.4",
+   "do": "sticker_pulse",
+   "id": "st_desert"
+  },
+  {
+   "at": "s06@outback+0.8",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "706",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_desert"
+  },
+  {
+   "at": "s06.end",
+   "do": "character_out",
+   "id": "au_think"
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.4",
+   "args": {
+    "k": 1.3,
+    "lonlat": [
+     46,
+     5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 1.4,
+    "lonlat": [
+     46.5,
+     4.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@food",
+   "do": "sticker_in",
+   "id": "st_food"
+  },
+  {
+   "at": "s07@food+0.4",
+   "do": "sticker_pulse",
+   "id": "st_food"
+  },
+  {
+   "at": "s07@wealth",
+   "do": "sticker_out",
+   "id": "st_food"
+  },
+  {
+   "at": "s07@wealth",
+   "do": "sticker_in",
+   "id": "st_money"
+  },
+  {
+   "at": "s07@wealth+0.4",
+   "do": "sticker_pulse",
+   "id": "st_money"
+  },
+  {
+   "at": "s07@wealth+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "706",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s07@milk",
+   "do": "sticker_out",
+   "id": "st_money"
+  },
+  {
+   "at": "s07@milk",
+   "do": "sticker_in",
+   "id": "st_milk"
+  },
+  {
+   "at": "s07@milk+0.4",
+   "do": "sticker_pulse",
+   "id": "st_milk"
+  },
+  {
+   "at": "s07@milk+0.3",
+   "do": "character_in",
+   "id": "grin"
+  },
+  {
+   "at": "s07@milk+0.8",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "706",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_milk"
+  },
+  {
+   "at": "s07.end",
+   "do": "character_out",
+   "id": "grin"
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     61,
+     12
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.6",
+   "do": "character_in",
+   "id": "cha"
+  },
+  {
+   "at": "s04+1.9",
+   "do": "character_in",
+   "id": "chb"
+  },
+  {
+   "at": "s05+1.0",
+   "do": "character_out",
+   "id": "cha"
+  },
+  {
+   "at": "s05+0.8",
+   "do": "character_out",
+   "id": "chb"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}
