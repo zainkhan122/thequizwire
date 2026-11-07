@@ -133,7 +133,7 @@
    }
   },
   "v05": {
-   "text": "Egypt has about 138. Sudan's are steeper and slimmer, up to 30 metres tall, and most stand at Meroe.",
+   "text": "Egypt has about 138. Sudan's are steeper and slimmer, up to 30 metres, and most stand at Meroe.",
    "cues": {
     "egypt": "egypt",
     "steeper": "steeper",
@@ -149,7 +149,7 @@
    }
   },
   "v07": {
-   "text": "Meroe lies 200 kilometres north of Khartoum, and some 1600 kilometres up the Nile from Giza.",
+   "text": "Meroe lies 200 kilometres north of Khartoum, and 1600 kilometres up the Nile from Giza.",
    "cues": {
     "khartoum": "khartoum",
     "giza": "giza",
@@ -335,7 +335,7 @@
      "natgeo_sudan"
     ],
     "vo": [
-     "egypt has about 138. sudan's are steeper and slimmer, up to 30 metres tall, and most stand at meroe"
+     "egypt has about 138. sudan's are steeper and slimmer, up to 30 metres, and most stand at meroe"
     ],
     "screen": [
      "138",
@@ -369,7 +369,7 @@
      "britannica_pyramid"
     ],
     "vo": [
-     "meroe lies 200 kilometres north of khartoum, and some 1600 kilometres up the nile from giza"
+     "meroe lies 200 kilometres north of khartoum, and 1600 kilometres up the nile from giza"
     ],
     "screen": [
      "Khartoum",
@@ -659,7 +659,7 @@
  "story": [
   {
    "vo": {
-    "text": "Egypt has about 138. Sudan's are steeper and slimmer, up to 30 metres tall, and most stand at Meroe.",
+    "text": "Egypt has about 138. Sudan's are steeper and slimmer, up to 30 metres, and most stand at Meroe.",
     "cues": {
      "egypt": "egypt",
      "steeper": "steeper",
@@ -848,7 +848,7 @@
   },
   {
    "vo": {
-    "text": "Meroe lies 200 kilometres north of Khartoum, and some 1600 kilometres up the Nile from Giza.",
+    "text": "Meroe lies 200 kilometres north of Khartoum, and 1600 kilometres up the Nile from Giza.",
     "cues": {
      "khartoum": "khartoum",
      "giza": "giza",

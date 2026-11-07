@@ -37,9 +37,9 @@
    "energy": 3,
    "pause_after": 0.3,
    "direction": "quick, each option its own beat",
-   "text": "USA, Italy, or Norway?",
+   "text": "the United States, Italy, or Norway?",
    "cues": {
-    "a": "usa",
+    "a": "states",
     "b": "italy",
     "c": "norway"
    }
@@ -79,7 +79,7 @@
    "energy": 4,
    "pause_after": 0.5,
    "direction": "ease back over the North Sea; three gold columns rise — Norway 18, USA 12, Italy 10 — the US flag-ball thinks on 'States'; the medal sticker on 'finished'",
-   "text": "The United States took 12 golds and 33 medals, its best ever. Italy, the hosts, 10. Norway: 41.",
+   "text": "The United States took 12 golds and 33 medals, its best ever. Italy, the hosts, 10. And Norway? 41.",
    "cues": {
     "states": "states",
     "hosts": "hosts",

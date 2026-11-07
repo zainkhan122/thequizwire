@@ -10,11 +10,12 @@
   {
    "text": "USA",
    "flag": "us",
-   "cue": "usa",
+   "cue": "states",
    "lonlat": [
     -98,
     39
-   ]
+   ],
+   "vo": "the United States"
   },
   {
    "text": "Italy",
@@ -140,7 +141,7 @@
    }
   },
   "v05": {
-   "text": "The United States took 12 golds and 33 medals, its best ever. Italy, the hosts, 10. Norway: 41.",
+   "text": "The United States took 12 golds and 33 medals, its best ever. Italy, the hosts, 10. And Norway? 41.",
    "cues": {
     "states": "states",
     "hosts": "hosts",
@@ -287,7 +288,7 @@
     ],
     "vo": [
      "which country topped the 2026 winter olympics medal table",
-     "usa, italy, or norway",
+     "the united states, italy, or norway",
      "norway. 18 golds in italy: the most any country has ever won at a single winter games",
      "small country, big winter. follow us"
     ],
@@ -311,7 +312,7 @@
      "sportsbrackets"
     ],
     "vo": [
-     "the united states took 12 golds and 33 medals, its best ever. italy, the hosts, 10. norway: 41"
+     "the united states took 12 golds and 33 medals, its best ever. italy, the hosts, 10. and norway? 41"
     ],
     "screen": [
      "Norway",
@@ -500,7 +501,7 @@
  "story": [
   {
    "vo": {
-    "text": "The United States took 12 golds and 33 medals, its best ever. Italy, the hosts, 10. Norway: 41.",
+    "text": "The United States took 12 golds and 33 medals, its best ever. Italy, the hosts, 10. And Norway? 41.",
     "cues": {
      "states": "states",
      "hosts": "hosts",

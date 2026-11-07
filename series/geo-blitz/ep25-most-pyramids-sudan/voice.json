@@ -79,7 +79,7 @@
    "energy": 4,
    "pause_after": 0.5,
    "direction": "tighten on Sudan; the Egypt counter runs to 138 on 'Egypt' while the Egyptian flag-ball thinks; a pyramid sticker on 'steeper'; the Meroe pin and tag drop on 'Meroe'",
-   "text": "Egypt has about 138. Sudan's are steeper and slimmer, up to 30 metres tall, and most stand at Meroe.",
+   "text": "Egypt has about 138. Sudan's are steeper and slimmer, up to 30 metres, and most stand at Meroe.",
    "cues": {
     "egypt": "egypt",
     "steeper": "steeper",
@@ -109,7 +109,7 @@
    "energy": 3,
    "pause_after": 0.6,
    "direction": "pull out to the whole Nile; the Khartoum pin on 'Khartoum'; a camel sticker travels the river line from Meroe to Giza until 'Giza'; the Giza pin and tag land; the river sticker pulses at the end",
-   "text": "Meroe lies 200 kilometres north of Khartoum, and some 1600 kilometres up the Nile from Giza.",
+   "text": "Meroe lies 200 kilometres north of Khartoum, and 1600 kilometres up the Nile from Giza.",
    "cues": {
     "khartoum": "khartoum",
     "giza": "giza",

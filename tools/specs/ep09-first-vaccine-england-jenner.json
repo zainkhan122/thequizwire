@@ -122,7 +122,7 @@
    "first": "first"
   },
   "v04": {
-   "text": "England. On 14 May 1796, Edward Jenner, a doctor in Berkeley, gave the very first.",
+   "text": "England. Edward Jenner, a country doctor in Berkeley, gave the very first on 14 May 1796.",
    "cues": {
     "answer": "england",
     "jenner": "jenner",
@@ -130,7 +130,7 @@
    }
   },
   "v05": {
-   "text": "He scratched cowpox from a milkmaid's hand into the arm of 8-year-old James Phipps. Cow, in Latin: vacca.",
+   "text": "He scratched cowpox from a milkmaid's hand into the arm of 8-year-old James Phipps. Vacca is Latin for cow.",
    "cues": {
     "scratched": "scratched",
     "arm": "arm",
@@ -138,7 +138,7 @@
    }
   },
   "v06": {
-   "text": "Weeks later he exposed the boy to smallpox. Nothing happened. Smallpox killed 3 in 10.",
+   "text": "Weeks later he exposed the boy to smallpox and nothing happened to him. Smallpox killed 3 in every 10.",
    "cues": {
     "weeks": "weeks",
     "nothing": "nothing",
@@ -146,7 +146,7 @@
    }
   },
   "v07": {
-   "text": "In 1980 the WHO in Geneva declared smallpox eradicated: the only human disease ever wiped out.",
+   "text": "In 1980 the WHO in Geneva declared smallpox eradicated, still the only human disease ever wiped out.",
    "cues": {
     "geneva": "geneva",
     "declared": "declared",
@@ -277,7 +277,7 @@
     "vo": [
      "which country gave the world its first vaccine",
      "france, china, or england",
-     "england. on 14 may 1796, edward jenner, a doctor in berkeley, gave the very first",
+     "england. edward jenner, a country doctor in berkeley, gave the very first on 14 may 1796",
      "a disease, gone. follow us"
     ],
     "screen": [
@@ -300,7 +300,7 @@
      "jenner_museum"
     ],
     "vo": [
-     "he scratched cowpox from a milkmaid's hand into the arm of 8-year-old james phipps. cow, in latin: vacca"
+     "he scratched cowpox from a milkmaid's hand into the arm of 8-year-old james phipps. vacca is latin for cow"
     ],
     "screen": [
      "VACCA",
@@ -320,7 +320,7 @@
      "who_smallpox"
     ],
     "vo": [
-     "weeks later he exposed the boy to smallpox. nothing happened. smallpox killed 3 in 10"
+     "weeks later he exposed the boy to smallpox and nothing happened to him. smallpox killed 3 in every 10"
     ],
     "screen": [
      "3 IN 10",
@@ -338,7 +338,7 @@
      "britannica_jenner"
     ],
     "vo": [
-     "in 1980 the who in geneva declared smallpox eradicated: the only human disease ever wiped out"
+     "in 1980 the who in geneva declared smallpox eradicated, still the only human disease ever wiped out"
     ],
     "screen": [
      "Geneva · WHO 1980",
@@ -539,7 +539,7 @@
  "story": [
   {
    "vo": {
-    "text": "He scratched cowpox from a milkmaid's hand into the arm of 8-year-old James Phipps. Cow, in Latin: vacca.",
+    "text": "He scratched cowpox from a milkmaid's hand into the arm of 8-year-old James Phipps. Vacca is Latin for cow.",
     "cues": {
      "scratched": "scratched",
      "arm": "arm",
@@ -549,7 +549,7 @@
    "direction": "push in on the Severn and Berkeley's pin; the cow sticker on 'scratched', the syringe on 'arm'; on 'vacca' a LATIN / ENGLISH split — VACCA, Latin for cow, against VACCINE, the word he coined",
    "energy": 4,
    "tone": "revelatory",
-   "pause_after": 0.5,
+   "pause_after": 0.45,
    "cam": [
     1.9,
     [
@@ -646,7 +646,7 @@
   },
   {
    "vo": {
-    "text": "Weeks later he exposed the boy to smallpox. Nothing happened. Smallpox killed 3 in 10.",
+    "text": "Weeks later he exposed the boy to smallpox and nothing happened to him. Smallpox killed 3 in every 10.",
     "cues": {
      "weeks": "weeks",
      "nothing": "nothing",
@@ -756,7 +756,7 @@
   },
   {
    "vo": {
-    "text": "In 1980 the WHO in Geneva declared smallpox eradicated: the only human disease ever wiped out.",
+    "text": "In 1980 the WHO in Geneva declared smallpox eradicated, still the only human disease ever wiped out.",
     "cues": {
      "geneva": "geneva",
      "declared": "declared",
@@ -766,7 +766,7 @@
    "direction": "pull back over the Channel; a line draws from Berkeley to Geneva with the syringe travelling along it; the Geneva pin and tag; the globe sticker on 'only'",
    "energy": 4,
    "tone": "resolute",
-   "pause_after": 0.6,
+   "pause_after": 0.35,
    "cam": [
     0.9,
     [
