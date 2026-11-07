@@ -13,7 +13,7 @@
  "start_hold": 0.0,
  "end_hold": 2.4,
  "sample_line": "v04",
- "title": "Which country FIRST put a patient to sleep for surgery?",
+ "title": "Where was the FIRST surgery under anaesthesia?",
  "lines": [
   {
    "id": "v01",
@@ -23,9 +23,9 @@
    "energy": 4,
    "pause_after": 0.3,
    "direction": "the question, cold — curiosity comes from the map moving under it",
-   "text": "Which country first put a patient to sleep for surgery?",
+   "text": "Where was the first surgery under anaesthesia?",
    "cues": {
-    "which": "which",
+    "where": "where",
     "first": "first"
    }
   },
@@ -78,7 +78,7 @@
    "tone": "revelatory",
    "energy": 4,
    "pause_after": 0.5,
-   "direction": "tighten on Boston; a tooth sticker on 'Morton' becomes a scalpel on 'Warren'; the NO PAIN card on 'nothing' with a sleeping-face sticker; the US flag-ball relaxes",
+   "direction": "tighten on Boston; a HELD DOWN plate waits at the bottom — how surgery used to be; a tooth sticker on 'Morton' becomes a stethoscope on 'Warren'; on 'nothing' the plate wipes away, the NO PAIN card lands with a sleeping-face sticker; the US flag-ball relaxes",
    "text": "Morton held the sponge; surgeon John Warren cut a tumour from Gilbert Abbott's neck. He felt nothing.",
    "cues": {
     "morton": "morton",
@@ -93,7 +93,7 @@
    "tone": "suspense",
    "energy": 3,
    "pause_after": 0.7,
-   "direction": "ease south-west so Boston and Georgia share the frame; the Jefferson pin on 'Jefferson'; the LONG / MORTON split of rival dates on 'earlier'; a shushing-face sticker on 'published'; the Boston pin leaves at the end",
+   "direction": "ease south-west so Boston and Georgia share the frame; the Jefferson pin on 'Jefferson'; a year counter ticks 1842 → 1846 on 'earlier'; a shushing-face sticker on 'unpublished'; the Boston pin leaves at the end",
    "text": "But Crawford Long of Jefferson, Georgia had done it 4 years earlier, in 1842, unpublished.",
    "cues": {
     "jefferson": "jefferson",

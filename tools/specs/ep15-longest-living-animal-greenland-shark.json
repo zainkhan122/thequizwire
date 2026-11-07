@@ -26,7 +26,7 @@
  "correct": 2,
  "answer_sub": "about 400 years",
  "outro_headline": "CHALLENGE A FRIEND",
- "cover_emoji": "🦈",
+ "cover_emoji": "⏳",
  "post": {
   "premise": "A vertebrate that can be born in the 1600s and still be swimming",
   "bait": "Whale, tortoise or shark — which did you pick? 👇",
@@ -54,7 +54,7 @@
     "392"
    ],
    "youtube": {
-    "title": "Which is the longest living animal? One was born before the USA existed 🦈",
+    "title": "Which is the longest living animal? One was born before the USA existed ⏳",
     "description": "Bowhead whale, giant tortoise or the third one? One of these can live about four centuries, is not an adult until around 150, and scientists worked out its age by reading the lens of its eye.\nGuess before the map lights up, then see the age table, how slowly it grows, and the date it may have been born.\nWhich did you pick?",
     "tags": [
      "#animalfacts",
@@ -818,5 +818,6 @@
    "size": 180,
    "rot": -8
   }
- ]
+ ],
+ "cover_emoji_why": "(retro-fix) hourglass = longevity; the shipped 🦈 cover gave the answer away"
 }

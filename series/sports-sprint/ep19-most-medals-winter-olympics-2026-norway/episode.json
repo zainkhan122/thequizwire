@@ -44,7 +44,7 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Which country topped the 2026 Winter Olympics medal table? ⛷️",
+  "title": "Which country topped the 2026 Winter Olympics medal table? 🏅",
   "premise": "A country of under six million out-skied the world again",
   "bait": "USA, Italy or Norway — which did you pick? 👇",
   "keywords": [
@@ -67,7 +67,8 @@
    "WinterOlympics",
    "SportsQuiz"
   ],
-  "cover_emoji": "⛷️",
+  "cover_emoji": "🏅",
+  "cover_emoji_why": "medal is the topic of the question; all three options are winter nations, skiing would lean towards Norway",
   "copy": {
    "spoilers": [
     "norway",
@@ -78,7 +79,7 @@
     "41"
    ],
    "youtube": {
-    "title": "Who topped the 2026 Winter Olympics medal table? A nation of 6 million ⛷️",
+    "title": "Who topped the 2026 Winter Olympics medal table? A nation of 6 million 🏅",
     "description": "USA, Italy or the third one? Team USA set its own record and the hosts had their best Games ever, yet the table was won by a country of fewer than six million people — one of whose skiers took more golds than Canada.\nGuess before the flag lifts, then see the table, the host cities, and the skier who beat whole nations.\nWhich did you pick?",
     "tags": [
      "#winterolympics",

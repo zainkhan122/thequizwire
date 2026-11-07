@@ -1,4 +1,4 @@
-# Which country has the MOST camels?
+# Which nation has the MOST camels?
 
 ## Signal
 suggest: "which country has the most camels" (YouTube autocomplete, checked 2026-11-05 in the "which country has the most
@@ -16,7 +16,7 @@ native (DCCEEW). A second-colour country (Arabia) wiped off the screen is the de
 "Somalia has the most camels (7 M+); Saudi Arabia under 2 M; Australia has the biggest feral herd (~300,000)."
 
 ## Question shape
-which-country, record superlative ("Which country has the MOST camels?"); flag options; reads verbatim as the hook;
+which-country, record superlative ("Which nation has the MOST camels?"); flag options; reads verbatim as the hook;
 hook = misconception (Arabia is the trap); mystery-zoom-out opener from the Arabian Sea so no candidate is in frame.
 
 ## Options and why they fool

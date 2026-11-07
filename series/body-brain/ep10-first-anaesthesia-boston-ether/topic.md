@@ -1,4 +1,4 @@
-# Which country FIRST put a patient to sleep for surgery?
+# Where was the FIRST surgery under anaesthesia?
 
 ## Signal
 suggest: "who invented anesthesia" / "first surgery without pain" (YouTube autocomplete, checked 2026-11-05 next to the
@@ -18,7 +18,7 @@ Both rival firsts are American, so the dispute does not touch the answer.
 followed on 21 December 1846."
 
 ## Question shape
-who-was-first, dated origin ("Which country FIRST put a patient to sleep for surgery?"); flag options; reads verbatim as
+who-was-first, dated origin ("Where was the FIRST surgery under anaesthesia?"); flag options; reads verbatim as
 the hook; hook = challenge (the title dares the viewer: a dentist held the sponge); night-lights opener over the North Atlantic.
 
 ## Options and why they fool

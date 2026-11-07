@@ -2,7 +2,7 @@
  "version": 1,
  "episode": "ep10-first-anaesthesia-boston-ether",
  "topic": "First surgery under anaesthesia: the USA — the first public demonstration of ether anaesthesia at Massachusetts General Hospital, Boston, 16 October 1846 (Morton/Warren/Abbott); Crawford Long's earlier unpublished use in Jefferson, Georgia, 30 March 1842; Liston's first ether operation in London, 21 December 1846.",
- "researched": "2026-11-05",
+ "researched": "2026-11-07",
  "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
  "myths": [
   {
@@ -133,7 +133,7 @@
     "britannica_anes"
    ],
    "vo": [
-    "which country first put a patient to sleep for surgery",
+    "where was the first surgery under anaesthesia",
     "england, france, or usa",
     "the usa. on 16 october 1846, at massachusetts general hospital in boston, a dentist put a patient to sleep with ether",
     "pain, switched off. follow us"
@@ -161,7 +161,8 @@
    ],
    "screen": [
     "NO PAIN",
-    "a neck tumour cut · he felt nothing"
+    "a neck tumour cut · he felt nothing",
+    "HELD DOWN"
    ]
   },
   {
@@ -179,11 +180,8 @@
    ],
    "screen": [
     "1842",
-    "Crawford Long, Jefferson, Georgia · unpublished",
     "1846",
-    "Morton, Boston · the public demonstration",
-    "LONG",
-    "MORTON",
+    "the public demonstration came 4 years later",
     "Jefferson"
    ]
   },

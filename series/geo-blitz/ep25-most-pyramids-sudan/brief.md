@@ -1,4 +1,4 @@
-# Brief — Geo Blitz #25 · Which country has the MOST pyramids?
+# Brief — Geo Blitz #25 · Where are MOST of the world's pyramids?
 
 ## Hook fact
 Sudan has more than 200 pyramids, built by the Kingdom of Kush along the Nile, most at Meroë — nearly twice Egypt's ~138

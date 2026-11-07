@@ -3,11 +3,11 @@
  "format": "quiz-v3",
  "series": "wild-files",
  "number": 16,
- "title": "Which country has the MOST camels?",
+ "title": "Which nation has the MOST camels?",
  "difficulty": "MEDIUM",
  "seed": 3516,
  "quiz": {
-  "question": "Which country has the MOST camels?",
+  "question": "Which nation has the MOST camels?",
   "keyword": "MOST",
   "options": [
    "Saudi Arabia",
@@ -44,7 +44,7 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Which country has the MOST camels? 🐪",
+  "title": "Which nation has the MOST camels? 🐪",
   "premise": "The land of the camel is not where most camels live",
   "bait": "Saudi Arabia, Australia or Somalia — which did you pick? 👇",
   "keywords": [
@@ -68,6 +68,7 @@
    "WildlifeQuiz"
   ],
   "cover_emoji": "🐪",
+  "cover_emoji_why": "camel is the topic word in the question; all three options are countries, the icon favours none",
   "copy": {
    "spoilers": [
     "somalia",
@@ -89,7 +90,7 @@
     ]
    },
    "instagram": {
-    "caption": "Which country has the MOST camels? 🐪\nSaudi Arabia, Australia or the other one? The land everyone pictures keeps under two million; one country has the biggest herd on Earth, and the biggest wild herd lives where camels are not even native.\nWhich did you pick?",
+    "caption": "Which nation has the MOST camels? 🐪\nSaudi Arabia, Australia or the other one? The land everyone pictures keeps under two million; one country has the biggest herd on Earth, and the biggest wild herd lives where camels are not even native.\nWhich did you pick?",
     "tags": [
      "#animalfacts",
      "#wildlifequiz",
@@ -106,7 +107,7 @@
     ]
    },
    "twitter": {
-    "text": "Which country has the MOST camels?\nSaudi Arabia, Australia or Somalia? The land everyone pictures keeps under two million — one of the others has the biggest herd on Earth.",
+    "text": "Which nation has the MOST camels?\nSaudi Arabia, Australia or Somalia? The land everyone pictures keeps under two million — one of the others has the biggest herd on Earth.",
     "tags": [
      "#Camels",
      "#AnimalQuiz"

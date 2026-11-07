@@ -32,6 +32,7 @@ v2 (episode.json "format": "quiz-v2", docs/PLAN_V2.md §2) replaces Q1/Q2's card
   Q24 balance   ≥ 2 SHOW events of ≥ 2 kinds (counter/bars/compare/split/route/rise/travel/spin/photo/disputed/erase/flash); SHOW set ≠ last 6 episodes; no kind in ≥ 5 of last 8 — reelkit/shapelint.py
   Q23 pace      explanation window: ≥ 15 visual events/10 s, no static span > 2.5 s, ≥ 1 real visual (photo/chart/route/rise/split), ≥ 2 events per sentence — reelkit/pacelint.py
   Q22 topic     topic.md: signal · why now · takeaway · question shape · distractors · search term · rejected · ship-by; stem ≠ last 5 — reelkit/topiclint.py
+  Q25 no-hint cover  the cover icon must not point at the answer (owner 2026-11-07): cover_emoji ≠ the correct option's emoji/flag, ≠ the flag of the answer country, and `cover_emoji_why` must be recorded (topic icon or neutral)
   Q18 copy      post.copy hand-written per channel (reelkit/postkit.py check): no answer/demonym/fact-number spoilers, no template sentences
   Q16 variety    v3: `variety` block in the pools (docs/VARIETY.md); ≥ 4/8 axes equal to the previous episode, 3-in-a-row opener/reveal/outro/hook stem, or the same emoji set → FAIL
   Q13 length     exactly 3 options · total 22–40 s (FAIL) / 26–36 s (else WARN) · question ≤ 76 chars · option ≤ 26 chars ·
@@ -216,6 +217,19 @@ def main():
             _live = _lp.exists() and any(x.get("episode") == Path(ep).name and x.get("state") in ("scheduled", "sent") for x in json.loads(_lp.read_text()).get("posts", []))
             (W if _live else G).extend(_F); W += _W
         except Exception as ex: G.append(f"Q23: pacelint could not run ({ex})")
+    # ---- Q25 no-hint cover (owner 2026-11-07): the icon on the cover/title must not give the answer away
+    try:
+        ce = str((E.get("post") or {}).get("cover_emoji") or "")
+        ci = q.get("correct"); om = (q.get("option_meta") or [])
+        if ce and isinstance(ci, int) and ci < len(om):
+            meta = om[ci] or {}
+            cps = ["%04x" % ord(ch) for ch in ce if ord(ch) > 0x2000]
+            if meta.get("emoji") and str(meta["emoji"]).lower() in cps: F.append(f"Q25: cover emoji {ce} is the correct option's own icon — it gives the answer away; use a topic or neutral icon")
+            fl = str(meta.get("flag") or "")
+            if len(fl) == 2 and len(cps) >= 2 and cps[0] == "%04x" % (0x1F1E6 + ord(fl[0].upper()) - 65) and cps[1] == "%04x" % (0x1F1E6 + ord(fl[1].upper()) - 65):
+                F.append(f"Q25: cover emoji is the answer country's flag ({fl}) — it gives the answer away")
+            if not (E.get("post") or {}).get("cover_emoji_why"): (F if "cover_emoji_why" in json.dumps(E.get("post") or {}) or int(str(E.get("number", 0)) or 0) >= 1 and (ep / "topic.md").exists() and "2026-11" in (ep / "topic.md").read_text() else W).append("Q25: post.cover_emoji_why missing — record why this icon does not hint at the answer (topic icon / neutral)")
+    except Exception as ex: W.append(f"Q25: cover check skipped ({ex})")
     # ---- Q18 per-channel copy gate (owner 2026-10-19): postkit's spoiler + template lints are a quizlint FAIL too
     try:
         sys.path.insert(0, str(Path(__file__).resolve().parent)); import postkit as _pk

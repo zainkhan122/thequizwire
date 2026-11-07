@@ -79,7 +79,7 @@
    "energy": 4,
    "pause_after": 0.5,
    "direction": "push in on the Severn and Berkeley's pin; the cow sticker on 'scratched', the syringe on 'arm'; on 'vacca' a LATIN / ENGLISH split — VACCA, Latin for cow, against VACCINE, the word he coined",
-   "text": "He scratched cowpox from a milkmaid's hand into the arm of 8-year-old James Phipps. Cow, in Latin, is vacca.",
+   "text": "He scratched cowpox from a milkmaid's hand into the arm of 8-year-old James Phipps. Cow, in Latin: vacca.",
    "cues": {
     "scratched": "scratched",
     "arm": "arm",
@@ -92,9 +92,9 @@
    "role": "story",
    "tone": "tender",
    "energy": 3,
-   "pause_after": 0.8,
+   "pause_after": 0.7,
    "direction": "ease out a little; the hourglass on 'weeks'; on 'nothing' the shield sticker and a relieved flag-ball; on 'killed' the 3 IN 10 card and the skull sticker — this is the stake, said plainly",
-   "text": "Weeks later he exposed the boy to smallpox on purpose. Nothing happened. Smallpox killed 3 in 10 of its victims.",
+   "text": "Weeks later he exposed the boy to smallpox. Nothing happened. Smallpox killed 3 in 10.",
    "cues": {
     "weeks": "weeks",
     "nothing": "nothing",
@@ -109,7 +109,7 @@
    "energy": 4,
    "pause_after": 0.6,
    "direction": "pull back over the Channel; a line draws from Berkeley to Geneva with the syringe travelling along it; the Geneva pin and tag; the globe sticker on 'only'",
-   "text": "In 1980, the WHO in Geneva declared smallpox eradicated, the only human disease ever wiped out.",
+   "text": "In 1980 the WHO in Geneva declared smallpox eradicated: the only human disease ever wiped out.",
    "cues": {
     "geneva": "geneva",
     "declared": "declared",

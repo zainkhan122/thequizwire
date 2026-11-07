@@ -67,3 +67,7 @@ globally (all series), not per series:
 Authoring path: every story beat accepts `elements` (any `engine/charts.py` chart) and free-form `devices` with
 `@+t` / `@@cue` timing — pick the device from the fact, write the reason in `brief.md ## Show it`, and `shapelint` checks
 the timeline matches the brief.
+
+
+## Cover icon — no hints (owner 2026-11-07, gate Q25)
+The emoji on the cover and in the post title must never point at the answer. Wild Files #15 (longest-living animal → Greenland shark) shipped with a 🦈 cover: the icon answered the question before the timer started. Rule: the cover icon is the TOPIC of the question (💉 for 'first vaccine', 🐪 for 'most camels' when all options are countries) or a neutral quiz mark — never the correct option's own emoji, never the answer country's flag, never an object that belongs to only one option. Every spec records `cover_emoji_why`; quizlint Q25 fails the episode when the icon equals the correct option's emoji/flag or the reason is missing.

@@ -3,7 +3,7 @@
  "series": "body-brain",
  "number": 10,
  "seed": 3410,
- "question": "Which country FIRST put a patient to sleep for surgery?",
+ "question": "Where was the FIRST surgery under anaesthesia?",
  "keyword": "FIRST",
  "difficulty": "MEDIUM",
  "options": [
@@ -73,7 +73,7 @@
     ]
    },
    "instagram": {
-    "caption": "Which country FIRST put a patient to sleep for surgery? 😴\nEngland, France or the other one? A dentist held a sponge, a surgeon cut a tumour from a man's neck, and the man felt nothing — and another doctor had quietly done it 4 years earlier.\nWhich did you pick?",
+    "caption": "Where was the FIRST surgery under anaesthesia? 😴\nEngland, France or the other one? A dentist held a sponge, a surgeon cut a tumour from a man's neck, and the man felt nothing — and another doctor had quietly done it 4 years earlier.\nWhich did you pick?",
     "tags": [
      "#medicalhistory",
      "#healthquiz",
@@ -90,7 +90,7 @@
     ]
    },
    "twitter": {
-    "text": "Which country FIRST put a patient to sleep for surgery?\nEngland, France or the USA? A dentist held the sponge, a surgeon cut, and the patient felt nothing — then the news crossed the Atlantic in weeks.",
+    "text": "Where was the FIRST surgery under anaesthesia?\nEngland, France or the USA? A dentist held the sponge, a surgeon cut, and the patient felt nothing — then the news crossed the Atlantic in weeks.",
     "tags": [
      "#Anesthesia",
      "#MedicalFacts"
@@ -111,7 +111,8 @@
   "reveal": "colour-lift",
   "beats": [
    "pin",
-   "split",
+   "erase",
+   "counter",
    "route",
    "travel"
   ],
@@ -122,7 +123,7 @@
  "intent": "A single operating theatre, then the quiet rival four years earlier, then the news racing across the ocean: the day pain was switched off.",
  "voice": {
   "v01_cues": {
-   "which": "which",
+   "where": "where",
    "first": "first"
   },
   "v04": {
@@ -287,7 +288,7 @@
      "britannica_anes"
     ],
     "vo": [
-     "which country first put a patient to sleep for surgery",
+     "where was the first surgery under anaesthesia",
      "england, france, or usa",
      "the usa. on 16 october 1846, at massachusetts general hospital in boston, a dentist put a patient to sleep with ether",
      "pain, switched off. follow us"
@@ -315,7 +316,8 @@
     ],
     "screen": [
      "NO PAIN",
-     "a neck tumour cut · he felt nothing"
+     "a neck tumour cut · he felt nothing",
+     "HELD DOWN"
     ]
    },
    {
@@ -333,11 +335,8 @@
     ],
     "screen": [
      "1842",
-     "Crawford Long, Jefferson, Georgia · unpublished",
      "1846",
-     "Morton, Boston · the public demonstration",
-     "LONG",
-     "MORTON",
+     "the public demonstration came 4 years later",
      "Jefferson"
     ]
    },
@@ -568,7 +567,7 @@
      "nothing": "nothing"
     }
    },
-   "direction": "tighten on Boston; a tooth sticker on 'Morton' becomes a scalpel on 'Warren'; the NO PAIN card on 'nothing' with a sleeping-face sticker; the US flag-ball relaxes",
+   "direction": "tighten on Boston; a HELD DOWN plate waits at the bottom — how surgery used to be; a tooth sticker on 'Morton' becomes a stethoscope on 'Warren'; on 'nothing' the plate wipes away, the NO PAIN card lands with a sleeping-face sticker; the US flag-ball relaxes",
    "energy": 4,
    "tone": "revelatory",
    "pause_after": 0.5,
@@ -594,6 +593,15 @@
    ],
    "pulse": false,
    "devices": [
+    {
+     "at": "@@nothing-0.1",
+     "do": "chart.erase_run",
+     "id": "held",
+     "until": "@@nothing+1.1",
+     "args": {
+      "direction": "left"
+     }
+    },
     {
      "at": "@@morton",
      "do": "sticker_in",
@@ -665,6 +673,15 @@
      "do": "character_out",
      "id": "relief"
     }
+   ],
+   "elements": [
+    {
+     "id": "held",
+     "type": "erase",
+     "text": "HELD DOWN",
+     "y": 1000,
+     "h": 260
+    }
    ]
   },
   {
@@ -676,7 +693,7 @@
      "published": "unpublished"
     }
    },
-   "direction": "ease south-west so Boston and Georgia share the frame; the Jefferson pin on 'Jefferson'; the LONG / MORTON split of rival dates on 'earlier'; a shushing-face sticker on 'published'; the Boston pin leaves at the end",
+   "direction": "ease south-west so Boston and Georgia share the frame; the Jefferson pin on 'Jefferson'; a year counter ticks 1842 → 1846 on 'earlier'; a shushing-face sticker on 'unpublished'; the Boston pin leaves at the end",
    "energy": 3,
    "tone": "suspense",
    "pause_after": 0.7,
@@ -699,21 +716,13 @@
    "elements": [
     {
      "id": "rival",
-     "type": "split",
-     "left": {
-      "kicker": "1842",
-      "text": "Crawford Long, Jefferson, Georgia · unpublished"
-     },
-     "right": {
-      "kicker": "1846",
-      "text": "Morton, Boston · the public demonstration"
-     },
-     "label_left": "LONG",
-     "label_right": "MORTON",
-     "y": 310,
-     "h": 540,
-     "x": 60,
-     "w": 620
+     "type": "counter",
+     "start": 1842,
+     "end": 1846,
+     "y": 330,
+     "label": "the public demonstration came 4 years later",
+     "fmt": "raw",
+     "size": 170
     }
    ],
    "devices": [
@@ -726,9 +735,13 @@
      }
     },
     {
-     "at": "@@earlier-0.2",
-     "do": "chart.split_in",
-     "id": "rival"
+     "at": "@@jefferson+0.3",
+     "do": "chart.counter_run",
+     "id": "rival",
+     "until": "@@earlier+1.2",
+     "args": {
+      "steps": 4
+     }
     },
     {
      "at": "@@earlier+0.5",
@@ -752,11 +765,6 @@
     },
     {
      "at": "@.end",
-     "do": "chart.out",
-     "id": "rival"
-    },
-    {
-     "at": "@.end",
      "do": "sticker_out",
      "id": "st_shh"
     },
@@ -775,6 +783,11 @@
      "args": {
       "pid": "boston"
      }
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "rival"
     }
    ]
   },
@@ -972,5 +985,6 @@
    "size": 200,
    "rot": 6
   }
- ]
+ ],
+ "cover_emoji_why": "sleep is the topic word in the question; favours no country"
 }

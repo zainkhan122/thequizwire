@@ -34,22 +34,21 @@
    "text": "a neck tumour cut · he felt nothing"
   },
   {
+   "id": "held",
+   "type": "erase",
+   "text": "HELD DOWN",
+   "y": 1000,
+   "h": 260
+  },
+  {
    "id": "rival",
-   "type": "split",
-   "left": {
-    "kicker": "1842",
-    "text": "Crawford Long, Jefferson, Georgia · unpublished"
-   },
-   "right": {
-    "kicker": "1846",
-    "text": "Morton, Boston · the public demonstration"
-   },
-   "label_left": "LONG",
-   "label_right": "MORTON",
-   "y": 310,
-   "h": 540,
-   "x": 60,
-   "w": 620
+   "type": "counter",
+   "start": 1842,
+   "end": 1846,
+   "y": 330,
+   "label": "the public demonstration came 4 years later",
+   "fmt": "raw",
+   "size": 170
   },
   {
    "id": "st_tooth",
@@ -301,6 +300,15 @@
    }
   },
   {
+   "at": "s05@nothing-0.1",
+   "do": "chart.erase_run",
+   "id": "held",
+   "until": "s05@nothing+1.1",
+   "args": {
+    "direction": "left"
+   }
+  },
+  {
    "at": "s05@morton",
    "do": "sticker_in",
    "id": "st_tooth"
@@ -408,9 +416,13 @@
    }
   },
   {
-   "at": "s06@earlier-0.2",
-   "do": "chart.split_in",
-   "id": "rival"
+   "at": "s06@jefferson+0.3",
+   "do": "chart.counter_run",
+   "id": "rival",
+   "until": "s06@earlier+1.2",
+   "args": {
+    "steps": 4
+   }
   },
   {
    "at": "s06@earlier+0.5",
@@ -434,11 +446,6 @@
   },
   {
    "at": "s06.end",
-   "do": "chart.out",
-   "id": "rival"
-  },
-  {
-   "at": "s06.end",
    "do": "sticker_out",
    "id": "st_shh"
   },
@@ -457,6 +464,11 @@
    "args": {
     "pid": "boston"
    }
+  },
+  {
+   "at": "s06.end",
+   "do": "hide",
+   "id": "rival"
   },
   {
    "at": "s07",

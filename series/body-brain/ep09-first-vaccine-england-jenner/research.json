@@ -2,7 +2,7 @@
  "version": 1,
  "episode": "ep09-first-vaccine-england-jenner",
  "topic": "The first vaccine: Edward Jenner, Berkeley, Gloucestershire, England — on 14 May 1796 he inoculated 8-year-old James Phipps with cowpox matter from milkmaid Sarah Nelmes's hand, later challenged him with smallpox without effect, and coined 'vaccine' from vacca (Latin, cow). Smallpox killed about 30 % of those infected; the WHO declared it eradicated in 1980, the only human disease eradicated. Earlier variolation (China, Ottoman Empire) used smallpox itself and is not a vaccine.",
- "researched": "2026-11-04",
+ "researched": "2026-11-07",
  "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
  "myths": [
   {
@@ -150,7 +150,7 @@
     "jenner_museum"
    ],
    "vo": [
-    "he scratched cowpox from a milkmaid's hand into the arm of 8-year-old james phipps. cow, in latin, is vacca"
+    "he scratched cowpox from a milkmaid's hand into the arm of 8-year-old james phipps. cow, in latin: vacca"
    ],
    "screen": [
     "VACCA",
@@ -170,7 +170,7 @@
     "who_smallpox"
    ],
    "vo": [
-    "weeks later he exposed the boy to smallpox on purpose. nothing happened. smallpox killed 3 in 10 of its victims"
+    "weeks later he exposed the boy to smallpox. nothing happened. smallpox killed 3 in 10"
    ],
    "screen": [
     "3 IN 10",
@@ -188,7 +188,7 @@
     "britannica_jenner"
    ],
    "vo": [
-    "in 1980, the who in geneva declared smallpox eradicated, the only human disease ever wiped out"
+    "in 1980 the who in geneva declared smallpox eradicated: the only human disease ever wiped out"
    ],
    "screen": [
     "Geneva · WHO 1980",

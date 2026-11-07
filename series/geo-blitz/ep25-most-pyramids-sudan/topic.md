@@ -1,4 +1,4 @@
-# Which country has the MOST pyramids?
+# Where are MOST of the world's pyramids?
 
 ## Signal
 suggest: "which country has the most pyramids" (YouTube autocomplete, checked 2026-11-05 next to the "which country has the
@@ -14,7 +14,7 @@ Meroë (UNESCO; National Geographic; Smithsonian). The closer: Kushite kings rul
 "Sudan has the most pyramids — 200+, built by Kush at Meroë; Egypt has about 138; Kushite kings once ruled Egypt."
 
 ## Question shape
-which-country, record superlative ("Which country has the MOST pyramids?"); flag options; reads verbatim as the hook;
+which-place, record superlative ("Where are MOST of the world's pyramids?"); flag options; reads verbatim as the hook;
 hook = misconception (Egypt is the trap); wide-drift opener over the Red Sea so neither Egypt nor Sudan is favoured.
 
 ## Options and why they fool

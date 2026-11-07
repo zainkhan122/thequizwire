@@ -3,7 +3,7 @@
  "series": "geo-blitz",
  "number": 25,
  "seed": 3625,
- "question": "Which country has the MOST pyramids?",
+ "question": "Where are MOST of the world's pyramids?",
  "keyword": "MOST",
  "difficulty": "MEDIUM",
  "options": [
@@ -26,7 +26,7 @@
  "correct": 2,
  "answer_sub": "200+ pyramids",
  "outro_headline": "TOO EASY?",
- "cover_emoji": "🏜️",
+ "cover_emoji": "🔺",
  "post": {
   "premise": "The land of the pyramids is not the land with the most pyramids",
   "bait": "Egypt, Mexico or Sudan — which did you pick? 👇",
@@ -60,7 +60,7 @@
     "khartoum"
    ],
    "youtube": {
-    "title": "Which country has the most pyramids? It's not Egypt 🏜️",
+    "title": "Which country has the most pyramids? It's not Egypt 🔺",
     "description": "Egypt, Mexico or the third one? The country everyone pictures when they hear 'pyramid' is not the one with the most of them. Another nation on the same river has nearly twice as many, steeper and smaller, and its kings once ruled Egypt itself as pharaohs.\nGuess before the map lights up, then see the count, the royal site, and the long river journey between the two.\nWhich did you pick?",
     "tags": [
      "#geographyquiz",
@@ -71,7 +71,7 @@
     ]
    },
    "instagram": {
-    "caption": "Which country has the MOST pyramids? 🏜️\nEgypt, Mexico or the other one? The country everyone pictures is not the one with the most: a neighbour on the same river has nearly twice as many, and its kings once ruled Egypt as pharaohs.\nWhich did you pick?",
+    "caption": "Where are MOST of the world's pyramids? 🏜️\nEgypt, Mexico or the other one? The country everyone pictures is not the one with the most: a neighbour on the same river has nearly twice as many, and its kings once ruled Egypt as pharaohs.\nWhich did you pick?",
     "tags": [
      "#geographyquiz",
      "#pyramids",
@@ -88,7 +88,7 @@
     ]
    },
    "twitter": {
-    "text": "Which country has the MOST pyramids?\nEgypt, Mexico or Sudan? One of them has nearly twice as many as the country you are picturing — and its kings once ruled Egypt.",
+    "text": "Where are MOST of the world's pyramids?\nEgypt, Mexico or Sudan? One of them has nearly twice as many as the country you are picturing — and its kings once ruled Egypt.",
     "tags": [
      "#GeographyQuiz",
      "#Pyramids"
@@ -121,7 +121,7 @@
  "intent": "A river journey in reverse: the count that beats Egypt, the kings who ruled Egypt, then the long Nile road from the forgotten pyramids to the famous ones.",
  "voice": {
   "v01_cues": {
-   "which": "which",
+   "where": "where",
    "most": "most"
   },
   "v04": {
@@ -310,7 +310,7 @@
      "smithsonian_sudan"
     ],
     "vo": [
-     "which country has the most pyramids",
+     "where are most of the world's pyramids",
      "egypt, mexico, or sudan",
      "sudan. the kingdom of kush built more than 200 pyramids along the nile, nearly twice egypt's count",
      "more than egypt. follow us"
@@ -1036,5 +1036,6 @@
    "size": 200,
    "rot": -6
   }
- ]
+ ],
+ "cover_emoji_why": "a plain triangle for 'pyramid' — the topic word; a desert icon would lean towards the two African options"
 }

@@ -3,11 +3,11 @@
  "format": "quiz-v3",
  "series": "body-brain",
  "number": 10,
- "title": "Which country FIRST put a patient to sleep for surgery?",
+ "title": "Where was the FIRST surgery under anaesthesia?",
  "difficulty": "MEDIUM",
  "seed": 3410,
  "quiz": {
-  "question": "Which country FIRST put a patient to sleep for surgery?",
+  "question": "Where was the FIRST surgery under anaesthesia?",
   "keyword": "FIRST",
   "options": [
    "England",
@@ -44,7 +44,7 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Which country FIRST put a patient to sleep for surgery? 😴",
+  "title": "Where was the FIRST surgery under anaesthesia? 😴",
   "premise": "A dentist, a sponge of ether and a tumour cut out in silence",
   "bait": "England, France or the USA — which did you pick? 👇",
   "keywords": [
@@ -69,6 +69,7 @@
    "HealthQuiz"
   ],
   "cover_emoji": "😴",
+  "cover_emoji_why": "sleep is the topic word in the question; favours no country",
   "copy": {
    "spoilers": [
     "usa",
@@ -96,7 +97,7 @@
     ]
    },
    "instagram": {
-    "caption": "Which country FIRST put a patient to sleep for surgery? 😴\nEngland, France or the other one? A dentist held a sponge, a surgeon cut a tumour from a man's neck, and the man felt nothing — and another doctor had quietly done it 4 years earlier.\nWhich did you pick?",
+    "caption": "Where was the FIRST surgery under anaesthesia? 😴\nEngland, France or the other one? A dentist held a sponge, a surgeon cut a tumour from a man's neck, and the man felt nothing — and another doctor had quietly done it 4 years earlier.\nWhich did you pick?",
     "tags": [
      "#medicalhistory",
      "#healthquiz",
@@ -113,7 +114,7 @@
     ]
    },
    "twitter": {
-    "text": "Which country FIRST put a patient to sleep for surgery?\nEngland, France or the USA? A dentist held the sponge, a surgeon cut, and the patient felt nothing — then the news crossed the Atlantic in weeks.",
+    "text": "Where was the FIRST surgery under anaesthesia?\nEngland, France or the USA? A dentist held the sponge, a surgeon cut, and the patient felt nothing — then the news crossed the Atlantic in weeks.",
     "tags": [
      "#Anesthesia",
      "#MedicalFacts"
@@ -134,7 +135,8 @@
   "reveal": "colour-lift",
   "beats": [
    "pin",
-   "split",
+   "erase",
+   "counter",
    "route",
    "travel"
   ],
