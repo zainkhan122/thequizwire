@@ -13,7 +13,7 @@
  "start_hold": 0.0,
  "end_hold": 2.4,
  "sample_line": "v04",
- "title": "Which country topped the 2026 Winter Olympics medal table?",
+ "title": "Which country topped the Milan Cortina Winter Games medal table?",
  "lines": [
   {
    "id": "v01",
@@ -23,7 +23,7 @@
    "energy": 4,
    "pause_after": 0.3,
    "direction": "the question, cold — curiosity comes from the map moving under it",
-   "text": "Which country topped the 2026 Winter Olympics medal table?",
+   "text": "Which country topped the Milan Cortina Winter Games medal table?",
    "cues": {
     "which": "which",
     "table": "table"
@@ -79,7 +79,7 @@
    "energy": 4,
    "pause_after": 0.5,
    "direction": "ease back over the North Sea; three gold columns rise — Norway 18, USA 12, Italy 10 — the US flag-ball thinks on 'States'; the medal sticker on 'finished'",
-   "text": "The United States took 12 golds and 33 medals, its best ever. Italy, the hosts, 10. And Norway? 41.",
+   "text": "The United States took 12 golds, 33 medals, its best ever. Italy, the hosts, 10. And Norway? 41.",
    "cues": {
     "states": "states",
     "hosts": "hosts",
@@ -94,7 +94,7 @@
    "energy": 4,
    "pause_after": 0.5,
    "direction": "dive onto northern Italy; the Milan pin, then Cortina; on 'skier' a KLAEBO / CANADA split — 6 golds, one man, against 5 golds, one nation; the skier sticker pulses on 'Canada'",
-   "text": "The Games ran from Milan to Cortina. A single Norwegian skier, Johannes Klaebo, won 6 golds, more than Canada did.",
+   "text": "Milan to Cortina. A single skier, Johannes Klaebo, took 6 golds, more than Canada.",
    "cues": {
     "milan": "milan",
     "cortina": "cortina",

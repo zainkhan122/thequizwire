@@ -1,4 +1,4 @@
-# Brief — Sports Sprint #19 · Which country topped the 2026 Winter Olympics medal table?
+# Brief — Sports Sprint #19 · Which country topped the Milan Cortina Winter Games medal table?
 
 ## Hook fact
 Norway topped the Milano Cortina 2026 table with 18 golds — the most by any nation at a single Winter Games — and 41 medals;

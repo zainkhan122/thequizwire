@@ -582,7 +582,7 @@
    }
   },
   {
-   "at": "s04+0.8",
+   "at": "s04+1.7",
    "do": "geo.scalebar_in",
    "stage": "stage_map"
   },

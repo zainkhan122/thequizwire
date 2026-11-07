@@ -3,11 +3,11 @@
  "format": "quiz-v3",
  "series": "sports-sprint",
  "number": 19,
- "title": "Which country topped the 2026 Winter Olympics medal table?",
+ "title": "Which country topped the Milan Cortina Winter Games medal table?",
  "difficulty": "EASY",
  "seed": 3719,
  "quiz": {
-  "question": "Which country topped the 2026 Winter Olympics medal table?",
+  "question": "Which country topped the Milan Cortina Winter Games medal table?",
   "keyword": "2026",
   "options": [
    "USA",
@@ -44,7 +44,7 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Which country topped the 2026 Winter Olympics medal table? 🏅",
+  "title": "Which country topped the Milan Cortina Winter Games medal table? 🏅",
   "premise": "A country of under six million out-skied the world again",
   "bait": "USA, Italy or Norway — which did you pick? 👇",
   "keywords": [

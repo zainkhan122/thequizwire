@@ -193,7 +193,7 @@ def build(S):
             B.append(d)
     B += [{"at": CTA, "do": "geo.clear", "stage": M, "args": {"dur": 0.25}},
           cam(f"{CTA}+0.2", "end-0.3", open_cam, "power1.inOut"),
-          *([{"at": "s04+0.8", "do": "geo.scalebar_in", "stage": M}] if g.get("scalebar") else [])]
+          *([{"at": "s04+1.7", "do": "geo.scalebar_in", "stage": M}] if g.get("scalebar") else [])]   # after chips_out (s04+1.2): the option chips otherwise cover the bar text
     for pb in g.get("pin_beats", []):
         B.append({"at": pb["at"], "do": "geo.pin_out" if pb.get("out") else "geo.pin_in", "stage": M, "args": {"pid": pb["pid"]}})
     B += [{"at": 0, "do": "hook_in"}, {"at": "s02", "do": "chips_in"}, {"at": "s03", "do": "bug_in"}, {"at": "s03", "do": "beat"},

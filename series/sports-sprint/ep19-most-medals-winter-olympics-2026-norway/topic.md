@@ -1,4 +1,6 @@
-# Which country topped the 2026 Winter Olympics medal table?
+# Which country topped the Milan Cortina Winter Games medal table?
+
+Spoken/on-screen question avoids the bare year "2026": Kokoro reads it as "two thousand twenty-six" and the ASR gate garbled "Winter Olympics" after it (render 42350002983). Post copy keeps "2026 Winter Olympics" for search.
 
 ## Signal
 suggest: "winter olympics 2026 medal table" and "olympics" family (YouTube autocomplete, review/signals.md 2026-10-29 lists

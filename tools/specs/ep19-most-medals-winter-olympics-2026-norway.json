@@ -3,7 +3,7 @@
  "series": "sports-sprint",
  "number": 19,
  "seed": 3719,
- "question": "Which country topped the 2026 Winter Olympics medal table?",
+ "question": "Which country topped the Milan Cortina Winter Games medal table?",
  "keyword": "2026",
  "difficulty": "EASY",
  "options": [
@@ -141,7 +141,7 @@
    }
   },
   "v05": {
-   "text": "The United States took 12 golds and 33 medals, its best ever. Italy, the hosts, 10. And Norway? 41.",
+   "text": "The United States took 12 golds, 33 medals, its best ever. Italy, the hosts, 10. And Norway? 41.",
    "cues": {
     "states": "states",
     "hosts": "hosts",
@@ -149,7 +149,7 @@
    }
   },
   "v06": {
-   "text": "The Games ran from Milan to Cortina. A single Norwegian skier, Johannes Klaebo, won 6 golds, more than Canada did.",
+   "text": "Milan to Cortina. A single skier, Johannes Klaebo, took 6 golds, more than Canada.",
    "cues": {
     "milan": "milan",
     "cortina": "cortina",
@@ -287,7 +287,7 @@
      "outlook_table"
     ],
     "vo": [
-     "which country topped the 2026 winter olympics medal table",
+     "which country topped the milan cortina winter games medal table",
      "the united states, italy, or norway",
      "norway. 18 golds in italy: the most any country has ever won at a single winter games",
      "small country, big winter. follow us"
@@ -312,7 +312,7 @@
      "sportsbrackets"
     ],
     "vo": [
-     "the united states took 12 golds and 33 medals, its best ever. italy, the hosts, 10. and norway? 41"
+     "the united states took 12 golds, 33 medals, its best ever. italy, the hosts, 10. and norway? 41"
     ],
     "screen": [
      "Norway",
@@ -336,7 +336,7 @@
      "olympics_medals"
     ],
     "vo": [
-     "the games ran from milan to cortina. a single norwegian skier, johannes klaebo, won 6 golds, more than canada did"
+     "milan to cortina. a single skier, johannes klaebo, took 6 golds, more than canada"
     ],
     "screen": [
      "Milan",
@@ -501,7 +501,7 @@
  "story": [
   {
    "vo": {
-    "text": "The United States took 12 golds and 33 medals, its best ever. Italy, the hosts, 10. And Norway? 41.",
+    "text": "The United States took 12 golds, 33 medals, its best ever. Italy, the hosts, 10. And Norway? 41.",
     "cues": {
      "states": "states",
      "hosts": "hosts",
@@ -619,7 +619,7 @@
   },
   {
    "vo": {
-    "text": "The Games ran from Milan to Cortina. A single Norwegian skier, Johannes Klaebo, won 6 golds, more than Canada did.",
+    "text": "Milan to Cortina. A single skier, Johannes Klaebo, took 6 golds, more than Canada.",
     "cues": {
      "milan": "milan",
      "cortina": "cortina",
