@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep20-most-rugby-world-cups-south-africa",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "The table that dethrones the All Blacks, the stadium where it started in 1995, then the ball's long flight to the one-point final in Paris.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Which nation has the MOST Rugby World Cups?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Which nation has the most Rugby World Cups?",
+   "cues": {
+    "which": "which",
+    "most": "most"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "New Zealand, Australia, or South Africa?",
+   "cues": {
+    "a": "zealand",
+    "b": "australia",
+    "c": "africa"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "South Africa. The Springboks have lifted the Webb Ellis Cup 4 times, more than any other nation.",
+   "cues": {
+    "answer": "africa",
+    "springboks": "springboks",
+    "times": "times"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.5,
+   "direction": "ease back over southern Africa; bars build on 'Zealand' with South Africa on top; the All Black flag-ball thinks; a rugby-ball sticker on 'England'; South Africa pulses",
+   "text": "The All Blacks of New Zealand have 3, Australia 2, England a single title. Nobody else has.",
+   "cues": {
+    "zealand": "zealand",
+    "australia": "australia",
+    "england": "england"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.6,
+   "direction": "tighten on Johannesburg; the pin and tag on 'Johannesburg'; a broken-chain sticker on 'apartheid'; the 1995 card and a trophy sticker on 'Mandela'; the Springbok flag-ball grins",
+   "text": "The first came at home in Johannesburg in 1995, a year after apartheid ended, Nelson Mandela in a Springbok jersey.",
+   "cues": {
+    "johannesburg": "johannesburg",
+    "apartheid": "apartheid",
+    "mandela": "mandela"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.6,
+   "direction": "pull right out so Africa and Europe share the frame; a rugby ball rides the drawn line from Johannesburg to Paris until 'Paris'; the Paris pin and tag; the 12–11 card on 'point'; the All Black flag-ball slumps",
+   "text": "The latest came in Paris in 2023, by a single point over New Zealand.",
+   "cues": {
+    "latest": "latest",
+    "paris": "paris",
+    "point": "point"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "4 cups, same jersey. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

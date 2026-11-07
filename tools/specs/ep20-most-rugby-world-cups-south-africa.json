@@ -1,0 +1,952 @@
+{
+ "id": "ep20-most-rugby-world-cups-south-africa",
+ "series": "sports-sprint",
+ "number": 20,
+ "seed": 3720,
+ "question": "Which nation has the MOST Rugby World Cups?",
+ "keyword": "MOST",
+ "difficulty": "EASY",
+ "options": [
+  {
+   "text": "New Zealand",
+   "flag": "nz",
+   "cue": "zealand"
+  },
+  {
+   "text": "Australia",
+   "flag": "au",
+   "cue": "australia"
+  },
+  {
+   "text": "South Africa",
+   "flag": "za",
+   "cue": "africa"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "4 titles",
+ "outro_headline": "CHALLENGE A FRIEND",
+ "cover_emoji": "🏉",
+ "cover_emoji_why": "rugby ball is the topic word of the question; all three options are rugby nations, the icon favours none",
+ "post": {
+  "premise": "The most feared rugby team is not the most crowned",
+  "bait": "New Zealand, Australia or South Africa — which did you pick? 👇",
+  "keywords": [
+   "most rugby world cups",
+   "rugby world cup winners",
+   "springboks world cup",
+   "all blacks world cups",
+   "rugby world cup 2027",
+   "sports quiz",
+   "rugby history",
+   "1995 rugby world cup"
+  ],
+  "tags": [
+   "SportsQuiz",
+   "Rugby"
+  ],
+  "sources_line": "World Rugby; Britannica; BBC Sport",
+  "copy": {
+   "spoilers": [
+    "south africa",
+    "springbok",
+    "springboks",
+    "mandela",
+    "johannesburg",
+    "4 times",
+    "four"
+   ],
+   "youtube": {
+    "title": "Who has won the most Rugby World Cups? It's not the All Blacks 🏉",
+    "description": "New Zealand, Australia or the third one? The most feared team in rugby is not the most crowned. One nation has lifted the cup more than anyone, won its first at home a year after a revolution in its politics, and took the latest final by a single point.\nGuess before the map lights up, then see the table, the stadium where it started, and the ball's journey to the latest final.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#rugby",
+     "#rugbyworldcup",
+     "#rwc2027",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which nation has the MOST Rugby World Cups? 🏉\nNew Zealand, Australia or the other one? The most feared team in rugby is not the most crowned: one nation has lifted the cup more than anyone and took the latest final by a single point.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#rugby",
+     "#rugbyworldcup",
+     "#rwc2027",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Who has won the most Rugby World Cups — New Zealand, Australia or South Africa?\nThe most feared team in rugby is not the most crowned; one nation lifted the cup at home a year after its politics changed forever, and took the latest final by a single point. Name it before the table builds.",
+    "tags": [
+     "#rugby",
+     "#sportsquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which nation has the MOST Rugby World Cups?\nNew Zealand, Australia or South Africa? The most feared team is not the most crowned — and the latest final was decided by a single point.",
+    "tags": [
+     "#Rugby",
+     "#SportsQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Who has won the most Rugby World Cups — New Zealand, Australia or South Africa? The most feared team in rugby is not the most crowned: one nation has lifted the cup more than anyone, won its first at home a year after its politics changed forever, and took the latest final by a single point.",
+    "tags": [
+     "#rugbyworldcup"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-record",
+  "hook": "misconception",
+  "opener": "wide-drift",
+  "reveal": "fill-pulse",
+  "beats": [
+   "bars",
+   "pin",
+   "label",
+   "route",
+   "travel"
+  ],
+  "cast": "flagball:za + emoji-set:rugby",
+  "music": "bed:bright",
+  "outro": "CHALLENGE A FRIEND"
+ },
+ "intent": "The table that dethrones the All Blacks, the stadium where it started in 1995, then the ball's long flight to the one-point final in Paris.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "most": "most"
+  },
+  "v04": {
+   "text": "South Africa. The Springboks have lifted the Webb Ellis Cup 4 times, more than any other nation.",
+   "cues": {
+    "answer": "africa",
+    "springboks": "springboks",
+    "times": "times"
+   }
+  },
+  "v05": {
+   "text": "The All Blacks of New Zealand have 3, Australia 2, England a single title. Nobody else has.",
+   "cues": {
+    "zealand": "zealand",
+    "australia": "australia",
+    "england": "england"
+   }
+  },
+  "v06": {
+   "text": "The first came at home in Johannesburg in 1995, a year after apartheid ended, Nelson Mandela in a Springbok jersey.",
+   "cues": {
+    "johannesburg": "johannesburg",
+    "apartheid": "apartheid",
+    "mandela": "mandela"
+   }
+  },
+  "v07": {
+   "text": "The latest came in Paris in 2023, by a single point over New Zealand.",
+   "cues": {
+    "latest": "latest",
+    "paris": "paris",
+    "point": "point"
+   }
+  },
+  "v08": {
+   "text": "4 cups, same jersey. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "4 TITLES",
+   "text": "1995 · 2007 · 2019 · 2023"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "za",
+   "face": "happy",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "nz",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "research": {
+  "topic": "Most Rugby World Cup titles: South Africa 4 (1995, 2007, 2019, 2023); New Zealand 3 (1987, 2011, 2015); Australia 2 (1991, 1999); England 1 (2003). 1995 final at Ellis Park, Johannesburg; 2023 final at Stade de France, Saint-Denis, Paris: South Africa 12–11 New Zealand.",
+  "myths": [
+   {
+    "myth": "New Zealand has won the most Rugby World Cups because the All Blacks are the dominant team.",
+    "reality": "South Africa has four titles to New Zealand's three after beating the All Blacks 12–11 in the 2023 final.",
+    "sources": [
+     "worldrugby",
+     "britannica_rwc",
+     "bbc_2023"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Feed clips list the winners as text; nobody builds the table, pins Ellis Park 1995 and then flies the ball to the one-point final in Paris on a moving map.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=most+rugby+world+cups",
+     "title": "Search: most rugby world cups",
+     "angle": "list clips",
+     "misses": "no map"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=1995+rugby+world+cup+final+mandela",
+     "title": "Search: 1995 rugby world cup final mandela",
+     "angle": "archive footage",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if facts",
+     "misses": "no sourced data"
+    }
+   ]
+  },
+  "sources": {
+   "worldrugby": {
+    "type": "primary",
+    "publisher": "World Rugby",
+    "title": "Rugby World Cup — past tournaments and winners",
+    "url": "https://www.rugbyworldcup.com/2023/past-tournaments",
+    "date": "2026-11-07",
+    "notes": "winners: 1987 NZ, 1991 AUS, 1995 RSA, 1999 AUS, 2003 ENG, 2007 RSA, 2011 NZ, 2015 NZ, 2019 RSA, 2023 RSA; 2023 final RSA 12–11 NZ at Stade de France"
+   },
+   "britannica_rwc": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Rugby World Cup",
+    "url": "https://www.britannica.com/sports/Rugby-World-Cup",
+    "date": "2026-11-07",
+    "notes": "South Africa four titles, New Zealand three, Australia two, England one; 1995 tournament hosted and won by South Africa a year after the end of apartheid"
+   },
+   "bbc_2023": {
+    "type": "reference",
+    "publisher": "BBC Sport",
+    "title": "Rugby World Cup final: New Zealand 11-12 South Africa",
+    "url": "https://www.bbc.com/sport/rugby-union/67241836",
+    "date": "2026-11-07",
+    "notes": "South Africa beat New Zealand 12-11 in Paris on 28 October 2023 to win a record fourth Rugby World Cup"
+   },
+   "mandela_found": {
+    "type": "primary",
+    "publisher": "Nelson Mandela Foundation",
+    "title": "1995 Rugby World Cup — Mandela and the Springbok jersey",
+    "url": "https://www.nelsonmandela.org/content/page/1995-rugby-world-cup",
+    "date": "2026-11-07",
+    "notes": "Mandela presented the trophy to captain Francois Pienaar at Ellis Park, Johannesburg, on 24 June 1995 wearing a Springbok jersey; the 1994 election had ended apartheid"
+   },
+   "britannica_mandela": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Nelson Mandela",
+    "url": "https://www.britannica.com/biography/Nelson-Mandela",
+    "date": "2026-11-07",
+    "notes": "elected president in April 1994 after the end of apartheid; 1995 Rugby World Cup a symbol of reconciliation"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "South Africa has won the most Rugby World Cups: four (1995, 2007, 2019, 2023).",
+    "sources": [
+     "worldrugby",
+     "britannica_rwc",
+     "bbc_2023"
+    ],
+    "vo": [
+     "which nation has the most rugby world cups",
+     "new zealand, australia, or south africa",
+     "south africa. the springboks have lifted the webb ellis cup 4 times, more than any other nation",
+     "4 cups, same jersey. follow us"
+    ],
+    "screen": [
+     "South Africa",
+     "New Zealand",
+     "Australia",
+     "4 TITLES",
+     "1995 · 2007 · 2019 · 2023",
+     "South Africa · 4 titles"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "New Zealand has three titles, Australia two, England one; no other nation has won the tournament.",
+    "sources": [
+     "worldrugby",
+     "britannica_rwc"
+    ],
+    "vo": [
+     "the all blacks of new zealand have 3, australia 2, england a single title. nobody else has"
+    ],
+    "screen": [
+     "England",
+     "4",
+     "3",
+     "2",
+     "1"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "South Africa's first title came at home at Ellis Park, Johannesburg, in 1995, a year after the end of apartheid, with Nelson Mandela presenting the cup in a Springbok jersey.",
+    "sources": [
+     "mandela_found",
+     "britannica_mandela",
+     "britannica_rwc"
+    ],
+    "vo": [
+     "the first came at home in johannesburg in 1995, a year after apartheid ended, nelson mandela in a springbok jersey"
+    ],
+    "screen": [
+     "Johannesburg",
+     "1995",
+     "Mandela hands over the cup",
+     "Ellis Park · 1995"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "South Africa's latest title came in Paris in 2023, beating New Zealand 12–11 in the final.",
+    "sources": [
+     "worldrugby",
+     "bbc_2023"
+    ],
+    "vo": [
+     "the latest came in paris in 2023, by a single point over new zealand"
+    ],
+    "screen": [
+     "Paris",
+     "12–11",
+     "the 2023 final against New Zealand",
+     "Paris · 2023 final"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -25,
+   -40,
+   45,
+   55
+  ],
+  "far_bbox": [
+   -60,
+   -60,
+   80,
+   75
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "710"
+  ],
+  "highlight_note": "South Africa",
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "flight",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "to_paris",
+       "properties": {
+        "name": "Johannesburg to Paris"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          28.06,
+          -26.2
+         ],
+         [
+          24,
+          -14
+         ],
+         [
+          18,
+          -2
+         ],
+         [
+          12,
+          10
+         ],
+         [
+          8,
+          24
+         ],
+         [
+          4,
+          38
+         ],
+         [
+          2.36,
+          48.92
+         ]
+        ]
+       }
+      }
+     ]
+    },
+    "note": "schematic line from the 1995 final to the 2023 final"
+   }
+  ],
+  "labels": [
+   {
+    "id": "za",
+    "lonlat": [
+     33.5,
+     -33.5
+    ],
+    "text": "South Africa · 4 titles",
+    "cls": "tag",
+    "in": "s04@times",
+    "out": "s05"
+   },
+   {
+    "id": "jhb",
+    "lonlat": [
+     33.0,
+     -24.0
+    ],
+    "text": "Ellis Park · 1995",
+    "cls": "tag",
+    "in": "s06@johannesburg+0.3",
+    "out": "s07"
+   },
+   {
+    "id": "par",
+    "lonlat": [
+     8.0,
+     46.0
+    ],
+    "text": "Paris · 2023 final",
+    "cls": "tag",
+    "in": "s07@paris+0.3",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "johannesburg",
+    "lonlat": [
+     28.06,
+     -26.2
+    ],
+    "label": "Johannesburg",
+    "side": "left"
+   },
+   {
+    "id": "paris",
+    "lonlat": [
+     2.36,
+     48.92
+    ],
+    "label": "Paris",
+    "side": "left"
+   }
+  ],
+  "scalebar": null,
+  "pin_beats": [],
+  "cams": {
+   "start": [
+    0.5,
+    [
+     10,
+     0
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     11,
+     -1
+    ]
+   ],
+   "s04": [
+    1.2,
+    [
+     25,
+     -29
+    ]
+   ],
+   "s04b": [
+    1.3,
+    [
+     25.5,
+     -29.5
+    ]
+   ],
+   "s05": [
+    0.8,
+    [
+     22,
+     -26
+    ]
+   ],
+   "s05b": [
+    0.85,
+    [
+     23,
+     -26.5
+    ]
+   ],
+   "s06": [
+    1.4,
+    [
+     27,
+     -27
+    ]
+   ],
+   "s06b": [
+    1.5,
+    [
+     27.5,
+     -26.8
+    ]
+   ],
+   "s07": [
+    0.45,
+    [
+     14,
+     10
+    ]
+   ],
+   "s07b": [
+    0.5,
+    [
+     14,
+     12
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "The All Blacks of New Zealand have 3, Australia 2, England a single title. Nobody else has.",
+    "cues": {
+     "zealand": "zealand",
+     "australia": "australia",
+     "england": "england"
+    }
+   },
+   "direction": "ease back over southern Africa; bars build on 'Zealand' with South Africa on top; the All Black flag-ball thinks; a rugby-ball sticker on 'England'; South Africa pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "cam": [
+    0.8,
+    [
+     22,
+     -26
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.85,
+    [
+     23,
+     -26.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "titles",
+     "type": "bars",
+     "rows": [
+      [
+       "South Africa",
+       4,
+       "4"
+      ],
+      [
+       "New Zealand",
+       3,
+       "3"
+      ],
+      [
+       "Australia",
+       2,
+       "2"
+      ],
+      [
+       "England",
+       1,
+       "1"
+      ]
+     ],
+     "y": 300,
+     "x": 70,
+     "w": 660,
+     "unit": "",
+     "max_value": 4.5,
+     "bar_h": 62,
+     "gap": 16
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@zealand-0.3",
+     "do": "chart.bars_in",
+     "id": "titles",
+     "args": {
+      "dur": 1.0,
+      "stagger": 0.3
+     }
+    },
+    {
+     "at": "@@zealand",
+     "do": "character_in",
+     "id": "nz_think"
+    },
+    {
+     "at": "@@england",
+     "do": "sticker_in",
+     "id": "st_ball"
+    },
+    {
+     "at": "@@england+0.4",
+     "do": "sticker_pulse",
+     "id": "st_ball"
+    },
+    {
+     "at": "@@england+0.6",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "710",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "titles"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_ball"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "nz_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The first came at home in Johannesburg in 1995, a year after apartheid ended, Nelson Mandela in a Springbok jersey.",
+    "cues": {
+     "johannesburg": "johannesburg",
+     "apartheid": "apartheid",
+     "mandela": "mandela"
+    }
+   },
+   "direction": "tighten on Johannesburg; the pin and tag on 'Johannesburg'; a broken-chain sticker on 'apartheid'; the 1995 card and a trophy sticker on 'Mandela'; the Springbok flag-ball grins",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.6,
+   "card": {
+    "kicker": "1995",
+    "text": "Mandela hands over the cup"
+   },
+   "card_at": null,
+   "cam": [
+    1.4,
+    [
+     27,
+     -27
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.5,
+    [
+     27.5,
+     -26.8
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@johannesburg",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "johannesburg"
+     }
+    },
+    {
+     "at": "@@apartheid",
+     "do": "sticker_in",
+     "id": "st_chain"
+    },
+    {
+     "at": "@@apartheid+0.4",
+     "do": "sticker_pulse",
+     "id": "st_chain"
+    },
+    {
+     "at": "@@mandela",
+     "do": "sticker_out",
+     "id": "st_chain"
+    },
+    {
+     "at": "@@mandela",
+     "do": "fact_in",
+     "id": "f3",
+     "until": "@.end"
+    },
+    {
+     "at": "@@mandela+0.2",
+     "do": "sticker_in",
+     "id": "st_trophy"
+    },
+    {
+     "at": "@@mandela+0.6",
+     "do": "sticker_pulse",
+     "id": "st_trophy"
+    },
+    {
+     "at": "@@mandela+0.3",
+     "do": "character_in",
+     "id": "grin"
+    },
+    {
+     "at": "@@mandela+0.8",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "710",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_trophy"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "grin"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The latest came in Paris in 2023, by a single point over New Zealand.",
+    "cues": {
+     "latest": "latest",
+     "paris": "paris",
+     "point": "point"
+    }
+   },
+   "direction": "pull right out so Africa and Europe share the frame; a rugby ball rides the drawn line from Johannesburg to Paris until 'Paris'; the Paris pin and tag; the 12–11 card on 'point'; the All Black flag-ball slumps",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.6,
+   "card": {
+    "kicker": "12–11",
+    "text": "the 2023 final against New Zealand"
+   },
+   "card_at": null,
+   "cam": [
+    0.45,
+    [
+     14,
+     10
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.5,
+    [
+     14,
+     12
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@+0.1",
+     "do": "sticker_in",
+     "id": "st_ball2"
+    },
+    {
+     "at": "@+0.1",
+     "do": "geo.route_draw",
+     "stage": "stage_map",
+     "until": "@@paris",
+     "args": {
+      "rid": "to_paris",
+      "layer": "flight"
+     }
+    },
+    {
+     "at": "@+0.1",
+     "do": "geo.travel",
+     "stage": "stage_map",
+     "until": "@@paris",
+     "args": {
+      "rid": "to_paris",
+      "layer": "flight",
+      "sid": "st_ball2",
+      "offset": [
+       0,
+       -50
+      ]
+     }
+    },
+    {
+     "at": "@@paris",
+     "do": "sticker_out",
+     "id": "st_ball2"
+    },
+    {
+     "at": "@@paris+0.2",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "paris"
+     }
+    },
+    {
+     "at": "@@point",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@point+0.2",
+     "do": "character_in",
+     "id": "nz_sad"
+    },
+    {
+     "at": "@@point+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "710",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "nz_sad"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "paris"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "johannesburg"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_ball",
+   "type": "sticker",
+   "emoji": "1f3c9",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_ball2",
+   "type": "sticker",
+   "emoji": "1f3c9",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "st_chain",
+   "type": "sticker",
+   "emoji": "26d3",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_trophy",
+   "type": "sticker",
+   "emoji": "1f3c6",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "nz_think",
+   "type": "character",
+   "flag": "nz",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "nz_sad",
+   "type": "character",
+   "flag": "nz",
+   "face": "sad",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "grin",
+   "type": "character",
+   "flag": "za",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

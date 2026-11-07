@@ -1,0 +1,99 @@
+{
+ "version": 1,
+ "episode": "ep11-stethoscope-invented-paris-laennec",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -12,
+     42,
+     14,
+     60
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "250"
+     ],
+     "cls": "",
+     "note": "France"
+    }
+   ],
+   "pins": [
+    {
+     "id": "paris",
+     "lonlat": [
+      2.316,
+      48.846
+     ],
+     "label": "Paris"
+    },
+    {
+     "id": "quimper",
+     "lonlat": [
+      -4.1,
+      47.996
+     ],
+     "label": "Quimper",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "pa",
+     "lonlat": [
+      5.5,
+      50.5
+     ],
+     "text": "Paris · Necker 1816",
+     "cls": "tag",
+     "in": "s04@paris+0.3",
+     "out": "s06"
+    },
+    {
+     "id": "qu",
+     "lonlat": [
+      -5.5,
+      46.6
+     ],
+     "text": "Quimper · 1826",
+     "cls": "tag",
+     "in": "s07@died+0.4",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -30,
+      30,
+      40,
+      70
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

@@ -1,0 +1,141 @@
+{
+ "id": "ep20-most-rugby-world-cups-south-africa",
+ "format": "quiz-v3",
+ "series": "sports-sprint",
+ "number": 20,
+ "title": "Which nation has the MOST Rugby World Cups?",
+ "difficulty": "EASY",
+ "seed": 3720,
+ "quiz": {
+  "question": "Which nation has the MOST Rugby World Cups?",
+  "keyword": "MOST",
+  "options": [
+   "New Zealand",
+   "Australia",
+   "South Africa"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "South Africa",
+  "answer_sub": "4 titles",
+  "option_meta": [
+   {
+    "flag": "nz"
+   },
+   {
+    "flag": "au"
+   },
+   {
+    "flag": "za"
+   }
+  ],
+  "banner": "South Africa",
+  "banner_sub": "✓  C was right · 4 titles",
+  "outro": {
+   "headline": "CHALLENGE A FRIEND",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which nation has the MOST Rugby World Cups? 🏉",
+  "premise": "The most feared rugby team is not the most crowned",
+  "bait": "New Zealand, Australia or South Africa — which did you pick? 👇",
+  "keywords": [
+   "most rugby world cups",
+   "rugby world cup winners",
+   "springboks world cup",
+   "all blacks world cups",
+   "rugby world cup 2027",
+   "sports quiz",
+   "rugby history",
+   "1995 rugby world cup"
+  ],
+  "description": "The most feared rugby team is not the most crowned. New Zealand, Australia or South Africa — which did you pick? 👇\n\nSources: World Rugby; Britannica; BBC Sport.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nSports Sprint #20",
+  "hashtags": [
+   "#SportsQuiz",
+   "#SportsTrivia",
+   "#thequizwire"
+  ],
+  "tags": [
+   "SportsQuiz",
+   "Rugby"
+  ],
+  "cover_emoji": "🏉",
+  "cover_emoji_why": "rugby ball is the topic word of the question; all three options are rugby nations, the icon favours none",
+  "copy": {
+   "spoilers": [
+    "south africa",
+    "springbok",
+    "springboks",
+    "mandela",
+    "johannesburg",
+    "4 times",
+    "four"
+   ],
+   "youtube": {
+    "title": "Who has won the most Rugby World Cups? It's not the All Blacks 🏉",
+    "description": "New Zealand, Australia or the third one? The most feared team in rugby is not the most crowned. One nation has lifted the cup more than anyone, won its first at home a year after a revolution in its politics, and took the latest final by a single point.\nGuess before the map lights up, then see the table, the stadium where it started, and the ball's journey to the latest final.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#rugby",
+     "#rugbyworldcup",
+     "#rwc2027",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which nation has the MOST Rugby World Cups? 🏉\nNew Zealand, Australia or the other one? The most feared team in rugby is not the most crowned: one nation has lifted the cup more than anyone and took the latest final by a single point.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#rugby",
+     "#rugbyworldcup",
+     "#rwc2027",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Who has won the most Rugby World Cups — New Zealand, Australia or South Africa?\nThe most feared team in rugby is not the most crowned; one nation lifted the cup at home a year after its politics changed forever, and took the latest final by a single point. Name it before the table builds.",
+    "tags": [
+     "#rugby",
+     "#sportsquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which nation has the MOST Rugby World Cups?\nNew Zealand, Australia or South Africa? The most feared team is not the most crowned — and the latest final was decided by a single point.",
+    "tags": [
+     "#Rugby",
+     "#SportsQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Who has won the most Rugby World Cups — New Zealand, Australia or South Africa? The most feared team in rugby is not the most crowned: one nation has lifted the cup more than anyone, won its first at home a year after its politics changed forever, and took the latest final by a single point.",
+    "tags": [
+     "#rugbyworldcup"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-record",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "fill-pulse",
+  "beats": [
+   "bars",
+   "pin",
+   "label",
+   "route",
+   "travel"
+  ],
+  "cast": "flagball:za + emoji-set:rugby",
+  "music": "bed:bright"
+ },
+ "status": "ready"
+}

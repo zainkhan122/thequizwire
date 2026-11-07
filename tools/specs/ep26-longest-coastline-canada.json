@@ -1,0 +1,854 @@
+{
+ "id": "ep26-longest-coastline-canada",
+ "series": "geo-blitz",
+ "number": 26,
+ "seed": 3626,
+ "question": "Which country has the LONGEST coastline?",
+ "keyword": "LONGEST",
+ "difficulty": "EASY",
+ "options": [
+  {
+   "text": "Russia",
+   "flag": "ru",
+   "cue": "russia"
+  },
+  {
+   "text": "Indonesia",
+   "flag": "id",
+   "cue": "indonesia"
+  },
+  {
+   "text": "Canada",
+   "flag": "ca",
+   "cue": "canada"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "202,080 km",
+ "outro_headline": "CHALLENGE A FRIEND",
+ "cover_emoji": "🌊",
+ "cover_emoji_why": "a wave is the topic word (coastline); all three options are coastal nations, the icon favours none",
+ "post": {
+  "premise": "The longest coast on Earth is mostly frozen and mostly empty",
+  "bait": "Russia, Indonesia or Canada — which did you pick? 👇",
+  "keywords": [
+   "which country has the longest coastline",
+   "longest coastline in the world",
+   "coastline by country",
+   "canada coastline",
+   "indonesia islands",
+   "geography quiz",
+   "world map facts",
+   "arctic archipelago"
+  ],
+  "tags": [
+   "GeographyQuiz",
+   "Coastline"
+  ],
+  "sources_line": "CIA World Factbook; Statistics Canada; Britannica",
+  "copy": {
+   "spoilers": [
+    "canada",
+    "canadian",
+    "202,080",
+    "202080",
+    "52,455",
+    "arctic archipelago"
+   ],
+   "youtube": {
+    "title": "Which country has the longest coastline? It would take 27 years to walk 🌊",
+    "description": "Russia, Indonesia or the third one? One nation's shoreline runs more than 200,000 km along three oceans — nearly four times the runner-up — and most of it is frozen for much of the year. Walk it at 20 km a day and you would need almost three decades.\nGuess before the map lights up, then see the comparison, the island count, and how long the walk would take.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#coastline",
+     "#worldmap",
+     "#geography",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country has the LONGEST coastline? 🌊\nRussia, Indonesia or the other one? One shoreline runs more than 200,000 km along three oceans, nearly four times the runner-up, and most of it is frozen for much of the year.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#coastline",
+     "#worldmap",
+     "#geography",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country has the longest coastline — Russia, Indonesia or Canada?\nOne shoreline runs more than 200,000 km along three oceans, nearly four times the runner-up, and walking it would take almost three decades. Pick your flag before the map lights up.",
+    "tags": [
+     "#coastline",
+     "#geographyquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which country has the LONGEST coastline?\nRussia, Indonesia or Canada? One shoreline runs more than 200,000 km along three oceans — a 27-year walk.",
+    "tags": [
+     "#Geography",
+     "#MapQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which country has the longest coastline — Russia, Indonesia or Canada? One nation's shoreline runs more than 200,000 km along three oceans, nearly four times the runner-up, and most of it is frozen for much of the year. Walking it would take almost three decades.",
+    "tags": [
+     "#coastline"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "fact-first",
+  "opener": "night-lights",
+  "reveal": "flag-lift",
+  "beats": [
+   "compare",
+   "counter",
+   "label",
+   "scalebar"
+  ],
+  "cast": "flagball:ca + emoji-set:sea",
+  "music": "bed:bright",
+  "outro": "CHALLENGE A FRIEND"
+ },
+ "intent": "Three oceans, one flag: the comparison that dwarfs the runner-up, the island count that explains it, then the walk nobody has done.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "longest": "longest"
+  },
+  "v04": {
+   "text": "Canada. 202,080 kilometres of coastline, on 3 oceans: the Pacific, the Arctic and the Atlantic.",
+   "cues": {
+    "answer": "canada",
+    "oceans": "oceans",
+    "atlantic": "atlantic"
+   }
+  },
+  "v05": {
+   "text": "Indonesia, with 17,000 islands, has about 55,000 kilometres. Russia, the widest country, under 38,000.",
+   "cues": {
+    "indonesia": "indonesia",
+    "russia": "russia",
+    "widest": "widest"
+   }
+  },
+  "v06": {
+   "text": "Most of Canada's coast is Arctic: 52,455 islands, many of them locked in ice for much of the year.",
+   "cues": {
+    "arctic": "arctic",
+    "islands": "islands",
+    "ice": "ice"
+   }
+  },
+  "v07": {
+   "text": "Walk it at 20 kilometres a day and the full trip takes nearly 28 years. Nobody ever has.",
+   "cues": {
+    "walk": "walk",
+    "years": "years",
+    "nobody": "nobody"
+   }
+  },
+  "v08": {
+   "text": "Oceans on every side. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "202,080 KM",
+   "text": "of coastline on 3 oceans"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "ca",
+   "face": "happy",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "ru",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "research": {
+  "topic": "Longest coastline: Canada 202,080 km (CIA World Factbook), Indonesia 54,716 km, Russia 37,653 km; Canada has 52,455 islands (Statistics Canada); Pacific, Arctic and Atlantic coasts.",
+  "myths": [
+   {
+    "myth": "Russia has the longest coastline because it is the biggest country.",
+    "reality": "Russia's coastline is about 37,653 km; Canada's is 202,080 km, more than five times longer, because of its Arctic archipelago.",
+    "sources": [
+     "cia_coast",
+     "britannica_canada"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Feed clips say 'Canada' as a one-liner; nobody draws the three coastlines against each other, counts the islands and times the walk on a moving map.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=which+country+has+the+longest+coastline",
+     "title": "Search: which country has the longest coastline",
+     "angle": "one-line answer clips",
+     "misses": "no comparison"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=canada+arctic+archipelago",
+     "title": "Search: canada arctic archipelago",
+     "angle": "documentaries",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if geography",
+     "misses": "no sourced data"
+    }
+   ]
+  },
+  "sources": {
+   "cia_coast": {
+    "type": "primary",
+    "publisher": "CIA World Factbook",
+    "title": "Field listing — Coastline",
+    "url": "https://www.cia.gov/the-world-factbook/field/coastline/",
+    "date": "2026-11-07",
+    "notes": "Canada 202,080 km; Indonesia 54,716 km; Russia 37,653 km"
+   },
+   "statcan_islands": {
+    "type": "primary",
+    "publisher": "Statistics Canada",
+    "title": "Geography — Canada Year Book 2012",
+    "url": "https://www150.statcan.gc.ca/n1/pub/11-402-x/2012000/chap/geo/geo-eng.htm",
+    "date": "2026-11-07",
+    "notes": "Canada has 52,455 islands; coastline of 243,042 km including islands (NRCan figure); borders the Pacific, Arctic and Atlantic oceans"
+   },
+   "britannica_canada": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Canada — land",
+    "url": "https://www.britannica.com/place/Canada",
+    "date": "2026-11-07",
+    "notes": "the world's longest coastline; Pacific, Arctic and Atlantic oceans; Arctic Archipelago ice-bound most of the year"
+   },
+   "britannica_indonesia": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Indonesia",
+    "url": "https://www.britannica.com/place/Indonesia",
+    "date": "2026-11-07",
+    "notes": "archipelago of more than 17,000 islands"
+   },
+   "nrcan_coast": {
+    "type": "primary",
+    "publisher": "Natural Resources Canada",
+    "title": "The Atlas of Canada — Coastline and shoreline",
+    "url": "https://natural-resources.canada.ca/maps-tools-and-publications/maps/atlas-canada",
+    "date": "2026-11-07",
+    "notes": "Canada's coastline is the longest in the world; much of the Arctic coast is ice-covered for most of the year"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Canada has the longest coastline of any country: 202,080 km on the Pacific, Arctic and Atlantic oceans.",
+    "sources": [
+     "cia_coast",
+     "britannica_canada",
+     "nrcan_coast"
+    ],
+    "vo": [
+     "which country has the longest coastline",
+     "russia, indonesia, or canada",
+     "canada. 202,080 kilometres of coastline, on 3 oceans: the pacific, the arctic and the atlantic",
+     "oceans on every side. follow us"
+    ],
+    "screen": [
+     "Canada",
+     "Russia",
+     "Indonesia",
+     "202,080 KM",
+     "of coastline on 3 oceans",
+     "Canada · 202,080 km",
+     "202,080 km"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Indonesia, an archipelago of more than 17,000 islands, has about 54,716 km of coastline; Russia about 37,653 km.",
+    "sources": [
+     "cia_coast",
+     "britannica_indonesia"
+    ],
+    "vo": [
+     "indonesia, with 17,000 islands, has about 55,000 kilometres. russia, the widest country, under 38,000"
+    ],
+    "screen": [
+     "54,716 km",
+     "37,653 km"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Canada has 52,455 islands; most of its coast is Arctic and ice-bound for much of the year.",
+    "sources": [
+     "statcan_islands",
+     "britannica_canada",
+     "nrcan_coast"
+    ],
+    "vo": [
+     "most of canada's coast is arctic: 52,455 islands, many of them locked in ice for much of the year"
+    ],
+    "screen": [
+     "52,455",
+     "islands in Canada",
+     "Arctic coast · ice-bound most of the year"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "At 20 km a day, walking 202,080 km would take about 10,100 days — nearly 28 years.",
+    "sources": [
+     "cia_coast",
+     "britannica_canada"
+    ],
+    "vo": [
+     "walk it at 20 kilometres a day and the full trip takes nearly 28 years. nobody ever has"
+    ],
+    "screen": [
+     "28 YEARS",
+     "to walk it at 20 km a day"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -142,
+   41,
+   -50,
+   84
+  ],
+  "far_bbox": [
+   -175,
+   20,
+   -20,
+   88
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "124"
+  ],
+  "highlight_note": "Canada",
+  "lift": "flag",
+  "lift_flag": "ca",
+  "labels": [
+   {
+    "id": "ca",
+    "lonlat": [
+     -100,
+     52
+    ],
+    "text": "Canada · 202,080 km",
+    "cls": "tag",
+    "in": "s04@oceans",
+    "out": "s05"
+   },
+   {
+    "id": "arc",
+    "lonlat": [
+     -95,
+     76
+    ],
+    "text": "Arctic coast · ice-bound most of the year",
+    "cls": "tag",
+    "in": "s06@ice+0.2",
+    "out": "s06.end"
+   }
+  ],
+  "pins": [],
+  "scalebar": {
+   "km": 1000,
+   "lonlat": [
+    -138,
+    44
+   ]
+  },
+  "pin_beats": [],
+  "cams": {
+   "start": [
+    0.45,
+    [
+     -96,
+     60
+    ]
+   ],
+   "s01": [
+    0.45,
+    [
+     -95,
+     60
+    ]
+   ],
+   "s04": [
+    0.55,
+    [
+     -96,
+     62
+    ]
+   ],
+   "s04b": [
+    0.6,
+    [
+     -95,
+     62
+    ]
+   ],
+   "s05": [
+    0.5,
+    [
+     -98,
+     58
+    ]
+   ],
+   "s05b": [
+    0.52,
+    [
+     -97,
+     58.5
+    ]
+   ],
+   "s06": [
+    0.7,
+    [
+     -92,
+     72
+    ]
+   ],
+   "s06b": [
+    0.75,
+    [
+     -90,
+     72.5
+    ]
+   ],
+   "s07": [
+    0.5,
+    [
+     -100,
+     60
+    ]
+   ],
+   "s07b": [
+    0.52,
+    [
+     -99,
+     60.5
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Indonesia, with 17,000 islands, has about 55,000 kilometres. Russia, the widest country, under 38,000.",
+    "cues": {
+     "indonesia": "indonesia",
+     "russia": "russia",
+     "widest": "widest"
+    }
+   },
+   "direction": "ease back so all of Canada sits in frame; the three coastline columns rise on 'Indonesia' with Canada towering; an island sticker; the Russian flag-ball thinks on 'Russia'; Canada pulses on 'widest'",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "cam": [
+    0.5,
+    [
+     -98,
+     58
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.52,
+    [
+     -97,
+     58.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "coast",
+     "type": "compare",
+     "items": [
+      [
+       "Canada",
+       202080,
+       "202,080 km"
+      ],
+      [
+       "Indonesia",
+       54716,
+       "54,716 km"
+      ],
+      [
+       "Russia",
+       37653,
+       "37,653 km"
+      ]
+     ],
+     "y": 320,
+     "x": 60,
+     "w": 900,
+     "max_h": 520
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@indonesia-0.3",
+     "do": "chart.compare_in",
+     "id": "coast",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.25
+     }
+    },
+    {
+     "at": "@@indonesia",
+     "do": "sticker_in",
+     "id": "st_island"
+    },
+    {
+     "at": "@@indonesia+0.4",
+     "do": "sticker_pulse",
+     "id": "st_island"
+    },
+    {
+     "at": "@@indonesia+0.9",
+     "do": "sticker_pulse",
+     "id": "st_island"
+    },
+    {
+     "at": "@@russia",
+     "do": "character_in",
+     "id": "ru_think"
+    },
+    {
+     "at": "@@widest+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "124",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "coast"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_island"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "ru_think"
+    },
+    {
+     "at": "@@russia+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "124",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Most of Canada's coast is Arctic: 52,455 islands, many of them locked in ice for much of the year.",
+    "cues": {
+     "arctic": "arctic",
+     "islands": "islands",
+     "ice": "ice"
+    }
+   },
+   "direction": "drift north over the Arctic Archipelago; a snowflake on 'Arctic'; the island counter runs to 52,455 on 'islands'; an ice sticker and the Arctic tag on 'ice'",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.5,
+   "cam": [
+    0.7,
+    [
+     -92,
+     72
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.75,
+    [
+     -90,
+     72.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "isl",
+     "type": "counter",
+     "start": 0,
+     "end": 52455,
+     "y": 330,
+     "label": "islands in Canada",
+     "fmt": "int",
+     "size": 170
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@arctic",
+     "do": "sticker_in",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@arctic+0.4",
+     "do": "sticker_pulse",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@arctic+0.9",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "124",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@islands-0.2",
+     "do": "chart.counter_run",
+     "id": "isl",
+     "until": "@@islands+1.5",
+     "args": {
+      "steps": 18
+     }
+    },
+    {
+     "at": "@@islands+0.6",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "124",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@ice",
+     "do": "sticker_out",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@ice",
+     "do": "sticker_in",
+     "id": "st_ice"
+    },
+    {
+     "at": "@@ice+0.4",
+     "do": "sticker_pulse",
+     "id": "st_ice"
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "isl"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_ice"
+    },
+    {
+     "at": "@@ice+0.9",
+     "do": "sticker_pulse",
+     "id": "st_ice"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Walk it at 20 kilometres a day and the full trip takes nearly 28 years. Nobody ever has.",
+    "cues": {
+     "walk": "walk",
+     "years": "years",
+     "nobody": "nobody"
+    }
+   },
+   "direction": "pull back to the whole country; a walking sticker on 'walk'; the 28 YEARS card on 'years'; the Canadian flag-ball grins; Canada pulses on 'nobody'",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.6,
+   "card": {
+    "kicker": "28 YEARS",
+    "text": "to walk it at 20 km a day"
+   },
+   "card_at": null,
+   "cam": [
+    0.5,
+    [
+     -100,
+     60
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.52,
+    [
+     -99,
+     60.5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@walk",
+     "do": "sticker_in",
+     "id": "st_walk"
+    },
+    {
+     "at": "@@walk+0.4",
+     "do": "sticker_pulse",
+     "id": "st_walk"
+    },
+    {
+     "at": "@@walk+0.9",
+     "do": "sticker_pulse",
+     "id": "st_walk"
+    },
+    {
+     "at": "@@years",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@years+0.3",
+     "do": "character_in",
+     "id": "grin"
+    },
+    {
+     "at": "@@nobody",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "124",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@nobody+0.3",
+     "do": "sticker_pulse",
+     "id": "st_walk"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_walk"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "grin"
+    },
+    {
+     "at": "@@years+0.8",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "124",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_island",
+   "type": "sticker",
+   "emoji": "1f3dd",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_snow",
+   "type": "sticker",
+   "emoji": "2744",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 0
+  },
+  {
+   "id": "st_ice",
+   "type": "sticker",
+   "emoji": "1f9ca",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_walk",
+   "type": "sticker",
+   "emoji": "1f6b6",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "ru_think",
+   "type": "character",
+   "flag": "ru",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "grin",
+   "type": "character",
+   "flag": "ca",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

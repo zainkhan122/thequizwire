@@ -1,0 +1,697 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "4 TITLES",
+   "text": "1995 · 2007 · 2019 · 2023"
+  },
+  {
+   "id": "titles",
+   "type": "bars",
+   "rows": [
+    [
+     "South Africa",
+     4,
+     "4"
+    ],
+    [
+     "New Zealand",
+     3,
+     "3"
+    ],
+    [
+     "Australia",
+     2,
+     "2"
+    ],
+    [
+     "England",
+     1,
+     "1"
+    ]
+   ],
+   "y": 300,
+   "x": 70,
+   "w": 660,
+   "unit": "",
+   "max_value": 4.5,
+   "bar_h": 62,
+   "gap": 16
+  },
+  {
+   "id": "f3",
+   "type": "fact",
+   "kicker": "1995",
+   "text": "Mandela hands over the cup"
+  },
+  {
+   "id": "f4",
+   "type": "fact",
+   "kicker": "12–11",
+   "text": "the 2023 final against New Zealand"
+  },
+  {
+   "id": "st_ball",
+   "type": "sticker",
+   "emoji": "1f3c9",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_ball2",
+   "type": "sticker",
+   "emoji": "1f3c9",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "st_chain",
+   "type": "sticker",
+   "emoji": "26d3",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_trophy",
+   "type": "sticker",
+   "emoji": "1f3c6",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "nz_think",
+   "type": "character",
+   "flag": "nz",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "nz_sad",
+   "type": "character",
+   "flag": "nz",
+   "face": "sad",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "grin",
+   "type": "character",
+   "flag": "za",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  },
+  {
+   "id": "cha",
+   "type": "character",
+   "flag": "za",
+   "face": "happy",
+   "x": 230,
+   "y": 820,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "chb",
+   "type": "character",
+   "flag": "nz",
+   "face": "think",
+   "x": 850,
+   "y": 1000,
+   "size": 200,
+   "rot": 8
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     10,
+     0
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     11,
+     -1
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 1.2,
+    "lonlat": [
+     25,
+     -29
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 1.3,
+    "lonlat": [
+     25.5,
+     -29.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "710",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s04@times",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "za"
+   }
+  },
+  {
+   "at": "s05",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "za"
+   }
+  },
+  {
+   "at": "s06@johannesburg+0.3",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "jhb"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "jhb"
+   }
+  },
+  {
+   "at": "s07@paris+0.3",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "par"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "par"
+   }
+  },
+  {
+   "at": "s04+3.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "710",
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 0.8,
+    "lonlat": [
+     22,
+     -26
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 0.85,
+    "lonlat": [
+     23,
+     -26.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@zealand-0.3",
+   "do": "chart.bars_in",
+   "id": "titles",
+   "args": {
+    "dur": 1.0,
+    "stagger": 0.3
+   }
+  },
+  {
+   "at": "s05@zealand",
+   "do": "character_in",
+   "id": "nz_think"
+  },
+  {
+   "at": "s05@england",
+   "do": "sticker_in",
+   "id": "st_ball"
+  },
+  {
+   "at": "s05@england+0.4",
+   "do": "sticker_pulse",
+   "id": "st_ball"
+  },
+  {
+   "at": "s05@england+0.6",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "710",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "titles"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_ball"
+  },
+  {
+   "at": "s05.end",
+   "do": "character_out",
+   "id": "nz_think"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 1.4,
+    "lonlat": [
+     27,
+     -27
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 1.5,
+    "lonlat": [
+     27.5,
+     -26.8
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@johannesburg",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "johannesburg"
+   }
+  },
+  {
+   "at": "s06@apartheid",
+   "do": "sticker_in",
+   "id": "st_chain"
+  },
+  {
+   "at": "s06@apartheid+0.4",
+   "do": "sticker_pulse",
+   "id": "st_chain"
+  },
+  {
+   "at": "s06@mandela",
+   "do": "sticker_out",
+   "id": "st_chain"
+  },
+  {
+   "at": "s06@mandela",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s06.end"
+  },
+  {
+   "at": "s06@mandela+0.2",
+   "do": "sticker_in",
+   "id": "st_trophy"
+  },
+  {
+   "at": "s06@mandela+0.6",
+   "do": "sticker_pulse",
+   "id": "st_trophy"
+  },
+  {
+   "at": "s06@mandela+0.3",
+   "do": "character_in",
+   "id": "grin"
+  },
+  {
+   "at": "s06@mandela+0.8",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "710",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_trophy"
+  },
+  {
+   "at": "s06.end",
+   "do": "character_out",
+   "id": "grin"
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.5",
+   "args": {
+    "k": 0.45,
+    "lonlat": [
+     14,
+     10
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     14,
+     12
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07+0.1",
+   "do": "sticker_in",
+   "id": "st_ball2"
+  },
+  {
+   "at": "s07+0.1",
+   "do": "geo.route_draw",
+   "stage": "stage_map",
+   "until": "s07@paris",
+   "args": {
+    "rid": "to_paris",
+    "layer": "flight"
+   }
+  },
+  {
+   "at": "s07+0.1",
+   "do": "geo.travel",
+   "stage": "stage_map",
+   "until": "s07@paris",
+   "args": {
+    "rid": "to_paris",
+    "layer": "flight",
+    "sid": "st_ball2",
+    "offset": [
+     0,
+     -50
+    ]
+   }
+  },
+  {
+   "at": "s07@paris",
+   "do": "sticker_out",
+   "id": "st_ball2"
+  },
+  {
+   "at": "s07@paris+0.2",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "paris"
+   }
+  },
+  {
+   "at": "s07@point",
+   "do": "fact_in",
+   "id": "f4",
+   "until": "s07.end"
+  },
+  {
+   "at": "s07@point+0.2",
+   "do": "character_in",
+   "id": "nz_sad"
+  },
+  {
+   "at": "s07@point+0.5",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "710",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "character_out",
+   "id": "nz_sad"
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "paris"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "johannesburg"
+   }
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     10,
+     0
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.6",
+   "do": "character_in",
+   "id": "cha"
+  },
+  {
+   "at": "s04+1.9",
+   "do": "character_in",
+   "id": "chb"
+  },
+  {
+   "at": "s05+1.0",
+   "do": "character_out",
+   "id": "cha"
+  },
+  {
+   "at": "s05+0.8",
+   "do": "character_out",
+   "id": "chb"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

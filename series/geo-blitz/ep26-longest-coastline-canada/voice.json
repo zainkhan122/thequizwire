@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep26-longest-coastline-canada",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "Three oceans, one flag: the comparison that dwarfs the runner-up, the island count that explains it, then the walk nobody has done.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Which country has the LONGEST coastline?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Which country has the longest coastline?",
+   "cues": {
+    "which": "which",
+    "longest": "longest"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Russia, Indonesia, or Canada?",
+   "cues": {
+    "a": "russia",
+    "b": "indonesia",
+    "c": "canada"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "Canada. 202,080 kilometres of coastline, on 3 oceans: the Pacific, the Arctic and the Atlantic.",
+   "cues": {
+    "answer": "canada",
+    "oceans": "oceans",
+    "atlantic": "atlantic"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.5,
+   "direction": "ease back so all of Canada sits in frame; the three coastline columns rise on 'Indonesia' with Canada towering; an island sticker; the Russian flag-ball thinks on 'Russia'; Canada pulses on 'widest'",
+   "text": "Indonesia, with 17,000 islands, has about 55,000 kilometres. Russia, the widest country, under 38,000.",
+   "cues": {
+    "indonesia": "indonesia",
+    "russia": "russia",
+    "widest": "widest"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.5,
+   "direction": "drift north over the Arctic Archipelago; a snowflake on 'Arctic'; the island counter runs to 52,455 on 'islands'; an ice sticker and the Arctic tag on 'ice'",
+   "text": "Most of Canada's coast is Arctic: 52,455 islands, many of them locked in ice for much of the year.",
+   "cues": {
+    "arctic": "arctic",
+    "islands": "islands",
+    "ice": "ice"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.6,
+   "direction": "pull back to the whole country; a walking sticker on 'walk'; the 28 YEARS card on 'years'; the Canadian flag-ball grins; Canada pulses on 'nobody'",
+   "text": "Walk it at 20 kilometres a day and the full trip takes nearly 28 years. Nobody ever has.",
+   "cues": {
+    "walk": "walk",
+    "years": "years",
+    "nobody": "nobody"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "Oceans on every side. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

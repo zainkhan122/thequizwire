@@ -1,0 +1,884 @@
+{
+ "id": "ep11-stethoscope-invented-paris-laennec",
+ "series": "body-brain",
+ "number": 11,
+ "seed": 3411,
+ "question": "Where was the stethoscope INVENTED?",
+ "keyword": "INVENTED",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Germany",
+   "flag": "de",
+   "cue": "germany"
+  },
+  {
+   "text": "England",
+   "flag": "gb",
+   "cue": "england"
+  },
+  {
+   "text": "France",
+   "flag": "fr",
+   "cue": "france"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "Paris · 1816",
+ "outro_headline": "1 FOR 1?",
+ "cover_emoji": "🩺",
+ "cover_emoji_why": "the stethoscope is the topic word of the question; all three options are countries, the icon favours none",
+ "post": {
+  "premise": "A shy doctor, a female patient and a rolled-up sheet of paper",
+  "bait": "Germany, England or France — which did you pick? 👇",
+  "keywords": [
+   "who invented the stethoscope",
+   "stethoscope history",
+   "laennec stethoscope",
+   "first stethoscope 1816",
+   "medical history",
+   "health quiz",
+   "human body facts",
+   "how the stethoscope was invented"
+  ],
+  "tags": [
+   "MedicalHistory",
+   "HealthQuiz"
+  ],
+  "sources_line": "Britannica; Clinical Medicine & Research (Roguin 2006); Science Museum Group",
+  "copy": {
+   "spoilers": [
+    "france",
+    "french",
+    "paris",
+    "laennec",
+    "necker",
+    "1816",
+    "quimper"
+   ],
+   "youtube": {
+    "title": "Who invented the stethoscope? A shy doctor and a sheet of paper 🩺",
+    "description": "Germany, England or the third one? Two centuries ago doctors listened to a heart by pressing an ear to the chest. One young physician, embarrassed in front of a female patient, rolled a sheet of paper into a tube — and heard the heartbeat more clearly than ever. He named it from the Greek, wrote the book, and died of the very disease his tube diagnosed best.\nGuess before the map lights up, then see the hospital, the old method wiped away, and the two dates that made the instrument.\nWhich did you pick?",
+    "tags": [
+     "#medicalhistory",
+     "#healthquiz",
+     "#stethoscope",
+     "#doctors",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Where was the stethoscope INVENTED? 🩺\nGermany, England or the other one? Doctors used to press an ear to the chest — until one shy physician rolled a sheet of paper into a tube and heard the heartbeat more clearly than ever.\nWhich did you pick?",
+    "tags": [
+     "#medicalhistory",
+     "#healthquiz",
+     "#stethoscope",
+     "#doctors",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Where was the stethoscope invented — Germany, England or France?\nDoctors used to press an ear to the chest, until one shy physician rolled a sheet of paper into a tube and heard a heartbeat more clearly than ever. Choose your flag before the map lights up.",
+    "tags": [
+     "#stethoscope",
+     "#medicalhistory"
+    ]
+   },
+   "twitter": {
+    "text": "Where was the stethoscope INVENTED?\nGermany, England or France? A shy doctor, a female patient and a rolled-up sheet of paper — that is how it began.",
+    "tags": [
+     "#MedicalHistory",
+     "#Stethoscope"
+    ]
+   },
+   "threads": {
+    "text": "Where was the stethoscope invented — Germany, England or France? Two centuries ago doctors pressed an ear to the chest, until one shy young physician, embarrassed in front of a female patient, rolled a sheet of paper into a tube and heard the heartbeat more clearly than ever.",
+    "tags": [
+     "#stethoscope"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "story",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "pin",
+   "erase",
+   "split",
+   "label"
+  ],
+  "cast": "flagball:fr + emoji-set:medicine",
+  "music": "bed:warm",
+  "outro": "1 FOR 1?"
+ },
+ "intent": "One hospital room in Paris: the old method wiped off the screen, the paper tube, the Greek name and the book, then the irony of the doctor's own death.",
+ "voice": {
+  "v01_cues": {
+   "where": "where",
+   "invented": "invented"
+  },
+  "v04": {
+   "text": "France. In 1816, at the Necker Hospital in Paris, René Laennec rolled a sheet of paper into a tube.",
+   "cues": {
+    "answer": "france",
+    "paris": "paris",
+    "rolled": "rolled"
+   }
+  },
+  "v05": {
+   "text": "Doctors pressed an ear to the chest. With a young woman patient Laennec found that awkward; the tube carried her heartbeat clearly.",
+   "cues": {
+    "ear": "ear",
+    "awkward": "awkward",
+    "heartbeat": "heartbeat"
+   }
+  },
+  "v06": {
+   "text": "He named it the stethoscope, from the Greek for chest and look, and published his findings in 1819.",
+   "cues": {
+    "named": "named",
+    "greek": "greek",
+    "published": "published"
+   }
+  },
+  "v07": {
+   "text": "Laennec died at 45 of tuberculosis, the disease his own instrument diagnosed best.",
+   "cues": {
+    "died": "died",
+    "tuberculosis": "tuberculosis",
+    "best": "best"
+   }
+  },
+  "v08": {
+   "text": "A paper tube. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "1816",
+   "text": "a rolled sheet of paper · Paris"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "fr",
+   "face": "happy",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "gb",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "research": {
+  "topic": "The stethoscope was invented in France: René Théophile Hyacinthe Laennec, Necker Hospital, Paris, 1816 — a rolled paper cylinder used to hear a young woman's heart; named from Greek stethos (chest) + skopein (to look/examine); published in 'De l'auscultation médiate' (1819); Laennec died of tuberculosis in 1826 aged 45.",
+  "myths": [
+   {
+    "myth": "The stethoscope was a British or German invention like much of 19th-century medical kit.",
+    "reality": "Laennec, a French physician, invented it in Paris in 1816 and published it in 1819.",
+    "sources": [
+     "britannica_laennec",
+     "roguin_2006",
+     "sciencemuseum"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Feed clips tell the Laennec anecdote as a talking head; nobody pins the hospital, wipes the ear-to-chest method off the screen and splits the two dates on a moving map.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=who+invented+the+stethoscope",
+     "title": "Search: who invented the stethoscope",
+     "angle": "talking-head history",
+     "misses": "no map, no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=laennec+stethoscope+story",
+     "title": "Search: laennec stethoscope story",
+     "angle": "long explainers",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if facts",
+     "misses": "no sourced data"
+    }
+   ]
+  },
+  "sources": {
+   "britannica_laennec": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "René Laennec — French physician",
+    "url": "https://www.britannica.com/biography/Rene-Laennec",
+    "date": "2026-11-07",
+    "notes": "invented the stethoscope in 1816 at the Necker Hospital, Paris; rolled paper cylinder; 'De l'auscultation médiate' 1819; died of tuberculosis 13 August 1826, aged 45"
+   },
+   "roguin_2006": {
+    "type": "scholarly",
+    "publisher": "Clinical Medicine & Research (via PubMed Central)",
+    "title": "Rene Theophile Hyacinthe Laënnec (1781–1826): The Man Behind the Stethoscope — A. Roguin, Clin Med Res 2006;4(3):230–235",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1570491/",
+    "date": "2026-11-07",
+    "notes": "1816 Necker Hospital; a young woman with heart symptoms; rolled quire of paper; name from Greek stethos + skopein; treatise published 1819; death from tuberculosis 1826"
+   },
+   "sciencemuseum": {
+    "type": "primary",
+    "publisher": "Science Museum Group",
+    "title": "Laennec-type monaural stethoscope",
+    "url": "https://collection.sciencemuseumgroup.org.uk/objects/co134936/laennec-type-monaural-stethoscope",
+    "date": "2026-11-07",
+    "notes": "wooden monaural stethoscope of the type Laennec designed after his paper tube of 1816"
+   },
+   "wiki_laennec": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "René Laennec",
+    "url": "https://en.wikipedia.org/wiki/Ren%C3%A9_Laennec",
+    "date": "2026-11-07",
+    "notes": "born Quimper 1781; invented the stethoscope 1816 at Hôpital Necker; died 1826 of tuberculosis"
+   },
+   "ap_necker": {
+    "type": "primary",
+    "publisher": "Assistance Publique – Hôpitaux de Paris",
+    "title": "Hôpital Necker-Enfants malades — history",
+    "url": "https://www.aphp.fr/contenu/hopital-necker-enfants-malades",
+    "date": "2026-11-07",
+    "notes": "Laennec invented the stethoscope at Necker in 1816"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The stethoscope was invented in France: René Laennec, Necker Hospital, Paris, 1816, from a rolled sheet of paper.",
+    "sources": [
+     "britannica_laennec",
+     "roguin_2006",
+     "ap_necker"
+    ],
+    "vo": [
+     "where was the stethoscope invented",
+     "germany, england, or france",
+     "france. in 1816, at the necker hospital in paris, rené laennec rolled a sheet of paper into a tube",
+     "a paper tube. follow us"
+    ],
+    "screen": [
+     "France",
+     "Germany",
+     "England",
+     "1816",
+     "a rolled sheet of paper · Paris",
+     "Necker Hospital",
+     "Paris · Necker 1816"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Physicians listened by pressing an ear to the chest; Laennec, examining a young woman, found this awkward and used a paper tube, which carried the heart sounds clearly.",
+    "sources": [
+     "roguin_2006",
+     "britannica_laennec"
+    ],
+    "vo": [
+     "doctors pressed an ear to the chest. with a young woman patient laennec found that awkward; the tube carried her heartbeat clearly"
+    ],
+    "screen": [
+     "EAR TO CHEST"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "He named the instrument the stethoscope from the Greek stethos (chest) and skopein (to look/examine) and published his treatise in 1819.",
+    "sources": [
+     "roguin_2006",
+     "britannica_laennec",
+     "wiki_laennec"
+    ],
+    "vo": [
+     "he named it the stethoscope, from the greek for chest and look, and published his findings in 1819"
+    ],
+    "screen": [
+     "STETHOS",
+     "Greek for chest",
+     "SKOPEIN",
+     "Greek for look, examine",
+     "CHEST",
+     "LOOK",
+     "1819",
+     "the book that named it"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Laennec died of tuberculosis in 1826 at the age of 45.",
+    "sources": [
+     "britannica_laennec",
+     "roguin_2006",
+     "wiki_laennec"
+    ],
+    "vo": [
+     "laennec died at 45 of tuberculosis, the disease his own instrument diagnosed best"
+    ],
+    "screen": [
+     "Quimper",
+     "Quimper · 1826"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -12,
+   42,
+   14,
+   60
+  ],
+  "far_bbox": [
+   -30,
+   30,
+   40,
+   70
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "250"
+  ],
+  "highlight_note": "France",
+  "labels": [
+   {
+    "id": "pa",
+    "lonlat": [
+     5.5,
+     50.5
+    ],
+    "text": "Paris · Necker 1816",
+    "cls": "tag",
+    "in": "s04@paris+0.3",
+    "out": "s06"
+   },
+   {
+    "id": "qu",
+    "lonlat": [
+     -5.5,
+     46.6
+    ],
+    "text": "Quimper · 1826",
+    "cls": "tag",
+    "in": "s07@died+0.4",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "paris",
+    "lonlat": [
+     2.316,
+     48.846
+    ],
+    "label": "Paris"
+   },
+   {
+    "id": "quimper",
+    "lonlat": [
+     -4.1,
+     47.996
+    ],
+    "label": "Quimper",
+    "side": "left"
+   }
+  ],
+  "scalebar": null,
+  "pin_beats": [
+   {
+    "at": "s04@paris",
+    "pid": "paris"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.45,
+    [
+     10,
+     48
+    ]
+   ],
+   "s01": [
+    0.45,
+    [
+     9,
+     48
+    ]
+   ],
+   "s04": [
+    1.5,
+    [
+     2.5,
+     48.0
+    ]
+   ],
+   "s04b": [
+    1.6,
+    [
+     2.8,
+     47.8
+    ]
+   ],
+   "s05": [
+    1.9,
+    [
+     2.3,
+     48.5
+    ]
+   ],
+   "s05b": [
+    2.0,
+    [
+     2.6,
+     48.3
+    ]
+   ],
+   "s06": [
+    1.3,
+    [
+     2.0,
+     47.5
+    ]
+   ],
+   "s06b": [
+    1.4,
+    [
+     2.3,
+     47.3
+    ]
+   ],
+   "s07": [
+    1.1,
+    [
+     -1.0,
+     47.8
+    ]
+   ],
+   "s07b": [
+    1.2,
+    [
+     -0.6,
+     47.6
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Doctors pressed an ear to the chest. With a young woman patient Laennec found that awkward; the tube carried her heartbeat clearly.",
+    "cues": {
+     "ear": "ear",
+     "awkward": "awkward",
+     "heartbeat": "heartbeat"
+    }
+   },
+   "direction": "tighten on Paris; an EAR TO CHEST plate waits at the bottom; an ear sticker on 'ear'; a blushing face on 'awkward'; on 'heartbeat' the plate wipes away and a heart sticker pulses; the French flag-ball grins",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.5,
+   "cam": [
+    1.9,
+    [
+     2.3,
+     48.5
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    2.0,
+    [
+     2.6,
+     48.3
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "old",
+     "type": "erase",
+     "text": "EAR TO CHEST",
+     "y": 1000,
+     "h": 260
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@ear",
+     "do": "sticker_in",
+     "id": "st_ear"
+    },
+    {
+     "at": "@@ear+0.4",
+     "do": "sticker_pulse",
+     "id": "st_ear"
+    },
+    {
+     "at": "@@awkward",
+     "do": "sticker_out",
+     "id": "st_ear"
+    },
+    {
+     "at": "@@awkward",
+     "do": "sticker_in",
+     "id": "st_blush"
+    },
+    {
+     "at": "@@awkward+0.4",
+     "do": "sticker_pulse",
+     "id": "st_blush"
+    },
+    {
+     "at": "@@heartbeat",
+     "do": "sticker_out",
+     "id": "st_blush"
+    },
+    {
+     "at": "@@heartbeat-0.1",
+     "do": "chart.erase_run",
+     "id": "old",
+     "until": "@@heartbeat+1.1",
+     "args": {
+      "direction": "left"
+     }
+    },
+    {
+     "at": "@@heartbeat",
+     "do": "sticker_in",
+     "id": "st_heart"
+    },
+    {
+     "at": "@@heartbeat+0.4",
+     "do": "sticker_pulse",
+     "id": "st_heart"
+    },
+    {
+     "at": "@@heartbeat+0.3",
+     "do": "character_in",
+     "id": "grin"
+    },
+    {
+     "at": "@@heartbeat+0.6",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "250",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_heart"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "grin"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "He named it the stethoscope, from the Greek for chest and look, and published his findings in 1819.",
+    "cues": {
+     "named": "named",
+     "greek": "greek",
+     "published": "published"
+    }
+   },
+   "direction": "ease back over France; the CHEST / LOOK split of Greek roots on 'Greek'; a book sticker on 'published' with the 1819 card; the Paris pin leaves at the end",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "1819",
+    "text": "the book that named it"
+   },
+   "card_at": null,
+   "cam": [
+    1.3,
+    [
+     2.0,
+     47.5
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.4,
+    [
+     2.3,
+     47.3
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "roots",
+     "type": "split",
+     "left": {
+      "kicker": "STETHOS",
+      "text": "Greek for chest"
+     },
+     "right": {
+      "kicker": "SKOPEIN",
+      "text": "Greek for look, examine"
+     },
+     "label_left": "CHEST",
+     "label_right": "LOOK",
+     "y": 310,
+     "h": 540,
+     "x": 60,
+     "w": 620
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@named",
+     "do": "sticker_in",
+     "id": "st_steth"
+    },
+    {
+     "at": "@@named+0.4",
+     "do": "sticker_pulse",
+     "id": "st_steth"
+    },
+    {
+     "at": "@@greek-0.2",
+     "do": "chart.split_in",
+     "id": "roots"
+    },
+    {
+     "at": "@@greek+0.6",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "250",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@published-0.2",
+     "do": "chart.out",
+     "id": "roots"
+    },
+    {
+     "at": "@@published",
+     "do": "sticker_out",
+     "id": "st_steth"
+    },
+    {
+     "at": "@@published",
+     "do": "sticker_in",
+     "id": "st_book"
+    },
+    {
+     "at": "@@published+0.4",
+     "do": "sticker_pulse",
+     "id": "st_book"
+    },
+    {
+     "at": "@@published+0.2",
+     "do": "fact_in",
+     "id": "f3",
+     "until": "@.end"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_book"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "paris"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Laennec died at 45 of tuberculosis, the disease his own instrument diagnosed best.",
+    "cues": {
+     "died": "died",
+     "tuberculosis": "tuberculosis",
+     "best": "best"
+    }
+   },
+   "direction": "drift west to Brittany; the Quimper pin and tag on 'died'; a lungs sticker on 'tuberculosis'; the British flag-ball thinks; France pulses on 'best'",
+   "energy": 3,
+   "tone": "somber",
+   "pause_after": 0.8,
+   "cam": [
+    1.1,
+    [
+     -1.0,
+     47.8
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.2,
+    [
+     -0.6,
+     47.6
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@died",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "quimper"
+     }
+    },
+    {
+     "at": "@@tuberculosis",
+     "do": "sticker_in",
+     "id": "st_lungs"
+    },
+    {
+     "at": "@@tuberculosis+0.4",
+     "do": "sticker_pulse",
+     "id": "st_lungs"
+    },
+    {
+     "at": "@@tuberculosis+0.3",
+     "do": "character_in",
+     "id": "gb_think"
+    },
+    {
+     "at": "@@best",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "250",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@best+0.3",
+     "do": "sticker_pulse",
+     "id": "st_lungs"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_lungs"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "gb_think"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "quimper"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_ear",
+   "type": "sticker",
+   "emoji": "1f442",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_blush",
+   "type": "sticker",
+   "emoji": "1f633",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_heart",
+   "type": "sticker",
+   "emoji": "1fac0",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_steth",
+   "type": "sticker",
+   "emoji": "1fa7a",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 8
+  },
+  {
+   "id": "st_book",
+   "type": "sticker",
+   "emoji": "1f4d6",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_lungs",
+   "type": "sticker",
+   "emoji": "1fac1",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "grin",
+   "type": "character",
+   "flag": "fr",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "gb_think",
+   "type": "character",
+   "flag": "gb",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  }
+ ]
+}

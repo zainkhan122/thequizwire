@@ -1,0 +1,139 @@
+{
+ "id": "ep26-longest-coastline-canada",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 26,
+ "title": "Which country has the LONGEST coastline?",
+ "difficulty": "EASY",
+ "seed": 3626,
+ "quiz": {
+  "question": "Which country has the LONGEST coastline?",
+  "keyword": "LONGEST",
+  "options": [
+   "Russia",
+   "Indonesia",
+   "Canada"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Canada",
+  "answer_sub": "202,080 km",
+  "option_meta": [
+   {
+    "flag": "ru"
+   },
+   {
+    "flag": "id"
+   },
+   {
+    "flag": "ca"
+   }
+  ],
+  "banner": "Canada",
+  "banner_sub": "✓  C was right · 202,080 km",
+  "outro": {
+   "headline": "CHALLENGE A FRIEND",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country has the LONGEST coastline? 🌊",
+  "premise": "The longest coast on Earth is mostly frozen and mostly empty",
+  "bait": "Russia, Indonesia or Canada — which did you pick? 👇",
+  "keywords": [
+   "which country has the longest coastline",
+   "longest coastline in the world",
+   "coastline by country",
+   "canada coastline",
+   "indonesia islands",
+   "geography quiz",
+   "world map facts",
+   "arctic archipelago"
+  ],
+  "description": "The longest coast on Earth is mostly frozen and mostly empty. Russia, Indonesia or Canada — which did you pick? 👇\n\nSources: CIA World Factbook; Statistics Canada; Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #26",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "GeographyQuiz",
+   "Coastline"
+  ],
+  "cover_emoji": "🌊",
+  "cover_emoji_why": "a wave is the topic word (coastline); all three options are coastal nations, the icon favours none",
+  "copy": {
+   "spoilers": [
+    "canada",
+    "canadian",
+    "202,080",
+    "202080",
+    "52,455",
+    "arctic archipelago"
+   ],
+   "youtube": {
+    "title": "Which country has the longest coastline? It would take 27 years to walk 🌊",
+    "description": "Russia, Indonesia or the third one? One nation's shoreline runs more than 200,000 km along three oceans — nearly four times the runner-up — and most of it is frozen for much of the year. Walk it at 20 km a day and you would need almost three decades.\nGuess before the map lights up, then see the comparison, the island count, and how long the walk would take.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#coastline",
+     "#worldmap",
+     "#geography",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country has the LONGEST coastline? 🌊\nRussia, Indonesia or the other one? One shoreline runs more than 200,000 km along three oceans, nearly four times the runner-up, and most of it is frozen for much of the year.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#coastline",
+     "#worldmap",
+     "#geography",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country has the longest coastline — Russia, Indonesia or Canada?\nOne shoreline runs more than 200,000 km along three oceans, nearly four times the runner-up, and walking it would take almost three decades. Pick your flag before the map lights up.",
+    "tags": [
+     "#coastline",
+     "#geographyquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which country has the LONGEST coastline?\nRussia, Indonesia or Canada? One shoreline runs more than 200,000 km along three oceans — a 27-year walk.",
+    "tags": [
+     "#Geography",
+     "#MapQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which country has the longest coastline — Russia, Indonesia or Canada? One nation's shoreline runs more than 200,000 km along three oceans, nearly four times the runner-up, and most of it is frozen for much of the year. Walking it would take almost three decades.",
+    "tags": [
+     "#coastline"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "night-lights",
+  "reveal": "flag-lift",
+  "beats": [
+   "compare",
+   "counter",
+   "label",
+   "scalebar"
+  ],
+  "cast": "flagball:ca + emoji-set:sea",
+  "music": "bed:bright"
+ },
+ "status": "ready"
+}

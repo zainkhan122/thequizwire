@@ -1,0 +1,162 @@
+{
+ "version": 1,
+ "episode": "ep20-most-rugby-world-cups-south-africa",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -25,
+     -40,
+     45,
+     55
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "710"
+     ],
+     "cls": "",
+     "note": "South Africa"
+    },
+    {
+     "kind": "route",
+     "id": "flight",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "to_paris",
+        "properties": {
+         "name": "Johannesburg to Paris"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           28.06,
+           -26.2
+          ],
+          [
+           24,
+           -14
+          ],
+          [
+           18,
+           -2
+          ],
+          [
+           12,
+           10
+          ],
+          [
+           8,
+           24
+          ],
+          [
+           4,
+           38
+          ],
+          [
+           2.36,
+           48.92
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic line from the 1995 final to the 2023 final"
+    }
+   ],
+   "pins": [
+    {
+     "id": "johannesburg",
+     "lonlat": [
+      28.06,
+      -26.2
+     ],
+     "label": "Johannesburg",
+     "side": "left"
+    },
+    {
+     "id": "paris",
+     "lonlat": [
+      2.36,
+      48.92
+     ],
+     "label": "Paris",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "za",
+     "lonlat": [
+      33.5,
+      -33.5
+     ],
+     "text": "South Africa · 4 titles",
+     "cls": "tag",
+     "in": "s04@times",
+     "out": "s05"
+    },
+    {
+     "id": "jhb",
+     "lonlat": [
+      33.0,
+      -24.0
+     ],
+     "text": "Ellis Park · 1995",
+     "cls": "tag",
+     "in": "s06@johannesburg+0.3",
+     "out": "s07"
+    },
+    {
+     "id": "par",
+     "lonlat": [
+      8.0,
+      46.0
+     ],
+     "text": "Paris · 2023 final",
+     "cls": "tag",
+     "in": "s07@paris+0.3",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -60,
+      -60,
+      80,
+      75
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

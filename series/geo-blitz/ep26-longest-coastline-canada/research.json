@@ -1,0 +1,185 @@
+{
+ "version": 1,
+ "episode": "ep26-longest-coastline-canada",
+ "topic": "Longest coastline: Canada 202,080 km (CIA World Factbook), Indonesia 54,716 km, Russia 37,653 km; Canada has 52,455 islands (Statistics Canada); Pacific, Arctic and Atlantic coasts.",
+ "researched": "2026-11-07",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Russia has the longest coastline because it is the biggest country.",
+   "reality": "Russia's coastline is about 37,653 km; Canada's is 202,080 km, more than five times longer, because of its Arctic archipelago.",
+   "sources": [
+    "cia_coast",
+    "britannica_canada"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Feed clips say 'Canada' as a one-liner; nobody draws the three coastlines against each other, counts the islands and times the walk on a moving map.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=which+country+has+the+longest+coastline",
+    "title": "Search: which country has the longest coastline",
+    "angle": "one-line answer clips",
+    "misses": "no comparison"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=canada+arctic+archipelago",
+    "title": "Search: canada arctic archipelago",
+    "angle": "documentaries",
+    "misses": "no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if geography",
+    "misses": "no sourced data"
+   }
+  ]
+ },
+ "sources": {
+  "cia_coast": {
+   "type": "primary",
+   "publisher": "CIA World Factbook",
+   "title": "Field listing — Coastline",
+   "url": "https://www.cia.gov/the-world-factbook/field/coastline/",
+   "date": "2026-11-07",
+   "notes": "Canada 202,080 km; Indonesia 54,716 km; Russia 37,653 km"
+  },
+  "statcan_islands": {
+   "type": "primary",
+   "publisher": "Statistics Canada",
+   "title": "Geography — Canada Year Book 2012",
+   "url": "https://www150.statcan.gc.ca/n1/pub/11-402-x/2012000/chap/geo/geo-eng.htm",
+   "date": "2026-11-07",
+   "notes": "Canada has 52,455 islands; coastline of 243,042 km including islands (NRCan figure); borders the Pacific, Arctic and Atlantic oceans"
+  },
+  "britannica_canada": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Canada — land",
+   "url": "https://www.britannica.com/place/Canada",
+   "date": "2026-11-07",
+   "notes": "the world's longest coastline; Pacific, Arctic and Atlantic oceans; Arctic Archipelago ice-bound most of the year"
+  },
+  "britannica_indonesia": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Indonesia",
+   "url": "https://www.britannica.com/place/Indonesia",
+   "date": "2026-11-07",
+   "notes": "archipelago of more than 17,000 islands"
+  },
+  "nrcan_coast": {
+   "type": "primary",
+   "publisher": "Natural Resources Canada",
+   "title": "The Atlas of Canada — Coastline and shoreline",
+   "url": "https://natural-resources.canada.ca/maps-tools-and-publications/maps/atlas-canada",
+   "date": "2026-11-07",
+   "notes": "Canada's coastline is the longest in the world; much of the Arctic coast is ice-covered for most of the year"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Canada has the longest coastline of any country: 202,080 km on the Pacific, Arctic and Atlantic oceans.",
+   "sources": [
+    "cia_coast",
+    "britannica_canada",
+    "nrcan_coast"
+   ],
+   "vo": [
+    "which country has the longest coastline",
+    "russia, indonesia, or canada",
+    "canada. 202,080 kilometres of coastline, on 3 oceans: the pacific, the arctic and the atlantic",
+    "oceans on every side. follow us"
+   ],
+   "screen": [
+    "Canada",
+    "Russia",
+    "Indonesia",
+    "202,080 KM",
+    "of coastline on 3 oceans",
+    "Canada · 202,080 km",
+    "202,080 km"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Indonesia, an archipelago of more than 17,000 islands, has about 54,716 km of coastline; Russia about 37,653 km.",
+   "sources": [
+    "cia_coast",
+    "britannica_indonesia"
+   ],
+   "vo": [
+    "indonesia, with 17,000 islands, has about 55,000 kilometres. russia, the widest country, under 38,000"
+   ],
+   "screen": [
+    "54,716 km",
+    "37,653 km"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Canada has 52,455 islands; most of its coast is Arctic and ice-bound for much of the year.",
+   "sources": [
+    "statcan_islands",
+    "britannica_canada",
+    "nrcan_coast"
+   ],
+   "vo": [
+    "most of canada's coast is arctic: 52,455 islands, many of them locked in ice for much of the year"
+   ],
+   "screen": [
+    "52,455",
+    "islands in Canada",
+    "Arctic coast · ice-bound most of the year"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "At 20 km a day, walking 202,080 km would take about 10,100 days — nearly 28 years.",
+   "sources": [
+    "cia_coast",
+    "britannica_canada"
+   ],
+   "vo": [
+    "walk it at 20 kilometres a day and the full trip takes nearly 28 years. nobody ever has"
+   ],
+   "screen": [
+    "28 YEARS",
+    "to walk it at 20 km a day"
+   ]
+  }
+ ]
+}

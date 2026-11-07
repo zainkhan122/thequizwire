@@ -1,0 +1,94 @@
+{
+ "version": 1,
+ "episode": "ep26-longest-coastline-canada",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -142,
+     41,
+     -50,
+     84
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "124"
+     ],
+     "cls": "",
+     "note": "Canada",
+     "lift": "flag",
+     "flag": "ca"
+    }
+   ],
+   "pins": [],
+   "labels": [
+    {
+     "id": "ca",
+     "lonlat": [
+      -100,
+      52
+     ],
+     "text": "Canada · 202,080 km",
+     "cls": "tag",
+     "in": "s04@oceans",
+     "out": "s05"
+    },
+    {
+     "id": "arc",
+     "lonlat": [
+      -95,
+      76
+     ],
+     "text": "Arctic coast · ice-bound most of the year",
+     "cls": "tag",
+     "in": "s06@ice+0.2",
+     "out": "s06.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "night",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -175,
+      20,
+      -20,
+      88
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 1000,
+    "lonlat": [
+     -138,
+     44
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,140 @@
+{
+ "id": "ep11-stethoscope-invented-paris-laennec",
+ "format": "quiz-v3",
+ "series": "body-brain",
+ "number": 11,
+ "title": "Where was the stethoscope INVENTED?",
+ "difficulty": "MEDIUM",
+ "seed": 3411,
+ "quiz": {
+  "question": "Where was the stethoscope INVENTED?",
+  "keyword": "INVENTED",
+  "options": [
+   "Germany",
+   "England",
+   "France"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "France",
+  "answer_sub": "Paris · 1816",
+  "option_meta": [
+   {
+    "flag": "de"
+   },
+   {
+    "flag": "gb"
+   },
+   {
+    "flag": "fr"
+   }
+  ],
+  "banner": "France",
+  "banner_sub": "✓  C was right · Paris · 1816",
+  "outro": {
+   "headline": "1 FOR 1?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Where was the stethoscope INVENTED? 🩺",
+  "premise": "A shy doctor, a female patient and a rolled-up sheet of paper",
+  "bait": "Germany, England or France — which did you pick? 👇",
+  "keywords": [
+   "who invented the stethoscope",
+   "stethoscope history",
+   "laennec stethoscope",
+   "first stethoscope 1816",
+   "medical history",
+   "health quiz",
+   "human body facts",
+   "how the stethoscope was invented"
+  ],
+  "description": "A shy doctor, a female patient and a rolled-up sheet of paper. Germany, England or France — which did you pick? 👇\n\nSources: Britannica; Clinical Medicine & Research (Roguin 2006); Science Museum Group.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nBody & Brain #11",
+  "hashtags": [
+   "#BodyFacts",
+   "#BrainQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "MedicalHistory",
+   "HealthQuiz"
+  ],
+  "cover_emoji": "🩺",
+  "cover_emoji_why": "the stethoscope is the topic word of the question; all three options are countries, the icon favours none",
+  "copy": {
+   "spoilers": [
+    "france",
+    "french",
+    "paris",
+    "laennec",
+    "necker",
+    "1816",
+    "quimper"
+   ],
+   "youtube": {
+    "title": "Who invented the stethoscope? A shy doctor and a sheet of paper 🩺",
+    "description": "Germany, England or the third one? Two centuries ago doctors listened to a heart by pressing an ear to the chest. One young physician, embarrassed in front of a female patient, rolled a sheet of paper into a tube — and heard the heartbeat more clearly than ever. He named it from the Greek, wrote the book, and died of the very disease his tube diagnosed best.\nGuess before the map lights up, then see the hospital, the old method wiped away, and the two dates that made the instrument.\nWhich did you pick?",
+    "tags": [
+     "#medicalhistory",
+     "#healthquiz",
+     "#stethoscope",
+     "#doctors",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Where was the stethoscope INVENTED? 🩺\nGermany, England or the other one? Doctors used to press an ear to the chest — until one shy physician rolled a sheet of paper into a tube and heard the heartbeat more clearly than ever.\nWhich did you pick?",
+    "tags": [
+     "#medicalhistory",
+     "#healthquiz",
+     "#stethoscope",
+     "#doctors",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Where was the stethoscope invented — Germany, England or France?\nDoctors used to press an ear to the chest, until one shy physician rolled a sheet of paper into a tube and heard a heartbeat more clearly than ever. Choose your flag before the map lights up.",
+    "tags": [
+     "#stethoscope",
+     "#medicalhistory"
+    ]
+   },
+   "twitter": {
+    "text": "Where was the stethoscope INVENTED?\nGermany, England or France? A shy doctor, a female patient and a rolled-up sheet of paper — that is how it began.",
+    "tags": [
+     "#MedicalHistory",
+     "#Stethoscope"
+    ]
+   },
+   "threads": {
+    "text": "Where was the stethoscope invented — Germany, England or France? Two centuries ago doctors pressed an ear to the chest, until one shy young physician, embarrassed in front of a female patient, rolled a sheet of paper into a tube and heard the heartbeat more clearly than ever.",
+    "tags": [
+     "#stethoscope"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "pin",
+   "erase",
+   "split",
+   "label"
+  ],
+  "cast": "flagball:fr + emoji-set:medicine",
+  "music": "bed:warm"
+ },
+ "status": "ready"
+}

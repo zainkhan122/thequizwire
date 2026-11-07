@@ -1,0 +1,191 @@
+{
+ "version": 1,
+ "episode": "ep20-most-rugby-world-cups-south-africa",
+ "topic": "Most Rugby World Cup titles: South Africa 4 (1995, 2007, 2019, 2023); New Zealand 3 (1987, 2011, 2015); Australia 2 (1991, 1999); England 1 (2003). 1995 final at Ellis Park, Johannesburg; 2023 final at Stade de France, Saint-Denis, Paris: South Africa 12–11 New Zealand.",
+ "researched": "2026-11-07",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "New Zealand has won the most Rugby World Cups because the All Blacks are the dominant team.",
+   "reality": "South Africa has four titles to New Zealand's three after beating the All Blacks 12–11 in the 2023 final.",
+   "sources": [
+    "worldrugby",
+    "britannica_rwc",
+    "bbc_2023"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Feed clips list the winners as text; nobody builds the table, pins Ellis Park 1995 and then flies the ball to the one-point final in Paris on a moving map.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=most+rugby+world+cups",
+    "title": "Search: most rugby world cups",
+    "angle": "list clips",
+    "misses": "no map"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=1995+rugby+world+cup+final+mandela",
+    "title": "Search: 1995 rugby world cup final mandela",
+    "angle": "archive footage",
+    "misses": "no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if facts",
+    "misses": "no sourced data"
+   }
+  ]
+ },
+ "sources": {
+  "worldrugby": {
+   "type": "primary",
+   "publisher": "World Rugby",
+   "title": "Rugby World Cup — past tournaments and winners",
+   "url": "https://www.rugbyworldcup.com/2023/past-tournaments",
+   "date": "2026-11-07",
+   "notes": "winners: 1987 NZ, 1991 AUS, 1995 RSA, 1999 AUS, 2003 ENG, 2007 RSA, 2011 NZ, 2015 NZ, 2019 RSA, 2023 RSA; 2023 final RSA 12–11 NZ at Stade de France"
+  },
+  "britannica_rwc": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Rugby World Cup",
+   "url": "https://www.britannica.com/sports/Rugby-World-Cup",
+   "date": "2026-11-07",
+   "notes": "South Africa four titles, New Zealand three, Australia two, England one; 1995 tournament hosted and won by South Africa a year after the end of apartheid"
+  },
+  "bbc_2023": {
+   "type": "reference",
+   "publisher": "BBC Sport",
+   "title": "Rugby World Cup final: New Zealand 11-12 South Africa",
+   "url": "https://www.bbc.com/sport/rugby-union/67241836",
+   "date": "2026-11-07",
+   "notes": "South Africa beat New Zealand 12-11 in Paris on 28 October 2023 to win a record fourth Rugby World Cup"
+  },
+  "mandela_found": {
+   "type": "primary",
+   "publisher": "Nelson Mandela Foundation",
+   "title": "1995 Rugby World Cup — Mandela and the Springbok jersey",
+   "url": "https://www.nelsonmandela.org/content/page/1995-rugby-world-cup",
+   "date": "2026-11-07",
+   "notes": "Mandela presented the trophy to captain Francois Pienaar at Ellis Park, Johannesburg, on 24 June 1995 wearing a Springbok jersey; the 1994 election had ended apartheid"
+  },
+  "britannica_mandela": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Nelson Mandela",
+   "url": "https://www.britannica.com/biography/Nelson-Mandela",
+   "date": "2026-11-07",
+   "notes": "elected president in April 1994 after the end of apartheid; 1995 Rugby World Cup a symbol of reconciliation"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "South Africa has won the most Rugby World Cups: four (1995, 2007, 2019, 2023).",
+   "sources": [
+    "worldrugby",
+    "britannica_rwc",
+    "bbc_2023"
+   ],
+   "vo": [
+    "which nation has the most rugby world cups",
+    "new zealand, australia, or south africa",
+    "south africa. the springboks have lifted the webb ellis cup 4 times, more than any other nation",
+    "4 cups, same jersey. follow us"
+   ],
+   "screen": [
+    "South Africa",
+    "New Zealand",
+    "Australia",
+    "4 TITLES",
+    "1995 · 2007 · 2019 · 2023",
+    "South Africa · 4 titles"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "New Zealand has three titles, Australia two, England one; no other nation has won the tournament.",
+   "sources": [
+    "worldrugby",
+    "britannica_rwc"
+   ],
+   "vo": [
+    "the all blacks of new zealand have 3, australia 2, england a single title. nobody else has"
+   ],
+   "screen": [
+    "England",
+    "4",
+    "3",
+    "2",
+    "1"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "South Africa's first title came at home at Ellis Park, Johannesburg, in 1995, a year after the end of apartheid, with Nelson Mandela presenting the cup in a Springbok jersey.",
+   "sources": [
+    "mandela_found",
+    "britannica_mandela",
+    "britannica_rwc"
+   ],
+   "vo": [
+    "the first came at home in johannesburg in 1995, a year after apartheid ended, nelson mandela in a springbok jersey"
+   ],
+   "screen": [
+    "Johannesburg",
+    "1995",
+    "Mandela hands over the cup",
+    "Ellis Park · 1995"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "South Africa's latest title came in Paris in 2023, beating New Zealand 12–11 in the final.",
+   "sources": [
+    "worldrugby",
+    "bbc_2023"
+   ],
+   "vo": [
+    "the latest came in paris in 2023, by a single point over new zealand"
+   ],
+   "screen": [
+    "Paris",
+    "12–11",
+    "the 2023 final against New Zealand",
+    "Paris · 2023 final"
+   ]
+  }
+ ]
+}

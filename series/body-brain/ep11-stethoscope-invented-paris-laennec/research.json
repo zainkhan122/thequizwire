@@ -1,0 +1,191 @@
+{
+ "version": 1,
+ "episode": "ep11-stethoscope-invented-paris-laennec",
+ "topic": "The stethoscope was invented in France: René Théophile Hyacinthe Laennec, Necker Hospital, Paris, 1816 — a rolled paper cylinder used to hear a young woman's heart; named from Greek stethos (chest) + skopein (to look/examine); published in 'De l'auscultation médiate' (1819); Laennec died of tuberculosis in 1826 aged 45.",
+ "researched": "2026-11-07",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The stethoscope was a British or German invention like much of 19th-century medical kit.",
+   "reality": "Laennec, a French physician, invented it in Paris in 1816 and published it in 1819.",
+   "sources": [
+    "britannica_laennec",
+    "roguin_2006",
+    "sciencemuseum"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Feed clips tell the Laennec anecdote as a talking head; nobody pins the hospital, wipes the ear-to-chest method off the screen and splits the two dates on a moving map.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=who+invented+the+stethoscope",
+    "title": "Search: who invented the stethoscope",
+    "angle": "talking-head history",
+    "misses": "no map, no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=laennec+stethoscope+story",
+    "title": "Search: laennec stethoscope story",
+    "angle": "long explainers",
+    "misses": "no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/@gyanotrick/shorts",
+    "title": "GyanoTrick",
+    "angle": "what-if facts",
+    "misses": "no sourced data"
+   }
+  ]
+ },
+ "sources": {
+  "britannica_laennec": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "René Laennec — French physician",
+   "url": "https://www.britannica.com/biography/Rene-Laennec",
+   "date": "2026-11-07",
+   "notes": "invented the stethoscope in 1816 at the Necker Hospital, Paris; rolled paper cylinder; 'De l'auscultation médiate' 1819; died of tuberculosis 13 August 1826, aged 45"
+  },
+  "roguin_2006": {
+   "type": "scholarly",
+   "publisher": "Clinical Medicine & Research (via PubMed Central)",
+   "title": "Rene Theophile Hyacinthe Laënnec (1781–1826): The Man Behind the Stethoscope — A. Roguin, Clin Med Res 2006;4(3):230–235",
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1570491/",
+   "date": "2026-11-07",
+   "notes": "1816 Necker Hospital; a young woman with heart symptoms; rolled quire of paper; name from Greek stethos + skopein; treatise published 1819; death from tuberculosis 1826"
+  },
+  "sciencemuseum": {
+   "type": "primary",
+   "publisher": "Science Museum Group",
+   "title": "Laennec-type monaural stethoscope",
+   "url": "https://collection.sciencemuseumgroup.org.uk/objects/co134936/laennec-type-monaural-stethoscope",
+   "date": "2026-11-07",
+   "notes": "wooden monaural stethoscope of the type Laennec designed after his paper tube of 1816"
+  },
+  "wiki_laennec": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "René Laennec",
+   "url": "https://en.wikipedia.org/wiki/Ren%C3%A9_Laennec",
+   "date": "2026-11-07",
+   "notes": "born Quimper 1781; invented the stethoscope 1816 at Hôpital Necker; died 1826 of tuberculosis"
+  },
+  "ap_necker": {
+   "type": "primary",
+   "publisher": "Assistance Publique – Hôpitaux de Paris",
+   "title": "Hôpital Necker-Enfants malades — history",
+   "url": "https://www.aphp.fr/contenu/hopital-necker-enfants-malades",
+   "date": "2026-11-07",
+   "notes": "Laennec invented the stethoscope at Necker in 1816"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The stethoscope was invented in France: René Laennec, Necker Hospital, Paris, 1816, from a rolled sheet of paper.",
+   "sources": [
+    "britannica_laennec",
+    "roguin_2006",
+    "ap_necker"
+   ],
+   "vo": [
+    "where was the stethoscope invented",
+    "germany, england, or france",
+    "france. in 1816, at the necker hospital in paris, rené laennec rolled a sheet of paper into a tube",
+    "a paper tube. follow us"
+   ],
+   "screen": [
+    "France",
+    "Germany",
+    "England",
+    "1816",
+    "a rolled sheet of paper · Paris",
+    "Necker Hospital",
+    "Paris · Necker 1816"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Physicians listened by pressing an ear to the chest; Laennec, examining a young woman, found this awkward and used a paper tube, which carried the heart sounds clearly.",
+   "sources": [
+    "roguin_2006",
+    "britannica_laennec"
+   ],
+   "vo": [
+    "doctors pressed an ear to the chest. with a young woman patient laennec found that awkward; the tube carried her heartbeat clearly"
+   ],
+   "screen": [
+    "EAR TO CHEST"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "He named the instrument the stethoscope from the Greek stethos (chest) and skopein (to look/examine) and published his treatise in 1819.",
+   "sources": [
+    "roguin_2006",
+    "britannica_laennec",
+    "wiki_laennec"
+   ],
+   "vo": [
+    "he named it the stethoscope, from the greek for chest and look, and published his findings in 1819"
+   ],
+   "screen": [
+    "STETHOS",
+    "Greek for chest",
+    "SKOPEIN",
+    "Greek for look, examine",
+    "CHEST",
+    "LOOK",
+    "1819",
+    "the book that named it"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Laennec died of tuberculosis in 1826 at the age of 45.",
+   "sources": [
+    "britannica_laennec",
+    "roguin_2006",
+    "wiki_laennec"
+   ],
+   "vo": [
+    "laennec died at 45 of tuberculosis, the disease his own instrument diagnosed best"
+   ],
+   "screen": [
+    "Quimper",
+    "Quimper · 1826"
+   ]
+  }
+ ]
+}

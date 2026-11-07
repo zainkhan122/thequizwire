@@ -1,0 +1,659 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "202,080 KM",
+   "text": "of coastline on 3 oceans"
+  },
+  {
+   "id": "coast",
+   "type": "compare",
+   "items": [
+    [
+     "Canada",
+     202080,
+     "202,080 km"
+    ],
+    [
+     "Indonesia",
+     54716,
+     "54,716 km"
+    ],
+    [
+     "Russia",
+     37653,
+     "37,653 km"
+    ]
+   ],
+   "y": 320,
+   "x": 60,
+   "w": 900,
+   "max_h": 520
+  },
+  {
+   "id": "isl",
+   "type": "counter",
+   "start": 0,
+   "end": 52455,
+   "y": 330,
+   "label": "islands in Canada",
+   "fmt": "int",
+   "size": 170
+  },
+  {
+   "id": "f4",
+   "type": "fact",
+   "kicker": "28 YEARS",
+   "text": "to walk it at 20 km a day"
+  },
+  {
+   "id": "st_island",
+   "type": "sticker",
+   "emoji": "1f3dd",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_snow",
+   "type": "sticker",
+   "emoji": "2744",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 0
+  },
+  {
+   "id": "st_ice",
+   "type": "sticker",
+   "emoji": "1f9ca",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_walk",
+   "type": "sticker",
+   "emoji": "1f6b6",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "ru_think",
+   "type": "character",
+   "flag": "ru",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "grin",
+   "type": "character",
+   "flag": "ca",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  },
+  {
+   "id": "cha",
+   "type": "character",
+   "flag": "ca",
+   "face": "happy",
+   "x": 230,
+   "y": 820,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "chb",
+   "type": "character",
+   "flag": "ru",
+   "face": "think",
+   "x": 850,
+   "y": 1000,
+   "size": 200,
+   "rot": 8
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.45,
+    "lonlat": [
+     -96,
+     60
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.45,
+    "lonlat": [
+     -95,
+     60
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 0.55,
+    "lonlat": [
+     -96,
+     62
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 0.6,
+    "lonlat": [
+     -95,
+     62
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "124",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s04@oceans",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ca"
+   }
+  },
+  {
+   "at": "s05",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ca"
+   }
+  },
+  {
+   "at": "s06@ice+0.2",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "arc"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "arc"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     -98,
+     58
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 0.52,
+    "lonlat": [
+     -97,
+     58.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@indonesia-0.3",
+   "do": "chart.compare_in",
+   "id": "coast",
+   "args": {
+    "dur": 0.9,
+    "stagger": 0.25
+   }
+  },
+  {
+   "at": "s05@indonesia",
+   "do": "sticker_in",
+   "id": "st_island"
+  },
+  {
+   "at": "s05@indonesia+0.4",
+   "do": "sticker_pulse",
+   "id": "st_island"
+  },
+  {
+   "at": "s05@indonesia+0.9",
+   "do": "sticker_pulse",
+   "id": "st_island"
+  },
+  {
+   "at": "s05@russia",
+   "do": "character_in",
+   "id": "ru_think"
+  },
+  {
+   "at": "s05@widest+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "124",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "coast"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_island"
+  },
+  {
+   "at": "s05.end",
+   "do": "character_out",
+   "id": "ru_think"
+  },
+  {
+   "at": "s05@russia+0.5",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "124",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 0.7,
+    "lonlat": [
+     -92,
+     72
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 0.75,
+    "lonlat": [
+     -90,
+     72.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@arctic",
+   "do": "sticker_in",
+   "id": "st_snow"
+  },
+  {
+   "at": "s06@arctic+0.4",
+   "do": "sticker_pulse",
+   "id": "st_snow"
+  },
+  {
+   "at": "s06@arctic+0.9",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "124",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06@islands-0.2",
+   "do": "chart.counter_run",
+   "id": "isl",
+   "until": "s06@islands+1.5",
+   "args": {
+    "steps": 18
+   }
+  },
+  {
+   "at": "s06@islands+0.6",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "124",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06@ice",
+   "do": "sticker_out",
+   "id": "st_snow"
+  },
+  {
+   "at": "s06@ice",
+   "do": "sticker_in",
+   "id": "st_ice"
+  },
+  {
+   "at": "s06@ice+0.4",
+   "do": "sticker_pulse",
+   "id": "st_ice"
+  },
+  {
+   "at": "s06.end",
+   "do": "hide",
+   "id": "isl"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_ice"
+  },
+  {
+   "at": "s06@ice+0.9",
+   "do": "sticker_pulse",
+   "id": "st_ice"
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.5",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     -100,
+     60
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 0.52,
+    "lonlat": [
+     -99,
+     60.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@walk",
+   "do": "sticker_in",
+   "id": "st_walk"
+  },
+  {
+   "at": "s07@walk+0.4",
+   "do": "sticker_pulse",
+   "id": "st_walk"
+  },
+  {
+   "at": "s07@walk+0.9",
+   "do": "sticker_pulse",
+   "id": "st_walk"
+  },
+  {
+   "at": "s07@years",
+   "do": "fact_in",
+   "id": "f4",
+   "until": "s07.end"
+  },
+  {
+   "at": "s07@years+0.3",
+   "do": "character_in",
+   "id": "grin"
+  },
+  {
+   "at": "s07@nobody",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "124",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s07@nobody+0.3",
+   "do": "sticker_pulse",
+   "id": "st_walk"
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_walk"
+  },
+  {
+   "at": "s07.end",
+   "do": "character_out",
+   "id": "grin"
+  },
+  {
+   "at": "s07@years+0.8",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "124",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.45,
+    "lonlat": [
+     -96,
+     60
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04+0.8",
+   "do": "geo.scalebar_in",
+   "stage": "stage_map"
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.6",
+   "do": "character_in",
+   "id": "cha"
+  },
+  {
+   "at": "s04+1.9",
+   "do": "character_in",
+   "id": "chb"
+  },
+  {
+   "at": "s05+1.0",
+   "do": "character_out",
+   "id": "cha"
+  },
+  {
+   "at": "s05+0.8",
+   "do": "character_out",
+   "id": "chb"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

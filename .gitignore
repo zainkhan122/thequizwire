@@ -41,3 +41,4 @@ secrets/
 
 # clip cache index lock (reelkit/clipcache.py)
 reelkit/cache/*.lock
+tools/specs/_gen/
