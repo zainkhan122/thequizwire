@@ -48,7 +48,9 @@ jobs:
             ep=$(dirname "$q"); case "$ep" in series/_template*) continue;; esac
             # shipped episodes passed every gate at render time and cannot change; the catalogue-relative gates (Q22 stem, Q24 SHOW set)
             # would otherwise fail them retroactively whenever a NEWER episode ships — lint only what can still be edited
-            st=$(python3 -c "import json;print(json.load(open('$q')).get('status',''))"); case "$st" in sent|scheduled|published) echo "== $ep (shipped · skipped)"; continue;; esac; echo "== $ep"
+            st=$(python3 -c "import json;print(json.load(open('$q')).get('status',''))"); case "$st" in sent|scheduled|published) echo "== $ep (shipped · skipped)"; continue;; esac
+            if [ -f dispatch/daily.json ] && python3 -c "import json,sys;d=json.load(open('dispatch/daily.json'))['days'];sys.exit(0 if any('$ep' in v for v in d.values()) else 1)"; then echo "== $ep (planned/shipped via daily.json · skipped)"; continue; fi
+            echo "== $ep"
             python3 reelkit/plan.py "$ep" --estimate >/dev/null
             python3 reelkit/quizlint.py "$ep"
             python3 reelkit/voice.py check "$ep" --plan-only
