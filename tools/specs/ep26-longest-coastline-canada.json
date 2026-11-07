@@ -120,7 +120,7 @@
    "longest": "longest"
   },
   "v04": {
-   "text": "Canada. 202,080 kilometres of coastline, on 3 oceans: the Pacific, the Arctic and the Atlantic.",
+   "text": "Canada. Over 200,000 kilometres of coastline on 3 oceans: the Pacific, the Arctic and the Atlantic.",
    "cues": {
     "answer": "canada",
     "oceans": "oceans",
@@ -128,7 +128,7 @@
    }
   },
   "v05": {
-   "text": "Indonesia, with 17,000 islands, has about 55,000 kilometres. Russia, the widest country, under 38,000.",
+   "text": "Indonesia and its 17,000 islands manage barely a quarter of that. Russia, the widest country, even less.",
    "cues": {
     "indonesia": "indonesia",
     "russia": "russia",
@@ -136,7 +136,7 @@
    }
   },
   "v06": {
-   "text": "Most of Canada's coast is Arctic: 52,455 islands, many of them locked in ice for much of the year.",
+   "text": "Most of it is Arctic, with over 52,000 islands, many of them locked in ice for most of the year.",
    "cues": {
     "arctic": "arctic",
     "islands": "islands",
@@ -144,7 +144,7 @@
    }
   },
   "v07": {
-   "text": "Walk it at 20 kilometres a day and the full trip takes nearly 28 years. Nobody ever has.",
+   "text": "Walk 20 kilometres a day and the trip takes nearly 28 years. Nobody ever has.",
    "cues": {
     "walk": "walk",
     "years": "years",
@@ -266,7 +266,7 @@
     "vo": [
      "which country has the longest coastline",
      "russia, indonesia, or canada",
-     "canada. 202,080 kilometres of coastline, on 3 oceans: the pacific, the arctic and the atlantic",
+     "canada. over 200,000 kilometres of coastline on 3 oceans: the pacific, the arctic and the atlantic",
      "oceans on every side. follow us"
     ],
     "screen": [
@@ -288,7 +288,7 @@
      "britannica_indonesia"
     ],
     "vo": [
-     "indonesia, with 17,000 islands, has about 55,000 kilometres. russia, the widest country, under 38,000"
+     "indonesia and its 17,000 islands manage barely a quarter of that. russia, the widest country, even less"
     ],
     "screen": [
      "54,716 km",
@@ -305,10 +305,9 @@
      "nrcan_coast"
     ],
     "vo": [
-     "most of canada's coast is arctic: 52,455 islands, many of them locked in ice for much of the year"
+     "most of it is arctic, with over 52,000 islands, many of them locked in ice for most of the year"
     ],
     "screen": [
-     "52,455",
      "islands in Canada",
      "Arctic coast · ice-bound most of the year"
     ]
@@ -322,7 +321,7 @@
      "britannica_canada"
     ],
     "vo": [
-     "walk it at 20 kilometres a day and the full trip takes nearly 28 years. nobody ever has"
+     "walk 20 kilometres a day and the trip takes nearly 28 years. nobody ever has"
     ],
     "screen": [
      "28 YEARS",
@@ -460,7 +459,7 @@
  "story": [
   {
    "vo": {
-    "text": "Indonesia, with 17,000 islands, has about 55,000 kilometres. Russia, the widest country, under 38,000.",
+    "text": "Indonesia and its 17,000 islands manage barely a quarter of that. Russia, the widest country, even less.",
     "cues": {
      "indonesia": "indonesia",
      "russia": "russia",
@@ -470,7 +469,7 @@
    "direction": "ease back so all of Canada sits in frame; the three coastline columns rise on 'Indonesia' with Canada towering; an island sticker; the Russian flag-ball thinks on 'Russia'; Canada pulses on 'widest'",
    "energy": 4,
    "tone": "resolute",
-   "pause_after": 0.5,
+   "pause_after": 0.35,
    "cam": [
     0.5,
     [
@@ -578,12 +577,17 @@
       "dur": 0.7,
       "layer": "hl"
      }
+    },
+    {
+     "at": "@@widest+0.5",
+     "do": "sticker_pulse",
+     "id": "st_island"
     }
    ]
   },
   {
    "vo": {
-    "text": "Most of Canada's coast is Arctic: 52,455 islands, many of them locked in ice for much of the year.",
+    "text": "Most of it is Arctic, with over 52,000 islands, many of them locked in ice for most of the year.",
     "cues": {
      "arctic": "arctic",
      "islands": "islands",
@@ -593,7 +597,7 @@
    "direction": "drift north over the Arctic Archipelago; a snowflake on 'Arctic'; the island counter runs to 52,455 on 'islands'; an ice sticker and the Arctic tag on 'ice'",
    "energy": 3,
    "tone": "revelatory",
-   "pause_after": 0.5,
+   "pause_after": 0.45,
    "cam": [
     0.7,
     [
@@ -691,12 +695,22 @@
      "at": "@@ice+0.9",
      "do": "sticker_pulse",
      "id": "st_ice"
+    },
+    {
+     "at": "@@islands+0.6",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "124",
+      "dur": 0.6,
+      "layer": "hl"
+     }
     }
    ]
   },
   {
    "vo": {
-    "text": "Walk it at 20 kilometres a day and the full trip takes nearly 28 years. Nobody ever has.",
+    "text": "Walk 20 kilometres a day and the trip takes nearly 28 years. Nobody ever has.",
     "cues": {
      "walk": "walk",
      "years": "years",
@@ -706,7 +720,7 @@
    "direction": "pull back to the whole country; a walking sticker on 'walk'; the 28 YEARS card on 'years'; the Canadian flag-ball grins; Canada pulses on 'nobody'",
    "energy": 3,
    "tone": "revelatory",
-   "pause_after": 0.6,
+   "pause_after": 0.45,
    "card": {
     "kicker": "28 YEARS",
     "text": "to walk it at 20 km a day"

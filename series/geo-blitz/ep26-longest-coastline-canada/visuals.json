@@ -364,6 +364,11 @@
    }
   },
   {
+   "at": "s05@widest+0.5",
+   "do": "sticker_pulse",
+   "id": "st_island"
+  },
+  {
    "at": "s06",
    "do": "geo.cam_to",
    "stage": "stage_map",
@@ -459,6 +464,16 @@
    "at": "s06@ice+0.9",
    "do": "sticker_pulse",
    "id": "st_ice"
+  },
+  {
+   "at": "s06@islands+0.6",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "124",
+    "dur": 0.6,
+    "layer": "hl"
+   }
   },
   {
    "at": "s07",
@@ -572,7 +587,7 @@
    }
   },
   {
-   "at": "s04+0.8",
+   "at": "s04+1.7",
    "do": "geo.scalebar_in",
    "stage": "stage_map"
   },
