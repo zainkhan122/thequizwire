@@ -133,7 +133,7 @@
    }
   },
   "v05": {
-   "text": "Egypt has about 138. Sudan's are steeper and slimmer, up to 30 metres, and most stand at Meroe.",
+   "text": "Egypt has about 138. Sudan's are steeper and slimmer at up to 30 metres and most of them stand at Meroe.",
    "cues": {
     "egypt": "egypt",
     "steeper": "steeper",
@@ -141,7 +141,7 @@
    }
   },
   "v06": {
-   "text": "Kush was no copycat. From 744 BC its kings ruled Egypt itself as pharaohs, for nearly a century.",
+   "text": "Kush was no copycat. From 744 BC its kings ruled Egypt itself as pharaohs for nearly a century.",
    "cues": {
     "copycat": "copycat",
     "ruled": "ruled",
@@ -149,7 +149,7 @@
    }
   },
   "v07": {
-   "text": "Meroe lies 200 kilometres north of Khartoum, and 1600 kilometres up the Nile from Giza.",
+   "text": "Meroe lies 200 kilometres north of Khartoum and 1600 kilometres up the Nile from Giza.",
    "cues": {
     "khartoum": "khartoum",
     "giza": "giza",
@@ -335,7 +335,7 @@
      "natgeo_sudan"
     ],
     "vo": [
-     "egypt has about 138. sudan's are steeper and slimmer, up to 30 metres, and most stand at meroe"
+     "egypt has about 138. sudan's are steeper and slimmer at up to 30 metres and most of them stand at meroe"
     ],
     "screen": [
      "138",
@@ -353,7 +353,7 @@
      "unesco_meroe"
     ],
     "vo": [
-     "kush was no copycat. from 744 bc its kings ruled egypt itself as pharaohs, for nearly a century"
+     "kush was no copycat. from 744 bc its kings ruled egypt itself as pharaohs for nearly a century"
     ],
     "screen": [
      "744 BC",
@@ -369,7 +369,7 @@
      "britannica_pyramid"
     ],
     "vo": [
-     "meroe lies 200 kilometres north of khartoum, and 1600 kilometres up the nile from giza"
+     "meroe lies 200 kilometres north of khartoum and 1600 kilometres up the nile from giza"
     ],
     "screen": [
      "Khartoum",
@@ -659,7 +659,7 @@
  "story": [
   {
    "vo": {
-    "text": "Egypt has about 138. Sudan's are steeper and slimmer, up to 30 metres, and most stand at Meroe.",
+    "text": "Egypt has about 138. Sudan's are steeper and slimmer at up to 30 metres and most of them stand at Meroe.",
     "cues": {
      "egypt": "egypt",
      "steeper": "steeper",
@@ -669,7 +669,7 @@
    "direction": "tighten on Sudan; the Egypt counter runs to 138 on 'Egypt' while the Egyptian flag-ball thinks; a pyramid sticker on 'steeper'; the Meroe pin and tag drop on 'Meroe'",
    "energy": 4,
    "tone": "resolute",
-   "pause_after": 0.5,
+   "pause_after": 0.35,
    "cam": [
     1.3,
     [
@@ -765,7 +765,7 @@
   },
   {
    "vo": {
-    "text": "Kush was no copycat. From 744 BC its kings ruled Egypt itself as pharaohs, for nearly a century.",
+    "text": "Kush was no copycat. From 744 BC its kings ruled Egypt itself as pharaohs for nearly a century.",
     "cues": {
      "copycat": "copycat",
      "ruled": "ruled",
@@ -775,7 +775,7 @@
    "direction": "ease north so Sudan and Egypt share the frame; a crown sticker on 'copycat'; the 744 BC card on 'ruled'; Sudan pulses on 'century'; the Sudanese flag-ball grins",
    "energy": 4,
    "tone": "revelatory",
-   "pause_after": 0.5,
+   "pause_after": 0.45,
    "card": {
     "kicker": "744 BC",
     "text": "Kushite kings rule Egypt as pharaohs"
@@ -848,7 +848,7 @@
   },
   {
    "vo": {
-    "text": "Meroe lies 200 kilometres north of Khartoum, and 1600 kilometres up the Nile from Giza.",
+    "text": "Meroe lies 200 kilometres north of Khartoum and 1600 kilometres up the Nile from Giza.",
     "cues": {
      "khartoum": "khartoum",
      "giza": "giza",
@@ -858,7 +858,7 @@
    "direction": "pull out to the whole Nile; the Khartoum pin on 'Khartoum'; a camel sticker travels the river line from Meroe to Giza until 'Giza'; the Giza pin and tag land; the river sticker pulses at the end",
    "energy": 3,
    "tone": "revelatory",
-   "pause_after": 0.6,
+   "pause_after": 0.45,
    "cam": [
     0.7,
     [
