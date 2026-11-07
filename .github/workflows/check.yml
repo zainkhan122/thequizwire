@@ -45,7 +45,10 @@ jobs:
         run: |
           set -e
           for q in $(git ls-files 'series/*/*/episode.json'); do
-            ep=$(dirname "$q"); case "$ep" in series/_template) continue;; esac; echo "== $ep"
+            ep=$(dirname "$q"); case "$ep" in series/_template*) continue;; esac
+            # shipped episodes passed every gate at render time and cannot change; the catalogue-relative gates (Q22 stem, Q24 SHOW set)
+            # would otherwise fail them retroactively whenever a NEWER episode ships — lint only what can still be edited
+            st=$(python3 -c "import json;print(json.load(open('$q')).get('status',''))"); case "$st" in sent|scheduled|published) echo "== $ep (shipped · skipped)"; continue;; esac; echo "== $ep"
             python3 reelkit/plan.py "$ep" --estimate >/dev/null
             python3 reelkit/quizlint.py "$ep"
             python3 reelkit/voice.py check "$ep" --plan-only
