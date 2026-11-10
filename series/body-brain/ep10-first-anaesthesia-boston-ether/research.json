@@ -2,7 +2,7 @@
  "version": 1,
  "episode": "ep10-first-anaesthesia-boston-ether",
  "topic": "First surgery under anaesthesia: the USA — the first public demonstration of ether anaesthesia at Massachusetts General Hospital, Boston, 16 October 1846 (Morton/Warren/Abbott); Crawford Long's earlier unpublished use in Jefferson, Georgia, 30 March 1842; Liston's first ether operation in London, 21 December 1846.",
- "researched": "2026-11-07",
+ "researched": "2026-11-10",
  "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
  "myths": [
   {
@@ -135,7 +135,7 @@
    "vo": [
     "where was the first surgery under anaesthesia",
     "england, france, or usa",
-    "the usa. on 16 october 1846, at massachusetts general hospital in boston, a dentist put a patient to sleep with ether",
+    "the usa. on 16 october 1846 at massachusetts general in boston a dentist put a patient to sleep with ether",
     "pain, switched off. follow us"
    ],
    "screen": [
@@ -157,7 +157,7 @@
     "mgh_etherdome"
    ],
    "vo": [
-    "morton held the sponge; surgeon john warren cut a tumour from gilbert abbott's neck. he felt nothing"
+    "morton held the sponge; john warren cut a tumour from gilbert abbott's neck. he felt nothing"
    ],
    "screen": [
     "NO PAIN",
@@ -176,7 +176,7 @@
     "lindahall"
    ],
    "vo": [
-    "but crawford long of jefferson, georgia had done it 4 years earlier, in 1842, unpublished"
+    "but crawford long of jefferson, georgia had done it 4 years earlier, unpublished"
    ],
    "screen": [
     "1842",
@@ -195,7 +195,7 @@
     "britannica_anes"
    ],
    "vo": [
-    "within 2 months the news reached london, where robert liston amputated a leg under ether that december"
+    "within 2 months london heard, and robert liston amputated a leg under ether that december"
    ],
    "screen": [
     "London",

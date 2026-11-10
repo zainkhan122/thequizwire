@@ -127,7 +127,7 @@
    "first": "first"
   },
   "v04": {
-   "text": "The USA. On 16 October 1846, at Massachusetts General Hospital in Boston, a dentist put a patient to sleep with ether.",
+   "text": "The USA. On 16 October 1846 at Massachusetts General in Boston a dentist put a patient to sleep with ether.",
    "cues": {
     "answer": "usa",
     "boston": "boston",
@@ -135,7 +135,7 @@
    }
   },
   "v05": {
-   "text": "Morton held the sponge; surgeon John Warren cut a tumour from Gilbert Abbott's neck. He felt nothing.",
+   "text": "Morton held the sponge; John Warren cut a tumour from Gilbert Abbott's neck. He felt nothing.",
    "cues": {
     "morton": "morton",
     "warren": "warren",
@@ -143,7 +143,7 @@
    }
   },
   "v06": {
-   "text": "But Crawford Long of Jefferson, Georgia had done it 4 years earlier, in 1842, unpublished.",
+   "text": "But Crawford Long of Jefferson, Georgia had done it 4 years earlier, unpublished.",
    "cues": {
     "jefferson": "jefferson",
     "earlier": "earlier",
@@ -151,7 +151,7 @@
    }
   },
   "v07": {
-   "text": "Within 2 months the news reached London, where Robert Liston amputated a leg under ether that December.",
+   "text": "Within 2 months London heard, and Robert Liston amputated a leg under ether that December.",
    "cues": {
     "months": "months",
     "london": "london",
@@ -290,7 +290,7 @@
     "vo": [
      "where was the first surgery under anaesthesia",
      "england, france, or usa",
-     "the usa. on 16 october 1846, at massachusetts general hospital in boston, a dentist put a patient to sleep with ether",
+     "the usa. on 16 october 1846 at massachusetts general in boston a dentist put a patient to sleep with ether",
      "pain, switched off. follow us"
     ],
     "screen": [
@@ -312,7 +312,7 @@
      "mgh_etherdome"
     ],
     "vo": [
-     "morton held the sponge; surgeon john warren cut a tumour from gilbert abbott's neck. he felt nothing"
+     "morton held the sponge; john warren cut a tumour from gilbert abbott's neck. he felt nothing"
     ],
     "screen": [
      "NO PAIN",
@@ -331,7 +331,7 @@
      "lindahall"
     ],
     "vo": [
-     "but crawford long of jefferson, georgia had done it 4 years earlier, in 1842, unpublished"
+     "but crawford long of jefferson, georgia had done it 4 years earlier, unpublished"
     ],
     "screen": [
      "1842",
@@ -350,7 +350,7 @@
      "britannica_anes"
     ],
     "vo": [
-     "within 2 months the news reached london, where robert liston amputated a leg under ether that december"
+     "within 2 months london heard, and robert liston amputated a leg under ether that december"
     ],
     "screen": [
      "London",
@@ -560,7 +560,7 @@
  "story": [
   {
    "vo": {
-    "text": "Morton held the sponge; surgeon John Warren cut a tumour from Gilbert Abbott's neck. He felt nothing.",
+    "text": "Morton held the sponge; John Warren cut a tumour from Gilbert Abbott's neck. He felt nothing.",
     "cues": {
      "morton": "morton",
      "warren": "warren",
@@ -570,7 +570,7 @@
    "direction": "tighten on Boston; a HELD DOWN plate waits at the bottom — how surgery used to be; a tooth sticker on 'Morton' becomes a stethoscope on 'Warren'; on 'nothing' the plate wipes away, the NO PAIN card lands with a sleeping-face sticker; the US flag-ball relaxes",
    "energy": 4,
    "tone": "revelatory",
-   "pause_after": 0.5,
+   "pause_after": 0.45,
    "card": {
     "kicker": "NO PAIN",
     "text": "a neck tumour cut · he felt nothing"
@@ -686,7 +686,7 @@
   },
   {
    "vo": {
-    "text": "But Crawford Long of Jefferson, Georgia had done it 4 years earlier, in 1842, unpublished.",
+    "text": "But Crawford Long of Jefferson, Georgia had done it 4 years earlier, unpublished.",
     "cues": {
      "jefferson": "jefferson",
      "earlier": "earlier",
@@ -696,7 +696,7 @@
    "direction": "ease south-west so Boston and Georgia share the frame; the Jefferson pin on 'Jefferson'; a year counter ticks 1842 → 1846 on 'earlier'; a shushing-face sticker on 'unpublished'; the Boston pin leaves at the end",
    "energy": 3,
    "tone": "suspense",
-   "pause_after": 0.7,
+   "pause_after": 0.6,
    "cam": [
     0.95,
     [
@@ -793,7 +793,7 @@
   },
   {
    "vo": {
-    "text": "Within 2 months the news reached London, where Robert Liston amputated a leg under ether that December.",
+    "text": "Within 2 months London heard, and Robert Liston amputated a leg under ether that December.",
     "cues": {
      "months": "months",
      "london": "london",
@@ -803,7 +803,7 @@
    "direction": "pull right out over the Atlantic; an envelope sticker rides the line from Boston to London until 'London'; the London pin and tag land; a flag-ball for Britain thinks; the US pulses on 'December'",
    "energy": 4,
    "tone": "resolute",
-   "pause_after": 0.6,
+   "pause_after": 0.35,
    "cam": [
     0.55,
     [
