@@ -3,7 +3,7 @@
  "series": "wild-files",
  "number": 16,
  "seed": 3516,
- "question": "Which nation is home to the MOST camels?",
+ "question": "Where do the MOST camels live?",
  "keyword": "MOST",
  "difficulty": "MEDIUM",
  "options": [
@@ -114,7 +114,7 @@
  "intent": "Wipe the assumption off the screen: the table that puts the Horn of Africa above Arabia, the word ARABIA erased, then the wild herd on the wrong continent and the milk in every Somali town.",
  "voice": {
   "v01_cues": {
-   "which": "which",
+   "where": "where",
    "camels": "camels"
   },
   "v04": {
@@ -295,7 +295,7 @@
      "worldbank_som"
     ],
     "vo": [
-     "which nation is home to the most camels",
+     "where do the most camels live",
      "saudi arabia, australia, or somalia",
      "somalia. more than 7 million camels, the most of any nation, in a country of 18 million people",
      "7 million humps. follow us"

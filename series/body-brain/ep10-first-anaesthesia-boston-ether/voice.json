@@ -79,7 +79,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "tighten on Boston; a HELD DOWN plate waits at the bottom — how surgery used to be; a tooth sticker on 'Morton' becomes a stethoscope on 'Warren'; on 'nothing' the plate wipes away, the NO PAIN card lands with a sleeping-face sticker; the US flag-ball relaxes",
-   "text": "Morton held the sponge; John Warren cut a tumour from Gilbert Abbott's neck. He felt nothing.",
+   "text": "Morton held the sponge; John Warren cut a tumour from Gilbert Abbott's neck. He felt nothing at all.",
    "cues": {
     "morton": "morton",
     "warren": "warren",
@@ -94,7 +94,7 @@
    "energy": 3,
    "pause_after": 0.6,
    "direction": "ease south-west so Boston and Georgia share the frame; the Jefferson pin on 'Jefferson'; a year counter ticks 1842 → 1846 on 'earlier'; a shushing-face sticker on 'unpublished'; the Boston pin leaves at the end",
-   "text": "But Crawford Long of Jefferson, Georgia had done it 4 years earlier, unpublished.",
+   "text": "But Crawford Long of Jefferson, Georgia had already done it 4 years earlier, unpublished.",
    "cues": {
     "jefferson": "jefferson",
     "earlier": "earlier",

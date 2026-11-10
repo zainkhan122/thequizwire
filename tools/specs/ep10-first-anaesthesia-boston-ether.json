@@ -135,7 +135,7 @@
    }
   },
   "v05": {
-   "text": "Morton held the sponge; John Warren cut a tumour from Gilbert Abbott's neck. He felt nothing.",
+   "text": "Morton held the sponge; John Warren cut a tumour from Gilbert Abbott's neck. He felt nothing at all.",
    "cues": {
     "morton": "morton",
     "warren": "warren",
@@ -143,7 +143,7 @@
    }
   },
   "v06": {
-   "text": "But Crawford Long of Jefferson, Georgia had done it 4 years earlier, unpublished.",
+   "text": "But Crawford Long of Jefferson, Georgia had already done it 4 years earlier, unpublished.",
    "cues": {
     "jefferson": "jefferson",
     "earlier": "earlier",
@@ -312,7 +312,7 @@
      "mgh_etherdome"
     ],
     "vo": [
-     "morton held the sponge; john warren cut a tumour from gilbert abbott's neck. he felt nothing"
+     "morton held the sponge; john warren cut a tumour from gilbert abbott's neck. he felt nothing at all"
     ],
     "screen": [
      "NO PAIN",
@@ -331,7 +331,7 @@
      "lindahall"
     ],
     "vo": [
-     "but crawford long of jefferson, georgia had done it 4 years earlier, unpublished"
+     "but crawford long of jefferson, georgia had already done it 4 years earlier, unpublished"
     ],
     "screen": [
      "1842",
@@ -560,7 +560,7 @@
  "story": [
   {
    "vo": {
-    "text": "Morton held the sponge; John Warren cut a tumour from Gilbert Abbott's neck. He felt nothing.",
+    "text": "Morton held the sponge; John Warren cut a tumour from Gilbert Abbott's neck. He felt nothing at all.",
     "cues": {
      "morton": "morton",
      "warren": "warren",
@@ -686,7 +686,7 @@
   },
   {
    "vo": {
-    "text": "But Crawford Long of Jefferson, Georgia had done it 4 years earlier, unpublished.",
+    "text": "But Crawford Long of Jefferson, Georgia had already done it 4 years earlier, unpublished.",
     "cues": {
      "jefferson": "jefferson",
      "earlier": "earlier",

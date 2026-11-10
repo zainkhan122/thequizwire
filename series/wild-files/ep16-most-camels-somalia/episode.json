@@ -3,11 +3,11 @@
  "format": "quiz-v3",
  "series": "wild-files",
  "number": 16,
- "title": "Which nation is home to the MOST camels?",
+ "title": "Where do the MOST camels live?",
  "difficulty": "MEDIUM",
  "seed": 3516,
  "quiz": {
-  "question": "Which nation is home to the MOST camels?",
+  "question": "Where do the MOST camels live?",
   "keyword": "MOST",
   "options": [
    "Saudi Arabia",
@@ -44,7 +44,7 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Which nation is home to the MOST camels? 🐪",
+  "title": "Where do the MOST camels live? 🐪",
   "premise": "The land of the camel is not where most camels live",
   "bait": "Saudi Arabia, Australia or Somalia — which did you pick? 👇",
   "keywords": [
