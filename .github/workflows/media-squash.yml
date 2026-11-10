@@ -1,0 +1,26 @@
+# Squash the media repo's history to a single commit (keeps the current tree).
+# Why: GitHub Pages builds on zainkhan122/thequizwire-media started failing on 2026-11-10 once the repo passed ~1.4 GB of
+# history, even though the published tree is only ~190 MB (dispatch.sh prunes shipped media). The media repo is a CDN —
+# its history has no value. Run manually when `gh api repos/zainkhan122/thequizwire-media` reports size > ~800 MB.
+name: media-squash
+on:
+  workflow_dispatch: {}
+concurrency: {group: media-repo, cancel-in-progress: false}
+jobs:
+  squash:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env: {MEDIA_TOKEN: "${{ secrets.MEDIA_TOKEN }}"}
+    steps:
+      - name: Squash
+        run: |
+          set -e
+          git clone -q --depth 1 "https://x-access-token:${MEDIA_TOKEN}@github.com/zainkhan122/thequizwire-media.git" m
+          cd m
+          echo "tree: $(du -sh --exclude=.git . | cut -f1)"
+          git checkout -q --orphan fresh
+          git add -A
+          git -c user.name=quizwire-dispatch -c user.email=dispatch@users.noreply.github.com commit -qm "media: history squashed $(date -u +%F) (Pages build limit; tree kept)"
+          git branch -D main -q; git branch -m main
+          git push -q --force origin main
+          echo "squashed → $(git rev-parse --short HEAD)"
