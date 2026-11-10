@@ -679,7 +679,7 @@
      "id": "held",
      "type": "erase",
      "text": "HELD DOWN",
-     "y": 1000,
+     "y": 860,
      "h": 260
     }
    ]

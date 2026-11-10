@@ -13,7 +13,7 @@
  "start_hold": 0.0,
  "end_hold": 2.4,
  "sample_line": "v04",
- "title": "Which nation has the MOST camels?",
+ "title": "Which nation is home to the MOST camels?",
  "lines": [
   {
    "id": "v01",
@@ -23,10 +23,10 @@
    "energy": 4,
    "pause_after": 0.3,
    "direction": "the question, cold — curiosity comes from the map moving under it",
-   "text": "Which nation has the most camels?",
+   "text": "Which nation is home to the most camels?",
    "cues": {
     "which": "which",
-    "most": "most"
+    "camels": "camels"
    }
   },
   {

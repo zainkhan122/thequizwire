@@ -3,7 +3,7 @@
  "series": "wild-files",
  "number": 16,
  "seed": 3516,
- "question": "Which nation has the MOST camels?",
+ "question": "Which nation is home to the MOST camels?",
  "keyword": "MOST",
  "difficulty": "MEDIUM",
  "options": [
@@ -115,7 +115,7 @@
  "voice": {
   "v01_cues": {
    "which": "which",
-   "most": "most"
+   "camels": "camels"
   },
   "v04": {
    "text": "Somalia. More than 7 million camels, the most of any nation, in a country of 18 million people.",
@@ -295,7 +295,7 @@
      "worldbank_som"
     ],
     "vo": [
-     "which nation has the most camels",
+     "which nation is home to the most camels",
      "saudi arabia, australia, or somalia",
      "somalia. more than 7 million camels, the most of any nation, in a country of 18 million people",
      "7 million humps. follow us"

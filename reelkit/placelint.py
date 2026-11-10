@@ -117,6 +117,7 @@ def check(S):
             if t == "bars": w, h = el.get("w", 900), len(el.get("rows", [])) * (el.get("bar_h", 74) + el.get("gap", 26) + 40) - el.get("gap", 26)
             elif t == "compare": w, h = el.get("w", 960), el.get("max_h", 700) + 120   # compare text is allow-overlap (charts.py) — CI accepted stickers on it (ep14, ep17)
             elif t == "split": w, h = el.get("w", 620), el.get("h", 540)
+            elif t == "erase": w, h = el.get("w", 960), el.get("h", 260)   # CI caption_zone_collision on erase cards at y=1000/h=260 (camels 11-08, Ether Day 11-10)
             else: continue
             b = [x, y, x + w, y + h]; on_here = on if t != "compare" else set()
             if b[3] > 1190: F.append(f"L2 {sc} {t} {el['id']!r} bottom {round(b[3])} enters the caption band (>= 1190) — raise y or shrink")

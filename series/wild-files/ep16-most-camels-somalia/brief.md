@@ -1,4 +1,4 @@
-# Brief — Wild Files #16 · Which nation has the MOST camels?
+# Brief — Wild Files #16 · Which nation is home to the MOST camels?
 
 ## Hook fact
 Somalia has more than 7 million camels, the most of any nation, in a country of about 18 million people (FAO; Worldmapper;
