@@ -1,0 +1,898 @@
+{
+ "id": "ep17-longest-flight-without-landing-swift",
+ "series": "wild-files",
+ "number": 17,
+ "seed": 3717,
+ "question": "Which bird flies the LONGEST without landing?",
+ "keyword": "LONGEST",
+ "difficulty": "HARD",
+ "options": [
+  {
+   "text": "Albatross",
+   "emoji": "1f426",
+   "cue": "albatross"
+  },
+  {
+   "text": "Arctic tern",
+   "emoji": "1f54a",
+   "cue": "tern"
+  },
+  {
+   "text": "Common swift",
+   "emoji": "1f9a4",
+   "cue": "swift"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "10 months airborne",
+ "outro_headline": "1 FOR 1?",
+ "cover_emoji": "⏱️",
+ "cover_emoji_why": "a stopwatch stands for the duration in the question; no bird on the cover, so none of the three options is hinted",
+ "post": {
+  "premise": "A bird that eats, drinks and sleeps without touching down",
+  "bait": "Albatross, Arctic tern or swift — which did you pick? 👇",
+  "keywords": [
+   "which bird can fly the longest",
+   "bird that never lands",
+   "common swift 10 months flight",
+   "how do birds sleep while flying",
+   "longest flight bird record",
+   "animal facts",
+   "wildlife quiz",
+   "swift migration africa"
+  ],
+  "tags": [
+   "WildlifeQuiz",
+   "Birds"
+  ],
+  "sources_line": "Current Biology (Hedenström et al. 2016); Lund University; Britannica; BTO",
+  "copy": {
+   "spoilers": [
+    "swift",
+    "swifts",
+    "apus",
+    "lund",
+    "sweden",
+    "swedish"
+   ],
+   "youtube": {
+    "title": "The bird that never lands: 10 months in the air without touching down ⏱️",
+    "description": "Albatross, Arctic tern or the third one? Scientists fitted tiny data loggers to a small bird and found some individuals stayed airborne for ten months straight — eating, drinking, even sleeping on the wing — until they came home to nest.\nGuess before the map lights up, then see where the study was done, the plate that gets wiped off the screen, and the flight south.\nWhich did you pick?",
+    "tags": [
+     "#birds",
+     "#wildlifequiz",
+     "#animalfacts",
+     "#nature",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which bird flies the LONGEST without landing? ⏱️\nAlbatross, Arctic tern or the other one? Tiny data loggers showed some individuals stayed airborne for ten months straight — eating, drinking and sleeping on the wing.\nWhich did you pick?",
+    "tags": [
+     "#birds",
+     "#wildlifequiz",
+     "#animalfacts",
+     "#nature",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which bird flies the longest without landing — the albatross, the Arctic tern or the common swift?\nTiny data loggers showed some individuals stayed airborne for ten months straight, eating, drinking and even sleeping on the wing. Pick your bird before the map lights up.",
+    "tags": [
+     "#birds",
+     "#wildlifequiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which bird flies the LONGEST without landing?\nAlbatross, Arctic tern or common swift? One of them stays airborne for ten months straight — and sleeps up there.",
+    "tags": [
+     "#Birds",
+     "#WildlifeQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which bird flies the longest without landing — the albatross, the Arctic tern or the common swift? Scientists fitted tiny data loggers to one of them and found some individuals stayed airborne for ten months straight, eating, drinking and even sleeping on the wing, until they came home to nest.",
+    "tags": [
+     "#birds"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-animal",
+  "hook": "challenge",
+  "opener": "night-lights",
+  "reveal": "colour-lift",
+  "beats": [
+   "pin",
+   "erase",
+   "route",
+   "label"
+  ],
+  "cast": "emoji-set:sky + flagball:none",
+  "music": "bed:deep",
+  "outro": "1 FOR 1?"
+ },
+ "intent": "A Swedish rooftop and the sky above Africa: the 10-month logger result, the LANDS TO SLEEP plate wiped away for how it naps on the wing, then the bird riding the line to the Congo basin where it spends the winter.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "longest": "longest"
+  },
+  "v04": {
+   "text": "The common swift. Data loggers on Swedish birds showed some stayed airborne for 10 months straight.",
+   "cues": {
+    "answer": "swift",
+    "loggers": "loggers",
+    "months": "months"
+   }
+  },
+  "v05": {
+   "text": "They eat insects on the wing, drink by skimming water and nap in slow glides high up.",
+   "cues": {
+    "insects": "insects",
+    "drink": "drink",
+    "nap": "nap"
+   }
+  },
+  "v06": {
+   "text": "They touch down for 2 months a year, to nest. Fledglings may fly 2 or 3 years before landing at all.",
+   "cues": {
+    "nest": "nest",
+    "fledglings": "fledglings",
+    "landing": "landing"
+   }
+  },
+  "v07": {
+   "text": "Each autumn they head south to the Congo basin, chasing the rains and their insects.",
+   "cues": {
+    "south": "south",
+    "congo": "congo",
+    "rains": "rains"
+   }
+  },
+  "v08": {
+   "text": "Months aloft, never down. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "10 MONTHS",
+   "text": "airborne without landing"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": null,
+  "b": null
+ },
+ "research": {
+  "topic": "Common swift (Apus apus): Hedenström et al., Current Biology 2016 — micro data loggers on swifts breeding in Sweden showed 10-month non-stop flight outside the breeding season, some individuals never landing in that time; they feed on aerial insects, drink by skimming, and sleep in short bouts during slow ascending glides at dusk and dawn; breeding season ~2 months on land; juveniles may remain airborne 2–3 years until first breeding; winter in sub-Saharan Africa, especially the Congo basin, tracking rain fronts.",
+  "myths": [
+   {
+    "myth": "The albatross or the Arctic tern holds the record for staying in the air.",
+    "reality": "Albatrosses and terns cover vast distances but land on water or shore to rest; the common swift stays airborne for ten months without landing (Hedenström et al. 2016).",
+    "sources": [
+     "hedenstrom_2016",
+     "lund_news",
+     "britannica_swift"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Swift clips are nest-cam footage or narrated facts; nobody maps the study, wipes LANDS TO SLEEP off the screen and flies the bird to the Congo as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=bird+that+never+lands",
+     "title": "Search: bird that never lands",
+     "angle": "narrated fact clips",
+     "misses": "no map, no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=common+swift+10+months+flight",
+     "title": "Search: common swift 10 months flight",
+     "angle": "science news explainers",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/@BBCEarth/shorts",
+     "title": "BBC Earth",
+     "angle": "wildlife footage",
+     "misses": "no quiz"
+    }
+   ]
+  },
+  "sources": {
+   "hedenstrom_2016": {
+    "type": "scholarly",
+    "publisher": "Current Biology",
+    "title": "Annual 10-Month Aerial Life Phase in the Common Swift Apus apus — Hedenström, Norevik, Warfvinge, Andersson, Bäckman, Åkesson, Curr Biol 2016;26(22):3066–3070",
+    "url": "https://doi.org/10.1016/j.cub.2016.09.014",
+    "date": "2026-11-11",
+    "notes": "micro data loggers on 13 swifts from Sweden; birds airborne >99 % of the 10-month non-breeding period; three individuals never landed; brief roosting only in some birds"
+   },
+   "lund_news": {
+    "type": "primary",
+    "publisher": "Lund University",
+    "title": "Swifts spend ten months in the air",
+    "url": "https://www.lunduniversity.lu.se/article/swifts-spend-ten-months-air",
+    "date": "2026-11-11",
+    "notes": "Lund University researchers; swifts breeding in southern Sweden; ten months without landing; feed, drink and presumably sleep in flight"
+   },
+   "britannica_swift": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Swift — bird",
+    "url": "https://www.britannica.com/animal/swift-bird",
+    "date": "2026-11-11",
+    "notes": "Apus apus; feeds on aerial insects; drinks by skimming water; winters in Africa south of the Sahara; young may not land for two to three years"
+   },
+   "bto_swift": {
+    "type": "primary",
+    "publisher": "British Trust for Ornithology",
+    "title": "Swift — BirdFacts",
+    "url": "https://www.bto.org/understanding-birds/birdfacts/swift",
+    "date": "2026-11-11",
+    "notes": "on land only during the roughly two-month breeding season; winters in the Congo basin and southern Africa; follows rain fronts rich in insects"
+   },
+   "rspb_swift": {
+    "type": "reference",
+    "publisher": "RSPB",
+    "title": "Swift",
+    "url": "https://www.rspb.org.uk/birds-and-wildlife/swift",
+    "date": "2026-11-11",
+    "notes": "sleeps on the wing in slow ascending glides at dusk; young birds may stay airborne for two or three years"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The common swift holds the record: data loggers on birds breeding in Sweden showed 10-month non-stop flight, some individuals never landing in that time.",
+    "sources": [
+     "hedenstrom_2016",
+     "lund_news",
+     "britannica_swift"
+    ],
+    "vo": [
+     "which bird flies the longest without landing",
+     "albatross, arctic tern, or common swift",
+     "the common swift. data loggers on swedish birds showed some stayed airborne for 10 months straight",
+     "months aloft, never down. follow us"
+    ],
+    "screen": [
+     "Common swift",
+     "Albatross",
+     "Arctic tern",
+     "10 MONTHS",
+     "airborne without landing",
+     "Lund · 10-month loggers",
+     "Lund"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Swifts feed on aerial insects, drink by skimming water and sleep in short bouts during slow glides at altitude.",
+    "sources": [
+     "hedenstrom_2016",
+     "britannica_swift",
+     "rspb_swift"
+    ],
+    "vo": [
+     "they eat insects on the wing, drink by skimming water and nap in slow glides high up"
+    ],
+    "screen": [
+     "LANDS TO SLEEP"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Swifts are on land only for the roughly two-month breeding season; young birds may remain airborne for two to three years before first landing.",
+    "sources": [
+     "bto_swift",
+     "britannica_swift",
+     "rspb_swift"
+    ],
+    "vo": [
+     "they touch down for 2 months a year, to nest. fledglings may fly 2 or 3 years before landing at all"
+    ],
+    "screen": [
+     "2 MONTHS",
+     "on land each year, to nest"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "They winter in sub-Saharan Africa, especially the Congo basin, following rain fronts and the insects they bring.",
+    "sources": [
+     "bto_swift",
+     "britannica_swift"
+    ],
+    "vo": [
+     "each autumn they head south to the congo basin, chasing the rains and their insects"
+    ],
+    "screen": [
+     "Congo basin · the winter sky"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -20,
+   -15,
+   50,
+   65
+  ],
+  "far_bbox": [
+   -60,
+   -40,
+   80,
+   75
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "752"
+  ],
+  "highlight_note": "Sweden — where the study birds breed",
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "migration",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "to_congo",
+       "properties": {
+        "name": "southern Sweden to the Congo basin"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          13.2,
+          55.7
+         ],
+         [
+          12,
+          48
+         ],
+         [
+          10,
+          40
+         ],
+         [
+          12,
+          30
+         ],
+         [
+          16,
+          20
+         ],
+         [
+          20,
+          10
+         ],
+         [
+          22,
+          2
+         ],
+         [
+          23,
+          -2
+         ]
+        ]
+       }
+      }
+     ]
+    },
+    "note": "schematic line from the breeding sites to the wintering region"
+   }
+  ],
+  "labels": [
+   {
+    "id": "lu",
+    "lonlat": [
+     20.5,
+     58.5
+    ],
+    "text": "Lund · 10-month loggers",
+    "cls": "tag",
+    "in": "s04@loggers+0.3",
+    "out": "s06"
+   },
+   {
+    "id": "cg",
+    "lonlat": [
+     30.0,
+     -6.5
+    ],
+    "text": "Congo basin · the winter sky",
+    "cls": "tag",
+    "in": "s07@congo+0.2",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "lund",
+    "lonlat": [
+     13.19,
+     55.7
+    ],
+    "label": "Lund",
+    "side": "right"
+   },
+   {
+    "id": "congo",
+    "lonlat": [
+     23,
+     -2
+    ],
+    "label": "Congo basin",
+    "side": "right"
+   }
+  ],
+  "scalebar": null,
+  "pin_beats": [
+   {
+    "at": "s04@loggers",
+    "pid": "lund"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.5,
+    [
+     10,
+     30
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     12,
+     30
+    ]
+   ],
+   "s04": [
+    0.9,
+    [
+     14,
+     57
+    ]
+   ],
+   "s04b": [
+    0.95,
+    [
+     14.5,
+     56.5
+    ]
+   ],
+   "s05": [
+    1.0,
+    [
+     13,
+     56
+    ]
+   ],
+   "s05b": [
+    1.05,
+    [
+     13.5,
+     55.5
+    ]
+   ],
+   "s06": [
+    0.8,
+    [
+     14,
+     55
+    ]
+   ],
+   "s06b": [
+    0.85,
+    [
+     14.5,
+     54.5
+    ]
+   ],
+   "s07": [
+    0.42,
+    [
+     15,
+     25
+    ]
+   ],
+   "s07b": [
+    0.44,
+    [
+     15.5,
+     24
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "They eat insects on the wing, drink by skimming water and nap in slow glides high up.",
+    "cues": {
+     "insects": "insects",
+     "drink": "drink",
+     "nap": "nap"
+    }
+   },
+   "direction": "tighten on the Skåne coast; the LANDS TO SLEEP plate waits at the bottom; a mosquito sticker on 'insects', a droplet on 'drink'; on 'nap' the plate wipes away and a sleeping-face sticker pulses as Sweden pulses",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    1.0,
+    [
+     13,
+     56
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    1.05,
+    [
+     13.5,
+     55.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "sleep",
+     "type": "erase",
+     "text": "LANDS TO SLEEP",
+     "y": 860,
+     "h": 260
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@insects",
+     "do": "sticker_in",
+     "id": "st_bug"
+    },
+    {
+     "at": "@@insects+0.4",
+     "do": "sticker_pulse",
+     "id": "st_bug"
+    },
+    {
+     "at": "@@drink",
+     "do": "sticker_out",
+     "id": "st_bug"
+    },
+    {
+     "at": "@@drink",
+     "do": "sticker_in",
+     "id": "st_drop"
+    },
+    {
+     "at": "@@drink+0.4",
+     "do": "sticker_pulse",
+     "id": "st_drop"
+    },
+    {
+     "at": "@@nap",
+     "do": "sticker_out",
+     "id": "st_drop"
+    },
+    {
+     "at": "@@nap-0.1",
+     "do": "chart.erase_run",
+     "id": "sleep",
+     "until": "@@nap+1.1",
+     "args": {
+      "direction": "left"
+     }
+    },
+    {
+     "at": "@@nap+0.1",
+     "do": "sticker_in",
+     "id": "st_zzz"
+    },
+    {
+     "at": "@@nap+0.5",
+     "do": "sticker_pulse",
+     "id": "st_zzz"
+    },
+    {
+     "at": "@@nap+0.6",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "752",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_zzz"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "They touch down for 2 months a year, to nest. Fledglings may fly 2 or 3 years before landing at all.",
+    "cues": {
+     "nest": "nest",
+     "fledglings": "fledglings",
+     "landing": "landing"
+    }
+   },
+   "direction": "ease back over southern Sweden; a nest sticker and the 2 MONTHS card on 'nest'; a hatching chick on 'fledglings'; Sweden pulses on 'landing'; the Lund pin leaves at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "card": {
+    "kicker": "2 MONTHS",
+    "text": "on land each year, to nest"
+   },
+   "card_at": null,
+   "cam": [
+    0.8,
+    [
+     14,
+     55
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.85,
+    [
+     14.5,
+     54.5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@nest",
+     "do": "sticker_in",
+     "id": "st_nest"
+    },
+    {
+     "at": "@@nest+0.4",
+     "do": "sticker_pulse",
+     "id": "st_nest"
+    },
+    {
+     "at": "@@nest+0.2",
+     "do": "fact_in",
+     "id": "f3",
+     "until": "@.end"
+    },
+    {
+     "at": "@@fledglings",
+     "do": "sticker_out",
+     "id": "st_nest"
+    },
+    {
+     "at": "@@fledglings",
+     "do": "sticker_in",
+     "id": "st_chick"
+    },
+    {
+     "at": "@@fledglings+0.4",
+     "do": "sticker_pulse",
+     "id": "st_chick"
+    },
+    {
+     "at": "@@landing",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "752",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@landing+0.3",
+     "do": "sticker_pulse",
+     "id": "st_chick"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_chick"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "lund"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Each autumn they head south to the Congo basin, chasing the rains and their insects.",
+    "cues": {
+     "south": "south",
+     "congo": "congo",
+     "rains": "rains"
+    }
+   },
+   "direction": "pull right out so Europe and Africa share the frame; the bird rides the drawn line from Sweden to the Congo basin until 'Congo'; the Congo pin and tag; a rain-cloud sticker on 'rains' as Sweden pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    0.42,
+    [
+     15,
+     25
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.44,
+    [
+     15.5,
+     24
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@+0.1",
+     "do": "sticker_in",
+     "id": "st_bird"
+    },
+    {
+     "at": "@+0.1",
+     "do": "geo.route_draw",
+     "stage": "stage_map",
+     "until": "@@congo",
+     "args": {
+      "rid": "to_congo",
+      "layer": "migration"
+     }
+    },
+    {
+     "at": "@+0.1",
+     "do": "geo.travel",
+     "stage": "stage_map",
+     "until": "@@congo",
+     "args": {
+      "rid": "to_congo",
+      "layer": "migration",
+      "sid": "st_bird",
+      "offset": [
+       0,
+       -50
+      ]
+     }
+    },
+    {
+     "at": "@@congo",
+     "do": "sticker_out",
+     "id": "st_bird"
+    },
+    {
+     "at": "@@congo",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "congo"
+     }
+    },
+    {
+     "at": "@@rains",
+     "do": "sticker_in",
+     "id": "st_rain"
+    },
+    {
+     "at": "@@rains+0.4",
+     "do": "sticker_pulse",
+     "id": "st_rain"
+    },
+    {
+     "at": "@@rains+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "752",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_rain"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "congo"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_bug",
+   "type": "sticker",
+   "emoji": "1f99f",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_drop",
+   "type": "sticker",
+   "emoji": "1f4a7",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_zzz",
+   "type": "sticker",
+   "emoji": "1f634",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_nest",
+   "type": "sticker",
+   "emoji": "1fab9",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_chick",
+   "type": "sticker",
+   "emoji": "1f423",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_bird",
+   "type": "sticker",
+   "emoji": "1f426",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "st_rain",
+   "type": "sticker",
+   "emoji": "1f327",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  }
+ ]
+}

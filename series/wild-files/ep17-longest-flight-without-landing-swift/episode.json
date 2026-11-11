@@ -1,0 +1,139 @@
+{
+ "id": "ep17-longest-flight-without-landing-swift",
+ "format": "quiz-v3",
+ "series": "wild-files",
+ "number": 17,
+ "title": "Which bird flies the LONGEST without landing?",
+ "difficulty": "HARD",
+ "seed": 3717,
+ "quiz": {
+  "question": "Which bird flies the LONGEST without landing?",
+  "keyword": "LONGEST",
+  "options": [
+   "Albatross",
+   "Arctic tern",
+   "Common swift"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Common swift",
+  "answer_sub": "10 months airborne",
+  "option_meta": [
+   {
+    "emoji": "1f426"
+   },
+   {
+    "emoji": "1f54a"
+   },
+   {
+    "emoji": "1f9a4"
+   }
+  ],
+  "banner": "Common swift",
+  "banner_sub": "✓  C was right · 10 months airborne",
+  "outro": {
+   "headline": "1 FOR 1?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which bird flies the LONGEST without landing? ⏱️",
+  "premise": "A bird that eats, drinks and sleeps without touching down",
+  "bait": "Albatross, Arctic tern or swift — which did you pick? 👇",
+  "keywords": [
+   "which bird can fly the longest",
+   "bird that never lands",
+   "common swift 10 months flight",
+   "how do birds sleep while flying",
+   "longest flight bird record",
+   "animal facts",
+   "wildlife quiz",
+   "swift migration africa"
+  ],
+  "description": "A bird that eats, drinks and sleeps without touching down. Albatross, Arctic tern or swift — which did you pick? 👇\n\nSources: Current Biology (Hedenström et al. 2016); Lund University; Britannica; BTO.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #17",
+  "hashtags": [
+   "#AnimalQuiz",
+   "#WildlifeFacts",
+   "#thequizwire"
+  ],
+  "tags": [
+   "WildlifeQuiz",
+   "Birds"
+  ],
+  "cover_emoji": "⏱️",
+  "cover_emoji_why": "a stopwatch stands for the duration in the question; no bird on the cover, so none of the three options is hinted",
+  "copy": {
+   "spoilers": [
+    "swift",
+    "swifts",
+    "apus",
+    "lund",
+    "sweden",
+    "swedish"
+   ],
+   "youtube": {
+    "title": "The bird that never lands: 10 months in the air without touching down ⏱️",
+    "description": "Albatross, Arctic tern or the third one? Scientists fitted tiny data loggers to a small bird and found some individuals stayed airborne for ten months straight — eating, drinking, even sleeping on the wing — until they came home to nest.\nGuess before the map lights up, then see where the study was done, the plate that gets wiped off the screen, and the flight south.\nWhich did you pick?",
+    "tags": [
+     "#birds",
+     "#wildlifequiz",
+     "#animalfacts",
+     "#nature",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which bird flies the LONGEST without landing? ⏱️\nAlbatross, Arctic tern or the other one? Tiny data loggers showed some individuals stayed airborne for ten months straight — eating, drinking and sleeping on the wing.\nWhich did you pick?",
+    "tags": [
+     "#birds",
+     "#wildlifequiz",
+     "#animalfacts",
+     "#nature",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which bird flies the longest without landing — the albatross, the Arctic tern or the common swift?\nTiny data loggers showed some individuals stayed airborne for ten months straight, eating, drinking and even sleeping on the wing. Pick your bird before the map lights up.",
+    "tags": [
+     "#birds",
+     "#wildlifequiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which bird flies the LONGEST without landing?\nAlbatross, Arctic tern or common swift? One of them stays airborne for ten months straight — and sleeps up there.",
+    "tags": [
+     "#Birds",
+     "#WildlifeQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which bird flies the longest without landing — the albatross, the Arctic tern or the common swift? Scientists fitted tiny data loggers to one of them and found some individuals stayed airborne for ten months straight, eating, drinking and even sleeping on the wing, until they came home to nest.",
+    "tags": [
+     "#birds"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-animal",
+  "hook": "question-first",
+  "opener": "night-lights",
+  "reveal": "colour-lift",
+  "beats": [
+   "pin",
+   "erase",
+   "route",
+   "label"
+  ],
+  "cast": "emoji-set:sky + flagball:none",
+  "music": "bed:deep"
+ },
+ "status": "ready"
+}

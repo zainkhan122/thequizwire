@@ -1,0 +1,184 @@
+{
+ "version": 1,
+ "episode": "ep17-longest-flight-without-landing-swift",
+ "topic": "Common swift (Apus apus): Hedenström et al., Current Biology 2016 — micro data loggers on swifts breeding in Sweden showed 10-month non-stop flight outside the breeding season, some individuals never landing in that time; they feed on aerial insects, drink by skimming, and sleep in short bouts during slow ascending glides at dusk and dawn; breeding season ~2 months on land; juveniles may remain airborne 2–3 years until first breeding; winter in sub-Saharan Africa, especially the Congo basin, tracking rain fronts.",
+ "researched": "2026-11-11",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The albatross or the Arctic tern holds the record for staying in the air.",
+   "reality": "Albatrosses and terns cover vast distances but land on water or shore to rest; the common swift stays airborne for ten months without landing (Hedenström et al. 2016).",
+   "sources": [
+    "hedenstrom_2016",
+    "lund_news",
+    "britannica_swift"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Swift clips are nest-cam footage or narrated facts; nobody maps the study, wipes LANDS TO SLEEP off the screen and flies the bird to the Congo as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=bird+that+never+lands",
+    "title": "Search: bird that never lands",
+    "angle": "narrated fact clips",
+    "misses": "no map, no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=common+swift+10+months+flight",
+    "title": "Search: common swift 10 months flight",
+    "angle": "science news explainers",
+    "misses": "no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/@BBCEarth/shorts",
+    "title": "BBC Earth",
+    "angle": "wildlife footage",
+    "misses": "no quiz"
+   }
+  ]
+ },
+ "sources": {
+  "hedenstrom_2016": {
+   "type": "scholarly",
+   "publisher": "Current Biology",
+   "title": "Annual 10-Month Aerial Life Phase in the Common Swift Apus apus — Hedenström, Norevik, Warfvinge, Andersson, Bäckman, Åkesson, Curr Biol 2016;26(22):3066–3070",
+   "url": "https://doi.org/10.1016/j.cub.2016.09.014",
+   "date": "2026-11-11",
+   "notes": "micro data loggers on 13 swifts from Sweden; birds airborne >99 % of the 10-month non-breeding period; three individuals never landed; brief roosting only in some birds"
+  },
+  "lund_news": {
+   "type": "primary",
+   "publisher": "Lund University",
+   "title": "Swifts spend ten months in the air",
+   "url": "https://www.lunduniversity.lu.se/article/swifts-spend-ten-months-air",
+   "date": "2026-11-11",
+   "notes": "Lund University researchers; swifts breeding in southern Sweden; ten months without landing; feed, drink and presumably sleep in flight"
+  },
+  "britannica_swift": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Swift — bird",
+   "url": "https://www.britannica.com/animal/swift-bird",
+   "date": "2026-11-11",
+   "notes": "Apus apus; feeds on aerial insects; drinks by skimming water; winters in Africa south of the Sahara; young may not land for two to three years"
+  },
+  "bto_swift": {
+   "type": "primary",
+   "publisher": "British Trust for Ornithology",
+   "title": "Swift — BirdFacts",
+   "url": "https://www.bto.org/understanding-birds/birdfacts/swift",
+   "date": "2026-11-11",
+   "notes": "on land only during the roughly two-month breeding season; winters in the Congo basin and southern Africa; follows rain fronts rich in insects"
+  },
+  "rspb_swift": {
+   "type": "reference",
+   "publisher": "RSPB",
+   "title": "Swift",
+   "url": "https://www.rspb.org.uk/birds-and-wildlife/swift",
+   "date": "2026-11-11",
+   "notes": "sleeps on the wing in slow ascending glides at dusk; young birds may stay airborne for two or three years"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The common swift holds the record: data loggers on birds breeding in Sweden showed 10-month non-stop flight, some individuals never landing in that time.",
+   "sources": [
+    "hedenstrom_2016",
+    "lund_news",
+    "britannica_swift"
+   ],
+   "vo": [
+    "which bird flies the longest without landing",
+    "albatross, arctic tern, or common swift",
+    "the common swift. data loggers on swedish birds showed some stayed airborne for 10 months straight",
+    "months aloft, never down. follow us"
+   ],
+   "screen": [
+    "Common swift",
+    "Albatross",
+    "Arctic tern",
+    "10 MONTHS",
+    "airborne without landing",
+    "Lund · 10-month loggers",
+    "Lund"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Swifts feed on aerial insects, drink by skimming water and sleep in short bouts during slow glides at altitude.",
+   "sources": [
+    "hedenstrom_2016",
+    "britannica_swift",
+    "rspb_swift"
+   ],
+   "vo": [
+    "they eat insects on the wing, drink by skimming water and nap in slow glides high up"
+   ],
+   "screen": [
+    "LANDS TO SLEEP"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Swifts are on land only for the roughly two-month breeding season; young birds may remain airborne for two to three years before first landing.",
+   "sources": [
+    "bto_swift",
+    "britannica_swift",
+    "rspb_swift"
+   ],
+   "vo": [
+    "they touch down for 2 months a year, to nest. fledglings may fly 2 or 3 years before landing at all"
+   ],
+   "screen": [
+    "2 MONTHS",
+    "on land each year, to nest"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "They winter in sub-Saharan Africa, especially the Congo basin, following rain fronts and the insects they bring.",
+   "sources": [
+    "bto_swift",
+    "britannica_swift"
+   ],
+   "vo": [
+    "each autumn they head south to the congo basin, chasing the rains and their insects"
+   ],
+   "screen": [
+    "Congo basin · the winter sky"
+   ]
+  }
+ ]
+}

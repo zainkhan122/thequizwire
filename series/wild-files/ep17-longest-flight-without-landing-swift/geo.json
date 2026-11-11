@@ -1,0 +1,157 @@
+{
+ "version": 1,
+ "episode": "ep17-longest-flight-without-landing-swift",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -20,
+     -15,
+     50,
+     65
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "752"
+     ],
+     "cls": "",
+     "note": "Sweden — where the study birds breed",
+     "lift": "color",
+     "color": "#FFD400"
+    },
+    {
+     "kind": "route",
+     "id": "migration",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "to_congo",
+        "properties": {
+         "name": "southern Sweden to the Congo basin"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           13.2,
+           55.7
+          ],
+          [
+           12,
+           48
+          ],
+          [
+           10,
+           40
+          ],
+          [
+           12,
+           30
+          ],
+          [
+           16,
+           20
+          ],
+          [
+           20,
+           10
+          ],
+          [
+           22,
+           2
+          ],
+          [
+           23,
+           -2
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic line from the breeding sites to the wintering region"
+    }
+   ],
+   "pins": [
+    {
+     "id": "lund",
+     "lonlat": [
+      13.19,
+      55.7
+     ],
+     "label": "Lund",
+     "side": "right"
+    },
+    {
+     "id": "congo",
+     "lonlat": [
+      23,
+      -2
+     ],
+     "label": "Congo basin",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "lu",
+     "lonlat": [
+      20.5,
+      58.5
+     ],
+     "text": "Lund · 10-month loggers",
+     "cls": "tag",
+     "in": "s04@loggers+0.3",
+     "out": "s06"
+    },
+    {
+     "id": "cg",
+     "lonlat": [
+      30.0,
+      -6.5
+     ],
+     "text": "Congo basin · the winter sky",
+     "cls": "tag",
+     "in": "s07@congo+0.2",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "night",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -60,
+      -40,
+      80,
+      75
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

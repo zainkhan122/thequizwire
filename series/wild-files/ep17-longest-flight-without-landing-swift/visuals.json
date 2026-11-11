@@ -1,0 +1,606 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "10 MONTHS",
+   "text": "airborne without landing"
+  },
+  {
+   "id": "sleep",
+   "type": "erase",
+   "text": "LANDS TO SLEEP",
+   "y": 860,
+   "h": 260
+  },
+  {
+   "id": "f3",
+   "type": "fact",
+   "kicker": "2 MONTHS",
+   "text": "on land each year, to nest"
+  },
+  {
+   "id": "st_bug",
+   "type": "sticker",
+   "emoji": "1f99f",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_drop",
+   "type": "sticker",
+   "emoji": "1f4a7",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_zzz",
+   "type": "sticker",
+   "emoji": "1f634",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_nest",
+   "type": "sticker",
+   "emoji": "1fab9",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_chick",
+   "type": "sticker",
+   "emoji": "1f423",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_bird",
+   "type": "sticker",
+   "emoji": "1f426",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "st_rain",
+   "type": "sticker",
+   "emoji": "1f327",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     10,
+     30
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     12,
+     30
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 0.9,
+    "lonlat": [
+     14,
+     57
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 0.95,
+    "lonlat": [
+     14.5,
+     56.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "752",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s04@loggers+0.3",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "lu"
+   }
+  },
+  {
+   "at": "s06",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "lu"
+   }
+  },
+  {
+   "at": "s07@congo+0.2",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "cg"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "cg"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     13,
+     56
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 1.05,
+    "lonlat": [
+     13.5,
+     55.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@insects",
+   "do": "sticker_in",
+   "id": "st_bug"
+  },
+  {
+   "at": "s05@insects+0.4",
+   "do": "sticker_pulse",
+   "id": "st_bug"
+  },
+  {
+   "at": "s05@drink",
+   "do": "sticker_out",
+   "id": "st_bug"
+  },
+  {
+   "at": "s05@drink",
+   "do": "sticker_in",
+   "id": "st_drop"
+  },
+  {
+   "at": "s05@drink+0.4",
+   "do": "sticker_pulse",
+   "id": "st_drop"
+  },
+  {
+   "at": "s05@nap",
+   "do": "sticker_out",
+   "id": "st_drop"
+  },
+  {
+   "at": "s05@nap-0.1",
+   "do": "chart.erase_run",
+   "id": "sleep",
+   "until": "s05@nap+1.1",
+   "args": {
+    "direction": "left"
+   }
+  },
+  {
+   "at": "s05@nap+0.1",
+   "do": "sticker_in",
+   "id": "st_zzz"
+  },
+  {
+   "at": "s05@nap+0.5",
+   "do": "sticker_pulse",
+   "id": "st_zzz"
+  },
+  {
+   "at": "s05@nap+0.6",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "752",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_zzz"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 0.8,
+    "lonlat": [
+     14,
+     55
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 0.85,
+    "lonlat": [
+     14.5,
+     54.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@nest",
+   "do": "sticker_in",
+   "id": "st_nest"
+  },
+  {
+   "at": "s06@nest+0.4",
+   "do": "sticker_pulse",
+   "id": "st_nest"
+  },
+  {
+   "at": "s06@nest+0.2",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s06.end"
+  },
+  {
+   "at": "s06@fledglings",
+   "do": "sticker_out",
+   "id": "st_nest"
+  },
+  {
+   "at": "s06@fledglings",
+   "do": "sticker_in",
+   "id": "st_chick"
+  },
+  {
+   "at": "s06@fledglings+0.4",
+   "do": "sticker_pulse",
+   "id": "st_chick"
+  },
+  {
+   "at": "s06@landing",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "752",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06@landing+0.3",
+   "do": "sticker_pulse",
+   "id": "st_chick"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_chick"
+  },
+  {
+   "at": "s06.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "lund"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.5",
+   "args": {
+    "k": 0.42,
+    "lonlat": [
+     15,
+     25
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 0.44,
+    "lonlat": [
+     15.5,
+     24
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07+0.1",
+   "do": "sticker_in",
+   "id": "st_bird"
+  },
+  {
+   "at": "s07+0.1",
+   "do": "geo.route_draw",
+   "stage": "stage_map",
+   "until": "s07@congo",
+   "args": {
+    "rid": "to_congo",
+    "layer": "migration"
+   }
+  },
+  {
+   "at": "s07+0.1",
+   "do": "geo.travel",
+   "stage": "stage_map",
+   "until": "s07@congo",
+   "args": {
+    "rid": "to_congo",
+    "layer": "migration",
+    "sid": "st_bird",
+    "offset": [
+     0,
+     -50
+    ]
+   }
+  },
+  {
+   "at": "s07@congo",
+   "do": "sticker_out",
+   "id": "st_bird"
+  },
+  {
+   "at": "s07@congo",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "congo"
+   }
+  },
+  {
+   "at": "s07@rains",
+   "do": "sticker_in",
+   "id": "st_rain"
+  },
+  {
+   "at": "s07@rains+0.4",
+   "do": "sticker_pulse",
+   "id": "st_rain"
+  },
+  {
+   "at": "s07@rains+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "752",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_rain"
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "congo"
+   }
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     10,
+     30
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04@loggers",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "lund"
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}
