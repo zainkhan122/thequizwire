@@ -1,0 +1,93 @@
+{
+ "version": 1,
+ "episode": "ep12-first-insulin-injection-toronto",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -96,
+     40,
+     -62,
+     52
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "124"
+     ],
+     "cls": "",
+     "note": "Canada",
+     "lift": "flag",
+     "flag": "ca"
+    }
+   ],
+   "pins": [
+    {
+     "id": "toronto",
+     "lonlat": [
+      -79.39,
+      43.65
+     ],
+     "label": "Toronto",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "to",
+     "lonlat": [
+      -76.5,
+      42.2
+     ],
+     "text": "Toronto · 11 Jan 1922",
+     "cls": "tag",
+     "in": "s04@hospital+0.3",
+     "out": "s05.end"
+    },
+    {
+     "id": "lab",
+     "lonlat": [
+      -83.5,
+      45.6
+     ],
+     "text": "University of Toronto · 1921",
+     "cls": "tag",
+     "in": "s06@lab",
+     "out": "s06.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -130,
+      25,
+      -40,
+      62
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}

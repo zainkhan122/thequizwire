@@ -1,0 +1,885 @@
+{
+ "id": "ep12-first-insulin-injection-toronto",
+ "series": "body-brain",
+ "number": 12,
+ "seed": 3412,
+ "question": "In which city was insulin FIRST injected into a patient?",
+ "keyword": "FIRST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "London",
+   "flag": "gb",
+   "cue": "london"
+  },
+  {
+   "text": "Berlin",
+   "flag": "de",
+   "cue": "berlin"
+  },
+  {
+   "text": "Toronto",
+   "flag": "ca",
+   "cue": "toronto"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "11 January 1922",
+ "outro_headline": "DID YOU GET IT?",
+ "cover_emoji": "💉",
+ "cover_emoji_why": "a syringe is the topic word (injection); all three options are cities, the icon favours none",
+ "post": {
+  "premise": "A dying boy, a borrowed lab and a patent sold for a dollar",
+  "bait": "London, Berlin or Toronto — which did you pick? 👇",
+  "keywords": [
+   "where was insulin discovered",
+   "first insulin injection 1922",
+   "banting and best insulin",
+   "leonard thompson insulin",
+   "world diabetes day",
+   "diabetes history",
+   "medical history quiz",
+   "who discovered insulin"
+  ],
+  "tags": [
+   "MedicalHistory",
+   "WorldDiabetesDay"
+  ],
+  "sources_line": "Nobel Prize; University of Toronto; Britannica; CMAJ",
+  "copy": {
+   "spoilers": [
+    "toronto",
+    "canada",
+    "canadian",
+    "banting",
+    "best",
+    "thompson",
+    "1922",
+    "collip",
+    "macleod"
+   ],
+   "youtube": {
+    "title": "Who discovered insulin, and where was it first injected? A $1 patent 💉",
+    "description": "London, Berlin or the third one? A century ago a dying teenager weighing 29 kg was given a cloudy extract from animal pancreases. The first shot failed; the second changed medicine forever. The men behind it sold the patent to their university for a single dollar.\nGuess before the map lights up, then see the hospital, the blood-sugar drop, and the price of the patent.\nWhich did you pick? World Diabetes Day falls this week.",
+    "tags": [
+     "#diabetes",
+     "#medicalhistory",
+     "#insulin",
+     "#healthquiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "In which city was insulin FIRST injected into a patient? 💉\nLondon, Berlin or the other one? A century ago a dying teenager got a cloudy extract from animal pancreases. The first shot failed, the second changed medicine forever.\nWhich did you pick?",
+    "tags": [
+     "#diabetes",
+     "#medicalhistory",
+     "#insulin",
+     "#healthquiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "In which city was insulin first injected into a patient — London, Berlin or Toronto?\nA century ago a dying teenager got a cloudy extract from animal pancreases. The first shot failed, the second changed medicine forever, and the patent was sold for a dollar. Pick your city before the map lights up.",
+    "tags": [
+     "#insulin",
+     "#medicalhistory"
+    ]
+   },
+   "twitter": {
+    "text": "In which city was insulin FIRST injected into a patient?\nLondon, Berlin or Toronto? A dying teenager, a borrowed lab and a patent sold for a dollar.",
+    "tags": [
+     "#WorldDiabetesDay",
+     "#MedicalHistory"
+    ]
+   },
+   "threads": {
+    "text": "In which city was insulin first injected into a patient — London, Berlin or Toronto? A century ago a dying teenager got a cloudy extract from animal pancreases. The first shot failed, the second changed medicine forever, and the discoverers sold the patent to their university for a single dollar.",
+    "tags": [
+     "#insulin"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "fact-first",
+  "opener": "wide-drift",
+  "reveal": "flag-lift",
+  "beats": [
+   "pin",
+   "counter",
+   "split",
+   "erase",
+   "label"
+  ],
+  "cast": "flagball:ca + emoji-set:medicine",
+  "music": "bed:warm",
+  "outro": "DID YOU GET IT?"
+ },
+ "intent": "One hospital on the lake: the date, the failed first dose and the blood-sugar counter dropping, the dogs and the borrowed lab, then the DEATH SENTENCE plate wiped away for a dollar.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "first": "first"
+  },
+  "v04": {
+   "text": "Toronto. On 11 January 1922, at Toronto General Hospital, 14-year-old Leonard Thompson got the first injection.",
+   "cues": {
+    "answer": "toronto",
+    "hospital": "hospital",
+    "injection": "injection"
+   }
+  },
+  "v05": {
+   "text": "The first dose was impure. 12 days later a purified extract dropped his blood sugar to normal.",
+   "cues": {
+    "impure": "impure",
+    "later": "later",
+    "normal": "normal"
+   }
+  },
+  "v06": {
+   "text": "Banting and Best had extracted it from dog pancreases the summer before, in a borrowed university lab.",
+   "cues": {
+    "banting": "banting",
+    "dog": "dog",
+    "lab": "lab"
+   }
+  },
+  "v07": {
+   "text": "Banting sold the patent to the university for a single dollar. Diabetes stopped being a death sentence.",
+   "cues": {
+    "patent": "patent",
+    "dollar": "dollar",
+    "sentence": "sentence"
+   }
+  },
+  "v08": {
+   "text": "A dollar well spent. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "11 JAN 1922",
+   "text": "Leonard Thompson, aged 14"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "ca",
+   "face": "happy",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "gb",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "research": {
+  "topic": "First insulin injection into a human: Leonard Thompson, 14, Toronto General Hospital, 11 January 1922 (impure extract, sterile abscess); purified extract by James Collip given 23 January 1922 lowered blood glucose from 0.52 % to 0.12 %; Banting and Best isolated the extract from dog pancreases in Macleod's lab, University of Toronto, summer 1921; patent assigned to the University of Toronto for $1; Nobel Prize 1923 to Banting and Macleod.",
+  "myths": [
+   {
+    "myth": "Insulin was a European discovery like most early-20th-century pharmacology.",
+    "reality": "It was isolated and first used clinically in Toronto, Canada, in 1921–22 by Banting, Best, Collip and Macleod.",
+    "sources": [
+     "nobel_insulin",
+     "uoft_insulin100",
+     "britannica_insulin"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Feed clips name Banting as a one-liner; nobody pins the hospital, runs the blood-sugar counter from the 1922 case notes and wipes DEATH SENTENCE off the screen on a moving map.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=who+discovered+insulin",
+     "title": "Search: who discovered insulin",
+     "angle": "talking-head history",
+     "misses": "no map, no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=leonard+thompson+insulin+1922",
+     "title": "Search: leonard thompson insulin 1922",
+     "angle": "long documentaries",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=world+diabetes+day+shorts",
+     "title": "Search: world diabetes day shorts",
+     "angle": "awareness clips",
+     "misses": "no history"
+    }
+   ]
+  },
+  "sources": {
+   "nobel_insulin": {
+    "type": "primary",
+    "publisher": "The Nobel Prize",
+    "title": "The discovery of insulin",
+    "url": "https://www.nobelprize.org/prizes/medicine/1923/summary/",
+    "date": "2026-11-11",
+    "notes": "Nobel Prize in Physiology or Medicine 1923 to Frederick Banting and John Macleod for the discovery of insulin; Toronto 1921–22"
+   },
+   "uoft_insulin100": {
+    "type": "primary",
+    "publisher": "University of Toronto",
+    "title": "Insulin 100 — the discovery of insulin",
+    "url": "https://insulin100.utoronto.ca/the-discovery-of-insulin/",
+    "date": "2026-11-11",
+    "notes": "Banting and Best began experiments on dog pancreases in May 1921 in Macleod's lab; first human injection to Leonard Thompson, 14, at Toronto General Hospital on 11 January 1922; Collip's purified extract given 23 January 1922; patent sold to the University of Toronto for $1"
+   },
+   "britannica_insulin": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Frederick Banting — Canadian physician",
+    "url": "https://www.britannica.com/biography/Frederick-Banting",
+    "date": "2026-11-11",
+    "notes": "with Charles Best isolated insulin in 1921 at the University of Toronto; first used on a 14-year-old diabetic boy in January 1922; Nobel Prize 1923"
+   },
+   "cmaj_1922": {
+    "type": "primary",
+    "publisher": "Canadian Medical Association Journal (via PubMed Central)",
+    "title": "Pancreatic extracts in the treatment of diabetes mellitus — Banting, Best, Collip, Campbell, Fletcher, CMAJ 1922;12(3):141–146",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1524425/",
+    "date": "2026-11-11",
+    "notes": "case of L.T., 14: first extract 11 January 1922 produced a sterile abscess and modest effect; purified extract from 23 January lowered blood sugar from 0.52 % to 0.12 % and cleared glycosuria"
+   },
+   "minkowski": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Oskar Minkowski — German physician",
+    "url": "https://www.britannica.com/biography/Oskar-Minkowski",
+    "date": "2026-11-11",
+    "notes": "with Joseph von Mering showed in 1889 that removing a dog's pancreas produces diabetes"
+   },
+   "diabetes_uk": {
+    "type": "reference",
+    "publisher": "Diabetes UK",
+    "title": "The history of insulin",
+    "url": "https://www.diabetes.org.uk/about-diabetes/history-of-insulin",
+    "date": "2026-11-11",
+    "notes": "before 1922 a type 1 diagnosis meant death within months to a couple of years on starvation diets; Banting sold the patent for $1 saying insulin belonged to the world"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Insulin was first injected into a patient in Toronto: Leonard Thompson, 14, at Toronto General Hospital on 11 January 1922.",
+    "sources": [
+     "uoft_insulin100",
+     "britannica_insulin",
+     "cmaj_1922"
+    ],
+    "vo": [
+     "in which city was insulin first injected into a patient",
+     "london, berlin, or toronto",
+     "toronto. on 11 january 1922, at toronto general hospital, 14-year-old leonard thompson got the first injection",
+     "a dollar well spent. follow us"
+    ],
+    "screen": [
+     "Toronto",
+     "London",
+     "Berlin",
+     "11 JAN 1922",
+     "Leonard Thompson, aged 14",
+     "Toronto · 11 Jan 1922"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "The first extract was impure and produced a sterile abscess; Collip's purified extract, given 12 days later on 23 January, dropped Thompson's blood sugar from 0.52 % to 0.12 %.",
+    "sources": [
+     "cmaj_1922",
+     "uoft_insulin100"
+    ],
+    "vo": [
+     "the first dose was impure. 12 days later a purified extract dropped his blood sugar to normal"
+    ],
+    "screen": [
+     "blood sugar · % of blood"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Minkowski and von Mering showed in 1889 that removing a dog's pancreas causes diabetes; Banting and Best extracted insulin from dog pancreases in the summer of 1921 in Macleod's laboratory at the University of Toronto.",
+    "sources": [
+     "uoft_insulin100",
+     "nobel_insulin",
+     "britannica_insulin",
+     "minkowski"
+    ],
+    "vo": [
+     "banting and best had extracted it from dog pancreases the summer before, in a borrowed university lab"
+    ],
+    "screen": [
+     "SUMMER 1921",
+     "dog pancreases, a borrowed lab",
+     "1889",
+     "no pancreas, diabetes follows",
+     "1921",
+     "pancreas extract treats it"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "The patent was assigned to the University of Toronto for one dollar; before insulin, type 1 diabetes was fatal within months to a few years.",
+    "sources": [
+     "uoft_insulin100",
+     "diabetes_uk"
+    ],
+    "vo": [
+     "banting sold the patent to the university for a single dollar. diabetes stopped being a death sentence"
+    ],
+    "screen": [
+     "DEATH SENTENCE",
+     "$1",
+     "the price of the patent"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -96,
+   40,
+   -62,
+   52
+  ],
+  "far_bbox": [
+   -130,
+   25,
+   -40,
+   62
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "124"
+  ],
+  "highlight_note": "Canada",
+  "lift": "flag",
+  "lift_flag": "ca",
+  "labels": [
+   {
+    "id": "to",
+    "lonlat": [
+     -76.5,
+     42.2
+    ],
+    "text": "Toronto · 11 Jan 1922",
+    "cls": "tag",
+    "in": "s04@hospital+0.3",
+    "out": "s05.end"
+   },
+   {
+    "id": "lab",
+    "lonlat": [
+     -83.5,
+     45.6
+    ],
+    "text": "University of Toronto · 1921",
+    "cls": "tag",
+    "in": "s06@lab",
+    "out": "s06.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "toronto",
+    "lonlat": [
+     -79.39,
+     43.65
+    ],
+    "label": "Toronto",
+    "side": "right"
+   }
+  ],
+  "scalebar": null,
+  "pin_beats": [
+   {
+    "at": "s04@hospital",
+    "pid": "toronto"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.5,
+    [
+     -80,
+     44
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     -79,
+     44
+    ]
+   ],
+   "s04": [
+    1.1,
+    [
+     -79.5,
+     43.4
+    ]
+   ],
+   "s04b": [
+    1.2,
+    [
+     -79.2,
+     43.6
+    ]
+   ],
+   "s05": [
+    1.3,
+    [
+     -79.6,
+     43.8
+    ]
+   ],
+   "s05b": [
+    1.4,
+    [
+     -79.3,
+     43.6
+    ]
+   ],
+   "s06": [
+    1.0,
+    [
+     -80.5,
+     44.2
+    ]
+   ],
+   "s06b": [
+    1.05,
+    [
+     -80.0,
+     44.0
+    ]
+   ],
+   "s07": [
+    0.8,
+    [
+     -80,
+     44.5
+    ]
+   ],
+   "s07b": [
+    0.85,
+    [
+     -79.5,
+     44.3
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "The first dose was impure. 12 days later a purified extract dropped his blood sugar to normal.",
+    "cues": {
+     "impure": "impure",
+     "later": "later",
+     "normal": "normal"
+    }
+   },
+   "direction": "tighten on the lakeshore; a vial sticker on 'impure'; on 'later' the blood-sugar counter runs down from 0.52 to 0.12 like the 1922 case notes; a green check on 'normal' and the Canadian flag-ball grins",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    1.3,
+    [
+     -79.6,
+     43.8
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    1.4,
+    [
+     -79.3,
+     43.6
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "sugar",
+     "type": "counter",
+     "start": 0.52,
+     "end": 0.12,
+     "y": 330,
+     "label": "blood sugar · % of blood",
+     "fmt": "float2",
+     "size": 170,
+     "suffix": " %"
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@impure",
+     "do": "sticker_in",
+     "id": "st_vial"
+    },
+    {
+     "at": "@@impure+0.4",
+     "do": "sticker_pulse",
+     "id": "st_vial"
+    },
+    {
+     "at": "@@later-0.2",
+     "do": "chart.counter_run",
+     "id": "sugar",
+     "until": "@@normal+0.6",
+     "args": {
+      "steps": 14
+     }
+    },
+    {
+     "at": "@@later+0.8",
+     "do": "sticker_out",
+     "id": "st_vial"
+    },
+    {
+     "at": "@@normal",
+     "do": "sticker_in",
+     "id": "st_check"
+    },
+    {
+     "at": "@@normal+0.4",
+     "do": "sticker_pulse",
+     "id": "st_check"
+    },
+    {
+     "at": "@@normal+0.2",
+     "do": "character_in",
+     "id": "grin"
+    },
+    {
+     "at": "@@normal+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "124",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "hide",
+     "id": "sugar"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_check"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "grin"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Banting and Best had extracted it from dog pancreases the summer before, in a borrowed university lab.",
+    "cues": {
+     "banting": "banting",
+     "dog": "dog",
+     "lab": "lab"
+    }
+   },
+   "direction": "ease back to the university; a microscope sticker on 'Banting'; the PROBLEM / ANSWER split (1889 Minkowski, 1921 Toronto) on 'dog' with a dog sticker in the right column; the split folds and the SUMMER 1921 card and the lab tag land on 'lab'; Canada pulses",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "card": {
+    "kicker": "SUMMER 1921",
+    "text": "dog pancreases, a borrowed lab"
+   },
+   "card_at": null,
+   "cam": [
+    1.0,
+    [
+     -80.5,
+     44.2
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.05,
+    [
+     -80.0,
+     44.0
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "dogs",
+     "type": "split",
+     "left": {
+      "kicker": "1889",
+      "text": "no pancreas, diabetes follows"
+     },
+     "right": {
+      "kicker": "1921",
+      "text": "pancreas extract treats it"
+     },
+     "label_left": "PROBLEM",
+     "label_right": "ANSWER",
+     "y": 310,
+     "h": 540,
+     "x": 60,
+     "w": 620
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@banting",
+     "do": "sticker_in",
+     "id": "st_scope"
+    },
+    {
+     "at": "@@banting+0.4",
+     "do": "sticker_pulse",
+     "id": "st_scope"
+    },
+    {
+     "at": "@@dog",
+     "do": "sticker_out",
+     "id": "st_scope"
+    },
+    {
+     "at": "@@dog-0.2",
+     "do": "chart.split_in",
+     "id": "dogs"
+    },
+    {
+     "at": "@@dog+0.2",
+     "do": "sticker_in",
+     "id": "st_dog"
+    },
+    {
+     "at": "@@dog+0.6",
+     "do": "sticker_pulse",
+     "id": "st_dog"
+    },
+    {
+     "at": "@@lab-0.3",
+     "do": "chart.out",
+     "id": "dogs"
+    },
+    {
+     "at": "@@lab",
+     "do": "fact_in",
+     "id": "f3",
+     "until": "@.end"
+    },
+    {
+     "at": "@@lab+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "124",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@lab+0.3",
+     "do": "sticker_pulse",
+     "id": "st_dog"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_dog"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "toronto"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Banting sold the patent to the university for a single dollar. Diabetes stopped being a death sentence.",
+    "cues": {
+     "patent": "patent",
+     "dollar": "dollar",
+     "sentence": "sentence"
+    }
+   },
+   "direction": "pull back over Ontario; the DEATH SENTENCE plate waits at the bottom; a scroll sticker on 'patent'; the $1 card on 'dollar' and the British flag-ball thinks; on 'sentence' the plate wipes away and Canada pulses",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "card": {
+    "kicker": "$1",
+    "text": "the price of the patent"
+   },
+   "card_at": null,
+   "cam": [
+    0.8,
+    [
+     -80,
+     44.5
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.85,
+    [
+     -79.5,
+     44.3
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "death",
+     "type": "erase",
+     "text": "DEATH SENTENCE",
+     "y": 860,
+     "h": 260
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@patent",
+     "do": "sticker_in",
+     "id": "st_scroll"
+    },
+    {
+     "at": "@@patent+0.4",
+     "do": "sticker_pulse",
+     "id": "st_scroll"
+    },
+    {
+     "at": "@@dollar",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@dollar+0.3",
+     "do": "character_in",
+     "id": "gb_think"
+    },
+    {
+     "at": "@@sentence-0.2",
+     "do": "sticker_out",
+     "id": "st_scroll"
+    },
+    {
+     "at": "@@sentence-0.1",
+     "do": "chart.erase_run",
+     "id": "death",
+     "until": "@@sentence+1.1",
+     "args": {
+      "direction": "left"
+     }
+    },
+    {
+     "at": "@@sentence+0.6",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "124",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "gb_think"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_vial",
+   "type": "sticker",
+   "emoji": "1f9ea",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_check",
+   "type": "sticker",
+   "emoji": "2705",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_scope",
+   "type": "sticker",
+   "emoji": "1f52c",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_dog",
+   "type": "sticker",
+   "emoji": "1f415",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_scroll",
+   "type": "sticker",
+   "emoji": "1f4dc",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "grin",
+   "type": "character",
+   "flag": "ca",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "gb_think",
+   "type": "character",
+   "flag": "gb",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  }
+ ]
+}

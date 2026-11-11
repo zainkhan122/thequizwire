@@ -1,0 +1,143 @@
+{
+ "id": "ep12-first-insulin-injection-toronto",
+ "format": "quiz-v3",
+ "series": "body-brain",
+ "number": 12,
+ "title": "In which city was insulin FIRST injected into a patient?",
+ "difficulty": "MEDIUM",
+ "seed": 3412,
+ "quiz": {
+  "question": "In which city was insulin FIRST injected into a patient?",
+  "keyword": "FIRST",
+  "options": [
+   "London",
+   "Berlin",
+   "Toronto"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Toronto",
+  "answer_sub": "11 January 1922",
+  "option_meta": [
+   {
+    "flag": "gb"
+   },
+   {
+    "flag": "de"
+   },
+   {
+    "flag": "ca"
+   }
+  ],
+  "banner": "Toronto",
+  "banner_sub": "✓  C was right · 11 January 1922",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "In which city was insulin FIRST injected into a patient? 💉",
+  "premise": "A dying boy, a borrowed lab and a patent sold for a dollar",
+  "bait": "London, Berlin or Toronto — which did you pick? 👇",
+  "keywords": [
+   "where was insulin discovered",
+   "first insulin injection 1922",
+   "banting and best insulin",
+   "leonard thompson insulin",
+   "world diabetes day",
+   "diabetes history",
+   "medical history quiz",
+   "who discovered insulin"
+  ],
+  "description": "A dying boy, a borrowed lab and a patent sold for a dollar. London, Berlin or Toronto — which did you pick? 👇\n\nSources: Nobel Prize; University of Toronto; Britannica; CMAJ.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nBody & Brain #12",
+  "hashtags": [
+   "#BodyFacts",
+   "#BrainQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "MedicalHistory",
+   "WorldDiabetesDay"
+  ],
+  "cover_emoji": "💉",
+  "cover_emoji_why": "a syringe is the topic word (injection); all three options are cities, the icon favours none",
+  "copy": {
+   "spoilers": [
+    "toronto",
+    "canada",
+    "canadian",
+    "banting",
+    "best",
+    "thompson",
+    "1922",
+    "collip",
+    "macleod"
+   ],
+   "youtube": {
+    "title": "Who discovered insulin, and where was it first injected? A $1 patent 💉",
+    "description": "London, Berlin or the third one? A century ago a dying teenager weighing 29 kg was given a cloudy extract from animal pancreases. The first shot failed; the second changed medicine forever. The men behind it sold the patent to their university for a single dollar.\nGuess before the map lights up, then see the hospital, the blood-sugar drop, and the price of the patent.\nWhich did you pick? World Diabetes Day falls this week.",
+    "tags": [
+     "#diabetes",
+     "#medicalhistory",
+     "#insulin",
+     "#healthquiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "In which city was insulin FIRST injected into a patient? 💉\nLondon, Berlin or the other one? A century ago a dying teenager got a cloudy extract from animal pancreases. The first shot failed, the second changed medicine forever.\nWhich did you pick?",
+    "tags": [
+     "#diabetes",
+     "#medicalhistory",
+     "#insulin",
+     "#healthquiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "In which city was insulin first injected into a patient — London, Berlin or Toronto?\nA century ago a dying teenager got a cloudy extract from animal pancreases. The first shot failed, the second changed medicine forever, and the patent was sold for a dollar. Pick your city before the map lights up.",
+    "tags": [
+     "#insulin",
+     "#medicalhistory"
+    ]
+   },
+   "twitter": {
+    "text": "In which city was insulin FIRST injected into a patient?\nLondon, Berlin or Toronto? A dying teenager, a borrowed lab and a patent sold for a dollar.",
+    "tags": [
+     "#WorldDiabetesDay",
+     "#MedicalHistory"
+    ]
+   },
+   "threads": {
+    "text": "In which city was insulin first injected into a patient — London, Berlin or Toronto? A century ago a dying teenager got a cloudy extract from animal pancreases. The first shot failed, the second changed medicine forever, and the discoverers sold the patent to their university for a single dollar.",
+    "tags": [
+     "#insulin"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "flag-lift",
+  "beats": [
+   "pin",
+   "counter",
+   "split",
+   "erase",
+   "label"
+  ],
+  "cast": "flagball:ca + emoji-set:medicine",
+  "music": "bed:warm"
+ },
+ "status": "ready"
+}

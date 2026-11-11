@@ -1,0 +1,197 @@
+{
+ "version": 1,
+ "episode": "ep12-first-insulin-injection-toronto",
+ "topic": "First insulin injection into a human: Leonard Thompson, 14, Toronto General Hospital, 11 January 1922 (impure extract, sterile abscess); purified extract by James Collip given 23 January 1922 lowered blood glucose from 0.52 % to 0.12 %; Banting and Best isolated the extract from dog pancreases in Macleod's lab, University of Toronto, summer 1921; patent assigned to the University of Toronto for $1; Nobel Prize 1923 to Banting and Macleod.",
+ "researched": "2026-11-11",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Insulin was a European discovery like most early-20th-century pharmacology.",
+   "reality": "It was isolated and first used clinically in Toronto, Canada, in 1921–22 by Banting, Best, Collip and Macleod.",
+   "sources": [
+    "nobel_insulin",
+    "uoft_insulin100",
+    "britannica_insulin"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Feed clips name Banting as a one-liner; nobody pins the hospital, runs the blood-sugar counter from the 1922 case notes and wipes DEATH SENTENCE off the screen on a moving map.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=who+discovered+insulin",
+    "title": "Search: who discovered insulin",
+    "angle": "talking-head history",
+    "misses": "no map, no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=leonard+thompson+insulin+1922",
+    "title": "Search: leonard thompson insulin 1922",
+    "angle": "long documentaries",
+    "misses": "no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=world+diabetes+day+shorts",
+    "title": "Search: world diabetes day shorts",
+    "angle": "awareness clips",
+    "misses": "no history"
+   }
+  ]
+ },
+ "sources": {
+  "nobel_insulin": {
+   "type": "primary",
+   "publisher": "The Nobel Prize",
+   "title": "The discovery of insulin",
+   "url": "https://www.nobelprize.org/prizes/medicine/1923/summary/",
+   "date": "2026-11-11",
+   "notes": "Nobel Prize in Physiology or Medicine 1923 to Frederick Banting and John Macleod for the discovery of insulin; Toronto 1921–22"
+  },
+  "uoft_insulin100": {
+   "type": "primary",
+   "publisher": "University of Toronto",
+   "title": "Insulin 100 — the discovery of insulin",
+   "url": "https://insulin100.utoronto.ca/the-discovery-of-insulin/",
+   "date": "2026-11-11",
+   "notes": "Banting and Best began experiments on dog pancreases in May 1921 in Macleod's lab; first human injection to Leonard Thompson, 14, at Toronto General Hospital on 11 January 1922; Collip's purified extract given 23 January 1922; patent sold to the University of Toronto for $1"
+  },
+  "britannica_insulin": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Frederick Banting — Canadian physician",
+   "url": "https://www.britannica.com/biography/Frederick-Banting",
+   "date": "2026-11-11",
+   "notes": "with Charles Best isolated insulin in 1921 at the University of Toronto; first used on a 14-year-old diabetic boy in January 1922; Nobel Prize 1923"
+  },
+  "cmaj_1922": {
+   "type": "primary",
+   "publisher": "Canadian Medical Association Journal (via PubMed Central)",
+   "title": "Pancreatic extracts in the treatment of diabetes mellitus — Banting, Best, Collip, Campbell, Fletcher, CMAJ 1922;12(3):141–146",
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1524425/",
+   "date": "2026-11-11",
+   "notes": "case of L.T., 14: first extract 11 January 1922 produced a sterile abscess and modest effect; purified extract from 23 January lowered blood sugar from 0.52 % to 0.12 % and cleared glycosuria"
+  },
+  "minkowski": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Oskar Minkowski — German physician",
+   "url": "https://www.britannica.com/biography/Oskar-Minkowski",
+   "date": "2026-11-11",
+   "notes": "with Joseph von Mering showed in 1889 that removing a dog's pancreas produces diabetes"
+  },
+  "diabetes_uk": {
+   "type": "reference",
+   "publisher": "Diabetes UK",
+   "title": "The history of insulin",
+   "url": "https://www.diabetes.org.uk/about-diabetes/history-of-insulin",
+   "date": "2026-11-11",
+   "notes": "before 1922 a type 1 diagnosis meant death within months to a couple of years on starvation diets; Banting sold the patent for $1 saying insulin belonged to the world"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Insulin was first injected into a patient in Toronto: Leonard Thompson, 14, at Toronto General Hospital on 11 January 1922.",
+   "sources": [
+    "uoft_insulin100",
+    "britannica_insulin",
+    "cmaj_1922"
+   ],
+   "vo": [
+    "in which city was insulin first injected into a patient",
+    "london, berlin, or toronto",
+    "toronto. on 11 january 1922, at toronto general hospital, 14-year-old leonard thompson got the first injection",
+    "a dollar well spent. follow us"
+   ],
+   "screen": [
+    "Toronto",
+    "London",
+    "Berlin",
+    "11 JAN 1922",
+    "Leonard Thompson, aged 14",
+    "Toronto · 11 Jan 1922"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "The first extract was impure and produced a sterile abscess; Collip's purified extract, given 12 days later on 23 January, dropped Thompson's blood sugar from 0.52 % to 0.12 %.",
+   "sources": [
+    "cmaj_1922",
+    "uoft_insulin100"
+   ],
+   "vo": [
+    "the first dose was impure. 12 days later a purified extract dropped his blood sugar to normal"
+   ],
+   "screen": [
+    "blood sugar · % of blood"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Minkowski and von Mering showed in 1889 that removing a dog's pancreas causes diabetes; Banting and Best extracted insulin from dog pancreases in the summer of 1921 in Macleod's laboratory at the University of Toronto.",
+   "sources": [
+    "uoft_insulin100",
+    "nobel_insulin",
+    "britannica_insulin",
+    "minkowski"
+   ],
+   "vo": [
+    "banting and best had extracted it from dog pancreases the summer before, in a borrowed university lab"
+   ],
+   "screen": [
+    "SUMMER 1921",
+    "dog pancreases, a borrowed lab",
+    "1889",
+    "no pancreas, diabetes follows",
+    "1921",
+    "pancreas extract treats it"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "The patent was assigned to the University of Toronto for one dollar; before insulin, type 1 diabetes was fatal within months to a few years.",
+   "sources": [
+    "uoft_insulin100",
+    "diabetes_uk"
+   ],
+   "vo": [
+    "banting sold the patent to the university for a single dollar. diabetes stopped being a death sentence"
+   ],
+   "screen": [
+    "DEATH SENTENCE",
+    "$1",
+    "the price of the patent"
+   ]
+  }
+ ]
+}
