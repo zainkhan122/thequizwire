@@ -107,6 +107,29 @@ def check(S):
             for name, test in DEAD:
                 d = test(b)
                 if d > 0: (F if d > MARGIN else Wn).append(f"L1 pin {p['id']!r} '{p.get('label')}' at cam {key} → label box {[round(v) for v in b]} {d:.0f} px into dead zone '{name}' — side:left/right, pin_out earlier, or change cam")
+    # L4 reveal flag-balls (characters.a / .b, shown s04–s05) vs tags and pins on screen at the reveal cams.
+    # Measured 11-11: insulin 'TORONTO · 11 JAN 1922' and Silverstone 'SILVERSTONE · 13 MAY 1950' tags were covered by the
+    # flag-ball at the default (230,820)/(850,1000) — passed every gate, caught only by eye. A tag hidden behind a ball is a dead reveal.
+    chars = S.get("characters") or {}
+    for ck in ("a", "b"):
+        c = chars.get(ck)
+        if not c: continue
+        half = c.get("size", 200) / 2; cb = [c["x"] - half, c["y"] - half, c["x"] + half, c["y"] + half]
+        if cb[3] > 1190: F.append(f"L4 character {ck!r} bottom {round(cb[3])} enters the caption band (>= 1190) — raise y")
+        for lab in g.get("labels", []):
+            s_in = scene_index(lab.get("in")) or 4
+            if s_in > 5: continue
+            for key, cam in cams_between(cams, s_in, 6):
+                x, y = screen(proj, cam, lab["lonlat"]); b = tag_box(x, y, lab["text"])
+                if offscreen(b): continue
+                ox = max(0, min(cb[2], b[2]) - max(cb[0], b[0])); oy = max(0, min(cb[3], b[3]) - max(cb[1], b[1]))
+                if ox * oy > 0: F.append(f"L4 character {ck!r} ({c['x']},{c['y']}) covers tag {lab['id']!r} '{lab['text']}' at cam {key} (tag box {[round(v) for v in b]}) — move the flag-ball (y ≥ tag bottom + 20) or the tag")
+        for pn in g.get("pins", []):
+            for key, cam in cams_between(cams, 4, 6):
+                x, y = screen(proj, cam, pn["lonlat"]); b = pin_box(x, y, pn.get("label", ""), pn.get("side"))
+                if offscreen(b): continue
+                ox = max(0, min(cb[2], b[2]) - max(cb[0], b[0])); oy = max(0, min(cb[3], b[3]) - max(cb[1], b[1]))
+                if ox * oy > 0: Wn.append(f"L4 character {ck!r} may cover pin {pn['id']!r} at cam {key} — check the pin's beat; move the flag-ball if the pin is in by s05")
     # L2 chart boxes (bars / compare / split; counters are rendered allow-overlap) vs stickers on in the same beat and the caption band.
     # CI tolerance measured: ep21 st_shrug overlapping a bars box by 31 % of its area passed, ep23 st_jp with its centre inside a split failed.
     stick = {e["id"]: e for e in S.get("extra_elements", []) if e.get("type") == "sticker"}

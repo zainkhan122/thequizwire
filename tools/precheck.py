@@ -27,6 +27,14 @@ tallest largest smallest highest lowest fastest oldest newest biggest tennis cri
 heart brain body blood bone doctor hospital transplant penguin penguins bear bears elephant elephants dragon dragons polar freezer
 january february march april may june july august september october november december""".split())
 
+def syllables(w):
+    w = re.sub(r"[^a-z]", "", w.lower())
+    if not w: return 1
+    if w.isdigit(): return len(w) * 1.5
+    v = len(re.findall(r"[aeiouy]+", w))
+    if w.endswith("e") and not w.endswith(("le", "ee")): v -= 1
+    return max(1, v)
+
 def words(s): return re.findall(r"[A-Za-z][A-Za-z'’-]*|\d[\d,\.]*", s)
 
 def main():
@@ -50,6 +58,17 @@ def main():
             if w.lower() in [b.lower() for b in BAD]: F.append(f"V3 {k}: “{w}” already failed the whisper gate once (docs/data/names_bad.json) — keep it on screen, out of the narration")
             elif w[0].isupper() and w.lower() not in allowed and not re.match(r"\d", w) and i > 0 and not ws[i - 1].endswith((".", "!", "?")):
                 W.append(f"V3 {k}: proper noun “{w}” — fine if it is plain English for Kokoro; names that fail CI go to docs/data/names_bad.json")
+    # V6 hook pace: v01 is read "urgent" (Kokoro speed 1.10) and CI measures 5.0–7.4 syl/s of phonation. Long hooks of short words
+    # run away: 'In which city was insulin FIRST injected into a patient?' (18 syl) measured 8.53 syl/s (11-11); 13-syllable hooks pass.
+    hsyl = sum(syllables(w) for w in words(q))
+    if hsyl > 15: F.append(f"V6 hook ≈ {hsyl} syllables — hooks over 15 syllables have run past the urgent pace band in CI; shorten the question (≤ 14)")
+    elif hsyl > 14: W.append(f"V6 hook ≈ {hsyl} syllables — borderline for the urgent pace band; consider shortening")
+    # V7 ASR-fragile tokens: possessives / contractions on digit-tokens and abbreviations ("F1's", "USA's") were dropped by the whisper gate
+    # (Silverstone 11-11: heard 'F1, first'); spell them out ("the first Formula 1 …").
+    for k, t in list(lines.items()) + [("question", q)]:
+        if not isinstance(t, str): continue
+        for tok in re.findall(r"\b[A-Z]*\d+[A-Za-z]*'s\b|\b[A-Z]{2,}'s\b", t):
+            F.append(f"V7 {k}: “{tok}” — possessive on a digit/abbreviation token fails the whisper gate; rephrase without the apostrophe")
     if numerals > 9: F.append(f"V2 {numerals} numerals across the narration (limit 9) — the wpm gate counts each as one word")
     elif numerals > 6: W.append(f"V2 {numerals} numerals — each costs ~1 s of narration against the wpm gate")
     total = len(words(q)) + len(words(opts)) + 1 + sum(len(words(t)) for t in lines.values() if t) - len(words(lines.get("v01", "")))

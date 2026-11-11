@@ -14,7 +14,9 @@ research{topic, myths[], landscape{our_gap, existing[3]}, sources{...}, claims[]
 import argparse, json, pathlib, sys, datetime
 
 OPENERS_REVEALS = {"opener": {"wide-drift", "mystery-zoom-out", "split-candidates", "night-lights"},            # each one changes the actual choreography (see build)
-                   "reveal": {"fill-pulse", "flag-lift", "colour-lift", "flash-cut", "route-draw", "feature-fill"}}   # feature-fill: a lake/park/river area layer appears (no country highlight)
+                   "reveal": {"fill-pulse", "flag-lift", "colour-lift", "route-draw", "feature-fill"}}   # feature-fill: a lake/park/river area layer appears (no country highlight)
+# flash-cut RETIRED 2026-11-11: its fx.flash whitens the frame for ~0.3 s at the reveal instant; the readability gate samples every 0.5 s and
+# measured the option/caption text at 1.3:1 (Geo #27). A white flash under text is a real readability hole, not a probe artefact.
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 SCREEN_EXEMPT = ["^GEO BLITZ", "^SPORTS SPRINT", "^BODY & BRAIN", "^WILD FILES", "^#\\d+$", "^(EASY|MEDIUM|HARD)$", "^THE ?QUIZ ?WIRE",
                  "km at \\d+°$", "^Map data:", "Voice: AI", "^TOO EASY\\?$", "^thequizwire\\.com$", "^GUESS BEFORE", "^A was right|^B was right|^C was right"]

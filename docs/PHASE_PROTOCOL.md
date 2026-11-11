@@ -75,3 +75,7 @@ next        : Phase N.M+1 — <name> (needs: <owner input or nothing>)
 - "Done" never means "ran in my head" — every exit check is a command with output pasted in the report.
 - "Done" never means "in the sandbox only" — unsynced work does not exist.
 - "Done" never includes a video unless the owner has said "make videos".
+
+
+## Render phase = `tools/ship.sh` (since 2026-11-11)
+`tools/ship.sh [--tag TAG] [--dispatch] [--msg MSG] <episode> ...` is the only sanctioned path from sandbox to CI: it runs placelint + preflight for every episode, and only when all pass it commits, pushes and dispatches `render.yml` with series-qualified paths. Never hand-chain `preflight; git push; curl dispatch`.

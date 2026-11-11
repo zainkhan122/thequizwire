@@ -42,10 +42,27 @@ jobs:
     outputs:
       eps: ${{ steps.p.outputs.eps }}
     steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.sha || github.sha }}
+          sparse-checkout: series
+          sparse-checkout-cone-mode: true
       - id: p
         env:
           EPS: ${{ inputs.episodes }}
-        run: python3 -c "import json,os; print('eps='+json.dumps(os.environ['EPS'].replace(',',' ').split()))" >> "$GITHUB_OUTPUT"
+        run: |
+          # resolve bare ids → series/<series>/<id>; refuse unknown episodes here instead of 4 runners failing at `cd` (11-11 lesson)
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import glob, json, os, sys
+          out = []
+          for e in os.environ['EPS'].replace(',', ' ').split():
+              e = e.strip('/')
+              if os.path.isfile(f"{e}/episode.json"): out.append(e); continue
+              hits = glob.glob(f"series/*/{e}/episode.json")
+              if len(hits) != 1: sys.exit(f"::error::episode not found (give series/<series>/<id>): {e}")
+              out.append(os.path.dirname(hits[0]))
+          print('eps=' + json.dumps(out))
+          PY
   render:
     needs: plan
     name: render ${{ matrix.ep }}
