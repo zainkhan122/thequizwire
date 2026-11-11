@@ -63,7 +63,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "The Maldives. Its highest natural point is about 5 metres; most of its 1,190 islands sit far lower.",
+   "text": "The Maldives. Its highest natural point is about 5 metres; most of its 1,190 islands sit lower.",
    "cues": {
     "answer": "maldives",
     "highest": "highest",
@@ -94,7 +94,7 @@
    "energy": 3,
    "pause_after": 0.45,
    "direction": "tighten on Malé; the 1.5 M / 3 M split lands on 'average'; the Malé pin on 'capital'; a brick-wall sticker and the sea-wall tag on 'wall'; the Maldives pulses",
-   "text": "Average ground level is a metre and a half. The capital, Malé, hides behind a sea wall 3 metres high.",
+   "text": "Average ground is a metre and a half. The capital, Malé, hides behind a sea wall 3 metres high.",
    "cues": {
     "average": "average",
     "capital": "capital",

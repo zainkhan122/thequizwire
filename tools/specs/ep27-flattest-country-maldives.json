@@ -123,7 +123,7 @@
    "flattest": "flattest"
   },
   "v04": {
-   "text": "The Maldives. Its highest natural point is about 5 metres; most of its 1,190 islands sit far lower.",
+   "text": "The Maldives. Its highest natural point is about 5 metres; most of its 1,190 islands sit lower.",
    "cues": {
     "answer": "maldives",
     "highest": "highest",
@@ -139,7 +139,7 @@
    }
   },
   "v06": {
-   "text": "Average ground level is a metre and a half. The capital, Malé, hides behind a sea wall 3 metres high.",
+   "text": "Average ground is a metre and a half. The capital, Malé, hides behind a sea wall 3 metres high.",
    "cues": {
     "average": "average",
     "capital": "capital",
@@ -309,7 +309,7 @@
     "vo": [
      "which is the flattest country on earth",
      "netherlands, denmark, or maldives",
-     "the maldives. its highest natural point is about 5 metres; most of its 1,190 islands sit far lower",
+     "the maldives. its highest natural point is about 5 metres; most of its 1,190 islands sit lower",
      "lower than a house. follow us"
     ],
     "screen": [
@@ -349,7 +349,7 @@
      "jica_wall"
     ],
     "vo": [
-     "average ground level is a metre and a half. the capital, malé, hides behind a sea wall 3 metres high"
+     "average ground is a metre and a half. the capital, malé, hides behind a sea wall 3 metres high"
     ],
     "screen": [
      "1.5 M",
@@ -676,7 +676,7 @@
   },
   {
    "vo": {
-    "text": "Average ground level is a metre and a half. The capital, Malé, hides behind a sea wall 3 metres high.",
+    "text": "Average ground is a metre and a half. The capital, Malé, hides behind a sea wall 3 metres high.",
     "cues": {
      "average": "average",
      "capital": "capital",
