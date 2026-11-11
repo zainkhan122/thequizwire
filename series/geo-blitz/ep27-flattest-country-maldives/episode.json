@@ -1,0 +1,142 @@
+{
+ "id": "ep27-flattest-country-maldives",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 27,
+ "title": "Which is the FLATTEST country on Earth?",
+ "difficulty": "MEDIUM",
+ "seed": 3627,
+ "quiz": {
+  "question": "Which is the FLATTEST country on Earth?",
+  "keyword": "FLATTEST",
+  "options": [
+   "Netherlands",
+   "Denmark",
+   "Maldives"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Maldives",
+  "answer_sub": "highest point 5 m",
+  "option_meta": [
+   {
+    "flag": "nl"
+   },
+   {
+    "flag": "dk"
+   },
+   {
+    "flag": "mv"
+   }
+  ],
+  "banner": "Maldives",
+  "banner_sub": "✓  C was right · highest point 5 m",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which is the FLATTEST country on Earth? 📏",
+  "premise": "A whole country whose highest point is lower than a house",
+  "bait": "Netherlands, Denmark or Maldives — which did you pick? 👇",
+  "keywords": [
+   "flattest country in the world",
+   "lowest country in the world",
+   "maldives highest point",
+   "countries at risk from sea level rise",
+   "netherlands below sea level",
+   "geography quiz",
+   "world map facts",
+   "sea level rise"
+  ],
+  "description": "A whole country whose highest point is lower than a house. Netherlands, Denmark or Maldives — which did you pick? 👇\n\nSources: CIA World Factbook; Britannica; IPCC; Maldives Ministry of Environment.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #27",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "GeographyQuiz",
+   "SeaLevel"
+  ],
+  "cover_emoji": "📏",
+  "cover_emoji_why": "a ruler stands for measuring height, the idea in the question; all three options are low-lying countries, the icon favours none",
+  "copy": {
+   "spoilers": [
+    "maldives",
+    "maldivian",
+    "malé",
+    "male",
+    "indian ocean",
+    "atoll",
+    "atolls",
+    "1,190",
+    "1190"
+   ],
+   "youtube": {
+    "title": "What is the flattest country in the world? Its peak is 5 metres high 📏",
+    "description": "Netherlands, Denmark or the third one? One nation's highest natural point would fit under a two-storey house, and most of its land sits about a metre and a half above the sea. Its capital is ringed by a wall, and its government once held a cabinet meeting underwater to make the point.\nGuess before the map lights up, then see the three high points side by side and the wall that keeps the capital dry.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#sealevel",
+     "#worldmap",
+     "#geography",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which is the FLATTEST country on Earth? 📏\nNetherlands, Denmark or the other one? One nation's highest point would fit under a two-storey house, and its government once held a cabinet meeting underwater to make the point.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#sealevel",
+     "#worldmap",
+     "#geography",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which is the flattest country on Earth — the Netherlands, Denmark or the Maldives?\nOne nation's highest natural point would fit under a two-storey house, most of its land sits about a metre and a half above the sea, and its government once held a cabinet meeting underwater to make the point. Choose before the ocean gives it away.",
+    "tags": [
+     "#sealevel",
+     "#geographyquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which is the FLATTEST country on Earth?\nNetherlands, Denmark or Maldives? One of them has a highest point lower than a house — and held a cabinet meeting underwater.",
+    "tags": [
+     "#SeaLevelRise",
+     "#GeoQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which is the flattest country on Earth — the Netherlands, Denmark or the Maldives? One nation's highest natural point would fit under a two-storey house, most of its land sits about a metre and a half above the sea, and its government once held a cabinet meeting underwater to make the point.",
+    "tags": [
+     "#sealevelrise"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-record",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "flash-cut",
+  "beats": [
+   "compare",
+   "pin",
+   "split",
+   "label"
+  ],
+  "cast": "flagball:mv + emoji-set:sea",
+  "music": "bed:bright"
+ },
+ "status": "ready"
+}

@@ -1,0 +1,120 @@
+{
+ "version": 1,
+ "episode": "ep27-flattest-country-maldives",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     55,
+     -12,
+     95,
+     22
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "462"
+     ],
+     "cls": "",
+     "note": "Maldives"
+    }
+   ],
+   "pins": [
+    {
+     "id": "male",
+     "lonlat": [
+      73.51,
+      4.175
+     ],
+     "label": "Malé",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "mv",
+     "lonlat": [
+      74.6,
+      5.6
+     ],
+     "text": "Maldives · highest point 5 m",
+     "cls": "tag",
+     "in": "s04@highest+0.3",
+     "out": "s05.end"
+    },
+    {
+     "id": "ml",
+     "lonlat": [
+      73.1,
+      3.9
+     ],
+     "text": "Malé · 3 m sea wall",
+     "cls": "tag",
+     "in": "s06@wall+0.2",
+     "out": "s06.end"
+    }
+   ],
+   "disputed": [
+    {
+     "id": "chagos",
+     "ne_name": "Br. Indian Ocean Ter.",
+     "name": "Chagos Archipelago",
+     "controller": "United Kingdom (treaty to transfer sovereignty to Mauritius signed May 2025, not in force)",
+     "claimants": [
+      "Mauritius",
+      "Seychelles"
+     ],
+     "as_of": "2026-11",
+     "source": "docs/border_registry.json#chagos",
+     "label_at": [
+      72.4,
+      -7.3
+     ],
+     "plate_cls": "small"
+    }
+   ],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      30,
+      -30,
+      110,
+      35
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 100,
+    "lonlat": [
+     72,
+     1
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

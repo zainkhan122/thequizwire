@@ -788,18 +788,21 @@
     72.4,
     -7.3
    ],
-   "ne_names": [],
+   "ne_names": [
+    "Br. Indian Ocean Ter."
+   ],
    "parts": [
     {
-     "ne_name": null,
-     "controller": "United Kingdom (2024 agreement to transfer sovereignty to Mauritius; verify status before use)",
+     "ne_name": "Br. Indian Ocean Ter.",
+     "controller": "United Kingdom (treaty to transfer sovereignty to Mauritius signed 22 May 2025; not ratified / not in force as of 2026-09)",
      "claimants": [
-      "Mauritius"
+      "Mauritius",
+      "Seychelles"
      ]
     }
    ],
-   "as_of": "2026-10",
-   "source": "verify at use"
+   "as_of": "2026-11",
+   "source": "Natural Earth; britannica.com/question/What-are-the-recent-developments-regarding-the-sovereignty-of-the-Chagos-Archipelago (2026-03)"
   },
   {
    "id": "sir_creek",

@@ -1,0 +1,682 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "5 M",
+   "text": "the highest natural point"
+  },
+  {
+   "id": "peaks",
+   "type": "compare",
+   "items": [
+    [
+     "Netherlands",
+     322,
+     "322 m"
+    ],
+    [
+     "Denmark",
+     171,
+     "171 m"
+    ],
+    [
+     "Maldives",
+     5,
+     "5 m"
+    ]
+   ],
+   "y": 320,
+   "x": 60,
+   "w": 900,
+   "max_h": 520
+  },
+  {
+   "id": "levels",
+   "type": "split",
+   "left": {
+    "kicker": "1.5 M",
+    "text": "average ground level"
+   },
+   "right": {
+    "kicker": "3 M",
+    "text": "the sea wall around Malé"
+   },
+   "label_left": "LAND",
+   "label_right": "WALL",
+   "y": 310,
+   "h": 540,
+   "x": 60,
+   "w": 620
+  },
+  {
+   "id": "f4",
+   "type": "fact",
+   "kicker": "2009",
+   "text": "a cabinet meeting underwater"
+  },
+  {
+   "id": "st_mtn",
+   "type": "sticker",
+   "emoji": "26f0",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_palm",
+   "type": "sticker",
+   "emoji": "1f334",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_wave",
+   "type": "sticker",
+   "emoji": "1f30a",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_wall",
+   "type": "sticker",
+   "emoji": "1f9f1",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_diver",
+   "type": "sticker",
+   "emoji": "1f93f",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_pen",
+   "type": "sticker",
+   "emoji": "1f58a",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "nl_think",
+   "type": "character",
+   "flag": "nl",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "grin",
+   "type": "character",
+   "flag": "mv",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  },
+  {
+   "id": "cha",
+   "type": "character",
+   "flag": "mv",
+   "face": "happy",
+   "x": 230,
+   "y": 820,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "chb",
+   "type": "character",
+   "flag": "nl",
+   "face": "think",
+   "x": 850,
+   "y": 1000,
+   "size": 200,
+   "rot": 8
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     75,
+     4
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.38,
+    "lonlat": [
+     76,
+     4
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 4.5,
+    "lonlat": [
+     73.3,
+     3.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 4.8,
+    "lonlat": [
+     73.4,
+     3.3
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.05",
+   "do": "fx.flash",
+   "args": {}
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "462",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s04@highest+0.3",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "mv"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "mv"
+   }
+  },
+  {
+   "at": "s06@wall+0.2",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ml"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ml"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 3.8,
+    "lonlat": [
+     73.6,
+     3.8
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 4.0,
+    "lonlat": [
+     73.9,
+     3.4
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@netherlands-0.3",
+   "do": "chart.compare_in",
+   "id": "peaks",
+   "args": {
+    "dur": 0.9,
+    "stagger": 0.25
+   }
+  },
+  {
+   "at": "s05@netherlands",
+   "do": "sticker_in",
+   "id": "st_mtn"
+  },
+  {
+   "at": "s05@netherlands+0.4",
+   "do": "sticker_pulse",
+   "id": "st_mtn"
+  },
+  {
+   "at": "s05@denmark",
+   "do": "character_in",
+   "id": "nl_think"
+  },
+  {
+   "at": "s05@tree",
+   "do": "sticker_out",
+   "id": "st_mtn"
+  },
+  {
+   "at": "s05@tree",
+   "do": "sticker_in",
+   "id": "st_palm"
+  },
+  {
+   "at": "s05@tree+0.4",
+   "do": "sticker_pulse",
+   "id": "st_palm"
+  },
+  {
+   "at": "s05@tree+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "462",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "peaks"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_palm"
+  },
+  {
+   "at": "s05.end",
+   "do": "character_out",
+   "id": "nl_think"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 8.0,
+    "lonlat": [
+     73.45,
+     4.12
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 8.6,
+    "lonlat": [
+     73.5,
+     4.08
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@average-0.2",
+   "do": "chart.split_in",
+   "id": "levels"
+  },
+  {
+   "at": "s06@average+0.3",
+   "do": "sticker_in",
+   "id": "st_wave"
+  },
+  {
+   "at": "s06@average+0.7",
+   "do": "sticker_pulse",
+   "id": "st_wave"
+  },
+  {
+   "at": "s06@wall",
+   "do": "sticker_out",
+   "id": "st_wave"
+  },
+  {
+   "at": "s06@wall",
+   "do": "sticker_in",
+   "id": "st_wall"
+  },
+  {
+   "at": "s06@wall+0.4",
+   "do": "sticker_pulse",
+   "id": "st_wall"
+  },
+  {
+   "at": "s06@wall+0.5",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "462",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "chart.out",
+   "id": "levels"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_wall"
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.5",
+   "args": {
+    "k": 5.0,
+    "lonlat": [
+     73.4,
+     3.9
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 5.3,
+    "lonlat": [
+     73.5,
+     3.7
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@cabinet",
+   "do": "sticker_in",
+   "id": "st_diver"
+  },
+  {
+   "at": "s07@cabinet+0.4",
+   "do": "sticker_pulse",
+   "id": "st_diver"
+  },
+  {
+   "at": "s07@cabinet+0.2",
+   "do": "fact_in",
+   "id": "f4",
+   "until": "s07.end"
+  },
+  {
+   "at": "s07@signing",
+   "do": "sticker_out",
+   "id": "st_diver"
+  },
+  {
+   "at": "s07@signing",
+   "do": "sticker_in",
+   "id": "st_pen"
+  },
+  {
+   "at": "s07@signing+0.4",
+   "do": "sticker_pulse",
+   "id": "st_pen"
+  },
+  {
+   "at": "s07@watched",
+   "do": "character_in",
+   "id": "grin"
+  },
+  {
+   "at": "s07@watched+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "462",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_pen"
+  },
+  {
+   "at": "s07.end",
+   "do": "character_out",
+   "id": "grin"
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "male"
+   }
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     75,
+     4
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04+1.7",
+   "do": "geo.scalebar_in",
+   "stage": "stage_map"
+  },
+  {
+   "at": "s06@capital",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "male"
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.6",
+   "do": "character_in",
+   "id": "cha"
+  },
+  {
+   "at": "s04+1.9",
+   "do": "character_in",
+   "id": "chb"
+  },
+  {
+   "at": "s05+1.0",
+   "do": "character_out",
+   "id": "cha"
+  },
+  {
+   "at": "s05+0.8",
+   "do": "character_out",
+   "id": "chb"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

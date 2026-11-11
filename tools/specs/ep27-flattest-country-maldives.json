@@ -1,0 +1,957 @@
+{
+ "id": "ep27-flattest-country-maldives",
+ "series": "geo-blitz",
+ "number": 27,
+ "seed": 3627,
+ "question": "Which is the FLATTEST country on Earth?",
+ "keyword": "FLATTEST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Netherlands",
+   "flag": "nl",
+   "cue": "netherlands"
+  },
+  {
+   "text": "Denmark",
+   "flag": "dk",
+   "cue": "denmark"
+  },
+  {
+   "text": "Maldives",
+   "flag": "mv",
+   "cue": "maldives"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "highest point 5 m",
+ "outro_headline": "DID YOU GET IT?",
+ "cover_emoji": "📏",
+ "cover_emoji_why": "a ruler stands for measuring height, the idea in the question; all three options are low-lying countries, the icon favours none",
+ "post": {
+  "premise": "A whole country whose highest point is lower than a house",
+  "bait": "Netherlands, Denmark or Maldives — which did you pick? 👇",
+  "keywords": [
+   "flattest country in the world",
+   "lowest country in the world",
+   "maldives highest point",
+   "countries at risk from sea level rise",
+   "netherlands below sea level",
+   "geography quiz",
+   "world map facts",
+   "sea level rise"
+  ],
+  "tags": [
+   "GeographyQuiz",
+   "SeaLevel"
+  ],
+  "sources_line": "CIA World Factbook; Britannica; IPCC; Maldives Ministry of Environment",
+  "copy": {
+   "spoilers": [
+    "maldives",
+    "maldivian",
+    "malé",
+    "male",
+    "indian ocean",
+    "atoll",
+    "atolls",
+    "1,190",
+    "1190"
+   ],
+   "youtube": {
+    "title": "What is the flattest country in the world? Its peak is 5 metres high 📏",
+    "description": "Netherlands, Denmark or the third one? One nation's highest natural point would fit under a two-storey house, and most of its land sits about a metre and a half above the sea. Its capital is ringed by a wall, and its government once held a cabinet meeting underwater to make the point.\nGuess before the map lights up, then see the three high points side by side and the wall that keeps the capital dry.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#sealevel",
+     "#worldmap",
+     "#geography",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which is the FLATTEST country on Earth? 📏\nNetherlands, Denmark or the other one? One nation's highest point would fit under a two-storey house, and its government once held a cabinet meeting underwater to make the point.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#sealevel",
+     "#worldmap",
+     "#geography",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which is the flattest country on Earth — the Netherlands, Denmark or the Maldives?\nOne nation's highest natural point would fit under a two-storey house, most of its land sits about a metre and a half above the sea, and its government once held a cabinet meeting underwater to make the point. Choose before the ocean gives it away.",
+    "tags": [
+     "#sealevel",
+     "#geographyquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which is the FLATTEST country on Earth?\nNetherlands, Denmark or Maldives? One of them has a highest point lower than a house — and held a cabinet meeting underwater.",
+    "tags": [
+     "#SeaLevelRise",
+     "#GeoQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which is the flattest country on Earth — the Netherlands, Denmark or the Maldives? One nation's highest natural point would fit under a two-storey house, most of its land sits about a metre and a half above the sea, and its government once held a cabinet meeting underwater to make the point.",
+    "tags": [
+     "#sealevelrise"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-record",
+  "hook": "misconception",
+  "opener": "mystery-zoom-out",
+  "reveal": "flash-cut",
+  "beats": [
+   "compare",
+   "pin",
+   "split",
+   "label"
+  ],
+  "cast": "flagball:mv + emoji-set:sea",
+  "music": "bed:bright",
+  "outro": "DID YOU GET IT?"
+ },
+ "intent": "Three low countries, one that is barely there: the high points side by side, the wall around the capital against the metre-and-a-half average, then the underwater cabinet meeting that made the world look.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "flattest": "flattest"
+  },
+  "v04": {
+   "text": "The Maldives. Its highest natural point is about 5 metres; most of its 1,190 islands sit far lower.",
+   "cues": {
+    "answer": "maldives",
+    "highest": "highest",
+    "islands": "islands"
+   }
+  },
+  "v05": {
+   "text": "The Netherlands reaches 322 metres. Denmark tops out at 171. The Maldives cannot clear a tree.",
+   "cues": {
+    "netherlands": "netherlands",
+    "denmark": "denmark",
+    "tree": "tree"
+   }
+  },
+  "v06": {
+   "text": "Average ground level is a metre and a half. The capital, Malé, hides behind a sea wall 3 metres high.",
+   "cues": {
+    "average": "average",
+    "capital": "capital",
+    "wall": "wall"
+   }
+  },
+  "v07": {
+   "text": "In 2009 the cabinet met underwater in scuba gear, signing a plea on rising seas. The world watched.",
+   "cues": {
+    "cabinet": "cabinet",
+    "signing": "signing",
+    "watched": "watched"
+   }
+  },
+  "v08": {
+   "text": "Lower than a house. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "5 M",
+   "text": "the highest natural point"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "mv",
+   "face": "happy",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "nl",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "research": {
+  "topic": "Flattest / lowest country: Maldives — highest natural point about 2.4 m (CIA: 5 m on Vilingili, 8th tee of a golf course), average ground elevation ~1.5 m, 1,190 coral islands in 26 atolls; the Netherlands' highest point Vaalserberg 322 m, Denmark's Møllehøj 171 m; Malé protected by a 3 m sea wall built with Japanese aid after the 1987 floods; 17 October 2009 President Nasheed's cabinet met underwater at Girifushi to sign a declaration ahead of the Copenhagen climate summit.",
+  "myths": [
+   {
+    "myth": "The Netherlands is the flattest country — a quarter of it lies below sea level.",
+    "reality": "Much of the Netherlands is below sea level, but its highest point is 322 m; the Maldives' highest natural point is a few metres and no land rises above about 5 m.",
+    "sources": [
+     "cia_maldives",
+     "cia_netherlands",
+     "britannica_maldives"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Clips either tour Maldives resorts or run a 'countries that will disappear' list; nobody puts the three high points side by side, measures the Malé wall against the average and shows the underwater cabinet on a moving map as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=flattest+country+in+the+world",
+     "title": "Search: flattest country in the world",
+     "angle": "ranking lists",
+     "misses": "no map, no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=maldives+underwater+cabinet+meeting",
+     "title": "Search: maldives underwater cabinet meeting",
+     "angle": "2009 news clips",
+     "misses": "no geography"
+    },
+    {
+     "url": "https://www.youtube.com/@gyanotrick/shorts",
+     "title": "GyanoTrick",
+     "angle": "what-if geography",
+     "misses": "no sourced data"
+    }
+   ]
+  },
+  "sources": {
+   "cia_maldives": {
+    "type": "primary",
+    "publisher": "CIA World Factbook",
+    "title": "Maldives — Geography",
+    "url": "https://www.cia.gov/the-world-factbook/countries/maldives/",
+    "date": "2026-11-11",
+    "notes": "lowest country in the world; highest point 8th tee, golf course, Villingili Island 5 m; mean elevation 2 m; 1,190 coral islands grouped into 26 atolls"
+   },
+   "cia_netherlands": {
+    "type": "primary",
+    "publisher": "CIA World Factbook",
+    "title": "Netherlands — Geography",
+    "url": "https://www.cia.gov/the-world-factbook/countries/netherlands/",
+    "date": "2026-11-11",
+    "notes": "highest point Mount Scenery 862 m (Saba); on the European mainland Vaalserberg 322 m; about a quarter of the land below sea level"
+   },
+   "cia_denmark": {
+    "type": "primary",
+    "publisher": "CIA World Factbook",
+    "title": "Denmark — Geography",
+    "url": "https://www.cia.gov/the-world-factbook/countries/denmark/",
+    "date": "2026-11-11",
+    "notes": "highest point Møllehøj 171 m"
+   },
+   "britannica_maldives": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Maldives",
+    "url": "https://www.britannica.com/place/Maldives",
+    "date": "2026-11-11",
+    "notes": "about 1,200 small coral islands; no land higher than about 1.8 m (6 feet) on most islands; capital Malé protected by a sea wall; average elevation about 1.5 m"
+   },
+   "guardian_cabinet": {
+    "type": "reference",
+    "publisher": "The Guardian",
+    "title": "Maldives cabinet makes a splash with underwater meeting",
+    "url": "https://www.theguardian.com/environment/2009/oct/17/maldives-underwater-cabinet",
+    "date": "2026-11-11",
+    "notes": "17 October 2009; President Mohamed Nasheed and 13 ministers in scuba gear 6 m down at Girifushi signed a declaration calling for global emission cuts before the Copenhagen summit"
+   },
+   "peakbagger_nl": {
+    "type": "reference",
+    "publisher": "Peakbagger / Britannica",
+    "title": "Vaalserberg; Møllehøj — country high points",
+    "url": "https://www.britannica.com/place/Vaalserberg",
+    "date": "2026-11-11",
+    "notes": "Vaalserberg 322.5 m, highest point of the European Netherlands; Denmark's Møllehøj 170.86 m (surveyed 2005)"
+   },
+   "bbc_cabinet": {
+    "type": "reference",
+    "publisher": "BBC News",
+    "title": "Maldives cabinet makes a splash",
+    "url": "http://news.bbc.co.uk/2/hi/south_asia/8311838.stm",
+    "date": "2026-11-11",
+    "notes": "17 October 2009 underwater cabinet meeting at Girifushi, 4 m down, 30 minutes, declaration signed with waterproof pens ahead of Copenhagen"
+   },
+   "border_registry": {
+    "type": "primary",
+    "publisher": "thequizwire docs/border_registry.json (Natural Earth)",
+    "title": "Border policy registry — chagos",
+    "url": "docs/border_registry.json",
+    "date": "2026-11-11",
+    "notes": "controller / claimant wording as shown on the plate"
+   },
+   "britannica_chagos": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Recent developments regarding the sovereignty of the Chagos Archipelago",
+    "url": "https://www.britannica.com/question/What-are-the-recent-developments-regarding-the-sovereignty-of-the-Chagos-Archipelago",
+    "date": "2026-11-11",
+    "notes": "ICJ advisory opinion 2019; UK–Mauritius treaty signed May 2025 not in force as of early 2026; UK administers as British Indian Ocean Territory; Seychelles has also claimed"
+   },
+   "jica_wall": {
+    "type": "primary",
+    "publisher": "Japan International Cooperation Agency",
+    "title": "Malé seawall — protecting the capital of the Maldives",
+    "url": "https://www.jica.go.jp/english/",
+    "date": "2026-11-11",
+    "notes": "3 m high tetrapod sea wall around Malé, built 1988–2002 with Japanese grant aid after the April 1987 flooding"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The Maldives is the flattest and lowest country: its highest natural point is a few metres (about 5 m at most), across 1,190 coral islands.",
+    "sources": [
+     "cia_maldives",
+     "britannica_maldives"
+    ],
+    "vo": [
+     "which is the flattest country on earth",
+     "netherlands, denmark, or maldives",
+     "the maldives. its highest natural point is about 5 metres; most of its 1,190 islands sit far lower",
+     "lower than a house. follow us"
+    ],
+    "screen": [
+     "Maldives",
+     "Netherlands",
+     "Denmark",
+     "5 M",
+     "the highest natural point",
+     "Maldives · highest point 5 m",
+     "5 m"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "The Netherlands' mainland high point is the Vaalserberg at 322 m; Denmark's is Møllehøj at 171 m.",
+    "sources": [
+     "cia_netherlands",
+     "cia_denmark",
+     "peakbagger_nl"
+    ],
+    "vo": [
+     "the netherlands reaches 322 metres. denmark tops out at 171. the maldives cannot clear a tree"
+    ],
+    "screen": [
+     "322 m",
+     "171 m"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Average ground level in the Maldives is about 1.5 m; the capital Malé is ringed by a 3 m sea wall built after the 1987 floods.",
+    "sources": [
+     "britannica_maldives",
+     "cia_maldives",
+     "jica_wall"
+    ],
+    "vo": [
+     "average ground level is a metre and a half. the capital, malé, hides behind a sea wall 3 metres high"
+    ],
+    "screen": [
+     "1.5 M",
+     "average ground level",
+     "3 M",
+     "the sea wall around Malé",
+     "Malé · 3 m sea wall"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "On 17 October 2009 the Maldives cabinet met underwater in scuba gear to sign a declaration on sea-level rise ahead of the Copenhagen summit.",
+    "sources": [
+     "guardian_cabinet",
+     "bbc_cabinet"
+    ],
+    "vo": [
+     "in 2009 the cabinet met underwater in scuba gear, signing a plea on rising seas. the world watched"
+    ],
+    "screen": [
+     "2009",
+     "a cabinet meeting underwater"
+    ]
+   },
+   {
+    "id": "C05",
+    "weight": "framing",
+    "text": "Border policy plate: the wide Indian Ocean view shows the Chagos Archipelago, administered by the United Kingdom as the British Indian Ocean Territory and claimed by Mauritius and Seychelles; a UK–Mauritius transfer treaty was signed in May 2025 but is not in force. No sovereignty asserted.",
+    "sources": [
+     "border_registry",
+     "britannica_chagos"
+    ],
+    "vo": [],
+    "screen": [
+     "Chagos Archipelago",
+     "Administered by United Kingdom (treaty to transfer sovereignty to Mauritius signed May 2025, not in force)",
+     "Claimed by Mauritius, Seychelles"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   55,
+   -12,
+   95,
+   22
+  ],
+  "far_bbox": [
+   30,
+   -30,
+   110,
+   35
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "462"
+  ],
+  "highlight_note": "Maldives",
+  "labels": [
+   {
+    "id": "mv",
+    "lonlat": [
+     74.6,
+     5.6
+    ],
+    "text": "Maldives · highest point 5 m",
+    "cls": "tag",
+    "in": "s04@highest+0.3",
+    "out": "s05.end"
+   },
+   {
+    "id": "ml",
+    "lonlat": [
+     73.1,
+     3.9
+    ],
+    "text": "Malé · 3 m sea wall",
+    "cls": "tag",
+    "in": "s06@wall+0.2",
+    "out": "s06.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "male",
+    "lonlat": [
+     73.51,
+     4.175
+    ],
+    "label": "Malé",
+    "side": "right"
+   }
+  ],
+  "scalebar": {
+   "km": 100,
+   "lonlat": [
+    72,
+    1
+   ]
+  },
+  "disputed": [
+   {
+    "id": "chagos",
+    "ne_name": "Br. Indian Ocean Ter.",
+    "name": "Chagos Archipelago",
+    "controller": "United Kingdom (treaty to transfer sovereignty to Mauritius signed May 2025, not in force)",
+    "claimants": [
+     "Mauritius",
+     "Seychelles"
+    ],
+    "as_of": "2026-11",
+    "source": "docs/border_registry.json#chagos",
+    "label_at": [
+     72.4,
+     -7.3
+    ],
+    "plate_cls": "small"
+   }
+  ],
+  "pin_beats": [
+   {
+    "at": "s06@capital",
+    "pid": "male"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.9,
+    [
+     76,
+     4
+    ]
+   ],
+   "s01": [
+    0.9,
+    [
+     75,
+     4
+    ]
+   ],
+   "s04": [
+    4.5,
+    [
+     73.3,
+     3.5
+    ]
+   ],
+   "s04b": [
+    4.8,
+    [
+     73.4,
+     3.3
+    ]
+   ],
+   "s05": [
+    3.8,
+    [
+     73.6,
+     3.8
+    ]
+   ],
+   "s05b": [
+    4.0,
+    [
+     73.9,
+     3.4
+    ]
+   ],
+   "s06": [
+    8.0,
+    [
+     73.45,
+     4.12
+    ]
+   ],
+   "s06b": [
+    8.6,
+    [
+     73.5,
+     4.08
+    ]
+   ],
+   "s07": [
+    5.0,
+    [
+     73.4,
+     3.9
+    ]
+   ],
+   "s07b": [
+    5.3,
+    [
+     73.5,
+     3.7
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "The Netherlands reaches 322 metres. Denmark tops out at 171. The Maldives cannot clear a tree.",
+    "cues": {
+     "netherlands": "netherlands",
+     "denmark": "denmark",
+     "tree": "tree"
+    }
+   },
+   "direction": "ease back so the atoll chain fills the frame; the three high-point columns rise on 'Netherlands' with the Maldives bar barely visible; a mountain sticker; the Dutch flag-ball thinks on 'Denmark'; a palm sticker on 'tree' as the Maldives pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    3.8,
+    [
+     73.6,
+     3.8
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    4.0,
+    [
+     73.9,
+     3.4
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "peaks",
+     "type": "compare",
+     "items": [
+      [
+       "Netherlands",
+       322,
+       "322 m"
+      ],
+      [
+       "Denmark",
+       171,
+       "171 m"
+      ],
+      [
+       "Maldives",
+       5,
+       "5 m"
+      ]
+     ],
+     "y": 320,
+     "x": 60,
+     "w": 900,
+     "max_h": 520
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@netherlands-0.3",
+     "do": "chart.compare_in",
+     "id": "peaks",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.25
+     }
+    },
+    {
+     "at": "@@netherlands",
+     "do": "sticker_in",
+     "id": "st_mtn"
+    },
+    {
+     "at": "@@netherlands+0.4",
+     "do": "sticker_pulse",
+     "id": "st_mtn"
+    },
+    {
+     "at": "@@denmark",
+     "do": "character_in",
+     "id": "nl_think"
+    },
+    {
+     "at": "@@tree",
+     "do": "sticker_out",
+     "id": "st_mtn"
+    },
+    {
+     "at": "@@tree",
+     "do": "sticker_in",
+     "id": "st_palm"
+    },
+    {
+     "at": "@@tree+0.4",
+     "do": "sticker_pulse",
+     "id": "st_palm"
+    },
+    {
+     "at": "@@tree+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "462",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "peaks"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_palm"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "nl_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Average ground level is a metre and a half. The capital, Malé, hides behind a sea wall 3 metres high.",
+    "cues": {
+     "average": "average",
+     "capital": "capital",
+     "wall": "wall"
+    }
+   },
+   "direction": "tighten on Malé; the 1.5 M / 3 M split lands on 'average'; the Malé pin on 'capital'; a brick-wall sticker and the sea-wall tag on 'wall'; the Maldives pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    8.0,
+    [
+     73.45,
+     4.12
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    8.6,
+    [
+     73.5,
+     4.08
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "levels",
+     "type": "split",
+     "left": {
+      "kicker": "1.5 M",
+      "text": "average ground level"
+     },
+     "right": {
+      "kicker": "3 M",
+      "text": "the sea wall around Malé"
+     },
+     "label_left": "LAND",
+     "label_right": "WALL",
+     "y": 310,
+     "h": 540,
+     "x": 60,
+     "w": 620
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@average-0.2",
+     "do": "chart.split_in",
+     "id": "levels"
+    },
+    {
+     "at": "@@average+0.3",
+     "do": "sticker_in",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@average+0.7",
+     "do": "sticker_pulse",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@wall",
+     "do": "sticker_out",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@wall",
+     "do": "sticker_in",
+     "id": "st_wall"
+    },
+    {
+     "at": "@@wall+0.4",
+     "do": "sticker_pulse",
+     "id": "st_wall"
+    },
+    {
+     "at": "@@wall+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "462",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "levels"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_wall"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "In 2009 the cabinet met underwater in scuba gear, signing a plea on rising seas. The world watched.",
+    "cues": {
+     "cabinet": "cabinet",
+     "signing": "signing",
+     "watched": "watched"
+    }
+   },
+   "direction": "ease back over the central atolls; a diver sticker and the 2009 card on 'cabinet'; a pen on 'signing'; the Maldivian flag-ball grins and the islands pulse on 'watched'; the Malé pin leaves at the end",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "card": {
+    "kicker": "2009",
+    "text": "a cabinet meeting underwater"
+   },
+   "card_at": null,
+   "cam": [
+    5.0,
+    [
+     73.4,
+     3.9
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    5.3,
+    [
+     73.5,
+     3.7
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@cabinet",
+     "do": "sticker_in",
+     "id": "st_diver"
+    },
+    {
+     "at": "@@cabinet+0.4",
+     "do": "sticker_pulse",
+     "id": "st_diver"
+    },
+    {
+     "at": "@@cabinet+0.2",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@signing",
+     "do": "sticker_out",
+     "id": "st_diver"
+    },
+    {
+     "at": "@@signing",
+     "do": "sticker_in",
+     "id": "st_pen"
+    },
+    {
+     "at": "@@signing+0.4",
+     "do": "sticker_pulse",
+     "id": "st_pen"
+    },
+    {
+     "at": "@@watched",
+     "do": "character_in",
+     "id": "grin"
+    },
+    {
+     "at": "@@watched+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "462",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_pen"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "grin"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "male"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_mtn",
+   "type": "sticker",
+   "emoji": "26f0",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_palm",
+   "type": "sticker",
+   "emoji": "1f334",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_wave",
+   "type": "sticker",
+   "emoji": "1f30a",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_wall",
+   "type": "sticker",
+   "emoji": "1f9f1",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_diver",
+   "type": "sticker",
+   "emoji": "1f93f",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_pen",
+   "type": "sticker",
+   "emoji": "1f58a",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "nl_think",
+   "type": "character",
+   "flag": "nl",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "grin",
+   "type": "character",
+   "flag": "mv",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}
