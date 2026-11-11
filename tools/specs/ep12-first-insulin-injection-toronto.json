@@ -340,7 +340,7 @@
      "banting sold the patent to the university for a single dollar. diabetes stopped being a death sentence"
     ],
     "screen": [
-     "DEATH SENTENCE",
+     "FATAL",
      "$1",
      "the price of the patent"
     ]
@@ -727,7 +727,7 @@
      "sentence": "sentence"
     }
    },
-   "direction": "pull back over Ontario; the DEATH SENTENCE plate waits at the bottom; a scroll sticker on 'patent'; the $1 card on 'dollar' and the British flag-ball thinks; on 'sentence' the plate wipes away and Canada pulses",
+   "direction": "pull back over Ontario; the FATAL plate waits at the bottom; a scroll sticker on 'patent'; the $1 card on 'dollar' and the British flag-ball thinks; on 'sentence' the plate wipes away and Canada pulses",
    "energy": 4,
    "tone": "revelatory",
    "pause_after": 0.45,
@@ -756,7 +756,7 @@
     {
      "id": "death",
      "type": "erase",
-     "text": "DEATH SENTENCE",
+     "text": "FATAL",
      "y": 860,
      "h": 260
     }

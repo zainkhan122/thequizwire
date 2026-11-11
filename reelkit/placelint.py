@@ -117,7 +117,10 @@ def check(S):
             if t == "bars": w, h = el.get("w", 900), len(el.get("rows", [])) * (el.get("bar_h", 74) + el.get("gap", 26) + 40) - el.get("gap", 26)
             elif t == "compare": w, h = el.get("w", 960), el.get("max_h", 700) + 120   # compare text is allow-overlap (charts.py) — CI accepted stickers on it (ep14, ep17)
             elif t == "split": w, h = el.get("w", 620), el.get("h", 540)
-            elif t == "erase": w, h = el.get("w", 960), el.get("h", 260)   # CI caption_zone_collision on erase cards at y=1000/h=260 (camels 11-08, Ether Day 11-10)
+            elif t == "erase":   # CI caption_zone_collision on erase cards at y=1000/h=260 (camels 11-08, Ether Day 11-10); the plate is as wide as its text —
+                # 'DEATH SENTENCE' (14 chars) measured 85→996 px in CI (insulin 11-11) and hit the right action column; ~65 px per char
+                w, h = min(960, 60 + 65 * len(el.get("text", ""))), el.get("h", 260); x = (W - w) / 2
+                if y + h > 640 and x + w > 960: F.append(f"L2 {sc} erase {el['id']!r} text {el.get('text')!r} is ~{round(w)} px wide — right edge enters the right action column (> 960) below y 640; shorten the text (≤ 13 chars) or raise y")
             else: continue
             b = [x, y, x + w, y + h]; on_here = on if t != "compare" else set()
             if b[3] > 1190: F.append(f"L2 {sc} {t} {el['id']!r} bottom {round(b[3])} enters the caption band (>= 1190) — raise y or shrink")

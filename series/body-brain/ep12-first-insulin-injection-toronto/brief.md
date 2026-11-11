@@ -12,7 +12,7 @@ Wide-drift opener over the Great Lakes under the question; three flag options (g
 the Toronto pin and the "Toronto · 11 Jan 1922" tag on "hospital", the 11 JAN 1922 card. Tighten on the lakeshore: a vial
 sticker on "impure"; on "later" a counter runs the blood sugar down from 0.52 to 0.12 — the actual case numbers; a green
 check on "normal" and the Canadian flag-ball grins. Ease back to the university: microscope on "Banting", a dog on "dog",
-the SUMMER 1921 card and the "University of Toronto · 1921" tag on "lab". Pull back over Ontario: a dark DEATH SENTENCE
+the SUMMER 1921 card and the "University of Toronto · 1921" tag on "lab". Pull back over Ontario: a dark FATAL
 plate waits at the foot of the frame; a scroll on "patent", the $1 card on "dollar" while the British flag-ball thinks; on
 "sentence" the plate wipes away and Canada pulses.
 
@@ -20,7 +20,7 @@ plate waits at the foot of the frame; a scroll on "patent", the $1 card on "doll
 1. s04 reveal — flag-lift Canada, Toronto pin, tag, 11 JAN 1922 card.
 2. s05 the failed first dose — 🧪 sticker, chart.counter_run 0.52 → 0.12 %, ✅ sticker, ca flag-ball grin.
 3. s06 the discovery — 🔬 sticker, chart.split_in PROBLEM 1889 / ANSWER 1921, 🐕 sticker, SUMMER 1921 card, lab tag, Toronto pin out.
-4. s07 the dollar — 📜 sticker, $1 card, gb flag-ball think, DEATH SENTENCE plate erased, pulse.
+4. s07 the dollar — 📜 sticker, $1 card, gb flag-ball think, FATAL plate erased, pulse.
 
 ## Different from
 #11 (stethoscope) erased a METHOD and split two Greek roots; #10 (anaesthesia) ran a year counter and a route to London.
@@ -35,7 +35,7 @@ This one's counter is a clinical value falling (not a year or a count) and the e
 
 ## Devices
 wide-drift opener · flag-lift reveal · tag labels ×2 · fact cards ×3 · geo.pin_in + pin_out · chart.counter_run (blood
-sugar 0.52 → 0.12 %) · chart.split_in (1889 / 1921) · chart.erase_run (DEATH SENTENCE) · geo.highlight_pulse ×3 · stickers 🧪 ✅ 🔬 🐕 📜 + sticker_pulse ×6
+sugar 0.52 → 0.12 %) · chart.split_in (1889 / 1921) · chart.erase_run (FATAL) · geo.highlight_pulse ×3 · stickers 🧪 ✅ 🔬 🐕 📜 + sticker_pulse ×6
 · flag-ball ca happy / gb think / ca grin / gb think.
 
 ## Media & Pace

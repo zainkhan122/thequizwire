@@ -71,7 +71,7 @@
   {
    "id": "death",
    "type": "erase",
-   "text": "DEATH SENTENCE",
+   "text": "FATAL",
    "y": 860,
    "h": 260
   },

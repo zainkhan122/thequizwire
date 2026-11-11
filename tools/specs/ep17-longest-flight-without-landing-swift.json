@@ -113,7 +113,7 @@
   "music": "bed:deep",
   "outro": "1 FOR 1?"
  },
- "intent": "A Swedish rooftop and the sky above Africa: the 10-month logger result, the LANDS TO SLEEP plate wiped away for how it naps on the wing, then the bird riding the line to the Congo basin where it spends the winter.",
+ "intent": "A Swedish rooftop and the sky above Africa: the 10-month logger result, the NAPS ON LAND plate wiped away for how it naps on the wing, then the bird riding the line to the Congo basin where it spends the winter.",
  "voice": {
   "v01_cues": {
    "which": "which",
@@ -180,7 +180,7 @@
    }
   ],
   "landscape": {
-   "our_gap": "Swift clips are nest-cam footage or narrated facts; nobody maps the study, wipes LANDS TO SLEEP off the screen and flies the bird to the Congo as a quiz.",
+   "our_gap": "Swift clips are nest-cam footage or narrated facts; nobody maps the study, wipes NAPS ON LAND off the screen and flies the bird to the Congo as a quiz.",
    "existing": [
     {
      "url": "https://www.youtube.com/results?search_query=bird+that+never+lands",
@@ -283,7 +283,7 @@
      "they eat insects on the wing, drink by skimming water and nap in slow glides high up"
     ],
     "screen": [
-     "LANDS TO SLEEP"
+     "NAPS ON LAND"
     ]
    },
    {
@@ -529,7 +529,7 @@
      "nap": "nap"
     }
    },
-   "direction": "tighten on the Skåne coast; the LANDS TO SLEEP plate waits at the bottom; a mosquito sticker on 'insects', a droplet on 'drink'; on 'nap' the plate wipes away and a sleeping-face sticker pulses as Sweden pulses",
+   "direction": "tighten on the Skåne coast; the NAPS ON LAND plate waits at the bottom; a mosquito sticker on 'insects', a droplet on 'drink'; on 'nap' the plate wipes away and a sleeping-face sticker pulses as Sweden pulses",
    "energy": 4,
    "tone": "revelatory",
    "pause_after": 0.45,
@@ -553,7 +553,7 @@
     {
      "id": "sleep",
      "type": "erase",
-     "text": "LANDS TO SLEEP",
+     "text": "NAPS ON LAND",
      "y": 860,
      "h": 260
     }

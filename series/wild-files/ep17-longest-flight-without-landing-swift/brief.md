@@ -10,7 +10,7 @@ basin, tracking rain fronts (BTO; RSPB; Britannica).
 ## Show it
 Night-lights opener centred on the Atlantic under the question; three emoji options (🐦 albatross, 🕊️ tern, 🦤 swift).
 Reveal = colour-lift on Sweden with the Lund pin, the "Lund · 10-month loggers" tag and the 10 MONTHS card. Tighten on the
-Skåne coast: a dark LANDS TO SLEEP plate waits at the foot of the frame; a mosquito sticker on "insects", a droplet on
+Skåne coast: a dark NAPS ON LAND plate waits at the foot of the frame; a mosquito sticker on "insects", a droplet on
 "drink"; on "nap" the plate wipes away and a sleeping face pulses as Sweden pulses. Ease back over southern Sweden: a nest
 sticker and the 2 MONTHS card on "nest", a hatching chick on "fledglings", Sweden pulses on "landing". Pull right out so
 Europe and Africa share the frame: the bird rides the drawn line from Sweden to the Congo basin until "Congo", the Congo
@@ -18,7 +18,7 @@ pin and "Congo basin · the winter sky" tag drop, a rain cloud on "rains" as Swe
 
 ## Beat order
 1. s04 reveal — colour-lift Sweden, Lund pin, tag, 10 MONTHS card.
-2. s05 life on the wing — 🦟 → 💧 stickers, LANDS TO SLEEP plate erased, 😴 sticker, pulse.
+2. s05 life on the wing — 🦟 → 💧 stickers, NAPS ON LAND plate erased, 😴 sticker, pulse.
 3. s06 the only landing — 🪹 sticker, 2 MONTHS card, 🐣 sticker, pulse, Lund pin out.
 4. s07 the winter sky — geo.route_draw + geo.travel 🐦 Sweden → Congo basin, Congo pin + tag, 🌧️ sticker, pulse.
 
@@ -31,11 +31,11 @@ last six episodes used together.
 - 1 s — the Atlantic's city lights under LONGEST in yellow; three birds about to land.
 - 7 s — options up, timer running; most viewers have said albatross.
 - 12 s — Sweden lifts into colour, a pin drops on Lund and 10 MONTHS lands.
-- 17 s — the words LANDS TO SLEEP wipe off the screen as a sleeping face appears.
+- 17 s — the words NAPS ON LAND wipe off the screen as a sleeping face appears.
 
 ## Devices
 night-lights opener · colour-lift reveal · tag labels ×2 · fact cards ×2 · geo.pin_in ×2 + pin_out ×2 · chart.erase_run
-(LANDS TO SLEEP) · geo.route_draw + geo.travel (Sweden → Congo basin) · geo.highlight_pulse ×4 · stickers 🦟 💧 😴 🪹 🐣 🐦 🌧️ +
+(NAPS ON LAND) · geo.route_draw + geo.travel (Sweden → Congo basin) · geo.highlight_pulse ×4 · stickers 🦟 💧 😴 🪹 🐣 🐦 🌧️ +
 sticker_pulse ×6 · no flag-balls (an animal answer).
 
 ## Media & Pace
