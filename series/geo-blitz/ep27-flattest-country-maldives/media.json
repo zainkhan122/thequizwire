@@ -93,12 +93,12 @@
   },
   "geo/main.json": {
    "by": "reelkit/geodata.py",
-   "bytes": 1651983,
+   "bytes": 335284,
    "credit": "Natural Earth",
    "kind": "data",
    "licence": "PD",
    "provider": "Natural Earth",
-   "source": "world-atlas 2.0.2 10m + ne_10m_admin_0_disputed_areas"
+   "source": "world-atlas 2.0.2 50m + ne_10m_admin_0_disputed_areas"
   },
   "geo/main_basemap.jpg": {
    "by": "reelkit/basemap.py",
