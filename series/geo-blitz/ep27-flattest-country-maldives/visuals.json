@@ -250,11 +250,6 @@
    }
   },
   {
-   "at": "s04+0.05",
-   "do": "fx.flash",
-   "args": {}
-  },
-  {
    "at": "s04+0.1",
    "do": "geo.highlight_in",
    "stage": "stage_map",
@@ -294,6 +289,15 @@
    "stage": "stage_map",
    "args": {
     "lid": "ml"
+   }
+  },
+  {
+   "at": "s04+3.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "462",
+    "layer": "hl"
    }
   },
   {

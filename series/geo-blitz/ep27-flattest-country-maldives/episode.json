@@ -128,7 +128,7 @@
   "question": "which-record",
   "hook": "question-first",
   "opener": "mystery-zoom-out",
-  "reveal": "flash-cut",
+  "reveal": "fill-pulse",
   "beats": [
    "compare",
    "pin",

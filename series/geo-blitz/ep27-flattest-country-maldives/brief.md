@@ -8,7 +8,7 @@ aid after the 1987 floods (JICA). On 17 October 2009 President Nasheed's cabinet
 declaration on sea-level rise before Copenhagen (The Guardian).
 
 ## Show it
-Mystery-zoom-out opener over empty ocean under the question; three flag options (nl, dk, mv). Reveal = flash-cut on the
+Mystery-zoom-out opener over empty ocean under the question; three flag options (nl, dk, mv). Reveal = fill-pulse on the
 Maldives with the "Maldives · highest point 5 m" tag and the 5 M card; a 100 km scalebar bottom-left. Ease back so the
 atoll chain fills the frame: three high-point columns rise on "Netherlands" with the Maldives bar barely visible, a
 mountain sticker, the Dutch flag-ball thinks on "Denmark", a palm on "tree" as the islands pulse. Tighten to ×8 on
@@ -30,11 +30,11 @@ has no counter and no route — SHOW set {compare, pin, split}.
 ## Swipe test
 - 1 s — empty blue ocean under FLATTEST in yellow; where is the land?
 - 7 s — options up, timer running; most viewers have said Netherlands.
-- 12 s — the flash-cut lights a chain of specks and 5 M lands.
+- 12 s — the fill pulses over a chain of specks and 5 M lands.
 - 18 s — three columns and the third is a sliver next to 322.
 
 ## Devices
-mystery-zoom-out opener · flash-cut reveal · tag labels ×2 · fact cards ×2 · scalebar 100 km · chart.compare_in ·
+mystery-zoom-out opener · fill-pulse reveal · tag labels ×2 · fact cards ×2 · scalebar 100 km · chart.compare_in ·
 chart.split_in · geo.pin / pin_out · geo.highlight_pulse ×3 · stickers ⛰ 🌴 🌊 🧱 🤿 🖊 + sticker_pulse ×6 · flag-ball mv
 happy / nl think / mv grin.
 
