@@ -24,7 +24,7 @@
   }
  ],
  "correct": 2,
- "answer_sub": "highest point 5 m",
+ "answer_sub": "peak 5 m",
  "outro_headline": "DID YOU GET IT?",
  "cover_emoji": "📏",
  "cover_emoji_why": "a ruler stands for measuring height, the idea in the question; all three options are low-lying countries, the icon favours none",
@@ -317,6 +317,7 @@
      "Netherlands",
      "Denmark",
      "5 M",
+     "peak 5 m",
      "the highest natural point",
      "Maldives · highest point 5 m",
      "5 m"
@@ -405,7 +406,7 @@
    110,
    35
   ],
-  "resolution": "50m",
+  "resolution": "10m",
   "highlight_ids": [
    "462"
   ],
@@ -420,7 +421,7 @@
     "text": "Maldives · highest point 5 m",
     "cls": "tag",
     "in": "s04@highest+0.3",
-    "out": "s05.end"
+    "out": "s04.end"
    },
    {
     "id": "ml",

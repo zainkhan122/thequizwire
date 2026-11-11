@@ -17,7 +17,7 @@
   "correct": 2,
   "beat": 3.0,
   "answer_line": "Maldives",
-  "answer_sub": "highest point 5 m",
+  "answer_sub": "peak 5 m",
   "option_meta": [
    {
     "flag": "nl"
@@ -30,7 +30,7 @@
    }
   ],
   "banner": "Maldives",
-  "banner_sub": "✓  C was right · highest point 5 m",
+  "banner_sub": "✓  C was right · peak 5 m",
   "outro": {
    "headline": "DID YOU GET IT?",
    "url": "thequizwire.com"

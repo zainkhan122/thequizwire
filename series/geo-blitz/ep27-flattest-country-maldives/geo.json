@@ -4,7 +4,7 @@
  "policy": "docs/BORDER_POLICY.md",
  "scenes": {
   "main": {
-   "resolution": "50m",
+   "resolution": "10m",
    "projection": "mercator",
    "fit": {
     "type": "bbox",
@@ -54,7 +54,7 @@
      "text": "Maldives · highest point 5 m",
      "cls": "tag",
      "in": "s04@highest+0.3",
-     "out": "s05.end"
+     "out": "s04.end"
     },
     {
      "id": "ml",

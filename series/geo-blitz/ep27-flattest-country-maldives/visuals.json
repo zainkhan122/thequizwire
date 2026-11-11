@@ -268,7 +268,7 @@
    }
   },
   {
-   "at": "s05.end",
+   "at": "s04.end",
    "do": "geo.label_out",
    "stage": "stage_map",
    "args": {
