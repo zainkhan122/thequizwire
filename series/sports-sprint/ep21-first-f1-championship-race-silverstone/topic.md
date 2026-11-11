@@ -1,4 +1,4 @@
-# Which track hosted F1's FIRST World Championship race?
+# Which track held the FIRST Formula 1 championship race?
 
 ## Signal
 calendar: the 2026 Formula 1 season finale runs in Abu Dhabi in early December; "f1 history" and "first f1 race" searches
@@ -19,7 +19,7 @@ this is an origin with a route and a split.
 Farina won and took the first title at Monza."
 
 ## Question shape
-who-was-first, dated origin with a circuit answer ("Which track hosted F1's FIRST World Championship race?"); stem
+who-was-first, dated origin with a circuit answer ("Which track held the FIRST Formula 1 championship race?"); stem
 `which track first` — distinct from the last five channel-wide (in which first · where was · which country longest ·
 where do most · which nation most). Flag options for the circuits' countries; hook = story (a bomber base and a king);
 mystery-zoom-out opener from the Channel so no circuit is in frame.

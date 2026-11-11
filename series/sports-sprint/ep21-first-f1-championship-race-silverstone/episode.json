@@ -3,11 +3,11 @@
  "format": "quiz-v3",
  "series": "sports-sprint",
  "number": 21,
- "title": "Which track hosted F1's FIRST World Championship race?",
+ "title": "Which track held the FIRST Formula 1 championship race?",
  "difficulty": "MEDIUM",
  "seed": 3521,
  "quiz": {
-  "question": "Which track hosted F1's FIRST World Championship race?",
+  "question": "Which track held the FIRST Formula 1 championship race?",
   "keyword": "FIRST",
   "options": [
    "Monza",
@@ -44,7 +44,7 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Which track hosted F1's FIRST World Championship race? 🏁",
+  "title": "Which track held the FIRST Formula 1 championship race? 🏁",
   "premise": "The first F1 race ran on a bomber base, with a king watching",
   "bait": "Monza, Monaco or Silverstone — which did you pick? 👇",
   "keywords": [
@@ -92,7 +92,7 @@
     ]
    },
    "instagram": {
-    "caption": "Which track hosted F1's FIRST World Championship race? 🏁\nMonza, Monaco or the other one? The championship opened on a circuit laid over the runways of a wartime bomber airfield, with a king in the grandstand. Seven rounds then, 24 now.\nWhich did you pick?",
+    "caption": "Which track held the FIRST Formula 1 championship race? 🏁\nMonza, Monaco or the other one? The championship opened on a circuit laid over the runways of a wartime bomber airfield, with a king in the grandstand. Seven rounds then, 24 now.\nWhich did you pick?",
     "tags": [
      "#f1",
      "#formula1",
@@ -109,7 +109,7 @@
     ]
    },
    "twitter": {
-    "text": "Which track hosted F1's FIRST World Championship race?\nMonza, Monaco or Silverstone? A bomber airfield, a king in the stands and a seven-round season.",
+    "text": "Which track held the FIRST Formula 1 championship race?\nMonza, Monaco or Silverstone? A bomber airfield, a king in the stands and a seven-round season.",
     "tags": [
      "#F1",
      "#SportsQuiz"

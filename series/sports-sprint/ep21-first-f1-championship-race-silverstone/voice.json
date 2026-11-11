@@ -13,7 +13,7 @@
  "start_hold": 0.0,
  "end_hold": 2.4,
  "sample_line": "v04",
- "title": "Which track hosted F1's FIRST World Championship race?",
+ "title": "Which track held the FIRST Formula 1 championship race?",
  "lines": [
   {
    "id": "v01",
@@ -23,7 +23,7 @@
    "energy": 4,
    "pause_after": 0.3,
    "direction": "the question, cold — curiosity comes from the map moving under it",
-   "text": "Which track hosted F1's first World Championship race?",
+   "text": "Which track held the first Formula 1 championship race?",
    "cues": {
     "which": "which",
     "first": "first"

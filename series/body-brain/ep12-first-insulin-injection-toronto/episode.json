@@ -3,11 +3,11 @@
  "format": "quiz-v3",
  "series": "body-brain",
  "number": 12,
- "title": "In which city was insulin FIRST injected into a patient?",
+ "title": "Which city saw the FIRST insulin injection?",
  "difficulty": "MEDIUM",
  "seed": 3412,
  "quiz": {
-  "question": "In which city was insulin FIRST injected into a patient?",
+  "question": "Which city saw the FIRST insulin injection?",
   "keyword": "FIRST",
   "options": [
    "London",
@@ -44,7 +44,7 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "In which city was insulin FIRST injected into a patient? 💉",
+  "title": "Which city saw the FIRST insulin injection? 💉",
   "premise": "A dying boy, a borrowed lab and a patent sold for a dollar",
   "bait": "London, Berlin or Toronto — which did you pick? 👇",
   "keywords": [
@@ -93,7 +93,7 @@
     ]
    },
    "instagram": {
-    "caption": "In which city was insulin FIRST injected into a patient? 💉\nLondon, Berlin or the other one? A century ago a dying teenager got a cloudy extract from animal pancreases. The first shot failed, the second changed medicine forever.\nWhich did you pick?",
+    "caption": "Which city saw the FIRST insulin injection? 💉\nLondon, Berlin or the other one? A century ago a dying teenager got a cloudy extract from animal pancreases. The first shot failed, the second changed medicine forever.\nWhich did you pick?",
     "tags": [
      "#diabetes",
      "#medicalhistory",
@@ -110,7 +110,7 @@
     ]
    },
    "twitter": {
-    "text": "In which city was insulin FIRST injected into a patient?\nLondon, Berlin or Toronto? A dying teenager, a borrowed lab and a patent sold for a dollar.",
+    "text": "Which city saw the FIRST insulin injection?\nLondon, Berlin or Toronto? A dying teenager, a borrowed lab and a patent sold for a dollar.",
     "tags": [
      "#WorldDiabetesDay",
      "#MedicalHistory"

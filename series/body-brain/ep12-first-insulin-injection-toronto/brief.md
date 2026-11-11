@@ -1,4 +1,4 @@
-# Brief — Body & Brain #12 · In which city was insulin FIRST injected into a patient?
+# Brief — Body & Brain #12 · Which city saw the FIRST insulin injection?
 
 ## Hook fact
 Insulin was first injected into a patient at Toronto General Hospital on 11 January 1922 — Leonard Thompson, 14, weighing

@@ -1,4 +1,4 @@
-# In which city was insulin FIRST injected into a patient?
+# Which city saw the FIRST insulin injection?
 
 ## Signal
 calendar: World Diabetes Day is 14 November (Frederick Banting's birthday); "who discovered insulin" peaks that week every
@@ -19,7 +19,7 @@ $1. #11 was Paris; this moves the series to North America with a city answer and
 worked; the patent was sold for a dollar."
 
 ## Question shape
-who-was-first with a city answer ("In which city was insulin FIRST injected into a patient?"); stem `in which first` —
+who-was-first with a city answer ("Which city saw the FIRST insulin injection?"); stem `in which first` —
 distinct from the last five channel-wide (where was · which country longest · where do most · which nation most · where
 was first). Flag options; hook = fact-first; wide-drift opener over the Great Lakes with no pin until the reveal.
 

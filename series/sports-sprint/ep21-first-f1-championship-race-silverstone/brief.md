@@ -1,4 +1,4 @@
-# Brief — Sports Sprint #21 · Which track hosted F1's FIRST World Championship race?
+# Brief — Sports Sprint #21 · Which track held the FIRST Formula 1 championship race?
 
 ## Hook fact
 The first Formula One World Championship race was the British Grand Prix at Silverstone on 13 May 1950, on a circuit laid

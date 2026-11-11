@@ -3,7 +3,7 @@
  "series": "body-brain",
  "number": 12,
  "seed": 3412,
- "question": "In which city was insulin FIRST injected into a patient?",
+ "question": "Which city saw the FIRST insulin injection?",
  "keyword": "FIRST",
  "difficulty": "MEDIUM",
  "options": [
@@ -70,7 +70,7 @@
     ]
    },
    "instagram": {
-    "caption": "In which city was insulin FIRST injected into a patient? 💉\nLondon, Berlin or the other one? A century ago a dying teenager got a cloudy extract from animal pancreases. The first shot failed, the second changed medicine forever.\nWhich did you pick?",
+    "caption": "Which city saw the FIRST insulin injection? 💉\nLondon, Berlin or the other one? A century ago a dying teenager got a cloudy extract from animal pancreases. The first shot failed, the second changed medicine forever.\nWhich did you pick?",
     "tags": [
      "#diabetes",
      "#medicalhistory",
@@ -87,7 +87,7 @@
     ]
    },
    "twitter": {
-    "text": "In which city was insulin FIRST injected into a patient?\nLondon, Berlin or Toronto? A dying teenager, a borrowed lab and a patent sold for a dollar.",
+    "text": "Which city saw the FIRST insulin injection?\nLondon, Berlin or Toronto? A dying teenager, a borrowed lab and a patent sold for a dollar.",
     "tags": [
      "#WorldDiabetesDay",
      "#MedicalHistory"
@@ -277,7 +277,7 @@
      "cmaj_1922"
     ],
     "vo": [
-     "in which city was insulin first injected into a patient",
+     "which city saw the first insulin injection",
      "london, berlin, or toronto",
      "toronto. on 11 january 1922, at toronto general hospital, 14-year-old leonard thompson got the first injection",
      "a dollar well spent. follow us"
