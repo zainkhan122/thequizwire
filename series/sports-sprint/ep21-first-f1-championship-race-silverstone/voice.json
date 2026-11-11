@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep21-first-f1-championship-race-silverstone",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "One airfield in the Midlands: the date and the king, Farina's Alfa, the 7-vs-24 split, then the racing car riding the line to Monza where the first title was decided.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Which track hosted F1's FIRST World Championship race?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Which track hosted F1's first World Championship race?",
+   "cues": {
+    "which": "which",
+    "first": "first"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Monza, Monaco, or Silverstone?",
+   "cues": {
+    "a": "monza",
+    "b": "monaco",
+    "c": "silverstone"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "Silverstone. On 13 May 1950 a former bomber airfield in England staged the first World Championship race.",
+   "cues": {
+    "answer": "silverstone",
+    "airfield": "airfield",
+    "championship": "championship"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "tighten on the airfield; a crown sticker on 'King'; the FARINA card and a racing car sticker on 'Farina'; a trophy on 'title' as the British flag-ball grins and the UK pulses",
+   "text": "King George watched from the stands. Giuseppe Farina won in an Alfa Romeo, then took the first title.",
+   "cues": {
+    "king": "king",
+    "farina": "farina",
+    "title": "title"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.35,
+   "direction": "ease back over England; the THEN / NOW split lands on 'rounds' (7 vs 24); a calendar sticker on 'calendar'; the Italian flag-ball thinks on 'finale'; the split folds at the end",
+   "text": "That season had 7 rounds. This year's calendar runs to 24, with the finale weeks away.",
+   "cues": {
+    "rounds": "rounds",
+    "calendar": "calendar",
+    "finale": "finale"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "pull right out so England and Italy share the frame; a racing car rides the drawn line from Silverstone to Monza until 'Monza'; the Monza pin and tag; a chequered flag on 'runways' as the UK pulses",
+   "text": "Farina clinched it at Monza. The British Grand Prix still runs on the old runways.",
+   "cues": {
+    "clinched": "clinched",
+    "monza": "monza",
+    "runways": "runways"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "From bombers to Grands Prix. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

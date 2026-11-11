@@ -1,0 +1,141 @@
+{
+ "id": "ep21-first-f1-championship-race-silverstone",
+ "format": "quiz-v3",
+ "series": "sports-sprint",
+ "number": 21,
+ "title": "Which track hosted F1's FIRST World Championship race?",
+ "difficulty": "MEDIUM",
+ "seed": 3521,
+ "quiz": {
+  "question": "Which track hosted F1's FIRST World Championship race?",
+  "keyword": "FIRST",
+  "options": [
+   "Monza",
+   "Monaco",
+   "Silverstone"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Silverstone",
+  "answer_sub": "13 May 1950",
+  "option_meta": [
+   {
+    "flag": "it"
+   },
+   {
+    "flag": "mc"
+   },
+   {
+    "flag": "gb"
+   }
+  ],
+  "banner": "Silverstone",
+  "banner_sub": "✓  C was right · 13 May 1950",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which track hosted F1's FIRST World Championship race? 🏁",
+  "premise": "The first F1 race ran on a bomber base, with a king watching",
+  "bait": "Monza, Monaco or Silverstone — which did you pick? 👇",
+  "keywords": [
+   "first formula 1 race",
+   "first f1 world championship race 1950",
+   "f1 history",
+   "giuseppe farina first champion",
+   "silverstone history",
+   "formula 1 quiz",
+   "sports quiz",
+   "f1 season finale"
+  ],
+  "description": "The first F1 race ran on a bomber base, with a king watching. Monza, Monaco or Silverstone — which did you pick? 👇\n\nSources: Formula1.com; Silverstone Circuit; Britannica; Motor Sport Magazine.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nSports Sprint #21",
+  "hashtags": [
+   "#SportsQuiz",
+   "#SportsTrivia",
+   "#thequizwire"
+  ],
+  "tags": [
+   "F1",
+   "SportsQuiz"
+  ],
+  "cover_emoji": "🏁",
+  "cover_emoji_why": "the chequered flag is the sport itself; all three options are famous circuits, the icon favours none",
+  "copy": {
+   "spoilers": [
+    "silverstone",
+    "england",
+    "english",
+    "british",
+    "britain",
+    "farina",
+    "1950",
+    "northamptonshire"
+   ],
+   "youtube": {
+    "title": "Where was the first Formula 1 race? A bomber base and a king 🏁",
+    "description": "Monza, Monaco or the third one? The World Championship opened in May on a circuit laid out over the runways of a wartime bomber airfield, with a reigning king in the grandstand. The season had just seven rounds; this year's has 24.\nGuess before the map lights up, then see the airfield, the first champion and the road to the finale.\nWhich did you pick?",
+    "tags": [
+     "#f1",
+     "#formula1",
+     "#sportsquiz",
+     "#motorsport",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which track hosted F1's FIRST World Championship race? 🏁\nMonza, Monaco or the other one? The championship opened on a circuit laid over the runways of a wartime bomber airfield, with a king in the grandstand. Seven rounds then, 24 now.\nWhich did you pick?",
+    "tags": [
+     "#f1",
+     "#formula1",
+     "#sportsquiz",
+     "#motorsport",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which track hosted Formula 1's first World Championship race — Monza, Monaco or Silverstone?\nThe championship opened on a circuit laid over the runways of a wartime bomber airfield, with a reigning king in the grandstand. Seven rounds then, 24 now. Pick your circuit before the map lights up.",
+    "tags": [
+     "#f1",
+     "#sportsquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which track hosted F1's FIRST World Championship race?\nMonza, Monaco or Silverstone? A bomber airfield, a king in the stands and a seven-round season.",
+    "tags": [
+     "#F1",
+     "#SportsQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which track hosted Formula 1's first World Championship race — Monza, Monaco or Silverstone? The championship opened on a circuit laid out over the runways of a wartime bomber airfield, with a reigning king in the grandstand. The season had seven rounds; this year's has 24.",
+    "tags": [
+     "#formula1"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "pin",
+   "route",
+   "split",
+   "label"
+  ],
+  "cast": "flagball:gb + emoji-set:racing",
+  "music": "bed:bright"
+ },
+ "status": "ready"
+}

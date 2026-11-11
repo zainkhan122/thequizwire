@@ -1,0 +1,936 @@
+{
+ "id": "ep21-first-f1-championship-race-silverstone",
+ "series": "sports-sprint",
+ "number": 21,
+ "seed": 3521,
+ "question": "Which track hosted F1's FIRST World Championship race?",
+ "keyword": "FIRST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Monza",
+   "flag": "it",
+   "cue": "monza"
+  },
+  {
+   "text": "Monaco",
+   "flag": "mc",
+   "cue": "monaco"
+  },
+  {
+   "text": "Silverstone",
+   "flag": "gb",
+   "cue": "silverstone"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "13 May 1950",
+ "outro_headline": "TOO EASY?",
+ "cover_emoji": "🏁",
+ "cover_emoji_why": "the chequered flag is the sport itself; all three options are famous circuits, the icon favours none",
+ "post": {
+  "premise": "The first F1 race ran on a bomber base, with a king watching",
+  "bait": "Monza, Monaco or Silverstone — which did you pick? 👇",
+  "keywords": [
+   "first formula 1 race",
+   "first f1 world championship race 1950",
+   "f1 history",
+   "giuseppe farina first champion",
+   "silverstone history",
+   "formula 1 quiz",
+   "sports quiz",
+   "f1 season finale"
+  ],
+  "tags": [
+   "F1",
+   "SportsQuiz"
+  ],
+  "sources_line": "Formula1.com; Silverstone Circuit; Britannica; Motor Sport Magazine",
+  "copy": {
+   "spoilers": [
+    "silverstone",
+    "england",
+    "english",
+    "british",
+    "britain",
+    "farina",
+    "1950",
+    "northamptonshire"
+   ],
+   "youtube": {
+    "title": "Where was the first Formula 1 race? A bomber base and a king 🏁",
+    "description": "Monza, Monaco or the third one? The World Championship opened in May on a circuit laid out over the runways of a wartime bomber airfield, with a reigning king in the grandstand. The season had just seven rounds; this year's has 24.\nGuess before the map lights up, then see the airfield, the first champion and the road to the finale.\nWhich did you pick?",
+    "tags": [
+     "#f1",
+     "#formula1",
+     "#sportsquiz",
+     "#motorsport",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which track hosted F1's FIRST World Championship race? 🏁\nMonza, Monaco or the other one? The championship opened on a circuit laid over the runways of a wartime bomber airfield, with a king in the grandstand. Seven rounds then, 24 now.\nWhich did you pick?",
+    "tags": [
+     "#f1",
+     "#formula1",
+     "#sportsquiz",
+     "#motorsport",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which track hosted Formula 1's first World Championship race — Monza, Monaco or Silverstone?\nThe championship opened on a circuit laid over the runways of a wartime bomber airfield, with a reigning king in the grandstand. Seven rounds then, 24 now. Pick your circuit before the map lights up.",
+    "tags": [
+     "#f1",
+     "#sportsquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which track hosted F1's FIRST World Championship race?\nMonza, Monaco or Silverstone? A bomber airfield, a king in the stands and a seven-round season.",
+    "tags": [
+     "#F1",
+     "#SportsQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which track hosted Formula 1's first World Championship race — Monza, Monaco or Silverstone? The championship opened on a circuit laid out over the runways of a wartime bomber airfield, with a reigning king in the grandstand. The season had seven rounds; this year's has 24.",
+    "tags": [
+     "#formula1"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "story",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "pin",
+   "route",
+   "split",
+   "label"
+  ],
+  "cast": "flagball:gb + emoji-set:racing",
+  "music": "bed:bright",
+  "outro": "TOO EASY?"
+ },
+ "intent": "One airfield in the Midlands: the date and the king, Farina's Alfa, the 7-vs-24 split, then the racing car riding the line to Monza where the first title was decided.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "first": "first"
+  },
+  "v04": {
+   "text": "Silverstone. On 13 May 1950 a former bomber airfield in England staged the first World Championship race.",
+   "cues": {
+    "answer": "silverstone",
+    "airfield": "airfield",
+    "championship": "championship"
+   }
+  },
+  "v05": {
+   "text": "King George watched from the stands. Giuseppe Farina won in an Alfa Romeo, then took the first title.",
+   "cues": {
+    "king": "king",
+    "farina": "farina",
+    "title": "title"
+   }
+  },
+  "v06": {
+   "text": "That season had 7 rounds. This year's calendar runs to 24, with the finale weeks away.",
+   "cues": {
+    "rounds": "rounds",
+    "calendar": "calendar",
+    "finale": "finale"
+   }
+  },
+  "v07": {
+   "text": "Farina clinched it at Monza. The British Grand Prix still runs on the old runways.",
+   "cues": {
+    "clinched": "clinched",
+    "monza": "monza",
+    "runways": "runways"
+   }
+  },
+  "v08": {
+   "text": "From bombers to Grands Prix. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "13 MAY 1950",
+   "text": "the first championship race"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "gb",
+   "face": "happy",
+   "x": 230,
+   "y": 820
+  },
+  "b": {
+   "flag": "it",
+   "face": "think",
+   "x": 850,
+   "y": 1000
+  }
+ },
+ "research": {
+  "topic": "First Formula One World Championship race: British Grand Prix (Grand Prix d'Europe), Silverstone, 13 May 1950, on a circuit laid out on the runways and perimeter track of RAF Silverstone, a wartime Wellington bomber training base; attended by King George VI and Queen Elizabeth; won by Giuseppe Farina (Alfa Romeo 158), who clinched the first drivers' title at the Italian Grand Prix, Monza, 3 September 1950; the 1950 season had 7 rounds (incl. Indianapolis 500); the 2026 calendar has 24 rounds, finishing in Abu Dhabi in December.",
+  "myths": [
+   {
+    "myth": "Formula 1 began at Monza or Monaco, the sport's oldest famous circuits.",
+    "reality": "Monaco (1929) and Monza (1922) hosted Grands Prix long before the championship, but the first World Championship round was Silverstone on 13 May 1950.",
+    "sources": [
+     "f1_1950",
+     "silverstone_history",
+     "britannica_farina"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "F1 history clips are long explainers or nostalgia reels; nobody pins the airfield, splits 7 vs 24 and drives the first season's line to Monza on a moving map as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=first+formula+1+race+1950",
+     "title": "Search: first formula 1 race 1950",
+     "angle": "archive footage reels",
+     "misses": "no quiz, no map"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=silverstone+history+raf",
+     "title": "Search: silverstone history raf",
+     "angle": "circuit documentaries",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/@formula1/shorts",
+     "title": "Formula 1",
+     "angle": "official highlights",
+     "misses": "no history quiz"
+    }
+   ]
+  },
+  "sources": {
+   "f1_1950": {
+    "type": "primary",
+    "publisher": "Formula1.com",
+    "title": "1950 British Grand Prix — race result and report",
+    "url": "https://www.formula1.com/en/results/1950/races/94/great-britain/race-result",
+    "date": "2026-11-11",
+    "notes": "13 May 1950, Silverstone; winner Giuseppe Farina, Alfa Romeo; first round of the inaugural World Championship"
+   },
+   "silverstone_history": {
+    "type": "primary",
+    "publisher": "Silverstone Circuit",
+    "title": "The history of Silverstone",
+    "url": "https://www.silverstone.co.uk/about/history",
+    "date": "2026-11-11",
+    "notes": "RAF Silverstone opened 1943 as a Wellington bomber training base; the circuit used its runways and perimeter roads; hosted the first round of the F1 World Championship on 13 May 1950 before King George VI and Queen Elizabeth"
+   },
+   "britannica_farina": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Giuseppe Farina — Italian racing driver",
+    "url": "https://www.britannica.com/biography/Giuseppe-Farina",
+    "date": "2026-11-11",
+    "notes": "won the first World Championship Grand Prix at Silverstone in 1950 and became the first world champion, clinching the title at Monza"
+   },
+   "motorsport_1950": {
+    "type": "primary",
+    "publisher": "Motor Sport Magazine",
+    "title": "1950 British Grand Prix race report",
+    "url": "https://www.motorsportmagazine.com/database/races/1950-british-grand-prix/",
+    "date": "2026-11-11",
+    "notes": "Alfa Romeo 158s finished 1-2-3, Farina from Fagioli and Parnell; royal family present; 7-round championship"
+   },
+   "f1_2026_calendar": {
+    "type": "primary",
+    "publisher": "Formula1.com",
+    "title": "2026 race calendar",
+    "url": "https://www.formula1.com/en/racing/2026",
+    "date": "2026-11-11",
+    "notes": "24 Grands Prix in 2026, finale Abu Dhabi in December"
+   },
+   "wiki_1950": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "1950 Formula One season",
+    "url": "https://en.wikipedia.org/wiki/1950_Formula_One_season",
+    "date": "2026-11-11",
+    "notes": "seven championship rounds including the Indianapolis 500; Farina champion after the Italian Grand Prix at Monza on 3 September 1950"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The first Formula One World Championship race was the British Grand Prix at Silverstone, England, on 13 May 1950, on a circuit laid over a former RAF bomber airfield.",
+    "sources": [
+     "f1_1950",
+     "silverstone_history",
+     "britannica_farina"
+    ],
+    "vo": [
+     "which track hosted f1's first world championship race",
+     "monza, monaco, or silverstone",
+     "silverstone. on 13 may 1950 a former bomber airfield in england staged the first world championship race",
+     "from bombers to grands prix. follow us"
+    ],
+    "screen": [
+     "Silverstone",
+     "Monza",
+     "Monaco",
+     "13 MAY 1950",
+     "the first championship race",
+     "Silverstone · 13 May 1950"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "King George VI attended; Giuseppe Farina won in an Alfa Romeo 158 and became the first world champion.",
+    "sources": [
+     "silverstone_history",
+     "motorsport_1950",
+     "britannica_farina"
+    ],
+    "vo": [
+     "king george watched from the stands. giuseppe farina won in an alfa romeo, then took the first title"
+    ],
+    "screen": [
+     "FARINA",
+     "Alfa Romeo 158 · first champion"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "The 1950 season had 7 championship rounds; the 2026 calendar has 24, ending in December.",
+    "sources": [
+     "wiki_1950",
+     "f1_2026_calendar",
+     "f1_1950"
+    ],
+    "vo": [
+     "that season had 7 rounds. this year's calendar runs to 24, with the finale weeks away"
+    ],
+    "screen": [
+     "1950",
+     "7 rounds",
+     "2026",
+     "24 rounds"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Farina clinched the first title at the Italian Grand Prix at Monza on 3 September 1950; the British Grand Prix is still held at Silverstone.",
+    "sources": [
+     "wiki_1950",
+     "britannica_farina",
+     "silverstone_history"
+    ],
+    "vo": [
+     "farina clinched it at monza. the british grand prix still runs on the old runways"
+    ],
+    "screen": [
+     "Monza · title decided 1950"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -8,
+   43,
+   16,
+   57
+  ],
+  "far_bbox": [
+   -25,
+   33,
+   35,
+   65
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "826"
+  ],
+  "highlight_note": "United Kingdom",
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "season",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "to_monza",
+       "properties": {
+        "name": "Silverstone to Monza"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -1.017,
+          52.07
+         ],
+         [
+          1.0,
+          50.6
+         ],
+         [
+          3.5,
+          49.2
+         ],
+         [
+          6.0,
+          47.8
+         ],
+         [
+          8.0,
+          46.4
+         ],
+         [
+          9.29,
+          45.62
+         ]
+        ]
+       }
+      }
+     ]
+    },
+    "note": "schematic line from the first race to the race that decided the first title"
+   }
+  ],
+  "labels": [
+   {
+    "id": "sv",
+    "lonlat": [
+     -4.6,
+     53.4
+    ],
+    "text": "Silverstone · 13 May 1950",
+    "cls": "tag",
+    "in": "s04@airfield+0.3",
+    "out": "s05.end"
+   },
+   {
+    "id": "mz",
+    "lonlat": [
+     9.0,
+     43.6
+    ],
+    "text": "Monza · title decided 1950",
+    "cls": "tag",
+    "in": "s07@monza+0.2",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "silverstone",
+    "lonlat": [
+     -1.017,
+     52.07
+    ],
+    "label": "Silverstone",
+    "side": "left"
+   },
+   {
+    "id": "monza",
+    "lonlat": [
+     9.29,
+     45.62
+    ],
+    "label": "Monza",
+    "side": "right"
+   }
+  ],
+  "scalebar": null,
+  "pin_beats": [
+   {
+    "at": "s04@airfield",
+    "pid": "silverstone"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.5,
+    [
+     2,
+     50
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     1.5,
+     50
+    ]
+   ],
+   "s04": [
+    1.4,
+    [
+     -1.5,
+     52.2
+    ]
+   ],
+   "s04b": [
+    1.5,
+    [
+     -1.2,
+     52.0
+    ]
+   ],
+   "s05": [
+    1.7,
+    [
+     -1.3,
+     52.3
+    ]
+   ],
+   "s05b": [
+    1.8,
+    [
+     -1.0,
+     52.1
+    ]
+   ],
+   "s06": [
+    1.2,
+    [
+     -1.0,
+     52.0
+    ]
+   ],
+   "s06b": [
+    1.25,
+    [
+     -0.6,
+     51.8
+    ]
+   ],
+   "s07": [
+    0.6,
+    [
+     4,
+     49
+    ]
+   ],
+   "s07b": [
+    0.66,
+    [
+     5.0,
+     48.6
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "King George watched from the stands. Giuseppe Farina won in an Alfa Romeo, then took the first title.",
+    "cues": {
+     "king": "king",
+     "farina": "farina",
+     "title": "title"
+    }
+   },
+   "direction": "tighten on the airfield; a crown sticker on 'King'; the FARINA card and a racing car sticker on 'Farina'; a trophy on 'title' as the British flag-ball grins and the UK pulses",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "card": {
+    "kicker": "FARINA",
+    "text": "Alfa Romeo 158 · first champion"
+   },
+   "card_at": null,
+   "cam": [
+    1.7,
+    [
+     -1.3,
+     52.3
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    1.8,
+    [
+     -1.0,
+     52.1
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@king",
+     "do": "sticker_in",
+     "id": "st_crown"
+    },
+    {
+     "at": "@@king+0.4",
+     "do": "sticker_pulse",
+     "id": "st_crown"
+    },
+    {
+     "at": "@@farina",
+     "do": "sticker_out",
+     "id": "st_crown"
+    },
+    {
+     "at": "@@farina",
+     "do": "fact_in",
+     "id": "f2",
+     "until": "@.end"
+    },
+    {
+     "at": "@@farina+0.1",
+     "do": "sticker_in",
+     "id": "st_car"
+    },
+    {
+     "at": "@@farina+0.5",
+     "do": "sticker_pulse",
+     "id": "st_car"
+    },
+    {
+     "at": "@@title",
+     "do": "sticker_out",
+     "id": "st_car"
+    },
+    {
+     "at": "@@title",
+     "do": "sticker_in",
+     "id": "st_trophy"
+    },
+    {
+     "at": "@@title+0.4",
+     "do": "sticker_pulse",
+     "id": "st_trophy"
+    },
+    {
+     "at": "@@title+0.2",
+     "do": "character_in",
+     "id": "grin"
+    },
+    {
+     "at": "@@title+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "826",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_trophy"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "grin"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "That season had 7 rounds. This year's calendar runs to 24, with the finale weeks away.",
+    "cues": {
+     "rounds": "rounds",
+     "calendar": "calendar",
+     "finale": "finale"
+    }
+   },
+   "direction": "ease back over England; the THEN / NOW split lands on 'rounds' (7 vs 24); a calendar sticker on 'calendar'; the Italian flag-ball thinks on 'finale'; the split folds at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    1.2,
+    [
+     -1.0,
+     52.0
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.25,
+    [
+     -0.6,
+     51.8
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "rounds",
+     "type": "split",
+     "left": {
+      "kicker": "1950",
+      "text": "7 rounds"
+     },
+     "right": {
+      "kicker": "2026",
+      "text": "24 rounds"
+     },
+     "label_left": "THEN",
+     "label_right": "NOW",
+     "y": 310,
+     "h": 540,
+     "x": 60,
+     "w": 620
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@rounds-0.3",
+     "do": "chart.split_in",
+     "id": "rounds"
+    },
+    {
+     "at": "@@calendar",
+     "do": "sticker_in",
+     "id": "st_cal"
+    },
+    {
+     "at": "@@calendar+0.4",
+     "do": "sticker_pulse",
+     "id": "st_cal"
+    },
+    {
+     "at": "@@finale",
+     "do": "character_in",
+     "id": "it_think"
+    },
+    {
+     "at": "@@finale+0.4",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "826",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "rounds"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_cal"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "it_think"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "silverstone"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Farina clinched it at Monza. The British Grand Prix still runs on the old runways.",
+    "cues": {
+     "clinched": "clinched",
+     "monza": "monza",
+     "runways": "runways"
+    }
+   },
+   "direction": "pull right out so England and Italy share the frame; a racing car rides the drawn line from Silverstone to Monza until 'Monza'; the Monza pin and tag; a chequered flag on 'runways' as the UK pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    0.6,
+    [
+     4,
+     49
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.66,
+    [
+     5.0,
+     48.6
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@+0.1",
+     "do": "sticker_in",
+     "id": "st_car2"
+    },
+    {
+     "at": "@+0.1",
+     "do": "geo.route_draw",
+     "stage": "stage_map",
+     "until": "@@monza",
+     "args": {
+      "rid": "to_monza",
+      "layer": "season"
+     }
+    },
+    {
+     "at": "@+0.1",
+     "do": "geo.travel",
+     "stage": "stage_map",
+     "until": "@@monza",
+     "args": {
+      "rid": "to_monza",
+      "layer": "season",
+      "sid": "st_car2",
+      "offset": [
+       0,
+       -50
+      ]
+     }
+    },
+    {
+     "at": "@@monza",
+     "do": "sticker_out",
+     "id": "st_car2"
+    },
+    {
+     "at": "@@monza",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "monza"
+     }
+    },
+    {
+     "at": "@@runways",
+     "do": "sticker_in",
+     "id": "st_flag"
+    },
+    {
+     "at": "@@runways+0.4",
+     "do": "sticker_pulse",
+     "id": "st_flag"
+    },
+    {
+     "at": "@@runways+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "826",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_flag"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "monza"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_crown",
+   "type": "sticker",
+   "emoji": "1f451",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_car",
+   "type": "sticker",
+   "emoji": "1f3ce",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_trophy",
+   "type": "sticker",
+   "emoji": "1f3c6",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_cal",
+   "type": "sticker",
+   "emoji": "1f4c5",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_car2",
+   "type": "sticker",
+   "emoji": "1f3ce",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "st_flag",
+   "type": "sticker",
+   "emoji": "1f3c1",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "grin",
+   "type": "character",
+   "flag": "gb",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "it_think",
+   "type": "character",
+   "flag": "it",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  }
+ ]
+}

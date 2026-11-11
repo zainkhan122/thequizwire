@@ -1,0 +1,147 @@
+{
+ "version": 1,
+ "episode": "ep21-first-f1-championship-race-silverstone",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -8,
+     43,
+     16,
+     57
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "826"
+     ],
+     "cls": "",
+     "note": "United Kingdom"
+    },
+    {
+     "kind": "route",
+     "id": "season",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "to_monza",
+        "properties": {
+         "name": "Silverstone to Monza"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           -1.017,
+           52.07
+          ],
+          [
+           1.0,
+           50.6
+          ],
+          [
+           3.5,
+           49.2
+          ],
+          [
+           6.0,
+           47.8
+          ],
+          [
+           8.0,
+           46.4
+          ],
+          [
+           9.29,
+           45.62
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic line from the first race to the race that decided the first title"
+    }
+   ],
+   "pins": [
+    {
+     "id": "silverstone",
+     "lonlat": [
+      -1.017,
+      52.07
+     ],
+     "label": "Silverstone",
+     "side": "left"
+    },
+    {
+     "id": "monza",
+     "lonlat": [
+      9.29,
+      45.62
+     ],
+     "label": "Monza",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "sv",
+     "lonlat": [
+      -4.6,
+      53.4
+     ],
+     "text": "Silverstone · 13 May 1950",
+     "cls": "tag",
+     "in": "s04@airfield+0.3",
+     "out": "s05.end"
+    },
+    {
+     "id": "mz",
+     "lonlat": [
+      9.0,
+      43.6
+     ],
+     "text": "Monza · title decided 1950",
+     "cls": "tag",
+     "in": "s07@monza+0.2",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -25,
+      33,
+      35,
+      65
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"
+  }
+ }
+}
