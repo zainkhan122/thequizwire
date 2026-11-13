@@ -1,0 +1,113 @@
+{
+ "version": 1,
+ "episode": "ep30-highest-capital-la-paz",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -72,
+     -23,
+     -57,
+     -9
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "068"
+     ],
+     "cls": "",
+     "note": "Bolivia",
+     "lift": "color",
+     "color": "#FFD400"
+    }
+   ],
+   "pins": [
+    {
+     "id": "lapaz",
+     "lonlat": [
+      -68.15,
+      -16.5
+     ],
+     "label": "La Paz",
+     "side": "right"
+    },
+    {
+     "id": "sucre",
+     "lonlat": [
+      -65.26,
+      -19.04
+     ],
+     "label": "Sucre",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "su",
+     "lonlat": [
+      -70.5,
+      -20.2
+     ],
+     "text": "Sucre · capital no. 2 · 2,800 m",
+     "cls": "tag",
+     "in": "s06@sucre+0.2",
+     "out": "s06.end"
+    },
+    {
+     "id": "ea",
+     "lonlat": [
+      -71.5,
+      -15.2
+     ],
+     "text": "El Alto airport · 4,060 m",
+     "cls": "tag",
+     "in": "s06@airport+0.2",
+     "out": "s06.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -95,
+      -40,
+      -30,
+      15
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 200,
+    "lonlat": [
+     -71.5,
+     -22.3
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

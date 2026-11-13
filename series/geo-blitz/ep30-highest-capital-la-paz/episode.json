@@ -1,0 +1,144 @@
+{
+ "id": "ep30-highest-capital-la-paz",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 30,
+ "title": "Name the HIGHEST capital city on Earth.",
+ "difficulty": "MEDIUM",
+ "seed": 3930,
+ "quiz": {
+  "question": "Name the HIGHEST capital city on Earth.",
+  "keyword": "HIGHEST",
+  "options": [
+   "Quito",
+   "La Paz",
+   "Kathmandu"
+  ],
+  "correct": 1,
+  "beat": 3.0,
+  "answer_line": "La Paz",
+  "answer_sub": "about 3,640 m above the sea",
+  "option_meta": [
+   {
+    "flag": "ec"
+   },
+   {
+    "flag": "bo"
+   },
+   {
+    "flag": "np"
+   }
+  ],
+  "banner": "La Paz",
+  "banner_sub": "✓  B was right · about 3,640 m above the sea",
+  "outro": {
+   "headline": "CHALLENGE A FRIEND",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Name the HIGHEST capital city on Earth. 🏔️",
+  "premise": "One capital sits so high that visitors arrive short of breath",
+  "bait": "Quito, La Paz or Kathmandu — which did you pick? 👇",
+  "keywords": [
+   "highest capital city in the world",
+   "highest capital in the world",
+   "quito altitude",
+   "kathmandu altitude",
+   "altitude sickness city",
+   "geography quiz",
+   "world map facts",
+   "andes cities"
+  ],
+  "description": "One capital sits so high that visitors arrive short of breath. Quito, La Paz or Kathmandu — which did you pick? 👇\n\nSources: Britannica; NASA Earth Observatory; Bolivian government.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #30",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "GeographyQuiz",
+   "Capitals"
+  ],
+  "cover_emoji": "🏔️",
+  "cover_emoji_why": "a mountain states 'high' and all three options sit under famous ranges — Andes twice, Himalaya once",
+  "copy": {
+   "spoilers": [
+    "la paz",
+    "paz",
+    "bolivia",
+    "bolivian",
+    "3,640",
+    "3640",
+    "sucre",
+    "el alto",
+    "illimani",
+    "altiplano",
+    "titicaca"
+   ],
+   "youtube": {
+    "title": "What is the highest capital city in the world? Visitors arrive short of breath 🏔️",
+    "description": "Quito, Kathmandu or the third one? One capital sits so high that the air holds a third less oxygen, its football team is almost unbeatable at home, and its airport is higher still. And it is only half the answer — the country has two capitals.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#capitals",
+     "#quiz",
+     "#maps",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Name the HIGHEST capital city on Earth 🏔️\nQuito, Kathmandu or the other one? One capital sits so high the air holds a third less oxygen, and its airport is higher still. And the country has two capitals.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#capitals",
+     "#quiz",
+     "#maps",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which is the highest capital city on Earth — Quito, La Paz or Kathmandu?\nOne capital sits so high that the air holds a third less oxygen, its football team is almost unbeatable at home, and its airport is higher still. Pick your flag before the altitude counter climbs.",
+    "tags": [
+     "#geographyquiz",
+     "#capitals"
+    ]
+   },
+   "twitter": {
+    "text": "Name the HIGHEST capital city on Earth.\nQuito, La Paz or Kathmandu? One of them has a third less oxygen in the air — and a second capital down the road.",
+    "tags": [
+     "#GeographyQuiz",
+     "#Capitals"
+    ]
+   },
+   "threads": {
+    "text": "Which is the highest capital city on Earth — Quito, La Paz or Kathmandu? One capital sits so high that the air holds a third less oxygen, its football team is almost unbeatable at home, and its airport is higher still.",
+    "tags": [
+     "#travelfacts"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "name-the-capital",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "pin",
+   "compare",
+   "photo-cutout",
+   "label"
+  ],
+  "cast": "flagball:bo + emoji-set:mountain",
+  "music": "bed:tense"
+ },
+ "status": "ready"
+}

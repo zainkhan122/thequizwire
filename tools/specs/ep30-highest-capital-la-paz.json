@@ -1,0 +1,925 @@
+{
+ "id": "ep30-highest-capital-la-paz",
+ "series": "geo-blitz",
+ "number": 30,
+ "seed": 3930,
+ "question": "Name the HIGHEST capital city on Earth.",
+ "keyword": "HIGHEST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Quito",
+   "flag": "ec",
+   "cue": "quito"
+  },
+  {
+   "text": "La Paz",
+   "flag": "bo",
+   "cue": "paz"
+  },
+  {
+   "text": "Kathmandu",
+   "flag": "np",
+   "cue": "kathmandu"
+  }
+ ],
+ "correct": 1,
+ "answer_sub": "about 3,640 m above the sea",
+ "outro_headline": "CHALLENGE A FRIEND",
+ "cover_emoji": "🏔️",
+ "cover_emoji_why": "a mountain states 'high' and all three options sit under famous ranges — Andes twice, Himalaya once",
+ "post": {
+  "premise": "One capital sits so high that visitors arrive short of breath",
+  "bait": "Quito, La Paz or Kathmandu — which did you pick? 👇",
+  "keywords": [
+   "highest capital city in the world",
+   "highest capital in the world",
+   "quito altitude",
+   "kathmandu altitude",
+   "altitude sickness city",
+   "geography quiz",
+   "world map facts",
+   "andes cities"
+  ],
+  "tags": [
+   "GeographyQuiz",
+   "Capitals"
+  ],
+  "sources_line": "Britannica; NASA Earth Observatory; Bolivian government",
+  "copy": {
+   "spoilers": [
+    "la paz",
+    "paz",
+    "bolivia",
+    "bolivian",
+    "3,640",
+    "3640",
+    "sucre",
+    "el alto",
+    "illimani",
+    "altiplano",
+    "titicaca"
+   ],
+   "youtube": {
+    "title": "What is the highest capital city in the world? Visitors arrive short of breath 🏔️",
+    "description": "Quito, Kathmandu or the third one? One capital sits so high that the air holds a third less oxygen, its football team is almost unbeatable at home, and its airport is higher still. And it is only half the answer — the country has two capitals.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#capitals",
+     "#quiz",
+     "#maps",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Name the HIGHEST capital city on Earth 🏔️\nQuito, Kathmandu or the other one? One capital sits so high the air holds a third less oxygen, and its airport is higher still. And the country has two capitals.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#capitals",
+     "#quiz",
+     "#maps",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which is the highest capital city on Earth — Quito, La Paz or Kathmandu?\nOne capital sits so high that the air holds a third less oxygen, its football team is almost unbeatable at home, and its airport is higher still. Pick your flag before the altitude counter climbs.",
+    "tags": [
+     "#geographyquiz",
+     "#capitals"
+    ]
+   },
+   "twitter": {
+    "text": "Name the HIGHEST capital city on Earth.\nQuito, La Paz or Kathmandu? One of them has a third less oxygen in the air — and a second capital down the road.",
+    "tags": [
+     "#GeographyQuiz",
+     "#Capitals"
+    ]
+   },
+   "threads": {
+    "text": "Which is the highest capital city on Earth — Quito, La Paz or Kathmandu? One capital sits so high that the air holds a third less oxygen, its football team is almost unbeatable at home, and its airport is higher still.",
+    "tags": [
+     "#travelfacts"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "name-the-capital",
+  "hook": "straight",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "pin",
+   "compare",
+   "photo-cutout",
+   "label"
+  ],
+  "cast": "flagball:bo + emoji-set:mountain",
+  "music": "bed:tense",
+  "outro": "CHALLENGE A FRIEND"
+ },
+ "intent": "A capital you climb to: three city silhouettes to scale, a real photograph of the city rising out of the map, a pin on the seat of government with the two-capitals twist, and the thin-air close on the football pitch.",
+ "voice": {
+  "v01_cues": {
+   "name": "name",
+   "highest": "highest"
+  },
+  "v04": {
+   "text": "La Paz. Bolivia's seat of government sits around 3,640 metres up, higher than any other capital.",
+   "cues": {
+    "answer": "paz",
+    "government": "government",
+    "higher": "higher"
+   }
+  },
+  "v05": {
+   "text": "Quito is about 2,850 metres. Kathmandu, under the Himalaya, only 1,400.",
+   "cues": {
+    "quito": "quito",
+    "kathmandu": "kathmandu",
+    "only": "only"
+   }
+  },
+  "v06": {
+   "text": "A twist: the constitutional capital is Sucre, down at 2,800. And the airport, El Alto, sits above the city at 4,060.",
+   "cues": {
+    "twist": "twist",
+    "sucre": "sucre",
+    "airport": "airport"
+   }
+  },
+  "v07": {
+   "text": "Up here the air holds about a third less oxygen. Visiting football teams gasp; the home side rarely loses.",
+   "cues": {
+    "air": "air",
+    "oxygen": "oxygen",
+    "gasp": "gasp",
+    "loses": "loses"
+   }
+  },
+  "v08": {
+   "text": "A capital above the clouds. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "3,640 M",
+   "text": "the highest seat of government"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "bo",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "ec",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "Highest capital city: La Paz, Bolivia, seat of government at about 3,640 m (city spans roughly 3,200–4,100 m); Sucre is the constitutional capital at about 2,800 m. Quito about 2,850 m; Kathmandu about 1,400 m. El Alto International Airport, above La Paz, is at 4,061 m, among the highest international airports. At 3,600 m the partial pressure of oxygen is roughly 65 % of sea level. Bolivia's national football team has a strong home record at the Estadio Hernando Siles (3,637 m); FIFA briefly tried to ban internationals above 2,500 m in 2007.",
+  "myths": [
+   {
+    "myth": "Quito is the highest capital in the world.",
+    "reality": "Quito, at about 2,850 m, is the highest constitutional capital; La Paz, Bolivia's seat of government, is higher at about 3,640 m — which is why most lists give La Paz.",
+    "sources": [
+     "brit_lapaz",
+     "brit_quito"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Highest-capital clips read a list; nobody runs the altitude counter past Quito and Kathmandu on a map, draws the three skylines to scale, pins the two capitals and shows the thin-air football twist as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=highest+capital+city+in+the+world",
+     "title": "Search: highest capital city in the world",
+     "angle": "ranking lists",
+     "misses": "no map, no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=la+paz+altitude",
+     "title": "Search: altitude sickness capital",
+     "angle": "travel vlogs",
+     "misses": "no comparison"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=bolivia+football+altitude",
+     "title": "Search: football at altitude",
+     "angle": "sport",
+     "misses": "no geography"
+    }
+   ]
+  },
+  "sources": {
+   "brit_lapaz": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "La Paz",
+    "url": "https://www.britannica.com/place/La-Paz-Bolivia",
+    "date": "2026-11-11",
+    "notes": "administrative capital of Bolivia at about 3,640 m (11,942 ft), the highest national capital in the world; Sucre is the constitutional capital"
+   },
+   "brit_quito": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Quito",
+    "url": "https://www.britannica.com/place/Quito",
+    "date": "2026-11-11",
+    "notes": "capital of Ecuador at 2,850 m (9,350 ft)"
+   },
+   "brit_kathmandu": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Kathmandu",
+    "url": "https://www.britannica.com/place/Kathmandu",
+    "date": "2026-11-11",
+    "notes": "capital of Nepal at about 1,324 m (4,344 ft) in the Kathmandu Valley"
+   },
+   "wiki_capitals_alt": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "List of capital cities by elevation",
+    "url": "https://en.wikipedia.org/wiki/List_of_capital_cities_by_elevation",
+    "date": "2026-11-11",
+    "notes": "La Paz 3,640 m (seat of government); Quito 2,850 m; Sucre 2,810 m; Kathmandu 1,400 m"
+   },
+   "wiki_elalto": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "El Alto International Airport",
+    "url": "https://en.wikipedia.org/wiki/El_Alto_International_Airport",
+    "date": "2026-11-11",
+    "notes": "elevation 4,061 m (13,325 ft); serves La Paz"
+   },
+   "commons_lapaz": {
+    "type": "reference",
+    "publisher": "Wikimedia Commons (EEJCC, CC0)",
+    "title": "La Catedral vista desde el Calvario",
+    "url": "https://commons.wikimedia.org/wiki/File:La_Catedral_vista_desde_el_Calvario_(cropped).jpg",
+    "date": "2026-11-11",
+    "notes": "CC0 photograph of La Paz from El Calvario"
+   },
+   "ine_bolivia": {
+    "type": "primary",
+    "publisher": "Instituto Nacional de Estadística de Bolivia",
+    "title": "La Paz — datos del departamento",
+    "url": "https://www.ine.gob.bo/",
+    "date": "2026-11-11",
+    "notes": "La Paz city at about 3,640 m; Sucre, the constitutional capital, at about 2,790 m"
+   },
+   "quito_gov": {
+    "type": "primary",
+    "publisher": "Municipio del Distrito Metropolitano de Quito",
+    "title": "Quito — datos generales",
+    "url": "https://www.quito.gob.ec/",
+    "date": "2026-11-11",
+    "notes": "the city sits at 2,850 m above sea level"
+   },
+   "aasana_elalto": {
+    "type": "primary",
+    "publisher": "AASANA / Administración de Aeropuertos y Servicios Auxiliares (Bolivia)",
+    "title": "Aeropuerto Internacional El Alto",
+    "url": "https://www.aasana.bo/",
+    "date": "2026-11-11",
+    "notes": "El Alto airport elevation 4,061 m"
+   },
+   "nasa_lapaz": {
+    "type": "primary",
+    "publisher": "NASA Earth Observatory",
+    "title": "La Paz, Bolivia",
+    "url": "https://earthobservatory.nasa.gov/images/146651/la-paz-bolivia",
+    "date": "2026-11-11",
+    "notes": "the city climbs the canyon walls from about 3,200 m to over 4,000 m at El Alto"
+   },
+   "cdc_altitude": {
+    "type": "primary",
+    "publisher": "U.S. CDC Yellow Book",
+    "title": "High elevation travel and altitude illness",
+    "url": "https://wwwnc.cdc.gov/travel/yellowbook/2024/environmental-hazards-risks/high-elevation-travel-and-altitude-illness",
+    "date": "2026-11-11",
+    "notes": "at 3,500 m the available oxygen is roughly two-thirds of sea level; altitude illness common above 2,500 m"
+   },
+   "fifa_altitude": {
+    "type": "reference",
+    "publisher": "BBC Sport",
+    "title": "FIFA bans high-altitude internationals (2007)",
+    "url": "https://news.bbc.co.uk/sport2/hi/football/africa/6701135.stm",
+    "date": "2026-11-11",
+    "notes": "FIFA moved in 2007 to ban internationals above 2,500 m, citing La Paz; Bolivia's strong home record at 3,600 m"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "La Paz, Bolivia's seat of government at about 3,640 m, is the highest capital city in the world.",
+    "sources": [
+     "brit_lapaz",
+     "wiki_capitals_alt",
+     "nasa_lapaz"
+    ],
+    "vo": [
+     "name the highest capital city on earth",
+     "quito, la paz, or kathmandu",
+     "la paz. bolivia's seat of government sits around 3,640 metres up, higher than any other capital",
+     "a capital above the clouds"
+    ],
+    "screen": [
+     "3,640 M",
+     "the highest seat of government",
+     "3,640 m"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Quito lies at about 2,850 m and Kathmandu at about 1,400 m.",
+    "sources": [
+     "brit_quito",
+     "brit_kathmandu",
+     "wiki_capitals_alt",
+     "quito_gov"
+    ],
+    "vo": [
+     "quito is about 2,850 metres. kathmandu, under the himalaya, only 1,400"
+    ],
+    "screen": [
+     "2,850 m",
+     "1,400 m"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Sucre, at about 2,800 m, is Bolivia's constitutional capital; El Alto airport above La Paz sits at about 4,060 m.",
+    "sources": [
+     "brit_lapaz",
+     "wiki_capitals_alt",
+     "wiki_elalto",
+     "ine_bolivia",
+     "aasana_elalto"
+    ],
+    "vo": [
+     "a twist: the constitutional capital is sucre, down at 2,800. and the airport, el alto, sits above the city at 4,060"
+    ],
+    "screen": [
+     "Sucre",
+     "Sucre · capital no. 2 · 2,800 m",
+     "El Alto airport · 4,060 m",
+     "La Paz",
+     "La Paz · the city in its canyon"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "At around 3,600 m the air delivers roughly a third less oxygen than at sea level; Bolivia's national football side has a strong home record at altitude and FIFA tried to ban high-altitude internationals in 2007.",
+    "sources": [
+     "cdc_altitude",
+     "fifa_altitude"
+    ],
+    "vo": [
+     "up here the air holds about a third less oxygen. visiting football teams gasp; the home side rarely loses"
+    ],
+    "screen": [
+     "THIN AIR",
+     "about a third less oxygen"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -72,
+   -23,
+   -57,
+   -9
+  ],
+  "far_bbox": [
+   -95,
+   -40,
+   -30,
+   15
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "068"
+  ],
+  "highlight_note": "Bolivia",
+  "labels": [
+   {
+    "id": "su",
+    "lonlat": [
+     -70.5,
+     -20.2
+    ],
+    "text": "Sucre · capital no. 2 · 2,800 m",
+    "cls": "tag",
+    "in": "s06@sucre+0.2",
+    "out": "s06.end"
+   },
+   {
+    "id": "ea",
+    "lonlat": [
+     -71.5,
+     -15.2
+    ],
+    "text": "El Alto airport · 4,060 m",
+    "cls": "tag",
+    "in": "s06@airport+0.2",
+    "out": "s06.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "lapaz",
+    "lonlat": [
+     -68.15,
+     -16.5
+    ],
+    "label": "La Paz",
+    "side": "right"
+   },
+   {
+    "id": "sucre",
+    "lonlat": [
+     -65.26,
+     -19.04
+    ],
+    "label": "Sucre",
+    "side": "right"
+   }
+  ],
+  "scalebar": {
+   "km": 200,
+   "lonlat": [
+    -71.5,
+    -22.3
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s04@government",
+    "pid": "lapaz"
+   },
+   {
+    "at": "s06@sucre",
+    "pid": "sucre"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.4,
+    [
+     -60,
+     -5
+    ]
+   ],
+   "s01": [
+    0.4,
+    [
+     -58,
+     -6
+    ]
+   ],
+   "s04": [
+    0.85,
+    [
+     -66,
+     -17
+    ]
+   ],
+   "s04b": [
+    0.88,
+    [
+     -66.3,
+     -17.2
+    ]
+   ],
+   "s05": [
+    0.75,
+    [
+     -65,
+     -17
+    ]
+   ],
+   "s05b": [
+    0.78,
+    [
+     -65.3,
+     -17.3
+    ]
+   ],
+   "s06": [
+    0.9,
+    [
+     -66.5,
+     -17.5
+    ]
+   ],
+   "s06b": [
+    0.94,
+    [
+     -66.8,
+     -17.7
+    ]
+   ],
+   "s07": [
+    1.2,
+    [
+     -67.5,
+     -16.8
+    ]
+   ],
+   "s07b": [
+    1.28,
+    [
+     -67.8,
+     -17.0
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Quito is about 2,850 metres. Kathmandu, under the Himalaya, only 1,400.",
+    "cues": {
+     "quito": "quito",
+     "kathmandu": "kathmandu",
+     "only": "only"
+    }
+   },
+   "direction": "ease back over the Altiplano; three skyline silhouettes rise on 'Quito' — Kathmandu a stub, Quito a step, La Paz a tower; the Ecuadorian flag-ball thinks on 'Kathmandu'; a mountain sticker on 'only' as Bolivia pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.75,
+    [
+     -65,
+     -17
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.78,
+    [
+     -65.3,
+     -17.3
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "alt",
+     "type": "compare",
+     "items": [
+      [
+       "Kathmandu",
+       1400,
+       "1,400 m"
+      ],
+      [
+       "Quito",
+       2850,
+       "2,850 m"
+      ],
+      [
+       "La Paz",
+       3640,
+       "3,640 m"
+      ]
+     ],
+     "y": 320,
+     "x": 60,
+     "w": 900,
+     "max_h": 520
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@quito-0.3",
+     "do": "chart.compare_in",
+     "id": "alt",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.25
+     }
+    },
+    {
+     "at": "@@kathmandu",
+     "do": "character_in",
+     "id": "ec_think"
+    },
+    {
+     "at": "@@only",
+     "do": "sticker_in",
+     "id": "st_mtn"
+    },
+    {
+     "at": "@@only+0.4",
+     "do": "sticker_pulse",
+     "id": "st_mtn"
+    },
+    {
+     "at": "@@only+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "068",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "alt"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_mtn"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "ec_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "A twist: the constitutional capital is Sucre, down at 2,800. And the airport, El Alto, sits above the city at 4,060.",
+    "cues": {
+     "twist": "twist",
+     "sucre": "sucre",
+     "airport": "airport"
+    }
+   },
+   "direction": "drift south-east; a twist sticker on 'twist' as the La Paz photograph rises out of Bolivia; the Sucre pin and tag on 'Sucre'; a plane sticker and the El Alto tag on 'airport' as Bolivia pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    0.9,
+    [
+     -66.5,
+     -17.5
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.94,
+    [
+     -66.8,
+     -17.7
+    ]
+   ],
+   "pulse": false,
+   "photo": {
+    "id": "ph_lapaz",
+    "commons": "File:La Catedral vista desde el Calvario (cropped).jpg",
+    "caption": "La Paz · the city in its canyon",
+    "from": "rise",
+    "fid": "068",
+    "layer": "hl",
+    "w": 480,
+    "h": 320,
+    "at": 0.3
+   },
+   "devices": [
+    {
+     "at": "@@twist",
+     "do": "sticker_in",
+     "id": "st_twist"
+    },
+    {
+     "at": "@@twist+0.4",
+     "do": "sticker_pulse",
+     "id": "st_twist"
+    },
+    {
+     "at": "@@sucre",
+     "do": "sticker_out",
+     "id": "st_twist"
+    },
+    {
+     "at": "@@airport",
+     "do": "sticker_in",
+     "id": "st_plane"
+    },
+    {
+     "at": "@@airport+0.4",
+     "do": "sticker_pulse",
+     "id": "st_plane"
+    },
+    {
+     "at": "@@airport+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "068",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_plane"
+    },
+    {
+     "at": "@.end",
+     "do": "photo_out",
+     "id": "ph_lapaz"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "sucre"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Up here the air holds about a third less oxygen. Visiting football teams gasp; the home side rarely loses.",
+    "cues": {
+     "air": "air",
+     "oxygen": "oxygen",
+     "gasp": "gasp",
+     "loses": "loses"
+    }
+   },
+   "direction": "tighten on La Paz; the THIN AIR card on 'air'; a lungs sticker on 'oxygen'; a football sticker on 'gasp'; the Bolivian flag-ball grins on 'loses' as Bolivia pulses; the pin leaves at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "THIN AIR",
+    "text": "about a third less oxygen"
+   },
+   "card_at": null,
+   "cam": [
+    1.2,
+    [
+     -67.5,
+     -16.8
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.28,
+    [
+     -67.8,
+     -17.0
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@air",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@oxygen",
+     "do": "sticker_in",
+     "id": "st_lungs"
+    },
+    {
+     "at": "@@oxygen+0.4",
+     "do": "sticker_pulse",
+     "id": "st_lungs"
+    },
+    {
+     "at": "@@gasp",
+     "do": "sticker_out",
+     "id": "st_lungs"
+    },
+    {
+     "at": "@@gasp",
+     "do": "sticker_in",
+     "id": "st_ball"
+    },
+    {
+     "at": "@@gasp+0.4",
+     "do": "sticker_pulse",
+     "id": "st_ball"
+    },
+    {
+     "at": "@@loses",
+     "do": "character_in",
+     "id": "bo_happy"
+    },
+    {
+     "at": "@@loses+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "068",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_ball"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "bo_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "lapaz"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_mtn",
+   "type": "sticker",
+   "emoji": "26f0",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_twist",
+   "type": "sticker",
+   "emoji": "1f300",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_plane",
+   "type": "sticker",
+   "emoji": "2708",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_lungs",
+   "type": "sticker",
+   "emoji": "1fac1",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_ball",
+   "type": "sticker",
+   "emoji": "26bd",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "ec_think",
+   "type": "character",
+   "flag": "ec",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "bo_happy",
+   "type": "character",
+   "flag": "bo",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

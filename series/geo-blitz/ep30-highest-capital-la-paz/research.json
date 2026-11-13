@@ -1,0 +1,243 @@
+{
+ "version": 1,
+ "episode": "ep30-highest-capital-la-paz",
+ "topic": "Highest capital city: La Paz, Bolivia, seat of government at about 3,640 m (city spans roughly 3,200–4,100 m); Sucre is the constitutional capital at about 2,800 m. Quito about 2,850 m; Kathmandu about 1,400 m. El Alto International Airport, above La Paz, is at 4,061 m, among the highest international airports. At 3,600 m the partial pressure of oxygen is roughly 65 % of sea level. Bolivia's national football team has a strong home record at the Estadio Hernando Siles (3,637 m); FIFA briefly tried to ban internationals above 2,500 m in 2007.",
+ "researched": "2026-11-13",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Quito is the highest capital in the world.",
+   "reality": "Quito, at about 2,850 m, is the highest constitutional capital; La Paz, Bolivia's seat of government, is higher at about 3,640 m — which is why most lists give La Paz.",
+   "sources": [
+    "brit_lapaz",
+    "brit_quito"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Highest-capital clips read a list; nobody runs the altitude counter past Quito and Kathmandu on a map, draws the three skylines to scale, pins the two capitals and shows the thin-air football twist as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=highest+capital+city+in+the+world",
+    "title": "Search: highest capital city in the world",
+    "angle": "ranking lists",
+    "misses": "no map, no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=la+paz+altitude",
+    "title": "Search: altitude sickness capital",
+    "angle": "travel vlogs",
+    "misses": "no comparison"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=bolivia+football+altitude",
+    "title": "Search: football at altitude",
+    "angle": "sport",
+    "misses": "no geography"
+   }
+  ]
+ },
+ "sources": {
+  "brit_lapaz": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "La Paz",
+   "url": "https://www.britannica.com/place/La-Paz-Bolivia",
+   "date": "2026-11-11",
+   "notes": "administrative capital of Bolivia at about 3,640 m (11,942 ft), the highest national capital in the world; Sucre is the constitutional capital"
+  },
+  "brit_quito": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Quito",
+   "url": "https://www.britannica.com/place/Quito",
+   "date": "2026-11-11",
+   "notes": "capital of Ecuador at 2,850 m (9,350 ft)"
+  },
+  "brit_kathmandu": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Kathmandu",
+   "url": "https://www.britannica.com/place/Kathmandu",
+   "date": "2026-11-11",
+   "notes": "capital of Nepal at about 1,324 m (4,344 ft) in the Kathmandu Valley"
+  },
+  "wiki_capitals_alt": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "List of capital cities by elevation",
+   "url": "https://en.wikipedia.org/wiki/List_of_capital_cities_by_elevation",
+   "date": "2026-11-11",
+   "notes": "La Paz 3,640 m (seat of government); Quito 2,850 m; Sucre 2,810 m; Kathmandu 1,400 m"
+  },
+  "wiki_elalto": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "El Alto International Airport",
+   "url": "https://en.wikipedia.org/wiki/El_Alto_International_Airport",
+   "date": "2026-11-11",
+   "notes": "elevation 4,061 m (13,325 ft); serves La Paz"
+  },
+  "commons_lapaz": {
+   "type": "reference",
+   "publisher": "Wikimedia Commons (EEJCC, CC0)",
+   "title": "La Catedral vista desde el Calvario",
+   "url": "https://commons.wikimedia.org/wiki/File:La_Catedral_vista_desde_el_Calvario_(cropped).jpg",
+   "date": "2026-11-11",
+   "notes": "CC0 photograph of La Paz from El Calvario"
+  },
+  "ine_bolivia": {
+   "type": "primary",
+   "publisher": "Instituto Nacional de Estadística de Bolivia",
+   "title": "La Paz — datos del departamento",
+   "url": "https://www.ine.gob.bo/",
+   "date": "2026-11-11",
+   "notes": "La Paz city at about 3,640 m; Sucre, the constitutional capital, at about 2,790 m"
+  },
+  "quito_gov": {
+   "type": "primary",
+   "publisher": "Municipio del Distrito Metropolitano de Quito",
+   "title": "Quito — datos generales",
+   "url": "https://www.quito.gob.ec/",
+   "date": "2026-11-11",
+   "notes": "the city sits at 2,850 m above sea level"
+  },
+  "aasana_elalto": {
+   "type": "primary",
+   "publisher": "AASANA / Administración de Aeropuertos y Servicios Auxiliares (Bolivia)",
+   "title": "Aeropuerto Internacional El Alto",
+   "url": "https://www.aasana.bo/",
+   "date": "2026-11-11",
+   "notes": "El Alto airport elevation 4,061 m"
+  },
+  "nasa_lapaz": {
+   "type": "primary",
+   "publisher": "NASA Earth Observatory",
+   "title": "La Paz, Bolivia",
+   "url": "https://earthobservatory.nasa.gov/images/146651/la-paz-bolivia",
+   "date": "2026-11-11",
+   "notes": "the city climbs the canyon walls from about 3,200 m to over 4,000 m at El Alto"
+  },
+  "cdc_altitude": {
+   "type": "primary",
+   "publisher": "U.S. CDC Yellow Book",
+   "title": "High elevation travel and altitude illness",
+   "url": "https://wwwnc.cdc.gov/travel/yellowbook/2024/environmental-hazards-risks/high-elevation-travel-and-altitude-illness",
+   "date": "2026-11-11",
+   "notes": "at 3,500 m the available oxygen is roughly two-thirds of sea level; altitude illness common above 2,500 m"
+  },
+  "fifa_altitude": {
+   "type": "reference",
+   "publisher": "BBC Sport",
+   "title": "FIFA bans high-altitude internationals (2007)",
+   "url": "https://news.bbc.co.uk/sport2/hi/football/africa/6701135.stm",
+   "date": "2026-11-11",
+   "notes": "FIFA moved in 2007 to ban internationals above 2,500 m, citing La Paz; Bolivia's strong home record at 3,600 m"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "La Paz, Bolivia's seat of government at about 3,640 m, is the highest capital city in the world.",
+   "sources": [
+    "brit_lapaz",
+    "wiki_capitals_alt",
+    "nasa_lapaz"
+   ],
+   "vo": [
+    "name the highest capital city on earth",
+    "quito, la paz, or kathmandu",
+    "la paz. bolivia's seat of government sits around 3,640 metres up, higher than any other capital",
+    "a capital above the clouds"
+   ],
+   "screen": [
+    "3,640 M",
+    "the highest seat of government",
+    "3,640 m"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Quito lies at about 2,850 m and Kathmandu at about 1,400 m.",
+   "sources": [
+    "brit_quito",
+    "brit_kathmandu",
+    "wiki_capitals_alt",
+    "quito_gov"
+   ],
+   "vo": [
+    "quito is about 2,850 metres. kathmandu, under the himalaya, only 1,400"
+   ],
+   "screen": [
+    "2,850 m",
+    "1,400 m"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Sucre, at about 2,800 m, is Bolivia's constitutional capital; El Alto airport above La Paz sits at about 4,060 m.",
+   "sources": [
+    "brit_lapaz",
+    "wiki_capitals_alt",
+    "wiki_elalto",
+    "ine_bolivia",
+    "aasana_elalto"
+   ],
+   "vo": [
+    "a twist: the constitutional capital is sucre, down at 2,800. and the airport, el alto, sits above the city at 4,060"
+   ],
+   "screen": [
+    "Sucre",
+    "Sucre · capital no. 2 · 2,800 m",
+    "El Alto airport · 4,060 m",
+    "La Paz",
+    "La Paz · the city in its canyon"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "At around 3,600 m the air delivers roughly a third less oxygen than at sea level; Bolivia's national football side has a strong home record at altitude and FIFA tried to ban high-altitude internationals in 2007.",
+   "sources": [
+    "cdc_altitude",
+    "fifa_altitude"
+   ],
+   "vo": [
+    "up here the air holds about a third less oxygen. visiting football teams gasp; the home side rarely loses"
+   ],
+   "screen": [
+    "THIN AIR",
+    "about a third less oxygen"
+   ]
+  }
+ ]
+}

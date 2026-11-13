@@ -1,0 +1,134 @@
+{
+ "version": 1,
+ "episode": "ep30-highest-capital-la-paz",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A capital you climb to: three city silhouettes to scale, a real photograph of the city rising out of the map, a pin on the seat of government with the two-capitals twist, and the thin-air close on the football pitch.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Name the HIGHEST capital city on Earth.",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Name the highest capital city on Earth.",
+   "cues": {
+    "name": "name",
+    "highest": "highest"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Quito, La Paz, or Kathmandu?",
+   "cues": {
+    "a": "quito",
+    "b": "paz",
+    "c": "kathmandu"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "La Paz. Bolivia's seat of government sits around 3,640 metres up, higher than any other capital.",
+   "cues": {
+    "answer": "paz",
+    "government": "government",
+    "higher": "higher"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.35,
+   "direction": "ease back over the Altiplano; three skyline silhouettes rise on 'Quito' — Kathmandu a stub, Quito a step, La Paz a tower; the Ecuadorian flag-ball thinks on 'Kathmandu'; a mountain sticker on 'only' as Bolivia pulses",
+   "text": "Quito is about 2,850 metres. Kathmandu, under the Himalaya, only 1,400.",
+   "cues": {
+    "quito": "quito",
+    "kathmandu": "kathmandu",
+    "only": "only"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "drift south-east; a twist sticker on 'twist' as the La Paz photograph rises out of Bolivia; the Sucre pin and tag on 'Sucre'; a plane sticker and the El Alto tag on 'airport' as Bolivia pulses",
+   "text": "A twist: the constitutional capital is Sucre, down at 2,800. And the airport, El Alto, sits above the city at 4,060.",
+   "cues": {
+    "twist": "twist",
+    "sucre": "sucre",
+    "airport": "airport"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.5,
+   "direction": "tighten on La Paz; the THIN AIR card on 'air'; a lungs sticker on 'oxygen'; a football sticker on 'gasp'; the Bolivian flag-ball grins on 'loses' as Bolivia pulses; the pin leaves at the end",
+   "text": "Up here the air holds about a third less oxygen. Visiting football teams gasp; the home side rarely loses.",
+   "cues": {
+    "air": "air",
+    "oxygen": "oxygen",
+    "gasp": "gasp",
+    "loses": "loses"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "A capital above the clouds. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}
