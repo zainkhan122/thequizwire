@@ -134,11 +134,11 @@
    }
   },
   "v05": {
-   "text": "Ecuador's capital is about 2,850 metres. Nepal's, under the Himalaya, only 1,400.",
+   "text": "Ecuador's capital sits nearly a kilometre lower than that. Nepal's, under the Himalaya, is lower still.",
    "cues": {
     "ecuador": "ecuador's",
     "nepal": "nepal's",
-    "only": "only"
+    "still": "still"
    }
   },
   "v06": {
@@ -349,7 +349,7 @@
      "quito_gov"
     ],
     "vo": [
-     "ecuador's capital is about 2,850 metres. nepal's, under the himalaya, only 1,400"
+     "ecuador's capital sits nearly a kilometre lower than that. nepal's, under the himalaya, is lower still"
     ],
     "screen": [
      "2,850 m",
@@ -553,14 +553,14 @@
  "story": [
   {
    "vo": {
-    "text": "Ecuador's capital is about 2,850 metres. Nepal's, under the Himalaya, only 1,400.",
+    "text": "Ecuador's capital sits nearly a kilometre lower than that. Nepal's, under the Himalaya, is lower still.",
     "cues": {
      "ecuador": "ecuador's",
      "nepal": "nepal's",
-     "only": "only"
+     "still": "still"
     }
    },
-   "direction": "ease back over the Altiplano; three skyline silhouettes rise on 'Ecuador' — Kathmandu a stub, Quito a step, La Paz a tower; the Ecuadorian flag-ball thinks on 'Nepal'; a mountain sticker on 'only' as Bolivia pulses",
+   "direction": "ease back over the Altiplano; three skyline silhouettes rise on 'Ecuador' — Kathmandu a stub, Quito a step, La Paz a tower; the Ecuadorian flag-ball thinks on 'Nepal'; a mountain sticker on 'still' as Bolivia pulses",
    "energy": 4,
    "tone": "resolute",
    "pause_after": 0.35,
@@ -623,17 +623,17 @@
      "id": "ec_think"
     },
     {
-     "at": "@@only",
+     "at": "@@still",
      "do": "sticker_in",
      "id": "st_mtn"
     },
     {
-     "at": "@@only+0.4",
+     "at": "@@still+0.4",
      "do": "sticker_pulse",
      "id": "st_mtn"
     },
     {
-     "at": "@@only+0.3",
+     "at": "@@still+0.3",
      "do": "geo.highlight_pulse",
      "stage": "stage_map",
      "args": {

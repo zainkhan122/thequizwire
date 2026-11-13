@@ -38,5 +38,5 @@ scalebar.
 
 ## Media & Pace
 One photograph: File:La Catedral vista desde el Calvario (cropped).jpg (EEJCC, CC0) rising out of Bolivia in s06;
-licence captured by reelkit/photos.py for the release credits.md only. Target 80–90 words, spoken numerals 3,640 / 2,850 / 1,400 (Sucre and El Alto heights on the tags only), ≥ 16 motion events / 10 s, ≤ 37 s;
+licence captured by reelkit/photos.py for the release credits.md only. Target 80–90 words, spoken numeral 3,640 only (the other heights live on the skyline chart and the tags — whisper counts a numeral as one word, so they sink the pace gate), ≥ 16 motion events / 10 s, ≤ 37 s;
 bed:tense for the climb.

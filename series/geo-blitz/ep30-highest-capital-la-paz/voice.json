@@ -78,12 +78,12 @@
    "tone": "resolute",
    "energy": 4,
    "pause_after": 0.35,
-   "direction": "ease back over the Altiplano; three skyline silhouettes rise on 'Ecuador' — Kathmandu a stub, Quito a step, La Paz a tower; the Ecuadorian flag-ball thinks on 'Nepal'; a mountain sticker on 'only' as Bolivia pulses",
-   "text": "Ecuador's capital is about 2,850 metres. Nepal's, under the Himalaya, only 1,400.",
+   "direction": "ease back over the Altiplano; three skyline silhouettes rise on 'Ecuador' — Kathmandu a stub, Quito a step, La Paz a tower; the Ecuadorian flag-ball thinks on 'Nepal'; a mountain sticker on 'still' as Bolivia pulses",
+   "text": "Ecuador's capital sits nearly a kilometre lower than that. Nepal's, under the Himalaya, is lower still.",
    "cues": {
     "ecuador": "ecuador's",
     "nepal": "nepal's",
-    "only": "only"
+    "still": "still"
    }
   },
   {
