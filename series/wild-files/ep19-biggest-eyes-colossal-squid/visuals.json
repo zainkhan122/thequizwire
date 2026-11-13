@@ -185,7 +185,7 @@
     "k": 0.5,
     "lonlat": [
      170,
-     -68
+     -67
     ],
     "ease": "power2.inOut"
    }
@@ -196,10 +196,10 @@
    "stage": "stage_map",
    "until": "s04.end",
    "args": {
-    "k": 0.52,
+    "k": 0.56,
     "lonlat": [
-     171,
-     -68.5
+     173,
+     -65
     ],
     "ease": "none"
    }
@@ -261,7 +261,7 @@
     "k": 0.45,
     "lonlat": [
      168,
-     -66
+     -64
     ],
     "ease": "power2.inOut"
    }
@@ -272,10 +272,10 @@
    "stage": "stage_map",
    "until": "s05.end",
    "args": {
-    "k": 0.47,
+    "k": 0.5,
     "lonlat": [
-     169,
-     -66.5
+     171,
+     -62
     ],
     "ease": "none"
    }
@@ -343,7 +343,7 @@
     "k": 0.42,
     "lonlat": [
      172,
-     -66
+     -68
     ],
     "ease": "power2.inOut"
    }
@@ -354,10 +354,10 @@
    "stage": "stage_map",
    "until": "s06.end",
    "args": {
-    "k": 0.44,
+    "k": 0.47,
     "lonlat": [
-     173,
-     -66.5
+     169,
+     -67
     ],
     "ease": "none"
    }
@@ -437,10 +437,10 @@
    "stage": "stage_map",
    "until": "s08+0.2",
    "args": {
-    "k": 0.64,
+    "k": 0.7,
     "lonlat": [
-     176,
-     -71.5
+     172,
+     -70
     ],
     "ease": "none"
    }

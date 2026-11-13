@@ -63,7 +63,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "England. In the 1880s Victorians played it after dinner, with books for a net and a cigar-box lid for a bat.",
+   "text": "England. In the 1880s Victorians played it after dinner: books for a net, a cigar-box lid for a bat.",
    "cues": {
     "answer": "england",
     "victorians": "victorians",
@@ -95,7 +95,7 @@
    "energy": 3,
    "pause_after": 0.45,
    "direction": "ease back over Britain; the PARLOUR GAME / OLYMPIC SPORT split lands on 'parlour'; a medal sticker on 'Olympic'; a trophy sticker on 'championships' as the UK pulses",
-   "text": "A parlour game became an Olympic sport in 1988. World championships began in London in 1926.",
+   "text": "A parlour game became an Olympic sport in 1988. The first world championships: London, 1926.",
    "cues": {
     "parlour": "parlour",
     "olympic": "olympic",

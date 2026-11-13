@@ -127,7 +127,7 @@
    "invented": "invented"
   },
   "v04": {
-   "text": "England. In the 1880s Victorians played it after dinner, with books for a net and a cigar-box lid for a bat.",
+   "text": "England. In the 1880s Victorians played it after dinner: books for a net, a cigar-box lid for a bat.",
    "cues": {
     "answer": "england",
     "victorians": "victorians",
@@ -144,7 +144,7 @@
    }
   },
   "v06": {
-   "text": "A parlour game became an Olympic sport in 1988. World championships began in London in 1926.",
+   "text": "A parlour game became an Olympic sport in 1988. The first world championships: London, 1926.",
    "cues": {
     "parlour": "parlour",
     "olympic": "olympic",
@@ -283,7 +283,7 @@
     "vo": [
      "which country invented table tennis",
      "china, england, or japan",
-     "england. in the 1880s victorians played it after dinner, with books for a net and a cigar-box lid for a bat",
+     "england. in the 1880s victorians played it after dinner: books for a net, a cigar-box lid for a bat",
      "invented at dinner, mastered in china"
     ],
     "screen": [
@@ -319,7 +319,7 @@
      "brit_tt"
     ],
     "vo": [
-     "a parlour game became an olympic sport in 1988. world championships began in london in 1926"
+     "a parlour game became an olympic sport in 1988. the first world championships: london, 1926"
     ],
     "screen": [
      "PARLOUR GAME",
@@ -568,7 +568,7 @@
   },
   {
    "vo": {
-    "text": "A parlour game became an Olympic sport in 1988. World championships began in London in 1926.",
+    "text": "A parlour game became an Olympic sport in 1988. The first world championships: London, 1926.",
     "cues": {
      "parlour": "parlour",
      "olympic": "olympic",
