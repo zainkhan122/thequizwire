@@ -311,7 +311,7 @@
    }
   },
   {
-   "at": "s05@quito-0.3",
+   "at": "s05@ecuador-0.3",
    "do": "chart.compare_in",
    "id": "alt",
    "args": {
@@ -320,7 +320,7 @@
    }
   },
   {
-   "at": "s05@kathmandu",
+   "at": "s05@nepal",
    "do": "character_in",
    "id": "ec_think"
   },

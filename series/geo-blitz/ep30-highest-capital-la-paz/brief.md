@@ -1,4 +1,4 @@
-# Brief — Geo Blitz #30 · Name the HIGHEST capital city on Earth.
+# Brief — Geo Blitz #30 · Which country has the HIGHEST capital city?
 
 ## Hook fact
 La Paz, Bolivia's administrative capital, lies at about 3,640 m — the highest national capital (Britannica); Sucre, the
@@ -8,8 +8,8 @@ Alto International Airport above La Paz is at 4,061 m. At 3,500 m the available 
 
 ## Show it
 Wide-drift opener over the Amazon basin under the question; three flags. Reveal = colour-lift on Bolivia, the La Paz pin
-drops on "government" with the 3,640 M card. Ease back over the Altiplano: three skyline silhouettes rise on "Quito" —
-Kathmandu a stub, Quito a step, La Paz a tower — the Ecuadorian flag-ball thinks on "Kathmandu", a mountain sticker on
+drops on "government" with the 3,640 M card. Ease back over the Altiplano: three skyline silhouettes rise on "Ecuador" —
+Kathmandu a stub, Quito a step, La Paz a tower — the Ecuadorian flag-ball thinks on "Nepal", a mountain sticker on
 "only". Drift south-east: a twist sticker on "twist" as a CC0 photograph of La Paz rises out of Bolivia, the Sucre pin and tag
 on "Sucre", a plane and the El Alto tag on "airport"; the Sucre pin leaves. Tighten on La Paz: the THIN AIR card on "air", a
 lungs sticker on "oxygen", a football on "gasp", the Bolivian flag-ball grins on "loses"; the pin leaves.
@@ -27,7 +27,7 @@ out of the country — SHOW set {compare, photo, rise}.
 
 ## Swipe test
 - 1 s — Amazon basin drifting under HIGHEST in yellow; three flags about to land.
-- 7 s — options up, timer running; most viewers have said Quito.
+- 7 s — options up, timer running; most viewers have said Ecuador.
 - 12 s — Bolivia lifts into colour; the pin drops; 3,640 M lands.
 - 18 s — three skylines rise; Kathmandu is the shortest, to the surprise of the Himalaya guessers.
 
@@ -38,5 +38,5 @@ scalebar.
 
 ## Media & Pace
 One photograph: File:La Catedral vista desde el Calvario (cropped).jpg (EEJCC, CC0) rising out of Bolivia in s06;
-licence captured by reelkit/photos.py for the release credits.md only. Target 80–90 words, spoken numerals 3,640 / 2,850 / 1,400 / 2,800 / 4,060, ≥ 16 motion events / 10 s, ≤ 37 s;
+licence captured by reelkit/photos.py for the release credits.md only. Target 80–90 words, spoken numerals 3,640 / 2,850 / 1,400 (Sucre and El Alto heights on the tags only), ≥ 16 motion events / 10 s, ≤ 37 s;
 bed:tense for the climb.

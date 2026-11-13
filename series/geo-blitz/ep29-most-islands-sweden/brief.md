@@ -9,7 +9,7 @@ islands emerge along the Gulf of Bothnia (SMHI; Wikipedia).
 ## Show it
 Mystery-zoom-out opener over the Mediterranean under the question; three flags. Reveal = colour-lift on Sweden with the
 267,000 card. Ease back over the Baltic: three island bars rise on "Indonesia" with Sweden towering, the Indonesian
-flag-ball thinks on "Philippines", a plus sticker on "together". Tighten on Stockholm: the inhabited counter runs 0 → 1,000
+flag-ball thinks on "Philippines", a plus sticker on "between". Tighten on Stockholm: the inhabited counter runs 0 → 1,000
 on "living" with a house sticker, the Stockholm pin and "14 islands" tag on "capital", a crown on "14"; the pin leaves.
 Drift north up the Gulf of Bothnia: a rock sticker on "skerries", the RISING LAND card and Bothnia tag on "ice", a sparkle
 on "new" as the Swedish flag-ball grins.

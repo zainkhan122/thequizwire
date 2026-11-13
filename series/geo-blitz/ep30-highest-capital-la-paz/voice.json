@@ -13,7 +13,7 @@
  "start_hold": 0.0,
  "end_hold": 2.4,
  "sample_line": "v04",
- "title": "Name the HIGHEST capital city on Earth.",
+ "title": "Which country has the HIGHEST capital city?",
  "lines": [
   {
    "id": "v01",
@@ -23,9 +23,9 @@
    "energy": 4,
    "pause_after": 0.3,
    "direction": "the question, cold — curiosity comes from the map moving under it",
-   "text": "Name the highest capital city on Earth.",
+   "text": "Which country has the highest capital city?",
    "cues": {
-    "name": "name",
+    "which": "which",
     "highest": "highest"
    }
   },
@@ -37,11 +37,11 @@
    "energy": 3,
    "pause_after": 0.3,
    "direction": "quick, each option its own beat",
-   "text": "Quito, La Paz, or Kathmandu?",
+   "text": "Ecuador, Bolivia, or Nepal?",
    "cues": {
-    "a": "quito",
-    "b": "paz",
-    "c": "kathmandu"
+    "a": "ecuador",
+    "b": "bolivia",
+    "c": "nepal"
    }
   },
   {
@@ -63,9 +63,9 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "La Paz. Bolivia's seat of government sits 3,640 metres up, higher than any other capital.",
+   "text": "Bolivia. La Paz, its seat of government, sits 3,640 metres up, higher than any other capital.",
    "cues": {
-    "answer": "paz",
+    "answer": "bolivia",
     "government": "government",
     "higher": "higher"
    },
@@ -78,11 +78,11 @@
    "tone": "resolute",
    "energy": 4,
    "pause_after": 0.35,
-   "direction": "ease back over the Altiplano; three skyline silhouettes rise on 'Quito' — Kathmandu a stub, Quito a step, La Paz a tower; the Ecuadorian flag-ball thinks on 'Kathmandu'; a mountain sticker on 'only' as Bolivia pulses",
-   "text": "Quito is about 2,850 metres. Kathmandu, under the Himalaya, only 1,400.",
+   "direction": "ease back over the Altiplano; three skyline silhouettes rise on 'Ecuador' — Kathmandu a stub, Quito a step, La Paz a tower; the Ecuadorian flag-ball thinks on 'Nepal'; a mountain sticker on 'only' as Bolivia pulses",
+   "text": "Ecuador's capital is about 2,850 metres. Nepal's, under the Himalaya, only 1,400.",
    "cues": {
-    "quito": "quito",
-    "kathmandu": "kathmandu",
+    "ecuador": "ecuador",
+    "nepal": "nepal",
     "only": "only"
    }
   },
@@ -94,7 +94,7 @@
    "energy": 3,
    "pause_after": 0.45,
    "direction": "drift south-east; a twist sticker on 'twist' as the La Paz photograph rises out of Bolivia; the Sucre pin and tag on 'Sucre'; a plane sticker and the El Alto tag on 'airport' as Bolivia pulses",
-   "text": "A twist: the constitutional capital is Sucre, down at 2,800. The airport, El Alto, sits at 4,060.",
+   "text": "A twist: the constitutional capital is Sucre, far lower down. And the airport sits even higher, above the city.",
    "cues": {
     "twist": "twist",
     "sucre": "sucre",

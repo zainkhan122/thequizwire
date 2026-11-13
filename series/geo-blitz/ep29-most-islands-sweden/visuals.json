@@ -323,17 +323,17 @@
    "id": "id_think"
   },
   {
-   "at": "s05@together",
+   "at": "s05@between",
    "do": "sticker_in",
    "id": "st_plus"
   },
   {
-   "at": "s05@together+0.4",
+   "at": "s05@between+0.4",
    "do": "sticker_pulse",
    "id": "st_plus"
   },
   {
-   "at": "s05@together+0.3",
+   "at": "s05@between+0.3",
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {

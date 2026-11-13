@@ -3,24 +3,24 @@
  "series": "geo-blitz",
  "number": 30,
  "seed": 3930,
- "question": "Name the HIGHEST capital city on Earth.",
+ "question": "Which country has the HIGHEST capital city?",
  "keyword": "HIGHEST",
  "difficulty": "MEDIUM",
  "options": [
   {
-   "text": "Quito",
+   "text": "Ecuador",
    "flag": "ec",
-   "cue": "quito"
+   "cue": "ecuador"
   },
   {
-   "text": "La Paz",
+   "text": "Bolivia",
    "flag": "bo",
-   "cue": "paz"
+   "cue": "bolivia"
   },
   {
-   "text": "Kathmandu",
+   "text": "Nepal",
    "flag": "np",
-   "cue": "kathmandu"
+   "cue": "nepal"
   }
  ],
  "correct": 1,
@@ -30,8 +30,9 @@
  "cover_emoji_why": "a mountain states 'high' and all three options sit under famous ranges — Andes twice, Himalaya once",
  "post": {
   "premise": "One capital sits so high that visitors arrive short of breath",
-  "bait": "Quito, La Paz or Kathmandu — which did you pick? 👇",
+  "bait": "Ecuador, Bolivia or Nepal — which did you pick? 👇",
   "keywords": [
+   "which country has the highest capital city",
    "highest capital city in the world",
    "highest capital in the world",
    "quito altitude",
@@ -61,8 +62,8 @@
     "titicaca"
    ],
    "youtube": {
-    "title": "What is the highest capital city in the world? Visitors arrive short of breath 🏔️",
-    "description": "Quito, Kathmandu or the third one? One capital sits so high that the air holds a third less oxygen, its football team is almost unbeatable at home, and its airport is higher still. And it is only half the answer — the country has two capitals.\nWhich did you pick?",
+    "title": "Which country has the highest capital city in the world? Visitors arrive short of breath 🏔️",
+    "description": "The Andes twice or the Himalaya once? One capital sits so high that the air holds a third less oxygen, its football team is almost unbeatable at home, and its airport is higher still. And it is only half the answer — the country has two capitals.\nWhich did you pick?",
     "tags": [
      "#geographyquiz",
      "#capitals",
@@ -72,7 +73,7 @@
     ]
    },
    "instagram": {
-    "caption": "Name the HIGHEST capital city on Earth 🏔️\nQuito, Kathmandu or the other one? One capital sits so high the air holds a third less oxygen, and its airport is higher still. And the country has two capitals.\nWhich did you pick?",
+    "caption": "Which country has the HIGHEST capital city? 🏔️\nThe Andes twice or the Himalaya once? One capital sits so high the air holds a third less oxygen, and its airport is higher still. And the country has two capitals.\nWhich did you pick?",
     "tags": [
      "#geographyquiz",
      "#capitals",
@@ -82,21 +83,21 @@
     ]
    },
    "facebook": {
-    "text": "Which is the highest capital city on Earth — Quito, La Paz or Kathmandu?\nOne capital sits so high that the air holds a third less oxygen, its football team is almost unbeatable at home, and its airport is higher still. Pick your flag before the altitude counter climbs.",
+    "text": "Which country has the highest capital city — Ecuador, Bolivia or Nepal?\nOne capital sits so high that the air holds a third less oxygen, its football team is almost unbeatable at home, and its airport is higher still. Pick your flag before the altitude counter climbs.",
     "tags": [
      "#geographyquiz",
      "#capitals"
     ]
    },
    "twitter": {
-    "text": "Name the HIGHEST capital city on Earth.\nQuito, La Paz or Kathmandu? One of them has a third less oxygen in the air — and a second capital down the road.",
+    "text": "Which country has the HIGHEST capital city?\nEcuador, Bolivia or Nepal? One of them has a third less oxygen in the air — and a second capital down the road.",
     "tags": [
      "#GeographyQuiz",
      "#Capitals"
     ]
    },
    "threads": {
-    "text": "Which is the highest capital city on Earth — Quito, La Paz or Kathmandu? One capital sits so high that the air holds a third less oxygen, its football team is almost unbeatable at home, and its airport is higher still.",
+    "text": "Which country has the highest capital city — Ecuador, Bolivia or Nepal? One capital sits so high that the air holds a third less oxygen, its football team is almost unbeatable at home, and its airport is higher still.",
     "tags": [
      "#travelfacts"
     ]
@@ -104,7 +105,7 @@
   }
  },
  "variety": {
-  "question": "name-the-capital",
+  "question": "which-country",
   "hook": "straight",
   "opener": "wide-drift",
   "reveal": "colour-lift",
@@ -121,27 +122,27 @@
  "intent": "A capital you climb to: three city silhouettes to scale, a real photograph of the city rising out of the map, a pin on the seat of government with the two-capitals twist, and the thin-air close on the football pitch.",
  "voice": {
   "v01_cues": {
-   "name": "name",
+   "which": "which",
    "highest": "highest"
   },
   "v04": {
-   "text": "La Paz. Bolivia's seat of government sits 3,640 metres up, higher than any other capital.",
+   "text": "Bolivia. La Paz, its seat of government, sits 3,640 metres up, higher than any other capital.",
    "cues": {
-    "answer": "paz",
+    "answer": "bolivia",
     "government": "government",
     "higher": "higher"
    }
   },
   "v05": {
-   "text": "Quito is about 2,850 metres. Kathmandu, under the Himalaya, only 1,400.",
+   "text": "Ecuador's capital is about 2,850 metres. Nepal's, under the Himalaya, only 1,400.",
    "cues": {
-    "quito": "quito",
-    "kathmandu": "kathmandu",
+    "ecuador": "ecuador",
+    "nepal": "nepal",
     "only": "only"
    }
   },
   "v06": {
-   "text": "A twist: the constitutional capital is Sucre, down at 2,800. The airport, El Alto, sits at 4,060.",
+   "text": "A twist: the constitutional capital is Sucre, far lower down. And the airport sits even higher, above the city.",
    "cues": {
     "twist": "twist",
     "sucre": "sucre",
@@ -326,9 +327,9 @@
      "nasa_lapaz"
     ],
     "vo": [
-     "name the highest capital city on earth",
-     "quito, la paz, or kathmandu",
-     "la paz. bolivia's seat of government sits 3,640 metres up, higher than any other capital",
+     "which country has the highest capital city",
+     "ecuador, bolivia, or nepal",
+     "bolivia. la paz, its seat of government, sits 3,640 metres up, higher than any other capital",
      "a capital above the clouds"
     ],
     "screen": [
@@ -348,7 +349,7 @@
      "quito_gov"
     ],
     "vo": [
-     "quito is about 2,850 metres. kathmandu, under the himalaya, only 1,400"
+     "ecuador's capital is about 2,850 metres. nepal's, under the himalaya, only 1,400"
     ],
     "screen": [
      "2,850 m",
@@ -367,7 +368,7 @@
      "aasana_elalto"
     ],
     "vo": [
-     "a twist: the constitutional capital is sucre, down at 2,800. the airport, el alto, sits at 4,060"
+     "a twist: the constitutional capital is sucre, far lower down. and the airport sits even higher, above the city"
     ],
     "screen": [
      "Sucre",
@@ -550,14 +551,14 @@
  "story": [
   {
    "vo": {
-    "text": "Quito is about 2,850 metres. Kathmandu, under the Himalaya, only 1,400.",
+    "text": "Ecuador's capital is about 2,850 metres. Nepal's, under the Himalaya, only 1,400.",
     "cues": {
-     "quito": "quito",
-     "kathmandu": "kathmandu",
+     "ecuador": "ecuador",
+     "nepal": "nepal",
      "only": "only"
     }
    },
-   "direction": "ease back over the Altiplano; three skyline silhouettes rise on 'Quito' — Kathmandu a stub, Quito a step, La Paz a tower; the Ecuadorian flag-ball thinks on 'Kathmandu'; a mountain sticker on 'only' as Bolivia pulses",
+   "direction": "ease back over the Altiplano; three skyline silhouettes rise on 'Ecuador' — Kathmandu a stub, Quito a step, La Paz a tower; the Ecuadorian flag-ball thinks on 'Nepal'; a mountain sticker on 'only' as Bolivia pulses",
    "energy": 4,
    "tone": "resolute",
    "pause_after": 0.35,
@@ -606,7 +607,7 @@
    ],
    "devices": [
     {
-     "at": "@@quito-0.3",
+     "at": "@@ecuador-0.3",
      "do": "chart.compare_in",
      "id": "alt",
      "args": {
@@ -615,7 +616,7 @@
      }
     },
     {
-     "at": "@@kathmandu",
+     "at": "@@nepal",
      "do": "character_in",
      "id": "ec_think"
     },
@@ -658,7 +659,7 @@
   },
   {
    "vo": {
-    "text": "A twist: the constitutional capital is Sucre, down at 2,800. The airport, El Alto, sits at 4,060.",
+    "text": "A twist: the constitutional capital is Sucre, far lower down. And the airport sits even higher, above the city.",
     "cues": {
      "twist": "twist",
      "sucre": "sucre",

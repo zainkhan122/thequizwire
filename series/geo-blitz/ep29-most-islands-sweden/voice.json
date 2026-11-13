@@ -78,12 +78,12 @@
    "tone": "resolute",
    "energy": 4,
    "pause_after": 0.35,
-   "direction": "ease back over the Baltic; three island bars rise on 'Indonesia' with Sweden off the chart; the Indonesian flag-ball thinks on 'Philippines'; a plus sticker on 'together' as Sweden pulses",
-   "text": "Indonesia has around 17,000. The Philippines, 7,600. Sweden beats both together.",
+   "direction": "ease back over the Baltic; three island bars rise on 'Indonesia' with Sweden off the chart; the Indonesian flag-ball thinks on 'Philippines'; a plus sticker on 'between' as Sweden pulses",
+   "text": "Indonesia and the Philippines, the famous island nations, have fewer than 25,000 between them.",
    "cues": {
     "indonesia": "indonesia",
     "philippines": "philippines",
-    "together": "together"
+    "between": "between"
    }
   },
   {
@@ -94,7 +94,7 @@
    "energy": 3,
    "pause_after": 0.45,
    "direction": "tighten on Stockholm; the inhabited counter runs 0 → 1,000 on 'living' with a house sticker; the Stockholm pin and 14-islands tag on 'capital'; a crown sticker on '14' as Sweden pulses; the pin leaves at the end",
-   "text": "Only about 1,000 of them have anyone living there. The capital alone sits on 14 islands.",
+   "text": "Only about 1,000 of them have anyone living on them at all. The capital alone is built on 14 islands.",
    "cues": {
     "living": "living",
     "capital": "capital",
@@ -109,7 +109,7 @@
    "energy": 3,
    "pause_after": 0.45,
    "direction": "drift north up the Gulf of Bothnia; a rock sticker on 'skerries'; the RISING LAND card and the Bothnia tag on 'ice'; a sparkle sticker on 'new' as the Swedish flag-ball grins and Sweden pulses",
-   "text": "Most are skerries, bare rock lifted by land still rising since the ice age. New islands appear every year.",
+   "text": "Most are skerries, bare rock lifted by land that is still rising since the ice age. New islands appear every year.",
    "cues": {
     "skerries": "skerries",
     "ice": "ice",
@@ -124,7 +124,7 @@
    "energy": 3,
    "pause_after": 0.0,
    "direction": "punchline, then a short follow — the outro visual asks",
-   "text": "All those islands, 1 country. Follow us.",
+   "text": "All those islands, and most of them empty. Follow us.",
    "cues": {
     "follow": "follow"
    }

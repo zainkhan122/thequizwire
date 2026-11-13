@@ -1,4 +1,4 @@
-# Name the HIGHEST capital city on Earth.
+# Which country has the HIGHEST capital city?
 
 ## Signal
 suggest: "highest capital city in the world" (YouTube autocomplete, "highest / lowest / coldest capital" family in
@@ -16,15 +16,15 @@ makes the number felt.
 capital is Sucre; the air up there has about a third less oxygen."
 
 ## Question shape
-name-the-capital with three city options under their flags (Quito / La Paz / Kathmandu); straight hook; wide-drift
+which-country with three flags (Ecuador / Bolivia / Nepal); straight hook — the answer is a country, so the city names stay on screen and out of the narration where whisper mishears them; wide-drift
 opener over the Amazon basin.
 
 ## Options and why they fool
-A Quito — the highest constitutional capital, the "textbook" answer · B La Paz (answer) · C Kathmandu — Himalaya by
+A Ecuador — Quito is the highest constitutional capital, the "textbook" answer · B Bolivia (answer) · C Nepal — Himalaya by
 association, actually the lowest of the three.
 
 ## Search term
-"highest capital city in the world"
+"which country has the highest capital city"
 
 ## Rejected alternatives
 - "Which is the highest city in the world" — La Rinconada; a mining camp, no capital map.

@@ -172,9 +172,9 @@
     "nasa_lapaz"
    ],
    "vo": [
-    "name the highest capital city on earth",
-    "quito, la paz, or kathmandu",
-    "la paz. bolivia's seat of government sits 3,640 metres up, higher than any other capital",
+    "which country has the highest capital city",
+    "ecuador, bolivia, or nepal",
+    "bolivia. la paz, its seat of government, sits 3,640 metres up, higher than any other capital",
     "a capital above the clouds"
    ],
    "screen": [
@@ -194,7 +194,7 @@
     "quito_gov"
    ],
    "vo": [
-    "quito is about 2,850 metres. kathmandu, under the himalaya, only 1,400"
+    "ecuador's capital is about 2,850 metres. nepal's, under the himalaya, only 1,400"
    ],
    "screen": [
     "2,850 m",
@@ -213,7 +213,7 @@
     "aasana_elalto"
    ],
    "vo": [
-    "a twist: the constitutional capital is sucre, down at 2,800. the airport, el alto, sits at 4,060"
+    "a twist: the constitutional capital is sucre, far lower down. and the airport sits even higher, above the city"
    ],
    "screen": [
     "Sucre",

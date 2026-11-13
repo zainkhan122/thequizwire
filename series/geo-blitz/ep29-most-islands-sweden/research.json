@@ -134,12 +134,11 @@
     "which country has the most islands",
     "indonesia, philippines, or sweden",
     "sweden. its statistics office counts about 267,000 islands, more than anyone else",
-    "all those islands, 1 country"
+    "all those islands, and most of them empty"
    ],
    "screen": [
     "267,000",
-    "islands counted by Statistics Sweden",
-    "1"
+    "islands counted by Statistics Sweden"
    ]
   },
   {
@@ -152,7 +151,7 @@
     "wiki_islands"
    ],
    "vo": [
-    "indonesia has around 17,000. the philippines, 7,600. sweden beats both together"
+    "indonesia and the philippines, the famous island nations, have fewer than 25,000 between them"
    ],
    "screen": [
     "267,000",
@@ -169,7 +168,7 @@
     "brit_stockholm"
    ],
    "vo": [
-    "only about 1,000 of them have anyone living there. the capital alone sits on 14 islands"
+    "only about 1,000 of them have anyone living on them at all. the capital alone is built on 14 islands"
    ],
    "screen": [
     "Stockholm · 14 islands",
@@ -189,7 +188,7 @@
     "scb_islands"
    ],
    "vo": [
-    "most are skerries, bare rock lifted by land still rising since the ice age. new islands appear every year"
+    "most are skerries, bare rock lifted by land that is still rising since the ice age. new islands appear every year"
    ],
    "screen": [
     "RISING LAND",

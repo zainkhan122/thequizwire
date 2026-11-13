@@ -130,15 +130,15 @@
    }
   },
   "v05": {
-   "text": "Indonesia has around 17,000. The Philippines, 7,600. Sweden beats both together.",
+   "text": "Indonesia and the Philippines, the famous island nations, have fewer than 25,000 between them.",
    "cues": {
     "indonesia": "indonesia",
     "philippines": "philippines",
-    "together": "together"
+    "between": "between"
    }
   },
   "v06": {
-   "text": "Only about 1,000 of them have anyone living there. The capital alone sits on 14 islands.",
+   "text": "Only about 1,000 of them have anyone living on them at all. The capital alone is built on 14 islands.",
    "cues": {
     "living": "living",
     "capital": "capital",
@@ -146,7 +146,7 @@
    }
   },
   "v07": {
-   "text": "Most are skerries, bare rock lifted by land still rising since the ice age. New islands appear every year.",
+   "text": "Most are skerries, bare rock lifted by land that is still rising since the ice age. New islands appear every year.",
    "cues": {
     "skerries": "skerries",
     "ice": "ice",
@@ -154,7 +154,7 @@
    }
   },
   "v08": {
-   "text": "All those islands, 1 country. Follow us."
+   "text": "All those islands, and most of them empty. Follow us."
   }
  },
  "facts": [
@@ -284,12 +284,11 @@
      "which country has the most islands",
      "indonesia, philippines, or sweden",
      "sweden. its statistics office counts about 267,000 islands, more than anyone else",
-     "all those islands, 1 country"
+     "all those islands, and most of them empty"
     ],
     "screen": [
      "267,000",
-     "islands counted by Statistics Sweden",
-     "1"
+     "islands counted by Statistics Sweden"
     ]
    },
    {
@@ -302,7 +301,7 @@
      "wiki_islands"
     ],
     "vo": [
-     "indonesia has around 17,000. the philippines, 7,600. sweden beats both together"
+     "indonesia and the philippines, the famous island nations, have fewer than 25,000 between them"
     ],
     "screen": [
      "267,000",
@@ -319,7 +318,7 @@
      "brit_stockholm"
     ],
     "vo": [
-     "only about 1,000 of them have anyone living there. the capital alone sits on 14 islands"
+     "only about 1,000 of them have anyone living on them at all. the capital alone is built on 14 islands"
     ],
     "screen": [
      "Stockholm · 14 islands",
@@ -339,7 +338,7 @@
      "scb_islands"
     ],
     "vo": [
-     "most are skerries, bare rock lifted by land still rising since the ice age. new islands appear every year"
+     "most are skerries, bare rock lifted by land that is still rising since the ice age. new islands appear every year"
     ],
     "screen": [
      "RISING LAND",
@@ -491,14 +490,14 @@
  "story": [
   {
    "vo": {
-    "text": "Indonesia has around 17,000. The Philippines, 7,600. Sweden beats both together.",
+    "text": "Indonesia and the Philippines, the famous island nations, have fewer than 25,000 between them.",
     "cues": {
      "indonesia": "indonesia",
      "philippines": "philippines",
-     "together": "together"
+     "between": "between"
     }
    },
-   "direction": "ease back over the Baltic; three island bars rise on 'Indonesia' with Sweden off the chart; the Indonesian flag-ball thinks on 'Philippines'; a plus sticker on 'together' as Sweden pulses",
+   "direction": "ease back over the Baltic; three island bars rise on 'Indonesia' with Sweden off the chart; the Indonesian flag-ball thinks on 'Philippines'; a plus sticker on 'between' as Sweden pulses",
    "energy": 4,
    "tone": "resolute",
    "pause_after": 0.35,
@@ -561,17 +560,17 @@
      "id": "id_think"
     },
     {
-     "at": "@@together",
+     "at": "@@between",
      "do": "sticker_in",
      "id": "st_plus"
     },
     {
-     "at": "@@together+0.4",
+     "at": "@@between+0.4",
      "do": "sticker_pulse",
      "id": "st_plus"
     },
     {
-     "at": "@@together+0.3",
+     "at": "@@between+0.3",
      "do": "geo.highlight_pulse",
      "stage": "stage_map",
      "args": {
@@ -599,7 +598,7 @@
   },
   {
    "vo": {
-    "text": "Only about 1,000 of them have anyone living there. The capital alone sits on 14 islands.",
+    "text": "Only about 1,000 of them have anyone living on them at all. The capital alone is built on 14 islands.",
     "cues": {
      "living": "living",
      "capital": "capital",
@@ -702,7 +701,7 @@
   },
   {
    "vo": {
-    "text": "Most are skerries, bare rock lifted by land still rising since the ice age. New islands appear every year.",
+    "text": "Most are skerries, bare rock lifted by land that is still rising since the ice age. New islands appear every year.",
     "cues": {
      "skerries": "skerries",
      "ice": "ice",
