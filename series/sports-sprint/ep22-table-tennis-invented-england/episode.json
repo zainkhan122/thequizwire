@@ -1,0 +1,146 @@
+{
+ "id": "ep22-table-tennis-invented-england",
+ "format": "quiz-v3",
+ "series": "sports-sprint",
+ "number": 22,
+ "title": "Which country INVENTED table tennis?",
+ "difficulty": "MEDIUM",
+ "seed": 3922,
+ "quiz": {
+  "question": "Which country INVENTED table tennis?",
+  "keyword": "INVENTED",
+  "options": [
+   "China",
+   "England",
+   "Japan"
+  ],
+  "correct": 1,
+  "beat": 3.0,
+  "answer_line": "England",
+  "answer_sub": "a Victorian parlour game, 1880s",
+  "option_meta": [
+   {
+    "flag": "cn"
+   },
+   {
+    "flag": "gb-eng"
+   },
+   {
+    "flag": "jp"
+   }
+  ],
+  "banner": "England",
+  "banner_sub": "✓  B was right · a Victorian parlour game, 1880s",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country INVENTED table tennis? 🏓",
+  "premise": "The country that dominates table tennis did not invent it",
+  "bait": "China, England or Japan — which did you pick? 👇",
+  "keywords": [
+   "where was table tennis invented",
+   "who invented table tennis",
+   "table tennis history",
+   "ping pong origin",
+   "china table tennis olympic gold",
+   "sports quiz",
+   "sports history",
+   "ping pong facts"
+  ],
+  "description": "The country that dominates table tennis did not invent it. China, England or Japan — which did you pick? 👇\n\nSources: ITTF; Britannica; Olympics.com.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nSports Sprint #22",
+  "hashtags": [
+   "#SportsQuiz",
+   "#SportsTrivia",
+   "#thequizwire"
+  ],
+  "tags": [
+   "SportsQuiz",
+   "TableTennis"
+  ],
+  "cover_emoji": "🏓",
+  "cover_emoji_why": "the paddle names the sport; it does not favour any of the three countries",
+  "copy": {
+   "spoilers": [
+    "england",
+    "english",
+    "britain",
+    "british",
+    "victorian",
+    "london",
+    "1880s",
+    "1901",
+    "cigar",
+    "champagne",
+    "wiff-waff",
+    "gossima",
+    "jaques"
+   ],
+   "youtube": {
+    "title": "Where was table tennis invented? Not the country that wins everything 🏓",
+    "description": "China, Japan or the third one? The country that has won almost every Olympic gold in the sport did not invent it. The first games were played after dinner on a dining table, with books for a net and a lid for a bat, and the sport had a much sillier name.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#tabletennis",
+     "#pingpong",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country INVENTED table tennis? 🏓\nChina, Japan or the other one? The country that wins almost every Olympic gold in it did not invent it. The first games were played after dinner on a dining table, with books for a net, under a much sillier name.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#tabletennis",
+     "#pingpong",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country invented table tennis — China, England or Japan?\nThe country that has won almost every Olympic gold in the sport did not invent it. The first games were played after dinner on a dining table, with books for a net and a lid for a bat. Lock in your flag before the table appears.",
+    "tags": [
+     "#sportsquiz",
+     "#tabletennis"
+    ]
+   },
+   "twitter": {
+    "text": "Which country INVENTED table tennis?\nChina, England or Japan? The nation that wins nearly every Olympic gold in it did not invent it — the first games used books for a net.",
+    "tags": [
+     "#SportsQuiz",
+     "#PingPong"
+    ]
+   },
+   "threads": {
+    "text": "Which country invented table tennis — China, England or Japan? The country that has won almost every Olympic gold in the sport did not invent it; the first games were played after dinner on a dining table, with books for a net and a lid for a bat.",
+    "tags": [
+     "#sportshistory"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "erase",
+   "bars",
+   "split",
+   "label"
+  ],
+  "cast": "flagball:gb-eng + emoji-set:parlour",
+  "music": "bed:pulse"
+ },
+ "status": "ready"
+}

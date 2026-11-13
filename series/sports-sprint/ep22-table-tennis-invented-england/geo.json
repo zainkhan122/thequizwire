@@ -1,0 +1,93 @@
+{
+ "version": 1,
+ "episode": "ep22-table-tennis-invented-england",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -8,
+     49.5,
+     3,
+     56
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "826"
+     ],
+     "cls": "",
+     "note": "United Kingdom (world-atlas has no separate England polygon); the VO and tag say England / London",
+     "lift": "color",
+     "color": "#FFD400"
+    }
+   ],
+   "pins": [
+    {
+     "id": "london",
+     "lonlat": [
+      -0.13,
+      51.51
+     ],
+     "label": "London",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "ld",
+     "lonlat": [
+      -3.2,
+      54.0
+     ],
+     "text": "London · Ping-Pong sets 1901",
+     "cls": "tag",
+     "in": "s05@london+0.2",
+     "out": "s05.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -30,
+      30,
+      60,
+      70
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 100,
+    "lonlat": [
+     -7.5,
+     50.0
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

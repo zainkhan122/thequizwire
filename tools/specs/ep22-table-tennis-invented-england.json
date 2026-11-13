@@ -1,0 +1,850 @@
+{
+ "id": "ep22-table-tennis-invented-england",
+ "series": "sports-sprint",
+ "number": 22,
+ "seed": 3922,
+ "question": "Which country INVENTED table tennis?",
+ "keyword": "INVENTED",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "China",
+   "flag": "cn",
+   "cue": "china"
+  },
+  {
+   "text": "England",
+   "flag": "gb-eng",
+   "cue": "england"
+  },
+  {
+   "text": "Japan",
+   "flag": "jp",
+   "cue": "japan"
+  }
+ ],
+ "correct": 1,
+ "answer_sub": "a Victorian parlour game, 1880s",
+ "outro_headline": "TOO EASY?",
+ "cover_emoji": "🏓",
+ "cover_emoji_why": "the paddle names the sport; it does not favour any of the three countries",
+ "post": {
+  "premise": "The country that dominates table tennis did not invent it",
+  "bait": "China, England or Japan — which did you pick? 👇",
+  "keywords": [
+   "where was table tennis invented",
+   "who invented table tennis",
+   "table tennis history",
+   "ping pong origin",
+   "china table tennis olympic gold",
+   "sports quiz",
+   "sports history",
+   "ping pong facts"
+  ],
+  "tags": [
+   "SportsQuiz",
+   "TableTennis"
+  ],
+  "sources_line": "ITTF; Britannica; Olympics.com",
+  "copy": {
+   "spoilers": [
+    "england",
+    "english",
+    "britain",
+    "british",
+    "victorian",
+    "london",
+    "1880s",
+    "1901",
+    "cigar",
+    "champagne",
+    "wiff-waff",
+    "gossima",
+    "jaques"
+   ],
+   "youtube": {
+    "title": "Where was table tennis invented? Not the country that wins everything 🏓",
+    "description": "China, Japan or the third one? The country that has won almost every Olympic gold in the sport did not invent it. The first games were played after dinner on a dining table, with books for a net and a lid for a bat, and the sport had a much sillier name.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#tabletennis",
+     "#pingpong",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country INVENTED table tennis? 🏓\nChina, Japan or the other one? The country that wins almost every Olympic gold in it did not invent it. The first games were played after dinner on a dining table, with books for a net, under a much sillier name.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#tabletennis",
+     "#pingpong",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country invented table tennis — China, England or Japan?\nThe country that has won almost every Olympic gold in the sport did not invent it. The first games were played after dinner on a dining table, with books for a net and a lid for a bat. Lock in your flag before the table appears.",
+    "tags": [
+     "#sportsquiz",
+     "#tabletennis"
+    ]
+   },
+   "twitter": {
+    "text": "Which country INVENTED table tennis?\nChina, England or Japan? The nation that wins nearly every Olympic gold in it did not invent it — the first games used books for a net.",
+    "tags": [
+     "#SportsQuiz",
+     "#PingPong"
+    ]
+   },
+   "threads": {
+    "text": "Which country invented table tennis — China, England or Japan? The country that has won almost every Olympic gold in the sport did not invent it; the first games were played after dinner on a dining table, with books for a net and a lid for a bat.",
+    "tags": [
+     "#sportshistory"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "misconception",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "erase",
+   "bars",
+   "split",
+   "label"
+  ],
+  "cast": "flagball:gb-eng + emoji-set:parlour",
+  "music": "bed:pulse",
+  "outro": "TOO EASY?"
+ },
+ "intent": "The inventor is not the champion: a CHINA plate erased over the map, a dinner-table origin with books and a cigar-box lid, a THEN / NOW split from parlour game to 1988 Olympic sport, and three gold-medal bars that hand the story back to China.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "invented": "invented"
+  },
+  "v04": {
+   "text": "England. In the 1880s Victorians played it after dinner, with books for a net and a cigar-box lid for a bat.",
+   "cues": {
+    "answer": "england",
+    "victorians": "victorians",
+    "books": "books",
+    "lid": "lid"
+   }
+  },
+  "v05": {
+   "text": "Not China. The first rules and the first ping-pong sets were sold in London around 1901.",
+   "cues": {
+    "china": "china",
+    "rules": "rules",
+    "london": "london"
+   }
+  },
+  "v06": {
+   "text": "A parlour game became an Olympic sport in 1988. World championships began in London in 1926.",
+   "cues": {
+    "parlour": "parlour",
+    "olympic": "olympic",
+    "championships": "championships"
+   }
+  },
+  "v07": {
+   "text": "Since then China has won 37 of 42 Olympic golds. Japan, 1. The inventors, none.",
+   "cues": {
+    "china": "china",
+    "golds": "golds",
+    "japan": "japan",
+    "none": "none"
+   }
+  },
+  "v08": {
+   "text": "Invented at dinner, mastered in China. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "1880s",
+   "text": "after dinner, on the dining table"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "gb-eng",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "cn",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "Table tennis originated in Victorian England in the 1880s as an after-dinner parlour game, improvised on dining tables with books as a net and cigar-box lids or champagne corks (Britannica; ITTF). The name 'Ping-Pong' was trademarked by J. Jaques & Son in London in 1901, when sets and rules were sold commercially; the ITTF was founded in 1926 and the first World Championships were held in London that December. Table tennis joined the Olympic programme at Seoul 1988; through Paris 2024 China has won 37 of the 42 gold medals; Japan 1 (mixed doubles, Tokyo 2020); Great Britain none.",
+  "myths": [
+   {
+    "myth": "China invented table tennis.",
+    "reality": "China dominates it (37 of 42 Olympic golds) but the game began as a Victorian parlour pastime in England in the 1880s; commercial sets and rules appeared in London around 1901.",
+    "sources": [
+     "brit_tt",
+     "ittf_history"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Table-tennis history clips are long documentaries; nobody erases 'China' over the map, shows the books-for-a-net origin, splits parlour-game-to-Olympics and stacks the gold bars as a 35-second quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=who+invented+table+tennis",
+     "title": "Search: who invented table tennis",
+     "angle": "explainers",
+     "misses": "no quiz, no map"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=history+of+ping+pong",
+     "title": "Search: history of ping pong",
+     "angle": "documentary",
+     "misses": "no medal twist"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=china+table+tennis+dominance",
+     "title": "Search: china table tennis dominance",
+     "angle": "sport analysis",
+     "misses": "no origin"
+    }
+   ]
+  },
+  "sources": {
+   "brit_tt": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Table tennis",
+    "url": "https://www.britannica.com/sports/table-tennis",
+    "date": "2026-11-11",
+    "notes": "originated in England in the late 19th century as an after-dinner parlour game; books as net, cigar-box lids as bats; 'Ping-Pong' trade name 1901; ITTF 1926; Olympic sport since 1988"
+   },
+   "ittf_history": {
+    "type": "primary",
+    "publisher": "International Table Tennis Federation",
+    "title": "History of table tennis",
+    "url": "https://www.ittf.com/history/",
+    "date": "2026-11-11",
+    "notes": "Victorian England origins in the 1880s; Jaques 'Ping-Pong' trademark 1901; ITTF founded and first World Championships in London, 1926"
+   },
+   "olympics_tt": {
+    "type": "primary",
+    "publisher": "Olympics.com",
+    "title": "Table tennis at the Olympic Games",
+    "url": "https://olympics.com/en/sports/table-tennis/",
+    "date": "2026-11-11",
+    "notes": "on the programme since Seoul 1988; China's dominance in Olympic table tennis"
+   },
+   "wiki_tt_oly": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Table tennis at the Summer Olympics",
+    "url": "https://en.wikipedia.org/wiki/Table_tennis_at_the_Summer_Olympics",
+    "date": "2026-11-11",
+    "notes": "medal table: China 37 golds of 42 awarded 1988–2024; Japan 1; South Korea 3; Sweden 1"
+   },
+   "wiki_tt": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Table tennis — History",
+    "url": "https://en.wikipedia.org/wiki/Table_tennis#History",
+    "date": "2026-11-11",
+    "notes": "upper-class Victorian parlour game of the 1880s; books for a net, cigar-box lid for a racket, champagne cork ball; Jaques trademark 1901; first World Championships London 1926"
+   },
+   "tt_museum": {
+    "type": "primary",
+    "publisher": "ITTF Museum (Shanghai)",
+    "title": "Origins of the game",
+    "url": "https://www.ittf.com/museum/",
+    "date": "2026-11-11",
+    "notes": "early English sets, Gossima and Ping-Pong boxed games from around 1900"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Table tennis was invented in England in the 1880s as an after-dinner parlour game played on dining tables with books for a net and cigar-box lids for bats.",
+    "sources": [
+     "brit_tt",
+     "ittf_history",
+     "wiki_tt"
+    ],
+    "vo": [
+     "which country invented table tennis",
+     "china, england, or japan",
+     "england. in the 1880s victorians played it after dinner, with books for a net and a cigar-box lid for a bat",
+     "invented at dinner, mastered in china"
+    ],
+    "screen": [
+     "1880s",
+     "after dinner, on the dining table"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Commercial sets and rules appeared in London around 1901, when J. Jaques & Son trademarked 'Ping-Pong'.",
+    "sources": [
+     "brit_tt",
+     "ittf_history",
+     "wiki_tt",
+     "tt_museum"
+    ],
+    "vo": [
+     "not china. the first rules and the first ping-pong sets were sold in london around 1901"
+    ],
+    "screen": [
+     "CHINA",
+     "London · Ping-Pong sets 1901"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "The first World Championships were held in London in 1926 and table tennis joined the Olympics at Seoul 1988.",
+    "sources": [
+     "ittf_history",
+     "olympics_tt",
+     "brit_tt"
+    ],
+    "vo": [
+     "a parlour game became an olympic sport in 1988. world championships began in london in 1926"
+    ],
+    "screen": [
+     "PARLOUR GAME",
+     "OLYMPIC SPORT",
+     "dining tables · 1880s",
+     "Seoul 1988 onward",
+     "THEN"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "core",
+    "text": "From 1988 to 2024 China won 37 of the 42 Olympic table tennis gold medals; Japan 1; Great Britain none.",
+    "sources": [
+     "wiki_tt_oly",
+     "olympics_tt"
+    ],
+    "vo": [
+     "since then china has won 37 of 42 olympic golds. japan, 1. the inventors, none"
+    ],
+    "screen": [
+     "37",
+     "1",
+     "0",
+     "Great Britain"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -8,
+   49.5,
+   3,
+   56
+  ],
+  "far_bbox": [
+   -30,
+   30,
+   60,
+   70
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "826"
+  ],
+  "highlight_note": "United Kingdom (world-atlas has no separate England polygon); the VO and tag say England / London",
+  "labels": [
+   {
+    "id": "ld",
+    "lonlat": [
+     -3.2,
+     54.0
+    ],
+    "text": "London · Ping-Pong sets 1901",
+    "cls": "tag",
+    "in": "s05@london+0.2",
+    "out": "s05.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "london",
+    "lonlat": [
+     -0.13,
+     51.51
+    ],
+    "label": "London",
+    "side": "left"
+   }
+  ],
+  "scalebar": {
+   "km": 100,
+   "lonlat": [
+    -7.5,
+    50.0
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s05@london",
+    "pid": "london"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.4,
+    [
+     10,
+     45
+    ]
+   ],
+   "s01": [
+    0.4,
+    [
+     8,
+     46
+    ]
+   ],
+   "s04": [
+    1.0,
+    [
+     -2,
+     53
+    ]
+   ],
+   "s04b": [
+    1.04,
+    [
+     -2.2,
+     52.8
+    ]
+   ],
+   "s05": [
+    1.15,
+    [
+     -1.5,
+     53.0
+    ]
+   ],
+   "s05b": [
+    1.2,
+    [
+     -1.2,
+     52.8
+    ]
+   ],
+   "s06": [
+    0.95,
+    [
+     -2,
+     53.5
+    ]
+   ],
+   "s06b": [
+    1.0,
+    [
+     -1.8,
+     53.2
+    ]
+   ],
+   "s07": [
+    0.7,
+    [
+     0,
+     54
+    ]
+   ],
+   "s07b": [
+    0.73,
+    [
+     0.5,
+     53.8
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Not China. The first rules and the first ping-pong sets were sold in London around 1901.",
+    "cues": {
+     "china": "china",
+     "rules": "rules",
+     "london": "london"
+    }
+   },
+   "direction": "tighten on southern England; the CHINA plate waits at the bottom and wipes away on 'China'; a scroll sticker on 'rules'; the London pin and tag on 'London' as the UK pulses; the pin leaves at the end",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    1.15,
+    [
+     -1.5,
+     53.0
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    1.2,
+    [
+     -1.2,
+     52.8
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "cn",
+     "type": "erase",
+     "text": "CHINA",
+     "y": 860,
+     "h": 260
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@china-0.1",
+     "do": "chart.erase_run",
+     "id": "cn",
+     "until": "@@china+1.1",
+     "args": {
+      "direction": "left"
+     }
+    },
+    {
+     "at": "@@rules",
+     "do": "sticker_in",
+     "id": "st_scroll"
+    },
+    {
+     "at": "@@rules+0.4",
+     "do": "sticker_pulse",
+     "id": "st_scroll"
+    },
+    {
+     "at": "@@london",
+     "do": "sticker_out",
+     "id": "st_scroll"
+    },
+    {
+     "at": "@@london+0.4",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "826",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "cn"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "london"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "A parlour game became an Olympic sport in 1988. World championships began in London in 1926.",
+    "cues": {
+     "parlour": "parlour",
+     "olympic": "olympic",
+     "championships": "championships"
+    }
+   },
+   "direction": "ease back over Britain; the PARLOUR GAME / OLYMPIC SPORT split lands on 'parlour'; a medal sticker on 'Olympic'; a trophy sticker on 'championships' as the UK pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    0.95,
+    [
+     -2,
+     53.5
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.0,
+    [
+     -1.8,
+     53.2
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "tn",
+     "type": "split",
+     "left": {
+      "kicker": "PARLOUR GAME",
+      "text": "dining tables · 1880s"
+     },
+     "right": {
+      "kicker": "OLYMPIC SPORT",
+      "text": "Seoul 1988 onward"
+     },
+     "label_left": "THEN",
+     "label_right": "NOW",
+     "y": 300,
+     "h": 560
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@parlour-0.2",
+     "do": "chart.split_in",
+     "id": "tn",
+     "args": {
+      "dur": 0.7
+     }
+    },
+    {
+     "at": "@@olympic",
+     "do": "sticker_in",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@olympic+0.4",
+     "do": "sticker_pulse",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@championships",
+     "do": "sticker_out",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@championships",
+     "do": "sticker_in",
+     "id": "st_trophy"
+    },
+    {
+     "at": "@@championships+0.4",
+     "do": "sticker_pulse",
+     "id": "st_trophy"
+    },
+    {
+     "at": "@@championships+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "826",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "tn"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_trophy"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Since then China has won 37 of 42 Olympic golds. Japan, 1. The inventors, none.",
+    "cues": {
+     "china": "china",
+     "golds": "golds",
+     "japan": "japan",
+     "none": "none"
+    }
+   },
+   "direction": "ease back further; three gold bars rise on 'China' with China towering; the Chinese flag-ball grins on 'golds'; a Japanese flag sticker on 'Japan'; a no-entry sticker and the English flag-ball, thinking, on 'none' as the UK pulses",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "cam": [
+    0.7,
+    [
+     0,
+     54
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.73,
+    [
+     0.5,
+     53.8
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "gold",
+     "type": "bars",
+     "rows": [
+      [
+       "China",
+       37,
+       "37"
+      ],
+      [
+       "Japan",
+       1,
+       "1"
+      ],
+      [
+       "Great Britain",
+       0.15,
+       "0"
+      ]
+     ],
+     "unit": "Olympic golds 1988-2024",
+     "y": 300,
+     "x": 60,
+     "w": 900
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@china-0.3",
+     "do": "chart.bars_in",
+     "id": "gold",
+     "args": {
+      "dur": 1.0,
+      "stagger": 0.3
+     }
+    },
+    {
+     "at": "@@golds",
+     "do": "character_in",
+     "id": "cn_happy"
+    },
+    {
+     "at": "@@none",
+     "do": "sticker_in",
+     "id": "st_zero"
+    },
+    {
+     "at": "@@none+0.4",
+     "do": "sticker_pulse",
+     "id": "st_zero"
+    },
+    {
+     "at": "@@none+0.1",
+     "do": "character_in",
+     "id": "en_think"
+    },
+    {
+     "at": "@@none+0.4",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "826",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "gold"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_zero"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "cn_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "en_think"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_scroll",
+   "type": "sticker",
+   "emoji": "1f4dc",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_medal",
+   "type": "sticker",
+   "emoji": "1f3c5",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_trophy",
+   "type": "sticker",
+   "emoji": "1f3c6",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_zero",
+   "type": "sticker",
+   "emoji": "1f6ab",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "cn_happy",
+   "type": "character",
+   "flag": "cn",
+   "face": "happy",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "en_think",
+   "type": "character",
+   "flag": "gb-eng",
+   "face": "think",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}
