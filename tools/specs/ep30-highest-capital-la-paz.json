@@ -136,8 +136,8 @@
   "v05": {
    "text": "Ecuador's capital is about 2,850 metres. Nepal's, under the Himalaya, only 1,400.",
    "cues": {
-    "ecuador": "ecuador",
-    "nepal": "nepal",
+    "ecuador": "ecuador's",
+    "nepal": "nepal's",
     "only": "only"
    }
   },
@@ -553,8 +553,8 @@
    "vo": {
     "text": "Ecuador's capital is about 2,850 metres. Nepal's, under the Himalaya, only 1,400.",
     "cues": {
-     "ecuador": "ecuador",
-     "nepal": "nepal",
+     "ecuador": "ecuador's",
+     "nepal": "nepal's",
      "only": "only"
     }
    },
