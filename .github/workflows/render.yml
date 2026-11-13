@@ -89,6 +89,9 @@ jobs:
         run: |
           GOT=$(git rev-parse HEAD); echo "rendering $GOT"
           if [ -n "$WANT" ] && [ "$GOT" != "$WANT" ]; then echo "::error::checked out $GOT, asked for $WANT"; exit 1; fi
+      - uses: actions/setup-python@v5          # pinned interpreter: the runner image jumped to 3.14 on 2026-11-11 and the TTS stack had no wheels
+        with:
+          python-version: '3.12'
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
