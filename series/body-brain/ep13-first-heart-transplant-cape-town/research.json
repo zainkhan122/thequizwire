@@ -1,0 +1,200 @@
+{
+ "version": 1,
+ "episode": "ep13-first-heart-transplant-cape-town",
+ "topic": "First human-to-human heart transplant: 3 December 1967, Groote Schuur Hospital, Cape Town, by Christiaan Barnard and a team of about 30; patient Louis Washkansky, 53, a grocer, lived 18 days (died of pneumonia). Donor Denise Darvall, 25, fatally injured by a car; her father Edward consented that night. Norman Shumway's Stanford team had developed the technique in dogs through the 1960s and performed the first US transplant on 6 January 1968. Second Cape Town patient Philip Blaiberg lived 19 months (593 days). ISHLT registry: median survival after adult heart transplant about 12–13 years.",
+ "researched": "2026-11-13",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The first heart transplant was American — Stanford invented the operation.",
+   "reality": "Shumway's Stanford team developed the technique, but the first human transplant was Barnard's in Cape Town on 3 December 1967; Stanford's first followed on 6 January 1968.",
+   "sources": [
+    "brit_barnard",
+    "stanford_shumway",
+    "cvja_first"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Barnard clips are biographies or archive news; nobody erases the American assumption over the map, pins the hospital and stacks the 18-day / 19-month / 12-year survival silhouettes as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=first+heart+transplant+1967",
+    "title": "Search: first heart transplant 1967",
+    "angle": "archive footage",
+    "misses": "no quiz, no map"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=christiaan+barnard",
+    "title": "Search: christiaan barnard",
+    "angle": "biography",
+    "misses": "no survival numbers"
+   },
+   {
+    "url": "https://www.youtube.com/@ClevelandClinic/shorts",
+    "title": "Cleveland Clinic",
+    "angle": "patient education",
+    "misses": "no history quiz"
+   }
+  ]
+ },
+ "sources": {
+  "gsh_museum": {
+   "type": "primary",
+   "publisher": "Heart of Cape Town Museum (Groote Schuur Hospital)",
+   "title": "The first heart transplant",
+   "url": "https://www.heartofcapetown.co.za/",
+   "date": "2026-11-11",
+   "notes": "3 December 1967, Groote Schuur Hospital; Christiaan Barnard and a team of about 30; patient Louis Washkansky, 53, lived 18 days; donor Denise Darvall, 25, struck by a car; her father Edward Darvall consented"
+  },
+  "cvja_first": {
+   "type": "primary",
+   "publisher": "Cardiovascular Journal of Africa",
+   "title": "Brink & Hassoulas (2009) — The first human heart transplant and further advances in cardiac transplantation at Groote Schuur Hospital",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3721262/",
+   "date": "2026-11-11",
+   "notes": "operation night of 2–3 December 1967; Washkansky survived 18 days (pneumonia); Blaiberg, operated 2 January 1968, survived 593 days; Shumway's experimental groundwork at Stanford"
+  },
+  "brit_barnard": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Christiaan Barnard",
+   "url": "https://www.britannica.com/biography/Christiaan-Barnard",
+   "date": "2026-11-11",
+   "notes": "South African surgeon who performed the first human heart transplant on 3 December 1967 in Cape Town; patient Louis Washkansky lived 18 days"
+  },
+  "stanford_shumway": {
+   "type": "primary",
+   "publisher": "Stanford Medicine",
+   "title": "Norman Shumway — father of heart transplantation",
+   "url": "https://med.stanford.edu/news/all-news/2006/02/norman-shumway-father-of-heart-transplantation-dies.html",
+   "date": "2026-11-11",
+   "notes": "developed the heart transplant technique in animals from the late 1950s; performed the first adult heart transplant in the United States on 6 January 1968"
+  },
+  "ishlt_survival": {
+   "type": "primary",
+   "publisher": "The Journal of Heart and Lung Transplantation (ISHLT Registry)",
+   "title": "Khush et al. (2019) — adult heart transplantation report",
+   "url": "https://www.jhltonline.org/article/S1053-2498(19)31601-1/fulltext",
+   "date": "2026-11-11",
+   "notes": "median survival after adult heart transplant about 12.5 years"
+  },
+  "wiki_washkansky": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Louis Washkansky",
+   "url": "https://en.wikipedia.org/wiki/Louis_Washkansky",
+   "date": "2026-11-11",
+   "notes": "grocer; received the first human heart transplant 3 December 1967; died 21 December 1967 of pneumonia after 18 days"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The first human heart transplant was performed in Cape Town, South Africa, on 3 December 1967 by Christiaan Barnard at Groote Schuur Hospital; the patient, Louis Washkansky, was a grocer.",
+   "sources": [
+    "gsh_museum",
+    "cvja_first",
+    "brit_barnard",
+    "wiki_washkansky"
+   ],
+   "vo": [
+    "which country saw the first human heart transplant",
+    "united states, south africa, or united kingdom",
+    "cape town. on 3 december 1967 a surgeon called christiaan barnard gave a grocer a new heart",
+    "a grocer, a surgeon, 18 days. follow us"
+   ],
+   "screen": [
+    "South Africa",
+    "United States",
+    "United Kingdom",
+    "3 DEC 1967",
+    "the first human heart transplant",
+    "Cape Town · 3 Dec 1967",
+    "Groote Schuur Hospital"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Norman Shumway's Stanford team developed the technique over years but was beaten to the first human operation; Barnard's team of about 30 operated overnight.",
+   "sources": [
+    "stanford_shumway",
+    "cvja_first",
+    "gsh_museum"
+   ],
+   "vo": [
+    "not an american first. stanford had rehearsed for years; a south african team of 30 beat them, overnight"
+   ],
+   "screen": [
+    "STANFORD",
+    "first US transplant · Jan 1968",
+    "people in the theatre that night"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Washkansky lived 18 days; the second patient, Philip Blaiberg, lived 19 months (593 days); median survival after adult heart transplant is now about 12 years.",
+   "sources": [
+    "cvja_first",
+    "ishlt_survival",
+    "brit_barnard"
+   ],
+   "vo": [
+    "the patient lived 18 days. the next lived 19 months. today half of recipients pass 12 years"
+   ],
+   "screen": [
+    "18 days",
+    "19 months",
+    "12 years",
+    "1967",
+    "1968",
+    "today"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "The donor, Denise Darvall, 25, was fatally injured by a car; her father consented to the donation that night.",
+   "sources": [
+    "gsh_museum",
+    "cvja_first"
+   ],
+   "vo": [
+    "the donor was a young woman killed crossing the road. her father agreed that night"
+   ],
+   "screen": [
+    "THE DONOR",
+    "Denise Darvall · her father said yes"
+   ]
+  }
+ ]
+}
