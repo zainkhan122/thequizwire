@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep28-river-most-water-amazon",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A river drawn, not a country filled: the main stem draws itself across the continent on the reveal, three discharge bars make the Nile look like a creek, a split holds the fifth-of-all-water fact against the mouth width, and a boat rides the line to the sea for the 1500 Sweet Sea story.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Which river carries the MOST water?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Which river carries the most water?",
+   "cues": {
+    "which": "which",
+    "most": "most"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Nile, Congo, or Amazon?",
+   "cues": {
+    "a": "nile",
+    "b": "congo",
+    "c": "amazon"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "The Amazon. It pours 209,000 cubic metres into the Atlantic every second, a fifth of all river water on Earth.",
+   "cues": {
+    "answer": "amazon",
+    "pours": "pours",
+    "fifth": "fifth"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.35,
+   "direction": "ease back so the whole basin sits in frame; three discharge bars rise on 'Congo' with the Amazon off the chart; the Egyptian flag-ball thinks on 'Nile'; a tiny-stream sticker on 'barely' as the river line re-draws",
+   "text": "The Congo, next, moves about 41,000. The Nile, the longest river, barely 3,000.",
+   "cues": {
+    "congo": "congo",
+    "nile": "nile",
+    "barely": "barely"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "hold wide; the length tag and a mountain sticker on 'Andes'; the Mouth pin and tag on 'mouth'; the 1 IN 5 / 320 KM split lands on 'wide'",
+   "text": "From the Andes it runs 6,400 kilometres to a mouth over 300 kilometres wide.",
+   "cues": {
+    "andes": "andes",
+    "mouth": "mouth",
+    "wide": "wide"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "drift east toward the mouth; a boat rides the drawn line from mid-river to the sea until 'sweet'; a sailor sticker on 'captain'; the 1500 card on 'fresh'; the Brazilian flag-ball grins on 'sweet'; the Mouth pin leaves at the end",
+   "text": "In 1500 a Spanish captain found fresh water out of sight of land, and called it the Sweet Sea.",
+   "cues": {
+    "captain": "captain",
+    "fresh": "fresh",
+    "sweet": "sweet"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "A fifth of all river water. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

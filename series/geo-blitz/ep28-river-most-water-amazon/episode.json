@@ -1,0 +1,145 @@
+{
+ "id": "ep28-river-most-water-amazon",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 28,
+ "title": "Which river carries the MOST water?",
+ "difficulty": "EASY",
+ "seed": 3728,
+ "quiz": {
+  "question": "Which river carries the MOST water?",
+  "keyword": "MOST",
+  "options": [
+   "Nile",
+   "Congo",
+   "Amazon"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Amazon",
+  "answer_sub": "209,000 m³ every second",
+  "option_meta": [
+   {
+    "flag": "eg"
+   },
+   {
+    "flag": "cd"
+   },
+   {
+    "flag": "br"
+   }
+  ],
+  "banner": "Amazon",
+  "banner_sub": "✓  C was right · 209,000 m³ every second",
+  "outro": {
+   "headline": "1 FOR 1?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which river carries the MOST water? 💧",
+  "premise": "One river moves a fifth of all the river water on Earth",
+  "bait": "Nile, Congo or Amazon — which did you pick? 👇",
+  "keywords": [
+   "which river carries the most water",
+   "largest river by discharge",
+   "amazon river facts",
+   "amazon vs nile",
+   "congo river",
+   "geography quiz",
+   "river facts",
+   "world map facts"
+  ],
+  "description": "One river moves a fifth of all the river water on Earth. Nile, Congo or Amazon — which did you pick? 👇\n\nSources: Britannica; NASA Earth Observatory; USGS.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #28",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "GeographyQuiz",
+   "Rivers"
+  ],
+  "cover_emoji": "💧",
+  "cover_emoji_why": "a water drop states the question (volume of water) and favours none of the three rivers",
+  "copy": {
+   "spoilers": [
+    "amazon",
+    "amazonas",
+    "brazil",
+    "brazilian",
+    "209,000",
+    "209000",
+    "manaus",
+    "pinzón",
+    "pinzon",
+    "sweet sea",
+    "mar dulce"
+   ],
+   "youtube": {
+    "title": "Which river carries the most water? A fifth of all river water on Earth 💧",
+    "description": "Nile, Congo or the third one? One river pours more into the ocean every second than the next several put together — a fifth of all the river water on Earth. Its mouth is wider than some countries, and a Spanish captain five centuries ago found fresh water out of sight of land.\nGuess before the map draws it, then see the three rivers side by side and ride a boat to the mouth.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#rivers",
+     "#worldmap",
+     "#geography",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which river carries the MOST water? 💧\nNile, Congo or the other one? One river moves a fifth of all river water on Earth, and a captain five centuries ago found fresh water out of sight of land.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#rivers",
+     "#worldmap",
+     "#geography",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which river carries the most water — the Nile, the Congo or the Amazon?\nOne river pours more into the ocean every second than the next several put together, a fifth of all the river water on Earth. Its mouth is wider than some countries, and a Spanish captain five centuries ago found fresh water out of sight of land. Lock in your river before the map draws it.",
+    "tags": [
+     "#rivers",
+     "#geographyquiz"
+    ]
+   },
+   "twitter": {
+    "text": "Which river carries the MOST water?\nNile, Congo or Amazon? One of them moves a fifth of all river water on Earth — and a captain once found fresh water out of sight of land.",
+    "tags": [
+     "#Geography",
+     "#Rivers"
+    ]
+   },
+   "threads": {
+    "text": "Which river carries the most water — the Nile, the Congo or the Amazon? One river pours more into the ocean every second than the next several put together, a fifth of all the river water on Earth; its mouth is wider than some countries, and a Spanish captain five centuries ago found fresh water out of sight of land.",
+    "tags": [
+     "#riverfacts"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-record",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "route-draw",
+  "beats": [
+   "route",
+   "bars",
+   "split",
+   "travel",
+   "label"
+  ],
+  "cast": "flagball:br + emoji-set:river",
+  "music": "bed:warm"
+ },
+ "status": "ready"
+}

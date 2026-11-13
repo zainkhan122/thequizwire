@@ -1,0 +1,235 @@
+{
+ "version": 1,
+ "episode": "ep28-river-most-water-amazon",
+ "topic": "River with the greatest discharge: Amazon, average about 209,000 m³/s into the Atlantic — roughly one fifth of all river water reaching the oceans (Britannica; USGS). Congo about 41,000 m³/s (second); Nile about 2,800–3,000 m³/s despite its length (Britannica). Amazon length about 6,400 km from the Peruvian Andes; mouth more than 320 km (200 mi) wide; fresh water detectable far out to sea. In 1500 Vicente Yáñez Pinzón found fresh water out of sight of land off the mouth and named it Mar Dulce, the Sweet Sea (Britannica).",
+ "researched": "2026-11-13",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The Nile is the greatest river — it is the longest.",
+   "reality": "Length and flow are different records: the Nile carries about 3,000 m³/s, the Amazon about 209,000 m³/s — some seventy times more.",
+   "sources": [
+    "brit_amazon",
+    "brit_nile"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "River clips rank by length or argue Nile vs Amazon; nobody draws the river on the reveal, stacks the three discharge bars and rides a boat to the Sweet Sea on a moving map as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=largest+river+in+the+world+by+volume",
+    "title": "Search: largest river by volume",
+    "angle": "ranking lists",
+    "misses": "no map, no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=amazon+vs+nile",
+    "title": "Search: amazon vs nile",
+    "angle": "length debates",
+    "misses": "flow never shown"
+   },
+   {
+    "url": "https://www.youtube.com/@geographynow/shorts",
+    "title": "Geography Now",
+    "angle": "country profiles",
+    "misses": "no river quiz"
+   }
+  ]
+ },
+ "sources": {
+  "brit_amazon": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Amazon River",
+   "url": "https://www.britannica.com/place/Amazon-River",
+   "date": "2026-11-11",
+   "notes": "greatest river by discharge, average about 7.4 million cubic feet (209,000 cubic metres) per second; about one-fifth of all river water discharged into the oceans; length about 6,400 km; mouth more than 200 miles (320 km) wide"
+  },
+  "usgs_rivers": {
+   "type": "primary",
+   "publisher": "U.S. Geological Survey",
+   "title": "Largest rivers in the world (discharge)",
+   "url": "https://www.usgs.gov/special-topics/water-science-school/science/rivers-world-water-and-sediment",
+   "date": "2026-11-11",
+   "notes": "Amazon mean discharge about 209,000 m³/s, Congo about 41,000 m³/s; the Amazon alone supplies about 20 percent of the fresh water entering the oceans"
+  },
+  "brit_congo": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Congo River",
+   "url": "https://www.britannica.com/place/Congo-River",
+   "date": "2026-11-11",
+   "notes": "second largest discharge in the world, about 1.45 million cubic feet (41,000 cubic metres) per second"
+  },
+  "brit_nile": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Nile River",
+   "url": "https://www.britannica.com/place/Nile-River",
+   "date": "2026-11-11",
+   "notes": "longest river; average discharge at Aswan about 2,830 cubic metres per second"
+  },
+  "nasa_plume": {
+   "type": "primary",
+   "publisher": "NASA Earth Observatory",
+   "title": "The Amazon River plume",
+   "url": "https://earthobservatory.nasa.gov/images/amazon-plume",
+   "date": "2026-11-11",
+   "notes": "the river's fresh water spreads hundreds of kilometres into the Atlantic; about one fifth of global river discharge"
+  },
+  "border_registry": {
+   "type": "primary",
+   "publisher": "thequizwire docs/border_registry.json (Natural Earth · ICJ)",
+   "title": "Border policy registry — essequibo",
+   "url": "docs/border_registry.json",
+   "date": "2026-11-11",
+   "notes": "controller / claimant wording as shown on the plate"
+  },
+  "icj_guyana": {
+   "type": "primary",
+   "publisher": "International Court of Justice",
+   "title": "Arbitral Award of 3 October 1899 (Guyana v. Venezuela) — case overview",
+   "url": "https://www.icj-cij.org/case/171",
+   "date": "2026-11-11",
+   "notes": "pending ICJ case over the Essequibo region, administered by Guyana and claimed by Venezuela"
+  },
+  "wiki_pinzon": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Vicente Yáñez Pinzón",
+   "url": "https://en.wikipedia.org/wiki/Vicente_Y%C3%A1%C3%B1ez_Pinz%C3%B3n",
+   "date": "2026-11-11",
+   "notes": "January 1500: reached the Brazilian coast and the Amazon mouth, where fresh water was found far offshore; named it Mar Dulce"
+  },
+  "brit_pinzon": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Vicente Yáñez Pinzón",
+   "url": "https://www.britannica.com/biography/Vicente-Yanez-Pinzon",
+   "date": "2026-11-11",
+   "notes": "in 1500 reached the mouth of the Amazon, finding fresh water far out at sea, and named it Mar Dulce (Sweet Sea)"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The Amazon has the greatest discharge of any river: about 209,000 m³/s on average, roughly one fifth of all river water reaching the oceans.",
+   "sources": [
+    "usgs_rivers",
+    "nasa_plume",
+    "brit_amazon"
+   ],
+   "vo": [
+    "which river carries the most water",
+    "nile, congo, or amazon",
+    "the amazon. it pours 209,000 cubic metres into the atlantic every second, a fifth of all river water on earth",
+    "a fifth of all river water. follow us"
+   ],
+   "screen": [
+    "Amazon",
+    "Nile",
+    "Congo",
+    "209,000 M³/S",
+    "average flow into the Atlantic",
+    "1 IN 5",
+    "of all river water reaching the sea"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "The Congo is second at about 41,000 m³/s; the Nile, the longest river, carries only about 3,000 m³/s.",
+   "sources": [
+    "usgs_rivers",
+    "brit_congo",
+    "brit_nile"
+   ],
+   "vo": [
+    "the congo, next, moves about 41,000. the nile, the longest river, barely 3,000"
+   ],
+   "screen": [
+    "209,000",
+    "41,000",
+    "3,000"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "The Amazon runs about 6,400 km from the Andes to a mouth more than 320 km wide.",
+   "sources": [
+    "brit_amazon",
+    "nasa_plume"
+   ],
+   "vo": [
+    "from the andes it runs 6,400 kilometres to a mouth over 300 kilometres wide"
+   ],
+   "screen": [
+    "320 KM",
+    "wide at the mouth",
+    "Mouth · over 320 km wide",
+    "6,400 km · Andes to Atlantic"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "In 1500 Vicente Yáñez Pinzón found fresh water out of sight of land off the Amazon mouth and named it Mar Dulce, the Sweet Sea.",
+   "sources": [
+    "brit_pinzon",
+    "wiki_pinzon",
+    "brit_amazon"
+   ],
+   "vo": [
+    "in 1500 a spanish captain found fresh water out of sight of land, and called it the sweet sea"
+   ],
+   "screen": [
+    "1500",
+    "the Sweet Sea · fresh water at sea"
+   ]
+  },
+  {
+   "id": "C05",
+   "weight": "framing",
+   "text": "Border policy plate: the basin view shows the Essequibo region, administered by Guyana and claimed by Venezuela (ICJ case pending). No sovereignty asserted.",
+   "sources": [
+    "border_registry",
+    "icj_guyana"
+   ],
+   "vo": [],
+   "screen": [
+    "Essequibo",
+    "Administered by Guyana",
+    "Claimed by Venezuela"
+   ]
+  }
+ ]
+}
