@@ -63,10 +63,10 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "England. In the 1880s Victorians played it after dinner: books for a net, a cigar-box lid for a bat.",
+   "text": "England. Late in Queen Victoria's reign, people played it after dinner: books for a net, a cigar-box lid for a bat.",
    "cues": {
     "answer": "england",
-    "victorians": "victorians",
+    "reign": "reign",
     "books": "books",
     "lid": "lid"
    },

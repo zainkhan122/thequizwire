@@ -127,10 +127,10 @@
    "invented": "invented"
   },
   "v04": {
-   "text": "England. In the 1880s Victorians played it after dinner: books for a net, a cigar-box lid for a bat.",
+   "text": "England. Late in Queen Victoria's reign, people played it after dinner: books for a net, a cigar-box lid for a bat.",
    "cues": {
     "answer": "england",
-    "victorians": "victorians",
+    "reign": "reign",
     "books": "books",
     "lid": "lid"
    }
@@ -283,7 +283,7 @@
     "vo": [
      "which country invented table tennis",
      "china, england, or japan",
-     "england. in the 1880s victorians played it after dinner: books for a net, a cigar-box lid for a bat",
+     "england. late in queen victoria's reign, people played it after dinner: books for a net, a cigar-box lid for a bat",
      "invented at dinner, mastered in china"
     ],
     "screen": [

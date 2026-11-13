@@ -668,7 +668,7 @@
      "airport": "airport"
     }
    },
-   "direction": "drift south-east; a twist sticker on 'twist' as the La Paz photograph rises out of Bolivia; the Sucre pin and tag on 'Sucre'; a plane sticker and the El Alto tag on 'airport' as Bolivia pulses",
+   "direction": "drift south-east; the La Paz pin steps aside and a twist sticker on 'twist' as the La Paz photograph rises out of Bolivia; the Sucre pin and tag on 'Sucre'; a plane sticker and the El Alto tag on 'airport' as Bolivia pulses",
    "energy": 3,
    "tone": "revelatory",
    "pause_after": 0.45,
@@ -700,6 +700,14 @@
     "at": 0.3
    },
    "devices": [
+    {
+     "at": "@+0.05",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "lapaz"
+     }
+    },
     {
      "at": "@@twist",
      "do": "sticker_in",
@@ -765,7 +773,7 @@
      "loses": "loses"
     }
    },
-   "direction": "tighten on La Paz; the THIN AIR card on 'air'; a lungs sticker on 'oxygen'; a football sticker on 'gasp'; the Bolivian flag-ball grins on 'loses' as Bolivia pulses; the pin leaves at the end",
+   "direction": "tighten on La Paz; the THIN AIR card on 'air'; a lungs sticker on 'oxygen'; a football sticker on 'gasp'; the Bolivian flag-ball grins on 'loses' as Bolivia pulses",
    "energy": 3,
    "tone": "resolute",
    "pause_after": 0.4,
@@ -846,14 +854,6 @@
      "at": "@.end",
      "do": "character_out",
      "id": "bo_happy"
-    },
-    {
-     "at": "@.end",
-     "do": "geo.pin_out",
-     "stage": "stage_map",
-     "args": {
-      "pid": "lapaz"
-     }
     }
    ]
   }
@@ -872,8 +872,8 @@
    "id": "st_twist",
    "type": "sticker",
    "emoji": "1f300",
-   "x": 840,
-   "y": 700,
+   "x": 90,
+   "y": 640,
    "size": 165,
    "rot": 6
   },

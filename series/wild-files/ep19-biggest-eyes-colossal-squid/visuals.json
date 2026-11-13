@@ -155,10 +155,10 @@
    "do": "geo.cam_set",
    "stage": "stage_map",
    "args": {
-    "k": 0.35,
+    "k": 0.7,
     "lonlat": [
-     150,
-     -35
+     168,
+     -40
     ]
    }
   },
@@ -168,10 +168,10 @@
    "stage": "stage_map",
    "until": "s03.end",
    "args": {
-    "k": 0.35,
+    "k": 0.78,
     "lonlat": [
-     152,
-     -36
+     170,
+     -41
     ],
     "ease": "none"
    }
@@ -324,10 +324,10 @@
    "stage": "stage_map",
    "until": "s06+1.6",
    "args": {
-    "k": 0.4,
+    "k": 0.75,
     "lonlat": [
-     172,
-     -69
+     168,
+     -72.5
     ],
     "ease": "power2.inOut"
    }
@@ -338,10 +338,10 @@
    "stage": "stage_map",
    "until": "s06.end",
    "args": {
-    "k": 0.46,
+    "k": 0.82,
     "lonlat": [
-     169,
-     -71
+     166,
+     -73.5
     ],
     "ease": "none"
    }
@@ -407,10 +407,10 @@
    "stage": "stage_map",
    "until": "s07+1.5",
    "args": {
-    "k": 0.6,
+    "k": 0.95,
     "lonlat": [
-     175,
-     -71.5
+     172,
+     -74
     ],
     "ease": "power2.inOut"
    }
@@ -421,10 +421,10 @@
    "stage": "stage_map",
    "until": "s08+0.2",
    "args": {
-    "k": 0.7,
+    "k": 1.05,
     "lonlat": [
-     172,
-     -71.5
+     171,
+     -74.5
     ],
     "ease": "none"
    }
@@ -502,10 +502,10 @@
    "stage": "stage_map",
    "until": "end-0.3",
    "args": {
-    "k": 0.35,
+    "k": 0.7,
     "lonlat": [
-     150,
-     -35
+     168,
+     -40
     ],
     "ease": "power1.inOut"
    }
