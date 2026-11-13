@@ -59,7 +59,6 @@
    "map animation",
    "unesco world heritage"
   ],
-  "description": "1,642 m deep and a fifth of Earth's fresh water in one lake. Russia, Tanzania or the USA — which did you pick? 👇\n\nSources: UNESCO World Heritage Centre, NASA Earth Observatory, Britannica, Wikipedia.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #17",
   "hashtags": [
    "#GeographyQuiz",
    "#MapQuiz",
@@ -75,11 +74,57 @@
    "like_cta_youtube": "Like and subscribe, one geography quiz every day.",
    "like_cta_social": "Follow {handle} for one geography quiz a day, and like it if you got it right.",
    "spoilers": [
+    "baikal",
+    "russia",
     "russian",
     "siberia",
-    "baikal",
-    "angara"
-   ]
+    "siberian",
+    "angara",
+    "1,642",
+    "1642",
+    "irkutsk"
+   ],
+   "youtube": {
+    "title": "Where is the deepest lake in the world? Deeper than the Great Lakes put together 🌊",
+    "description": "The Great Lakes, Africa's rift or the third one? One lake goes down more than a mile and a half and holds about a fifth of all the unfrozen fresh water on Earth — more than all five Great Lakes combined. Hundreds of rivers flow in. Only one flows out.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#lakes",
+     "#deepestlake",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Where is the DEEPEST lake on Earth? 🌊\nThe Great Lakes, Africa's rift or the other one? One lake holds about a fifth of all unfrozen fresh water on the planet, more than the five Great Lakes together. Hundreds of rivers in, one out.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#lakes",
+     "#deepestlake",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Where is the deepest lake on Earth — Russia, Tanzania or the USA?\nOne lake goes down more than a mile and a half and holds about a fifth of all the unfrozen fresh water on the planet, more than the five Great Lakes combined. Pick your flag before the depth counter starts.",
+    "tags": [
+     "#geographyquiz",
+     "#lakes"
+    ]
+   },
+   "twitter": {
+    "text": "Where is the DEEPEST lake on Earth?\nRussia, Tanzania or the USA? One lake holds a fifth of the planet's unfrozen fresh water — hundreds of rivers in, one out.",
+    "tags": [
+     "#GeographyQuiz",
+     "#Lakes"
+    ]
+   },
+   "threads": {
+    "text": "Where is the deepest lake on Earth — Russia, Tanzania or the USA? One lake goes down more than a mile and a half and holds a fifth of all the unfrozen fresh water on the planet, more than the five Great Lakes combined. hundreds of rivers flow in; only one flows out.",
+    "tags": [
+     "#freshwater"
+    ]
+   }
   }
  },
  "variety": {
