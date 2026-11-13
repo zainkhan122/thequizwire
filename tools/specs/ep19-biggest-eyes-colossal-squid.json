@@ -350,128 +350,172 @@
  },
  "geo": {
   "fit_bbox": [
-   160,
-   -50,
-   185,
-   -30
+   164,
+   -48,
+   180,
+   -33
   ],
   "far_bbox": [
    130,
    -80,
-   230,
-   -20
+   200,
+   -10
   ],
   "resolution": "50m",
   "highlight_ids": [
    "554"
   ],
-  "highlight_note": "New Zealand — the record specimen was landed by a New Zealand vessel and is kept in Wellington; the Ross Sea is reached by a camera sweep south (no Antarctic claim is drawn)",
+  "highlight_note": "New Zealand — the record specimen was landed by a New Zealand vessel and is kept in Wellington; the Ross Sea catch arrives as a drawn ship route from the south edge of the frame to Wellington (no Antarctic claim is drawn)",
   "labels": [
    {
     "id": "rs",
     "lonlat": [
-     162,
-     -70.5
+     166.2,
+     -46.6
     ],
-    "text": "Ross Sea · caught 2007",
+    "text": "from the Ross Sea · 2007",
     "cls": "tag",
     "in": "s06@ross+0.2",
     "out": "s06.end"
    }
   ],
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "catch",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "haul",
+       "properties": {
+        "name": "Ross Sea to Wellington"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          170.5,
+          -60
+         ],
+         [
+          171.5,
+          -52
+         ],
+         [
+          172.6,
+          -46
+         ],
+         [
+          174.2,
+          -42.2
+         ],
+         [
+          174.78,
+          -41.29
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ],
   "pins": [
    {
-    "id": "ross",
+    "id": "wel",
     "lonlat": [
-     178,
-     -74
+     174.78,
+     -41.29
     ],
-    "label": "Ross Sea",
+    "label": "Wellington · Te Papa",
     "side": "left"
    }
   ],
   "scalebar": {
    "km": 200,
    "lonlat": [
-    161,
-    -48.5
+    165,
+    -34
    ]
   },
   "pin_beats": [
    {
-    "at": "s06@ross",
-    "pid": "ross"
+    "at": "s06@museum",
+    "pid": "wel"
    }
   ],
   "cams": {
    "start": [
-    0.7,
+    0.5,
     [
-     149,
-     -31
+     146,
+     -30
     ]
    ],
    "s01": [
-    0.76,
+    0.55,
     [
-     151,
-     -33
+     148,
+     -32
     ]
    ],
    "s04": [
-    0.9,
+    1.0,
     [
      172,
      -41
     ]
    ],
    "s04b": [
-    0.98,
+    1.06,
     [
-     174,
-     -40
+     172.6,
+     -40.6
     ]
    ],
    "s05": [
-    0.75,
+    0.9,
     [
-     170,
-     -44
+     171,
+     -42.5
     ]
    ],
    "s05b": [
-    0.82,
+    0.96,
     [
-     173,
+     171.6,
      -42
     ]
    ],
    "s06": [
-    0.75,
+    0.8,
     [
-     168,
-     -72.5
+     171,
+     -44
     ]
    ],
    "s06b": [
-    0.82,
+    0.86,
     [
-     166,
-     -73.5
+     171.8,
+     -43.4
     ]
    ],
    "s07": [
-    0.95,
+    1.2,
     [
-     172,
-     -74
+     170.5,
+     -43.5
     ]
    ],
    "s07b": [
-    1.05,
+    1.3,
     [
-     171,
-     -74.5
+     170,
+     -44
     ]
    ]
   }
@@ -492,17 +536,17 @@
    "tone": "resolute",
    "pause_after": 0.35,
    "cam": [
-    0.75,
+    0.9,
     [
-     170,
-     -44
+     171,
+     -42.5
     ]
    ],
    "cam_dur": 1.3,
    "cam_hold": [
-    0.82,
+    0.96,
     [
-     173,
+     171.6,
      -42
     ]
    ],
@@ -600,23 +644,23 @@
      "museum": "museum"
     }
    },
-   "direction": "sweep south from New Zealand to the Ross Sea; a hook sticker on 'record'; the Ross Sea pin and tag on 'Ross'; a museum sticker on 'museum' as New Zealand pulses",
+   "direction": "ease back so the sea south of the islands is in frame; a hook sticker on 'record'; from 'Ross' a ship route draws in from the bottom edge with the ship riding it north to Wellington, the Ross Sea tag plated by the route's start; the Wellington pin lands on 'museum' with a museum sticker as New Zealand pulses",
    "energy": 3,
    "tone": "revelatory",
    "pause_after": 0.45,
    "cam": [
-    0.75,
+    0.8,
     [
-     168,
-     -72.5
+     171,
+     -44
     ]
    ],
-   "cam_dur": 1.6,
+   "cam_dur": 1.4,
    "cam_hold": [
-    0.82,
+    0.86,
     [
-     166,
-     -73.5
+     171.8,
+     -43.4
     ]
    ],
    "pulse": false,
@@ -637,13 +681,38 @@
      "id": "st_hook"
     },
     {
-     "at": "@@ross+0.3",
+     "at": "@@ross",
      "do": "sticker_in",
      "id": "st_ship"
     },
     {
-     "at": "@@ross+0.7",
-     "do": "sticker_pulse",
+     "at": "@@ross",
+     "do": "geo.route_draw",
+     "stage": "stage_map",
+     "until": "@@museum",
+     "args": {
+      "rid": "haul",
+      "layer": "catch"
+     }
+    },
+    {
+     "at": "@@ross",
+     "do": "geo.travel",
+     "stage": "stage_map",
+     "until": "@@museum",
+     "args": {
+      "rid": "haul",
+      "layer": "catch",
+      "sid": "st_ship",
+      "offset": [
+       0,
+       -40
+      ]
+     }
+    },
+    {
+     "at": "@@museum",
+     "do": "sticker_out",
      "id": "st_ship"
     },
     {
@@ -655,11 +724,6 @@
       "dur": 0.7,
       "layer": "hl"
      }
-    },
-    {
-     "at": "@@museum",
-     "do": "sticker_out",
-     "id": "st_ship"
     },
     {
      "at": "@@museum",
@@ -688,23 +752,23 @@
      "closing": "closing"
     }
    },
-   "direction": "tighten on the Ross Sea; the depth counter runs 0 → 1,000 metres from 'huge'; a moon sticker on 'dark'; a whale sticker on 'sperm'; a soft pulse on 'closing'; the pin leaves at the end",
+   "direction": "tighten on the South Island; the depth counter runs 0 → 1,000 metres from 'huge'; a moon sticker on 'dark'; a whale sticker on 'sperm'; a soft pulse on 'closing'; the pin leaves at the end",
    "energy": 3,
    "tone": "suspense",
    "pause_after": 0.6,
    "cam": [
-    0.95,
+    1.2,
     [
-     172,
-     -74
+     170.5,
+     -43.5
     ]
    ],
    "cam_dur": 1.5,
    "cam_hold": [
-    1.05,
+    1.3,
     [
-     171,
-     -74.5
+     170,
+     -44
     ]
    ],
    "pulse": false,
@@ -777,7 +841,7 @@
      "do": "geo.pin_out",
      "stage": "stage_map",
      "args": {
-      "pid": "ross"
+      "pid": "wel"
      }
     }
    ]
@@ -815,10 +879,10 @@
    "id": "st_ship",
    "type": "sticker",
    "emoji": "1f6a2",
-   "x": 840,
-   "y": 700,
-   "size": 165,
-   "rot": 6
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
   },
   {
    "id": "st_museum",

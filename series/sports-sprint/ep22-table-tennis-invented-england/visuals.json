@@ -38,12 +38,12 @@
    "id": "tn",
    "type": "split",
    "left": {
-    "kicker": "PARLOUR GAME",
-    "text": "dining tables · 1880s"
+    "kicker": "PARLOUR",
+    "text": "a dinner-table game · 1880s"
    },
    "right": {
-    "kicker": "OLYMPIC SPORT",
-    "text": "Seoul 1988 onward"
+    "kicker": "OLYMPIC",
+    "text": "a medal sport since Seoul 1988"
    },
    "label_left": "THEN",
    "label_right": "NOW",

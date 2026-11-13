@@ -9,10 +9,10 @@
    "fit": {
     "type": "bbox",
     "bbox": [
-     160,
-     -50,
-     185,
-     -30
+     164,
+     -48,
+     180,
+     -33
     ]
    },
    "padding": 20,
@@ -30,19 +30,61 @@
       "554"
      ],
      "cls": "",
-     "note": "New Zealand — the record specimen was landed by a New Zealand vessel and is kept in Wellington; the Ross Sea is reached by a camera sweep south (no Antarctic claim is drawn)",
+     "note": "New Zealand — the record specimen was landed by a New Zealand vessel and is kept in Wellington; the Ross Sea catch arrives as a drawn ship route from the south edge of the frame to Wellington (no Antarctic claim is drawn)",
      "lift": "color",
      "color": "#FFD400"
+    },
+    {
+     "kind": "route",
+     "id": "catch",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "haul",
+        "properties": {
+         "name": "Ross Sea to Wellington"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           170.5,
+           -60
+          ],
+          [
+           171.5,
+           -52
+          ],
+          [
+           172.6,
+           -46
+          ],
+          [
+           174.2,
+           -42.2
+          ],
+          [
+           174.78,
+           -41.29
+          ]
+         ]
+        }
+       }
+      ]
+     }
     }
    ],
    "pins": [
     {
-     "id": "ross",
+     "id": "wel",
      "lonlat": [
-      178,
-      -74
+      174.78,
+      -41.29
      ],
-     "label": "Ross Sea",
+     "label": "Wellington · Te Papa",
      "side": "left"
     }
    ],
@@ -50,10 +92,10 @@
     {
      "id": "rs",
      "lonlat": [
-      162,
-      -70.5
+      166.2,
+      -46.6
      ],
-     "text": "Ross Sea · caught 2007",
+     "text": "from the Ross Sea · 2007",
      "cls": "tag",
      "in": "s06@ross+0.2",
      "out": "s06.end"
@@ -70,8 +112,8 @@
      "bbox": [
       130,
       -80,
-      230,
-      -20
+      200,
+      -10
      ],
      "k_min": 0.3
     }
@@ -80,8 +122,8 @@
    "scalebar": {
     "km": 200,
     "lonlat": [
-     161,
-     -48.5
+     165,
+     -34
     ],
     "at": [
      60,

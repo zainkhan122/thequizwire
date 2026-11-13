@@ -10,7 +10,7 @@ Britain 0.
 ## Show it
 Wide-drift opener over the Alps under the question; three flags. Reveal = colour-lift on Britain with the 1880s card.
 Tighten on England: the CHINA plate wipes away on "China", a scroll sticker on "rules", the London pin and "Ping-Pong sets
-1901" tag on "London"; the pin leaves. Ease back: the PARLOUR GAME / OLYMPIC SPORT split lands on "parlour", a medal on
+1901" tag on "London"; the pin leaves. Ease back: the PARLOUR / OLYMPIC split lands on "parlour", a medal on
 "Olympic", a trophy on "championships". Ease back further for the close: three gold bars rise on "China" with China
 towering, the Chinese flag-ball grins on "golds", a zero sticker and the English flag-ball thinking on "none".
 

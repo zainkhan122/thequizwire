@@ -9,7 +9,7 @@ Nilsson et al. argue the eyes evolved to detect the bioluminescent glow stirred 
 ## Show it
 Wide-drift opener over the Tasman Sea under the question; three emoji options. Reveal = colour-lift on New Zealand (where the record animal is kept) with
 the 27 CM card. Ease back over New Zealand: three eye silhouettes rise on "ostrich" — 5 cm, 15 cm, the 27 cm football —
-a brain sticker on "brain", a whale sticker on "whale", New Zealand pulses on "15". Sweep south from New Zealand to the Ross Sea: a hook sticker
+a brain sticker on "brain", a whale sticker on "whale", New Zealand pulses on "15". Ease back so the sea south of the islands is in frame; a ship route draws in from the bottom edge and carries the catch north to Wellington: a hook sticker
 on "record", the Ross Sea pin and "caught 2007" tag on "Ross", a ship sticker, a museum sticker on
 "museum". Tighten on the Ross Sea for the close: the depth counter runs 0 → 1,000 m from "big", a moon on "dark", a whale
 on "sperm", a soft pulse on "closing"; the pin leaves.
@@ -17,12 +17,12 @@ on "sperm", a soft pulse on "closing"; the pin leaves.
 ## Beat order
 1. s04 reveal — colour-lift New Zealand, 27 CM card.
 2. s05 three eyes to scale — chart.compare_in ×3, 🧠 🐋 stickers, pulse.
-3. s06 where it came from — camera sweep NZ → Ross Sea, 🪝 sticker, geo.pin Ross Sea + tag, 🚢 🏛 stickers, pulse.
+3. s06 where it came from — 🪝 sticker, geo.route_draw + geo.travel (🚢 rides the route from the south edge to Wellington), Ross Sea tag, geo.pin Wellington · Te Papa, 🏛 sticker, pulse.
 4. s07 why so big — chart.counter 0 → 1,000 m, 🌙 🐳 stickers, soft pulse, pin out.
 
 ## Different from
 #18 (loudest animal) was bars + erase + counter on Norway; #17 (swift) route + counter + split; #16 (camels) bars + pin.
-This one is the first Wild Files with a side-by-side compare of body parts to scale, set on New Zealand with a camera sweep to the Ross Sea, with a suspense
+This one is the first Wild Files with a side-by-side compare of body parts to scale, set tight on New Zealand — the Ross Sea arrives by ship route, the camera never leaves the islands (open ocean/ice gave 26 % motion in CI) — with a suspense
 close instead of a triumphant one — SHOW set {compare, counter}.
 
 ## Swipe test

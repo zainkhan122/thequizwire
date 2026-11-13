@@ -94,7 +94,7 @@
    "tone": "revelatory",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "sweep south from New Zealand to the Ross Sea; a hook sticker on 'record'; the Ross Sea pin and tag on 'Ross'; a museum sticker on 'museum' as New Zealand pulses",
+   "direction": "ease back so the sea south of the islands is in frame; a hook sticker on 'record'; from 'Ross' a ship route draws in from the bottom edge with the ship riding it north to Wellington, the Ross Sea tag plated by the route's start; the Wellington pin lands on 'museum' with a museum sticker as New Zealand pulses",
    "text": "The record animal came up on a fishing line in the Ross Sea in 2007. It sits in a Wellington museum.",
    "cues": {
     "record": "record",
@@ -109,7 +109,7 @@
    "tone": "suspense",
    "energy": 3,
    "pause_after": 0.6,
-   "direction": "tighten on the Ross Sea; the depth counter runs 0 → 1,000 metres from 'huge'; a moon sticker on 'dark'; a whale sticker on 'sperm'; a soft pulse on 'closing'; the pin leaves at the end",
+   "direction": "tighten on the South Island; the depth counter runs 0 → 1,000 metres from 'huge'; a moon sticker on 'dark'; a whale sticker on 'sperm'; a soft pulse on 'closing'; the pin leaves at the end",
    "text": "Why so huge? A kilometre down, in the dark, they spot a sperm whale closing in.",
    "cues": {
     "huge": "huge",

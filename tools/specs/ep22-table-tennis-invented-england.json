@@ -322,10 +322,10 @@
      "a parlour game that became an olympic sport in 1988, decades after its first world championships"
     ],
     "screen": [
-     "PARLOUR GAME",
-     "OLYMPIC SPORT",
-     "dining tables · 1880s",
-     "Seoul 1988 onward",
+     "PARLOUR",
+     "OLYMPIC",
+     "a dinner-table game · 1880s",
+     "a medal sport since Seoul 1988",
      "THEN"
     ]
    },
@@ -575,7 +575,7 @@
      "championships": "championships"
     }
    },
-   "direction": "ease back over Britain; the PARLOUR GAME / OLYMPIC SPORT split lands on 'parlour'; a medal sticker on 'Olympic'; a trophy sticker on 'championships' as the UK pulses",
+   "direction": "ease back over Britain; the PARLOUR / OLYMPIC split lands on 'parlour'; a medal sticker on 'Olympic'; a trophy sticker on 'championships' as the UK pulses",
    "energy": 3,
    "tone": "revelatory",
    "pause_after": 0.45,
@@ -600,12 +600,12 @@
      "id": "tn",
      "type": "split",
      "left": {
-      "kicker": "PARLOUR GAME",
-      "text": "dining tables · 1880s"
+      "kicker": "PARLOUR",
+      "text": "a dinner-table game · 1880s"
      },
      "right": {
-      "kicker": "OLYMPIC SPORT",
-      "text": "Seoul 1988 onward"
+      "kicker": "OLYMPIC",
+      "text": "a medal sport since Seoul 1988"
      },
      "label_left": "THEN",
      "label_right": "NOW",
