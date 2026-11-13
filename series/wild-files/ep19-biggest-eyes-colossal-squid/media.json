@@ -1,5 +1,4 @@
 {
- "version": 1,
  "files": {},
  "generated": {
   "brand/cursor.svg": {
@@ -67,7 +66,7 @@
   },
   "geo/main.json": {
    "by": "reelkit/geodata.py",
-   "bytes": 68603,
+   "bytes": 74581,
    "credit": "Natural Earth",
    "kind": "data",
    "licence": "PD",
@@ -76,21 +75,21 @@
   },
   "geo/main_basemap.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 595269,
+   "bytes": 345895,
    "credit": "NASA Blue Marble",
    "kind": "image",
    "licence": "PD-USGov",
    "provider": "NASA GIBS",
-   "source": "BlueMarble_ShadedRelief_Bathymetry z5 (84 tiles)"
+   "source": "BlueMarble_ShadedRelief_Bathymetry z6 (90 tiles)"
   },
   "geo/main_basemap_far.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 660909,
+   "bytes": 355597,
    "credit": "NASA Blue Marble",
    "kind": "image",
    "licence": "PD-USGov",
    "provider": "NASA GIBS",
-   "source": "BlueMarble_ShadedRelief_Bathymetry z4 (72 tiles)"
+   "source": "BlueMarble_ShadedRelief_Bathymetry z4 (45 tiles)"
   },
   "mix.wav": {
    "ai_voice": "Kokoro am_michael",
@@ -199,5 +198,6 @@
    "provider": "Twemoji (Twitter, Inc. and other contributors)",
    "source": "https://github.com/twitter/twemoji"
   }
- }
+ },
+ "version": 1
 }
