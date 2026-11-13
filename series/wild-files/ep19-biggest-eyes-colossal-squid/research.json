@@ -112,6 +112,14 @@
    "date": "2026-11-11",
    "notes": "largest invertebrate; eyes among the largest in the animal kingdom; lives in Antarctic waters to depths of about 2,000 m; preyed on by sperm whales"
   },
+  "wiki_colossal": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Colossal squid",
+   "url": "https://en.wikipedia.org/wiki/Colossal_squid",
+   "date": "2026-11-11",
+   "notes": "specimen caught in the Ross Sea in February 2007 by the San Aspiring, 495 kg, displayed at Te Papa, Wellington; eyes about 27 cm"
+  },
   "noaa_sperm": {
    "type": "primary",
    "publisher": "NOAA Fisheries",
@@ -166,7 +174,8 @@
    "text": "The record specimen was caught on a longline in the Ross Sea off Antarctica in February 2007 and is displayed at Te Papa in Wellington.",
    "sources": [
     "tepapa_capture",
-    "tepapa_eyes"
+    "tepapa_eyes",
+    "wiki_colossal"
    ],
    "vo": [
     "the record animal came up on a fishing line in the ross sea in 2007. it sits in a wellington museum"
