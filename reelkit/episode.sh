@@ -61,7 +61,7 @@ has build  && { log "composition"; if [ -f "$EP/build.py" ]; then python3 "$EP/b
   # mix.wav is referenced only when present at compose time: rebuild once so the <audio> tag is in
   [ -f "$HF/assets/mix.wav" ] && ! grep -q 'id="mix"' "$HF/index.html" && { if [ -f "$EP/build.py" ]; then python3 "$EP/build.py" "$HF"; else python3 "$REPO/engine/compose.py" "$EP" "$HF" >/dev/null; fi; } || true; }
 has static && { log "browser-less composition run (selectors · runtime · determinism)"; node "$REPO/reelkit/hfstatic.mjs" "$HF"; }
-has quizlint && { log "quiz format gate"; python3 "$REPO/reelkit/quizlint.py" "$EP" --hf "$HF" $REL --report "$EP/out/quizlint.json"; }
+has quizlint && { log "quiz format gate"; python3 "$REPO/reelkit/quizlint.py" "$EP" --hf "$HF" $REL --report "$EP/out/quizlint.json"; (cd "$REPO" && python3 reelkit/dupelint.py "$EP"); }
 has placelint && { log "offline layout/occlusion/motion/ASR pre-gate (no browser)"; python3 "$REPO/reelkit/placelint.py" "$EP"; }
 has geolint  && { log "map honesty + border policy gate"; ONL=""; [ "${GEOLINT_ONLINE:-0}" = 1 ] && ONL="--online"; python3 "$REPO/reelkit/geolint.py" "$EP" --hf "$HF" $REL $ONL --report "$EP/out/geolint.json"; }
 has facts  && { log "fact gate (claims ledger ↔ narration + on-screen text)"; python3 "$REPO/reelkit/factcheck.py" "$EP" --hf "$HF" --report "$EP/out/factcheck.json" --sources-md "$EP/out/sources.md"; }
