@@ -13,7 +13,7 @@
  "start_hold": 0.0,
  "end_hold": 2.4,
  "sample_line": "v04",
- "title": "Which creature has the BIGGEST eyes?",
+ "title": "Which creature has the most ENORMOUS eyes?",
  "lines": [
   {
    "id": "v01",
@@ -23,10 +23,10 @@
    "energy": 4,
    "pause_after": 0.3,
    "direction": "the question, cold — curiosity comes from the map moving under it",
-   "text": "Which creature has the biggest eyes?",
+   "text": "Which creature has the most enormous eyes?",
    "cues": {
     "which": "which",
-    "biggest": "biggest"
+    "enormous": "enormous"
    }
   },
   {
@@ -63,11 +63,11 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "The colossal squid. Its eyes are about 27 centimetres across, the largest of any animal.",
+   "text": "The colossal squid. Its eyes are about 27 centimetres across, wider than any other animal's.",
    "cues": {
     "answer": "colossal",
     "eyes": "eyes",
-    "largest": "largest"
+    "wider": "wider"
    },
    "climax": true
   },
@@ -79,7 +79,7 @@
    "energy": 4,
    "pause_after": 0.35,
    "direction": "ease back over the Southern Ocean; three eye silhouettes rise on 'ostrich' — a small disc, a mid disc, the squid's football; a brain sticker on 'brain'; a whale sticker on 'whale' as Antarctica pulses on '15'",
-   "text": "An ostrich eye is 5 centimetres, bigger than its brain. A blue whale manages only 15.",
+   "text": "An ostrich eye is 5 centimetres, wider than its brain. A blue whale manages only 15.",
    "cues": {
     "ostrich": "ostrich",
     "brain": "brain",
@@ -109,10 +109,10 @@
    "tone": "suspense",
    "energy": 3,
    "pause_after": 0.6,
-   "direction": "tighten on the Ross Sea; the depth counter runs 0 → 1,000 metres from 'big'; a moon sticker on 'dark'; a whale sticker on 'sperm'; a soft pulse on 'closing'; the pin leaves at the end",
-   "text": "Why so big? A kilometre down, in the dark, they spot a sperm whale closing in.",
+   "direction": "tighten on the Ross Sea; the depth counter runs 0 → 1,000 metres from 'huge'; a moon sticker on 'dark'; a whale sticker on 'sperm'; a soft pulse on 'closing'; the pin leaves at the end",
+   "text": "Why so huge? A kilometre down, in the dark, they spot a sperm whale closing in.",
    "cues": {
-    "big": "big",
+    "huge": "huge",
     "dark": "dark",
     "sperm": "sperm",
     "closing": "closing"
@@ -126,7 +126,7 @@
    "energy": 3,
    "pause_after": 0.0,
    "direction": "punchline, then a short follow — the outro visual asks",
-   "text": "Eyes the size of a football. Follow us.",
+   "text": "Eyes as wide as a football. Follow us.",
    "cues": {
     "follow": "follow"
    }

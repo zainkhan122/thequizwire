@@ -1,4 +1,4 @@
-# Which creature has the BIGGEST eyes?
+# Which creature has the most ENORMOUS eyes?
 
 ## Signal
 suggest: "animal with the biggest eyes" (YouTube autocomplete, "biggest / smallest body part" family in review/signals.md,

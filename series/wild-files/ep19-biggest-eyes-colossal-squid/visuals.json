@@ -25,7 +25,7 @@
    "id": "f1",
    "type": "fact",
    "kicker": "27 CM",
-   "text": "the largest eye of any animal"
+   "text": "the widest eye of any animal"
   },
   {
    "id": "eyes",
@@ -446,7 +446,7 @@
    }
   },
   {
-   "at": "s07@big-0.1",
+   "at": "s07@huge-0.1",
    "do": "chart.counter_run",
    "id": "depth",
    "until": "s07@dark+0.3"

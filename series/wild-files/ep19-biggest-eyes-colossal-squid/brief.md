@@ -1,4 +1,4 @@
-# Brief — Wild Files #19 · Which creature has the BIGGEST eyes?
+# Brief — Wild Files #19 · Which creature has the most ENORMOUS eyes?
 
 ## Hook fact
 The colossal squid's eye measures about 27 cm in diameter, the largest of any animal (Te Papa; Nilsson et al. 2012, Current
@@ -26,7 +26,7 @@ This one is the first Wild Files with a side-by-side compare of body parts to sc
 close instead of a triumphant one — SHOW set {compare, counter}.
 
 ## Swipe test
-- 1 s — Tasman Sea drifting under BIGGEST in yellow; three emoji options about to land.
+- 1 s — Tasman Sea drifting under ENORMOUS in yellow; three emoji options about to land.
 - 7 s — options up, timer running; most viewers have said blue whale.
 - 12 s — Antarctica lifts into colour; 27 CM lands.
 - 18 s — three eye discs rise; the whale's is smaller than expected, the squid's is a football.

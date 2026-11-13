@@ -3,8 +3,8 @@
  "series": "wild-files",
  "number": 19,
  "seed": 3819,
- "question": "Which creature has the BIGGEST eyes?",
- "keyword": "BIGGEST",
+ "question": "Which creature has the most ENORMOUS eyes?",
+ "keyword": "ENORMOUS",
  "difficulty": "MEDIUM",
  "options": [
   {
@@ -71,7 +71,7 @@
     ]
    },
    "instagram": {
-    "caption": "Which creature has the BIGGEST eyes? 👁️\nThe biggest animal, the biggest bird, or the other one? The largest eyes on Earth are as wide as a football and belong to something seen alive only a handful of times, a kilometre down in the coldest sea on the planet.\nWhich did you pick?",
+    "caption": "Which creature has the most ENORMOUS eyes? 👁️\nThe biggest animal, the biggest bird, or the other one? The largest eyes on Earth are as wide as a football and belong to something seen alive only a handful of times, a kilometre down in the coldest sea on the planet.\nWhich did you pick?",
     "tags": [
      "#animals",
      "#wildlife",
@@ -81,21 +81,21 @@
     ]
    },
    "facebook": {
-    "text": "Which creature has the biggest eyes — the blue whale, the ostrich or the colossal squid?\nThe largest eyes on Earth are as wide as a football and belong to an animal seen alive only a handful of times, a kilometre down in the coldest sea on the planet, hiding from one very large hunter. Pick your animal before the eyes open.",
+    "text": "Which creature has the most enormous eyes — the blue whale, the ostrich or the colossal squid?\nThe largest eyes on Earth are as wide as a football and belong to an animal seen alive only a handful of times, a kilometre down in the coldest sea on the planet, hiding from one very large hunter. Pick your animal before the eyes open.",
     "tags": [
      "#animals",
      "#deepsea"
     ]
    },
    "twitter": {
-    "text": "Which creature has the BIGGEST eyes?\nBlue whale, ostrich or colossal squid? The largest eyes on Earth are as wide as a football — and almost nobody has seen them open.",
+    "text": "Which creature has the most ENORMOUS eyes?\nBlue whale, ostrich or colossal squid? The largest eyes on Earth are as wide as a football — and almost nobody has seen them open.",
     "tags": [
      "#DeepSea",
      "#AnimalQuiz"
     ]
    },
    "threads": {
-    "text": "Which creature has the biggest eyes — the blue whale, the ostrich or the colossal squid? The largest eyes on Earth are as wide as a football and belong to an animal seen alive only a handful of times, a kilometre down in the coldest sea on the planet.",
+    "text": "Which creature has the most enormous eyes — the blue whale, the ostrich or the colossal squid? The largest eyes on Earth are as wide as a football and belong to an animal seen alive only a handful of times, a kilometre down in the coldest sea on the planet.",
     "tags": [
      "#oceanlife"
     ]
@@ -121,18 +121,18 @@
  "voice": {
   "v01_cues": {
    "which": "which",
-   "biggest": "biggest"
+   "enormous": "enormous"
   },
   "v04": {
-   "text": "The colossal squid. Its eyes are about 27 centimetres across, the largest of any animal.",
+   "text": "The colossal squid. Its eyes are about 27 centimetres across, wider than any other animal's.",
    "cues": {
     "answer": "colossal",
     "eyes": "eyes",
-    "largest": "largest"
+    "wider": "wider"
    }
   },
   "v05": {
-   "text": "An ostrich eye is 5 centimetres, bigger than its brain. A blue whale manages only 15.",
+   "text": "An ostrich eye is 5 centimetres, wider than its brain. A blue whale manages only 15.",
    "cues": {
     "ostrich": "ostrich",
     "brain": "brain",
@@ -149,22 +149,22 @@
    }
   },
   "v07": {
-   "text": "Why so big? A kilometre down, in the dark, they spot a sperm whale closing in.",
+   "text": "Why so huge? A kilometre down, in the dark, they spot a sperm whale closing in.",
    "cues": {
-    "big": "big",
+    "huge": "huge",
     "dark": "dark",
     "sperm": "sperm",
     "closing": "closing"
    }
   },
   "v08": {
-   "text": "Eyes the size of a football. Follow us."
+   "text": "Eyes as wide as a football. Follow us."
   }
  },
  "facts": [
   {
    "kicker": "27 CM",
-   "text": "the largest eye of any animal"
+   "text": "the widest eye of any animal"
   }
  ],
  "characters": {
@@ -276,14 +276,14 @@
      "brit_squid"
     ],
     "vo": [
-     "which creature has the biggest eyes",
+     "which creature has the most enormous eyes",
      "blue whale, ostrich, or colossal squid",
-     "the colossal squid. its eyes are about 27 centimetres across, the largest of any animal",
-     "eyes the size of a football"
+     "the colossal squid. its eyes are about 27 centimetres across, wider than any other animal's",
+     "eyes as wide as a football"
     ],
     "screen": [
      "27 CM",
-     "the largest eye of any animal",
+     "the widest eye of any animal",
      "27 cm"
     ]
    },
@@ -297,7 +297,7 @@
      "nilsson_2012"
     ],
     "vo": [
-     "an ostrich eye is 5 centimetres, bigger than its brain. a blue whale manages only 15"
+     "an ostrich eye is 5 centimetres, wider than its brain. a blue whale manages only 15"
     ],
     "screen": [
      "5 cm",
@@ -332,7 +332,7 @@
      "noaa_sperm"
     ],
     "vo": [
-     "why so big? a kilometre down, in the dark, they spot a sperm whale closing in"
+     "why so huge? a kilometre down, in the dark, they spot a sperm whale closing in"
     ],
     "screen": [
      "metres down · in the dark"
@@ -482,7 +482,7 @@
  "story": [
   {
    "vo": {
-    "text": "An ostrich eye is 5 centimetres, bigger than its brain. A blue whale manages only 15.",
+    "text": "An ostrich eye is 5 centimetres, wider than its brain. A blue whale manages only 15.",
     "cues": {
      "ostrich": "ostrich",
      "brain": "brain",
@@ -683,15 +683,15 @@
   },
   {
    "vo": {
-    "text": "Why so big? A kilometre down, in the dark, they spot a sperm whale closing in.",
+    "text": "Why so huge? A kilometre down, in the dark, they spot a sperm whale closing in.",
     "cues": {
-     "big": "big",
+     "huge": "huge",
      "dark": "dark",
      "sperm": "sperm",
      "closing": "closing"
     }
    },
-   "direction": "tighten on the Ross Sea; the depth counter runs 0 → 1,000 metres from 'big'; a moon sticker on 'dark'; a whale sticker on 'sperm'; a soft pulse on 'closing'; the pin leaves at the end",
+   "direction": "tighten on the Ross Sea; the depth counter runs 0 → 1,000 metres from 'huge'; a moon sticker on 'dark'; a whale sticker on 'sperm'; a soft pulse on 'closing'; the pin leaves at the end",
    "energy": 3,
    "tone": "suspense",
    "pause_after": 0.6,
@@ -725,7 +725,7 @@
    ],
    "devices": [
     {
-     "at": "@@big-0.1",
+     "at": "@@huge-0.1",
      "do": "chart.counter_run",
      "id": "depth",
      "until": "@@dark+0.3"
