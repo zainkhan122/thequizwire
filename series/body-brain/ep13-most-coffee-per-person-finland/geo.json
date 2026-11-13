@@ -1,0 +1,93 @@
+{
+ "version": 1,
+ "episode": "ep13-most-coffee-per-person-finland",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     18,
+     58,
+     33,
+     71
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "246"
+     ],
+     "cls": "",
+     "note": "Finland",
+     "lift": "color",
+     "color": "#FFD400"
+    }
+   ],
+   "pins": [
+    {
+     "id": "helsinki",
+     "lonlat": [
+      24.94,
+      60.17
+     ],
+     "label": "Helsinki",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "hk",
+     "lonlat": [
+      22.0,
+      63.3
+     ],
+     "text": "2 coffee breaks a day",
+     "cls": "tag",
+     "in": "s07@breaks",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -15,
+      35,
+      60,
+      75
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 200,
+    "lonlat": [
+     19,
+     58.8
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

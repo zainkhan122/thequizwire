@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep13-most-coffee-per-person-finland",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A habit quiz with a body payoff: three kilogram bars that put Italy far down the list, a cups-a-day counter, a split that turns cups into milligrams of caffeine against the safe daily limit, and the coffee break written into the law.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Which country drinks the MOST coffee per person?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Which country drinks the most coffee per person?",
+   "cues": {
+    "which": "which",
+    "most": "most"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Italy, United States, or Finland?",
+   "cues": {
+    "a": "italy",
+    "b": "united",
+    "c": "finland"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "Finland. Finns get through about 12 kilograms of coffee beans a year each.",
+   "cues": {
+    "answer": "finland",
+    "kilograms": "kilograms",
+    "each": "each"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.35,
+   "direction": "ease back over the Baltic; three kilogram bars rise on 'Italy' with Finland on top; the Italian flag-ball thinks on 'States'; the cups counter runs 0 → 4 on 'cups' with a cup sticker as Finland pulses",
+   "text": "Italy manages about 6. The United States, under 5. In Finland that is 4 cups a day.",
+   "cues": {
+    "italy": "italy",
+    "states": "states",
+    "cups": "cups"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "tighten slightly; the 4 CUPS / 400 MG split lands on 'milligrams'; a warning sticker on 'limit'; a green tick on 'safe' as Finland pulses",
+   "text": "4 cups is about 400 milligrams of caffeine, right at the daily limit regulators call safe for adults.",
+   "cues": {
+    "milligrams": "milligrams",
+    "limit": "limit",
+    "safe": "safe"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.5,
+   "direction": "tighten on Helsinki; a snowflake sticker on 'winters'; the Helsinki pin on 'law' and the COFFEE BREAK card; the coffee-break tag and the Finnish flag-ball on 'breaks' as Finland pulses; the pin leaves at the end",
+   "text": "Why so much? Long dark winters, and a law: 2 coffee breaks a day, written into work agreements.",
+   "cues": {
+    "winters": "winters",
+    "law": "law",
+    "breaks": "breaks"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "4 cups a day, by agreement. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

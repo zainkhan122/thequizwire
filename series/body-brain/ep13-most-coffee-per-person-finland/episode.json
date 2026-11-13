@@ -1,0 +1,142 @@
+{
+ "id": "ep13-most-coffee-per-person-finland",
+ "format": "quiz-v3",
+ "series": "body-brain",
+ "number": 13,
+ "title": "Which country drinks the MOST coffee per person?",
+ "difficulty": "MEDIUM",
+ "seed": 3913,
+ "quiz": {
+  "question": "Which country drinks the MOST coffee per person?",
+  "keyword": "MOST",
+  "options": [
+   "Italy",
+   "United States",
+   "Finland"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Finland",
+  "answer_sub": "about 12 kg of beans a year each",
+  "option_meta": [
+   {
+    "flag": "it"
+   },
+   {
+    "flag": "us"
+   },
+   {
+    "flag": "fi"
+   }
+  ],
+  "banner": "Finland",
+  "banner_sub": "✓  C was right · about 12 kg of beans a year each",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country drinks the MOST coffee per person? ☕",
+  "premise": "The world's biggest coffee drinkers are not the espresso nation",
+  "bait": "Italy, United States or Finland — which did you pick? 👇",
+  "keywords": [
+   "which country drinks the most coffee",
+   "coffee consumption per capita by country",
+   "coffee facts",
+   "how much caffeine is safe",
+   "finland coffee culture",
+   "body quiz",
+   "health quiz",
+   "coffee break law"
+  ],
+  "description": "The world's biggest coffee drinkers are not the espresso nation. Italy, United States or Finland — which did you pick? 👇\n\nSources: International Coffee Organization; EFSA; Statistics Finland.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nBody & Brain #13",
+  "hashtags": [
+   "#BodyFacts",
+   "#BrainQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "BodyQuiz",
+   "Coffee"
+  ],
+  "cover_emoji": "☕",
+  "cover_emoji_why": "a cup names the drink and belongs to no country; espresso culture, diner culture and Nordic culture all claim it",
+  "copy": {
+   "spoilers": [
+    "finland",
+    "finnish",
+    "finns",
+    "helsinki",
+    "nordic",
+    "scandinavia",
+    "12 kg",
+    "12kg",
+    "kahvitauko"
+   ],
+   "youtube": {
+    "title": "Which country drinks the most coffee per person? Not the espresso one ☕",
+    "description": "The espresso nation, the land of the bottomless cup, or the third one? The world's heaviest coffee drinkers get through about four cups a day each, their coffee breaks are written into work contracts, and it is nowhere near a coffee plantation. We also show how much caffeine a body can safely take.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#coffee",
+     "#healthfacts",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country drinks the MOST coffee per person? ☕\nThe espresso nation, the bottomless-cup nation, or the other one? The heaviest coffee drinkers on Earth get through about four cups a day each, and their coffee breaks are written into work contracts.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#coffee",
+     "#healthfacts",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country drinks the most coffee per person — Italy, the United States or Finland?\nThe heaviest coffee drinkers on Earth get through about four cups a day each, their coffee breaks are written into work contracts, and it is nowhere near a coffee plantation. Choose your flag before the cups start stacking.",
+    "tags": [
+     "#bodyquiz",
+     "#coffee"
+    ]
+   },
+   "twitter": {
+    "text": "Which country drinks the MOST coffee per person?\nItaly, United States or Finland? About four cups a day each — and the coffee break is in the work contract.",
+    "tags": [
+     "#BodyQuiz",
+     "#Coffee"
+    ]
+   },
+   "threads": {
+    "text": "Which country drinks the most coffee per person — Italy, the United States or Finland? The heaviest coffee drinkers on Earth get through about four cups a day each, their coffee breaks are written into work contracts, and it is nowhere near a coffee plantation.",
+    "tags": [
+     "#coffeetime"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "colour-lift",
+  "beats": [
+   "bars",
+   "counter",
+   "split",
+   "label"
+  ],
+  "cast": "flagball:fi + emoji-set:cafe",
+  "music": "bed:warm"
+ },
+ "status": "ready"
+}

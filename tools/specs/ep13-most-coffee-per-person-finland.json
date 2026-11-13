@@ -1,0 +1,861 @@
+{
+ "id": "ep13-most-coffee-per-person-finland",
+ "series": "body-brain",
+ "number": 13,
+ "seed": 3913,
+ "question": "Which country drinks the MOST coffee per person?",
+ "keyword": "MOST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Italy",
+   "flag": "it",
+   "cue": "italy"
+  },
+  {
+   "text": "United States",
+   "flag": "us",
+   "cue": "united"
+  },
+  {
+   "text": "Finland",
+   "flag": "fi",
+   "cue": "finland"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "about 12 kg of beans a year each",
+ "outro_headline": "DID YOU GET IT?",
+ "cover_emoji": "☕",
+ "cover_emoji_why": "a cup names the drink and belongs to no country; espresso culture, diner culture and Nordic culture all claim it",
+ "post": {
+  "premise": "The world's biggest coffee drinkers are not the espresso nation",
+  "bait": "Italy, United States or Finland — which did you pick? 👇",
+  "keywords": [
+   "which country drinks the most coffee",
+   "coffee consumption per capita by country",
+   "coffee facts",
+   "how much caffeine is safe",
+   "finland coffee culture",
+   "body quiz",
+   "health quiz",
+   "coffee break law"
+  ],
+  "tags": [
+   "BodyQuiz",
+   "Coffee"
+  ],
+  "sources_line": "International Coffee Organization; EFSA; Statistics Finland",
+  "copy": {
+   "spoilers": [
+    "finland",
+    "finnish",
+    "finns",
+    "helsinki",
+    "nordic",
+    "scandinavia",
+    "12 kg",
+    "12kg",
+    "kahvitauko"
+   ],
+   "youtube": {
+    "title": "Which country drinks the most coffee per person? Not the espresso one ☕",
+    "description": "The espresso nation, the land of the bottomless cup, or the third one? The world's heaviest coffee drinkers get through about four cups a day each, their coffee breaks are written into work contracts, and it is nowhere near a coffee plantation. We also show how much caffeine a body can safely take.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#coffee",
+     "#healthfacts",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country drinks the MOST coffee per person? ☕\nThe espresso nation, the bottomless-cup nation, or the other one? The heaviest coffee drinkers on Earth get through about four cups a day each, and their coffee breaks are written into work contracts.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#coffee",
+     "#healthfacts",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country drinks the most coffee per person — Italy, the United States or Finland?\nThe heaviest coffee drinkers on Earth get through about four cups a day each, their coffee breaks are written into work contracts, and it is nowhere near a coffee plantation. Choose your flag before the cups start stacking.",
+    "tags": [
+     "#bodyquiz",
+     "#coffee"
+    ]
+   },
+   "twitter": {
+    "text": "Which country drinks the MOST coffee per person?\nItaly, United States or Finland? About four cups a day each — and the coffee break is in the work contract.",
+    "tags": [
+     "#BodyQuiz",
+     "#Coffee"
+    ]
+   },
+   "threads": {
+    "text": "Which country drinks the most coffee per person — Italy, the United States or Finland? The heaviest coffee drinkers on Earth get through about four cups a day each, their coffee breaks are written into work contracts, and it is nowhere near a coffee plantation.",
+    "tags": [
+     "#coffeetime"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "misconception",
+  "opener": "mystery-zoom-out",
+  "reveal": "colour-lift",
+  "beats": [
+   "bars",
+   "counter",
+   "split",
+   "label"
+  ],
+  "cast": "flagball:fi + emoji-set:cafe",
+  "music": "bed:warm",
+  "outro": "DID YOU GET IT?"
+ },
+ "intent": "A habit quiz with a body payoff: three kilogram bars that put Italy far down the list, a cups-a-day counter, a split that turns cups into milligrams of caffeine against the safe daily limit, and the coffee break written into the law.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "most": "most"
+  },
+  "v04": {
+   "text": "Finland. Finns get through about 12 kilograms of coffee beans a year each.",
+   "cues": {
+    "answer": "finland",
+    "kilograms": "kilograms",
+    "each": "each"
+   }
+  },
+  "v05": {
+   "text": "Italy manages about 6. The United States, under 5. In Finland that is 4 cups a day.",
+   "cues": {
+    "italy": "italy",
+    "states": "states",
+    "cups": "cups"
+   }
+  },
+  "v06": {
+   "text": "4 cups is about 400 milligrams of caffeine, right at the daily limit regulators call safe for adults.",
+   "cues": {
+    "milligrams": "milligrams",
+    "limit": "limit",
+    "safe": "safe"
+   }
+  },
+  "v07": {
+   "text": "Why so much? Long dark winters, and a law: 2 coffee breaks a day, written into work agreements.",
+   "cues": {
+    "winters": "winters",
+    "law": "law",
+    "breaks": "breaks"
+   }
+  },
+  "v08": {
+   "text": "4 cups a day, by agreement. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "12 KG",
+   "text": "of coffee beans per person, per year"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "fi",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "it",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "Highest coffee consumption per capita: Finland, about 12 kg of green coffee per person per year (ICO data; roughly 4 cups a day). Italy about 6 kg; United States about 4.7 kg. EFSA (2015) considers up to 400 mg caffeine a day safe for healthy adults (a cup of filter coffee ~ 90–100 mg). Finnish collective agreements typically guarantee two 10–15 minute coffee breaks (kahvitauko) per working day. Long dark winters are commonly cited for the habit.",
+  "myths": [
+   {
+    "myth": "Italy, the home of espresso, drinks the most coffee.",
+    "reality": "Italians drink small cups; by weight of beans Finland leads at about 12 kg a year per person, roughly twice Italy.",
+    "sources": [
+     "ico_data",
+     "wiki_percapita"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Coffee-country lists are static rankings; nobody stacks the kilogram bars on a map, converts cups to caffeine against the safe limit and shows the coffee break written into work agreements as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=which+country+drinks+the+most+coffee",
+     "title": "Search: which country drinks the most coffee",
+     "angle": "ranking lists",
+     "misses": "no map, no body angle"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=how+much+caffeine+is+too+much",
+     "title": "Search: how much caffeine is too much",
+     "angle": "health explainers",
+     "misses": "no country quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=finland+coffee+culture",
+     "title": "Search: coffee culture nordic",
+     "angle": "travel vlogs",
+     "misses": "no numbers"
+    }
+   ]
+  },
+  "sources": {
+   "ico_data": {
+    "type": "primary",
+    "publisher": "International Coffee Organization",
+    "title": "Coffee consumption statistics (per capita)",
+    "url": "https://www.ico.org/",
+    "date": "2026-11-11",
+    "notes": "Finland about 12 kg per capita per year, the highest; Italy about 6 kg; United States about 4.7 kg"
+   },
+   "wiki_percapita": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "List of countries by coffee consumption per capita",
+    "url": "https://en.wikipedia.org/wiki/List_of_countries_by_coffee_consumption_per_capita",
+    "date": "2026-11-11",
+    "notes": "Finland 12 kg; Italy 5.9 kg; United States 4.7 kg (ICO-based)"
+   },
+   "efsa_caffeine": {
+    "type": "primary",
+    "publisher": "European Food Safety Authority",
+    "title": "Scientific Opinion on the safety of caffeine (2015)",
+    "url": "https://www.efsa.europa.eu/en/efsajournal/pub/4102",
+    "date": "2026-11-11",
+    "notes": "habitual caffeine intake up to 400 mg a day does not raise safety concerns for healthy adults; single doses up to 200 mg"
+   },
+   "fda_caffeine": {
+    "type": "primary",
+    "publisher": "U.S. Food and Drug Administration",
+    "title": "Spilling the beans: how much caffeine is too much?",
+    "url": "https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much",
+    "date": "2026-11-11",
+    "notes": "400 mg a day is generally not associated with negative effects for healthy adults; a cup of coffee is roughly 80–100 mg"
+   },
+   "thisisfinland": {
+    "type": "primary",
+    "publisher": "ThisisFINLAND (Finnish Ministry for Foreign Affairs)",
+    "title": "Finns drink more coffee than anyone",
+    "url": "https://finland.fi/life-society/finns-drink-more-coffee-than-anyone/",
+    "date": "2026-11-11",
+    "notes": "about 12 kg per person per year; two coffee breaks a day are stipulated in most collective labour agreements; long dark winters"
+   },
+   "brit_finland": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Finland — climate and daily life",
+    "url": "https://www.britannica.com/place/Finland",
+    "date": "2026-11-11",
+    "notes": "long dark winters above 60° N"
+   },
+   "wiki_kahvitauko": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Coffee culture — Finland",
+    "url": "https://en.wikipedia.org/wiki/Coffee_culture#Finland",
+    "date": "2026-11-11",
+    "notes": "highest per-capita consumption; coffee breaks are mandated in many Finnish collective agreements"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Finland has the highest coffee consumption per person, about 12 kg of beans a year — roughly 4 cups a day.",
+    "sources": [
+     "ico_data",
+     "wiki_percapita",
+     "thisisfinland"
+    ],
+    "vo": [
+     "which country drinks the most coffee per person",
+     "italy, united states, or finland",
+     "finland. finns get through about 12 kilograms of coffee beans a year each",
+     "4 cups a day, by agreement"
+    ],
+    "screen": [
+     "12 KG",
+     "of coffee beans per person, per year",
+     "12 kg",
+     "cups a day · every day"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Italy consumes about 6 kg per person a year and the United States under 5 kg.",
+    "sources": [
+     "ico_data",
+     "wiki_percapita"
+    ],
+    "vo": [
+     "italy manages about 6. the united states, under 5. in finland that is 4 cups a day"
+    ],
+    "screen": [
+     "6 kg",
+     "4.7 kg"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Four cups of filter coffee is about 400 mg of caffeine, the daily amount EFSA and the FDA regard as safe for healthy adults.",
+    "sources": [
+     "efsa_caffeine",
+     "fda_caffeine"
+    ],
+    "vo": [
+     "4 cups is about 400 milligrams of caffeine, right at the daily limit regulators call safe for adults"
+    ],
+    "screen": [
+     "4 CUPS",
+     "about 400 mg of caffeine",
+     "400 MG",
+     "the safe daily limit for adults",
+     "CUPS",
+     "LIMIT"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Finnish collective labour agreements typically guarantee two coffee breaks a working day; long dark winters are the usual explanation for the habit.",
+    "sources": [
+     "thisisfinland",
+     "wiki_kahvitauko",
+     "brit_finland"
+    ],
+    "vo": [
+     "why so much? long dark winters, and a law: 2 coffee breaks a day, written into work agreements"
+    ],
+    "screen": [
+     "COFFEE BREAK",
+     "2 a day, in the work agreement",
+     "2 coffee breaks a day",
+     "Helsinki"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   18,
+   58,
+   33,
+   71
+  ],
+  "far_bbox": [
+   -15,
+   35,
+   60,
+   75
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "246"
+  ],
+  "highlight_note": "Finland",
+  "labels": [
+   {
+    "id": "hk",
+    "lonlat": [
+     22.0,
+     63.3
+    ],
+    "text": "2 coffee breaks a day",
+    "cls": "tag",
+    "in": "s07@breaks",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "helsinki",
+    "lonlat": [
+     24.94,
+     60.17
+    ],
+    "label": "Helsinki",
+    "side": "left"
+   }
+  ],
+  "scalebar": {
+   "km": 200,
+   "lonlat": [
+    19,
+    58.8
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s07@law",
+    "pid": "helsinki"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.4,
+    [
+     15,
+     40
+    ]
+   ],
+   "s01": [
+    0.4,
+    [
+     17,
+     42
+    ]
+   ],
+   "s04": [
+    0.75,
+    [
+     26,
+     64
+    ]
+   ],
+   "s04b": [
+    0.78,
+    [
+     26.5,
+     64
+    ]
+   ],
+   "s05": [
+    0.68,
+    [
+     26,
+     64.5
+    ]
+   ],
+   "s05b": [
+    0.71,
+    [
+     26.5,
+     64
+    ]
+   ],
+   "s06": [
+    0.8,
+    [
+     25,
+     64
+    ]
+   ],
+   "s06b": [
+    0.84,
+    [
+     25.5,
+     63.6
+    ]
+   ],
+   "s07": [
+    1.0,
+    [
+     25,
+     61.5
+    ]
+   ],
+   "s07b": [
+    1.05,
+    [
+     25.3,
+     61.2
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Italy manages about 6. The United States, under 5. In Finland that is 4 cups a day.",
+    "cues": {
+     "italy": "italy",
+     "states": "states",
+     "cups": "cups"
+    }
+   },
+   "direction": "ease back over the Baltic; three kilogram bars rise on 'Italy' with Finland on top; the Italian flag-ball thinks on 'States'; the cups counter runs 0 → 4 on 'cups' with a cup sticker as Finland pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.68,
+    [
+     26,
+     64.5
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.71,
+    [
+     26.5,
+     64
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "kg",
+     "type": "bars",
+     "rows": [
+      [
+       "Finland",
+       12,
+       "12 kg"
+      ],
+      [
+       "Italy",
+       6,
+       "6 kg"
+      ],
+      [
+       "United States",
+       4.7,
+       "4.7 kg"
+      ]
+     ],
+     "unit": "kg of beans per person per year",
+     "y": 300,
+     "x": 60,
+     "w": 900
+    },
+    {
+     "id": "cups",
+     "type": "counter",
+     "start": 0,
+     "end": 4,
+     "y": 760,
+     "label": "cups a day · every day",
+     "fmt": "int",
+     "size": 150
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@italy-0.4",
+     "do": "chart.bars_in",
+     "id": "kg",
+     "args": {
+      "dur": 1.0,
+      "stagger": 0.3
+     }
+    },
+    {
+     "at": "@@states",
+     "do": "character_in",
+     "id": "it_think"
+    },
+    {
+     "at": "@@cups-0.6",
+     "do": "chart.out",
+     "id": "kg"
+    },
+    {
+     "at": "@@cups-0.3",
+     "do": "chart.counter_run",
+     "id": "cups",
+     "until": "@@cups+1.2"
+    },
+    {
+     "at": "@@cups",
+     "do": "sticker_in",
+     "id": "st_cup"
+    },
+    {
+     "at": "@@cups+0.4",
+     "do": "sticker_pulse",
+     "id": "st_cup"
+    },
+    {
+     "at": "@@cups+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "246",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "cups"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_cup"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "it_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "4 cups is about 400 milligrams of caffeine, right at the daily limit regulators call safe for adults.",
+    "cues": {
+     "milligrams": "milligrams",
+     "limit": "limit",
+     "safe": "safe"
+    }
+   },
+   "direction": "tighten slightly; the 4 CUPS / 400 MG split lands on 'milligrams'; a warning sticker on 'limit'; a green tick on 'safe' as Finland pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    0.8,
+    [
+     25,
+     64
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.84,
+    [
+     25.5,
+     63.6
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "caf",
+     "type": "split",
+     "left": {
+      "kicker": "4 CUPS",
+      "text": "about 400 mg of caffeine"
+     },
+     "right": {
+      "kicker": "400 MG",
+      "text": "the safe daily limit for adults"
+     },
+     "label_left": "CUPS",
+     "label_right": "LIMIT",
+     "y": 300,
+     "h": 560
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@milligrams-0.2",
+     "do": "chart.split_in",
+     "id": "caf",
+     "args": {
+      "dur": 0.7
+     }
+    },
+    {
+     "at": "@@limit",
+     "do": "sticker_in",
+     "id": "st_warn"
+    },
+    {
+     "at": "@@limit+0.4",
+     "do": "sticker_pulse",
+     "id": "st_warn"
+    },
+    {
+     "at": "@@safe",
+     "do": "sticker_out",
+     "id": "st_warn"
+    },
+    {
+     "at": "@@safe",
+     "do": "sticker_in",
+     "id": "st_tick"
+    },
+    {
+     "at": "@@safe+0.4",
+     "do": "sticker_pulse",
+     "id": "st_tick"
+    },
+    {
+     "at": "@@safe+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "246",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "caf"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_tick"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Why so much? Long dark winters, and a law: 2 coffee breaks a day, written into work agreements.",
+    "cues": {
+     "winters": "winters",
+     "law": "law",
+     "breaks": "breaks"
+    }
+   },
+   "direction": "tighten on Helsinki; a snowflake sticker on 'winters'; the Helsinki pin on 'law' and the COFFEE BREAK card; the coffee-break tag and the Finnish flag-ball on 'breaks' as Finland pulses; the pin leaves at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "COFFEE BREAK",
+    "text": "2 a day, in the work agreement"
+   },
+   "card_at": null,
+   "cam": [
+    1.0,
+    [
+     25,
+     61.5
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.05,
+    [
+     25.3,
+     61.2
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@winters",
+     "do": "sticker_in",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@winters+0.4",
+     "do": "sticker_pulse",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@law",
+     "do": "sticker_out",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@law+0.1",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@breaks",
+     "do": "character_in",
+     "id": "fi_happy"
+    },
+    {
+     "at": "@@breaks+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "246",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "fi_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "helsinki"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_cup",
+   "type": "sticker",
+   "emoji": "2615",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_warn",
+   "type": "sticker",
+   "emoji": "26a0",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_tick",
+   "type": "sticker",
+   "emoji": "2705",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_snow",
+   "type": "sticker",
+   "emoji": "2744",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "it_think",
+   "type": "character",
+   "flag": "it",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "fi_happy",
+   "type": "character",
+   "flag": "fi",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}
