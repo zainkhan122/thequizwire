@@ -124,7 +124,7 @@
    "energy": 3,
    "pause_after": 0.0,
    "direction": "punchline, then a short follow — the outro visual asks",
-   "text": "All those islands, and most of them empty. Follow us.",
+   "text": "Most of those islands are empty. Follow us.",
    "cues": {
     "follow": "follow"
    }
