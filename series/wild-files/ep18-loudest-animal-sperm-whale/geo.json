@@ -1,0 +1,91 @@
+{
+ "version": 1,
+ "episode": "ep18-loudest-animal-sperm-whale",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -5,
+     55,
+     35,
+     75
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "578"
+     ],
+     "cls": "",
+     "note": "Norway — where the record clicks were recorded"
+    }
+   ],
+   "pins": [
+    {
+     "id": "andenes",
+     "lonlat": [
+      16.12,
+      69.32
+     ],
+     "label": "Andenes",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "an",
+     "lonlat": [
+      17.5,
+      70.6
+     ],
+     "text": "Andenes · 236 dB measured",
+     "cls": "tag",
+     "in": "s07@measured+0.2",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -45,
+      35,
+      70,
+      82
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 500,
+    "lonlat": [
+     -2,
+     57
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

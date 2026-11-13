@@ -1,0 +1,868 @@
+{
+ "id": "ep18-loudest-animal-sperm-whale",
+ "series": "wild-files",
+ "number": 18,
+ "seed": 3818,
+ "question": "What is the LOUDEST animal on Earth?",
+ "keyword": "LOUDEST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Blue whale",
+   "emoji": "1f40b",
+   "cue": "blue"
+  },
+  {
+   "text": "Howler monkey",
+   "emoji": "1f412",
+   "cue": "howler"
+  },
+  {
+   "text": "Sperm whale",
+   "emoji": "1f433",
+   "cue": "sperm"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "236 dB clicks",
+ "outro_headline": "TOO EASY?",
+ "cover_emoji": "🔊",
+ "cover_emoji_why": "a speaker says 'loud' without pointing at a sea or land animal; two of the three options are whales, so no whale icon",
+ "post": {
+  "premise": "The loudest sound any animal makes is not a roar — it is a click",
+  "bait": "Blue whale, howler monkey or sperm whale — which did you pick? 👇",
+  "keywords": [
+   "loudest animal in the world",
+   "loudest animal on earth",
+   "sperm whale clicks decibels",
+   "blue whale sound",
+   "howler monkey loudest land animal",
+   "animal quiz",
+   "wildlife facts",
+   "ocean sounds"
+  ],
+  "tags": [
+   "AnimalQuiz",
+   "Wildlife"
+  ],
+  "sources_line": "Møhl et al. 2003 (JASA); Frontiers in Marine Science 2021; Current Biology 2015",
+  "copy": {
+   "spoilers": [
+    "sperm whale",
+    "sperm",
+    "236",
+    "click",
+    "clicks",
+    "andenes",
+    "norway",
+    "spermaceti"
+   ],
+   "youtube": {
+    "title": "What is the loudest animal in the world? Louder than a jet, and it is not a roar 🔊",
+    "description": "The biggest animal, the loudest monkey, or the third one? The loudest sound any animal makes was measured in the far north, and it lasts a fraction of a millisecond. It comes from an enormous nose, and the animal uses it to hunt in total darkness, 2 kilometres down.\nGuess before the map lights up, then see the three loudest voices side by side and where the record was recorded.\nWhich did you pick?",
+    "tags": [
+     "#animals",
+     "#wildlife",
+     "#animalquiz",
+     "#ocean",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "What is the LOUDEST animal on Earth? 🔊\nThe biggest animal, the loudest monkey, or the other one? The record sound lasts a fraction of a millisecond, comes from an enormous nose, and is used to hunt 2 kilometres down in the dark.\nWhich did you pick?",
+    "tags": [
+     "#animals",
+     "#wildlife",
+     "#animalquiz",
+     "#ocean",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "What is the loudest animal on Earth — the blue whale, the howler monkey or the sperm whale?\nThe loudest sound any animal makes was measured in the far north. It lasts a fraction of a millisecond, comes from an enormous nose, and is used to hunt in total darkness 2 kilometres down. Pick your animal before the map lights up.",
+    "tags": [
+     "#wildlife",
+     "#animalquiz"
+    ]
+   },
+   "twitter": {
+    "text": "What is the LOUDEST animal on Earth?\nBlue whale, howler monkey or sperm whale? The record sound is louder than a jet engine — and it is not a roar.",
+    "tags": [
+     "#Wildlife",
+     "#AnimalFacts"
+    ]
+   },
+   "threads": {
+    "text": "What is the loudest animal on Earth — the blue whale, the howler monkey or the sperm whale? The loudest sound any animal makes was measured in the far north; it lasts a fraction of a millisecond, comes from an enormous nose, and is used to hunt in total darkness 2 kilometres down.",
+    "tags": [
+     "#oceanfacts"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-animal",
+  "hook": "misconception",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "pin",
+   "bars",
+   "erase",
+   "counter",
+   "label"
+  ],
+  "cast": "emoji-set:ocean + flagball:none",
+  "music": "bed:deep",
+  "outro": "TOO EASY?"
+ },
+ "intent": "A sound quiz on a map: three loudness bars that put a monkey in second place, an erased 'A ROAR' that becomes a click, a pin on the Norwegian canyon where it was measured, and a depth counter dropping 2 kilometres into the dark.",
+ "voice": {
+  "v01_cues": {
+   "what": "what",
+   "loudest": "loudest"
+  },
+  "v04": {
+   "text": "The sperm whale. Its clicks reach 236 decibels underwater, the loudest sound any animal makes.",
+   "cues": {
+    "answer": "sperm",
+    "clicks": "clicks",
+    "loudest": "loudest"
+   }
+  },
+  "v05": {
+   "text": "A blue whale call hits 188. A howler monkey, loudest on land, about 140, heard 5 kilometres off.",
+   "cues": {
+    "blue": "blue",
+    "howler": "howler",
+    "heard": "heard"
+   }
+  },
+  "v06": {
+   "text": "Not a roar. Each click lasts a fraction of a millisecond, fired from the whale's enormous nose.",
+   "cues": {
+    "roar": "roar",
+    "click": "click",
+    "nose": "nose"
+   }
+  },
+  "v07": {
+   "text": "Measured off northern Norway. The whales hunt squid 2 kilometres down, in the dark, by sound.",
+   "cues": {
+    "measured": "measured",
+    "squid": "squid",
+    "dark": "dark"
+   }
+  },
+  "v08": {
+   "text": "The loudest voice is a click. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "236 DB",
+   "text": "the loudest animal sound"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": null,
+  "b": null
+ },
+ "research": {
+  "topic": "Loudest animal: sperm whale echolocation clicks measured at source levels up to 236 dB re 1 µPa (pp) at 1 m by Møhl et al. 2003 (JASA), recorded off Andenes, northern Norway, with a hydrophone array; monopulsed clicks ~100 µs long from the spermaceti organ (the whale's enormous nose). Blue whale calls 188–191 dB re 1 µPa (Frontiers in Marine Science 2021). Howler monkeys: loudest land animal, ~140 dB in air, audible ~5 km (Current Biology 2015; Nat Geo). Sperm whales dive beyond 2,000 m hunting squid, navigating by echolocation. Underwater and in-air decibels are not directly comparable; the on-screen bars say so.",
+  "myths": [
+   {
+    "myth": "The blue whale, the biggest animal, is the loudest.",
+    "reality": "Blue whale calls reach about 188 dB underwater; sperm whale clicks have been measured at 236 dB underwater — the loudest biological sound recorded.",
+    "sources": [
+     "mohl_2003",
+     "frontiers_blue"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Loudest-animal lists are stock-footage countdowns; nobody puts the three decibel bars on screen with the water/air caveat, erases 'a roar' into a click, pins the Norwegian canyon where the record was recorded and drops a depth counter as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=loudest+animal+in+the+world",
+     "title": "Search: loudest animal in the world",
+     "angle": "top-10 countdowns",
+     "misses": "no quiz, no map, no caveat"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=sperm+whale+clicks",
+     "title": "Search: sperm whale clicks",
+     "angle": "diver encounter videos",
+     "misses": "no numbers"
+    },
+    {
+     "url": "https://www.youtube.com/@NatGeoAnimals/shorts",
+     "title": "Nat Geo Animals",
+     "angle": "footage reels",
+     "misses": "no quiz"
+    }
+   ]
+  },
+  "sources": {
+   "mohl_2003": {
+    "type": "primary",
+    "publisher": "Journal of the Acoustical Society of America",
+    "title": "Møhl, Wahlberg, Madsen, Heerfordt & Lund (2003) — The monopulsed nature of sperm whale clicks",
+    "url": "https://pubs.aip.org/asa/jasa/article/114/2/1143/547296",
+    "date": "2026-11-11",
+    "notes": "on-axis clicks with source levels up to 236 dB re 1 µPa (pp); recorded off Andenes, Norway; click duration ~100 µs; the most intense biological sound measured"
+   },
+   "frontiers_blue": {
+    "type": "primary",
+    "publisher": "Frontiers in Marine Science",
+    "title": "Source levels of Antarctic blue whale calls (2021)",
+    "url": "https://www.frontiersin.org/articles/10.3389/fmars.2021.654125/full",
+    "date": "2026-11-11",
+    "notes": "blue whale call source levels 188–191 dB re 1 µPa at 1 m"
+   },
+   "curbio_howler": {
+    "type": "primary",
+    "publisher": "Current Biology",
+    "title": "Dunn et al. (2015) — Evolutionary trade-off between vocal tract and testes dimensions in howler monkeys",
+    "url": "https://www.cell.com/current-biology/fulltext/S0960-9822(15)01125-4",
+    "date": "2026-11-11",
+    "notes": "howler monkeys among the loudest land animals; enlarged hyoid; calls carry through dense forest for kilometres"
+   },
+   "natgeo_howler": {
+    "type": "reference",
+    "publisher": "National Geographic",
+    "title": "Howler monkey",
+    "url": "https://www.nationalgeographic.com/animals/mammals/facts/howler-monkeys",
+    "date": "2026-11-11",
+    "notes": "howls can be heard up to 3 miles (5 km) away; loudest land animal"
+   },
+   "noaa_sperm": {
+    "type": "primary",
+    "publisher": "NOAA Fisheries",
+    "title": "Sperm whale",
+    "url": "https://www.fisheries.noaa.gov/species/sperm-whale",
+    "date": "2026-11-11",
+    "notes": "dives regularly to 600 m and can exceed 2,000 m, hunting squid in darkness using echolocation clicks; the spermaceti organ fills the massive head"
+   },
+   "ifl_loudest": {
+    "type": "reference",
+    "publisher": "IFLScience",
+    "title": "What is the loudest animal in the world?",
+    "url": "https://www.iflscience.com/what-is-the-loudest-animal-in-the-world-75495",
+    "date": "2026-11-11",
+    "notes": "236 dB underwater is not directly comparable with in-air decibels; howler monkey ~140 dB in air, heard 5 km away"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The sperm whale makes the loudest sound of any animal: echolocation clicks measured at up to 236 dB re 1 µPa underwater.",
+    "sources": [
+     "mohl_2003",
+     "noaa_sperm",
+     "ifl_loudest"
+    ],
+    "vo": [
+     "what is the loudest animal on earth",
+     "blue whale, howler monkey, or sperm whale",
+     "the sperm whale. its clicks reach 236 decibels underwater, the loudest sound any animal makes",
+     "the loudest voice is a click. follow us"
+    ],
+    "screen": [
+     "Sperm whale",
+     "Blue whale",
+     "Howler monkey",
+     "236 DB",
+     "the loudest animal sound",
+     "236 dB",
+     "188 dB",
+     "140 dB in air"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Blue whale calls reach about 188 dB underwater; howler monkeys, the loudest land animals, reach about 140 dB in air and can be heard about 5 km away.",
+    "sources": [
+     "frontiers_blue",
+     "curbio_howler",
+     "natgeo_howler",
+     "ifl_loudest"
+    ],
+    "vo": [
+     "a blue whale call hits 188. a howler monkey, loudest on land, about 140, heard 5 kilometres off"
+    ],
+    "screen": [
+     "5 KM",
+     "how far a howler carries"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Sperm whale clicks are not roars: each lasts about 100 microseconds and is produced in the spermaceti organ, the whale's enormous nose.",
+    "sources": [
+     "mohl_2003",
+     "noaa_sperm"
+    ],
+    "vo": [
+     "not a roar. each click lasts a fraction of a millisecond, fired from the whale's enormous nose"
+    ],
+    "screen": [
+     "A ROAR"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "The 236 dB clicks were recorded off Andenes, northern Norway; sperm whales hunt squid at depths beyond 2,000 m using echolocation.",
+    "sources": [
+     "mohl_2003",
+     "noaa_sperm"
+    ],
+    "vo": [
+     "measured off northern norway. the whales hunt squid 2 kilometres down, in the dark, by sound"
+    ],
+    "screen": [
+     "Andenes",
+     "Andenes · 236 dB measured",
+     "metres down · hunting squid"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -5,
+   55,
+   35,
+   75
+  ],
+  "far_bbox": [
+   -45,
+   35,
+   70,
+   82
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "578"
+  ],
+  "highlight_note": "Norway — where the record clicks were recorded",
+  "labels": [
+   {
+    "id": "an",
+    "lonlat": [
+     17.5,
+     70.6
+    ],
+    "text": "Andenes · 236 dB measured",
+    "cls": "tag",
+    "in": "s07@measured+0.2",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "andenes",
+    "lonlat": [
+     16.12,
+     69.32
+    ],
+    "label": "Andenes",
+    "side": "right"
+   }
+  ],
+  "scalebar": {
+   "km": 500,
+   "lonlat": [
+    -2,
+    57
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s07@measured",
+    "pid": "andenes"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.45,
+    [
+     -10,
+     40
+    ]
+   ],
+   "s01": [
+    0.45,
+    [
+     -8,
+     42
+    ]
+   ],
+   "s04": [
+    0.8,
+    [
+     12,
+     66
+    ]
+   ],
+   "s04b": [
+    0.85,
+    [
+     13,
+     65.5
+    ]
+   ],
+   "s05": [
+    0.75,
+    [
+     10,
+     66
+    ]
+   ],
+   "s05b": [
+    0.78,
+    [
+     11,
+     65.5
+    ]
+   ],
+   "s06": [
+    0.9,
+    [
+     12,
+     67
+    ]
+   ],
+   "s06b": [
+    0.95,
+    [
+     13,
+     66.5
+    ]
+   ],
+   "s07": [
+    1.3,
+    [
+     14,
+     69
+    ]
+   ],
+   "s07b": [
+    1.4,
+    [
+     15,
+     68.6
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "A blue whale call hits 188. A howler monkey, loudest on land, about 140, heard 5 kilometres off.",
+    "cues": {
+     "blue": "blue",
+     "howler": "howler",
+     "heard": "heard"
+    }
+   },
+   "direction": "ease back over the Norwegian Sea; three decibel bars rise on 'blue' with the whale towering; the monkey sticker on 'howler'; the 5 KM card and an ear sticker on 'heard' as Norway pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "card": {
+    "kicker": "5 KM",
+    "text": "how far a howler carries"
+   },
+   "card_at": null,
+   "cam": [
+    0.75,
+    [
+     10,
+     66
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.78,
+    [
+     11,
+     65.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "db",
+     "type": "bars",
+     "rows": [
+      [
+       "Sperm whale",
+       236,
+       "236 dB"
+      ],
+      [
+       "Blue whale",
+       188,
+       "188 dB"
+      ],
+      [
+       "Howler monkey",
+       140,
+       "140 dB in air"
+      ]
+     ],
+     "unit": "dB · whales measured in water",
+     "y": 300,
+     "x": 60,
+     "w": 900
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@blue-0.3",
+     "do": "chart.bars_in",
+     "id": "db",
+     "args": {
+      "dur": 1.0,
+      "stagger": 0.3
+     }
+    },
+    {
+     "at": "@@howler",
+     "do": "sticker_in",
+     "id": "st_monkey"
+    },
+    {
+     "at": "@@howler+0.4",
+     "do": "sticker_pulse",
+     "id": "st_monkey"
+    },
+    {
+     "at": "@@heard",
+     "do": "sticker_out",
+     "id": "st_monkey"
+    },
+    {
+     "at": "@@heard",
+     "do": "fact_in",
+     "id": "f2",
+     "until": "@.end"
+    },
+    {
+     "at": "@@heard+0.1",
+     "do": "sticker_in",
+     "id": "st_ear"
+    },
+    {
+     "at": "@@heard+0.5",
+     "do": "sticker_pulse",
+     "id": "st_ear"
+    },
+    {
+     "at": "@@heard+0.4",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "578",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "db"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_ear"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Not a roar. Each click lasts a fraction of a millisecond, fired from the whale's enormous nose.",
+    "cues": {
+     "roar": "roar",
+     "click": "click",
+     "nose": "nose"
+    }
+   },
+   "direction": "drift north along the coast; the A ROAR plate waits at the bottom and wipes away on 'roar'; a stopwatch sticker on 'click'; a nose sticker on 'nose' as Norway pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    0.9,
+    [
+     12,
+     67
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.95,
+    [
+     13,
+     66.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "roar",
+     "type": "erase",
+     "text": "A ROAR",
+     "y": 860,
+     "h": 260
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@roar-0.1",
+     "do": "chart.erase_run",
+     "id": "roar",
+     "until": "@@roar+1.1",
+     "args": {
+      "direction": "left"
+     }
+    },
+    {
+     "at": "@@click",
+     "do": "sticker_in",
+     "id": "st_watch"
+    },
+    {
+     "at": "@@click+0.4",
+     "do": "sticker_pulse",
+     "id": "st_watch"
+    },
+    {
+     "at": "@@nose",
+     "do": "sticker_out",
+     "id": "st_watch"
+    },
+    {
+     "at": "@@nose",
+     "do": "sticker_in",
+     "id": "st_nose"
+    },
+    {
+     "at": "@@nose+0.4",
+     "do": "sticker_pulse",
+     "id": "st_nose"
+    },
+    {
+     "at": "@@nose+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "578",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "roar"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_nose"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Measured off northern Norway. The whales hunt squid 2 kilometres down, in the dark, by sound.",
+    "cues": {
+     "measured": "measured",
+     "squid": "squid",
+     "dark": "dark"
+    }
+   },
+   "direction": "tighten on the Vesterålen coast; the Andenes pin and tag on 'measured'; a squid sticker on 'squid'; the depth counter runs 0 → 2,000 metres on 'squid'; a moon sticker on 'dark' as Norway pulses; the pin leaves at the end",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    1.3,
+    [
+     14,
+     69
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.4,
+    [
+     15,
+     68.6
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "depth",
+     "type": "counter",
+     "start": 0,
+     "end": 2000,
+     "y": 330,
+     "label": "metres down · hunting squid",
+     "fmt": "int",
+     "size": 170
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@measured",
+     "do": "sticker_in",
+     "id": "st_mic"
+    },
+    {
+     "at": "@@measured+0.4",
+     "do": "sticker_pulse",
+     "id": "st_mic"
+    },
+    {
+     "at": "@@squid",
+     "do": "sticker_out",
+     "id": "st_mic"
+    },
+    {
+     "at": "@@squid",
+     "do": "sticker_in",
+     "id": "st_squid"
+    },
+    {
+     "at": "@@squid+0.4",
+     "do": "sticker_pulse",
+     "id": "st_squid"
+    },
+    {
+     "at": "@@squid-0.2",
+     "do": "chart.counter_run",
+     "id": "depth",
+     "until": "@@dark+0.4"
+    },
+    {
+     "at": "@@dark",
+     "do": "sticker_out",
+     "id": "st_squid"
+    },
+    {
+     "at": "@@dark",
+     "do": "sticker_in",
+     "id": "st_moon"
+    },
+    {
+     "at": "@@dark+0.4",
+     "do": "sticker_pulse",
+     "id": "st_moon"
+    },
+    {
+     "at": "@@dark+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "578",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "depth"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_moon"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "andenes"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_monkey",
+   "type": "sticker",
+   "emoji": "1f412",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_ear",
+   "type": "sticker",
+   "emoji": "1f442",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_watch",
+   "type": "sticker",
+   "emoji": "23f1",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_nose",
+   "type": "sticker",
+   "emoji": "1f443",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_mic",
+   "type": "sticker",
+   "emoji": "1f3a4",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_squid",
+   "type": "sticker",
+   "emoji": "1f991",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_moon",
+   "type": "sticker",
+   "emoji": "1f319",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  }
+ ]
+}

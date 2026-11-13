@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep18-loudest-animal-sperm-whale",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A sound quiz on a map: three loudness bars that put a monkey in second place, an erased 'A ROAR' that becomes a click, a pin on the Norwegian canyon where it was measured, and a depth counter dropping 2 kilometres into the dark.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "What is the LOUDEST animal on Earth?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "What is the loudest animal on Earth?",
+   "cues": {
+    "what": "what",
+    "loudest": "loudest"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Blue whale, Howler monkey, or Sperm whale?",
+   "cues": {
+    "a": "blue",
+    "b": "howler",
+    "c": "sperm"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "The sperm whale. Its clicks reach 236 decibels underwater, the loudest sound any animal makes.",
+   "cues": {
+    "answer": "sperm",
+    "clicks": "clicks",
+    "loudest": "loudest"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.35,
+   "direction": "ease back over the Norwegian Sea; three decibel bars rise on 'blue' with the whale towering; the monkey sticker on 'howler'; the 5 KM card and an ear sticker on 'heard' as Norway pulses",
+   "text": "A blue whale call hits 188. A howler monkey, loudest on land, about 140, heard 5 kilometres off.",
+   "cues": {
+    "blue": "blue",
+    "howler": "howler",
+    "heard": "heard"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "drift north along the coast; the A ROAR plate waits at the bottom and wipes away on 'roar'; a stopwatch sticker on 'click'; a nose sticker on 'nose' as Norway pulses",
+   "text": "Not a roar. Each click lasts a fraction of a millisecond, fired from the whale's enormous nose.",
+   "cues": {
+    "roar": "roar",
+    "click": "click",
+    "nose": "nose"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "tighten on the Vesterålen coast; the Andenes pin and tag on 'measured'; a squid sticker on 'squid'; the depth counter runs 0 → 2,000 metres on 'squid'; a moon sticker on 'dark' as Norway pulses; the pin leaves at the end",
+   "text": "Measured off northern Norway. The whales hunt squid 2 kilometres down, in the dark, by sound.",
+   "cues": {
+    "measured": "measured",
+    "squid": "squid",
+    "dark": "dark"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "The loudest voice is a click. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

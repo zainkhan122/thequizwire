@@ -1,0 +1,194 @@
+{
+ "version": 1,
+ "episode": "ep18-loudest-animal-sperm-whale",
+ "topic": "Loudest animal: sperm whale echolocation clicks measured at source levels up to 236 dB re 1 µPa (pp) at 1 m by Møhl et al. 2003 (JASA), recorded off Andenes, northern Norway, with a hydrophone array; monopulsed clicks ~100 µs long from the spermaceti organ (the whale's enormous nose). Blue whale calls 188–191 dB re 1 µPa (Frontiers in Marine Science 2021). Howler monkeys: loudest land animal, ~140 dB in air, audible ~5 km (Current Biology 2015; Nat Geo). Sperm whales dive beyond 2,000 m hunting squid, navigating by echolocation. Underwater and in-air decibels are not directly comparable; the on-screen bars say so.",
+ "researched": "2026-11-13",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The blue whale, the biggest animal, is the loudest.",
+   "reality": "Blue whale calls reach about 188 dB underwater; sperm whale clicks have been measured at 236 dB underwater — the loudest biological sound recorded.",
+   "sources": [
+    "mohl_2003",
+    "frontiers_blue"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Loudest-animal lists are stock-footage countdowns; nobody puts the three decibel bars on screen with the water/air caveat, erases 'a roar' into a click, pins the Norwegian canyon where the record was recorded and drops a depth counter as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=loudest+animal+in+the+world",
+    "title": "Search: loudest animal in the world",
+    "angle": "top-10 countdowns",
+    "misses": "no quiz, no map, no caveat"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=sperm+whale+clicks",
+    "title": "Search: sperm whale clicks",
+    "angle": "diver encounter videos",
+    "misses": "no numbers"
+   },
+   {
+    "url": "https://www.youtube.com/@NatGeoAnimals/shorts",
+    "title": "Nat Geo Animals",
+    "angle": "footage reels",
+    "misses": "no quiz"
+   }
+  ]
+ },
+ "sources": {
+  "mohl_2003": {
+   "type": "primary",
+   "publisher": "Journal of the Acoustical Society of America",
+   "title": "Møhl, Wahlberg, Madsen, Heerfordt & Lund (2003) — The monopulsed nature of sperm whale clicks",
+   "url": "https://pubs.aip.org/asa/jasa/article/114/2/1143/547296",
+   "date": "2026-11-11",
+   "notes": "on-axis clicks with source levels up to 236 dB re 1 µPa (pp); recorded off Andenes, Norway; click duration ~100 µs; the most intense biological sound measured"
+  },
+  "frontiers_blue": {
+   "type": "primary",
+   "publisher": "Frontiers in Marine Science",
+   "title": "Source levels of Antarctic blue whale calls (2021)",
+   "url": "https://www.frontiersin.org/articles/10.3389/fmars.2021.654125/full",
+   "date": "2026-11-11",
+   "notes": "blue whale call source levels 188–191 dB re 1 µPa at 1 m"
+  },
+  "curbio_howler": {
+   "type": "primary",
+   "publisher": "Current Biology",
+   "title": "Dunn et al. (2015) — Evolutionary trade-off between vocal tract and testes dimensions in howler monkeys",
+   "url": "https://www.cell.com/current-biology/fulltext/S0960-9822(15)01125-4",
+   "date": "2026-11-11",
+   "notes": "howler monkeys among the loudest land animals; enlarged hyoid; calls carry through dense forest for kilometres"
+  },
+  "natgeo_howler": {
+   "type": "reference",
+   "publisher": "National Geographic",
+   "title": "Howler monkey",
+   "url": "https://www.nationalgeographic.com/animals/mammals/facts/howler-monkeys",
+   "date": "2026-11-11",
+   "notes": "howls can be heard up to 3 miles (5 km) away; loudest land animal"
+  },
+  "noaa_sperm": {
+   "type": "primary",
+   "publisher": "NOAA Fisheries",
+   "title": "Sperm whale",
+   "url": "https://www.fisheries.noaa.gov/species/sperm-whale",
+   "date": "2026-11-11",
+   "notes": "dives regularly to 600 m and can exceed 2,000 m, hunting squid in darkness using echolocation clicks; the spermaceti organ fills the massive head"
+  },
+  "ifl_loudest": {
+   "type": "reference",
+   "publisher": "IFLScience",
+   "title": "What is the loudest animal in the world?",
+   "url": "https://www.iflscience.com/what-is-the-loudest-animal-in-the-world-75495",
+   "date": "2026-11-11",
+   "notes": "236 dB underwater is not directly comparable with in-air decibels; howler monkey ~140 dB in air, heard 5 km away"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The sperm whale makes the loudest sound of any animal: echolocation clicks measured at up to 236 dB re 1 µPa underwater.",
+   "sources": [
+    "mohl_2003",
+    "noaa_sperm",
+    "ifl_loudest"
+   ],
+   "vo": [
+    "what is the loudest animal on earth",
+    "blue whale, howler monkey, or sperm whale",
+    "the sperm whale. its clicks reach 236 decibels underwater, the loudest sound any animal makes",
+    "the loudest voice is a click. follow us"
+   ],
+   "screen": [
+    "Sperm whale",
+    "Blue whale",
+    "Howler monkey",
+    "236 DB",
+    "the loudest animal sound",
+    "236 dB",
+    "188 dB",
+    "140 dB in air"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Blue whale calls reach about 188 dB underwater; howler monkeys, the loudest land animals, reach about 140 dB in air and can be heard about 5 km away.",
+   "sources": [
+    "frontiers_blue",
+    "curbio_howler",
+    "natgeo_howler",
+    "ifl_loudest"
+   ],
+   "vo": [
+    "a blue whale call hits 188. a howler monkey, loudest on land, about 140, heard 5 kilometres off"
+   ],
+   "screen": [
+    "5 KM",
+    "how far a howler carries"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Sperm whale clicks are not roars: each lasts about 100 microseconds and is produced in the spermaceti organ, the whale's enormous nose.",
+   "sources": [
+    "mohl_2003",
+    "noaa_sperm"
+   ],
+   "vo": [
+    "not a roar. each click lasts a fraction of a millisecond, fired from the whale's enormous nose"
+   ],
+   "screen": [
+    "A ROAR"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "The 236 dB clicks were recorded off Andenes, northern Norway; sperm whales hunt squid at depths beyond 2,000 m using echolocation.",
+   "sources": [
+    "mohl_2003",
+    "noaa_sperm"
+   ],
+   "vo": [
+    "measured off northern norway. the whales hunt squid 2 kilometres down, in the dark, by sound"
+   ],
+   "screen": [
+    "Andenes",
+    "Andenes · 236 dB measured",
+    "metres down · hunting squid"
+   ]
+  }
+ ]
+}

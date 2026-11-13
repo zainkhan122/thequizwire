@@ -1,0 +1,142 @@
+{
+ "id": "ep18-loudest-animal-sperm-whale",
+ "format": "quiz-v3",
+ "series": "wild-files",
+ "number": 18,
+ "title": "What is the LOUDEST animal on Earth?",
+ "difficulty": "MEDIUM",
+ "seed": 3818,
+ "quiz": {
+  "question": "What is the LOUDEST animal on Earth?",
+  "keyword": "LOUDEST",
+  "options": [
+   "Blue whale",
+   "Howler monkey",
+   "Sperm whale"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Sperm whale",
+  "answer_sub": "236 dB clicks",
+  "option_meta": [
+   {
+    "emoji": "1f40b"
+   },
+   {
+    "emoji": "1f412"
+   },
+   {
+    "emoji": "1f433"
+   }
+  ],
+  "banner": "Sperm whale",
+  "banner_sub": "✓  C was right · 236 dB clicks",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "What is the LOUDEST animal on Earth? 🔊",
+  "premise": "The loudest sound any animal makes is not a roar — it is a click",
+  "bait": "Blue whale, howler monkey or sperm whale — which did you pick? 👇",
+  "keywords": [
+   "loudest animal in the world",
+   "loudest animal on earth",
+   "sperm whale clicks decibels",
+   "blue whale sound",
+   "howler monkey loudest land animal",
+   "animal quiz",
+   "wildlife facts",
+   "ocean sounds"
+  ],
+  "description": "The loudest sound any animal makes is not a roar — it is a click. Blue whale, howler monkey or sperm whale — which did you pick? 👇\n\nSources: Møhl et al. 2003 (JASA); Frontiers in Marine Science 2021; Current Biology 2015.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #18",
+  "hashtags": [
+   "#AnimalQuiz",
+   "#WildlifeFacts",
+   "#thequizwire"
+  ],
+  "tags": [
+   "AnimalQuiz",
+   "Wildlife"
+  ],
+  "cover_emoji": "🔊",
+  "cover_emoji_why": "a speaker says 'loud' without pointing at a sea or land animal; two of the three options are whales, so no whale icon",
+  "copy": {
+   "spoilers": [
+    "sperm whale",
+    "sperm",
+    "236",
+    "click",
+    "clicks",
+    "andenes",
+    "norway",
+    "spermaceti"
+   ],
+   "youtube": {
+    "title": "What is the loudest animal in the world? Louder than a jet, and it is not a roar 🔊",
+    "description": "The biggest animal, the loudest monkey, or the third one? The loudest sound any animal makes was measured in the far north, and it lasts a fraction of a millisecond. It comes from an enormous nose, and the animal uses it to hunt in total darkness, 2 kilometres down.\nGuess before the map lights up, then see the three loudest voices side by side and where the record was recorded.\nWhich did you pick?",
+    "tags": [
+     "#animals",
+     "#wildlife",
+     "#animalquiz",
+     "#ocean",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "What is the LOUDEST animal on Earth? 🔊\nThe biggest animal, the loudest monkey, or the other one? The record sound lasts a fraction of a millisecond, comes from an enormous nose, and is used to hunt 2 kilometres down in the dark.\nWhich did you pick?",
+    "tags": [
+     "#animals",
+     "#wildlife",
+     "#animalquiz",
+     "#ocean",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "What is the loudest animal on Earth — the blue whale, the howler monkey or the sperm whale?\nThe loudest sound any animal makes was measured in the far north. It lasts a fraction of a millisecond, comes from an enormous nose, and is used to hunt in total darkness 2 kilometres down. Pick your animal before the map lights up.",
+    "tags": [
+     "#wildlife",
+     "#animalquiz"
+    ]
+   },
+   "twitter": {
+    "text": "What is the LOUDEST animal on Earth?\nBlue whale, howler monkey or sperm whale? The record sound is louder than a jet engine — and it is not a roar.",
+    "tags": [
+     "#Wildlife",
+     "#AnimalFacts"
+    ]
+   },
+   "threads": {
+    "text": "What is the loudest animal on Earth — the blue whale, the howler monkey or the sperm whale? The loudest sound any animal makes was measured in the far north; it lasts a fraction of a millisecond, comes from an enormous nose, and is used to hunt in total darkness 2 kilometres down.",
+    "tags": [
+     "#oceanfacts"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-animal",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "pin",
+   "bars",
+   "erase",
+   "counter",
+   "label"
+  ],
+  "cast": "emoji-set:ocean + flagball:none",
+  "music": "bed:deep"
+ },
+ "status": "ready"
+}

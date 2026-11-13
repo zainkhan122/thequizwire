@@ -1,0 +1,628 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "236 DB",
+   "text": "the loudest animal sound"
+  },
+  {
+   "id": "f2",
+   "type": "fact",
+   "kicker": "5 KM",
+   "text": "how far a howler carries"
+  },
+  {
+   "id": "db",
+   "type": "bars",
+   "rows": [
+    [
+     "Sperm whale",
+     236,
+     "236 dB"
+    ],
+    [
+     "Blue whale",
+     188,
+     "188 dB"
+    ],
+    [
+     "Howler monkey",
+     140,
+     "140 dB in air"
+    ]
+   ],
+   "unit": "dB · whales measured in water",
+   "y": 300,
+   "x": 60,
+   "w": 900
+  },
+  {
+   "id": "roar",
+   "type": "erase",
+   "text": "A ROAR",
+   "y": 860,
+   "h": 260
+  },
+  {
+   "id": "depth",
+   "type": "counter",
+   "start": 0,
+   "end": 2000,
+   "y": 330,
+   "label": "metres down · hunting squid",
+   "fmt": "int",
+   "size": 170
+  },
+  {
+   "id": "st_monkey",
+   "type": "sticker",
+   "emoji": "1f412",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_ear",
+   "type": "sticker",
+   "emoji": "1f442",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_watch",
+   "type": "sticker",
+   "emoji": "23f1",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_nose",
+   "type": "sticker",
+   "emoji": "1f443",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_mic",
+   "type": "sticker",
+   "emoji": "1f3a4",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_squid",
+   "type": "sticker",
+   "emoji": "1f991",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_moon",
+   "type": "sticker",
+   "emoji": "1f319",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     -8,
+     42
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.38,
+    "lonlat": [
+     -10,
+     40
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 0.8,
+    "lonlat": [
+     12,
+     66
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 0.85,
+    "lonlat": [
+     13,
+     65.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "578",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s07@measured+0.2",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "an"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "an"
+   }
+  },
+  {
+   "at": "s04+3.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "578",
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 0.75,
+    "lonlat": [
+     10,
+     66
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 0.78,
+    "lonlat": [
+     11,
+     65.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@blue-0.3",
+   "do": "chart.bars_in",
+   "id": "db",
+   "args": {
+    "dur": 1.0,
+    "stagger": 0.3
+   }
+  },
+  {
+   "at": "s05@howler",
+   "do": "sticker_in",
+   "id": "st_monkey"
+  },
+  {
+   "at": "s05@howler+0.4",
+   "do": "sticker_pulse",
+   "id": "st_monkey"
+  },
+  {
+   "at": "s05@heard",
+   "do": "sticker_out",
+   "id": "st_monkey"
+  },
+  {
+   "at": "s05@heard",
+   "do": "fact_in",
+   "id": "f2",
+   "until": "s05.end"
+  },
+  {
+   "at": "s05@heard+0.1",
+   "do": "sticker_in",
+   "id": "st_ear"
+  },
+  {
+   "at": "s05@heard+0.5",
+   "do": "sticker_pulse",
+   "id": "st_ear"
+  },
+  {
+   "at": "s05@heard+0.4",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "578",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "db"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_ear"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 0.9,
+    "lonlat": [
+     12,
+     67
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 0.95,
+    "lonlat": [
+     13,
+     66.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@roar-0.1",
+   "do": "chart.erase_run",
+   "id": "roar",
+   "until": "s06@roar+1.1",
+   "args": {
+    "direction": "left"
+   }
+  },
+  {
+   "at": "s06@click",
+   "do": "sticker_in",
+   "id": "st_watch"
+  },
+  {
+   "at": "s06@click+0.4",
+   "do": "sticker_pulse",
+   "id": "st_watch"
+  },
+  {
+   "at": "s06@nose",
+   "do": "sticker_out",
+   "id": "st_watch"
+  },
+  {
+   "at": "s06@nose",
+   "do": "sticker_in",
+   "id": "st_nose"
+  },
+  {
+   "at": "s06@nose+0.4",
+   "do": "sticker_pulse",
+   "id": "st_nose"
+  },
+  {
+   "at": "s06@nose+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "578",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "chart.out",
+   "id": "roar"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_nose"
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.5",
+   "args": {
+    "k": 1.3,
+    "lonlat": [
+     14,
+     69
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 1.4,
+    "lonlat": [
+     15,
+     68.6
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@measured",
+   "do": "sticker_in",
+   "id": "st_mic"
+  },
+  {
+   "at": "s07@measured+0.4",
+   "do": "sticker_pulse",
+   "id": "st_mic"
+  },
+  {
+   "at": "s07@squid",
+   "do": "sticker_out",
+   "id": "st_mic"
+  },
+  {
+   "at": "s07@squid",
+   "do": "sticker_in",
+   "id": "st_squid"
+  },
+  {
+   "at": "s07@squid+0.4",
+   "do": "sticker_pulse",
+   "id": "st_squid"
+  },
+  {
+   "at": "s07@squid-0.2",
+   "do": "chart.counter_run",
+   "id": "depth",
+   "until": "s07@dark+0.4"
+  },
+  {
+   "at": "s07@dark",
+   "do": "sticker_out",
+   "id": "st_squid"
+  },
+  {
+   "at": "s07@dark",
+   "do": "sticker_in",
+   "id": "st_moon"
+  },
+  {
+   "at": "s07@dark+0.4",
+   "do": "sticker_pulse",
+   "id": "st_moon"
+  },
+  {
+   "at": "s07@dark+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "578",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "chart.out",
+   "id": "depth"
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_moon"
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "andenes"
+   }
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     -8,
+     42
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04+1.7",
+   "do": "geo.scalebar_in",
+   "stage": "stage_map"
+  },
+  {
+   "at": "s07@measured",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "andenes"
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}
