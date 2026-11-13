@@ -36,7 +36,9 @@ done
 [ "$FAILS" -eq 0 ] || { echo "ship: $FAILS episode(s) failed preflight — nothing committed, pushed or dispatched"; exit 1; }
 git add -A series tools reelkit docs .github 2>/dev/null || true   # episode files AND any gate/tool change made alongside them
 if ! git diff --cached --quiet; then git commit -qm "${MSG:-ship: ${PATHS[*]}}"; fi
-git push -q "https://x-access-token:$(cat "$TOKEN_FILE")@github.com/zainkhan122/thequizwire.git" HEAD:main
+URL="https://x-access-token:$(cat "$TOKEN_FILE")@github.com/zainkhan122/thequizwire.git"
+git pull -q --rebase "$URL" main || { echo "ship: rebase onto origin/main failed — resolve and re-run"; exit 1; }   # the daily cron commits dispatch/*.json
+git push -q "$URL" HEAD:main
 SHA="$(git rev-parse HEAD)"
 code=$(curl -s -o /tmp/ship_dispatch.out -w "%{http_code}" -X POST -H "Authorization: Bearer $(cat "$TOKEN_FILE")" -H "Accept: application/vnd.github+json" \
   https://api.github.com/repos/zainkhan122/thequizwire/actions/workflows/render.yml/dispatches \
