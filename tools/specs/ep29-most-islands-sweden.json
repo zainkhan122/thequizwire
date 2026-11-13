@@ -122,7 +122,7 @@
    "most": "most"
   },
   "v04": {
-   "text": "Sweden. Its statistics office counts about 267,000 islands, far more than any other country on Earth.",
+   "text": "Sweden. Its statistics office counts about 267,000 islands, more than any other country.",
    "cues": {
     "answer": "sweden",
     "counts": "counts",
@@ -130,7 +130,7 @@
    }
   },
   "v05": {
-   "text": "Indonesia has around 17,000. The Philippines, 7,600. Sweden has more than both of them together.",
+   "text": "Indonesia has around 17,000. The Philippines, 7,600. Sweden beats both of them together.",
    "cues": {
     "indonesia": "indonesia",
     "philippines": "philippines",
@@ -138,7 +138,7 @@
    }
   },
   "v06": {
-   "text": "Only about 1,000 of them have anyone living there at all. The capital alone sits on 14 islands.",
+   "text": "Only about 1,000 of them have anyone living there. The capital alone sits on 14 islands.",
    "cues": {
     "living": "living",
     "capital": "capital",
@@ -146,7 +146,7 @@
    }
   },
   "v07": {
-   "text": "Most are skerries, bare rock pushed up by the land rising since the ice age. New islands appear every year.",
+   "text": "Most are skerries, bare rock lifted by land still rising since the ice age. New islands appear there every single year.",
    "cues": {
     "skerries": "skerries",
     "ice": "ice",
@@ -283,7 +283,7 @@
     "vo": [
      "which country has the most islands",
      "indonesia, philippines, or sweden",
-     "sweden. its statistics office counts about 267,000 islands, far more than any other country on earth",
+     "sweden. its statistics office counts about 267,000 islands, more than any other country",
      "267,000 islands, 1 country"
     ],
     "screen": [
@@ -302,7 +302,7 @@
      "wiki_islands"
     ],
     "vo": [
-     "indonesia has around 17,000. the philippines, 7,600. sweden has more than both of them together"
+     "indonesia has around 17,000. the philippines, 7,600. sweden beats both of them together"
     ],
     "screen": [
      "267,000",
@@ -319,7 +319,7 @@
      "brit_stockholm"
     ],
     "vo": [
-     "only about 1,000 of them have anyone living there at all. the capital alone sits on 14 islands"
+     "only about 1,000 of them have anyone living there. the capital alone sits on 14 islands"
     ],
     "screen": [
      "Stockholm · 14 islands",
@@ -339,7 +339,7 @@
      "scb_islands"
     ],
     "vo": [
-     "most are skerries, bare rock pushed up by the land rising since the ice age. new islands appear every year"
+     "most are skerries, bare rock lifted by land still rising since the ice age. new islands appear there every single year"
     ],
     "screen": [
      "RISING LAND",
@@ -491,7 +491,7 @@
  "story": [
   {
    "vo": {
-    "text": "Indonesia has around 17,000. The Philippines, 7,600. Sweden has more than both of them together.",
+    "text": "Indonesia has around 17,000. The Philippines, 7,600. Sweden beats both of them together.",
     "cues": {
      "indonesia": "indonesia",
      "philippines": "philippines",
@@ -599,7 +599,7 @@
   },
   {
    "vo": {
-    "text": "Only about 1,000 of them have anyone living there at all. The capital alone sits on 14 islands.",
+    "text": "Only about 1,000 of them have anyone living there. The capital alone sits on 14 islands.",
     "cues": {
      "living": "living",
      "capital": "capital",
@@ -702,7 +702,7 @@
   },
   {
    "vo": {
-    "text": "Most are skerries, bare rock pushed up by the land rising since the ice age. New islands appear every year.",
+    "text": "Most are skerries, bare rock lifted by land still rising since the ice age. New islands appear there every single year.",
     "cues": {
      "skerries": "skerries",
      "ice": "ice",
@@ -712,7 +712,7 @@
    "direction": "drift north up the Gulf of Bothnia; a rock sticker on 'skerries'; the RISING LAND card and the Bothnia tag on 'ice'; a sparkle sticker on 'new' as the Swedish flag-ball grins and Sweden pulses",
    "energy": 3,
    "tone": "revelatory",
-   "pause_after": 0.5,
+   "pause_after": 0.4,
    "card": {
     "kicker": "RISING LAND",
     "text": "up to 9 mm a year since the ice age"

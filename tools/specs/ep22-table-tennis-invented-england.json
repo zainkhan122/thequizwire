@@ -152,7 +152,7 @@
    }
   },
   "v07": {
-   "text": "Since then China has won 37 of 42 Olympic golds. Japan, 1. The inventors, none.",
+   "text": "Since then China has won 37 of 42 Olympic golds. Japan has won 1. The inventors, none.",
    "cues": {
     "china": "china",
     "golds": "golds",
@@ -338,7 +338,7 @@
      "olympics_tt"
     ],
     "vo": [
-     "since then china has won 37 of 42 olympic golds. japan, 1. the inventors, none"
+     "since then china has won 37 of 42 olympic golds. japan has won 1. the inventors, none"
     ],
     "screen": [
      "37",
@@ -671,7 +671,7 @@
   },
   {
    "vo": {
-    "text": "Since then China has won 37 of 42 Olympic golds. Japan, 1. The inventors, none.",
+    "text": "Since then China has won 37 of 42 Olympic golds. Japan has won 1. The inventors, none.",
     "cues": {
      "china": "china",
      "golds": "golds",

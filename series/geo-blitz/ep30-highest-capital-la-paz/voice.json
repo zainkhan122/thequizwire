@@ -63,7 +63,7 @@
    "energy": 4,
    "pause_after": 0.45,
    "direction": "the map answers with you",
-   "text": "La Paz. Bolivia's seat of government sits around 3,640 metres up, higher than any other capital.",
+   "text": "La Paz. Bolivia's seat of government sits 3,640 metres up, higher than any other capital.",
    "cues": {
     "answer": "paz",
     "government": "government",
@@ -94,7 +94,7 @@
    "energy": 3,
    "pause_after": 0.45,
    "direction": "drift south-east; a twist sticker on 'twist' as the La Paz photograph rises out of Bolivia; the Sucre pin and tag on 'Sucre'; a plane sticker and the El Alto tag on 'airport' as Bolivia pulses",
-   "text": "A twist: the constitutional capital is Sucre, down at 2,800. And the airport, El Alto, sits above the city at 4,060.",
+   "text": "A twist: the constitutional capital is Sucre, down at 2,800. The airport, El Alto, sits at 4,060.",
    "cues": {
     "twist": "twist",
     "sucre": "sucre",
@@ -107,9 +107,9 @@
    "role": "story",
    "tone": "resolute",
    "energy": 3,
-   "pause_after": 0.5,
+   "pause_after": 0.4,
    "direction": "tighten on La Paz; the THIN AIR card on 'air'; a lungs sticker on 'oxygen'; a football sticker on 'gasp'; the Bolivian flag-ball grins on 'loses' as Bolivia pulses; the pin leaves at the end",
-   "text": "Up here the air holds about a third less oxygen. Visiting football teams gasp; the home side rarely loses.",
+   "text": "Up here the air holds a third less oxygen. Visiting football teams gasp; the home side rarely loses.",
    "cues": {
     "air": "air",
     "oxygen": "oxygen",
