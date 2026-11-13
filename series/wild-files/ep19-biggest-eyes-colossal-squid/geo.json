@@ -9,10 +9,10 @@
    "fit": {
     "type": "bbox",
     "bbox": [
-     150,
-     -80,
-     190,
-     -60
+     160,
+     -50,
+     185,
+     -30
     ]
    },
    "padding": 20,
@@ -27,10 +27,10 @@
      "kind": "highlight",
      "id": "hl",
      "ids": [
-      "010"
+      "554"
      ],
      "cls": "",
-     "note": "Antarctica — the Ross Sea is its sea; the squid is Antarctic",
+     "note": "New Zealand — the record specimen was landed by a New Zealand vessel and is kept in Wellington; the Ross Sea is reached by a camera sweep south (no Antarctic claim is drawn)",
      "lift": "color",
      "color": "#FFD400"
     }
@@ -57,17 +57,6 @@
      "cls": "tag",
      "in": "s06@ross+0.2",
      "out": "s06.end"
-    },
-    {
-     "id": "we",
-     "lonlat": [
-      166,
-      -46
-     ],
-     "text": "Wellington · Te Papa museum",
-     "cls": "tag",
-     "in": "s06@museum",
-     "out": "s06.end"
     }
    ],
    "disputed": [],
@@ -79,20 +68,20 @@
     "k_max": 2.0,
     "far": {
      "bbox": [
-      100,
-      -85,
+      130,
+      -80,
       230,
-      -30
+      -20
      ],
      "k_min": 0.3
     }
    },
    "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
    "scalebar": {
-    "km": 500,
+    "km": 200,
     "lonlat": [
-     152,
-     -62
+     161,
+     -48.5
     ],
     "at": [
      60,

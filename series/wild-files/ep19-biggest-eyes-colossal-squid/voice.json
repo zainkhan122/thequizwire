@@ -78,7 +78,7 @@
    "tone": "resolute",
    "energy": 4,
    "pause_after": 0.35,
-   "direction": "ease back over the Southern Ocean; three eye silhouettes rise on 'ostrich' — a small disc, a mid disc, the squid's football; a brain sticker on 'brain'; a whale sticker on 'whale' as Antarctica pulses on '15'",
+   "direction": "ease back over New Zealand; three eye silhouettes rise on 'ostrich' — a small disc, a mid disc, the squid's football; a brain sticker on 'brain'; a whale sticker on 'whale' as New Zealand pulses on '15'",
    "text": "An ostrich eye is 5 centimetres, wider than its brain. A blue whale manages only 15.",
    "cues": {
     "ostrich": "ostrich",
@@ -94,7 +94,7 @@
    "tone": "revelatory",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "drift north toward New Zealand; a hook sticker on 'record'; the Ross Sea pin and tag on 'Ross'; the Wellington tag and a museum sticker on 'museum' as Antarctica pulses",
+   "direction": "sweep south from New Zealand to the Ross Sea; a hook sticker on 'record'; the Ross Sea pin and tag on 'Ross'; a museum sticker on 'museum' as New Zealand pulses",
    "text": "The record animal came up on a fishing line in the Ross Sea in 2007. It sits in a Wellington museum.",
    "cues": {
     "record": "record",

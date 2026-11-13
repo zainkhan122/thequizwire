@@ -327,7 +327,6 @@
     "screen": [
      "Ross Sea",
      "Ross Sea · caught 2007",
-     "Wellington · Te Papa museum",
      "2007"
     ]
    },
@@ -351,22 +350,22 @@
  },
  "geo": {
   "fit_bbox": [
-   150,
-   -80,
-   190,
-   -60
+   160,
+   -50,
+   185,
+   -30
   ],
   "far_bbox": [
-   100,
-   -85,
+   130,
+   -80,
    230,
-   -30
+   -20
   ],
   "resolution": "50m",
   "highlight_ids": [
-   "010"
+   "554"
   ],
-  "highlight_note": "Antarctica — the Ross Sea is its sea; the squid is Antarctic",
+  "highlight_note": "New Zealand — the record specimen was landed by a New Zealand vessel and is kept in Wellington; the Ross Sea is reached by a camera sweep south (no Antarctic claim is drawn)",
   "labels": [
    {
     "id": "rs",
@@ -377,17 +376,6 @@
     "text": "Ross Sea · caught 2007",
     "cls": "tag",
     "in": "s06@ross+0.2",
-    "out": "s06.end"
-   },
-   {
-    "id": "we",
-    "lonlat": [
-     166,
-     -46
-    ],
-    "text": "Wellington · Te Papa museum",
-    "cls": "tag",
-    "in": "s06@museum",
     "out": "s06.end"
    }
   ],
@@ -403,10 +391,10 @@
    }
   ],
   "scalebar": {
-   "km": 500,
+   "km": 200,
    "lonlat": [
-    152,
-    -62
+    161,
+    -48.5
    ]
   },
   "pin_beats": [
@@ -419,71 +407,71 @@
    "start": [
     0.35,
     [
-     140,
-     -30
+     150,
+     -35
     ]
    ],
    "s01": [
     0.35,
     [
-     142,
-     -32
+     152,
+     -36
     ]
    ],
    "s04": [
-    0.5,
+    0.9,
     [
-     170,
-     -67
+     172,
+     -41
     ]
    ],
    "s04b": [
-    0.56,
+    0.98,
     [
-     173,
-     -65
+     174,
+     -40
     ]
    ],
    "s05": [
-    0.45,
+    0.75,
     [
-     168,
-     -64
+     170,
+     -44
     ]
    ],
    "s05b": [
-    0.5,
+    0.82,
     [
-     171,
-     -62
+     173,
+     -42
     ]
    ],
    "s06": [
-    0.42,
+    0.4,
     [
      172,
-     -68
+     -69
     ]
    ],
    "s06b": [
-    0.47,
+    0.46,
     [
      169,
-     -67
+     -71
     ]
    ],
    "s07": [
     0.6,
     [
      175,
-     -71
+     -71.5
     ]
    ],
    "s07b": [
     0.7,
     [
      172,
-     -70
+     -71.5
     ]
    ]
   }
@@ -499,23 +487,23 @@
      "15": "15"
     }
    },
-   "direction": "ease back over the Southern Ocean; three eye silhouettes rise on 'ostrich' — a small disc, a mid disc, the squid's football; a brain sticker on 'brain'; a whale sticker on 'whale' as Antarctica pulses on '15'",
+   "direction": "ease back over New Zealand; three eye silhouettes rise on 'ostrich' — a small disc, a mid disc, the squid's football; a brain sticker on 'brain'; a whale sticker on 'whale' as New Zealand pulses on '15'",
    "energy": 4,
    "tone": "resolute",
    "pause_after": 0.35,
    "cam": [
-    0.45,
+    0.75,
     [
-     168,
-     -64
+     170,
+     -44
     ]
    ],
    "cam_dur": 1.3,
    "cam_hold": [
-    0.5,
+    0.82,
     [
-     171,
-     -62
+     173,
+     -42
     ]
    ],
    "pulse": false,
@@ -586,7 +574,7 @@
      "do": "geo.highlight_pulse",
      "stage": "stage_map",
      "args": {
-      "fid": "010",
+      "fid": "554",
       "dur": 0.7,
       "layer": "hl"
      }
@@ -612,23 +600,23 @@
      "museum": "museum"
     }
    },
-   "direction": "drift north toward New Zealand; a hook sticker on 'record'; the Ross Sea pin and tag on 'Ross'; the Wellington tag and a museum sticker on 'museum' as Antarctica pulses",
+   "direction": "sweep south from New Zealand to the Ross Sea; a hook sticker on 'record'; the Ross Sea pin and tag on 'Ross'; a museum sticker on 'museum' as New Zealand pulses",
    "energy": 3,
    "tone": "revelatory",
    "pause_after": 0.45,
    "cam": [
-    0.42,
+    0.4,
     [
      172,
-     -68
+     -69
     ]
    ],
-   "cam_dur": 1.4,
+   "cam_dur": 1.6,
    "cam_hold": [
-    0.47,
+    0.46,
     [
      169,
-     -67
+     -71
     ]
    ],
    "pulse": false,
@@ -659,11 +647,11 @@
      "id": "st_ship"
     },
     {
-     "at": "@@ross+0.5",
+     "at": "@@museum+0.4",
      "do": "geo.highlight_pulse",
      "stage": "stage_map",
      "args": {
-      "fid": "010",
+      "fid": "554",
       "dur": 0.7,
       "layer": "hl"
      }
@@ -708,7 +696,7 @@
     0.6,
     [
      175,
-     -71
+     -71.5
     ]
    ],
    "cam_dur": 1.5,
@@ -716,7 +704,7 @@
     0.7,
     [
      172,
-     -70
+     -71.5
     ]
    ],
    "pulse": false,
@@ -769,7 +757,7 @@
      "do": "geo.highlight_pulse",
      "stage": "stage_map",
      "args": {
-      "fid": "010",
+      "fid": "554",
       "dur": 0.7,
       "layer": "hl"
      }

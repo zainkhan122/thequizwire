@@ -157,8 +157,8 @@
    "args": {
     "k": 0.35,
     "lonlat": [
-     140,
-     -30
+     150,
+     -35
     ]
    }
   },
@@ -170,8 +170,8 @@
    "args": {
     "k": 0.35,
     "lonlat": [
-     142,
-     -32
+     152,
+     -36
     ],
     "ease": "none"
    }
@@ -182,10 +182,10 @@
    "stage": "stage_map",
    "until": "s04+1.4",
    "args": {
-    "k": 0.5,
+    "k": 0.9,
     "lonlat": [
-     170,
-     -67
+     172,
+     -41
     ],
     "ease": "power2.inOut"
    }
@@ -196,10 +196,10 @@
    "stage": "stage_map",
    "until": "s04.end",
    "args": {
-    "k": 0.56,
+    "k": 0.98,
     "lonlat": [
-     173,
-     -65
+     174,
+     -40
     ],
     "ease": "none"
    }
@@ -209,7 +209,7 @@
    "do": "geo.highlight_in",
    "stage": "stage_map",
    "args": {
-    "fid": "010",
+    "fid": "554",
     "layer": "hl",
     "dur": 0.5
    }
@@ -231,22 +231,6 @@
    }
   },
   {
-   "at": "s06@museum",
-   "do": "geo.label_in",
-   "stage": "stage_map",
-   "args": {
-    "lid": "we"
-   }
-  },
-  {
-   "at": "s06.end",
-   "do": "geo.label_out",
-   "stage": "stage_map",
-   "args": {
-    "lid": "we"
-   }
-  },
-  {
    "at": "s04+2.6",
    "do": "fact_in",
    "id": "f1",
@@ -258,10 +242,10 @@
    "stage": "stage_map",
    "until": "s05+1.3",
    "args": {
-    "k": 0.45,
+    "k": 0.75,
     "lonlat": [
-     168,
-     -64
+     170,
+     -44
     ],
     "ease": "power2.inOut"
    }
@@ -272,10 +256,10 @@
    "stage": "stage_map",
    "until": "s05.end",
    "args": {
-    "k": 0.5,
+    "k": 0.82,
     "lonlat": [
-     171,
-     -62
+     173,
+     -42
     ],
     "ease": "none"
    }
@@ -319,7 +303,7 @@
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {
-    "fid": "010",
+    "fid": "554",
     "dur": 0.7,
     "layer": "hl"
    }
@@ -338,26 +322,26 @@
    "at": "s06",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s06+1.4",
+   "until": "s06+1.6",
    "args": {
-    "k": 0.42,
+    "k": 0.4,
     "lonlat": [
      172,
-     -68
+     -69
     ],
     "ease": "power2.inOut"
    }
   },
   {
-   "at": "s06+1.4",
+   "at": "s06+1.6",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s06.end",
    "args": {
-    "k": 0.47,
+    "k": 0.46,
     "lonlat": [
      169,
-     -67
+     -71
     ],
     "ease": "none"
    }
@@ -388,11 +372,11 @@
    "id": "st_ship"
   },
   {
-   "at": "s06@ross+0.5",
+   "at": "s06@museum+0.4",
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {
-    "fid": "010",
+    "fid": "554",
     "dur": 0.7,
     "layer": "hl"
    }
@@ -426,7 +410,7 @@
     "k": 0.6,
     "lonlat": [
      175,
-     -71
+     -71.5
     ],
     "ease": "power2.inOut"
    }
@@ -440,7 +424,7 @@
     "k": 0.7,
     "lonlat": [
      172,
-     -70
+     -71.5
     ],
     "ease": "none"
    }
@@ -481,7 +465,7 @@
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {
-    "fid": "010",
+    "fid": "554",
     "dur": 0.7,
     "layer": "hl"
    }
@@ -520,8 +504,8 @@
    "args": {
     "k": 0.35,
     "lonlat": [
-     140,
-     -30
+     150,
+     -35
     ],
     "ease": "power1.inOut"
    }

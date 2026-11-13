@@ -1,4 +1,5 @@
 {
+ "version": 1,
  "files": {},
  "generated": {
   "brand/cursor.svg": {
@@ -180,6 +181,5 @@
    "provider": "Twemoji (Twitter, Inc. and other contributors)",
    "source": "https://github.com/twitter/twemoji"
   }
- },
- "version": 1
+ }
 }
