@@ -67,7 +67,7 @@
   },
   "geo/main.json": {
    "by": "reelkit/geodata.py",
-   "bytes": 74580,
+   "bytes": 25274,
    "credit": "Natural Earth",
    "kind": "data",
    "licence": "PD",
@@ -76,21 +76,21 @@
   },
   "geo/main_basemap.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 345895,
+   "bytes": 395099,
    "credit": "NASA Blue Marble",
    "kind": "image",
    "licence": "PD-USGov",
    "provider": "NASA GIBS",
-   "source": "BlueMarble_ShadedRelief_Bathymetry z6 (90 tiles)"
+   "source": "BlueMarble_ShadedRelief_Bathymetry z7 (130 tiles)"
   },
   "geo/main_basemap_far.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 608442,
+   "bytes": 548684,
    "credit": "NASA Blue Marble",
    "kind": "image",
    "licence": "PD-USGov",
    "provider": "NASA GIBS",
-   "source": "BlueMarble_ShadedRelief_Bathymetry z5 (84 tiles)"
+   "source": "BlueMarble_ShadedRelief_Bathymetry z5 (78 tiles)"
   },
   "mix.wav": {
    "ai_voice": "Kokoro am_michael",
