@@ -49,7 +49,9 @@ ls "$HOME"/.cache/hyperframes/chrome/chrome-headless-shell/*/chrome-headless-she
 echo "== python deps"
 python3 -m pip install -q --upgrade pip >/dev/null 2>&1 || true
 # gates: voice/qa (faster-whisper, librosa), provenance (fontTools), score (numpy/scipy/soundfile), snaps/svgraster (pillow), TTS (kokoro-onnx)
-PYDEPS="numpy scipy soundfile pillow faster-whisper librosa fonttools kokoro-onnx onnxruntime cairosvg opencv-python-headless"
+# PINNED render-path deps (2026-11-11: an unpinned install pulled onnxruntime 1.32.0 the day it shipped and Kokoro died with
+# "Unexpected input data type int32" — a whole batch failed for nothing). Bump deliberately, with a render that proves it.
+PYDEPS="numpy==2.5.4 scipy soundfile pillow faster-whisper librosa fonttools kokoro-onnx==0.6.1 onnxruntime==1.31.1 cairosvg opencv-python-headless"
 retry python3 -m pip install -q $PYDEPS 2>/dev/null || retry python3 -m pip install -q --break-system-packages $PYDEPS
 python3 -c "import numpy, scipy, soundfile, PIL, faster_whisper, librosa, fontTools, kokoro_onnx" || { echo "ci_setup: Python gate dependencies missing" >&2; exit 1; }
 

@@ -11,3 +11,4 @@ Every render failure gets a row here AND a gate in the pipeline (precheck / plac
 | 4 runners failed at `cd` | bare ids passed to `render.yml` | plan job resolves ids / fails fast; `tools/ship.sh` always sends paths |
 | A FAIL got pushed + dispatched | `;` chain in the shell | `tools/ship.sh`: preflight for every episode must be 0 before commit/push/dispatch |
 | 10 m map data 1.6 MB | India's coastline inside the far bbox | existing P5 cap (kept); note: Indian-Ocean-wide views stay 50 m |
+| Kokoro crashed in CI (`int32` vs `float`) on every episode | unpinned `pip install onnxruntime` picked up 1.32.0 on release day | `reelkit/ci_setup.sh` pins numpy / kokoro-onnx / onnxruntime; bumps only with a proving render |
