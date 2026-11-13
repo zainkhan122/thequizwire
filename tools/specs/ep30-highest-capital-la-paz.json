@@ -142,7 +142,7 @@
    }
   },
   "v06": {
-   "text": "A twist: the constitutional capital is Sucre, far lower down. And the airport sits even higher, above the city.",
+   "text": "A twist: the constitutional capital is Sucre, far lower down. The airport sits even higher.",
    "cues": {
     "twist": "twist",
     "sucre": "sucre",
@@ -370,7 +370,7 @@
      "aasana_elalto"
     ],
     "vo": [
-     "a twist: the constitutional capital is sucre, far lower down. and the airport sits even higher, above the city"
+     "a twist: the constitutional capital is sucre, far lower down. the airport sits even higher"
     ],
     "screen": [
      "Sucre",
@@ -661,7 +661,7 @@
   },
   {
    "vo": {
-    "text": "A twist: the constitutional capital is Sucre, far lower down. And the airport sits even higher, above the city.",
+    "text": "A twist: the constitutional capital is Sucre, far lower down. The airport sits even higher.",
     "cues": {
      "twist": "twist",
      "sucre": "sucre",
