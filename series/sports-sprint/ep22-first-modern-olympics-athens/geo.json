@@ -1,0 +1,171 @@
+{
+ "version": 1,
+ "episode": "ep22-first-modern-olympics-athens",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     19,
+     34.5,
+     29,
+     41.9
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "300"
+     ],
+     "cls": "",
+     "note": "Greece",
+     "lift": "color",
+     "color": "#FFD400"
+    },
+    {
+     "kind": "route",
+     "id": "marathon",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "run",
+        "properties": {
+         "name": "Marathon to Athens"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           23.962,
+           38.153
+          ],
+          [
+           23.93,
+           38.11
+          ],
+          [
+           23.88,
+           38.07
+          ],
+          [
+           23.82,
+           38.03
+          ],
+          [
+           23.78,
+           38.0
+          ],
+          [
+           23.741,
+           37.968
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic line of the 1896 marathon course, Marathon to the Panathenaic Stadium"
+    }
+   ],
+   "pins": [
+    {
+     "id": "athens",
+     "lonlat": [
+      23.741,
+      37.968
+     ],
+     "label": "Athens",
+     "side": "right"
+    },
+    {
+     "id": "marathon",
+     "lonlat": [
+      23.962,
+      38.153
+     ],
+     "label": "Marathon",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "at",
+     "lonlat": [
+      21.5,
+      39.2
+     ],
+     "text": "Athens · 6 April 1896",
+     "cls": "tag",
+     "in": "s04@opened+0.3",
+     "out": "s04.end"
+    },
+    {
+     "id": "ps",
+     "lonlat": [
+      24.0,
+      39.3
+     ],
+     "text": "Panathenaic Stadium",
+     "cls": "tag",
+     "in": "s05@athletes",
+     "out": "s05.end"
+    },
+    {
+     "id": "ma",
+     "lonlat": [
+      23.77,
+      38.19
+     ],
+     "text": "Marathon · start, 40 km",
+     "cls": "tag",
+     "in": "s06@marathon+0.2",
+     "out": "s06.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      12,
+      32,
+      34,
+      46
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 50,
+    "lonlat": [
+     22.2,
+     37.2
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

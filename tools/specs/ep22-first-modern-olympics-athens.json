@@ -1,0 +1,984 @@
+{
+ "id": "ep22-first-modern-olympics-athens",
+ "series": "sports-sprint",
+ "number": 22,
+ "seed": 3722,
+ "question": "Where were the FIRST modern Olympics held?",
+ "keyword": "FIRST",
+ "difficulty": "EASY",
+ "options": [
+  {
+   "text": "Paris",
+   "flag": "fr",
+   "cue": "paris"
+  },
+  {
+   "text": "Athens",
+   "flag": "gr",
+   "cue": "athens"
+  },
+  {
+   "text": "London",
+   "flag": "gb",
+   "cue": "london"
+  }
+ ],
+ "correct": 1,
+ "answer_sub": "6 April 1896",
+ "outro_headline": "CHALLENGE A FRIEND",
+ "cover_emoji": "🥇",
+ "cover_emoji_why": "a gold medal says 'Olympics' without pointing at a city; all three options have hosted Games",
+ "post": {
+  "premise": "A marble stadium, 14 nations, and not one woman competing",
+  "bait": "Paris, Athens or London — which did you pick? 👇",
+  "keywords": [
+   "first modern olympics",
+   "where were the first modern olympics held",
+   "olympic games history",
+   "1896 olympics",
+   "panathenaic stadium",
+   "first olympic marathon",
+   "sports quiz",
+   "olympics quiz"
+  ],
+  "tags": [
+   "SportsQuiz",
+   "Olympics"
+  ],
+  "sources_line": "IOC olympics.com; Britannica; Panathenaic Stadium",
+  "copy": {
+   "spoilers": [
+    "athens",
+    "greece",
+    "greek",
+    "panathenaic",
+    "spyridon",
+    "louis",
+    "connolly",
+    "241",
+    "1896"
+   ],
+   "youtube": {
+    "title": "Where were the first modern Olympics held? A few hundred men and not one woman 🥇",
+    "description": "Paris, London or the third one? The first modern Games opened in a stadium rebuilt in marble for the occasion, with a few hundred athletes from 14 nations and no women at all. The marathon was run for the very first time, and a water carrier won it.\nGuess before the map lights up, then follow the marathon route into the stadium and meet the first champion.\nWhich did you pick?",
+    "tags": [
+     "#olympics",
+     "#sportsquiz",
+     "#sportshistory",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Where were the FIRST modern Olympics held? 🥇\nParis, Athens or London? A marble stadium, 14 nations, no women, and a marathon run for the very first time — won by a water carrier.\nWhich did you pick?",
+    "tags": [
+     "#olympics",
+     "#sportsquiz",
+     "#sportshistory",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Where were the first modern Olympics held — Paris, Athens or London?\nThe first modern Games opened in a stadium rebuilt in marble for the occasion, with a few hundred athletes from 14 nations and not a single woman. The marathon was run for the very first time. Lock in your answer before the stadium appears.",
+    "tags": [
+     "#olympics",
+     "#sportshistory"
+    ]
+   },
+   "twitter": {
+    "text": "Where were the FIRST modern Olympics held?\nParis, Athens or London? 14 nations, a marble stadium, no women — and a marathon won by a water carrier.",
+    "tags": [
+     "#Olympics",
+     "#SportsQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Where were the first modern Olympics held — Paris, Athens or London? The first modern Games opened in a stadium rebuilt in marble for the occasion, with a few hundred athletes from 14 nations and not a single woman; the marathon was run for the very first time and a water carrier won it.",
+    "tags": [
+     "#sportshistory"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "straight",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "pin",
+   "counter",
+   "route",
+   "travel",
+   "erase",
+   "label"
+  ],
+  "cast": "flagball:gr + emoji-set:olympic",
+  "music": "bed:warm",
+  "outro": "CHALLENGE A FRIEND"
+ },
+ "intent": "The Games most people can name but cannot place in time: a marble stadium on a moving map, the 241-athlete counter against an erased 'women competed', then the first marathon drawn from Marathon into the stadium with a runner riding the line.",
+ "voice": {
+  "v01_cues": {
+   "where": "where",
+   "first": "first"
+  },
+  "v04": {
+   "text": "Athens. On 6 April 1896 the first modern Games opened in a stadium rebuilt in marble.",
+   "cues": {
+    "answer": "athens",
+    "opened": "opened",
+    "marble": "marble"
+   }
+  },
+  "v05": {
+   "text": "Just 241 athletes from 14 nations, all of them men. Women first competed in Paris, 4 years later.",
+   "cues": {
+    "athletes": "athletes",
+    "nations": "nations",
+    "women": "women",
+    "paris": "paris"
+   }
+  },
+  "v06": {
+   "text": "The marathon ran 40 kilometres from Marathon into the stadium. A Greek water carrier won it.",
+   "cues": {
+    "marathon": "marathon",
+    "stadium": "stadium",
+    "carrier": "carrier"
+   }
+  },
+  "v07": {
+   "text": "The first champion was an American, James Connolly, in the triple jump. He had left Harvard to come.",
+   "cues": {
+    "champion": "champion",
+    "jump": "jump",
+    "harvard": "harvard"
+   }
+  },
+  "v08": {
+   "text": "Marble, flags, a water carrier. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "6 APRIL 1896",
+   "text": "the first modern Games open"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "gr",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "fr",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "First modern Olympic Games: Athens, 6–15 April 1896, opened in the Panathenaic Stadium (ancient stadium rebuilt in white marble, paid for by Georgios Averoff); 241 athletes from 14 nations, 43 events, all male; first women at Paris 1900 (22 women). First champion James Connolly (USA), triple jump, 6 April 1896, who had left Harvard to compete. Marathon (first ever) ≈ 40 km from Marathon to the Panathenaic Stadium, 10 April 1896, won by Spyridon Louis, a Greek water carrier, in 2:58:50.",
+  "myths": [
+   {
+    "myth": "The modern Olympics began in Paris, home of their founder Pierre de Coubertin.",
+    "reality": "Coubertin founded the IOC in Paris in 1894, but the first Games were held in Athens in April 1896; Paris hosted the second Games in 1900.",
+    "sources": [
+     "ioc_1896",
+     "britannica_1896"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Olympic history clips are either long documentaries or trivia lists; nobody counts the 241 athletes, erases 'any women' and runs the first marathon route into the marble stadium on a moving map as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=first+modern+olympics+1896",
+     "title": "Search: first modern olympics 1896",
+     "angle": "documentary explainers",
+     "misses": "no quiz, no map"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=panathenaic+stadium",
+     "title": "Search: panathenaic stadium",
+     "angle": "travel vlogs",
+     "misses": "no history quiz"
+    },
+    {
+     "url": "https://www.youtube.com/@olympics/shorts",
+     "title": "Olympics",
+     "angle": "official highlights",
+     "misses": "no history quiz"
+    }
+   ]
+  },
+  "sources": {
+   "ioc_1896": {
+    "type": "primary",
+    "publisher": "International Olympic Committee (olympics.com)",
+    "title": "Athens 1896 Olympic Games",
+    "url": "https://olympics.com/en/olympic-games/athens-1896",
+    "date": "2026-11-11",
+    "notes": "6–15 April 1896; 241 athletes (all men) from 14 NOCs; 43 events; Panathenaic Stadium"
+   },
+   "ioc_1900": {
+    "type": "primary",
+    "publisher": "International Olympic Committee (olympics.com)",
+    "title": "Paris 1900 Olympic Games",
+    "url": "https://olympics.com/en/olympic-games/paris-1900",
+    "date": "2026-11-11",
+    "notes": "first Games with women: 22 women among 997 athletes"
+   },
+   "ioc_connolly": {
+    "type": "primary",
+    "publisher": "International Olympic Committee (olympics.com)",
+    "title": "James Connolly — first modern Olympic champion",
+    "url": "https://olympics.com/en/athletes/james-connolly",
+    "date": "2026-11-11",
+    "notes": "won the triple jump on 6 April 1896, the first champion of the modern Games; had left Harvard to travel to Athens"
+   },
+   "panathenaic": {
+    "type": "primary",
+    "publisher": "Panathenaic Stadium (Hellenic Olympic Committee)",
+    "title": "History of the Panathenaic Stadium",
+    "url": "https://www.panathenaicstadium.gr/History",
+    "date": "2026-11-11",
+    "notes": "ancient stadium rebuilt in Pentelic marble for 1896 with the donation of Georgios Averoff; hosted the first modern Olympic Games"
+   },
+   "britannica_1896": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Athens 1896 Olympic Games",
+    "url": "https://www.britannica.com/event/Athens-1896-Olympic-Games",
+    "date": "2026-11-11",
+    "notes": "first modern Games, 6–15 April 1896; about 280 athletes from 13 nations by older counts, IOC figure 241 from 14; no women; marathon won by Spyridon Louis"
+   },
+   "britannica_louis": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Spyridon Louis — Greek athlete",
+    "url": "https://www.britannica.com/biography/Spyridon-Louis",
+    "date": "2026-11-11",
+    "notes": "Greek water carrier who won the first Olympic marathon, 10 April 1896, over about 40 km from Marathon to Athens in 2 hr 58 min 50 sec"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The first modern Olympic Games were held in Athens, opening on 6 April 1896 in the Panathenaic Stadium, rebuilt in marble for the occasion.",
+    "sources": [
+     "ioc_1896",
+     "panathenaic",
+     "britannica_1896"
+    ],
+    "vo": [
+     "where were the first modern olympics held",
+     "paris, athens, or london",
+     "athens. on 6 april 1896 the first modern games opened in a stadium rebuilt in marble",
+     "marble, flags, a water carrier. follow us"
+    ],
+    "screen": [
+     "Athens",
+     "Paris",
+     "London",
+     "6 APRIL 1896",
+     "the first modern Games open",
+     "Athens · 6 April 1896",
+     "Panathenaic Stadium"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "241 athletes from 14 nations competed, all men; women first competed at Paris 1900.",
+    "sources": [
+     "ioc_1896",
+     "ioc_1900",
+     "britannica_1896"
+    ],
+    "vo": [
+     "just 241 athletes from 14 nations, all of them men. women first competed in paris, 4 years later"
+    ],
+    "screen": [
+     "241",
+     "athletes · 14 nations",
+     "ANY WOMEN"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "The first marathon ran about 40 km from Marathon to the Panathenaic Stadium and was won by Spyridon Louis, a Greek water carrier.",
+    "sources": [
+     "britannica_louis",
+     "ioc_1896",
+     "britannica_1896"
+    ],
+    "vo": [
+     "the marathon ran 40 kilometres from marathon into the stadium. a greek water carrier won it"
+    ],
+    "screen": [
+     "Marathon",
+     "Marathon · start, 40 km",
+     "SPYRIDON LOUIS",
+     "water carrier · won it"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "James Connolly of the United States won the triple jump on 6 April 1896, becoming the first modern Olympic champion; he had left Harvard to compete.",
+    "sources": [
+     "ioc_connolly",
+     "britannica_1896"
+    ],
+    "vo": [
+     "the first champion was an american, james connolly, in the triple jump. he had left harvard to come"
+    ],
+    "screen": [
+     "CONNOLLY",
+     "triple jump · first champion"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   19,
+   34.5,
+   29,
+   41.9
+  ],
+  "far_bbox": [
+   12,
+   32,
+   34,
+   46
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "300"
+  ],
+  "highlight_note": "Greece",
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "marathon",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "run",
+       "properties": {
+        "name": "Marathon to Athens"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          23.962,
+          38.153
+         ],
+         [
+          23.93,
+          38.11
+         ],
+         [
+          23.88,
+          38.07
+         ],
+         [
+          23.82,
+          38.03
+         ],
+         [
+          23.78,
+          38.0
+         ],
+         [
+          23.741,
+          37.968
+         ]
+        ]
+       }
+      }
+     ]
+    },
+    "note": "schematic line of the 1896 marathon course, Marathon to the Panathenaic Stadium"
+   }
+  ],
+  "labels": [
+   {
+    "id": "at",
+    "lonlat": [
+     21.5,
+     39.2
+    ],
+    "text": "Athens · 6 April 1896",
+    "cls": "tag",
+    "in": "s04@opened+0.3",
+    "out": "s04.end"
+   },
+   {
+    "id": "ps",
+    "lonlat": [
+     24.0,
+     39.3
+    ],
+    "text": "Panathenaic Stadium",
+    "cls": "tag",
+    "in": "s05@athletes",
+    "out": "s05.end"
+   },
+   {
+    "id": "ma",
+    "lonlat": [
+     23.77,
+     38.19
+    ],
+    "text": "Marathon · start, 40 km",
+    "cls": "tag",
+    "in": "s06@marathon+0.2",
+    "out": "s06.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "athens",
+    "lonlat": [
+     23.741,
+     37.968
+    ],
+    "label": "Athens",
+    "side": "right"
+   },
+   {
+    "id": "marathon",
+    "lonlat": [
+     23.962,
+     38.153
+    ],
+    "label": "Marathon",
+    "side": "right"
+   }
+  ],
+  "scalebar": {
+   "km": 50,
+   "lonlat": [
+    22.2,
+    37.2
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s04@opened",
+    "pid": "athens"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.45,
+    [
+     21,
+     39
+    ]
+   ],
+   "s01": [
+    0.45,
+    [
+     21.5,
+     38.8
+    ]
+   ],
+   "s04": [
+    1.2,
+    [
+     23.5,
+     38.2
+    ]
+   ],
+   "s04b": [
+    1.28,
+    [
+     23.6,
+     38.1
+    ]
+   ],
+   "s05": [
+    1.3,
+    [
+     23.4,
+     38.3
+    ]
+   ],
+   "s05b": [
+    1.36,
+    [
+     23.6,
+     38.2
+    ]
+   ],
+   "s06": [
+    5.0,
+    [
+     23.86,
+     38.07
+    ]
+   ],
+   "s06b": [
+    5.4,
+    [
+     23.84,
+     38.05
+    ]
+   ],
+   "s07": [
+    0.9,
+    [
+     23.2,
+     38.4
+    ]
+   ],
+   "s07b": [
+    0.95,
+    [
+     23.4,
+     38.3
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Just 241 athletes from 14 nations, all of them men. Women first competed in Paris, 4 years later.",
+    "cues": {
+     "athletes": "athletes",
+     "nations": "nations",
+     "women": "women",
+     "paris": "paris"
+    }
+   },
+   "direction": "hold on Attica; the athlete counter runs 0 → 241 on 'athletes' with the stadium tag; a flag sticker on 'nations'; the ANY WOMEN plate is struck through on 'women'; the French flag-ball thinks on 'Paris' and Greece pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    1.3,
+    [
+     23.4,
+     38.3
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    1.36,
+    [
+     23.6,
+     38.2
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "ath",
+     "type": "counter",
+     "start": 0,
+     "end": 241,
+     "y": 330,
+     "label": "athletes · 14 nations",
+     "fmt": "int",
+     "size": 170
+    },
+    {
+     "id": "nowomen",
+     "type": "erase",
+     "text": "ANY WOMEN",
+     "y": 900,
+     "h": 240
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@athletes-0.2",
+     "do": "chart.counter_run",
+     "id": "ath",
+     "until": "@@nations"
+    },
+    {
+     "at": "@@nations",
+     "do": "sticker_in",
+     "id": "st_flags"
+    },
+    {
+     "at": "@@nations+0.4",
+     "do": "sticker_pulse",
+     "id": "st_flags"
+    },
+    {
+     "at": "@@women",
+     "do": "sticker_out",
+     "id": "st_flags"
+    },
+    {
+     "at": "@@women-0.1",
+     "do": "chart.erase_run",
+     "id": "nowomen",
+     "until": "@@women+1.1",
+     "args": {
+      "direction": "left"
+     }
+    },
+    {
+     "at": "@@paris",
+     "do": "character_in",
+     "id": "fr_think"
+    },
+    {
+     "at": "@@paris+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "300",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "ath"
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "nowomen"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "fr_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The marathon ran 40 kilometres from Marathon into the stadium. A Greek water carrier won it.",
+    "cues": {
+     "marathon": "marathon",
+     "stadium": "stadium",
+     "carrier": "carrier"
+    }
+   },
+   "direction": "dive to ×5 over the course; the Marathon pin and tag on 'marathon'; a runner rides the drawn line into the stadium until 'stadium'; the SPYRIDON LOUIS card and a water-drop sticker on 'carrier' as Greece pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "card": {
+    "kicker": "SPYRIDON LOUIS",
+    "text": "water carrier · won it"
+   },
+   "card_at": null,
+   "cam": [
+    5.0,
+    [
+     23.86,
+     38.07
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    5.4,
+    [
+     23.84,
+     38.05
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@marathon",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "marathon"
+     }
+    },
+    {
+     "at": "@@marathon+0.2",
+     "do": "sticker_in",
+     "id": "st_runner"
+    },
+    {
+     "at": "@@marathon+0.2",
+     "do": "geo.route_draw",
+     "stage": "stage_map",
+     "until": "@@stadium",
+     "args": {
+      "rid": "run",
+      "layer": "marathon"
+     }
+    },
+    {
+     "at": "@@marathon+0.2",
+     "do": "geo.travel",
+     "stage": "stage_map",
+     "until": "@@stadium",
+     "args": {
+      "rid": "run",
+      "layer": "marathon",
+      "sid": "st_runner",
+      "offset": [
+       0,
+       -50
+      ]
+     }
+    },
+    {
+     "at": "@@stadium",
+     "do": "sticker_out",
+     "id": "st_runner"
+    },
+    {
+     "at": "@@carrier",
+     "do": "fact_in",
+     "id": "f3",
+     "until": "@.end"
+    },
+    {
+     "at": "@@carrier+0.1",
+     "do": "sticker_in",
+     "id": "st_drop"
+    },
+    {
+     "at": "@@carrier+0.5",
+     "do": "sticker_pulse",
+     "id": "st_drop"
+    },
+    {
+     "at": "@@carrier+0.4",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "300",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_drop"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "marathon"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The first champion was an American, James Connolly, in the triple jump. He had left Harvard to come.",
+    "cues": {
+     "champion": "champion",
+     "jump": "jump",
+     "harvard": "harvard"
+    }
+   },
+   "direction": "ease back over Greece; the CONNOLLY card on 'champion'; a jumping sticker on 'jump'; a graduation cap on 'Harvard' as the Greek flag-ball grins and Greece pulses; the Athens pin leaves at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.4,
+   "card": {
+    "kicker": "CONNOLLY",
+    "text": "triple jump · first champion"
+   },
+   "card_at": null,
+   "cam": [
+    0.9,
+    [
+     23.2,
+     38.4
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.95,
+    [
+     23.4,
+     38.3
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@champion",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@champion+0.2",
+     "do": "sticker_in",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@champion+0.6",
+     "do": "sticker_pulse",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@jump",
+     "do": "sticker_out",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@jump",
+     "do": "sticker_in",
+     "id": "st_jump"
+    },
+    {
+     "at": "@@jump+0.4",
+     "do": "sticker_pulse",
+     "id": "st_jump"
+    },
+    {
+     "at": "@@harvard",
+     "do": "sticker_out",
+     "id": "st_jump"
+    },
+    {
+     "at": "@@harvard",
+     "do": "sticker_in",
+     "id": "st_cap"
+    },
+    {
+     "at": "@@harvard+0.4",
+     "do": "sticker_pulse",
+     "id": "st_cap"
+    },
+    {
+     "at": "@@harvard+0.2",
+     "do": "character_in",
+     "id": "grin"
+    },
+    {
+     "at": "@@harvard+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "300",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_cap"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "grin"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "athens"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_flags",
+   "type": "sticker",
+   "emoji": "1f3f3",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_runner",
+   "type": "sticker",
+   "emoji": "1f3c3",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "st_drop",
+   "type": "sticker",
+   "emoji": "1f4a7",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_medal",
+   "type": "sticker",
+   "emoji": "1f947",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_jump",
+   "type": "sticker",
+   "emoji": "1f93e",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_cap",
+   "type": "sticker",
+   "emoji": "1f393",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "fr_think",
+   "type": "character",
+   "flag": "fr",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "grin",
+   "type": "character",
+   "flag": "gr",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

@@ -1,0 +1,716 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "6 APRIL 1896",
+   "text": "the first modern Games open"
+  },
+  {
+   "id": "ath",
+   "type": "counter",
+   "start": 0,
+   "end": 241,
+   "y": 330,
+   "label": "athletes · 14 nations",
+   "fmt": "int",
+   "size": 170
+  },
+  {
+   "id": "nowomen",
+   "type": "erase",
+   "text": "ANY WOMEN",
+   "y": 900,
+   "h": 240
+  },
+  {
+   "id": "f3",
+   "type": "fact",
+   "kicker": "SPYRIDON LOUIS",
+   "text": "water carrier · won it"
+  },
+  {
+   "id": "f4",
+   "type": "fact",
+   "kicker": "CONNOLLY",
+   "text": "triple jump · first champion"
+  },
+  {
+   "id": "st_flags",
+   "type": "sticker",
+   "emoji": "1f3f3",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_runner",
+   "type": "sticker",
+   "emoji": "1f3c3",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "st_drop",
+   "type": "sticker",
+   "emoji": "1f4a7",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_medal",
+   "type": "sticker",
+   "emoji": "1f947",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_jump",
+   "type": "sticker",
+   "emoji": "1f93e",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_cap",
+   "type": "sticker",
+   "emoji": "1f393",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "fr_think",
+   "type": "character",
+   "flag": "fr",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "grin",
+   "type": "character",
+   "flag": "gr",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  },
+  {
+   "id": "cha",
+   "type": "character",
+   "flag": "gr",
+   "face": "happy",
+   "x": 230,
+   "y": 1060,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "chb",
+   "type": "character",
+   "flag": "fr",
+   "face": "think",
+   "x": 850,
+   "y": 1060,
+   "size": 200,
+   "rot": 8
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.45,
+    "lonlat": [
+     21,
+     39
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.45,
+    "lonlat": [
+     21.5,
+     38.8
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 1.2,
+    "lonlat": [
+     23.5,
+     38.2
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 1.28,
+    "lonlat": [
+     23.6,
+     38.1
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "300",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s04@opened+0.3",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "at"
+   }
+  },
+  {
+   "at": "s04.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "at"
+   }
+  },
+  {
+   "at": "s05@athletes",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ps"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ps"
+   }
+  },
+  {
+   "at": "s06@marathon+0.2",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ma"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "ma"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 1.3,
+    "lonlat": [
+     23.4,
+     38.3
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 1.36,
+    "lonlat": [
+     23.6,
+     38.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@athletes-0.2",
+   "do": "chart.counter_run",
+   "id": "ath",
+   "until": "s05@nations"
+  },
+  {
+   "at": "s05@nations",
+   "do": "sticker_in",
+   "id": "st_flags"
+  },
+  {
+   "at": "s05@nations+0.4",
+   "do": "sticker_pulse",
+   "id": "st_flags"
+  },
+  {
+   "at": "s05@women",
+   "do": "sticker_out",
+   "id": "st_flags"
+  },
+  {
+   "at": "s05@women-0.1",
+   "do": "chart.erase_run",
+   "id": "nowomen",
+   "until": "s05@women+1.1",
+   "args": {
+    "direction": "left"
+   }
+  },
+  {
+   "at": "s05@paris",
+   "do": "character_in",
+   "id": "fr_think"
+  },
+  {
+   "at": "s05@paris+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "300",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "ath"
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "nowomen"
+  },
+  {
+   "at": "s05.end",
+   "do": "character_out",
+   "id": "fr_think"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 5.0,
+    "lonlat": [
+     23.86,
+     38.07
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 5.4,
+    "lonlat": [
+     23.84,
+     38.05
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@marathon",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "marathon"
+   }
+  },
+  {
+   "at": "s06@marathon+0.2",
+   "do": "sticker_in",
+   "id": "st_runner"
+  },
+  {
+   "at": "s06@marathon+0.2",
+   "do": "geo.route_draw",
+   "stage": "stage_map",
+   "until": "s06@stadium",
+   "args": {
+    "rid": "run",
+    "layer": "marathon"
+   }
+  },
+  {
+   "at": "s06@marathon+0.2",
+   "do": "geo.travel",
+   "stage": "stage_map",
+   "until": "s06@stadium",
+   "args": {
+    "rid": "run",
+    "layer": "marathon",
+    "sid": "st_runner",
+    "offset": [
+     0,
+     -50
+    ]
+   }
+  },
+  {
+   "at": "s06@stadium",
+   "do": "sticker_out",
+   "id": "st_runner"
+  },
+  {
+   "at": "s06@carrier",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s06.end"
+  },
+  {
+   "at": "s06@carrier+0.1",
+   "do": "sticker_in",
+   "id": "st_drop"
+  },
+  {
+   "at": "s06@carrier+0.5",
+   "do": "sticker_pulse",
+   "id": "st_drop"
+  },
+  {
+   "at": "s06@carrier+0.4",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "300",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_drop"
+  },
+  {
+   "at": "s06.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "marathon"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.5",
+   "args": {
+    "k": 0.9,
+    "lonlat": [
+     23.2,
+     38.4
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 0.95,
+    "lonlat": [
+     23.4,
+     38.3
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@champion",
+   "do": "fact_in",
+   "id": "f4",
+   "until": "s07.end"
+  },
+  {
+   "at": "s07@champion+0.2",
+   "do": "sticker_in",
+   "id": "st_medal"
+  },
+  {
+   "at": "s07@champion+0.6",
+   "do": "sticker_pulse",
+   "id": "st_medal"
+  },
+  {
+   "at": "s07@jump",
+   "do": "sticker_out",
+   "id": "st_medal"
+  },
+  {
+   "at": "s07@jump",
+   "do": "sticker_in",
+   "id": "st_jump"
+  },
+  {
+   "at": "s07@jump+0.4",
+   "do": "sticker_pulse",
+   "id": "st_jump"
+  },
+  {
+   "at": "s07@harvard",
+   "do": "sticker_out",
+   "id": "st_jump"
+  },
+  {
+   "at": "s07@harvard",
+   "do": "sticker_in",
+   "id": "st_cap"
+  },
+  {
+   "at": "s07@harvard+0.4",
+   "do": "sticker_pulse",
+   "id": "st_cap"
+  },
+  {
+   "at": "s07@harvard+0.2",
+   "do": "character_in",
+   "id": "grin"
+  },
+  {
+   "at": "s07@harvard+0.5",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "300",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_cap"
+  },
+  {
+   "at": "s07.end",
+   "do": "character_out",
+   "id": "grin"
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "athens"
+   }
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.45,
+    "lonlat": [
+     21,
+     39
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04+1.7",
+   "do": "geo.scalebar_in",
+   "stage": "stage_map"
+  },
+  {
+   "at": "s04@opened",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "athens"
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.6",
+   "do": "character_in",
+   "id": "cha"
+  },
+  {
+   "at": "s04+1.9",
+   "do": "character_in",
+   "id": "chb"
+  },
+  {
+   "at": "s05+1.0",
+   "do": "character_out",
+   "id": "cha"
+  },
+  {
+   "at": "s05+0.8",
+   "do": "character_out",
+   "id": "chb"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}
