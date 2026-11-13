@@ -1,0 +1,104 @@
+{
+ "version": 1,
+ "episode": "ep19-biggest-eyes-colossal-squid",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     150,
+     -80,
+     190,
+     -60
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "010"
+     ],
+     "cls": "",
+     "note": "Antarctica — the Ross Sea is its sea; the squid is Antarctic",
+     "lift": "color",
+     "color": "#FFD400"
+    }
+   ],
+   "pins": [
+    {
+     "id": "ross",
+     "lonlat": [
+      178,
+      -74
+     ],
+     "label": "Ross Sea",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "rs",
+     "lonlat": [
+      162,
+      -70.5
+     ],
+     "text": "Ross Sea · caught 2007",
+     "cls": "tag",
+     "in": "s06@ross+0.2",
+     "out": "s06.end"
+    },
+    {
+     "id": "we",
+     "lonlat": [
+      166,
+      -46
+     ],
+     "text": "Wellington · Te Papa museum",
+     "cls": "tag",
+     "in": "s06@museum",
+     "out": "s06.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      100,
+      -85,
+      230,
+      -30
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 500,
+    "lonlat": [
+     152,
+     -62
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

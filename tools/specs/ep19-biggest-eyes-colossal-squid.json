@@ -1,0 +1,854 @@
+{
+ "id": "ep19-biggest-eyes-colossal-squid",
+ "series": "wild-files",
+ "number": 19,
+ "seed": 3819,
+ "question": "Which creature has the BIGGEST eyes?",
+ "keyword": "BIGGEST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Blue whale",
+   "emoji": "1f40b",
+   "cue": "blue"
+  },
+  {
+   "text": "Ostrich",
+   "emoji": "1f426",
+   "cue": "ostrich"
+  },
+  {
+   "text": "Colossal squid",
+   "emoji": "1f991",
+   "cue": "colossal"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "eyes about 27 cm across",
+ "outro_headline": "CHALLENGE A FRIEND",
+ "cover_emoji": "👁️",
+ "cover_emoji_why": "an eye states the subject and belongs to no option; it says nothing about sea, land or size",
+ "post": {
+  "premise": "The biggest eyes on Earth belong to a creature few have seen",
+  "bait": "Blue whale, ostrich or colossal squid — which did you pick? 👇",
+  "keywords": [
+   "which animal has the biggest eyes",
+   "largest eyes in the animal kingdom",
+   "colossal squid eyes",
+   "ostrich eye bigger than brain",
+   "blue whale eye size",
+   "animal quiz",
+   "deep sea facts",
+   "wildlife facts"
+  ],
+  "tags": [
+   "AnimalQuiz",
+   "DeepSea"
+  ],
+  "sources_line": "Te Papa (Museum of New Zealand); Current Biology 2012 (Nilsson et al.); Smithsonian",
+  "copy": {
+   "spoilers": [
+    "colossal squid",
+    "squid",
+    "27 cm",
+    "27cm",
+    "ross sea",
+    "antarctic",
+    "antarctica",
+    "te papa",
+    "new zealand",
+    "sperm whale"
+   ],
+   "youtube": {
+    "title": "The animal with the biggest eyes? Bigger than a football 👁️",
+    "description": "The biggest animal, the biggest bird, or the third one? The largest eyes on Earth are as wide as a football, and they belong to a creature that has only been seen alive a handful of times — because it lives a kilometre down in the coldest sea on the planet, hiding from one very large hunter.\nWhich did you pick?",
+    "tags": [
+     "#animals",
+     "#wildlife",
+     "#animalquiz",
+     "#deepsea",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which creature has the BIGGEST eyes? 👁️\nThe biggest animal, the biggest bird, or the other one? The largest eyes on Earth are as wide as a football and belong to something seen alive only a handful of times, a kilometre down in the coldest sea on the planet.\nWhich did you pick?",
+    "tags": [
+     "#animals",
+     "#wildlife",
+     "#animalquiz",
+     "#deepsea",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which creature has the biggest eyes — the blue whale, the ostrich or the colossal squid?\nThe largest eyes on Earth are as wide as a football and belong to an animal seen alive only a handful of times, a kilometre down in the coldest sea on the planet, hiding from one very large hunter. Pick your animal before the eyes open.",
+    "tags": [
+     "#animals",
+     "#deepsea"
+    ]
+   },
+   "twitter": {
+    "text": "Which creature has the BIGGEST eyes?\nBlue whale, ostrich or colossal squid? The largest eyes on Earth are as wide as a football — and almost nobody has seen them open.",
+    "tags": [
+     "#DeepSea",
+     "#AnimalQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which creature has the biggest eyes — the blue whale, the ostrich or the colossal squid? The largest eyes on Earth are as wide as a football and belong to an animal seen alive only a handful of times, a kilometre down in the coldest sea on the planet.",
+    "tags": [
+     "#oceanlife"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-animal",
+  "hook": "straight",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "compare",
+   "pin",
+   "counter",
+   "label"
+  ],
+  "cast": "emoji-set:deep-sea + flagball:none",
+  "music": "bed:pulse",
+  "outro": "CHALLENGE A FRIEND"
+ },
+ "intent": "A size quiz that ends in the dark: three eye silhouettes side by side (a whale's is smaller than a bird's), a pin on the Ross Sea where the biggest one was hauled up, a depth counter dropping a kilometre, and the reason the eyes are so big — spotting a sperm whale coming.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "biggest": "biggest"
+  },
+  "v04": {
+   "text": "The colossal squid. Its eyes are about 27 centimetres across, the largest of any animal.",
+   "cues": {
+    "answer": "colossal",
+    "eyes": "eyes",
+    "largest": "largest"
+   }
+  },
+  "v05": {
+   "text": "An ostrich eye is 5 centimetres, bigger than its brain. A blue whale manages only 15.",
+   "cues": {
+    "ostrich": "ostrich",
+    "brain": "brain",
+    "whale": "whale",
+    "15": "15"
+   }
+  },
+  "v06": {
+   "text": "The record animal came up on a fishing line in the Ross Sea in 2007. It sits in a Wellington museum.",
+   "cues": {
+    "record": "record",
+    "ross": "ross",
+    "museum": "museum"
+   }
+  },
+  "v07": {
+   "text": "Why so big? A kilometre down, in the dark, they spot a sperm whale closing in.",
+   "cues": {
+    "big": "big",
+    "dark": "dark",
+    "sperm": "sperm",
+    "closing": "closing"
+   }
+  },
+  "v08": {
+   "text": "Eyes the size of a football. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "27 CM",
+   "text": "the largest eye of any animal"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": null,
+  "b": null
+ },
+ "research": {
+  "topic": "Largest eyes in the animal kingdom: the colossal squid (Mesonychoteuthis hamiltoni), about 27 cm in diameter (Te Papa measured 27 cm on the 2007 Ross Sea specimen; Nilsson et al. 2012 Current Biology analysed giant/colossal squid eyes of 27 cm). Ostrich eye about 5 cm, larger than its brain (largest of any land animal). Blue whale eye about 15 cm. The 495 kg specimen was caught by the fishing vessel San Aspiring in the Ross Sea in February 2007 and is displayed at Te Papa, Wellington. Nilsson et al. argue such huge eyes evolved to detect the bioluminescent glow stirred up by approaching sperm whales at depths of 500–1,000+ m.",
+  "myths": [
+   {
+    "myth": "The biggest animal, the blue whale, must have the biggest eyes.",
+    "reality": "A blue whale's eye is about 15 cm; a colossal squid's is about 27 cm — the whale's is smaller than it looks for its size because big eyes give diminishing returns in water.",
+    "sources": [
+     "nilsson_2012",
+     "tepapa_eyes"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Biggest-eyes clips are stock-footage lists; nobody puts the three eyes side by side to scale, pins the Ross Sea catch, drops the depth counter and explains the sperm-whale reason as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=animal+with+the+biggest+eyes",
+     "title": "Search: animal with the biggest eyes",
+     "angle": "top-10 lists",
+     "misses": "no scale, no map"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=colossal+squid+eye",
+     "title": "Search: colossal squid eye",
+     "angle": "museum clips",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=ostrich+eye+bigger+than+brain",
+     "title": "Search: ostrich eye bigger than brain",
+     "angle": "single fact",
+     "misses": "no comparison"
+    }
+   ]
+  },
+  "sources": {
+   "tepapa_eyes": {
+    "type": "primary",
+    "publisher": "Te Papa — Museum of New Zealand",
+    "title": "The colossal squid's eyes",
+    "url": "https://www.tepapa.govt.nz/discover-collections/read-watch-play/science/colossal-squid/anatomy-colossal-squid/eyes",
+    "date": "2026-11-11",
+    "notes": "eye about 27 cm in diameter, the largest of any animal; the 2007 specimen is on display at Te Papa"
+   },
+   "tepapa_capture": {
+    "type": "primary",
+    "publisher": "Te Papa — Museum of New Zealand",
+    "title": "Capture of the colossal squid",
+    "url": "https://www.tepapa.govt.nz/discover-collections/read-watch-play/science/colossal-squid/capture-colossal-squid",
+    "date": "2026-11-11",
+    "notes": "caught by the fishing vessel San Aspiring in the Ross Sea, February 2007, on a toothfish longline; 495 kg"
+   },
+   "nilsson_2012": {
+    "type": "primary",
+    "publisher": "Current Biology",
+    "title": "Nilsson, Warrant, Johnsen, Hanlon & Shashar (2012) — A unique advantage for giant eyes in giant squid",
+    "url": "https://www.cell.com/current-biology/fulltext/S0960-9822(12)00147-7",
+    "date": "2026-11-11",
+    "notes": "giant and colossal squid eyes about 27 cm; such eyes are uniquely suited to detect the bioluminescence triggered by approaching sperm whales at depth"
+   },
+   "si_ostrich": {
+    "type": "reference",
+    "publisher": "Smithsonian's National Zoo",
+    "title": "Ostrich",
+    "url": "https://nationalzoo.si.edu/animals/ostrich",
+    "date": "2026-11-11",
+    "notes": "eyes about 2 inches (5 cm) across, the largest of any land animal, bigger than its brain"
+   },
+   "wiki_eye": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Eye — largest eyes",
+    "url": "https://en.wikipedia.org/wiki/Eye#Size",
+    "date": "2026-11-11",
+    "notes": "colossal squid eye up to 27 cm; blue whale eye about 15 cm; ostrich about 5 cm"
+   },
+   "brit_squid": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Colossal squid",
+    "url": "https://www.britannica.com/animal/colossal-squid",
+    "date": "2026-11-11",
+    "notes": "largest invertebrate; eyes among the largest in the animal kingdom; lives in Antarctic waters to depths of about 2,000 m; preyed on by sperm whales"
+   },
+   "noaa_sperm": {
+    "type": "primary",
+    "publisher": "NOAA Fisheries",
+    "title": "Sperm whale",
+    "url": "https://www.fisheries.noaa.gov/species/sperm-whale",
+    "date": "2026-11-11",
+    "notes": "sperm whales dive beyond 1,000 m to hunt large squid"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The colossal squid has the largest eyes of any animal, about 27 cm in diameter.",
+    "sources": [
+     "tepapa_eyes",
+     "nilsson_2012",
+     "brit_squid"
+    ],
+    "vo": [
+     "which creature has the biggest eyes",
+     "blue whale, ostrich, or colossal squid",
+     "the colossal squid. its eyes are about 27 centimetres across, the largest of any animal",
+     "eyes the size of a football"
+    ],
+    "screen": [
+     "27 CM",
+     "the largest eye of any animal",
+     "27 cm"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "An ostrich's eye is about 5 cm across — larger than its brain and the largest of any land animal; a blue whale's eye is about 15 cm.",
+    "sources": [
+     "si_ostrich",
+     "wiki_eye",
+     "nilsson_2012"
+    ],
+    "vo": [
+     "an ostrich eye is 5 centimetres, bigger than its brain. a blue whale manages only 15"
+    ],
+    "screen": [
+     "5 cm",
+     "15 cm"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "The record specimen was caught on a longline in the Ross Sea off Antarctica in February 2007 and is displayed at Te Papa in Wellington.",
+    "sources": [
+     "tepapa_capture",
+     "tepapa_eyes"
+    ],
+    "vo": [
+     "the record animal came up on a fishing line in the ross sea in 2007. it sits in a wellington museum"
+    ],
+    "screen": [
+     "Ross Sea",
+     "Ross Sea · caught 2007",
+     "Wellington · Te Papa museum",
+     "2007"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Colossal squid live at depths of around 1,000 m and more; their huge eyes are suited to detecting the bioluminescent glow stirred up by sperm whales hunting them.",
+    "sources": [
+     "nilsson_2012",
+     "brit_squid",
+     "noaa_sperm"
+    ],
+    "vo": [
+     "why so big? a kilometre down, in the dark, they spot a sperm whale closing in"
+    ],
+    "screen": [
+     "metres down · in the dark"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   150,
+   -80,
+   190,
+   -60
+  ],
+  "far_bbox": [
+   100,
+   -85,
+   230,
+   -30
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "010"
+  ],
+  "highlight_note": "Antarctica — the Ross Sea is its sea; the squid is Antarctic",
+  "labels": [
+   {
+    "id": "rs",
+    "lonlat": [
+     162,
+     -70.5
+    ],
+    "text": "Ross Sea · caught 2007",
+    "cls": "tag",
+    "in": "s06@ross+0.2",
+    "out": "s06.end"
+   },
+   {
+    "id": "we",
+    "lonlat": [
+     166,
+     -46
+    ],
+    "text": "Wellington · Te Papa museum",
+    "cls": "tag",
+    "in": "s06@museum",
+    "out": "s06.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "ross",
+    "lonlat": [
+     178,
+     -74
+    ],
+    "label": "Ross Sea",
+    "side": "left"
+   }
+  ],
+  "scalebar": {
+   "km": 500,
+   "lonlat": [
+    152,
+    -62
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s06@ross",
+    "pid": "ross"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.35,
+    [
+     140,
+     -30
+    ]
+   ],
+   "s01": [
+    0.35,
+    [
+     142,
+     -32
+    ]
+   ],
+   "s04": [
+    0.5,
+    [
+     170,
+     -68
+    ]
+   ],
+   "s04b": [
+    0.52,
+    [
+     171,
+     -68.5
+    ]
+   ],
+   "s05": [
+    0.45,
+    [
+     168,
+     -66
+    ]
+   ],
+   "s05b": [
+    0.47,
+    [
+     169,
+     -66.5
+    ]
+   ],
+   "s06": [
+    0.42,
+    [
+     172,
+     -66
+    ]
+   ],
+   "s06b": [
+    0.44,
+    [
+     173,
+     -66.5
+    ]
+   ],
+   "s07": [
+    0.6,
+    [
+     175,
+     -71
+    ]
+   ],
+   "s07b": [
+    0.64,
+    [
+     176,
+     -71.5
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "An ostrich eye is 5 centimetres, bigger than its brain. A blue whale manages only 15.",
+    "cues": {
+     "ostrich": "ostrich",
+     "brain": "brain",
+     "whale": "whale",
+     "15": "15"
+    }
+   },
+   "direction": "ease back over the Southern Ocean; three eye silhouettes rise on 'ostrich' — a small disc, a mid disc, the squid's football; a brain sticker on 'brain'; a whale sticker on 'whale' as Antarctica pulses on '15'",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.45,
+    [
+     168,
+     -66
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.47,
+    [
+     169,
+     -66.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "eyes",
+     "type": "compare",
+     "items": [
+      [
+       "Ostrich",
+       5,
+       "5 cm"
+      ],
+      [
+       "Blue whale",
+       15,
+       "15 cm"
+      ],
+      [
+       "Colossal squid",
+       27,
+       "27 cm"
+      ]
+     ],
+     "y": 320,
+     "x": 60,
+     "w": 900,
+     "max_h": 520
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@ostrich-0.3",
+     "do": "chart.compare_in",
+     "id": "eyes",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.25
+     }
+    },
+    {
+     "at": "@@brain",
+     "do": "sticker_in",
+     "id": "st_brain"
+    },
+    {
+     "at": "@@brain+0.4",
+     "do": "sticker_pulse",
+     "id": "st_brain"
+    },
+    {
+     "at": "@@whale",
+     "do": "sticker_out",
+     "id": "st_brain"
+    },
+    {
+     "at": "@@whale",
+     "do": "sticker_in",
+     "id": "st_whale"
+    },
+    {
+     "at": "@@whale+0.4",
+     "do": "sticker_pulse",
+     "id": "st_whale"
+    },
+    {
+     "at": "@@15+0.2",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "010",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "eyes"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_whale"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The record animal came up on a fishing line in the Ross Sea in 2007. It sits in a Wellington museum.",
+    "cues": {
+     "record": "record",
+     "ross": "ross",
+     "museum": "museum"
+    }
+   },
+   "direction": "drift north toward New Zealand; a hook sticker on 'record'; the Ross Sea pin and tag on 'Ross'; the Wellington tag and a museum sticker on 'museum' as Antarctica pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    0.42,
+    [
+     172,
+     -66
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.44,
+    [
+     173,
+     -66.5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@record",
+     "do": "sticker_in",
+     "id": "st_hook"
+    },
+    {
+     "at": "@@record+0.4",
+     "do": "sticker_pulse",
+     "id": "st_hook"
+    },
+    {
+     "at": "@@ross",
+     "do": "sticker_out",
+     "id": "st_hook"
+    },
+    {
+     "at": "@@ross+0.3",
+     "do": "sticker_in",
+     "id": "st_ship"
+    },
+    {
+     "at": "@@ross+0.7",
+     "do": "sticker_pulse",
+     "id": "st_ship"
+    },
+    {
+     "at": "@@ross+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "010",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@museum",
+     "do": "sticker_out",
+     "id": "st_ship"
+    },
+    {
+     "at": "@@museum",
+     "do": "sticker_in",
+     "id": "st_museum"
+    },
+    {
+     "at": "@@museum+0.4",
+     "do": "sticker_pulse",
+     "id": "st_museum"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_museum"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Why so big? A kilometre down, in the dark, they spot a sperm whale closing in.",
+    "cues": {
+     "big": "big",
+     "dark": "dark",
+     "sperm": "sperm",
+     "closing": "closing"
+    }
+   },
+   "direction": "tighten on the Ross Sea; the depth counter runs 0 → 1,000 metres from 'big'; a moon sticker on 'dark'; a whale sticker on 'sperm'; a soft pulse on 'closing'; the pin leaves at the end",
+   "energy": 3,
+   "tone": "suspense",
+   "pause_after": 0.6,
+   "cam": [
+    0.6,
+    [
+     175,
+     -71
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.64,
+    [
+     176,
+     -71.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "depth",
+     "type": "counter",
+     "start": 0,
+     "end": 1000,
+     "y": 330,
+     "label": "metres down · in the dark",
+     "fmt": "int",
+     "size": 170
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@big-0.1",
+     "do": "chart.counter_run",
+     "id": "depth",
+     "until": "@@dark+0.3"
+    },
+    {
+     "at": "@@dark",
+     "do": "sticker_in",
+     "id": "st_moon"
+    },
+    {
+     "at": "@@dark+0.4",
+     "do": "sticker_pulse",
+     "id": "st_moon"
+    },
+    {
+     "at": "@@sperm",
+     "do": "sticker_out",
+     "id": "st_moon"
+    },
+    {
+     "at": "@@sperm",
+     "do": "sticker_in",
+     "id": "st_sperm"
+    },
+    {
+     "at": "@@sperm+0.4",
+     "do": "sticker_pulse",
+     "id": "st_sperm"
+    },
+    {
+     "at": "@@closing+0.2",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "010",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "depth"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_sperm"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "ross"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_brain",
+   "type": "sticker",
+   "emoji": "1f9e0",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_whale",
+   "type": "sticker",
+   "emoji": "1f40b",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_hook",
+   "type": "sticker",
+   "emoji": "1fa9d",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_ship",
+   "type": "sticker",
+   "emoji": "1f6a2",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_museum",
+   "type": "sticker",
+   "emoji": "1f3db",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_moon",
+   "type": "sticker",
+   "emoji": "1f319",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_sperm",
+   "type": "sticker",
+   "emoji": "1f433",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": -6
+  }
+ ]
+}

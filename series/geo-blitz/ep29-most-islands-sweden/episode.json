@@ -1,0 +1,141 @@
+{
+ "id": "ep29-most-islands-sweden",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 29,
+ "title": "Which country has the MOST islands?",
+ "difficulty": "MEDIUM",
+ "seed": 3929,
+ "quiz": {
+  "question": "Which country has the MOST islands?",
+  "keyword": "MOST",
+  "options": [
+   "Indonesia",
+   "Philippines",
+   "Sweden"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Sweden",
+  "answer_sub": "about 267,000 islands",
+  "option_meta": [
+   {
+    "flag": "id"
+   },
+   {
+    "flag": "ph"
+   },
+   {
+    "flag": "se"
+   }
+  ],
+  "banner": "Sweden",
+  "banner_sub": "✓  C was right · about 267,000 islands",
+  "outro": {
+   "headline": "1 FOR 1?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country has the MOST islands? 🏝️",
+  "premise": "The country with the most islands is not in the tropics",
+  "bait": "Indonesia, Philippines or Sweden — which did you pick? 👇",
+  "keywords": [
+   "which country has the most islands",
+   "country with the most islands",
+   "how many islands does indonesia have",
+   "philippines islands",
+   "swedish archipelago",
+   "geography quiz",
+   "world map facts",
+   "island facts"
+  ],
+  "description": "The country with the most islands is not in the tropics. Indonesia, Philippines or Sweden — which did you pick? 👇\n\nSources: Statistics Sweden; Indonesian Geospatial Information Agency; NAMRIA Philippines.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #29",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "GeographyQuiz",
+   "Islands"
+  ],
+  "cover_emoji": "🏝️",
+  "cover_emoji_why": "a palm island states the subject and points at the tropics — the opposite of the answer — so it misleads rather than hints",
+  "copy": {
+   "spoilers": [
+    "sweden",
+    "swedish",
+    "267,000",
+    "267000",
+    "stockholm",
+    "baltic",
+    "scandinavia",
+    "nordic"
+   ],
+   "youtube": {
+    "title": "Which country has the most islands? Not the one you think 🏝️",
+    "description": "Indonesia, the Philippines or the third one? The country with the most islands on Earth has more than both of them put together, most of its islands have nobody on them, and it is nowhere near the tropics. Pick your flag before the count starts.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#islands",
+     "#quiz",
+     "#maps",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country has the MOST islands? 🏝️\nIndonesia, the Philippines or the other one? The winner has more islands than both of them put together, most with nobody on them — and it is nowhere near the tropics.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#islands",
+     "#quiz",
+     "#maps",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country has the most islands — Indonesia, the Philippines or Sweden?\nThe winner has more islands than the other two put together, most of them with nobody living on them, and it is nowhere near the tropics. Lock in your flag before the count starts.",
+    "tags": [
+     "#geographyquiz",
+     "#islands"
+    ]
+   },
+   "twitter": {
+    "text": "Which country has the MOST islands?\nIndonesia, Philippines or Sweden? The winner has more than the other two combined — and most of its islands are empty.",
+    "tags": [
+     "#GeographyQuiz",
+     "#Islands"
+    ]
+   },
+   "threads": {
+    "text": "Which country has the most islands — Indonesia, the Philippines or Sweden? The winner has more islands than the other two put together, most of them with nobody living on them, and it is nowhere near the tropics.",
+    "tags": [
+     "#islandlife"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "colour-lift",
+  "beats": [
+   "bars",
+   "counter",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:se + emoji-set:islands",
+  "music": "bed:pulse"
+ },
+ "status": "ready"
+}

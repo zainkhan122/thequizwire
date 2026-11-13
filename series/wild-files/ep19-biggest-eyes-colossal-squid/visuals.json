@@ -1,0 +1,602 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "27 CM",
+   "text": "the largest eye of any animal"
+  },
+  {
+   "id": "eyes",
+   "type": "compare",
+   "items": [
+    [
+     "Ostrich",
+     5,
+     "5 cm"
+    ],
+    [
+     "Blue whale",
+     15,
+     "15 cm"
+    ],
+    [
+     "Colossal squid",
+     27,
+     "27 cm"
+    ]
+   ],
+   "y": 320,
+   "x": 60,
+   "w": 900,
+   "max_h": 520
+  },
+  {
+   "id": "depth",
+   "type": "counter",
+   "start": 0,
+   "end": 1000,
+   "y": 330,
+   "label": "metres down · in the dark",
+   "fmt": "int",
+   "size": 170
+  },
+  {
+   "id": "st_brain",
+   "type": "sticker",
+   "emoji": "1f9e0",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_whale",
+   "type": "sticker",
+   "emoji": "1f40b",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_hook",
+   "type": "sticker",
+   "emoji": "1fa9d",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_ship",
+   "type": "sticker",
+   "emoji": "1f6a2",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_museum",
+   "type": "sticker",
+   "emoji": "1f3db",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_moon",
+   "type": "sticker",
+   "emoji": "1f319",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_sperm",
+   "type": "sticker",
+   "emoji": "1f433",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.35,
+    "lonlat": [
+     140,
+     -30
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.35,
+    "lonlat": [
+     142,
+     -32
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     170,
+     -68
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 0.52,
+    "lonlat": [
+     171,
+     -68.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "010",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s06@ross+0.2",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "rs"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "rs"
+   }
+  },
+  {
+   "at": "s06@museum",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "we"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "we"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 0.45,
+    "lonlat": [
+     168,
+     -66
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 0.47,
+    "lonlat": [
+     169,
+     -66.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@ostrich-0.3",
+   "do": "chart.compare_in",
+   "id": "eyes",
+   "args": {
+    "dur": 0.9,
+    "stagger": 0.25
+   }
+  },
+  {
+   "at": "s05@brain",
+   "do": "sticker_in",
+   "id": "st_brain"
+  },
+  {
+   "at": "s05@brain+0.4",
+   "do": "sticker_pulse",
+   "id": "st_brain"
+  },
+  {
+   "at": "s05@whale",
+   "do": "sticker_out",
+   "id": "st_brain"
+  },
+  {
+   "at": "s05@whale",
+   "do": "sticker_in",
+   "id": "st_whale"
+  },
+  {
+   "at": "s05@whale+0.4",
+   "do": "sticker_pulse",
+   "id": "st_whale"
+  },
+  {
+   "at": "s05@15+0.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "010",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "eyes"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_whale"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 0.42,
+    "lonlat": [
+     172,
+     -66
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 0.44,
+    "lonlat": [
+     173,
+     -66.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@record",
+   "do": "sticker_in",
+   "id": "st_hook"
+  },
+  {
+   "at": "s06@record+0.4",
+   "do": "sticker_pulse",
+   "id": "st_hook"
+  },
+  {
+   "at": "s06@ross",
+   "do": "sticker_out",
+   "id": "st_hook"
+  },
+  {
+   "at": "s06@ross+0.3",
+   "do": "sticker_in",
+   "id": "st_ship"
+  },
+  {
+   "at": "s06@ross+0.7",
+   "do": "sticker_pulse",
+   "id": "st_ship"
+  },
+  {
+   "at": "s06@ross+0.5",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "010",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06@museum",
+   "do": "sticker_out",
+   "id": "st_ship"
+  },
+  {
+   "at": "s06@museum",
+   "do": "sticker_in",
+   "id": "st_museum"
+  },
+  {
+   "at": "s06@museum+0.4",
+   "do": "sticker_pulse",
+   "id": "st_museum"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_museum"
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.5",
+   "args": {
+    "k": 0.6,
+    "lonlat": [
+     175,
+     -71
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 0.64,
+    "lonlat": [
+     176,
+     -71.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@big-0.1",
+   "do": "chart.counter_run",
+   "id": "depth",
+   "until": "s07@dark+0.3"
+  },
+  {
+   "at": "s07@dark",
+   "do": "sticker_in",
+   "id": "st_moon"
+  },
+  {
+   "at": "s07@dark+0.4",
+   "do": "sticker_pulse",
+   "id": "st_moon"
+  },
+  {
+   "at": "s07@sperm",
+   "do": "sticker_out",
+   "id": "st_moon"
+  },
+  {
+   "at": "s07@sperm",
+   "do": "sticker_in",
+   "id": "st_sperm"
+  },
+  {
+   "at": "s07@sperm+0.4",
+   "do": "sticker_pulse",
+   "id": "st_sperm"
+  },
+  {
+   "at": "s07@closing+0.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "010",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "chart.out",
+   "id": "depth"
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_sperm"
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "ross"
+   }
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.35,
+    "lonlat": [
+     140,
+     -30
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04+1.7",
+   "do": "geo.scalebar_in",
+   "stage": "stage_map"
+  },
+  {
+   "at": "s06@ross",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "ross"
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

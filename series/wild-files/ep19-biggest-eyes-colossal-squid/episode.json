@@ -1,0 +1,143 @@
+{
+ "id": "ep19-biggest-eyes-colossal-squid",
+ "format": "quiz-v3",
+ "series": "wild-files",
+ "number": 19,
+ "title": "Which creature has the BIGGEST eyes?",
+ "difficulty": "MEDIUM",
+ "seed": 3819,
+ "quiz": {
+  "question": "Which creature has the BIGGEST eyes?",
+  "keyword": "BIGGEST",
+  "options": [
+   "Blue whale",
+   "Ostrich",
+   "Colossal squid"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Colossal squid",
+  "answer_sub": "eyes about 27 cm across",
+  "option_meta": [
+   {
+    "emoji": "1f40b"
+   },
+   {
+    "emoji": "1f426"
+   },
+   {
+    "emoji": "1f991"
+   }
+  ],
+  "banner": "Colossal squid",
+  "banner_sub": "✓  C was right · eyes about 27 cm across",
+  "outro": {
+   "headline": "CHALLENGE A FRIEND",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which creature has the BIGGEST eyes? 👁️",
+  "premise": "The biggest eyes on Earth belong to a creature few have seen",
+  "bait": "Blue whale, ostrich or colossal squid — which did you pick? 👇",
+  "keywords": [
+   "which animal has the biggest eyes",
+   "largest eyes in the animal kingdom",
+   "colossal squid eyes",
+   "ostrich eye bigger than brain",
+   "blue whale eye size",
+   "animal quiz",
+   "deep sea facts",
+   "wildlife facts"
+  ],
+  "description": "The biggest eyes on Earth belong to a creature few have seen. Blue whale, ostrich or colossal squid — which did you pick? 👇\n\nSources: Te Papa (Museum of New Zealand); Current Biology 2012 (Nilsson et al.); Smithsonian.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #19",
+  "hashtags": [
+   "#AnimalQuiz",
+   "#WildlifeFacts",
+   "#thequizwire"
+  ],
+  "tags": [
+   "AnimalQuiz",
+   "DeepSea"
+  ],
+  "cover_emoji": "👁️",
+  "cover_emoji_why": "an eye states the subject and belongs to no option; it says nothing about sea, land or size",
+  "copy": {
+   "spoilers": [
+    "colossal squid",
+    "squid",
+    "27 cm",
+    "27cm",
+    "ross sea",
+    "antarctic",
+    "antarctica",
+    "te papa",
+    "new zealand",
+    "sperm whale"
+   ],
+   "youtube": {
+    "title": "The animal with the biggest eyes? Bigger than a football 👁️",
+    "description": "The biggest animal, the biggest bird, or the third one? The largest eyes on Earth are as wide as a football, and they belong to a creature that has only been seen alive a handful of times — because it lives a kilometre down in the coldest sea on the planet, hiding from one very large hunter.\nWhich did you pick?",
+    "tags": [
+     "#animals",
+     "#wildlife",
+     "#animalquiz",
+     "#deepsea",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which creature has the BIGGEST eyes? 👁️\nThe biggest animal, the biggest bird, or the other one? The largest eyes on Earth are as wide as a football and belong to something seen alive only a handful of times, a kilometre down in the coldest sea on the planet.\nWhich did you pick?",
+    "tags": [
+     "#animals",
+     "#wildlife",
+     "#animalquiz",
+     "#deepsea",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which creature has the biggest eyes — the blue whale, the ostrich or the colossal squid?\nThe largest eyes on Earth are as wide as a football and belong to an animal seen alive only a handful of times, a kilometre down in the coldest sea on the planet, hiding from one very large hunter. Pick your animal before the eyes open.",
+    "tags": [
+     "#animals",
+     "#deepsea"
+    ]
+   },
+   "twitter": {
+    "text": "Which creature has the BIGGEST eyes?\nBlue whale, ostrich or colossal squid? The largest eyes on Earth are as wide as a football — and almost nobody has seen them open.",
+    "tags": [
+     "#DeepSea",
+     "#AnimalQuiz"
+    ]
+   },
+   "threads": {
+    "text": "Which creature has the biggest eyes — the blue whale, the ostrich or the colossal squid? The largest eyes on Earth are as wide as a football and belong to an animal seen alive only a handful of times, a kilometre down in the coldest sea on the planet.",
+    "tags": [
+     "#oceanlife"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-animal",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "compare",
+   "pin",
+   "counter",
+   "label"
+  ],
+  "cast": "emoji-set:deep-sea + flagball:none",
+  "music": "bed:pulse"
+ },
+ "status": "ready"
+}

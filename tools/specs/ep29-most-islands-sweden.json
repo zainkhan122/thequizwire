@@ -1,0 +1,864 @@
+{
+ "id": "ep29-most-islands-sweden",
+ "series": "geo-blitz",
+ "number": 29,
+ "seed": 3929,
+ "question": "Which country has the MOST islands?",
+ "keyword": "MOST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Indonesia",
+   "flag": "id",
+   "cue": "indonesia"
+  },
+  {
+   "text": "Philippines",
+   "flag": "ph",
+   "cue": "philippines"
+  },
+  {
+   "text": "Sweden",
+   "flag": "se",
+   "cue": "sweden"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "about 267,000 islands",
+ "outro_headline": "1 FOR 1?",
+ "cover_emoji": "🏝️",
+ "cover_emoji_why": "a palm island states the subject and points at the tropics — the opposite of the answer — so it misleads rather than hints",
+ "post": {
+  "premise": "The country with the most islands is not in the tropics",
+  "bait": "Indonesia, Philippines or Sweden — which did you pick? 👇",
+  "keywords": [
+   "which country has the most islands",
+   "country with the most islands",
+   "how many islands does indonesia have",
+   "philippines islands",
+   "swedish archipelago",
+   "geography quiz",
+   "world map facts",
+   "island facts"
+  ],
+  "tags": [
+   "GeographyQuiz",
+   "Islands"
+  ],
+  "sources_line": "Statistics Sweden; Indonesian Geospatial Information Agency; NAMRIA Philippines",
+  "copy": {
+   "spoilers": [
+    "sweden",
+    "swedish",
+    "267,000",
+    "267000",
+    "stockholm",
+    "baltic",
+    "scandinavia",
+    "nordic"
+   ],
+   "youtube": {
+    "title": "Which country has the most islands? Not the one you think 🏝️",
+    "description": "Indonesia, the Philippines or the third one? The country with the most islands on Earth has more than both of them put together, most of its islands have nobody on them, and it is nowhere near the tropics. Pick your flag before the count starts.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#islands",
+     "#quiz",
+     "#maps",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country has the MOST islands? 🏝️\nIndonesia, the Philippines or the other one? The winner has more islands than both of them put together, most with nobody on them — and it is nowhere near the tropics.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#islands",
+     "#quiz",
+     "#maps",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country has the most islands — Indonesia, the Philippines or Sweden?\nThe winner has more islands than the other two put together, most of them with nobody living on them, and it is nowhere near the tropics. Lock in your flag before the count starts.",
+    "tags": [
+     "#geographyquiz",
+     "#islands"
+    ]
+   },
+   "twitter": {
+    "text": "Which country has the MOST islands?\nIndonesia, Philippines or Sweden? The winner has more than the other two combined — and most of its islands are empty.",
+    "tags": [
+     "#GeographyQuiz",
+     "#Islands"
+    ]
+   },
+   "threads": {
+    "text": "Which country has the most islands — Indonesia, the Philippines or Sweden? The winner has more islands than the other two put together, most of them with nobody living on them, and it is nowhere near the tropics.",
+    "tags": [
+     "#islandlife"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "misconception",
+  "opener": "mystery-zoom-out",
+  "reveal": "colour-lift",
+  "beats": [
+   "bars",
+   "counter",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:se + emoji-set:islands",
+  "music": "bed:pulse",
+  "outro": "1 FOR 1?"
+ },
+ "intent": "A tropical question with a northern answer: three island bars that dwarf the tropics, a counter that runs to 267,000, a pin on the capital built across 14 islands, and a rocky-skerry close that explains why nobody lives on most of them.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "most": "most"
+  },
+  "v04": {
+   "text": "Sweden. Its statistics office counts about 267,000 islands, far more than any other country on Earth.",
+   "cues": {
+    "answer": "sweden",
+    "counts": "counts",
+    "more": "more"
+   }
+  },
+  "v05": {
+   "text": "Indonesia has around 17,000. The Philippines, 7,600. Sweden has more than both of them together.",
+   "cues": {
+    "indonesia": "indonesia",
+    "philippines": "philippines",
+    "together": "together"
+   }
+  },
+  "v06": {
+   "text": "Only about 1,000 of them have anyone living there at all. The capital alone sits on 14 islands.",
+   "cues": {
+    "living": "living",
+    "capital": "capital",
+    "14": "14"
+   }
+  },
+  "v07": {
+   "text": "Most are skerries, bare rock pushed up by the land rising since the ice age. New islands appear every year.",
+   "cues": {
+    "skerries": "skerries",
+    "ice": "ice",
+    "new": "new"
+   }
+  },
+  "v08": {
+   "text": "267,000 islands, 1 country. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "267,000",
+   "text": "islands counted by Statistics Sweden"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "se",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "id",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "Country with the most islands: Sweden, about 267,570 islands (Statistics Sweden, 2013 count, islands ≥ 25 m²), of which about 1,000 are inhabited. Indonesia has about 17,000 (17,504 per the Geospatial Information Agency / official UN submission); the Philippines 7,641 (NAMRIA). Stockholm is built on 14 islands. Most Swedish islands are skerries, small bare rocks; post-glacial rebound lifts the land several millimetres a year and new islands emerge.",
+  "myths": [
+   {
+    "myth": "Indonesia, the world's biggest archipelago, has the most islands.",
+    "reality": "Indonesia's official count is about 17,000; Sweden's statistics office counts about 267,000, most of them tiny uninhabited skerries.",
+    "sources": [
+     "scb_islands",
+     "big_indonesia"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Most-islands clips read a list; nobody stacks the three bars on a map, runs the count to 267,000 over the archipelago, pins the 14-island capital and explains the rising land as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=country+with+the+most+islands",
+     "title": "Search: country with the most islands",
+     "angle": "ranking lists",
+     "misses": "no map, no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=how+many+islands+does+indonesia+have",
+     "title": "Search: how many islands does indonesia have",
+     "angle": "single-country explainers",
+     "misses": "no comparison"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=stockholm+archipelago",
+     "title": "Search: stockholm archipelago",
+     "angle": "travel",
+     "misses": "no numbers"
+    }
+   ]
+  },
+  "sources": {
+   "scb_islands": {
+    "type": "primary",
+    "publisher": "Statistics Sweden (SCB)",
+    "title": "Islands in Sweden",
+    "url": "https://www.scb.se/en/finding-statistics/statistics-by-subject-area/environment/land-use/islands-in-sweden/",
+    "date": "2026-11-11",
+    "notes": "Sweden has 267,570 islands; about 1,000 are inhabited"
+   },
+   "wiki_islands": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "List of countries by number of islands",
+    "url": "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_islands",
+    "date": "2026-11-11",
+    "notes": "Sweden 267,570; Indonesia 17,504; Philippines 7,641"
+   },
+   "big_indonesia": {
+    "type": "primary",
+    "publisher": "Badan Informasi Geospasial (Indonesia)",
+    "title": "Indonesia's island count",
+    "url": "https://www.big.go.id/",
+    "date": "2026-11-11",
+    "notes": "official count about 17,000 named islands registered with the UN"
+   },
+   "namria_ph": {
+    "type": "primary",
+    "publisher": "NAMRIA (Philippines)",
+    "title": "Philippine islands",
+    "url": "https://www.namria.gov.ph/",
+    "date": "2026-11-11",
+    "notes": "7,641 islands"
+   },
+   "brit_stockholm": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Stockholm",
+    "url": "https://www.britannica.com/place/Stockholm",
+    "date": "2026-11-11",
+    "notes": "the city is built on 14 islands where Lake Mälaren meets the Baltic"
+   },
+   "wiki_rebound": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Post-glacial rebound",
+    "url": "https://en.wikipedia.org/wiki/Post-glacial_rebound",
+    "date": "2026-11-11",
+    "notes": "land in Sweden/Finland still rises up to about 9 mm a year since the ice sheet melted; new land and islands emerge along the Gulf of Bothnia"
+   },
+   "smhi_rebound": {
+    "type": "primary",
+    "publisher": "SMHI (Swedish Meteorological and Hydrological Institute)",
+    "title": "Land uplift",
+    "url": "https://www.smhi.se/en/theme/land-uplift",
+    "date": "2026-11-11",
+    "notes": "post-glacial land uplift along the Swedish coast, greatest in the north"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Sweden has the most islands of any country: about 267,570 counted by Statistics Sweden.",
+    "sources": [
+     "scb_islands",
+     "wiki_islands"
+    ],
+    "vo": [
+     "which country has the most islands",
+     "indonesia, philippines, or sweden",
+     "sweden. its statistics office counts about 267,000 islands, far more than any other country on earth",
+     "267,000 islands, 1 country"
+    ],
+    "screen": [
+     "267,000",
+     "islands counted by Statistics Sweden",
+     "1"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Indonesia has about 17,000 islands and the Philippines about 7,600 — fewer together than Sweden alone.",
+    "sources": [
+     "big_indonesia",
+     "namria_ph",
+     "wiki_islands"
+    ],
+    "vo": [
+     "indonesia has around 17,000. the philippines, 7,600. sweden has more than both of them together"
+    ],
+    "screen": [
+     "267,000",
+     "17,000",
+     "7,600"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Only about 1,000 Swedish islands are inhabited; Stockholm is built on 14 islands.",
+    "sources": [
+     "scb_islands",
+     "brit_stockholm"
+    ],
+    "vo": [
+     "only about 1,000 of them have anyone living there at all. the capital alone sits on 14 islands"
+    ],
+    "screen": [
+     "Stockholm · 14 islands",
+     "Stockholm",
+     "1,000",
+     "islands with people on them",
+     "14"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Most Swedish islands are skerries — bare rock; the land is still rising after the ice age and new islands keep emerging.",
+    "sources": [
+     "wiki_rebound",
+     "smhi_rebound",
+     "scb_islands"
+    ],
+    "vo": [
+     "most are skerries, bare rock pushed up by the land rising since the ice age. new islands appear every year"
+    ],
+    "screen": [
+     "RISING LAND",
+     "up to 9 mm a year since the ice age",
+     "Gulf of Bothnia · land rising"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   8,
+   54,
+   26,
+   70
+  ],
+  "far_bbox": [
+   -20,
+   30,
+   60,
+   75
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "752"
+  ],
+  "highlight_note": "Sweden",
+  "labels": [
+   {
+    "id": "st",
+    "lonlat": [
+     21.5,
+     60.6
+    ],
+    "text": "Stockholm · 14 islands",
+    "cls": "tag",
+    "in": "s06@capital+0.2",
+    "out": "s06.end"
+   },
+   {
+    "id": "bo",
+    "lonlat": [
+     14.5,
+     66.0
+    ],
+    "text": "Gulf of Bothnia · land rising",
+    "cls": "tag",
+    "in": "s07@ice",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "stockholm",
+    "lonlat": [
+     18.07,
+     59.33
+    ],
+    "label": "Stockholm",
+    "side": "right"
+   }
+  ],
+  "scalebar": {
+   "km": 200,
+   "lonlat": [
+    9.5,
+    55.2
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s06@capital",
+    "pid": "stockholm"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.4,
+    [
+     20,
+     25
+    ]
+   ],
+   "s01": [
+    0.4,
+    [
+     22,
+     27
+    ]
+   ],
+   "s04": [
+    0.7,
+    [
+     17,
+     62
+    ]
+   ],
+   "s04b": [
+    0.73,
+    [
+     17.5,
+     62
+    ]
+   ],
+   "s05": [
+    0.62,
+    [
+     18,
+     62
+    ]
+   ],
+   "s05b": [
+    0.65,
+    [
+     18.5,
+     61.5
+    ]
+   ],
+   "s06": [
+    0.9,
+    [
+     18,
+     60
+    ]
+   ],
+   "s06b": [
+    0.95,
+    [
+     18.3,
+     59.8
+    ]
+   ],
+   "s07": [
+    0.75,
+    [
+     19,
+     64
+    ]
+   ],
+   "s07b": [
+    0.8,
+    [
+     19.5,
+     64.5
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Indonesia has around 17,000. The Philippines, 7,600. Sweden has more than both of them together.",
+    "cues": {
+     "indonesia": "indonesia",
+     "philippines": "philippines",
+     "together": "together"
+    }
+   },
+   "direction": "ease back over the Baltic; three island bars rise on 'Indonesia' with Sweden off the chart; the Indonesian flag-ball thinks on 'Philippines'; a plus sticker on 'together' as Sweden pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.62,
+    [
+     18,
+     62
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.65,
+    [
+     18.5,
+     61.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "isl",
+     "type": "bars",
+     "rows": [
+      [
+       "Sweden",
+       267,
+       "267,000"
+      ],
+      [
+       "Indonesia",
+       17,
+       "17,000"
+      ],
+      [
+       "Philippines",
+       7.6,
+       "7,600"
+      ]
+     ],
+     "unit": "islands",
+     "y": 300,
+     "x": 60,
+     "w": 900
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@indonesia-0.4",
+     "do": "chart.bars_in",
+     "id": "isl",
+     "args": {
+      "dur": 1.0,
+      "stagger": 0.3
+     }
+    },
+    {
+     "at": "@@philippines",
+     "do": "character_in",
+     "id": "id_think"
+    },
+    {
+     "at": "@@together",
+     "do": "sticker_in",
+     "id": "st_plus"
+    },
+    {
+     "at": "@@together+0.4",
+     "do": "sticker_pulse",
+     "id": "st_plus"
+    },
+    {
+     "at": "@@together+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "752",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "isl"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_plus"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "id_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Only about 1,000 of them have anyone living there at all. The capital alone sits on 14 islands.",
+    "cues": {
+     "living": "living",
+     "capital": "capital",
+     "14": "14"
+    }
+   },
+   "direction": "tighten on Stockholm; the inhabited counter runs 0 → 1,000 on 'living' with a house sticker; the Stockholm pin and 14-islands tag on 'capital'; a crown sticker on '14' as Sweden pulses; the pin leaves at the end",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    0.9,
+    [
+     18,
+     60
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.95,
+    [
+     18.3,
+     59.8
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "inh",
+     "type": "counter",
+     "start": 0,
+     "end": 1000,
+     "y": 330,
+     "label": "islands with people on them",
+     "fmt": "int",
+     "size": 170
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@living-0.3",
+     "do": "chart.counter_run",
+     "id": "inh",
+     "until": "@@capital"
+    },
+    {
+     "at": "@@living",
+     "do": "sticker_in",
+     "id": "st_house"
+    },
+    {
+     "at": "@@living+0.4",
+     "do": "sticker_pulse",
+     "id": "st_house"
+    },
+    {
+     "at": "@@capital",
+     "do": "sticker_out",
+     "id": "st_house"
+    },
+    {
+     "at": "@@14",
+     "do": "sticker_in",
+     "id": "st_crown"
+    },
+    {
+     "at": "@@14+0.4",
+     "do": "sticker_pulse",
+     "id": "st_crown"
+    },
+    {
+     "at": "@@14+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "752",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "inh"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_crown"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "stockholm"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Most are skerries, bare rock pushed up by the land rising since the ice age. New islands appear every year.",
+    "cues": {
+     "skerries": "skerries",
+     "ice": "ice",
+     "new": "new"
+    }
+   },
+   "direction": "drift north up the Gulf of Bothnia; a rock sticker on 'skerries'; the RISING LAND card and the Bothnia tag on 'ice'; a sparkle sticker on 'new' as the Swedish flag-ball grins and Sweden pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "RISING LAND",
+    "text": "up to 9 mm a year since the ice age"
+   },
+   "card_at": null,
+   "cam": [
+    0.75,
+    [
+     19,
+     64
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.8,
+    [
+     19.5,
+     64.5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@skerries",
+     "do": "sticker_in",
+     "id": "st_rock"
+    },
+    {
+     "at": "@@skerries+0.4",
+     "do": "sticker_pulse",
+     "id": "st_rock"
+    },
+    {
+     "at": "@@ice",
+     "do": "sticker_out",
+     "id": "st_rock"
+    },
+    {
+     "at": "@@ice",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@new",
+     "do": "sticker_in",
+     "id": "st_spark"
+    },
+    {
+     "at": "@@new+0.4",
+     "do": "sticker_pulse",
+     "id": "st_spark"
+    },
+    {
+     "at": "@@new",
+     "do": "character_in",
+     "id": "se_happy"
+    },
+    {
+     "at": "@@new+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "752",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_spark"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "se_happy"
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_plus",
+   "type": "sticker",
+   "emoji": "2795",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_house",
+   "type": "sticker",
+   "emoji": "1f3e0",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_crown",
+   "type": "sticker",
+   "emoji": "1f451",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_rock",
+   "type": "sticker",
+   "emoji": "1faa8",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_spark",
+   "type": "sticker",
+   "emoji": "2728",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "id_think",
+   "type": "character",
+   "flag": "id",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "se_happy",
+   "type": "character",
+   "flag": "se",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

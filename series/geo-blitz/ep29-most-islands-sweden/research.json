@@ -1,0 +1,201 @@
+{
+ "version": 1,
+ "episode": "ep29-most-islands-sweden",
+ "topic": "Country with the most islands: Sweden, about 267,570 islands (Statistics Sweden, 2013 count, islands ≥ 25 m²), of which about 1,000 are inhabited. Indonesia has about 17,000 (17,504 per the Geospatial Information Agency / official UN submission); the Philippines 7,641 (NAMRIA). Stockholm is built on 14 islands. Most Swedish islands are skerries, small bare rocks; post-glacial rebound lifts the land several millimetres a year and new islands emerge.",
+ "researched": "2026-11-13",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Indonesia, the world's biggest archipelago, has the most islands.",
+   "reality": "Indonesia's official count is about 17,000; Sweden's statistics office counts about 267,000, most of them tiny uninhabited skerries.",
+   "sources": [
+    "scb_islands",
+    "big_indonesia"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Most-islands clips read a list; nobody stacks the three bars on a map, runs the count to 267,000 over the archipelago, pins the 14-island capital and explains the rising land as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=country+with+the+most+islands",
+    "title": "Search: country with the most islands",
+    "angle": "ranking lists",
+    "misses": "no map, no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=how+many+islands+does+indonesia+have",
+    "title": "Search: how many islands does indonesia have",
+    "angle": "single-country explainers",
+    "misses": "no comparison"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=stockholm+archipelago",
+    "title": "Search: stockholm archipelago",
+    "angle": "travel",
+    "misses": "no numbers"
+   }
+  ]
+ },
+ "sources": {
+  "scb_islands": {
+   "type": "primary",
+   "publisher": "Statistics Sweden (SCB)",
+   "title": "Islands in Sweden",
+   "url": "https://www.scb.se/en/finding-statistics/statistics-by-subject-area/environment/land-use/islands-in-sweden/",
+   "date": "2026-11-11",
+   "notes": "Sweden has 267,570 islands; about 1,000 are inhabited"
+  },
+  "wiki_islands": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "List of countries by number of islands",
+   "url": "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_islands",
+   "date": "2026-11-11",
+   "notes": "Sweden 267,570; Indonesia 17,504; Philippines 7,641"
+  },
+  "big_indonesia": {
+   "type": "primary",
+   "publisher": "Badan Informasi Geospasial (Indonesia)",
+   "title": "Indonesia's island count",
+   "url": "https://www.big.go.id/",
+   "date": "2026-11-11",
+   "notes": "official count about 17,000 named islands registered with the UN"
+  },
+  "namria_ph": {
+   "type": "primary",
+   "publisher": "NAMRIA (Philippines)",
+   "title": "Philippine islands",
+   "url": "https://www.namria.gov.ph/",
+   "date": "2026-11-11",
+   "notes": "7,641 islands"
+  },
+  "brit_stockholm": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Stockholm",
+   "url": "https://www.britannica.com/place/Stockholm",
+   "date": "2026-11-11",
+   "notes": "the city is built on 14 islands where Lake Mälaren meets the Baltic"
+  },
+  "wiki_rebound": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Post-glacial rebound",
+   "url": "https://en.wikipedia.org/wiki/Post-glacial_rebound",
+   "date": "2026-11-11",
+   "notes": "land in Sweden/Finland still rises up to about 9 mm a year since the ice sheet melted; new land and islands emerge along the Gulf of Bothnia"
+  },
+  "smhi_rebound": {
+   "type": "primary",
+   "publisher": "SMHI (Swedish Meteorological and Hydrological Institute)",
+   "title": "Land uplift",
+   "url": "https://www.smhi.se/en/theme/land-uplift",
+   "date": "2026-11-11",
+   "notes": "post-glacial land uplift along the Swedish coast, greatest in the north"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Sweden has the most islands of any country: about 267,570 counted by Statistics Sweden.",
+   "sources": [
+    "scb_islands",
+    "wiki_islands"
+   ],
+   "vo": [
+    "which country has the most islands",
+    "indonesia, philippines, or sweden",
+    "sweden. its statistics office counts about 267,000 islands, far more than any other country on earth",
+    "267,000 islands, 1 country"
+   ],
+   "screen": [
+    "267,000",
+    "islands counted by Statistics Sweden",
+    "1"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Indonesia has about 17,000 islands and the Philippines about 7,600 — fewer together than Sweden alone.",
+   "sources": [
+    "big_indonesia",
+    "namria_ph",
+    "wiki_islands"
+   ],
+   "vo": [
+    "indonesia has around 17,000. the philippines, 7,600. sweden has more than both of them together"
+   ],
+   "screen": [
+    "267,000",
+    "17,000",
+    "7,600"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Only about 1,000 Swedish islands are inhabited; Stockholm is built on 14 islands.",
+   "sources": [
+    "scb_islands",
+    "brit_stockholm"
+   ],
+   "vo": [
+    "only about 1,000 of them have anyone living there at all. the capital alone sits on 14 islands"
+   ],
+   "screen": [
+    "Stockholm · 14 islands",
+    "Stockholm",
+    "1,000",
+    "islands with people on them",
+    "14"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Most Swedish islands are skerries — bare rock; the land is still rising after the ice age and new islands keep emerging.",
+   "sources": [
+    "wiki_rebound",
+    "smhi_rebound",
+    "scb_islands"
+   ],
+   "vo": [
+    "most are skerries, bare rock pushed up by the land rising since the ice age. new islands appear every year"
+   ],
+   "screen": [
+    "RISING LAND",
+    "up to 9 mm a year since the ice age",
+    "Gulf of Bothnia · land rising"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,135 @@
+{
+ "version": 1,
+ "episode": "ep19-biggest-eyes-colossal-squid",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A size quiz that ends in the dark: three eye silhouettes side by side (a whale's is smaller than a bird's), a pin on the Ross Sea where the biggest one was hauled up, a depth counter dropping a kilometre, and the reason the eyes are so big — spotting a sperm whale coming.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Which creature has the BIGGEST eyes?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Which creature has the biggest eyes?",
+   "cues": {
+    "which": "which",
+    "biggest": "biggest"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Blue whale, Ostrich, or Colossal squid?",
+   "cues": {
+    "a": "blue",
+    "b": "ostrich",
+    "c": "colossal"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "The colossal squid. Its eyes are about 27 centimetres across, the largest of any animal.",
+   "cues": {
+    "answer": "colossal",
+    "eyes": "eyes",
+    "largest": "largest"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.35,
+   "direction": "ease back over the Southern Ocean; three eye silhouettes rise on 'ostrich' — a small disc, a mid disc, the squid's football; a brain sticker on 'brain'; a whale sticker on 'whale' as Antarctica pulses on '15'",
+   "text": "An ostrich eye is 5 centimetres, bigger than its brain. A blue whale manages only 15.",
+   "cues": {
+    "ostrich": "ostrich",
+    "brain": "brain",
+    "whale": "whale",
+    "15": "15"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "drift north toward New Zealand; a hook sticker on 'record'; the Ross Sea pin and tag on 'Ross'; the Wellington tag and a museum sticker on 'museum' as Antarctica pulses",
+   "text": "The record animal came up on a fishing line in the Ross Sea in 2007. It sits in a Wellington museum.",
+   "cues": {
+    "record": "record",
+    "ross": "ross",
+    "museum": "museum"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "suspense",
+   "energy": 3,
+   "pause_after": 0.6,
+   "direction": "tighten on the Ross Sea; the depth counter runs 0 → 1,000 metres from 'big'; a moon sticker on 'dark'; a whale sticker on 'sperm'; a soft pulse on 'closing'; the pin leaves at the end",
+   "text": "Why so big? A kilometre down, in the dark, they spot a sperm whale closing in.",
+   "cues": {
+    "big": "big",
+    "dark": "dark",
+    "sperm": "sperm",
+    "closing": "closing"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "Eyes the size of a football. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+{
+ "version": 1,
+ "episode": "ep29-most-islands-sweden",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     8,
+     54,
+     26,
+     70
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "752"
+     ],
+     "cls": "",
+     "note": "Sweden",
+     "lift": "color",
+     "color": "#FFD400"
+    }
+   ],
+   "pins": [
+    {
+     "id": "stockholm",
+     "lonlat": [
+      18.07,
+      59.33
+     ],
+     "label": "Stockholm",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "st",
+     "lonlat": [
+      21.5,
+      60.6
+     ],
+     "text": "Stockholm · 14 islands",
+     "cls": "tag",
+     "in": "s06@capital+0.2",
+     "out": "s06.end"
+    },
+    {
+     "id": "bo",
+     "lonlat": [
+      14.5,
+      66.0
+     ],
+     "text": "Gulf of Bothnia · land rising",
+     "cls": "tag",
+     "in": "s07@ice",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -20,
+      30,
+      60,
+      75
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 200,
+    "lonlat": [
+     9.5,
+     55.2
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}
