@@ -371,7 +371,7 @@
    }
   },
   {
-   "at": "s06@6-0.2",
+   "at": "s06@six-0.2",
    "do": "chart.split_in",
    "id": "run",
    "args": {
@@ -379,7 +379,7 @@
    }
   },
   {
-   "at": "s06@6+0.6",
+   "at": "s06@six+0.6",
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {

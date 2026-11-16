@@ -625,7 +625,7 @@
    ],
    "devices": [
     {
-     "at": "@@6-0.2",
+     "at": "@@six-0.2",
      "do": "chart.split_in",
      "id": "run",
      "args": {
@@ -633,7 +633,7 @@
      }
     },
     {
-     "at": "@@6+0.6",
+     "at": "@@six+0.6",
      "do": "geo.highlight_pulse",
      "stage": "stage_map",
      "args": {
