@@ -102,7 +102,7 @@
   }
  },
  "variety": {
-  "question": "who-holds",
+  "question": "which-record",
   "hook": "challenge",
   "opener": "mystery-zoom-out",
   "reveal": "flag-lift",

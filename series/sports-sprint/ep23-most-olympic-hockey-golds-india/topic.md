@@ -17,7 +17,7 @@ turns on — and the recent Tokyo/Paris bronzes make the NOW half of the split c
 Australia are far behind; the last gold was Moscow and the last two Games brought bronze."
 
 ## Question shape
-who-holds, a record with a modern-power trap ("who has the most olympic golds in men's field hockey?" — stem varied from the which-country run); flag
+which-record, a "who" stem with a modern-power trap ("who has the most olympic golds in men's field hockey?" — stem varied from the which-country run); flag
 options; reads verbatim as the hook; hook = challenge (the title says 'not the one you think'); mystery-zoom-out opener
 from the Arabian Peninsula so no candidate is in frame.
 
