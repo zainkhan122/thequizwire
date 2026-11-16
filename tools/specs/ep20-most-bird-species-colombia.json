@@ -24,12 +24,12 @@
   }
  ],
  "correct": 2,
- "answer_sub": "nearly 2,000 species · a fifth of all birds",
+ "answer_sub": "a fifth of all bird species",
  "outro_headline": "DID YOU GET IT?",
  "cover_emoji": "🔭",
  "cover_emoji_why": "binoculars say 'birdwatching' and belong to no country; they say nothing about rainforest, islands or mountains",
  "post": {
-  "premise": "The country with the most bird species is not the one with the biggest rainforest",
+  "premise": "The most bird species are not in the biggest rainforest",
   "bait": "Brazil, Indonesia or Colombia — which did you pick? 👇",
   "keywords": [
    "which country has the most bird species",
@@ -162,7 +162,7 @@
  "facts": [
   {
    "kicker": "160+",
-   "text": "hummingbird species, more than any country"
+   "text": "hummingbird species · world record"
   }
  ],
  "characters": {
@@ -298,7 +298,7 @@
      "a fifth of all birds, 1 country"
     ],
     "screen": [
-     "nearly 2,000 species · a fifth of all birds",
+     "a fifth of all bird species",
      "1,969",
      "species",
      "a fifth of all birds"
@@ -353,7 +353,7 @@
     ],
     "screen": [
      "160+",
-     "hummingbird species, more than any country",
+     "hummingbird species · world record",
      "Santa Marta · endemic birds"
     ]
    }
@@ -706,7 +706,7 @@
    "pause_after": 0.5,
    "card": {
     "kicker": "160+",
-    "text": "hummingbird species, more than any country"
+    "text": "hummingbird species · world record"
    },
    "card_at": null,
    "cam": [

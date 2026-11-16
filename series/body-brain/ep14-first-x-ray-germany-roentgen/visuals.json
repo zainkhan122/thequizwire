@@ -25,7 +25,7 @@
    "id": "f1",
    "type": "fact",
    "kicker": "FIRST NOBEL",
-   "text": "Physics, for a ray he would not patent"
+   "text": "for a ray he never patented"
   },
   {
    "id": "ph_hand",
@@ -36,13 +36,14 @@
    "y": 420,
    "w": 400,
    "h": 480,
-   "rot": -3
+   "rot": -3,
+   "credit": "📷 Wilhelm Röntgen · Public domain"
   },
   {
    "id": "f4",
    "type": "fact",
    "kicker": "FIRST NOBEL",
-   "text": "Physics, for a ray he would not patent"
+   "text": "for a ray he never patented"
   },
   {
    "id": "pat",

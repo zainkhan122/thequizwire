@@ -17,7 +17,7 @@
   "correct": 2,
   "beat": 3.0,
   "answer_line": "Colombia",
-  "answer_sub": "nearly 2,000 species · a fifth of all birds",
+  "answer_sub": "a fifth of all bird species",
   "option_meta": [
    {
     "flag": "br"
@@ -30,7 +30,7 @@
    }
   ],
   "banner": "Colombia",
-  "banner_sub": "✓  C was right · nearly 2,000 species · a fifth of all birds",
+  "banner_sub": "✓  C was right · a fifth of all bird species",
   "outro": {
    "headline": "DID YOU GET IT?",
    "url": "thequizwire.com"
@@ -45,7 +45,7 @@
  ],
  "post": {
   "title": "Which country has the MOST bird species? 🔭",
-  "premise": "The country with the most bird species is not the one with the biggest rainforest",
+  "premise": "The most bird species are not in the biggest rainforest",
   "bait": "Brazil, Indonesia or Colombia — which did you pick? 👇",
   "keywords": [
    "which country has the most bird species",
@@ -57,7 +57,7 @@
    "wildlife facts",
    "nature quiz"
   ],
-  "description": "The country with the most bird species is not the one with the biggest rainforest. Brazil, Indonesia or Colombia — which did you pick? 👇\n\nSources: BirdLife International; Colombian Committee of Ornithological Records; Encyclopaedia Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #20",
+  "description": "The most bird species are not in the biggest rainforest. Brazil, Indonesia or Colombia — which did you pick? 👇\n\nSources: BirdLife International; Colombian Committee of Ornithological Records; Encyclopaedia Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #20",
   "hashtags": [
    "#AnimalQuiz",
    "#WildlifeFacts",

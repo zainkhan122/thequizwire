@@ -17,7 +17,7 @@
   "correct": 1,
   "beat": 3.0,
   "answer_line": "Kazakhstan",
-  "answer_sub": "about 2.7 million km² · no coast",
+  "answer_sub": "2.7 million km² · no coast",
   "option_meta": [
    {
     "flag": "mn"
@@ -30,7 +30,7 @@
    }
   ],
   "banner": "Kazakhstan",
-  "banner_sub": "✓  B was right · about 2.7 million km² · no coast",
+  "banner_sub": "✓  B was right · 2.7 million km² · no coast",
   "outro": {
    "headline": "DID YOU GET IT?",
    "url": "thequizwire.com"
@@ -45,7 +45,7 @@
  ],
  "post": {
   "title": "Which is the LARGEST landlocked country? 🧭",
-  "premise": "The biggest country with no coastline still launches rockets into space",
+  "premise": "The biggest country with no coast launches rockets",
   "bait": "Mongolia, Kazakhstan or Bolivia — which did you pick? 👇",
   "keywords": [
    "largest landlocked country",
@@ -57,7 +57,7 @@
    "map quiz",
    "country facts"
   ],
-  "description": "The biggest country with no coastline still launches rockets into space. Mongolia, Kazakhstan or Bolivia — which did you pick? 👇\n\nSources: CIA World Factbook; Encyclopaedia Britannica; UN Statistics Division.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #31",
+  "description": "The biggest country with no coast launches rockets. Mongolia, Kazakhstan or Bolivia — which did you pick? 👇\n\nSources: CIA World Factbook; Encyclopaedia Britannica; UN Statistics Division.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #31",
   "hashtags": [
    "#GeographyQuiz",
    "#MapQuiz",
@@ -83,7 +83,7 @@
    ],
    "youtube": {
     "title": "What is the largest landlocked country? It has no coast but launches rockets 🧭",
-    "description": "The steppe nation, the Andean one, or the third one? The biggest country with no coastline is wider than Western Europe, its longest shore is on a lake, and the first human ever sent into space lifted off from inside it.\nWhich did you pick?",
+    "description": "The Gobi nation, the Andean one, or the third one? The biggest country with no coastline is wider than Western Europe, its longest shore is on a lake, and the first human ever sent into space lifted off from inside it.\nWhich did you pick?",
     "tags": [
      "#geoquiz",
      "#landlocked",
@@ -93,7 +93,7 @@
     ]
    },
    "instagram": {
-    "caption": "Which is the LARGEST landlocked country? 🧭\nThe steppe nation, the Andean one, or the other one? Wider than Western Europe, not a metre of sea coast, and the first human in space lifted off from inside it.\nWhich did you pick?",
+    "caption": "Which is the LARGEST landlocked country? 🧭\nThe Gobi nation, the Andean one, or the other one? Wider than Western Europe, not a metre of sea coast, and the first human in space lifted off from inside it.\nWhich did you pick?",
     "tags": [
      "#geoquiz",
      "#landlocked",
@@ -119,7 +119,7 @@
    "threads": {
     "text": "Which is the largest landlocked country — Mongolia, Kazakhstan or Bolivia? The biggest country with no coastline is wider than Western Europe, its longest shore is on a lake, and the first human ever sent into space lifted off from inside it.",
     "tags": [
-     "#geography"
+     "#landlocked"
     ]
    }
   }
@@ -131,7 +131,7 @@
   "reveal": "flag-lift",
   "beats": [
    "bars",
-   "erase",
+   "compare",
    "pin",
    "label"
   ],

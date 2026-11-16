@@ -17,7 +17,7 @@
   "correct": 1,
   "beat": 3.0,
   "answer_line": "Saudi Arabia",
-  "answer_sub": "no permanent river, no natural lake",
+  "answer_sub": "no permanent river or lake",
   "option_meta": [
    {
     "flag": "au"
@@ -30,7 +30,7 @@
    }
   ],
   "banner": "Saudi Arabia",
-  "banner_sub": "✓  B was right · no permanent river, no natural lake",
+  "banner_sub": "✓  B was right · no permanent river or lake",
   "outro": {
    "headline": "TOO EASY?",
    "url": "thequizwire.com"
@@ -45,7 +45,7 @@
  ],
  "post": {
   "title": "Which is the BIGGEST country with no rivers? 💧",
-  "premise": "A country bigger than Western Europe has not one river that flows all year",
+  "premise": "A country of millions without a single river",
   "bait": "Australia, Saudi Arabia or Egypt — which did you pick? 👇",
   "keywords": [
    "country with no rivers",
@@ -57,7 +57,7 @@
    "map quiz",
    "country facts"
   ],
-  "description": "A country bigger than Western Europe has not one river that flows all year. Australia, Saudi Arabia or Egypt — which did you pick? 👇\n\nSources: Encyclopaedia Britannica; CIA World Factbook; Saline Water Conversion Corporation.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #32",
+  "description": "A country of millions without a single river. Australia, Saudi Arabia or Egypt — which did you pick? 👇\n\nSources: Encyclopaedia Britannica; CIA World Factbook; Saline Water Conversion Corporation.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #32",
   "hashtags": [
    "#GeographyQuiz",
    "#MapQuiz",
@@ -84,7 +84,7 @@
     "gulf coast"
    ],
    "youtube": {
-    "title": "Which country has no rivers at all? It drinks the sea instead 💧",
+    "title": "The biggest country with no rivers? It drinks the sea instead 💧",
     "description": "The island continent, the desert kingdom, or the land of the great river? One of them has not a single river that flows all year and no natural lake, yet millions live in its capital. The water arrives by pipeline, hundreds of kilometres from the coast, after being pulled out of the sea.\nWhich did you pick?",
     "tags": [
      "#geoquiz",
@@ -121,7 +121,7 @@
    "threads": {
     "text": "Which is the biggest country with no rivers — Australia, Saudi Arabia or Egypt? One of them has not a single river that flows all year and no natural lake, yet millions live in its capital, drinking water pulled out of the sea and piped hundreds of kilometres inland.",
     "tags": [
-     "#geography"
+     "#desertlife"
     ]
    }
   }

@@ -25,7 +25,7 @@
    "id": "f1",
    "type": "fact",
    "kicker": "MADE WATER",
-   "text": "over half its drinking water comes from the sea"
+   "text": "over half its drinking water"
   },
   {
    "id": "water",
@@ -47,7 +47,7 @@
    "id": "f4",
    "type": "fact",
    "kicker": "MADE WATER",
-   "text": "over half its drinking water comes from the sea"
+   "text": "over half its drinking water"
   },
   {
    "id": "st_river",

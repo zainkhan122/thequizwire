@@ -29,7 +29,7 @@
  "cover_emoji": "🏑",
  "cover_emoji_why": "a hockey stick names the sport and belongs to no country; the three options are all hockey nations, so it favours none",
  "post": {
-  "premise": "The cricket-mad giant owns the Olympic record in a different sport entirely",
+  "premise": "A cricket nation owns the Olympic hockey record",
   "bait": "Netherlands, Australia or India — which did you pick? 👇",
   "keywords": [
    "most olympic gold medals field hockey",
@@ -59,7 +59,7 @@
     "8 golds"
    ],
    "youtube": {
-    "title": "Which country has the most Olympic hockey golds? Not the one you think 🏑",
+    "title": "Which country has the most Olympic gold medals in hockey? Not the one you think 🏑",
     "description": "The modern champions, the southern powerhouse, or the third one? One nation has more men's field hockey golds than anyone, won six of them in a row without losing a single match, and once beat the United States by more than twenty goals in a single game. It is better known today for a different sport entirely.\nWhich did you pick?",
     "tags": [
      "#sportsquiz",
@@ -96,7 +96,7 @@
    "threads": {
     "text": "Which country has the most Olympic golds in men's field hockey — the Netherlands, Australia or India? One nation won six golds in a row without losing a single match, once scored more than twenty in a single Olympic game, and is better known today for a different sport entirely.",
     "tags": [
-     "#olympics"
+     "#fieldhockey"
     ]
    }
   }
@@ -161,7 +161,7 @@
  "facts": [
   {
    "kicker": "24–1",
-   "text": "v United States, Los Angeles, the biggest Olympic win"
+   "text": "v USA, Los Angeles · record win"
   }
  ],
  "characters": {
@@ -341,7 +341,7 @@
     ],
     "screen": [
      "24–1",
-     "v United States, Los Angeles, the biggest Olympic win",
+     "v USA, Los Angeles · record win",
      "BRONZE",
      "Tokyo and Paris, back on the podium",
      "NOW"
@@ -704,7 +704,7 @@
    "pause_after": 0.5,
    "card": {
     "kicker": "24–1",
-    "text": "v United States, Los Angeles, the biggest Olympic win"
+    "text": "v USA, Los Angeles · record win"
    },
    "card_at": null,
    "cam": [

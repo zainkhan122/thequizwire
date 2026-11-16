@@ -24,12 +24,12 @@
   }
  ],
  "correct": 1,
- "answer_sub": "no permanent river, no natural lake",
+ "answer_sub": "no permanent river or lake",
  "outro_headline": "TOO EASY?",
  "cover_emoji": "💧",
  "cover_emoji_why": "a water drop names the subject (rivers, or the lack of them) and belongs to no option; all three countries are dry in places, so it favours none",
  "post": {
-  "premise": "A country bigger than Western Europe has not one river that flows all year",
+  "premise": "A country of millions without a single river",
   "bait": "Australia, Saudi Arabia or Egypt — which did you pick? 👇",
   "keywords": [
    "country with no rivers",
@@ -61,7 +61,7 @@
     "gulf coast"
    ],
    "youtube": {
-    "title": "Which country has no rivers at all? It drinks the sea instead 💧",
+    "title": "The biggest country with no rivers? It drinks the sea instead 💧",
     "description": "The island continent, the desert kingdom, or the land of the great river? One of them has not a single river that flows all year and no natural lake, yet millions live in its capital. The water arrives by pipeline, hundreds of kilometres from the coast, after being pulled out of the sea.\nWhich did you pick?",
     "tags": [
      "#geoquiz",
@@ -98,7 +98,7 @@
    "threads": {
     "text": "Which is the biggest country with no rivers — Australia, Saudi Arabia or Egypt? One of them has not a single river that flows all year and no natural lake, yet millions live in its capital, drinking water pulled out of the sea and piped hundreds of kilometres inland.",
     "tags": [
-     "#geography"
+     "#desertlife"
     ]
    }
   }
@@ -164,7 +164,7 @@
  "facts": [
   {
    "kicker": "MADE WATER",
-   "text": "over half its drinking water comes from the sea"
+   "text": "over half its drinking water"
   }
  ],
  "characters": {
@@ -307,7 +307,7 @@
      "it drinks the sea"
     ],
     "screen": [
-     "no permanent river, no natural lake",
+     "no permanent river or lake",
      "no permanent river"
     ]
    },
@@ -361,7 +361,7 @@
     ],
     "screen": [
      "MADE WATER",
-     "over half its drinking water comes from the sea",
+     "over half its drinking water",
      "Jubail",
      "Riyadh",
      "sea water, piped inland"
@@ -755,7 +755,7 @@
    "pause_after": 0.5,
    "card": {
     "kicker": "MADE WATER",
-    "text": "over half its drinking water comes from the sea"
+    "text": "over half its drinking water"
    },
    "card_at": null,
    "cam": [

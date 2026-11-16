@@ -102,7 +102,15 @@
    "title": "Caspian Sea",
    "url": "https://www.britannica.com/place/Caspian-Sea",
    "date": "2026-11-11",
-   "notes": "world's largest inland body of water; a lake with no outlet to the ocean; bordered by Kazakhstan on the north-east"
+   "notes": "world's largest inland body of water, about 371,000 km²; a lake with no outlet to the ocean; bordered by Kazakhstan on the north-east"
+  },
+  "brit_lakes": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Lake — the largest lakes",
+   "url": "https://www.britannica.com/science/lake",
+   "date": "2026-11-11",
+   "notes": "Caspian Sea about 371,000 km²; Lake Superior about 82,100 km²; Lake Victoria about 69,500 km²"
   },
   "wiki_landlocked": {
    "type": "reference",
@@ -148,8 +156,7 @@
    "screen": [
     "2.72 million km²",
     "million km² · no coast",
-    "2.7 million km²",
-    "no coast"
+    "2.7 million km² · no coast"
    ]
   },
   {
@@ -172,17 +179,23 @@
   {
    "id": "C03",
    "weight": "core",
-   "text": "Kazakhstan's western shore is on the Caspian Sea, the world's largest inland body of water, a lake with no outlet to the ocean.",
+   "text": "Kazakhstan's western shore is on the Caspian Sea, the world's largest lake at about 371,000 km² (Lake Superior about 82,000 km², Lake Victoria about 69,000 km²), with no outlet to the ocean.",
    "sources": [
     "brit_caspian",
+    "brit_lakes",
     "cia_kz"
    ],
    "vo": [
     "the caspian laps its western shore, but it is a lake, the biggest on earth, sealed from the ocean"
    ],
    "screen": [
-    "CASPIAN SEA",
-    "the Caspian · a lake"
+    "the Caspian · a lake",
+    "Lake Victoria",
+    "Lake Superior",
+    "Caspian",
+    "69,000 km²",
+    "82,000 km²",
+    "371,000 km²"
    ]
   },
   {
@@ -198,7 +211,7 @@
    ],
    "screen": [
     "BAIKONUR",
-    "the world's first spaceport, leased to Russia",
+    "first spaceport, leased to Russia",
     "Baikonur Cosmodrome"
    ]
   }

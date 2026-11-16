@@ -27,7 +27,7 @@ A Netherlands — the modern men's and women's superpower, but only 2 men's gold
 distance.
 
 ## Search term
-"most olympic gold medals hockey"
+"most olympic gold medals in hockey"
 
 ## Rejected alternatives
 - "Which country has the most Olympic hockey golds overall (men + women)" — the Dutch women close the gap; ambiguous

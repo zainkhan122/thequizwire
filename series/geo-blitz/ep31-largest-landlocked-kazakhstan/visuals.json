@@ -25,7 +25,7 @@
    "id": "f1",
    "type": "fact",
    "kicker": "BAIKONUR",
-   "text": "the world's first spaceport, leased to Russia"
+   "text": "first spaceport, leased to Russia"
   },
   {
    "id": "area",
@@ -53,17 +53,35 @@
    "w": 900
   },
   {
-   "id": "casp",
-   "type": "erase",
-   "text": "CASPIAN SEA",
-   "y": 860,
-   "h": 260
+   "id": "lakes",
+   "type": "compare",
+   "items": [
+    [
+     "Lake Victoria",
+     69,
+     "69,000 km²"
+    ],
+    [
+     "Lake Superior",
+     82,
+     "82,000 km²"
+    ],
+    [
+     "Caspian",
+     371,
+     "371,000 km²"
+    ]
+   ],
+   "y": 320,
+   "x": 60,
+   "w": 900,
+   "max_h": 520
   },
   {
    "id": "f4",
    "type": "fact",
    "kicker": "BAIKONUR",
-   "text": "the world's first spaceport, leased to Russia"
+   "text": "first spaceport, leased to Russia"
   },
   {
    "id": "st_yurt",
@@ -88,7 +106,7 @@
    "type": "sticker",
    "emoji": "1f30a",
    "x": 840,
-   "y": 700,
+   "y": 1010,
    "size": 165,
    "rot": 6
   },
@@ -373,12 +391,12 @@
    }
   },
   {
-   "at": "s06@caspian",
-   "do": "chart.erase_run",
-   "id": "casp",
-   "until": "s06@lake+1.1",
+   "at": "s06@caspian-0.2",
+   "do": "chart.compare_in",
+   "id": "lakes",
    "args": {
-    "direction": "left"
+    "dur": 0.9,
+    "stagger": 0.25
    }
   },
   {
@@ -414,7 +432,7 @@
   {
    "at": "s06.end",
    "do": "chart.out",
-   "id": "casp"
+   "id": "lakes"
   },
   {
    "at": "s06.end",

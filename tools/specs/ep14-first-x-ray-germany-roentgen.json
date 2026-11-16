@@ -24,12 +24,12 @@
   }
  ],
  "correct": 1,
- "answer_sub": "a hand, a ring, and a new kind of ray",
+ "answer_sub": "a hand, a ring, a new kind of ray",
  "outro_headline": "1 FOR 1?",
  "cover_emoji": "🦴",
  "cover_emoji_why": "a bone names the subject (seeing inside the body) and belongs to no country; it says nothing about which lab got there first",
  "post": {
-  "premise": "The first picture ever taken through living flesh showed a wedding ring",
+  "premise": "The first picture through living flesh showed a ring",
   "bait": "France, Germany or United States — which did you pick? 👇",
   "keywords": [
    "first x-ray ever taken",
@@ -98,7 +98,7 @@
    "threads": {
     "text": "Which country made the first X-ray image — France, Germany or the United States? A physics professor placed his wife's hand on a photographic plate for a quarter of an hour; her bones appeared, and her wedding ring, and she said five words nobody forgets.",
     "tags": [
-     "#medicalhistory"
+     "#xrayhistory"
     ]
    }
   }
@@ -163,7 +163,7 @@
  "facts": [
   {
    "kicker": "FIRST NOBEL",
-   "text": "Physics, for a ray he would not patent"
+   "text": "for a ray he never patented"
   }
  ],
  "characters": {
@@ -299,7 +299,7 @@
      "her hand, a new science"
     ],
     "screen": [
-     "a hand, a ring, and a new kind of ray",
+     "a hand, a ring, a new kind of ray",
      "Würzburg · 1895",
      "Röntgen",
      "1895"
@@ -349,7 +349,7 @@
     ],
     "screen": [
      "FIRST NOBEL",
-     "Physics, for a ray he would not patent",
+     "for a ray he never patented",
      "PATENT"
     ]
    }
@@ -684,7 +684,7 @@
    "pause_after": 0.5,
    "card": {
     "kicker": "FIRST NOBEL",
-    "text": "Physics, for a ray he would not patent"
+    "text": "for a ray he never patented"
    },
    "card_at": null,
    "cam": [

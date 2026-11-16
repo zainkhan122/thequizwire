@@ -17,7 +17,7 @@
   "correct": 1,
   "beat": 3.0,
   "answer_line": "Germany",
-  "answer_sub": "a hand, a ring, and a new kind of ray",
+  "answer_sub": "a hand, a ring, a new kind of ray",
   "option_meta": [
    {
     "flag": "fr"
@@ -30,7 +30,7 @@
    }
   ],
   "banner": "Germany",
-  "banner_sub": "✓  B was right · a hand, a ring, and a new kind of ray",
+  "banner_sub": "✓  B was right · a hand, a ring, a new kind of ray",
   "outro": {
    "headline": "1 FOR 1?",
    "url": "thequizwire.com"
@@ -45,7 +45,7 @@
  ],
  "post": {
   "title": "Which country made the FIRST X-ray image? 🦴",
-  "premise": "The first picture ever taken through living flesh showed a wedding ring",
+  "premise": "The first picture through living flesh showed a ring",
   "bait": "France, Germany or United States — which did you pick? 👇",
   "keywords": [
    "first x-ray ever taken",
@@ -57,7 +57,7 @@
    "medical history quiz",
    "science facts"
   ],
-  "description": "The first picture ever taken through living flesh showed a wedding ring. France, Germany or United States — which did you pick? 👇\n\nSources: Nobel Prize Outreach; Encyclopaedia Britannica; Deutsches Röntgen-Museum.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nBody & Brain #14",
+  "description": "The first picture through living flesh showed a ring. France, Germany or United States — which did you pick? 👇\n\nSources: Nobel Prize Outreach; Encyclopaedia Britannica; Deutsches Röntgen-Museum.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nBody & Brain #14",
   "hashtags": [
    "#BodyFacts",
    "#BrainQuiz",
@@ -121,7 +121,7 @@
    "threads": {
     "text": "Which country made the first X-ray image — France, Germany or the United States? A physics professor placed his wife's hand on a photographic plate for a quarter of an hour; her bones appeared, and her wedding ring, and she said five words nobody forgets.",
     "tags": [
-     "#medicalhistory"
+     "#xrayhistory"
     ]
    }
   }

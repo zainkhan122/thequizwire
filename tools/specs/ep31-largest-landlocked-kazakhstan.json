@@ -24,12 +24,12 @@
   }
  ],
  "correct": 1,
- "answer_sub": "about 2.7 million km² · no coast",
+ "answer_sub": "2.7 million km² · no coast",
  "outro_headline": "DID YOU GET IT?",
  "cover_emoji": "🧭",
  "cover_emoji_why": "a compass says 'find it on the map' and belongs to no option; it says nothing about steppe, altiplano or desert",
  "post": {
-  "premise": "The biggest country with no coastline still launches rockets into space",
+  "premise": "The biggest country with no coast launches rockets",
   "bait": "Mongolia, Kazakhstan or Bolivia — which did you pick? 👇",
   "keywords": [
    "largest landlocked country",
@@ -60,7 +60,7 @@
    ],
    "youtube": {
     "title": "What is the largest landlocked country? It has no coast but launches rockets 🧭",
-    "description": "The steppe nation, the Andean one, or the third one? The biggest country with no coastline is wider than Western Europe, its longest shore is on a lake, and the first human ever sent into space lifted off from inside it.\nWhich did you pick?",
+    "description": "The Gobi nation, the Andean one, or the third one? The biggest country with no coastline is wider than Western Europe, its longest shore is on a lake, and the first human ever sent into space lifted off from inside it.\nWhich did you pick?",
     "tags": [
      "#geoquiz",
      "#landlocked",
@@ -70,7 +70,7 @@
     ]
    },
    "instagram": {
-    "caption": "Which is the LARGEST landlocked country? 🧭\nThe steppe nation, the Andean one, or the other one? Wider than Western Europe, not a metre of sea coast, and the first human in space lifted off from inside it.\nWhich did you pick?",
+    "caption": "Which is the LARGEST landlocked country? 🧭\nThe Gobi nation, the Andean one, or the other one? Wider than Western Europe, not a metre of sea coast, and the first human in space lifted off from inside it.\nWhich did you pick?",
     "tags": [
      "#geoquiz",
      "#landlocked",
@@ -96,7 +96,7 @@
    "threads": {
     "text": "Which is the largest landlocked country — Mongolia, Kazakhstan or Bolivia? The biggest country with no coastline is wider than Western Europe, its longest shore is on a lake, and the first human ever sent into space lifted off from inside it.",
     "tags": [
-     "#geography"
+     "#landlocked"
     ]
    }
   }
@@ -108,7 +108,7 @@
   "reveal": "flag-lift",
   "beats": [
    "bars",
-   "erase",
+   "compare",
    "pin",
    "label"
   ],
@@ -116,7 +116,7 @@
   "music": "bed:bright",
   "outro": "DID YOU GET IT?"
  },
- "intent": "A size quiz with a trap in the middle: three area bars that put the Andes and the steppe neighbours far below the winner, the word CASPIAN SEA erased because it is a lake, and the launch pad on the steppe where the space age began — landlocked, and still the road to orbit.",
+ "intent": "A size quiz with a trap in the middle: three area bars that put the Andes and the steppe neighbours far below the winner, the Caspian set to scale against the next-biggest lakes because it is a lake, and the launch pad on the steppe where the space age began — landlocked, and still the road to orbit.",
  "voice": {
   "v01_cues": {
    "which": "which",
@@ -161,7 +161,7 @@
  "facts": [
   {
    "kicker": "BAIKONUR",
-   "text": "the world's first spaceport, leased to Russia"
+   "text": "first spaceport, leased to Russia"
   }
  ],
  "characters": {
@@ -253,7 +253,15 @@
     "title": "Caspian Sea",
     "url": "https://www.britannica.com/place/Caspian-Sea",
     "date": "2026-11-11",
-    "notes": "world's largest inland body of water; a lake with no outlet to the ocean; bordered by Kazakhstan on the north-east"
+    "notes": "world's largest inland body of water, about 371,000 km²; a lake with no outlet to the ocean; bordered by Kazakhstan on the north-east"
+   },
+   "brit_lakes": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Lake — the largest lakes",
+    "url": "https://www.britannica.com/science/lake",
+    "date": "2026-11-11",
+    "notes": "Caspian Sea about 371,000 km²; Lake Superior about 82,100 km²; Lake Victoria about 69,500 km²"
    },
    "wiki_landlocked": {
     "type": "reference",
@@ -299,8 +307,7 @@
     "screen": [
      "2.72 million km²",
      "million km² · no coast",
-     "2.7 million km²",
-     "no coast"
+     "2.7 million km² · no coast"
     ]
    },
    {
@@ -323,17 +330,23 @@
    {
     "id": "C03",
     "weight": "core",
-    "text": "Kazakhstan's western shore is on the Caspian Sea, the world's largest inland body of water, a lake with no outlet to the ocean.",
+    "text": "Kazakhstan's western shore is on the Caspian Sea, the world's largest lake at about 371,000 km² (Lake Superior about 82,000 km², Lake Victoria about 69,000 km²), with no outlet to the ocean.",
     "sources": [
      "brit_caspian",
+     "brit_lakes",
      "cia_kz"
     ],
     "vo": [
      "the caspian laps its western shore, but it is a lake, the biggest on earth, sealed from the ocean"
     ],
     "screen": [
-     "CASPIAN SEA",
-     "the Caspian · a lake"
+     "the Caspian · a lake",
+     "Lake Victoria",
+     "Lake Superior",
+     "Caspian",
+     "69,000 km²",
+     "82,000 km²",
+     "371,000 km²"
     ]
    },
    {
@@ -349,7 +362,7 @@
     ],
     "screen": [
      "BAIKONUR",
-     "the world's first spaceport, leased to Russia",
+     "first spaceport, leased to Russia",
      "Baikonur Cosmodrome"
     ]
    }
@@ -616,7 +629,7 @@
      "ocean": "ocean"
     }
    },
-   "direction": "swing west to the Caspian shore; the words CASPIAN SEA stand on 'Caspian' and are erased on 'lake'; the lake tag plates the shore; a wave sticker on 'ocean' as Kazakhstan pulses",
+   "direction": "swing west to the Caspian shore; three lake silhouettes rise to scale on 'Caspian' with the Caspian dwarfing Superior and Victoria; the lake tag plates the shore on 'lake'; a wave sticker on 'ocean' as Kazakhstan pulses",
    "energy": 3,
    "tone": "revelatory",
    "pause_after": 0.45,
@@ -638,21 +651,39 @@
    "pulse": false,
    "elements": [
     {
-     "id": "casp",
-     "type": "erase",
-     "text": "CASPIAN SEA",
-     "y": 860,
-     "h": 260
+     "id": "lakes",
+     "type": "compare",
+     "items": [
+      [
+       "Lake Victoria",
+       69,
+       "69,000 km²"
+      ],
+      [
+       "Lake Superior",
+       82,
+       "82,000 km²"
+      ],
+      [
+       "Caspian",
+       371,
+       "371,000 km²"
+      ]
+     ],
+     "y": 320,
+     "x": 60,
+     "w": 900,
+     "max_h": 520
     }
    ],
    "devices": [
     {
-     "at": "@@caspian",
-     "do": "chart.erase_run",
-     "id": "casp",
-     "until": "@@lake+1.1",
+     "at": "@@caspian-0.2",
+     "do": "chart.compare_in",
+     "id": "lakes",
      "args": {
-      "direction": "left"
+      "dur": 0.9,
+      "stagger": 0.25
      }
     },
     {
@@ -688,7 +719,7 @@
     {
      "at": "@.end",
      "do": "chart.out",
-     "id": "casp"
+     "id": "lakes"
     },
     {
      "at": "@.end",
@@ -712,7 +743,7 @@
    "pause_after": 0.5,
    "card": {
     "kicker": "BAIKONUR",
-    "text": "the world's first spaceport, leased to Russia"
+    "text": "first spaceport, leased to Russia"
    },
    "card_at": null,
    "cam": [
@@ -813,7 +844,7 @@
    "type": "sticker",
    "emoji": "1f30a",
    "x": 840,
-   "y": 700,
+   "y": 1010,
    "size": 165,
    "rot": 6
   },
