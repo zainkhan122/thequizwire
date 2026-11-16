@@ -270,6 +270,22 @@
     "url": "https://www.fih.hockey/events/olympic-games",
     "date": "2026-11-11",
     "notes": "men's hockey Olympic since 1908 (continuous since 1928); India's dominance 1928–1956"
+   },
+   "border_registry": {
+    "type": "primary",
+    "publisher": "Natural Earth 10m admin-0 disputed areas (via docs/border_registry.json)",
+    "title": "Disputed areas: Kashmir parts, Arunachal Pradesh",
+    "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/",
+    "date": "2026-11-13",
+    "notes": "Jammu and Kashmir admin India/claimed Pakistan; Azad Kashmir & Gilgit-Baltistan admin Pakistan/claimed India; Aksai Chin admin China/claimed India; Arunachal Pradesh admin India/claimed China"
+   },
+   "natural_earth": {
+    "type": "primary",
+    "publisher": "Natural Earth",
+    "title": "Admin 0 – Countries (public domain)",
+    "url": "https://www.naturalearthdata.com/downloads/",
+    "date": "2026-11-13",
+    "notes": "map geometry (110m); India 356, Russia 643, Indonesia 360"
    }
   },
   "claims": [
@@ -289,7 +305,6 @@
      "8 golds, 1 stick"
     ],
     "screen": [
-     "8 golds · six of them in a row",
      "8",
      "golds · men's field hockey"
     ]
@@ -323,7 +338,6 @@
     "screen": [
      "SIX",
      "golds in a row, Amsterdam to Melbourne",
-     "THEN",
      "Jhansi · home of the Wizard"
     ]
    },
@@ -343,8 +357,30 @@
      "24–1",
      "v USA, Los Angeles · record win",
      "BRONZE",
-     "Tokyo and Paris, back on the podium",
-     "NOW"
+     "Tokyo and Paris, back on the podium"
+    ]
+   },
+   {
+    "id": "C05",
+    "weight": "framing",
+    "text": "Border policy plates (the India close-up shows Kashmir and Arunachal Pradesh): each disputed part is labelled with who administers it and who claims it, per docs/BORDER_POLICY.md. No sovereignty asserted; Sir Creek (undemarcated India–Pakistan line) and Doklam (Bhutan, contested by China) are marked with plates too.",
+    "sources": [
+     "border_registry",
+     "natural_earth"
+    ],
+    "vo": [],
+    "screen": [
+     "Kashmir",
+     "Administered by India, Pakistan and China, by sector",
+     "Claimed by India, Pakistan, China",
+     "LoC 1972 · India: J&K, Ladakh · Pakistan: AJK, Gilgit-Baltistan · China: Aksai Chin",
+     "Arunachal Pradesh",
+     "Administered by India",
+     "Claimed by China",
+     "McMahon Line (1914) is the de facto boundary",
+     "Sir Creek",
+     "Doklam",
+     "Administered by Bhutan (contested by China)"
     ]
    }
   ]
