@@ -35,7 +35,7 @@ paired with a THEN / NOW split that is current (last two Games) — SHOW set {co
 
 ## Devices
 mystery-zoom-out opener · flag-lift reveal · fact cards ×2 · chart.counter_run · chart.split_in · geo.pin ×1 / pin_out ×1
-· geo.highlight_pulse ×4 · stickers 🦘 🏑 🏳 🪄 🥅 ❄ + sticker_pulse ×8 · flag-ball in happy / nl think · scalebar.
+· geo.highlight_pulse ×4 · stickers 🦘 🏑 🏳 🪄 🥅 ❄ + sticker_pulse ×8 · flag-ball in happy / nl think · scalebar · disputed plates: Kashmir (by sector), Arunachal Pradesh, Sir Creek, Doklam.
 
 ## Media & Pace
 No photograph: the 1930s team photographs on Commons have unclear authorship for the PD-only rule, and the counter and

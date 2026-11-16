@@ -379,6 +379,182 @@
     "side": "left"
    }
   ],
+  "disputed": [
+   {
+    "id": "jk",
+    "ne_name": "Jammu and Kashmir",
+    "name": "Kashmir",
+    "controller": "India, Pakistan and China, by sector",
+    "claimants": [
+     "India",
+     "Pakistan",
+     "China"
+    ],
+    "note": "LoC 1972 · India: J&K, Ladakh · Pakistan: AJK, Gilgit-Baltistan · China: Aksai Chin",
+    "as_of": "2026-11",
+    "source": "docs/border_registry.json#kashmir",
+    "label_at": [
+     73,
+     33.5
+    ],
+    "plate_cls": "small"
+   },
+   {
+    "id": "ak",
+    "ne_name": "Azad Kashmir",
+    "name": "Azad Kashmir",
+    "controller": "Pakistan",
+    "claimants": [
+     "India"
+    ],
+    "as_of": "2026-11",
+    "source": "docs/border_registry.json#kashmir",
+    "plate": false,
+    "plate_group": "jk",
+    "label_at": [
+     73.792156,
+     33.848664
+    ]
+   },
+   {
+    "id": "gb",
+    "ne_name": "Gilgit-Baltistan",
+    "name": "Gilgit-Baltistan",
+    "controller": "Pakistan",
+    "claimants": [
+     "India"
+    ],
+    "as_of": "2026-11",
+    "source": "docs/border_registry.json#kashmir",
+    "plate": false,
+    "plate_group": "jk",
+    "label_at": [
+     74.854045,
+     35.9976
+    ]
+   },
+   {
+    "id": "ac",
+    "ne_name": "Aksai Chin",
+    "name": "Aksai Chin",
+    "controller": "China",
+    "claimants": [
+     "India"
+    ],
+    "as_of": "2026-11",
+    "source": "docs/border_registry.json#kashmir",
+    "plate": false,
+    "plate_group": "jk",
+    "label_at": [
+     79.172747,
+     35.061522
+    ]
+   },
+   {
+    "id": "ar",
+    "ne_name": "Arunachal Pradesh",
+    "name": "Arunachal Pradesh",
+    "controller": "India",
+    "claimants": [
+     "China"
+    ],
+    "note": "McMahon Line (1914) is the de facto boundary",
+    "as_of": "2026-11",
+    "source": "docs/border_registry.json#arunachal",
+    "label_at": [
+     88,
+     33
+    ],
+    "plate_cls": "small"
+   },
+   {
+    "id": "sirc",
+    "name": "Sir Creek",
+    "controller": "India (east bank) and Pakistan (west bank); the line in the creek is undemarcated",
+    "claimants": [
+     "India",
+     "Pakistan"
+    ],
+    "as_of": "2026-11",
+    "source": "docs/border_registry.json#sir_creek",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        68.7,
+        23.5
+       ],
+       [
+        69.0,
+        23.5
+       ],
+       [
+        69.0,
+        24.25
+       ],
+       [
+        68.7,
+        24.25
+       ],
+       [
+        68.7,
+        23.5
+       ]
+      ]
+     ]
+    },
+    "label_at": [
+     73.5,
+     20.5
+    ],
+    "plate_cls": "small",
+    "author_note": "no Natural Earth polygon — marker box on the creek; plate carries the policy text"
+   },
+   {
+    "id": "dokl",
+    "name": "Doklam",
+    "controller": "Bhutan (contested by China)",
+    "claimants": [
+     "China"
+    ],
+    "as_of": "2026-11",
+    "source": "docs/border_registry.json#doklam",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        88.9,
+        27.2
+       ],
+       [
+        89.15,
+        27.2
+       ],
+       [
+        89.15,
+        27.4
+       ],
+       [
+        88.9,
+        27.4
+       ],
+       [
+        88.9,
+        27.2
+       ]
+      ]
+     ]
+    },
+    "label_at": [
+     84.5,
+     25.6
+    ],
+    "plate_cls": "small",
+    "author_note": "no Natural Earth polygon — marker box on the plateau"
+   }
+  ],
   "scalebar": {
    "km": 500,
    "lonlat": [
