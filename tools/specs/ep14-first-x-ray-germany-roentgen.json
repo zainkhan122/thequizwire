@@ -141,7 +141,7 @@
    }
   },
   "v06": {
-   "text": "He laid his wife's hand on the plate. Her bones appeared, and her ring. She said: I have seen my death.",
+   "text": "He laid his wife's hand on the plate. Her bones appeared, and her ring. Her words: I have seen my death.",
    "cues": {
     "hand": "hand",
     "bones": "bones",
@@ -299,15 +299,12 @@
      "her hand, a new science"
     ],
     "screen": [
-     "a hand, a ring, a new kind of ray",
-     "Würzburg · 1895",
-     "Röntgen",
-     "1895"
+     "Würzburg · 1895"
     ]
    },
    {
     "id": "C02",
-    "weight": "core",
+    "weight": "detail",
     "text": "X-rays were taken up in France and the United States within months of the discovery (early 1896), but the first radiograph of a human body part was made in Würzburg.",
     "sources": [
      "brit_xray",
@@ -328,7 +325,7 @@
      "commons_hand"
     ],
     "vo": [
-     "he laid his wife's hand on the plate. her bones appeared, and her ring. she said: i have seen my death"
+     "he laid his wife's hand on the plate. her bones appeared, and her ring. her words: i have seen my death"
     ],
     "screen": [
      "Her hand · the first X-ray",
@@ -573,7 +570,7 @@
   },
   {
    "vo": {
-    "text": "He laid his wife's hand on the plate. Her bones appeared, and her ring. She said: I have seen my death.",
+    "text": "He laid his wife's hand on the plate. Her bones appeared, and her ring. Her words: I have seen my death.",
     "cues": {
      "hand": "hand",
      "bones": "bones",

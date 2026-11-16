@@ -306,8 +306,7 @@
     ],
     "screen": [
      "2.72 million km²",
-     "million km² · no coast",
-     "2.7 million km² · no coast"
+     "million km² · no coast"
     ]
    },
    {
@@ -369,6 +368,8 @@
   ]
  },
  "geo": {
+  "projection_reason": "satellite raster (Web Mercator tiles) under a location story; the only area comparison is the to-scale bars chart (Kazakhstan / Mongolia / Bolivia in million km²) — the map shapes are never compared (P1)",
+  "size_claim_device": "area",
   "fit_bbox": [
    46,
    40,

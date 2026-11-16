@@ -5,7 +5,10 @@
 
 FAIL (exit 1)
   P1 projection honesty   a scene whose script/screen text makes a size/area claim uses a conformal projection
-                          (Mercator & co.); every scene needs `projection_reason`
+                          (Mercator & co.); every scene needs `projection_reason`. Exception, recorded in the scene as
+                          `size_claim_device`: the comparison is made by a to-scale chart (visuals element of type
+                          bars/compare, named by id) and never by the map's shapes — the raster stays, the chart is
+                          the instrument (same reasoning as ep12's quoted-figure rule).
   P2 distances            a distance claim ("km", "miles", "far") with no `scalebar` in the scene
   P3 coordinates          pin/label lon/lat out of range; with --online a pin with `qid` farther than 25 km from the
                           Wikidata coordinate (P625); any disputed entry whose `label_at` is missing
@@ -102,7 +105,13 @@ def main():
         pj = sp.get("projection", "equalEarth")
         if pj not in KNOWN: F.append(f"{sid}: unknown projection '{pj}'")
         if not sp.get("projection_reason"): F.append(f"{sid}: projection_reason missing (say why this projection is honest for this claim)")
-        if size_claim and pj in CONFORMAL: F.append(f"{sid}: size/area claim in the episode but projection '{pj}' is conformal — use equalEarth / conicEqualArea (P1)")
+        if size_claim and pj in CONFORMAL:
+            dev = sp.get("size_claim_device"); vs = ep / "visuals.json"
+            els = {e.get("id"): e for e in json.loads(vs.read_text()).get("elements", [])} if vs.exists() else {}
+            if dev and els.get(dev, {}).get("type") in ("bars", "compare") and "chart" in (sp.get("projection_reason") or "").lower():
+                W.append(f"{sid}: size claim on '{pj}' allowed — comparison carried by to-scale chart '{dev}' ({els[dev]['type']}), not by map shapes (P1)")
+            else:
+                F.append(f"{sid}: size/area claim in the episode but projection '{pj}' is conformal — use equalEarth / conicEqualArea, or name the to-scale chart in `size_claim_device` (P1)")
         if dist_claim and not sp.get("scalebar"): F.append(f"{sid}: distance claim in the episode but no scalebar (P2)")
         for p in sp.get("pins", []) + sp.get("labels", []):
             ll = p.get("lonlat")

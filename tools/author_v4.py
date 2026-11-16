@@ -115,6 +115,7 @@ def build(S):
                              "pins": g.get("pins", []), "labels": g.get("labels", []), "disputed": g.get("disputed", []), "sources": ["Natural Earth"],
                              "basemap": {"layer": "night" if opener == "night-lights" else "bluemarble", "k_max": 2.0, "far": {"bbox": g["far_bbox"], "k_min": 0.3}},
                              "projection_reason": g.get("projection_reason", "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"),
+                             **({"size_claim_device": g["size_claim_device"]} if g.get("size_claim_device") else {}),
                              **({"scalebar": {"km": g["scalebar"]["km"], "lonlat": g["scalebar"]["lonlat"], "at": [60, 1130]}} if g.get("scalebar") else {})}}}   # scalebar: null → none (world-scale Mercator: a bar would lie)
     # ---------------- visuals.json
     ch = S["characters"]; st = S.get("stickers", []); F = S["facts"]; cams = g["cams"]

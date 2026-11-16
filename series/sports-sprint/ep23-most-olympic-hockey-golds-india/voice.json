@@ -111,7 +111,7 @@
    "direction": "tighten on the north; the 24–1 card on 'score' with a goal sticker; a snow sticker on 'Moscow'; the Indian flag-ball grins on 'Paris' as India pulses; the pin leaves at the end",
    "text": "An early match against the United States produced a score never matched since. Gold last came in Moscow; bronze in Tokyo and Paris.",
    "cues": {
-    "final": "score",
+    "score": "score",
     "moscow": "moscow",
     "paris": "paris"
    }

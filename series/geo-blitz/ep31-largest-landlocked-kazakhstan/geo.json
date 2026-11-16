@@ -76,7 +76,8 @@
      "k_min": 0.3
     }
    },
-   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; the only area comparison is the to-scale bars chart (Kazakhstan / Mongolia / Bolivia in million km²) — the map shapes are never compared (P1)",
+   "size_claim_device": "area",
    "scalebar": {
     "km": 500,
     "lonlat": [
