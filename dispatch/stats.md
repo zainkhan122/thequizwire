@@ -1,19 +1,19 @@
-# Channel stats — 2026-11-15T14:28Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
+# Channel stats — 2026-11-16T16:41Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
 
 ## Per series, all channels (7-day movement — what is trending for us)
-- wild-files: 16 posts · +5 in 7 d · 7390 total
+- wild-files: 16 posts · +7 in 7 d · 7392 total
 - geo-blitz: 23 posts · +4 in 7 d · 11328 total
 - sports-sprint: 18 posts · +3 in 7 d · 7826 total
-- body-brain: 6 posts · +2 in 7 d · 3195 total
+- body-brain: 6 posts · +0 in 7 d · 3195 total
 
 ## youtube — 32 posts · metric views · buffer insights · 32/32 sent posts with metrics
 last 24 h:
-- ep09-basketball-invented-springfield (sports-sprint): +2 · 1195 total
-- ep17-deepest-lake-baikal (geo-blitz): +1 · 1006 total
+- ep10-komodo-dragons-indonesia (wild-files): +1 · 789 total
+- ep12-polar-bears-penguins (wild-files): +1 · 723 total
 - ep14-most-time-zones-france (geo-blitz): +0 · 1267 total
 - ep10-grand-slam-on-grass-wimbledon (sports-sprint): +0 · 1221 total
 - ep15-no-rivers-saudi-arabia (geo-blitz): +0 · 1214 total
-series (7 d): wild-files +5 (8) · geo-blitz +4 (12) · sports-sprint +3 (9) · body-brain +2 (3)
+series (7 d): wild-files +7 (8) · geo-blitz +4 (12) · sports-sprint +3 (9) · body-brain +0 (3)
 hours (first-24 h by publish hour): 12:00 n=4 med 97.5 · 19:00 n=4 med 715.5
 → slots: ['19:00', '12:00']
 
@@ -59,10 +59,10 @@ hours (first-24 h by publish hour): 10:00 n=3 med 0 · 19:00 n=4 med 2.0
 | ep15-first-davis-cup-boston | youtube | Tue 12:00 | views | 667 | 0 | 1 | 0 | 16 | 0 |
 | ep15-first-davis-cup-boston | threads | Tue 10:00 | views | 0 | 0 | 0 | 0 | 0 | 0 |
 | ep12-polar-bears-penguins | threads | Mon 19:00 | views | 0 | 0 | 0 | 0 | 0 | 0 |
-| ep12-polar-bears-penguins | youtube | Mon 19:00 | views | 722 | 0 | 0 | 446 | 16 | 0 |
+| ep12-polar-bears-penguins | youtube | Mon 19:00 | views | 723 | 1 | 1 | 446 | 16 | 0 |
 | ep05-first-heart-transplant | threads | Sun 10:00 | views | 4 | 0 | 0 | None | 0 | 0 |
 | ep14-cricket-world-cup-wins | threads | Sat 19:00 | views | 11 | 0 | 0 | None | 0 | 0 |
-| ep05-first-heart-transplant | youtube | Sat 19:00 | views | 1058 | 0 | 1 | None | 85 | 0 |
+| ep05-first-heart-transplant | youtube | Sat 19:00 | views | 1058 | 0 | 0 | None | 85 | 0 |
 | ep14-cricket-world-cup-wins | youtube | Sat 12:00 | views | 674 | 0 | 0 | None | 7 | 0 |
 | ep18-newest-un-member | threads | Fri 19:00 | views | 11 | 0 | 0 | None | 0 | 0 |
 | ep18-newest-un-member | youtube | Fri 12:00 | views | 843 | 0 | 1 | None | 50 | 1 |
@@ -75,10 +75,10 @@ hours (first-24 h by publish hour): 10:00 n=3 med 0 · 19:00 n=4 med 2.0
 | ep11-most-elephants-botswana | youtube | Wed 19:00 | views | 1006 | 0 | 0 | None | 79 | 0 |
 | ep12-most-world-cups-brazil | youtube | Wed 12:00 | views | 1026 | 0 | 0 | None | 48 | 0 |
 | ep10-komodo-dragons-indonesia | threads | Tue 19:00 | views | 7 | 0 | 0 | None | 1 | 0 |
-| ep17-deepest-lake-baikal | youtube | Tue 19:00 | views | 1006 | 1 | 1 | None | 124 | 2 |
-| ep10-komodo-dragons-indonesia | youtube | Tue 12:00 | views | 788 | 0 | 3 | None | 118 | 0 |
+| ep17-deepest-lake-baikal | youtube | Tue 19:00 | views | 1006 | 0 | 1 | None | 124 | 2 |
+| ep10-komodo-dragons-indonesia | youtube | Tue 12:00 | views | 789 | 1 | 4 | None | 118 | 0 |
 | ep04-tallest-men-netherlands | threads | Mon 19:00 | views | 1 | 0 | 0 | None | 0 | 0 |
-| ep04-tallest-men-netherlands | youtube | Mon 19:00 | views | 1203 | 0 | 1 | None | 69 | 1 |
+| ep04-tallest-men-netherlands | youtube | Mon 19:00 | views | 1203 | 0 | 0 | None | 69 | 1 |
 | ep11-first-modern-olympics-athens | youtube | Sun 12:00 | views | 1069 | 0 | 0 | None | 35 | 0 |
 | ep11-first-modern-olympics-athens | threads | Sun 10:00 | views | 1 | 0 | 0 | None | 0 | 0 |
 | ep15-no-rivers-saudi-arabia | threads | Sat 19:00 | views | 0 | 0 | 0 | None | 0 | 0 |
@@ -93,7 +93,7 @@ hours (first-24 h by publish hour): 10:00 n=3 med 0 · 19:00 n=4 med 2.0
 | ep09-basketball-invented-springfield | threads | Fri 11:00 | views | 0 | 0 | 0 | None | 0 | 0 |
 | ep10-grand-slam-on-grass-wimbledon | youtube | Fri 11:00 | views | 1221 | 0 | 0 | None | 97 | 2 |
 | ep14-most-time-zones-france | threads | Fri 11:00 | views | 4 | 0 | 0 | None | 0 | 0 |
-| ep09-basketball-invented-springfield | youtube | Fri 11:00 | views | 1195 | 2 | 2 | None | 77 | 0 |
+| ep09-basketball-invented-springfield | youtube | Fri 11:00 | views | 1195 | 0 | 2 | None | 77 | 0 |
 | ep13-southern-alps-new-zealand | threads | Fri 10:00 | views | 15 | 0 | 0 | None | 1 | 0 |
 | ep14-most-time-zones-france | youtube | Fri 10:00 | views | 1267 | 0 | 0 | None | 113 | 1 |
 | ep12-coldest-desert-antarctica | threads | Fri 09:00 | views | 6 | 0 | 0 | None | 0 | 0 |
