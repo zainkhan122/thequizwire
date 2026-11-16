@@ -3,11 +3,11 @@
  "format": "quiz-v3",
  "series": "wild-files",
  "number": 20,
- "title": "Which country has the MOST bird species?",
+ "title": "Where do the MOST bird species live?",
  "difficulty": "MEDIUM",
  "seed": 3820,
  "quiz": {
-  "question": "Which country has the MOST bird species?",
+  "question": "Where do the MOST bird species live?",
   "keyword": "MOST",
   "options": [
    "Brazil",
@@ -44,11 +44,11 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Which country has the MOST bird species? 🔭",
+  "title": "Where do the MOST bird species live? 🔭",
   "premise": "The most bird species are not in the biggest rainforest",
   "bait": "Brazil, Indonesia or Colombia — which did you pick? 👇",
   "keywords": [
-   "which country has the most bird species",
+   "where do the most bird species live",
    "most bird species in the world",
    "birdwatching countries",
    "most biodiverse countries",
@@ -94,7 +94,7 @@
     ]
    },
    "instagram": {
-    "caption": "Which country has the MOST bird species? 🔭\nThe rainforest giant, the island nation of thousands, or the other one? One country holds about a fifth of every bird species on Earth and more hummingbirds than anywhere else. The reason is not jungle, it is mountains.\nWhich did you pick?",
+    "caption": "Where do the MOST bird species live? 🔭\nThe rainforest giant, the island nation of thousands, or the other one? One country holds about a fifth of every bird species on Earth and more hummingbirds than anywhere else. The reason is not jungle, it is mountains.\nWhich did you pick?",
     "tags": [
      "#animalquiz",
      "#birds",
@@ -104,21 +104,21 @@
     ]
    },
    "facebook": {
-    "text": "Which country has the most bird species — Brazil, Indonesia or Colombia?\nOne country holds about a fifth of every bird species on Earth, more hummingbirds than anywhere else, and new species are still being described from its hills. The reason is not jungle — it is three walls of mountains. Pick your flag before the tally lands.",
+    "text": "Where do the most bird species live — Brazil, Indonesia or Colombia?\nOne country holds about a fifth of every bird species on Earth, more hummingbirds than anywhere else, and new species are still being described from its hills. The reason is not jungle — it is three walls of mountains. Pick your flag before the tally lands.",
     "tags": [
      "#animalquiz",
      "#birds"
     ]
    },
    "twitter": {
-    "text": "Which country has the MOST bird species?\nBrazil, Indonesia or Colombia? About a fifth of every bird on Earth, and the reason is mountains, not jungle.",
+    "text": "Where do the MOST bird species live?\nBrazil, Indonesia or Colombia? About a fifth of every bird on Earth, and the reason is mountains, not jungle.",
     "tags": [
      "#AnimalQuiz",
      "#Birds"
     ]
    },
    "threads": {
-    "text": "Which country has the most bird species — Brazil, Indonesia or Colombia? One country holds about a fifth of every bird species on Earth and more hummingbirds than anywhere else; the reason is not jungle, it is three walls of mountains.",
+    "text": "Where do the most bird species live — Brazil, Indonesia or Colombia? One country holds about a fifth of every bird species on Earth and more hummingbirds than anywhere else; the reason is not jungle, it is three walls of mountains.",
     "tags": [
      "#birdwatching"
     ]
@@ -126,7 +126,7 @@
   }
  },
  "variety": {
-  "question": "which-country",
+  "question": "where-is",
   "hook": "question-first",
   "opener": "mystery-zoom-out",
   "reveal": "flag-lift",

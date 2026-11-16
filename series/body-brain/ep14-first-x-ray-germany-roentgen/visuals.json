@@ -46,11 +46,13 @@
    "text": "for a ray he never patented"
   },
   {
-   "id": "pat",
-   "type": "erase",
-   "text": "PATENT",
-   "y": 860,
-   "h": 260
+   "id": "st_no",
+   "type": "sticker",
+   "emoji": "1f6ab",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
   },
   {
    "id": "st_bulb",
@@ -402,6 +404,14 @@
    "id": "ph_hand"
   },
   {
+   "at": "s06@hand+0.2",
+   "do": "fx.flash",
+   "args": {
+    "peak": 0.9,
+    "out": 0.3
+   }
+  },
+  {
    "at": "s06@hand",
    "do": "sticker_in",
    "id": "st_bulb"
@@ -505,18 +515,24 @@
    "id": "st_steth"
   },
   {
-   "at": "s07@patent-0.3",
-   "do": "chart.erase_run",
-   "id": "pat",
-   "until": "s07@patent+1.0",
-   "args": {
-    "direction": "left"
-   }
+   "at": "s07@patent",
+   "do": "sticker_in",
+   "id": "st_no"
   },
   {
-   "at": "s07@nobel-0.4",
-   "do": "chart.out",
-   "id": "pat"
+   "at": "s07@patent+0.4",
+   "do": "sticker_pulse",
+   "id": "st_no"
+  },
+  {
+   "at": "s07@patent+0.9",
+   "do": "sticker_pulse",
+   "id": "st_no"
+  },
+  {
+   "at": "s07@nobel-0.2",
+   "do": "sticker_out",
+   "id": "st_no"
   },
   {
    "at": "s07@nobel",

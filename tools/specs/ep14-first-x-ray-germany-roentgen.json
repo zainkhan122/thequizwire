@@ -110,7 +110,7 @@
   "reveal": "fill-pulse",
   "beats": [
    "photo-cutout",
-   "erase",
+   "flash",
    "pin",
    "label"
   ],
@@ -118,7 +118,7 @@
   "music": "bed:deep",
   "outro": "1 FOR 1?"
  },
- "intent": "A discovery told through one photograph: the real plate of a hand with a ring rising out of the country where it was made, the quote she said when she saw it, the word PATENT erased because he refused one, and the first Nobel Prize in Physics as the close — a body quiz where the body is literally seen through.",
+ "intent": "A discovery told through one photograph: the real plate of a hand with a ring rising out of the country where it was made, the quote she said when she saw it, a no-entry sign because he refused a patent, and the first Nobel Prize in Physics as the close — a body quiz where the body is literally seen through.",
  "voice": {
   "v01_cues": {
    "which": "which",
@@ -346,8 +346,7 @@
     ],
     "screen": [
      "FIRST NOBEL",
-     "for a ray he never patented",
-     "PATENT"
+     "for a ray he never patented"
     ]
    }
   ]
@@ -610,6 +609,14 @@
    },
    "devices": [
     {
+     "at": "@@hand+0.2",
+     "do": "fx.flash",
+     "args": {
+      "peak": 0.9,
+      "out": 0.3
+     }
+    },
+    {
      "at": "@@hand",
      "do": "sticker_in",
      "id": "st_bulb"
@@ -675,7 +682,7 @@
      "nobel": "nobel"
     }
    },
-   "direction": "ease back a little; a stethoscope sticker on 'weeks'; the word PATENT stands and is erased on 'patent'; the FIRST NOBEL card on 'Nobel' with a medal sticker; the German flag-ball grins as Germany pulses; the pin leaves at the end",
+   "direction": "ease back a little; a stethoscope sticker on 'weeks'; a no-entry sticker on 'patent'; the FIRST NOBEL card on 'Nobel' with a medal sticker; the German flag-ball grins as Germany pulses; the pin leaves at the end",
    "energy": 3,
    "tone": "resolute",
    "pause_after": 0.5,
@@ -700,15 +707,6 @@
     ]
    ],
    "pulse": false,
-   "elements": [
-    {
-     "id": "pat",
-     "type": "erase",
-     "text": "PATENT",
-     "y": 860,
-     "h": 260
-    }
-   ],
    "devices": [
     {
      "at": "@@weeks",
@@ -731,18 +729,24 @@
      "id": "st_steth"
     },
     {
-     "at": "@@patent-0.3",
-     "do": "chart.erase_run",
-     "id": "pat",
-     "until": "@@patent+1.0",
-     "args": {
-      "direction": "left"
-     }
+     "at": "@@patent",
+     "do": "sticker_in",
+     "id": "st_no"
     },
     {
-     "at": "@@nobel-0.4",
-     "do": "chart.out",
-     "id": "pat"
+     "at": "@@patent+0.4",
+     "do": "sticker_pulse",
+     "id": "st_no"
+    },
+    {
+     "at": "@@patent+0.9",
+     "do": "sticker_pulse",
+     "id": "st_no"
+    },
+    {
+     "at": "@@nobel-0.2",
+     "do": "sticker_out",
+     "id": "st_no"
     },
     {
      "at": "@@nobel",
@@ -797,6 +801,15 @@
   }
  ],
  "extra_elements": [
+  {
+   "id": "st_no",
+   "type": "sticker",
+   "emoji": "1f6ab",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
   {
    "id": "st_bulb",
    "type": "sticker",

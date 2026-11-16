@@ -3,11 +3,11 @@
  "format": "quiz-v3",
  "series": "sports-sprint",
  "number": 23,
- "title": "Which country has the MOST Olympic golds in men's field hockey?",
+ "title": "Who has the MOST Olympic golds in men's field hockey?",
  "difficulty": "MEDIUM",
  "seed": 4123,
  "quiz": {
-  "question": "Which country has the MOST Olympic golds in men's field hockey?",
+  "question": "Who has the MOST Olympic golds in men's field hockey?",
   "keyword": "MOST",
   "options": [
    "Netherlands",
@@ -44,7 +44,7 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Which country has the MOST Olympic golds in men's field hockey? 🏑",
+  "title": "Who has the MOST Olympic golds in men's field hockey? 🏑",
   "premise": "A cricket nation owns the Olympic hockey record",
   "bait": "Netherlands, Australia or India — which did you pick? 👇",
   "keywords": [
@@ -93,7 +93,7 @@
     ]
    },
    "instagram": {
-    "caption": "Which country has the MOST Olympic golds in men's field hockey? 🏑\nThe modern champions, the southern powerhouse, or the other one? One nation won six golds in a row without losing a match, and once scored more than twenty in a single Olympic game. Today it is famous for a different sport.\nWhich did you pick?",
+    "caption": "Who has the MOST Olympic golds in men's field hockey? 🏑\nThe modern champions, the southern powerhouse, or the other one? One nation won six golds in a row without losing a match, and once scored more than twenty in a single Olympic game. Today it is famous for a different sport.\nWhich did you pick?",
     "tags": [
      "#sportsquiz",
      "#hockey",
@@ -103,21 +103,21 @@
     ]
    },
    "facebook": {
-    "text": "Which country has the most Olympic golds in men's field hockey — the Netherlands, Australia or India?\nOne nation has more men's hockey golds than anyone, won six of them in a row without losing a single match, and once beat the United States by more than twenty goals in one game. It is better known today for a different sport entirely. Pick your flag before the counter starts.",
+    "text": "Who has the most Olympic golds in men's field hockey — the Netherlands, Australia or India?\nOne nation has more men's hockey golds than anyone, won six of them in a row without losing a single match, and once beat the United States by more than twenty goals in one game. It is better known today for a different sport entirely. Pick your flag before the counter starts.",
     "tags": [
      "#sportsquiz",
      "#hockey"
     ]
    },
    "twitter": {
-    "text": "Which country has the MOST Olympic golds in men's field hockey?\nNetherlands, Australia or India? Six in a row without losing a match — and famous today for a different sport.",
+    "text": "Who has the MOST Olympic golds in men's field hockey?\nNetherlands, Australia or India? Six in a row without losing a match — and famous today for a different sport.",
     "tags": [
      "#SportsQuiz",
      "#Hockey"
     ]
    },
    "threads": {
-    "text": "Which country has the most Olympic golds in men's field hockey — the Netherlands, Australia or India? One nation won six golds in a row without losing a single match, once scored more than twenty in a single Olympic game, and is better known today for a different sport entirely.",
+    "text": "Who has the most Olympic golds in men's field hockey — the Netherlands, Australia or India? One nation won six golds in a row without losing a single match, once scored more than twenty in a single Olympic game, and is better known today for a different sport entirely.",
     "tags": [
      "#fieldhockey"
     ]
@@ -125,7 +125,7 @@
   }
  },
  "variety": {
-  "question": "which-country",
+  "question": "who-holds",
   "hook": "question-first",
   "opener": "mystery-zoom-out",
   "reveal": "flag-lift",

@@ -133,7 +133,7 @@
   "reveal": "fill-pulse",
   "beats": [
    "photo-cutout",
-   "erase",
+   "flash",
    "pin",
    "label"
   ],

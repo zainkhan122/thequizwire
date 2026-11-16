@@ -1,4 +1,4 @@
-# Which country has the MOST bird species?
+# Where do the MOST bird species live?
 
 ## Signal
 suggest: "which country has the most bird species" (YouTube autocomplete, "most … species / most biodiverse" family
@@ -17,7 +17,7 @@ birds, plus two coasts. New species are still being described, and the country h
 fourth; the reason is three Andean ranges and two coasts; Colombia has the most hummingbird species."
 
 ## Question shape
-which-country, biodiversity record with an Amazon trap ("which country has the most bird species?"); flag options;
+where-is, biodiversity record with an Amazon trap ("where do the most bird species live?" — stem varied from the which-country run); flag options;
 reads verbatim as the hook; hook = fact-first (the title rules out the Amazon one); mystery-zoom-out opener from
 Mexico so no candidate is in frame.
 
@@ -26,7 +26,7 @@ A Brazil — the Amazon makes it the reflex answer; it is third · B Indonesia �
 fourth · C Colombia (answer) — smaller than both, yet its mountains pack in more species than any country on Earth.
 
 ## Search term
-"which country has the most bird species"
+"most bird species"
 
 ## Rejected alternatives
 - "Which country has the most animal species overall" — Brazil by most counts; a different answer and a fuzzier count.
