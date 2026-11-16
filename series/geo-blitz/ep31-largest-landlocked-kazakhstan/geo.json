@@ -1,0 +1,93 @@
+{
+ "version": 1,
+ "episode": "ep31-largest-landlocked-kazakhstan",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     46,
+     40,
+     88,
+     56
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "398"
+     ],
+     "cls": "",
+     "note": "Kazakhstan",
+     "lift": "flag",
+     "flag": "kz"
+    }
+   ],
+   "pins": [
+    {
+     "id": "baik",
+     "lonlat": [
+      63.3,
+      45.9
+     ],
+     "label": "Baikonur Cosmodrome",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "cs",
+     "lonlat": [
+      50.5,
+      43.0
+     ],
+     "text": "the Caspian · a lake",
+     "cls": "tag",
+     "in": "s06@lake+0.2",
+     "out": "s06.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      20,
+      20,
+      110,
+      65
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 500,
+    "lonlat": [
+     47,
+     40.8
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

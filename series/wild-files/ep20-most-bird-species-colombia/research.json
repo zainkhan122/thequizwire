@@ -1,0 +1,209 @@
+{
+ "version": 1,
+ "episode": "ep20-most-bird-species-colombia",
+ "topic": "Country with the most bird species: Colombia, about 1,969 species on the national checklist of the Colombian Committee of Ornithological Records (roughly a fifth of the world's ~11,000 species), ahead of Peru (~1,890), Brazil (~1,860) and Indonesia (~1,700+). The diversity is driven by the three Andean cordilleras and their isolated valleys, plus Caribbean and Pacific coasts, Amazon and Orinoco lowlands. Colombia has the most hummingbird species of any country (over 160) and new species continue to be described; the Sierra Nevada de Santa Marta has one of the world's highest concentrations of endemic birds.",
+ "researched": "2026-11-16",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Brazil, with most of the Amazon, must have the most bird species.",
+   "reality": "Brazil ranks third behind Colombia and Peru; Colombia's Andean valleys and two coasts pack more species into an eighth of Brazil's area.",
+   "sources": [
+    "birdlife_colombia",
+    "brit_colombia"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Most-birds clips are top-10 lists; nobody erases the Amazon guess on a map, sets the three tallies to scale, shows the three Andean ranges as the reason and pins the massif of endemics as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=which+country+has+the+most+bird+species",
+    "title": "Search: which country has the most bird species",
+    "angle": "ranking lists",
+    "misses": "no map, no reason"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=birding+colombia",
+    "title": "Search: birding in the Andes",
+    "angle": "birding vlogs",
+    "misses": "no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=most+biodiverse+country",
+    "title": "Search: most biodiverse country",
+    "angle": "explainers",
+    "misses": "no bird focus"
+   }
+  ]
+ },
+ "sources": {
+  "birdlife_colombia": {
+   "type": "primary",
+   "publisher": "BirdLife International",
+   "title": "Country profile: Colombia",
+   "url": "https://datazone.birdlife.org/country/colombia",
+   "date": "2026-11-11",
+   "notes": "the country with the most bird species in the world; endemic-rich Andes and Santa Marta massif"
+  },
+  "acocolombia": {
+   "type": "primary",
+   "publisher": "Asociación Colombiana de Ornitología / Comité Colombiano de Registros Ornitológicos",
+   "title": "Lista de las aves de Colombia",
+   "url": "https://asociacioncolombianadeornitologia.org/lista-de-aves-de-colombia/",
+   "date": "2026-11-11",
+   "notes": "national checklist of about 1,969 species (current edition)"
+  },
+  "brit_colombia": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Colombia — Plant and animal life",
+   "url": "https://www.britannica.com/place/Colombia/Plant-and-animal-life",
+   "date": "2026-11-11",
+   "notes": "more bird species than any other country; three Andean cordilleras; Caribbean and Pacific coasts"
+  },
+  "brit_andes": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Andes Mountains — Colombia",
+   "url": "https://www.britannica.com/place/Andes-Mountains",
+   "date": "2026-11-11",
+   "notes": "in Colombia the Andes divide into three ranges (Cordillera Occidental, Central, Oriental) separated by deep valleys"
+  },
+  "wiki_birds_country": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "List of birds by country (countries ranked by species count)",
+   "url": "https://en.wikipedia.org/wiki/List_of_birds_by_country",
+   "date": "2026-11-11",
+   "notes": "Colombia first (about 1,969), Peru second (about 1,890), Brazil third (about 1,860), Indonesia fourth"
+  },
+  "wiki_colombia_birds": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "List of birds of Colombia",
+   "url": "https://en.wikipedia.org/wiki/List_of_birds_of_Colombia",
+   "date": "2026-11-11",
+   "notes": "about 1,969 species; around 80 endemics; more hummingbird species than any other country (over 160)"
+  },
+  "brit_hummingbird": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Hummingbird",
+   "url": "https://www.britannica.com/animal/hummingbird",
+   "date": "2026-11-11",
+   "notes": "family of over 300 species confined to the Americas; greatest diversity in the northern Andes"
+  },
+  "birdlife_santamarta": {
+   "type": "primary",
+   "publisher": "BirdLife International",
+   "title": "Sierra Nevada de Santa Marta — Endemic Bird Area",
+   "url": "https://datazone.birdlife.org/eba/factsheet/44",
+   "date": "2026-11-11",
+   "notes": "isolated coastal massif with one of the highest concentrations of endemic bird species on Earth"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Colombia has the most bird species of any country, about 1,969 — roughly a fifth of the world's bird species.",
+   "sources": [
+    "birdlife_colombia",
+    "acocolombia",
+    "wiki_birds_country"
+   ],
+   "vo": [
+    "which country has the most bird species",
+    "brazil, indonesia, or colombia",
+    "colombia. nearly 2,000 bird species, about a fifth of every bird species on earth",
+    "a fifth of all birds, 1 country"
+   ],
+   "screen": [
+    "nearly 2,000 species · a fifth of all birds",
+    "1,969",
+    "species",
+    "a fifth of all birds"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Brazil ranks third (about 1,860 species) and Indonesia fourth (about 1,700+); Peru is second (about 1,890).",
+   "sources": [
+    "wiki_birds_country",
+    "brit_colombia"
+   ],
+   "vo": [
+    "brazil has the amazon, yet only comes third. indonesia's many islands come fourth",
+    "peru sits just behind. the secret is 3 andean ranges, every valley between them breeding its own birds, and coasts on 2 oceans"
+   ],
+   "screen": [
+    "BRAZIL",
+    "1,890",
+    "1,860",
+    "Peru"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Colombia's bird diversity comes from the three Andean cordilleras with isolated valleys between them and its Caribbean and Pacific coasts.",
+   "sources": [
+    "brit_colombia",
+    "brit_andes",
+    "birdlife_colombia"
+   ],
+   "vo": [
+    "peru sits just behind. the secret is 3 andean ranges, every valley between them breeding its own birds, and coasts on 2 oceans"
+   ],
+   "screen": [
+    "3 Andean ranges"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Colombia has more hummingbird species than any other country (over 160); new species are still being described, and the Sierra Nevada de Santa Marta is one of the richest endemic bird areas on Earth.",
+   "sources": [
+    "wiki_colombia_birds",
+    "brit_hummingbird",
+    "birdlife_santamarta"
+   ],
+   "vo": [
+    "more kinds of hummingbird live here than anywhere else, and new species are still being described from these hills"
+   ],
+   "screen": [
+    "160+",
+    "hummingbird species, more than any country",
+    "Santa Marta · endemic birds"
+   ]
+  }
+ ]
+}

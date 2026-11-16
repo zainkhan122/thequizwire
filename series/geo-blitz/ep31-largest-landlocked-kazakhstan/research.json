@@ -1,0 +1,206 @@
+{
+ "version": 1,
+ "episode": "ep31-largest-landlocked-kazakhstan",
+ "topic": "Largest landlocked country: Kazakhstan, about 2,724,900 km² (ninth-largest country overall), with no ocean coastline; Mongolia is second at about 1,564,000 km² and Bolivia the largest landlocked country in the Americas at about 1,099,000 km². Kazakhstan's western shore is on the Caspian Sea, the world's largest inland body of water, classed as a lake with no outlet to the ocean. The Baikonur Cosmodrome in south-central Kazakhstan is the world's first and largest operational spaceport, leased to Russia; Sputnik 1 (1957) and Yuri Gagarin's Vostok 1 (1961) launched from it.",
+ "researched": "2026-11-16",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Kazakhstan has a sea coast, so it cannot be landlocked.",
+   "reality": "Its long western shore is on the Caspian, which is an endorheic lake with no connection to the ocean; Kazakhstan is landlocked and the largest such country.",
+   "sources": [
+    "brit_caspian",
+    "cia_kz"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Landlocked-country lists are static rankings; nobody stacks the three area bars on a map, erases the 'Caspian Sea' because it is a lake, and lands the quiz on the launch pad where the space age began.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=largest+landlocked+country",
+    "title": "Search: largest landlocked country",
+    "angle": "ranking lists",
+    "misses": "no map, no Caspian twist"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=is+the+caspian+sea+a+lake",
+    "title": "Search: is the Caspian Sea a lake",
+    "angle": "explainers",
+    "misses": "no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=baikonur+cosmodrome",
+    "title": "Search: Baikonur cosmodrome",
+    "angle": "space documentaries",
+    "misses": "no geography angle"
+   }
+  ]
+ },
+ "sources": {
+  "cia_kz": {
+   "type": "primary",
+   "publisher": "CIA World Factbook",
+   "title": "Kazakhstan — Geography",
+   "url": "https://www.cia.gov/the-world-factbook/countries/kazakhstan/",
+   "date": "2026-11-11",
+   "notes": "total area 2,724,900 sq km; landlocked; world's largest landlocked country; Caspian Sea coastline is on an inland body of water"
+  },
+  "cia_mn": {
+   "type": "primary",
+   "publisher": "CIA World Factbook",
+   "title": "Mongolia — Geography",
+   "url": "https://www.cia.gov/the-world-factbook/countries/mongolia/",
+   "date": "2026-11-11",
+   "notes": "total area 1,564,116 sq km; landlocked"
+  },
+  "cia_bo": {
+   "type": "primary",
+   "publisher": "CIA World Factbook",
+   "title": "Bolivia — Geography",
+   "url": "https://www.cia.gov/the-world-factbook/countries/bolivia/",
+   "date": "2026-11-11",
+   "notes": "total area 1,098,581 sq km; landlocked"
+  },
+  "brit_kz": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Kazakhstan",
+   "url": "https://www.britannica.com/place/Kazakhstan",
+   "date": "2026-11-11",
+   "notes": "largest landlocked country in the world; ninth-largest country by area"
+  },
+  "brit_caspian": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Caspian Sea",
+   "url": "https://www.britannica.com/place/Caspian-Sea",
+   "date": "2026-11-11",
+   "notes": "world's largest inland body of water; a lake with no outlet to the ocean; bordered by Kazakhstan on the north-east"
+  },
+  "wiki_landlocked": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Landlocked country",
+   "url": "https://en.wikipedia.org/wiki/Landlocked_country",
+   "date": "2026-11-11",
+   "notes": "Kazakhstan 2,724,900 km² largest; Mongolia 1,564,116 km² second; Bolivia 1,098,581 km²"
+  },
+  "nasa_baikonur": {
+   "type": "primary",
+   "publisher": "NASA",
+   "title": "Baikonur Cosmodrome",
+   "url": "https://www.nasa.gov/international-space-station/baikonur-cosmodrome/",
+   "date": "2026-11-11",
+   "notes": "world's first and largest operational space launch facility, in Kazakhstan; leased by Russia; Sputnik 1 and Gagarin's Vostok 1 launched from it"
+  },
+  "brit_baikonur": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Baikonur Cosmodrome",
+   "url": "https://www.britannica.com/place/Baikonur-Cosmodrome",
+   "date": "2026-11-11",
+   "notes": "launch site in Kazakhstan; first artificial satellite (Sputnik 1, 1957) and first crewed flight (Vostok 1, 1961); leased to Russia"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Kazakhstan is the largest landlocked country and the ninth-largest country overall, about 2.7 million km² (2,724,900 km²), with no ocean coastline.",
+   "sources": [
+    "cia_kz",
+    "brit_kz",
+    "wiki_landlocked"
+   ],
+   "vo": [
+    "which is the largest landlocked country",
+    "mongolia, kazakhstan, or bolivia",
+    "kazakhstan. only 8 countries on earth are bigger, and it has not a single metre of ocean coast",
+    "landlocked, and launching rockets"
+   ],
+   "screen": [
+    "2.72 million km²",
+    "million km² · no coast",
+    "2.7 million km²",
+    "no coast"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Mongolia (about 1.56 million km²) and Bolivia (about 1.10 million km²) are also landlocked, at roughly 57 % and 40 % of Kazakhstan's area.",
+   "sources": [
+    "cia_mn",
+    "cia_bo",
+    "wiki_landlocked"
+   ],
+   "vo": [
+    "mongolia is a little over half that size. bolivia, under half. neither touches the sea"
+   ],
+   "screen": [
+    "1.56 million km²",
+    "1.10 million km²"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Kazakhstan's western shore is on the Caspian Sea, the world's largest inland body of water, a lake with no outlet to the ocean.",
+   "sources": [
+    "brit_caspian",
+    "cia_kz"
+   ],
+   "vo": [
+    "the caspian laps its western shore, but it is a lake, the biggest on earth, sealed from the ocean"
+   ],
+   "screen": [
+    "CASPIAN SEA",
+    "the Caspian · a lake"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Baikonur Cosmodrome in Kazakhstan is the world's first and largest spaceport, leased to Russia; the first satellite (Sputnik 1) and the first human spaceflight (Gagarin, Vostok 1) launched from it.",
+   "sources": [
+    "nasa_baikonur",
+    "brit_baikonur"
+   ],
+   "vo": [
+    "yet the road to space starts here. the first satellite and the first cosmonaut lifted off from a pad on these steppes"
+   ],
+   "screen": [
+    "BAIKONUR",
+    "the world's first spaceport, leased to Russia",
+    "Baikonur Cosmodrome"
+   ]
+  }
+ ]
+}

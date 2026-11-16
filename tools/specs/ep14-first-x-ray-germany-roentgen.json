@@ -1,0 +1,878 @@
+{
+ "id": "ep14-first-x-ray-germany-roentgen",
+ "series": "body-brain",
+ "number": 14,
+ "seed": 3914,
+ "question": "Which country made the FIRST X-ray image?",
+ "keyword": "FIRST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "France",
+   "flag": "fr",
+   "cue": "france"
+  },
+  {
+   "text": "Germany",
+   "flag": "de",
+   "cue": "germany"
+  },
+  {
+   "text": "United States",
+   "flag": "us",
+   "cue": "united"
+  }
+ ],
+ "correct": 1,
+ "answer_sub": "a hand, a ring, and a new kind of ray",
+ "outro_headline": "1 FOR 1?",
+ "cover_emoji": "🦴",
+ "cover_emoji_why": "a bone names the subject (seeing inside the body) and belongs to no country; it says nothing about which lab got there first",
+ "post": {
+  "premise": "The first picture ever taken through living flesh showed a wedding ring",
+  "bait": "France, Germany or United States — which did you pick? 👇",
+  "keywords": [
+   "first x-ray ever taken",
+   "who discovered x-rays",
+   "first x-ray image hand",
+   "history of the x-ray",
+   "wilhelm rontgen discovery",
+   "body quiz",
+   "medical history quiz",
+   "science facts"
+  ],
+  "tags": [
+   "BodyQuiz",
+   "MedicalHistory"
+  ],
+  "sources_line": "Nobel Prize Outreach; Encyclopaedia Britannica; Deutsches Röntgen-Museum",
+  "copy": {
+   "spoilers": [
+    "germany",
+    "german",
+    "röntgen",
+    "rontgen",
+    "roentgen",
+    "würzburg",
+    "wurzburg",
+    "bavaria",
+    "bavarian",
+    "anna bertha",
+    "wilhelm"
+   ],
+   "youtube": {
+    "title": "Where was the first X-ray ever taken? Her first words were chilling 🦴",
+    "description": "The great laboratories, the famous inventor, or the third one? A physics professor caught a new kind of ray on a photographic plate, then placed his wife's hand on it for a quarter of an hour. Her bones appeared, and her wedding ring, and she said five words nobody forgets. Within weeks doctors everywhere were using it. He refused to patent it.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#xray",
+     "#medicalhistory",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country made the FIRST X-ray image? 🦴\nThe great laboratories, the famous inventor, or the other one? A physics professor placed his wife's hand on a photographic plate for a quarter of an hour. Her bones appeared, and her wedding ring, and she said five words nobody forgets.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#xray",
+     "#medicalhistory",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country made the first X-ray image — France, Germany or the United States?\nA physics professor caught a new kind of ray on a photographic plate, then placed his wife's hand on it for a quarter of an hour. Her bones appeared, and her wedding ring, and she said five words nobody forgets. Choose your flag before the plate develops.",
+    "tags": [
+     "#bodyquiz",
+     "#xray"
+    ]
+   },
+   "twitter": {
+    "text": "Which country made the FIRST X-ray image?\nFrance, Germany or United States? His wife's hand, a quarter of an hour on the plate — and five words nobody forgets.",
+    "tags": [
+     "#BodyQuiz",
+     "#XRay"
+    ]
+   },
+   "threads": {
+    "text": "Which country made the first X-ray image — France, Germany or the United States? A physics professor placed his wife's hand on a photographic plate for a quarter of an hour; her bones appeared, and her wedding ring, and she said five words nobody forgets.",
+    "tags": [
+     "#medicalhistory"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "story",
+  "opener": "wide-drift",
+  "reveal": "fill-pulse",
+  "beats": [
+   "photo-cutout",
+   "erase",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:de + emoji-set:lab",
+  "music": "bed:deep",
+  "outro": "1 FOR 1?"
+ },
+ "intent": "A discovery told through one photograph: the real plate of a hand with a ring rising out of the country where it was made, the quote she said when she saw it, the word PATENT erased because he refused one, and the first Nobel Prize in Physics as the close — a body quiz where the body is literally seen through.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "first": "first"
+  },
+  "v04": {
+   "text": "Germany. A physics professor in Bavaria caught a new kind of ray on a photographic plate.",
+   "cues": {
+    "answer": "germany",
+    "professor": "professor",
+    "plate": "plate"
+   }
+  },
+  "v05": {
+   "text": "France and America followed within months. But the first picture through flesh was made here.",
+   "cues": {
+    "france": "france",
+    "months": "months",
+    "here": "here"
+   }
+  },
+  "v06": {
+   "text": "He laid his wife's hand on the plate. Her bones appeared, and her ring. She said: I have seen my death.",
+   "cues": {
+    "hand": "hand",
+    "bones": "bones",
+    "death": "death"
+   }
+  },
+  "v07": {
+   "text": "Within weeks doctors were finding bullets. He refused to patent it, and took the first Nobel Prize in Physics.",
+   "cues": {
+    "weeks": "weeks",
+    "patent": "patent",
+    "nobel": "nobel"
+   }
+  },
+  "v08": {
+   "text": "Her hand, a new science. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "FIRST NOBEL",
+   "text": "Physics, for a ray he would not patent"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "de",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "fr",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "First X-ray image: Wilhelm Conrad Röntgen, professor of physics at the University of Würzburg (Bavaria, Germany), discovered X-rays on 8 November 1895 while experimenting with cathode-ray tubes. On 22 December 1895 he made the first X-ray photograph of a human body part, his wife Anna Bertha Ludwig's hand, showing her bones and wedding ring; she is reported to have said 'I have seen my death'. Exposure times for such plates were about 15 minutes. His paper 'On a New Kind of Rays' appeared on 28 December 1895; by early 1896 X-rays were in medical use in Europe and America (locating bullets, fractures). Röntgen refused to patent the discovery and received the first Nobel Prize in Physics in 1901.",
+  "myths": [
+   {
+    "myth": "X-rays were an American invention — Edison's.",
+    "reality": "Edison built an early fluoroscope in 1896, but the rays were discovered and first photographed in Würzburg, Germany, by Röntgen in 1895.",
+    "sources": [
+     "nobel_bio",
+     "brit_rontgen"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "X-ray history clips read a timeline; nobody raises the actual first plate out of the country on a map, erases the patent he never took, and lands on the first Nobel as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=first+x+ray+ever+taken",
+     "title": "Search: first x-ray ever taken",
+     "angle": "history explainers",
+     "misses": "no map, no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=who+discovered+x+rays",
+     "title": "Search: who discovered x-rays",
+     "angle": "biography",
+     "misses": "no country framing"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=how+do+x+rays+work",
+     "title": "Search: how do x-rays work",
+     "angle": "physics explainers",
+     "misses": "no story"
+    }
+   ]
+  },
+  "sources": {
+   "nobel_bio": {
+    "type": "primary",
+    "publisher": "Nobel Prize Outreach",
+    "title": "Wilhelm Conrad Röntgen — Biographical",
+    "url": "https://www.nobelprize.org/prizes/physics/1901/rontgen/biographical/",
+    "date": "2026-11-11",
+    "notes": "professor at Würzburg; discovered X-rays on 8 November 1895; first Nobel Prize in Physics 1901; refused to take out patents"
+   },
+   "nobel_facts": {
+    "type": "primary",
+    "publisher": "Nobel Prize Outreach",
+    "title": "The Nobel Prize in Physics 1901",
+    "url": "https://www.nobelprize.org/prizes/physics/1901/summary/",
+    "date": "2026-11-11",
+    "notes": "awarded to Röntgen 'in recognition of the extraordinary services he has rendered by the discovery of the remarkable rays'"
+   },
+   "brit_rontgen": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Wilhelm Conrad Röntgen",
+    "url": "https://www.britannica.com/biography/Wilhelm-Rontgen",
+    "date": "2026-11-11",
+    "notes": "discovered X-rays at Würzburg in 1895; photographed his wife's hand showing bones and ring; first Nobel Prize for Physics 1901"
+   },
+   "brit_xray": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "X-ray",
+    "url": "https://www.britannica.com/science/X-ray",
+    "date": "2026-11-11",
+    "notes": "discovered 1895 by Röntgen; within months in medical use for locating fractures and foreign bodies"
+   },
+   "roentgen_museum": {
+    "type": "primary",
+    "publisher": "Deutsches Röntgen-Museum (Remscheid)",
+    "title": "Die Entdeckung der Röntgenstrahlen",
+    "url": "https://roentgenmuseum.de/",
+    "date": "2026-11-11",
+    "notes": "22 December 1895 radiograph of Anna Bertha Röntgen's hand; exposure about 15 minutes; 'Ich habe meinen Tod gesehen'"
+   },
+   "uni_wuerzburg": {
+    "type": "primary",
+    "publisher": "Julius-Maximilians-Universität Würzburg",
+    "title": "Röntgen Memorial Site",
+    "url": "https://www.uni-wuerzburg.de/en/university/history/roentgen/",
+    "date": "2026-11-11",
+    "notes": "discovery in the Institute of Physics, Würzburg, 8 November 1895; first public lecture 23 January 1896"
+   },
+   "commons_hand": {
+    "type": "reference",
+    "publisher": "Wikimedia Commons",
+    "title": "File:First medical X-ray by Wilhelm Röntgen of his wife Anna Bertha Ludwig's hand - 18951222.jpg",
+    "url": "https://commons.wikimedia.org/wiki/File:First_medical_X-ray_by_Wilhelm_R%C3%B6ntgen_of_his_wife_Anna_Bertha_Ludwig%27s_hand_-_18951222.jpg",
+    "date": "2026-11-11",
+    "notes": "the 22 December 1895 radiograph; public domain (author died 1923)"
+   },
+   "wiki_history": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "X-ray — History",
+    "url": "https://en.wikipedia.org/wiki/X-ray#History",
+    "date": "2026-11-11",
+    "notes": "Edison's fluoroscope 1896; first clinical uses in Europe and the United States in early 1896; Röntgen refused patents"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "X-rays were discovered by Wilhelm Röntgen, professor of physics at Würzburg in Bavaria, Germany, in November 1895.",
+    "sources": [
+     "nobel_bio",
+     "brit_rontgen",
+     "uni_wuerzburg"
+    ],
+    "vo": [
+     "which country made the first x-ray image",
+     "france, germany, or united states",
+     "germany. a physics professor in bavaria caught a new kind of ray on a photographic plate",
+     "her hand, a new science"
+    ],
+    "screen": [
+     "a hand, a ring, and a new kind of ray",
+     "Würzburg · 1895",
+     "Röntgen",
+     "1895"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "X-rays were taken up in France and the United States within months of the discovery (early 1896), but the first radiograph of a human body part was made in Würzburg.",
+    "sources": [
+     "brit_xray",
+     "wiki_history"
+    ],
+    "vo": [
+     "france and america followed within months. but the first picture through flesh was made here"
+    ],
+    "screen": []
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "On 22 December 1895 Röntgen made the first X-ray photograph of a body part, his wife Anna Bertha's hand, showing bones and wedding ring after about 15 minutes' exposure; she reportedly said 'I have seen my death'.",
+    "sources": [
+     "roentgen_museum",
+     "brit_rontgen",
+     "commons_hand"
+    ],
+    "vo": [
+     "he laid his wife's hand on the plate. her bones appeared, and her ring. she said: i have seen my death"
+    ],
+    "screen": [
+     "Her hand · the first X-ray",
+     "I have seen my death"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Doctors were using X-rays to find bullets and fractures within weeks; Röntgen refused to patent the discovery and received the first Nobel Prize in Physics (1901).",
+    "sources": [
+     "nobel_bio",
+     "nobel_facts",
+     "brit_xray"
+    ],
+    "vo": [
+     "within weeks doctors were finding bullets. he refused to patent it, and took the first nobel prize in physics"
+    ],
+    "screen": [
+     "FIRST NOBEL",
+     "Physics, for a ray he would not patent",
+     "PATENT"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   5,
+   47,
+   16,
+   56
+  ],
+  "far_bbox": [
+   -15,
+   32,
+   40,
+   65
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "276"
+  ],
+  "highlight_note": "Germany",
+  "labels": [
+   {
+    "id": "quote",
+    "lonlat": [
+     12.8,
+     48.3
+    ],
+    "text": "I have seen my death",
+    "cls": "tag",
+    "in": "s06@death+0.2",
+    "out": "s06.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "wurz",
+    "lonlat": [
+     9.93,
+     49.79
+    ],
+    "label": "Würzburg · 1895",
+    "side": "right"
+   }
+  ],
+  "scalebar": {
+   "km": 100,
+   "lonlat": [
+    5.6,
+    47.5
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s04@professor",
+    "pid": "wurz"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.45,
+    [
+     -2,
+     42
+    ]
+   ],
+   "s01": [
+    0.45,
+    [
+     0,
+     43
+    ]
+   ],
+   "s04": [
+    0.95,
+    [
+     10,
+     50.5
+    ]
+   ],
+   "s04b": [
+    1.0,
+    [
+     10.3,
+     50.3
+    ]
+   ],
+   "s05": [
+    0.85,
+    [
+     10,
+     51
+    ]
+   ],
+   "s05b": [
+    0.9,
+    [
+     10.4,
+     50.8
+    ]
+   ],
+   "s06": [
+    1.1,
+    [
+     10.5,
+     49.6
+    ]
+   ],
+   "s06b": [
+    1.15,
+    [
+     10.8,
+     49.4
+    ]
+   ],
+   "s07": [
+    1.2,
+    [
+     9.5,
+     50.2
+    ]
+   ],
+   "s07b": [
+    1.26,
+    [
+     9.2,
+     50.4
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "France and America followed within months. But the first picture through flesh was made here.",
+    "cues": {
+     "france": "france",
+     "months": "months",
+     "here": "here"
+    }
+   },
+   "direction": "ease back over central Europe; the French flag-ball thinks on 'France'; a flask sticker on 'months'; a pointer sticker on 'here' as Germany pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.85,
+    [
+     10,
+     51
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.9,
+    [
+     10.4,
+     50.8
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@france",
+     "do": "character_in",
+     "id": "fr_think"
+    },
+    {
+     "at": "@@months",
+     "do": "sticker_in",
+     "id": "st_flask"
+    },
+    {
+     "at": "@@months+0.4",
+     "do": "sticker_pulse",
+     "id": "st_flask"
+    },
+    {
+     "at": "@@here",
+     "do": "sticker_out",
+     "id": "st_flask"
+    },
+    {
+     "at": "@@here",
+     "do": "sticker_in",
+     "id": "st_point"
+    },
+    {
+     "at": "@@here+0.4",
+     "do": "sticker_pulse",
+     "id": "st_point"
+    },
+    {
+     "at": "@@here+0.9",
+     "do": "sticker_pulse",
+     "id": "st_point"
+    },
+    {
+     "at": "@@here+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "276",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_point"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "fr_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "He laid his wife's hand on the plate. Her bones appeared, and her ring. She said: I have seen my death.",
+    "cues": {
+     "hand": "hand",
+     "bones": "bones",
+     "death": "death"
+    }
+   },
+   "direction": "tighten on Franconia; a lamp sticker and the real plate of her hand rising out of Germany on 'hand'; a ring sticker on 'bones'; the quote tag plates on 'death' as Germany pulses softly",
+   "energy": 3,
+   "tone": "suspense",
+   "pause_after": 0.6,
+   "cam": [
+    1.1,
+    [
+     10.5,
+     49.6
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.15,
+    [
+     10.8,
+     49.4
+    ]
+   ],
+   "pulse": false,
+   "photo": {
+    "id": "ph_hand",
+    "commons": "File:First medical X-ray by Wilhelm Röntgen of his wife Anna Bertha Ludwig's hand - 18951222.jpg",
+    "caption": "Her hand · the first X-ray",
+    "from": "rise",
+    "fid": "276",
+    "layer": "hl",
+    "w": 400,
+    "h": 480,
+    "at": 0.2
+   },
+   "devices": [
+    {
+     "at": "@@hand",
+     "do": "sticker_in",
+     "id": "st_bulb"
+    },
+    {
+     "at": "@@hand+0.4",
+     "do": "sticker_pulse",
+     "id": "st_bulb"
+    },
+    {
+     "at": "@@bones",
+     "do": "sticker_out",
+     "id": "st_bulb"
+    },
+    {
+     "at": "@@bones",
+     "do": "sticker_in",
+     "id": "st_ring"
+    },
+    {
+     "at": "@@bones+0.4",
+     "do": "sticker_pulse",
+     "id": "st_ring"
+    },
+    {
+     "at": "@@bones+0.6",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "276",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@death+0.4",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "276",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@death+0.8",
+     "do": "sticker_out",
+     "id": "st_ring"
+    },
+    {
+     "at": "@.end",
+     "do": "photo_out",
+     "id": "ph_hand"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Within weeks doctors were finding bullets. He refused to patent it, and took the first Nobel Prize in Physics.",
+    "cues": {
+     "weeks": "weeks",
+     "patent": "patent",
+     "nobel": "nobel"
+    }
+   },
+   "direction": "ease back a little; a stethoscope sticker on 'weeks'; the word PATENT stands and is erased on 'patent'; the FIRST NOBEL card on 'Nobel' with a medal sticker; the German flag-ball grins as Germany pulses; the pin leaves at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "FIRST NOBEL",
+    "text": "Physics, for a ray he would not patent"
+   },
+   "card_at": null,
+   "cam": [
+    1.2,
+    [
+     9.5,
+     50.2
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.26,
+    [
+     9.2,
+     50.4
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "pat",
+     "type": "erase",
+     "text": "PATENT",
+     "y": 860,
+     "h": 260
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@weeks",
+     "do": "sticker_in",
+     "id": "st_steth"
+    },
+    {
+     "at": "@@weeks+0.4",
+     "do": "sticker_pulse",
+     "id": "st_steth"
+    },
+    {
+     "at": "@@weeks+0.9",
+     "do": "sticker_pulse",
+     "id": "st_steth"
+    },
+    {
+     "at": "@@patent",
+     "do": "sticker_out",
+     "id": "st_steth"
+    },
+    {
+     "at": "@@patent-0.3",
+     "do": "chart.erase_run",
+     "id": "pat",
+     "until": "@@patent+1.0",
+     "args": {
+      "direction": "left"
+     }
+    },
+    {
+     "at": "@@nobel-0.4",
+     "do": "chart.out",
+     "id": "pat"
+    },
+    {
+     "at": "@@nobel",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@nobel+0.3",
+     "do": "sticker_in",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@nobel+0.7",
+     "do": "sticker_pulse",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@nobel+0.8",
+     "do": "character_in",
+     "id": "de_happy"
+    },
+    {
+     "at": "@@nobel+1.0",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "276",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_medal"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "de_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "wurz"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_bulb",
+   "type": "sticker",
+   "emoji": "1f4a1",
+   "x": 130,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_flask",
+   "type": "sticker",
+   "emoji": "1f9ea",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_point",
+   "type": "sticker",
+   "emoji": "1f447",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_ring",
+   "type": "sticker",
+   "emoji": "1f48d",
+   "x": 130,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_steth",
+   "type": "sticker",
+   "emoji": "1fa7a",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_medal",
+   "type": "sticker",
+   "emoji": "1f3c5",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "fr_think",
+   "type": "character",
+   "flag": "fr",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "de_happy",
+   "type": "character",
+   "flag": "de",
+   "face": "happy",
+   "x": 300,
+   "y": 1130,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

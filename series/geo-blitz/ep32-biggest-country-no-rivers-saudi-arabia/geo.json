@@ -1,0 +1,142 @@
+{
+ "version": 1,
+ "episode": "ep32-biggest-country-no-rivers-saudi-arabia",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     34,
+     16,
+     56,
+     32
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "682"
+     ],
+     "cls": "",
+     "note": "Saudi Arabia"
+    },
+    {
+     "kind": "route",
+     "id": "pipeline",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "jr",
+        "properties": {
+         "name": "Jubail to Riyadh"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           49.66,
+           27.0
+          ],
+          [
+           48.9,
+           26.5
+          ],
+          [
+           48.0,
+           25.9
+          ],
+          [
+           47.3,
+           25.2
+          ],
+          [
+           46.72,
+           24.69
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "pins": [
+    {
+     "id": "jubail",
+     "lonlat": [
+      49.66,
+      27.0
+     ],
+     "label": "Jubail",
+     "side": "right"
+    },
+    {
+     "id": "riyadh",
+     "lonlat": [
+      46.72,
+      24.69
+     ],
+     "label": "Riyadh",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "pipe",
+     "lonlat": [
+      47.6,
+      26.6
+     ],
+     "text": "sea water, piped inland",
+     "cls": "tag",
+     "in": "s07@capital+0.2",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      5,
+      -5,
+      85,
+      48
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 200,
+    "lonlat": [
+     35,
+     16.8
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep20-most-bird-species-colombia",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A biodiversity quiz that beats the obvious answer: the word BRAZIL erased when the rainforest giant only comes third, three tallies to scale with the winner on top, the three Andean ranges as the reason, and a pin on the coastal massif where birds exist nowhere else — mountains, not jungle.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Which country has the MOST bird species?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Which country has the most bird species?",
+   "cues": {
+    "which": "which",
+    "most": "most"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Brazil, Indonesia, or Colombia?",
+   "cues": {
+    "a": "brazil",
+    "b": "indonesia",
+    "c": "colombia"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "Colombia. Nearly 2,000 bird species, about a fifth of every bird species on Earth.",
+   "cues": {
+    "answer": "colombia",
+    "species": "species",
+    "earth": "earth"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.35,
+   "direction": "ease back over the north of South America; the word BRAZIL stands on 'Brazil' and is erased on 'third'; the Brazilian flag-ball thinks on 'third'; an island sticker on 'fourth' as Colombia pulses",
+   "text": "Brazil has the Amazon, yet only comes third. Indonesia's many islands come fourth.",
+   "cues": {
+    "brazil": "brazil",
+    "third": "third",
+    "fourth": "fourth"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "tighten on the Andes; three tallies rise to scale on 'Peru' with Colombia on top; the Andes tag plates on 'valley' with a mountain sticker; a wave sticker on 'oceans' as Colombia pulses",
+   "text": "Peru sits just behind. The secret is 3 Andean ranges, every valley between them breeding its own birds, and coasts on 2 oceans.",
+   "cues": {
+    "peru": "peru",
+    "valley": "valley",
+    "oceans": "oceans"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.5,
+   "direction": "drift north to the Caribbean massif; the 160+ card on 'hummingbird' with a feather sticker; the Santa Marta pin on 'anywhere'; a magnifier sticker on 'hills' as the Colombian flag-ball grins and Colombia pulses; the pin leaves at the end",
+   "text": "More kinds of hummingbird live here than anywhere else, and new species are still being described from these hills.",
+   "cues": {
+    "hummingbird": "hummingbird",
+    "anywhere": "anywhere",
+    "hills": "hills"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "A fifth of all birds, 1 country. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

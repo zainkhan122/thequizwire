@@ -1,0 +1,144 @@
+{
+ "id": "ep14-first-x-ray-germany-roentgen",
+ "format": "quiz-v3",
+ "series": "body-brain",
+ "number": 14,
+ "title": "Which country made the FIRST X-ray image?",
+ "difficulty": "MEDIUM",
+ "seed": 3914,
+ "quiz": {
+  "question": "Which country made the FIRST X-ray image?",
+  "keyword": "FIRST",
+  "options": [
+   "France",
+   "Germany",
+   "United States"
+  ],
+  "correct": 1,
+  "beat": 3.0,
+  "answer_line": "Germany",
+  "answer_sub": "a hand, a ring, and a new kind of ray",
+  "option_meta": [
+   {
+    "flag": "fr"
+   },
+   {
+    "flag": "de"
+   },
+   {
+    "flag": "us"
+   }
+  ],
+  "banner": "Germany",
+  "banner_sub": "✓  B was right · a hand, a ring, and a new kind of ray",
+  "outro": {
+   "headline": "1 FOR 1?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country made the FIRST X-ray image? 🦴",
+  "premise": "The first picture ever taken through living flesh showed a wedding ring",
+  "bait": "France, Germany or United States — which did you pick? 👇",
+  "keywords": [
+   "first x-ray ever taken",
+   "who discovered x-rays",
+   "first x-ray image hand",
+   "history of the x-ray",
+   "wilhelm rontgen discovery",
+   "body quiz",
+   "medical history quiz",
+   "science facts"
+  ],
+  "description": "The first picture ever taken through living flesh showed a wedding ring. France, Germany or United States — which did you pick? 👇\n\nSources: Nobel Prize Outreach; Encyclopaedia Britannica; Deutsches Röntgen-Museum.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nBody & Brain #14",
+  "hashtags": [
+   "#BodyFacts",
+   "#BrainQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "BodyQuiz",
+   "MedicalHistory"
+  ],
+  "cover_emoji": "🦴",
+  "cover_emoji_why": "a bone names the subject (seeing inside the body) and belongs to no country; it says nothing about which lab got there first",
+  "copy": {
+   "spoilers": [
+    "germany",
+    "german",
+    "röntgen",
+    "rontgen",
+    "roentgen",
+    "würzburg",
+    "wurzburg",
+    "bavaria",
+    "bavarian",
+    "anna bertha",
+    "wilhelm"
+   ],
+   "youtube": {
+    "title": "Where was the first X-ray ever taken? Her first words were chilling 🦴",
+    "description": "The great laboratories, the famous inventor, or the third one? A physics professor caught a new kind of ray on a photographic plate, then placed his wife's hand on it for a quarter of an hour. Her bones appeared, and her wedding ring, and she said five words nobody forgets. Within weeks doctors everywhere were using it. He refused to patent it.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#xray",
+     "#medicalhistory",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country made the FIRST X-ray image? 🦴\nThe great laboratories, the famous inventor, or the other one? A physics professor placed his wife's hand on a photographic plate for a quarter of an hour. Her bones appeared, and her wedding ring, and she said five words nobody forgets.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#xray",
+     "#medicalhistory",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country made the first X-ray image — France, Germany or the United States?\nA physics professor caught a new kind of ray on a photographic plate, then placed his wife's hand on it for a quarter of an hour. Her bones appeared, and her wedding ring, and she said five words nobody forgets. Choose your flag before the plate develops.",
+    "tags": [
+     "#bodyquiz",
+     "#xray"
+    ]
+   },
+   "twitter": {
+    "text": "Which country made the FIRST X-ray image?\nFrance, Germany or United States? His wife's hand, a quarter of an hour on the plate — and five words nobody forgets.",
+    "tags": [
+     "#BodyQuiz",
+     "#XRay"
+    ]
+   },
+   "threads": {
+    "text": "Which country made the first X-ray image — France, Germany or the United States? A physics professor placed his wife's hand on a photographic plate for a quarter of an hour; her bones appeared, and her wedding ring, and she said five words nobody forgets.",
+    "tags": [
+     "#medicalhistory"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "fill-pulse",
+  "beats": [
+   "photo-cutout",
+   "erase",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:de + emoji-set:lab",
+  "music": "bed:deep"
+ },
+ "status": "ready"
+}

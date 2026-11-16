@@ -1,0 +1,91 @@
+{
+ "version": 1,
+ "episode": "ep14-first-x-ray-germany-roentgen",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     5,
+     47,
+     16,
+     56
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "276"
+     ],
+     "cls": "",
+     "note": "Germany"
+    }
+   ],
+   "pins": [
+    {
+     "id": "wurz",
+     "lonlat": [
+      9.93,
+      49.79
+     ],
+     "label": "Würzburg · 1895",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "quote",
+     "lonlat": [
+      12.8,
+      48.3
+     ],
+     "text": "I have seen my death",
+     "cls": "tag",
+     "in": "s06@death+0.2",
+     "out": "s06.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -15,
+      32,
+      40,
+      65
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 100,
+    "lonlat": [
+     5.6,
+     47.5
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

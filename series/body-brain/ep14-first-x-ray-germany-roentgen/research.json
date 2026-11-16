@@ -1,0 +1,204 @@
+{
+ "version": 1,
+ "episode": "ep14-first-x-ray-germany-roentgen",
+ "topic": "First X-ray image: Wilhelm Conrad Röntgen, professor of physics at the University of Würzburg (Bavaria, Germany), discovered X-rays on 8 November 1895 while experimenting with cathode-ray tubes. On 22 December 1895 he made the first X-ray photograph of a human body part, his wife Anna Bertha Ludwig's hand, showing her bones and wedding ring; she is reported to have said 'I have seen my death'. Exposure times for such plates were about 15 minutes. His paper 'On a New Kind of Rays' appeared on 28 December 1895; by early 1896 X-rays were in medical use in Europe and America (locating bullets, fractures). Röntgen refused to patent the discovery and received the first Nobel Prize in Physics in 1901.",
+ "researched": "2026-11-16",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "X-rays were an American invention — Edison's.",
+   "reality": "Edison built an early fluoroscope in 1896, but the rays were discovered and first photographed in Würzburg, Germany, by Röntgen in 1895.",
+   "sources": [
+    "nobel_bio",
+    "brit_rontgen"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "X-ray history clips read a timeline; nobody raises the actual first plate out of the country on a map, erases the patent he never took, and lands on the first Nobel as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=first+x+ray+ever+taken",
+    "title": "Search: first x-ray ever taken",
+    "angle": "history explainers",
+    "misses": "no map, no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=who+discovered+x+rays",
+    "title": "Search: who discovered x-rays",
+    "angle": "biography",
+    "misses": "no country framing"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=how+do+x+rays+work",
+    "title": "Search: how do x-rays work",
+    "angle": "physics explainers",
+    "misses": "no story"
+   }
+  ]
+ },
+ "sources": {
+  "nobel_bio": {
+   "type": "primary",
+   "publisher": "Nobel Prize Outreach",
+   "title": "Wilhelm Conrad Röntgen — Biographical",
+   "url": "https://www.nobelprize.org/prizes/physics/1901/rontgen/biographical/",
+   "date": "2026-11-11",
+   "notes": "professor at Würzburg; discovered X-rays on 8 November 1895; first Nobel Prize in Physics 1901; refused to take out patents"
+  },
+  "nobel_facts": {
+   "type": "primary",
+   "publisher": "Nobel Prize Outreach",
+   "title": "The Nobel Prize in Physics 1901",
+   "url": "https://www.nobelprize.org/prizes/physics/1901/summary/",
+   "date": "2026-11-11",
+   "notes": "awarded to Röntgen 'in recognition of the extraordinary services he has rendered by the discovery of the remarkable rays'"
+  },
+  "brit_rontgen": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Wilhelm Conrad Röntgen",
+   "url": "https://www.britannica.com/biography/Wilhelm-Rontgen",
+   "date": "2026-11-11",
+   "notes": "discovered X-rays at Würzburg in 1895; photographed his wife's hand showing bones and ring; first Nobel Prize for Physics 1901"
+  },
+  "brit_xray": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "X-ray",
+   "url": "https://www.britannica.com/science/X-ray",
+   "date": "2026-11-11",
+   "notes": "discovered 1895 by Röntgen; within months in medical use for locating fractures and foreign bodies"
+  },
+  "roentgen_museum": {
+   "type": "primary",
+   "publisher": "Deutsches Röntgen-Museum (Remscheid)",
+   "title": "Die Entdeckung der Röntgenstrahlen",
+   "url": "https://roentgenmuseum.de/",
+   "date": "2026-11-11",
+   "notes": "22 December 1895 radiograph of Anna Bertha Röntgen's hand; exposure about 15 minutes; 'Ich habe meinen Tod gesehen'"
+  },
+  "uni_wuerzburg": {
+   "type": "primary",
+   "publisher": "Julius-Maximilians-Universität Würzburg",
+   "title": "Röntgen Memorial Site",
+   "url": "https://www.uni-wuerzburg.de/en/university/history/roentgen/",
+   "date": "2026-11-11",
+   "notes": "discovery in the Institute of Physics, Würzburg, 8 November 1895; first public lecture 23 January 1896"
+  },
+  "commons_hand": {
+   "type": "reference",
+   "publisher": "Wikimedia Commons",
+   "title": "File:First medical X-ray by Wilhelm Röntgen of his wife Anna Bertha Ludwig's hand - 18951222.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:First_medical_X-ray_by_Wilhelm_R%C3%B6ntgen_of_his_wife_Anna_Bertha_Ludwig%27s_hand_-_18951222.jpg",
+   "date": "2026-11-11",
+   "notes": "the 22 December 1895 radiograph; public domain (author died 1923)"
+  },
+  "wiki_history": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "X-ray — History",
+   "url": "https://en.wikipedia.org/wiki/X-ray#History",
+   "date": "2026-11-11",
+   "notes": "Edison's fluoroscope 1896; first clinical uses in Europe and the United States in early 1896; Röntgen refused patents"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "X-rays were discovered by Wilhelm Röntgen, professor of physics at Würzburg in Bavaria, Germany, in November 1895.",
+   "sources": [
+    "nobel_bio",
+    "brit_rontgen",
+    "uni_wuerzburg"
+   ],
+   "vo": [
+    "which country made the first x-ray image",
+    "france, germany, or united states",
+    "germany. a physics professor in bavaria caught a new kind of ray on a photographic plate",
+    "her hand, a new science"
+   ],
+   "screen": [
+    "a hand, a ring, and a new kind of ray",
+    "Würzburg · 1895",
+    "Röntgen",
+    "1895"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "X-rays were taken up in France and the United States within months of the discovery (early 1896), but the first radiograph of a human body part was made in Würzburg.",
+   "sources": [
+    "brit_xray",
+    "wiki_history"
+   ],
+   "vo": [
+    "france and america followed within months. but the first picture through flesh was made here"
+   ],
+   "screen": []
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "On 22 December 1895 Röntgen made the first X-ray photograph of a body part, his wife Anna Bertha's hand, showing bones and wedding ring after about 15 minutes' exposure; she reportedly said 'I have seen my death'.",
+   "sources": [
+    "roentgen_museum",
+    "brit_rontgen",
+    "commons_hand"
+   ],
+   "vo": [
+    "he laid his wife's hand on the plate. her bones appeared, and her ring. she said: i have seen my death"
+   ],
+   "screen": [
+    "Her hand · the first X-ray",
+    "I have seen my death"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Doctors were using X-rays to find bullets and fractures within weeks; Röntgen refused to patent the discovery and received the first Nobel Prize in Physics (1901).",
+   "sources": [
+    "nobel_bio",
+    "nobel_facts",
+    "brit_xray"
+   ],
+   "vo": [
+    "within weeks doctors were finding bullets. he refused to patent it, and took the first nobel prize in physics"
+   ],
+   "screen": [
+    "FIRST NOBEL",
+    "Physics, for a ray he would not patent",
+    "PATENT"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,925 @@
+{
+ "id": "ep32-biggest-country-no-rivers-saudi-arabia",
+ "series": "geo-blitz",
+ "number": 32,
+ "seed": 4032,
+ "question": "Which is the BIGGEST country with no rivers?",
+ "keyword": "BIGGEST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Australia",
+   "flag": "au",
+   "cue": "australia"
+  },
+  {
+   "text": "Saudi Arabia",
+   "flag": "sa",
+   "cue": "saudi"
+  },
+  {
+   "text": "Egypt",
+   "flag": "eg",
+   "cue": "egypt"
+  }
+ ],
+ "correct": 1,
+ "answer_sub": "no permanent river, no natural lake",
+ "outro_headline": "TOO EASY?",
+ "cover_emoji": "💧",
+ "cover_emoji_why": "a water drop names the subject (rivers, or the lack of them) and belongs to no option; all three countries are dry in places, so it favours none",
+ "post": {
+  "premise": "A country bigger than Western Europe has not one river that flows all year",
+  "bait": "Australia, Saudi Arabia or Egypt — which did you pick? 👇",
+  "keywords": [
+   "country with no rivers",
+   "largest country without a river",
+   "countries without rivers",
+   "where does saudi arabia get its water",
+   "desalination facts",
+   "geography quiz",
+   "map quiz",
+   "country facts"
+  ],
+  "tags": [
+   "GeoQuiz",
+   "Rivers"
+  ],
+  "sources_line": "Encyclopaedia Britannica; CIA World Factbook; Saline Water Conversion Corporation",
+  "copy": {
+   "spoilers": [
+    "saudi",
+    "arabia",
+    "riyadh",
+    "jubail",
+    "jeddah",
+    "wadi",
+    "wadis",
+    "desalination",
+    "desalinated",
+    "arabian",
+    "gulf coast"
+   ],
+   "youtube": {
+    "title": "Which country has no rivers at all? It drinks the sea instead 💧",
+    "description": "The island continent, the desert kingdom, or the land of the great river? One of them has not a single river that flows all year and no natural lake, yet millions live in its capital. The water arrives by pipeline, hundreds of kilometres from the coast, after being pulled out of the sea.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#rivers",
+     "#geography",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which is the BIGGEST country with no rivers? 💧\nThe island continent, the desert kingdom, or the land of the great river? One of them has no river that flows all year and no natural lake, yet millions live in its capital, drinking water pulled out of the sea.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#rivers",
+     "#geography",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which is the biggest country with no rivers — Australia, Saudi Arabia or Egypt?\nOne of them has not a single river that flows all year and no natural lake, yet millions live in its capital. The water arrives by pipeline, hundreds of kilometres from the coast, after being pulled out of the sea. Choose your flag before the pipeline starts to draw.",
+    "tags": [
+     "#geoquiz",
+     "#rivers"
+    ]
+   },
+   "twitter": {
+    "text": "Which is the BIGGEST country with no rivers?\nAustralia, Saudi Arabia or Egypt? No river that flows all year, no natural lake — and a capital of millions drinking the sea.",
+    "tags": [
+     "#GeoQuiz",
+     "#Rivers"
+    ]
+   },
+   "threads": {
+    "text": "Which is the biggest country with no rivers — Australia, Saudi Arabia or Egypt? One of them has not a single river that flows all year and no natural lake, yet millions live in its capital, drinking water pulled out of the sea and piped hundreds of kilometres inland.",
+    "tags": [
+     "#geography"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "misconception",
+  "opener": "wide-drift",
+  "reveal": "fill-pulse",
+  "beats": [
+   "split",
+   "route",
+   "travel",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:sa + emoji-set:desert",
+  "music": "bed:tense",
+  "outro": "TOO EASY?"
+ },
+ "intent": "A water quiz told as plumbing: the kingdom with no river lifts into view, a WADIS / DESAL split explains where its water does and does not come from, and a pipeline route draws from the Gulf coast to the capital with a water drop riding it inland — the sea, delivered.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "biggest": "biggest"
+  },
+  "v04": {
+   "text": "Saudi Arabia. The biggest country with no permanent river or natural lake.",
+   "cues": {
+    "answer": "saudi",
+    "river": "river",
+    "lake": "lake"
+   }
+  },
+  "v05": {
+   "text": "Australia has rivers, some seasonal. Egypt is built on the Nile. Here nothing flows all year.",
+   "cues": {
+    "australia": "australia",
+    "egypt": "egypt",
+    "flows": "flows"
+   }
+  },
+  "v06": {
+   "text": "Rain comes a few days a year, races down dry valleys called wadis, and is gone. The kingdom makes water from the sea.",
+   "cues": {
+    "rain": "rain",
+    "wadis": "wadis",
+    "sea": "sea"
+   }
+  },
+  "v07": {
+   "text": "It is pumped from the Gulf coast across the desert to the capital, hundreds of kilometres inland, uphill.",
+   "cues": {
+    "pumped": "pumped",
+    "capital": "capital",
+    "uphill": "uphill"
+   }
+  },
+  "v08": {
+   "text": "It drinks the sea. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "MADE WATER",
+   "text": "over half its drinking water comes from the sea"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "sa",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "au",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "Largest country without a permanent river: Saudi Arabia, about 2.15 million km², has no perennial rivers and no natural lakes; rainfall is rare and runs briefly through wadis (dry valleys). It is the world's largest producer of desalinated water (about a fifth of global output, SWCC), supplying more than half of its drinking water. The Jubail–Riyadh transmission system carries desalinated water from the Gulf coast to Riyadh, roughly 460–480 km inland and about 600–700 m uphill. Australia has permanent rivers (Murray–Darling) alongside many ephemeral ones; Egypt's population lives along the Nile.",
+  "myths": [
+   {
+    "myth": "Every big country has at least one river.",
+    "reality": "Saudi Arabia, larger than Western Europe, has no river that flows all year and no natural lake; its wadis run only for days after rain.",
+    "sources": [
+     "brit_sa",
+     "cia_sa"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "No-river clips are one-line trivia; nobody splits where the water does and does not come from, then draws the real pipeline from the coast to the capital on a map as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=country+with+no+rivers",
+     "title": "Search: country with no rivers",
+     "angle": "trivia lists",
+     "misses": "no map, no plumbing"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=how+does+saudi+arabia+get+water",
+     "title": "Search: how does the desert kingdom get water",
+     "angle": "explainers",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=desalination+explained",
+     "title": "Search: desalination explained",
+     "angle": "tech explainers",
+     "misses": "no country angle"
+    }
+   ]
+  },
+  "sources": {
+   "brit_sa": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Saudi Arabia — Drainage and soils",
+    "url": "https://www.britannica.com/place/Saudi-Arabia/Drainage-and-soils",
+    "date": "2026-11-11",
+    "notes": "there are no permanent rivers or lakes; drainage is through wadis that carry water only after rain"
+   },
+   "cia_sa": {
+    "type": "primary",
+    "publisher": "CIA World Factbook",
+    "title": "Saudi Arabia — Geography",
+    "url": "https://www.cia.gov/the-world-factbook/countries/saudi-arabia/",
+    "date": "2026-11-11",
+    "notes": "total area 2,149,690 sq km; harsh dry desert; no perennial rivers"
+   },
+   "swcc": {
+    "type": "primary",
+    "publisher": "Saline Water Conversion Corporation (Saudi Arabia)",
+    "title": "About SWCC",
+    "url": "https://www.swcc.gov.sa/",
+    "date": "2026-11-11",
+    "notes": "the world's largest producer of desalinated water; supplies the majority of the kingdom's drinking water"
+   },
+   "brit_desal": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Desalination",
+    "url": "https://www.britannica.com/technology/desalination",
+    "date": "2026-11-11",
+    "notes": "Saudi Arabia is the world's largest producer of desalinated water; desalination supplies most of its urban drinking water"
+   },
+   "brit_riyadh": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Riyadh",
+    "url": "https://www.britannica.com/place/Riyadh",
+    "date": "2026-11-11",
+    "notes": "capital, on the Najd plateau at about 600 m, roughly 400 km from the Persian Gulf; supplied by desalinated water piped from Al-Jubayl"
+   },
+   "brit_jubail": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Al-Jubayl",
+    "url": "https://www.britannica.com/place/Al-Jubayl",
+    "date": "2026-11-11",
+    "notes": "industrial city on the Persian Gulf; one of the world's largest desalination plants; pipelines carry water to Riyadh"
+   },
+   "brit_australia": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Australia — Drainage",
+    "url": "https://www.britannica.com/place/Australia/Drainage",
+    "date": "2026-11-11",
+    "notes": "the Murray–Darling is a permanent river system; many interior rivers are ephemeral"
+   },
+   "brit_nile": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Nile River",
+    "url": "https://www.britannica.com/place/Nile-River",
+    "date": "2026-11-11",
+    "notes": "Egypt's population is concentrated along the Nile valley and delta"
+   },
+   "wiki_wadi": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Wadi",
+    "url": "https://en.wikipedia.org/wiki/Wadi",
+    "date": "2026-11-11",
+    "notes": "a dry valley that contains water only during periods of heavy rain"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Saudi Arabia (about 2.15 million km²) is the largest country with no permanent river and no natural lake.",
+    "sources": [
+     "brit_sa",
+     "cia_sa"
+    ],
+    "vo": [
+     "which is the biggest country with no rivers",
+     "australia, saudi arabia, or egypt",
+     "saudi arabia. the biggest country with no permanent river or natural lake",
+     "it drinks the sea"
+    ],
+    "screen": [
+     "no permanent river, no natural lake",
+     "no permanent river"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Australia has permanent rivers such as the Murray–Darling alongside ephemeral ones; Egypt's people live along the Nile.",
+    "sources": [
+     "brit_australia",
+     "brit_nile"
+    ],
+    "vo": [
+     "australia has rivers, some seasonal. egypt is built on the nile. here nothing flows all year"
+    ],
+    "screen": []
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Rain in Saudi Arabia is rare and drains briefly through wadis; the kingdom is the world's largest producer of desalinated water, about a fifth of global output.",
+    "sources": [
+     "brit_sa",
+     "wiki_wadi",
+     "swcc",
+     "brit_desal"
+    ],
+    "vo": [
+     "rain comes a few days a year, races down dry valleys called wadis, and is gone. the kingdom makes water from the sea"
+    ],
+    "screen": [
+     "WADIS",
+     "dry valleys that flow for days a year",
+     "DESAL",
+     "about a fifth of the world's desalinated water",
+     "RAIN",
+     "SEA"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Desalinated water is pumped from Al-Jubayl on the Gulf coast to Riyadh, roughly 400 km inland and about 600 m higher; desalination supplies over half of the kingdom's drinking water.",
+    "sources": [
+     "brit_riyadh",
+     "brit_jubail",
+     "swcc",
+     "brit_desal"
+    ],
+    "vo": [
+     "it is pumped from the gulf coast across the desert to the capital, hundreds of kilometres inland, uphill"
+    ],
+    "screen": [
+     "MADE WATER",
+     "over half its drinking water comes from the sea",
+     "Jubail",
+     "Riyadh",
+     "sea water, piped inland"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   34,
+   16,
+   56,
+   32
+  ],
+  "far_bbox": [
+   5,
+   -5,
+   85,
+   48
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "682"
+  ],
+  "highlight_note": "Saudi Arabia",
+  "labels": [
+   {
+    "id": "pipe",
+    "lonlat": [
+     47.6,
+     26.6
+    ],
+    "text": "sea water, piped inland",
+    "cls": "tag",
+    "in": "s07@capital+0.2",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "jubail",
+    "lonlat": [
+     49.66,
+     27.0
+    ],
+    "label": "Jubail",
+    "side": "right"
+   },
+   {
+    "id": "riyadh",
+    "lonlat": [
+     46.72,
+     24.69
+    ],
+    "label": "Riyadh",
+    "side": "left"
+   }
+  ],
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "pipeline",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "jr",
+       "properties": {
+        "name": "Jubail to Riyadh"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          49.66,
+          27.0
+         ],
+         [
+          48.9,
+          26.5
+         ],
+         [
+          48.0,
+          25.9
+         ],
+         [
+          47.3,
+          25.2
+         ],
+         [
+          46.72,
+          24.69
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "scalebar": {
+   "km": 200,
+   "lonlat": [
+    35,
+    16.8
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s07@pumped",
+    "pid": "jubail"
+   },
+   {
+    "at": "s07@capital",
+    "pid": "riyadh"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.45,
+    [
+     62,
+     34
+    ]
+   ],
+   "s01": [
+    0.45,
+    [
+     60,
+     33
+    ]
+   ],
+   "s04": [
+    0.85,
+    [
+     45,
+     24
+    ]
+   ],
+   "s04b": [
+    0.9,
+    [
+     45.5,
+     24.2
+    ]
+   ],
+   "s05": [
+    0.8,
+    [
+     44,
+     24
+    ]
+   ],
+   "s05b": [
+    0.84,
+    [
+     44.5,
+     24.3
+    ]
+   ],
+   "s06": [
+    0.95,
+    [
+     43,
+     22.5
+    ]
+   ],
+   "s06b": [
+    1.0,
+    [
+     43.5,
+     22.8
+    ]
+   ],
+   "s07": [
+    1.3,
+    [
+     48,
+     25.6
+    ]
+   ],
+   "s07b": [
+    1.36,
+    [
+     48.2,
+     25.8
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Australia has rivers, some seasonal. Egypt is built on the Nile. Here nothing flows all year.",
+    "cues": {
+     "australia": "australia",
+     "egypt": "egypt",
+     "flows": "flows"
+    }
+   },
+   "direction": "ease back over the peninsula; the Australian flag-ball thinks on 'Australia'; a river sticker on 'Egypt' and a dry-cracked sticker on 'flows' as Saudi Arabia pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.8,
+    [
+     44,
+     24
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.84,
+    [
+     44.5,
+     24.3
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@australia",
+     "do": "character_in",
+     "id": "au_think"
+    },
+    {
+     "at": "@@egypt",
+     "do": "sticker_in",
+     "id": "st_river"
+    },
+    {
+     "at": "@@egypt+0.4",
+     "do": "sticker_pulse",
+     "id": "st_river"
+    },
+    {
+     "at": "@@flows",
+     "do": "sticker_out",
+     "id": "st_river"
+    },
+    {
+     "at": "@@flows",
+     "do": "sticker_in",
+     "id": "st_dry"
+    },
+    {
+     "at": "@@flows+0.4",
+     "do": "sticker_pulse",
+     "id": "st_dry"
+    },
+    {
+     "at": "@@flows+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "682",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_dry"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "au_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Rain comes a few days a year, races down dry valleys called wadis, and is gone. The kingdom makes water from the sea.",
+    "cues": {
+     "rain": "rain",
+     "wadis": "wadis",
+     "sea": "sea"
+    }
+   },
+   "direction": "drift south over the Najd; a rain sticker on 'rain'; the WADIS / DESAL split lands on 'wadis'; a wave sticker on 'sea' as Saudi Arabia pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    0.95,
+    [
+     43,
+     22.5
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.0,
+    [
+     43.5,
+     22.8
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "water",
+     "type": "split",
+     "left": {
+      "kicker": "WADIS",
+      "text": "dry valleys that flow for days a year"
+     },
+     "right": {
+      "kicker": "DESAL",
+      "text": "about a fifth of the world's desalinated water"
+     },
+     "label_left": "RAIN",
+     "label_right": "SEA",
+     "y": 300,
+     "h": 560
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@rain",
+     "do": "sticker_in",
+     "id": "st_rain"
+    },
+    {
+     "at": "@@rain+0.4",
+     "do": "sticker_pulse",
+     "id": "st_rain"
+    },
+    {
+     "at": "@@wadis",
+     "do": "sticker_out",
+     "id": "st_rain"
+    },
+    {
+     "at": "@@wadis-0.2",
+     "do": "chart.split_in",
+     "id": "water",
+     "args": {
+      "dur": 0.7
+     }
+    },
+    {
+     "at": "@@sea",
+     "do": "sticker_in",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@sea+0.4",
+     "do": "sticker_pulse",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@sea+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "682",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "water"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_wave"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "It is pumped from the Gulf coast across the desert to the capital, hundreds of kilometres inland, uphill.",
+    "cues": {
+     "pumped": "pumped",
+     "capital": "capital",
+     "uphill": "uphill"
+    }
+   },
+   "direction": "tighten on the Gulf coast and the capital; the Jubail pin on 'pumped' as the pipeline route draws inland with a water-drop sticker riding it; the Riyadh pin and the MADE WATER card on 'capital'; the pipe tag; the Saudi flag-ball grins on 'uphill' as Saudi Arabia pulses; the pins leave at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "MADE WATER",
+    "text": "over half its drinking water comes from the sea"
+   },
+   "card_at": null,
+   "cam": [
+    1.3,
+    [
+     48,
+     25.6
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.36,
+    [
+     48.2,
+     25.8
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@pumped+0.1",
+     "do": "sticker_in",
+     "id": "st_drop"
+    },
+    {
+     "at": "@@pumped+0.1",
+     "do": "geo.route_draw",
+     "stage": "stage_map",
+     "until": "@@capital+0.6",
+     "args": {
+      "rid": "jr",
+      "layer": "pipeline"
+     }
+    },
+    {
+     "at": "@@pumped+0.1",
+     "do": "geo.travel",
+     "stage": "stage_map",
+     "until": "@@capital+0.6",
+     "args": {
+      "rid": "jr",
+      "layer": "pipeline",
+      "sid": "st_drop",
+      "offset": [
+       0,
+       -40
+      ]
+     }
+    },
+    {
+     "at": "@@capital+0.7",
+     "do": "sticker_out",
+     "id": "st_drop"
+    },
+    {
+     "at": "@@capital+0.2",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@uphill",
+     "do": "character_in",
+     "id": "sa_happy"
+    },
+    {
+     "at": "@@uphill+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "682",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "sa_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "jubail"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "riyadh"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_river",
+   "type": "sticker",
+   "emoji": "1f3de",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_dry",
+   "type": "sticker",
+   "emoji": "1f3dc",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_rain",
+   "type": "sticker",
+   "emoji": "1f327",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_wave",
+   "type": "sticker",
+   "emoji": "1f30a",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_drop",
+   "type": "sticker",
+   "emoji": "1f4a7",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "au_think",
+   "type": "character",
+   "flag": "au",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "sa_happy",
+   "type": "character",
+   "flag": "sa",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+ "version": 1,
+ "episode": "ep20-most-bird-species-colombia",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -80,
+     -5,
+     -66,
+     13
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "170"
+     ],
+     "cls": "",
+     "note": "Colombia",
+     "lift": "flag",
+     "flag": "co"
+    }
+   ],
+   "pins": [
+    {
+     "id": "sm",
+     "lonlat": [
+      -73.7,
+      10.8
+     ],
+     "label": "Santa Marta · endemic birds",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "andes",
+     "lonlat": [
+      -75.6,
+      2.2
+     ],
+     "text": "3 Andean ranges",
+     "cls": "tag",
+     "in": "s06@valley+0.2",
+     "out": "s06.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -110,
+      -30,
+      -35,
+      35
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 200,
+    "lonlat": [
+     -79.5,
+     -4.5
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

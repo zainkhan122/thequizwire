@@ -1,0 +1,875 @@
+{
+ "id": "ep23-most-olympic-hockey-golds-india",
+ "series": "sports-sprint",
+ "number": 23,
+ "seed": 4123,
+ "question": "Which country has the MOST Olympic golds in men's field hockey?",
+ "keyword": "MOST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Netherlands",
+   "flag": "nl",
+   "cue": "netherlands"
+  },
+  {
+   "text": "Australia",
+   "flag": "au",
+   "cue": "australia"
+  },
+  {
+   "text": "India",
+   "flag": "in",
+   "cue": "india"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "8 golds · six of them in a row",
+ "outro_headline": "CHALLENGE A FRIEND",
+ "cover_emoji": "🏑",
+ "cover_emoji_why": "a hockey stick names the sport and belongs to no country; the three options are all hockey nations, so it favours none",
+ "post": {
+  "premise": "The cricket-mad giant owns the Olympic record in a different sport entirely",
+  "bait": "Netherlands, Australia or India — which did you pick? 👇",
+  "keywords": [
+   "most olympic gold medals field hockey",
+   "olympic hockey history",
+   "who has won the most hockey golds",
+   "field hockey olympics records",
+   "dhyan chand",
+   "sports quiz",
+   "olympics quiz",
+   "hockey facts"
+  ],
+  "tags": [
+   "SportsQuiz",
+   "Hockey"
+  ],
+  "sources_line": "International Olympic Committee; FIH; Olympedia",
+  "copy": {
+   "spoilers": [
+    "india",
+    "indian",
+    "dhyan chand",
+    "wizard",
+    "delhi",
+    "jhansi",
+    "amsterdam to melbourne",
+    "eight golds",
+    "8 golds"
+   ],
+   "youtube": {
+    "title": "Which country has the most Olympic hockey golds? Not the one you think 🏑",
+    "description": "The modern champions, the southern powerhouse, or the third one? One nation has more men's field hockey golds than anyone, won six of them in a row without losing a single match, and once beat the United States by more than twenty goals in a single game. It is better known today for a different sport entirely.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#hockey",
+     "#olympics",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country has the MOST Olympic golds in men's field hockey? 🏑\nThe modern champions, the southern powerhouse, or the other one? One nation won six golds in a row without losing a match, and once scored more than twenty in a single Olympic game. Today it is famous for a different sport.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#hockey",
+     "#olympics",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country has the most Olympic golds in men's field hockey — the Netherlands, Australia or India?\nOne nation has more men's hockey golds than anyone, won six of them in a row without losing a single match, and once beat the United States by more than twenty goals in one game. It is better known today for a different sport entirely. Pick your flag before the counter starts.",
+    "tags": [
+     "#sportsquiz",
+     "#hockey"
+    ]
+   },
+   "twitter": {
+    "text": "Which country has the MOST Olympic golds in men's field hockey?\nNetherlands, Australia or India? Six in a row without losing a match — and famous today for a different sport.",
+    "tags": [
+     "#SportsQuiz",
+     "#Hockey"
+    ]
+   },
+   "threads": {
+    "text": "Which country has the most Olympic golds in men's field hockey — the Netherlands, Australia or India? One nation won six golds in a row without losing a single match, once scored more than twenty in a single Olympic game, and is better known today for a different sport entirely.",
+    "tags": [
+     "#olympics"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "challenge",
+  "opener": "mystery-zoom-out",
+  "reveal": "flag-lift",
+  "beats": [
+   "counter",
+   "split",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:in + emoji-set:hockey",
+  "music": "bed:bright",
+  "outro": "CHALLENGE A FRIEND"
+ },
+ "intent": "A record quiz with a misdirection: the counter runs to a number the modern hockey powers cannot touch, the THEN / NOW split sets six unbeaten golds against two recent bronzes, and the pin lands on the home town of the player they called the Wizard — a cricket country whose Olympic story is a stick and a ball.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "most": "most"
+  },
+  "v04": {
+   "text": "India. 8 Olympic golds in men's hockey, more than anyone.",
+   "cues": {
+    "answer": "india",
+    "golds": "golds",
+    "anyone": "anyone"
+   }
+  },
+  "v05": {
+   "text": "The Netherlands and Australia are today's powers. Neither comes close to the total.",
+   "cues": {
+    "netherlands": "netherlands",
+    "australia": "australia",
+    "total": "total"
+   }
+  },
+  "v06": {
+   "text": "6 came in a row, before and after independence, without losing a match, built around the man they called the Wizard.",
+   "cues": {
+    "six": "6",
+    "independence": "independence",
+    "wizard": "wizard"
+   }
+  },
+  "v07": {
+   "text": "An early match against the United States produced a score never matched since. Gold last came in Moscow; bronze in Tokyo and Paris.",
+   "cues": {
+    "final": "score",
+    "moscow": "moscow",
+    "paris": "paris"
+   }
+  },
+  "v08": {
+   "text": "8 golds, 1 stick. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "24–1",
+   "text": "v United States, Los Angeles, the biggest Olympic win"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "in",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "nl",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "Most Olympic gold medals in men's field hockey: India, 8 (1928, 1932, 1936, 1948, 1952, 1956, 1964, 1980), including six consecutive from Amsterdam 1928 to Melbourne 1956 without losing a match; 13 medals in all. Germany has 4 men's golds (incl. West Germany 1972), Pakistan 3, Great Britain 3, Netherlands 2, Australia 1, Argentina 1, Belgium 1. India beat the United States 24–1 at Los Angeles 1932, the largest margin in Olympic hockey; Dhyan Chand ('the Wizard'), who lived in Jhansi, led the 1928–1936 sides. India's last gold was Moscow 1980; bronze at Tokyo 2020 and Paris 2024.",
+  "myths": [
+   {
+    "myth": "The Netherlands or Australia, today's hockey superpowers, must hold the Olympic record.",
+    "reality": "India's 8 men's golds are still unmatched; the Netherlands have 2 and Australia 1 in the men's event.",
+    "sources": [
+     "olympedia_hockey",
+     "ioc_india"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Hockey-record clips are medal tables; nobody runs the counter against the modern powers on a map, splits the unbeaten run against the recent bronzes, and pins the Wizard's home town as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=most+olympic+gold+medals+hockey",
+     "title": "Search: most olympic gold medals hockey",
+     "angle": "medal lists",
+     "misses": "no map, no story"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=india+hockey+olympics+history",
+     "title": "Search: india hockey olympics history",
+     "angle": "documentaries",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=dhyan+chand",
+     "title": "Search: dhyan chand",
+     "angle": "biography",
+     "misses": "no record framing"
+    }
+   ]
+  },
+  "sources": {
+   "olympedia_hockey": {
+    "type": "primary",
+    "publisher": "Olympedia",
+    "title": "Hockey — Olympic Games medal table (men)",
+    "url": "https://www.olympedia.org/sports/HOC",
+    "date": "2026-11-11",
+    "notes": "India 8 gold, 1 silver, 4 bronze in men's hockey; Germany 4 (incl. West Germany), Pakistan 3, Great Britain 3, Netherlands 2, Australia 1, Argentina 1, Belgium 1"
+   },
+   "ioc_india": {
+    "type": "primary",
+    "publisher": "International Olympic Committee",
+    "title": "India's golden era of hockey",
+    "url": "https://olympics.com/en/news/india-hockey-olympic-golds-history",
+    "date": "2026-11-11",
+    "notes": "eight Olympic golds; six consecutive 1928–1956; 24–1 win over the United States at Los Angeles 1932"
+   },
+   "ioc_la32": {
+    "type": "primary",
+    "publisher": "International Olympic Committee",
+    "title": "Los Angeles 1932 — Hockey results",
+    "url": "https://olympics.com/en/olympic-games/los-angeles-1932/results/hockey",
+    "date": "2026-11-11",
+    "notes": "India 24–1 United States, 11 August 1932; India gold"
+   },
+   "brit_chand": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Dhyan Chand",
+    "url": "https://www.britannica.com/biography/Dhyan-Chand",
+    "date": "2026-11-11",
+    "notes": "Indian field hockey player known as 'the Wizard'; led India to golds in 1928, 1932 and 1936; lived and died in Jhansi"
+   },
+   "wiki_india_hockey": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "India men's national field hockey team",
+    "url": "https://en.wikipedia.org/wiki/India_men%27s_national_field_hockey_team",
+    "date": "2026-11-11",
+    "notes": "8 Olympic golds; unbeaten run of 30 matches 1928–1956; last gold Moscow 1980; bronze Tokyo 2020 and Paris 2024"
+   },
+   "wiki_medalists": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "List of Olympic medalists in field hockey",
+    "url": "https://en.wikipedia.org/wiki/List_of_Olympic_medalists_in_field_hockey",
+    "date": "2026-11-11",
+    "notes": "men's tournament medal table; India most successful nation with 8 golds"
+   },
+   "fih_history": {
+    "type": "primary",
+    "publisher": "International Hockey Federation (FIH)",
+    "title": "Hockey at the Olympic Games",
+    "url": "https://www.fih.hockey/events/olympic-games",
+    "date": "2026-11-11",
+    "notes": "men's hockey Olympic since 1908 (continuous since 1928); India's dominance 1928–1956"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "India has won the most Olympic gold medals in men's field hockey: 8, more than any other nation.",
+    "sources": [
+     "olympedia_hockey",
+     "ioc_india",
+     "wiki_medalists"
+    ],
+    "vo": [
+     "which country has the most olympic golds in men's field hockey",
+     "netherlands, australia, or india",
+     "india. 8 olympic golds in men's hockey, more than anyone",
+     "8 golds, 1 stick"
+    ],
+    "screen": [
+     "8 golds · six of them in a row",
+     "8",
+     "golds · men's field hockey"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "The Netherlands (2 men's golds) and Australia (1) are far behind India's 8.",
+    "sources": [
+     "olympedia_hockey",
+     "wiki_medalists"
+    ],
+    "vo": [
+     "the netherlands and australia are today's powers. neither comes close to the total"
+    ],
+    "screen": []
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "India won six consecutive golds from Amsterdam 1928 to Melbourne 1956 without losing a match, with Dhyan Chand, 'the Wizard', leading the pre-war sides; he lived in Jhansi.",
+    "sources": [
+     "ioc_india",
+     "wiki_india_hockey",
+     "brit_chand",
+     "fih_history"
+    ],
+    "vo": [
+     "6 came in a row, before and after independence, without losing a match, built around the man they called the wizard"
+    ],
+    "screen": [
+     "SIX",
+     "golds in a row, Amsterdam to Melbourne",
+     "THEN",
+     "Jhansi · home of the Wizard"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "India beat the United States 24–1 at Los Angeles 1932; India's last gold was Moscow 1980, followed by bronze at Tokyo 2020 and Paris 2024.",
+    "sources": [
+     "ioc_la32",
+     "ioc_india",
+     "wiki_india_hockey"
+    ],
+    "vo": [
+     "an early match against the united states produced a score never matched since. gold last came in moscow; bronze in tokyo and paris"
+    ],
+    "screen": [
+     "24–1",
+     "v United States, Los Angeles, the biggest Olympic win",
+     "BRONZE",
+     "Tokyo and Paris, back on the podium",
+     "NOW"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   68,
+   6,
+   98,
+   36
+  ],
+  "far_bbox": [
+   35,
+   -15,
+   125,
+   50
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "356"
+  ],
+  "highlight_note": "India",
+  "labels": [],
+  "pins": [
+   {
+    "id": "jhansi",
+    "lonlat": [
+     78.57,
+     25.45
+    ],
+    "label": "Jhansi · home of the Wizard",
+    "side": "left"
+   }
+  ],
+  "scalebar": {
+   "km": 500,
+   "lonlat": [
+    69,
+    7
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s06@wizard",
+    "pid": "jhansi"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.45,
+    [
+     52,
+     28
+    ]
+   ],
+   "s01": [
+    0.45,
+    [
+     54,
+     27
+    ]
+   ],
+   "s04": [
+    0.85,
+    [
+     80,
+     22
+    ]
+   ],
+   "s04b": [
+    0.9,
+    [
+     80.5,
+     22.3
+    ]
+   ],
+   "s05": [
+    0.8,
+    [
+     79,
+     22
+    ]
+   ],
+   "s05b": [
+    0.84,
+    [
+     79.5,
+     22.4
+    ]
+   ],
+   "s06": [
+    1.0,
+    [
+     79,
+     24.5
+    ]
+   ],
+   "s06b": [
+    1.05,
+    [
+     79.4,
+     24.8
+    ]
+   ],
+   "s07": [
+    1.1,
+    [
+     78,
+     23
+    ]
+   ],
+   "s07b": [
+    1.16,
+    [
+     78.4,
+     23.3
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "The Netherlands and Australia are today's powers. Neither comes close to the total.",
+    "cues": {
+     "netherlands": "netherlands",
+     "australia": "australia",
+     "total": "total"
+    }
+   },
+   "direction": "ease back over the subcontinent; the Dutch flag-ball thinks on 'Netherlands'; a kangaroo sticker on 'Australia'; the golds counter runs 0 → 8 on 'total' with a stick sticker as India pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.8,
+    [
+     79,
+     22
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.84,
+    [
+     79.5,
+     22.4
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "golds",
+     "type": "counter",
+     "start": 0,
+     "end": 8,
+     "y": 330,
+     "label": "golds · men's field hockey",
+     "fmt": "int",
+     "size": 190
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@netherlands",
+     "do": "character_in",
+     "id": "nl_think"
+    },
+    {
+     "at": "@@australia",
+     "do": "sticker_in",
+     "id": "st_roo"
+    },
+    {
+     "at": "@@australia+0.4",
+     "do": "sticker_pulse",
+     "id": "st_roo"
+    },
+    {
+     "at": "@@australia+0.9",
+     "do": "sticker_pulse",
+     "id": "st_roo"
+    },
+    {
+     "at": "@@total-0.4",
+     "do": "sticker_out",
+     "id": "st_roo"
+    },
+    {
+     "at": "@@total-0.3",
+     "do": "chart.counter_run",
+     "id": "golds",
+     "until": "@@total+1.3"
+    },
+    {
+     "at": "@@total",
+     "do": "sticker_in",
+     "id": "st_stick"
+    },
+    {
+     "at": "@@total+0.4",
+     "do": "sticker_pulse",
+     "id": "st_stick"
+    },
+    {
+     "at": "@@total+0.6",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "356",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "golds"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_stick"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "nl_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "6 came in a row, before and after independence, without losing a match, built around the man they called the Wizard.",
+    "cues": {
+     "six": "6",
+     "independence": "independence",
+     "wizard": "wizard"
+    }
+   },
+   "direction": "drift north toward the Gangetic plain; the SIX / BRONZE split lands on '6'; a flag-wave sticker on 'independence'; the Jhansi pin on 'Wizard' with a magic sticker as India pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    1.0,
+    [
+     79,
+     24.5
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.05,
+    [
+     79.4,
+     24.8
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "run",
+     "type": "split",
+     "left": {
+      "kicker": "SIX",
+      "text": "golds in a row, Amsterdam to Melbourne"
+     },
+     "right": {
+      "kicker": "BRONZE",
+      "text": "Tokyo and Paris, back on the podium"
+     },
+     "label_left": "THEN",
+     "label_right": "NOW",
+     "y": 300,
+     "h": 560
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@6-0.2",
+     "do": "chart.split_in",
+     "id": "run",
+     "args": {
+      "dur": 0.7
+     }
+    },
+    {
+     "at": "@@6+0.6",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "356",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@independence",
+     "do": "sticker_in",
+     "id": "st_flag"
+    },
+    {
+     "at": "@@independence+0.4",
+     "do": "sticker_pulse",
+     "id": "st_flag"
+    },
+    {
+     "at": "@@wizard",
+     "do": "sticker_out",
+     "id": "st_flag"
+    },
+    {
+     "at": "@@wizard+0.2",
+     "do": "sticker_in",
+     "id": "st_magic"
+    },
+    {
+     "at": "@@wizard+0.6",
+     "do": "sticker_pulse",
+     "id": "st_magic"
+    },
+    {
+     "at": "@@wizard+0.4",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "356",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "run"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_magic"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "An early match against the United States produced a score never matched since. Gold last came in Moscow; bronze in Tokyo and Paris.",
+    "cues": {
+     "final": "score",
+     "moscow": "moscow",
+     "paris": "paris"
+    }
+   },
+   "direction": "tighten on the north; the 24–1 card on 'score' with a goal sticker; a snow sticker on 'Moscow'; the Indian flag-ball grins on 'Paris' as India pulses; the pin leaves at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "24–1",
+    "text": "v United States, Los Angeles, the biggest Olympic win"
+   },
+   "card_at": null,
+   "cam": [
+    1.1,
+    [
+     78,
+     23
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.16,
+    [
+     78.4,
+     23.3
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@score-0.3",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@@moscow-0.2"
+    },
+    {
+     "at": "@@score",
+     "do": "sticker_in",
+     "id": "st_goal"
+    },
+    {
+     "at": "@@score+0.4",
+     "do": "sticker_pulse",
+     "id": "st_goal"
+    },
+    {
+     "at": "@@moscow",
+     "do": "sticker_out",
+     "id": "st_goal"
+    },
+    {
+     "at": "@@moscow",
+     "do": "sticker_in",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@moscow+0.4",
+     "do": "sticker_pulse",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@moscow+0.9",
+     "do": "sticker_pulse",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@paris",
+     "do": "sticker_out",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@paris",
+     "do": "character_in",
+     "id": "in_happy"
+    },
+    {
+     "at": "@@paris+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "356",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "in_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "jhansi"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_roo",
+   "type": "sticker",
+   "emoji": "1f998",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_stick",
+   "type": "sticker",
+   "emoji": "1f3d1",
+   "x": 840,
+   "y": 880,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_flag",
+   "type": "sticker",
+   "emoji": "1f3f3",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_magic",
+   "type": "sticker",
+   "emoji": "1fa84",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_goal",
+   "type": "sticker",
+   "emoji": "1f945",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_snow",
+   "type": "sticker",
+   "emoji": "2744",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "nl_think",
+   "type": "character",
+   "flag": "nl",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "in_happy",
+   "type": "character",
+   "flag": "in",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

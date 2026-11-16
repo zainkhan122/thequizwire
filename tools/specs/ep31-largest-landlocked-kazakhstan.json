@@ -1,0 +1,850 @@
+{
+ "id": "ep31-largest-landlocked-kazakhstan",
+ "series": "geo-blitz",
+ "number": 31,
+ "seed": 4031,
+ "question": "Which is the LARGEST landlocked country?",
+ "keyword": "LARGEST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Mongolia",
+   "flag": "mn",
+   "cue": "mongolia"
+  },
+  {
+   "text": "Kazakhstan",
+   "flag": "kz",
+   "cue": "kazakhstan"
+  },
+  {
+   "text": "Bolivia",
+   "flag": "bo",
+   "cue": "bolivia"
+  }
+ ],
+ "correct": 1,
+ "answer_sub": "about 2.7 million km² · no coast",
+ "outro_headline": "DID YOU GET IT?",
+ "cover_emoji": "🧭",
+ "cover_emoji_why": "a compass says 'find it on the map' and belongs to no option; it says nothing about steppe, altiplano or desert",
+ "post": {
+  "premise": "The biggest country with no coastline still launches rockets into space",
+  "bait": "Mongolia, Kazakhstan or Bolivia — which did you pick? 👇",
+  "keywords": [
+   "largest landlocked country",
+   "landlocked countries list",
+   "biggest country without a coastline",
+   "is the caspian sea a lake",
+   "where do rockets launch from",
+   "geography quiz",
+   "map quiz",
+   "country facts"
+  ],
+  "tags": [
+   "GeoQuiz",
+   "Landlocked"
+  ],
+  "sources_line": "CIA World Factbook; Encyclopaedia Britannica; UN Statistics Division",
+  "copy": {
+   "spoilers": [
+    "kazakhstan",
+    "kazakh",
+    "astana",
+    "almaty",
+    "baikonur",
+    "caspian",
+    "2.7 million",
+    "2,724,900",
+    "steppe"
+   ],
+   "youtube": {
+    "title": "What is the largest landlocked country? It has no coast but launches rockets 🧭",
+    "description": "The steppe nation, the Andean one, or the third one? The biggest country with no coastline is wider than Western Europe, its longest shore is on a lake, and the first human ever sent into space lifted off from inside it.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#landlocked",
+     "#geography",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which is the LARGEST landlocked country? 🧭\nThe steppe nation, the Andean one, or the other one? Wider than Western Europe, not a metre of sea coast, and the first human in space lifted off from inside it.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#landlocked",
+     "#geography",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which is the largest landlocked country — Mongolia, Kazakhstan or Bolivia?\nThe biggest country with no coastline is wider than Western Europe, its longest shore is on a lake, and the first human ever sent into space lifted off from inside it. Pick your flag before the bars stack up.",
+    "tags": [
+     "#geoquiz",
+     "#landlocked"
+    ]
+   },
+   "twitter": {
+    "text": "Which is the LARGEST landlocked country?\nMongolia, Kazakhstan or Bolivia? No coast at all — and the first human in space lifted off from inside it.",
+    "tags": [
+     "#GeoQuiz",
+     "#Landlocked"
+    ]
+   },
+   "threads": {
+    "text": "Which is the largest landlocked country — Mongolia, Kazakhstan or Bolivia? The biggest country with no coastline is wider than Western Europe, its longest shore is on a lake, and the first human ever sent into space lifted off from inside it.",
+    "tags": [
+     "#geography"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "fact-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "flag-lift",
+  "beats": [
+   "bars",
+   "erase",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:kz + emoji-set:steppe",
+  "music": "bed:bright",
+  "outro": "DID YOU GET IT?"
+ },
+ "intent": "A size quiz with a trap in the middle: three area bars that put the Andes and the steppe neighbours far below the winner, the word CASPIAN SEA erased because it is a lake, and the launch pad on the steppe where the space age began — landlocked, and still the road to orbit.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "largest": "largest"
+  },
+  "v04": {
+   "text": "Kazakhstan. Only 8 countries on Earth are bigger, and it has not a single metre of ocean coast.",
+   "cues": {
+    "answer": "kazakhstan",
+    "earth": "earth",
+    "coast": "coast"
+   }
+  },
+  "v05": {
+   "text": "Mongolia is a little over half that size. Bolivia, under half. Neither touches the sea.",
+   "cues": {
+    "mongolia": "mongolia",
+    "bolivia": "bolivia",
+    "sea": "sea"
+   }
+  },
+  "v06": {
+   "text": "The Caspian laps its western shore, but it is a lake, the biggest on Earth, sealed from the ocean.",
+   "cues": {
+    "caspian": "caspian",
+    "lake": "lake",
+    "ocean": "ocean"
+   }
+  },
+  "v07": {
+   "text": "Yet the road to space starts here. The first satellite and the first cosmonaut lifted off from a pad on these steppes.",
+   "cues": {
+    "space": "space",
+    "satellite": "satellite",
+    "steppes": "steppes"
+   }
+  },
+  "v08": {
+   "text": "Landlocked, and launching rockets. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "BAIKONUR",
+   "text": "the world's first spaceport, leased to Russia"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "kz",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "bo",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "Largest landlocked country: Kazakhstan, about 2,724,900 km² (ninth-largest country overall), with no ocean coastline; Mongolia is second at about 1,564,000 km² and Bolivia the largest landlocked country in the Americas at about 1,099,000 km². Kazakhstan's western shore is on the Caspian Sea, the world's largest inland body of water, classed as a lake with no outlet to the ocean. The Baikonur Cosmodrome in south-central Kazakhstan is the world's first and largest operational spaceport, leased to Russia; Sputnik 1 (1957) and Yuri Gagarin's Vostok 1 (1961) launched from it.",
+  "myths": [
+   {
+    "myth": "Kazakhstan has a sea coast, so it cannot be landlocked.",
+    "reality": "Its long western shore is on the Caspian, which is an endorheic lake with no connection to the ocean; Kazakhstan is landlocked and the largest such country.",
+    "sources": [
+     "brit_caspian",
+     "cia_kz"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Landlocked-country lists are static rankings; nobody stacks the three area bars on a map, erases the 'Caspian Sea' because it is a lake, and lands the quiz on the launch pad where the space age began.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=largest+landlocked+country",
+     "title": "Search: largest landlocked country",
+     "angle": "ranking lists",
+     "misses": "no map, no Caspian twist"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=is+the+caspian+sea+a+lake",
+     "title": "Search: is the Caspian Sea a lake",
+     "angle": "explainers",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=baikonur+cosmodrome",
+     "title": "Search: Baikonur cosmodrome",
+     "angle": "space documentaries",
+     "misses": "no geography angle"
+    }
+   ]
+  },
+  "sources": {
+   "cia_kz": {
+    "type": "primary",
+    "publisher": "CIA World Factbook",
+    "title": "Kazakhstan — Geography",
+    "url": "https://www.cia.gov/the-world-factbook/countries/kazakhstan/",
+    "date": "2026-11-11",
+    "notes": "total area 2,724,900 sq km; landlocked; world's largest landlocked country; Caspian Sea coastline is on an inland body of water"
+   },
+   "cia_mn": {
+    "type": "primary",
+    "publisher": "CIA World Factbook",
+    "title": "Mongolia — Geography",
+    "url": "https://www.cia.gov/the-world-factbook/countries/mongolia/",
+    "date": "2026-11-11",
+    "notes": "total area 1,564,116 sq km; landlocked"
+   },
+   "cia_bo": {
+    "type": "primary",
+    "publisher": "CIA World Factbook",
+    "title": "Bolivia — Geography",
+    "url": "https://www.cia.gov/the-world-factbook/countries/bolivia/",
+    "date": "2026-11-11",
+    "notes": "total area 1,098,581 sq km; landlocked"
+   },
+   "brit_kz": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Kazakhstan",
+    "url": "https://www.britannica.com/place/Kazakhstan",
+    "date": "2026-11-11",
+    "notes": "largest landlocked country in the world; ninth-largest country by area"
+   },
+   "brit_caspian": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Caspian Sea",
+    "url": "https://www.britannica.com/place/Caspian-Sea",
+    "date": "2026-11-11",
+    "notes": "world's largest inland body of water; a lake with no outlet to the ocean; bordered by Kazakhstan on the north-east"
+   },
+   "wiki_landlocked": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Landlocked country",
+    "url": "https://en.wikipedia.org/wiki/Landlocked_country",
+    "date": "2026-11-11",
+    "notes": "Kazakhstan 2,724,900 km² largest; Mongolia 1,564,116 km² second; Bolivia 1,098,581 km²"
+   },
+   "nasa_baikonur": {
+    "type": "primary",
+    "publisher": "NASA",
+    "title": "Baikonur Cosmodrome",
+    "url": "https://www.nasa.gov/international-space-station/baikonur-cosmodrome/",
+    "date": "2026-11-11",
+    "notes": "world's first and largest operational space launch facility, in Kazakhstan; leased by Russia; Sputnik 1 and Gagarin's Vostok 1 launched from it"
+   },
+   "brit_baikonur": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Baikonur Cosmodrome",
+    "url": "https://www.britannica.com/place/Baikonur-Cosmodrome",
+    "date": "2026-11-11",
+    "notes": "launch site in Kazakhstan; first artificial satellite (Sputnik 1, 1957) and first crewed flight (Vostok 1, 1961); leased to Russia"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Kazakhstan is the largest landlocked country and the ninth-largest country overall, about 2.7 million km² (2,724,900 km²), with no ocean coastline.",
+    "sources": [
+     "cia_kz",
+     "brit_kz",
+     "wiki_landlocked"
+    ],
+    "vo": [
+     "which is the largest landlocked country",
+     "mongolia, kazakhstan, or bolivia",
+     "kazakhstan. only 8 countries on earth are bigger, and it has not a single metre of ocean coast",
+     "landlocked, and launching rockets"
+    ],
+    "screen": [
+     "2.72 million km²",
+     "million km² · no coast",
+     "2.7 million km²",
+     "no coast"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Mongolia (about 1.56 million km²) and Bolivia (about 1.10 million km²) are also landlocked, at roughly 57 % and 40 % of Kazakhstan's area.",
+    "sources": [
+     "cia_mn",
+     "cia_bo",
+     "wiki_landlocked"
+    ],
+    "vo": [
+     "mongolia is a little over half that size. bolivia, under half. neither touches the sea"
+    ],
+    "screen": [
+     "1.56 million km²",
+     "1.10 million km²"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Kazakhstan's western shore is on the Caspian Sea, the world's largest inland body of water, a lake with no outlet to the ocean.",
+    "sources": [
+     "brit_caspian",
+     "cia_kz"
+    ],
+    "vo": [
+     "the caspian laps its western shore, but it is a lake, the biggest on earth, sealed from the ocean"
+    ],
+    "screen": [
+     "CASPIAN SEA",
+     "the Caspian · a lake"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Baikonur Cosmodrome in Kazakhstan is the world's first and largest spaceport, leased to Russia; the first satellite (Sputnik 1) and the first human spaceflight (Gagarin, Vostok 1) launched from it.",
+    "sources": [
+     "nasa_baikonur",
+     "brit_baikonur"
+    ],
+    "vo": [
+     "yet the road to space starts here. the first satellite and the first cosmonaut lifted off from a pad on these steppes"
+    ],
+    "screen": [
+     "BAIKONUR",
+     "the world's first spaceport, leased to Russia",
+     "Baikonur Cosmodrome"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   46,
+   40,
+   88,
+   56
+  ],
+  "far_bbox": [
+   20,
+   20,
+   110,
+   65
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "398"
+  ],
+  "highlight_note": "Kazakhstan",
+  "labels": [
+   {
+    "id": "cs",
+    "lonlat": [
+     50.5,
+     43.0
+    ],
+    "text": "the Caspian · a lake",
+    "cls": "tag",
+    "in": "s06@lake+0.2",
+    "out": "s06.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "baik",
+    "lonlat": [
+     63.3,
+     45.9
+    ],
+    "label": "Baikonur Cosmodrome",
+    "side": "right"
+   }
+  ],
+  "scalebar": {
+   "km": 500,
+   "lonlat": [
+    47,
+    40.8
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s07@satellite",
+    "pid": "baik"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.45,
+    [
+     62,
+     28
+    ]
+   ],
+   "s01": [
+    0.45,
+    [
+     64,
+     30
+    ]
+   ],
+   "s04": [
+    0.85,
+    [
+     67,
+     48
+    ]
+   ],
+   "s04b": [
+    0.9,
+    [
+     67.5,
+     48.2
+    ]
+   ],
+   "s05": [
+    0.8,
+    [
+     66,
+     47.5
+    ]
+   ],
+   "s05b": [
+    0.84,
+    [
+     66.5,
+     47.8
+    ]
+   ],
+   "s06": [
+    1.0,
+    [
+     56,
+     45.5
+    ]
+   ],
+   "s06b": [
+    1.05,
+    [
+     55.5,
+     45.8
+    ]
+   ],
+   "s07": [
+    1.1,
+    [
+     64,
+     46.5
+    ]
+   ],
+   "s07b": [
+    1.16,
+    [
+     63.6,
+     46.2
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Mongolia is a little over half that size. Bolivia, under half. Neither touches the sea.",
+    "cues": {
+     "mongolia": "mongolia",
+     "bolivia": "bolivia",
+     "sea": "sea"
+    }
+   },
+   "direction": "ease back over the steppe; three area bars rise on 'Mongolia' with Kazakhstan on top, a camp sticker beside them; the Bolivian flag-ball thinks on 'Bolivia'; a no-waves sticker on 'sea' as Kazakhstan pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.8,
+    [
+     66,
+     47.5
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.84,
+    [
+     66.5,
+     47.8
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "area",
+     "type": "bars",
+     "rows": [
+      [
+       "Kazakhstan",
+       2.72,
+       "2.72 million km²"
+      ],
+      [
+       "Mongolia",
+       1.56,
+       "1.56 million km²"
+      ],
+      [
+       "Bolivia",
+       1.1,
+       "1.10 million km²"
+      ]
+     ],
+     "unit": "million km² · no coast",
+     "y": 300,
+     "x": 60,
+     "w": 900
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@mongolia-0.4",
+     "do": "chart.bars_in",
+     "id": "area",
+     "args": {
+      "dur": 1.0,
+      "stagger": 0.3
+     }
+    },
+    {
+     "at": "@@mongolia+0.3",
+     "do": "sticker_in",
+     "id": "st_yurt"
+    },
+    {
+     "at": "@@mongolia+0.7",
+     "do": "sticker_pulse",
+     "id": "st_yurt"
+    },
+    {
+     "at": "@@bolivia",
+     "do": "sticker_out",
+     "id": "st_yurt"
+    },
+    {
+     "at": "@@bolivia",
+     "do": "character_in",
+     "id": "bo_think"
+    },
+    {
+     "at": "@@sea",
+     "do": "sticker_in",
+     "id": "st_nosea"
+    },
+    {
+     "at": "@@sea+0.4",
+     "do": "sticker_pulse",
+     "id": "st_nosea"
+    },
+    {
+     "at": "@@sea+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "398",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "area"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_nosea"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "bo_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The Caspian laps its western shore, but it is a lake, the biggest on Earth, sealed from the ocean.",
+    "cues": {
+     "caspian": "caspian",
+     "lake": "lake",
+     "ocean": "ocean"
+    }
+   },
+   "direction": "swing west to the Caspian shore; the words CASPIAN SEA stand on 'Caspian' and are erased on 'lake'; the lake tag plates the shore; a wave sticker on 'ocean' as Kazakhstan pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    1.0,
+    [
+     56,
+     45.5
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.05,
+    [
+     55.5,
+     45.8
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "casp",
+     "type": "erase",
+     "text": "CASPIAN SEA",
+     "y": 860,
+     "h": 260
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@caspian",
+     "do": "chart.erase_run",
+     "id": "casp",
+     "until": "@@lake+1.1",
+     "args": {
+      "direction": "left"
+     }
+    },
+    {
+     "at": "@@ocean",
+     "do": "sticker_in",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@ocean+0.4",
+     "do": "sticker_pulse",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@lake+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "398",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@ocean+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "398",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "casp"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_wave"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Yet the road to space starts here. The first satellite and the first cosmonaut lifted off from a pad on these steppes.",
+    "cues": {
+     "space": "space",
+     "satellite": "satellite",
+     "steppes": "steppes"
+    }
+   },
+   "direction": "tighten on the launch site; a rocket sticker on 'space'; the Baikonur pin on 'satellite' with the BAIKONUR card; the Kazakh flag-ball grins on 'steppes' as Kazakhstan pulses; the pin leaves at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "BAIKONUR",
+    "text": "the world's first spaceport, leased to Russia"
+   },
+   "card_at": null,
+   "cam": [
+    1.1,
+    [
+     64,
+     46.5
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.16,
+    [
+     63.6,
+     46.2
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@space",
+     "do": "sticker_in",
+     "id": "st_rocket"
+    },
+    {
+     "at": "@@space+0.4",
+     "do": "sticker_pulse",
+     "id": "st_rocket"
+    },
+    {
+     "at": "@@satellite+0.6",
+     "do": "sticker_pulse",
+     "id": "st_rocket"
+    },
+    {
+     "at": "@@steppes",
+     "do": "sticker_out",
+     "id": "st_rocket"
+    },
+    {
+     "at": "@@satellite+0.1",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@steppes",
+     "do": "character_in",
+     "id": "kz_happy"
+    },
+    {
+     "at": "@@steppes+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "398",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "kz_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "baik"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_yurt",
+   "type": "sticker",
+   "emoji": "1f3d5",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_nosea",
+   "type": "sticker",
+   "emoji": "1f6ab",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_wave",
+   "type": "sticker",
+   "emoji": "1f30a",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_rocket",
+   "type": "sticker",
+   "emoji": "1f680",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "bo_think",
+   "type": "character",
+   "flag": "bo",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "kz_happy",
+   "type": "character",
+   "flag": "kz",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

@@ -1,0 +1,868 @@
+{
+ "id": "ep20-most-bird-species-colombia",
+ "series": "wild-files",
+ "number": 20,
+ "seed": 3820,
+ "question": "Which country has the MOST bird species?",
+ "keyword": "MOST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Brazil",
+   "flag": "br",
+   "cue": "brazil"
+  },
+  {
+   "text": "Indonesia",
+   "flag": "id",
+   "cue": "indonesia"
+  },
+  {
+   "text": "Colombia",
+   "flag": "co",
+   "cue": "colombia"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "nearly 2,000 species · a fifth of all birds",
+ "outro_headline": "DID YOU GET IT?",
+ "cover_emoji": "🔭",
+ "cover_emoji_why": "binoculars say 'birdwatching' and belong to no country; they say nothing about rainforest, islands or mountains",
+ "post": {
+  "premise": "The country with the most bird species is not the one with the biggest rainforest",
+  "bait": "Brazil, Indonesia or Colombia — which did you pick? 👇",
+  "keywords": [
+   "which country has the most bird species",
+   "most bird species in the world",
+   "birdwatching countries",
+   "most biodiverse countries",
+   "hummingbird species by country",
+   "animal quiz",
+   "wildlife facts",
+   "nature quiz"
+  ],
+  "tags": [
+   "AnimalQuiz",
+   "Birds"
+  ],
+  "sources_line": "BirdLife International; Colombian Committee of Ornithological Records; Encyclopaedia Britannica",
+  "copy": {
+   "spoilers": [
+    "colombia",
+    "colombian",
+    "andes",
+    "andean",
+    "bogotá",
+    "bogota",
+    "santa marta",
+    "1,969",
+    "1969",
+    "nearly 2,000 species"
+   ],
+   "youtube": {
+    "title": "Which country has the most bird species? Not the Amazon one 🔭",
+    "description": "The rainforest giant, the island nation of thousands, or the third one? One country holds about a fifth of every bird species on Earth, more hummingbirds than anywhere else, and new species are still being described from its hills. The reason is not jungle — it is three walls of mountains.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#birds",
+     "#wildlife",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country has the MOST bird species? 🔭\nThe rainforest giant, the island nation of thousands, or the other one? One country holds about a fifth of every bird species on Earth and more hummingbirds than anywhere else. The reason is not jungle, it is mountains.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#birds",
+     "#wildlife",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country has the most bird species — Brazil, Indonesia or Colombia?\nOne country holds about a fifth of every bird species on Earth, more hummingbirds than anywhere else, and new species are still being described from its hills. The reason is not jungle — it is three walls of mountains. Pick your flag before the tally lands.",
+    "tags": [
+     "#animalquiz",
+     "#birds"
+    ]
+   },
+   "twitter": {
+    "text": "Which country has the MOST bird species?\nBrazil, Indonesia or Colombia? About a fifth of every bird on Earth, and the reason is mountains, not jungle.",
+    "tags": [
+     "#AnimalQuiz",
+     "#Birds"
+    ]
+   },
+   "threads": {
+    "text": "Which country has the most bird species — Brazil, Indonesia or Colombia? One country holds about a fifth of every bird species on Earth and more hummingbirds than anywhere else; the reason is not jungle, it is three walls of mountains.",
+    "tags": [
+     "#birdwatching"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "fact-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "flag-lift",
+  "beats": [
+   "compare",
+   "erase",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:co + emoji-set:birds",
+  "music": "bed:warm",
+  "outro": "DID YOU GET IT?"
+ },
+ "intent": "A biodiversity quiz that beats the obvious answer: the word BRAZIL erased when the rainforest giant only comes third, three tallies to scale with the winner on top, the three Andean ranges as the reason, and a pin on the coastal massif where birds exist nowhere else — mountains, not jungle.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "most": "most"
+  },
+  "v04": {
+   "text": "Colombia. Nearly 2,000 bird species, about a fifth of every bird species on Earth.",
+   "cues": {
+    "answer": "colombia",
+    "species": "species",
+    "earth": "earth"
+   }
+  },
+  "v05": {
+   "text": "Brazil has the Amazon, yet only comes third. Indonesia's many islands come fourth.",
+   "cues": {
+    "brazil": "brazil",
+    "third": "third",
+    "fourth": "fourth"
+   }
+  },
+  "v06": {
+   "text": "Peru sits just behind. The secret is 3 Andean ranges, every valley between them breeding its own birds, and coasts on 2 oceans.",
+   "cues": {
+    "peru": "peru",
+    "valley": "valley",
+    "oceans": "oceans"
+   }
+  },
+  "v07": {
+   "text": "More kinds of hummingbird live here than anywhere else, and new species are still being described from these hills.",
+   "cues": {
+    "hummingbird": "hummingbird",
+    "anywhere": "anywhere",
+    "hills": "hills"
+   }
+  },
+  "v08": {
+   "text": "A fifth of all birds, 1 country. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "160+",
+   "text": "hummingbird species, more than any country"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "co",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "br",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "Country with the most bird species: Colombia, about 1,969 species on the national checklist of the Colombian Committee of Ornithological Records (roughly a fifth of the world's ~11,000 species), ahead of Peru (~1,890), Brazil (~1,860) and Indonesia (~1,700+). The diversity is driven by the three Andean cordilleras and their isolated valleys, plus Caribbean and Pacific coasts, Amazon and Orinoco lowlands. Colombia has the most hummingbird species of any country (over 160) and new species continue to be described; the Sierra Nevada de Santa Marta has one of the world's highest concentrations of endemic birds.",
+  "myths": [
+   {
+    "myth": "Brazil, with most of the Amazon, must have the most bird species.",
+    "reality": "Brazil ranks third behind Colombia and Peru; Colombia's Andean valleys and two coasts pack more species into an eighth of Brazil's area.",
+    "sources": [
+     "birdlife_colombia",
+     "brit_colombia"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Most-birds clips are top-10 lists; nobody erases the Amazon guess on a map, sets the three tallies to scale, shows the three Andean ranges as the reason and pins the massif of endemics as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=which+country+has+the+most+bird+species",
+     "title": "Search: which country has the most bird species",
+     "angle": "ranking lists",
+     "misses": "no map, no reason"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=birding+colombia",
+     "title": "Search: birding in the Andes",
+     "angle": "birding vlogs",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=most+biodiverse+country",
+     "title": "Search: most biodiverse country",
+     "angle": "explainers",
+     "misses": "no bird focus"
+    }
+   ]
+  },
+  "sources": {
+   "birdlife_colombia": {
+    "type": "primary",
+    "publisher": "BirdLife International",
+    "title": "Country profile: Colombia",
+    "url": "https://datazone.birdlife.org/country/colombia",
+    "date": "2026-11-11",
+    "notes": "the country with the most bird species in the world; endemic-rich Andes and Santa Marta massif"
+   },
+   "acocolombia": {
+    "type": "primary",
+    "publisher": "Asociación Colombiana de Ornitología / Comité Colombiano de Registros Ornitológicos",
+    "title": "Lista de las aves de Colombia",
+    "url": "https://asociacioncolombianadeornitologia.org/lista-de-aves-de-colombia/",
+    "date": "2026-11-11",
+    "notes": "national checklist of about 1,969 species (current edition)"
+   },
+   "brit_colombia": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Colombia — Plant and animal life",
+    "url": "https://www.britannica.com/place/Colombia/Plant-and-animal-life",
+    "date": "2026-11-11",
+    "notes": "more bird species than any other country; three Andean cordilleras; Caribbean and Pacific coasts"
+   },
+   "brit_andes": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Andes Mountains — Colombia",
+    "url": "https://www.britannica.com/place/Andes-Mountains",
+    "date": "2026-11-11",
+    "notes": "in Colombia the Andes divide into three ranges (Cordillera Occidental, Central, Oriental) separated by deep valleys"
+   },
+   "wiki_birds_country": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "List of birds by country (countries ranked by species count)",
+    "url": "https://en.wikipedia.org/wiki/List_of_birds_by_country",
+    "date": "2026-11-11",
+    "notes": "Colombia first (about 1,969), Peru second (about 1,890), Brazil third (about 1,860), Indonesia fourth"
+   },
+   "wiki_colombia_birds": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "List of birds of Colombia",
+    "url": "https://en.wikipedia.org/wiki/List_of_birds_of_Colombia",
+    "date": "2026-11-11",
+    "notes": "about 1,969 species; around 80 endemics; more hummingbird species than any other country (over 160)"
+   },
+   "brit_hummingbird": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Hummingbird",
+    "url": "https://www.britannica.com/animal/hummingbird",
+    "date": "2026-11-11",
+    "notes": "family of over 300 species confined to the Americas; greatest diversity in the northern Andes"
+   },
+   "birdlife_santamarta": {
+    "type": "primary",
+    "publisher": "BirdLife International",
+    "title": "Sierra Nevada de Santa Marta — Endemic Bird Area",
+    "url": "https://datazone.birdlife.org/eba/factsheet/44",
+    "date": "2026-11-11",
+    "notes": "isolated coastal massif with one of the highest concentrations of endemic bird species on Earth"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Colombia has the most bird species of any country, about 1,969 — roughly a fifth of the world's bird species.",
+    "sources": [
+     "birdlife_colombia",
+     "acocolombia",
+     "wiki_birds_country"
+    ],
+    "vo": [
+     "which country has the most bird species",
+     "brazil, indonesia, or colombia",
+     "colombia. nearly 2,000 bird species, about a fifth of every bird species on earth",
+     "a fifth of all birds, 1 country"
+    ],
+    "screen": [
+     "nearly 2,000 species · a fifth of all birds",
+     "1,969",
+     "species",
+     "a fifth of all birds"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Brazil ranks third (about 1,860 species) and Indonesia fourth (about 1,700+); Peru is second (about 1,890).",
+    "sources": [
+     "wiki_birds_country",
+     "brit_colombia"
+    ],
+    "vo": [
+     "brazil has the amazon, yet only comes third. indonesia's many islands come fourth",
+     "peru sits just behind. the secret is 3 andean ranges, every valley between them breeding its own birds, and coasts on 2 oceans"
+    ],
+    "screen": [
+     "BRAZIL",
+     "1,890",
+     "1,860",
+     "Peru"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Colombia's bird diversity comes from the three Andean cordilleras with isolated valleys between them and its Caribbean and Pacific coasts.",
+    "sources": [
+     "brit_colombia",
+     "brit_andes",
+     "birdlife_colombia"
+    ],
+    "vo": [
+     "peru sits just behind. the secret is 3 andean ranges, every valley between them breeding its own birds, and coasts on 2 oceans"
+    ],
+    "screen": [
+     "3 Andean ranges"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Colombia has more hummingbird species than any other country (over 160); new species are still being described, and the Sierra Nevada de Santa Marta is one of the richest endemic bird areas on Earth.",
+    "sources": [
+     "wiki_colombia_birds",
+     "brit_hummingbird",
+     "birdlife_santamarta"
+    ],
+    "vo": [
+     "more kinds of hummingbird live here than anywhere else, and new species are still being described from these hills"
+    ],
+    "screen": [
+     "160+",
+     "hummingbird species, more than any country",
+     "Santa Marta · endemic birds"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -80,
+   -5,
+   -66,
+   13
+  ],
+  "far_bbox": [
+   -110,
+   -30,
+   -35,
+   35
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "170"
+  ],
+  "highlight_note": "Colombia",
+  "labels": [
+   {
+    "id": "andes",
+    "lonlat": [
+     -75.6,
+     2.2
+    ],
+    "text": "3 Andean ranges",
+    "cls": "tag",
+    "in": "s06@valley+0.2",
+    "out": "s06.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "sm",
+    "lonlat": [
+     -73.7,
+     10.8
+    ],
+    "label": "Santa Marta · endemic birds",
+    "side": "left"
+   }
+  ],
+  "scalebar": {
+   "km": 200,
+   "lonlat": [
+    -79.5,
+    -4.5
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s07@anywhere",
+    "pid": "sm"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.45,
+    [
+     -100,
+     21
+    ]
+   ],
+   "s01": [
+    0.45,
+    [
+     -98,
+     19
+    ]
+   ],
+   "s04": [
+    0.9,
+    [
+     -73,
+     4.5
+    ]
+   ],
+   "s04b": [
+    0.95,
+    [
+     -73.3,
+     4.8
+    ]
+   ],
+   "s05": [
+    0.8,
+    [
+     -72.5,
+     4
+    ]
+   ],
+   "s05b": [
+    0.84,
+    [
+     -72.8,
+     4.3
+    ]
+   ],
+   "s06": [
+    1.0,
+    [
+     -74.5,
+     4.5
+    ]
+   ],
+   "s06b": [
+    1.05,
+    [
+     -74.8,
+     4.8
+    ]
+   ],
+   "s07": [
+    1.05,
+    [
+     -75.4,
+     7.6
+    ]
+   ],
+   "s07b": [
+    1.1,
+    [
+     -75.2,
+     8.0
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Brazil has the Amazon, yet only comes third. Indonesia's many islands come fourth.",
+    "cues": {
+     "brazil": "brazil",
+     "third": "third",
+     "fourth": "fourth"
+    }
+   },
+   "direction": "ease back over the north of South America; the word BRAZIL stands on 'Brazil' and is erased on 'third'; the Brazilian flag-ball thinks on 'third'; an island sticker on 'fourth' as Colombia pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.8,
+    [
+     -72.5,
+     4
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.84,
+    [
+     -72.8,
+     4.3
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "brz",
+     "type": "erase",
+     "text": "BRAZIL",
+     "y": 560,
+     "h": 260
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@brazil",
+     "do": "chart.erase_run",
+     "id": "brz",
+     "until": "@@third+1.0",
+     "args": {
+      "direction": "left"
+     }
+    },
+    {
+     "at": "@@third",
+     "do": "character_in",
+     "id": "br_think"
+    },
+    {
+     "at": "@@fourth",
+     "do": "sticker_in",
+     "id": "st_isle"
+    },
+    {
+     "at": "@@fourth+0.4",
+     "do": "sticker_pulse",
+     "id": "st_isle"
+    },
+    {
+     "at": "@@fourth+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "170",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@fourth+0.8",
+     "do": "chart.out",
+     "id": "brz"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_isle"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "br_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Peru sits just behind. The secret is 3 Andean ranges, every valley between them breeding its own birds, and coasts on 2 oceans.",
+    "cues": {
+     "peru": "peru",
+     "valley": "valley",
+     "oceans": "oceans"
+    }
+   },
+   "direction": "tighten on the Andes; three tallies rise to scale on 'Peru' with Colombia on top; the Andes tag plates on 'valley' with a mountain sticker; a wave sticker on 'oceans' as Colombia pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    1.0,
+    [
+     -74.5,
+     4.5
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.05,
+    [
+     -74.8,
+     4.8
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "tally",
+     "type": "compare",
+     "items": [
+      [
+       "Brazil",
+       1860,
+       "1,860"
+      ],
+      [
+       "Peru",
+       1890,
+       "1,890"
+      ],
+      [
+       "Colombia",
+       1969,
+       "1,969"
+      ]
+     ],
+     "y": 320,
+     "x": 60,
+     "w": 900,
+     "max_h": 520
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@peru-0.3",
+     "do": "chart.compare_in",
+     "id": "tally",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.25
+     }
+    },
+    {
+     "at": "@@valley",
+     "do": "sticker_in",
+     "id": "st_mtn"
+    },
+    {
+     "at": "@@valley+0.4",
+     "do": "sticker_pulse",
+     "id": "st_mtn"
+    },
+    {
+     "at": "@@oceans",
+     "do": "sticker_out",
+     "id": "st_mtn"
+    },
+    {
+     "at": "@@oceans",
+     "do": "sticker_in",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@oceans+0.4",
+     "do": "sticker_pulse",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@oceans+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "170",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "tally"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_wave"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "More kinds of hummingbird live here than anywhere else, and new species are still being described from these hills.",
+    "cues": {
+     "hummingbird": "hummingbird",
+     "anywhere": "anywhere",
+     "hills": "hills"
+    }
+   },
+   "direction": "drift north to the Caribbean massif; the 160+ card on 'hummingbird' with a feather sticker; the Santa Marta pin on 'anywhere'; a magnifier sticker on 'hills' as the Colombian flag-ball grins and Colombia pulses; the pin leaves at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "160+",
+    "text": "hummingbird species, more than any country"
+   },
+   "card_at": null,
+   "cam": [
+    1.05,
+    [
+     -75.4,
+     7.6
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.1,
+    [
+     -75.2,
+     8.0
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@hummingbird-0.2",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@@hills-0.2"
+    },
+    {
+     "at": "@@hummingbird+0.2",
+     "do": "sticker_in",
+     "id": "st_feather"
+    },
+    {
+     "at": "@@hummingbird+0.6",
+     "do": "sticker_pulse",
+     "id": "st_feather"
+    },
+    {
+     "at": "@@hummingbird+1.1",
+     "do": "sticker_pulse",
+     "id": "st_feather"
+    },
+    {
+     "at": "@@anywhere",
+     "do": "sticker_out",
+     "id": "st_feather"
+    },
+    {
+     "at": "@@hills",
+     "do": "sticker_in",
+     "id": "st_mag"
+    },
+    {
+     "at": "@@hills+0.4",
+     "do": "sticker_pulse",
+     "id": "st_mag"
+    },
+    {
+     "at": "@@hills+0.2",
+     "do": "character_in",
+     "id": "co_happy"
+    },
+    {
+     "at": "@@hills+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "170",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_mag"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "co_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "sm"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_isle",
+   "type": "sticker",
+   "emoji": "1f3dd",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_mtn",
+   "type": "sticker",
+   "emoji": "26f0",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_wave",
+   "type": "sticker",
+   "emoji": "1f30a",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_feather",
+   "type": "sticker",
+   "emoji": "1fab6",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_mag",
+   "type": "sticker",
+   "emoji": "1f50d",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "br_think",
+   "type": "character",
+   "flag": "br",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "co_happy",
+   "type": "character",
+   "flag": "co",
+   "face": "happy",
+   "x": 300,
+   "y": 1130,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

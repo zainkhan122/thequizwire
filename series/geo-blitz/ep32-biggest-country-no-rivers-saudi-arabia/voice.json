@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep32-biggest-country-no-rivers-saudi-arabia",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A water quiz told as plumbing: the kingdom with no river lifts into view, a WADIS / DESAL split explains where its water does and does not come from, and a pipeline route draws from the Gulf coast to the capital with a water drop riding it inland — the sea, delivered.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Which is the BIGGEST country with no rivers?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Which is the biggest country with no rivers?",
+   "cues": {
+    "which": "which",
+    "biggest": "biggest"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Australia, Saudi Arabia, or Egypt?",
+   "cues": {
+    "a": "australia",
+    "b": "saudi",
+    "c": "egypt"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "Saudi Arabia. The biggest country with no permanent river or natural lake.",
+   "cues": {
+    "answer": "saudi",
+    "river": "river",
+    "lake": "lake"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.35,
+   "direction": "ease back over the peninsula; the Australian flag-ball thinks on 'Australia'; a river sticker on 'Egypt' and a dry-cracked sticker on 'flows' as Saudi Arabia pulses",
+   "text": "Australia has rivers, some seasonal. Egypt is built on the Nile. Here nothing flows all year.",
+   "cues": {
+    "australia": "australia",
+    "egypt": "egypt",
+    "flows": "flows"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "drift south over the Najd; a rain sticker on 'rain'; the WADIS / DESAL split lands on 'wadis'; a wave sticker on 'sea' as Saudi Arabia pulses",
+   "text": "Rain comes a few days a year, races down dry valleys called wadis, and is gone. The kingdom makes water from the sea.",
+   "cues": {
+    "rain": "rain",
+    "wadis": "wadis",
+    "sea": "sea"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.5,
+   "direction": "tighten on the Gulf coast and the capital; the Jubail pin on 'pumped' as the pipeline route draws inland with a water-drop sticker riding it; the Riyadh pin and the MADE WATER card on 'capital'; the pipe tag; the Saudi flag-ball grins on 'uphill' as Saudi Arabia pulses; the pins leave at the end",
+   "text": "It is pumped from the Gulf coast across the desert to the capital, hundreds of kilometres inland, uphill.",
+   "cues": {
+    "pumped": "pumped",
+    "capital": "capital",
+    "uphill": "uphill"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "It drinks the sea. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

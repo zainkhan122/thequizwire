@@ -1,0 +1,142 @@
+{
+ "id": "ep31-largest-landlocked-kazakhstan",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 31,
+ "title": "Which is the LARGEST landlocked country?",
+ "difficulty": "MEDIUM",
+ "seed": 4031,
+ "quiz": {
+  "question": "Which is the LARGEST landlocked country?",
+  "keyword": "LARGEST",
+  "options": [
+   "Mongolia",
+   "Kazakhstan",
+   "Bolivia"
+  ],
+  "correct": 1,
+  "beat": 3.0,
+  "answer_line": "Kazakhstan",
+  "answer_sub": "about 2.7 million km² · no coast",
+  "option_meta": [
+   {
+    "flag": "mn"
+   },
+   {
+    "flag": "kz"
+   },
+   {
+    "flag": "bo"
+   }
+  ],
+  "banner": "Kazakhstan",
+  "banner_sub": "✓  B was right · about 2.7 million km² · no coast",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which is the LARGEST landlocked country? 🧭",
+  "premise": "The biggest country with no coastline still launches rockets into space",
+  "bait": "Mongolia, Kazakhstan or Bolivia — which did you pick? 👇",
+  "keywords": [
+   "largest landlocked country",
+   "landlocked countries list",
+   "biggest country without a coastline",
+   "is the caspian sea a lake",
+   "where do rockets launch from",
+   "geography quiz",
+   "map quiz",
+   "country facts"
+  ],
+  "description": "The biggest country with no coastline still launches rockets into space. Mongolia, Kazakhstan or Bolivia — which did you pick? 👇\n\nSources: CIA World Factbook; Encyclopaedia Britannica; UN Statistics Division.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #31",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "GeoQuiz",
+   "Landlocked"
+  ],
+  "cover_emoji": "🧭",
+  "cover_emoji_why": "a compass says 'find it on the map' and belongs to no option; it says nothing about steppe, altiplano or desert",
+  "copy": {
+   "spoilers": [
+    "kazakhstan",
+    "kazakh",
+    "astana",
+    "almaty",
+    "baikonur",
+    "caspian",
+    "2.7 million",
+    "2,724,900",
+    "steppe"
+   ],
+   "youtube": {
+    "title": "What is the largest landlocked country? It has no coast but launches rockets 🧭",
+    "description": "The steppe nation, the Andean one, or the third one? The biggest country with no coastline is wider than Western Europe, its longest shore is on a lake, and the first human ever sent into space lifted off from inside it.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#landlocked",
+     "#geography",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which is the LARGEST landlocked country? 🧭\nThe steppe nation, the Andean one, or the other one? Wider than Western Europe, not a metre of sea coast, and the first human in space lifted off from inside it.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#landlocked",
+     "#geography",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which is the largest landlocked country — Mongolia, Kazakhstan or Bolivia?\nThe biggest country with no coastline is wider than Western Europe, its longest shore is on a lake, and the first human ever sent into space lifted off from inside it. Pick your flag before the bars stack up.",
+    "tags": [
+     "#geoquiz",
+     "#landlocked"
+    ]
+   },
+   "twitter": {
+    "text": "Which is the LARGEST landlocked country?\nMongolia, Kazakhstan or Bolivia? No coast at all — and the first human in space lifted off from inside it.",
+    "tags": [
+     "#GeoQuiz",
+     "#Landlocked"
+    ]
+   },
+   "threads": {
+    "text": "Which is the largest landlocked country — Mongolia, Kazakhstan or Bolivia? The biggest country with no coastline is wider than Western Europe, its longest shore is on a lake, and the first human ever sent into space lifted off from inside it.",
+    "tags": [
+     "#geography"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "flag-lift",
+  "beats": [
+   "bars",
+   "erase",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:kz + emoji-set:steppe",
+  "music": "bed:bright"
+ },
+ "status": "ready"
+}

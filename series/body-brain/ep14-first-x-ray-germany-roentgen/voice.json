@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep14-first-x-ray-germany-roentgen",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A discovery told through one photograph: the real plate of a hand with a ring rising out of the country where it was made, the quote she said when she saw it, the word PATENT erased because he refused one, and the first Nobel Prize in Physics as the close — a body quiz where the body is literally seen through.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Which country made the FIRST X-ray image?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Which country made the first X-ray image?",
+   "cues": {
+    "which": "which",
+    "first": "first"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "France, Germany, or United States?",
+   "cues": {
+    "a": "france",
+    "b": "germany",
+    "c": "united"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "Germany. A physics professor in Bavaria caught a new kind of ray on a photographic plate.",
+   "cues": {
+    "answer": "germany",
+    "professor": "professor",
+    "plate": "plate"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.35,
+   "direction": "ease back over central Europe; the French flag-ball thinks on 'France'; a flask sticker on 'months'; a pointer sticker on 'here' as Germany pulses",
+   "text": "France and America followed within months. But the first picture through flesh was made here.",
+   "cues": {
+    "france": "france",
+    "months": "months",
+    "here": "here"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "suspense",
+   "energy": 3,
+   "pause_after": 0.6,
+   "direction": "tighten on Franconia; a lamp sticker and the real plate of her hand rising out of Germany on 'hand'; a ring sticker on 'bones'; the quote tag plates on 'death' as Germany pulses softly",
+   "text": "He laid his wife's hand on the plate. Her bones appeared, and her ring. She said: I have seen my death.",
+   "cues": {
+    "hand": "hand",
+    "bones": "bones",
+    "death": "death"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.5,
+   "direction": "ease back a little; a stethoscope sticker on 'weeks'; the word PATENT stands and is erased on 'patent'; the FIRST NOBEL card on 'Nobel' with a medal sticker; the German flag-ball grins as Germany pulses; the pin leaves at the end",
+   "text": "Within weeks doctors were finding bullets. He refused to patent it, and took the first Nobel Prize in Physics.",
+   "cues": {
+    "weeks": "weeks",
+    "patent": "patent",
+    "nobel": "nobel"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "Her hand, a new science. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

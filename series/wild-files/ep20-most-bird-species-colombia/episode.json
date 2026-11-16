@@ -1,0 +1,143 @@
+{
+ "id": "ep20-most-bird-species-colombia",
+ "format": "quiz-v3",
+ "series": "wild-files",
+ "number": 20,
+ "title": "Which country has the MOST bird species?",
+ "difficulty": "MEDIUM",
+ "seed": 3820,
+ "quiz": {
+  "question": "Which country has the MOST bird species?",
+  "keyword": "MOST",
+  "options": [
+   "Brazil",
+   "Indonesia",
+   "Colombia"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Colombia",
+  "answer_sub": "nearly 2,000 species · a fifth of all birds",
+  "option_meta": [
+   {
+    "flag": "br"
+   },
+   {
+    "flag": "id"
+   },
+   {
+    "flag": "co"
+   }
+  ],
+  "banner": "Colombia",
+  "banner_sub": "✓  C was right · nearly 2,000 species · a fifth of all birds",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country has the MOST bird species? 🔭",
+  "premise": "The country with the most bird species is not the one with the biggest rainforest",
+  "bait": "Brazil, Indonesia or Colombia — which did you pick? 👇",
+  "keywords": [
+   "which country has the most bird species",
+   "most bird species in the world",
+   "birdwatching countries",
+   "most biodiverse countries",
+   "hummingbird species by country",
+   "animal quiz",
+   "wildlife facts",
+   "nature quiz"
+  ],
+  "description": "The country with the most bird species is not the one with the biggest rainforest. Brazil, Indonesia or Colombia — which did you pick? 👇\n\nSources: BirdLife International; Colombian Committee of Ornithological Records; Encyclopaedia Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #20",
+  "hashtags": [
+   "#AnimalQuiz",
+   "#WildlifeFacts",
+   "#thequizwire"
+  ],
+  "tags": [
+   "AnimalQuiz",
+   "Birds"
+  ],
+  "cover_emoji": "🔭",
+  "cover_emoji_why": "binoculars say 'birdwatching' and belong to no country; they say nothing about rainforest, islands or mountains",
+  "copy": {
+   "spoilers": [
+    "colombia",
+    "colombian",
+    "andes",
+    "andean",
+    "bogotá",
+    "bogota",
+    "santa marta",
+    "1,969",
+    "1969",
+    "nearly 2,000 species"
+   ],
+   "youtube": {
+    "title": "Which country has the most bird species? Not the Amazon one 🔭",
+    "description": "The rainforest giant, the island nation of thousands, or the third one? One country holds about a fifth of every bird species on Earth, more hummingbirds than anywhere else, and new species are still being described from its hills. The reason is not jungle — it is three walls of mountains.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#birds",
+     "#wildlife",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country has the MOST bird species? 🔭\nThe rainforest giant, the island nation of thousands, or the other one? One country holds about a fifth of every bird species on Earth and more hummingbirds than anywhere else. The reason is not jungle, it is mountains.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#birds",
+     "#wildlife",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country has the most bird species — Brazil, Indonesia or Colombia?\nOne country holds about a fifth of every bird species on Earth, more hummingbirds than anywhere else, and new species are still being described from its hills. The reason is not jungle — it is three walls of mountains. Pick your flag before the tally lands.",
+    "tags": [
+     "#animalquiz",
+     "#birds"
+    ]
+   },
+   "twitter": {
+    "text": "Which country has the MOST bird species?\nBrazil, Indonesia or Colombia? About a fifth of every bird on Earth, and the reason is mountains, not jungle.",
+    "tags": [
+     "#AnimalQuiz",
+     "#Birds"
+    ]
+   },
+   "threads": {
+    "text": "Which country has the most bird species — Brazil, Indonesia or Colombia? One country holds about a fifth of every bird species on Earth and more hummingbirds than anywhere else; the reason is not jungle, it is three walls of mountains.",
+    "tags": [
+     "#birdwatching"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "flag-lift",
+  "beats": [
+   "compare",
+   "erase",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:co + emoji-set:birds",
+  "music": "bed:warm"
+ },
+ "status": "ready"
+}
