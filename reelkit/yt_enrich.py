@@ -343,6 +343,54 @@ def cmd_playlists(a):
     print(f"yt_enrich: playlists ok · {yt.units} quota units")
 
 
+def cmd_audit(a):
+    """List every playlist on the channel with item counts, flag duplicate titles; cost ≈ 1 unit per 50 playlists."""
+    c = cfg(); A = c["youtube_api"]; yt = YT(cap=A["daily_units_cap"]); tok = None; rows = []
+    while True:
+        d = yt.call("GET", "playlists", {"part": "snippet,contentDetails", "mine": "true", "maxResults": 50, **({"pageToken": tok} if tok else {})})
+        rows += [(p["id"], p["snippet"]["title"], p["contentDetails"]["itemCount"], p["snippet"]["publishedAt"][:10]) for p in d.get("items", [])]
+        tok = d.get("nextPageToken")
+        if not tok: break
+    ours = {S["playlist_id"]: slug for slug, S in c["series"].items() if S.get("playlist_id")}; ours[A.get("channel_playlist_id")] = "channel"
+    for pid, t, n, dt in sorted(rows, key=lambda r: r[1].lower()):
+        print(f"   {pid:36} {n:4d} items  {dt}  {t}" + (f"   ← config:{ours[pid]}" if pid in ours else ""))
+    titles = {}
+    for pid, t, n, dt in rows: titles.setdefault(re.sub(r"[^a-z]", "", t.lower()), []).append(pid)
+    for k, v in titles.items():
+        if len(v) > 1: print(f"   DUPLICATE title group: {v}")
+    print(f"yt_enrich: audit {len(rows)} playlists · {yt.units} units")
+
+
+def cmd_merge(a):
+    """Move every item of playlist SRC into playlist DST (skip items already there), then delete SRC; update config/ledger ids.
+    Cost: 1 unit per 50 reads + 50 per insert + 50 for the delete."""
+    c = cfg(); A = c["youtube_api"]; yt = YT(a.dry_run, cap=A["daily_units_cap"]); src, dst = a.src, a.dst
+    def items(pid):
+        out, tok = [], None
+        while True:
+            d = yt.call("GET", "playlistItems", {"part": "snippet", "playlistId": pid, "maxResults": 50, **({"pageToken": tok} if tok else {})})
+            out += [(i["id"], i["snippet"]["resourceId"]["videoId"]) for i in d.get("items", [])]
+            tok = d.get("nextPageToken")
+            if not tok: return out
+    have = {v for _, v in items(dst)}; moved = 0
+    for _, vid in items(src):
+        if vid in have: continue
+        yt.add_to_playlist(dst, vid); have.add(vid); moved += 1
+    if not a.dry_run: yt.call("DELETE", "playlists", {"id": src}, cost=50)
+    L = json.loads(LEDGER.read_text()); n = 0
+    for p in L["posts"]:
+        for k in ("yt_playlist_id",):
+            if p.get(k) == src: p[k] = dst; p.pop("yt_series_item", None); n += 1
+        if p.get("yt_channel_item") and A.get("channel_playlist_id") == src: p.pop("yt_channel_item", None)
+    for slug, S in c["series"].items():
+        if S.get("playlist_id") == src: S["playlist_id"] = dst
+    if A.get("channel_playlist_id") == src: A["channel_playlist_id"] = dst
+    if not a.dry_run:
+        LEDGER.write_text(json.dumps(L, indent=1, ensure_ascii=False) + "\n"); CFG_PATH.write_text(json.dumps(c, indent=1, ensure_ascii=False) + "\n")
+        quota_save(yt.q, {"units": yt.spent()})
+    print(f"yt_enrich: merged {src} → {dst}: {moved} item(s) moved, {src} deleted, {n} ledger row(s) repointed · {yt.units} units")
+
+
 def cmd_thumb(a):
     c = cfg(); A = c["youtube_api"]; L = json.loads(LEDGER.read_text()); ep = Path(a.episode).name
     rows = [p for p in L["posts"] if p["platform"] == "youtube" and p["episode"] == ep and p.get("state") == "sent"]
@@ -418,8 +466,9 @@ def main():
     ap = argparse.ArgumentParser(); sp = ap.add_subparsers(dest="cmd", required=True)
     sp.add_parser("auth"); sp.add_parser("whoami")
     for n in ("run", "playlists"): sp.add_parser(n).add_argument("--dry-run", action="store_true")
+    sp.add_parser("audit"); m = sp.add_parser("merge"); m.add_argument("src"); m.add_argument("dst"); m.add_argument("--dry-run", action="store_true")
     t = sp.add_parser("thumb"); t.add_argument("episode"); t.add_argument("--force", action="store_true"); t.add_argument("--dry-run", action="store_true")
-    a = ap.parse_args(); {"auth": cmd_auth, "whoami": cmd_whoami, "run": cmd_run, "playlists": cmd_playlists, "thumb": cmd_thumb}[a.cmd](a)
+    a = ap.parse_args(); {"auth": cmd_auth, "whoami": cmd_whoami, "run": cmd_run, "playlists": cmd_playlists, "thumb": cmd_thumb, "audit": cmd_audit, "merge": cmd_merge}[a.cmd](a)
 
 
 if __name__ == "__main__":

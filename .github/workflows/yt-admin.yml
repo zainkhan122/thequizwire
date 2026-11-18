@@ -1,0 +1,26 @@
+name: yt-admin
+on:
+  workflow_dispatch:
+    inputs:
+      args:
+        description: "yt_enrich.py arguments, e.g. 'audit' or 'merge <src> <dst>'"
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: dispatch
+jobs:
+  admin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 reelkit/yt_enrich.py ${{ inputs.args }} | tee -a "$GITHUB_STEP_SUMMARY"
+      - run: |
+          git config user.name thequizwire-bot; git config user.email bot@thequizwire.com
+          git add dispatch/ledger.json dispatch/yt_quota.json config/publishing.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -qm "yt-admin: ${{ inputs.args }}" && git pull -q --rebase && git push -q)
