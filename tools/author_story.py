@@ -113,7 +113,7 @@ def build(S):
             B.append({"at": rel(b["kw"].get("at", "@+0.6"), s), "do": "kw_in", "id": kid})
             B.append({"at": rel(b["kw"].get("until", "@.end"), s), "do": "kw_out", "id": kid})
         if b.get("card"):
-            fid = f"f{i + 2:02d}"; els.append({"id": fid, "type": "fact", "kicker": b["card"]["kicker"], "text": b["card"]["text"], **({"y": b["card"]["y"]} if b["card"].get("y") else {})})
+            fid = f"f{i + 2:02d}"; els.append({"id": fid, "type": "fact", "kicker": b["card"]["kicker"], "text": b["card"]["text"], "y": b["card"].get("y", 1010)})
             B.append({"at": rel(b["card"].get("at", "@+0.5"), s), "do": "fact_in", "id": fid})
             B.append({"at": rel(b["card"].get("until", "@.end"), s), "do": "hide", "id": fid, "args": {"dur": 0.3}})
         if b.get("sticker"):
