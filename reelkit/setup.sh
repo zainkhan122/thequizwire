@@ -3,7 +3,7 @@
 #     source ~/thequizwire/reelkit/setup.sh   (or: source ~/thequizwire/bootstrap.sh — also wires git + prints the resume pack)
 #
 # Everything heavy lives in ~/.cache (excluded from workspace snapshots → never blows the 128 MB / 10k-file save budget).
-# Re-running only fetches what is missing. The sandbox never renders video; it authors, builds HTML, runs the offline gates
+# Re-running only fetches what is missing. The sandbox authors, builds HTML, runs the offline gates, and (SETUP_RENDER=1) renders previews locally
 # (plan/geo/build/static/quizlint/geolint/facts/provenance/selftest) and previews maps as PNG (reelkit/geopreview.mjs).
 #
 #   ~/.cache/kokoro/    Kokoro-82M ONNX int8 + voices (Apache-2.0, CPU TTS)   — only with SETUP_TTS=1 (≈ 90 MB, ~1 min)
@@ -43,3 +43,15 @@ fi
 echo "[4/4] geodata cache"
 if [ -s "$C/geodata/natural-earth/ne_10m_admin_0_disputed_areas.geojson" ]; then ok "geodata cached ($(du -sh "$C/geodata" | cut -f1))"
 else echo "  – not cached: python3 $QW/reelkit/geodata.py fetch --all   (≈ 9 MB; the offline fallback is tests/fixtures/ne_disputed_kashmir.geojson via GEO_FIXTURE)"; fi
+
+# ---- optional: local preview rendering (SETUP_RENDER=1) — reelkit/local_render.py (headless Chromium + imageio-ffmpeg; ≈ 7 min per 50 s episode)
+if [ "${SETUP_RENDER:-0}" = 1 ]; then
+  echo "[5/5] local render toolchain (playwright chromium · imageio-ffmpeg · faster-whisper · Chromium system libs user-side)"
+  pip install -q --user playwright imageio-ffmpeg faster-whisper kokoro-onnx onnxruntime soundfile 2>&1 | grep -v "^\s*$" | tail -2
+  python3 -m playwright install chromium 2>&1 | tail -1
+  ln -sf "$(python3 -c 'import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())')" "$C/bin/ffmpeg"
+  if [ ! -d "$C/ulib" ]; then   # no root: unpack the .so files Chromium needs from Debian packages into ~/.cache/ulib (local_render.py sets LD_LIBRARY_PATH)
+    mkdir -p "$C/debs" "$C/ulib"; ( cd "$C/debs" && apt-get download libnspr4 libnss3 libatk1.0-0t64 libatk-bridge2.0-0t64 libxdamage1 libxkbcommon0 libasound2t64 libatspi2.0-0t64 libcups2t64 >/dev/null 2>&1
+      for d in *.deb; do dpkg-deb -x "$d" "$C/ulib"; done ); fi
+  ok "local render: python3 reelkit/local_render.py <ep> [--scale 0.5 --fps 10 --t1 6] → ~/.cache/build/<ep>/final.mp4 (+ .contact.jpg)"
+fi

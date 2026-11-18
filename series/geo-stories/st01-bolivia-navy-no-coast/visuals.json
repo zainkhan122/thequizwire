@@ -24,12 +24,19 @@
   {
    "id": "kw01",
    "type": "kw",
-   "text": "a navy, *no coast*"
+   "text": "a navy, *no coastline*"
   },
   {
    "id": "kw02",
    "type": "kw",
-   "text": "*400 km* of coast · 1879"
+   "text": "a long *desert coast*"
+  },
+  {
+   "id": "f02",
+   "type": "fact",
+   "kicker": "400 km",
+   "text": "of Pacific coast, 1825–1879",
+   "y": 1010
   },
   {
    "id": "kw03",
@@ -46,7 +53,7 @@
   {
    "id": "kw04",
    "type": "kw",
-   "text": "Día del *Mar*"
+   "text": "Day of the *Sea*"
   },
   {
    "id": "f04",
@@ -70,11 +77,20 @@
    "text": "*Lake Titicaca* · 3,800 m"
   },
   {
+   "id": "st_ship",
+   "type": "sticker",
+   "emoji": "1f6a2",
+   "x": 470,
+   "y": 600,
+   "size": 170,
+   "rot": 0
+  },
+  {
    "id": "sailors",
    "type": "counter",
    "start": 0,
    "end": 5000,
-   "y": 560,
+   "y": 330,
    "label": "sailors in the Bolivian Navy",
    "fmt": "int",
    "size": 150
@@ -136,13 +152,13 @@
    "do": "title_out"
   },
   {
-   "at": "s01@coastline-0.1",
+   "at": "s01@coastline-0.05",
    "do": "kw_in",
    "id": "kw01",
    "until": "s01.end"
   },
   {
-   "at": "s01@navy",
+   "at": "s01@navy+0.7",
    "do": "geo.highlight_in",
    "args": {
     "fid": "068",
@@ -150,6 +166,26 @@
     "dur": 0.6
    },
    "stage": "stage_map"
+  },
+  {
+   "at": "s01@navy",
+   "do": "geo.route_draw",
+   "stage": "stage_map",
+   "until": "s01@navy+1.5",
+   "args": {
+    "rid": "068",
+    "layer": "edge_tint"
+   }
+  },
+  {
+   "at": "s01@navy+2.2",
+   "do": "geo.route_out",
+   "stage": "stage_map",
+   "args": {
+    "rid": "068",
+    "layer": "edge_tint",
+    "dur": 0.8
+   }
   },
   {
    "at": "s01@coastline+0.2",
@@ -190,46 +226,72 @@
    }
   },
   {
-   "at": "s02+2.7",
+   "at": "s02@desert",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02@desert+1.0",
+   "args": {
+    "k": 1.62,
+    "lonlat": [
+     -70.2,
+     -22.9
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s02@antofagasta-0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02@antofagasta+0.8",
+   "args": {
+    "k": 1.9,
+    "lonlat": [
+     -70.3,
+     -23.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s02@antofagasta+0.8",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s02.end",
    "args": {
-    "k": 1.589,
+    "k": 1.95,
     "lonlat": [
-     -70.1,
-     -22.4
+     -70.3,
+     -23.6
     ],
     "ease": "none"
    }
   },
   {
-   "at": "s02@desert",
+   "at": "s02@desert-0.05",
    "do": "kw_in",
    "id": "kw02"
   },
   {
-   "at": "s02.end",
+   "at": "s02@antofagasta+0.5",
    "do": "kw_out",
    "id": "kw02"
   },
   {
-   "at": "s02@shore",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
+   "at": "s02@antofagasta+0.7",
+   "do": "fact_in",
+   "id": "f02"
+  },
+  {
+   "at": "s02.end",
+   "do": "hide",
+   "id": "f02",
    "args": {
-    "fid": "068",
-    "layer": "tint",
-    "dur": 0.6
+    "dur": 0.3
    }
   },
   {
-   "at": "s02@antofagasta+0.05",
-   "do": "kw_pulse",
-   "id": "kw02"
-  },
-  {
-   "at": "s02@antofagasta",
+   "at": "s02@shore",
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {
@@ -285,27 +347,75 @@
    }
   },
   {
-   "at": "s03+2.5999999999999996",
+   "at": "s03@north",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03@north+1.1",
+   "args": {
+    "k": 1.05,
+    "lonlat": [
+     -69.4,
+     -21.4
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s03@chilean-0.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03@chilean+0.9",
+   "args": {
+    "k": 0.9,
+    "lonlat": [
+     -68.8,
+     -20.6
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s03@landlocked-0.2",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s03.end",
    "args": {
-    "k": 0.922,
+    "k": 0.84,
     "lonlat": [
-     -68.6,
-     -20.2
+     -67.6,
+     -19.2
     ],
-    "ease": "none"
+    "ease": "power2.inOut"
    }
   },
   {
-   "at": "s03@chile",
+   "at": "s03@chile+0.7",
    "do": "geo.highlight_in",
    "stage": "stage_map",
    "args": {
     "fid": "152",
     "layer": "solid",
     "dur": 0.5
+   }
+  },
+  {
+   "at": "s03@chile",
+   "do": "geo.route_draw",
+   "stage": "stage_map",
+   "until": "s03@chile+1.5",
+   "args": {
+    "rid": "152",
+    "layer": "edge_solid"
+   }
+  },
+  {
+   "at": "s03@chile+2.2",
+   "do": "geo.route_out",
+   "stage": "stage_map",
+   "args": {
+    "rid": "152",
+    "layer": "edge_solid",
+    "dur": 0.8
    }
   },
   {
@@ -319,17 +429,17 @@
    }
   },
   {
-   "at": "s03@north",
+   "at": "s03@war-0.1",
    "do": "kw_in",
    "id": "kw03"
   },
   {
-   "at": "s03.end",
+   "at": "s03@chilean-0.1",
    "do": "kw_out",
    "id": "kw03"
   },
   {
-   "at": "s03@chilean+0.2",
+   "at": "s03@chilean+0.3",
    "do": "fact_in",
    "id": "f03"
   },
@@ -396,31 +506,59 @@
    }
   },
   {
-   "at": "s04+2.7",
+   "at": "s04@march-0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04@march+0.9",
+   "args": {
+    "k": 0.86,
+    "lonlat": [
+     -65.5,
+     -17.2
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04@court-0.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04@court+0.9",
+   "args": {
+    "k": 0.74,
+    "lonlat": [
+     -66.6,
+     -18.4
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04@court+0.9",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s04.end",
    "args": {
-    "k": 0.779,
+    "k": 0.72,
     "lonlat": [
-     -65.8,
-     -17.6
+     -66.8,
+     -18.6
     ],
     "ease": "none"
    }
   },
   {
-   "at": "s04@march",
+   "at": "s04@sea-0.15",
    "do": "kw_in",
    "id": "kw04"
   },
   {
-   "at": "s04.end",
+   "at": "s04@court-0.2",
    "do": "kw_out",
    "id": "kw04"
   },
   {
-   "at": "s04@court+0.1",
+   "at": "s04@lost+0.3",
    "do": "fact_in",
    "id": "f04"
   },
@@ -435,7 +573,10 @@
   {
    "at": "s04@march",
    "do": "sticker_in",
-   "id": "st_flag"
+   "id": "st_flag",
+   "args": {
+    "frm": "rise"
+   }
   },
   {
    "at": "s04@court",
@@ -453,52 +594,12 @@
    }
   },
   {
-   "at": "s04@sea+0.05",
-   "do": "kw_pulse",
-   "id": "kw04"
-  },
-  {
-   "at": "s04@sea",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "068",
-    "layer": "tint",
-    "dur": 0.6
-   }
-  },
-  {
-   "at": "s04@lost+0.05",
-   "do": "kw_pulse",
-   "id": "kw04"
-  },
-  {
-   "at": "s04@lost",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "068",
-    "layer": "tint",
-    "dur": 0.6
-   }
-  },
-  {
-   "at": "s04@lost",
+   "at": "s04@court-0.2",
    "do": "geo.label_out",
    "args": {
     "lid": "lost"
    },
    "stage": "stage_map"
-  },
-  {
-   "at": "s04@sea",
-   "do": "sticker_pulse",
-   "id": "st_flag"
-  },
-  {
-   "at": "s04@accepted+0.1",
-   "do": "sticker_pulse",
-   "id": "st_flag"
   },
   {
    "at": "s05",
@@ -529,66 +630,81 @@
    }
   },
   {
-   "at": "s05+2.8",
+   "at": "s05@titicaca-0.1",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s05.end",
+   "until": "s05@titicaca+1.0",
    "args": {
-    "k": 2.152,
+    "k": 2.25,
     "lonlat": [
-     -69.3,
-     -15.9
+     -69.25,
+     -15.95
     ],
-    "ease": "none"
+    "ease": "power2.inOut"
    }
   },
   {
    "at": "s05@andes",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05@andes+1.0",
+   "args": {
+    "k": 2.1,
+    "lonlat": [
+     -69.1,
+     -16.1
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05@sailors-0.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 2.3,
+    "lonlat": [
+     -69.3,
+     -15.9
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05@titicaca-0.1",
    "do": "kw_in",
    "id": "kw05"
   },
   {
-   "at": "s05.end",
+   "at": "s05@sailors-0.7",
    "do": "kw_out",
    "id": "kw05"
   },
   {
-   "at": "s05@sail",
-   "do": "geo.highlight_pulse",
+   "at": "s05@titicaca+0.1",
+   "do": "geo.rise",
    "stage": "stage_map",
    "args": {
-    "fid": "068",
-    "layer": "tint",
-    "dur": 0.6
+    "fid": "lago_titicaca",
+    "eid": "st_ship",
+    "layer": "lake",
+    "dur": 0.8,
+    "lift": 10
    }
   },
   {
-   "at": "s05@titicaca",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "068",
-    "layer": "tint",
-    "dur": 0.6
-   }
+   "at": "s05@andes+0.1",
+   "do": "sticker_pulse",
+   "id": "st_ship"
   },
   {
-   "at": "s05@sailors+0.05",
-   "do": "kw_pulse",
-   "id": "kw05"
+   "at": "s05@sailors-0.3",
+   "do": "sticker_out",
+   "id": "st_ship"
   },
   {
-   "at": "s05@sailors",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "068",
-    "layer": "tint",
-    "dur": 0.6
-   }
-  },
-  {
-   "at": "s05@titicaca+0.2",
+   "at": "s05@sailors+0.3",
    "do": "geo.pin_in",
    "stage": "stage_map",
    "args": {

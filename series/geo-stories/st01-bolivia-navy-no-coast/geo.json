@@ -33,6 +33,15 @@
      "note": "Bolivia, the subject"
     },
     {
+     "kind": "feature",
+     "id": "edge_tint",
+     "ids": [
+      "068"
+     ],
+     "cls": "draw trace",
+     "note": "outline trace for tint"
+    },
+    {
      "kind": "highlight",
      "id": "solid",
      "ids": [
@@ -40,6 +49,15 @@
      ],
      "cls": "solid",
      "note": "Chile, the neighbour that took the coast"
+    },
+    {
+     "kind": "feature",
+     "id": "edge_solid",
+     "ids": [
+      "152"
+     ],
+     "cls": "draw trace",
+     "note": "outline trace for solid"
     },
     {
      "kind": "route",
@@ -179,8 +197,8 @@
     {
      "id": "lost",
      "lonlat": [
-      -71.9,
-      -22.4
+      -72.3,
+      -21.4
      ],
      "text": "LOST COAST",
      "cls": "tag",

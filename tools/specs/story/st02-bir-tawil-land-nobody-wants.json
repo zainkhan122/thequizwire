@@ -179,8 +179,8 @@
     ]
    ],
    "kw": {
-    "text": "*1899* · the straight line",
-    "at": "@@parallel"
+    "text": "*1899* · a straight line",
+    "at": "@@straight-0.1"
    },
    "devices": [
     {
@@ -232,7 +232,8 @@
    ],
    "kw": {
     "text": "*1902* · the second line",
-    "at": "@@second"
+    "at": "@@second-0.05",
+    "until": "@@south+0.8"
    },
    "devices": [
     {
@@ -302,7 +303,8 @@
    ],
    "kw": {
     "text": "the *coastal* triangle",
-    "at": "@@coastal"
+    "at": "@@coastal-0.1",
+    "until": "@@towns+0.9"
    },
    "card": {
     "kicker": "20,580 km²",
@@ -379,7 +381,7 @@
    ],
    "kw": {
     "text": "claim it, *lose the coast*",
-    "at": "@@claim"
+    "at": "@@claim-0.05"
    },
    "elements": [
     {

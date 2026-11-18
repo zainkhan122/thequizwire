@@ -161,8 +161,9 @@
     ]
    ],
    "kw": {
-    "text": "*2,688 km* to any coast",
-    "at": "@@coast"
+    "text": "*farthest* from any land",
+    "at": "@@farthest-0.1",
+    "until": "@@coast-0.2"
    },
    "elements": [
     {
@@ -243,7 +244,8 @@
    ],
    "kw": {
     "text": "*three* specks of land",
-    "at": "@@three"
+    "at": "@@three-0.05",
+    "until": "@@maher-0.3"
    },
    "devices": [
     {
@@ -330,8 +332,8 @@
     ]
    ],
    "kw": {
-    "text": "*400 km* up · closest people",
-    "at": "@@overhead"
+    "text": "the *closest* people",
+    "at": "@@closest-0.1"
    },
    "card": {
     "kicker": "ISS ≈ 400 km",
@@ -347,7 +349,8 @@
     "size": 200,
     "rot": -14,
     "at": "@@station",
-    "until": "@.end"
+    "until": "@.end",
+    "from": "pop"
    },
    "devices": [
     {
@@ -421,8 +424,9 @@
     ]
    ],
    "kw": {
-    "text": "the *spacecraft cemetery*",
-    "at": "@@dead"
+    "text": "dead *spacecraft* fall here",
+    "at": "@@dead-0.1",
+    "until": "@@250-0.4"
    },
    "elements": [
     {

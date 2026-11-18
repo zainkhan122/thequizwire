@@ -34,6 +34,16 @@
      "note": "Egypt and Sudan, the two claimants, one tint"
     },
     {
+     "kind": "feature",
+     "id": "edge_tint",
+     "ids": [
+      "818",
+      "729"
+     ],
+     "cls": "draw trace",
+     "note": "outline trace for tint"
+    },
+    {
      "kind": "area",
      "id": "void",
      "cls": "highlight solid",

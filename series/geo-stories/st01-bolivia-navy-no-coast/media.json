@@ -1,5 +1,4 @@
 {
- "version": 1,
  "files": {},
  "generated": {
   "brand/cursor.svg": {
@@ -117,6 +116,16 @@
    "licence": "CC-BY-4.0",
    "provider": "Twemoji (Twitter, Inc. and other contributors)",
    "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f6a2.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 889,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
   }
- }
+ },
+ "version": 1
 }

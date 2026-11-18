@@ -109,8 +109,8 @@
    ]
   ],
   "kw": {
-   "text": "a navy, *no coast*",
-   "at": "@@coastline-0.1"
+   "text": "a navy, *no coastline*",
+   "at": "@@coastline-0.05"
   },
   "devices": [
    {
@@ -163,8 +163,9 @@
     ]
    ],
    "kw": {
-    "text": "*400 km* of coast · 1879",
-    "at": "@@desert"
+    "text": "a long *desert coast*",
+    "at": "@@desert-0.05",
+    "until": "@@antofagasta+0.5"
    },
    "devices": [
     {
@@ -184,6 +185,48 @@
       "pid": "ant"
      }
     }
+   ],
+   "card": {
+    "kicker": "400 km",
+    "text": "of Pacific coast, 1825–1879",
+    "at": "@@antofagasta+0.7",
+    "y": 1010
+   },
+   "cam_path": [
+    [
+     "@@desert",
+     "@@desert+1.0",
+     [
+      1.62,
+      [
+       -70.2,
+       -22.9
+      ]
+     ]
+    ],
+    [
+     "@@antofagasta-0.2",
+     "@@antofagasta+0.8",
+     [
+      1.9,
+      [
+       -70.3,
+       -23.5
+      ]
+     ]
+    ],
+    [
+     "@@antofagasta+0.8",
+     "@.end",
+     [
+      1.95,
+      [
+       -70.3,
+       -23.6
+      ]
+     ],
+     "none"
+    ]
    ]
   },
   {
@@ -192,6 +235,7 @@
     "cues": {
      "chile": "chile",
      "north": "north",
+     "war": "war",
      "chilean": "chilean",
      "landlocked": "landlocked"
     }
@@ -229,12 +273,13 @@
    },
    "kw": {
     "text": "*1879* · War of the Pacific",
-    "at": "@@north"
+    "at": "@@war-0.1",
+    "until": "@@chilean-0.1"
    },
    "card": {
     "kicker": "1904",
     "text": "treaty fixed the border",
-    "at": "@@chilean+0.2",
+    "at": "@@chilean+0.3",
     "y": 1010
    },
    "devices": [
@@ -262,6 +307,41 @@
       "dur": 0.6
      }
     }
+   ],
+   "cam_path": [
+    [
+     "@@north",
+     "@@north+1.1",
+     [
+      1.05,
+      [
+       -69.4,
+       -21.4
+      ]
+     ]
+    ],
+    [
+     "@@chilean-0.3",
+     "@@chilean+0.9",
+     [
+      0.9,
+      [
+       -68.8,
+       -20.6
+      ]
+     ]
+    ],
+    [
+     "@@landlocked-0.2",
+     "@.end",
+     [
+      0.84,
+      [
+       -67.6,
+       -19.2
+      ]
+     ]
+    ]
    ]
   },
   {
@@ -295,8 +375,9 @@
     ]
    ],
    "kw": {
-    "text": "Día del *Mar*",
-    "at": "@@march"
+    "text": "Day of the *Sea*",
+    "at": "@@sea-0.15",
+    "until": "@@court-0.2"
    },
    "sticker": {
     "id": "st_flag",
@@ -306,32 +387,59 @@
     "size": 190,
     "rot": 8,
     "at": "@@march",
-    "until": "@@court"
+    "until": "@@court",
+    "from": "rise"
    },
    "card": {
     "kicker": "ICJ 2018",
     "text": "Chile has no duty to negotiate",
-    "at": "@@court+0.1",
+    "at": "@@lost+0.3",
     "y": 1010
    },
    "devices": [
     {
-     "at": "@@lost",
+     "at": "@@court-0.2",
      "do": "geo.label_out",
      "args": {
       "lid": "lost"
      }
-    },
-    {
-     "at": "@@sea",
-     "do": "sticker_pulse",
-     "id": "st_flag"
-    },
-    {
-     "at": "@@accepted+0.1",
-     "do": "sticker_pulse",
-     "id": "st_flag"
     }
+   ],
+   "cam_path": [
+    [
+     "@@march-0.2",
+     "@@march+0.9",
+     [
+      0.86,
+      [
+       -65.5,
+       -17.2
+      ]
+     ]
+    ],
+    [
+     "@@court-0.3",
+     "@@court+0.9",
+     [
+      0.74,
+      [
+       -66.6,
+       -18.4
+      ]
+     ]
+    ],
+    [
+     "@@court+0.9",
+     "@.end",
+     [
+      0.72,
+      [
+       -66.8,
+       -18.6
+      ]
+     ],
+     "none"
+    ]
    ]
   },
   {
@@ -367,15 +475,25 @@
    "highlights": [],
    "kw": {
     "text": "*Lake Titicaca* · 3,800 m",
-    "at": "@@andes"
+    "at": "@@titicaca-0.1",
+    "until": "@@sailors-0.7"
    },
    "elements": [
+    {
+     "id": "st_ship",
+     "type": "sticker",
+     "emoji": "1f6a2",
+     "x": 470,
+     "y": 600,
+     "size": 170,
+     "rot": 0
+    },
     {
      "id": "sailors",
      "type": "counter",
      "start": 0,
      "end": 5000,
-     "y": 560,
+     "y": 330,
      "label": "sailors in the Bolivian Navy",
      "fmt": "int",
      "size": 150
@@ -383,7 +501,29 @@
    ],
    "devices": [
     {
-     "at": "@@titicaca+0.2",
+     "at": "@@titicaca+0.1",
+     "do": "geo.rise",
+     "stage": "stage_map",
+     "args": {
+      "fid": "lago_titicaca",
+      "eid": "st_ship",
+      "layer": "lake",
+      "dur": 0.8,
+      "lift": 10
+     }
+    },
+    {
+     "at": "@@andes+0.1",
+     "do": "sticker_pulse",
+     "id": "st_ship"
+    },
+    {
+     "at": "@@sailors-0.3",
+     "do": "sticker_out",
+     "id": "st_ship"
+    },
+    {
+     "at": "@@sailors+0.3",
      "do": "geo.pin_in",
      "stage": "stage_map",
      "args": {
@@ -422,6 +562,41 @@
       "dur": 0.7
      }
     }
+   ],
+   "cam_path": [
+    [
+     "@@titicaca-0.1",
+     "@@titicaca+1.0",
+     [
+      2.25,
+      [
+       -69.25,
+       -15.95
+      ]
+     ]
+    ],
+    [
+     "@@andes",
+     "@@andes+1.0",
+     [
+      2.1,
+      [
+       -69.1,
+       -16.1
+      ]
+     ]
+    ],
+    [
+     "@@sailors-0.4",
+     "@.end",
+     [
+      2.3,
+      [
+       -69.3,
+       -15.9
+      ]
+     ]
+    ]
    ]
   }
  ],
@@ -643,8 +818,8 @@
    {
     "id": "lost",
     "lonlat": [
-     -71.9,
-     -22.4
+     -72.3,
+     -21.4
     ],
     "text": "LOST COAST",
     "cls": "tag",

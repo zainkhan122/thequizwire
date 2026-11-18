@@ -65,8 +65,11 @@ def build(S):
          "landscape": R0["landscape"], "sources": R0["sources"], "claims": R0["claims"]}
     g = S["geo"]
     layers = [{"kind": "land"}, {"kind": "borders"}]
+    traced = set()
     for L in g.get("layers", []):
         layers.append({"kind": "highlight", "id": L["id"], "ids": L["ids"], "cls": L.get("cls", "tint"), "note": L.get("note", "")})
+        if L.get("trace", True):                                                                    # animated border: a per-feature outline layer the pen draws on highlight_in
+            layers.append({"kind": "feature", "id": f"edge_{L['id']}", "ids": L["ids"], "cls": "draw trace", "note": f"outline trace for {L['id']}"}); traced.add(L["id"])
     layers += g.get("extra_layers", [])
     res = {"resolution": g["resolution"]} if g.get("resolution") else {}
     G = {"version": 1, "episode": ep, "policy": "docs/BORDER_POLICY.md",
@@ -83,6 +86,13 @@ def build(S):
         if isinstance(x, (int, float)): return f"{s}+{x}"
         return x.replace("@", s, 1) if isinstance(x, str) and x.startswith("@") else x
     els, B = [], []
+    def trace_for(d):                                                                                 # highlight_in on a traced layer → the border draws itself first, the fill follows
+        if d.get("do") == "geo.highlight_in" and d["args"].get("layer") in traced:
+            at = d["at"]; L = d["args"]["layer"]; plus = (lambda x: f"{at}+{x}") if isinstance(at, str) else (lambda x: at + x)
+            d["at"] = plus(0.7)
+            return [{"at": at, "do": "geo.route_draw", "stage": M, "until": plus(1.5), "args": {"rid": d["args"]["fid"], "layer": f"edge_{L}"}},
+                    {"at": plus(2.2), "do": "geo.route_out", "stage": M, "args": {"rid": d["args"]["fid"], "layer": f"edge_{L}", "dur": 0.8}}]
+        return []
     k0, c0 = cams["start"]
     if opener == "mystery-zoom-out":
         B += [{"at": 0, "do": "geo.cam_set", "stage": M, "args": {"k": 0.5, "lonlat": cams["open"][1]}}, cam("s01", "s01.end", [max(0.3, k0), c0], "power1.inOut")]
@@ -96,16 +106,23 @@ def build(S):
         d = dict(d); d["at"] = rel(d.get("at", 0), "s01"); d["until"] = rel(d["until"], "s01") if "until" in d else None
         if d["until"] is None: d.pop("until")
         if str(d["do"]).startswith("geo."): d.setdefault("stage", M)
-        B.append(d)
+        B.append(d); B += trace_for(d)
     for i, b in enumerate(beats):
         s = sc(i + 2); nxt = sc(i + 3)
         if b.get("cam"):
             glide = float(b.get("cam_dur", 1.4)); B.append(cam(s, f"{s}+{glide}", b["cam"], b.get("cam_ease", "power2.inOut")))
             hold = b.get("cam_hold") or [round(b["cam"][0] * 1.03, 3), b["cam"][1]]                       # slow drift after the glide (never a frozen frame)
             B.append(cam(f"{s}+{glide}", f"{s}+{glide + 1.2}", hold, "none"))
-            B.append(cam(f"{s}+{glide + 1.2}", f"{s}.end", [round(hold[0] * 1.025, 3), hold[1]], "none"))
+            if b.get("cam_path"):                                                                         # authored extra moves: [[at, until, [k, lonlat], ease?], ...]
+                for mv in b["cam_path"]: B.append(cam(rel(mv[0], s), rel(mv[1], s), mv[2], mv[3] if len(mv) > 3 else "power2.inOut"))
+            else:                                                                                         # default: a second, firmer push on the last cue, then a slow drift out
+                cues_ = list(b["vo"].get("cues") or {}); lastc = cues_[-1] if cues_ else None
+                mid, mid2 = (f"{s}@{lastc}-0.2", f"{s}@{lastc}+0.7") if lastc else (f"{s}+{glide + 1.2}", f"{s}+{glide + 2.1}")
+                B.append(cam(f"{s}+{glide + 1.2}", mid, [round(hold[0] * 1.02, 3), hold[1]], "none"))
+                B.append(cam(mid, mid2, [round(hold[0] * 1.12, 3), hold[1]], "power2.inOut"))
+                B.append(cam(mid2, f"{s}.end", [round(hold[0] * 1.14, 3), hold[1]], "none"))
         for h in b.get("highlights", []):
-            B.append({"at": rel(h.get("at", "@+0.2"), s), "do": "geo.highlight_in", "stage": M, "args": {"fid": h["fid"], "layer": h["layer"], "dur": h.get("dur", 0.5)}})
+            B.append({"at": rel(h.get("at", "@+0.2"), s), "do": "geo.highlight_in", "stage": M, "args": {"fid": h["fid"], "layer": h["layer"], "dur": h.get("dur", 0.5)}}); B += trace_for(B[-1])
             if h.get("out"): B.append({"at": rel(h["out"], s), "do": "geo.highlight_out", "stage": M, "args": {"fid": h["fid"], "layer": h["layer"]}})
         if b.get("pulse"): B.append({"at": rel(b["pulse"]["at"], s), "do": "geo.highlight_pulse", "stage": M, "args": {"fid": b["pulse"]["fid"], "layer": b["pulse"]["layer"], "dur": 0.7}})
         if b.get("kw"):
@@ -118,7 +135,7 @@ def build(S):
             B.append({"at": rel(b["card"].get("until", "@.end"), s), "do": "hide", "id": fid, "args": {"dur": 0.3}})
         if b.get("sticker"):
             st = b["sticker"]; els.append({"id": st["id"], "type": "sticker", "emoji": st["emoji"], "x": st.get("x", 740), "y": st.get("y", 580), "size": st.get("size", 200), "rot": st.get("rot", 6)})
-            B += [{"at": rel(st.get("at", "@+0.6"), s), "do": "sticker_in", "id": st["id"]}, {"at": rel(st.get("until", "@.end"), s), "do": "sticker_out", "id": st["id"]}]
+            B += [{"at": rel(st.get("at", "@+0.6"), s), "do": "sticker_in", "id": st["id"], "args": {"frm": st.get("from", "rise")}}, {"at": rel(st.get("until", "@.end"), s), "do": "sticker_out", "id": st["id"]}]
         if b.get("photo"):
             p_ = b["photo"]; els.append({"id": p_["id"], "type": "photo", "commons": p_["commons"], "caption": p_.get("caption", ""), "x": p_.get("x", 440), "y": p_.get("y", 420), "w": p_.get("w", 580), "h": p_.get("h", 440), "rot": p_.get("rot", -3)})
             B += [{"at": rel(p_.get("at", "@+0.5"), s), "do": "photo_in", "id": p_["id"], "args": {"frm": p_.get("from", "pop")}}, {"at": rel(p_.get("until", "@.end"), s), "do": "photo_out", "id": p_["id"]}]
@@ -152,7 +169,7 @@ def build(S):
         d = dict(d); d["at"] = rel(d.get("at", 0), CLOSE)
         if "until" in d: d["until"] = rel(d["until"], CLOSE)
         if str(d["do"]).startswith("geo."): d.setdefault("stage", M)
-        B.append(d)
+        B.append(d); B += trace_for(d)
     for L in g.get("labels", []):
         B.append({"at": L.get("in", "s02+1.0"), "do": "geo.label_in", "stage": M, "args": {"lid": L["id"]}})
         if L.get("out"): B.append({"at": L["out"], "do": "geo.label_out", "stage": M, "args": {"lid": L["id"]}})

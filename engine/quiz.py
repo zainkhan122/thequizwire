@@ -349,8 +349,14 @@ class Quiz:
         return (f'<img id="{sid}" class="sticker3" src="{src}" alt="" style="left:{x}px;top:{y}px;width:{size}px;height:{size}px;z-index:{z};--rot:{rot}deg" '
                 f'data-layout-allow-overlap="true">')
 
-    def sticker_in(self, t, sid, dur=0.45):
+    def sticker_in(self, t, sid, dur=0.45, frm="pop"):
+        """pop (default): scale/rotate burst. rise: the sticker RISES into place where it sits — grows from its own baseline
+        (transform-origin bottom centre, scaleY 0.05→1 with a little overshoot) while drifting up 40 px; no spin."""
+        if frm == "rise":
+            self.J(f"tl.fromTo('#{sid}',{{autoAlpha:0,scaleY:0.05,scaleX:0.7,y:40,transformOrigin:'50% 100%'}},{{autoAlpha:1,scaleY:1,scaleX:1,y:0,duration:{f(max(dur, 0.6))},ease:'back.out(1.7)',immediateRender:false}},{f(t)});")
+            return
         self.J(f"tl.fromTo('#{sid}',{{autoAlpha:0,scale:0.3,rotation:'-=25'}},{{autoAlpha:1,scale:1,rotation:'+=25',duration:{f(dur)},ease:'back.out(2)',immediateRender:false}},{f(t)});")
+
 
     def photo(self, pid, src, x, y, w=560, h=420, caption="", credit="", rot=0, z=58):
         """P2 media device: a real photo in a frame (caption + on-screen credit). Slow push happens inside the frame (img scale)."""

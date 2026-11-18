@@ -230,3 +230,68 @@ def follower(vo_mono, attack=0.03, release=0.35):
         y = a_s * y + (1 - a_s) * v if v > y else r_s * y + (1 - r_s) * v
         out[i:i + step] = y
     return out
+
+
+# ---------------------------------------------------------------- story palette (Geo Stories, 2026-11-18)
+# Owner note on the first story render: the quiz ticks/whooshes read as noise under narration. These are tonal, short, soft,
+# with a tiny reverb tail: sine-based pops and clicks, a narrow-band air sweep instead of white-noise whooshes, no crack layers.
+def _tail(x, secs=0.6, wet=0.18):
+    y = reverb(x, secs=secs, wet=wet, bright=3500); return y.mean(1).astype(np.float32)
+
+
+def s_pop(f0=640, f1=420, d=0.14, level=0.12):
+    """Soft tonal pop for a highlight lighting up: short downward sine chirp with a 2nd partial, 5 ms attack, no noise."""
+    t = t_(d); f = f0 * (f1 / f0) ** np.clip(t / 0.06, 0, 1)
+    ph = 2 * np.pi * np.cumsum(f) / SR
+    x = (np.sin(ph) + 0.25 * np.sin(2 * ph)) * np.exp(-t * 26) * env_adsr(len(t), 0.005, 0.02, 1, 0.05)
+    return (_tail(x, 0.5, 0.15) * level).astype(np.float32)
+
+
+def s_click(level=0.07):
+    """Pin / label click: 18 ms damped sine at 1.6 kHz over a woody 380 Hz body."""
+    t = t_(0.08)
+    x = np.sin(2 * np.pi * 1600 * t) * np.exp(-t * 180) * 0.6 + np.sin(2 * np.pi * 380 * t) * np.exp(-t * 60)
+    return (x * env_adsr(len(t), 0.002, 0.01, 1, 0.03) * level).astype(np.float32)
+
+
+def s_air(d=0.8, level=0.06, up=True):
+    """Camera move: narrow resonant band (Q≈6) sweeping 350→1400 Hz on low-passed noise, hann² envelope — air, not hiss."""
+    n = int(d * SR); x = filt(RNG.standard_normal(n), "low", 2500)
+    fc = np.geomspace(350, 1400, n) if up else np.geomspace(1400, 350, n)
+    out = np.zeros(n, np.float32); b0 = b1 = 0.0                                   # 2-pole resonator, coefficients updated every 64 samples
+    for k in range(0, n, 64):
+        f = fc[k]; r = 0.985; w = 2 * np.pi * f / SR; a1 = -2 * r * np.cos(w); a2 = r * r
+        for i in range(k, min(k + 64, n)):
+            y = x[i] * (1 - r) - a1 * b0 - a2 * b1; b1 = b0; b0 = y; out[i] = y
+    e = np.sin(np.linspace(0, np.pi, n)) ** 2; out = out / (np.abs(out).max() + 1e-9)
+    return (_tail(out * e, 0.5, 0.12) * level).astype(np.float32)
+
+
+def s_draw(d=1.0, level=0.07, f0=330, f1=495):
+    """Route draw-on: a soft sine glide up a fifth with gentle tremolo, fades with the stroke."""
+    t = t_(d); f = f0 * (f1 / f0) ** (t / d)
+    x = np.sin(2 * np.pi * np.cumsum(f) / SR) * (0.85 + 0.15 * np.sin(2 * np.pi * 9 * t)) * env_adsr(len(t), 0.05, 0.1, 0.8, 0.25)
+    return (_tail(x, 0.7, 0.2) * level).astype(np.float32)
+
+
+def s_riser(d=1.6, level=0.08):
+    """Counter run: tonal riser (three detuned sines gliding an octave), no noise layer, squared ramp."""
+    t = t_(d); x = np.zeros_like(t)
+    for det in (0.0, 3.0, -4.0):
+        f = 220 * 2 ** (det / 1200) * 2 ** (t / d); x += np.sin(2 * np.pi * np.cumsum(f) / SR)
+    return (_tail(x / 3 * (t / d) ** 2, 0.6, 0.15) * level).astype(np.float32)
+
+
+def s_hit(level=0.18):
+    """Title / close: sub boom (90→38 Hz) plus a soft bell partial, no crack."""
+    t = t_(1.4); f = 90 * (38 / 90) ** np.clip(t / 0.25, 0, 1)
+    sub = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 3.2)
+    bell = (np.sin(2 * np.pi * 880 * t) + 0.5 * np.sin(2 * np.pi * 1760 * t)) * np.exp(-t * 5) * 0.12
+    return (_tail(sub + bell, 1.2, 0.2) * level).astype(np.float32)
+
+
+def s_bloop(level=0.10, f0=260, f1=520, d=0.22):
+    """Something rising out of the map (ships at Titicaca): upward sine bloop."""
+    t = t_(d); f = f0 * (f1 / f0) ** (t / d)
+    x = np.sin(2 * np.pi * np.cumsum(f) / SR) * env_adsr(len(t), 0.01, 0.05, 0.7, 0.1)
+    return (_tail(x, 0.5, 0.18) * level).astype(np.float32)

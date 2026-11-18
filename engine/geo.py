@@ -210,9 +210,9 @@ class Scene:
 
     def route_draw(self, t0, t1, rid, layer="route"):
         """Draw-on for a route/line layer path via stroke-dash over a pathLength-normalised path (deterministic in every renderer)."""
-        sel = f"#{self.id}_{layer}_{rid}"                                   # route paths carry pathLength="1" (geo-runtime), so no length measuring at script time;
+        sel = f"#{self.id}_{layer}_{rid}"                                   # route paths carry pathLength="1000" (geo-runtime; with 1 GSAP snapped the px offset to whole numbers → the draw popped instead of drawing), so no length measuring at script time;
         # opacity sits in BOTH var sets: a from-only property is tweened back to the CSS value (0) by GSAP, which hid every drawn route in the renderer
-        self.G.J(f"tl.fromTo('{sel}',{{strokeDasharray:'1 1',strokeDashoffset:1,opacity:1}},{{strokeDashoffset:0,opacity:1,duration:{f(t1 - t0)},ease:'power1.inOut',immediateRender:false}},{f(t0)});")
+        self.G.J(f"tl.fromTo('{sel}',{{strokeDasharray:'1000 1000',strokeDashoffset:1000,opacity:1}},{{strokeDashoffset:0,opacity:1,duration:{f(t1 - t0)},ease:'power1.inOut',immediateRender:false}},{f(t0)});")
 
     def travel(self, t0, t1, rid, sid, layer="route", ease="power1.inOut", offset=(0, 0)):
         """M2 device: move the screen element #sid (a sticker / character) along the route path rid, from start to end, between t0 and t1.
@@ -292,6 +292,7 @@ CSS = f"""
 .geo .g-feature{{fill:none;stroke:{CREAM};stroke-width:2}}
 .geo .g-feature.faint{{stroke:rgba(239,230,210,.32);stroke-width:1.2;stroke-dasharray:6 5}}
 .geo .g-feature.draw{{fill:none;stroke:#FFD400;stroke-width:6;stroke-linejoin:round;stroke-linecap:round;opacity:0;filter:drop-shadow(0 0 4px rgba(0,0,0,.8))}}   /* border-draw reveal: route_draw on a feature outline (pathLength=1 like routes) */
+.geo .g-feature.draw.trace{{stroke:#FFD400;stroke-width:5;filter:drop-shadow(0 0 8px rgba(255,212,0,.7)) drop-shadow(0 0 2px rgba(0,0,0,.8))}}   /* story border trace: a pen drawing the subject's outline (route_draw on an edge_* layer) */
 .geo .g-route{{fill:none;stroke:{SAND};stroke-width:4;stroke-linecap:round;opacity:0}}
 .geo .g-route.river{{stroke:#5FE3FF;stroke-width:7;stroke-linejoin:round;filter:drop-shadow(0 0 3px rgba(0,0,0,.9)) drop-shadow(0 0 1px rgba(0,0,0,.8))}}   /* rivers: bright over sand/orange fills, dark halo for contrast */
 .geo .g-area.lake{{fill:#0E4F8F;stroke:#9ADCFF;stroke-width:1.6}}   /* NE lakes drawn above country fills (geo.json layer {{kind:area, cls:lake, source:ne-lakes}}) */

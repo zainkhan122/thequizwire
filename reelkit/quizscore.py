@@ -45,33 +45,44 @@ def _beat_time(expr, TL):
 
 
 def story_sfx(sfx, ep, TL, root):
-    """Auto-SFX for story-v1 from the visuals beats (docs/STORY_GUIDELINES.md §5 cue map). Quiet, procedural, deterministic:
-    cam_to with a real move → whoosh · highlight_in/pulse → soft pop · pin/label → click · route_draw → swish · counter → riser · title/close → hit."""
+    """Auto-SFX for story-v1 from the visuals beats (docs/STORY_GUIDELINES.md §5 cue map) using the tonal story palette
+    (synth.s_*): camera glide → air sweep (only real moves, ≥ 1.25× scale change or a long pan) · highlight_in → pop ·
+    pin/label → click · route_draw → sine glide · counter → tonal riser · title/close → sub hit · geo.rise → bloop.
+    Pulses are silent (they are visual breath, not events). Minimum spacing 0.45 s between pops/clicks."""
     vp = ep / "visuals.json"
     if not vp.exists(): return
-    X = json.loads(vp.read_text()); last_k, last_pop = None, -9.0
+    X = json.loads(vp.read_text()); last_k, last_c, last_t = None, None, -9.0
+    def spaced(t):
+        nonlocal last_t
+        if t - last_t < 0.45: return False
+        last_t = t; return True
     for b in sorted(X.get("beats", []), key=lambda b: _beat_time(b.get("at", 0), TL) or 0):
         t = _beat_time(b.get("at", 0), TL)
-        if t is None or t < 0: continue
+        if t is None or t < 0 or t > TL["total"]: continue
         do, args = b.get("do", ""), b.get("args", {})
-        if do in ("geo.cam_set",): last_k = args.get("k"); continue
+        if do == "geo.cam_set": last_k, last_c = args.get("k"), args.get("lonlat"); continue
         if do == "geo.cam_to":
-            k = args.get("k"); big = last_k is None or k is None or abs(k - last_k) >= 0.25 * max(last_k or 1, 0.1)
-            if big and args.get("ease", "power2.inOut") != "none": place(sfx, S.whoosh(d=0.7, level=0.10, up=(k or 1) >= (last_k or 1)), t - 0.05)
-            last_k = k
-        elif do in ("geo.highlight_in", "geo.highlight_pulse"):
-            if t - last_pop > 0.35: place(sfx, S.tick(hi=False, level=0.10), t); last_pop = t
-        elif do in ("geo.pin_in", "geo.label_in", "sticker_in", "fact_in", "kw_in"):
-            place(sfx, S.tick(hi=True, level=0.07), t)
+            k, c = args.get("k"), args.get("lonlat"); ease = args.get("ease", "power2.inOut")
+            ratio = (k / last_k) if (k and last_k) else 2.0
+            pan = max(abs(c[0] - last_c[0]), abs(c[1] - last_c[1])) if (c and last_c) else 0
+            if ease != "none" and (ratio >= 1.25 or ratio <= 0.8 or pan >= 3.0):
+                t1 = _beat_time(b.get("until", 0), TL) or (t + 1.2)
+                place(sfx, S.s_air(d=min(1.4, max(0.6, t1 - t)), level=0.07, up=ratio >= 1), t - 0.05)
+            last_k, last_c = k, c
+        elif do == "geo.highlight_in":
+            if spaced(t): place(sfx, S.s_pop(level=0.11), t)
+        elif do in ("geo.pin_in", "geo.label_in", "fact_in"):
+            if spaced(t): place(sfx, S.s_click(level=0.08), t)
         elif do == "geo.route_draw":
             t1 = _beat_time(b.get("until", 0), TL) or (t + 1.0)
-            place(sfx, S.whoosh(d=min(1.6, max(0.4, t1 - t)), level=0.08, up=True), t)
+            place(sfx, S.s_draw(d=min(1.8, max(0.5, t1 - t)), level=0.07), t)
         elif do == "chart.counter_run":
             t1 = _beat_time(b.get("until", 0), TL) or (t + 1.5)
-            place(sfx, S.riser(d=min(2.4, max(0.8, t1 - t)), level=0.09), t)
+            place(sfx, S.s_riser(d=min(2.4, max(0.8, t1 - t)), level=0.08), t)
         elif do in ("title_in", "close_in"):
-            place(sfx, S.hit(level=0.16), t + 0.02)
-            if do == "close_in": place(sfx, S.bell(root * 4, d=2.0, level=0.09), t + 0.05)
+            place(sfx, S.s_hit(level=0.16), t + 0.02)
+        elif do in ("geo.rise", "sticker_in"):
+            if spaced(t): place(sfx, S.s_bloop(level=0.09), t)
 
 
 def main():
@@ -106,11 +117,12 @@ def main():
     root = N(key); fifth = root * 1.5; third_min = root * 2 ** (3 / 12); third_maj = root * 2 ** (4 / 12)
     story = E.get("format") == "story-v1"
     if story:                                                                 # Geo Stories: low drone under the pad (docs/STORY_GUIDELINES.md §5 "bed:drone")
-        place(music, S.drone(root / 2, total + 0.5, cutoff=320, level=0.10), 0.0)
+        place(music, S.drone(root / 2, total + 0.5, cutoff=320, level=0.03), 0.0)
     for s in scenes:
         d = max(0.8, s["end"] - s["start"] + 1.2)
         chord = [root, fifth, third_maj * 2] if s.get("role") == "cta" else [root, fifth, third_min * 2]
         lvl = {"hook": 0.14, "options": 0.12, "countdown": 0.10, "reveal": 0.16, "story": 0.13, "cta": 0.15}.get(s.get("role"), 0.12)
+        if story: lvl *= 0.35                                                 # stories: the bed is a floor under narration, not a track (VO ≥ 15 dB over music)
         place(music, S.pad(chord, d, cutoff=1200 if s.get("role") != "reveal" else 1800, a=0.8, r=1.4, level=lvl), s["start"] - 0.15)
     # ---- countdown ticks + riser, reveal sting
     for s in scenes:
@@ -126,7 +138,7 @@ def main():
     if story: story_sfx(sfx, ep, TL, root)
     # ---- duck music/sfx under speech
     env = S.follower(vo.mean(1))
-    duck_m = 1.0 - 0.72 * np.clip(env / (np.max(env) + 1e-6), 0, 1)
+    duck_m = 1.0 - (0.82 if story else 0.72) * np.clip(env / (np.max(env) + 1e-6), 0, 1)
     duck_s = 1.0 - 0.35 * np.clip(env / (np.max(env) + 1e-6), 0, 1)
     music *= duck_m[:, None]; sfx *= duck_s[:, None]
     mix = vo + music + sfx

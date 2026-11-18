@@ -29,7 +29,7 @@
   {
    "id": "kw02",
    "type": "kw",
-   "text": "*2,688 km* to any coast"
+   "text": "*farthest* from any land"
   },
   {
    "id": "dist",
@@ -49,7 +49,7 @@
   {
    "id": "kw04",
    "type": "kw",
-   "text": "*400 km* up · closest people"
+   "text": "the *closest* people"
   },
   {
    "id": "f04",
@@ -70,7 +70,7 @@
   {
    "id": "kw05",
    "type": "kw",
-   "text": "the *spacecraft cemetery*"
+   "text": "dead *spacecraft* fall here"
   },
   {
    "id": "craft",
@@ -180,9 +180,9 @@
    "at": "s02+3.0",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s02.end",
+   "until": "s02@kilometres-0.2",
    "args": {
-    "k": 0.41,
+    "k": 0.408,
     "lonlat": [
      -123.0,
      -46.0
@@ -191,12 +191,40 @@
    }
   },
   {
-   "at": "s02@coast",
+   "at": "s02@kilometres-0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02@kilometres+0.7",
+   "args": {
+    "k": 0.448,
+    "lonlat": [
+     -123.0,
+     -46.0
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s02@kilometres+0.7",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02.end",
+   "args": {
+    "k": 0.456,
+    "lonlat": [
+     -123.0,
+     -46.0
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s02@farthest-0.1",
    "do": "kw_in",
    "id": "kw02"
   },
   {
-   "at": "s02.end",
+   "at": "s02@coast-0.2",
    "do": "kw_out",
    "id": "kw02"
   },
@@ -212,31 +240,6 @@
   },
   {
    "at": "s02@pacific",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "ring",
-    "layer": "ring",
-    "dur": 0.6
-   }
-  },
-  {
-   "at": "s02@farthest",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "ring",
-    "layer": "ring",
-    "dur": 0.6
-   }
-  },
-  {
-   "at": "s02@kilometres+0.05",
-   "do": "kw_pulse",
-   "id": "kw02"
-  },
-  {
-   "at": "s02@kilometres",
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {
@@ -311,9 +314,9 @@
    "at": "s03+2.5999999999999996",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s03.end",
+   "until": "s03@south-0.2",
    "args": {
-    "k": 0.4,
+    "k": 0.398,
     "lonlat": [
      -121.5,
      -48.5
@@ -322,18 +325,41 @@
    }
   },
   {
-   "at": "s03@three",
+   "at": "s03@south-0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03@south+0.7",
+   "args": {
+    "k": 0.437,
+    "lonlat": [
+     -121.5,
+     -48.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s03@south+0.7",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.445,
+    "lonlat": [
+     -121.5,
+     -48.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s03@three-0.05",
    "do": "kw_in",
    "id": "kw03"
   },
   {
-   "at": "s03.end",
+   "at": "s03@maher-0.3",
    "do": "kw_out",
-   "id": "kw03"
-  },
-  {
-   "at": "s03@ducie+0.05",
-   "do": "kw_pulse",
    "id": "kw03"
   },
   {
@@ -347,42 +373,7 @@
    }
   },
   {
-   "at": "s03@motu+0.05",
-   "do": "kw_pulse",
-   "id": "kw03"
-  },
-  {
    "at": "s03@motu",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "ring",
-    "layer": "ring",
-    "dur": 0.6
-   }
-  },
-  {
-   "at": "s03@maher+0.05",
-   "do": "kw_pulse",
-   "id": "kw03"
-  },
-  {
-   "at": "s03@maher",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "ring",
-    "layer": "ring",
-    "dur": 0.6
-   }
-  },
-  {
-   "at": "s03@south+0.05",
-   "do": "kw_pulse",
-   "id": "kw03"
-  },
-  {
-   "at": "s03@south",
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {
@@ -477,9 +468,9 @@
    "at": "s04+2.8",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s04.end",
+   "until": "s04@closest-0.2",
    "args": {
-    "k": 0.799,
+    "k": 0.796,
     "lonlat": [
      -123.2,
      -48.7
@@ -488,7 +479,35 @@
    }
   },
   {
-   "at": "s04@overhead",
+   "at": "s04@closest-0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04@closest+0.7",
+   "args": {
+    "k": 0.874,
+    "lonlat": [
+     -123.2,
+     -48.7
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04@closest+0.7",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 0.889,
+    "lonlat": [
+     -123.2,
+     -48.7
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04@closest-0.1",
    "do": "kw_in",
    "id": "kw04"
   },
@@ -513,7 +532,10 @@
   {
    "at": "s04@station",
    "do": "sticker_in",
-   "id": "st_sat"
+   "id": "st_sat",
+   "args": {
+    "frm": "pop"
+   }
   },
   {
    "at": "s04.end",
@@ -522,6 +544,16 @@
   },
   {
    "at": "s04@nobody",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "ring",
+    "layer": "ring",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s04@overhead",
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {
@@ -601,9 +633,9 @@
    "at": "s05+2.7",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s05.end",
+   "until": "s05@mir-0.2",
    "args": {
-    "k": 0.635,
+    "k": 0.632,
     "lonlat": [
      -123.0,
      -47.5
@@ -612,12 +644,40 @@
    }
   },
   {
-   "at": "s05@dead",
+   "at": "s05@mir-0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05@mir+0.7",
+   "args": {
+    "k": 0.694,
+    "lonlat": [
+     -123.0,
+     -47.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05@mir+0.7",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 0.707,
+    "lonlat": [
+     -123.0,
+     -47.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@dead-0.1",
    "do": "kw_in",
    "id": "kw05"
   },
   {
-   "at": "s05.end",
+   "at": "s05@250-0.4",
    "do": "kw_out",
    "id": "kw05"
   },
@@ -632,42 +692,7 @@
    }
   },
   {
-   "at": "s05@fall+0.05",
-   "do": "kw_pulse",
-   "id": "kw05"
-  },
-  {
    "at": "s05@fall",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "ring",
-    "layer": "ring",
-    "dur": 0.6
-   }
-  },
-  {
-   "at": "s05@250+0.05",
-   "do": "kw_pulse",
-   "id": "kw05"
-  },
-  {
-   "at": "s05@250",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "ring",
-    "layer": "ring",
-    "dur": 0.6
-   }
-  },
-  {
-   "at": "s05@mir+0.05",
-   "do": "kw_pulse",
-   "id": "kw05"
-  },
-  {
-   "at": "s05@mir",
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {
