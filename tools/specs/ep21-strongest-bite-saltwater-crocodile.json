@@ -548,7 +548,7 @@
      "type": "counter",
      "start": 0,
      "end": 16460,
-     "y": 760,
+     "y": 560,
      "label": "newtons · measured on a wild crocodile",
      "fmt": "int",
      "size": 150
