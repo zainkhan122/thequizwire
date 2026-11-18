@@ -163,7 +163,7 @@
     ]
    ],
    "kw": {
-    "text": "*400 km* of coast, lost 1879",
+    "text": "*400 km* of coast · 1879",
     "at": "@@desert"
    },
    "devices": [
@@ -830,7 +830,7 @@
      "this is the pacific shore bolivia once held, a long desert coast around antofagasta"
     ],
     "screen": [
-     "400 km of coast, lost 1879",
+     "400 km of coast · 1879",
      "Antofagasta",
      "LOST COAST"
     ]
