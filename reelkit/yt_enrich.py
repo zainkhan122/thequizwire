@@ -163,7 +163,10 @@ class YT:
             if not tok: return out
 
     def in_playlist(self, pid, vid):
-        d = self.call("GET", "playlistItems", {"part": "id", "playlistId": pid, "videoId": vid, "maxResults": 1})
+        try: d = self.call("GET", "playlistItems", {"part": "id", "playlistId": pid, "videoId": vid, "maxResults": 1})
+        except RuntimeError as e:
+            if "404" in str(e): return None            # freshly created playlists 404 for a while (eventual consistency) — treat as "not in it"
+            raise
         items = d.get("items") or []
         return items[0]["id"] if items else None
 
@@ -177,8 +180,13 @@ class YT:
         return d.get("id", "<dry>")
 
     def add_to_playlist(self, pid, vid):
-        d = self.call("POST", "playlistItems", {"part": "snippet"}, {"snippet": {"playlistId": pid, "resourceId": {"kind": "youtube#video", "videoId": vid}}}, cost=50)
-        return d.get("id", "<dry>")
+        for i in range(3):
+            try:
+                d = self.call("POST", "playlistItems", {"part": "snippet"}, {"snippet": {"playlistId": pid, "resourceId": {"kind": "youtube#video", "videoId": vid}}}, cost=50)
+                return d.get("id", "<dry>")
+            except RuntimeError as e:
+                if "404" in str(e) and i < 2: time.sleep(5 * (i + 1)); continue   # new playlist not yet visible to writes
+                raise
 
     def set_thumbnail(self, vid, jpg: bytes):
         d = self.call("POST", "thumbnails/set", {"videoId": vid, "uploadType": "media"}, cost=50, raw=(jpg, "image/jpeg"), base=UPLOAD)
