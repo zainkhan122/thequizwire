@@ -1,0 +1,50 @@
+{
+ "files": {},
+ "generated": {
+  "geo/main.json": {
+   "by": "reelkit/geodata.py",
+   "bytes": 385747,
+   "credit": "Natural Earth",
+   "kind": "data",
+   "licence": "PD",
+   "provider": "Natural Earth",
+   "source": "world-atlas 2.0.2 10m + ne_50m_lakes"
+  },
+  "geo/main_basemap.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 1415007,
+   "credit": "NASA Blue Marble",
+   "kind": "image",
+   "licence": "PD-USGov",
+   "provider": "NASA GIBS",
+   "source": "BlueMarble_ShadedRelief_Bathymetry z7 (143 tiles)"
+  },
+  "geo/main_basemap_far.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 771234,
+   "credit": "NASA Blue Marble",
+   "kind": "image",
+   "licence": "PD-USGov",
+   "provider": "NASA GIBS",
+   "source": "BlueMarble_ShadedRelief_Bathymetry z5 (112 tiles)"
+  },
+  "mix.wav": {
+   "ai_voice": "Kokoro am_michael",
+   "by": "reelkit/quizscore.py (procedural bed/ticks/sting) + Kokoro VO takes",
+   "derived_from": "procedural reelkit/synth.py + Kokoro takes vo/*",
+   "kind": "mix",
+   "licence": "own",
+   "provider": "build"
+  },
+  "stickers/1f1e7-1f1f4.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 5913,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  }
+ },
+ "version": 1
+}

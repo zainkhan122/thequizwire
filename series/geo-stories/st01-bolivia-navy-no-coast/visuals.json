@@ -1,0 +1,742 @@
+{
+ "version": 3,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "kw01",
+   "type": "kw",
+   "text": "a navy, *no coast*"
+  },
+  {
+   "id": "kw02",
+   "type": "kw",
+   "text": "*400 km* of coast"
+  },
+  {
+   "id": "f02",
+   "type": "fact",
+   "kicker": "400 km",
+   "text": "of Pacific coast until 1879",
+   "y": 1250
+  },
+  {
+   "id": "kw03",
+   "type": "kw",
+   "text": "*1879* · War of the Pacific"
+  },
+  {
+   "id": "f03",
+   "type": "fact",
+   "kicker": "1904",
+   "text": "treaty fixed the border",
+   "y": 1250
+  },
+  {
+   "id": "kw04",
+   "type": "kw",
+   "text": "Día del *Mar*"
+  },
+  {
+   "id": "f04",
+   "type": "fact",
+   "kicker": "ICJ 2018",
+   "text": "Chile has no duty to negotiate",
+   "y": 1250
+  },
+  {
+   "id": "st_flag",
+   "type": "sticker",
+   "emoji": "1f1e7-1f1f4",
+   "x": 800,
+   "y": 700,
+   "size": 190,
+   "rot": 8
+  },
+  {
+   "id": "kw05",
+   "type": "kw",
+   "text": "*Lake Titicaca* · 3,800 m"
+  },
+  {
+   "id": "sailors",
+   "type": "counter",
+   "start": 0,
+   "end": 5000,
+   "y": 560,
+   "label": "sailors in the Bolivian Navy",
+   "fmt": "int",
+   "size": 150
+  },
+  {
+   "id": "close",
+   "type": "close",
+   "text": "A navy *without a sea*",
+   "y": 760
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.3,
+    "lonlat": [
+     -64,
+     -22
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s01+2.6",
+   "args": {
+    "k": 0.75,
+    "lonlat": [
+     -66.5,
+     -18.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s01+2.6",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s01.end",
+   "args": {
+    "k": 0.72,
+    "lonlat": [
+     -66.5,
+     -18.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": 0,
+   "do": "title_in"
+  },
+  {
+   "at": "s02+0.3",
+   "do": "title_out"
+  },
+  {
+   "at": "s01@coastline-0.1",
+   "do": "kw_in",
+   "id": "kw01",
+   "until": "s01.end"
+  },
+  {
+   "at": "s01@navy",
+   "do": "geo.highlight_in",
+   "args": {
+    "fid": "068",
+    "layer": "tint",
+    "dur": 0.6
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s01@coastline+0.2",
+   "do": "geo.highlight_pulse",
+   "args": {
+    "fid": "068",
+    "layer": "tint",
+    "dur": 0.7
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s02",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02+1.5",
+   "args": {
+    "k": 1.5,
+    "lonlat": [
+     -70.0,
+     -22.6
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s02+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02+2.7",
+   "args": {
+    "k": 1.55,
+    "lonlat": [
+     -70.1,
+     -22.4
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s02+2.7",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02.end",
+   "args": {
+    "k": 1.589,
+    "lonlat": [
+     -70.1,
+     -22.4
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s02@desert",
+   "do": "kw_in",
+   "id": "kw02"
+  },
+  {
+   "at": "s02.end",
+   "do": "kw_out",
+   "id": "kw02"
+  },
+  {
+   "at": "s02@antofagasta+0.6",
+   "do": "fact_in",
+   "id": "f02"
+  },
+  {
+   "at": "s02.end",
+   "do": "hide",
+   "id": "f02",
+   "args": {
+    "dur": 0.3
+   }
+  },
+  {
+   "at": "s02@shore",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "068",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s02@shore-0.1",
+   "do": "geo.route_draw",
+   "until": "s02@antofagasta+0.2",
+   "args": {
+    "rid": "coast",
+    "layer": "lost"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s02@antofagasta",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "ant"
+   }
+  },
+  {
+   "at": "s03",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03+1.4",
+   "args": {
+    "k": 0.95,
+    "lonlat": [
+     -69.0,
+     -20.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s03+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03+2.5999999999999996",
+   "args": {
+    "k": 0.9,
+    "lonlat": [
+     -68.6,
+     -20.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s03+2.5999999999999996",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.922,
+    "lonlat": [
+     -68.6,
+     -20.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s03@chile",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "152",
+    "layer": "solid",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s03@landlocked",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "068",
+    "layer": "tint",
+    "dur": 0.7
+   }
+  },
+  {
+   "at": "s03@north",
+   "do": "kw_in",
+   "id": "kw03"
+  },
+  {
+   "at": "s03.end",
+   "do": "kw_out",
+   "id": "kw03"
+  },
+  {
+   "at": "s03@chilean+0.2",
+   "do": "fact_in",
+   "id": "f03"
+  },
+  {
+   "at": "s03.end",
+   "do": "hide",
+   "id": "f03",
+   "args": {
+    "dur": 0.3
+   }
+  },
+  {
+   "at": "s03@landlocked+0.3",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "ant"
+   }
+  },
+  {
+   "at": "s03@chilean",
+   "do": "geo.label_in",
+   "args": {
+    "lid": "lost"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s03@north+0.1",
+   "do": "geo.highlight_pulse",
+   "args": {
+    "fid": "152",
+    "layer": "solid",
+    "dur": 0.6
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.5",
+   "args": {
+    "k": 0.8,
+    "lonlat": [
+     -66.0,
+     -17.8
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+2.7",
+   "args": {
+    "k": 0.76,
+    "lonlat": [
+     -65.8,
+     -17.6
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+2.7",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 0.779,
+    "lonlat": [
+     -65.8,
+     -17.6
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04@march",
+   "do": "kw_in",
+   "id": "kw04"
+  },
+  {
+   "at": "s04.end",
+   "do": "kw_out",
+   "id": "kw04"
+  },
+  {
+   "at": "s04@court+0.1",
+   "do": "fact_in",
+   "id": "f04"
+  },
+  {
+   "at": "s04.end",
+   "do": "hide",
+   "id": "f04",
+   "args": {
+    "dur": 0.3
+   }
+  },
+  {
+   "at": "s04@march",
+   "do": "sticker_in",
+   "id": "st_flag"
+  },
+  {
+   "at": "s04@court",
+   "do": "sticker_out",
+   "id": "st_flag"
+  },
+  {
+   "at": "s04@accepted",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "068",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s04@sea+0.05",
+   "do": "kw_pulse",
+   "id": "kw04"
+  },
+  {
+   "at": "s04@sea",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "068",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s04@lost+0.05",
+   "do": "kw_pulse",
+   "id": "kw04"
+  },
+  {
+   "at": "s04@lost",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "068",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s04@lost",
+   "do": "geo.label_out",
+   "args": {
+    "lid": "lost"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s04@sea",
+   "do": "sticker_pulse",
+   "id": "st_flag"
+  },
+  {
+   "at": "s04@accepted+0.1",
+   "do": "sticker_pulse",
+   "id": "st_flag"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.6",
+   "args": {
+    "k": 2.0,
+    "lonlat": [
+     -69.2,
+     -16.0
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.6",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+2.8",
+   "args": {
+    "k": 2.1,
+    "lonlat": [
+     -69.3,
+     -15.9
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05+2.8",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 2.152,
+    "lonlat": [
+     -69.3,
+     -15.9
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@andes",
+   "do": "kw_in",
+   "id": "kw05"
+  },
+  {
+   "at": "s05.end",
+   "do": "kw_out",
+   "id": "kw05"
+  },
+  {
+   "at": "s05@sail",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "068",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s05@titicaca",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "068",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s05@sailors+0.05",
+   "do": "kw_pulse",
+   "id": "kw05"
+  },
+  {
+   "at": "s05@sailors",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "068",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s05@titicaca+0.2",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "tit"
+   }
+  },
+  {
+   "at": "s05@sailors-0.6",
+   "do": "chart.counter_run",
+   "id": "sailors",
+   "until": "s05@sailors+1.2",
+   "args": {
+    "steps": 14
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "sailors"
+  },
+  {
+   "at": "s05@titicaca",
+   "do": "geo.highlight_pulse",
+   "args": {
+    "fid": "lago_titicaca",
+    "layer": "lake",
+    "dur": 0.8
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s05@sailors+0.3",
+   "do": "geo.highlight_pulse",
+   "args": {
+    "fid": "lago_titicaca",
+    "layer": "lake",
+    "dur": 0.7
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.8",
+   "args": {
+    "k": 0.7,
+    "lonlat": [
+     -67.0,
+     -19.0
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+0.3",
+   "do": "close_in",
+   "id": "close",
+   "until": "s06.end"
+  },
+  {
+   "at": "s06@sea",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "068",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s06@coast",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "068",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s06+0.2",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "tit"
+   }
+  },
+  {
+   "at": "s06@coast",
+   "do": "geo.route_draw",
+   "until": "s06@coast+1.2",
+   "args": {
+    "rid": "coast",
+    "layer": "lost"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s03+99",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "lost"
+   }
+  },
+  {
+   "at": "s02+1.2",
+   "do": "geo.scalebar_in",
+   "stage": "stage_map"
+  },
+  {
+   "at": "s07",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s07+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.3,
+    "lonlat": [
+     -64,
+     -22
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "cta_in",
+   "until": "end-1.0"
+  }
+ ],
+ "captions": {
+  "roles": [],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

@@ -456,7 +456,9 @@ def cmd_run(a):
                                 yt.set_thumbnail(vid, b); p.update({"yt_thumbnail_at": now(), "yt_thumbnail_src": src}); done["thumb"] += 1; out.append(f"thumb set ({src})")
                             except RateLimited as e: thumbs_open = False; out.append(f"thumb: {e} — rest next run")
                             except Forbidden as e: p["yt_thumbnail_error"] = str(e)[:200]; print(f"::warning::{ep}: {e}"); out.append("thumb: forbidden (see warning)")
-                if "series" in steps:
+                if "series" in steps and not S.get("playlist_id"):
+                    out.append("series playlist: none configured (owner creates it; config/publishing.json playlist_id)"); p["yt_series_item"] = "no-playlist"
+                elif "series" in steps:
                     pid = ensure_playlist(yt, c, S["playlist"], f"{S['name']} — a new {S['topic']} every day from TheQuizWire.", S, "playlist_id", cache)
                     item = yt.in_playlist(pid, vid) or yt.add_to_playlist(pid, vid); p.update({"yt_playlist_id": pid, "yt_series_item": item}); done["series"] += 1; out.append("series playlist")
                 if "channel" in steps:

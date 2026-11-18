@@ -25,6 +25,55 @@ import master  # noqa: E402
 REPO = Path(__file__).resolve().parents[1]
 
 
+def _beat_time(expr, TL):
+    """Resolve a visuals.json time expression the way engine/compose.T does (s02+0.3 · s03@cue-0.1 · s04.end · end-0.3)."""
+    import re
+    if isinstance(expr, (int, float)): return float(expr)
+    m = re.fullmatch(r"(end|s\w+?)(?:\.(end))?(?:@([\w-]+))?(?:([+-])([\d.]+))?", str(expr).strip())
+    if not m: return None
+    base, end, cue, sign, off = m.groups()
+    SC = {s["id"]: s for s in TL["scenes"]}
+    if base == "end": t = TL["total"]
+    elif base not in SC: return None
+    elif cue:
+        t = TL.get("cues", {}).get(f"{base}@{cue}")
+        if t is None: return None
+    elif end or sign == "-": t = SC[base]["end"]
+    else: t = SC[base]["start"]
+    if sign and off: t += float(off) * (1 if sign == "+" else -1)
+    return round(t, 3)
+
+
+def story_sfx(sfx, ep, TL, root):
+    """Auto-SFX for story-v1 from the visuals beats (docs/STORY_GUIDELINES.md §5 cue map). Quiet, procedural, deterministic:
+    cam_to with a real move → whoosh · highlight_in/pulse → soft pop · pin/label → click · route_draw → swish · counter → riser · title/close → hit."""
+    vp = ep / "visuals.json"
+    if not vp.exists(): return
+    X = json.loads(vp.read_text()); last_k, last_pop = None, -9.0
+    for b in sorted(X.get("beats", []), key=lambda b: _beat_time(b.get("at", 0), TL) or 0):
+        t = _beat_time(b.get("at", 0), TL)
+        if t is None or t < 0: continue
+        do, args = b.get("do", ""), b.get("args", {})
+        if do in ("geo.cam_set",): last_k = args.get("k"); continue
+        if do == "geo.cam_to":
+            k = args.get("k"); big = last_k is None or k is None or abs(k - last_k) >= 0.25 * max(last_k or 1, 0.1)
+            if big and args.get("ease", "power2.inOut") != "none": place(sfx, S.whoosh(d=0.7, level=0.10, up=(k or 1) >= (last_k or 1)), t - 0.05)
+            last_k = k
+        elif do in ("geo.highlight_in", "geo.highlight_pulse"):
+            if t - last_pop > 0.35: place(sfx, S.tick(hi=False, level=0.10), t); last_pop = t
+        elif do in ("geo.pin_in", "geo.label_in", "sticker_in", "fact_in", "kw_in"):
+            place(sfx, S.tick(hi=True, level=0.07), t)
+        elif do == "geo.route_draw":
+            t1 = _beat_time(b.get("until", 0), TL) or (t + 1.0)
+            place(sfx, S.whoosh(d=min(1.6, max(0.4, t1 - t)), level=0.08, up=True), t)
+        elif do == "chart.counter_run":
+            t1 = _beat_time(b.get("until", 0), TL) or (t + 1.5)
+            place(sfx, S.riser(d=min(2.4, max(0.8, t1 - t)), level=0.09), t)
+        elif do in ("title_in", "close_in"):
+            place(sfx, S.hit(level=0.16), t + 0.02)
+            if do == "close_in": place(sfx, S.bell(root * 4, d=2.0, level=0.09), t + 0.05)
+
+
 def main():
     ep = Path(sys.argv[1]).resolve()
     vo_dir = Path(sys.argv[2]) if len(sys.argv) > 2 else Path.home() / ".cache/build" / ep.name
@@ -55,6 +104,9 @@ def main():
 
     # ---- bed: root + fifth pad, re-triggered per section so it breathes; resolves on the CTA
     root = N(key); fifth = root * 1.5; third_min = root * 2 ** (3 / 12); third_maj = root * 2 ** (4 / 12)
+    story = E.get("format") == "story-v1"
+    if story:                                                                 # Geo Stories: low drone under the pad (docs/STORY_GUIDELINES.md §5 "bed:drone")
+        place(music, S.drone(root / 2, total + 0.5, cutoff=320, level=0.10), 0.0)
     for s in scenes:
         d = max(0.8, s["end"] - s["start"] + 1.2)
         chord = [root, fifth, third_maj * 2] if s.get("role") == "cta" else [root, fifth, third_min * 2]
@@ -71,6 +123,7 @@ def main():
             place(sfx, S.hit(level=0.28), s["start"] + 0.02)
         if s.get("role") == "cta":
             place(sfx, S.whoosh(d=0.6, level=0.16, up=True), s["start"] - 0.2)
+    if story: story_sfx(sfx, ep, TL, root)
     # ---- duck music/sfx under speech
     env = S.follower(vo.mean(1))
     duck_m = 1.0 - 0.72 * np.clip(env / (np.max(env) + 1e-6), 0, 1)

@@ -1,0 +1,222 @@
+{
+ "version": 1,
+ "episode": "st01-bolivia-navy-no-coast",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "10m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -75,
+     -26,
+     -57,
+     -9
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "tint",
+     "ids": [
+      "068"
+     ],
+     "cls": "tint",
+     "note": "Bolivia, the subject"
+    },
+    {
+     "kind": "highlight",
+     "id": "solid",
+     "ids": [
+      "152"
+     ],
+     "cls": "solid",
+     "note": "Chile, the neighbour that took the coast"
+    },
+    {
+     "kind": "route",
+     "id": "lost",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "coast",
+        "properties": {
+         "name": "Bolivia's coast 1825–1879"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           -70.084,
+           -21.488
+          ],
+          [
+           -70.152,
+           -21.666
+          ],
+          [
+           -70.192,
+           -21.885
+          ],
+          [
+           -70.213,
+           -22.083
+          ],
+          [
+           -70.235,
+           -22.299
+          ],
+          [
+           -70.253,
+           -22.456
+          ],
+          [
+           -70.289,
+           -22.665
+          ],
+          [
+           -70.314,
+           -22.79
+          ],
+          [
+           -70.573,
+           -23.081
+          ],
+          [
+           -70.602,
+           -23.282
+          ],
+          [
+           -70.624,
+           -23.474
+          ],
+          [
+           -70.631,
+           -23.516
+          ],
+          [
+           -70.512,
+           -23.873
+          ],
+          [
+           -70.527,
+           -23.996
+          ],
+          [
+           -70.534,
+           -24.293
+          ],
+          [
+           -70.563,
+           -24.482
+          ],
+          [
+           -70.584,
+           -24.538
+          ],
+          [
+           -70.577,
+           -24.732
+          ],
+          [
+           -70.519,
+           -24.919
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    },
+    {
+     "kind": "area",
+     "id": "lake",
+     "cls": "lake",
+     "source": "ne-lakes",
+     "static": true,
+     "ne": {
+      "file": "ne_50m_lakes",
+      "names": [
+       "Lago Titicaca"
+      ]
+     }
+    }
+   ],
+   "pins": [
+    {
+     "id": "ant",
+     "lonlat": [
+      -70.4,
+      -23.65
+     ],
+     "label": "Antofagasta",
+     "side": "right",
+     "qid": "Q51431"
+    },
+    {
+     "id": "tit",
+     "lonlat": [
+      -69.3,
+      -15.9
+     ],
+     "label": "Lake Titicaca",
+     "side": "right",
+     "qid": "Q35342"
+    }
+   ],
+   "labels": [
+    {
+     "id": "lost",
+     "lonlat": [
+      -71.9,
+      -22.4
+     ],
+     "text": "LOST COAST",
+     "cls": "tag",
+     "in": "s03+99",
+     "out": null
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.2,
+    "far": {
+     "bbox": [
+      -88,
+      -58,
+      -30,
+      14
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 200,
+    "lonlat": [
+     -74.5,
+     -24.8
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

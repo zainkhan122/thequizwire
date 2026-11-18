@@ -15,7 +15,8 @@ import json, re, sys
 from pathlib import Path
 EVENT = {"fact_in", "fact_out", "sticker_in", "sticker_out", "character_in", "character_out", "photo_in", "photo_out", "hide", "reveal",
          "geo.cam_to", "geo.pin_in", "geo.pin_out", "geo.label_in", "geo.label_out", "geo.highlight_in", "geo.highlight_out", "geo.highlight_pulse",
-         "geo.route_draw", "geo.disputed_in", "geo.disputed_out", "geo.spin", "geo.rise", "geo.travel", "geo.fade", "fx.flash", "fx.pop"}
+         "geo.route_draw", "geo.disputed_in", "geo.disputed_out", "geo.spin", "geo.rise", "geo.travel", "geo.fade", "fx.flash", "fx.pop",
+         "kw_in", "kw_out", "kw_pulse", "title_in", "title_out", "close_in", "sticker_pulse"}                     # story-v1 verbs (engine/story.py)
 SPAN = {"geo.cam_to", "geo.spin", "geo.route_draw", "geo.travel", "geo.fade", "chart.counter_run", "chart.erase_run", "chart.bars_in", "chart.compare_in"}
 REAL = {"photo_in", "geo.rise", "geo.travel", "geo.route_draw", "chart.counter_run", "chart.bars_in", "chart.compare_in", "chart.split_in", "chart.erase_run", "chart.callouts_in", "chart.strip_in"}
 DEFAULT_DUR = {"geo.cam_to": 1.2, "geo.spin": 1.2, "geo.route_draw": 1.2, "geo.travel": 1.2, "geo.fade": 1.2, "chart.counter_run": 1.5, "chart.erase_run": 1.5, "chart.bars_in": 1.2, "chart.compare_in": 1.4}

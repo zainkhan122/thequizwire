@@ -22,7 +22,7 @@ Styles (all share fonts, yellow #FFD400, series chip, logo bug):
   b  QUIZ CARD     — blurred frame behind a dark glass card: question + the three option pills (no answer marked)  ← APPROVED default
   c  TORN SPLIT    — satellite top, torn-paper edge into a yellow panel with the question in black, sticker on the tear, "tap to guess" pill
 """
-import argparse, hashlib, json, math, os, random, subprocess, sys, urllib.request
+import argparse, hashlib, json, math, os, random, re, subprocess, sys, urllib.request
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 
@@ -250,7 +250,8 @@ def question_mark(im, xy, size, rotate=12, alpha=235):
 
 # ---------------------------------------------------------------- episode context
 def context(ep, frame=None, video=None):
-    ep = Path(ep); E = json.loads((ep / "episode.json").read_text()); Q = E["quiz"]
+    ep = Path(ep); E = json.loads((ep / "episode.json").read_text())
+    Q = E.get("quiz") or {"question": E.get("title", ""), "keyword": "", "options": []}                     # story-v1 has no quiz block
     reg = json.loads((ROOT / "series/series.json").read_text())["series"]
     S = next((s for s in reg if s["slug"] == E["series"]), {"name": E["series"].title(), "color": "#E3A72F"})
     stickers = []
@@ -354,6 +355,26 @@ def style_b(C):
     return im
 
 
+def style_story(C):
+    """Geo Stories (format story-v1, docs/STORY_GUIDELINES.md §6): title + place only. Big headline with the *keyword* in yellow,
+    place line above in the series colour, series chip, logo. No sticker, no options, no quiz pill."""
+    E = C["E"]; st = E.get("story") or {}; cv = st.get("cover") or {}
+    head = cv.get("headline") or st.get("headline") or E.get("title", ""); place_ = cv.get("place") or st.get("place", "")
+    kw = " ".join(re.findall(r"\*([^*]+)\*", head)); text = head.replace("*", "")
+    bg = cover_fit(C["bg"], 1.22, anchor=tuple(C["cover"]["bg_anchor"])).filter(ImageFilter.GaussianBlur(3)); im = bg.convert("RGBA")
+    darken(im, 0, 700, 130, 30); darken(im, 980, H, 20, 225); vignette(im, 140)
+    color = hex_rgb(C["S"]["color"])
+    series_chip(im, (60, 96), C["S"], C["number"], color)
+    fp = anton(58); pw = int(fp.getlength(place_.upper()) + 72)
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(layer)
+    d.rounded_rectangle((60, 1010, 60 + pw, 1010 + 92), 16, fill=color + (255,)); d.text((96, 1024), place_.upper(), font=fp, fill=(16, 16, 20, 255))
+    im.alpha_composite(layer)
+    f, lines = fit_question(text, kw, 150, 960, 3, min_size=100)
+    bottom = draw_question(im, lines, f, 1140, WHITE + (255,), YELLOW + (255,), 8, (12, 12, 14, 255), align="left", left=60, max_w=960, line_h=0.98)
+    logo_bug(im, (60, min(bottom + 70, 1760)), 80, align="left")
+    return im
+
+
 def torn_mask(y_left, y_right, seed, amp=22):
     rnd = random.Random(seed); pts = [(0, H), (0, y_left)]
     x = 0
@@ -418,7 +439,7 @@ def style_d(C):
     return im
 
 
-STYLES = {"a": style_a, "b": style_b, "c": style_c, "d": style_d}
+STYLES = {"a": style_a, "b": style_b, "c": style_c, "d": style_d, "story": style_story}
 DEFAULT_STYLE = "b"          # owner-approved 2026-10-16 (quiz card, no timer ring); a/c kept as alternates
 
 
@@ -446,6 +467,7 @@ def main():
     ap.add_argument("--burn", help="write a copy of --video with the cover as its first 0.3 s to this path")
     a = ap.parse_args()
     C = context(a.episode, a.frame, a.video)
+    if C["E"].get("format") == "story-v1" and not a.all: a.style = "story"                                 # stories always get the title + place card
     for s in (STYLES if a.all else [a.style]):
         im = STYLES[s](C).convert("RGB")
         out = Path(a.out) if (a.out and not a.all) else Path(a.episode) / "out" / ("cover.png" if (s == DEFAULT_STYLE and not a.all) else f"cover_{s}.png")

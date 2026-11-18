@@ -117,6 +117,8 @@ def main():
     a = ap.parse_args(); ep = Path(a.ep).resolve()
     F, W = [], []
     E = json.loads((ep / "episode.json").read_text()); V = json.loads((ep / "voice.json").read_text())
+    if E.get("format") == "story-v1":                                      # Geo Stories have their own gate (docs/STORY_GUIDELINES.md §8)
+        import os; os.execv(sys.executable, [sys.executable, str(Path(__file__).with_name("storylint.py"))] + sys.argv[1:])
     T = json.loads((ep / "timeline.json").read_text()) if (ep / "timeline.json").exists() else None
     X = json.loads((ep / "visuals.json").read_text()) if (ep / "visuals.json").exists() else {"stage": [], "elements": [], "beats": []}
     GJ = json.loads((ep / "geo.json").read_text()) if (ep / "geo.json").exists() else {"scenes": {}}

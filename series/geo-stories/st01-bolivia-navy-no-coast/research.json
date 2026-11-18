@@ -1,0 +1,242 @@
+{
+ "version": 1,
+ "episode": "st01-bolivia-navy-no-coast",
+ "topic": "Bolivia lost its Pacific coast to Chile in the War of the Pacific (1879–1884, Treaty of 1904), keeps a navy based on Lake Titicaca and inland rivers, marks the Day of the Sea on 23 March, and lost its 2018 ICJ case asking Chile to negotiate sea access.",
+ "researched": "2026-11-18",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Bolivia never had a coast.",
+   "reality": "It had about 400 km of Pacific coast (the Litoral department, Antofagasta) from independence in 1825 until 1879."
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right",
+  "^GEO STORIES",
+  "^KNOW A STRANGER PLACE\\?$"
+ ],
+ "landscape": {
+  "our_gap": "Bolivia-navy clips are talking heads with a flag; nobody draws the lost shore on the satellite map, shows Chile taking it, the court saying no, and then tightens onto the lake where the sailors are.",
+  "existing": [
+   {
+    "title": "Why Bolivia Has a Navy (landlocked)",
+    "format": "talking head, stock footage",
+    "gap": "no map of the lost coast"
+   },
+   {
+    "title": "War of the Pacific explained",
+    "format": "history animation, 10 min",
+    "gap": "not a Short, no present-day twist"
+   },
+   {
+    "title": "Bolivia Lake Titicaca navy tour",
+    "format": "news feature",
+    "gap": "no geography of why"
+   }
+  ]
+ },
+ "sources": {
+  "brit_wotp": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "War of the Pacific (1879–84)",
+   "url": "https://www.britannica.com/event/War-of-the-Pacific",
+   "date": "2026-11-17",
+   "notes": "Chile against Bolivia and Peru, 1879–84; Bolivia lost its coastal province (Antofagasta) and became landlocked; 1904 treaty confirmed Chilean sovereignty."
+  },
+  "brit_bolivia": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Bolivia — Independence and the War of the Pacific",
+   "url": "https://www.britannica.com/place/Bolivia/Independence",
+   "date": "2026-11-17",
+   "notes": "Bolivia's Litoral on the Pacific, roughly 400 km of coast, lost to Chile after 1879."
+  },
+  "icj2018": {
+   "type": "primary",
+   "publisher": "International Court of Justice",
+   "title": "Obligation to Negotiate Access to the Pacific Ocean (Bolivia v. Chile), Judgment of 1 October 2018",
+   "url": "https://www.icj-cij.org/case/153",
+   "date": "2026-11-17",
+   "notes": "The Court found that Chile did not undertake a legal obligation to negotiate a sovereign access to the Pacific Ocean for Bolivia (12 votes to 3)."
+  },
+  "reuters_icj": {
+   "type": "press",
+   "publisher": "Reuters",
+   "title": "World Court rules Chile not obliged to negotiate sea access for Bolivia (1 Oct 2018)",
+   "url": "https://www.reuters.com/article/us-bolivia-chile-court-idUSKCN1MB2WH",
+   "date": "2026-11-17",
+   "notes": "ICJ ruled against Bolivia; Bolivia lost its 400 km coast in the 1879–83 war."
+  },
+  "treaty1904": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Treaty of Peace and Friendship of 1904 between Chile and Bolivia",
+   "url": "https://en.wikipedia.org/wiki/Treaty_of_Peace_and_Friendship_of_1904_between_Chile_and_Bolivia",
+   "date": "2026-11-17",
+   "notes": "Signed 20 October 1904; Bolivia recognised Chilean sovereignty over the former Litoral; Chile granted transit rights and built the Arica–La Paz railway."
+  },
+  "bbc_navy": {
+   "type": "press",
+   "publisher": "BBC News",
+   "title": "Bolivia's landlocked navy dreams of the sea (2018)",
+   "url": "https://www.bbc.com/news/world-latin-america-45622219",
+   "date": "2026-11-17",
+   "notes": "Bolivia's navy, about 5,000 personnel, patrols Lake Titicaca and the rivers; the 23 March Día del Mar; the ICJ case."
+  },
+  "armada": {
+   "type": "primary",
+   "publisher": "Armada Boliviana (Ministerio de Defensa)",
+   "title": "Armada Boliviana — Historia y misión",
+   "url": "https://www.armada.mil.bo/",
+   "date": "2026-11-17",
+   "notes": "Official site of the Bolivian Navy: mission, river and lake districts, Lake Titicaca naval base (Tiquina)."
+  },
+  "wiki_navy": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Bolivian Navy",
+   "url": "https://en.wikipedia.org/wiki/Bolivian_Navy",
+   "date": "2026-11-17",
+   "notes": "Armada Boliviana, about 5,000 personnel, headquartered in La Paz, bases on Lake Titicaca and the river systems."
+  },
+  "wiki_dia": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Día del Mar",
+   "url": "https://en.wikipedia.org/wiki/D%C3%ADa_del_Mar",
+   "date": "2026-11-17",
+   "notes": "Day of the Sea, 23 March, commemorating the loss of the coast (Battle of Topáter, 1879)."
+  },
+  "brit_titicaca": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Lake Titicaca",
+   "url": "https://www.britannica.com/place/Lake-Titicaca",
+   "date": "2026-11-17",
+   "notes": "Elevation about 3,810 m; on the Peru–Bolivia border; the highest large navigable lake."
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Bolivia is landlocked and maintains a navy of roughly 5,000 personnel operating on Lake Titicaca and its rivers.",
+   "sources": [
+    "armada",
+    "bbc_navy",
+    "wiki_navy"
+   ],
+   "vo": [
+    "bolivia has a navy. it has not had a coastline for more than a century",
+    "so where does the navy sail? up here, on lake titicaca, nearly four kilometres up in the andes, with around five thousand sailors and a fleet of patrol boats",
+    "a navy without a sea, drilling on a mountain lake, waiting for a coast it still calls its own"
+   ],
+   "screen": [
+    "a navy, no coast",
+    "sailors in the Bolivian Navy",
+    "Lake Titicaca",
+    "Lake Titicaca · 3,800 m",
+    "A navy without a sea",
+    "The navy with no sea",
+    "Bolivia"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Bolivia held about 400 km of Pacific coast (the Litoral, around Antofagasta) until 1879.",
+   "sources": [
+    "icj2018",
+    "brit_bolivia",
+    "brit_wotp",
+    "reuters_icj"
+   ],
+   "vo": [
+    "this is the pacific shore bolivia once held, a long desert coast around antofagasta"
+   ],
+   "screen": [
+    "400 km of coast",
+    "400 km",
+    "of Pacific coast until 1879",
+    "Antofagasta",
+    "LOST COAST"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "In the War of the Pacific (1879–84) Chile took the coast; the 1904 treaty fixed Chilean sovereignty and Bolivia became landlocked.",
+   "sources": [
+    "brit_wotp",
+    "treaty1904",
+    "icj2018"
+   ],
+   "vo": [
+    "in 1879 chile marched north in the war of the pacific. within a few years the coast was chilean, and bolivia was landlocked"
+   ],
+   "screen": [
+    "1879 · War of the Pacific",
+    "1904",
+    "treaty fixed the border"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "Bolivia marks the Day of the Sea every 23 March and in 2018 the ICJ ruled Chile has no obligation to negotiate sea access.",
+   "sources": [
+    "icj2018",
+    "reuters_icj",
+    "wiki_dia",
+    "bbc_navy"
+   ],
+   "vo": [
+    "bolivia never accepted it. every march it marks the day of the sea, with parades far from any shore, and in 2018 it took chile to the world court, asking for a way back to the ocean. it lost"
+   ],
+   "screen": [
+    "Día del Mar",
+    "ICJ 2018",
+    "Chile has no duty to negotiate"
+   ]
+  },
+  {
+   "id": "C05",
+   "weight": "detail",
+   "text": "Lake Titicaca lies at about 3,810 m on the Bolivia–Peru border.",
+   "sources": [
+    "brit_titicaca",
+    "bbc_navy"
+   ],
+   "vo": [
+    "up here, on lake titicaca, nearly four kilometres up in the andes"
+   ],
+   "screen": [
+    "Lake Titicaca · 3,800 m"
+   ]
+  }
+ ]
+}

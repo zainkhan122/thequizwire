@@ -8,7 +8,8 @@ import json, re, sys
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SECTIONS = ["Signal", "Why this, why now", "Viewer takeaway", "Question shape", "Options and why they fool", "Search term", "Rejected alternatives", "Ship by", "Copy"]
-MIN = {"Signal": 30, "Why this, why now": 60, "Viewer takeaway": 30, "Question shape": 40, "Options and why they fool": 80, "Search term": 5, "Rejected alternatives": 40, "Ship by": 10, "Copy": 80}
+STORY_SECTIONS = ["Signal", "Why this, why now", "Viewer takeaway", "Question shape", "Twist", "Search term", "Rejected alternatives", "Ship by", "Copy"]
+MIN = {"Twist": 40, "Signal": 30, "Why this, why now": 60, "Viewer takeaway": 30, "Question shape": 40, "Options and why they fool": 80, "Search term": 5, "Rejected alternatives": 40, "Ship by": 10, "Copy": 80}
 SOURCE = re.compile(r"https?://|calendar:|comment:|suggest:|trends?:|wikipedia:|news:", re.I)
 
 def stem(q):
@@ -44,7 +45,8 @@ def run(ep_dir):
     F, W = [], []; ep = Path(ep_dir); E = json.loads((ep / "episode.json").read_text()); tp = ep / "topic.md"
     if not tp.exists(): return [f"Q22: {tp.name} missing — write the topic decision first (docs/TOPIC_GUIDELINES.md)"], W
     S = sections(tp.read_text())
-    for k in SECTIONS:
+    story = E.get("format") == "story-v1"                                   # Geo Stories: idea card (docs/STORY_GUIDELINES.md §7) — Twist replaces the options section
+    for k in (STORY_SECTIONS if story else SECTIONS):
         if k not in S: F.append(f"Q22: topic.md section '## {k}' missing")
         elif len(S[k]) < MIN[k]: F.append(f"Q22: topic.md '{k}' is too thin ({len(S[k])} chars) — write the actual reasoning")
     if S.get("Signal") and not SOURCE.search(S["Signal"]): F.append("Q22: Signal must name a source (URL, suggest:, trends:, wikipedia:, calendar:, comment:, news:)")

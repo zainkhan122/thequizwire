@@ -29,7 +29,7 @@ from pathlib import Path
 ENGINE = Path(__file__).resolve().parent
 REPO = ENGINE.parent
 sys.path.insert(0, str(ENGINE))
-import fx, geo, quiz, charts  # noqa: E402
+import fx, geo, quiz, charts, story  # noqa: E402
 
 FONTS = ["Anton-Regular.ttf", "Oswald.ttf", "DMSerifDisplay-Regular.ttf", "DMSerifDisplay-Italic.ttf", "SpecialElite-Regular.ttf", "LilitaOne-Regular.ttf"]
 INK, CREAM, SEA = "#0B1620", "#EFE6D2", "#0F2A3A"
@@ -56,6 +56,7 @@ class Composer:
         self.G = geo.Geo(self.J, hf, REPO, data_dir=hf.parent / "geo")      # reelkit/geodata.py prep writes <build>/geo/<scene>.json
         self.Q = quiz.Quiz(self.J, self.series, self.E.get("number"))
         self.CH = charts.Charts(self.J)
+        self.ST = story.Story(self.J)
         self.stages, self.credit_bits = {}, list(self.E.get("credits", []))
 
     # ---------------------------------------------------------------- time expressions
@@ -116,7 +117,9 @@ class Composer:
 
     def element(self, el):
         k = el["type"]
-        if k == "answer": self.body.append(self.Q.answer_plate(el["id"], el["text"], y=el.get("y", 980), sub=el.get("sub", "")))
+        if k == "kw": self.body.append(self.ST.kw(el["id"], el["text"], y=el.get("y", 1380)))                          # story keyword caption
+        elif k == "close": self.body.append(self.ST.close(el["id"], el["text"], y=el.get("y", 760)))
+        elif k == "answer": self.body.append(self.Q.answer_plate(el["id"], el["text"], y=el.get("y", 980), sub=el.get("sub", "")))
         elif k == "fact":
             if getattr(self, "v3", False): self.body.append(self.Q.fact3(el["id"], el["text"], kicker=el.get("kicker", ""), y=el.get("y", 1250)))
             else: self.body.append(self.Q.fact(el["id"], el["text"], y=el.get("y", 1230), kicker=el.get("kicker", "")))
@@ -150,6 +153,12 @@ class Composer:
             if do in ("chart.counter_run", "chart.erase_run"): m(t, t1 if t1 is not None else t + float(b.get("dur", 1.5)), b["id"], **args)
             else: m(t, b["id"], **args)
         elif do == "fx.flash": self.FX.flash(t, **args)
+        elif do == "title_in": self.ST.title_in(t, **args)
+        elif do == "title_out": self.ST.title_out(t, **args)
+        elif do == "kw_in": self.ST.kw_in(t, t1, b["id"], **args)
+        elif do == "kw_pulse": self.ST.kw_pulse(t, b["id"], **args)
+        elif do == "kw_out": self.ST.kw_out(t, b["id"], **args)
+        elif do == "close_in": self.ST.close_in(t, t1, b.get("id", "close"), **args)
         elif do == "reveal": (self.Q.reveal_pills if getattr(self, "v3", False) else self.Q.reveal_chips if self.v2 else self.Q.reveal)(t, **args)
         elif do in ("card_in", "card_out", "options_in", "countdown"): getattr(self.Q, do)(t, **args)
         elif getattr(self, "v3", False) and do in ("hook_in", "hook_out", "chips_in", "chips_out"):                   # v3 aliases of the v2 verbs
@@ -194,8 +203,9 @@ class Composer:
 
     def run(self):
         E, Q = self.E, self.Q
-        q = E["quiz"]
-        self.v3 = E.get("format") == "quiz-v3"
+        self.story = E.get("format") == "story-v1"
+        q = E.get("quiz") or {"question": E["title"], "options": [], "correct": 0, "outro": (E.get("story") or {}).get("outro", {})}
+        self.v3 = E.get("format") in ("quiz-v3", "story-v1")
         self.v2 = E.get("format") == "quiz-v2" or self.v3
         # chrome
         self.body.append(Q.bug())
@@ -212,7 +222,12 @@ class Composer:
         mapc = self.G.credits() if self.G.scenes else ""
         bits = [b for b in self.credit_bits if b not in mapc]                                   # "Natural Earth" is already in the map-data credit
         credit = " · ".join(dict.fromkeys(([f"Map data: {mapc}"] if mapc else []) + bits + ["Voice: AI (Kokoro) · thequizwire.com"]))
-        if self.v3:
+        if self.story:                                                                               # Geo Stories: title block + keyword captions + close line + outro (docs/STORY_GUIDELINES.md)
+            st = E["story"]; self.J("tl.set('#bug',{autoAlpha:0},0);")
+            self.body.append(self.ST.title("title", st["place"], st["headline"]))
+            o = st.get("outro", {}); self.body.append(Q.outro3(headline=o.get("headline", "KNOW A STRANGER PLACE?"), url=o.get("url", "thequizwire.com")))
+            self.caption_count = 0
+        elif self.v3:
             self.J("tl.set('#bug',{autoAlpha:0},0);")
             self.body.append(Q.hook3("hook", q["question"], q.get("keyword")))
             self.body.append(Q.pills("q1", q["options"], q["correct"], meta=q.get("option_meta")))
@@ -264,7 +279,7 @@ html,body{{width:1080px;height:1920px;overflow:hidden;background:{INK}}}
 .clip{{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden}}
 .kb{{position:absolute;left:-108px;top:-201px;width:1296px;height:2322px;transform-origin:50% 50%}}
 .kb img{{position:absolute;left:0;top:0;width:1296px;height:2322px;object-fit:cover}}
-{fx.CSS}{geo.CSS}{quiz.CSS}{charts.CSS}
+{fx.CSS}{geo.CSS}{quiz.CSS}{charts.CSS}{story.CSS}
 """
         title = f"{self.series['name']} #{self.E.get('number', '')}: {self.E['title']}"
         audio = f'<audio id="mix" src="assets/mix.wav" data-start="0" data-duration="{f(self.TOTAL)}" data-track-index="9"></audio>' if (hf / "assets" / "mix.wav").exists() else ""

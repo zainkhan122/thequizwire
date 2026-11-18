@@ -266,6 +266,42 @@
     "general knowledge"
    ],
    "playlist_id": "PLepe-4Y03_y0"
+  },
+  "geo-stories": {
+   "name": "Geo Stories",
+   "emoji": "🛰️",
+   "topic": "geography story",
+   "youtube_category": "27",
+   "playlist": null,
+   "hashtags": {
+    "youtube": [
+     "#Geography",
+     "#MapStory"
+    ],
+    "instagram": [
+     "#Geography",
+     "#MapStory",
+     "#GeoReels"
+    ],
+    "facebook": [
+     "#Geography"
+    ],
+    "twitter": [
+     "#Geography"
+    ],
+    "threads": [
+     "#Geography"
+    ]
+   },
+   "keywords": [
+    "geography",
+    "map story",
+    "world geography",
+    "borders",
+    "satellite map"
+   ],
+   "playlist_id": null,
+   "playlist_note": "owner creates the YouTube playlist; set playlist_id here — never create by title"
   }
  },
  "youtube_api": {

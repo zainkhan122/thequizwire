@@ -117,6 +117,23 @@
    ],
    "sources_doc": "docs/DATA_SOURCES.md#wild-files-wild-files--animals",
    "pitch": "Animal superlatives with honest scale comparisons and a range map (GBIF occurrence-derived, CC0/CC BY) instead of a stock clip."
+  },
+  {
+   "slug": "geo-stories",
+   "name": "Geo Stories",
+   "active": true,
+   "color": "#5FB6F2",
+   "key": "A2",
+   "feed_last_number": 0,
+   "next_number": 1,
+   "engines": [
+    "geo",
+    "globe",
+    "maptile"
+   ],
+   "format": "story-v1",
+   "sources_doc": "docs/DATA_SOURCES.md#geo-blitz-geo-blitz--maps",
+   "pitch": "One geographic question answered on a real satellite map with one twist: borders, routes, oddities and the news with a map at its centre — narrated, no quiz. Disputed borders shown with who administers and who claims them."
   }
  ]
 }

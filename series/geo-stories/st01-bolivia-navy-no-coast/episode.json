@@ -1,0 +1,123 @@
+{
+ "id": "st01-bolivia-navy-no-coast",
+ "format": "story-v1",
+ "series": "geo-stories",
+ "number": 1,
+ "title": "The navy with no sea",
+ "seed": 5101,
+ "difficulty": "STORY",
+ "story": {
+  "place": "Bolivia",
+  "headline": "The navy with *no sea*",
+  "search_term": "bolivia navy",
+  "shape": "the-edge-case",
+  "close": "A navy *without a sea*",
+  "cover": {
+   "place": "BOLIVIA · SOUTH AMERICA",
+   "headline": "The navy with *no sea*"
+  },
+  "outro": {
+   "headline": "KNOW A STRANGER PLACE?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "cold-open",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Bolivia navy: the fleet of a country with no sea 🛰️",
+  "premise": "Bolivia keeps a navy of thousands though it has had no coastline since the 1880s",
+  "bait": "Which country would you give its coast back? 👇",
+  "keywords": [
+   "bolivia navy",
+   "landlocked navy",
+   "bolivia coast",
+   "war of the pacific",
+   "lake titicaca",
+   "bolivia chile",
+   "geography story",
+   "map story"
+  ],
+  "description": "Bolivia lost its only coast to Chile in a nineteenth-century war and has spent more than a century asking for it back, in parades, in treaties and in court. Yet it still keeps a navy. This map story shows the shore it once held, how it was taken, and where its sailors actually train today.\nWould you give the coast back? Tell us below.",
+  "hashtags": [
+   "#Geography",
+   "#MapStory",
+   "#Bolivia",
+   "#Shorts"
+  ],
+  "tags": [
+   "GeoStories",
+   "Bolivia"
+  ],
+  "cover_emoji": "",
+  "cover_emoji_why": "stories carry no icon on the cover (title + place only)",
+  "copy": {
+   "spoilers": [
+    "titicaca",
+    "five thousand",
+    "5,000"
+   ],
+   "youtube": {
+    "title": "Bolivia navy: the fleet of a country with no sea 🛰️",
+    "description": "Bolivia lost its only coast to Chile in a nineteenth-century war and has spent more than a century asking for it back, in parades, in treaties and in court. Yet it still keeps a navy. This map story shows the shore it once held, how it was taken, and where its sailors actually train today.\nWould you give the coast back? Tell us below.",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Bolivia",
+     "#Shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "The navy with no sea 🛰️\nBolivia lost its only coast to Chile in a nineteenth-century war and has spent more than a century asking for it back. It still keeps a navy. Here is the shore it once held, how it was taken, and where its sailors train today.\nWould you give the coast back?",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Bolivia",
+     "#GeoReels",
+     "#DidYouKnow"
+    ]
+   },
+   "facebook": {
+    "text": "Bolivia has no coastline, and it has a navy.\nIt lost its only shore to Chile in a nineteenth-century war and has spent more than a century asking for it back, in parades, in treaties and in court. This map story shows the coast it once held, how it was taken, and where its sailors train today. Would you give the coast back?",
+    "tags": [
+     "#Geography",
+     "#Bolivia"
+    ]
+   },
+   "twitter": {
+    "text": "Bolivia has no coastline. It has a navy. Where does it sail? A map story.",
+    "tags": [
+     "#Geography",
+     "#Bolivia"
+    ]
+   },
+   "threads": {
+    "text": "Bolivia lost its only coast in the 1880s and never accepted it. It still keeps a navy — so where does it sail? A one-minute map story.",
+    "tags": [
+     "#Geography",
+     "#MapStory"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "story",
+  "story_shape": "the-edge-case",
+  "hook": "cold-open",
+  "opener": "plunge",
+  "reveal": "none",
+  "beats": [
+   "route",
+   "pin",
+   "label",
+   "card"
+  ],
+  "cast": "none",
+  "music": "bed:drone"
+ },
+ "status": "draft"
+}

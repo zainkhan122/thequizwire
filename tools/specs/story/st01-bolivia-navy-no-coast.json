@@ -1,0 +1,900 @@
+{
+ "id": "st01-bolivia-navy-no-coast",
+ "series": "geo-stories",
+ "number": 1,
+ "seed": 5101,
+ "place": "Bolivia",
+ "headline": "The navy with *no sea*",
+ "search_term": "bolivia navy",
+ "cover": {
+  "place": "BOLIVIA · SOUTH AMERICA",
+  "headline": "The navy with *no sea*"
+ },
+ "intent": "A country that lost its coast in a war it still refuses to accept, told as a map: the shore it had, the war that took it, the court that said no, and the lake where its sailors train today.",
+ "variety": {
+  "shape": "the-edge-case",
+  "opener": "plunge",
+  "music": "bed:drone",
+  "cast": "none",
+  "beats": [
+   "route",
+   "pin",
+   "label",
+   "card"
+  ]
+ },
+ "post": {
+  "premise": "Bolivia keeps a navy of thousands though it has had no coastline since the 1880s",
+  "bait": "Which country would you give its coast back? 👇",
+  "keywords": [
+   "bolivia navy",
+   "landlocked navy",
+   "bolivia coast",
+   "war of the pacific",
+   "lake titicaca",
+   "bolivia chile",
+   "geography story",
+   "map story"
+  ],
+  "tags": [
+   "GeoStories",
+   "Bolivia"
+  ],
+  "copy": {
+   "spoilers": [
+    "titicaca",
+    "five thousand",
+    "5,000"
+   ],
+   "youtube": {
+    "title": "Bolivia navy: the fleet of a country with no sea 🛰️",
+    "description": "Bolivia lost its only coast to Chile in a nineteenth-century war and has spent more than a century asking for it back, in parades, in treaties and in court. Yet it still keeps a navy. This map story shows the shore it once held, how it was taken, and where its sailors actually train today.\nWould you give the coast back? Tell us below.",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Bolivia",
+     "#Shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "The navy with no sea 🛰️\nBolivia lost its only coast to Chile in a nineteenth-century war and has spent more than a century asking for it back. It still keeps a navy. Here is the shore it once held, how it was taken, and where its sailors train today.\nWould you give the coast back?",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Bolivia",
+     "#GeoReels",
+     "#DidYouKnow"
+    ]
+   },
+   "facebook": {
+    "text": "Bolivia has no coastline, and it has a navy.\nIt lost its only shore to Chile in a nineteenth-century war and has spent more than a century asking for it back, in parades, in treaties and in court. This map story shows the coast it once held, how it was taken, and where its sailors train today. Would you give the coast back?",
+    "tags": [
+     "#Geography",
+     "#Bolivia"
+    ]
+   },
+   "twitter": {
+    "text": "Bolivia has no coastline. It has a navy. Where does it sail? A map story.",
+    "tags": [
+     "#Geography",
+     "#Bolivia"
+    ]
+   },
+   "threads": {
+    "text": "Bolivia lost its only coast in the 1880s and never accepted it. It still keeps a navy — so where does it sail? A one-minute map story.",
+    "tags": [
+     "#Geography",
+     "#MapStory"
+    ]
+   }
+  }
+ },
+ "open": {
+  "vo": {
+   "text": "Bolivia has a navy. It has not had a coastline for more than a century.",
+   "cues": {
+    "navy": "navy",
+    "coastline": "coastline"
+   }
+  },
+  "tone": "urgent",
+  "energy": 4,
+  "pause_after": 0.4,
+  "cam_dur": 2.6,
+  "cam_hold": [
+   0.72,
+   [
+    -66.5,
+    -18.5
+   ]
+  ],
+  "kw": {
+   "text": "a navy, *no coast*",
+   "at": "@@coastline-0.1"
+  },
+  "devices": [
+   {
+    "at": "@@navy",
+    "do": "geo.highlight_in",
+    "args": {
+     "fid": "068",
+     "layer": "tint",
+     "dur": 0.6
+    }
+   },
+   {
+    "at": "@@coastline+0.2",
+    "do": "geo.highlight_pulse",
+    "args": {
+     "fid": "068",
+     "layer": "tint",
+     "dur": 0.7
+    }
+   }
+  ]
+ },
+ "beats": [
+  {
+   "vo": {
+    "text": "This is the Pacific shore Bolivia once held, a long desert coast around Antofagasta.",
+    "cues": {
+     "shore": "shore",
+     "desert": "desert",
+     "antofagasta": "antofagasta"
+    }
+   },
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "draw the coast as it is named; pin the port",
+   "cam": [
+    1.5,
+    [
+     -70.0,
+     -22.6
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.55,
+    [
+     -70.1,
+     -22.4
+    ]
+   ],
+   "kw": {
+    "text": "*400 km* of coast",
+    "at": "@@desert"
+   },
+   "card": {
+    "kicker": "400 km",
+    "text": "of Pacific coast until 1879",
+    "at": "@@antofagasta+0.6",
+    "y": 1250
+   },
+   "devices": [
+    {
+     "at": "@@shore-0.1",
+     "do": "geo.route_draw",
+     "until": "@@antofagasta+0.2",
+     "args": {
+      "rid": "coast",
+      "layer": "lost"
+     }
+    },
+    {
+     "at": "@@antofagasta",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "ant"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "In 1879 Chile marched north in the War of the Pacific. Within a few years the coast was Chilean, and Bolivia was landlocked.",
+    "cues": {
+     "chile": "chile",
+     "north": "north",
+     "chilean": "chilean",
+     "landlocked": "landlocked"
+    }
+   },
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "Chile lights solid on its name; the coast route recolours into Chile; Bolivia pulses on landlocked",
+   "cam": [
+    0.95,
+    [
+     -69.0,
+     -20.5
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.9,
+    [
+     -68.6,
+     -20.2
+    ]
+   ],
+   "highlights": [
+    {
+     "fid": "152",
+     "layer": "solid",
+     "at": "@@chile"
+    }
+   ],
+   "pulse": {
+    "at": "@@landlocked",
+    "fid": "068",
+    "layer": "tint"
+   },
+   "kw": {
+    "text": "*1879* · War of the Pacific",
+    "at": "@@north"
+   },
+   "card": {
+    "kicker": "1904",
+    "text": "treaty fixed the border",
+    "at": "@@chilean+0.2",
+    "y": 1250
+   },
+   "devices": [
+    {
+     "at": "@@landlocked+0.3",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "ant"
+     }
+    },
+    {
+     "at": "@@chilean",
+     "do": "geo.label_in",
+     "args": {
+      "lid": "lost"
+     }
+    },
+    {
+     "at": "@@north+0.1",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "152",
+      "layer": "solid",
+      "dur": 0.6
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Bolivia never accepted it. Every March it marks the Day of the Sea, with parades far from any shore, and in 2018 it took Chile to the World Court, asking for a way back to the ocean. It lost.",
+    "cues": {
+     "accepted": "accepted",
+     "march": "march",
+     "sea": "sea",
+     "court": "court",
+     "lost": "lost"
+    }
+   },
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "pull back to the whole country; flag sticker on the Day of the Sea; the court card lands on lost",
+   "cam": [
+    0.8,
+    [
+     -66.0,
+     -17.8
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.76,
+    [
+     -65.8,
+     -17.6
+    ]
+   ],
+   "kw": {
+    "text": "Día del *Mar*",
+    "at": "@@march"
+   },
+   "sticker": {
+    "id": "st_flag",
+    "emoji": "1f1e7-1f1f4",
+    "x": 800,
+    "y": 700,
+    "size": 190,
+    "rot": 8,
+    "at": "@@march",
+    "until": "@@court"
+   },
+   "card": {
+    "kicker": "ICJ 2018",
+    "text": "Chile has no duty to negotiate",
+    "at": "@@court+0.1",
+    "y": 1250
+   },
+   "devices": [
+    {
+     "at": "@@lost",
+     "do": "geo.label_out",
+     "args": {
+      "lid": "lost"
+     }
+    },
+    {
+     "at": "@@sea",
+     "do": "sticker_pulse",
+     "id": "st_flag"
+    },
+    {
+     "at": "@@accepted+0.1",
+     "do": "sticker_pulse",
+     "id": "st_flag"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "So where does the navy sail? Up here, on Lake Titicaca, nearly four kilometres up in the Andes, with around five thousand sailors and a fleet of patrol boats.",
+    "cues": {
+     "sail": "sail",
+     "titicaca": "titicaca",
+     "andes": "andes",
+     "sailors": "sailors"
+    }
+   },
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.5,
+   "climax": true,
+   "direction": "the twist: tighten onto the lake; the lake glows; the pin and the counter on sailors",
+   "cam": [
+    2.0,
+    [
+     -69.2,
+     -16.0
+    ]
+   ],
+   "cam_dur": 1.6,
+   "cam_hold": [
+    2.1,
+    [
+     -69.3,
+     -15.9
+    ]
+   ],
+   "highlights": [],
+   "kw": {
+    "text": "*Lake Titicaca* · 3,800 m",
+    "at": "@@andes"
+   },
+   "elements": [
+    {
+     "id": "sailors",
+     "type": "counter",
+     "start": 0,
+     "end": 5000,
+     "y": 560,
+     "label": "sailors in the Bolivian Navy",
+     "fmt": "int",
+     "size": 150
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@titicaca+0.2",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "tit"
+     }
+    },
+    {
+     "at": "@@sailors-0.6",
+     "do": "chart.counter_run",
+     "id": "sailors",
+     "until": "@@sailors+1.2",
+     "args": {
+      "steps": 14
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "sailors"
+    },
+    {
+     "at": "@@titicaca",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "lago_titicaca",
+      "layer": "lake",
+      "dur": 0.8
+     }
+    },
+    {
+     "at": "@@sailors+0.3",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "lago_titicaca",
+      "layer": "lake",
+      "dur": 0.7
+     }
+    }
+   ]
+  }
+ ],
+ "close": {
+  "vo": {
+   "text": "A navy without a sea, drilling on a mountain lake, waiting for a coast it still calls its own.",
+   "cues": {
+    "sea": "sea",
+    "coast": "coast"
+   }
+  },
+  "text": "A navy *without a sea*",
+  "tone": "revelatory",
+  "energy": 4,
+  "pause_after": 0.5,
+  "y": 760,
+  "cam": [
+   0.7,
+   [
+    -67.0,
+    -19.0
+   ]
+  ],
+  "cam_dur": 1.8,
+  "devices": [
+   {
+    "at": "@+0.2",
+    "do": "geo.pin_out",
+    "stage": "stage_map",
+    "args": {
+     "pid": "tit"
+    }
+   },
+   {
+    "at": "@@coast",
+    "do": "geo.route_draw",
+    "until": "@@coast+1.2",
+    "args": {
+     "rid": "coast",
+     "layer": "lost"
+    }
+   }
+  ]
+ },
+ "cta": {
+  "vo": {
+   "text": "Follow for a new map story every day."
+  }
+ },
+ "outro_headline": "KNOW A STRANGER PLACE?",
+ "geo": {
+  "fit_bbox": [
+   -75,
+   -26,
+   -57,
+   -9
+  ],
+  "far_bbox": [
+   -88,
+   -58,
+   -30,
+   14
+  ],
+  "resolution": "10m",
+  "layers": [
+   {
+    "id": "tint",
+    "ids": [
+     "068"
+    ],
+    "cls": "tint",
+    "note": "Bolivia, the subject"
+   },
+   {
+    "id": "solid",
+    "ids": [
+     "152"
+    ],
+    "cls": "solid",
+    "note": "Chile, the neighbour that took the coast"
+   }
+  ],
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "lost",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "coast",
+       "properties": {
+        "name": "Bolivia's coast 1825–1879"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -70.084,
+          -21.488
+         ],
+         [
+          -70.152,
+          -21.666
+         ],
+         [
+          -70.192,
+          -21.885
+         ],
+         [
+          -70.213,
+          -22.083
+         ],
+         [
+          -70.235,
+          -22.299
+         ],
+         [
+          -70.253,
+          -22.456
+         ],
+         [
+          -70.289,
+          -22.665
+         ],
+         [
+          -70.314,
+          -22.79
+         ],
+         [
+          -70.573,
+          -23.081
+         ],
+         [
+          -70.602,
+          -23.282
+         ],
+         [
+          -70.624,
+          -23.474
+         ],
+         [
+          -70.631,
+          -23.516
+         ],
+         [
+          -70.512,
+          -23.873
+         ],
+         [
+          -70.527,
+          -23.996
+         ],
+         [
+          -70.534,
+          -24.293
+         ],
+         [
+          -70.563,
+          -24.482
+         ],
+         [
+          -70.584,
+          -24.538
+         ],
+         [
+          -70.577,
+          -24.732
+         ],
+         [
+          -70.519,
+          -24.919
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "kind": "area",
+    "id": "lake",
+    "cls": "lake",
+    "source": "ne-lakes",
+    "static": true,
+    "ne": {
+     "file": "ne_50m_lakes",
+     "names": [
+      "Lago Titicaca"
+     ]
+    }
+   }
+  ],
+  "pins": [
+   {
+    "id": "ant",
+    "lonlat": [
+     -70.4,
+     -23.65
+    ],
+    "label": "Antofagasta",
+    "side": "right",
+    "qid": "Q51431"
+   },
+   {
+    "id": "tit",
+    "lonlat": [
+     -69.3,
+     -15.9
+    ],
+    "label": "Lake Titicaca",
+    "side": "right",
+    "qid": "Q35342"
+   }
+  ],
+  "labels": [
+   {
+    "id": "lost",
+    "lonlat": [
+     -71.9,
+     -22.4
+    ],
+    "text": "LOST COAST",
+    "cls": "tag",
+    "in": "s03+99",
+    "out": null
+   }
+  ],
+  "scalebar": {
+   "km": 200,
+   "lonlat": [
+    -74.5,
+    -24.8
+   ]
+  },
+  "subject": {
+   "fid": "068",
+   "layer": "tint"
+  },
+  "cams": {
+   "start": [
+    0.3,
+    [
+     -64,
+     -22
+    ]
+   ],
+   "open": [
+    0.75,
+    [
+     -66.5,
+     -18.5
+    ]
+   ]
+  },
+  "pin_beats": []
+ },
+ "research": {
+  "topic": "Bolivia lost its Pacific coast to Chile in the War of the Pacific (1879–1884, Treaty of 1904), keeps a navy based on Lake Titicaca and inland rivers, marks the Day of the Sea on 23 March, and lost its 2018 ICJ case asking Chile to negotiate sea access.",
+  "myths": [
+   {
+    "myth": "Bolivia never had a coast.",
+    "reality": "It had about 400 km of Pacific coast (the Litoral department, Antofagasta) from independence in 1825 until 1879."
+   }
+  ],
+  "landscape": {
+   "our_gap": "Bolivia-navy clips are talking heads with a flag; nobody draws the lost shore on the satellite map, shows Chile taking it, the court saying no, and then tightens onto the lake where the sailors are.",
+   "existing": [
+    {
+     "title": "Why Bolivia Has a Navy (landlocked)",
+     "format": "talking head, stock footage",
+     "gap": "no map of the lost coast"
+    },
+    {
+     "title": "War of the Pacific explained",
+     "format": "history animation, 10 min",
+     "gap": "not a Short, no present-day twist"
+    },
+    {
+     "title": "Bolivia Lake Titicaca navy tour",
+     "format": "news feature",
+     "gap": "no geography of why"
+    }
+   ]
+  },
+  "sources": {
+   "brit_wotp": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "War of the Pacific (1879–84)",
+    "url": "https://www.britannica.com/event/War-of-the-Pacific",
+    "date": "2026-11-17",
+    "notes": "Chile against Bolivia and Peru, 1879–84; Bolivia lost its coastal province (Antofagasta) and became landlocked; 1904 treaty confirmed Chilean sovereignty."
+   },
+   "brit_bolivia": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Bolivia — Independence and the War of the Pacific",
+    "url": "https://www.britannica.com/place/Bolivia/Independence",
+    "date": "2026-11-17",
+    "notes": "Bolivia's Litoral on the Pacific, roughly 400 km of coast, lost to Chile after 1879."
+   },
+   "icj2018": {
+    "type": "primary",
+    "publisher": "International Court of Justice",
+    "title": "Obligation to Negotiate Access to the Pacific Ocean (Bolivia v. Chile), Judgment of 1 October 2018",
+    "url": "https://www.icj-cij.org/case/153",
+    "date": "2026-11-17",
+    "notes": "The Court found that Chile did not undertake a legal obligation to negotiate a sovereign access to the Pacific Ocean for Bolivia (12 votes to 3)."
+   },
+   "reuters_icj": {
+    "type": "press",
+    "publisher": "Reuters",
+    "title": "World Court rules Chile not obliged to negotiate sea access for Bolivia (1 Oct 2018)",
+    "url": "https://www.reuters.com/article/us-bolivia-chile-court-idUSKCN1MB2WH",
+    "date": "2026-11-17",
+    "notes": "ICJ ruled against Bolivia; Bolivia lost its 400 km coast in the 1879–83 war."
+   },
+   "treaty1904": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Treaty of Peace and Friendship of 1904 between Chile and Bolivia",
+    "url": "https://en.wikipedia.org/wiki/Treaty_of_Peace_and_Friendship_of_1904_between_Chile_and_Bolivia",
+    "date": "2026-11-17",
+    "notes": "Signed 20 October 1904; Bolivia recognised Chilean sovereignty over the former Litoral; Chile granted transit rights and built the Arica–La Paz railway."
+   },
+   "bbc_navy": {
+    "type": "press",
+    "publisher": "BBC News",
+    "title": "Bolivia's landlocked navy dreams of the sea (2018)",
+    "url": "https://www.bbc.com/news/world-latin-america-45622219",
+    "date": "2026-11-17",
+    "notes": "Bolivia's navy, about 5,000 personnel, patrols Lake Titicaca and the rivers; the 23 March Día del Mar; the ICJ case."
+   },
+   "armada": {
+    "type": "primary",
+    "publisher": "Armada Boliviana (Ministerio de Defensa)",
+    "title": "Armada Boliviana — Historia y misión",
+    "url": "https://www.armada.mil.bo/",
+    "date": "2026-11-17",
+    "notes": "Official site of the Bolivian Navy: mission, river and lake districts, Lake Titicaca naval base (Tiquina)."
+   },
+   "wiki_navy": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Bolivian Navy",
+    "url": "https://en.wikipedia.org/wiki/Bolivian_Navy",
+    "date": "2026-11-17",
+    "notes": "Armada Boliviana, about 5,000 personnel, headquartered in La Paz, bases on Lake Titicaca and the river systems."
+   },
+   "wiki_dia": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Día del Mar",
+    "url": "https://en.wikipedia.org/wiki/D%C3%ADa_del_Mar",
+    "date": "2026-11-17",
+    "notes": "Day of the Sea, 23 March, commemorating the loss of the coast (Battle of Topáter, 1879)."
+   },
+   "brit_titicaca": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Lake Titicaca",
+    "url": "https://www.britannica.com/place/Lake-Titicaca",
+    "date": "2026-11-17",
+    "notes": "Elevation about 3,810 m; on the Peru–Bolivia border; the highest large navigable lake."
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Bolivia is landlocked and maintains a navy of roughly 5,000 personnel operating on Lake Titicaca and its rivers.",
+    "sources": [
+     "armada",
+     "bbc_navy",
+     "wiki_navy"
+    ],
+    "vo": [
+     "bolivia has a navy. it has not had a coastline for more than a century",
+     "so where does the navy sail? up here, on lake titicaca, nearly four kilometres up in the andes, with around five thousand sailors and a fleet of patrol boats",
+     "a navy without a sea, drilling on a mountain lake, waiting for a coast it still calls its own"
+    ],
+    "screen": [
+     "a navy, no coast",
+     "sailors in the Bolivian Navy",
+     "Lake Titicaca",
+     "Lake Titicaca · 3,800 m",
+     "A navy without a sea",
+     "The navy with no sea",
+     "Bolivia"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Bolivia held about 400 km of Pacific coast (the Litoral, around Antofagasta) until 1879.",
+    "sources": [
+     "icj2018",
+     "brit_bolivia",
+     "brit_wotp",
+     "reuters_icj"
+    ],
+    "vo": [
+     "this is the pacific shore bolivia once held, a long desert coast around antofagasta"
+    ],
+    "screen": [
+     "400 km of coast",
+     "400 km",
+     "of Pacific coast until 1879",
+     "Antofagasta",
+     "LOST COAST"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "In the War of the Pacific (1879–84) Chile took the coast; the 1904 treaty fixed Chilean sovereignty and Bolivia became landlocked.",
+    "sources": [
+     "brit_wotp",
+     "treaty1904",
+     "icj2018"
+    ],
+    "vo": [
+     "in 1879 chile marched north in the war of the pacific. within a few years the coast was chilean, and bolivia was landlocked"
+    ],
+    "screen": [
+     "1879 · War of the Pacific",
+     "1904",
+     "treaty fixed the border"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "core",
+    "text": "Bolivia marks the Day of the Sea every 23 March and in 2018 the ICJ ruled Chile has no obligation to negotiate sea access.",
+    "sources": [
+     "icj2018",
+     "reuters_icj",
+     "wiki_dia",
+     "bbc_navy"
+    ],
+    "vo": [
+     "bolivia never accepted it. every march it marks the day of the sea, with parades far from any shore, and in 2018 it took chile to the world court, asking for a way back to the ocean. it lost"
+    ],
+    "screen": [
+     "Día del Mar",
+     "ICJ 2018",
+     "Chile has no duty to negotiate"
+    ]
+   },
+   {
+    "id": "C05",
+    "weight": "detail",
+    "text": "Lake Titicaca lies at about 3,810 m on the Bolivia–Peru border.",
+    "sources": [
+     "brit_titicaca",
+     "bbc_navy"
+    ],
+    "vo": [
+     "up here, on lake titicaca, nearly four kilometres up in the andes"
+    ],
+    "screen": [
+     "Lake Titicaca · 3,800 m"
+    ]
+   }
+  ]
+ }
+}
