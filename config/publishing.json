@@ -135,7 +135,7 @@
    "emoji": "🌍",
    "topic": "geography quiz",
    "youtube_category": "27",
-   "playlist": "Geo Blitz 🌍 Daily Geography Quiz",
+   "playlist": "Geo Blitz",
    "hashtags": {
     "youtube": [
      "#GeographyQuiz",
@@ -163,14 +163,14 @@
     "general knowledge",
     "trivia"
    ],
-   "playlist_id": "PLWhHzNp-e8_E"
+   "playlist_id": "PLDv1VGWRbAeY"
   },
   "wild-files": {
    "name": "Wild Files",
    "emoji": "🐾",
    "topic": "animal quiz",
    "youtube_category": "15",
-   "playlist": "Wild Files 🐾 Animal Quiz",
+   "playlist": "Wild Files",
    "hashtags": {
     "youtube": [
      "#AnimalQuiz",
@@ -197,14 +197,14 @@
     "nature trivia",
     "general knowledge"
    ],
-   "playlist_id": "PLN8oBVdR-y5g"
+   "playlist_id": "PLUiUpLO-bwgo"
   },
   "sports-sprint": {
    "name": "Sports Sprint",
    "emoji": "🏆",
    "topic": "sports quiz",
    "youtube_category": "17",
-   "playlist": "Sports Sprint 🏆 Sports Quiz",
+   "playlist": "Sports Sprint",
    "hashtags": {
     "youtube": [
      "#SportsQuiz",
@@ -231,14 +231,14 @@
     "sports history",
     "general knowledge"
    ],
-   "playlist_id": "PLTCyGf04zqB4"
+   "playlist_id": "PLI_QR7mmV4wE"
   },
   "body-brain": {
    "name": "Body & Brain",
    "emoji": "🧠",
    "topic": "human body quiz",
    "youtube_category": "27",
-   "playlist": "Body & Brain 🧠 Human Body Quiz",
+   "playlist": "Body & Brain",
    "hashtags": {
     "youtube": [
      "#HumanBodyQuiz",
@@ -265,7 +265,7 @@
     "science trivia",
     "general knowledge"
    ],
-   "playlist_id": "PLGaF-PD8D7GA"
+   "playlist_id": "PLepe-4Y03_y0"
   }
  },
  "youtube_api": {
@@ -276,6 +276,7 @@
   "max_cover_bytes": 2000000,
   "thumbnails": true,
   "channel_playlist": "TheQuizWire · Daily Map Quiz",
-  "channel_playlist_id": "PLMrT8lRsJLa4"
+  "channel_playlist_id": "PLMrT8lRsJLa4",
+  "playlists_note": "Playlist ids/titles are the OWNER's existing YouTube playlists (audit 2026-11-18). Never create playlists by title; merge duplicates with `yt_enrich.py merge <src> <dst>`."
  }
 }

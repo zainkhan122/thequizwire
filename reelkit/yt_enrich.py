@@ -25,7 +25,7 @@ after Buffer reports `sent` (the upload is still processing for a few minutes).
 Without secrets, `run --dry-run` prints the plan offline (used by selftest). Public copy is never changed: videos.update re-sends the
 existing title/description/category and only adds tags.
 """
-import argparse, json, os, subprocess, sys, tempfile, time, urllib.error, urllib.parse, urllib.request
+import argparse, json, os, re, subprocess, sys, tempfile, time, urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -296,7 +296,7 @@ def steps_for(p, A):
     s = []
     if A["thumbnails"] and not p.get("yt_thumbnail_at") and not p.get("yt_thumbnail_error"): s.append("thumb")
     if not p.get("yt_series_item"): s.append("series")
-    if not p.get("yt_channel_item"): s.append("channel")
+    if A.get("channel_playlist") and not p.get("yt_channel_item"): s.append("channel")   # owner 2026-11-18: series playlists only unless a channel list is configured
     if not p.get("yt_tags_at"): s.append("tags")
     return s
 
@@ -372,6 +372,15 @@ def cmd_merge(a):
             out += [(i["id"], i["snippet"]["resourceId"]["videoId"]) for i in d.get("items", [])]
             tok = d.get("nextPageToken")
             if not tok: return out
+    if dst == "-":                                                                   # plain delete (no destination)
+        if not a.dry_run: yt.call("DELETE", "playlists", {"id": src}, cost=50)
+        L = json.loads(LEDGER.read_text())
+        for p in L["posts"]:
+            if A.get("channel_playlist_id") == src: p.pop("yt_channel_item", None)
+        if A.get("channel_playlist_id") == src: A["channel_playlist_id"] = None; A["channel_playlist"] = None
+        if not a.dry_run:
+            LEDGER.write_text(json.dumps(L, indent=1, ensure_ascii=False) + "\n"); CFG_PATH.write_text(json.dumps(c, indent=1, ensure_ascii=False) + "\n"); quota_save(yt.q, {"units": yt.spent()})
+        print(f"yt_enrich: deleted playlist {src} · {yt.units} units"); return
     have = {v for _, v in items(dst)}; moved = 0
     for _, vid in items(src):
         if vid in have: continue
