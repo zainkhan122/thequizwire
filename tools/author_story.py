@@ -50,9 +50,10 @@ def build(S):
     for i, b in enumerate(beats):
         lines.append({"id": f"v{i + 2:02d}", "scene": sc(i + 2), "role": "story", "tone": b.get("tone", "resolute"), "energy": b.get("energy", 3), "pause_after": b.get("pause_after", 0.4),
                       "direction": b.get("direction", "one idea, let it land"), "text": b["vo"]["text"], "cues": b["vo"].get("cues", {}), **({"climax": True} if b.get("climax") else {})})
-    lines.append({"id": f"v{NB + 2:02d}", "scene": CLOSE, "role": "story", "tone": C.get("tone", "revelatory"), "energy": C.get("energy", 4), "pause_after": C.get("pause_after", 0.5),
-                  "direction": C.get("direction", "answer the opening line with the same noun"), "text": C["vo"]["text"], "cues": C["vo"].get("cues", {}), "climax": True})
-    lines.append({"id": f"v{NB + 3:02d}", "scene": CTA, "role": "cta", "tone": "tender", "energy": 3, "pause_after": 0.0, "direction": "short follow — the outro visual does the work",
+    lines.append({"id": f"v{NB + 2:02d}", "scene": CLOSE, "role": "story", "tone": C.get("tone", "revelatory"), "energy": C.get("energy", 5), "pause_after": C.get("pause_after", 0.5),
+                  "direction": C.get("direction", "answer the opening line with the same noun"), "text": C["vo"]["text"], "cues": C["vo"].get("cues", {}),
+                  **({} if any(b.get("climax") for b in beats) else {"climax": True})})                        # exactly one climax (voice gate)
+    lines.append({"id": f"v{NB + 3:02d}", "scene": CTA, "role": "cta", "tone": "tender", "energy": 2, "pause_after": 0.0, "direction": "short follow — the outro visual does the work",
                   "text": S["cta"]["vo"]["text"], "cues": {}})
     V = {"version": 1, "episode": ep, "backend": "kokoro", "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)", "kokoro_fallback": {"voice": "am_michael", "speed": 1.3},
          "intent": S["intent"], "pacing_profile": "documentary: cold open, place, why in 2–5 beats, twist, close answers the open, short CTA (docs/STORY_GUIDELINES.md §2)",
@@ -140,7 +141,9 @@ def build(S):
             B.append(d)
     # close
     els.append({"id": "close", "type": "close", "text": C["text"], **({"y": C["y"]} if C.get("y") else {})})
-    if C.get("cam"): B.append(cam(CLOSE, f"{CLOSE}+{C.get('cam_dur', 1.6)}", C["cam"], "power2.inOut"))
+    if C.get("cam"):
+        B.append(cam(CLOSE, f"{CLOSE}+{C.get('cam_dur', 1.6)}", C["cam"], "power2.inOut"))
+        B.append(cam(f"{CLOSE}+{C.get('cam_dur', 1.6)}", f"{CLOSE}.end", [round(C["cam"][0] * 0.96, 3), C["cam"][1]], "none"))     # slow pull during the close line
     B.append({"at": rel(C.get("at", "@+0.3"), CLOSE), "do": "close_in", "id": "close", "until": f"{CLOSE}.end"})
     if g.get("subject"):                                                                    # cue breath on the close line too
         for cue in (C["vo"].get("cues") or {}):

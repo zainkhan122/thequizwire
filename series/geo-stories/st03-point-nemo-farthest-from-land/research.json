@@ -1,0 +1,208 @@
+{
+ "version": 1,
+ "episode": "st03-point-nemo-farthest-from-land",
+ "topic": "Point Nemo (48°52.6′S 123°23.6′W), the oceanic pole of inaccessibility, lies about 2,688 km from the nearest land (Ducie Island, Motu Nui, Maher Island); the ISS orbits at about 400 km, so its crew are at times the nearest humans; the surrounding area is used as the 'spacecraft cemetery' where 260+ spacecraft including Mir were deorbited.",
+ "researched": "2026-11-18",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Point Nemo is an island.",
+   "reality": "It is a point of open ocean, the spot farthest from any coastline; there is no land there at all."
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right",
+  "^GEO STORIES",
+  "^KNOW A STRANGER PLACE\\?$"
+ ],
+ "landscape": {
+  "our_gap": "Point Nemo Shorts are narrated stock-footage clips about 'the creepiest place on Earth'; nobody draws the 2,688 km circle to scale on the satellite map, pins the three specks, and ties the orbit altitude to the spacecraft cemetery in one minute.",
+  "existing": [
+   {
+    "title": "Point Nemo, the most remote place on Earth",
+    "format": "stock footage + narration",
+    "gap": "no to-scale map"
+   },
+   {
+    "title": "The spacecraft cemetery explained",
+    "format": "space-channel explainer",
+    "gap": "no geography of why here"
+   },
+   {
+    "title": "Cthulhu lives at Point Nemo",
+    "format": "meme / horror",
+    "gap": "no facts"
+   }
+  ]
+ },
+ "sources": {
+  "noaa": {
+   "type": "primary",
+   "publisher": "NOAA National Ocean Service",
+   "title": "What is Point Nemo?",
+   "url": "https://oceanservice.noaa.gov/facts/nemo.html",
+   "date": "2026-11-17",
+   "notes": "Oceanic pole of inaccessibility at 48°52.6′S 123°23.6′W; about 2,688 km from the nearest land (Ducie Island, Motu Nui, Maher Island); used for controlled re-entries of spacecraft."
+  },
+  "lukatela": {
+   "type": "scholarly",
+   "publisher": "Hrvoje Lukatela (Geodyssey)",
+   "title": "A Point of Inaccessibility in the Pacific Ocean (1992 computation)",
+   "url": "http://www.geodyssey.com/papers/hlnemo92.html",
+   "date": "2026-11-17",
+   "notes": "Original computation: 48°52.6′S 123°23.6′W, 2,688 km from Ducie Island, Motu Nui and Maher Island."
+  },
+  "wiki_nemo": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Pole of inaccessibility — Oceanic pole (Point Nemo)",
+   "url": "https://en.wikipedia.org/wiki/Pole_of_inaccessibility#Oceanic_pole_of_inaccessibility",
+   "date": "2026-11-17",
+   "notes": "Point Nemo, 2,688 km from the three nearest islands; ISS crews at ~400 km are at times the nearest humans; spacecraft cemetery nearby."
+  },
+  "wiki_cemetery": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Spacecraft cemetery",
+   "url": "https://en.wikipedia.org/wiki/Spacecraft_cemetery",
+   "date": "2026-11-17",
+   "notes": "South Pacific Ocean Uninhabited Area around Point Nemo; between 1971 and 2016 at least 263 spacecraft were deorbited there, including Mir (2001)."
+  },
+  "esa": {
+   "type": "primary",
+   "publisher": "European Space Agency",
+   "title": "Where do old satellites go when they die? (Space debris)",
+   "url": "https://www.esa.int/Space_Safety/Space_Debris/Reentry_and_collision_avoidance",
+   "date": "2026-11-17",
+   "notes": "Controlled re-entries target the South Pacific Ocean Uninhabited Area, far from shipping and land."
+  },
+  "nasa_iss": {
+   "type": "primary",
+   "publisher": "NASA",
+   "title": "International Space Station facts and figures",
+   "url": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
+   "date": "2026-11-17",
+   "notes": "The ISS orbits at an average altitude of about 400 km (250 miles)."
+  },
+  "brit_mir": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Mir (space station)",
+   "url": "https://www.britannica.com/technology/Mir-space-station",
+   "date": "2026-11-17",
+   "notes": "Mir was deorbited on 23 March 2001 over the South Pacific."
+  },
+  "popsci": {
+   "type": "press",
+   "publisher": "Popular Science",
+   "title": "The spacecraft cemetery at Point Nemo",
+   "url": "https://www.popsci.com/point-nemo-spacecraft-cemetery/",
+   "date": "2026-11-17",
+   "notes": "More than 260 spacecraft, including Mir, brought down in the uninhabited South Pacific area around Point Nemo."
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Point Nemo, the oceanic pole of inaccessibility (48°52.6′S 123°23.6′W), is about 2,688 km from the nearest land.",
+   "sources": [
+    "noaa",
+    "lukatela",
+    "wiki_nemo"
+   ],
+   "vo": [
+    "this is point nemo, the spot in the south pacific farthest from any land. the nearest coast is two thousand six hundred and eighty-eight kilometres away",
+    "the loneliest point in the ocean, where the only neighbours pass by in orbit"
+   ],
+   "screen": [
+    "2,688 km to any coast",
+    "km to the nearest land",
+    "Point Nemo",
+    "closer than any coast at 2,688 km"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "The three nearest pieces of land are Ducie Island (Pitcairn), Motu Nui (off Easter Island) and Maher Island (Antarctica), all uninhabited.",
+   "sources": [
+    "noaa",
+    "lukatela",
+    "wiki_nemo"
+   ],
+   "vo": [
+    "three specks of land sit on that circle: ducie island to the north, motu nui off easter island to the north-east, and maher island, on the edge of antarctica, to the south",
+    "nobody lives on any of them"
+   ],
+   "screen": [
+    "three specks of land",
+    "Ducie Island",
+    "Motu Nui",
+    "Maher Island"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "The ISS orbits at about 400 km, so when it passes over Point Nemo its crew are nearer than anyone on land.",
+   "sources": [
+    "nasa_iss",
+    "wiki_nemo",
+    "noaa"
+   ],
+   "vo": [
+    "there is a point in the ocean where the nearest human beings are usually in orbit",
+    "the space station passes about four hundred kilometres overhead, so when it does, its crew are the closest people to this spot"
+   ],
+   "screen": [
+    "nearest humans: in orbit",
+    "400 km up · closest people",
+    "ISS ≈ 400 km",
+    "Neighbours only in orbit",
+    "The place where the nearest people are in space"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "The area around Point Nemo is used for controlled spacecraft re-entries; at least 263 spacecraft were deorbited there between 1971 and 2016, including Mir in 2001.",
+   "sources": [
+    "esa",
+    "wiki_cemetery",
+    "brit_mir",
+    "popsci"
+   ],
+   "vo": [
+    "that emptiness is useful. space agencies steer dead spacecraft to burn up and fall here, more than two hundred and fifty of them so far, including the mir space station"
+   ],
+   "screen": [
+    "the spacecraft cemetery",
+    "spacecraft brought down here (1971–2016)"
+   ]
+  }
+ ]
+}

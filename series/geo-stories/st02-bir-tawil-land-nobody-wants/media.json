@@ -1,0 +1,41 @@
+{
+ "files": {},
+ "generated": {
+  "geo/main.json": {
+   "by": "reelkit/geodata.py",
+   "bytes": 99154,
+   "credit": "Natural Earth",
+   "kind": "data",
+   "licence": "PD",
+   "provider": "Natural Earth",
+   "source": "world-atlas 2.0.2 50m + ne_10m_admin_0_disputed_areas + ne_10m_admin_0_disputed_areas"
+  },
+  "geo/main_basemap.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 1341299,
+   "credit": "NASA Blue Marble",
+   "kind": "image",
+   "licence": "PD-USGov",
+   "provider": "NASA GIBS",
+   "source": "BlueMarble_ShadedRelief_Bathymetry z8 (156 tiles)"
+  },
+  "geo/main_basemap_far.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 406612,
+   "credit": "NASA Blue Marble",
+   "kind": "image",
+   "licence": "PD-USGov",
+   "provider": "NASA GIBS",
+   "source": "BlueMarble_ShadedRelief_Bathymetry z6 (36 tiles)"
+  },
+  "mix.wav": {
+   "ai_voice": "Kokoro am_michael",
+   "by": "reelkit/quizscore.py (procedural bed/ticks/sting) + Kokoro VO takes",
+   "derived_from": "procedural reelkit/synth.py + Kokoro takes vo/*",
+   "kind": "mix",
+   "licence": "own",
+   "provider": "build"
+  }
+ },
+ "version": 1
+}

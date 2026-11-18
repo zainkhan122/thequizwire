@@ -82,7 +82,7 @@
    "scene": "s05",
    "role": "story",
    "tone": "revelatory",
-   "energy": 4,
+   "energy": 5,
    "pause_after": 0.5,
    "direction": "the twist: tighten onto the lake; the lake glows; the pin and the counter on sailors",
    "text": "So where does the navy sail? Up here, on Lake Titicaca, nearly four kilometres up in the Andes, with around five thousand sailors and a fleet of patrol boats.",
@@ -99,22 +99,21 @@
    "scene": "s06",
    "role": "story",
    "tone": "revelatory",
-   "energy": 4,
+   "energy": 5,
    "pause_after": 0.5,
    "direction": "answer the opening line with the same noun",
    "text": "A navy without a sea, drilling on a mountain lake, waiting for a coast it still calls its own.",
    "cues": {
     "sea": "sea",
     "coast": "coast"
-   },
-   "climax": true
+   }
   },
   {
    "id": "v07",
    "scene": "s07",
    "role": "cta",
    "tone": "tender",
-   "energy": 3,
+   "energy": 2,
    "pause_after": 0.0,
    "direction": "short follow — the outro visual does the work",
    "text": "Follow for a new map story every day.",

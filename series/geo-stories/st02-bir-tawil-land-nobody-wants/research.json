@@ -1,0 +1,214 @@
+{
+ "version": 1,
+ "episode": "st02-bir-tawil-land-nobody-wants",
+ "topic": "Bir Tawil, a ~2,060 km² area between Egypt and Sudan claimed by neither, exists because the 1899 Anglo-Egyptian Condominium boundary (22°N) and the 1902 administrative boundary disagree; each state asserts the line that gives it the larger Hala'ib Triangle on the Red Sea, so neither can claim Bir Tawil.",
+ "researched": "2026-11-18",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Bir Tawil is unclaimed because nobody knows it exists.",
+   "reality": "Both Egypt and Sudan know it; claiming it would mean accepting the boundary line that hands the far larger Hala'ib Triangle to the other side."
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right",
+  "^GEO STORIES",
+  "^KNOW A STRANGER PLACE\\?$"
+ ],
+ "landscape": {
+  "our_gap": "Bir Tawil Shorts are talking heads about 'the last unclaimed land' and self-declared kingdoms; nobody draws both lines on the satellite map and shows, in one frame, why claiming the small patch costs the coastal triangle.",
+  "existing": [
+   {
+    "title": "The land no country wants",
+    "format": "talking head + stock",
+    "gap": "no map of the two lines"
+   },
+   {
+    "title": "I claimed my own country (Bir Tawil)",
+    "format": "vlog / stunt",
+    "gap": "no geography at all"
+   },
+   {
+    "title": "Hala'ib Triangle explained",
+    "format": "10-min history video",
+    "gap": "not a Short, no single-frame payoff"
+   }
+  ]
+ },
+ "sources": {
+  "brit_halaib": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Ḥalāʾib Triangle",
+   "url": "https://www.britannica.com/place/Halaib-Triangle",
+   "date": "2026-11-17",
+   "notes": "Area of about 20,580 km² on the Red Sea coast; 1899 agreement set the political boundary at 22°N; 1902 administrative boundary gave the area to Sudan; administered by Egypt, claimed by Sudan."
+  },
+  "wiki_birtawil": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Bir Tawil",
+   "url": "https://en.wikipedia.org/wiki/Bir_Tawil",
+   "date": "2026-11-17",
+   "notes": "About 2,060 km²; terra nullius; result of the 1899 (22°N) and 1902 boundaries; claiming it would forfeit the claim to the Hala'ib Triangle."
+  },
+  "wiki_halaib": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Hala'ib Triangle",
+   "url": "https://en.wikipedia.org/wiki/Hala%27ib_Triangle",
+   "date": "2026-11-17",
+   "notes": "20,580 km²; towns Hala'ib, Abu Ramad, Shalateen; Egypt administers since the 1990s; Sudan claims; 1902 line placed it under Khartoum."
+  },
+  "condominium": {
+   "type": "primary",
+   "publisher": "Anglo-Egyptian Condominium Agreement (19 January 1899), text via Wikisource",
+   "title": "Agreement between Her Britannic Majesty's Government and the Government of His Highness the Khedive of Egypt relative to the future administration of the Sudan",
+   "url": "https://en.wikisource.org/wiki/Anglo-Egyptian_Condominium_Agreement",
+   "date": "2026-11-17",
+   "notes": "Article I: the word Sudan means all territories south of the 22nd parallel of latitude."
+  },
+  "registry": {
+   "type": "reference",
+   "publisher": "TheQuizWire border policy registry",
+   "title": "docs/border_registry.json#halaib_bir_tawil",
+   "url": "https://github.com/zainkhan122/thequizwire/blob/main/docs/border_registry.json",
+   "date": "2026-11-17",
+   "notes": "Halayib Triangle: controller Egypt, claimant Sudan; Bir Tawil: claimed by neither (terra nullius); as of 2026-10."
+  },
+  "guardian": {
+   "type": "press",
+   "publisher": "The Guardian",
+   "title": "Welcome to the land that no country wants (2016)",
+   "url": "https://www.theguardian.com/world/2016/mar/03/welcome-to-the-land-that-no-country-wants-bir-tawil",
+   "date": "2026-11-17",
+   "notes": "Bir Tawil, about 2,000 km², unclaimed by Egypt or Sudan because of the two conflicting 1899 and 1902 lines; claiming it means giving up the Hala'ib Triangle."
+  },
+  "ibs18": {
+   "type": "primary",
+   "publisher": "US Department of State, Office of the Geographer",
+   "title": "International Boundary Study No. 18: Sudan – United Arab Republic (Egypt) Boundary (27 July 1962)",
+   "url": "https://fall.fsulawrc.com/collection/LimitsinSeas/IBS018.pdf",
+   "date": "2026-11-17",
+   "notes": "Official boundary study: the 1899 Condominium boundary at 22°N, the 1902 administrative boundary and the two areas (Hala'ib north of 22°N administered from Khartoum; Bir Tawil south of it administered from Cairo)."
+  },
+  "bbc": {
+   "type": "press",
+   "publisher": "BBC News",
+   "title": "The man who declared himself king of a no man's land (2014)",
+   "url": "https://www.bbc.com/news/magazine-28000525",
+   "date": "2026-11-17",
+   "notes": "Bir Tawil between Egypt and Sudan, unclaimed by either; the 1899 straight line versus the 1902 administrative line; the Hala'ib Triangle is the prize."
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Bir Tawil (about 2,060 km²) lies between Egypt and Sudan and is claimed by neither state.",
+   "sources": [
+    "ibs18",
+    "wiki_birtawil",
+    "guardian",
+    "bbc",
+    "registry"
+   ],
+   "vo": [
+    "between egypt and sudan there is a piece of desert that nobody claims. not forgotten. refused",
+    "and the same two lines leave this smaller patch to the other side. claim it, and you accept the line that loses you the coast. so neither does",
+    "two thousand square kilometres of desert, unclaimed on purpose, because wanting it would cost the coast"
+   ],
+   "screen": [
+    "nobody claims it",
+    "2,060 km²",
+    "Bir Tawil",
+    "Bir Tawil",
+    "Administered by no state — claimed by neither Egypt nor Sudan (terra nullius)",
+    "Claimed by no state",
+    "The land nobody wants",
+    "Unclaimed on purpose",
+    "claim it, lose the coast"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "The 1899 Anglo-Egyptian Condominium Agreement set the Egypt–Sudan boundary along the 22nd parallel.",
+   "sources": [
+    "condominium",
+    "brit_halaib",
+    "wiki_birtawil"
+   ],
+   "vo": [
+    "in 1899 britain drew the border along the twenty-second parallel. a straight line, east to west"
+   ],
+   "screen": [
+    "1899 · the straight line",
+    "1899 · 22°N"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "In 1902 a separate administrative boundary was drawn following tribal grazing areas, placing the Hala'ib Triangle under Sudan and Bir Tawil under Egypt.",
+   "sources": [
+    "ibs18",
+    "brit_halaib",
+    "wiki_halaib",
+    "bbc"
+   ],
+   "vo": [
+    "three years later it drew a second line, following the tribes instead: a bend north by the sea, a bend south in the desert"
+   ],
+   "screen": [
+    "1902 · the second line"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "The Hala'ib Triangle (about 20,580 km², with Red Sea coast and towns) is administered by Egypt and claimed by Sudan; Egypt relies on the 1899 line and Sudan on the 1902 line.",
+   "sources": [
+    "ibs18",
+    "brit_halaib",
+    "wiki_halaib",
+    "registry"
+   ],
+   "vo": [
+    "egypt holds to the straight line. sudan holds to the second. each line gives its owner the big coastal triangle, the one with the red sea and the towns"
+   ],
+   "screen": [
+    "the coastal triangle",
+    "20,580 km²",
+    "coastal triangle",
+    "Red Sea coast · towns · both claim it",
+    "Halaib Triangle",
+    "Administered by Egypt",
+    "Claimed by Sudan"
+   ]
+  }
+ ]
+}

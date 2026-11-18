@@ -64,7 +64,7 @@ Editing either one is a policy change: cite the source, bump `as_of`, update bot
 | `dokdo` | Dokdo / Takeshima | Dokdo / Takeshima: **South Korea** administers · claimed by Japan | 2026-10 |
 | `south_china_sea` | South China Sea islands | South China Sea islands: **features held variously by China, Vietnam, the Philippines, Malaysia, Taiwan** administers · claimed by China, Vietnam, Philippines, Malaysia, Brunei, Taiwan | 2026-10 |
 | `essequibo` | Essequibo | West of Essequibo River: **Guyana** administers · claimed by Venezuela | 2026-10 |
-| `halaib_bir_tawil` | Halaib Triangle and Bir Tawil | Halaib Triangle: **Egypt** administers · claimed by Sudan; Bir Tawil: **claimed by neither Egypt nor Sudan (terra nullius)** administers · claimed by — | 2026-10 |
+| `halaib_bir_tawil` | Halaib Triangle and Bir Tawil | Halaib Triangle: **Egypt** administers · claimed by Sudan; Bir Tawil: **no state — claimed by neither Egypt nor Sudan (terra nullius)** administers · claimed by — | 2026-11 |
 | `abyei` | Abyei | Abyei: **joint/contested (UNISFA-patrolled)** administers · claimed by Sudan, South Sudan | 2026-10 |
 | `ilemi` | Ilemi Triangle | Ilemi Triangle: **Kenya** administers · claimed by South Sudan | 2026-10 |
 | `chagos` | Chagos Archipelago | Chagos Archipelago: **United Kingdom (2024 agreement to transfer sovereignty to Mauritius; verify status before use)** administers · claimed by Mauritius | 2026-10 |

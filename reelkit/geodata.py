@@ -82,7 +82,8 @@ def ne_features(spec_ne):
     src = json.loads(ne_path(spec_ne["file"]).read_text())
     def names_of(f):
         pr = f.get("properties") or {}
-        return {str(pr.get(k) or "").strip().lower() for k in ("name", "name_en", "name_alt", "name_long")} - {""}
+        pl = {str(k).lower(): v for k, v in pr.items()}                                        # 10m admin files use upper-case keys (NAME, NAME_EN…)
+        return {str(pl.get(k) or "").strip().lower() for k in ("name", "name_en", "name_alt", "name_long", "brk_name")} - {""}
     groups = spec_ne.get("groups") or {_slug(n): [n] for n in spec_ne.get("names", [])}
     flow = spec_ne.get("flow", "north"); out = []
     for gid, want in groups.items():

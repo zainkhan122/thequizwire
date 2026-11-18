@@ -1,0 +1,127 @@
+{
+ "id": "st03-point-nemo-farthest-from-land",
+ "format": "story-v1",
+ "series": "geo-stories",
+ "number": 3,
+ "title": "The place where the nearest people are in space",
+ "seed": 5103,
+ "difficulty": "STORY",
+ "story": {
+  "place": "Point Nemo · South Pacific",
+  "headline": "The place where the nearest people are *in space*",
+  "search_term": "point nemo",
+  "shape": "number-nobody-believes",
+  "close": "Neighbours only *in orbit*",
+  "cover": {
+   "place": "POINT NEMO · SOUTH PACIFIC",
+   "headline": "Nearest humans: *in space*"
+  },
+  "outro": {
+   "headline": "KNOW A STRANGER PLACE?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "cold-open",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Point Nemo: the spot where the nearest humans are in space 🛰️",
+  "premise": "There is a spot in the Pacific where the closest humans are usually the ones in orbit",
+  "bait": "Could you handle being 2,700 km from anyone? 👇",
+  "keywords": [
+   "point nemo",
+   "farthest from land",
+   "most remote place on earth",
+   "spacecraft cemetery",
+   "oceanic pole of inaccessibility",
+   "where satellites crash",
+   "geography story",
+   "map story"
+  ],
+  "description": "In the South Pacific there is a point so far from any coast that the people passing overhead on the space station are often closer than anyone on land. This map story measures the distance to the three nearest specks of land, draws the empty circle around it, and shows why space agencies steer their dead spacecraft here on purpose.\nCould you handle being that far from anyone? Tell us below.",
+  "hashtags": [
+   "#Geography",
+   "#MapStory",
+   "#Ocean",
+   "#Shorts"
+  ],
+  "tags": [
+   "GeoStories",
+   "Ocean"
+  ],
+  "cover_emoji": "",
+  "cover_emoji_why": "stories carry no icon on the cover (title + place only)",
+  "copy": {
+   "spoilers": [
+    "2,688",
+    "2688",
+    "ducie",
+    "motu nui",
+    "maher",
+    "cemetery",
+    "mir"
+   ],
+   "youtube": {
+    "title": "Point Nemo: the spot where the nearest humans are in space 🛰️",
+    "description": "In the South Pacific there is a point so far from any coast that the people passing overhead on the space station are often closer than anyone on land. This map story measures the distance to the three nearest specks of land, draws the empty circle around it, and shows why space agencies steer their dead spacecraft here on purpose.\nCould you handle being that far from anyone? Tell us below.",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Ocean",
+     "#Shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Nearest humans: in space 🛰️\nIn the South Pacific there is a point so far from any coast that the crew passing overhead is often closer than anyone on land. Here are the three nearest specks of land, the empty circle, and why dead spacecraft are aimed here.\nCould you handle it?",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Ocean",
+     "#GeoReels",
+     "#DidYouKnow"
+    ]
+   },
+   "facebook": {
+    "text": "In the South Pacific there is a point so far from any coast that the astronauts passing overhead are often the closest people. This map story measures the distance to the three nearest specks of land, draws the empty circle, and shows why space agencies aim their dead spacecraft at it. Could you handle being that far from anyone?",
+    "tags": [
+     "#Geography",
+     "#Ocean"
+    ]
+   },
+   "twitter": {
+    "text": "There is a point in the Pacific where the nearest humans are usually in orbit. A map story.",
+    "tags": [
+     "#Geography",
+     "#Ocean"
+    ]
+   },
+   "threads": {
+    "text": "A spot in the South Pacific so remote that the space station crew is often closer than anyone on land — and that is exactly why dead satellites are aimed at it. One-minute map story.",
+    "tags": [
+     "#Geography",
+     "#MapStory"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "story",
+  "story_shape": "number-nobody-believes",
+  "hook": "cold-open",
+  "opener": "mystery-zoom-out",
+  "reveal": "none",
+  "beats": [
+   "pin",
+   "route",
+   "counter",
+   "pin"
+  ],
+  "cast": "none",
+  "music": "bed:drone"
+ },
+ "status": "draft"
+}

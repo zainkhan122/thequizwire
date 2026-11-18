@@ -722,13 +722,13 @@
     },
     {
      "ne_name": "Bir Tawil",
-     "controller": "claimed by neither Egypt nor Sudan (terra nullius)",
+     "controller": "no state — claimed by neither Egypt nor Sudan (terra nullius)",
      "claimants": []
     }
    ],
-   "as_of": "2026-10",
-   "source": "Natural Earth",
-   "note": "Natural Earth spells the feature 'Halayib Triangle'"
+   "as_of": "2026-11",
+   "source": "Natural Earth; US Dept of State International Boundary Study No. 18 (1962); Britannica 'Halaib Triangle'",
+   "note": "Natural Earth spells the feature 'Halayib Triangle'. Bir Tawil plate reads 'Administered by no state — claimed by neither…' (wording fixed 2026-11-18 so the plate template stays grammatical)"
   },
   {
    "id": "abyei",

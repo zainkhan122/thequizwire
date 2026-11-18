@@ -351,7 +351,7 @@
     }
    },
    "tone": "revelatory",
-   "energy": 4,
+   "energy": 5,
    "pause_after": 0.5,
    "climax": true,
    "direction": "the twist: tighten onto the lake; the lake glows; the pin and the counter on sailors",
@@ -441,7 +441,7 @@
   },
   "text": "A navy *without a sea*",
   "tone": "revelatory",
-  "energy": 4,
+  "energy": 5,
   "pause_after": 0.5,
   "y": 760,
   "cam": [

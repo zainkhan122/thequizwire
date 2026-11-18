@@ -1,0 +1,321 @@
+{
+ "version": 1,
+ "episode": "st02-bir-tawil-land-nobody-wants",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     29,
+     18,
+     39,
+     26
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "tint",
+     "ids": [
+      "818",
+      "729"
+     ],
+     "cls": "tint",
+     "note": "Egypt and Sudan, the two claimants, one tint"
+    },
+    {
+     "kind": "area",
+     "id": "void",
+     "cls": "highlight solid",
+     "source": "ne-disputed-void",
+     "ne": {
+      "file": "ne_10m_admin_0_disputed_areas",
+      "names": [
+       "Bir Tawil"
+      ]
+     }
+    },
+    {
+     "kind": "area",
+     "id": "prize",
+     "cls": "highlight glow",
+     "source": "ne-disputed-prize",
+     "ne": {
+      "file": "ne_10m_admin_0_disputed_areas",
+      "names": [
+       "Halayib Triangle"
+      ]
+     }
+    },
+    {
+     "kind": "route",
+     "id": "lines",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "l1899",
+        "properties": {
+         "name": "1899 political boundary (22°N)"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           31.4,
+           22.0
+          ],
+          [
+           33.0,
+           22.0
+          ],
+          [
+           34.2,
+           22.0
+          ],
+          [
+           35.5,
+           22.0
+          ],
+          [
+           36.88,
+           22.0
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    },
+    {
+     "kind": "route",
+     "id": "lines2",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "l1902",
+        "properties": {
+         "name": "1902 administrative boundary (Natural Earth polygon edges)"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           33.303681,
+           22.0
+          ],
+          [
+           33.304,
+           21.903
+          ],
+          [
+           33.44,
+           21.801
+          ],
+          [
+           33.558,
+           21.711
+          ],
+          [
+           33.717,
+           21.731
+          ],
+          [
+           33.866,
+           21.75
+          ],
+          [
+           33.999,
+           21.767
+          ],
+          [
+           33.999,
+           21.767
+          ],
+          [
+           33.999118,
+           22.0
+          ],
+          [
+           34.147,
+           22.192
+          ],
+          [
+           34.828,
+           22.607
+          ],
+          [
+           35.487,
+           23.023
+          ],
+          [
+           35.675,
+           22.967
+          ],
+          [
+           35.752,
+           22.886
+          ],
+          [
+           35.782,
+           22.841
+          ],
+          [
+           35.83,
+           22.785
+          ],
+          [
+           35.943,
+           22.713
+          ],
+          [
+           36.121,
+           22.676
+          ],
+          [
+           36.296,
+           22.522
+          ],
+          [
+           36.402,
+           22.449
+          ],
+          [
+           36.44,
+           22.356
+          ],
+          [
+           36.714,
+           22.169
+          ],
+          [
+           36.757,
+           22.177
+          ],
+          [
+           36.809,
+           22.121
+          ],
+          [
+           36.895,
+           22.066
+          ],
+          [
+           36.899,
+           22.03
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "pins": [],
+   "labels": [
+    {
+     "id": "l1899",
+     "lonlat": [
+      32.5,
+      22.1
+     ],
+     "text": "1899 · 22°N",
+     "cls": "tag",
+     "in": "s02+99",
+     "out": null
+    },
+    {
+     "id": "l1902",
+     "lonlat": [
+      33.95,
+      22.55
+     ],
+     "text": "1902 · the second line",
+     "cls": "tag",
+     "in": "s03+99",
+     "out": null
+    }
+   ],
+   "disputed": [
+    {
+     "id": "halaib",
+     "ne_name": "Halayib Triangle",
+     "name": "Halaib Triangle",
+     "controller": "Egypt",
+     "claimants": [
+      "Sudan"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#halaib_bir_tawil",
+     "label_at": [
+      35.7,
+      23.4
+     ],
+     "plate_cls": "small",
+     "manual": true
+    },
+    {
+     "id": "birtawil",
+     "ne_name": "Bir Tawil",
+     "name": "Bir Tawil",
+     "controller": "no state — claimed by neither Egypt nor Sudan (terra nullius)",
+     "claimants": [
+      "no state"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#halaib_bir_tawil",
+     "label_at": [
+      33.9,
+      21.55
+     ],
+     "plate_cls": "small",
+     "manual": true
+    }
+   ],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.8,
+    "far": {
+     "bbox": [
+      22,
+      10,
+      46,
+      32
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a border story at 22°N; the big/small comparison is carried by the to-scale bar chart `area` (compare element), not by the map shapes (P1)",
+   "size_claim_device": "area",
+   "scalebar": {
+    "km": 100,
+    "lonlat": [
+     29.6,
+     18.9
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

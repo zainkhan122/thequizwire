@@ -1,0 +1,1471 @@
+{
+ "id": "st03-point-nemo-farthest-from-land",
+ "series": "geo-stories",
+ "number": 3,
+ "seed": 5103,
+ "place": "Point Nemo · South Pacific",
+ "headline": "The place where the nearest people are *in space*",
+ "search_term": "point nemo",
+ "cover": {
+  "place": "POINT NEMO · SOUTH PACIFIC",
+  "headline": "Nearest humans: *in space*"
+ },
+ "intent": "The spot in the ocean farthest from any land, so remote that astronauts overhead are often the closest people, and the reason space agencies aim dead satellites at it.",
+ "variety": {
+  "shape": "number-nobody-believes",
+  "opener": "mystery-zoom-out",
+  "music": "bed:drone",
+  "cast": "none",
+  "beats": [
+   "pin",
+   "route",
+   "counter",
+   "pin"
+  ]
+ },
+ "post": {
+  "premise": "There is a spot in the Pacific where the closest humans are usually the ones in orbit",
+  "bait": "Could you handle being 2,700 km from anyone? 👇",
+  "keywords": [
+   "point nemo",
+   "farthest from land",
+   "most remote place on earth",
+   "spacecraft cemetery",
+   "oceanic pole of inaccessibility",
+   "where satellites crash",
+   "geography story",
+   "map story"
+  ],
+  "tags": [
+   "GeoStories",
+   "Ocean"
+  ],
+  "copy": {
+   "spoilers": [
+    "2,688",
+    "2688",
+    "ducie",
+    "motu nui",
+    "maher",
+    "cemetery",
+    "mir"
+   ],
+   "youtube": {
+    "title": "Point Nemo: the spot where the nearest humans are in space 🛰️",
+    "description": "In the South Pacific there is a point so far from any coast that the people passing overhead on the space station are often closer than anyone on land. This map story measures the distance to the three nearest specks of land, draws the empty circle around it, and shows why space agencies steer their dead spacecraft here on purpose.\nCould you handle being that far from anyone? Tell us below.",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Ocean",
+     "#Shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Nearest humans: in space 🛰️\nIn the South Pacific there is a point so far from any coast that the crew passing overhead is often closer than anyone on land. Here are the three nearest specks of land, the empty circle, and why dead spacecraft are aimed here.\nCould you handle it?",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Ocean",
+     "#GeoReels",
+     "#DidYouKnow"
+    ]
+   },
+   "facebook": {
+    "text": "In the South Pacific there is a point so far from any coast that the astronauts passing overhead are often the closest people. This map story measures the distance to the three nearest specks of land, draws the empty circle, and shows why space agencies aim their dead spacecraft at it. Could you handle being that far from anyone?",
+    "tags": [
+     "#Geography",
+     "#Ocean"
+    ]
+   },
+   "twitter": {
+    "text": "There is a point in the Pacific where the nearest humans are usually in orbit. A map story.",
+    "tags": [
+     "#Geography",
+     "#Ocean"
+    ]
+   },
+   "threads": {
+    "text": "A spot in the South Pacific so remote that the space station crew is often closer than anyone on land — and that is exactly why dead satellites are aimed at it. One-minute map story.",
+    "tags": [
+     "#Geography",
+     "#MapStory"
+    ]
+   }
+  }
+ },
+ "open": {
+  "vo": {
+   "text": "There is a point in the ocean where the nearest human beings are usually in orbit.",
+   "cues": {
+    "point": "point",
+    "ocean": "ocean",
+    "orbit": "orbit"
+   }
+  },
+  "tone": "urgent",
+  "energy": 4,
+  "pause_after": 0.45,
+  "kw": {
+   "text": "nearest humans: *in orbit*",
+   "at": "@@orbit-0.2"
+  },
+  "devices": [
+   {
+    "at": "@@point",
+    "do": "geo.pin_in",
+    "stage": "stage_map",
+    "args": {
+     "pid": "nemo"
+    }
+   },
+   {
+    "at": "@@ocean",
+    "do": "geo.highlight_pulse",
+    "args": {
+     "fid": "ring",
+     "layer": "ring",
+     "dur": 0.7
+    }
+   }
+  ]
+ },
+ "beats": [
+  {
+   "vo": {
+    "text": "This is Point Nemo, the spot in the South Pacific farthest from any land. The nearest coast is two thousand six hundred and eighty-eight kilometres away.",
+    "cues": {
+     "nemo": "nemo",
+     "pacific": "pacific",
+     "farthest": "farthest",
+     "coast": "coast",
+     "kilometres": "kilometres"
+    }
+   },
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "pull back; the empty circle draws on 'farthest'; counter on the distance",
+   "cam": [
+    0.42,
+    [
+     -123.4,
+     -46.0
+    ]
+   ],
+   "cam_dur": 1.8,
+   "cam_hold": [
+    0.4,
+    [
+     -123.0,
+     -46.0
+    ]
+   ],
+   "kw": {
+    "text": "*2,688 km* to any coast",
+    "at": "@@coast"
+   },
+   "elements": [
+    {
+     "id": "dist",
+     "type": "counter",
+     "start": 0,
+     "end": 2688,
+     "y": 560,
+     "label": "km to the nearest land",
+     "fmt": "int",
+     "size": 150
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@farthest-0.2",
+     "do": "geo.route_draw",
+     "until": "@@coast+0.4",
+     "args": {
+      "rid": "ringline",
+      "layer": "ringline"
+     }
+    },
+    {
+     "at": "@@coast+0.2",
+     "do": "geo.highlight_in",
+     "args": {
+      "fid": "ring",
+      "layer": "ring",
+      "dur": 0.6
+     }
+    },
+    {
+     "at": "@@kilometres-1.4",
+     "do": "chart.counter_run",
+     "id": "dist",
+     "until": "@@kilometres+0.6",
+     "args": {
+      "steps": 14
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "dist"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Three specks of land sit on that circle: Ducie Island to the north, Motu Nui off Easter Island to the north-east, and Maher Island, on the edge of Antarctica, to the south.",
+    "cues": {
+     "three": "three",
+     "ducie": "ducie",
+     "motu": "motu",
+     "maher": "maher",
+     "south": "south"
+    }
+   },
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "three pins land on their names; three spokes draw from the centre",
+   "cam": [
+    0.4,
+    [
+     -122.0,
+     -48.0
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.39,
+    [
+     -121.5,
+     -48.5
+    ]
+   ],
+   "kw": {
+    "text": "*three* specks of land",
+    "at": "@@three"
+   },
+   "devices": [
+    {
+     "at": "@@ducie",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "ducie"
+     }
+    },
+    {
+     "at": "@@ducie-0.2",
+     "do": "geo.route_draw",
+     "until": "@@ducie+0.6",
+     "args": {
+      "rid": "s1",
+      "layer": "spokes"
+     }
+    },
+    {
+     "at": "@@motu",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "motu"
+     }
+    },
+    {
+     "at": "@@motu-0.2",
+     "do": "geo.route_draw",
+     "until": "@@motu+0.6",
+     "args": {
+      "rid": "s2",
+      "layer": "spokes"
+     }
+    },
+    {
+     "at": "@@maher",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "maher"
+     }
+    },
+    {
+     "at": "@@maher-0.2",
+     "do": "geo.route_draw",
+     "until": "@@maher+0.6",
+     "args": {
+      "rid": "s3",
+      "layer": "spokes"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Nobody lives on any of them. The space station passes about four hundred kilometres overhead, so when it does, its crew are the closest people to this spot.",
+    "cues": {
+     "nobody": "nobody",
+     "station": "station",
+     "overhead": "overhead",
+     "closest": "closest"
+    }
+   },
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "climax": true,
+   "direction": "tighten back onto the point; satellite sticker arcs over on 'station'; card with the altitude",
+   "cam": [
+    0.75,
+    [
+     -123.4,
+     -48.9
+    ]
+   ],
+   "cam_dur": 1.6,
+   "cam_hold": [
+    0.78,
+    [
+     -123.2,
+     -48.7
+    ]
+   ],
+   "kw": {
+    "text": "*400 km* up · closest people",
+    "at": "@@overhead"
+   },
+   "card": {
+    "kicker": "ISS ≈ 400 km",
+    "text": "closer than any coast at 2,688 km",
+    "at": "@@closest-0.2",
+    "y": 1250
+   },
+   "sticker": {
+    "id": "st_sat",
+    "emoji": "1f6f0",
+    "x": 700,
+    "y": 520,
+    "size": 200,
+    "rot": -14,
+    "at": "@@station",
+    "until": "@.end"
+   },
+   "devices": [
+    {
+     "at": "@@overhead",
+     "do": "sticker_pulse",
+     "id": "st_sat"
+    },
+    {
+     "at": "@@nobody",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "ring",
+      "layer": "ring",
+      "dur": 0.7
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "That emptiness is useful. Space agencies steer dead spacecraft to burn up and fall here, more than two hundred and fifty of them so far, including the Mir space station.",
+    "cues": {
+     "useful": "useful",
+     "dead": "dead",
+     "fall": "fall",
+     "hundred": "hundred",
+     "mir": "mir"
+    }
+   },
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.5,
+   "direction": "the circle fills; counter of spacecraft on 'hundred'; the sticker falls in",
+   "cam": [
+    0.6,
+    [
+     -123.4,
+     -47.5
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.62,
+    [
+     -123.0,
+     -47.5
+    ]
+   ],
+   "kw": {
+    "text": "the *spacecraft cemetery*",
+    "at": "@@dead"
+   },
+   "elements": [
+    {
+     "id": "craft",
+     "type": "counter",
+     "start": 0,
+     "end": 263,
+     "y": 560,
+     "label": "spacecraft brought down here (1971–2016)",
+     "fmt": "int",
+     "size": 150
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@fall-0.2",
+     "do": "chart.counter_run",
+     "id": "craft",
+     "until": "@@hundred+0.8",
+     "args": {
+      "steps": 14
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "craft"
+    },
+    {
+     "at": "@@fall",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "ring",
+      "layer": "ring",
+      "dur": 0.7
+     }
+    },
+    {
+     "at": "@@mir",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "ring",
+      "layer": "ring",
+      "dur": 0.7
+     }
+    }
+   ]
+  }
+ ],
+ "close": {
+  "vo": {
+   "text": "The loneliest point in the ocean, where the only neighbours pass by in orbit.",
+   "cues": {
+    "loneliest": "loneliest",
+    "ocean": "ocean",
+    "orbit": "orbit"
+   }
+  },
+  "text": "Neighbours only *in orbit*",
+  "tone": "revelatory",
+  "energy": 5,
+  "pause_after": 0.5,
+  "y": 760,
+  "cam": [
+   0.38,
+   [
+    -123.4,
+    -45.0
+   ]
+  ],
+  "cam_dur": 1.8,
+  "devices": [
+   {
+    "at": "@@orbit",
+    "do": "geo.highlight_pulse",
+    "args": {
+     "fid": "ring",
+     "layer": "ring",
+     "dur": 0.8
+    }
+   }
+  ]
+ },
+ "cta": {
+  "vo": {
+   "text": "Follow for a new map story every day."
+  }
+ },
+ "outro_headline": "KNOW A STRANGER PLACE?",
+ "geo": {
+  "fit_bbox": [
+   -160,
+   -80,
+   -85,
+   -15
+  ],
+  "far_bbox": [
+   -180,
+   -88,
+   -60,
+   5
+  ],
+  "resolution": "50m",
+  "k_max": 1.2,
+  "layers": [],
+  "extra_layers": [
+   {
+    "kind": "area",
+    "id": "ring",
+    "cls": "highlight glow",
+    "perFeature": true,
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "ring",
+       "properties": {
+        "name": "2,688 km radius around Point Nemo"
+       },
+       "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+         [
+          [
+           -123.393,
+           -24.703
+          ],
+          [
+           -121.14,
+           -24.768
+          ],
+          [
+           -118.894,
+           -24.962
+          ],
+          [
+           -116.662,
+           -25.283
+          ],
+          [
+           -114.449,
+           -25.732
+          ],
+          [
+           -112.262,
+           -26.305
+          ],
+          [
+           -110.108,
+           -27.001
+          ],
+          [
+           -107.992,
+           -27.815
+          ],
+          [
+           -105.922,
+           -28.746
+          ],
+          [
+           -103.902,
+           -29.789
+          ],
+          [
+           -101.94,
+           -30.939
+          ],
+          [
+           -100.041,
+           -32.192
+          ],
+          [
+           -98.21,
+           -33.544
+          ],
+          [
+           -96.456,
+           -34.989
+          ],
+          [
+           -94.783,
+           -36.522
+          ],
+          [
+           -93.201,
+           -38.136
+          ],
+          [
+           -91.716,
+           -39.827
+          ],
+          [
+           -90.339,
+           -41.588
+          ],
+          [
+           -89.079,
+           -43.412
+          ],
+          [
+           -87.95,
+           -45.293
+          ],
+          [
+           -86.965,
+           -47.223
+          ],
+          [
+           -86.142,
+           -49.196
+          ],
+          [
+           -85.504,
+           -51.202
+          ],
+          [
+           -85.075,
+           -53.232
+          ],
+          [
+           -84.888,
+           -55.276
+          ],
+          [
+           -84.982,
+           -57.322
+          ],
+          [
+           -85.407,
+           -59.357
+          ],
+          [
+           -86.221,
+           -61.364
+          ],
+          [
+           -87.498,
+           -63.323
+          ],
+          [
+           -89.323,
+           -65.211
+          ],
+          [
+           -91.795,
+           -66.997
+          ],
+          [
+           -95.019,
+           -68.643
+          ],
+          [
+           -99.088,
+           -70.106
+          ],
+          [
+           -104.056,
+           -71.332
+          ],
+          [
+           -109.894,
+           -72.264
+          ],
+          [
+           -116.441,
+           -72.85
+          ],
+          [
+           -123.393,
+           -73.051
+          ],
+          [
+           -130.345,
+           -72.85
+          ],
+          [
+           -136.892,
+           -72.264
+          ],
+          [
+           -142.73,
+           -71.332
+          ],
+          [
+           -147.698,
+           -70.106
+          ],
+          [
+           -151.767,
+           -68.643
+          ],
+          [
+           -154.991,
+           -66.997
+          ],
+          [
+           -157.463,
+           -65.211
+          ],
+          [
+           -159.288,
+           -63.323
+          ],
+          [
+           -160.565,
+           -61.364
+          ],
+          [
+           -161.379,
+           -59.357
+          ],
+          [
+           -161.804,
+           -57.322
+          ],
+          [
+           -161.898,
+           -55.276
+          ],
+          [
+           -161.711,
+           -53.232
+          ],
+          [
+           -161.282,
+           -51.202
+          ],
+          [
+           -160.644,
+           -49.196
+          ],
+          [
+           -159.821,
+           -47.223
+          ],
+          [
+           -158.836,
+           -45.293
+          ],
+          [
+           -157.707,
+           -43.412
+          ],
+          [
+           -156.447,
+           -41.588
+          ],
+          [
+           -155.07,
+           -39.827
+          ],
+          [
+           -153.585,
+           -38.136
+          ],
+          [
+           -152.003,
+           -36.522
+          ],
+          [
+           -150.33,
+           -34.989
+          ],
+          [
+           -148.576,
+           -33.544
+          ],
+          [
+           -146.745,
+           -32.192
+          ],
+          [
+           -144.846,
+           -30.939
+          ],
+          [
+           -142.884,
+           -29.789
+          ],
+          [
+           -140.864,
+           -28.746
+          ],
+          [
+           -138.794,
+           -27.815
+          ],
+          [
+           -136.678,
+           -27.001
+          ],
+          [
+           -134.524,
+           -26.305
+          ],
+          [
+           -132.337,
+           -25.732
+          ],
+          [
+           -130.124,
+           -25.283
+          ],
+          [
+           -127.892,
+           -24.962
+          ],
+          [
+           -125.646,
+           -24.768
+          ],
+          [
+           -123.393,
+           -24.703
+          ]
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "kind": "route",
+    "id": "ringline",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "ringline",
+       "properties": {
+        "name": "the empty circle"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -123.393,
+          -24.703
+         ],
+         [
+          -121.14,
+          -24.768
+         ],
+         [
+          -118.894,
+          -24.962
+         ],
+         [
+          -116.662,
+          -25.283
+         ],
+         [
+          -114.449,
+          -25.732
+         ],
+         [
+          -112.262,
+          -26.305
+         ],
+         [
+          -110.108,
+          -27.001
+         ],
+         [
+          -107.992,
+          -27.815
+         ],
+         [
+          -105.922,
+          -28.746
+         ],
+         [
+          -103.902,
+          -29.789
+         ],
+         [
+          -101.94,
+          -30.939
+         ],
+         [
+          -100.041,
+          -32.192
+         ],
+         [
+          -98.21,
+          -33.544
+         ],
+         [
+          -96.456,
+          -34.989
+         ],
+         [
+          -94.783,
+          -36.522
+         ],
+         [
+          -93.201,
+          -38.136
+         ],
+         [
+          -91.716,
+          -39.827
+         ],
+         [
+          -90.339,
+          -41.588
+         ],
+         [
+          -89.079,
+          -43.412
+         ],
+         [
+          -87.95,
+          -45.293
+         ],
+         [
+          -86.965,
+          -47.223
+         ],
+         [
+          -86.142,
+          -49.196
+         ],
+         [
+          -85.504,
+          -51.202
+         ],
+         [
+          -85.075,
+          -53.232
+         ],
+         [
+          -84.888,
+          -55.276
+         ],
+         [
+          -84.982,
+          -57.322
+         ],
+         [
+          -85.407,
+          -59.357
+         ],
+         [
+          -86.221,
+          -61.364
+         ],
+         [
+          -87.498,
+          -63.323
+         ],
+         [
+          -89.323,
+          -65.211
+         ],
+         [
+          -91.795,
+          -66.997
+         ],
+         [
+          -95.019,
+          -68.643
+         ],
+         [
+          -99.088,
+          -70.106
+         ],
+         [
+          -104.056,
+          -71.332
+         ],
+         [
+          -109.894,
+          -72.264
+         ],
+         [
+          -116.441,
+          -72.85
+         ],
+         [
+          -123.393,
+          -73.051
+         ],
+         [
+          -130.345,
+          -72.85
+         ],
+         [
+          -136.892,
+          -72.264
+         ],
+         [
+          -142.73,
+          -71.332
+         ],
+         [
+          -147.698,
+          -70.106
+         ],
+         [
+          -151.767,
+          -68.643
+         ],
+         [
+          -154.991,
+          -66.997
+         ],
+         [
+          -157.463,
+          -65.211
+         ],
+         [
+          -159.288,
+          -63.323
+         ],
+         [
+          -160.565,
+          -61.364
+         ],
+         [
+          -161.379,
+          -59.357
+         ],
+         [
+          -161.804,
+          -57.322
+         ],
+         [
+          -161.898,
+          -55.276
+         ],
+         [
+          -161.711,
+          -53.232
+         ],
+         [
+          -161.282,
+          -51.202
+         ],
+         [
+          -160.644,
+          -49.196
+         ],
+         [
+          -159.821,
+          -47.223
+         ],
+         [
+          -158.836,
+          -45.293
+         ],
+         [
+          -157.707,
+          -43.412
+         ],
+         [
+          -156.447,
+          -41.588
+         ],
+         [
+          -155.07,
+          -39.827
+         ],
+         [
+          -153.585,
+          -38.136
+         ],
+         [
+          -152.003,
+          -36.522
+         ],
+         [
+          -150.33,
+          -34.989
+         ],
+         [
+          -148.576,
+          -33.544
+         ],
+         [
+          -146.745,
+          -32.192
+         ],
+         [
+          -144.846,
+          -30.939
+         ],
+         [
+          -142.884,
+          -29.789
+         ],
+         [
+          -140.864,
+          -28.746
+         ],
+         [
+          -138.794,
+          -27.815
+         ],
+         [
+          -136.678,
+          -27.001
+         ],
+         [
+          -134.524,
+          -26.305
+         ],
+         [
+          -132.337,
+          -25.732
+         ],
+         [
+          -130.124,
+          -25.283
+         ],
+         [
+          -127.892,
+          -24.962
+         ],
+         [
+          -125.646,
+          -24.768
+         ],
+         [
+          -123.393,
+          -24.703
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "kind": "route",
+    "id": "spokes",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "s1",
+       "properties": {
+        "name": "to Ducie Island"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -123.393,
+          -48.877
+         ],
+         [
+          -124.3,
+          -36.8
+         ],
+         [
+          -124.78,
+          -24.68
+         ]
+        ]
+       }
+      },
+      {
+       "type": "Feature",
+       "id": "s2",
+       "properties": {
+        "name": "to Motu Nui"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -123.393,
+          -48.877
+         ],
+         [
+          -116.6,
+          -38.6
+         ],
+         [
+          -109.45,
+          -27.2
+         ]
+        ]
+       }
+      },
+      {
+       "type": "Feature",
+       "id": "s3",
+       "properties": {
+        "name": "to Maher Island"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -123.393,
+          -48.877
+         ],
+         [
+          -125.0,
+          -61.0
+         ],
+         [
+          -126.95,
+          -72.98
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "pins": [
+   {
+    "id": "nemo",
+    "lonlat": [
+     -123.393,
+     -48.877
+    ],
+    "label": "Point Nemo",
+    "side": "right",
+    "qid": "Q1192386"
+   },
+   {
+    "id": "ducie",
+    "lonlat": [
+     -124.78,
+     -24.68
+    ],
+    "label": "Ducie Island",
+    "side": "left",
+    "qid": "Q485530"
+   },
+   {
+    "id": "motu",
+    "lonlat": [
+     -109.45,
+     -27.2
+    ],
+    "label": "Motu Nui",
+    "side": "right",
+    "qid": "Q1949807"
+   },
+   {
+    "id": "maher",
+    "lonlat": [
+     -126.95,
+     -72.98
+    ],
+    "label": "Maher Island",
+    "side": "right",
+    "qid": "Q1884184"
+   }
+  ],
+  "labels": [],
+  "scalebar": {
+   "km": 1000,
+   "lonlat": [
+    -158,
+    -77
+   ]
+  },
+  "cams": {
+   "start": [
+    0.3,
+    [
+     -123.4,
+     -47.0
+    ]
+   ],
+   "open": [
+    0.9,
+    [
+     -123.4,
+     -48.8
+    ]
+   ]
+  },
+  "pin_beats": [],
+  "subject": {
+   "fid": "ring",
+   "layer": "ring"
+  },
+  "projection_reason": "satellite raster (Web Mercator tiles) for an ocean location story; the only distance claim is carried by the scalebar and a stated number, no area comparison (P1/P2)"
+ },
+ "research": {
+  "topic": "Point Nemo (48°52.6′S 123°23.6′W), the oceanic pole of inaccessibility, lies about 2,688 km from the nearest land (Ducie Island, Motu Nui, Maher Island); the ISS orbits at about 400 km, so its crew are at times the nearest humans; the surrounding area is used as the 'spacecraft cemetery' where 260+ spacecraft including Mir were deorbited.",
+  "myths": [
+   {
+    "myth": "Point Nemo is an island.",
+    "reality": "It is a point of open ocean, the spot farthest from any coastline; there is no land there at all."
+   }
+  ],
+  "landscape": {
+   "our_gap": "Point Nemo Shorts are narrated stock-footage clips about 'the creepiest place on Earth'; nobody draws the 2,688 km circle to scale on the satellite map, pins the three specks, and ties the orbit altitude to the spacecraft cemetery in one minute.",
+   "existing": [
+    {
+     "title": "Point Nemo, the most remote place on Earth",
+     "format": "stock footage + narration",
+     "gap": "no to-scale map"
+    },
+    {
+     "title": "The spacecraft cemetery explained",
+     "format": "space-channel explainer",
+     "gap": "no geography of why here"
+    },
+    {
+     "title": "Cthulhu lives at Point Nemo",
+     "format": "meme / horror",
+     "gap": "no facts"
+    }
+   ]
+  },
+  "sources": {
+   "noaa": {
+    "type": "primary",
+    "publisher": "NOAA National Ocean Service",
+    "title": "What is Point Nemo?",
+    "url": "https://oceanservice.noaa.gov/facts/nemo.html",
+    "date": "2026-11-17",
+    "notes": "Oceanic pole of inaccessibility at 48°52.6′S 123°23.6′W; about 2,688 km from the nearest land (Ducie Island, Motu Nui, Maher Island); used for controlled re-entries of spacecraft."
+   },
+   "lukatela": {
+    "type": "scholarly",
+    "publisher": "Hrvoje Lukatela (Geodyssey)",
+    "title": "A Point of Inaccessibility in the Pacific Ocean (1992 computation)",
+    "url": "http://www.geodyssey.com/papers/hlnemo92.html",
+    "date": "2026-11-17",
+    "notes": "Original computation: 48°52.6′S 123°23.6′W, 2,688 km from Ducie Island, Motu Nui and Maher Island."
+   },
+   "wiki_nemo": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Pole of inaccessibility — Oceanic pole (Point Nemo)",
+    "url": "https://en.wikipedia.org/wiki/Pole_of_inaccessibility#Oceanic_pole_of_inaccessibility",
+    "date": "2026-11-17",
+    "notes": "Point Nemo, 2,688 km from the three nearest islands; ISS crews at ~400 km are at times the nearest humans; spacecraft cemetery nearby."
+   },
+   "wiki_cemetery": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Spacecraft cemetery",
+    "url": "https://en.wikipedia.org/wiki/Spacecraft_cemetery",
+    "date": "2026-11-17",
+    "notes": "South Pacific Ocean Uninhabited Area around Point Nemo; between 1971 and 2016 at least 263 spacecraft were deorbited there, including Mir (2001)."
+   },
+   "esa": {
+    "type": "primary",
+    "publisher": "European Space Agency",
+    "title": "Where do old satellites go when they die? (Space debris)",
+    "url": "https://www.esa.int/Space_Safety/Space_Debris/Reentry_and_collision_avoidance",
+    "date": "2026-11-17",
+    "notes": "Controlled re-entries target the South Pacific Ocean Uninhabited Area, far from shipping and land."
+   },
+   "nasa_iss": {
+    "type": "primary",
+    "publisher": "NASA",
+    "title": "International Space Station facts and figures",
+    "url": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
+    "date": "2026-11-17",
+    "notes": "The ISS orbits at an average altitude of about 400 km (250 miles)."
+   },
+   "brit_mir": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Mir (space station)",
+    "url": "https://www.britannica.com/technology/Mir-space-station",
+    "date": "2026-11-17",
+    "notes": "Mir was deorbited on 23 March 2001 over the South Pacific."
+   },
+   "popsci": {
+    "type": "press",
+    "publisher": "Popular Science",
+    "title": "The spacecraft cemetery at Point Nemo",
+    "url": "https://www.popsci.com/point-nemo-spacecraft-cemetery/",
+    "date": "2026-11-17",
+    "notes": "More than 260 spacecraft, including Mir, brought down in the uninhabited South Pacific area around Point Nemo."
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Point Nemo, the oceanic pole of inaccessibility (48°52.6′S 123°23.6′W), is about 2,688 km from the nearest land.",
+    "sources": [
+     "noaa",
+     "lukatela",
+     "wiki_nemo"
+    ],
+    "vo": [
+     "this is point nemo, the spot in the south pacific farthest from any land. the nearest coast is two thousand six hundred and eighty-eight kilometres away",
+     "the loneliest point in the ocean, where the only neighbours pass by in orbit"
+    ],
+    "screen": [
+     "2,688 km to any coast",
+     "km to the nearest land",
+     "Point Nemo",
+     "closer than any coast at 2,688 km"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "The three nearest pieces of land are Ducie Island (Pitcairn), Motu Nui (off Easter Island) and Maher Island (Antarctica), all uninhabited.",
+    "sources": [
+     "noaa",
+     "lukatela",
+     "wiki_nemo"
+    ],
+    "vo": [
+     "three specks of land sit on that circle: ducie island to the north, motu nui off easter island to the north-east, and maher island, on the edge of antarctica, to the south",
+     "nobody lives on any of them"
+    ],
+    "screen": [
+     "three specks of land",
+     "Ducie Island",
+     "Motu Nui",
+     "Maher Island"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "The ISS orbits at about 400 km, so when it passes over Point Nemo its crew are nearer than anyone on land.",
+    "sources": [
+     "nasa_iss",
+     "wiki_nemo",
+     "noaa"
+    ],
+    "vo": [
+     "there is a point in the ocean where the nearest human beings are usually in orbit",
+     "the space station passes about four hundred kilometres overhead, so when it does, its crew are the closest people to this spot"
+    ],
+    "screen": [
+     "nearest humans: in orbit",
+     "400 km up · closest people",
+     "ISS ≈ 400 km",
+     "Neighbours only in orbit",
+     "The place where the nearest people are in space"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "core",
+    "text": "The area around Point Nemo is used for controlled spacecraft re-entries; at least 263 spacecraft were deorbited there between 1971 and 2016, including Mir in 2001.",
+    "sources": [
+     "esa",
+     "wiki_cemetery",
+     "brit_mir",
+     "popsci"
+    ],
+    "vo": [
+     "that emptiness is useful. space agencies steer dead spacecraft to burn up and fall here, more than two hundred and fifty of them so far, including the mir space station"
+    ],
+    "screen": [
+     "the spacecraft cemetery",
+     "spacecraft brought down here (1971–2016)"
+    ]
+   }
+  ]
+ }
+}

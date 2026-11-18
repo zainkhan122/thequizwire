@@ -54,7 +54,7 @@ def main():
     for s in story_scenes:
         if s not in kw_scenes: F.append(f"S3: scene {s} has no keyword caption (kw_in)")
     for el in X.get("elements", []):
-        if el.get("type") == "kw" and len(words(el.get("text", ""))) > 5: F.append(f"S3: kw {el['id']} > 5 words")
+        if el.get("type") == "kw" and len([w for w in el.get("text", "").split() if re.search(r"\w", w)]) > 5: F.append(f"S3: kw {el['id']} > 5 words")
     lit = {}
     for b in X.get("beats", []):
         if b.get("do") in ("geo.highlight_in", "geo.highlight_pulse"):

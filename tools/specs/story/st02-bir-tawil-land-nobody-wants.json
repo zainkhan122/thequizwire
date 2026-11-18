@@ -1,0 +1,983 @@
+{
+ "id": "st02-bir-tawil-land-nobody-wants",
+ "series": "geo-stories",
+ "number": 2,
+ "seed": 5102,
+ "place": "Bir Tawil · Egypt / Sudan",
+ "headline": "The land *nobody wants*",
+ "search_term": "bir tawil",
+ "cover": {
+  "place": "BIR TAWIL · NORTH-EAST AFRICA",
+  "headline": "The land *nobody wants*"
+ },
+ "intent": "Two colonial border lines that disagree, and the strange result: one triangle both Egypt and Sudan claim, and one patch of desert neither will touch, because claiming it means giving up the other.",
+ "variety": {
+  "shape": "why-here-not-there",
+  "opener": "wide-drift",
+  "music": "bed:drone",
+  "cast": "none",
+  "beats": [
+   "route",
+   "route",
+   "highlight",
+   "card"
+  ]
+ },
+ "post": {
+  "premise": "A patch of Sahara that neither Egypt nor Sudan claims, because of two border lines drawn a century ago",
+  "bait": "Would you claim it? 👇",
+  "keywords": [
+   "bir tawil",
+   "land nobody claims",
+   "terra nullius",
+   "egypt sudan border",
+   "halaib triangle",
+   "unclaimed land",
+   "geography story",
+   "map story"
+  ],
+  "tags": [
+   "GeoStories",
+   "Africa"
+  ],
+  "copy": {
+   "spoilers": [
+    "halaib",
+    "hala'ib",
+    "triangle",
+    "1899",
+    "1902",
+    "2,060",
+    "2060"
+   ],
+   "youtube": {
+    "title": "Bir Tawil: the land nobody wants 🛰️",
+    "description": "On the border of Egypt and Sudan there is a patch of desert the size of a small country that neither side claims. Not forgotten, not unknown, deliberately refused. The reason is two lines drawn by the same empire a few years apart, and what each one hands to the other side. This map story shows both lines and why claiming this land would cost more than it is worth.\nWould you claim it? Tell us below.",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Africa",
+     "#Shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "The land nobody wants 🛰️\nOn the Egypt–Sudan border there is a patch of desert neither side claims. Not forgotten, deliberately refused. Two lines drawn by the same empire a few years apart explain why.\nWould you claim it?",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Africa",
+     "#GeoReels",
+     "#DidYouKnow"
+    ]
+   },
+   "facebook": {
+    "text": "On the border of Egypt and Sudan there is a patch of desert the size of a small country that neither side claims. Not forgotten, deliberately refused. Two lines drawn by the same empire a few years apart explain why, and this map story shows both. Would you claim it?",
+    "tags": [
+     "#Geography",
+     "#Africa"
+    ]
+   },
+   "twitter": {
+    "text": "A patch of Sahara that neither Egypt nor Sudan will claim. Two lines on a map explain why.",
+    "tags": [
+     "#Geography",
+     "#Africa"
+    ]
+   },
+   "threads": {
+    "text": "Between Egypt and Sudan there is land neither country claims — on purpose. A one-minute map story about two lines that disagree.",
+    "tags": [
+     "#Geography",
+     "#MapStory"
+    ]
+   }
+  }
+ },
+ "open": {
+  "vo": {
+   "text": "Between Egypt and Sudan there is a piece of desert that nobody claims. Not forgotten. Refused.",
+   "cues": {
+    "egypt": "egypt",
+    "sudan": "sudan",
+    "nobody": "nobody",
+    "refused": "refused"
+   }
+  },
+  "tone": "urgent",
+  "energy": 4,
+  "pause_after": 0.4,
+  "kw": {
+   "text": "*nobody* claims it",
+   "at": "@@nobody-0.1"
+  },
+  "devices": [
+   {
+    "at": "@@egypt",
+    "do": "geo.highlight_in",
+    "args": {
+     "fid": "818",
+     "layer": "tint",
+     "dur": 0.5
+    }
+   },
+   {
+    "at": "@@sudan",
+    "do": "geo.highlight_in",
+    "args": {
+     "fid": "729",
+     "layer": "tint",
+     "dur": 0.5
+    }
+   },
+   {
+    "at": "@@refused",
+    "do": "geo.highlight_pulse",
+    "args": {
+     "fid": "bir_tawil",
+     "layer": "void",
+     "dur": 0.7
+    }
+   },
+   {
+    "at": "@@nobody",
+    "do": "geo.highlight_in",
+    "args": {
+     "fid": "bir_tawil",
+     "layer": "void",
+     "dur": 0.5
+    }
+   }
+  ]
+ },
+ "beats": [
+  {
+   "vo": {
+    "text": "In 1899 Britain drew the border along the twenty-second parallel. A straight line, east to west.",
+    "cues": {
+     "britain": "britain",
+     "parallel": "parallel",
+     "straight": "straight"
+    }
+   },
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "the 1899 line draws across on 'parallel'",
+   "cam": [
+    1.6,
+    [
+     34.6,
+     22.2
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.65,
+    [
+     34.8,
+     22.2
+    ]
+   ],
+   "kw": {
+    "text": "*1899* · the straight line",
+    "at": "@@parallel"
+   },
+   "devices": [
+    {
+     "at": "@@parallel-0.2",
+     "do": "geo.route_draw",
+     "until": "@@straight+0.3",
+     "args": {
+      "rid": "l1899",
+      "layer": "lines"
+     }
+    },
+    {
+     "at": "@@straight",
+     "do": "geo.label_in",
+     "args": {
+      "lid": "l1899"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Three years later it drew a second line, following the tribes instead: a bend north by the sea, a bend south in the desert.",
+    "cues": {
+     "second": "second",
+     "tribes": "tribes",
+     "north": "north",
+     "south": "south"
+    }
+   },
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "the 1902 administrative line draws on 'second'; the two bends pulse on north / south",
+   "cam": [
+    1.75,
+    [
+     35.0,
+     22.3
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.8,
+    [
+     35.1,
+     22.3
+    ]
+   ],
+   "kw": {
+    "text": "*1902* · the second line",
+    "at": "@@second"
+   },
+   "devices": [
+    {
+     "at": "@@second",
+     "do": "geo.route_draw",
+     "until": "@@tribes+0.6",
+     "args": {
+      "rid": "l1902",
+      "layer": "lines2"
+     }
+    },
+    {
+     "at": "@@tribes+0.3",
+     "do": "geo.label_in",
+     "args": {
+      "lid": "l1902"
+     }
+    },
+    {
+     "at": "@@north",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "halayib_triangle",
+      "layer": "prize",
+      "dur": 0.7
+     }
+    },
+    {
+     "at": "@@south",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "bir_tawil",
+      "layer": "void",
+      "dur": 0.7
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Egypt holds to the straight line. Sudan holds to the second. Each line gives its owner the big coastal triangle, the one with the Red Sea and the towns.",
+    "cues": {
+     "straight": "straight",
+     "second": "second",
+     "coastal": "coastal",
+     "towns": "towns"
+    }
+   },
+   "tone": "neutral",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the coastal triangle lights on 'coastal'; the disputed plate is on screen with it",
+   "cam": [
+    1.9,
+    [
+     35.9,
+     22.5
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.95,
+    [
+     36.0,
+     22.5
+    ]
+   ],
+   "kw": {
+    "text": "the *coastal* triangle",
+    "at": "@@coastal"
+   },
+   "card": {
+    "kicker": "20,580 km²",
+    "text": "Red Sea coast · towns · both claim it",
+    "at": "@@towns-0.2",
+    "y": 1250
+   },
+   "devices": [
+    {
+     "at": "@@coastal-0.1",
+     "do": "geo.highlight_in",
+     "args": {
+      "fid": "halayib_triangle",
+      "layer": "prize",
+      "dur": 0.5
+     }
+    },
+    {
+     "at": "@@coastal+0.2",
+     "do": "geo.disputed_in",
+     "args": {
+      "did": "halaib"
+     }
+    },
+    {
+     "at": "@@straight",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "halayib_triangle",
+      "layer": "prize",
+      "dur": 0.6
+     }
+    },
+    {
+     "at": "@@second",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "halayib_triangle",
+      "layer": "prize",
+      "dur": 0.6
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "And the same two lines leave this smaller patch to the other side. Claim it, and you accept the line that loses you the coast. So neither does.",
+    "cues": {
+     "smaller": "smaller",
+     "claim": "claim",
+     "coast": "coast",
+     "neither": "neither"
+    }
+   },
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "climax": true,
+   "direction": "tighten onto Bir Tawil; the void fills; counter on the area",
+   "cam": [
+    2.6,
+    [
+     33.8,
+     21.95
+    ]
+   ],
+   "cam_dur": 1.6,
+   "cam_hold": [
+    2.7,
+    [
+     33.75,
+     21.95
+    ]
+   ],
+   "kw": {
+    "text": "claim it, *lose the coast*",
+    "at": "@@claim"
+   },
+   "elements": [
+    {
+     "id": "area",
+     "type": "compare",
+     "items": [
+      [
+       "coastal triangle",
+       20580,
+       "20,580 km²"
+      ],
+      [
+       "Bir Tawil",
+       2060,
+       "2,060 km²"
+      ]
+     ],
+     "y": 430,
+     "x": 90,
+     "w": 900,
+     "max_h": 420
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@smaller-0.1",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "bir_tawil",
+      "layer": "void",
+      "dur": 0.8
+     }
+    },
+    {
+     "at": "@@smaller",
+     "do": "geo.disputed_in",
+     "args": {
+      "did": "birtawil"
+     }
+    },
+    {
+     "at": "@@smaller+0.2",
+     "do": "chart.compare_in",
+     "id": "area",
+     "args": {
+      "dur": 1.0,
+      "stagger": 0.5
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "area"
+    },
+    {
+     "at": "@@neither",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "bir_tawil",
+      "layer": "void",
+      "dur": 0.7
+     }
+    }
+   ]
+  }
+ ],
+ "close": {
+  "vo": {
+   "text": "Two thousand square kilometres of desert, unclaimed on purpose, because wanting it would cost the coast.",
+   "cues": {
+    "desert": "desert",
+    "purpose": "purpose",
+    "coast": "coast"
+   }
+  },
+  "text": "Unclaimed *on purpose*",
+  "tone": "revelatory",
+  "energy": 5,
+  "pause_after": 0.5,
+  "y": 760,
+  "cam": [
+   1.4,
+   [
+    34.8,
+    22.2
+   ]
+  ],
+  "cam_dur": 1.8,
+  "devices": [
+   {
+    "at": "@@coast",
+    "do": "geo.highlight_pulse",
+    "args": {
+     "fid": "halayib_triangle",
+     "layer": "prize",
+     "dur": 0.7
+    }
+   }
+  ]
+ },
+ "cta": {
+  "vo": {
+   "text": "Follow for a new map story every day."
+  }
+ },
+ "outro_headline": "KNOW A STRANGER PLACE?",
+ "geo": {
+  "fit_bbox": [
+   29,
+   18,
+   39,
+   26
+  ],
+  "far_bbox": [
+   22,
+   10,
+   46,
+   32
+  ],
+  "resolution": "50m",
+  "k_max": 2.8,
+  "size_claim_device": "area",
+  "layers": [
+   {
+    "id": "tint",
+    "ids": [
+     "818",
+     "729"
+    ],
+    "cls": "tint",
+    "note": "Egypt and Sudan, the two claimants, one tint"
+   }
+  ],
+  "extra_layers": [
+   {
+    "kind": "area",
+    "id": "void",
+    "cls": "highlight solid",
+    "source": "ne-disputed-void",
+    "ne": {
+     "file": "ne_10m_admin_0_disputed_areas",
+     "names": [
+      "Bir Tawil"
+     ]
+    }
+   },
+   {
+    "kind": "area",
+    "id": "prize",
+    "cls": "highlight glow",
+    "source": "ne-disputed-prize",
+    "ne": {
+     "file": "ne_10m_admin_0_disputed_areas",
+     "names": [
+      "Halayib Triangle"
+     ]
+    }
+   },
+   {
+    "kind": "route",
+    "id": "lines",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "l1899",
+       "properties": {
+        "name": "1899 political boundary (22°N)"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          31.4,
+          22.0
+         ],
+         [
+          33.0,
+          22.0
+         ],
+         [
+          34.2,
+          22.0
+         ],
+         [
+          35.5,
+          22.0
+         ],
+         [
+          36.88,
+          22.0
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "kind": "route",
+    "id": "lines2",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "l1902",
+       "properties": {
+        "name": "1902 administrative boundary (Natural Earth polygon edges)"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          33.303681,
+          22.0
+         ],
+         [
+          33.304,
+          21.903
+         ],
+         [
+          33.44,
+          21.801
+         ],
+         [
+          33.558,
+          21.711
+         ],
+         [
+          33.717,
+          21.731
+         ],
+         [
+          33.866,
+          21.75
+         ],
+         [
+          33.999,
+          21.767
+         ],
+         [
+          33.999,
+          21.767
+         ],
+         [
+          33.999118,
+          22.0
+         ],
+         [
+          34.147,
+          22.192
+         ],
+         [
+          34.828,
+          22.607
+         ],
+         [
+          35.487,
+          23.023
+         ],
+         [
+          35.675,
+          22.967
+         ],
+         [
+          35.752,
+          22.886
+         ],
+         [
+          35.782,
+          22.841
+         ],
+         [
+          35.83,
+          22.785
+         ],
+         [
+          35.943,
+          22.713
+         ],
+         [
+          36.121,
+          22.676
+         ],
+         [
+          36.296,
+          22.522
+         ],
+         [
+          36.402,
+          22.449
+         ],
+         [
+          36.44,
+          22.356
+         ],
+         [
+          36.714,
+          22.169
+         ],
+         [
+          36.757,
+          22.177
+         ],
+         [
+          36.809,
+          22.121
+         ],
+         [
+          36.895,
+          22.066
+         ],
+         [
+          36.899,
+          22.03
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "pins": [],
+  "labels": [
+   {
+    "id": "l1899",
+    "lonlat": [
+     32.5,
+     22.1
+    ],
+    "text": "1899 · 22°N",
+    "cls": "tag",
+    "in": "s02+99",
+    "out": null
+   },
+   {
+    "id": "l1902",
+    "lonlat": [
+     33.95,
+     22.55
+    ],
+    "text": "1902 · the second line",
+    "cls": "tag",
+    "in": "s03+99",
+    "out": null
+   }
+  ],
+  "disputed": [
+   {
+    "id": "halaib",
+    "ne_name": "Halayib Triangle",
+    "name": "Halaib Triangle",
+    "controller": "Egypt",
+    "claimants": [
+     "Sudan"
+    ],
+    "as_of": "2026-10",
+    "source": "docs/border_registry.json#halaib_bir_tawil",
+    "label_at": [
+     35.7,
+     23.4
+    ],
+    "plate_cls": "small",
+    "manual": true
+   },
+   {
+    "id": "birtawil",
+    "ne_name": "Bir Tawil",
+    "name": "Bir Tawil",
+    "controller": "no state — claimed by neither Egypt nor Sudan (terra nullius)",
+    "claimants": [
+     "no state"
+    ],
+    "as_of": "2026-10",
+    "source": "docs/border_registry.json#halaib_bir_tawil",
+    "label_at": [
+     33.9,
+     21.55
+    ],
+    "plate_cls": "small",
+    "manual": true
+   }
+  ],
+  "scalebar": {
+   "km": 100,
+   "lonlat": [
+    29.6,
+    18.9
+   ]
+  },
+  "cams": {
+   "start": [
+    0.9,
+    [
+     34.5,
+     22.5
+    ]
+   ],
+   "open": [
+    1.15,
+    [
+     34.8,
+     22.3
+    ]
+   ]
+  },
+  "pin_beats": [],
+  "subject": {
+   "fid": "halayib_triangle",
+   "layer": "prize"
+  },
+  "projection_reason": "satellite raster (Web Mercator tiles) under a border story at 22°N; the big/small comparison is carried by the to-scale bar chart `area` (compare element), not by the map shapes (P1)"
+ },
+ "research": {
+  "topic": "Bir Tawil, a ~2,060 km² area between Egypt and Sudan claimed by neither, exists because the 1899 Anglo-Egyptian Condominium boundary (22°N) and the 1902 administrative boundary disagree; each state asserts the line that gives it the larger Hala'ib Triangle on the Red Sea, so neither can claim Bir Tawil.",
+  "myths": [
+   {
+    "myth": "Bir Tawil is unclaimed because nobody knows it exists.",
+    "reality": "Both Egypt and Sudan know it; claiming it would mean accepting the boundary line that hands the far larger Hala'ib Triangle to the other side."
+   }
+  ],
+  "landscape": {
+   "our_gap": "Bir Tawil Shorts are talking heads about 'the last unclaimed land' and self-declared kingdoms; nobody draws both lines on the satellite map and shows, in one frame, why claiming the small patch costs the coastal triangle.",
+   "existing": [
+    {
+     "title": "The land no country wants",
+     "format": "talking head + stock",
+     "gap": "no map of the two lines"
+    },
+    {
+     "title": "I claimed my own country (Bir Tawil)",
+     "format": "vlog / stunt",
+     "gap": "no geography at all"
+    },
+    {
+     "title": "Hala'ib Triangle explained",
+     "format": "10-min history video",
+     "gap": "not a Short, no single-frame payoff"
+    }
+   ]
+  },
+  "sources": {
+   "brit_halaib": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Ḥalāʾib Triangle",
+    "url": "https://www.britannica.com/place/Halaib-Triangle",
+    "date": "2026-11-17",
+    "notes": "Area of about 20,580 km² on the Red Sea coast; 1899 agreement set the political boundary at 22°N; 1902 administrative boundary gave the area to Sudan; administered by Egypt, claimed by Sudan."
+   },
+   "wiki_birtawil": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Bir Tawil",
+    "url": "https://en.wikipedia.org/wiki/Bir_Tawil",
+    "date": "2026-11-17",
+    "notes": "About 2,060 km²; terra nullius; result of the 1899 (22°N) and 1902 boundaries; claiming it would forfeit the claim to the Hala'ib Triangle."
+   },
+   "wiki_halaib": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Hala'ib Triangle",
+    "url": "https://en.wikipedia.org/wiki/Hala%27ib_Triangle",
+    "date": "2026-11-17",
+    "notes": "20,580 km²; towns Hala'ib, Abu Ramad, Shalateen; Egypt administers since the 1990s; Sudan claims; 1902 line placed it under Khartoum."
+   },
+   "condominium": {
+    "type": "primary",
+    "publisher": "Anglo-Egyptian Condominium Agreement (19 January 1899), text via Wikisource",
+    "title": "Agreement between Her Britannic Majesty's Government and the Government of His Highness the Khedive of Egypt relative to the future administration of the Sudan",
+    "url": "https://en.wikisource.org/wiki/Anglo-Egyptian_Condominium_Agreement",
+    "date": "2026-11-17",
+    "notes": "Article I: the word Sudan means all territories south of the 22nd parallel of latitude."
+   },
+   "registry": {
+    "type": "reference",
+    "publisher": "TheQuizWire border policy registry",
+    "title": "docs/border_registry.json#halaib_bir_tawil",
+    "url": "https://github.com/zainkhan122/thequizwire/blob/main/docs/border_registry.json",
+    "date": "2026-11-17",
+    "notes": "Halayib Triangle: controller Egypt, claimant Sudan; Bir Tawil: claimed by neither (terra nullius); as of 2026-10."
+   },
+   "guardian": {
+    "type": "press",
+    "publisher": "The Guardian",
+    "title": "Welcome to the land that no country wants (2016)",
+    "url": "https://www.theguardian.com/world/2016/mar/03/welcome-to-the-land-that-no-country-wants-bir-tawil",
+    "date": "2026-11-17",
+    "notes": "Bir Tawil, about 2,000 km², unclaimed by Egypt or Sudan because of the two conflicting 1899 and 1902 lines; claiming it means giving up the Hala'ib Triangle."
+   },
+   "ibs18": {
+    "type": "primary",
+    "publisher": "US Department of State, Office of the Geographer",
+    "title": "International Boundary Study No. 18: Sudan – United Arab Republic (Egypt) Boundary (27 July 1962)",
+    "url": "https://fall.fsulawrc.com/collection/LimitsinSeas/IBS018.pdf",
+    "date": "2026-11-17",
+    "notes": "Official boundary study: the 1899 Condominium boundary at 22°N, the 1902 administrative boundary and the two areas (Hala'ib north of 22°N administered from Khartoum; Bir Tawil south of it administered from Cairo)."
+   },
+   "bbc": {
+    "type": "press",
+    "publisher": "BBC News",
+    "title": "The man who declared himself king of a no man's land (2014)",
+    "url": "https://www.bbc.com/news/magazine-28000525",
+    "date": "2026-11-17",
+    "notes": "Bir Tawil between Egypt and Sudan, unclaimed by either; the 1899 straight line versus the 1902 administrative line; the Hala'ib Triangle is the prize."
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Bir Tawil (about 2,060 km²) lies between Egypt and Sudan and is claimed by neither state.",
+    "sources": [
+     "ibs18",
+     "wiki_birtawil",
+     "guardian",
+     "bbc",
+     "registry"
+    ],
+    "vo": [
+     "between egypt and sudan there is a piece of desert that nobody claims. not forgotten. refused",
+     "and the same two lines leave this smaller patch to the other side. claim it, and you accept the line that loses you the coast. so neither does",
+     "two thousand square kilometres of desert, unclaimed on purpose, because wanting it would cost the coast"
+    ],
+    "screen": [
+     "nobody claims it",
+     "2,060 km²",
+     "Bir Tawil",
+     "Bir Tawil",
+     "Administered by no state — claimed by neither Egypt nor Sudan (terra nullius)",
+     "Claimed by no state",
+     "The land nobody wants",
+     "Unclaimed on purpose",
+     "claim it, lose the coast"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "The 1899 Anglo-Egyptian Condominium Agreement set the Egypt–Sudan boundary along the 22nd parallel.",
+    "sources": [
+     "condominium",
+     "brit_halaib",
+     "wiki_birtawil"
+    ],
+    "vo": [
+     "in 1899 britain drew the border along the twenty-second parallel. a straight line, east to west"
+    ],
+    "screen": [
+     "1899 · the straight line",
+     "1899 · 22°N"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "In 1902 a separate administrative boundary was drawn following tribal grazing areas, placing the Hala'ib Triangle under Sudan and Bir Tawil under Egypt.",
+    "sources": [
+     "ibs18",
+     "brit_halaib",
+     "wiki_halaib",
+     "bbc"
+    ],
+    "vo": [
+     "three years later it drew a second line, following the tribes instead: a bend north by the sea, a bend south in the desert"
+    ],
+    "screen": [
+     "1902 · the second line"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "core",
+    "text": "The Hala'ib Triangle (about 20,580 km², with Red Sea coast and towns) is administered by Egypt and claimed by Sudan; Egypt relies on the 1899 line and Sudan on the 1902 line.",
+    "sources": [
+     "ibs18",
+     "brit_halaib",
+     "wiki_halaib",
+     "registry"
+    ],
+    "vo": [
+     "egypt holds to the straight line. sudan holds to the second. each line gives its owner the big coastal triangle, the one with the red sea and the towns"
+    ],
+    "screen": [
+     "the coastal triangle",
+     "20,580 km²",
+     "coastal triangle",
+     "Red Sea coast · towns · both claim it",
+     "Halaib Triangle",
+     "Administered by Egypt",
+     "Claimed by Sudan"
+    ]
+   }
+  ]
+ }
+}

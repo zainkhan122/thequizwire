@@ -649,6 +649,20 @@
    }
   },
   {
+   "at": "s06+1.8",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 0.672,
+    "lonlat": [
+     -67.0,
+     -19.0
+    ],
+    "ease": "none"
+   }
+  },
+  {
    "at": "s06+0.3",
    "do": "close_in",
    "id": "close",

@@ -1,0 +1,125 @@
+{
+ "version": 1,
+ "episode": "st02-bir-tawil-land-nobody-wants",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "Two colonial border lines that disagree, and the strange result: one triangle both Egypt and Sudan claim, and one patch of desert neither will touch, because claiming it means giving up the other.",
+ "pacing_profile": "documentary: cold open, place, why in 2–5 beats, twist, close answers the open, short CTA (docs/STORY_GUIDELINES.md §2)",
+ "pause_policy": "Pause only at the marked ellipses.",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v01",
+ "title": "The land nobody wants",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.4,
+   "direction": "the opening line, cold — the map is already moving",
+   "text": "Between Egypt and Sudan there is a piece of desert that nobody claims. Not forgotten. Refused.",
+   "cues": {
+    "egypt": "egypt",
+    "sudan": "sudan",
+    "nobody": "nobody",
+    "refused": "refused"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.4,
+   "direction": "the 1899 line draws across on 'parallel'",
+   "text": "In 1899 Britain drew the border along the twenty-second parallel. A straight line, east to west.",
+   "cues": {
+    "britain": "britain",
+    "parallel": "parallel",
+    "straight": "straight"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "the 1902 administrative line draws on 'second'; the two bends pulse on north / south",
+   "text": "Three years later it drew a second line, following the tribes instead: a bend north by the sea, a bend south in the desert.",
+   "cues": {
+    "second": "second",
+    "tribes": "tribes",
+    "north": "north",
+    "south": "south"
+   }
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "story",
+   "tone": "neutral",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the coastal triangle lights on 'coastal'; the disputed plate is on screen with it",
+   "text": "Egypt holds to the straight line. Sudan holds to the second. Each line gives its owner the big coastal triangle, the one with the Red Sea and the towns.",
+   "cues": {
+    "straight": "straight",
+    "second": "second",
+    "coastal": "coastal",
+    "towns": "towns"
+   }
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "direction": "tighten onto Bir Tawil; the void fills; counter on the area",
+   "text": "And the same two lines leave this smaller patch to the other side. Claim it, and you accept the line that loses you the coast. So neither does.",
+   "cues": {
+    "smaller": "smaller",
+    "claim": "claim",
+    "coast": "coast",
+    "neither": "neither"
+   },
+   "climax": true
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "direction": "answer the opening line with the same noun",
+   "text": "Two thousand square kilometres of desert, unclaimed on purpose, because wanting it would cost the coast.",
+   "cues": {
+    "desert": "desert",
+    "purpose": "purpose",
+    "coast": "coast"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 2,
+   "pause_after": 0.0,
+   "direction": "short follow — the outro visual does the work",
+   "text": "Follow for a new map story every day.",
+   "cues": {}
+  }
+ ]
+}

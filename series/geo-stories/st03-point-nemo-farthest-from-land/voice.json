@@ -1,0 +1,128 @@
+{
+ "version": 1,
+ "episode": "st03-point-nemo-farthest-from-land",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "The spot in the ocean farthest from any land, so remote that astronauts overhead are often the closest people, and the reason space agencies aim dead satellites at it.",
+ "pacing_profile": "documentary: cold open, place, why in 2–5 beats, twist, close answers the open, short CTA (docs/STORY_GUIDELINES.md §2)",
+ "pause_policy": "Pause only at the marked ellipses.",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v01",
+ "title": "The place where the nearest people are in space",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the opening line, cold — the map is already moving",
+   "text": "There is a point in the ocean where the nearest human beings are usually in orbit.",
+   "cues": {
+    "point": "point",
+    "ocean": "ocean",
+    "orbit": "orbit"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "pull back; the empty circle draws on 'farthest'; counter on the distance",
+   "text": "This is Point Nemo, the spot in the South Pacific farthest from any land. The nearest coast is two thousand six hundred and eighty-eight kilometres away.",
+   "cues": {
+    "nemo": "nemo",
+    "pacific": "pacific",
+    "farthest": "farthest",
+    "coast": "coast",
+    "kilometres": "kilometres"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "story",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "three pins land on their names; three spokes draw from the centre",
+   "text": "Three specks of land sit on that circle: Ducie Island to the north, Motu Nui off Easter Island to the north-east, and Maher Island, on the edge of Antarctica, to the south.",
+   "cues": {
+    "three": "three",
+    "ducie": "ducie",
+    "motu": "motu",
+    "maher": "maher",
+    "south": "south"
+   }
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "direction": "tighten back onto the point; satellite sticker arcs over on 'station'; card with the altitude",
+   "text": "Nobody lives on any of them. The space station passes about four hundred kilometres overhead, so when it does, its crew are the closest people to this spot.",
+   "cues": {
+    "nobody": "nobody",
+    "station": "station",
+    "overhead": "overhead",
+    "closest": "closest"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.5,
+   "direction": "the circle fills; counter of spacecraft on 'hundred'; the sticker falls in",
+   "text": "That emptiness is useful. Space agencies steer dead spacecraft to burn up and fall here, more than two hundred and fifty of them so far, including the Mir space station.",
+   "cues": {
+    "useful": "useful",
+    "dead": "dead",
+    "fall": "fall",
+    "hundred": "hundred",
+    "mir": "mir"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "direction": "answer the opening line with the same noun",
+   "text": "The loneliest point in the ocean, where the only neighbours pass by in orbit.",
+   "cues": {
+    "loneliest": "loneliest",
+    "ocean": "ocean",
+    "orbit": "orbit"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 2,
+   "pause_after": 0.0,
+   "direction": "short follow — the outro visual does the work",
+   "text": "Follow for a new map story every day.",
+   "cues": {}
+  }
+ ]
+}
