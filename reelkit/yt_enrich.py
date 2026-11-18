@@ -361,10 +361,10 @@ def cmd_audit(a):
     print(f"yt_enrich: audit {len(rows)} playlists · {yt.units} units")
 
 
-def cmd_merge(a):
+def cmd_merge(a, yt=None):
     """Move every item of playlist SRC into playlist DST (skip items already there), then delete SRC; update config/ledger ids.
     Cost: 1 unit per 50 reads + 50 per insert + 50 for the delete."""
-    c = cfg(); A = c["youtube_api"]; yt = YT(a.dry_run, cap=A["daily_units_cap"]); src, dst = a.src, a.dst
+    c = cfg(); A = c["youtube_api"]; yt = yt or YT(a.dry_run, cap=A["daily_units_cap"]); src, dst = a.src, a.dst
     def items(pid):
         out, tok = [], None
         while True:
@@ -422,11 +422,21 @@ def cmd_run(a):
     if offline: print("yt_enrich: no YT_* secrets — offline plan only")
     rows = [p for p in L["posts"] if p["platform"] == "youtube" and p.get("state") == "sent"]
     todo = [(p, steps_for(p, A)) for p in rows]; todo = [(p, s) for p, s in todo if s]
-    if not todo: print("yt_enrich: nothing to do"); return
+    if not todo and not (ROOT / "dispatch/yt_merges.json").exists(): print("yt_enrich: nothing to do"); return
     est = sum(EST[s] for _, ss in todo for s in ss)
     print(f"yt_enrich: {len(todo)} video(s) with work · estimate {est} units · cap {A['daily_units_cap']}/day · thumbnails ≤ {A['thumbnails_per_run']}/run")
     yt = YT(a.dry_run, offline=offline, cap=A["daily_units_cap"]); cache = {}; done = {"thumb": 0, "series": 0, "channel": 0, "tags": 0}
     thumbs_open, stopped = True, None
+    MQ = ROOT / "dispatch/yt_merges.json"                      # queued playlist merges (owner 2026-11-18: duplicates → owner's lists), run first
+    if MQ.exists():
+        q = json.loads(MQ.read_text()); left = []
+        for m in q:
+            try: cmd_merge(argparse.Namespace(src=m["src"], dst=m["dst"], dry_run=a.dry_run), yt=yt); c = cfg()
+            except Budget as e: left.append(m); print(f"::notice::merge {m['src']}→{m['dst']} waits for quota ({e})"); left += [x for x in q if x is not m and x not in left]; break
+            except Exception as e: print(f"::warning::merge {m['src']}→{m['dst']} failed: {str(e)[:200]}"); left.append(m)
+        if not a.dry_run: (MQ.write_text(json.dumps(left, indent=1) + "\n") if left else MQ.unlink())
+        L = json.loads(LEDGER.read_text()); rows = [p for p in L["posts"] if p["platform"] == "youtube" and p.get("state") == "sent"]
+        todo = [(p, steps_for(p, A)) for p in rows]; todo = [(p, s) for p, s in todo if s]
     try:
         for p, steps in todo:
             try:

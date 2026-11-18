@@ -275,7 +275,7 @@
   "min_age_minutes": 10,
   "max_cover_bytes": 2000000,
   "thumbnails": true,
-  "channel_playlist": "TheQuizWire · Daily Map Quiz",
+  "channel_playlist": null,
   "channel_playlist_id": "PLMrT8lRsJLa4",
   "playlists_note": "Playlist ids/titles are the OWNER's existing YouTube playlists (audit 2026-11-18). Never create playlists by title; merge duplicates with `yt_enrich.py merge <src> <dst>`."
  }
