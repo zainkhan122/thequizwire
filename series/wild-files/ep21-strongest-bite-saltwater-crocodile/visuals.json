@@ -53,10 +53,20 @@
    "max_h": 520
   },
   {
+   "id": "newton",
+   "type": "counter",
+   "start": 0,
+   "end": 16460,
+   "y": 760,
+   "label": "newtons · measured on a wild crocodile",
+   "fmt": "int",
+   "size": 150
+  },
+  {
    "id": "f4",
    "type": "fact",
-   "kicker": "16,460 N",
-   "text": "measured on a wild crocodile"
+   "kicker": "ambush",
+   "text": "waits at the water's edge"
   },
   {
    "id": "st_muscle",
@@ -357,6 +367,15 @@
    }
   },
   {
+   "at": "s06@clamp-0.2",
+   "do": "chart.counter_run",
+   "id": "newton",
+   "until": "s06@open+0.4",
+   "args": {
+    "steps": 16
+   }
+  },
+  {
    "at": "s06@clamp",
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
@@ -420,6 +439,11 @@
     "dur": 0.7,
     "layer": "hl"
    }
+  },
+  {
+   "at": "s06.end",
+   "do": "chart.out",
+   "id": "newton"
   },
   {
    "at": "s06.end",

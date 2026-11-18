@@ -93,7 +93,7 @@
    "tone": "revelatory",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "hold on the north; a highlight pulse on 'clamp' with the jaws tag; a tooth sticker on 'open'; a band sticker on 'band' as the north pulses",
+   "direction": "hold on the north; the newton counter runs on 'clamp' with the jaws tag; a tooth sticker on 'open'; a band sticker on 'band' as the north pulses",
    "text": "The muscles are built to clamp shut, not to open. A rubber band can hold the mouth closed.",
    "cues": {
     "clamp": "clamp",
@@ -108,7 +108,7 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.5,
-   "direction": "tighten on the Kakadu wetlands; a wave sticker on 'rivers'; the Kakadu pin and the 16,460 N card on 'Australia'; a warning sticker on 'drink' as a crocodile sticker lands and the north pulses; the pin leaves at the end",
+   "direction": "tighten on the Kakadu wetlands; a wave sticker on 'rivers'; the Kakadu pin and the ambush card on 'Australia'; a warning sticker on 'drink' as a crocodile sticker lands and the north pulses; the pin leaves at the end",
    "text": "The giants live in the rivers and estuaries of northern Australia, longer than a car, and ambush whatever comes to drink.",
    "cues": {
     "rivers": "rivers",

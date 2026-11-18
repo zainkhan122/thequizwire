@@ -110,7 +110,7 @@
   "reveal": "fill-pulse",
   "beats": [
    "compare",
-   "pulse",
+   "counter",
    "pin",
    "label"
   ],
@@ -540,6 +540,16 @@
      "x": 60,
      "w": 900,
      "max_h": 520
+    },
+    {
+     "id": "newton",
+     "type": "counter",
+     "start": 0,
+     "end": 16460,
+     "y": 760,
+     "label": "newtons · measured on a wild crocodile",
+     "fmt": "int",
+     "size": 150
     }
    ],
    "devices": [
@@ -613,7 +623,7 @@
      "band": "band"
     }
    },
-   "direction": "hold on the north; a highlight pulse on 'clamp' with the jaws tag; a tooth sticker on 'open'; a band sticker on 'band' as the north pulses",
+   "direction": "hold on the north; the newton counter runs on 'clamp' with the jaws tag; a tooth sticker on 'open'; a band sticker on 'band' as the north pulses",
    "energy": 3,
    "tone": "revelatory",
    "pause_after": 0.45,
@@ -634,6 +644,15 @@
    ],
    "pulse": false,
    "devices": [
+    {
+     "at": "@@clamp-0.2",
+     "do": "chart.counter_run",
+     "id": "newton",
+     "until": "@@open+0.4",
+     "args": {
+      "steps": 16
+     }
+    },
     {
      "at": "@@clamp",
      "do": "geo.highlight_pulse",
@@ -701,6 +720,11 @@
     },
     {
      "at": "@.end",
+     "do": "chart.out",
+     "id": "newton"
+    },
+    {
+     "at": "@.end",
      "do": "sticker_out",
      "id": "st_band"
     }
@@ -715,13 +739,13 @@
      "drink": "drink"
     }
    },
-   "direction": "tighten on the Kakadu wetlands; a wave sticker on 'rivers'; the Kakadu pin and the 16,460 N card on 'Australia'; a warning sticker on 'drink' as a crocodile sticker lands and the north pulses; the pin leaves at the end",
+   "direction": "tighten on the Kakadu wetlands; a wave sticker on 'rivers'; the Kakadu pin and the ambush card on 'Australia'; a warning sticker on 'drink' as a crocodile sticker lands and the north pulses; the pin leaves at the end",
    "energy": 3,
    "tone": "resolute",
    "pause_after": 0.5,
    "card": {
-    "kicker": "16,460 N",
-    "text": "measured on a wild crocodile"
+    "kicker": "ambush",
+    "text": "waits at the water's edge"
    },
    "card_at": null,
    "cam": [
