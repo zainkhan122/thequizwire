@@ -110,7 +110,7 @@
   "reveal": "fill-pulse",
   "beats": [
    "compare",
-   "flash",
+   "pulse",
    "pin",
    "label"
   ],
@@ -613,7 +613,7 @@
      "band": "band"
     }
    },
-   "direction": "hold on the north; a white flash on 'clamp' with the jaws tag; a tooth sticker on 'open'; a band sticker on 'band' as the north pulses",
+   "direction": "hold on the north; a highlight pulse on 'clamp' with the jaws tag; a tooth sticker on 'open'; a band sticker on 'band' as the north pulses",
    "energy": 3,
    "tone": "revelatory",
    "pause_after": 0.45,
@@ -636,10 +636,12 @@
    "devices": [
     {
      "at": "@@clamp",
-     "do": "fx.flash",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
      "args": {
-      "peak": 0.45,
-      "out": 0.25
+      "fid": "036",
+      "dur": 0.7,
+      "layer": "hl"
      }
     },
     {

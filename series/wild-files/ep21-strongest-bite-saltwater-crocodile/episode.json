@@ -133,7 +133,7 @@
   "reveal": "fill-pulse",
   "beats": [
    "compare",
-   "flash",
+   "pulse",
    "pin",
    "label"
   ],

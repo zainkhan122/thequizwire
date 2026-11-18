@@ -93,7 +93,7 @@
    "tone": "revelatory",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "hold on the north; a white flash on 'clamp' with the jaws tag; a tooth sticker on 'open'; a band sticker on 'band' as the north pulses",
+   "direction": "hold on the north; a highlight pulse on 'clamp' with the jaws tag; a tooth sticker on 'open'; a band sticker on 'band' as the north pulses",
    "text": "The muscles are built to clamp shut, not to open. A rubber band can hold the mouth closed.",
    "cues": {
     "clamp": "clamp",
