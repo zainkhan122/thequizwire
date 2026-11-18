@@ -360,8 +360,8 @@
    "at": "s06@clamp",
    "do": "fx.flash",
    "args": {
-    "peak": 0.9,
-    "out": 0.3
+    "peak": 0.45,
+    "out": 0.25
    }
   },
   {

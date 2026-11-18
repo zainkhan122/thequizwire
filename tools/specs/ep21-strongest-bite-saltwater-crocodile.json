@@ -352,7 +352,7 @@
      "the giants live in the rivers and estuaries of northern australia, longer than a car, and ambush whatever comes to drink"
     ],
     "screen": [
-     "Kakadu · croc country"
+     "Kakadu"
     ]
    }
   ]
@@ -395,8 +395,8 @@
      132.4,
      -12.9
     ],
-    "label": "Kakadu · croc country",
-    "side": "right"
+    "label": "Kakadu",
+    "side": "left"
    }
   ],
   "scalebar": {
@@ -638,8 +638,8 @@
      "at": "@@clamp",
      "do": "fx.flash",
      "args": {
-      "peak": 0.9,
-      "out": 0.3
+      "peak": 0.45,
+      "out": 0.25
      }
     },
     {
