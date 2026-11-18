@@ -351,6 +351,30 @@
    },
    "devices": [
     {
+     "at": "@+0.1",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "ducie"
+     }
+    },
+    {
+     "at": "@+0.1",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "motu"
+     }
+    },
+    {
+     "at": "@+0.1",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "maher"
+     }
+    },
+    {
      "at": "@@overhead",
      "do": "sticker_pulse",
      "id": "st_sat"

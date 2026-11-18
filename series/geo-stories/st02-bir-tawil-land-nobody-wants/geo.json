@@ -237,7 +237,7 @@
      "text": "1899 · 22°N",
      "cls": "tag",
      "in": "s02+99",
-     "out": null
+     "out": "s04+0.2"
     },
     {
      "id": "l1902",
@@ -263,8 +263,8 @@
      "as_of": "2026-10",
      "source": "docs/border_registry.json#halaib_bir_tawil",
      "label_at": [
-      35.7,
-      23.4
+      34.3,
+      23.3
      ],
      "plate_cls": "small",
      "manual": true

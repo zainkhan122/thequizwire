@@ -52,7 +52,7 @@ class Story:
     # ---------------------------------------------------------------- keyword captions
     def kw(self, kid, text, y=1380):
         _, hh = mark(text)
-        return f'<div id="{kid}" class="skw tu" style="top:{y}px"{ALLOW}{CAPZ}>{hh}</div>'
+        return f'<div id="{kid}" class="skw tu" style="top:{y}px"{ALLOW}{CAPZ}><span{ALLOW}>{hh}</span></div>'
 
     def kw_in(self, t0, t1, kid, dur=0.3):
         self.J(f"tl.fromTo('#{kid}',{{autoAlpha:0,y:24,scale:0.9}},{{autoAlpha:1,y:0,scale:1,duration:{f(dur)},ease:'back.out(1.6)',immediateRender:false}},{f(t0)});")
@@ -84,10 +84,11 @@ CSS = """
   text-shadow:0 7px 0 rgba(0,0,0,.6),0 0 22px rgba(0,0,0,.9),0 16px 32px rgba(0,0,0,.7)}
 .v3 .stitle.m .st-head{font-size:82px} .v3 .stitle.s .st-head{font-size:70px}
 .v3 .st-head .w{display:inline-block;will-change:transform,opacity} .v3 .st-head b{color:#FFD400;font-weight:400}
-.v3 .skw{position:absolute;left:60px;width:960px;text-align:center;font-family:'Anton';font-size:66px;line-height:1.1;text-transform:uppercase;color:#fff;letter-spacing:.02em;
+.v3 .skw{position:absolute;left:60px;width:880px;text-align:center;font-family:'Anton';font-size:62px;line-height:1.15;text-transform:uppercase;color:#fff;letter-spacing:.02em;
   -webkit-text-stroke:2px #141414;paint-order:stroke fill;text-shadow:0 5px 0 rgba(0,0,0,.55),0 0 18px rgba(0,0,0,.9);z-index:71;visibility:hidden;opacity:0;pointer-events:none}
+.v3 .skw>span{display:inline-block;background:rgba(11,22,32,.82);padding:8px 26px 6px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.35)}  /* plate: readable over yellow land fills (textqa ≥ 3:1) */
 .v3 .skw b{color:#FFD400;font-weight:400} .v3 .skw i{color:#FF5A4E;font-style:normal}
-.v3 .sclose{position:absolute;left:70px;width:940px;text-align:center;font-family:'Lilita';font-size:84px;line-height:1.06;text-transform:uppercase;color:#fff;-webkit-text-stroke:3px #141414;
+.v3 .sclose{position:absolute;left:60px;width:880px;text-align:center;font-family:'Lilita';font-size:84px;line-height:1.06;text-transform:uppercase;color:#fff;-webkit-text-stroke:3px #141414;
   paint-order:stroke fill;text-shadow:0 7px 0 rgba(0,0,0,.6),0 0 22px rgba(0,0,0,.9);z-index:72;visibility:hidden;opacity:0}
 .v3 .sclose.m{font-size:72px} .v3 .sclose.s{font-size:62px} .v3 .sclose b{color:#FFD400;font-weight:400}
 .geo .g-highlight.tint{fill:rgba(95,182,242,.5);stroke:#fff;stroke-width:2.2}

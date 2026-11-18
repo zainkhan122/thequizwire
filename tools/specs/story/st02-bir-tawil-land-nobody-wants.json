@@ -286,17 +286,17 @@
    "pause_after": 0.45,
    "direction": "the coastal triangle lights on 'coastal'; the disputed plate is on screen with it",
    "cam": [
-    1.9,
+    1.8,
     [
-     35.9,
+     35.5,
      22.5
     ]
    ],
    "cam_dur": 1.5,
    "cam_hold": [
-    1.95,
+    1.84,
     [
-     36.0,
+     35.6,
      22.5
     ]
    ],
@@ -718,7 +718,7 @@
     "text": "1899 · 22°N",
     "cls": "tag",
     "in": "s02+99",
-    "out": null
+    "out": "s04+0.2"
    },
    {
     "id": "l1902",
@@ -744,8 +744,8 @@
     "as_of": "2026-10",
     "source": "docs/border_registry.json#halaib_bir_tawil",
     "label_at": [
-     35.7,
-     23.4
+     34.3,
+     23.3
     ],
     "plate_cls": "small",
     "manual": true

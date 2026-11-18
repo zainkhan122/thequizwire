@@ -397,9 +397,9 @@
    "stage": "stage_map",
    "until": "s04+1.5",
    "args": {
-    "k": 1.9,
+    "k": 1.8,
     "lonlat": [
-     35.9,
+     35.5,
      22.5
     ],
     "ease": "power2.inOut"
@@ -411,9 +411,9 @@
    "stage": "stage_map",
    "until": "s04+2.7",
    "args": {
-    "k": 1.95,
+    "k": 1.84,
     "lonlat": [
-     36.0,
+     35.6,
      22.5
     ],
     "ease": "none"
@@ -425,9 +425,9 @@
    "stage": "stage_map",
    "until": "s04.end",
    "args": {
-    "k": 1.999,
+    "k": 1.886,
     "lonlat": [
-     36.0,
+     35.6,
      22.5
     ],
     "ease": "none"
@@ -725,6 +725,14 @@
   {
    "at": "s02+99",
    "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "l1899"
+   }
+  },
+  {
+   "at": "s04+0.2",
+   "do": "geo.label_out",
    "stage": "stage_map",
    "args": {
     "lid": "l1899"
