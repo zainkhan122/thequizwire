@@ -1,4 +1,4 @@
-# Channel stats — 2026-11-18T10:39Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
+# Channel stats — 2026-11-18T10:50Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
 
 ## Per series, all channels (7-day movement — what is trending for us)
 - geo-blitz: 40 posts · +4468 in 7 d · 18811 total
@@ -34,7 +34,7 @@ hours (first-24 h by publish hour): 10:00 n=3 med 0 · 19:00 n=5 med 4
 
 ## twitter — 0 posts · metric — · buffer insights · 0/32 sent posts with metrics · http 429 RATE_LIMIT_EXCEEDED Too many requests from this client. Please try again later. You can raise your Buffer API limit: https://publish.buffer.
 
-## YouTube API: 0/56 thumbnails · 1 series-playlist items · 0 channel-playlist items · 0 tagged · quota 159 units on 2026-11-18
+## YouTube API: 4/56 thumbnails · 12 series-playlist items · 12 channel-playlist items · 12 tagged · quota 2348 units on 2026-11-18
 
 ## Every post
 

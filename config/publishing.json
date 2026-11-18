@@ -196,7 +196,8 @@
     "wildlife facts",
     "nature trivia",
     "general knowledge"
-   ]
+   ],
+   "playlist_id": "PLN8oBVdR-y5g"
   },
   "sports-sprint": {
    "name": "Sports Sprint",
@@ -229,7 +230,8 @@
     "sports trivia",
     "sports history",
     "general knowledge"
-   ]
+   ],
+   "playlist_id": "PLTCyGf04zqB4"
   },
   "body-brain": {
    "name": "Body & Brain",
@@ -262,7 +264,8 @@
     "brain facts",
     "science trivia",
     "general knowledge"
-   ]
+   ],
+   "playlist_id": "PLGaF-PD8D7GA"
   }
  },
  "youtube_api": {

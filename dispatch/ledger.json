@@ -18,7 +18,9 @@
    "refreshed_at": "2026-10-16T14:01:39+00:00",
    "yt_video_id": "Lai2oqJxZ8w",
    "yt_playlist_id": "PLWhHzNp-e8_E",
-   "yt_series_item": "UExXaEh6TnAtZThfRS41NkI0NEY2RDEwNTU3Q0M2"
+   "yt_series_item": "UExXaEh6TnAtZThfRS41NkI0NEY2RDEwNTU3Q0M2",
+   "yt_channel_item": "UExNclQ4bFJzSkxhNC41NkI0NEY2RDEwNTU3Q0M2",
+   "yt_tags_at": "2026-11-18T10:49:23+00:00"
   },
   {
    "episode": "ep11-budapest-buda-pest",
@@ -34,7 +36,12 @@
    "account": "BUFFER_API_KEY",
    "sent_at": "2026-10-16T13:00:36.889Z",
    "external_link": "https://www.youtube.com/shorts/yN1Gkwj9DUQ",
-   "refreshed_at": "2026-10-16T14:01:41+00:00"
+   "refreshed_at": "2026-10-16T14:01:41+00:00",
+   "yt_video_id": "yN1Gkwj9DUQ",
+   "yt_playlist_id": "PLWhHzNp-e8_E",
+   "yt_series_item": "UExXaEh6TnAtZThfRS4yODlGNEE0NkRGMEEzMEQy",
+   "yt_channel_item": "UExNclQ4bFJzSkxhNC4yODlGNEE0NkRGMEEzMEQy",
+   "yt_tags_at": "2026-11-18T10:49:27+00:00"
   },
   {
    "episode": "ep12-coldest-desert-antarctica",
@@ -50,7 +57,12 @@
    "account": "BUFFER_API_KEY",
    "sent_at": "2026-10-16T13:04:54.767Z",
    "external_link": "https://www.youtube.com/shorts/9ZgeQDGH7Ag",
-   "refreshed_at": "2026-10-16T14:01:43+00:00"
+   "refreshed_at": "2026-10-16T14:01:43+00:00",
+   "yt_video_id": "9ZgeQDGH7Ag",
+   "yt_playlist_id": "PLWhHzNp-e8_E",
+   "yt_series_item": "UExXaEh6TnAtZThfRS4wMTcyMDhGQUE4NTIzM0Y5",
+   "yt_channel_item": "UExNclQ4bFJzSkxhNC4wMTcyMDhGQUE4NTIzM0Y5",
+   "yt_tags_at": "2026-11-18T10:49:31+00:00"
   },
   {
    "episode": "ep13-southern-alps-new-zealand",
@@ -66,7 +78,12 @@
    "account": "BUFFER_API_KEY",
    "sent_at": "2026-10-16T13:25:04.669Z",
    "external_link": "https://www.youtube.com/shorts/qPy0M9aj2mg",
-   "refreshed_at": "2026-10-16T14:01:45+00:00"
+   "refreshed_at": "2026-10-16T14:01:45+00:00",
+   "yt_video_id": "qPy0M9aj2mg",
+   "yt_playlist_id": "PLWhHzNp-e8_E",
+   "yt_series_item": "UExXaEh6TnAtZThfRS41MjE1MkI0OTQ2QzJGNzNG",
+   "yt_channel_item": "UExNclQ4bFJzSkxhNC41MjE1MkI0OTQ2QzJGNzNG",
+   "yt_tags_at": "2026-11-18T10:49:36+00:00"
   },
   {
    "episode": "ep14-most-time-zones-france",
@@ -82,7 +99,14 @@
    "account": "BUFFER_API_KEY",
    "sent_at": "2026-10-16T14:04:53.400Z",
    "external_link": "https://www.youtube.com/shorts/j0VdDXhWSKA",
-   "refreshed_at": "2026-10-16T19:58:57+00:00"
+   "refreshed_at": "2026-10-16T19:58:57+00:00",
+   "yt_video_id": "j0VdDXhWSKA",
+   "yt_thumbnail_at": "2026-11-18T10:49:40+00:00",
+   "yt_thumbnail_src": "release daily-2026-11-06",
+   "yt_playlist_id": "PLWhHzNp-e8_E",
+   "yt_series_item": "UExXaEh6TnAtZThfRS4wOTA3OTZBNzVEMTUzOTMy",
+   "yt_channel_item": "UExNclQ4bFJzSkxhNC4wOTA3OTZBNzVEMTUzOTMy",
+   "yt_tags_at": "2026-11-18T10:49:42+00:00"
   },
   {
    "episode": "ep09-basketball-invented-springfield",
@@ -98,7 +122,12 @@
    "account": "BUFFER_API_KEY",
    "sent_at": "2026-10-16T15:07:05.525Z",
    "external_link": "https://www.youtube.com/shorts/CcAeQzYfnn8",
-   "refreshed_at": "2026-10-16T19:58:59+00:00"
+   "refreshed_at": "2026-10-16T19:58:59+00:00",
+   "yt_video_id": "CcAeQzYfnn8",
+   "yt_playlist_id": "PLTCyGf04zqB4",
+   "yt_series_item": "UExUQ3lHZjA0enFCNC41NkI0NEY2RDEwNTU3Q0M2",
+   "yt_channel_item": "UExNclQ4bFJzSkxhNC4xMkVGQjNCMUM1N0RFNEUx",
+   "yt_tags_at": "2026-11-18T10:49:46+00:00"
   },
   {
    "episode": "ep10-grand-slam-on-grass-wimbledon",
@@ -114,7 +143,12 @@
    "account": "BUFFER_API_KEY",
    "sent_at": "2026-10-16T15:55:03.675Z",
    "external_link": "https://www.youtube.com/shorts/vYxREWsIqUE",
-   "refreshed_at": "2026-10-16T19:59:01+00:00"
+   "refreshed_at": "2026-10-16T19:59:01+00:00",
+   "yt_video_id": "vYxREWsIqUE",
+   "yt_playlist_id": "PLTCyGf04zqB4",
+   "yt_series_item": "UExUQ3lHZjA0enFCNC4yODlGNEE0NkRGMEEzMEQy",
+   "yt_channel_item": "UExNclQ4bFJzSkxhNC41MzJCQjBCNDIyRkJDN0VD",
+   "yt_tags_at": "2026-11-18T10:49:50+00:00"
   },
   {
    "episode": "ep07-arctic-tern-migration",
@@ -130,7 +164,12 @@
    "account": "BUFFER_API_KEY",
    "sent_at": "2026-10-17T13:03:15.101Z",
    "external_link": "https://www.youtube.com/shorts/17HuwomVQqs",
-   "refreshed_at": "2026-10-17T19:18:53+00:00"
+   "refreshed_at": "2026-10-17T19:18:53+00:00",
+   "yt_video_id": "17HuwomVQqs",
+   "yt_playlist_id": "PLN8oBVdR-y5g",
+   "yt_series_item": "UExOOG9CVmRSLXk1Zy41NkI0NEY2RDEwNTU3Q0M2",
+   "yt_channel_item": "UExNclQ4bFJzSkxhNC5DQUNERDQ2NkIzRUQxNTY1",
+   "yt_tags_at": "2026-11-18T10:49:55+00:00"
   },
   {
    "episode": "ep08-most-wild-tigers-india",
@@ -146,7 +185,12 @@
    "account": "BUFFER_API_KEY",
    "sent_at": "2026-10-17T13:25:04.220Z",
    "external_link": "https://www.youtube.com/shorts/fctqWgJUWUs",
-   "refreshed_at": "2026-10-17T19:18:55+00:00"
+   "refreshed_at": "2026-10-17T19:18:55+00:00",
+   "yt_video_id": "fctqWgJUWUs",
+   "yt_playlist_id": "PLN8oBVdR-y5g",
+   "yt_series_item": "UExOOG9CVmRSLXk1Zy4yODlGNEE0NkRGMEEzMEQy",
+   "yt_channel_item": "UExNclQ4bFJzSkxhNC45NDk1REZENzhEMzU5MDQz",
+   "yt_tags_at": "2026-11-18T10:49:58+00:00"
   },
   {
    "episode": "ep09-galapagos-penguin-equator",
@@ -162,7 +206,12 @@
    "account": "BUFFER_API_KEY",
    "sent_at": "2026-10-17T13:36:05.934Z",
    "external_link": "https://www.youtube.com/shorts/finC7MGdZLY",
-   "refreshed_at": "2026-10-17T19:18:57+00:00"
+   "refreshed_at": "2026-10-17T19:18:57+00:00",
+   "yt_video_id": "finC7MGdZLY",
+   "yt_playlist_id": "PLN8oBVdR-y5g",
+   "yt_series_item": "UExOOG9CVmRSLXk1Zy4wMTcyMDhGQUE4NTIzM0Y5",
+   "yt_channel_item": "UExNclQ4bFJzSkxhNC5GNjNDRDREMDQxOThCMDQ2",
+   "yt_tags_at": "2026-11-18T10:50:02+00:00"
   },
   {
    "episode": "ep10-nile-basin-countries",
@@ -802,7 +851,14 @@
    "account": "BUFFER_API_KEY",
    "sent_at": "2026-10-17T23:00:23.522Z",
    "external_link": "https://www.youtube.com/shorts/Sfbcbm7yCFA",
-   "refreshed_at": "2026-10-18T06:01:57+00:00"
+   "refreshed_at": "2026-10-18T06:01:57+00:00",
+   "yt_video_id": "Sfbcbm7yCFA",
+   "yt_thumbnail_at": "2026-11-18T10:50:10+00:00",
+   "yt_thumbnail_src": "release daily-2026-10-17",
+   "yt_playlist_id": "PLWhHzNp-e8_E",
+   "yt_series_item": "UExXaEh6TnAtZThfRS4xMkVGQjNCMUM1N0RFNEUx",
+   "yt_channel_item": "UExNclQ4bFJzSkxhNC40NzZCMERDMjVEN0RFRThB",
+   "yt_tags_at": "2026-11-18T10:50:11+00:00"
   },
   {
    "episode": "ep15-no-rivers-saudi-arabia",
@@ -882,7 +938,14 @@
    "account": "BUFFER_API_KEY",
    "sent_at": "2026-10-18T16:01:27.020Z",
    "external_link": "https://www.youtube.com/shorts/at_okwENeS0",
-   "refreshed_at": "2026-10-18T19:28:22+00:00"
+   "refreshed_at": "2026-10-18T19:28:22+00:00",
+   "yt_video_id": "at_okwENeS0",
+   "yt_thumbnail_at": "2026-11-18T10:50:20+00:00",
+   "yt_thumbnail_src": "release daily-2026-10-17",
+   "yt_playlist_id": "PLTCyGf04zqB4",
+   "yt_series_item": "UExUQ3lHZjA0enFCNC4wMTcyMDhGQUE4NTIzM0Y5",
+   "yt_channel_item": "UExNclQ4bFJzSkxhNC5EMEEwRUY5M0RDRTU3NDJC",
+   "yt_tags_at": "2026-11-18T10:50:22+00:00"
   },
   {
    "episode": "ep11-first-modern-olympics-athens",
@@ -981,7 +1044,10 @@
    "replaced": "6ad628dcf8ab1a796325e2b1",
    "sent_at": "2026-10-19T23:00:35.992Z",
    "external_link": "https://www.youtube.com/shorts/nlcIaUTyiTA",
-   "refreshed_at": "2026-10-20T06:06:59+00:00"
+   "refreshed_at": "2026-10-20T06:06:59+00:00",
+   "yt_video_id": "nlcIaUTyiTA",
+   "yt_thumbnail_at": "2026-11-18T10:50:29+00:00",
+   "yt_thumbnail_src": "release daily-2026-10-19"
   },
   {
    "episode": "ep04-tallest-men-netherlands",
@@ -1205,7 +1271,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-11-18T10:36:57+00:00",
+   "refreshed_at": "2026-11-18T10:40:31+00:00",
    "error": "An unknown error has occurred. Please retry the post again, and get in touch if this persists."
   },
   {
@@ -2604,7 +2670,7 @@
    "sent_at": null,
    "external_link": null,
    "refreshed_at": "2026-11-01T07:38:39+00:00",
-   "refresh_error": "rate limited; retry after 884236s"
+   "refresh_error": "rate limited; retry after 883641s"
   },
   {
    "episode": "ep22-most-oil-venezuela",
@@ -2621,7 +2687,7 @@
    "sent_at": null,
    "external_link": null,
    "refreshed_at": "2026-11-01T07:38:41+00:00",
-   "refresh_error": "rate limited; retry after 884234s"
+   "refresh_error": "rate limited; retry after 883639s"
   },
   {
    "episode": "ep22-most-oil-venezuela",
@@ -2638,7 +2704,7 @@
    "sent_at": null,
    "external_link": null,
    "refreshed_at": "2026-11-01T07:38:43+00:00",
-   "refresh_error": "rate limited; retry after 884232s"
+   "refresh_error": "rate limited; retry after 883637s"
   },
   {
    "episode": "ep22-most-oil-venezuela",
@@ -2687,7 +2753,7 @@
    "sent_at": null,
    "external_link": null,
    "refreshed_at": "2026-11-01T07:38:46+00:00",
-   "refresh_error": "rate limited; retry after 884230s"
+   "refresh_error": "rate limited; retry after 883635s"
   },
   {
    "episode": "ep08-most-doctors-cuba",
@@ -2704,7 +2770,7 @@
    "sent_at": null,
    "external_link": null,
    "refreshed_at": "2026-11-01T07:38:48+00:00",
-   "refresh_error": "rate limited; retry after 884228s"
+   "refresh_error": "rate limited; retry after 883633s"
   },
   {
    "episode": "ep08-most-doctors-cuba",
@@ -2721,7 +2787,7 @@
    "sent_at": null,
    "external_link": null,
    "refreshed_at": "2026-11-01T07:38:50+00:00",
-   "refresh_error": "rate limited; retry after 884226s"
+   "refresh_error": "rate limited; retry after 883631s"
   },
   {
    "episode": "ep08-most-doctors-cuba",
@@ -2767,7 +2833,7 @@
    "recorded_at": "2026-11-02T09:16:34+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884223s"
+   "refresh_error": "rate limited; retry after 883629s"
   },
   {
    "episode": "ep23-most-tsunamis-pacific",
@@ -2781,7 +2847,7 @@
    "recorded_at": "2026-11-02T09:16:35+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884222s"
+   "refresh_error": "rate limited; retry after 883627s"
   },
   {
    "episode": "ep23-most-tsunamis-pacific",
@@ -2795,7 +2861,7 @@
    "recorded_at": "2026-11-02T09:16:38+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884220s"
+   "refresh_error": "rate limited; retry after 883625s"
   },
   {
    "episode": "ep23-most-tsunamis-pacific",
@@ -2841,7 +2907,7 @@
    "recorded_at": "2026-11-04T10:05:37+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884218s"
+   "refresh_error": "rate limited; retry after 883623s"
   },
   {
    "episode": "ep18-most-world-cup-goals-mbappe",
@@ -2855,7 +2921,7 @@
    "recorded_at": "2026-11-04T10:05:39+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884216s"
+   "refresh_error": "rate limited; retry after 883621s"
   },
   {
    "episode": "ep18-most-world-cup-goals-mbappe",
@@ -2869,7 +2935,7 @@
    "recorded_at": "2026-11-04T10:05:41+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884214s"
+   "refresh_error": "rate limited; retry after 883619s"
   },
   {
    "episode": "ep18-most-world-cup-goals-mbappe",
@@ -2915,7 +2981,7 @@
    "recorded_at": "2026-11-04T10:13:48+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884212s"
+   "refresh_error": "rate limited; retry after 883617s"
   },
   {
    "episode": "ep07-most-diabetes-china",
@@ -2929,7 +2995,7 @@
    "recorded_at": "2026-11-04T10:13:50+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884210s"
+   "refresh_error": "rate limited; retry after 883615s"
   },
   {
    "episode": "ep07-most-diabetes-china",
@@ -2943,7 +3009,7 @@
    "recorded_at": "2026-11-04T10:13:52+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884208s"
+   "refresh_error": "rate limited; retry after 883613s"
   },
   {
    "episode": "ep07-most-diabetes-china",
@@ -2989,7 +3055,7 @@
    "recorded_at": "2026-11-05T09:31:50+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884206s"
+   "refresh_error": "rate limited; retry after 883611s"
   },
   {
    "episode": "ep15-longest-living-animal-greenland-shark",
@@ -3003,7 +3069,7 @@
    "recorded_at": "2026-11-05T09:31:52+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884204s"
+   "refresh_error": "rate limited; retry after 883609s"
   },
   {
    "episode": "ep15-longest-living-animal-greenland-shark",
@@ -3017,7 +3083,7 @@
    "recorded_at": "2026-11-05T09:31:54+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884202s"
+   "refresh_error": "rate limited; retry after 883607s"
   },
   {
    "episode": "ep15-longest-living-animal-greenland-shark",
@@ -3063,7 +3129,7 @@
    "recorded_at": "2026-11-06T14:58:14+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884200s"
+   "refresh_error": "rate limited; retry after 883605s"
   },
   {
    "episode": "ep24-most-time-zones-france",
@@ -3077,7 +3143,7 @@
    "recorded_at": "2026-11-06T14:58:16+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884198s"
+   "refresh_error": "rate limited; retry after 883603s"
   },
   {
    "episode": "ep24-most-time-zones-france",
@@ -3091,7 +3157,7 @@
    "recorded_at": "2026-11-06T14:58:18+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884196s"
+   "refresh_error": "rate limited; retry after 883601s"
   },
   {
    "episode": "ep24-most-time-zones-france",
@@ -3137,7 +3203,7 @@
    "recorded_at": "2026-11-07T07:17:45+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884194s"
+   "refresh_error": "rate limited; retry after 883599s"
   },
   {
    "episode": "ep09-first-vaccine-england-jenner",
@@ -3151,7 +3217,7 @@
    "recorded_at": "2026-11-07T07:17:47+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884192s"
+   "refresh_error": "rate limited; retry after 883597s"
   },
   {
    "episode": "ep09-first-vaccine-england-jenner",
@@ -3165,7 +3231,7 @@
    "recorded_at": "2026-11-07T07:17:49+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884190s"
+   "refresh_error": "rate limited; retry after 883595s"
   },
   {
    "episode": "ep09-first-vaccine-england-jenner",
@@ -3211,7 +3277,7 @@
    "recorded_at": "2026-11-07T08:07:14+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884188s"
+   "refresh_error": "rate limited; retry after 883593s"
   },
   {
    "episode": "ep25-most-pyramids-sudan",
@@ -3225,7 +3291,7 @@
    "recorded_at": "2026-11-07T08:07:16+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884186s"
+   "refresh_error": "rate limited; retry after 883591s"
   },
   {
    "episode": "ep25-most-pyramids-sudan",
@@ -3239,7 +3305,7 @@
    "recorded_at": "2026-11-07T08:07:18+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884184s"
+   "refresh_error": "rate limited; retry after 883589s"
   },
   {
    "episode": "ep25-most-pyramids-sudan",
@@ -3285,7 +3351,7 @@
    "recorded_at": "2026-11-07T08:14:57+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884181s"
+   "refresh_error": "rate limited; retry after 883587s"
   },
   {
    "episode": "ep19-most-medals-winter-olympics-2026-norway",
@@ -3299,7 +3365,7 @@
    "recorded_at": "2026-11-07T08:14:59+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884180s"
+   "refresh_error": "rate limited; retry after 883585s"
   },
   {
    "episode": "ep19-most-medals-winter-olympics-2026-norway",
@@ -3313,7 +3379,7 @@
    "recorded_at": "2026-11-07T08:15:01+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884178s"
+   "refresh_error": "rate limited; retry after 883583s"
   },
   {
    "episode": "ep19-most-medals-winter-olympics-2026-norway",
@@ -3359,7 +3425,7 @@
    "recorded_at": "2026-11-10T07:47:41+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884176s"
+   "refresh_error": "rate limited; retry after 883581s"
   },
   {
    "episode": "ep20-most-rugby-world-cups-south-africa",
@@ -3373,7 +3439,7 @@
    "recorded_at": "2026-11-10T07:47:43+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884174s"
+   "refresh_error": "rate limited; retry after 883579s"
   },
   {
    "episode": "ep20-most-rugby-world-cups-south-africa",
@@ -3387,7 +3453,7 @@
    "recorded_at": "2026-11-10T07:47:45+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884172s"
+   "refresh_error": "rate limited; retry after 883577s"
   },
   {
    "episode": "ep20-most-rugby-world-cups-south-africa",
@@ -3433,7 +3499,7 @@
    "recorded_at": "2026-11-10T08:38:03+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884170s"
+   "refresh_error": "rate limited; retry after 883575s"
   },
   {
    "episode": "ep10-first-anaesthesia-boston-ether",
@@ -3447,7 +3513,7 @@
    "recorded_at": "2026-11-10T08:38:05+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884168s"
+   "refresh_error": "rate limited; retry after 883573s"
   },
   {
    "episode": "ep10-first-anaesthesia-boston-ether",
@@ -3461,7 +3527,7 @@
    "recorded_at": "2026-11-10T08:38:07+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884166s"
+   "refresh_error": "rate limited; retry after 883571s"
   },
   {
    "episode": "ep10-first-anaesthesia-boston-ether",
@@ -3507,7 +3573,7 @@
    "recorded_at": "2026-11-10T08:41:22+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884164s"
+   "refresh_error": "rate limited; retry after 883569s"
   },
   {
    "episode": "ep16-most-camels-somalia",
@@ -3521,7 +3587,7 @@
    "recorded_at": "2026-11-10T08:41:24+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884162s"
+   "refresh_error": "rate limited; retry after 883567s"
   },
   {
    "episode": "ep16-most-camels-somalia",
@@ -3535,7 +3601,7 @@
    "recorded_at": "2026-11-10T08:41:26+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884160s"
+   "refresh_error": "rate limited; retry after 883565s"
   },
   {
    "episode": "ep16-most-camels-somalia",
@@ -3581,7 +3647,7 @@
    "recorded_at": "2026-11-11T16:59:05+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884158s"
+   "refresh_error": "rate limited; retry after 883563s"
   },
   {
    "episode": "ep26-longest-coastline-canada",
@@ -3595,7 +3661,7 @@
    "recorded_at": "2026-11-11T16:59:07+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884156s"
+   "refresh_error": "rate limited; retry after 883561s"
   },
   {
    "episode": "ep26-longest-coastline-canada",
@@ -3609,7 +3675,7 @@
    "recorded_at": "2026-11-11T16:59:09+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884154s"
+   "refresh_error": "rate limited; retry after 883559s"
   },
   {
    "episode": "ep26-longest-coastline-canada",
@@ -3655,7 +3721,7 @@
    "recorded_at": "2026-11-11T16:59:13+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884152s"
+   "refresh_error": "rate limited; retry after 883557s"
   },
   {
    "episode": "ep11-stethoscope-invented-paris-laennec",
@@ -3669,7 +3735,7 @@
    "recorded_at": "2026-11-11T16:59:15+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884150s"
+   "refresh_error": "rate limited; retry after 883555s"
   },
   {
    "episode": "ep11-stethoscope-invented-paris-laennec",
@@ -3683,7 +3749,7 @@
    "recorded_at": "2026-11-11T16:59:17+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884148s"
+   "refresh_error": "rate limited; retry after 883553s"
   },
   {
    "episode": "ep11-stethoscope-invented-paris-laennec",
@@ -3729,7 +3795,7 @@
    "recorded_at": "2026-11-13T15:15:07+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884146s"
+   "refresh_error": "rate limited; retry after 883551s"
   },
   {
    "episode": "ep12-first-insulin-injection-toronto",
@@ -3743,7 +3809,7 @@
    "recorded_at": "2026-11-13T15:15:09+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884144s"
+   "refresh_error": "rate limited; retry after 883549s"
   },
   {
    "episode": "ep12-first-insulin-injection-toronto",
@@ -3757,7 +3823,7 @@
    "recorded_at": "2026-11-13T15:15:11+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884142s"
+   "refresh_error": "rate limited; retry after 883547s"
   },
   {
    "episode": "ep12-first-insulin-injection-toronto",
@@ -3803,7 +3869,7 @@
    "recorded_at": "2026-11-13T15:15:14+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884140s"
+   "refresh_error": "rate limited; retry after 883545s"
   },
   {
    "episode": "ep27-flattest-country-maldives",
@@ -3817,7 +3883,7 @@
    "recorded_at": "2026-11-13T15:15:16+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884138s"
+   "refresh_error": "rate limited; retry after 883543s"
   },
   {
    "episode": "ep27-flattest-country-maldives",
@@ -3831,7 +3897,7 @@
    "recorded_at": "2026-11-13T15:15:18+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884136s"
+   "refresh_error": "rate limited; retry after 883541s"
   },
   {
    "episode": "ep27-flattest-country-maldives",
@@ -3877,7 +3943,7 @@
    "recorded_at": "2026-11-13T15:15:21+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884134s"
+   "refresh_error": "rate limited; retry after 883539s"
   },
   {
    "episode": "ep18-loudest-animal-sperm-whale",
@@ -3891,7 +3957,7 @@
    "recorded_at": "2026-11-13T15:15:23+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884132s"
+   "refresh_error": "rate limited; retry after 883537s"
   },
   {
    "episode": "ep18-loudest-animal-sperm-whale",
@@ -3905,7 +3971,7 @@
    "recorded_at": "2026-11-13T15:15:26+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884130s"
+   "refresh_error": "rate limited; retry after 883535s"
   },
   {
    "episode": "ep18-loudest-animal-sperm-whale",
@@ -3951,7 +4017,7 @@
    "recorded_at": "2026-11-14T14:03:48+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884128s"
+   "refresh_error": "rate limited; retry after 883533s"
   },
   {
    "episode": "ep28-river-most-water-amazon",
@@ -3965,7 +4031,7 @@
    "recorded_at": "2026-11-14T14:03:50+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884126s"
+   "refresh_error": "rate limited; retry after 883531s"
   },
   {
    "episode": "ep28-river-most-water-amazon",
@@ -3979,7 +4045,7 @@
    "recorded_at": "2026-11-14T14:03:52+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884124s"
+   "refresh_error": "rate limited; retry after 883529s"
   },
   {
    "episode": "ep28-river-most-water-amazon",
@@ -3995,7 +4061,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-11-18T10:38:49+00:00",
+   "refreshed_at": "2026-11-18T10:48:44+00:00",
    "error": "An unknown error has occurred. Please retry the post again, and get in touch if this persists."
   },
   {
@@ -4026,7 +4092,7 @@
    "recorded_at": "2026-11-15T14:39:51+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884122s"
+   "refresh_error": "rate limited; retry after 883527s"
   },
   {
    "episode": "ep17-longest-flight-without-landing-swift",
@@ -4040,7 +4106,7 @@
    "recorded_at": "2026-11-15T14:39:53+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884120s"
+   "refresh_error": "rate limited; retry after 883525s"
   },
   {
    "episode": "ep17-longest-flight-without-landing-swift",
@@ -4054,7 +4120,7 @@
    "recorded_at": "2026-11-15T14:39:55+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884118s"
+   "refresh_error": "rate limited; retry after 883523s"
   },
   {
    "episode": "ep17-longest-flight-without-landing-swift",
@@ -4100,7 +4166,7 @@
    "recorded_at": "2026-11-15T14:39:58+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884116s"
+   "refresh_error": "rate limited; retry after 883521s"
   },
   {
    "episode": "ep21-first-f1-championship-race-silverstone",
@@ -4114,7 +4180,7 @@
    "recorded_at": "2026-11-15T14:40:00+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884114s"
+   "refresh_error": "rate limited; retry after 883519s"
   },
   {
    "episode": "ep21-first-f1-championship-race-silverstone",
@@ -4128,7 +4194,7 @@
    "recorded_at": "2026-11-15T14:40:02+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884112s"
+   "refresh_error": "rate limited; retry after 883517s"
   },
   {
    "episode": "ep21-first-f1-championship-race-silverstone",
@@ -4174,7 +4240,7 @@
    "recorded_at": "2026-11-15T14:40:06+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884110s"
+   "refresh_error": "rate limited; retry after 883515s"
   },
   {
    "episode": "ep29-most-islands-sweden",
@@ -4188,7 +4254,7 @@
    "recorded_at": "2026-11-15T14:40:08+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884108s"
+   "refresh_error": "rate limited; retry after 883513s"
   },
   {
    "episode": "ep29-most-islands-sweden",
@@ -4202,7 +4268,7 @@
    "recorded_at": "2026-11-15T14:40:10+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884106s"
+   "refresh_error": "rate limited; retry after 883511s"
   },
   {
    "episode": "ep29-most-islands-sweden",
@@ -4248,7 +4314,7 @@
    "recorded_at": "2026-11-16T16:52:28+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884104s"
+   "refresh_error": "rate limited; retry after 883509s"
   },
   {
    "episode": "ep19-biggest-eyes-colossal-squid",
@@ -4262,7 +4328,7 @@
    "recorded_at": "2026-11-16T16:52:30+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884102s"
+   "refresh_error": "rate limited; retry after 883507s"
   },
   {
    "episode": "ep19-biggest-eyes-colossal-squid",
@@ -4276,7 +4342,7 @@
    "recorded_at": "2026-11-16T16:52:32+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884100s"
+   "refresh_error": "rate limited; retry after 883505s"
   },
   {
    "episode": "ep19-biggest-eyes-colossal-squid",
@@ -4322,7 +4388,7 @@
    "recorded_at": "2026-11-16T16:52:35+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884098s"
+   "refresh_error": "rate limited; retry after 883503s"
   },
   {
    "episode": "ep30-highest-capital-la-paz",
@@ -4336,7 +4402,7 @@
    "recorded_at": "2026-11-16T16:52:37+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884096s"
+   "refresh_error": "rate limited; retry after 883501s"
   },
   {
    "episode": "ep30-highest-capital-la-paz",
@@ -4350,7 +4416,7 @@
    "recorded_at": "2026-11-16T16:52:39+00:00",
    "title": null,
    "account": "BUFFER_API_KEY_2",
-   "refresh_error": "rate limited; retry after 884094s"
+   "refresh_error": "rate limited; retry after 883499s"
   },
   {
    "episode": "ep30-highest-capital-la-paz",
