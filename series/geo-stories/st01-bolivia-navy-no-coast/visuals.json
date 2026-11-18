@@ -29,14 +29,7 @@
   {
    "id": "kw02",
    "type": "kw",
-   "text": "*400 km* of coast"
-  },
-  {
-   "id": "f02",
-   "type": "fact",
-   "kicker": "400 km",
-   "text": "of Pacific coast until 1879",
-   "y": 1250
+   "text": "*400 km* of coast · until 1879"
   },
   {
    "id": "kw03",
@@ -221,20 +214,22 @@
    "id": "kw02"
   },
   {
-   "at": "s02@antofagasta+0.6",
-   "do": "fact_in",
-   "id": "f02"
-  },
-  {
-   "at": "s02.end",
-   "do": "hide",
-   "id": "f02",
+   "at": "s02@shore",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
    "args": {
-    "dur": 0.3
+    "fid": "068",
+    "layer": "tint",
+    "dur": 0.6
    }
   },
   {
-   "at": "s02@shore",
+   "at": "s02@antofagasta+0.05",
+   "do": "kw_pulse",
+   "id": "kw02"
+  },
+  {
+   "at": "s02@antofagasta",
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {

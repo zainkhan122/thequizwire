@@ -496,6 +496,14 @@
   "cam_dur": 1.8,
   "devices": [
    {
+    "at": "@+0.1",
+    "do": "geo.pin_out",
+    "stage": "stage_map",
+    "args": {
+     "pid": "nemo"
+    }
+   },
+   {
     "at": "@@orbit",
     "do": "geo.highlight_pulse",
     "args": {
