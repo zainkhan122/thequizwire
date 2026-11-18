@@ -702,6 +702,14 @@
    }
   },
   {
+   "at": "s05@fall-0.5",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "nemo"
+   }
+  },
+  {
    "at": "s05@fall-0.2",
    "do": "chart.counter_run",
    "id": "craft",
@@ -797,14 +805,6 @@
     "fid": "ring",
     "layer": "ring",
     "dur": 0.6
-   }
-  },
-  {
-   "at": "s06+0.1",
-   "do": "geo.pin_out",
-   "stage": "stage_map",
-   "args": {
-    "pid": "nemo"
    }
   },
   {

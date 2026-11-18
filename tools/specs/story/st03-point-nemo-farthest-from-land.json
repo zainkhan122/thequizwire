@@ -442,6 +442,14 @@
    ],
    "devices": [
     {
+     "at": "@@fall-0.5",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "nemo"
+     }
+    },
+    {
      "at": "@@fall-0.2",
      "do": "chart.counter_run",
      "id": "craft",
@@ -499,14 +507,6 @@
   ],
   "cam_dur": 1.8,
   "devices": [
-   {
-    "at": "@+0.1",
-    "do": "geo.pin_out",
-    "stage": "stage_map",
-    "args": {
-     "pid": "nemo"
-    }
-   },
    {
     "at": "@@orbit",
     "do": "geo.highlight_pulse",
