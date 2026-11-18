@@ -1,0 +1,213 @@
+{
+ "version": 1,
+ "episode": "ep32-eight-thousanders-nepal",
+ "topic": "Eight-thousanders (peaks above 8,000 m): there are 14 on Earth, all in the Himalaya and Karakoram. Nepal contains or shares 8: Everest, Kangchenjunga, Lhotse, Makalu, Cho Oyu, Dhaulagiri, Manaslu and Annapurna. Pakistan has 5 (K2, Nanga Parbat, Gasherbrum I, Gasherbrum II, Broad Peak); China has 5 (Everest, Lhotse, Makalu and Cho Oyu shared with Nepal, plus Shishapangma entirely in Tibet). Of Nepal's eight, Everest, Lhotse, Makalu and Cho Oyu stand on the China border and Kangchenjunga on the India border; Dhaulagiri, Manaslu and Annapurna rise entirely inside Nepal. Everest's height was jointly announced by Nepal and China in December 2020 as 8,848.86 m. The southern approach starts from the Tenzing-Hillary airstrip at Lukla.",
+ "researched": "2026-11-18",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The highest mountains are spread evenly along the Himalaya, so no single country has many.",
+   "reality": "Nepal alone holds or shares eight of the fourteen eight-thousanders; Pakistan and China have five each, India one (shared).",
+   "sources": [
+    "brit_himalaya",
+    "wiki_8000",
+    "ntb_peaks"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Eight-thousander clips list the peaks by height; nobody counts them by country on a map, splits border giants from inland giants, and pins the one both countries measured together as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=14+eight+thousanders",
+    "title": "Search: the 14 eight-thousanders",
+    "angle": "ranked lists",
+    "misses": "no country count"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=highest+mountains+in+nepal",
+    "title": "Search: highest mountains in Nepal",
+    "angle": "trekking vlogs",
+    "misses": "no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=how+tall+is+everest",
+    "title": "Search: how tall is Everest",
+    "angle": "explainers",
+    "misses": "single peak"
+   }
+  ]
+ },
+ "sources": {
+  "ntb_peaks": {
+   "type": "primary",
+   "publisher": "Nepal Department of Tourism (Government of Nepal)",
+   "title": "Mountaineering in Nepal — peaks above 8,000 m",
+   "url": "https://www.tourismdepartment.gov.np/",
+   "date": "2026-11-17",
+   "notes": "eight of the fourteen 8,000 m peaks are in Nepal: Everest, Kangchenjunga, Lhotse, Makalu, Cho Oyu, Dhaulagiri, Manaslu, Annapurna"
+  },
+  "dos_everest": {
+   "type": "primary",
+   "publisher": "Survey Department, Government of Nepal",
+   "title": "Height of Sagarmatha (Mount Everest) — joint announcement with China, 8 December 2020",
+   "url": "https://dos.gov.np/",
+   "date": "2026-11-17",
+   "notes": "Everest officially 8,848.86 m, measured by Nepal's survey and agreed with China"
+  },
+  "brit_himalaya": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Himalayas — Physical features",
+   "url": "https://www.britannica.com/place/Himalayas",
+   "date": "2026-11-17",
+   "notes": "the Nepal Himalaya holds most of the world's peaks above 8,000 m, including Everest, Kangchenjunga, Lhotse, Makalu, Cho Oyu, Dhaulagiri, Manaslu and Annapurna"
+  },
+  "brit_everest": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Mount Everest",
+   "url": "https://www.britannica.com/place/Mount-Everest",
+   "date": "2026-11-17",
+   "notes": "on the crest of the Great Himalayas on the Nepal–Tibet (China) border; 8,849 m per the 2020 Nepal–China survey"
+  },
+  "brit_k2": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "K2",
+   "url": "https://www.britannica.com/place/K2",
+   "date": "2026-11-17",
+   "notes": "second-highest peak, in the Karakoram on the Pakistan–China frontier; Pakistan's eight-thousanders include Nanga Parbat, Gasherbrum I and II, Broad Peak"
+  },
+  "wiki_8000": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Eight-thousander",
+   "url": "https://en.wikipedia.org/wiki/Eight-thousander",
+   "date": "2026-11-17",
+   "notes": "14 peaks; by country Nepal 8, China 5, Pakistan 5, India 1 (all shared ones counted for each country); Shishapangma entirely in China"
+  },
+  "wiki_lukla": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Tenzing–Hillary Airport",
+   "url": "https://en.wikipedia.org/wiki/Tenzing%E2%80%93Hillary_Airport",
+   "date": "2026-11-17",
+   "notes": "Lukla airstrip is the usual start of the trek to Everest Base Camp on the Nepali side"
+  },
+  "bbc_everest": {
+   "type": "reference",
+   "publisher": "BBC News",
+   "title": "Mt Everest grows by nearly a metre to new height",
+   "url": "https://www.bbc.com/news/world-asia-55218443",
+   "date": "2026-11-17",
+   "notes": "Nepal and China jointly announced 8,848.86 m on 8 December 2020"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Nepal contains or shares 8 of the 14 peaks above 8,000 m — more than any other country.",
+   "sources": [
+    "ntb_peaks",
+    "brit_himalaya",
+    "wiki_8000"
+   ],
+   "vo": [
+    "how many 8,000-metre peaks stand in nepal",
+    "5, 8, or 11",
+    "8. more giant peaks than any other country, packed into a thin strip of himalaya",
+    "a country of giants"
+   ],
+   "screen": [
+    "8 peaks",
+    "Nepal"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "detail",
+   "text": "Pakistan has 5 eight-thousanders including K2; China has 5, four of them shared with Nepal and Shishapangma alone.",
+   "sources": [
+    "brit_k2",
+    "wiki_8000"
+   ],
+   "vo": [
+    "pakistan comes next, home of k2. china shares most of its giants across a border line"
+   ],
+   "screen": [
+    "5 peaks",
+    "Pakistan",
+    "China"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Of Nepal's eight, Everest, Lhotse, Makalu and Cho Oyu stand on the China border and Kangchenjunga on the India border; Dhaulagiri, Manaslu and Annapurna rise entirely inside Nepal.",
+   "sources": [
+    "ntb_peaks",
+    "brit_himalaya",
+    "wiki_8000"
+   ],
+   "vo": [
+    "most of nepal's giants straddle the frontier with china or india. a few rise entirely inside the country"
+   ],
+   "screen": [
+    "SHARED",
+    "on the China and India lines",
+    "ALL NEPAL",
+    "Dhaulagiri, Manaslu, Annapurna",
+    "BORDER",
+    "INSIDE",
+    "frontier giants"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "Everest sits on the Nepal–China border; its height was jointly announced as 8,848.86 m in December 2020; the southern trek starts from the Lukla airstrip.",
+   "sources": [
+    "dos_everest",
+    "brit_everest",
+    "bbc_everest",
+    "wiki_lukla"
+   ],
+   "vo": [
+    "the tallest of all, everest, sits right on the china line. climbers from the south begin at a mountain airstrip"
+   ],
+   "screen": [
+    "8,849 m",
+    "Everest, measured jointly in 2020",
+    "Everest · on the China line"
+   ]
+  }
+ ]
+}

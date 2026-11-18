@@ -1,0 +1,143 @@
+{
+ "id": "ep24-first-world-cup-uruguay",
+ "format": "quiz-v3",
+ "series": "sports-sprint",
+ "number": 24,
+ "title": "Where was the FIRST FIFA World Cup played?",
+ "difficulty": "MEDIUM",
+ "seed": 6224,
+ "quiz": {
+  "question": "Where was the FIRST FIFA World Cup played?",
+  "keyword": "FIRST",
+  "options": [
+   "Brazil",
+   "Italy",
+   "Uruguay"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Uruguay",
+  "answer_sub": "one city, 13 teams, hosts won",
+  "option_meta": [
+   {
+    "flag": "br"
+   },
+   {
+    "flag": "it"
+   },
+   {
+    "flag": "uy"
+   }
+  ],
+  "banner": "Uruguay",
+  "banner_sub": "✓  C was right · one city, 13 teams, hosts won",
+  "outro": {
+   "headline": "CHALLENGE A FRIEND",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Where was the FIRST FIFA World Cup played? ⚽",
+  "premise": "The first World Cup was played in a single city",
+  "bait": "Brazil, Italy or Uruguay — which did you pick? 👇",
+  "keywords": [
+   "where was the first world cup",
+   "first fifa world cup",
+   "first world cup host",
+   "world cup history",
+   "world cup 1930 facts",
+   "football quiz",
+   "soccer trivia",
+   "sports quiz"
+  ],
+  "description": "The first World Cup was played in a single city. Brazil, Italy or Uruguay — which did you pick? 👇\n\nSources: FIFA; Encyclopaedia Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nSports Sprint #24",
+  "hashtags": [
+   "#SportsQuiz",
+   "#SportsTrivia",
+   "#thequizwire"
+  ],
+  "tags": [
+   "SportsQuiz",
+   "WorldCup"
+  ],
+  "cover_emoji": "⚽",
+  "cover_emoji_why": "a football names the sport and belongs to all three options; it points at no country",
+  "copy": {
+   "spoilers": [
+    "uruguay",
+    "uruguayan",
+    "montevideo",
+    "centenario",
+    "argentina",
+    "4–2",
+    "4-2",
+    "river plate",
+    "conte verde"
+   ],
+   "youtube": {
+    "title": "Where was the first World Cup played? Most Europeans refused to go ⚽",
+    "description": "The five-time champions, the hosts of the second edition, or the third one? The first World Cup was played in a single city, in a stadium finished days after the opening match, by thirteen teams. Most of Europe stayed home; the few who came spent two weeks on a ship and picked up another squad on the way.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#worldcup",
+     "#football",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Where was the FIRST FIFA World Cup played? ⚽\nThe five-time champions, the hosts of the second edition, or the other one? Played in a single city, in a stadium finished days after the opening match, by thirteen teams; most of Europe stayed home.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#worldcup",
+     "#football",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Where was the first FIFA World Cup played — Brazil, Italy or Uruguay?\nThe first World Cup was played in a single city, in a stadium finished days after the opening match, by thirteen teams. Most of Europe stayed home; the few who came spent two weeks on a ship and picked up another squad on the way. Pick your flag before the ship sets sail.",
+    "tags": [
+     "#sportsquiz",
+     "#worldcup"
+    ]
+   },
+   "twitter": {
+    "text": "Where was the FIRST FIFA World Cup played?\nBrazil, Italy or Uruguay? One city, thirteen teams, a stadium finished days late — and most of Europe refused the voyage.",
+    "tags": [
+     "#SportsQuiz",
+     "#WorldCup"
+    ]
+   },
+   "threads": {
+    "text": "Where was the first FIFA World Cup played — Brazil, Italy or Uruguay? One city, thirteen teams, a stadium finished days after the opening match; most of Europe stayed home and the few who came spent two weeks on a ship.",
+    "tags": [
+     "#footballhistory"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "route",
+   "travel",
+   "flash",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:uy + emoji-set:football",
+  "music": "bed:brass"
+ },
+ "status": "ready"
+}

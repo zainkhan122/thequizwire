@@ -1,0 +1,152 @@
+{
+ "version": 1,
+ "episode": "ep24-first-world-cup-uruguay",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -58.6,
+     -35.2,
+     -53,
+     -30
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "858"
+     ],
+     "cls": "",
+     "note": "Uruguay",
+     "lift": "color",
+     "color": "#FFD400"
+    },
+    {
+     "kind": "route",
+     "id": "voyage",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "cv",
+        "properties": {
+         "name": "Rio to Montevideo"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           -43.2,
+           -22.9
+          ],
+          [
+           -45.5,
+           -25.0
+          ],
+          [
+           -48.0,
+           -28.0
+          ],
+          [
+           -50.5,
+           -31.0
+          ],
+          [
+           -53.5,
+           -33.8
+          ],
+          [
+           -55.5,
+           -35.2
+          ],
+          [
+           -56.19,
+           -34.9
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "pins": [
+    {
+     "id": "mvd",
+     "lonlat": [
+      -56.19,
+      -34.9
+     ],
+     "label": "Montevideo · every match",
+     "side": "right"
+    },
+    {
+     "id": "rio",
+     "lonlat": [
+      -43.2,
+      -22.9
+     ],
+     "label": "Rio de Janeiro",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "stad",
+     "lonlat": [
+      -56.0,
+      -33.2
+     ],
+     "text": "Centenario · built for it",
+     "cls": "tag",
+     "in": "s06@stadium+0.2",
+     "out": "s06.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -80,
+      -56,
+      -30,
+      10
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 100,
+    "lonlat": [
+     -58.3,
+     -35.0
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

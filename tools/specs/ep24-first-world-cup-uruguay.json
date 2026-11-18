@@ -1,0 +1,903 @@
+{
+ "id": "ep24-first-world-cup-uruguay",
+ "series": "sports-sprint",
+ "number": 24,
+ "seed": 6224,
+ "question": "Where was the FIRST FIFA World Cup played?",
+ "keyword": "FIRST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Brazil",
+   "flag": "br",
+   "cue": "brazil"
+  },
+  {
+   "text": "Italy",
+   "flag": "it",
+   "cue": "italy"
+  },
+  {
+   "text": "Uruguay",
+   "flag": "uy",
+   "cue": "uruguay"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "one city, 13 teams, hosts won",
+ "outro_headline": "CHALLENGE A FRIEND",
+ "cover_emoji": "⚽",
+ "cover_emoji_why": "a football names the sport and belongs to all three options; it points at no country",
+ "post": {
+  "premise": "The first World Cup was played in a single city",
+  "bait": "Brazil, Italy or Uruguay — which did you pick? 👇",
+  "keywords": [
+   "where was the first world cup",
+   "first fifa world cup",
+   "first world cup host",
+   "world cup history",
+   "world cup 1930 facts",
+   "football quiz",
+   "soccer trivia",
+   "sports quiz"
+  ],
+  "tags": [
+   "SportsQuiz",
+   "WorldCup"
+  ],
+  "sources_line": "FIFA; Encyclopaedia Britannica",
+  "copy": {
+   "spoilers": [
+    "uruguay",
+    "uruguayan",
+    "montevideo",
+    "centenario",
+    "argentina",
+    "4–2",
+    "4-2",
+    "river plate",
+    "conte verde"
+   ],
+   "youtube": {
+    "title": "Where was the first World Cup played? Most Europeans refused to go ⚽",
+    "description": "The five-time champions, the hosts of the second edition, or the third one? The first World Cup was played in a single city, in a stadium finished days after the opening match, by thirteen teams. Most of Europe stayed home; the few who came spent two weeks on a ship and picked up another squad on the way.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#worldcup",
+     "#football",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Where was the FIRST FIFA World Cup played? ⚽\nThe five-time champions, the hosts of the second edition, or the other one? Played in a single city, in a stadium finished days after the opening match, by thirteen teams; most of Europe stayed home.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#worldcup",
+     "#football",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Where was the first FIFA World Cup played — Brazil, Italy or Uruguay?\nThe first World Cup was played in a single city, in a stadium finished days after the opening match, by thirteen teams. Most of Europe stayed home; the few who came spent two weeks on a ship and picked up another squad on the way. Pick your flag before the ship sets sail.",
+    "tags": [
+     "#sportsquiz",
+     "#worldcup"
+    ]
+   },
+   "twitter": {
+    "text": "Where was the FIRST FIFA World Cup played?\nBrazil, Italy or Uruguay? One city, thirteen teams, a stadium finished days late — and most of Europe refused the voyage.",
+    "tags": [
+     "#SportsQuiz",
+     "#WorldCup"
+    ]
+   },
+   "threads": {
+    "text": "Where was the first FIFA World Cup played — Brazil, Italy or Uruguay? One city, thirteen teams, a stadium finished days after the opening match; most of Europe stayed home and the few who came spent two weeks on a ship.",
+    "tags": [
+     "#footballhistory"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "story",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "route",
+   "travel",
+   "flash",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:uy + emoji-set:football",
+  "music": "bed:brass",
+  "outro": "CHALLENGE A FRIEND"
+ },
+ "intent": "A founding story told as a sea voyage: the small host country lifts into colour, the brand-new stadium is pinned, and a ship draws the last leg of the Atlantic crossing down the coast to the river mouth, Brazil's squad aboard, before a flash marks the first final the hosts won.",
+ "voice": {
+  "v01_cues": {
+   "where": "where",
+   "first": "first"
+  },
+  "v04": {
+   "text": "Uruguay. The very first World Cup, played in a single city, by 13 teams.",
+   "cues": {
+    "answer": "uruguay",
+    "city": "city",
+    "teams": "teams"
+   }
+  },
+  "v05": {
+   "text": "Italy hosted the second. Brazil has won the most. But the first trophy stayed at home.",
+   "cues": {
+    "italy": "italy",
+    "brazil": "brazil",
+    "home": "home"
+   }
+  },
+  "v06": {
+   "text": "The hosts were Olympic champions, and built a new stadium for it, finished days after the opening match.",
+   "cues": {
+    "champions": "champions",
+    "stadium": "stadium",
+    "opening": "opening"
+   }
+  },
+  "v07": {
+   "text": "Few European teams made the long voyage, and Brazil's squad climbed aboard on the way. In the final, the hosts beat Argentina.",
+   "cues": {
+    "voyage": "voyage",
+    "aboard": "aboard",
+    "final": "final"
+   }
+  },
+  "v08": {
+   "text": "The first cup never left home. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "4–2",
+   "text": "v Argentina · the first final"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "uy",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "it",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "The first FIFA World Cup was held in Uruguay, 13–30 July 1930, entirely in Montevideo, with 13 teams. Uruguay was chosen as reigning Olympic champions (1924, 1928) and for the centenary of its first constitution; the Estadio Centenario, built for the tournament, was completed five days after the opening matches. Only four European teams travelled: France, Belgium and Romania sailed on the SS Conte Verde (picking up Brazil's squad in Rio de Janeiro), Yugoslavia on another ship. Uruguay beat Argentina 4–2 in the final on 30 July 1930. Italy hosted and won the second edition in 1934; Brazil has the most titles (five).",
+  "myths": [
+   {
+    "myth": "The first World Cup was in Europe, where football began.",
+    "reality": "It was in Uruguay, in a single city; most European federations refused the long voyage and only four European teams took part.",
+    "sources": [
+     "fifa_1930",
+     "brit_wc"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "1930 World Cup clips are grainy highlight reels; nobody lifts the small host into colour, pins the late stadium and draws the ship's last leg down the coast as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=first+world+cup+1930",
+     "title": "Search: the first World Cup",
+     "angle": "archive highlights",
+     "misses": "no map, no voyage"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=world+cup+history+explained",
+     "title": "Search: World Cup history explained",
+     "angle": "long explainers",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=world+cup+hosts+quiz",
+     "title": "Search: World Cup hosts quiz",
+     "angle": "list quizzes",
+     "misses": "no story"
+    }
+   ]
+  },
+  "sources": {
+   "fifa_1930": {
+    "type": "primary",
+    "publisher": "FIFA",
+    "title": "FIFA World Cup Uruguay 1930 — tournament page",
+    "url": "https://www.fifa.com/en/tournaments/mens/worldcup/1930uruguay",
+    "date": "2026-11-17",
+    "notes": "13 teams, all matches in Montevideo, 13–30 July 1930; final Uruguay 4–2 Argentina at the Estadio Centenario"
+   },
+   "fifa_centenario": {
+    "type": "primary",
+    "publisher": "FIFA",
+    "title": "The Estadio Centenario — the first World Cup stadium",
+    "url": "https://www.fifa.com/en/articles/estadio-centenario-first-world-cup-stadium",
+    "date": "2026-11-17",
+    "notes": "built for the 1930 tournament and the centenary of Uruguay's constitution; unfinished at kick-off, opened five days into the tournament"
+   },
+   "brit_wc": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "World Cup (football)",
+    "url": "https://www.britannica.com/sports/World-Cup-football",
+    "date": "2026-11-17",
+    "notes": "first held in Uruguay in 1930; Uruguay, Olympic champions of 1924 and 1928, hosted and won; Italy hosted 1934; Brazil has won a record five titles"
+   },
+   "brit_uruguay": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Uruguay — Sports and recreation",
+    "url": "https://www.britannica.com/place/Uruguay",
+    "date": "2026-11-17",
+    "notes": "hosted and won the first World Cup in 1930 in Montevideo"
+   },
+   "wiki_1930": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "1930 FIFA World Cup",
+    "url": "https://en.wikipedia.org/wiki/1930_FIFA_World_Cup",
+    "date": "2026-11-17",
+    "notes": "13 teams; four from Europe (France, Belgium, Romania, Yugoslavia); France, Belgium and Romania sailed on the SS Conte Verde, which collected the Brazilian squad in Rio de Janeiro; Estadio Centenario completed five days into the tournament"
+   },
+   "wiki_conte_verde": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "SS Conte Verde",
+    "url": "https://en.wikipedia.org/wiki/SS_Conte_Verde",
+    "date": "2026-11-17",
+    "notes": "Italian liner that carried the European teams and FIFA president Jules Rimet to Montevideo for the 1930 World Cup, calling at Rio de Janeiro"
+   },
+   "wiki_final": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "1930 FIFA World Cup final",
+    "url": "https://en.wikipedia.org/wiki/1930_FIFA_World_Cup_final",
+    "date": "2026-11-17",
+    "notes": "Uruguay 4–2 Argentina, 30 July 1930, Estadio Centenario, Montevideo"
+   },
+   "ioc_uruguay": {
+    "type": "primary",
+    "publisher": "International Olympic Committee",
+    "title": "Uruguay — Olympic football gold 1924 and 1928",
+    "url": "https://olympics.com/en/sports/football/",
+    "date": "2026-11-17",
+    "notes": "Uruguay won the Olympic football tournaments of Paris 1924 and Amsterdam 1928"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The first FIFA World Cup was played in Uruguay in July 1930, entirely in Montevideo, with 13 teams.",
+    "sources": [
+     "fifa_1930",
+     "brit_wc",
+     "wiki_1930"
+    ],
+    "vo": [
+     "where was the first fifa world cup played",
+     "brazil, italy, or uruguay",
+     "uruguay. the very first world cup, played in a single city, by 13 teams",
+     "the first cup never left home"
+    ],
+    "screen": [
+     "Uruguay",
+     "Montevideo · every match"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "detail",
+    "text": "Italy hosted the second World Cup in 1934; Brazil holds the record with five titles.",
+    "sources": [
+     "brit_wc",
+     "wiki_1930"
+    ],
+    "vo": [
+     "italy hosted the second. brazil has won the most. but the first trophy stayed at home"
+    ],
+    "screen": []
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Uruguay, Olympic champions of 1924 and 1928, built the Estadio Centenario for the tournament; it was completed five days after the opening matches.",
+    "sources": [
+     "fifa_centenario",
+     "ioc_uruguay",
+     "wiki_1930"
+    ],
+    "vo": [
+     "the hosts were olympic champions, and built a new stadium for it, finished days after the opening match"
+    ],
+    "screen": [
+     "Centenario · built for it"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "core",
+    "text": "Only four European teams travelled; France, Belgium and Romania sailed on the Conte Verde, which picked up Brazil's squad in Rio de Janeiro; Uruguay beat Argentina 4–2 in the final.",
+    "sources": [
+     "fifa_1930",
+     "wiki_1930",
+     "wiki_conte_verde",
+     "wiki_final"
+    ],
+    "vo": [
+     "few european teams made the long voyage, and brazil's squad climbed aboard on the way. in the final, the hosts beat argentina"
+    ],
+    "screen": [
+     "4–2",
+     "v Argentina · the first final",
+     "Rio de Janeiro"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -58.6,
+   -35.2,
+   -53,
+   -30
+  ],
+  "far_bbox": [
+   -80,
+   -56,
+   -30,
+   10
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "858"
+  ],
+  "highlight_note": "Uruguay",
+  "labels": [
+   {
+    "id": "stad",
+    "lonlat": [
+     -56.0,
+     -33.2
+    ],
+    "text": "Centenario · built for it",
+    "cls": "tag",
+    "in": "s06@stadium+0.2",
+    "out": "s06.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "mvd",
+    "lonlat": [
+     -56.19,
+     -34.9
+    ],
+    "label": "Montevideo · every match",
+    "side": "right"
+   },
+   {
+    "id": "rio",
+    "lonlat": [
+     -43.2,
+     -22.9
+    ],
+    "label": "Rio de Janeiro",
+    "side": "left"
+   }
+  ],
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "voyage",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "cv",
+       "properties": {
+        "name": "Rio to Montevideo"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -43.2,
+          -22.9
+         ],
+         [
+          -45.5,
+          -25.0
+         ],
+         [
+          -48.0,
+          -28.0
+         ],
+         [
+          -50.5,
+          -31.0
+         ],
+         [
+          -53.5,
+          -33.8
+         ],
+         [
+          -55.5,
+          -35.2
+         ],
+         [
+          -56.19,
+          -34.9
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "scalebar": {
+   "km": 100,
+   "lonlat": [
+    -58.3,
+    -35.0
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s06@stadium",
+    "pid": "mvd"
+   },
+   {
+    "at": "s07@aboard",
+    "pid": "rio"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.45,
+    [
+     -70,
+     -20
+    ]
+   ],
+   "s01": [
+    0.45,
+    [
+     -68,
+     -21
+    ]
+   ],
+   "s04": [
+    1.3,
+    [
+     -56,
+     -32.8
+    ]
+   ],
+   "s04b": [
+    1.36,
+    [
+     -56.2,
+     -32.9
+    ]
+   ],
+   "s05": [
+    1.15,
+    [
+     -55.8,
+     -32.6
+    ]
+   ],
+   "s05b": [
+    1.2,
+    [
+     -56,
+     -32.8
+    ]
+   ],
+   "s06": [
+    1.4,
+    [
+     -55.6,
+     -34.6
+    ]
+   ],
+   "s06b": [
+    1.46,
+    [
+     -55.7,
+     -34.7
+    ]
+   ],
+   "s07": [
+    0.6,
+    [
+     -46,
+     -26.8
+    ]
+   ],
+   "s07b": [
+    0.63,
+    [
+     -46.2,
+     -27.0
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Italy hosted the second. Brazil has won the most. But the first trophy stayed at home.",
+    "cues": {
+     "italy": "italy",
+     "brazil": "brazil",
+     "home": "home"
+    }
+   },
+   "direction": "ease back over the River Plate; the Italian flag-ball thinks on 'Italy'; a trophy sticker on 'Brazil'; a house sticker on 'home' as Uruguay pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    1.15,
+    [
+     -55.8,
+     -32.6
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    1.2,
+    [
+     -56,
+     -32.8
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@italy",
+     "do": "character_in",
+     "id": "it_think"
+    },
+    {
+     "at": "@@brazil",
+     "do": "sticker_in",
+     "id": "st_cup"
+    },
+    {
+     "at": "@@brazil+0.4",
+     "do": "sticker_pulse",
+     "id": "st_cup"
+    },
+    {
+     "at": "@@brazil+0.9",
+     "do": "sticker_pulse",
+     "id": "st_cup"
+    },
+    {
+     "at": "@@home",
+     "do": "sticker_out",
+     "id": "st_cup"
+    },
+    {
+     "at": "@@home",
+     "do": "sticker_in",
+     "id": "st_home"
+    },
+    {
+     "at": "@@home+0.4",
+     "do": "sticker_pulse",
+     "id": "st_home"
+    },
+    {
+     "at": "@@home+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "858",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_home"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "it_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The hosts were Olympic champions, and built a new stadium for it, finished days after the opening match.",
+    "cues": {
+     "champions": "champions",
+     "stadium": "stadium",
+     "opening": "opening"
+    }
+   },
+   "direction": "tighten on the capital; a medal sticker on 'champions'; the Montevideo pin and the Centenario tag on 'stadium'; a hammer sticker on 'opening' as Uruguay pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    1.4,
+    [
+     -55.6,
+     -34.6
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.46,
+    [
+     -55.7,
+     -34.7
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@champions",
+     "do": "sticker_in",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@champions+0.4",
+     "do": "sticker_pulse",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@champions+0.9",
+     "do": "sticker_pulse",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@stadium+0.4",
+     "do": "sticker_out",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@opening",
+     "do": "sticker_in",
+     "id": "st_hammer"
+    },
+    {
+     "at": "@@opening+0.4",
+     "do": "sticker_pulse",
+     "id": "st_hammer"
+    },
+    {
+     "at": "@@opening+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "858",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_hammer"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "mvd"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Few European teams made the long voyage, and Brazil's squad climbed aboard on the way. In the final, the hosts beat Argentina.",
+    "cues": {
+     "voyage": "voyage",
+     "aboard": "aboard",
+     "final": "final"
+    }
+   },
+   "direction": "pull far back up the Atlantic coast; the Rio pin on 'aboard' as the ship's last leg draws down the coast to the river mouth with a ship sticker riding it; a white flash and the 4–2 card on 'final' as the Uruguayan flag-ball grins and Uruguay pulses; the pins leave at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "4–2",
+    "text": "v Argentina · the first final"
+   },
+   "card_at": null,
+   "cam": [
+    0.6,
+    [
+     -46,
+     -26.8
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.63,
+    [
+     -46.2,
+     -27.0
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@aboard+0.1",
+     "do": "sticker_in",
+     "id": "st_ship"
+    },
+    {
+     "at": "@@aboard+0.1",
+     "do": "geo.route_draw",
+     "stage": "stage_map",
+     "until": "@@final-0.2",
+     "args": {
+      "rid": "cv",
+      "layer": "voyage"
+     }
+    },
+    {
+     "at": "@@aboard+0.1",
+     "do": "geo.travel",
+     "stage": "stage_map",
+     "until": "@@final-0.2",
+     "args": {
+      "rid": "cv",
+      "layer": "voyage",
+      "sid": "st_ship",
+      "offset": [
+       0,
+       -40
+      ]
+     }
+    },
+    {
+     "at": "@@final-0.1",
+     "do": "sticker_out",
+     "id": "st_ship"
+    },
+    {
+     "at": "@@final",
+     "do": "fx.flash",
+     "args": {
+      "peak": 0.9,
+      "out": 0.3
+     }
+    },
+    {
+     "at": "@@final+0.2",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@final+0.6",
+     "do": "character_in",
+     "id": "uy_happy"
+    },
+    {
+     "at": "@@final+0.8",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "858",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "uy_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "rio"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_cup",
+   "type": "sticker",
+   "emoji": "1f3c6",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_home",
+   "type": "sticker",
+   "emoji": "1f3e0",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_medal",
+   "type": "sticker",
+   "emoji": "1f3c5",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_hammer",
+   "type": "sticker",
+   "emoji": "1f528",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_ship",
+   "type": "sticker",
+   "emoji": "1f6a2",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "it_think",
+   "type": "character",
+   "flag": "it",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "uy_happy",
+   "type": "character",
+   "flag": "uy",
+   "face": "happy",
+   "x": 300,
+   "y": 1130,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

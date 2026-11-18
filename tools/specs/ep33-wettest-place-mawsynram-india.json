@@ -1,0 +1,984 @@
+{
+ "id": "ep33-wettest-place-mawsynram-india",
+ "series": "geo-blitz",
+ "number": 33,
+ "seed": 4233,
+ "question": "Where is the WETTEST place on Earth?",
+ "keyword": "WETTEST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Brazil",
+   "flag": "br",
+   "cue": "brazil"
+  },
+  {
+   "text": "Indonesia",
+   "flag": "id",
+   "cue": "indonesia"
+  },
+  {
+   "text": "India",
+   "flag": "in",
+   "cue": "india"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "nearly 12 m of rain a year",
+ "outro_headline": "TOO EASY?",
+ "cover_emoji": "☔",
+ "cover_emoji_why": "an umbrella names the subject (rain) and belongs to no country; all three options are wet in places, so it favours none",
+ "post": {
+  "premise": "The wettest place on Earth is a hill village, not a rainforest",
+  "bait": "Brazil, Indonesia or India — which did you pick? 👇",
+  "keywords": [
+   "wettest place on earth",
+   "rainiest place in the world",
+   "where does it rain the most",
+   "highest rainfall in the world",
+   "monsoon facts",
+   "geography quiz",
+   "map quiz",
+   "weather facts"
+  ],
+  "tags": [
+   "GeoQuiz",
+   "Weather"
+  ],
+  "sources_line": "India Meteorological Department; Guinness World Records; Encyclopaedia Britannica",
+  "copy": {
+   "spoilers": [
+    "india",
+    "indian",
+    "mawsynram",
+    "cherrapunji",
+    "sohra",
+    "meghalaya",
+    "khasi",
+    "bay of bengal",
+    "11,871",
+    "26,470",
+    "assam"
+   ],
+   "youtube": {
+    "title": "Where is the wettest place on Earth? Not the rainforest ☔",
+    "description": "The Amazon giant, the island nation, or the third one? The wettest place on Earth is a hill village where nearly twelve metres of rain fall in an average year, most of it in a few summer months, because the clouds hit a wall of hills and drop everything at once. The town next door once took more rain in a single year than most cities see in a generation.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#weather",
+     "#geography",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Where is the WETTEST place on Earth? ☔\nThe Amazon giant, the island nation, or the other one? The wettest place on Earth is a hill village where nearly twelve metres of rain fall in an average year, because the clouds hit a wall of hills and drop everything at once.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#weather",
+     "#geography",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Where is the wettest place on Earth — Brazil, Indonesia or India?\nIt is a hill village where nearly twelve metres of rain fall in an average year, most of it in a few summer months, because the clouds hit a wall of hills and drop everything at once. The town next door once took more rain in a single year than most cities see in a generation. Pick your flag before the bars go up.",
+    "tags": [
+     "#geoquiz",
+     "#weather"
+    ]
+   },
+   "twitter": {
+    "text": "Where is the WETTEST place on Earth?\nBrazil, Indonesia or India? A hill village, nearly twelve metres of rain a year — and it is not in a rainforest.",
+    "tags": [
+     "#GeoQuiz",
+     "#Weather"
+    ]
+   },
+   "threads": {
+    "text": "Where is the wettest place on Earth — Brazil, Indonesia or India? A hill village where nearly twelve metres of rain fall in an average year, because the monsoon clouds hit a wall of hills and drop everything at once; the town next door once took more rain in one year than most cities see in a generation.",
+    "tags": [
+     "#monsoon"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "misconception",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "bars",
+   "flash",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:in + emoji-set:weather",
+  "music": "bed:pulse",
+  "outro": "TOO EASY?"
+ },
+ "intent": "A weather quiz that beats the rainforest guess: bars put the hill village against the Amazon's city and London so the gap is absurd, a lightning flash marks the moment the monsoon hits the hills, and a pin lands on the village itself with the neighbouring town's one-year record on a card.",
+ "voice": {
+  "v01_cues": {
+   "where": "where",
+   "wettest": "wettest"
+  },
+  "v04": {
+   "text": "India. A hill village in the north-east, where nearly 12 metres of rain fall a year.",
+   "cues": {
+    "answer": "india",
+    "village": "village",
+    "year": "year"
+   }
+  },
+  "v05": {
+   "text": "Brazil has the Amazon, Indonesia its islands. Even they get barely a quarter of this.",
+   "cues": {
+    "brazil": "brazil",
+    "indonesia": "indonesia",
+    "quarter": "quarter"
+   }
+  },
+  "v06": {
+   "text": "Monsoon clouds roll in off the Bay of Bengal, hit a wall of hills, and drop everything in summer.",
+   "cues": {
+    "clouds": "clouds",
+    "hills": "hills",
+    "summer": "summer"
+   }
+  },
+  "v07": {
+   "text": "The town next door once took more rain in a year than most cities see in a generation. Locals carry woven shields.",
+   "cues": {
+    "town": "town",
+    "generation": "generation",
+    "shields": "shields"
+   }
+  },
+  "v08": {
+   "text": "A village under a waterfall. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "26.5 m",
+   "text": "in one year at Cherrapunji, 1860–61"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "in",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "br",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "Wettest place on Earth by average annual rainfall: Mawsynram, a village in the East Khasi Hills of Meghalaya, north-east India, with a long-term average of about 11,871 mm a year (Guinness World Records; India Meteorological Department). Nearby Cherrapunji (Sohra), about 11,777 mm, holds the records for the most rain in a calendar month and in a twelve-month period (26,470 mm, August 1860–July 1861). The cause is orographic: summer monsoon air from the Bay of Bengal is funnelled up the Khasi Hills escarpment and releases most of its moisture between June and September. For comparison Manaus in the Amazon receives about 2,300 mm a year and London about 600 mm. Khasi villagers use the knup, a woven bamboo-and-leaf rain shield.",
+  "myths": [
+   {
+    "myth": "The wettest place must be in a rainforest, the Amazon or Borneo.",
+    "reality": "Rainforests are wet all year, but the record for average rainfall is a monsoon-hit hill village in India, with roughly five times the Amazon's total.",
+    "sources": [
+     "guinness_wettest",
+     "imd_rain"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Wettest-place clips are drone shots of Meghalaya's bridges; nobody beats the rainforest guess with bars to scale, flashes the monsoon hitting the hills, and pins the village with the one-year record as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=wettest+place+on+earth",
+     "title": "Search: wettest place on earth",
+     "angle": "travel documentaries",
+     "misses": "no comparison, no mechanism"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=living+root+bridges",
+     "title": "Search: the region's root bridges",
+     "angle": "scenery",
+     "misses": "no rainfall data"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=rainiest+countries",
+     "title": "Search: rainiest countries",
+     "angle": "ranking lists",
+     "misses": "country totals, not places"
+    }
+   ]
+  },
+  "sources": {
+   "imd_rain": {
+    "type": "primary",
+    "publisher": "India Meteorological Department",
+    "title": "Climatological normals — Mawsynram and Cherrapunji (Sohra)",
+    "url": "https://mausam.imd.gov.in/",
+    "date": "2026-11-17",
+    "notes": "Mawsynram long-term mean annual rainfall about 11,871 mm; Cherrapunji about 11,777 mm; most rain June–September"
+   },
+   "guinness_wettest": {
+    "type": "reference",
+    "publisher": "Guinness World Records",
+    "title": "Highest average annual rainfall",
+    "url": "https://www.guinnessworldrecords.com/world-records/greatest-average-annual-rainfall",
+    "date": "2026-11-17",
+    "notes": "Mawsynram, Meghalaya, India: 11,871 mm average annual rainfall"
+   },
+   "guinness_year": {
+    "type": "reference",
+    "publisher": "Guinness World Records",
+    "title": "Greatest rainfall in 12 months",
+    "url": "https://www.guinnessworldrecords.com/world-records/greatest-rainfall-in-12-months",
+    "date": "2026-11-17",
+    "notes": "26,470 mm at Cherrapunji between 1 August 1860 and 31 July 1861"
+   },
+   "brit_cherra": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Cherrapunji",
+    "url": "https://www.britannica.com/place/Cherrapunji",
+    "date": "2026-11-17",
+    "notes": "among the wettest places on Earth; about 11,777 mm a year; orographic rain as monsoon winds from the Bay of Bengal rise over the Khasi Hills"
+   },
+   "brit_meghalaya": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Meghalaya — Climate",
+    "url": "https://www.britannica.com/place/Meghalaya",
+    "date": "2026-11-17",
+    "notes": "the southern slopes of the Khasi Hills receive the heaviest rainfall in the world; Mawsynram and Cherrapunji"
+   },
+   "nasa_eo": {
+    "type": "primary",
+    "publisher": "NASA Earth Observatory",
+    "title": "Where Is the Wettest Place on Earth?",
+    "url": "https://earthobservatory.nasa.gov/",
+    "date": "2026-11-17",
+    "notes": "moist monsoon air from the Bay of Bengal is forced up the Meghalaya escarpment, producing extreme rainfall at Mawsynram and Cherrapunji"
+   },
+   "wiki_mawsynram": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Mawsynram",
+    "url": "https://en.wikipedia.org/wiki/Mawsynram",
+    "date": "2026-11-17",
+    "notes": "11,871 mm average; wettest place on Earth; villagers use knups, woven rain shields"
+   },
+   "wiki_manaus": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Manaus — Climate",
+    "url": "https://en.wikipedia.org/wiki/Manaus#Climate",
+    "date": "2026-11-17",
+    "notes": "Manaus averages about 2,300 mm of rain a year"
+   },
+   "metoffice_london": {
+    "type": "primary",
+    "publisher": "UK Met Office",
+    "title": "London climate averages 1991–2020",
+    "url": "https://www.metoffice.gov.uk/research/climate/maps-and-data/uk-climate-averages",
+    "date": "2026-11-17",
+    "notes": "London receives roughly 600 mm of rain a year"
+   },
+   "border_registry": {
+    "type": "primary",
+    "publisher": "Natural Earth 10m admin-0 disputed areas (via docs/border_registry.json)",
+    "title": "Disputed areas: Arunachal Pradesh, Doklam",
+    "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/",
+    "date": "2026-11-17",
+    "notes": "Arunachal Pradesh administered by India, claimed by China; Doklam administered by Bhutan, contested by China"
+   },
+   "natural_earth": {
+    "type": "primary",
+    "publisher": "Natural Earth",
+    "title": "Admin 0 – Countries (public domain)",
+    "url": "https://www.naturalearthdata.com/downloads/",
+    "date": "2026-11-17",
+    "notes": "map geometry; India 356"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Mawsynram in Meghalaya, north-east India, is the wettest place on Earth by average annual rainfall, about 11,871 mm (nearly 12 m).",
+    "sources": [
+     "imd_rain",
+     "guinness_wettest",
+     "wiki_mawsynram"
+    ],
+    "vo": [
+     "where is the wettest place on earth",
+     "brazil, indonesia, or india",
+     "india. a hill village in the north-east, where nearly 12 metres of rain fall a year",
+     "a village under a waterfall"
+    ],
+    "screen": [
+     "11,871 mm",
+     "Mawsynram · wettest on Earth",
+     "Mawsynram"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "detail",
+    "text": "Manaus in the Amazon receives about 2,300 mm a year and London about 600 mm — a fraction of Mawsynram's total.",
+    "sources": [
+     "wiki_manaus",
+     "metoffice_london"
+    ],
+    "vo": [
+     "brazil has the amazon, indonesia its islands. even they get barely a quarter of this"
+    ],
+    "screen": [
+     "2,300 mm",
+     "600 mm",
+     "Manaus",
+     "London"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "The rain is orographic: summer monsoon air from the Bay of Bengal is forced up the Khasi Hills and releases most of its moisture between June and September.",
+    "sources": [
+     "nasa_eo",
+     "brit_cherra",
+     "brit_meghalaya"
+    ],
+    "vo": [
+     "monsoon clouds roll in off the bay of bengal, hit a wall of hills, and drop everything in summer"
+    ],
+    "screen": [
+     "where the monsoon hits the hills"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Nearby Cherrapunji recorded 26,470 mm in the twelve months to July 1861, the most ever measured in a year; Khasi villagers carry woven rain shields called knups.",
+    "sources": [
+     "guinness_year",
+     "brit_cherra",
+     "wiki_mawsynram"
+    ],
+    "vo": [
+     "the town next door once took more rain in a year than most cities see in a generation. locals carry woven shields"
+    ],
+    "screen": [
+     "26.5 m",
+     "in one year at Cherrapunji, 1860–61"
+    ]
+   },
+   {
+    "id": "C05",
+    "weight": "framing",
+    "text": "Border policy plates (the north-east India close-up shows Arunachal Pradesh and Doklam): each disputed part is labelled with who administers it and who claims it, per docs/BORDER_POLICY.md. No sovereignty asserted.",
+    "sources": [
+     "border_registry",
+     "natural_earth"
+    ],
+    "vo": [],
+    "screen": [
+     "Arunachal Pradesh",
+     "Administered by India",
+     "Claimed by China",
+     "McMahon Line (1914) is the de facto boundary",
+     "Doklam",
+     "Administered by Bhutan (contested by China)"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   86,
+   21.5,
+   97.5,
+   29
+  ],
+  "far_bbox": [
+   60,
+   0,
+   110,
+   40
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "356"
+  ],
+  "highlight_note": "India",
+  "labels": [
+   {
+    "id": "mon",
+    "lonlat": [
+     93.0,
+     24.2
+    ],
+    "text": "where the monsoon hits the hills",
+    "cls": "tag",
+    "in": "s06@hills+0.2",
+    "out": "s06.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "maw",
+    "lonlat": [
+     91.58,
+     25.3
+    ],
+    "label": "Mawsynram · wettest on Earth",
+    "side": "right"
+   }
+  ],
+  "disputed": [
+   {
+    "id": "ar",
+    "ne_name": "Arunachal Pradesh",
+    "name": "Arunachal Pradesh",
+    "controller": "India",
+    "claimants": [
+     "China"
+    ],
+    "note": "McMahon Line (1914) is the de facto boundary",
+    "as_of": "2026-11",
+    "source": "docs/border_registry.json#arunachal",
+    "label_at": [
+     94.5,
+     28.2
+    ],
+    "plate_cls": "small"
+   },
+   {
+    "id": "dokl",
+    "name": "Doklam",
+    "controller": "Bhutan (contested by China)",
+    "claimants": [
+     "China"
+    ],
+    "as_of": "2026-11",
+    "source": "docs/border_registry.json#doklam",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        88.9,
+        27.2
+       ],
+       [
+        89.15,
+        27.2
+       ],
+       [
+        89.15,
+        27.4
+       ],
+       [
+        88.9,
+        27.4
+       ],
+       [
+        88.9,
+        27.2
+       ]
+      ]
+     ]
+    },
+    "label_at": [
+     87.6,
+     26.6
+    ],
+    "plate_cls": "small",
+    "author_note": "no Natural Earth polygon — marker box on the plateau"
+   }
+  ],
+  "scalebar": {
+   "km": 100,
+   "lonlat": [
+    86.4,
+    21.9
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s06@hills",
+    "pid": "maw"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.45,
+    [
+     76,
+     14
+    ]
+   ],
+   "s01": [
+    0.45,
+    [
+     78,
+     15
+    ]
+   ],
+   "s04": [
+    1.0,
+    [
+     91.5,
+     25.3
+    ]
+   ],
+   "s04b": [
+    1.05,
+    [
+     91.7,
+     25.4
+    ]
+   ],
+   "s05": [
+    0.85,
+    [
+     91.5,
+     25.0
+    ]
+   ],
+   "s05b": [
+    0.9,
+    [
+     91.7,
+     25.2
+    ]
+   ],
+   "s06": [
+    1.2,
+    [
+     92.3,
+     25.0
+    ]
+   ],
+   "s06b": [
+    1.26,
+    [
+     92.5,
+     25.1
+    ]
+   ],
+   "s07": [
+    1.3,
+    [
+     92.4,
+     25.4
+    ]
+   ],
+   "s07b": [
+    1.36,
+    [
+     92.6,
+     25.5
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Brazil has the Amazon, Indonesia its islands. Even they get barely a quarter of this.",
+    "cues": {
+     "brazil": "brazil",
+     "indonesia": "indonesia",
+     "quarter": "quarter"
+    }
+   },
+   "direction": "ease back over the delta; three bars rise on 'Brazil' with the village off the scale as the Brazilian flag-ball thinks; an island sticker on 'Indonesia'; a rain sticker on 'quarter' as India pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.85,
+    [
+     91.5,
+     25.0
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.9,
+    [
+     91.7,
+     25.2
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "rain",
+     "type": "bars",
+     "rows": [
+      [
+       "Mawsynram",
+       11871,
+       "11,871 mm"
+      ],
+      [
+       "Manaus",
+       2300,
+       "2,300 mm"
+      ],
+      [
+       "London",
+       600,
+       "600 mm"
+      ]
+     ],
+     "unit": "rain in an average year",
+     "y": 300,
+     "x": 60,
+     "w": 900
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@brazil-0.2",
+     "do": "chart.bars_in",
+     "id": "rain",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.25
+     }
+    },
+    {
+     "at": "@@brazil+0.3",
+     "do": "character_in",
+     "id": "br_think"
+    },
+    {
+     "at": "@@indonesia",
+     "do": "sticker_in",
+     "id": "st_isle"
+    },
+    {
+     "at": "@@indonesia+0.4",
+     "do": "sticker_pulse",
+     "id": "st_isle"
+    },
+    {
+     "at": "@@quarter",
+     "do": "sticker_out",
+     "id": "st_isle"
+    },
+    {
+     "at": "@@quarter",
+     "do": "sticker_in",
+     "id": "st_rain"
+    },
+    {
+     "at": "@@quarter+0.4",
+     "do": "sticker_pulse",
+     "id": "st_rain"
+    },
+    {
+     "at": "@@quarter+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "356",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "rain"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_rain"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "br_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Monsoon clouds roll in off the Bay of Bengal, hit a wall of hills, and drop everything in summer.",
+    "cues": {
+     "clouds": "clouds",
+     "hills": "hills",
+     "summer": "summer"
+    }
+   },
+   "direction": "tighten on the Khasi Hills; a cloud sticker on 'clouds'; a white flash, the Mawsynram pin and the monsoon tag on 'hills'; a sun sticker on 'summer' as India pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    1.2,
+    [
+     92.3,
+     25.0
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.26,
+    [
+     92.5,
+     25.1
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@clouds",
+     "do": "sticker_in",
+     "id": "st_cloud"
+    },
+    {
+     "at": "@@clouds+0.4",
+     "do": "sticker_pulse",
+     "id": "st_cloud"
+    },
+    {
+     "at": "@@clouds+0.9",
+     "do": "sticker_pulse",
+     "id": "st_cloud"
+    },
+    {
+     "at": "@@hills",
+     "do": "fx.flash",
+     "args": {
+      "peak": 0.9,
+      "out": 0.3
+     }
+    },
+    {
+     "at": "@@hills+0.3",
+     "do": "sticker_out",
+     "id": "st_cloud"
+    },
+    {
+     "at": "@@summer",
+     "do": "sticker_in",
+     "id": "st_sun"
+    },
+    {
+     "at": "@@summer+0.4",
+     "do": "sticker_pulse",
+     "id": "st_sun"
+    },
+    {
+     "at": "@@summer+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "356",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_sun"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The town next door once took more rain in a year than most cities see in a generation. Locals carry woven shields.",
+    "cues": {
+     "town": "town",
+     "generation": "generation",
+     "shields": "shields"
+    }
+   },
+   "direction": "hold on the escarpment; the 26.5 m card on 'town' with a calendar sticker; an umbrella sticker on 'shields' as the Indian flag-ball grins and India pulses; the pin leaves at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "26.5 m",
+    "text": "in one year at Cherrapunji, 1860–61"
+   },
+   "card_at": null,
+   "cam": [
+    1.3,
+    [
+     92.4,
+     25.4
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.36,
+    [
+     92.6,
+     25.5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@town+0.2",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@@shields-0.2"
+    },
+    {
+     "at": "@@town+0.4",
+     "do": "sticker_in",
+     "id": "st_cal"
+    },
+    {
+     "at": "@@town+0.8",
+     "do": "sticker_pulse",
+     "id": "st_cal"
+    },
+    {
+     "at": "@@generation",
+     "do": "sticker_pulse",
+     "id": "st_cal"
+    },
+    {
+     "at": "@@shields",
+     "do": "sticker_out",
+     "id": "st_cal"
+    },
+    {
+     "at": "@@shields",
+     "do": "sticker_in",
+     "id": "st_umb"
+    },
+    {
+     "at": "@@shields+0.4",
+     "do": "sticker_pulse",
+     "id": "st_umb"
+    },
+    {
+     "at": "@@shields+0.2",
+     "do": "character_in",
+     "id": "in_happy"
+    },
+    {
+     "at": "@@shields+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "356",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_umb"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "in_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "maw"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_isle",
+   "type": "sticker",
+   "emoji": "1f3dd",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_rain",
+   "type": "sticker",
+   "emoji": "1f327",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_cloud",
+   "type": "sticker",
+   "emoji": "2601",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_sun",
+   "type": "sticker",
+   "emoji": "2600",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_cal",
+   "type": "sticker",
+   "emoji": "1f4c5",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_umb",
+   "type": "sticker",
+   "emoji": "2614",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "br_think",
+   "type": "character",
+   "flag": "br",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "in_happy",
+   "type": "character",
+   "flag": "in",
+   "face": "happy",
+   "x": 300,
+   "y": 1130,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep33-wettest-place-mawsynram-india",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A weather quiz that beats the rainforest guess: bars put the hill village against the Amazon's city and London so the gap is absurd, a lightning flash marks the moment the monsoon hits the hills, and a pin lands on the village itself with the neighbouring town's one-year record on a card.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Where is the WETTEST place on Earth?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Where is the wettest place on Earth?",
+   "cues": {
+    "where": "where",
+    "wettest": "wettest"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Brazil, Indonesia, or India?",
+   "cues": {
+    "a": "brazil",
+    "b": "indonesia",
+    "c": "india"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "India. A hill village in the north-east, where nearly 12 metres of rain fall a year.",
+   "cues": {
+    "answer": "india",
+    "village": "village",
+    "year": "year"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.35,
+   "direction": "ease back over the delta; three bars rise on 'Brazil' with the village off the scale as the Brazilian flag-ball thinks; an island sticker on 'Indonesia'; a rain sticker on 'quarter' as India pulses",
+   "text": "Brazil has the Amazon, Indonesia its islands. Even they get barely a quarter of this.",
+   "cues": {
+    "brazil": "brazil",
+    "indonesia": "indonesia",
+    "quarter": "quarter"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "tighten on the Khasi Hills; a cloud sticker on 'clouds'; a white flash, the Mawsynram pin and the monsoon tag on 'hills'; a sun sticker on 'summer' as India pulses",
+   "text": "Monsoon clouds roll in off the Bay of Bengal, hit a wall of hills, and drop everything in summer.",
+   "cues": {
+    "clouds": "clouds",
+    "hills": "hills",
+    "summer": "summer"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.5,
+   "direction": "hold on the escarpment; the 26.5 m card on 'town' with a calendar sticker; an umbrella sticker on 'shields' as the Indian flag-ball grins and India pulses; the pin leaves at the end",
+   "text": "The town next door once took more rain in a year than most cities see in a generation. Locals carry woven shields.",
+   "cues": {
+    "town": "town",
+    "generation": "generation",
+    "shields": "shields"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "A village under a waterfall. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

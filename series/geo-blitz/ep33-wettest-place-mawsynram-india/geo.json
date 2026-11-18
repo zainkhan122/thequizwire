@@ -1,0 +1,154 @@
+{
+ "version": 1,
+ "episode": "ep33-wettest-place-mawsynram-india",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     86,
+     21.5,
+     97.5,
+     29
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "356"
+     ],
+     "cls": "",
+     "note": "India",
+     "lift": "color",
+     "color": "#FFD400"
+    }
+   ],
+   "pins": [
+    {
+     "id": "maw",
+     "lonlat": [
+      91.58,
+      25.3
+     ],
+     "label": "Mawsynram · wettest on Earth",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "mon",
+     "lonlat": [
+      93.0,
+      24.2
+     ],
+     "text": "where the monsoon hits the hills",
+     "cls": "tag",
+     "in": "s06@hills+0.2",
+     "out": "s06.end"
+    }
+   ],
+   "disputed": [
+    {
+     "id": "ar",
+     "ne_name": "Arunachal Pradesh",
+     "name": "Arunachal Pradesh",
+     "controller": "India",
+     "claimants": [
+      "China"
+     ],
+     "note": "McMahon Line (1914) is the de facto boundary",
+     "as_of": "2026-11",
+     "source": "docs/border_registry.json#arunachal",
+     "label_at": [
+      94.5,
+      28.2
+     ],
+     "plate_cls": "small"
+    },
+    {
+     "id": "dokl",
+     "name": "Doklam",
+     "controller": "Bhutan (contested by China)",
+     "claimants": [
+      "China"
+     ],
+     "as_of": "2026-11",
+     "source": "docs/border_registry.json#doklam",
+     "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+       [
+        [
+         88.9,
+         27.2
+        ],
+        [
+         89.15,
+         27.2
+        ],
+        [
+         89.15,
+         27.4
+        ],
+        [
+         88.9,
+         27.4
+        ],
+        [
+         88.9,
+         27.2
+        ]
+       ]
+      ]
+     },
+     "label_at": [
+      87.6,
+      26.6
+     ],
+     "plate_cls": "small",
+     "author_note": "no Natural Earth polygon — marker box on the plateau"
+    }
+   ],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      60,
+      0,
+      110,
+      40
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 100,
+    "lonlat": [
+     86.4,
+     21.9
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

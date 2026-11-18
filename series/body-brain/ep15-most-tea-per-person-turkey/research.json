@@ -1,0 +1,207 @@
+{
+ "version": 1,
+ "episode": "ep15-most-tea-per-person-turkey",
+ "topic": "Tea consumption per person: Turkey leads the world at roughly 3.2 kg per person per year (Euromonitor data via Statista; FAO consumption tables), ahead of Ireland (about 2.2 kg) and the United Kingdom (about 1.9 kg); China, the largest producer and total consumer, drinks well under 1 kg per head. Turkey grows nearly all its own tea in Rize and neighbouring provinces on the wet eastern Black Sea coast, through the state company ÇAYKUR and private firms, and is among the world's top five producers. Black tea (çay) is brewed in a stacked double kettle (çaydanlık) and served in small tulip-shaped glasses many times a day.",
+ "researched": "2026-11-18",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The British drink more tea than anyone.",
+   "reality": "Per person, Turkey drinks roughly half as much again as Britain; Ireland also out-drinks the UK. Britain's reputation comes from history, not today's per-head numbers.",
+   "sources": [
+    "statista_tea",
+    "wiki_tea_pc"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Tea-consumption clips are top-10 lists; nobody beats the British guess with to-scale bars, pins the hills where the winner grows its own leaf, and rides the tea across the country to the glass as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=which+country+drinks+the+most+tea",
+    "title": "Search: which country drinks the most tea",
+    "angle": "ranking lists",
+    "misses": "no map, no growing story"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=turkish+tea+culture",
+    "title": "Search: tea culture of the winner",
+    "angle": "travel vlogs",
+    "misses": "no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=tea+facts",
+    "title": "Search: tea facts",
+    "angle": "explainers",
+    "misses": "no country angle"
+   }
+  ]
+ },
+ "sources": {
+  "fao_tea": {
+   "type": "primary",
+   "publisher": "FAO — Intergovernmental Group on Tea",
+   "title": "Current market situation and medium-term outlook for tea",
+   "url": "https://www.fao.org/markets-and-trade/commodities/tea/en/",
+   "date": "2026-11-17",
+   "notes": "Turkey is among the largest tea producers and has the highest per-capita consumption; China the largest producer and total consumer"
+  },
+  "caykur": {
+   "type": "primary",
+   "publisher": "ÇAYKUR (Turkish state tea enterprise)",
+   "title": "About ÇAYKUR — tea cultivation in Turkey",
+   "url": "https://www.caykur.gov.tr/",
+   "date": "2026-11-17",
+   "notes": "tea is grown in Rize, Trabzon, Artvin and Giresun provinces on the eastern Black Sea coast; Turkey meets nearly all domestic demand from its own harvest"
+  },
+  "statista_tea": {
+   "type": "reference",
+   "publisher": "Statista (Euromonitor data)",
+   "title": "Annual per capita tea consumption worldwide by leading countries",
+   "url": "https://www.statista.com/statistics/507950/global-per-capita-tea-consumption-by-country/",
+   "date": "2026-11-17",
+   "notes": "Turkey about 3.16 kg per person per year; Ireland about 2.19 kg; United Kingdom about 1.94 kg"
+  },
+  "wiki_tea_pc": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "List of countries by tea consumption per capita",
+   "url": "https://en.wikipedia.org/wiki/List_of_countries_by_tea_consumption_per_capita",
+   "date": "2026-11-17",
+   "notes": "Turkey first (about 3.16 kg), Ireland second, United Kingdom third; China about 0.57 kg"
+  },
+  "brit_tea": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Tea — Consumption and production",
+   "url": "https://www.britannica.com/topic/tea-beverage",
+   "date": "2026-11-17",
+   "notes": "tea originated in China; Turkey is a major producer and the leading per-capita consumer; black tea dominates in Turkey"
+  },
+  "brit_rize": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Rize",
+   "url": "https://www.britannica.com/place/Rize",
+   "date": "2026-11-17",
+   "notes": "city and province on the eastern Black Sea coast of Turkey; the centre of Turkish tea cultivation on steep, rainy slopes"
+  },
+  "wiki_turkish_tea": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Turkish tea",
+   "url": "https://en.wikipedia.org/wiki/Turkish_tea",
+   "date": "2026-11-17",
+   "notes": "black tea brewed in a çaydanlık (stacked double kettle) and served in small tulip-shaped glasses; drunk throughout the day"
+  },
+  "tuik": {
+   "type": "primary",
+   "publisher": "Turkish Statistical Institute (TurkStat)",
+   "title": "Crop production statistics — tea",
+   "url": "https://data.tuik.gov.tr/",
+   "date": "2026-11-17",
+   "notes": "annual fresh tea leaf harvest of about 1.4 million tonnes, almost entirely from the eastern Black Sea provinces"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Turkey has the world's highest tea consumption per person, roughly 3.2 kg a year.",
+   "sources": [
+    "fao_tea",
+    "statista_tea",
+    "wiki_tea_pc"
+   ],
+   "vo": [
+    "who drinks the most tea per person",
+    "united kingdom, china, or turkey",
+    "turkey. over 3 kilos of tea per person a year, more than anyone on earth",
+    "a nation in a tea glass"
+   ],
+   "screen": [
+    "3.2 kg",
+    "Turkey"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "detail",
+   "text": "Ireland is second at about 2.2 kg and the United Kingdom third at about 1.9 kg; China, where tea originated, drinks well under 1 kg per person.",
+   "sources": [
+    "statista_tea",
+    "wiki_tea_pc",
+    "brit_tea"
+   ],
+   "vo": [
+    "britain is famous for it, yet comes third. china grew the leaf first, but drinks far less per head"
+   ],
+   "screen": [
+    "2.2 kg",
+    "1.9 kg",
+    "Ireland",
+    "United Kingdom"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Turkey grows nearly all of its own tea in Rize and neighbouring provinces on the steep, rainy eastern Black Sea coast.",
+   "sources": [
+    "caykur",
+    "tuik",
+    "brit_rize"
+   ],
+   "vo": [
+    "almost all of it is grown at home, on steep wet hills along the black sea coast"
+   ],
+   "screen": [
+    "Rize · where the tea grows",
+    "grown at home"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Turkish black tea is brewed in a stacked double kettle and served in small tulip-shaped glasses many times a day.",
+   "sources": [
+    "wiki_turkish_tea",
+    "brit_tea"
+   ],
+   "vo": [
+    "from there it travels across the country to tulip-shaped glasses, poured dozens of times a day"
+   ],
+   "screen": [
+    "BLACK TEA",
+    "brewed strong in a two-pot kettle",
+    "Istanbul"
+   ]
+  }
+ ]
+}

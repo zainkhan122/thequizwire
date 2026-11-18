@@ -1,0 +1,875 @@
+{
+ "id": "ep32-eight-thousanders-nepal",
+ "series": "geo-blitz",
+ "number": 32,
+ "seed": 4132,
+ "question": "How many 8,000-metre peaks stand in NEPAL?",
+ "keyword": "NEPAL",
+ "difficulty": "HARD",
+ "options": [
+  {
+   "text": "5",
+   "cue": "5"
+  },
+  {
+   "text": "8",
+   "cue": "8"
+  },
+  {
+   "text": "11",
+   "cue": "11"
+  }
+ ],
+ "correct": 1,
+ "answer_sub": "more giants than any other country",
+ "outro_headline": "TOO EASY?",
+ "cover_emoji": "🧗",
+ "cover_emoji_why": "a climber names the subject (the highest mountains) without hinting at the count; it points at no option",
+ "post": {
+  "premise": "One small country holds most of the planet's giant peaks",
+  "bait": "Five, eight or eleven — which did you pick? 👇",
+  "keywords": [
+   "how many 8000m peaks are in nepal",
+   "eight thousanders",
+   "highest mountains in the world",
+   "nepal mountains",
+   "himalaya quiz",
+   "mount everest facts",
+   "geography quiz",
+   "map quiz"
+  ],
+  "tags": [
+   "GeoQuiz",
+   "Mountains"
+  ],
+  "sources_line": "Nepal Department of Tourism; Encyclopaedia Britannica; Survey Department of Nepal",
+  "copy": {
+   "spoilers": [
+    "eight",
+    "annapurna",
+    "dhaulagiri",
+    "manaslu",
+    "kangchenjunga",
+    "lhotse",
+    "makalu",
+    "cho oyu"
+   ],
+   "youtube": {
+    "title": "How many 8000m peaks are in Nepal? Most people guess too low 🧗",
+    "description": "Only a handful of mountains on Earth rise above eight thousand metres, and one small Himalayan country holds more of them than anyone else. Some stand on its borders with China and India; a few rise entirely inside it. The tallest of all is measured to the metre by both countries that share it.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#mountains",
+     "#geography",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "How many 8,000-metre peaks stand in NEPAL? 🧗\nOnly a handful of mountains on Earth rise above eight thousand metres, and this small Himalayan country holds more of them than anyone else. Some stand on its borders; a few rise entirely inside it.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#mountains",
+     "#geography",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "How many 8,000-metre peaks stand in Nepal — five, eight or eleven?\nOnly a handful of mountains on Earth rise above eight thousand metres, and one small Himalayan country holds more of them than anyone else. Some stand on its borders with China and India; a few rise entirely inside it. Pick a number before the bars go up.",
+    "tags": [
+     "#geoquiz",
+     "#mountains"
+    ]
+   },
+   "twitter": {
+    "text": "How many 8,000-metre peaks stand in NEPAL?\nFive, eight or eleven? One small country holds more of the planet's giants than anyone else.",
+    "tags": [
+     "#GeoQuiz",
+     "#Mountains"
+    ]
+   },
+   "threads": {
+    "text": "How many 8,000-metre peaks stand in Nepal — five, eight or eleven? Only a handful of mountains on Earth rise above eight thousand metres, and this small Himalayan country holds more of them than anyone else; some stand on its borders, a few rise entirely inside it.",
+    "tags": [
+     "#himalaya"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "how-many",
+  "hook": "challenge",
+  "opener": "wide-drift",
+  "reveal": "fill-pulse",
+  "beats": [
+   "bars",
+   "split",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:np + emoji-set:mountain",
+  "music": "bed:epic",
+  "outro": "TOO EASY?"
+ },
+ "intent": "A counting quiz that turns into a border story: bars put the three giant-peak nations to scale, a BORDER / INSIDE split shows that most of Nepal's giants stand on a frontier line, and a pin lands on the tallest of all with the metre-exact height both countries agreed.",
+ "voice": {
+  "v01_cues": {
+   "how": "how",
+   "nepal": "nepal"
+  },
+  "v04": {
+   "text": "8. More giant peaks than any other country, packed into a thin strip of Himalaya.",
+   "cues": {
+    "answer": "8",
+    "peaks": "peaks",
+    "himalaya": "himalaya"
+   }
+  },
+  "v05": {
+   "text": "Pakistan comes next, home of K2. China shares most of its giants across a border line.",
+   "cues": {
+    "pakistan": "pakistan",
+    "china": "china",
+    "line": "line"
+   }
+  },
+  "v06": {
+   "text": "Most of Nepal's giants straddle the frontier with China or India. A few rise entirely inside the country.",
+   "cues": {
+    "straddle": "straddle",
+    "india": "india",
+    "inside": "inside"
+   }
+  },
+  "v07": {
+   "text": "The tallest of all, Everest, sits right on the China line. Climbers from the south begin at a mountain airstrip.",
+   "cues": {
+    "everest": "everest",
+    "south": "south",
+    "airstrip": "airstrip"
+   }
+  },
+  "v08": {
+   "text": "A country of giants. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "8,849 m",
+   "text": "Everest, measured jointly in 2020"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "np",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "pk",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "Eight-thousanders (peaks above 8,000 m): there are 14 on Earth, all in the Himalaya and Karakoram. Nepal contains or shares 8: Everest, Kangchenjunga, Lhotse, Makalu, Cho Oyu, Dhaulagiri, Manaslu and Annapurna. Pakistan has 5 (K2, Nanga Parbat, Gasherbrum I, Gasherbrum II, Broad Peak); China has 5 (Everest, Lhotse, Makalu and Cho Oyu shared with Nepal, plus Shishapangma entirely in Tibet). Of Nepal's eight, Everest, Lhotse, Makalu and Cho Oyu stand on the China border and Kangchenjunga on the India border; Dhaulagiri, Manaslu and Annapurna rise entirely inside Nepal. Everest's height was jointly announced by Nepal and China in December 2020 as 8,848.86 m. The southern approach starts from the Tenzing-Hillary airstrip at Lukla.",
+  "myths": [
+   {
+    "myth": "The highest mountains are spread evenly along the Himalaya, so no single country has many.",
+    "reality": "Nepal alone holds or shares eight of the fourteen eight-thousanders; Pakistan and China have five each, India one (shared).",
+    "sources": [
+     "brit_himalaya",
+     "wiki_8000",
+     "ntb_peaks"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Eight-thousander clips list the peaks by height; nobody counts them by country on a map, splits border giants from inland giants, and pins the one both countries measured together as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=14+eight+thousanders",
+     "title": "Search: the 14 eight-thousanders",
+     "angle": "ranked lists",
+     "misses": "no country count"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=highest+mountains+in+nepal",
+     "title": "Search: highest mountains in Nepal",
+     "angle": "trekking vlogs",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=how+tall+is+everest",
+     "title": "Search: how tall is Everest",
+     "angle": "explainers",
+     "misses": "single peak"
+    }
+   ]
+  },
+  "sources": {
+   "ntb_peaks": {
+    "type": "primary",
+    "publisher": "Nepal Department of Tourism (Government of Nepal)",
+    "title": "Mountaineering in Nepal — peaks above 8,000 m",
+    "url": "https://www.tourismdepartment.gov.np/",
+    "date": "2026-11-17",
+    "notes": "eight of the fourteen 8,000 m peaks are in Nepal: Everest, Kangchenjunga, Lhotse, Makalu, Cho Oyu, Dhaulagiri, Manaslu, Annapurna"
+   },
+   "dos_everest": {
+    "type": "primary",
+    "publisher": "Survey Department, Government of Nepal",
+    "title": "Height of Sagarmatha (Mount Everest) — joint announcement with China, 8 December 2020",
+    "url": "https://dos.gov.np/",
+    "date": "2026-11-17",
+    "notes": "Everest officially 8,848.86 m, measured by Nepal's survey and agreed with China"
+   },
+   "brit_himalaya": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Himalayas — Physical features",
+    "url": "https://www.britannica.com/place/Himalayas",
+    "date": "2026-11-17",
+    "notes": "the Nepal Himalaya holds most of the world's peaks above 8,000 m, including Everest, Kangchenjunga, Lhotse, Makalu, Cho Oyu, Dhaulagiri, Manaslu and Annapurna"
+   },
+   "brit_everest": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Mount Everest",
+    "url": "https://www.britannica.com/place/Mount-Everest",
+    "date": "2026-11-17",
+    "notes": "on the crest of the Great Himalayas on the Nepal–Tibet (China) border; 8,849 m per the 2020 Nepal–China survey"
+   },
+   "brit_k2": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "K2",
+    "url": "https://www.britannica.com/place/K2",
+    "date": "2026-11-17",
+    "notes": "second-highest peak, in the Karakoram on the Pakistan–China frontier; Pakistan's eight-thousanders include Nanga Parbat, Gasherbrum I and II, Broad Peak"
+   },
+   "wiki_8000": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Eight-thousander",
+    "url": "https://en.wikipedia.org/wiki/Eight-thousander",
+    "date": "2026-11-17",
+    "notes": "14 peaks; by country Nepal 8, China 5, Pakistan 5, India 1 (all shared ones counted for each country); Shishapangma entirely in China"
+   },
+   "wiki_lukla": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Tenzing–Hillary Airport",
+    "url": "https://en.wikipedia.org/wiki/Tenzing%E2%80%93Hillary_Airport",
+    "date": "2026-11-17",
+    "notes": "Lukla airstrip is the usual start of the trek to Everest Base Camp on the Nepali side"
+   },
+   "bbc_everest": {
+    "type": "reference",
+    "publisher": "BBC News",
+    "title": "Mt Everest grows by nearly a metre to new height",
+    "url": "https://www.bbc.com/news/world-asia-55218443",
+    "date": "2026-11-17",
+    "notes": "Nepal and China jointly announced 8,848.86 m on 8 December 2020"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Nepal contains or shares 8 of the 14 peaks above 8,000 m — more than any other country.",
+    "sources": [
+     "ntb_peaks",
+     "brit_himalaya",
+     "wiki_8000"
+    ],
+    "vo": [
+     "how many 8,000-metre peaks stand in nepal",
+     "5, 8, or 11",
+     "8. more giant peaks than any other country, packed into a thin strip of himalaya",
+     "a country of giants"
+    ],
+    "screen": [
+     "8 peaks",
+     "Nepal"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "detail",
+    "text": "Pakistan has 5 eight-thousanders including K2; China has 5, four of them shared with Nepal and Shishapangma alone.",
+    "sources": [
+     "brit_k2",
+     "wiki_8000"
+    ],
+    "vo": [
+     "pakistan comes next, home of k2. china shares most of its giants across a border line"
+    ],
+    "screen": [
+     "5 peaks",
+     "Pakistan",
+     "China"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Of Nepal's eight, Everest, Lhotse, Makalu and Cho Oyu stand on the China border and Kangchenjunga on the India border; Dhaulagiri, Manaslu and Annapurna rise entirely inside Nepal.",
+    "sources": [
+     "ntb_peaks",
+     "brit_himalaya",
+     "wiki_8000"
+    ],
+    "vo": [
+     "most of nepal's giants straddle the frontier with china or india. a few rise entirely inside the country"
+    ],
+    "screen": [
+     "SHARED",
+     "on the China and India lines",
+     "ALL NEPAL",
+     "Dhaulagiri, Manaslu, Annapurna",
+     "BORDER",
+     "INSIDE",
+     "frontier giants"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "core",
+    "text": "Everest sits on the Nepal–China border; its height was jointly announced as 8,848.86 m in December 2020; the southern trek starts from the Lukla airstrip.",
+    "sources": [
+     "dos_everest",
+     "brit_everest",
+     "bbc_everest",
+     "wiki_lukla"
+    ],
+    "vo": [
+     "the tallest of all, everest, sits right on the china line. climbers from the south begin at a mountain airstrip"
+    ],
+    "screen": [
+     "8,849 m",
+     "Everest, measured jointly in 2020",
+     "Everest · on the China line"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   80,
+   26.3,
+   88.3,
+   30.5
+  ],
+  "far_bbox": [
+   60,
+   5,
+   105,
+   45
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "524"
+  ],
+  "highlight_note": "Nepal",
+  "labels": [
+   {
+    "id": "front",
+    "lonlat": [
+     85.6,
+     28.6
+    ],
+    "text": "frontier giants",
+    "cls": "tag",
+    "in": "s06@straddle+0.2",
+    "out": "s06.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "ev",
+    "lonlat": [
+     86.925,
+     27.988
+    ],
+    "label": "Everest · on the China line",
+    "side": "left"
+   }
+  ],
+  "scalebar": {
+   "km": 100,
+   "lonlat": [
+    80.3,
+    26.6
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s07@everest",
+    "pid": "ev"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.45,
+    [
+     78,
+     22
+    ]
+   ],
+   "s01": [
+    0.45,
+    [
+     80,
+     23
+    ]
+   ],
+   "s04": [
+    1.0,
+    [
+     84,
+     28.3
+    ]
+   ],
+   "s04b": [
+    1.05,
+    [
+     84.2,
+     28.4
+    ]
+   ],
+   "s05": [
+    0.9,
+    [
+     83.5,
+     28.6
+    ]
+   ],
+   "s05b": [
+    0.94,
+    [
+     83.8,
+     28.7
+    ]
+   ],
+   "s06": [
+    1.0,
+    [
+     84.2,
+     28.3
+    ]
+   ],
+   "s06b": [
+    1.05,
+    [
+     84.4,
+     28.4
+    ]
+   ],
+   "s07": [
+    1.25,
+    [
+     85.6,
+     27.9
+    ]
+   ],
+   "s07b": [
+    1.3,
+    [
+     85.8,
+     28.0
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Pakistan comes next, home of K2. China shares most of its giants across a border line.",
+    "cues": {
+     "pakistan": "pakistan",
+     "china": "china",
+     "line": "line"
+    }
+   },
+   "direction": "ease back along the range; three bars rise on 'Pakistan' with Nepal on top; the Pakistani flag-ball thinks on 'Pakistan'; a mountain sticker on 'line' as Nepal pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.9,
+    [
+     83.5,
+     28.6
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.94,
+    [
+     83.8,
+     28.7
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "count",
+     "type": "bars",
+     "rows": [
+      [
+       "Nepal",
+       8,
+       "8 peaks"
+      ],
+      [
+       "Pakistan",
+       5,
+       "5 peaks"
+      ],
+      [
+       "China",
+       5,
+       "5 peaks"
+      ]
+     ],
+     "unit": "peaks above 8,000 m",
+     "y": 300,
+     "x": 60,
+     "w": 900
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@pakistan-0.2",
+     "do": "chart.bars_in",
+     "id": "count",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.25
+     }
+    },
+    {
+     "at": "@@pakistan+0.3",
+     "do": "character_in",
+     "id": "pk_think"
+    },
+    {
+     "at": "@@line",
+     "do": "sticker_in",
+     "id": "st_mtn"
+    },
+    {
+     "at": "@@line+0.4",
+     "do": "sticker_pulse",
+     "id": "st_mtn"
+    },
+    {
+     "at": "@@line+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "524",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "count"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_mtn"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "pk_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Most of Nepal's giants straddle the frontier with China or India. A few rise entirely inside the country.",
+    "cues": {
+     "straddle": "straddle",
+     "india": "india",
+     "inside": "inside"
+    }
+   },
+   "direction": "tighten on the central Himalaya; the SHARED / ALL NEPAL split lands on 'straddle' with the frontier tag; a flag sticker on 'India'; a boot sticker on 'inside' as Nepal pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    1.0,
+    [
+     84.2,
+     28.3
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.05,
+    [
+     84.4,
+     28.4
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "where",
+     "type": "split",
+     "left": {
+      "kicker": "SHARED",
+      "text": "on the China and India lines"
+     },
+     "right": {
+      "kicker": "ALL NEPAL",
+      "text": "Dhaulagiri, Manaslu, Annapurna"
+     },
+     "label_left": "BORDER",
+     "label_right": "INSIDE",
+     "y": 300,
+     "h": 560
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@straddle-0.2",
+     "do": "chart.split_in",
+     "id": "where",
+     "args": {
+      "dur": 0.7
+     }
+    },
+    {
+     "at": "@@india",
+     "do": "sticker_in",
+     "id": "st_flag"
+    },
+    {
+     "at": "@@india+0.4",
+     "do": "sticker_pulse",
+     "id": "st_flag"
+    },
+    {
+     "at": "@@inside",
+     "do": "sticker_out",
+     "id": "st_flag"
+    },
+    {
+     "at": "@@inside",
+     "do": "sticker_in",
+     "id": "st_boot"
+    },
+    {
+     "at": "@@inside+0.4",
+     "do": "sticker_pulse",
+     "id": "st_boot"
+    },
+    {
+     "at": "@@inside+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "524",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "where"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_boot"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The tallest of all, Everest, sits right on the China line. Climbers from the south begin at a mountain airstrip.",
+    "cues": {
+     "everest": "everest",
+     "south": "south",
+     "airstrip": "airstrip"
+    }
+   },
+   "direction": "drift east to the Khumbu; the Everest pin and the 8,849 m card on 'Everest' with a snow sticker; a plane sticker on 'airstrip' as the Nepali flag-ball grins and Nepal pulses; the pin leaves at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "8,849 m",
+    "text": "Everest, measured jointly in 2020"
+   },
+   "card_at": null,
+   "cam": [
+    1.25,
+    [
+     85.6,
+     27.9
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.3,
+    [
+     85.8,
+     28.0
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@everest+0.3",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@@airstrip-0.2"
+    },
+    {
+     "at": "@@everest+0.5",
+     "do": "sticker_in",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@everest+0.9",
+     "do": "sticker_pulse",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@south",
+     "do": "sticker_pulse",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@airstrip",
+     "do": "sticker_out",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@airstrip",
+     "do": "sticker_in",
+     "id": "st_plane"
+    },
+    {
+     "at": "@@airstrip+0.4",
+     "do": "sticker_pulse",
+     "id": "st_plane"
+    },
+    {
+     "at": "@@airstrip+0.2",
+     "do": "character_in",
+     "id": "np_happy"
+    },
+    {
+     "at": "@@airstrip+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "524",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_plane"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "np_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "ev"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_mtn",
+   "type": "sticker",
+   "emoji": "1f3d4",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_flag",
+   "type": "sticker",
+   "emoji": "1f6a9",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_boot",
+   "type": "sticker",
+   "emoji": "1f97e",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_snow",
+   "type": "sticker",
+   "emoji": "2744",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_plane",
+   "type": "sticker",
+   "emoji": "1f6e9",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "pk_think",
+   "type": "character",
+   "flag": "pk",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "np_happy",
+   "type": "character",
+   "flag": "np",
+   "face": "happy",
+   "x": 300,
+   "y": 1130,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "version": 1,
+ "episode": "ep21-strongest-bite-saltwater-crocodile",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     123,
+     -20,
+     145,
+     -9
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "036"
+     ],
+     "cls": "",
+     "note": "Australia"
+    }
+   ],
+   "pins": [
+    {
+     "id": "kak",
+     "lonlat": [
+      132.4,
+      -12.9
+     ],
+     "label": "Kakadu · croc country",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "clamp",
+     "lonlat": [
+      134.5,
+      -16.5
+     ],
+     "text": "jaws built to clamp",
+     "cls": "tag",
+     "in": "s06@clamp+0.2",
+     "out": "s06.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      90,
+      -45,
+      170,
+      10
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 200,
+    "lonlat": [
+     123.5,
+     -19.5
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

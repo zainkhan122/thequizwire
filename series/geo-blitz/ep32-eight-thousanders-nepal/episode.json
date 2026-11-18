@@ -1,0 +1,135 @@
+{
+ "id": "ep32-eight-thousanders-nepal",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 32,
+ "title": "How many 8,000-metre peaks stand in NEPAL?",
+ "difficulty": "HARD",
+ "seed": 4132,
+ "quiz": {
+  "question": "How many 8,000-metre peaks stand in NEPAL?",
+  "keyword": "NEPAL",
+  "options": [
+   "5",
+   "8",
+   "11"
+  ],
+  "correct": 1,
+  "beat": 3.0,
+  "answer_line": "8",
+  "answer_sub": "more giants than any other country",
+  "option_meta": [
+   {},
+   {},
+   {}
+  ],
+  "banner": "8",
+  "banner_sub": "✓  B was right · more giants than any other country",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "How many 8,000-metre peaks stand in NEPAL? 🧗",
+  "premise": "One small country holds most of the planet's giant peaks",
+  "bait": "Five, eight or eleven — which did you pick? 👇",
+  "keywords": [
+   "how many 8000m peaks are in nepal",
+   "eight thousanders",
+   "highest mountains in the world",
+   "nepal mountains",
+   "himalaya quiz",
+   "mount everest facts",
+   "geography quiz",
+   "map quiz"
+  ],
+  "description": "One small country holds most of the planet's giant peaks. Five, eight or eleven — which did you pick? 👇\n\nSources: Nepal Department of Tourism; Encyclopaedia Britannica; Survey Department of Nepal.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #32",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "GeoQuiz",
+   "Mountains"
+  ],
+  "cover_emoji": "🧗",
+  "cover_emoji_why": "a climber names the subject (the highest mountains) without hinting at the count; it points at no option",
+  "copy": {
+   "spoilers": [
+    "eight",
+    "annapurna",
+    "dhaulagiri",
+    "manaslu",
+    "kangchenjunga",
+    "lhotse",
+    "makalu",
+    "cho oyu"
+   ],
+   "youtube": {
+    "title": "How many 8000m peaks are in Nepal? Most people guess too low 🧗",
+    "description": "Only a handful of mountains on Earth rise above eight thousand metres, and one small Himalayan country holds more of them than anyone else. Some stand on its borders with China and India; a few rise entirely inside it. The tallest of all is measured to the metre by both countries that share it.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#mountains",
+     "#geography",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "How many 8,000-metre peaks stand in NEPAL? 🧗\nOnly a handful of mountains on Earth rise above eight thousand metres, and this small Himalayan country holds more of them than anyone else. Some stand on its borders; a few rise entirely inside it.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#mountains",
+     "#geography",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "How many 8,000-metre peaks stand in Nepal — five, eight or eleven?\nOnly a handful of mountains on Earth rise above eight thousand metres, and one small Himalayan country holds more of them than anyone else. Some stand on its borders with China and India; a few rise entirely inside it. Pick a number before the bars go up.",
+    "tags": [
+     "#geoquiz",
+     "#mountains"
+    ]
+   },
+   "twitter": {
+    "text": "How many 8,000-metre peaks stand in NEPAL?\nFive, eight or eleven? One small country holds more of the planet's giants than anyone else.",
+    "tags": [
+     "#GeoQuiz",
+     "#Mountains"
+    ]
+   },
+   "threads": {
+    "text": "How many 8,000-metre peaks stand in Nepal — five, eight or eleven? Only a handful of mountains on Earth rise above eight thousand metres, and this small Himalayan country holds more of them than anyone else; some stand on its borders, a few rise entirely inside it.",
+    "tags": [
+     "#himalaya"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "how-many",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "fill-pulse",
+  "beats": [
+   "bars",
+   "split",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:np + emoji-set:mountain",
+  "music": "bed:epic"
+ },
+ "status": "ready"
+}

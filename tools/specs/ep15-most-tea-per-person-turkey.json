@@ -1,0 +1,937 @@
+{
+ "id": "ep15-most-tea-per-person-turkey",
+ "series": "body-brain",
+ "number": 15,
+ "seed": 5215,
+ "question": "Who drinks the MOST tea per person?",
+ "keyword": "MOST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "United Kingdom",
+   "flag": "gb",
+   "cue": "kingdom"
+  },
+  {
+   "text": "China",
+   "flag": "cn",
+   "cue": "china"
+  },
+  {
+   "text": "Turkey",
+   "flag": "tr",
+   "cue": "turkey"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "over 3 kg a year, grown at home",
+ "outro_headline": "DID YOU GET IT?",
+ "cover_emoji": "🫖",
+ "cover_emoji_why": "a teapot names the drink and belongs to all three options; it says nothing about which country",
+ "post": {
+  "premise": "The world's biggest tea drinkers are not the British",
+  "bait": "Britain, China or Turkey — which did you pick? 👇",
+  "keywords": [
+   "who drinks the most tea",
+   "tea consumption per capita",
+   "tea drinking countries",
+   "which country drinks the most tea",
+   "black tea facts",
+   "food quiz",
+   "health quiz",
+   "world facts"
+  ],
+  "tags": [
+   "BodyQuiz",
+   "Tea"
+  ],
+  "sources_line": "FAO; Euromonitor via Statista; ÇAYKUR",
+  "copy": {
+   "spoilers": [
+    "turkey",
+    "turkish",
+    "turks",
+    "rize",
+    "black sea",
+    "çay",
+    "cay",
+    "tulip glass",
+    "istanbul",
+    "ankara"
+   ],
+   "youtube": {
+    "title": "Who drinks the most tea per person? Not Britain 🫖",
+    "description": "The nation famous for its afternoon cup, the country that grew the leaf first, or the third one? One of them drinks more than three kilos of tea per person every year, almost all of it grown on its own wet hills, and serves it dozens of times a day in small curved glasses.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#tea",
+     "#food",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Who drinks the MOST tea per person? 🫖\nThe nation famous for its afternoon cup, the country that grew the leaf first, or the other one? One of them drinks more than three kilos per person a year, grown on its own wet hills and served dozens of times a day.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#tea",
+     "#food",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Who drinks the most tea per person — the United Kingdom, China or Turkey?\nOne of them drinks more than three kilos of tea per person every year, almost all of it grown on its own wet hills, and serves it dozens of times a day in small curved glasses. Pick your flag before the bars rise.",
+    "tags": [
+     "#bodyquiz",
+     "#tea"
+    ]
+   },
+   "twitter": {
+    "text": "Who drinks the MOST tea per person?\nThe UK, China or Turkey? More than three kilos a year each, grown at home, poured dozens of times a day.",
+    "tags": [
+     "#BodyQuiz",
+     "#Tea"
+    ]
+   },
+   "threads": {
+    "text": "Who drinks the most tea per person — the United Kingdom, China or Turkey? One of them drinks more than three kilos per person every year, almost all of it grown on its own wet hills, and serves it dozens of times a day in small curved glasses.",
+    "tags": [
+     "#tealovers"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "misconception",
+  "opener": "mystery-zoom-out",
+  "reveal": "flag-lift",
+  "beats": [
+   "bars",
+   "route",
+   "travel",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:tr + emoji-set:tea",
+  "music": "bed:warm",
+  "outro": "DID YOU GET IT?"
+ },
+ "intent": "A habit quiz that beats the British stereotype: bars put the three biggest tea drinkers to scale, a pin lands on the wet Black Sea hills where almost all of it is grown, and a teapot rides the road west across the country to the glasses where it ends up — grown at home, drunk all day.",
+ "voice": {
+  "v01_cues": {
+   "who": "who",
+   "most": "most"
+  },
+  "v04": {
+   "text": "Turkey. Over 3 kilos of tea per person a year, more than anyone on Earth.",
+   "cues": {
+    "answer": "turkey",
+    "tea": "tea",
+    "earth": "earth"
+   }
+  },
+  "v05": {
+   "text": "Britain is famous for it, yet comes third. China grew the leaf first, but drinks far less per head.",
+   "cues": {
+    "britain": "britain",
+    "third": "third",
+    "china": "china"
+   }
+  },
+  "v06": {
+   "text": "Almost all of it is grown at home, on steep wet hills along the Black Sea coast.",
+   "cues": {
+    "grown": "grown",
+    "hills": "hills",
+    "coast": "coast"
+   }
+  },
+  "v07": {
+   "text": "From there it travels across the country to tulip-shaped glasses, poured dozens of times a day.",
+   "cues": {
+    "travels": "travels",
+    "glasses": "glasses",
+    "day": "day"
+   }
+  },
+  "v08": {
+   "text": "A nation in a tea glass. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "BLACK TEA",
+   "text": "brewed strong in a two-pot kettle"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "tr",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "gb",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "Tea consumption per person: Turkey leads the world at roughly 3.2 kg per person per year (Euromonitor data via Statista; FAO consumption tables), ahead of Ireland (about 2.2 kg) and the United Kingdom (about 1.9 kg); China, the largest producer and total consumer, drinks well under 1 kg per head. Turkey grows nearly all its own tea in Rize and neighbouring provinces on the wet eastern Black Sea coast, through the state company ÇAYKUR and private firms, and is among the world's top five producers. Black tea (çay) is brewed in a stacked double kettle (çaydanlık) and served in small tulip-shaped glasses many times a day.",
+  "myths": [
+   {
+    "myth": "The British drink more tea than anyone.",
+    "reality": "Per person, Turkey drinks roughly half as much again as Britain; Ireland also out-drinks the UK. Britain's reputation comes from history, not today's per-head numbers.",
+    "sources": [
+     "statista_tea",
+     "wiki_tea_pc"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Tea-consumption clips are top-10 lists; nobody beats the British guess with to-scale bars, pins the hills where the winner grows its own leaf, and rides the tea across the country to the glass as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=which+country+drinks+the+most+tea",
+     "title": "Search: which country drinks the most tea",
+     "angle": "ranking lists",
+     "misses": "no map, no growing story"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=turkish+tea+culture",
+     "title": "Search: tea culture of the winner",
+     "angle": "travel vlogs",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=tea+facts",
+     "title": "Search: tea facts",
+     "angle": "explainers",
+     "misses": "no country angle"
+    }
+   ]
+  },
+  "sources": {
+   "fao_tea": {
+    "type": "primary",
+    "publisher": "FAO — Intergovernmental Group on Tea",
+    "title": "Current market situation and medium-term outlook for tea",
+    "url": "https://www.fao.org/markets-and-trade/commodities/tea/en/",
+    "date": "2026-11-17",
+    "notes": "Turkey is among the largest tea producers and has the highest per-capita consumption; China the largest producer and total consumer"
+   },
+   "caykur": {
+    "type": "primary",
+    "publisher": "ÇAYKUR (Turkish state tea enterprise)",
+    "title": "About ÇAYKUR — tea cultivation in Turkey",
+    "url": "https://www.caykur.gov.tr/",
+    "date": "2026-11-17",
+    "notes": "tea is grown in Rize, Trabzon, Artvin and Giresun provinces on the eastern Black Sea coast; Turkey meets nearly all domestic demand from its own harvest"
+   },
+   "statista_tea": {
+    "type": "reference",
+    "publisher": "Statista (Euromonitor data)",
+    "title": "Annual per capita tea consumption worldwide by leading countries",
+    "url": "https://www.statista.com/statistics/507950/global-per-capita-tea-consumption-by-country/",
+    "date": "2026-11-17",
+    "notes": "Turkey about 3.16 kg per person per year; Ireland about 2.19 kg; United Kingdom about 1.94 kg"
+   },
+   "wiki_tea_pc": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "List of countries by tea consumption per capita",
+    "url": "https://en.wikipedia.org/wiki/List_of_countries_by_tea_consumption_per_capita",
+    "date": "2026-11-17",
+    "notes": "Turkey first (about 3.16 kg), Ireland second, United Kingdom third; China about 0.57 kg"
+   },
+   "brit_tea": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Tea — Consumption and production",
+    "url": "https://www.britannica.com/topic/tea-beverage",
+    "date": "2026-11-17",
+    "notes": "tea originated in China; Turkey is a major producer and the leading per-capita consumer; black tea dominates in Turkey"
+   },
+   "brit_rize": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Rize",
+    "url": "https://www.britannica.com/place/Rize",
+    "date": "2026-11-17",
+    "notes": "city and province on the eastern Black Sea coast of Turkey; the centre of Turkish tea cultivation on steep, rainy slopes"
+   },
+   "wiki_turkish_tea": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Turkish tea",
+    "url": "https://en.wikipedia.org/wiki/Turkish_tea",
+    "date": "2026-11-17",
+    "notes": "black tea brewed in a çaydanlık (stacked double kettle) and served in small tulip-shaped glasses; drunk throughout the day"
+   },
+   "tuik": {
+    "type": "primary",
+    "publisher": "Turkish Statistical Institute (TurkStat)",
+    "title": "Crop production statistics — tea",
+    "url": "https://data.tuik.gov.tr/",
+    "date": "2026-11-17",
+    "notes": "annual fresh tea leaf harvest of about 1.4 million tonnes, almost entirely from the eastern Black Sea provinces"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Turkey has the world's highest tea consumption per person, roughly 3.2 kg a year.",
+    "sources": [
+     "fao_tea",
+     "statista_tea",
+     "wiki_tea_pc"
+    ],
+    "vo": [
+     "who drinks the most tea per person",
+     "united kingdom, china, or turkey",
+     "turkey. over 3 kilos of tea per person a year, more than anyone on earth",
+     "a nation in a tea glass"
+    ],
+    "screen": [
+     "3.2 kg",
+     "Turkey"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "detail",
+    "text": "Ireland is second at about 2.2 kg and the United Kingdom third at about 1.9 kg; China, where tea originated, drinks well under 1 kg per person.",
+    "sources": [
+     "statista_tea",
+     "wiki_tea_pc",
+     "brit_tea"
+    ],
+    "vo": [
+     "britain is famous for it, yet comes third. china grew the leaf first, but drinks far less per head"
+    ],
+    "screen": [
+     "2.2 kg",
+     "1.9 kg",
+     "Ireland",
+     "United Kingdom"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Turkey grows nearly all of its own tea in Rize and neighbouring provinces on the steep, rainy eastern Black Sea coast.",
+    "sources": [
+     "caykur",
+     "tuik",
+     "brit_rize"
+    ],
+    "vo": [
+     "almost all of it is grown at home, on steep wet hills along the black sea coast"
+    ],
+    "screen": [
+     "Rize · where the tea grows",
+     "grown at home"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Turkish black tea is brewed in a stacked double kettle and served in small tulip-shaped glasses many times a day.",
+    "sources": [
+     "wiki_turkish_tea",
+     "brit_tea"
+    ],
+    "vo": [
+     "from there it travels across the country to tulip-shaped glasses, poured dozens of times a day"
+    ],
+    "screen": [
+     "BLACK TEA",
+     "brewed strong in a two-pot kettle",
+     "Istanbul"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   25.5,
+   36.2,
+   45,
+   42.3
+  ],
+  "far_bbox": [
+   -5,
+   20,
+   75,
+   60
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "792"
+  ],
+  "highlight_note": "Turkey",
+  "labels": [
+   {
+    "id": "home",
+    "lonlat": [
+     36.5,
+     40.0
+    ],
+    "text": "grown at home",
+    "cls": "tag",
+    "in": "s06@grown+0.2",
+    "out": "s06.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "rize",
+    "lonlat": [
+     40.52,
+     41.02
+    ],
+    "label": "Rize · where the tea grows",
+    "side": "left"
+   },
+   {
+    "id": "ist",
+    "lonlat": [
+     28.98,
+     41.01
+    ],
+    "label": "Istanbul",
+    "side": "right"
+   }
+  ],
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "tearoad",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "ri",
+       "properties": {
+        "name": "Rize to Istanbul"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          40.52,
+          41.02
+         ],
+         [
+          39.7,
+          41.0
+         ],
+         [
+          37.9,
+          41.0
+         ],
+         [
+          35.5,
+          41.2
+         ],
+         [
+          33.0,
+          41.4
+         ],
+         [
+          30.5,
+          40.8
+         ],
+         [
+          28.98,
+          41.01
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "scalebar": {
+   "km": 200,
+   "lonlat": [
+    26,
+    36.6
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s06@hills",
+    "pid": "rize"
+   },
+   {
+    "at": "s07@glasses",
+    "pid": "ist"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.45,
+    [
+     15,
+     46
+    ]
+   ],
+   "s01": [
+    0.45,
+    [
+     17,
+     45
+    ]
+   ],
+   "s04": [
+    0.9,
+    [
+     35,
+     39
+    ]
+   ],
+   "s04b": [
+    0.95,
+    [
+     35.3,
+     39.2
+    ]
+   ],
+   "s05": [
+    0.8,
+    [
+     34.5,
+     39
+    ]
+   ],
+   "s05b": [
+    0.84,
+    [
+     34.8,
+     39.2
+    ]
+   ],
+   "s06": [
+    1.1,
+    [
+     38.5,
+     40.2
+    ]
+   ],
+   "s06b": [
+    1.15,
+    [
+     38.8,
+     40.4
+    ]
+   ],
+   "s07": [
+    0.95,
+    [
+     34.5,
+     40.3
+    ]
+   ],
+   "s07b": [
+    1.0,
+    [
+     34.8,
+     40.5
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Britain is famous for it, yet comes third. China grew the leaf first, but drinks far less per head.",
+    "cues": {
+     "britain": "britain",
+     "third": "third",
+     "china": "china"
+    }
+   },
+   "direction": "ease back over Anatolia; three bars rise on 'Britain' with Turkey on top as the British flag-ball thinks; a dragon sticker on 'China' as Turkey pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.8,
+    [
+     34.5,
+     39
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.84,
+    [
+     34.8,
+     39.2
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "cups",
+     "type": "bars",
+     "rows": [
+      [
+       "Turkey",
+       3.2,
+       "3.2 kg"
+      ],
+      [
+       "Ireland",
+       2.2,
+       "2.2 kg"
+      ],
+      [
+       "United Kingdom",
+       1.9,
+       "1.9 kg"
+      ]
+     ],
+     "unit": "tea per person a year",
+     "y": 300,
+     "x": 60,
+     "w": 900
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@britain-0.2",
+     "do": "chart.bars_in",
+     "id": "cups",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.25
+     }
+    },
+    {
+     "at": "@@britain+0.3",
+     "do": "character_in",
+     "id": "gb_think"
+    },
+    {
+     "at": "@@china",
+     "do": "sticker_in",
+     "id": "st_dragon"
+    },
+    {
+     "at": "@@china+0.4",
+     "do": "sticker_pulse",
+     "id": "st_dragon"
+    },
+    {
+     "at": "@@china+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "792",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "cups"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_dragon"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "gb_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Almost all of it is grown at home, on steep wet hills along the Black Sea coast.",
+    "cues": {
+     "grown": "grown",
+     "hills": "hills",
+     "coast": "coast"
+    }
+   },
+   "direction": "tighten on the eastern Black Sea; the grown-at-home tag on 'grown' with a leaf sticker; the Rize pin on 'hills'; a rain sticker on 'coast' as Turkey pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    1.1,
+    [
+     38.5,
+     40.2
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.15,
+    [
+     38.8,
+     40.4
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@grown",
+     "do": "sticker_in",
+     "id": "st_leaf"
+    },
+    {
+     "at": "@@grown+0.4",
+     "do": "sticker_pulse",
+     "id": "st_leaf"
+    },
+    {
+     "at": "@@grown+0.9",
+     "do": "sticker_pulse",
+     "id": "st_leaf"
+    },
+    {
+     "at": "@@hills+0.6",
+     "do": "sticker_out",
+     "id": "st_leaf"
+    },
+    {
+     "at": "@@coast",
+     "do": "sticker_in",
+     "id": "st_rain"
+    },
+    {
+     "at": "@@coast+0.4",
+     "do": "sticker_pulse",
+     "id": "st_rain"
+    },
+    {
+     "at": "@@coast+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "792",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_rain"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "From there it travels across the country to tulip-shaped glasses, poured dozens of times a day.",
+    "cues": {
+     "travels": "travels",
+     "glasses": "glasses",
+     "day": "day"
+    }
+   },
+   "direction": "pull back west along the coast; the tea road draws from the hills toward the Bosporus on 'travels' with a teapot riding it; the Istanbul pin and the BLACK TEA card on 'glasses'; a glass sticker on 'day' as the Turkish flag-ball grins and Turkey pulses; the pins leave at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "BLACK TEA",
+    "text": "brewed strong in a two-pot kettle"
+   },
+   "card_at": null,
+   "cam": [
+    0.95,
+    [
+     34.5,
+     40.3
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.0,
+    [
+     34.8,
+     40.5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@travels+0.1",
+     "do": "sticker_in",
+     "id": "st_pot"
+    },
+    {
+     "at": "@@travels+0.1",
+     "do": "geo.route_draw",
+     "stage": "stage_map",
+     "until": "@@glasses+0.4",
+     "args": {
+      "rid": "ri",
+      "layer": "tearoad"
+     }
+    },
+    {
+     "at": "@@travels+0.1",
+     "do": "geo.travel",
+     "stage": "stage_map",
+     "until": "@@glasses+0.4",
+     "args": {
+      "rid": "ri",
+      "layer": "tearoad",
+      "sid": "st_pot",
+      "offset": [
+       0,
+       -40
+      ]
+     }
+    },
+    {
+     "at": "@@glasses+0.5",
+     "do": "sticker_out",
+     "id": "st_pot"
+    },
+    {
+     "at": "@@glasses+0.3",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@day",
+     "do": "sticker_in",
+     "id": "st_glass"
+    },
+    {
+     "at": "@@day+0.4",
+     "do": "sticker_pulse",
+     "id": "st_glass"
+    },
+    {
+     "at": "@@day+0.2",
+     "do": "character_in",
+     "id": "tr_happy"
+    },
+    {
+     "at": "@@day+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "792",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_glass"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "tr_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "rize"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "ist"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_dragon",
+   "type": "sticker",
+   "emoji": "1f409",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_leaf",
+   "type": "sticker",
+   "emoji": "1f33f",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_rain",
+   "type": "sticker",
+   "emoji": "1f327",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_pot",
+   "type": "sticker",
+   "emoji": "1fad6",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "st_glass",
+   "type": "sticker",
+   "emoji": "1f375",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "gb_think",
+   "type": "character",
+   "flag": "gb",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "tr_happy",
+   "type": "character",
+   "flag": "tr",
+   "face": "happy",
+   "x": 300,
+   "y": 1130,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

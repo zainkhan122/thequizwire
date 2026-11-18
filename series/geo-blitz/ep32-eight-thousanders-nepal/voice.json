@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep32-eight-thousanders-nepal",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A counting quiz that turns into a border story: bars put the three giant-peak nations to scale, a BORDER / INSIDE split shows that most of Nepal's giants stand on a frontier line, and a pin lands on the tallest of all with the metre-exact height both countries agreed.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "How many 8,000-metre peaks stand in NEPAL?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "How many 8,000-metre peaks stand in nepal?",
+   "cues": {
+    "how": "how",
+    "nepal": "nepal"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "5, 8, or 11?",
+   "cues": {
+    "a": "5",
+    "b": "8",
+    "c": "11"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "8. More giant peaks than any other country, packed into a thin strip of Himalaya.",
+   "cues": {
+    "answer": "8",
+    "peaks": "peaks",
+    "himalaya": "himalaya"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.35,
+   "direction": "ease back along the range; three bars rise on 'Pakistan' with Nepal on top; the Pakistani flag-ball thinks on 'Pakistan'; a mountain sticker on 'line' as Nepal pulses",
+   "text": "Pakistan comes next, home of K2. China shares most of its giants across a border line.",
+   "cues": {
+    "pakistan": "pakistan",
+    "china": "china",
+    "line": "line"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "tighten on the central Himalaya; the SHARED / ALL NEPAL split lands on 'straddle' with the frontier tag; a flag sticker on 'India'; a boot sticker on 'inside' as Nepal pulses",
+   "text": "Most of Nepal's giants straddle the frontier with China or India. A few rise entirely inside the country.",
+   "cues": {
+    "straddle": "straddle",
+    "india": "india",
+    "inside": "inside"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.5,
+   "direction": "drift east to the Khumbu; the Everest pin and the 8,849 m card on 'Everest' with a snow sticker; a plane sticker on 'airstrip' as the Nepali flag-ball grins and Nepal pulses; the pin leaves at the end",
+   "text": "The tallest of all, Everest, sits right on the China line. Climbers from the south begin at a mountain airstrip.",
+   "cues": {
+    "everest": "everest",
+    "south": "south",
+    "airstrip": "airstrip"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "A country of giants. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

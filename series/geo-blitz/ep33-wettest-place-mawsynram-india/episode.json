@@ -1,0 +1,144 @@
+{
+ "id": "ep33-wettest-place-mawsynram-india",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 33,
+ "title": "Where is the WETTEST place on Earth?",
+ "difficulty": "MEDIUM",
+ "seed": 4233,
+ "quiz": {
+  "question": "Where is the WETTEST place on Earth?",
+  "keyword": "WETTEST",
+  "options": [
+   "Brazil",
+   "Indonesia",
+   "India"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "India",
+  "answer_sub": "nearly 12 m of rain a year",
+  "option_meta": [
+   {
+    "flag": "br"
+   },
+   {
+    "flag": "id"
+   },
+   {
+    "flag": "in"
+   }
+  ],
+  "banner": "India",
+  "banner_sub": "✓  C was right · nearly 12 m of rain a year",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Where is the WETTEST place on Earth? ☔",
+  "premise": "The wettest place on Earth is a hill village, not a rainforest",
+  "bait": "Brazil, Indonesia or India — which did you pick? 👇",
+  "keywords": [
+   "wettest place on earth",
+   "rainiest place in the world",
+   "where does it rain the most",
+   "highest rainfall in the world",
+   "monsoon facts",
+   "geography quiz",
+   "map quiz",
+   "weather facts"
+  ],
+  "description": "The wettest place on Earth is a hill village, not a rainforest. Brazil, Indonesia or India — which did you pick? 👇\n\nSources: India Meteorological Department; Guinness World Records; Encyclopaedia Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #33",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "GeoQuiz",
+   "Weather"
+  ],
+  "cover_emoji": "☔",
+  "cover_emoji_why": "an umbrella names the subject (rain) and belongs to no country; all three options are wet in places, so it favours none",
+  "copy": {
+   "spoilers": [
+    "india",
+    "indian",
+    "mawsynram",
+    "cherrapunji",
+    "sohra",
+    "meghalaya",
+    "khasi",
+    "bay of bengal",
+    "11,871",
+    "26,470",
+    "assam"
+   ],
+   "youtube": {
+    "title": "Where is the wettest place on Earth? Not the rainforest ☔",
+    "description": "The Amazon giant, the island nation, or the third one? The wettest place on Earth is a hill village where nearly twelve metres of rain fall in an average year, most of it in a few summer months, because the clouds hit a wall of hills and drop everything at once. The town next door once took more rain in a single year than most cities see in a generation.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#weather",
+     "#geography",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Where is the WETTEST place on Earth? ☔\nThe Amazon giant, the island nation, or the other one? The wettest place on Earth is a hill village where nearly twelve metres of rain fall in an average year, because the clouds hit a wall of hills and drop everything at once.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#weather",
+     "#geography",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Where is the wettest place on Earth — Brazil, Indonesia or India?\nIt is a hill village where nearly twelve metres of rain fall in an average year, most of it in a few summer months, because the clouds hit a wall of hills and drop everything at once. The town next door once took more rain in a single year than most cities see in a generation. Pick your flag before the bars go up.",
+    "tags": [
+     "#geoquiz",
+     "#weather"
+    ]
+   },
+   "twitter": {
+    "text": "Where is the WETTEST place on Earth?\nBrazil, Indonesia or India? A hill village, nearly twelve metres of rain a year — and it is not in a rainforest.",
+    "tags": [
+     "#GeoQuiz",
+     "#Weather"
+    ]
+   },
+   "threads": {
+    "text": "Where is the wettest place on Earth — Brazil, Indonesia or India? A hill village where nearly twelve metres of rain fall in an average year, because the monsoon clouds hit a wall of hills and drop everything at once; the town next door once took more rain in one year than most cities see in a generation.",
+    "tags": [
+     "#monsoon"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "where-is",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "bars",
+   "flash",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:in + emoji-set:weather",
+  "music": "bed:pulse"
+ },
+ "status": "ready"
+}

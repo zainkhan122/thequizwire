@@ -1,0 +1,144 @@
+{
+ "id": "ep15-most-tea-per-person-turkey",
+ "format": "quiz-v3",
+ "series": "body-brain",
+ "number": 15,
+ "title": "Who drinks the MOST tea per person?",
+ "difficulty": "MEDIUM",
+ "seed": 5215,
+ "quiz": {
+  "question": "Who drinks the MOST tea per person?",
+  "keyword": "MOST",
+  "options": [
+   "United Kingdom",
+   "China",
+   "Turkey"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Turkey",
+  "answer_sub": "over 3 kg a year, grown at home",
+  "option_meta": [
+   {
+    "flag": "gb"
+   },
+   {
+    "flag": "cn"
+   },
+   {
+    "flag": "tr"
+   }
+  ],
+  "banner": "Turkey",
+  "banner_sub": "✓  C was right · over 3 kg a year, grown at home",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Who drinks the MOST tea per person? 🫖",
+  "premise": "The world's biggest tea drinkers are not the British",
+  "bait": "Britain, China or Turkey — which did you pick? 👇",
+  "keywords": [
+   "who drinks the most tea",
+   "tea consumption per capita",
+   "tea drinking countries",
+   "which country drinks the most tea",
+   "black tea facts",
+   "food quiz",
+   "health quiz",
+   "world facts"
+  ],
+  "description": "The world's biggest tea drinkers are not the British. Britain, China or Turkey — which did you pick? 👇\n\nSources: FAO; Euromonitor via Statista; ÇAYKUR.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nBody & Brain #15",
+  "hashtags": [
+   "#BodyFacts",
+   "#BrainQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "BodyQuiz",
+   "Tea"
+  ],
+  "cover_emoji": "🫖",
+  "cover_emoji_why": "a teapot names the drink and belongs to all three options; it says nothing about which country",
+  "copy": {
+   "spoilers": [
+    "turkey",
+    "turkish",
+    "turks",
+    "rize",
+    "black sea",
+    "çay",
+    "cay",
+    "tulip glass",
+    "istanbul",
+    "ankara"
+   ],
+   "youtube": {
+    "title": "Who drinks the most tea per person? Not Britain 🫖",
+    "description": "The nation famous for its afternoon cup, the country that grew the leaf first, or the third one? One of them drinks more than three kilos of tea per person every year, almost all of it grown on its own wet hills, and serves it dozens of times a day in small curved glasses.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#tea",
+     "#food",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Who drinks the MOST tea per person? 🫖\nThe nation famous for its afternoon cup, the country that grew the leaf first, or the other one? One of them drinks more than three kilos per person a year, grown on its own wet hills and served dozens of times a day.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#tea",
+     "#food",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Who drinks the most tea per person — the United Kingdom, China or Turkey?\nOne of them drinks more than three kilos of tea per person every year, almost all of it grown on its own wet hills, and serves it dozens of times a day in small curved glasses. Pick your flag before the bars rise.",
+    "tags": [
+     "#bodyquiz",
+     "#tea"
+    ]
+   },
+   "twitter": {
+    "text": "Who drinks the MOST tea per person?\nThe UK, China or Turkey? More than three kilos a year each, grown at home, poured dozens of times a day.",
+    "tags": [
+     "#BodyQuiz",
+     "#Tea"
+    ]
+   },
+   "threads": {
+    "text": "Who drinks the most tea per person — the United Kingdom, China or Turkey? One of them drinks more than three kilos per person every year, almost all of it grown on its own wet hills, and serves it dozens of times a day in small curved glasses.",
+    "tags": [
+     "#tealovers"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "flag-lift",
+  "beats": [
+   "bars",
+   "route",
+   "travel",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:tr + emoji-set:tea",
+  "music": "bed:warm"
+ },
+ "status": "ready"
+}

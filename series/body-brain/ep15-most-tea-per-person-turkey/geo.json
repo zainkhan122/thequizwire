@@ -1,0 +1,152 @@
+{
+ "version": 1,
+ "episode": "ep15-most-tea-per-person-turkey",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     25.5,
+     36.2,
+     45,
+     42.3
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "792"
+     ],
+     "cls": "",
+     "note": "Turkey",
+     "lift": "flag",
+     "flag": "tr"
+    },
+    {
+     "kind": "route",
+     "id": "tearoad",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "ri",
+        "properties": {
+         "name": "Rize to Istanbul"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           40.52,
+           41.02
+          ],
+          [
+           39.7,
+           41.0
+          ],
+          [
+           37.9,
+           41.0
+          ],
+          [
+           35.5,
+           41.2
+          ],
+          [
+           33.0,
+           41.4
+          ],
+          [
+           30.5,
+           40.8
+          ],
+          [
+           28.98,
+           41.01
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "pins": [
+    {
+     "id": "rize",
+     "lonlat": [
+      40.52,
+      41.02
+     ],
+     "label": "Rize · where the tea grows",
+     "side": "left"
+    },
+    {
+     "id": "ist",
+     "lonlat": [
+      28.98,
+      41.01
+     ],
+     "label": "Istanbul",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "home",
+     "lonlat": [
+      36.5,
+      40.0
+     ],
+     "text": "grown at home",
+     "cls": "tag",
+     "in": "s06@grown+0.2",
+     "out": "s06.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -5,
+      20,
+      75,
+      60
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 200,
+    "lonlat": [
+     26,
+     36.6
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,652 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "8,849 m",
+   "text": "Everest, measured jointly in 2020"
+  },
+  {
+   "id": "count",
+   "type": "bars",
+   "rows": [
+    [
+     "Nepal",
+     8,
+     "8 peaks"
+    ],
+    [
+     "Pakistan",
+     5,
+     "5 peaks"
+    ],
+    [
+     "China",
+     5,
+     "5 peaks"
+    ]
+   ],
+   "unit": "peaks above 8,000 m",
+   "y": 300,
+   "x": 60,
+   "w": 900
+  },
+  {
+   "id": "where",
+   "type": "split",
+   "left": {
+    "kicker": "SHARED",
+    "text": "on the China and India lines"
+   },
+   "right": {
+    "kicker": "ALL NEPAL",
+    "text": "Dhaulagiri, Manaslu, Annapurna"
+   },
+   "label_left": "BORDER",
+   "label_right": "INSIDE",
+   "y": 300,
+   "h": 560
+  },
+  {
+   "id": "f4",
+   "type": "fact",
+   "kicker": "8,849 m",
+   "text": "Everest, measured jointly in 2020"
+  },
+  {
+   "id": "st_mtn",
+   "type": "sticker",
+   "emoji": "1f3d4",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_flag",
+   "type": "sticker",
+   "emoji": "1f6a9",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_boot",
+   "type": "sticker",
+   "emoji": "1f97e",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_snow",
+   "type": "sticker",
+   "emoji": "2744",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_plane",
+   "type": "sticker",
+   "emoji": "1f6e9",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "pk_think",
+   "type": "character",
+   "flag": "pk",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "np_happy",
+   "type": "character",
+   "flag": "np",
+   "face": "happy",
+   "x": 300,
+   "y": 1130,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  },
+  {
+   "id": "cha",
+   "type": "character",
+   "flag": "np",
+   "face": "happy",
+   "x": 230,
+   "y": 1060,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "chb",
+   "type": "character",
+   "flag": "pk",
+   "face": "think",
+   "x": 850,
+   "y": 1060,
+   "size": 200,
+   "rot": 8
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.45,
+    "lonlat": [
+     78,
+     22
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.45,
+    "lonlat": [
+     80,
+     23
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     84,
+     28.3
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 1.05,
+    "lonlat": [
+     84.2,
+     28.4
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "524",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s06@straddle+0.2",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "front"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "front"
+   }
+  },
+  {
+   "at": "s04+3.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "524",
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 0.9,
+    "lonlat": [
+     83.5,
+     28.6
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 0.94,
+    "lonlat": [
+     83.8,
+     28.7
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@pakistan-0.2",
+   "do": "chart.bars_in",
+   "id": "count",
+   "args": {
+    "dur": 0.9,
+    "stagger": 0.25
+   }
+  },
+  {
+   "at": "s05@pakistan+0.3",
+   "do": "character_in",
+   "id": "pk_think"
+  },
+  {
+   "at": "s05@line",
+   "do": "sticker_in",
+   "id": "st_mtn"
+  },
+  {
+   "at": "s05@line+0.4",
+   "do": "sticker_pulse",
+   "id": "st_mtn"
+  },
+  {
+   "at": "s05@line+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "524",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "count"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_mtn"
+  },
+  {
+   "at": "s05.end",
+   "do": "character_out",
+   "id": "pk_think"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     84.2,
+     28.3
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 1.05,
+    "lonlat": [
+     84.4,
+     28.4
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@straddle-0.2",
+   "do": "chart.split_in",
+   "id": "where",
+   "args": {
+    "dur": 0.7
+   }
+  },
+  {
+   "at": "s06@india",
+   "do": "sticker_in",
+   "id": "st_flag"
+  },
+  {
+   "at": "s06@india+0.4",
+   "do": "sticker_pulse",
+   "id": "st_flag"
+  },
+  {
+   "at": "s06@inside",
+   "do": "sticker_out",
+   "id": "st_flag"
+  },
+  {
+   "at": "s06@inside",
+   "do": "sticker_in",
+   "id": "st_boot"
+  },
+  {
+   "at": "s06@inside+0.4",
+   "do": "sticker_pulse",
+   "id": "st_boot"
+  },
+  {
+   "at": "s06@inside+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "524",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "chart.out",
+   "id": "where"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_boot"
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.5",
+   "args": {
+    "k": 1.25,
+    "lonlat": [
+     85.6,
+     27.9
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 1.3,
+    "lonlat": [
+     85.8,
+     28.0
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@everest+0.3",
+   "do": "fact_in",
+   "id": "f4",
+   "until": "s07@airstrip-0.2"
+  },
+  {
+   "at": "s07@everest+0.5",
+   "do": "sticker_in",
+   "id": "st_snow"
+  },
+  {
+   "at": "s07@everest+0.9",
+   "do": "sticker_pulse",
+   "id": "st_snow"
+  },
+  {
+   "at": "s07@south",
+   "do": "sticker_pulse",
+   "id": "st_snow"
+  },
+  {
+   "at": "s07@airstrip",
+   "do": "sticker_out",
+   "id": "st_snow"
+  },
+  {
+   "at": "s07@airstrip",
+   "do": "sticker_in",
+   "id": "st_plane"
+  },
+  {
+   "at": "s07@airstrip+0.4",
+   "do": "sticker_pulse",
+   "id": "st_plane"
+  },
+  {
+   "at": "s07@airstrip+0.2",
+   "do": "character_in",
+   "id": "np_happy"
+  },
+  {
+   "at": "s07@airstrip+0.5",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "524",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_plane"
+  },
+  {
+   "at": "s07.end",
+   "do": "character_out",
+   "id": "np_happy"
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "ev"
+   }
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.45,
+    "lonlat": [
+     78,
+     22
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04+1.7",
+   "do": "geo.scalebar_in",
+   "stage": "stage_map"
+  },
+  {
+   "at": "s07@everest",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "ev"
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.6",
+   "do": "character_in",
+   "id": "cha"
+  },
+  {
+   "at": "s04+1.9",
+   "do": "character_in",
+   "id": "chb"
+  },
+  {
+   "at": "s05+1.0",
+   "do": "character_out",
+   "id": "cha"
+  },
+  {
+   "at": "s05+0.8",
+   "do": "character_out",
+   "id": "chb"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

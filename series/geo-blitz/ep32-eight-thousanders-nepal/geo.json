@@ -1,0 +1,91 @@
+{
+ "version": 1,
+ "episode": "ep32-eight-thousanders-nepal",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     80,
+     26.3,
+     88.3,
+     30.5
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "524"
+     ],
+     "cls": "",
+     "note": "Nepal"
+    }
+   ],
+   "pins": [
+    {
+     "id": "ev",
+     "lonlat": [
+      86.925,
+      27.988
+     ],
+     "label": "Everest · on the China line",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "front",
+     "lonlat": [
+      85.6,
+      28.6
+     ],
+     "text": "frontier giants",
+     "cls": "tag",
+     "in": "s06@straddle+0.2",
+     "out": "s06.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      60,
+      5,
+      105,
+      45
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 100,
+    "lonlat": [
+     80.3,
+     26.6
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

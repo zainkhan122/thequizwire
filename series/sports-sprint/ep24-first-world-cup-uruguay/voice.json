@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep24-first-world-cup-uruguay",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A founding story told as a sea voyage: the small host country lifts into colour, the brand-new stadium is pinned, and a ship draws the last leg of the Atlantic crossing down the coast to the river mouth, Brazil's squad aboard, before a flash marks the first final the hosts won.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Where was the FIRST FIFA World Cup played?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Where was the first FIFA World Cup played?",
+   "cues": {
+    "where": "where",
+    "first": "first"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Brazil, Italy, or Uruguay?",
+   "cues": {
+    "a": "brazil",
+    "b": "italy",
+    "c": "uruguay"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "Uruguay. The very first World Cup, played in a single city, by 13 teams.",
+   "cues": {
+    "answer": "uruguay",
+    "city": "city",
+    "teams": "teams"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.35,
+   "direction": "ease back over the River Plate; the Italian flag-ball thinks on 'Italy'; a trophy sticker on 'Brazil'; a house sticker on 'home' as Uruguay pulses",
+   "text": "Italy hosted the second. Brazil has won the most. But the first trophy stayed at home.",
+   "cues": {
+    "italy": "italy",
+    "brazil": "brazil",
+    "home": "home"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "tighten on the capital; a medal sticker on 'champions'; the Montevideo pin and the Centenario tag on 'stadium'; a hammer sticker on 'opening' as Uruguay pulses",
+   "text": "The hosts were Olympic champions, and built a new stadium for it, finished days after the opening match.",
+   "cues": {
+    "champions": "champions",
+    "stadium": "stadium",
+    "opening": "opening"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.5,
+   "direction": "pull far back up the Atlantic coast; the Rio pin on 'aboard' as the ship's last leg draws down the coast to the river mouth with a ship sticker riding it; a white flash and the 4–2 card on 'final' as the Uruguayan flag-ball grins and Uruguay pulses; the pins leave at the end",
+   "text": "Few European teams made the long voyage, and Brazil's squad climbed aboard on the way. In the final, the hosts beat Argentina.",
+   "cues": {
+    "voyage": "voyage",
+    "aboard": "aboard",
+    "final": "final"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "The first cup never left home. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

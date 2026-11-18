@@ -1,0 +1,144 @@
+{
+ "id": "ep21-strongest-bite-saltwater-crocodile",
+ "format": "quiz-v3",
+ "series": "wild-files",
+ "number": 21,
+ "title": "Which animal has the STRONGEST bite?",
+ "difficulty": "MEDIUM",
+ "seed": 3921,
+ "quiz": {
+  "question": "Which animal has the STRONGEST bite?",
+  "keyword": "STRONGEST",
+  "options": [
+   "Hippo",
+   "Lion",
+   "Saltwater crocodile"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Saltwater crocodile",
+  "answer_sub": "the strongest bite ever measured",
+  "option_meta": [
+   {
+    "emoji": "1f99b"
+   },
+   {
+    "emoji": "1f981"
+   },
+   {
+    "emoji": "1f40a"
+   }
+  ],
+  "banner": "Saltwater crocodile",
+  "banner_sub": "✓  C was right · the strongest bite ever measured",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which animal has the STRONGEST bite? 🦷",
+  "premise": "The strongest bite ever measured belongs to an ambush hunter",
+  "bait": "Hippo, lion or crocodile — which did you pick? 👇",
+  "keywords": [
+   "which animal has the strongest bite",
+   "strongest bite force",
+   "strongest bite in the animal kingdom",
+   "bite force psi",
+   "animal facts",
+   "wildlife quiz",
+   "animal quiz",
+   "nature facts"
+  ],
+  "description": "The strongest bite ever measured belongs to an ambush hunter. Hippo, lion or crocodile — which did you pick? 👇\n\nSources: Erickson et al. 2012 (PLoS ONE); Australian Museum; Encyclopaedia Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #21",
+  "hashtags": [
+   "#AnimalQuiz",
+   "#WildlifeFacts",
+   "#thequizwire"
+  ],
+  "tags": [
+   "AnimalQuiz",
+   "BiteForce"
+  ],
+  "cover_emoji": "🦷",
+  "cover_emoji_why": "a tooth names the subject (bite) and belongs to all three animals; it points at none of them",
+  "copy": {
+   "spoilers": [
+    "crocodile",
+    "croc",
+    "saltwater",
+    "saltie",
+    "australia",
+    "australian",
+    "kakadu",
+    "northern territory",
+    "3,700",
+    "16,460",
+    "estuar"
+   ],
+   "youtube": {
+    "title": "Which animal has the strongest bite? Scientists measured it 🦷",
+    "description": "The river giant with the famous yawn, the big cat, or the third one? Scientists put a meter between the jaws of each and one of them came out at more than three times the big cat's force — the strongest bite ever measured on a living animal. The strange part: the same jaws can be held shut with a rubber band.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#wildlife",
+     "#animals",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which animal has the STRONGEST bite? 🦷\nThe river giant with the famous yawn, the big cat, or the other one? Scientists put a meter between the jaws of each; one came out at more than three times the big cat's force. The strange part: the same jaws can be held shut with a rubber band.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#wildlife",
+     "#animals",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which animal has the strongest bite — the hippo, the lion or the saltwater crocodile?\nScientists put a meter between the jaws of each and one of them came out at more than three times the big cat's force, the strongest bite ever measured on a living animal. The strange part: the same jaws can be held shut with a rubber band. Pick before the bars snap shut.",
+    "tags": [
+     "#animalquiz",
+     "#wildlife"
+    ]
+   },
+   "twitter": {
+    "text": "Which animal has the STRONGEST bite?\nHippo, lion or saltwater crocodile? The strongest bite ever measured — and jaws a rubber band can hold shut.",
+    "tags": [
+     "#AnimalQuiz",
+     "#Wildlife"
+    ]
+   },
+   "threads": {
+    "text": "Which animal has the strongest bite — the hippo, the lion or the saltwater crocodile? Scientists measured all of them; one came out at more than three times the big cat's force, the strongest bite ever measured on a living animal, yet a rubber band can hold its jaws shut.",
+    "tags": [
+     "#animalfacts"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-animal",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "compare",
+   "flash",
+   "pin",
+   "label"
+  ],
+  "cast": "emoji-set:reptile + flagball:none",
+  "music": "bed:tense"
+ },
+ "status": "ready"
+}

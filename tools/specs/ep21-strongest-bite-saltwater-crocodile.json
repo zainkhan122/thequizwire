@@ -1,0 +1,880 @@
+{
+ "id": "ep21-strongest-bite-saltwater-crocodile",
+ "series": "wild-files",
+ "number": 21,
+ "seed": 3921,
+ "question": "Which animal has the STRONGEST bite?",
+ "keyword": "STRONGEST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Hippo",
+   "emoji": "1f99b",
+   "cue": "hippo"
+  },
+  {
+   "text": "Lion",
+   "emoji": "1f981",
+   "cue": "lion"
+  },
+  {
+   "text": "Saltwater crocodile",
+   "emoji": "1f40a",
+   "cue": "crocodile"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "the strongest bite ever measured",
+ "outro_headline": "DID YOU GET IT?",
+ "cover_emoji": "🦷",
+ "cover_emoji_why": "a tooth names the subject (bite) and belongs to all three animals; it points at none of them",
+ "post": {
+  "premise": "The strongest bite ever measured belongs to an ambush hunter",
+  "bait": "Hippo, lion or crocodile — which did you pick? 👇",
+  "keywords": [
+   "which animal has the strongest bite",
+   "strongest bite force",
+   "strongest bite in the animal kingdom",
+   "bite force psi",
+   "animal facts",
+   "wildlife quiz",
+   "animal quiz",
+   "nature facts"
+  ],
+  "tags": [
+   "AnimalQuiz",
+   "BiteForce"
+  ],
+  "sources_line": "Erickson et al. 2012 (PLoS ONE); Australian Museum; Encyclopaedia Britannica",
+  "copy": {
+   "spoilers": [
+    "crocodile",
+    "croc",
+    "saltwater",
+    "saltie",
+    "australia",
+    "australian",
+    "kakadu",
+    "northern territory",
+    "3,700",
+    "16,460",
+    "estuar"
+   ],
+   "youtube": {
+    "title": "Which animal has the strongest bite? Scientists measured it 🦷",
+    "description": "The river giant with the famous yawn, the big cat, or the third one? Scientists put a meter between the jaws of each and one of them came out at more than three times the big cat's force — the strongest bite ever measured on a living animal. The strange part: the same jaws can be held shut with a rubber band.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#wildlife",
+     "#animals",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which animal has the STRONGEST bite? 🦷\nThe river giant with the famous yawn, the big cat, or the other one? Scientists put a meter between the jaws of each; one came out at more than three times the big cat's force. The strange part: the same jaws can be held shut with a rubber band.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#wildlife",
+     "#animals",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which animal has the strongest bite — the hippo, the lion or the saltwater crocodile?\nScientists put a meter between the jaws of each and one of them came out at more than three times the big cat's force, the strongest bite ever measured on a living animal. The strange part: the same jaws can be held shut with a rubber band. Pick before the bars snap shut.",
+    "tags": [
+     "#animalquiz",
+     "#wildlife"
+    ]
+   },
+   "twitter": {
+    "text": "Which animal has the STRONGEST bite?\nHippo, lion or saltwater crocodile? The strongest bite ever measured — and jaws a rubber band can hold shut.",
+    "tags": [
+     "#AnimalQuiz",
+     "#Wildlife"
+    ]
+   },
+   "threads": {
+    "text": "Which animal has the strongest bite — the hippo, the lion or the saltwater crocodile? Scientists measured all of them; one came out at more than three times the big cat's force, the strongest bite ever measured on a living animal, yet a rubber band can hold its jaws shut.",
+    "tags": [
+     "#animalfacts"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-animal",
+  "hook": "straight",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "compare",
+   "flash",
+   "pin",
+   "label"
+  ],
+  "cast": "emoji-set:reptile + flagball:none",
+  "music": "bed:tense",
+  "outro": "DID YOU GET IT?"
+ },
+ "intent": "A force quiz with a snap: three bite forces rise to scale so the lion and hippo look small, a white flash marks the clamp of jaws built to close and not to open, and a pin lands on the estuaries of northern Australia where the biggest of them wait for anything that comes to drink.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "strongest": "strongest"
+  },
+  "v04": {
+   "text": "The saltwater crocodile. The strongest bite ever measured on a living animal: 3,700 pounds per square inch.",
+   "cues": {
+    "answer": "crocodile",
+    "measured": "measured",
+    "inch": "inch"
+   }
+  },
+  "v05": {
+   "text": "A lion manages under a third of that. A hippo reaches about half.",
+   "cues": {
+    "lion": "lion",
+    "hippo": "hippo",
+    "half": "half"
+   }
+  },
+  "v06": {
+   "text": "The muscles are built to clamp shut, not to open. A rubber band can hold the mouth closed.",
+   "cues": {
+    "clamp": "clamp",
+    "open": "open",
+    "band": "band"
+   }
+  },
+  "v07": {
+   "text": "The giants live in the rivers and estuaries of northern Australia, longer than a car, and ambush whatever comes to drink.",
+   "cues": {
+    "rivers": "rivers",
+    "australia": "australia",
+    "drink": "drink"
+   }
+  },
+  "v08": {
+   "text": "Jaws that never let go. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "16,460 N",
+   "text": "measured on a wild crocodile"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": null,
+  "b": null
+ },
+ "research": {
+  "topic": "Strongest measured bite of any living animal: the saltwater crocodile (Crocodylus porosus). Erickson et al. (PLoS ONE, 2012) recorded 16,460 newtons (about 3,700 psi) from a 5.2 m saltwater crocodile, the highest bite force ever directly measured on a living animal. Lions measure roughly 4,000–4,500 N (about 650–1,000 psi); hippos are estimated at about 8,100 N (about 1,800 psi). Crocodilian jaw muscles are massive for closing but weak for opening, so the mouth can be held shut by hand or with tape or a band. Saltwater crocodiles live in rivers, estuaries and coasts from eastern India to northern Australia; the largest males exceed 6 m and ambush prey at the water's edge.",
+  "myths": [
+   {
+    "myth": "The hippo, with the biggest gape in Africa, has the strongest bite.",
+    "reality": "A hippo's bite is estimated at about half the saltwater crocodile's measured force; the crocodile holds the record for a living animal.",
+    "sources": [
+     "erickson2012",
+     "natgeo_hippo"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Bite-force clips are top-10 countdowns with psi numbers; nobody puts the three forces to scale, flashes the clamp, and pins the estuaries where the record holder lives as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=strongest+bite+force+animal",
+     "title": "Search: strongest bite force animal",
+     "angle": "countdown lists",
+     "misses": "no map, no mechanism"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=saltwater+crocodile+documentary",
+     "title": "Search: the record holder on film",
+     "angle": "documentary clips",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=hippo+vs+crocodile",
+     "title": "Search: hippo vs crocodile",
+     "angle": "versus videos",
+     "misses": "no measured data"
+    }
+   ]
+  },
+  "sources": {
+   "erickson2012": {
+    "type": "scholarly",
+    "publisher": "Erickson, G. M. et al., PLoS ONE 7(3): e31781 (2012)",
+    "title": "Insights into the Ecology and Evolutionary Success of Crocodilians Revealed through Bite-Force and Tooth-Pressure Experimentation",
+    "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0031781",
+    "date": "2026-11-17",
+    "notes": "maximum bite force of 16,414–16,460 N recorded from a 5.2 m Crocodylus porosus — the highest directly measured for any living animal"
+   },
+   "ausmuseum": {
+    "type": "primary",
+    "publisher": "Australian Museum",
+    "title": "Estuarine (Saltwater) Crocodile",
+    "url": "https://australian.museum/learn/animals/reptiles/estuarine-crocodile/",
+    "date": "2026-11-17",
+    "notes": "largest living reptile, males over 6 m; rivers, estuaries and coasts of northern Australia; ambush predator at the water's edge"
+   },
+   "parks_kakadu": {
+    "type": "primary",
+    "publisher": "Parks Australia",
+    "title": "Kakadu National Park — Crocodiles",
+    "url": "https://parksaustralia.gov.au/kakadu/discover/nature/crocodiles/",
+    "date": "2026-11-17",
+    "notes": "Kakadu's rivers and billabongs hold one of the largest saltwater crocodile populations; be crocwise near any water"
+   },
+   "brit_saltie": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Saltwater crocodile",
+    "url": "https://www.britannica.com/animal/saltwater-crocodile",
+    "date": "2026-11-17",
+    "notes": "largest living crocodilian, to 6–7 m; range from eastern India through Southeast Asia to northern Australia; powerful jaws with weak opening muscles"
+   },
+   "natgeo_croc": {
+    "type": "reference",
+    "publisher": "National Geographic",
+    "title": "Crocodiles have strongest bite ever measured, hands-on tests show",
+    "url": "https://www.nationalgeographic.com/animals/article/120315-crocodiles-bite-force-erickson-science-plos-one-strongest",
+    "date": "2026-11-17",
+    "notes": "saltwater crocodile bite of 3,700 psi; lions and tigers around 1,000 psi; jaw-closing muscles enormous, opening muscles weak"
+   },
+   "natgeo_hippo": {
+    "type": "reference",
+    "publisher": "National Geographic",
+    "title": "Hippopotamus — facts",
+    "url": "https://www.nationalgeographic.com/animals/mammals/facts/hippopotamus",
+    "date": "2026-11-17",
+    "notes": "hippo bite force estimated at about 1,800 psi"
+   },
+   "guinness_bite": {
+    "type": "reference",
+    "publisher": "Guinness World Records",
+    "title": "Strongest bite force for a living animal (measured)",
+    "url": "https://www.guinnessworldrecords.com/world-records/strongest-bite-force-for-a-living-animal",
+    "date": "2026-11-17",
+    "notes": "saltwater crocodile, 16,460 N, measured by Gregory Erickson's team"
+   },
+   "wiki_saltie": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Saltwater crocodile",
+    "url": "https://en.wikipedia.org/wiki/Saltwater_crocodile",
+    "date": "2026-11-17",
+    "notes": "bite force 16,414 N measured; range eastern India to northern Australia; males commonly 4.3–5.2 m, exceptionally over 6 m"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The saltwater crocodile has the strongest bite ever directly measured on a living animal: about 16,460 N, roughly 3,700 psi.",
+    "sources": [
+     "erickson2012",
+     "guinness_bite",
+     "natgeo_croc"
+    ],
+    "vo": [
+     "which animal has the strongest bite",
+     "hippo, lion, or saltwater crocodile",
+     "the saltwater crocodile. the strongest bite ever measured on a living animal: 3,700 pounds per square inch",
+     "jaws that never let go"
+    ],
+    "screen": [
+     "3,700 psi",
+     "16,460 N",
+     "measured on a wild crocodile",
+     "Saltwater crocodile"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "detail",
+    "text": "A lion's bite is around 1,000 psi; a hippo's is estimated at about 1,800 psi — under a third and about half of the crocodile's measured force.",
+    "sources": [
+     "natgeo_croc",
+     "natgeo_hippo"
+    ],
+    "vo": [
+     "a lion manages under a third of that. a hippo reaches about half"
+    ],
+    "screen": [
+     "1,000 psi",
+     "1,800 psi",
+     "Lion",
+     "Hippo"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Crocodilian jaw muscles are built for closing; the muscles that open the jaws are weak, so the mouth can be held shut with a band or tape.",
+    "sources": [
+     "erickson2012",
+     "brit_saltie",
+     "natgeo_croc"
+    ],
+    "vo": [
+     "the muscles are built to clamp shut, not to open. a rubber band can hold the mouth closed"
+    ],
+    "screen": [
+     "jaws built to clamp"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "The largest saltwater crocodiles live in the rivers and estuaries of northern Australia, exceed 6 m, and ambush prey at the water's edge.",
+    "sources": [
+     "ausmuseum",
+     "parks_kakadu",
+     "brit_saltie",
+     "wiki_saltie"
+    ],
+    "vo": [
+     "the giants live in the rivers and estuaries of northern australia, longer than a car, and ambush whatever comes to drink"
+    ],
+    "screen": [
+     "Kakadu · croc country"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   123,
+   -20,
+   145,
+   -9
+  ],
+  "far_bbox": [
+   90,
+   -45,
+   170,
+   10
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "036"
+  ],
+  "highlight_note": "Australia",
+  "labels": [
+   {
+    "id": "clamp",
+    "lonlat": [
+     134.5,
+     -16.5
+    ],
+    "text": "jaws built to clamp",
+    "cls": "tag",
+    "in": "s06@clamp+0.2",
+    "out": "s06.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "kak",
+    "lonlat": [
+     132.4,
+     -12.9
+    ],
+    "label": "Kakadu · croc country",
+    "side": "right"
+   }
+  ],
+  "scalebar": {
+   "km": 200,
+   "lonlat": [
+    123.5,
+    -19.5
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s07@australia",
+    "pid": "kak"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.45,
+    [
+     150,
+     -22
+    ]
+   ],
+   "s01": [
+    0.45,
+    [
+     149,
+     -21
+    ]
+   ],
+   "s04": [
+    0.9,
+    [
+     134,
+     -15
+    ]
+   ],
+   "s04b": [
+    0.95,
+    [
+     134.2,
+     -14.8
+    ]
+   ],
+   "s05": [
+    0.8,
+    [
+     133.5,
+     -15.5
+    ]
+   ],
+   "s05b": [
+    0.84,
+    [
+     133.8,
+     -15.3
+    ]
+   ],
+   "s06": [
+    0.95,
+    [
+     134,
+     -15.2
+    ]
+   ],
+   "s06b": [
+    1.0,
+    [
+     134.2,
+     -15.0
+    ]
+   ],
+   "s07": [
+    1.2,
+    [
+     132.5,
+     -13.6
+    ]
+   ],
+   "s07b": [
+    1.25,
+    [
+     132.7,
+     -13.4
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "A lion manages under a third of that. A hippo reaches about half.",
+    "cues": {
+     "lion": "lion",
+     "hippo": "hippo",
+     "half": "half"
+    }
+   },
+   "direction": "ease back over the Top End; three forces rise to scale on 'lion' with the crocodile towering; a hippo sticker on 'hippo'; a muscle sticker on 'half' as the north pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.8,
+    [
+     133.5,
+     -15.5
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.84,
+    [
+     133.8,
+     -15.3
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "force",
+     "type": "compare",
+     "items": [
+      [
+       "Lion",
+       1000,
+       "1,000 psi"
+      ],
+      [
+       "Hippo",
+       1800,
+       "1,800 psi"
+      ],
+      [
+       "Saltwater crocodile",
+       3700,
+       "3,700 psi"
+      ]
+     ],
+     "y": 320,
+     "x": 60,
+     "w": 900,
+     "max_h": 520
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@lion-0.3",
+     "do": "chart.compare_in",
+     "id": "force",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.25
+     }
+    },
+    {
+     "at": "@@hippo",
+     "do": "sticker_in",
+     "id": "st_hippo"
+    },
+    {
+     "at": "@@hippo+0.4",
+     "do": "sticker_pulse",
+     "id": "st_hippo"
+    },
+    {
+     "at": "@@half",
+     "do": "sticker_out",
+     "id": "st_hippo"
+    },
+    {
+     "at": "@@half",
+     "do": "sticker_in",
+     "id": "st_muscle"
+    },
+    {
+     "at": "@@half+0.4",
+     "do": "sticker_pulse",
+     "id": "st_muscle"
+    },
+    {
+     "at": "@@half+0.9",
+     "do": "sticker_pulse",
+     "id": "st_muscle"
+    },
+    {
+     "at": "@@half+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "036",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_muscle"
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "force"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The muscles are built to clamp shut, not to open. A rubber band can hold the mouth closed.",
+    "cues": {
+     "clamp": "clamp",
+     "open": "open",
+     "band": "band"
+    }
+   },
+   "direction": "hold on the north; a white flash on 'clamp' with the jaws tag; a tooth sticker on 'open'; a band sticker on 'band' as the north pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    0.95,
+    [
+     134,
+     -15.2
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.0,
+    [
+     134.2,
+     -15.0
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@clamp",
+     "do": "fx.flash",
+     "args": {
+      "peak": 0.9,
+      "out": 0.3
+     }
+    },
+    {
+     "at": "@@open",
+     "do": "sticker_in",
+     "id": "st_tooth"
+    },
+    {
+     "at": "@@open+0.4",
+     "do": "sticker_pulse",
+     "id": "st_tooth"
+    },
+    {
+     "at": "@@open+0.9",
+     "do": "sticker_pulse",
+     "id": "st_tooth"
+    },
+    {
+     "at": "@@band",
+     "do": "sticker_out",
+     "id": "st_tooth"
+    },
+    {
+     "at": "@@band",
+     "do": "sticker_in",
+     "id": "st_band"
+    },
+    {
+     "at": "@@band+0.4",
+     "do": "sticker_pulse",
+     "id": "st_band"
+    },
+    {
+     "at": "@@band+0.9",
+     "do": "sticker_pulse",
+     "id": "st_band"
+    },
+    {
+     "at": "@@open+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "036",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@@band+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "036",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_band"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The giants live in the rivers and estuaries of northern Australia, longer than a car, and ambush whatever comes to drink.",
+    "cues": {
+     "rivers": "rivers",
+     "australia": "australia",
+     "drink": "drink"
+    }
+   },
+   "direction": "tighten on the Kakadu wetlands; a wave sticker on 'rivers'; the Kakadu pin and the 16,460 N card on 'Australia'; a warning sticker on 'drink' as a crocodile sticker lands and the north pulses; the pin leaves at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "16,460 N",
+    "text": "measured on a wild crocodile"
+   },
+   "card_at": null,
+   "cam": [
+    1.2,
+    [
+     132.5,
+     -13.6
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.25,
+    [
+     132.7,
+     -13.4
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@rivers",
+     "do": "sticker_in",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@rivers+0.4",
+     "do": "sticker_pulse",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@rivers+0.9",
+     "do": "sticker_pulse",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@australia+0.4",
+     "do": "sticker_out",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@australia+0.3",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@@drink-0.2"
+    },
+    {
+     "at": "@@drink",
+     "do": "sticker_in",
+     "id": "st_warn"
+    },
+    {
+     "at": "@@drink+0.4",
+     "do": "sticker_pulse",
+     "id": "st_warn"
+    },
+    {
+     "at": "@@drink+0.9",
+     "do": "sticker_pulse",
+     "id": "st_warn"
+    },
+    {
+     "at": "@@drink+0.2",
+     "do": "sticker_in",
+     "id": "st_croc"
+    },
+    {
+     "at": "@@drink+0.6",
+     "do": "sticker_pulse",
+     "id": "st_croc"
+    },
+    {
+     "at": "@@drink+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "036",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_warn"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_croc"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "kak"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_muscle",
+   "type": "sticker",
+   "emoji": "1f4aa",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_tooth",
+   "type": "sticker",
+   "emoji": "1f9b7",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_band",
+   "type": "sticker",
+   "emoji": "1f4ce",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_wave",
+   "type": "sticker",
+   "emoji": "1f30a",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_warn",
+   "type": "sticker",
+   "emoji": "26a0",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_hippo",
+   "type": "sticker",
+   "emoji": "1f99b",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "st_croc",
+   "type": "sticker",
+   "emoji": "1f40a",
+   "x": 300,
+   "y": 1130,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

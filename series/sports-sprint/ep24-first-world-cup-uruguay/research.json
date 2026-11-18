@@ -1,0 +1,202 @@
+{
+ "version": 1,
+ "episode": "ep24-first-world-cup-uruguay",
+ "topic": "The first FIFA World Cup was held in Uruguay, 13–30 July 1930, entirely in Montevideo, with 13 teams. Uruguay was chosen as reigning Olympic champions (1924, 1928) and for the centenary of its first constitution; the Estadio Centenario, built for the tournament, was completed five days after the opening matches. Only four European teams travelled: France, Belgium and Romania sailed on the SS Conte Verde (picking up Brazil's squad in Rio de Janeiro), Yugoslavia on another ship. Uruguay beat Argentina 4–2 in the final on 30 July 1930. Italy hosted and won the second edition in 1934; Brazil has the most titles (five).",
+ "researched": "2026-11-18",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The first World Cup was in Europe, where football began.",
+   "reality": "It was in Uruguay, in a single city; most European federations refused the long voyage and only four European teams took part.",
+   "sources": [
+    "fifa_1930",
+    "brit_wc"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "1930 World Cup clips are grainy highlight reels; nobody lifts the small host into colour, pins the late stadium and draws the ship's last leg down the coast as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=first+world+cup+1930",
+    "title": "Search: the first World Cup",
+    "angle": "archive highlights",
+    "misses": "no map, no voyage"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=world+cup+history+explained",
+    "title": "Search: World Cup history explained",
+    "angle": "long explainers",
+    "misses": "no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=world+cup+hosts+quiz",
+    "title": "Search: World Cup hosts quiz",
+    "angle": "list quizzes",
+    "misses": "no story"
+   }
+  ]
+ },
+ "sources": {
+  "fifa_1930": {
+   "type": "primary",
+   "publisher": "FIFA",
+   "title": "FIFA World Cup Uruguay 1930 — tournament page",
+   "url": "https://www.fifa.com/en/tournaments/mens/worldcup/1930uruguay",
+   "date": "2026-11-17",
+   "notes": "13 teams, all matches in Montevideo, 13–30 July 1930; final Uruguay 4–2 Argentina at the Estadio Centenario"
+  },
+  "fifa_centenario": {
+   "type": "primary",
+   "publisher": "FIFA",
+   "title": "The Estadio Centenario — the first World Cup stadium",
+   "url": "https://www.fifa.com/en/articles/estadio-centenario-first-world-cup-stadium",
+   "date": "2026-11-17",
+   "notes": "built for the 1930 tournament and the centenary of Uruguay's constitution; unfinished at kick-off, opened five days into the tournament"
+  },
+  "brit_wc": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "World Cup (football)",
+   "url": "https://www.britannica.com/sports/World-Cup-football",
+   "date": "2026-11-17",
+   "notes": "first held in Uruguay in 1930; Uruguay, Olympic champions of 1924 and 1928, hosted and won; Italy hosted 1934; Brazil has won a record five titles"
+  },
+  "brit_uruguay": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Uruguay — Sports and recreation",
+   "url": "https://www.britannica.com/place/Uruguay",
+   "date": "2026-11-17",
+   "notes": "hosted and won the first World Cup in 1930 in Montevideo"
+  },
+  "wiki_1930": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "1930 FIFA World Cup",
+   "url": "https://en.wikipedia.org/wiki/1930_FIFA_World_Cup",
+   "date": "2026-11-17",
+   "notes": "13 teams; four from Europe (France, Belgium, Romania, Yugoslavia); France, Belgium and Romania sailed on the SS Conte Verde, which collected the Brazilian squad in Rio de Janeiro; Estadio Centenario completed five days into the tournament"
+  },
+  "wiki_conte_verde": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "SS Conte Verde",
+   "url": "https://en.wikipedia.org/wiki/SS_Conte_Verde",
+   "date": "2026-11-17",
+   "notes": "Italian liner that carried the European teams and FIFA president Jules Rimet to Montevideo for the 1930 World Cup, calling at Rio de Janeiro"
+  },
+  "wiki_final": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "1930 FIFA World Cup final",
+   "url": "https://en.wikipedia.org/wiki/1930_FIFA_World_Cup_final",
+   "date": "2026-11-17",
+   "notes": "Uruguay 4–2 Argentina, 30 July 1930, Estadio Centenario, Montevideo"
+  },
+  "ioc_uruguay": {
+   "type": "primary",
+   "publisher": "International Olympic Committee",
+   "title": "Uruguay — Olympic football gold 1924 and 1928",
+   "url": "https://olympics.com/en/sports/football/",
+   "date": "2026-11-17",
+   "notes": "Uruguay won the Olympic football tournaments of Paris 1924 and Amsterdam 1928"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The first FIFA World Cup was played in Uruguay in July 1930, entirely in Montevideo, with 13 teams.",
+   "sources": [
+    "fifa_1930",
+    "brit_wc",
+    "wiki_1930"
+   ],
+   "vo": [
+    "where was the first fifa world cup played",
+    "brazil, italy, or uruguay",
+    "uruguay. the very first world cup, played in a single city, by 13 teams",
+    "the first cup never left home"
+   ],
+   "screen": [
+    "Uruguay",
+    "Montevideo · every match"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "detail",
+   "text": "Italy hosted the second World Cup in 1934; Brazil holds the record with five titles.",
+   "sources": [
+    "brit_wc",
+    "wiki_1930"
+   ],
+   "vo": [
+    "italy hosted the second. brazil has won the most. but the first trophy stayed at home"
+   ],
+   "screen": []
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Uruguay, Olympic champions of 1924 and 1928, built the Estadio Centenario for the tournament; it was completed five days after the opening matches.",
+   "sources": [
+    "fifa_centenario",
+    "ioc_uruguay",
+    "wiki_1930"
+   ],
+   "vo": [
+    "the hosts were olympic champions, and built a new stadium for it, finished days after the opening match"
+   ],
+   "screen": [
+    "Centenario · built for it"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "Only four European teams travelled; France, Belgium and Romania sailed on the Conte Verde, which picked up Brazil's squad in Rio de Janeiro; Uruguay beat Argentina 4–2 in the final.",
+   "sources": [
+    "fifa_1930",
+    "wiki_1930",
+    "wiki_conte_verde",
+    "wiki_final"
+   ],
+   "vo": [
+    "few european teams made the long voyage, and brazil's squad climbed aboard on the way. in the final, the hosts beat argentina"
+   ],
+   "screen": [
+    "4–2",
+    "v Argentina · the first final",
+    "Rio de Janeiro"
+   ]
+  }
+ ]
+}
