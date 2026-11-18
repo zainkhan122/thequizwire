@@ -162,8 +162,8 @@
  },
  "facts": [
   {
-   "kicker": "16,460 N",
-   "text": "measured on a wild crocodile"
+   "kicker": "ambush",
+   "text": "waits at the water's edge"
   }
  ],
  "characters": {
@@ -299,6 +299,8 @@
     "screen": [
      "3,700 psi",
      "16,460 N",
+     "16,460",
+     "newtons · measured on a wild crocodile",
      "measured on a wild crocodile",
      "Crocodile"
     ]
@@ -352,7 +354,9 @@
      "the giants live in the rivers and estuaries of northern australia, longer than a car, and ambush whatever comes to drink"
     ],
     "screen": [
-     "Kakadu"
+     "Kakadu",
+     "ambush",
+     "waits at the water's edge"
     ]
    }
   ]
