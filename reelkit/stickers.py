@@ -35,7 +35,7 @@ def prep(ep, build):
     for fn in ("visuals.json", "episode.json"):
         if (ep / fn).exists(): walk(json.loads((ep / fn).read_text()), want)
     E = json.loads((ep / "episode.json").read_text()) if (ep / "episode.json").exists() else {}
-    if E.get("format") == "quiz-v3": want |= OUTRO_EMOJI                      # the v3 outro's like / bell stickers
+    if E.get("format") in ("quiz-v3", "story-v1"): want |= OUTRO_EMOJI                      # the v3 outro's like / bell stickers
     if not want: return []
     out = build / "stickers"; out.mkdir(parents=True, exist_ok=True)
     mp = ep / "media.json"; man = json.loads(mp.read_text()) if mp.exists() else {"files": {}}; gen = man.setdefault("generated", {})

@@ -22,7 +22,7 @@ SIMPLE = {"licence": "CC0-1.0", "provider": "Simple Icons", "credit": "Simple Ic
 def prep(ep, build):
     ep, build = pathlib.Path(ep), pathlib.Path(build)
     E = json.loads((ep / "episode.json").read_text())
-    if E.get("format") != "quiz-v3": return []
+    if E.get("format") not in ("quiz-v3", "story-v1"): return []
     out = build / "brand"; out.mkdir(parents=True, exist_ok=True)
     mp = ep / "media.json"; man = json.loads(mp.read_text()) if mp.exists() else {"files": {}}; gen = man.setdefault("generated", {})
     done = []

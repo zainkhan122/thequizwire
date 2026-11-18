@@ -745,8 +745,7 @@
       -48.877
      ],
      "label": "Point Nemo",
-     "side": "right",
-     "qid": "Q1192386"
+     "side": "right"
     },
     {
      "id": "ducie",
@@ -755,8 +754,7 @@
       -24.68
      ],
      "label": "Ducie Island",
-     "side": "left",
-     "qid": "Q485530"
+     "side": "left"
     },
     {
      "id": "motu",
@@ -765,8 +763,7 @@
       -27.2
      ],
      "label": "Motu Nui",
-     "side": "right",
-     "qid": "Q1949807"
+     "side": "right"
     },
     {
      "id": "maher",
@@ -775,8 +772,7 @@
       -72.98
      ],
      "label": "Maher Island",
-     "side": "right",
-     "qid": "Q1884184"
+     "side": "right"
     }
    ],
    "labels": [],

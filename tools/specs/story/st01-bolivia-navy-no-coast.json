@@ -342,7 +342,7 @@
   },
   {
    "vo": {
-    "text": "So where does the navy sail? Up here, on Lake Titicaca, nearly four kilometres up in the Andes, with around five thousand sailors and a fleet of patrol boats.",
+    "text": "So where does the navy sail? Up here, on Lake Titicaca, nearly 4 kilometres up in the Andes, with around 5,000 sailors and a fleet of patrol boats.",
     "cues": {
      "sail": "sail",
      "titicaca": "titicaca",
@@ -809,7 +809,7 @@
     ],
     "vo": [
      "bolivia has a navy. it has not had a coastline for more than a century",
-     "so where does the navy sail? up here, on lake titicaca, nearly four kilometres up in the andes, with around five thousand sailors and a fleet of patrol boats",
+     "so where does the navy sail? up here, on lake titicaca, nearly 4 kilometres up in the andes, with around 5,000 sailors and a fleet of patrol boats",
      "a navy without a sea, drilling on a mountain lake, waiting for a coast it still calls its own"
     ],
     "screen": [
@@ -889,7 +889,7 @@
      "bbc_navy"
     ],
     "vo": [
-     "up here, on lake titicaca, nearly four kilometres up in the andes"
+     "up here, on lake titicaca, nearly 4 kilometres up in the andes"
     ],
     "screen": [
      "Lake Titicaca · 3,800 m"

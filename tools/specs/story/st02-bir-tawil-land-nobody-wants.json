@@ -152,7 +152,7 @@
  "beats": [
   {
    "vo": {
-    "text": "In 1899 Britain drew the border along the twenty-second parallel. A straight line, east to west.",
+    "text": "In 1899 Britain drew the border along the 22nd parallel. A straight line, east to west.",
     "cues": {
      "britain": "britain",
      "parallel": "parallel",
@@ -931,7 +931,7 @@
      "wiki_birtawil"
     ],
     "vo": [
-     "in 1899 britain drew the border along the twenty-second parallel. a straight line, east to west"
+     "in 1899 britain drew the border along the 22nd parallel. a straight line, east to west"
     ],
     "screen": [
      "1899 · the straight line",

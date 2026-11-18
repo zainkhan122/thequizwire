@@ -623,12 +623,12 @@
    }
   },
   {
-   "at": "s05@hundred+0.05",
+   "at": "s05@250+0.05",
    "do": "kw_pulse",
    "id": "kw05"
   },
   {
-   "at": "s05@hundred",
+   "at": "s05@250",
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {
@@ -656,7 +656,7 @@
    "at": "s05@fall-0.2",
    "do": "chart.counter_run",
    "id": "craft",
-   "until": "s05@hundred+0.8",
+   "until": "s05@250+0.8",
    "args": {
     "steps": 14
    }

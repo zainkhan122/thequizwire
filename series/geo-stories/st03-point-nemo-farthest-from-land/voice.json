@@ -38,7 +38,7 @@
    "energy": 3,
    "pause_after": 0.45,
    "direction": "pull back; the empty circle draws on 'farthest'; counter on the distance",
-   "text": "This is Point Nemo, the spot in the South Pacific farthest from any land. The nearest coast is two thousand six hundred and eighty-eight kilometres away.",
+   "text": "This is Point Nemo, the spot in the South Pacific farthest from any land. The nearest coast is 2,688 kilometres away.",
    "cues": {
     "nemo": "nemo",
     "pacific": "pacific",
@@ -72,7 +72,7 @@
    "energy": 5,
    "pause_after": 0.5,
    "direction": "tighten back onto the point; satellite sticker arcs over on 'station'; card with the altitude",
-   "text": "Nobody lives on any of them. The space station passes about four hundred kilometres overhead, so when it does, its crew are the closest people to this spot.",
+   "text": "Nobody lives on any of them. The space station passes about 400 kilometres overhead, so when it does, its crew are the closest people to this spot.",
    "cues": {
     "nobody": "nobody",
     "station": "station",
@@ -89,12 +89,12 @@
    "energy": 4,
    "pause_after": 0.5,
    "direction": "the circle fills; counter of spacecraft on 'hundred'; the sticker falls in",
-   "text": "That emptiness is useful. Space agencies steer dead spacecraft to burn up and fall here, more than two hundred and fifty of them so far, including the Mir space station.",
+   "text": "That emptiness is useful. Space agencies steer dead spacecraft to burn up and fall here, more than 250 of them so far, including the Mir space station.",
    "cues": {
     "useful": "useful",
     "dead": "dead",
     "fall": "fall",
-    "hundred": "hundred",
+    "250": "250",
     "mir": "mir"
    }
   },

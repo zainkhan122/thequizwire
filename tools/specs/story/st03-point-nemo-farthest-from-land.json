@@ -132,7 +132,7 @@
  "beats": [
   {
    "vo": {
-    "text": "This is Point Nemo, the spot in the South Pacific farthest from any land. The nearest coast is two thousand six hundred and eighty-eight kilometres away.",
+    "text": "This is Point Nemo, the spot in the South Pacific farthest from any land. The nearest coast is 2,688 kilometres away.",
     "cues": {
      "nemo": "nemo",
      "pacific": "pacific",
@@ -301,7 +301,7 @@
   },
   {
    "vo": {
-    "text": "Nobody lives on any of them. The space station passes about four hundred kilometres overhead, so when it does, its crew are the closest people to this spot.",
+    "text": "Nobody lives on any of them. The space station passes about 400 kilometres overhead, so when it does, its crew are the closest people to this spot.",
     "cues": {
      "nobody": "nobody",
      "station": "station",
@@ -368,12 +368,12 @@
   },
   {
    "vo": {
-    "text": "That emptiness is useful. Space agencies steer dead spacecraft to burn up and fall here, more than two hundred and fifty of them so far, including the Mir space station.",
+    "text": "That emptiness is useful. Space agencies steer dead spacecraft to burn up and fall here, more than 250 of them so far, including the Mir space station.",
     "cues": {
      "useful": "useful",
      "dead": "dead",
      "fall": "fall",
-     "hundred": "hundred",
+     "250": "250",
      "mir": "mir"
     }
    },
@@ -417,7 +417,7 @@
      "at": "@@fall-0.2",
      "do": "chart.counter_run",
      "id": "craft",
-     "until": "@@hundred+0.8",
+     "until": "@@250+0.8",
      "args": {
       "steps": 14
      }
@@ -1227,8 +1227,7 @@
      -48.877
     ],
     "label": "Point Nemo",
-    "side": "right",
-    "qid": "Q1192386"
+    "side": "right"
    },
    {
     "id": "ducie",
@@ -1237,8 +1236,7 @@
      -24.68
     ],
     "label": "Ducie Island",
-    "side": "left",
-    "qid": "Q485530"
+    "side": "left"
    },
    {
     "id": "motu",
@@ -1247,8 +1245,7 @@
      -27.2
     ],
     "label": "Motu Nui",
-    "side": "right",
-    "qid": "Q1949807"
+    "side": "right"
    },
    {
     "id": "maher",
@@ -1257,8 +1254,7 @@
      -72.98
     ],
     "label": "Maher Island",
-    "side": "right",
-    "qid": "Q1884184"
+    "side": "right"
    }
   ],
   "labels": [],
@@ -1397,7 +1393,7 @@
      "wiki_nemo"
     ],
     "vo": [
-     "this is point nemo, the spot in the south pacific farthest from any land. the nearest coast is two thousand six hundred and eighty-eight kilometres away",
+     "this is point nemo, the spot in the south pacific farthest from any land. the nearest coast is 2,688 kilometres away",
      "the loneliest point in the ocean, where the only neighbours pass by in orbit"
     ],
     "screen": [
@@ -1438,7 +1434,7 @@
     ],
     "vo": [
      "there is a point in the ocean where the nearest human beings are usually in orbit",
-     "the space station passes about four hundred kilometres overhead, so when it does, its crew are the closest people to this spot"
+     "the space station passes about 400 kilometres overhead, so when it does, its crew are the closest people to this spot"
     ],
     "screen": [
      "nearest humans: in orbit",
@@ -1459,7 +1455,7 @@
      "popsci"
     ],
     "vo": [
-     "that emptiness is useful. space agencies steer dead spacecraft to burn up and fall here, more than two hundred and fifty of them so far, including the mir space station"
+     "that emptiness is useful. space agencies steer dead spacecraft to burn up and fall here, more than 250 of them so far, including the mir space station"
     ],
     "screen": [
      "the spacecraft cemetery",
