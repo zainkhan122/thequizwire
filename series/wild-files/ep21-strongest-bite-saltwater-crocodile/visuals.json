@@ -270,7 +270,7 @@
    }
   },
   {
-   "at": "s05@lion-0.3",
+   "at": "s05@lion+0.1",
    "do": "chart.compare_in",
    "id": "force",
    "args": {

@@ -3,11 +3,11 @@
  "format": "quiz-v3",
  "series": "geo-blitz",
  "number": 32,
- "title": "How many 8,000-metre peaks stand in NEPAL?",
+ "title": "How many peaks above 8000 m stand in NEPAL?",
  "difficulty": "HARD",
  "seed": 4132,
  "quiz": {
-  "question": "How many 8,000-metre peaks stand in NEPAL?",
+  "question": "How many peaks above 8000 m stand in NEPAL?",
   "keyword": "NEPAL",
   "options": [
    "5",
@@ -38,12 +38,12 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "How many 8,000-metre peaks stand in NEPAL? 🧗",
+  "title": "How many peaks above 8000 m stand in NEPAL? 🧗",
   "premise": "One small country holds most of the planet's giant peaks",
-  "bait": "Five, eight or eleven — which did you pick? 👇",
+  "bait": "Which number did you pick? 👇",
   "keywords": [
-   "how many 8000m peaks are in nepal",
-   "eight thousanders",
+   "how many peaks in nepal",
+   "giant peaks nepal",
    "highest mountains in the world",
    "nepal mountains",
    "himalaya quiz",
@@ -51,7 +51,7 @@
    "geography quiz",
    "map quiz"
   ],
-  "description": "One small country holds most of the planet's giant peaks. Five, eight or eleven — which did you pick? 👇\n\nSources: Nepal Department of Tourism; Encyclopaedia Britannica; Survey Department of Nepal.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #32",
+  "description": "One small country holds most of the planet's giant peaks. Which number did you pick? 👇\n\nSources: Nepal Department of Tourism; Encyclopaedia Britannica; Survey Department of Nepal.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #32",
   "hashtags": [
    "#GeographyQuiz",
    "#MapQuiz",
@@ -65,7 +65,6 @@
   "cover_emoji_why": "a climber names the subject (the highest mountains) without hinting at the count; it points at no option",
   "copy": {
    "spoilers": [
-    "eight",
     "annapurna",
     "dhaulagiri",
     "manaslu",
@@ -75,8 +74,8 @@
     "cho oyu"
    ],
    "youtube": {
-    "title": "How many 8000m peaks are in Nepal? Most people guess too low 🧗",
-    "description": "Only a handful of mountains on Earth rise above eight thousand metres, and one small Himalayan country holds more of them than anyone else. Some stand on its borders with China and India; a few rise entirely inside it. The tallest of all is measured to the metre by both countries that share it.\nWhich did you pick?",
+    "title": "How many giant peaks in Nepal? Most people guess too low 🧗",
+    "description": "Only a handful of mountains on Earth count as true giants, and one small Himalayan country holds more of them than anyone else. Some stand on its borders with China and India; a few rise entirely inside it. The tallest of all is measured to the metre by both countries that share it.\nWhich did you pick?",
     "tags": [
      "#geoquiz",
      "#mountains",
@@ -86,7 +85,7 @@
     ]
    },
    "instagram": {
-    "caption": "How many 8,000-metre peaks stand in NEPAL? 🧗\nOnly a handful of mountains on Earth rise above eight thousand metres, and this small Himalayan country holds more of them than anyone else. Some stand on its borders; a few rise entirely inside it.\nWhich did you pick?",
+    "caption": "How many peaks above 8000 m stand in NEPAL? 🧗\nOnly a handful of mountains on Earth count as true giants, and this small Himalayan country holds more of them than anyone else. Some stand on its borders; a few rise entirely inside it.\nWhich did you pick?",
     "tags": [
      "#geoquiz",
      "#mountains",
@@ -96,21 +95,21 @@
     ]
    },
    "facebook": {
-    "text": "How many 8,000-metre peaks stand in Nepal — five, eight or eleven?\nOnly a handful of mountains on Earth rise above eight thousand metres, and one small Himalayan country holds more of them than anyone else. Some stand on its borders with China and India; a few rise entirely inside it. Pick a number before the bars go up.",
+    "text": "How many peaks above 8000 m stand in Nepal — 5, 8 or 11?\nOnly a handful of mountains on Earth count as true giants, and one small Himalayan country holds more of them than anyone else. Some stand on its borders with China and India; a few rise entirely inside it. Pick a number before the bars go up.",
     "tags": [
      "#geoquiz",
      "#mountains"
     ]
    },
    "twitter": {
-    "text": "How many 8,000-metre peaks stand in NEPAL?\nFive, eight or eleven? One small country holds more of the planet's giants than anyone else.",
+    "text": "How many peaks above 8000 m stand in NEPAL?\n5, 8 or 11? One small country holds more of the planet's giants than anyone else.",
     "tags": [
      "#GeoQuiz",
      "#Mountains"
     ]
    },
    "threads": {
-    "text": "How many 8,000-metre peaks stand in Nepal — five, eight or eleven? Only a handful of mountains on Earth rise above eight thousand metres, and this small Himalayan country holds more of them than anyone else; some stand on its borders, a few rise entirely inside it.",
+    "text": "How many peaks above 8000 m stand in Nepal — 5, 8 or 11? Only a handful of mountains on Earth count as true giants, and this small Himalayan country holds more of them than anyone else; some stand on its borders, a few rise entirely inside it.",
     "tags": [
      "#himalaya"
     ]

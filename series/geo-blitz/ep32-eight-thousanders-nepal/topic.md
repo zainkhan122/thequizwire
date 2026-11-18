@@ -1,4 +1,4 @@
-# How many 8,000-metre peaks stand in NEPAL?
+# How many peaks above 8000 m stand in NEPAL?
 
 ## Signal
 suggest: "how many 8000m peaks are in nepal" (YouTube autocomplete under "eight thousanders", checked 2026-11-17);
@@ -16,7 +16,7 @@ the metre by both countries together in 2020. A number question lets the map sho
 Nepal's stand on its borders; Everest is 8,849 m, agreed by Nepal and China in 2020."
 
 ## Question shape
-how-many, a count with a too-low trap ("how many 8,000-metre peaks stand in nepal?"); number options; reads
+how-many, a count with a too-low trap ("how many peaks above 8000 m stand in nepal?"); number options; reads
 verbatim as the hook; hook = challenge; wide-drift opener along the range (the answer is a number, so the country may
 be in frame).
 
@@ -25,7 +25,7 @@ A 5 — the Pakistan figure, and what people guess for a small country · B 8 (a
 eight-thousanders · C 11 — the overshoot for people who think "all of them".
 
 ## Search term
-"how many 8000m peaks are in nepal"
+"peaks in nepal"
 
 ## Rejected alternatives
 - "Which country has the most 8,000 m peaks" — repeats the which-country-most stem of the last run.

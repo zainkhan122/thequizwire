@@ -12,11 +12,11 @@
   "options": [
    "Hippo",
    "Lion",
-   "Saltwater crocodile"
+   "Crocodile"
   ],
   "correct": 2,
   "beat": 3.0,
-  "answer_line": "Saltwater crocodile",
+  "answer_line": "Crocodile",
   "answer_sub": "the strongest bite ever measured",
   "option_meta": [
    {
@@ -29,7 +29,7 @@
     "emoji": "1f40a"
    }
   ],
-  "banner": "Saltwater crocodile",
+  "banner": "Crocodile",
   "banner_sub": "✓  C was right · the strongest bite ever measured",
   "outro": {
    "headline": "DID YOU GET IT?",
@@ -105,23 +105,23 @@
     ]
    },
    "facebook": {
-    "text": "Which animal has the strongest bite — the hippo, the lion or the saltwater crocodile?\nScientists put a meter between the jaws of each and one of them came out at more than three times the big cat's force, the strongest bite ever measured on a living animal. The strange part: the same jaws can be held shut with a rubber band. Pick before the bars snap shut.",
+    "text": "Which animal has the strongest bite — the hippo, the lion or the crocodile?\nScientists put a meter between the jaws of each and one of them came out at more than three times the big cat's force, the strongest bite ever measured on a living animal. The strange part: the same jaws can be held shut with a rubber band. Pick before the bars snap shut.",
     "tags": [
      "#animalquiz",
-     "#wildlife"
+     "#biteforce"
     ]
    },
    "twitter": {
-    "text": "Which animal has the STRONGEST bite?\nHippo, lion or saltwater crocodile? The strongest bite ever measured — and jaws a rubber band can hold shut.",
+    "text": "Which animal has the STRONGEST bite?\nHippo, lion or crocodile? The strongest bite ever measured — and jaws a rubber band can hold shut.",
     "tags": [
      "#AnimalQuiz",
      "#Wildlife"
     ]
    },
    "threads": {
-    "text": "Which animal has the strongest bite — the hippo, the lion or the saltwater crocodile? Scientists measured all of them; one came out at more than three times the big cat's force, the strongest bite ever measured on a living animal, yet a rubber band can hold its jaws shut.",
+    "text": "Which animal has the strongest bite — the hippo, the lion or the crocodile? Scientists measured all of them; one came out at more than three times the big cat's force, the strongest bite ever measured on a living animal, yet a rubber band can hold its jaws shut.",
     "tags": [
-     "#animalfacts"
+     "#predators"
     ]
    }
   }

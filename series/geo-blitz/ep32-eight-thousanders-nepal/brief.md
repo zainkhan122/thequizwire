@@ -1,4 +1,4 @@
-# Brief — Geo Blitz #32 · How many 8,000-metre peaks stand in NEPAL?
+# Brief — Geo Blitz #32 · How many peaks above 8000 m stand in NEPAL?
 
 ## Hook fact
 Nepal contains or shares eight of the fourteen peaks above 8,000 m: Everest, Kangchenjunga, Lhotse, Makalu, Cho Oyu,

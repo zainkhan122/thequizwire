@@ -88,7 +88,7 @@
     ]
    },
    "twitter": {
-    "text": "Who drinks the MOST tea per person?\nThe UK, China or Turkey? More than three kilos a year each, grown at home, poured dozens of times a day.",
+    "text": "Who drinks the MOST tea per person?\nUnited Kingdom, China or Turkey? More than three kilos a year each, grown at home, poured dozens of times a day.",
     "tags": [
      "#BodyQuiz",
      "#Tea"
@@ -610,7 +610,7 @@
    ],
    "devices": [
     {
-     "at": "@@britain-0.2",
+     "at": "@@britain+0.1",
      "do": "chart.bars_in",
      "id": "cups",
      "args": {
