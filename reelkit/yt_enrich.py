@@ -136,7 +136,7 @@ class YT:
             if st in (403, 429) and ("quotaexceeded" in msg or "dailylimitexceeded" in msg): raise Budget(f"API says quota exceeded ({reason})")
             if st == 429 and reason == "uploadRateLimitExceeded": raise RateLimited("thumbnails: uploadRateLimitExceeded")
             if st == 403 and path.startswith("thumbnails"): raise Forbidden(f"thumbnails: {reason or 'forbidden'} — channel may lack custom-thumbnail permission (phone verification)")
-            if st >= 500 and i < 2: time.sleep(3 * (i + 1)); continue
+            if (st >= 500 or (st == 409 and "service_unavailable" in msg)) and i < 2: time.sleep(5 * (i + 1)); continue   # transient
             raise RuntimeError(f"{method} {path} → {st}: {json.dumps(d)[:300]}")
         raise RuntimeError("retries exhausted")
 
@@ -250,6 +250,16 @@ def cover_bytes(row, ep_dir, limit, log=print):
                     b = j.read_bytes()
                     if is_jpeg(b) and len(b) <= limit: return b, "regenerated"
                 log(f"      cover regen failed: {(r.stderr or r.stdout).strip()[-160:]}")
+    if ep_dir and (ep_dir / "episode.json").exists():
+        # media pruned from Pages/releases (early episodes): build the cover from the episode alone on the brand background —
+        # the question, options and timer are the thumbnail; still far better than YouTube's auto-picked frame.
+        with tempfile.TemporaryDirectory() as td:
+            j = Path(td) / "cover.jpg"
+            r = subprocess.run([sys.executable, str(ROOT / "reelkit/cover.py"), str(ep_dir), "--jpg", str(j), "--out", str(Path(td) / "cover.png")], capture_output=True, text=True)
+            if r.returncode == 0 and j.exists():
+                b = j.read_bytes()
+                if is_jpeg(b) and len(b) <= limit: return b, "regenerated (no media, brand background)"
+            log(f"      cover fallback failed: {(r.stderr or r.stdout).strip()[-160:]}")
     return None, "none"
 
 
@@ -362,34 +372,38 @@ def cmd_run(a):
     thumbs_open, stopped = True, None
     try:
         for p, steps in todo:
-            ep = p["episode"]; slug = series_of(c, ep); S = c["series"].get(slug) if slug else None
-            if not S: print(f"   {ep}: series unknown — skip"); continue
-            vid = resolve_video_id(yt, p, cache)
-            if not vid: print(f"   {ep}: video id not found yet (no externalLink, no unique title match) — retry later"); continue
-            p["yt_video_id"] = vid; out = []
-            if "thumb" in steps:
-                if age_minutes(p) < A["min_age_minutes"] and not offline: out.append("thumb: too fresh, next run")
-                elif not thumbs_open or done["thumb"] >= A["thumbnails_per_run"]: out.append("thumb: deferred (per-run cap)")
-                else:
-                    b, src = cover_bytes(p, ROOT / "series" / slug / ep, A["max_cover_bytes"]) if not offline else (b"\xff\xd8\xff", "offline")
-                    if not b: out.append("thumb: NO COVER (hosted/release/regen all failed)")
+            try:
+                ep = p["episode"]; slug = series_of(c, ep); S = c["series"].get(slug) if slug else None
+                if not S: print(f"   {ep}: series unknown — skip"); continue
+                vid = resolve_video_id(yt, p, cache)
+                if not vid: print(f"   {ep}: video id not found yet (no externalLink, no unique title match) — retry later"); continue
+                p["yt_video_id"] = vid; out = []
+                if "thumb" in steps:
+                    if age_minutes(p) < A["min_age_minutes"] and not offline: out.append("thumb: too fresh, next run")
+                    elif not thumbs_open or done["thumb"] >= A["thumbnails_per_run"]: out.append("thumb: deferred (per-run cap)")
                     else:
-                        try:
-                            yt.set_thumbnail(vid, b); p.update({"yt_thumbnail_at": now(), "yt_thumbnail_src": src}); done["thumb"] += 1; out.append(f"thumb set ({src})")
-                        except RateLimited as e: thumbs_open = False; out.append(f"thumb: {e} — rest next run")
-                        except Forbidden as e: p["yt_thumbnail_error"] = str(e)[:200]; print(f"::warning::{ep}: {e}"); out.append("thumb: forbidden (see warning)")
-            if "series" in steps:
-                pid = ensure_playlist(yt, c, S["playlist"], f"{S['name']} — a new {S['topic']} every day from TheQuizWire.", S, "playlist_id", cache)
-                item = yt.in_playlist(pid, vid) or yt.add_to_playlist(pid, vid); p.update({"yt_playlist_id": pid, "yt_series_item": item}); done["series"] += 1; out.append("series playlist")
-            if "channel" in steps:
-                pid = ensure_playlist(yt, c, A["channel_playlist"], f"Every TheQuizWire Short in one list — guess before the map reveals it. {c['channel']['site']}", A, "channel_playlist_id", cache)
-                item = yt.in_playlist(pid, vid) or yt.add_to_playlist(pid, vid); p.update({"yt_channel_item": item}); done["channel"] += 1; out.append("channel playlist")
-            if "tags" in steps:
-                kit = ROOT / "series" / slug / ep / "out/postkit.json"
-                tags = (json.loads(kit.read_text())["youtube"].get("keywords") if kit.exists() else None) or S.get("keywords", [])
-                tagged = yt.add_tags(vid, tags) if tags else False
-                p["yt_tags_at"] = now(); done["tags"] += 1; out.append("tags added" if tagged else "tags unchanged")
-            print(f"   {ep} ({vid}): " + " · ".join(out))
+                        b, src = cover_bytes(p, ROOT / "series" / slug / ep, A["max_cover_bytes"]) if not offline else (b"\xff\xd8\xff", "offline")
+                        if not b: out.append("thumb: NO COVER (hosted/release/regen all failed)")
+                        else:
+                            try:
+                                yt.set_thumbnail(vid, b); p.update({"yt_thumbnail_at": now(), "yt_thumbnail_src": src}); done["thumb"] += 1; out.append(f"thumb set ({src})")
+                            except RateLimited as e: thumbs_open = False; out.append(f"thumb: {e} — rest next run")
+                            except Forbidden as e: p["yt_thumbnail_error"] = str(e)[:200]; print(f"::warning::{ep}: {e}"); out.append("thumb: forbidden (see warning)")
+                if "series" in steps:
+                    pid = ensure_playlist(yt, c, S["playlist"], f"{S['name']} — a new {S['topic']} every day from TheQuizWire.", S, "playlist_id", cache)
+                    item = yt.in_playlist(pid, vid) or yt.add_to_playlist(pid, vid); p.update({"yt_playlist_id": pid, "yt_series_item": item}); done["series"] += 1; out.append("series playlist")
+                if "channel" in steps:
+                    pid = ensure_playlist(yt, c, A["channel_playlist"], f"Every TheQuizWire Short in one list — guess before the map reveals it. {c['channel']['site']}", A, "channel_playlist_id", cache)
+                    item = yt.in_playlist(pid, vid) or yt.add_to_playlist(pid, vid); p.update({"yt_channel_item": item}); done["channel"] += 1; out.append("channel playlist")
+                if "tags" in steps:
+                    kit = ROOT / "series" / slug / ep / "out/postkit.json"
+                    tags = (json.loads(kit.read_text())["youtube"].get("keywords") if kit.exists() else None) or S.get("keywords", [])
+                    tagged = yt.add_tags(vid, tags) if tags else False
+                    p["yt_tags_at"] = now(); done["tags"] += 1; out.append("tags added" if tagged else "tags unchanged")
+                print(f"   {ep} ({vid}): " + " · ".join(out))
+            except (Budget, RateLimited): raise
+            except Exception as e:                       # one video must not abort the whole run (409 SERVICE_UNAVAILABLE etc.)
+                p["yt_error"] = f"{now()} {str(e)[:160]}"; print(f"::warning::{ep} ({vid}): {str(e)[:200]} — retried next run")
     except Budget as e:
         stopped = str(e); print(f"::notice::yt_enrich stopped at the quota cap — {e}; remaining work resumes next run")
     finally:
