@@ -747,6 +747,14 @@
    }
   },
   {
+   "at": "s05+0.2",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "l1902"
+   }
+  },
+  {
    "at": "s02+1.2",
    "do": "geo.scalebar_in",
    "stage": "stage_map"
