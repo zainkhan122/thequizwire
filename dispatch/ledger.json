@@ -15,7 +15,8 @@
    "account": "BUFFER_API_KEY",
    "sent_at": "2026-10-16T12:16:04.093Z",
    "external_link": "https://www.youtube.com/shorts/Lai2oqJxZ8w",
-   "refreshed_at": "2026-10-16T14:01:39+00:00"
+   "refreshed_at": "2026-10-16T14:01:39+00:00",
+   "yt_video_id": "Lai2oqJxZ8w"
   },
   {
    "episode": "ep11-budapest-buda-pest",
@@ -1202,7 +1203,7 @@
    "account": "BUFFER_API_KEY",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-11-01T07:38:25+00:00",
+   "refreshed_at": "2026-11-18T10:31:49+00:00",
    "error": "An unknown error has occurred. Please retry the post again, and get in touch if this persists."
   },
   {
@@ -2575,16 +2576,16 @@
    "platform": "youtube",
    "post_id": "6ae6c68b1ee172cd6ddc8316",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/cc3ddd6ddf47/Where-is-the-MOST-oil-in-the-world.mp4",
    "due_at": "2026-11-01T17:00:00.000Z",
    "created_at": "2026-11-01T04:56:43.576Z",
    "recorded_at": "2026-11-01T04:56:43+00:00",
    "title": "Which country has the most oil reserves in the world? Not Saudi Arabia 🛢️",
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-11-01T07:38:39+00:00"
+   "sent_at": "2026-11-01T17:01:17.881Z",
+   "external_link": "https://www.youtube.com/shorts/r8bvZSCD99Q",
+   "refreshed_at": "2026-11-18T10:31:51+00:00"
   },
   {
    "episode": "ep22-most-oil-venezuela",
@@ -2600,7 +2601,8 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-11-01T07:38:39+00:00"
+   "refreshed_at": "2026-11-01T07:38:39+00:00",
+   "refresh_error": "rate limited; retry after 884542s"
   },
   {
    "episode": "ep22-most-oil-venezuela",
@@ -2616,7 +2618,8 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-11-01T07:38:41+00:00"
+   "refreshed_at": "2026-11-01T07:38:41+00:00",
+   "refresh_error": "rate limited; retry after 884540s"
   },
   {
    "episode": "ep22-most-oil-venezuela",
@@ -2632,39 +2635,40 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-11-01T07:38:43+00:00"
+   "refreshed_at": "2026-11-01T07:38:43+00:00",
+   "refresh_error": "rate limited; retry after 884538s"
   },
   {
    "episode": "ep22-most-oil-venezuela",
    "platform": "threads",
    "post_id": "6ae6c690ab019b90873fc72b",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/cc3ddd6ddf47/Where-is-the-MOST-oil-in-the-world.mp4",
    "due_at": "2026-11-01T15:00:00.000Z",
    "created_at": "2026-11-01T04:56:48.498Z",
    "recorded_at": "2026-11-01T04:56:48+00:00",
    "title": null,
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-11-01T07:38:43+00:00"
+   "sent_at": "2026-11-01T15:01:36.762Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfNAVUPDbg7",
+   "refreshed_at": "2026-11-18T10:31:55+00:00"
   },
   {
    "episode": "ep08-most-doctors-cuba",
    "platform": "youtube",
    "post_id": "6ae6cad4f0984eef334b2b3c",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/52df59bc3233/Which-nation-has-the-MOST-doctors-per-person.mp4",
    "due_at": "2026-11-02T00:00:00.000Z",
    "created_at": "2026-11-01T05:15:00.875Z",
    "recorded_at": "2026-11-01T05:15:01+00:00",
    "title": "Which country has the most doctors per person? Not the USA 🩺",
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-11-01T07:38:45+00:00"
+   "sent_at": "2026-11-02T00:00:43.046Z",
+   "external_link": "https://www.youtube.com/shorts/2TYTxWHak6s",
+   "refreshed_at": "2026-11-18T10:31:57+00:00"
   },
   {
    "episode": "ep08-most-doctors-cuba",
@@ -2680,7 +2684,8 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-11-01T07:38:46+00:00"
+   "refreshed_at": "2026-11-01T07:38:46+00:00",
+   "refresh_error": "rate limited; retry after 884536s"
   },
   {
    "episode": "ep08-most-doctors-cuba",
@@ -2696,7 +2701,8 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-11-01T07:38:48+00:00"
+   "refreshed_at": "2026-11-01T07:38:48+00:00",
+   "refresh_error": "rate limited; retry after 884534s"
   },
   {
    "episode": "ep08-most-doctors-cuba",
@@ -2712,36 +2718,40 @@
    "account": "BUFFER_API_KEY_2",
    "sent_at": null,
    "external_link": null,
-   "refreshed_at": "2026-11-01T07:38:50+00:00"
+   "refreshed_at": "2026-11-01T07:38:50+00:00",
+   "refresh_error": "rate limited; retry after 884532s"
   },
   {
    "episode": "ep08-most-doctors-cuba",
    "platform": "threads",
    "post_id": "6ae6cadacf3a3112f3decd47",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/52df59bc3233/Which-nation-has-the-MOST-doctors-per-person.mp4",
    "due_at": "2026-11-02T00:00:00.000Z",
    "created_at": "2026-11-01T05:15:06.022Z",
    "recorded_at": "2026-11-01T05:15:06+00:00",
    "title": null,
    "account": "BUFFER_API_KEY",
-   "sent_at": null,
-   "external_link": null,
-   "refreshed_at": "2026-11-01T07:38:50+00:00"
+   "sent_at": "2026-11-02T00:01:20.696Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfN-GSsESqB",
+   "refreshed_at": "2026-11-18T10:32:01+00:00"
   },
   {
    "episode": "ep23-most-tsunamis-pacific",
    "platform": "youtube",
    "post_id": "6ae854f1ca68b566b62d6fbb",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/8eb4e5e3ff19/Which-ocean-produces-the-MOST-tsunamis.mp4",
    "due_at": "2026-11-02T17:00:00.000Z",
    "created_at": "2026-11-02T09:16:33.304Z",
    "recorded_at": "2026-11-02T09:16:33+00:00",
    "title": "Which ocean has the most tsunamis? World Tsunami Awareness Day 🌊",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-02T17:02:00.412Z",
+   "external_link": "https://www.youtube.com/shorts/zy7zP1PFzT4",
+   "refreshed_at": "2026-11-18T10:32:03+00:00"
   },
   {
    "episode": "ep23-most-tsunamis-pacific",
@@ -2754,7 +2764,8 @@
    "created_at": "2026-11-02T09:16:33.816Z",
    "recorded_at": "2026-11-02T09:16:34+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884530s"
   },
   {
    "episode": "ep23-most-tsunamis-pacific",
@@ -2767,7 +2778,8 @@
    "created_at": "2026-11-02T09:16:35.805Z",
    "recorded_at": "2026-11-02T09:16:35+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884528s"
   },
   {
    "episode": "ep23-most-tsunamis-pacific",
@@ -2780,33 +2792,40 @@
    "created_at": "2026-11-02T09:16:37.830Z",
    "recorded_at": "2026-11-02T09:16:38+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884526s"
   },
   {
    "episode": "ep23-most-tsunamis-pacific",
    "platform": "threads",
    "post_id": "6ae854f6dd7a4869734d9eba",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/8eb4e5e3ff19/Which-ocean-produces-the-MOST-tsunamis.mp4",
    "due_at": "2026-11-02T15:00:00.000Z",
    "created_at": "2026-11-02T09:16:38.304Z",
    "recorded_at": "2026-11-02T09:16:38+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-02T15:04:07.829Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfPlaYZAQLZ",
+   "refreshed_at": "2026-11-18T10:32:07+00:00"
   },
   {
    "episode": "ep18-most-world-cup-goals-mbappe",
    "platform": "youtube",
    "post_id": "6aeb03701d881477a61ae2d2",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/0afaa6ad7b2f/Who-has-scored-the-MOST-World-Cup-goals-ever.mp4",
    "due_at": "2026-11-04T17:00:00.000Z",
    "created_at": "2026-11-04T10:05:36.651Z",
    "recorded_at": "2026-11-04T10:05:36+00:00",
    "title": "Who has the most World Cup goals ever? 2026 changed the answer ⚽",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-04T17:01:43.152Z",
+   "external_link": "https://www.youtube.com/shorts/7TxcrYAu7V0",
+   "refreshed_at": "2026-11-18T10:32:09+00:00"
   },
   {
    "episode": "ep18-most-world-cup-goals-mbappe",
@@ -2819,7 +2838,8 @@
    "created_at": "2026-11-04T10:05:37.203Z",
    "recorded_at": "2026-11-04T10:05:37+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884523s"
   },
   {
    "episode": "ep18-most-world-cup-goals-mbappe",
@@ -2832,7 +2852,8 @@
    "created_at": "2026-11-04T10:05:39.193Z",
    "recorded_at": "2026-11-04T10:05:39+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884521s"
   },
   {
    "episode": "ep18-most-world-cup-goals-mbappe",
@@ -2845,33 +2866,40 @@
    "created_at": "2026-11-04T10:05:41.206Z",
    "recorded_at": "2026-11-04T10:05:41+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884519s"
   },
   {
    "episode": "ep18-most-world-cup-goals-mbappe",
    "platform": "threads",
    "post_id": "6aeb03751d881477a61ae704",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/0afaa6ad7b2f/Who-has-scored-the-MOST-World-Cup-goals-ever.mp4",
    "due_at": "2026-11-04T15:00:00.000Z",
    "created_at": "2026-11-04T10:05:41.578Z",
    "recorded_at": "2026-11-04T10:05:41+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-04T15:02:29.482Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfUu0dIBOv6",
+   "refreshed_at": "2026-11-18T10:32:14+00:00"
   },
   {
    "episode": "ep07-most-diabetes-china",
    "platform": "youtube",
    "post_id": "6aeb055b961fae078ac8dc70",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/2161cd432818/In-which-country-do-MOST-people-with-diabetes-live.mp4",
    "due_at": "2026-11-05T00:00:00.000Z",
    "created_at": "2026-11-04T10:13:47.741Z",
    "recorded_at": "2026-11-04T10:13:47+00:00",
    "title": "Which country has the most diabetes in the world? Not the USA 🩸",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-05T00:01:38.150Z",
+   "external_link": "https://www.youtube.com/shorts/vMd-nVNNFmU",
+   "refreshed_at": "2026-11-18T10:32:16+00:00"
   },
   {
    "episode": "ep07-most-diabetes-china",
@@ -2884,7 +2912,8 @@
    "created_at": "2026-11-04T10:13:48.130Z",
    "recorded_at": "2026-11-04T10:13:48+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884517s"
   },
   {
    "episode": "ep07-most-diabetes-china",
@@ -2897,7 +2926,8 @@
    "created_at": "2026-11-04T10:13:50.135Z",
    "recorded_at": "2026-11-04T10:13:50+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884515s"
   },
   {
    "episode": "ep07-most-diabetes-china",
@@ -2910,33 +2940,40 @@
    "created_at": "2026-11-04T10:13:52.388Z",
    "recorded_at": "2026-11-04T10:13:52+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884513s"
   },
   {
    "episode": "ep07-most-diabetes-china",
    "platform": "threads",
    "post_id": "6aeb0560961fae078ac8dd2e",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/2161cd432818/In-which-country-do-MOST-people-with-diabetes-live.mp4",
    "due_at": "2026-11-05T00:00:00.000Z",
    "created_at": "2026-11-04T10:13:52.914Z",
    "recorded_at": "2026-11-04T10:13:53+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-05T00:02:20.189Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfVsmnxiw_H",
+   "refreshed_at": "2026-11-18T10:32:20+00:00"
   },
   {
    "episode": "ep15-longest-living-animal-greenland-shark",
    "platform": "youtube",
    "post_id": "6aec4d05534ed2a8ec8fcf43",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/367f2483965e/Which-of-these-animals-lives-the-LONGEST.mp4",
    "due_at": "2026-11-05T17:00:00.000Z",
    "created_at": "2026-11-05T09:31:49.625Z",
    "recorded_at": "2026-11-05T09:31:49+00:00",
    "title": "Which is the longest living animal? One was born before the USA existed 🦈",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-05T17:02:05.603Z",
+   "external_link": "https://www.youtube.com/shorts/si0gQ8IwSC0",
+   "refreshed_at": "2026-11-18T10:32:22+00:00"
   },
   {
    "episode": "ep15-longest-living-animal-greenland-shark",
@@ -2949,7 +2986,8 @@
    "created_at": "2026-11-05T09:31:50.190Z",
    "recorded_at": "2026-11-05T09:31:50+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884511s"
   },
   {
    "episode": "ep15-longest-living-animal-greenland-shark",
@@ -2962,7 +3000,8 @@
    "created_at": "2026-11-05T09:31:52.084Z",
    "recorded_at": "2026-11-05T09:31:52+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884508s"
   },
   {
    "episode": "ep15-longest-living-animal-greenland-shark",
@@ -2975,33 +3014,40 @@
    "created_at": "2026-11-05T09:31:54.120Z",
    "recorded_at": "2026-11-05T09:31:54+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884507s"
   },
   {
    "episode": "ep15-longest-living-animal-greenland-shark",
    "platform": "threads",
    "post_id": "6aec4d0a27a401d3bfca5a93",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/367f2483965e/Which-of-these-animals-lives-the-LONGEST.mp4",
    "due_at": "2026-11-05T15:00:00.000Z",
    "created_at": "2026-11-05T09:31:54.714Z",
    "recorded_at": "2026-11-05T09:31:54+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-05T15:02:21.600Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfXTmV1tqYl",
+   "refreshed_at": "2026-11-18T10:32:27+00:00"
   },
   {
    "episode": "ep24-most-time-zones-france",
    "platform": "youtube",
    "post_id": "6aedeb05263cb82eef0bdea7",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/9ea788899b44/Which-country-has-the-MOST-time-zones.mp4",
    "due_at": "2026-11-06T17:00:00.000Z",
    "created_at": "2026-11-06T14:58:13.578Z",
    "recorded_at": "2026-11-06T14:58:13+00:00",
    "title": "Which country has the most time zones? It's not the biggest one 🕰️",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-06T17:00:49.302Z",
+   "external_link": "https://www.youtube.com/shorts/BqA4pIA_xzQ",
+   "refreshed_at": "2026-11-18T10:32:28+00:00"
   },
   {
    "episode": "ep24-most-time-zones-france",
@@ -3014,7 +3060,8 @@
    "created_at": "2026-11-06T14:58:14.290Z",
    "recorded_at": "2026-11-06T14:58:14+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884504s"
   },
   {
    "episode": "ep24-most-time-zones-france",
@@ -3027,7 +3074,8 @@
    "created_at": "2026-11-06T14:58:16.223Z",
    "recorded_at": "2026-11-06T14:58:16+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884502s"
   },
   {
    "episode": "ep24-most-time-zones-france",
@@ -3040,33 +3088,40 @@
    "created_at": "2026-11-06T14:58:18.220Z",
    "recorded_at": "2026-11-06T14:58:18+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884500s"
   },
   {
    "episode": "ep24-most-time-zones-france",
    "platform": "threads",
    "post_id": "6aedeb0abbaeea3ce9f39864",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/9ea788899b44/Which-country-has-the-MOST-time-zones.mp4",
    "due_at": "2026-11-07T00:00:00.000Z",
    "created_at": "2026-11-06T14:58:18.720Z",
    "recorded_at": "2026-11-06T14:58:18+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-07T00:01:55.614Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/Dfa2JXsuNHU",
+   "refreshed_at": "2026-11-18T10:32:33+00:00"
   },
   {
    "episode": "ep09-first-vaccine-england-jenner",
    "platform": "youtube",
    "post_id": "6aeed0999214322f68d75f2d",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/3343f2d51701/Which-country-gave-the-world-its-FIRST-vaccine.mp4",
    "due_at": "2026-11-07T17:00:00.000Z",
    "created_at": "2026-11-07T07:17:45.052Z",
    "recorded_at": "2026-11-07T07:17:45+00:00",
    "title": "Where was the first vaccine in history given? A milkmaid's hand started it 💉",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-07T17:02:35.304Z",
+   "external_link": "https://www.youtube.com/shorts/xMcIq9-Otro",
+   "refreshed_at": "2026-11-18T10:32:35+00:00"
   },
   {
    "episode": "ep09-first-vaccine-england-jenner",
@@ -3079,7 +3134,8 @@
    "created_at": "2026-11-07T07:17:45.427Z",
    "recorded_at": "2026-11-07T07:17:45+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884498s"
   },
   {
    "episode": "ep09-first-vaccine-england-jenner",
@@ -3092,7 +3148,8 @@
    "created_at": "2026-11-07T07:17:47.437Z",
    "recorded_at": "2026-11-07T07:17:47+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884496s"
   },
   {
    "episode": "ep09-first-vaccine-england-jenner",
@@ -3105,33 +3162,40 @@
    "created_at": "2026-11-07T07:17:49.451Z",
    "recorded_at": "2026-11-07T07:17:49+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884494s"
   },
   {
    "episode": "ep09-first-vaccine-england-jenner",
    "platform": "threads",
    "post_id": "6aeed09d9214322f68d7600d",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/3343f2d51701/Which-country-gave-the-world-its-FIRST-vaccine.mp4",
    "due_at": "2026-11-07T15:00:00.000Z",
    "created_at": "2026-11-07T07:17:49.798Z",
    "recorded_at": "2026-11-07T07:17:49+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-07T15:02:23.157Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfcdE_dMLcm",
+   "refreshed_at": "2026-11-18T10:32:39+00:00"
   },
   {
    "episode": "ep25-most-pyramids-sudan",
    "platform": "youtube",
    "post_id": "6aeedc31d6bbae6fa172eb36",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/5a19452058e1/Where-are-MOST-of-the-worlds-pyramids.mp4",
    "due_at": "2026-11-08T00:00:00.000Z",
    "created_at": "2026-11-07T08:07:13.924Z",
    "recorded_at": "2026-11-07T08:07:14+00:00",
    "title": "Which country has the most pyramids? It's not Egypt 🔺",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-08T00:01:06.443Z",
+   "external_link": "https://www.youtube.com/shorts/D45Bfu25vkw",
+   "refreshed_at": "2026-11-18T10:32:41+00:00"
   },
   {
    "episode": "ep25-most-pyramids-sudan",
@@ -3144,7 +3208,8 @@
    "created_at": "2026-11-07T08:07:14.367Z",
    "recorded_at": "2026-11-07T08:07:14+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884492s"
   },
   {
    "episode": "ep25-most-pyramids-sudan",
@@ -3157,7 +3222,8 @@
    "created_at": "2026-11-07T08:07:16.362Z",
    "recorded_at": "2026-11-07T08:07:16+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884490s"
   },
   {
    "episode": "ep25-most-pyramids-sudan",
@@ -3170,33 +3236,40 @@
    "created_at": "2026-11-07T08:07:18.389Z",
    "recorded_at": "2026-11-07T08:07:18+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884488s"
   },
   {
    "episode": "ep25-most-pyramids-sudan",
    "platform": "threads",
    "post_id": "6aeedc36229bf05daf37c0dd",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/5a19452058e1/Where-are-MOST-of-the-worlds-pyramids.mp4",
    "due_at": "2026-11-08T00:00:00.000Z",
    "created_at": "2026-11-07T08:07:18.740Z",
    "recorded_at": "2026-11-07T08:07:18+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-08T00:01:46.249Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/Dfda6mSB-PM",
+   "refreshed_at": "2026-11-18T10:32:45+00:00"
   },
   {
    "episode": "ep19-most-medals-winter-olympics-2026-norway",
    "platform": "youtube",
    "post_id": "6aeede00af7e526d430bc46b",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/74d98e02436b/Which-country-topped-the-Milan-Cortina-Winter-Games-medal-table.mp4",
    "due_at": "2026-11-08T17:00:00.000Z",
    "created_at": "2026-11-07T08:14:56.588Z",
    "recorded_at": "2026-11-07T08:14:56+00:00",
    "title": "Who topped the 2026 Winter Olympics medal table? A nation of 6 million 🏅",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-08T17:02:16.888Z",
+   "external_link": "https://www.youtube.com/shorts/lQNZV4EzC0I",
+   "refreshed_at": "2026-11-18T10:32:47+00:00"
   },
   {
    "episode": "ep19-most-medals-winter-olympics-2026-norway",
@@ -3209,7 +3282,8 @@
    "created_at": "2026-11-07T08:14:56.964Z",
    "recorded_at": "2026-11-07T08:14:57+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884485s"
   },
   {
    "episode": "ep19-most-medals-winter-olympics-2026-norway",
@@ -3222,7 +3296,8 @@
    "created_at": "2026-11-07T08:14:58.982Z",
    "recorded_at": "2026-11-07T08:14:59+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884483s"
   },
   {
    "episode": "ep19-most-medals-winter-olympics-2026-norway",
@@ -3235,33 +3310,40 @@
    "created_at": "2026-11-07T08:15:01.155Z",
    "recorded_at": "2026-11-07T08:15:01+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884481s"
   },
   {
    "episode": "ep19-most-medals-winter-olympics-2026-norway",
    "platform": "threads",
    "post_id": "6aeede05229bf05daf3845c7",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/74d98e02436b/Which-country-topped-the-Milan-Cortina-Winter-Games-medal-table.mp4",
    "due_at": "2026-11-08T15:00:00.000Z",
    "created_at": "2026-11-07T08:15:01.748Z",
    "recorded_at": "2026-11-07T08:15:02+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-08T15:02:38.902Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DffCBB9A5zL",
+   "refreshed_at": "2026-11-18T10:32:52+00:00"
   },
   {
    "episode": "ep20-most-rugby-world-cups-south-africa",
    "platform": "youtube",
    "post_id": "6af2cc1c223aa16048f8b283",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/3b319ba94ca4/Which-nation-has-the-MOST-Rugby-World-Cups.mp4",
    "due_at": "2026-11-10T17:00:00.000Z",
    "created_at": "2026-11-10T07:47:40.454Z",
    "recorded_at": "2026-11-10T07:47:40+00:00",
    "title": "Who has won the most Rugby World Cups? It's not the All Blacks 🏉",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-10T17:02:47.940Z",
+   "external_link": "https://www.youtube.com/shorts/Xe5zxBEv934",
+   "refreshed_at": "2026-11-18T10:32:54+00:00"
   },
   {
    "episode": "ep20-most-rugby-world-cups-south-africa",
@@ -3274,7 +3356,8 @@
    "created_at": "2026-11-10T07:47:40.941Z",
    "recorded_at": "2026-11-10T07:47:41+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884479s"
   },
   {
    "episode": "ep20-most-rugby-world-cups-south-africa",
@@ -3287,7 +3370,8 @@
    "created_at": "2026-11-10T07:47:42.880Z",
    "recorded_at": "2026-11-10T07:47:43+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884477s"
   },
   {
    "episode": "ep20-most-rugby-world-cups-south-africa",
@@ -3300,33 +3384,40 @@
    "created_at": "2026-11-10T07:47:44.984Z",
    "recorded_at": "2026-11-10T07:47:45+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884475s"
   },
   {
    "episode": "ep20-most-rugby-world-cups-south-africa",
    "platform": "threads",
    "post_id": "6af2cc21b59b34913a63f7cd",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/3b319ba94ca4/Which-nation-has-the-MOST-Rugby-World-Cups.mp4",
    "due_at": "2026-11-10T15:00:00.000Z",
    "created_at": "2026-11-10T07:47:45.434Z",
    "recorded_at": "2026-11-10T07:47:45+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-10T15:03:07.756Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfkLqWLSkwv",
+   "refreshed_at": "2026-11-18T10:32:58+00:00"
   },
   {
    "episode": "ep10-first-anaesthesia-boston-ether",
    "platform": "youtube",
    "post_id": "6af2d7eb69951ef15d58930a",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/f2769fed3e88/Where-was-the-FIRST-surgery-under-anaesthesia.mp4",
    "due_at": "2026-11-11T00:00:00.000Z",
    "created_at": "2026-11-10T08:38:03.126Z",
    "recorded_at": "2026-11-10T08:38:03+00:00",
    "title": "Where was the first surgery under anaesthesia? A dentist held the sponge 😴",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-11T00:01:32.442Z",
+   "external_link": "https://www.youtube.com/shorts/MuEJKHeH-J0",
+   "refreshed_at": "2026-11-18T10:33:00+00:00"
   },
   {
    "episode": "ep10-first-anaesthesia-boston-ether",
@@ -3339,7 +3430,8 @@
    "created_at": "2026-11-10T08:38:03.604Z",
    "recorded_at": "2026-11-10T08:38:03+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884472s"
   },
   {
    "episode": "ep10-first-anaesthesia-boston-ether",
@@ -3352,7 +3444,8 @@
    "created_at": "2026-11-10T08:38:05.588Z",
    "recorded_at": "2026-11-10T08:38:05+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884470s"
   },
   {
    "episode": "ep10-first-anaesthesia-boston-ether",
@@ -3365,33 +3458,40 @@
    "created_at": "2026-11-10T08:38:07.579Z",
    "recorded_at": "2026-11-10T08:38:07+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884468s"
   },
   {
    "episode": "ep10-first-anaesthesia-boston-ether",
    "platform": "threads",
    "post_id": "6af2d7f01586e43ae33e01e3",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/f2769fed3e88/Where-was-the-FIRST-surgery-under-anaesthesia.mp4",
    "due_at": "2026-11-11T00:00:00.000Z",
    "created_at": "2026-11-10T08:38:08.221Z",
    "recorded_at": "2026-11-10T08:38:08+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-11T00:02:12.379Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DflJWMgMTxc",
+   "refreshed_at": "2026-11-18T10:33:05+00:00"
   },
   {
    "episode": "ep16-most-camels-somalia",
    "platform": "youtube",
    "post_id": "6af2d8b107c5e29b2ea594e1",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/aeb5178f6791/Where-do-the-MOST-camels-live.mp4",
    "due_at": "2026-11-11T17:00:00.000Z",
    "created_at": "2026-11-10T08:41:21.218Z",
    "recorded_at": "2026-11-10T08:41:21+00:00",
    "title": "Which country has the most camels? It's not Arabia 🐪",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-11T17:05:15.828Z",
+   "external_link": "https://www.youtube.com/shorts/yMUq1v_QNCc",
+   "refreshed_at": "2026-11-18T10:33:07+00:00"
   },
   {
    "episode": "ep16-most-camels-somalia",
@@ -3404,7 +3504,8 @@
    "created_at": "2026-11-10T08:41:21.850Z",
    "recorded_at": "2026-11-10T08:41:22+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884466s"
   },
   {
    "episode": "ep16-most-camels-somalia",
@@ -3417,7 +3518,8 @@
    "created_at": "2026-11-10T08:41:23.863Z",
    "recorded_at": "2026-11-10T08:41:24+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884464s"
   },
   {
    "episode": "ep16-most-camels-somalia",
@@ -3430,33 +3532,40 @@
    "created_at": "2026-11-10T08:41:25.854Z",
    "recorded_at": "2026-11-10T08:41:26+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884462s"
   },
   {
    "episode": "ep16-most-camels-somalia",
    "platform": "threads",
    "post_id": "6af2d8b62224e5e62372ec5a",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/aeb5178f6791/Where-do-the-MOST-camels-live.mp4",
    "due_at": "2026-11-11T15:00:00.000Z",
    "created_at": "2026-11-10T08:41:26.332Z",
    "recorded_at": "2026-11-10T08:41:26+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-11T15:06:10.275Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfmwzZJBSUh",
+   "refreshed_at": "2026-11-18T10:33:11+00:00"
   },
   {
    "episode": "ep26-longest-coastline-canada",
    "platform": "youtube",
    "post_id": "6af49ed8aa9908a25ec3b9fe",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/539f9f3f25d9/Which-country-has-the-LONGEST-coastline.mp4",
    "due_at": "2026-11-12T00:00:00.000Z",
    "created_at": "2026-11-11T16:59:04.954Z",
    "recorded_at": "2026-11-11T16:59:05+00:00",
    "title": "Which country has the longest coastline? It would take 27 years to walk 🌊",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-12T00:01:36.042Z",
+   "external_link": "https://www.youtube.com/shorts/QQVDrVhiN-4",
+   "refreshed_at": "2026-11-18T10:33:13+00:00"
   },
   {
    "episode": "ep26-longest-coastline-canada",
@@ -3469,7 +3578,8 @@
    "created_at": "2026-11-11T16:59:05.723Z",
    "recorded_at": "2026-11-11T16:59:05+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884460s"
   },
   {
    "episode": "ep26-longest-coastline-canada",
@@ -3482,7 +3592,8 @@
    "created_at": "2026-11-11T16:59:07.626Z",
    "recorded_at": "2026-11-11T16:59:07+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884458s"
   },
   {
    "episode": "ep26-longest-coastline-canada",
@@ -3495,33 +3606,40 @@
    "created_at": "2026-11-11T16:59:09.660Z",
    "recorded_at": "2026-11-11T16:59:09+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884456s"
   },
   {
    "episode": "ep26-longest-coastline-canada",
    "platform": "threads",
    "post_id": "6af49edeafe96d2e4a0be9c1",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/539f9f3f25d9/Which-country-has-the-LONGEST-coastline.mp4",
    "due_at": "2026-11-12T00:00:00.000Z",
    "created_at": "2026-11-11T16:59:10.099Z",
    "recorded_at": "2026-11-11T16:59:10+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-12T00:02:10.297Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfnuJJxB-Vm",
+   "refreshed_at": "2026-11-18T10:33:17+00:00"
   },
   {
    "episode": "ep11-stethoscope-invented-paris-laennec",
    "platform": "youtube",
    "post_id": "6af49ee056105614fa55f29b",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/dbdff448f0d8/Where-was-the-stethoscope-INVENTED.mp4",
    "due_at": "2026-11-12T17:00:00.000Z",
    "created_at": "2026-11-11T16:59:12.475Z",
    "recorded_at": "2026-11-11T16:59:12+00:00",
    "title": "Who invented the stethoscope? A shy doctor and a sheet of paper 🩺",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-12T17:03:12.169Z",
+   "external_link": "https://www.youtube.com/shorts/EzzCKD1DfDg",
+   "refreshed_at": "2026-11-18T10:33:19+00:00"
   },
   {
    "episode": "ep11-stethoscope-invented-paris-laennec",
@@ -3534,7 +3652,8 @@
    "created_at": "2026-11-11T16:59:12.912Z",
    "recorded_at": "2026-11-11T16:59:13+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884454s"
   },
   {
    "episode": "ep11-stethoscope-invented-paris-laennec",
@@ -3547,7 +3666,8 @@
    "created_at": "2026-11-11T16:59:14.944Z",
    "recorded_at": "2026-11-11T16:59:15+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884452s"
   },
   {
    "episode": "ep11-stethoscope-invented-paris-laennec",
@@ -3560,33 +3680,40 @@
    "created_at": "2026-11-11T16:59:17.005Z",
    "recorded_at": "2026-11-11T16:59:17+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884450s"
   },
   {
    "episode": "ep11-stethoscope-invented-paris-laennec",
    "platform": "threads",
    "post_id": "6af49ee5afe96d2e4a0beb26",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/dbdff448f0d8/Where-was-the-stethoscope-INVENTED.mp4",
    "due_at": "2026-11-12T15:00:00.000Z",
    "created_at": "2026-11-11T16:59:17.466Z",
    "recorded_at": "2026-11-11T16:59:17+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-12T15:04:40.441Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfpVbdAFJ1k",
+   "refreshed_at": "2026-11-18T10:33:23+00:00"
   },
   {
    "episode": "ep12-first-insulin-injection-toronto",
    "platform": "youtube",
    "post_id": "6af7297a88f57d6580d26c77",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/2adae6faac91/Which-city-saw-the-FIRST-insulin-injection.mp4",
    "due_at": "2026-11-13T17:00:00.000Z",
    "created_at": "2026-11-13T15:15:06.510Z",
    "recorded_at": "2026-11-13T15:15:06+00:00",
    "title": "Who discovered insulin, and where was it first injected? A $1 patent 💉",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-13T17:01:06.714Z",
+   "external_link": "https://www.youtube.com/shorts/KgshIIQ0ju8",
+   "refreshed_at": "2026-11-18T10:33:25+00:00"
   },
   {
    "episode": "ep12-first-insulin-injection-toronto",
@@ -3599,7 +3726,8 @@
    "created_at": "2026-11-13T15:15:07.192Z",
    "recorded_at": "2026-11-13T15:15:07+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884447s"
   },
   {
    "episode": "ep12-first-insulin-injection-toronto",
@@ -3612,7 +3740,8 @@
    "created_at": "2026-11-13T15:15:09.122Z",
    "recorded_at": "2026-11-13T15:15:09+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884445s"
   },
   {
    "episode": "ep12-first-insulin-injection-toronto",
@@ -3625,33 +3754,40 @@
    "created_at": "2026-11-13T15:15:11.140Z",
    "recorded_at": "2026-11-13T15:15:11+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884443s"
   },
   {
    "episode": "ep12-first-insulin-injection-toronto",
    "platform": "threads",
    "post_id": "6af7297f88f57d6580d2705b",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/2adae6faac91/Which-city-saw-the-FIRST-insulin-injection.mp4",
    "due_at": "2026-11-14T00:00:00.000Z",
    "created_at": "2026-11-13T15:15:11.670Z",
    "recorded_at": "2026-11-13T15:15:11+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-14T00:01:29.605Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/Dfs3qK6vvJ4",
+   "refreshed_at": "2026-11-18T10:33:30+00:00"
   },
   {
    "episode": "ep27-flattest-country-maldives",
    "platform": "youtube",
    "post_id": "6af72981999051dc87f59507",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/37c80e999459/Which-is-the-FLATTEST-country-on-Earth.mp4",
    "due_at": "2026-11-14T00:00:00.000Z",
    "created_at": "2026-11-13T15:15:13.846Z",
    "recorded_at": "2026-11-13T15:15:13+00:00",
    "title": "What is the flattest country in the world? Its peak is 5 metres high 📏",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-14T00:00:46.272Z",
+   "external_link": "https://www.youtube.com/shorts/g6Qs8trkzzk",
+   "refreshed_at": "2026-11-18T10:33:32+00:00"
   },
   {
    "episode": "ep27-flattest-country-maldives",
@@ -3664,7 +3800,8 @@
    "created_at": "2026-11-13T15:15:14.295Z",
    "recorded_at": "2026-11-13T15:15:14+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884441s"
   },
   {
    "episode": "ep27-flattest-country-maldives",
@@ -3677,7 +3814,8 @@
    "created_at": "2026-11-13T15:15:16.265Z",
    "recorded_at": "2026-11-13T15:15:16+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884439s"
   },
   {
    "episode": "ep27-flattest-country-maldives",
@@ -3690,33 +3828,40 @@
    "created_at": "2026-11-13T15:15:18.303Z",
    "recorded_at": "2026-11-13T15:15:18+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884437s"
   },
   {
    "episode": "ep27-flattest-country-maldives",
    "platform": "threads",
    "post_id": "6af72987999051dc87f59842",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/37c80e999459/Which-is-the-FLATTEST-country-on-Earth.mp4",
    "due_at": "2026-11-14T15:00:00.000Z",
    "created_at": "2026-11-13T15:15:19.076Z",
    "recorded_at": "2026-11-13T15:15:19+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-14T15:03:36.482Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/Dfue5FVt2nw",
+   "refreshed_at": "2026-11-18T10:33:36+00:00"
   },
   {
    "episode": "ep18-loudest-animal-sperm-whale",
    "platform": "youtube",
    "post_id": "6af72989999051dc87f599f1",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/b7c8313d86da/What-is-the-LOUDEST-animal-on-Earth.mp4",
    "due_at": "2026-11-14T17:00:00.000Z",
    "created_at": "2026-11-13T15:15:21.015Z",
    "recorded_at": "2026-11-13T15:15:21+00:00",
    "title": "What is the loudest animal in the world? Louder than a jet, and it is not a roar 🔊",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-14T17:02:19.006Z",
+   "external_link": "https://www.youtube.com/shorts/6I08j64vD_U",
+   "refreshed_at": "2026-11-18T10:33:38+00:00"
   },
   {
    "episode": "ep18-loudest-animal-sperm-whale",
@@ -3729,7 +3874,8 @@
    "created_at": "2026-11-13T15:15:21.810Z",
    "recorded_at": "2026-11-13T15:15:21+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884435s"
   },
   {
    "episode": "ep18-loudest-animal-sperm-whale",
@@ -3742,7 +3888,8 @@
    "created_at": "2026-11-13T15:15:23.675Z",
    "recorded_at": "2026-11-13T15:15:23+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884433s"
   },
   {
    "episode": "ep18-loudest-animal-sperm-whale",
@@ -3755,33 +3902,40 @@
    "created_at": "2026-11-13T15:15:25.730Z",
    "recorded_at": "2026-11-13T15:15:26+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884431s"
   },
   {
    "episode": "ep18-loudest-animal-sperm-whale",
    "platform": "threads",
    "post_id": "6af7298e999051dc87f59c63",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/b7c8313d86da/What-is-the-LOUDEST-animal-on-Earth.mp4",
    "due_at": "2026-11-15T00:00:00.000Z",
    "created_at": "2026-11-13T15:15:26.526Z",
    "recorded_at": "2026-11-13T15:15:26+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-15T00:02:15.372Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfvcigvBDMN",
+   "refreshed_at": "2026-11-18T10:33:42+00:00"
   },
   {
    "episode": "ep28-river-most-water-amazon",
    "platform": "youtube",
    "post_id": "6af86a44e5a113497a88bcfc",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/c8b58d824cff/Which-river-carries-the-MOST-water.mp4",
    "due_at": "2026-11-15T00:00:00.000Z",
    "created_at": "2026-11-14T14:03:48.273Z",
    "recorded_at": "2026-11-14T14:03:48+00:00",
    "title": "Which river carries the most water? A fifth of all river water on Earth 💧",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-15T00:00:57.654Z",
+   "external_link": "https://www.youtube.com/shorts/EC9veO45DR4",
+   "refreshed_at": "2026-11-18T10:33:44+00:00"
   },
   {
    "episode": "ep28-river-most-water-amazon",
@@ -3794,7 +3948,8 @@
    "created_at": "2026-11-14T14:03:48.648Z",
    "recorded_at": "2026-11-14T14:03:48+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884428s"
   },
   {
    "episode": "ep28-river-most-water-amazon",
@@ -3807,7 +3962,8 @@
    "created_at": "2026-11-14T14:03:50.682Z",
    "recorded_at": "2026-11-14T14:03:50+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884426s"
   },
   {
    "episode": "ep28-river-most-water-amazon",
@@ -3820,33 +3976,41 @@
    "created_at": "2026-11-14T14:03:52.620Z",
    "recorded_at": "2026-11-14T14:03:52+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884424s"
   },
   {
    "episode": "ep28-river-most-water-amazon",
    "platform": "threads",
    "post_id": "6af86a4876c23bf1c71cd3e6",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "error",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/c8b58d824cff/Which-river-carries-the-MOST-water.mp4",
    "due_at": "2026-11-15T15:00:00.000Z",
    "created_at": "2026-11-14T14:03:52.977Z",
    "recorded_at": "2026-11-14T14:03:53+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": null,
+   "external_link": null,
+   "refreshed_at": "2026-11-18T10:33:49+00:00",
+   "error": "An unknown error has occurred. Please retry the post again, and get in touch if this persists."
   },
   {
    "episode": "ep17-longest-flight-without-landing-swift",
    "platform": "youtube",
    "post_id": "6af9c43676c23bf1c786cc55",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/e1c45f0c3adb/Which-bird-flies-the-LONGEST-without-landing.mp4",
    "due_at": "2026-11-15T17:00:00.000Z",
    "created_at": "2026-11-15T14:39:50.556Z",
    "recorded_at": "2026-11-15T14:39:50+00:00",
    "title": "The bird that never lands: 10 months in the air without touching down ⏱️",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-15T17:00:52.400Z",
+   "external_link": "https://www.youtube.com/shorts/GtPUShl0MH0",
+   "refreshed_at": "2026-11-18T10:33:51+00:00"
   },
   {
    "episode": "ep17-longest-flight-without-landing-swift",
@@ -3859,7 +4023,8 @@
    "created_at": "2026-11-15T14:39:51.111Z",
    "recorded_at": "2026-11-15T14:39:51+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884422s"
   },
   {
    "episode": "ep17-longest-flight-without-landing-swift",
@@ -3872,7 +4037,8 @@
    "created_at": "2026-11-15T14:39:53.091Z",
    "recorded_at": "2026-11-15T14:39:53+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884420s"
   },
   {
    "episode": "ep17-longest-flight-without-landing-swift",
@@ -3885,33 +4051,40 @@
    "created_at": "2026-11-15T14:39:54.990Z",
    "recorded_at": "2026-11-15T14:39:55+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884418s"
   },
   {
    "episode": "ep17-longest-flight-without-landing-swift",
    "platform": "threads",
    "post_id": "6af9c43b918fe79d2eec2235",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/e1c45f0c3adb/Which-bird-flies-the-LONGEST-without-landing.mp4",
    "due_at": "2026-11-16T00:00:00.000Z",
    "created_at": "2026-11-15T14:39:55.405Z",
    "recorded_at": "2026-11-15T14:39:55+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-16T00:01:16.154Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/DfyBOi-A6vV",
+   "refreshed_at": "2026-11-18T10:33:55+00:00"
   },
   {
    "episode": "ep21-first-f1-championship-race-silverstone",
    "platform": "youtube",
    "post_id": "6af9c43de86a5789a617871e",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/3c52dafedf7b/Which-track-held-the-FIRST-Formula-1-championship-race.mp4",
    "due_at": "2026-11-16T00:00:00.000Z",
    "created_at": "2026-11-15T14:39:57.710Z",
    "recorded_at": "2026-11-15T14:39:57+00:00",
    "title": "Where was the first Formula 1 race? A bomber base and a king 🏁",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-16T00:00:37.021Z",
+   "external_link": "https://www.youtube.com/shorts/8y7YWA8gZLg",
+   "refreshed_at": "2026-11-18T10:33:57+00:00"
   },
   {
    "episode": "ep21-first-f1-championship-race-silverstone",
@@ -3924,7 +4097,8 @@
    "created_at": "2026-11-15T14:39:58.107Z",
    "recorded_at": "2026-11-15T14:39:58+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884416s"
   },
   {
    "episode": "ep21-first-f1-championship-race-silverstone",
@@ -3937,7 +4111,8 @@
    "created_at": "2026-11-15T14:40:00.333Z",
    "recorded_at": "2026-11-15T14:40:00+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884414s"
   },
   {
    "episode": "ep21-first-f1-championship-race-silverstone",
@@ -3950,33 +4125,40 @@
    "created_at": "2026-11-15T14:40:02.170Z",
    "recorded_at": "2026-11-15T14:40:02+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884412s"
   },
   {
    "episode": "ep21-first-f1-championship-race-silverstone",
    "platform": "threads",
    "post_id": "6af9c442e5a113497af2b9ae",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/3c52dafedf7b/Which-track-held-the-FIRST-Formula-1-championship-race.mp4",
    "due_at": "2026-11-16T15:00:00.000Z",
    "created_at": "2026-11-15T14:40:02.614Z",
    "recorded_at": "2026-11-15T14:40:03+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-16T15:05:54.063Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/Dfzooi1tKPQ",
+   "refreshed_at": "2026-11-18T10:34:01+00:00"
   },
   {
    "episode": "ep29-most-islands-sweden",
    "platform": "youtube",
    "post_id": "6af9c445e86a5789a617895b",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/25b6e04d2675/Which-country-has-the-MOST-islands.mp4",
    "due_at": "2026-11-16T17:00:00.000Z",
    "created_at": "2026-11-15T14:40:05.656Z",
    "recorded_at": "2026-11-15T14:40:05+00:00",
    "title": "Which country has the most islands? Not the one you think 🏝️",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-16T17:05:23.300Z",
+   "external_link": "https://www.youtube.com/shorts/cm2Zah93l4Q",
+   "refreshed_at": "2026-11-18T10:34:03+00:00"
   },
   {
    "episode": "ep29-most-islands-sweden",
@@ -3989,7 +4171,8 @@
    "created_at": "2026-11-15T14:40:06.129Z",
    "recorded_at": "2026-11-15T14:40:06+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884410s"
   },
   {
    "episode": "ep29-most-islands-sweden",
@@ -4002,7 +4185,8 @@
    "created_at": "2026-11-15T14:40:08.151Z",
    "recorded_at": "2026-11-15T14:40:08+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884408s"
   },
   {
    "episode": "ep29-most-islands-sweden",
@@ -4015,33 +4199,40 @@
    "created_at": "2026-11-15T14:40:10.280Z",
    "recorded_at": "2026-11-15T14:40:10+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884406s"
   },
   {
    "episode": "ep29-most-islands-sweden",
    "platform": "threads",
    "post_id": "6af9c44ac5b364e06260417c",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/25b6e04d2675/Which-country-has-the-MOST-islands.mp4",
    "due_at": "2026-11-17T00:00:00.000Z",
    "created_at": "2026-11-15T14:40:10.754Z",
    "recorded_at": "2026-11-15T14:40:10+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-17T00:03:04.159Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/Df0mOPgAosR",
+   "refreshed_at": "2026-11-18T10:34:07+00:00"
   },
   {
    "episode": "ep19-biggest-eyes-colossal-squid",
    "platform": "youtube",
    "post_id": "6afb34cb549ae8b062b167ba",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/c9a3847789fc/Which-creature-has-the-most-ENORMOUS-eyes.mp4",
    "due_at": "2026-11-17T00:00:00.000Z",
    "created_at": "2026-11-16T16:52:27.431Z",
    "recorded_at": "2026-11-16T16:52:27+00:00",
    "title": "The animal with the biggest eyes? Bigger than a football 👁️",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-17T00:00:45.119Z",
+   "external_link": "https://www.youtube.com/shorts/BDIF2YH9HSU",
+   "refreshed_at": "2026-11-18T10:34:09+00:00"
   },
   {
    "episode": "ep19-biggest-eyes-colossal-squid",
@@ -4054,7 +4245,8 @@
    "created_at": "2026-11-16T16:52:28.064Z",
    "recorded_at": "2026-11-16T16:52:28+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884403s"
   },
   {
    "episode": "ep19-biggest-eyes-colossal-squid",
@@ -4067,7 +4259,8 @@
    "created_at": "2026-11-16T16:52:29.944Z",
    "recorded_at": "2026-11-16T16:52:30+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884401s"
   },
   {
    "episode": "ep19-biggest-eyes-colossal-squid",
@@ -4080,33 +4273,40 @@
    "created_at": "2026-11-16T16:52:32.011Z",
    "recorded_at": "2026-11-16T16:52:32+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884399s"
   },
   {
    "episode": "ep19-biggest-eyes-colossal-squid",
    "platform": "threads",
    "post_id": "6afb34d0c4dfb4e5f35e47e9",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/c9a3847789fc/Which-creature-has-the-most-ENORMOUS-eyes.mp4",
    "due_at": "2026-11-17T15:00:00.000Z",
    "created_at": "2026-11-16T16:52:32.604Z",
    "recorded_at": "2026-11-16T16:52:32+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-17T15:05:22.180Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/Df2NeqaAr0s",
+   "refreshed_at": "2026-11-18T10:34:14+00:00"
   },
   {
    "episode": "ep30-highest-capital-la-paz",
    "platform": "youtube",
    "post_id": "6afb34d3145e4ab7bd3b39ef",
    "channel_id": "6a72ff4f99afb44349064208",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/15949c282911/Which-country-has-the-HIGHEST-capital-city.mp4",
    "due_at": "2026-11-17T17:00:00.000Z",
    "created_at": "2026-11-16T16:52:35.113Z",
    "recorded_at": "2026-11-16T16:52:35+00:00",
    "title": "Which country has the highest capital city in the world? Visitors arrive short of breath 🏔️",
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-17T17:04:17.043Z",
+   "external_link": "https://www.youtube.com/shorts/BYiZRZb-qbA",
+   "refreshed_at": "2026-11-18T10:34:16+00:00"
   },
   {
    "episode": "ep30-highest-capital-la-paz",
@@ -4119,7 +4319,8 @@
    "created_at": "2026-11-16T16:52:35.537Z",
    "recorded_at": "2026-11-16T16:52:35+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884397s"
   },
   {
    "episode": "ep30-highest-capital-la-paz",
@@ -4132,7 +4333,8 @@
    "created_at": "2026-11-16T16:52:37.566Z",
    "recorded_at": "2026-11-16T16:52:37+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884395s"
   },
   {
    "episode": "ep30-highest-capital-la-paz",
@@ -4145,20 +4347,24 @@
    "created_at": "2026-11-16T16:52:39.547Z",
    "recorded_at": "2026-11-16T16:52:39+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY_2"
+   "account": "BUFFER_API_KEY_2",
+   "refresh_error": "rate limited; retry after 884393s"
   },
   {
    "episode": "ep30-highest-capital-la-paz",
    "platform": "threads",
    "post_id": "6afb34d7ed62f9846f3cb780",
    "channel_id": "6a6dd3b24b2d03035f7e82e8",
-   "state": "scheduled",
+   "state": "sent",
    "media_url": "https://zainkhan122.github.io/thequizwire-media/media/15949c282911/Which-country-has-the-HIGHEST-capital-city.mp4",
    "due_at": "2026-11-18T00:00:00.000Z",
    "created_at": "2026-11-16T16:52:39.951Z",
    "recorded_at": "2026-11-16T16:52:40+00:00",
    "title": null,
-   "account": "BUFFER_API_KEY"
+   "account": "BUFFER_API_KEY",
+   "sent_at": "2026-11-18T00:03:27.634Z",
+   "external_link": "https://www.threads.com/@thequizwire/post/Df3LET7o-AV",
+   "refreshed_at": "2026-11-18T10:34:20+00:00"
   }
  ]
 }
