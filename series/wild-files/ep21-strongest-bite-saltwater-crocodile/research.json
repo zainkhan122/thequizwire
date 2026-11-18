@@ -112,6 +112,14 @@
    "date": "2026-11-17",
    "notes": "hippo bite force estimated at about 1,800 psi"
   },
+  "wiki_biteforce": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Bite force — measured and estimated values by species",
+   "url": "https://en.wikipedia.org/wiki/Bite_force_quotient",
+   "date": "2026-11-17",
+   "notes": "lion about 4,450 N (around 1,000 psi); hippopotamus about 8,100 N (around 1,800 psi); saltwater crocodile 16,414 N"
+  },
   "guinness_bite": {
    "type": "reference",
    "publisher": "Guinness World Records",
@@ -158,7 +166,8 @@
    "text": "A lion's bite is around 1,000 psi; a hippo's is estimated at about 1,800 psi — under a third and about half of the crocodile's measured force.",
    "sources": [
     "natgeo_croc",
-    "natgeo_hippo"
+    "natgeo_hippo",
+    "wiki_biteforce"
    ],
    "vo": [
     "a lion manages under a third of that. a hippo reaches about half"
