@@ -1,4 +1,4 @@
-# Channel stats — 2026-11-18T10:58Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
+# Channel stats — 2026-11-18T16:06Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
 
 ## Per series, all channels (7-day movement — what is trending for us)
 - geo-blitz: 40 posts · +4468 in 7 d · 18811 total
@@ -14,7 +14,7 @@ last 24 h:
 - ep10-grand-slam-on-grass-wimbledon (sports-sprint): +0 · 1221 total
 - ep15-no-rivers-saudi-arabia (geo-blitz): +0 · 1214 total
 series (7 d): geo-blitz +4447 (21) · wild-files +3858 (13) · body-brain +394 (9) · sports-sprint +316 (13)
-hours (first-24 h by publish hour): 12:00 n=4 med 97.5 · 19:00 n=5 med 840
+hours (first-24 h by publish hour): 12:00 n=4 med 97.5 · 19:00 n=4 med 715.5
 → slots: ['19:00', '12:00']
 
 ## instagram — 0 posts · metric — · buffer insights · 0/32 sent posts with metrics · http 429 RATE_LIMIT_EXCEEDED Too many requests from this client. Please try again later. You can raise your Buffer API limit: https://publish.buffer.
@@ -23,13 +23,13 @@ hours (first-24 h by publish hour): 12:00 n=4 med 97.5 · 19:00 n=5 med 840
 
 ## threads — 54 posts · metric views · buffer insights · 54/54 sent posts with metrics
 last 24 h:
-- ep19-biggest-eyes-colossal-squid (wild-files): +3 · 3 total
 - ep13-southern-alps-new-zealand (geo-blitz): +0 · 15 total
 - ep18-newest-un-member (geo-blitz): +0 · 11 total
 - ep14-cricket-world-cup-wins (sports-sprint): +0 · 11 total
 - ep20-coldest-capital-ulaanbaatar (geo-blitz): +0 · 8 total
+- ep10-komodo-dragons-indonesia (wild-files): +0 · 7 total
 series (7 d): geo-blitz +21 (19) · wild-files +12 (13) · sports-sprint +10 (13) · body-brain +8 (9)
-hours (first-24 h by publish hour): 10:00 n=3 med 0 · 19:00 n=5 med 4
+hours (first-24 h by publish hour): 10:00 n=4 med 1.5 · 19:00 n=4 med 2.0
 → slots: ['19:00', '10:00']
 
 ## twitter — 0 posts · metric — · buffer insights · 0/32 sent posts with metrics · http 429 RATE_LIMIT_EXCEEDED Too many requests from this client. Please try again later. You can raise your Buffer API limit: https://publish.buffer.
@@ -42,9 +42,9 @@ hours (first-24 h by publish hour): 10:00 n=3 med 0 · 19:00 n=5 med 4
 |---|---|---|---|---|---|---|---|---|---|
 | ep30-highest-capital-la-paz | threads | Tue 19:00 | views | 0 | 0 | 0 | None | 0 | 0 |
 | ep30-highest-capital-la-paz | youtube | Tue 12:00 | views | 935 | 935 | 935 | None | 22 | 0 |
-| ep19-biggest-eyes-colossal-squid | threads | Tue 10:00 | views | 3 | 3 | 3 | None | 0 | 0 |
-| ep29-most-islands-sweden | threads | Mon 19:00 | views | 5 | None | 5 | 5 | 0 | 0 |
-| ep19-biggest-eyes-colossal-squid | youtube | Mon 19:00 | views | 1189 | None | 1189 | 1189 | 52 | 0 |
+| ep19-biggest-eyes-colossal-squid | threads | Tue 10:00 | views | 3 | None | 3 | 3 | 0 | 0 |
+| ep29-most-islands-sweden | threads | Mon 19:00 | views | 5 | None | 5 | None | 0 | 0 |
+| ep19-biggest-eyes-colossal-squid | youtube | Mon 19:00 | views | 1189 | None | 1189 | None | 52 | 0 |
 | ep29-most-islands-sweden | youtube | Mon 12:00 | views | 1172 | None | 1172 | None | 62 | 0 |
 | ep21-first-f1-championship-race-silverstone | threads | Mon 10:00 | views | 10 | None | 10 | None | 0 | 0 |
 | ep17-longest-flight-without-landing-swift | threads | Sun 19:00 | views | 0 | None | 0 | None | 0 | 0 |
@@ -62,7 +62,7 @@ hours (first-24 h by publish hour): 10:00 n=3 med 0 · 19:00 n=5 med 4
 | ep26-longest-coastline-canada | threads | Wed 19:00 | views | 7 | None | 7 | None | 0 | 0 |
 | ep26-longest-coastline-canada | youtube | Wed 19:00 | views | 689 | None | 689 | None | 32 | 0 |
 | ep16-most-camels-somalia | youtube | Wed 12:00 | views | 1192 | None | 1192 | None | 89 | 0 |
-| ep16-most-camels-somalia | threads | Wed 10:00 | views | 0 | None | 0 | None | 0 | 0 |
+| ep16-most-camels-somalia | threads | Wed 10:00 | views | 0 | None | None | None | 0 | 0 |
 | ep10-first-anaesthesia-boston-ether | threads | Tue 19:00 | views | 3 | None | None | None | 0 | 0 |
 | ep10-first-anaesthesia-boston-ether | youtube | Tue 19:00 | views | 1040 | None | None | None | 43 | 0 |
 | ep20-most-rugby-world-cups-south-africa | youtube | Tue 12:00 | views | 1139 | None | None | None | 62 | 0 |
