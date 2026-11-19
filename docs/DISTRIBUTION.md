@@ -76,7 +76,7 @@ Go-live: run **dispatch** with `live=true` for the approved pilots (`tag: pilot-
 | Body | tease line from `post.description`, "✅ In this <topic> Short:" + the three facts, comment prompt (channel's "What was your first guess?"), subscribe line + site, sources, map-data/voice credits | "✅ The answer and three quick facts are in the reel", two facts, comment prompt, follow line | "✅ Answer + three quick facts inside", comment prompt, site, AI-narration line |
 | Hashtags | 3–5, **last line of the description** (`#Shorts` + 2 series + 1 episode + brand) | 3–5 at the end of the caption (series + `#QuizReels` + episode + brand) | 1–3 |
 | Links/sources | in the description | first comment (links are not clickable in captions) | first comment |
-| Metadata | `categoryId` per series (Geo/Body 27 Education, Sports 17, Wild 15), `madeForKids false`, `notifySubscribers true`, `privacy public`, `embeddable`, `license youtube` | `type reel`, `shouldShareToFeed true`, `isAiGenerated true`, cover frame `thumbnailOffset 2000 ms` | `type reel` |
+| Metadata | `categoryId` per series (Geo/Body 27 Education, Sports 17, Wild 15), `madeForKids false`, `notifySubscribers true`, `privacy public`, `embeddable`, `license youtube` | `type reel`, `shouldShareToFeed true`, `isAiGenerated true`, cover frame `thumbnailOffset 0 ms` (frame 0 = the cover card) | `type reel` |
 | Lint | title ≤ 100 (warn > 85, < 30), no `#` in title, ≤ 2 emoji, first line ≤ 120, 3–5 tags as the last line, ≤ 5000 chars | caption ≤ 2200, hook ≤ 125, 3–5 tags, URL warning | ≤ 1000 chars, 1–3 tags |
 | Always | no "next video / tomorrow" tease (owner rule); hashtags `#[A-Za-z0-9_]{2,40}`; an answer must exist | | |
 

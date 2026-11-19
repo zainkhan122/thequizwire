@@ -259,7 +259,7 @@ def payloads(c, ep_dir, media_url, kit=None, channels=None):
                                                   "notifySubscribers": y["notifySubscribers"], "embeddable": y["embeddable"], "license": y["license"], "isAiGenerated": y["isAiGenerated"]}}})
         elif platform == "instagram":
             g = kit["instagram"]
-            base.update({"text": g["caption"], "assets": [{"video": {"url": media_url, "metadata": {"thumbnailOffset": int(g.get("thumbnailOffsetMs", 2000))}}}],
+            base.update({"text": g["caption"], "assets": [{"video": {"url": media_url, "metadata": {"thumbnailOffset": int(g.get("thumbnailOffsetMs", 0))}}}],
                          "metadata": {"instagram": {"type": "reel", "shouldShareToFeed": bool(g["shouldShareToFeed"]), "isAiGenerated": bool(g["isAiGenerated"]),
                                                     **({"firstComment": g["firstComment"]} if g.get("firstComment") else {})}}})
         elif platform == "facebook":
