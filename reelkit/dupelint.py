@@ -37,6 +37,8 @@ def main():
     me = load(ep)
     if not me: sys.exit(f"dupelint: {ep}/episode.json unreadable")
     mw = words(me["question"]); fails = []
+    if os.path.basename(ep).startswith("_"):                                  # fixtures/templates (_template_v3, _fixture_*) are never published — not catalogue entries
+        print(f"dupelint: {me['slug']} → skipped (template/fixture)"); return
     for d in sorted(glob.glob("series/*/ep*")):
         if os.path.abspath(d) == os.path.abspath(ep): continue
         o = load(d)
