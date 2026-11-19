@@ -324,6 +324,13 @@
      "at": "@.end",
      "do": "chart.out",
      "id": "dist"
+    },
+    {
+     "at": "@@coast-0.3",
+     "do": "geo.pin_out",
+     "args": {
+      "pid": "nemo"
+     }
     }
    ],
    "cam_path": [
@@ -496,6 +503,13 @@
       "fid": "ring",
       "layer": "ring",
       "dur": 0.6
+     }
+    },
+    {
+     "at": "@+1.0",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "nemo"
      }
     }
    ],

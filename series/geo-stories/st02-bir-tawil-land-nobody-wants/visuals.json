@@ -613,6 +613,22 @@
    "stage": "stage_map"
   },
   {
+   "at": "s03@north-0.4",
+   "do": "geo.label_out",
+   "args": {
+    "lid": "l1899"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s03@south-0.4",
+   "do": "geo.label_out",
+   "args": {
+    "lid": "l1902"
+   },
+   "stage": "stage_map"
+  },
+  {
    "at": "s04",
    "do": "geo.cam_to",
    "stage": "stage_map",
@@ -826,6 +842,14 @@
     "fid": "halayib_triangle",
     "layer": "prize",
     "dur": 0.7
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s04+0.4",
+   "do": "geo.label_in",
+   "args": {
+    "lid": "l1902"
    },
    "stage": "stage_map"
   },

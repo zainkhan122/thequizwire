@@ -433,6 +433,20 @@
       "layer": "void",
       "dur": 0.7
      }
+    },
+    {
+     "at": "@@north-0.4",
+     "do": "geo.label_out",
+     "args": {
+      "lid": "l1899"
+     }
+    },
+    {
+     "at": "@@south-0.4",
+     "do": "geo.label_out",
+     "args": {
+      "lid": "l1902"
+     }
     }
    ],
    "cam_path": [
@@ -634,6 +648,13 @@
       "fid": "halayib_triangle",
       "layer": "prize",
       "dur": 0.7
+     }
+    },
+    {
+     "at": "@+0.4",
+     "do": "geo.label_in",
+     "args": {
+      "lid": "l1902"
      }
     }
    ],
@@ -1189,7 +1210,7 @@
    {
     "id": "l1902",
     "lonlat": [
-     35.4,
+     35.15,
      23.0
     ],
     "text": "1902 · the second line",
