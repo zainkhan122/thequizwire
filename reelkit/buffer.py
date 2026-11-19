@@ -301,10 +301,14 @@ def verify_media(url):
 def cmd_channels(a):
     c = cfg(); found = []                                                     # (account, org_id, channel)
     before = json.dumps(c["buffer"]["channels"], sort_keys=True)
-    present = present_accounts(c)
+    present = present_accounts(c); unavailable = []
     if not present: sys.exit(f"buffer: none of {accounts(c)} is set")
     for acc in present:
-        cl = Client(c, acc); acct = cl.account(); orgs = acct.get("organizations") or []
+        cl = Client(c, acc)
+        try: acct = cl.account()
+        except Deferred as e:                                                   # 11-19: BUFFER_API_KEY_2 answered 429 Retry-After 9.5 days; discovery must not sink the whole preflight
+            print(f"::warning::buffer: {acc} unavailable ({e}) — keeping its channels from config; dispatch will defer them"); unavailable.append(acc); continue
+        orgs = acct.get("organizations") or []
         if not orgs: print(f"buffer: {acc} ({acct.get('email')}) sees no organization"); continue
         for o in orgs:
             chans = cl.channels(o["id"])
@@ -322,7 +326,7 @@ def cmd_channels(a):
         if entry.get("buffer_id") and vis:
             acc, org, ch = vis[0]; entry.update({"account": acc, "organization_id": org}); continue   # pinned and still visible
         if entry.get("buffer_id"):
-            if missing: print(f"   {platform}: channel {entry['buffer_id']} not visible through the keys present — keeping it"); continue
+            if missing or entry.get("account") in unavailable: print(f"   {platform}: channel {entry['buffer_id']} not visible right now — keeping it"); continue
             print(f"   {platform}: previous channel {entry['buffer_id']} is no longer visible — clearing"); entry.update({"buffer_id": "", "service_id": "", "name": "", "account": "", "organization_id": ""})
         hits = [(acc, org, ch) for acc, org, ch in found if ch["service"] == platform and not ch["isDisconnected"]]
         if len(hits) == 1:
@@ -346,8 +350,11 @@ def cmd_queue(a):
     for (acc, org), items in g.items():
         if not token(acc, required=False): print(f"   ({acc} not set — {', '.join(p for p, _ in items)} not checked)"); continue
         cl = Client(c, acc); ids = [cid for _, cid in items]
-        sched, complete = cl.posts(org, ids, ["scheduled", "sending"])
-        lim = {l["channelId"]: l for l in cl.limits(ids)}
+        try:
+            sched, complete = cl.posts(org, ids, ["scheduled", "sending"])
+            lim = {l["channelId"]: l for l in cl.limits(ids)}
+        except Deferred as e:
+            print(f"::warning::buffer: {acc} unavailable ({e}) — {', '.join(p for p, _ in items)} not checked"); continue
         for p, cid in items:
             n = sum(1 for x in sched if x["channelId"] == cid); l = lim.get(cid, {})
             print(f"   {p:<10} queued {n:>3}{'' if complete else '+'}   today: scheduled {l.get('scheduled', '?')} sent {l.get('sent', '?')} limit {l.get('limit', '—')}{'  AT LIMIT' if l.get('isAtLimit') else ''}")
