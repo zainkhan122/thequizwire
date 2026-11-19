@@ -858,21 +858,12 @@
    "stage": "stage_map"
   },
   {
-   "at": "s06@moon",
-   "do": "geo.disc_in",
+   "at": "s06@continent",
+   "do": "geo.highlight_pulse",
    "args": {
-    "did": "moon",
-    "frm": "pop",
-    "dur": 0.7
-   },
-   "stage": "stage_map"
-  },
-  {
-   "at": "s06@moon+1.6",
-   "do": "geo.disc_out",
-   "args": {
-    "did": "moon",
-    "dur": 0.6
+    "fid": "036",
+    "layer": "tint",
+    "dur": 0.8
    },
    "stage": "stage_map"
   },

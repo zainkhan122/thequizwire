@@ -201,6 +201,7 @@ class Scene:
             for fid in fids:
                 self.G.J(f"tl.to('#{self.id}_{lid}_{fid}',{{opacity:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")
         for p in self.spec.get("pins", []): self.pin_out(t, p["id"], dur=dur)
+        for D in self.spec.get("discs", []): self.G.J(f"tl.to('#{self.id}_disc_{D['id']}',{{opacity:0,duration:{f(dur)},ease:'power1.in'}},{f(t)});")
         for L in self.spec.get("labels", []):
             if not L.get("for"): self.label_out(t, L["id"], dur=dur)
         if self.spec.get("scalebar"):                                       # the scalebar goes too (v3 outro dims the map over it)
