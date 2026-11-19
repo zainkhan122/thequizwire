@@ -98,7 +98,7 @@
    "id": "close",
    "type": "close",
    "text": "Everest simply *vanishes*",
-   "y": 760
+   "y": 1180
   }
  ],
  "beats": [
@@ -531,8 +531,8 @@
      86.925,
      27.988
     ],
-    "dx": 0,
-    "dy": -70
+    "dx": -130,
+    "dy": -60
    },
    "stage": "stage_map"
   },
@@ -813,6 +813,14 @@
     "layer": "trenchline",
     "dur": 0.6
    }
+  },
+  {
+   "at": "s06@deepest",
+   "do": "geo.pin_out",
+   "args": {
+    "pid": "cd"
+   },
+   "stage": "stage_map"
   },
   {
    "at": "s06@hole",

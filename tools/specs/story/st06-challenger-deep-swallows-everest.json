@@ -829,8 +829,8 @@
        86.925,
        27.988
       ],
-      "dx": 0,
-      "dy": -70
+      "dx": -130,
+      "dy": -60
      }
     },
     {
@@ -1080,7 +1080,7 @@
   "tone": "revelatory",
   "energy": 5,
   "pause_after": 0.5,
-  "y": 760,
+  "y": 1180,
   "cam": [
    1.2,
    [
@@ -1090,6 +1090,13 @@
   ],
   "cam_dur": 1.6,
   "devices": [
+   {
+    "at": "@@deepest",
+    "do": "geo.pin_out",
+    "args": {
+     "pid": "cd"
+    }
+   },
    {
     "at": "@@hole",
     "do": "geo.route_draw",
