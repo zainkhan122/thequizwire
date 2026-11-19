@@ -139,7 +139,7 @@
     "at": "@@egypt+0.4",
     "do": "prop.flutter",
     "id": "fl_eg",
-    "until": "s06.end"
+    "until": "s05+0.2"
    },
    {
     "at": "@@sudan-0.1",
@@ -167,7 +167,7 @@
     "at": "@@sudan+0.4",
     "do": "prop.flutter",
     "id": "fl_sd",
-    "until": "s06.end"
+    "until": "s05+0.2"
    },
    {
     "at": "@@egypt",
@@ -288,20 +288,20 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.4,
-   "direction": "the camera rides the pen: the 1899 line draws itself west to east along the parallel while we track it",
+   "direction": "the whole parallel in frame; the 1899 line draws west to east across the sentence; one push onto it on 'straight'",
    "cam": [
-    2.0,
+    1.55,
     [
-     31.9,
-     22.1
+     34.3,
+     22.3
     ]
    ],
-   "cam_dur": 0.9,
+   "cam_dur": 0.8,
    "cam_hold": [
-    2.0,
+    1.55,
     [
-     32.2,
-     22.1
+     34.3,
+     22.3
     ]
    ],
    "kw": {
@@ -310,9 +310,9 @@
    },
    "devices": [
     {
-     "at": "@@parallel-0.2",
+     "at": "@@britain+0.2",
      "do": "geo.route_draw",
-     "until": "@@straight+0.3",
+     "until": "@@parallel+0.5",
      "args": {
       "rid": "l1899",
       "layer": "lines"
@@ -328,28 +328,40 @@
    ],
    "cam_path": [
     [
-     "@@parallel-0.2",
-     "@@straight+0.6",
+     "@+0.8",
+     "@@straight-0.2",
      [
-      2.0,
+      1.58,
       [
-       36.0,
-       22.1
+       34.3,
+       22.25
       ]
      ],
-     "power1.inOut"
+     "none"
     ],
     [
-     "@@straight+0.6",
-     "@.end",
+     "@@straight-0.2",
+     "@@straight+0.8",
      [
-      1.7,
+      1.9,
       [
        34.6,
-       22.3
+       22.2
       ]
      ],
      "power2.inOut"
+    ],
+    [
+     "@@straight+0.8",
+     "@.end",
+     [
+      1.92,
+      [
+       34.6,
+       22.2
+      ]
+     ],
+     "none"
     ]
    ]
   },
@@ -366,20 +378,20 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "second line: track the pen along it — the bend north to the sea, then the bend south into the desert",
+   "direction": "the whole second line in frame; it draws completely on 'second line'; push to the bend by the sea on 'north', to the desert bend on 'south'",
    "cam": [
-    2.1,
+    1.75,
     [
-     33.6,
-     21.9
+     35.0,
+     22.3
     ]
    ],
    "cam_dur": 0.8,
    "cam_hold": [
-    2.1,
+    1.75,
     [
-     33.7,
-     21.9
+     35.0,
+     22.3
     ]
    ],
    "kw": {
@@ -389,16 +401,16 @@
    },
    "devices": [
     {
-     "at": "@@second",
+     "at": "@@second-0.1",
      "do": "geo.route_draw",
-     "until": "@@tribes+0.6",
+     "until": "@@tribes+0.4",
      "args": {
       "rid": "l1902",
       "layer": "lines2"
      }
     },
     {
-     "at": "@@tribes+0.3",
+     "at": "@@tribes+0.5",
      "do": "geo.label_in",
      "args": {
       "lid": "l1902"
@@ -425,52 +437,52 @@
    ],
    "cam_path": [
     [
-     "@@second-0.2",
-     "@@tribes+0.4",
+     "@+0.8",
+     "@@north-0.3",
      [
-      2.0,
+      1.78,
       [
-       35.2,
-       22.5
+       35.0,
+       22.3
       ]
      ],
-     "power1.inOut"
+     "none"
     ],
     [
-     "@@north-0.2",
-     "@@north+0.6",
+     "@@north-0.3",
+     "@@north+0.7",
      [
-      2.3,
+      2.2,
       [
-       36.2,
-       22.9
+       36.0,
+       22.7
       ]
      ],
      "power2.inOut"
     ],
     [
      "@@south-0.3",
-     "@@south+0.6",
+     "@@south+0.7",
      [
-      2.4,
+      2.3,
       [
        33.9,
-       21.8
+       21.85
       ]
      ],
      "power2.inOut"
     ],
     [
-     "@@south+0.6",
+     "@@south+0.7",
      "@.end",
      [
-      1.8,
+      2.3,
       [
-       34.8,
-       22.3
+       33.95,
+       21.85
       ]
      ],
-     "power2.inOut"
+     "none"
     ]
    ]
   },
@@ -538,7 +550,7 @@
      "at": "@@straight+0.6",
      "do": "prop.anchor",
      "id": "fl_eg",
-     "until": "s06.end",
+     "until": "s05+0.2",
      "args": {
       "lonlat": [
        35.25,
@@ -580,7 +592,7 @@
      "at": "@@second+0.6",
      "do": "prop.anchor",
      "id": "fl_sd",
-     "until": "s06.end",
+     "until": "s05+0.2",
      "args": {
       "lonlat": [
        35.95,
@@ -666,20 +678,20 @@
    "energy": 5,
    "pause_after": 0.5,
    "climax": true,
-   "direction": "back to the small patch: two red NOs slam down on it, one from each side; the size comparison lands; both flags shake their heads",
+   "direction": "flags and plates clear; the size comparison stands alone for the first sentence; it leaves, then the two red NOs land on the patch, one from each side",
    "cam": [
-    2.6,
+    2.4,
     [
-     33.8,
-     21.95
+     33.9,
+     22.1
     ]
    ],
-   "cam_dur": 1.6,
+   "cam_dur": 1.4,
    "cam_hold": [
-    2.7,
+    2.4,
     [
-     33.75,
-     21.95
+     33.9,
+     22.1
     ]
    ],
    "kw": {
@@ -730,19 +742,29 @@
    ],
    "devices": [
     {
+     "at": "@+0.1",
+     "do": "prop.out",
+     "id": "fl_eg"
+    },
+    {
+     "at": "@+0.1",
+     "do": "prop.out",
+     "id": "fl_sd"
+    },
+    {
+     "at": "@+0.1",
+     "do": "geo.disputed_out",
+     "args": {
+      "did": "halaib"
+     }
+    },
+    {
      "at": "@@smaller-0.1",
      "do": "geo.highlight_pulse",
      "args": {
       "fid": "bir_tawil",
       "layer": "void",
       "dur": 0.8
-     }
-    },
-    {
-     "at": "@@smaller",
-     "do": "geo.disputed_in",
-     "args": {
-      "did": "birtawil"
      }
     },
     {
@@ -755,25 +777,32 @@
      }
     },
     {
-     "at": "@.end",
+     "at": "@@coast-0.5",
      "do": "chart.out",
      "id": "area"
     },
     {
-     "at": "@@claim-0.1",
+     "at": "@@coast-0.1",
+     "do": "geo.disputed_in",
+     "args": {
+      "did": "birtawil"
+     }
+    },
+    {
+     "at": "@@coast-0.1",
      "do": "prop.anchor",
      "id": "no1",
      "until": "s06.end",
      "args": {
       "lonlat": [
-       33.55,
-       22.15
+       33.3,
+       22.25
       ],
-      "dy": -60
+      "dy": 0
      }
     },
     {
-     "at": "@@claim",
+     "at": "@@coast",
      "do": "prop.pop",
      "id": "no1",
      "args": {
@@ -788,10 +817,10 @@
      "until": "s06.end",
      "args": {
       "lonlat": [
-       34.3,
-       21.55
+       34.5,
+       22.25
       ],
-      "dy": -60
+      "dy": 0
      }
     },
     {
@@ -811,27 +840,45 @@
       "layer": "void",
       "dur": 0.7
      }
-    },
-    {
-     "at": "@@neither+0.2",
-     "do": "prop.flutter",
-     "id": "fl_eg",
-     "until": "@@neither+1.4",
-     "args": {
-      "skew": 16,
-      "period": 0.3
-     }
-    },
-    {
-     "at": "@@neither+0.2",
-     "do": "prop.flutter",
-     "id": "fl_sd",
-     "until": "@@neither+1.4",
-     "args": {
-      "skew": 16,
-      "period": 0.3
-     }
     }
+   ],
+   "cam_path": [
+    [
+     "@+1.4",
+     "@@claim-0.2",
+     [
+      2.4,
+      [
+       33.9,
+       22.1
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@claim-0.2",
+     "@@claim+0.8",
+     [
+      2.8,
+      [
+       33.9,
+       21.95
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@claim+0.8",
+     "@.end",
+     [
+      2.85,
+      [
+       33.9,
+       21.95
+      ]
+     ],
+     "none"
+    ]
    ]
   }
  ],
@@ -848,12 +895,12 @@
   "tone": "revelatory",
   "energy": 5,
   "pause_after": 0.5,
-  "y": 760,
+  "y": 560,
   "cam": [
-   1.5,
+   1.8,
    [
-    34.7,
-    22.95
+    34.4,
+    22.6
    ]
   ],
   "cam_dur": 1.8,
@@ -896,16 +943,6 @@
     "at": "@.end+0.2",
     "do": "prop.out",
     "id": "no2"
-   },
-   {
-    "at": "@.end+0.2",
-    "do": "prop.out",
-    "id": "fl_eg"
-   },
-   {
-    "at": "@.end+0.2",
-    "do": "prop.out",
-    "id": "fl_sd"
    }
   ]
  },

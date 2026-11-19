@@ -38,7 +38,7 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.4,
-   "direction": "the camera rides the pen: the 1899 line draws itself west to east along the parallel while we track it",
+   "direction": "the whole parallel in frame; the 1899 line draws west to east across the sentence; one push onto it on 'straight'",
    "text": "In 1899 Britain drew the border along the 22nd parallel. A straight line, east to west.",
    "cues": {
     "britain": "britain",
@@ -53,7 +53,7 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "second line: track the pen along it — the bend north to the sea, then the bend south into the desert",
+   "direction": "the whole second line in frame; it draws completely on 'second line'; push to the bend by the sea on 'north', to the desert bend on 'south'",
    "text": "Three years later it drew a second line, following the tribes instead: a bend north by the sea, a bend south in the desert.",
    "cues": {
     "second": "second",
@@ -85,7 +85,7 @@
    "tone": "revelatory",
    "energy": 5,
    "pause_after": 0.5,
-   "direction": "back to the small patch: two red NOs slam down on it, one from each side; the size comparison lands; both flags shake their heads",
+   "direction": "flags and plates clear; the size comparison stands alone for the first sentence; it leaves, then the two red NOs land on the patch, one from each side",
    "text": "And the same two lines leave this smaller patch to the other side. Claim it, and you accept the line that loses you the coast. So neither does.",
    "cues": {
     "smaller": "smaller",
