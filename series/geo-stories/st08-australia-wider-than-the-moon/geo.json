@@ -29,8 +29,8 @@
      "ids": [
       "036"
      ],
-     "cls": "tint",
-     "note": "Australia, the subject"
+     "cls": "neon",
+     "note": "Australia, the subject — glowing border, faint fill"
     },
     {
      "kind": "feature",
@@ -38,13 +38,13 @@
      "ids": [
       "036"
      ],
-     "cls": "draw trace",
+     "cls": "draw trace neon",
      "note": "outline trace for tint"
     },
     {
      "kind": "route",
      "id": "width",
-     "cls": "river",
+     "cls": "neon",
      "geojson": {
       "type": "FeatureCollection",
       "features": [
@@ -306,272 +306,6 @@
        }
       ]
      }
-    },
-    {
-     "kind": "route",
-     "id": "moon",
-     "cls": "river dashed",
-     "geojson": {
-      "type": "FeatureCollection",
-      "features": [
-       {
-        "type": "Feature",
-        "id": "moon",
-        "properties": {
-         "name": "Moon diameter laid along the same line, 3,474 km"
-        },
-        "geometry": {
-         "type": "LineString",
-         "coordinates": [
-          [
-           113.155,
-           -26.153
-          ],
-          [
-           113.72,
-           -26.273
-          ],
-          [
-           114.286,
-           -26.39
-          ],
-          [
-           114.853,
-           -26.506
-          ],
-          [
-           115.421,
-           -26.619
-          ],
-          [
-           115.991,
-           -26.729
-          ],
-          [
-           116.561,
-           -26.838
-          ],
-          [
-           117.133,
-           -26.944
-          ],
-          [
-           117.705,
-           -27.048
-          ],
-          [
-           118.279,
-           -27.15
-          ],
-          [
-           118.854,
-           -27.249
-          ],
-          [
-           119.429,
-           -27.346
-          ],
-          [
-           120.006,
-           -27.441
-          ],
-          [
-           120.584,
-           -27.533
-          ],
-          [
-           121.162,
-           -27.622
-          ],
-          [
-           121.742,
-           -27.71
-          ],
-          [
-           122.323,
-           -27.795
-          ],
-          [
-           122.904,
-           -27.877
-          ],
-          [
-           123.486,
-           -27.957
-          ],
-          [
-           124.069,
-           -28.035
-          ],
-          [
-           124.653,
-           -28.11
-          ],
-          [
-           125.238,
-           -28.183
-          ],
-          [
-           125.824,
-           -28.253
-          ],
-          [
-           126.41,
-           -28.321
-          ],
-          [
-           126.997,
-           -28.386
-          ],
-          [
-           127.585,
-           -28.449
-          ],
-          [
-           128.173,
-           -28.509
-          ],
-          [
-           128.762,
-           -28.566
-          ],
-          [
-           129.352,
-           -28.622
-          ],
-          [
-           129.942,
-           -28.674
-          ],
-          [
-           130.533,
-           -28.724
-          ],
-          [
-           131.125,
-           -28.771
-          ],
-          [
-           131.716,
-           -28.816
-          ],
-          [
-           132.309,
-           -28.858
-          ],
-          [
-           132.902,
-           -28.898
-          ],
-          [
-           133.495,
-           -28.935
-          ],
-          [
-           134.089,
-           -28.969
-          ],
-          [
-           134.683,
-           -29.001
-          ],
-          [
-           135.278,
-           -29.031
-          ],
-          [
-           135.873,
-           -29.057
-          ],
-          [
-           136.468,
-           -29.081
-          ],
-          [
-           137.063,
-           -29.102
-          ],
-          [
-           137.659,
-           -29.121
-          ],
-          [
-           138.254,
-           -29.137
-          ],
-          [
-           138.85,
-           -29.151
-          ],
-          [
-           139.447,
-           -29.161
-          ],
-          [
-           140.043,
-           -29.17
-          ],
-          [
-           140.639,
-           -29.175
-          ],
-          [
-           141.235,
-           -29.178
-          ],
-          [
-           141.832,
-           -29.178
-          ],
-          [
-           142.428,
-           -29.176
-          ],
-          [
-           143.025,
-           -29.171
-          ],
-          [
-           143.621,
-           -29.163
-          ],
-          [
-           144.217,
-           -29.153
-          ],
-          [
-           144.813,
-           -29.14
-          ],
-          [
-           145.409,
-           -29.124
-          ],
-          [
-           146.004,
-           -29.106
-          ],
-          [
-           146.6,
-           -29.085
-          ],
-          [
-           147.195,
-           -29.061
-          ],
-          [
-           147.79,
-           -29.035
-          ],
-          [
-           148.385,
-           -29.007
-          ]
-         ]
-        }
-       }
-      ]
-     }
     }
    ],
    "pins": [
@@ -609,19 +343,49 @@
     "Natural Earth"
    ],
    "basemap": {
-    "layer": "bluemarble",
-    "k_max": 2.2,
+    "layer": "s2",
+    "k_max": 4.0,
     "far": {
      "bbox": [
-      90,
-      -52,
-      180,
-      5
+      95,
+      -50,
+      175,
+      0
      ],
-     "k_min": 0.3
-    }
+     "k_min": 0.38
+    },
+    "pad_deg": 8,
+    "near": [
+     {
+      "lonlat": [
+       113.155,
+       -26.153
+      ],
+      "k": 3.4,
+      "pad": 1.5
+     },
+     {
+      "lonlat": [
+       153.637,
+       -28.638
+      ],
+      "k": 3.4,
+      "pad": 1.5
+     }
+    ]
    },
-   "projection_reason": "satellite raster (Web Mercator tiles); both lengths are geodesics along the same great circle drawn to the same scale, and the comparison is stated in kilometres on screen (P1/P2); no claim about extent is made",
+   "discs": [
+    {
+     "id": "moon",
+     "lonlat": [
+      130.533,
+      -28.724
+     ],
+     "km": 3474.0,
+     "cls": "moon"
+    }
+   ],
+   "projection_reason": "satellite raster (Web Mercator tiles); the width is a geodesic drawn on the map and the Moon is a disc of its true diameter drawn at the same latitude band (locally conformal), both stated in kilometres on screen (P1/P2); no claim about area is made",
    "size_claim_device": "route",
    "scalebar": {
     "km": 1000,

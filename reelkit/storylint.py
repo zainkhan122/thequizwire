@@ -4,7 +4,7 @@
 quizlint delegates here for story-v1. Checks (FAIL unless noted):
   S1 structure: series geo-stories · story block {place, headline, close, cover} · roles hook, story×2–5(+close), cta · headline has one *keyword*
   S2 narration: 110–155 words (WARN outside 120–150) · total ≤ 60 s · close shares a key noun with the open line
-  S3 captions: ≥ 1 kw caption per story scene (close scene exempt) · kw ≤ 5 words · ≤ 2 highlight layers (colours) lit per scene
+  S3 text: ≥ 1 text element (kw / counter / card) per story scene (close exempt) · ONE text element at a time (no overlap) · kw ≤ 5 words · ≤ 2 highlight layers lit per scene
   S4 cues: every geo.highlight_in / pin_in / label_in beat is anchored to a cue word or scene start (not a bare number)
   S5 cover: title + place only — no cover_emoji, no twist word (the close's keyword) on the cover headline
   S6 copy: spoilers (post.copy.spoilers) absent from every channel copy · each channel copy present
@@ -20,6 +20,24 @@ MOTION = {"geo.cam_to", "geo.highlight_in", "geo.highlight_pulse", "geo.pin_in",
 STOP = set("the a an of in on at to for with and or but it its is was has had have not no from by as this that these those one two more than every still so up here where who".split())
 words = lambda s: re.findall(r"[A-Za-z0-9'’-]+", s or "")
 nouns = lambda s: {w.lower().strip("'’-") for w in words(s) if w.lower() not in STOP and len(w) > 3}
+
+
+def _t(T, expr):
+    """Resolve a visuals.json time expression against timeline.json (same grammar as engine/compose.py T()); None if unresolvable."""
+    try:
+        if isinstance(expr, (int, float)): return float(expr)
+        m = re.fullmatch(r"(end|s\w+?)(?:\.(end))?(?:@([\w-]+))?(?:([+-])([\d.]+))?", str(expr).strip())
+        if not m: return None
+        base, end, cue, sign, off = m.groups()
+        if base == "end": t = T["total"]
+        else:
+            s = next(x for x in T["scenes"] if x["id"] == base)
+            if cue: t = T["cues"][f"{base}@{cue}"]
+            elif end or sign == "-": t = s["end"]
+            else: t = s["start"]
+        if sign and off: t += float(off) * (1 if sign == "+" else -1)
+        return round(t, 3)
+    except Exception: return None
 
 
 def main():
@@ -50,9 +68,26 @@ def main():
     if openl and closel and not (nouns(openl.get("text")) & nouns(closel.get("text"))): F.append("S2: close line shares no key noun with the opening line")
     # S3
     scenes = {l["scene"]: l for l in lines}; story_scenes = [l["scene"] for l in lines if l.get("role") == "story"][:-1]
-    kw_scenes = {str(b.get("at", "")).split("+")[0].split("@")[0].split(".")[0].split("-")[0] for b in X.get("beats", []) if b.get("do") == "kw_in"}
+    # owner 2026-11-19 ("too much text on screen"): ONE text element at a time — a scene's text may be a kw caption, a counter or a fact card,
+    # and no two of them may overlap in time.
+    scene_of = lambda b: str(b.get("at", "")).split("+")[0].split("@")[0].split(".")[0].split("-")[0]
+    TEXT_IN = {"kw_in", "fact_in", "chart.counter_run"}
+    kw_scenes = {scene_of(b) for b in X.get("beats", []) if b.get("do") in TEXT_IN | {"geo.pin_in", "geo.label_in"}}   # a labelled pin is this scene's text
     for s in story_scenes:
-        if s not in kw_scenes: F.append(f"S3: scene {s} has no keyword caption (kw_in)")
+        if s not in kw_scenes: F.append(f"S3: scene {s} has no text element (kw_in / fact_in / chart.counter_run / labelled pin)")
+    if T and T.get("scenes"):
+        tx = []
+        for b in X.get("beats", []):
+            if b.get("do") not in TEXT_IN: continue
+            t0 = _t(T, b.get("at")); outs = {"kw_in": ("kw_out",), "fact_in": ("hide",), "chart.counter_run": ("chart.out", "hide")}[b["do"]]
+            t1 = _t(T, b["until"]) if b.get("until") and b["do"] == "kw_in" else None
+            if t1 is None:
+                cands = [_t(T, o.get("at")) for o in X.get("beats", []) if o.get("do") in outs and o.get("id") == b.get("id")]
+                cands = [c for c in cands if c is not None and t0 is not None and c > t0]; t1 = min(cands) if cands else None
+            if t0 is not None and t1 is not None: tx.append((t0, t1, b.get("id")))
+        tx.sort()
+        for i in range(1, len(tx)):
+            if tx[i][0] < tx[i - 1][1] - 0.05: F.append(f"S3: two text elements on screen at once — {tx[i - 1][2]} until {tx[i - 1][1]:.1f}s overlaps {tx[i][2]} from {tx[i][0]:.1f}s (one text at a time)")
     for el in X.get("elements", []):
         if el.get("type") == "kw" and len([w for w in el.get("text", "").split() if re.search(r"\w", w)]) > 5: F.append(f"S3: kw {el['id']} > 5 words")
     lit = {}

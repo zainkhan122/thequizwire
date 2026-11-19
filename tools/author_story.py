@@ -9,8 +9,10 @@ Spec keys:
           cam_ease?, highlights[{fid, layer, at}], pulse?, elements[], devices[]}                            # times: "@@cue" · "@+1.2" · "@.end" (relative to the beat's scene)
   close{vo{text,cues}, text (screen line, *keyword*), tone, pause_after, cam?}                                # the answer to the opening line
   cta{vo{text}}, outro_headline,
-  geo{fit_bbox, far_bbox, resolution?, layers[{id, ids[], cls}] (highlight layers: tint/solid/glow/zone1..6), extra_layers[], labels[], pins[], disputed[],
-      scalebar{km,lonlat}|null, cams{start, open}, pin_beats[], size_claim_device?, projection_reason?},
+  geo{fit_bbox, far_bbox, resolution?, layers[{id, ids[], cls, neon?}] (highlight layers: tint/solid/glow/neon/zone1..6), extra_layers[], labels[], pins[], disputed[],
+      scalebar{km,lonlat}|null, cams{start, open}, pin_beats[], size_claim_device?, projection_reason?,
+      basemap? ("bluemarble" | "s2" = Sentinel-2 cloudless, CC BY → set top-level screen_credit), k_max?, k_min?, pad_deg?, near[{lonlat,k,pad?}]?, discs[{id,lonlat,km,cls?}]?},
+  screen_credit? (one line shown in the outro + copied to the post description — required for CC BY basemaps),
   stickers_extra[], extra_elements[], research{topic, myths, landscape, sources, claims}
 Scenes: s01 = open (role hook) · s02.. = beats (role story) · sNN-1 = close (role story, screen line) · sNN = cta.
 """
@@ -38,6 +40,7 @@ def build(S):
          "story": {"place": S["place"], "headline": S["headline"], "search_term": S["search_term"], "shape": shape, "close": S["close"]["text"],
                    "cover": S.get("cover", {"place": "", "headline": S["headline"]}), "outro": {"headline": S.get("outro_headline", "KNOW A STRANGER PLACE?"), "url": "thequizwire.com"}},
          "hook_type": "cold-open", "promise": {"min_motion": 0.7}, "credits": ["Natural Earth"],
+         **({"screen_credit": S["screen_credit"]} if S.get("screen_credit") else {}),
          "post": {"title": S["post"]["copy"]["youtube"]["title"], "premise": S["post"]["premise"], "bait": S["post"]["bait"], "keywords": S["post"]["keywords"],
                   "description": S["post"]["copy"]["youtube"]["description"], "hashtags": S["post"]["copy"]["youtube"].get("tags", []), "tags": S["post"]["tags"],
                   "cover_emoji": "", "cover_emoji_why": "stories carry no icon on the cover (title + place only)", "copy": S["post"]["copy"],
@@ -70,13 +73,15 @@ def build(S):
     for L in g.get("layers", []):
         layers.append({"kind": "highlight", "id": L["id"], "ids": L["ids"], "cls": L.get("cls", "tint"), "note": L.get("note", "")})
         if L.get("trace", True):                                                                    # animated border: a per-feature outline layer the pen draws on highlight_in
-            layers.append({"kind": "feature", "id": f"edge_{L['id']}", "ids": L["ids"], "cls": "draw trace", "note": f"outline trace for {L['id']}"}); traced.add(L["id"])
+            layers.append({"kind": "feature", "id": f"edge_{L['id']}", "ids": L["ids"], "cls": "draw trace" + (" neon" if L.get("neon") or g.get("neon") else ""), "note": f"outline trace for {L['id']}"}); traced.add(L["id"])
     layers += g.get("extra_layers", [])
     res = {"resolution": g["resolution"]} if g.get("resolution") else {}
     G = {"version": 1, "episode": ep, "policy": "docs/BORDER_POLICY.md",
          "scenes": {"main": {**res, "projection": "mercator", "fit": {"type": "bbox", "bbox": g["fit_bbox"]}, "padding": 20, "layers": layers,
                              "pins": g.get("pins", []), "labels": g.get("labels", []), "disputed": g.get("disputed", []), "sources": ["Natural Earth"],
-                             "basemap": {"layer": "night" if opener == "night-lights" else "bluemarble", "k_max": g.get("k_max", 2.2), "far": {"bbox": g["far_bbox"], "k_min": 0.3}},
+                             "basemap": {"layer": "night" if opener == "night-lights" else g.get("basemap", "bluemarble"), "k_max": g.get("k_max", 2.2), "far": {"bbox": g["far_bbox"], "k_min": g.get("k_min", 0.3)},
+                                         **({"pad_deg": g["pad_deg"]} if g.get("pad_deg") else {}), **({"near": g["near"]} if g.get("near") else {})},
+                             **({"discs": g["discs"]} if g.get("discs") else {}),
                              "projection_reason": g.get("projection_reason", "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"),
                              **({"size_claim_device": g["size_claim_device"]} if g.get("size_claim_device") else {}),
                              **({"scalebar": {"km": g["scalebar"]["km"], "lonlat": g["scalebar"]["lonlat"], "at": [60, 1130]}} if g.get("scalebar") else {})}}}

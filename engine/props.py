@@ -8,6 +8,8 @@ A prop is an inline-SVG rig (`rig` element in visuals.json) with named sub-parts
   flag     flag on a pole; cloth {id}_cloth is a flag-icons SVG (assets/geo/flags/<cc>.svg)
   tag      small text tag (one word) — for "?" / "NO" / years
   mountain a peak with a snow cap and a summit flag (prop.fall it into a trench)
+  plane    top-down airliner, nose to +x (rot = heading) — fly it with geo.travel along a route
+  moon     grey cratered disc (screen-space; for the TRUE-SCALE moon on the map use geo.json `discs` + geo.disc_in)
 Devices (visuals.json beats, do = "prop.<verb>", stage = the geo stage they anchor to):
   prop.anchor  t0..t1  keep the prop glued to a lon/lat (+dx,dy px) while the camera moves
   prop.pop / prop.out  show / hide (pop = scale burst, rise = grows from its baseline)
@@ -69,6 +71,21 @@ def _mountain(i):
             f'<g id="{i}_flag"><path d="M14 -82 v-30" stroke="#2b2f36" stroke-width="4"/><path d="M14 -112 l26 7 l-26 7z" fill="#e5322d"/></g>'
             f'<g id="{i}_flame" opacity="0"><path d="M-70 -70 Q-90 -110 -60 -140 Q-50 -110 -30 -120 Q-40 -90 -40 -70Z" fill="#ff9f1c" stroke="#e5322d" stroke-width="4"/></g>')
 
+def _plane(i):
+    # top-down airliner, nose to the right (+x); rotate the element to the heading
+    return (f'<g id="{i}_shadow" opacity=".35" transform="translate(10 26)"><path d="M-80 0 L-50 -10 L10 -10 L60 -4 L86 0 L60 4 L10 10 L-50 10Z" fill="#000"/><path d="M-20 -8 L-40 -88 L-20 -88 L20 -8Z M-20 8 L-40 88 L-20 88 L20 8Z" fill="#000"/></g>'
+            f'<path d="M-20 -8 L-44 -92 L-22 -92 L24 -8Z" fill="#dfe6ee" stroke="#1f2937" stroke-width="4" stroke-linejoin="round"/>'
+            f'<path d="M-20 8 L-44 92 L-22 92 L24 8Z" fill="#dfe6ee" stroke="#1f2937" stroke-width="4" stroke-linejoin="round"/>'
+            f'<path d="M-82 -4 L-96 -40 L-82 -40 L-62 -4Z M-82 4 L-96 40 L-82 40 L-62 4Z" fill="#e53e3e" stroke="#1f2937" stroke-width="4" stroke-linejoin="round"/>'
+            f'<path d="M-84 0 L-56 -12 L14 -12 L62 -5 L92 0 L62 5 L14 12 L-56 12Z" fill="#ffffff" stroke="#1f2937" stroke-width="5" stroke-linejoin="round"/>'
+            f'<path d="M30 -6 L62 -3 L62 3 L30 6Z" fill="#1f2937"/><path d="M-50 -6 h60" stroke="#60a5fa" stroke-width="4" stroke-dasharray="6 6"/>')
+
+def _moon(i):
+    return (f'<defs><radialGradient id="{i}_g" cx="38%" cy="34%" r="70%"><stop offset="0" stop-color="#f6f6f3"/><stop offset=".55" stop-color="#b9bcc3"/><stop offset="1" stop-color="#5f6670"/></radialGradient></defs>'
+            f'<circle r="92" fill="url(#{i}_g)" stroke="#2b2f36" stroke-width="5"/>'
+            f'<circle cx="-38" cy="-16" r="12" fill="rgba(70,76,88,.55)"/><circle cx="20" cy="-36" r="8" fill="rgba(70,76,88,.55)"/><circle cx="32" cy="26" r="14" fill="rgba(70,76,88,.55)"/>'
+            f'<circle cx="-10" cy="42" r="7" fill="rgba(70,76,88,.55)"/><circle cx="-52" cy="28" r="6" fill="rgba(70,76,88,.55)"/><circle cx="52" cy="-8" r="5" fill="rgba(70,76,88,.55)"/>')
+
 def _tag(i, text, color):
     t = html.escape(text, quote=False)
     return (f'<rect x="-90" y="-46" width="180" height="92" rx="20" fill="{color}" stroke="#1b1b1b" stroke-width="6"/>'
@@ -80,7 +97,7 @@ def rig_html(el):
     i, kind, size = el["id"], el["rig"], int(el.get("size", 200))
     body = {"sat": lambda: _sat(i), "fallsat": lambda: _fallsat(i), "splash": lambda: _splash(i),
             "person": lambda: _person(i, el.get("shirt", "#2a9d8f")), "flag": lambda: _flag(i, el["flag"]), "mountain": lambda: _mountain(i),
-            "tag": lambda: _tag(i, el.get("text", "?"), el.get("color", "#e5322d"))}[kind]()
+            "tag": lambda: _tag(i, el.get("text", "?"), el.get("color", "#e5322d")), "plane": lambda: _plane(i), "moon": lambda: _moon(i)}[kind]()
     vb = "-100 -160 200 260" if kind == "fallsat" else "-100 -100 200 200"
     h = int(size * 1.3) if kind == "fallsat" else size
     return (f'<svg id="{i}" class="prop3" data-rig="{kind}" style="left:{el.get("x", 540)}px;top:{el.get("y", 900)}px;width:{size}px;height:{h}px;margin-left:{-size // 2}px;margin-top:{-h // 2}px;'

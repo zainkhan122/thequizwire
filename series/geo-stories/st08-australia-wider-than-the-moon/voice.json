@@ -22,7 +22,7 @@
    "tone": "urgent",
    "energy": 4,
    "pause_after": 0.45,
-   "direction": "slow drift over the whole continent; the border traces itself on 'country'; nothing else until the beats",
+   "direction": "CRITICAL opener: wide high-altitude view of the Indian Ocean–Pacific rim, then a hyper-smooth kinetic plunge down onto the continent while the neon border draws itself; the push never stops",
    "text": "This country is wider than the Moon. Not on a trick map. In kilometres.",
    "cues": {
     "country": "country",
@@ -37,7 +37,7 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "push west, pin drops on Steep Point; sweep east across the continent, pin drops on Cape Byron",
+   "direction": "dive onto Steep Point (pin + sonar ping); a plane takes off and the camera tracks it east across the whole continent; dive onto Cape Byron (pin + ping)",
    "text": "Australia's westernmost point is Steep Point, a cliff on the Indian Ocean. Its easternmost is Cape Byron, a lighthouse on the Pacific.",
    "cues": {
     "westernmost": "westernmost",
@@ -53,7 +53,7 @@
    "tone": "neutral",
    "energy": 3,
    "pause_after": 0.5,
-   "direction": "pull out to the whole continent; the width line draws from west to east; counter rolls to 3,990",
+   "direction": "pull back to the whole continent in one move; the neon width line draws west to east with the plane on its tip; the counter rolls to 3,990 (only text on screen)",
    "text": "Between them, almost 4,000 kilometres.",
    "cues": {
     "between": "between",
@@ -68,7 +68,7 @@
    "tone": "revelatory",
    "energy": 5,
    "pause_after": 0.5,
-   "direction": "the dashed Moon line draws along the same path and stops; a pin marks where it ends; push in on the gap to the coast; card",
+   "direction": "the Moon — a disc of its true 3,474-km diameter — rolls in from the west and settles with its edge on Steep Point; counter 3,474; the camera slides east along the line to where the disc ends; pin + ping + flash; push in on the gap to the coast; card",
    "text": "The Moon, edge to edge, is 3,474 kilometres. Lay it along the same line from Steep Point and it runs out here, in the outback of New South Wales, 500 kilometres short of the coast.",
    "cues": {
     "moon": "moon",
@@ -86,7 +86,7 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "honest caveat: pull out to the whole width again; the full line redraws on 'wider'; the country pulses",
+   "direction": "the disc lifts off the map and fades; long pull-out drifting west across the continent; the width line redraws with the plane; the border pulses",
    "text": "The Moon is a sphere, so it still has far more surface than this one flat continent. But point to point, Australia is the wider of the two.",
    "cues": {
     "sphere": "sphere",

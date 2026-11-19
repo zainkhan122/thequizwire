@@ -335,11 +335,26 @@ def prep(ep: Path, out: Path, fixtures=None, quiet=False):
                 fw = int(min(max((fb[2] - fb[0]) * ppd * kmin * 1.15, 1200), 6000))
                 fmeta = _bm.stitch(fb, fw, out / f"{sid}_basemap_far.jpg", bm.get("layer", "bluemarble"))
                 data["basemap"]["far"] = {"src": f"{sid}_basemap_far.jpg", **{k: fmeta[k] for k in ("scale", "translate", "size", "zoom")}}
-                gen[f"geo/{sid}_basemap_far.jpg"] = {"kind": "image", "licence": "PD-USGov", "provider": "NASA GIBS", "by": "reelkit/basemap.py",
+                gen[f"geo/{sid}_basemap_far.jpg"] = {"kind": "image", "licence": fmeta["licence"], "provider": fmeta["provider"], "by": "reelkit/basemap.py",
                                                      "source": f"{fmeta['layer']} z{fmeta['zoom']} ({fmeta['tiles']} tiles)", "credit": fmeta["credit"], "bytes": fmeta["bytes"]}
                 if not quiet: print(f"  ✓ {sid}: far basemap z{fmeta['zoom']} {fmeta['size'][0]}×{fmeta['size'][1]} · {fmeta['bytes'] // 1024} KB")
+            # near rasters (owner 2026-11-19, "plunge" shots): high-zoom patches under the deepest cameras, drawn above the main raster.
+            # basemap.near: [{"lonlat": [lon, lat], "k": 6, "pad": 1.3}] — footprint = the 1080×1920 viewport at that camera × pad.
+            near_out = []
+            for j, nr in enumerate(bm.get("near") or []):
+                lon, lat = nr["lonlat"]; kk = float(nr["k"]); padf = float(nr.get("pad", 1.35))
+                ppd = spec.get("w", 1080) / max(bb[2] - bb[0], 1e-6)
+                import math as _m2
+                hw = 540 / (ppd * kk) * padf; hh = 960 * _m2.cos(_m2.radians(min(abs(lat), 80))) / (ppd * kk) * padf
+                nb = [lon - hw, lat - hh, lon + hw, lat + hh]
+                nmeta = _bm.stitch(nb, int(1080 * kk * 1.1), out / f"{sid}_basemap_near{j}.jpg", bm.get("layer", "bluemarble"))
+                near_out.append({"src": f"{sid}_basemap_near{j}.jpg", **{k: nmeta[k] for k in ("scale", "translate", "size", "zoom")}})
+                gen[f"geo/{sid}_basemap_near{j}.jpg"] = {"kind": "image", "licence": nmeta["licence"], "provider": nmeta["provider"], "by": "reelkit/basemap.py",
+                                                         "source": f"{nmeta['layer']} z{nmeta['zoom']} ({nmeta['tiles']} tiles)", "credit": nmeta["credit"], "bytes": nmeta["bytes"]}
+                if not quiet: print(f"  ✓ {sid}: near basemap {j} z{nmeta['zoom']} {nmeta['size'][0]}×{nmeta['size'][1]} · {nmeta['bytes'] // 1024} KB")
+            if near_out: data["basemap"]["near"] = near_out
             data["sources"].append(meta["credit"])
-            gen[f"geo/{sid}_basemap.jpg"] = {"kind": "image", "licence": "PD-USGov", "provider": "NASA GIBS", "by": "reelkit/basemap.py",
+            gen[f"geo/{sid}_basemap.jpg"] = {"kind": "image", "licence": meta["licence"], "provider": meta["provider"], "by": "reelkit/basemap.py",
                                              "source": f"{meta['layer']} z{meta['zoom']} ({meta['tiles']} tiles)", "credit": meta["credit"], "bytes": meta["bytes"]}
             if not quiet: print(f"  ✓ {sid}: basemap {meta['layer']} z{meta['zoom']} {meta['size'][0]}×{meta['size'][1]} · {meta['bytes'] // 1024} KB")
         want = {L["flag"].lower() for L in spec.get("layers", []) if L.get("flag")}

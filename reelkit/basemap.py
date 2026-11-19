@@ -17,11 +17,17 @@ so a bbox across the antimeridian stitches seamlessly; the 180° tile seam (a da
 """
 import concurrent.futures, io, json, math, os, pathlib, sys, tempfile, time, urllib.request
 
-LAYERS = {"bluemarble": ("BlueMarble_ShadedRelief_Bathymetry", "GoogleMapsCompatible_Level8", "jpeg", 8, "NASA Blue Marble"),
-          "bmng": ("BlueMarble_NextGeneration", "GoogleMapsCompatible_Level8", "jpeg", 8, "NASA Blue Marble"),
-          "night": ("VIIRS_CityLights_2012", "GoogleMapsCompatible_Level8", "jpeg", 8, "NASA Black Marble")}
+GIBS = "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/{name}/default/{tms}/{z}/{y}/{x}.{ext}"
+EOX = "https://tiles.maps.eox.at/wmts/1.0.0/{name}/default/g/{z}/{y}/{x}.{ext}"
+# layer: (name, tms, ext, zmax, credit, url template, licence, provider)
+LAYERS = {"bluemarble": ("BlueMarble_ShadedRelief_Bathymetry", "GoogleMapsCompatible_Level8", "jpeg", 8, "NASA Blue Marble", GIBS, "PD-USGov", "NASA GIBS"),
+          "bmng": ("BlueMarble_NextGeneration", "GoogleMapsCompatible_Level8", "jpeg", 8, "NASA Blue Marble", GIBS, "PD-USGov", "NASA GIBS"),
+          "night": ("VIIRS_CityLights_2012", "GoogleMapsCompatible_Level8", "jpeg", 8, "NASA Black Marble", GIBS, "PD-USGov", "NASA GIBS"),
+          # owner 2026-11-19 ("bright continental satellite maps", Google-Earth clarity): Sentinel-2 cloudless 2020 by EOX, 10 m/px, CC BY 4.0.
+          # Attribution is REQUIRED: the episode shows the screen credit in the outro and carries it in the post description.
+          "s2": ("s2cloudless-2020_3857", "g", "jpg", 14, "Sentinel-2 cloudless by EOX (Contains modified Copernicus Sentinel data 2020)", EOX, "CC-BY-4.0", "EOX IT Services GmbH")}
 CACHE = pathlib.Path.home() / ".cache" / "basemap"
-MAX_W, MAX_H, MAX_BYTES = 4864, 6144, 6_000_000
+MAX_W, MAX_H, MAX_BYTES = 8192, 8192, 14_000_000      # Chromium decodes 8k JPEGs fine; a z7 continent at 1080×1920 needs ~6k px to stay crisp at k ≈ 3
 UA = "quizwire/1 (github zainkhan122/thequizwire)"
 
 
@@ -37,7 +43,7 @@ def pick_zoom(bbox, width_px, zmax):
 
 def stitch(bbox, width_px, out_path, layer="bluemarble", quality=86):
     from PIL import Image
-    name, tms, ext, zmax, credit = LAYERS[layer]
+    name, tms, ext, zmax, credit, tmpl, licence, provider = LAYERS[layer]
     lon0, lat0, lon1, lat1 = bbox
     lat0, lat1 = max(lat0, -85.0), min(lat1, 85.0)
     z = pick_zoom(bbox, width_px, zmax); n = 2 ** z
@@ -58,7 +64,7 @@ def stitch(bbox, width_px, out_path, layer="bluemarble", quality=86):
             if not ph.exists(): Image.new("RGB", (256, 256), (16, 34, 58)).save(ph, quality=60)
             return t, ph
         if not p.exists():
-            url = f"https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/{name}/default/{tms}/{z}/{y}/{xw}.{ext}"
+            url = tmpl.format(name=name, tms=tms, z=z, y=y, x=xw, ext=ext)
             for attempt in range(4):                                             # GIBS drops SSL connections now and then: retry with back-off
                 try: p.write_bytes(urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=60).read()); break
                 except Exception as e:
@@ -88,7 +94,7 @@ def stitch(bbox, width_px, out_path, layer="bluemarble", quality=86):
     s = 256 * n / (2 * math.pi)
     return {"layer": name, "zoom": z, "tiles": len(tiles), "size": list(img.size), "bytes": buf.tell(), "quality": q,
             "scale": s, "translate": [s * math.pi - x0 * 256, s * math.pi - y0 * 256], "bbox": [lon0, lat0, lon1, lat1],
-            "credit": credit, "licence": "PD-USGov", "provider": "NASA GIBS"}
+            "credit": credit, "licence": licence, "provider": provider}
 
 
 if __name__ == "__main__":

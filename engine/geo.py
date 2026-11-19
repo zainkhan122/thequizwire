@@ -92,6 +92,10 @@ class Scene:
                     fsrc = self.G.data_dir / d["basemap"]["far"]["src"]; fdst = dst.parent / fsrc.name
                     if fsrc.exists() and (not fdst.exists() or fdst.stat().st_mtime < fsrc.stat().st_mtime): shutil.copy(fsrc, fdst)
                     d["basemap"]["far"]["src"] = f"assets/geo/{fsrc.name}"
+                for nr in d["basemap"].get("near") or []:
+                    nsrc = self.G.data_dir / nr["src"]; ndst = dst.parent / nsrc.name
+                    if nsrc.exists() and (not ndst.exists() or ndst.stat().st_mtime < nsrc.stat().st_mtime): shutil.copy(nsrc, ndst)
+                    nr["src"] = f"assets/geo/{nsrc.name}"
             for cc, rel in list((d.get("flags") or {}).items()):          # flag-icons SVGs used by lifts / characters
                 src = self.G.data_dir / rel; dst = self.G.hf / "assets" / "geo" / "flags" / src.name
                 dst.parent.mkdir(parents=True, exist_ok=True)
@@ -252,6 +256,32 @@ class Scene:
             if L.get("for") == did:
                 self.label_in(t + 0.25, L["id"])
 
+    # ---------------------------------------------------------------- owner 2026-11-19: animated objects on the map
+    def pin_ping(self, t, pid, dur=0.9, n=1):
+        """Sonar ring bursting out of a pin head (use right after pin_in)."""
+        self.G.J(f"tl.fromTo('#{self.id}_ping_{pid}',{{opacity:0.9,scale:0.3}},{{opacity:0,scale:3.2,duration:{f(dur)},ease:'power2.out',repeat:{n - 1},immediateRender:false}},{f(t)});")
+
+    def disc_in(self, t, did, dur=0.9, frm="drop", dx=0):
+        """Show a true-scale disc (geo.json `discs`). frm: drop = falls onto the map and settles · roll = rolls in from `dx` map-px west (default: 2.4 diameters) · pop."""
+        sel = f"#{self.id}_disc_{did}"; org = f"()=>{{const e=document.querySelector('{sel}');return e?e.getAttribute('data-cx')+' '+e.getAttribute('data-cy'):'0 0'}}"
+        if frm == "drop":
+            self.G.J(f"tl.fromTo('{sel}',{{opacity:0,scale:1.9,svgOrigin:{org}}},{{opacity:0.92,scale:1,duration:{f(dur)},ease:'power3.in',immediateRender:false}},{f(t)});")
+            self.G.J(f"tl.fromTo('{sel}',{{scale:1}},{{scale:0.97,duration:0.12,ease:'power1.out',yoyo:true,repeat:1,immediateRender:false}},{f(t + dur)});")
+        elif frm == "roll":
+            self.G.J(f"{{const e=document.querySelector('{sel}');const r=e?parseFloat(e.getAttribute('data-r')):100;const off={dx if dx else 0}||-(r*4.8);"
+                     f"tl.fromTo(e,{{opacity:0.92,x:off,rotation:-540,svgOrigin:{org}}},{{x:0,rotation:0,duration:{f(dur)},ease:'power2.out',immediateRender:false}},{f(t)});}}")
+        else:
+            self.G.J(f"tl.fromTo('{sel}',{{opacity:0,scale:0.2,svgOrigin:{org}}},{{opacity:0.92,scale:1,duration:{f(dur)},ease:'back.out(1.6)',immediateRender:false}},{f(t)});")
+
+    def disc_out(self, t, did, dur=0.6):
+        """The disc lifts off the map (grows a little while it fades)."""
+        sel = f"#{self.id}_disc_{did}"; org = f"()=>{{const e=document.querySelector('{sel}');return e?e.getAttribute('data-cx')+' '+e.getAttribute('data-cy'):'0 0'}}"
+        self.G.J(f"tl.to('{sel}',{{opacity:0,scale:1.25,svgOrigin:{org},duration:{f(dur)},ease:'power2.in'}},{f(t)});")
+
+    def disc_pulse(self, t, did, dur=0.8):
+        sel = f"#{self.id}_disc_{did}"; org = f"()=>{{const e=document.querySelector('{sel}');return e?e.getAttribute('data-cx')+' '+e.getAttribute('data-cy'):'0 0'}}"
+        self.G.J(f"tl.fromTo('{sel}',{{scale:1,svgOrigin:{org}}},{{scale:1.04,duration:{f(dur / 2)},ease:'sine.inOut',yoyo:true,repeat:1,immediateRender:false}},{f(t)});")
+
     def scalebar_in(self, t, dur=0.3):
         self.G.J(f"tl.fromTo('#{self.id}_scale',{{autoAlpha:0}},{{autoAlpha:1,duration:{f(dur)},immediateRender:false}},{f(t)});")
 
@@ -306,6 +336,14 @@ CSS = f"""
 .geo .geo-pin .pinlabel{{position:absolute;left:22px;top:-24px;white-space:nowrap;font-family:'Oswald';font-weight:600;font-size:36px;letter-spacing:.04em;color:{CREAM};background:{INK};padding:4px 14px 2px;border-left:6px solid {RED}}}
 .geo .geo-pin.left .pinlabel{{left:auto;right:22px;border-left:0;border-right:6px solid {RED}}}   /* pins {{"side": "left"}}: label runs west of the head (avoids a neighbour to the east) */
 .geo .geo-pin.back,.geo .geo-label.back{{visibility:hidden!important}}
+.geo .geo-pin .ping{{position:absolute;left:-22px;top:-22px;width:44px;height:44px;border-radius:50%;border:5px solid #FF2D2D;opacity:0;pointer-events:none}}
+.geo .g-disc{{opacity:0}}
+/* owner 2026-11-19 — neon map lines: glowing border trace / route over the bright satellite raster */
+.geo .g-feature.draw.neon{{stroke:#FFE600;stroke-width:7;filter:drop-shadow(0 0 6px rgba(255,230,0,.95)) drop-shadow(0 0 18px rgba(255,200,0,.75)) drop-shadow(0 0 2px rgba(0,0,0,.9))}}
+.geo .g-highlight.neon{{fill:rgba(255,230,0,.10);stroke:#FFE600;stroke-width:4;filter:drop-shadow(0 0 8px rgba(255,230,0,.9)) drop-shadow(0 0 22px rgba(255,200,0,.6))}}
+.geo .g-route.neon{{stroke:#FF3B3B;stroke-width:8;filter:drop-shadow(0 0 6px rgba(255,59,59,.95)) drop-shadow(0 0 18px rgba(255,59,59,.7)) drop-shadow(0 0 2px rgba(0,0,0,.9))}}
+.geo .g-route.neon.blue{{stroke:#36C9FF;filter:drop-shadow(0 0 6px rgba(54,201,255,.95)) drop-shadow(0 0 18px rgba(54,201,255,.7)) drop-shadow(0 0 2px rgba(0,0,0,.9))}}
+.geo .g-route.neon.dashed{{stroke-dasharray:18 14}}
 .geo .geo-label{{position:absolute;width:0;height:0}}
 .geo .geo-label .lbl,.geo .geo-label>span{{position:absolute;left:0;top:0;transform:translate(-50%,-50%);white-space:nowrap}}
 .geo .geo-label.al>span{{transform:translate(0,-50%)}}      /* cls "al": label starts at the anchor (runs east) */

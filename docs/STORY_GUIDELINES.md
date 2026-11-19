@@ -91,3 +91,14 @@ quizlint skips `story-v1`; `storylint` (new) checks: shape + hook present, 110�
 highlight beat on its cue word, ≥ 1 keyword caption per story scene, ≤ 2 highlight colours per scene, cover has no
 twist word, close answers the open (shared key noun), spoilers not in copy. Pacelint, geolint, textqa, layout,
 claim ledger, two-publisher rule, border policy: unchanged and mandatory.
+
+## v2 look (owner rejection 2026-11-19: "very few camera moves · too much text · basic animation · 360p maps")
+Every new story episode follows these, enforced where a lint can:
+1. **Basemap**: `geo.basemap: "s2"` — Sentinel-2 cloudless (EOX, 10 m/px, bright daylight; CC BY 4.0). Main raster z7 for a continent
+   (`pad_deg` 8, `k_max` ≈ 4), `near` patches under every deep camera (`[{lonlat, k, pad}]`), far raster for the wide opener.
+   Attribution is mandatory → top-level `screen_credit` (shown under the outro, copied into the post copy; provenance allows exactly that string).
+2. **Camera**: continuous. Opener = `plunge` from a high-altitude wide view (k ≈ 0.4) down onto the subject while the neon border traces
+   (`layers[].neon`). Every beat has a `cam_path` so the camera is never still; dives (k 3+) onto pins, tracking pans between them.
+3. **Text**: ONE text element at a time (storylint S3): a kw caption OR a counter OR a card, never stacked. Pin labels ≤ 3 words.
+4. **Animation**: each beat animates an object on the map — `plane` rig flown with `geo.travel`, true-scale `discs` (`geo.disc_in roll|drop|pop`),
+   `geo.pin_ping` sonar rings after every pin, props with drop shadows (`prop.*`), neon routes (`cls: "neon"`, `"neon blue"`, `"neon dashed"`).

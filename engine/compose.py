@@ -23,7 +23,7 @@ visuals.json
                fx.flash
 A bare `python3 engine/compose.py` on the template episode is the engine smoke test (tests/selftest.py).
 """
-import json, re, shutil, sys
+import html, json, re, shutil, sys
 from pathlib import Path
 
 ENGINE = Path(__file__).resolve().parent
@@ -233,6 +233,10 @@ class Composer:
         if self.story:                                                                               # Geo Stories: title block + keyword captions + close line + outro (docs/STORY_GUIDELINES.md)
             st = E["story"]; self.J("tl.set('#bug',{autoAlpha:0},0);")
             self.body.append(self.ST.title("title", st["place"], st["headline"]))
+            if E.get("screen_credit"):                                                                   # CC BY basemap (Sentinel-2 cloudless): attribution line under the outro, owner 2026-11-19
+                self.body.append(f'<div id="scredit" class="scredit tu" data-fc="skip" data-tq-dwell="off" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">{html.escape(E["screen_credit"])}</div>')
+                t_cta = next((self.T(b["at"]) for b in self.V.get("beats", []) if b.get("do") == "cta_in"), None)
+                if t_cta is not None: self.J(f"tl.fromTo('#scredit',{{autoAlpha:0}},{{autoAlpha:1,duration:0.4,immediateRender:false}},{t_cta + 0.4:.3f});")
             o = st.get("outro", {}); self.body.append(Q.outro3(headline=o.get("headline", "KNOW A STRANGER PLACE?"), url=o.get("url", "thequizwire.com")))
             self.caption_count = 0
         elif self.v3:

@@ -165,8 +165,15 @@ def main():
             audit.append({"file": rel, "provenance": src})
             if not src:
                 F.append(f"built file {rel} has no provenance (add it to media.json 'files' or 'generated')")
-        for pat in (r"public domain", r"cc[ -]by", r"map data:", r"voice: ai", r"©"):          # owner 2026-10-22: no legal/credit/source text may reach the screen
-            if re.search(pat, text): F.append(f"credit/legal text found in the composition ({pat!r}) — the video must carry none")
+        # owner 2026-10-22: no legal/credit/source text may reach the screen — EXCEPT (owner 2026-11-19, Sentinel-2 basemap) the one declared
+        # episode.json `screen_credit` line, which a CC BY asset in the build requires; that exact string is allowed, nothing else.
+        try: scredit = norm(json.loads((ep / "episode.json").read_text()).get("screen_credit") or "")
+        except Exception: scredit = ""
+        attrib_shipped = any((g.get("licence") in ATTRIBUTION) for g in (man.get("generated") or {}).values()) or any((f_.get("licence") in ATTRIBUTION) for f_ in (man.get("files") or {}).values())
+        if scredit and not attrib_shipped: F.append("episode.json screen_credit is set but no attribution-licensed asset is shipped — drop the credit line")
+        text_chk = text.replace(scredit, " ") if scredit and attrib_shipped else text
+        for pat in (r"public domain", r"cc[ -]by", r"map data:", r"voice: ai", r"©"):
+            if re.search(pat, text_chk): F.append(f"credit/legal text found in the composition ({pat!r}) — the video must carry none beyond episode.json screen_credit")
     else:
         W.append(f"{hf}/index.html not built — output audit and on-screen credits not checked")
 

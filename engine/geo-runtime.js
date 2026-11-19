@@ -190,13 +190,34 @@
         const a = C.proj(ref), b = bp(ref), ox = a[0] - f * b[0], oy = a[1] - f * b[1];
         return `<image id="${id}_basemap${sfx}" class="geo-basemap" href="${bm.src}" width="${bm.size[0]}" height="${bm.size[1]}" transform="matrix(${f} 0 0 ${f} ${ox} ${oy})" preserveAspectRatio="none"></image>`;
       };
-      raster = (data.basemap.far ? place(data.basemap.far, "_far") : "") + place(data.basemap, "");
+      const near = (data.basemap.near || []).map((nr, j) => {                   // high-zoom patches: feathered edges so the resolution step never shows as a seam
+        const bp = d3.geoMercator().scale(nr.scale).translate(nr.translate), f = C.proj.scale() / nr.scale;
+        const a = C.proj(ref), b = bp(ref), ox = a[0] - f * b[0], oy = a[1] - f * b[1], w = nr.size[0], h = nr.size[1], mid = id + "_near" + j;
+        return `<defs><radialGradient id="${mid}_rg" cx="50%" cy="50%" r="50%"><stop offset="0.62" stop-color="#fff"></stop><stop offset="1" stop-color="#000"></stop></radialGradient>` +
+               `<mask id="${mid}_m" maskUnits="userSpaceOnUse" x="0" y="0" width="${w}" height="${h}"><ellipse cx="${w / 2}" cy="${h / 2}" rx="${w / 2}" ry="${h / 2}" fill="url(#${mid}_rg)"></ellipse></mask></defs>` +
+               `<g transform="matrix(${f} 0 0 ${f} ${ox} ${oy})"><image id="${mid}" class="geo-basemap" href="${nr.src}" width="${w}" height="${h}" mask="url(#${mid}_m)" preserveAspectRatio="none"></image></g>`;
+      }).join("");
+      raster = (data.basemap.far ? place(data.basemap.far, "_far") : "") + place(data.basemap, "") + near;
       el.classList.add("has-basemap");
     }
-    el.innerHTML = `<svg class="geo-svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><g id="${id}_cam">${raster}${svgLayers}</g></svg><div class="geo-ui" id="${id}_ui"></div>`;
+    // discs (owner 2026-11-19, true-scale props): a circle of `km` diameter at a lon/lat, drawn IN MAP UNITS so it zooms with the camera.
+    // Radius = half the diameter measured along the parallel (Mercator: locally conformal, so a circle on the map is a circle on the ground).
+    const discs = (spec.discs || []).map((D) => {
+      const [lon, lat] = D.lonlat, c = C.proj(D.lonlat), dl = (D.km / 2) / (111.32 * Math.cos(lat * Math.PI / 180)), e = C.proj([lon + dl, lat]);
+      if (!c || !e) return "";
+      const r = Math.hypot(e[0] - c[0], e[1] - c[1]), did = id + "_disc_" + D.id, cx = c[0].toFixed(2), cy = c[1].toFixed(2);
+      const craters = [[-0.42, -0.18, 0.12], [0.22, -0.4, 0.09], [0.35, 0.28, 0.15], [-0.1, 0.45, 0.08], [-0.55, 0.3, 0.07], [0.05, -0.05, 0.06], [0.58, -0.1, 0.06]]
+        .map(([x, y, s]) => `<circle cx="${(c[0] + x * r).toFixed(2)}" cy="${(c[1] + y * r).toFixed(2)}" r="${(s * r).toFixed(2)}" fill="rgba(70,76,88,.55)" stroke="rgba(255,255,255,.25)" stroke-width="${(r * 0.012).toFixed(2)}"></circle>`).join("");
+      return `<g id="${did}" class="g-disc ${D.cls || ""}" data-cx="${cx}" data-cy="${cy}" data-r="${r.toFixed(2)}" style="opacity:0">` +
+        `<defs><radialGradient id="${did}_g" cx="38%" cy="34%" r="70%"><stop offset="0" stop-color="#f4f4f1"></stop><stop offset="0.55" stop-color="#b9bcc3"></stop><stop offset="1" stop-color="#5f6670"></stop></radialGradient>` +
+        `<filter id="${did}_sh" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="${(r * 0.06).toFixed(1)}" dy="${(r * 0.1).toFixed(1)}" stdDeviation="${(r * 0.08).toFixed(1)}" flood-color="#000" flood-opacity="0.55"></feDropShadow></filter></defs>` +
+        `<circle cx="${cx}" cy="${cy}" r="${r.toFixed(2)}" fill="url(#${did}_g)" filter="url(#${did}_sh)"></circle>${craters}` +
+        `<circle cx="${cx}" cy="${cy}" r="${r.toFixed(2)}" fill="none" stroke="rgba(255,255,255,.85)" stroke-width="${(r * 0.014).toFixed(2)}"></circle></g>`;
+    }).join("");
+    el.innerHTML = `<svg class="geo-svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><g id="${id}_cam">${raster}${discs}${svgLayers}</g></svg><div class="geo-ui" id="${id}_ui"></div>`;
     const ui = el.querySelector(".geo-ui");
     const html = [];
-    for (const p of C.pins) html.push(`<div class="geo-pin ${p.cls || ""}${p.side === "left" ? " left" : ""}" id="${id}_pin_${p.id}" style="visibility:hidden;opacity:0" data-layout-allow-overlap="true"><div class="pinhead"></div>${p.label ? `<div class="pinlabel tu" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">${esc(p.label)}</div>` : ""}</div>`);
+    for (const p of C.pins) html.push(`<div class="geo-pin ${p.cls || ""}${p.side === "left" ? " left" : ""}" id="${id}_pin_${p.id}" style="visibility:hidden;opacity:0" data-layout-allow-overlap="true"><div class="ping" id="${id}_ping_${p.id}"></div><div class="pinhead"></div>${p.label ? `<div class="pinlabel tu" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">${esc(p.label)}</div>` : ""}</div>`);
     for (const l of C.labels) html.push(`<div class="geo-label tu ${l.cls || ""}" id="${id}_lbl_${l.id}" style="visibility:hidden;opacity:0" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">${l.html ? l.html.replace(/^<div class="plate"/, '<div class="plate" data-layout-allow-overlap="true" data-layout-allow-occlusion="true"') : ("<span data-layout-allow-overlap=\"true\" data-layout-allow-occlusion=\"true\">" + esc(l.text || "") + "</span>")}</div>`);   // span = centred on the anchor (CSS translate(-50%,-50%)), like the SVG preview
     if (C.scalebar) html.push(`<div class="geo-scale tu" id="${id}_scale" data-km="${C.scalebar.km}" data-layout-allow-overlap="true" data-layout-allow-occlusion="true"><div class="bar"></div><span>${C.scalebar.km.toLocaleString("en-US")} km at ${Math.round(C.scalebar.lat)}°</span></div>`);
     ui.innerHTML = html.join("");

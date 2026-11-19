@@ -28,6 +28,7 @@
  "credits": [
   "Natural Earth"
  ],
+ "screen_credit": "Satellite imagery: Sentinel-2 cloudless by EOX (CC BY 4.0) · Contains modified Copernicus Sentinel data 2020 · Natural Earth",
  "post": {
   "title": "The country that is wider than the Moon 🌕",
   "premise": "Lay the Moon across this country and it does not reach the other coast",
@@ -41,7 +42,7 @@
    "geography story",
    "map story"
   ],
-  "description": "From its westernmost rock to its easternmost cape, Australia is almost 4,000 kilometres across. The Moon is 3,474 kilometres wide. This map story draws the full width, then lays the Moon's diameter along it and shows where it runs out.\nDid you know the Moon was that small? Tell us below.",
+  "description": "From its westernmost rock to its easternmost cape, Australia is almost 4,000 kilometres across. The Moon is 3,474 kilometres wide. This map story draws the full width, then lays the Moon's diameter along it and shows where it runs out.\nDid you know the Moon was that small? Tell us below.\nSatellite imagery: Sentinel-2 cloudless by EOX (CC BY 4.0) · Contains modified Copernicus Sentinel data 2020 · Natural Earth",
   "hashtags": [
    "#Geography",
    "#MapStory",
@@ -64,7 +65,7 @@
    ],
    "youtube": {
     "title": "The country that is wider than the Moon 🌕",
-    "description": "From its westernmost rock to its easternmost cape, Australia is almost 4,000 kilometres across. The Moon is 3,474 kilometres wide. This map story draws the full width, then lays the Moon's diameter along it and shows where it runs out.\nDid you know the Moon was that small? Tell us below.",
+    "description": "From its westernmost rock to its easternmost cape, Australia is almost 4,000 kilometres across. The Moon is 3,474 kilometres wide. This map story draws the full width, then lays the Moon's diameter along it and shows where it runs out.\nDid you know the Moon was that small? Tell us below.\nSatellite imagery: Sentinel-2 cloudless by EOX (CC BY 4.0) · Contains modified Copernicus Sentinel data 2020 · Natural Earth",
     "tags": [
      "#Geography",
      "#MapStory",
@@ -73,7 +74,7 @@
     ]
    },
    "instagram": {
-    "caption": "Wider than the Moon 🌕\nFrom its westernmost rock to its easternmost cape, Australia is almost 4,000 km across. The Moon is 3,474 km wide. This map story draws the full width, lays the Moon along it, and shows where it runs out.\nDid you know the Moon was that small?",
+    "caption": "Wider than the Moon 🌕\nFrom its westernmost rock to its easternmost cape, Australia is almost 4,000 km across. The Moon is 3,474 km wide. This map story draws the full width, lays the Moon along it, and shows where it runs out.\nDid you know the Moon was that small?\nSatellite imagery: Sentinel-2 cloudless by EOX (CC BY 4.0) · Contains modified Copernicus Sentinel data 2020 · Natural Earth",
     "tags": [
      "#Geography",
      "#MapStory",
@@ -83,7 +84,7 @@
     ]
    },
    "facebook": {
-    "text": "From its westernmost rock to its easternmost cape, Australia is almost 4,000 kilometres across. The Moon is 3,474 kilometres wide. This map story draws the full width, then lays the Moon's diameter along it and shows where it runs out. Did you know the Moon was that small?",
+    "text": "From its westernmost rock to its easternmost cape, Australia is almost 4,000 kilometres across. The Moon is 3,474 kilometres wide. This map story draws the full width, then lays the Moon's diameter along it and shows where it runs out. Did you know the Moon was that small?\nSatellite imagery: Sentinel-2 cloudless by EOX (CC BY 4.0) · Contains modified Copernicus Sentinel data 2020 · Natural Earth",
     "tags": [
      "#Geography",
      "#Space"
@@ -111,7 +112,7 @@
   "question": "story",
   "story_shape": "number-nobody-believes",
   "hook": "cold-open",
-  "opener": "wide-drift",
+  "opener": "plunge",
   "reveal": "none",
   "beats": [
    "pin",
