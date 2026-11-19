@@ -462,12 +462,30 @@ def burn(video, cover, out, secs=0.3, fps=30):
     return out
 
 
+def verify(video, cover_jpg, max_diff=12.0):
+    """Frame-0 gate (owner rule 2026-11-19): decode the first frame of `video` and compare it with the cover JPG
+    (mean absolute RGB difference at 108×192). Returns the diff; raises SystemExit when the reel does not open on its cover."""
+    import tempfile, subprocess
+    from PIL import Image, ImageChops, ImageStat
+    with tempfile.TemporaryDirectory() as td:
+        f0 = Path(td) / "f0.png"
+        subprocess.run([ffmpeg_exe(), "-v", "error", "-y", "-i", str(video), "-frames:v", "1", str(f0)], check=True)
+        a = Image.open(f0).convert("RGB").resize((108, 192)); b = Image.open(cover_jpg).convert("RGB").resize((108, 192))
+        diff = sum(ImageStat.Stat(ImageChops.difference(a, b)).mean) / 3
+    if diff > max_diff: sys.exit(f"cover verify: frame 0 differs from the cover (mean |Δ| {diff:.1f} > {max_diff}) — run cover.py --burn before publishing")
+    print(f"frame 0 = cover (mean |Δ| {diff:.1f})"); return diff
+
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("episode"); ap.add_argument("--style", default=DEFAULT_STYLE, choices=list(STYLES))
     ap.add_argument("--frame"); ap.add_argument("--video"); ap.add_argument("--out"); ap.add_argument("--all", action="store_true", help="render every style")
     ap.add_argument("--jpg", help="also save a JPG copy (YouTube thumbnail, < 2 MB)")
     ap.add_argument("--burn", help="write a copy of --video with the cover as its first 0.3 s to this path")
+    ap.add_argument("--verify", help="gate only: check that frame 0 of this MP4 is the cover given by --jpg (exit 1 otherwise)")
     a = ap.parse_args()
+    if a.verify:
+        if not a.jpg: sys.exit("cover: --verify needs --jpg <cover.jpg>")
+        verify(a.verify, a.jpg); return
     C = context(a.episode, a.frame, a.video)
     if C["E"].get("format") == "story-v1" and not a.all: a.style = "story"                                 # stories always get the title + place card
     for s in (STYLES if a.all else [a.style]):

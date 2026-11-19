@@ -65,6 +65,13 @@ Story shapes (variety axis `story_shape`; never two days in a row, never the pre
 Style B frame, **title only** (owner 2026-11-19: no place kicker — naming the country gives the curiosity away): the headline (≤ 7 words, white, one yellow keyword), the
 series tag "GEO STORIES · #n", brand footer. No options, no timer, no map that gives the twist away. The cover must
 not reveal the twist (same hard rule as the quiz covers).
+- **Frame 0 IS the cover — production rule, not a note (owner 2026-11-19).** Instagram, Facebook, X and Threads show
+  the first frame of a reel as its cover, so every published master opens on its cover card for 0.3 s (audio shifted to
+  match). Enforced in three places: `reelkit/local_render.py` burns it into every full local render (what you review is
+  what ships); `reelkit/dispatch.sh` burns it into the release master and then **refuses to post** if the burn fails or
+  if `cover.py --verify` finds frame 0 ≠ the cover JPG; YouTube gets the same JPG as its custom thumbnail from
+  `reelkit/yt_enrich.py` after Buffer publishes (frame 0 is irrelevant there — YouTube picks/uses the thumbnail).
+  Manual uploads: use the release master as-is, never the plain render.
 
 ## 6. Copy
 Title carries the search term verbatim + the place; descriptions promise the question, never the twist; a comment

@@ -17,6 +17,7 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument("ep"); ap.add_argument("--fps", type=int, default=30); ap.add_argument("--crf", type=int, default=20)
     ap.add_argument("--scale", type=float, default=1.0, help="0.5 = 540x960 preview"); ap.add_argument("--out", default="final.mp4")
     ap.add_argument("--t0", type=float, default=0.0); ap.add_argument("--t1", type=float, default=None); ap.add_argument("--sheet", type=int, default=12)
+    ap.add_argument("--no-cover", action="store_true", help="skip the frame-0 cover burn (debug only)")
     a = ap.parse_args()
     ep = pathlib.Path(a.ep).resolve(); build = pathlib.Path(os.environ.get("BUILD") or pathlib.Path.home() / ".cache/build" / ep.name); hf = build / "hf"
     html = hf / "index.html"; assert html.exists(), f"no composition at {html} (run episode.sh <ep> build)"
@@ -50,6 +51,13 @@ def main():
         subprocess.run([ff, "-v", "error", "-y", "-i", str(tmp), "-ss", f"{a.t0:.3f}", "-t", f"{t1 - a.t0:.3f}", "-i", str(mix), "-map", "0:v", "-map", "1:a",
                         "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", str(out)], check=True); tmp.unlink()
     else: tmp.rename(out)
+    # production rule (owner 2026-11-19): frame 0 of every full reel is its cover — burn it here too, so the local review copy IS what ships
+    if a.t0 == 0 and a.t1 is None and not a.no_cover:
+        plain = out.with_name(out.stem + ".plain.mp4"); out.rename(plain)
+        r = subprocess.run([sys.executable, str(pathlib.Path(__file__).with_name("cover.py")), str(ep), "--video", str(plain), "--out", str(out.with_name("cover.png")),
+                            "--jpg", str(out.with_name("cover.jpg")), "--burn", str(out)], capture_output=True, text=True)
+        if r.returncode == 0: plain.unlink(); print("cover: burned into frame 0 ·", out.with_name("cover.jpg"))
+        else: plain.rename(out); print("cover: burn FAILED — plain render kept (fix before publishing):", (r.stderr or r.stdout).strip()[-400:])
     # contact sheet
     try:
         from PIL import Image, ImageDraw; import io

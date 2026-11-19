@@ -44,8 +44,13 @@ for EP in "${EPS[@]}"; do
     echo "   cover: burned in ($(tail -1 "$EP/out/cover.log"))"
     [ -n "${TAG:-}" ] && [ -n "${GH_TOKEN:-}" ] && gh release upload "$TAG" "$EP/out/${STEM}_cover.jpg" --clobber >/dev/null 2>&1 && echo "   cover: ${STEM}_cover.jpg attached to release $TAG"
   else
-    echo "::warning::$NAME: cover failed — posting the plain render"; tail -3 "$EP/out/cover.log"; cp "$EP/out/render.mp4" "$EP/out/final.mp4"
+    echo "::error::$NAME: cover failed — NOT posting (owner rule 2026-11-19: frame 0 of every reel is its cover)"; tail -3 "$EP/out/cover.log"; echo "| $NAME | cover FAIL | — | — | — | — | — |" >> "$SUMMARY"; FAILS=$((FAILS+1)); continue
   fi
+  # gate: frame 0 of the file we are about to publish must BE the cover (catches a stale/bypassed burn before anything is uploaded)
+  if ! python3 "$REPO/reelkit/cover.py" "$EP" --verify "$EP/out/final.mp4" --jpg "$EP/out/${STEM}_cover.jpg" > "$EP/out/cover_verify.log" 2>&1; then
+    echo "::error::$NAME: frame 0 is not the cover — NOT posting"; tail -3 "$EP/out/cover_verify.log"; echo "| $NAME | frame-0 cover FAIL | — | — | — | — | — |" >> "$SUMMARY"; FAILS=$((FAILS+1)); continue
+  fi
+  echo "   cover: frame 0 verified ($(tail -1 "$EP/out/cover_verify.log"))"
   if ! python3 "$REPO/reelkit/postkit.py" build "$EP" > "$EP/out/postkit.log" 2>&1; then echo "   postkit FAIL"; tail -5 "$EP/out/postkit.log"; echo "| $NAME | postkit FAIL | — | — | — | — | — |" >> "$SUMMARY"; FAILS=$((FAILS+1)); continue; fi
   grep -E "WARN|FAIL" "$EP/out/postkit.log" | sed 's/^/   /'
   rm -f "$EP/out/media_url.txt"; CAND+=("$EP")
