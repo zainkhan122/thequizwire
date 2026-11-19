@@ -2,7 +2,7 @@
  "version": 1,
  "episode": "st03-point-nemo-farthest-from-land",
  "topic": "Point Nemo (48°52.6′S 123°23.6′W), the oceanic pole of inaccessibility, lies about 2,688 km from the nearest land (Ducie Island, Motu Nui, Maher Island); the ISS orbits at about 400 km, so its crew are at times the nearest humans; the surrounding area is used as the 'spacecraft cemetery' where 260+ spacecraft including Mir were deorbited.",
- "researched": "2026-11-18",
+ "researched": "2026-11-19",
  "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
  "myths": [
   {
@@ -139,7 +139,7 @@
     "the loneliest point in the ocean, where the only neighbours pass by in orbit"
    ],
    "screen": [
-    "2,688 km to any coast",
+    "farthest from any land",
     "km to the nearest land",
     "Point Nemo",
     "closer than any coast at 2,688 km"
@@ -180,7 +180,7 @@
    ],
    "screen": [
     "nearest humans: in orbit",
-    "400 km up · closest people",
+    "the closest people",
     "ISS ≈ 400 km",
     "Neighbours only in orbit",
     "The place where the nearest people are in space"
@@ -200,7 +200,7 @@
     "that emptiness is useful. space agencies steer dead spacecraft to burn up and fall here, more than 250 of them so far, including the mir space station"
    ],
    "screen": [
-    "the spacecraft cemetery",
+    "dead spacecraft fall here",
     "spacecraft brought down here (1971–2016)"
    ]
   }
