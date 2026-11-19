@@ -1,0 +1,1277 @@
+{
+ "id": "st06-challenger-deep-swallows-everest",
+ "series": "geo-stories",
+ "number": 6,
+ "seed": 5106,
+ "place": "Challenger Deep · Mariana Trench",
+ "headline": "The hole that would *swallow Everest*",
+ "search_term": "challenger deep",
+ "cover": {
+  "place": "",
+  "headline": "Drop Everest in. *It's gone.*"
+ },
+ "intent": "The deepest point in the ocean, Challenger Deep, is about 10,935 m down; Mount Everest is 8,849 m tall, so the whole mountain would sit under more than two kilometres of water.",
+ "variety": {
+  "shape": "number-nobody-believes",
+  "opener": "plunge",
+  "music": "bed:drone",
+  "cast": "none",
+  "beats": [
+   "pin",
+   "counter",
+   "travel",
+   "compare"
+  ]
+ },
+ "post": {
+  "premise": "The deepest hole in the ocean is deeper than Everest is tall, by a lot",
+  "bait": "How deep did you think it was? 👇",
+  "keywords": [
+   "challenger deep",
+   "mariana trench depth",
+   "deepest point in the ocean",
+   "everest in mariana trench",
+   "how deep is the ocean",
+   "deepest place on earth",
+   "geography story",
+   "map story"
+  ],
+  "tags": [
+   "GeoStories",
+   "Ocean"
+  ],
+  "copy": {
+   "spoilers": [
+    "10,935",
+    "10935",
+    "8,849",
+    "2,086"
+   ],
+   "youtube": {
+    "title": "The hole in the ocean that would swallow Everest 🌊",
+    "description": "South-west of Guam the sea floor drops into Challenger Deep, the deepest known point on Earth. This map story pins it, counts the way down, and drops Mount Everest into the trench to show how much water would still be above its summit.\nHow deep did you think it was? Tell us below.",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Ocean",
+     "#Shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Drop Everest in. It vanishes 🌊\nSouth-west of Guam the sea floor falls into Challenger Deep, the deepest known point on Earth. This map story counts the way down, then drops the tallest mountain in and shows how much water would still be above it.\nHow deep did you think it was?",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Ocean",
+     "#GeoReels",
+     "#DidYouKnow"
+    ]
+   },
+   "facebook": {
+    "text": "South-west of Guam the sea floor drops into Challenger Deep, the deepest known point on Earth. This map story pins it, counts the way down, and drops Mount Everest into the trench to show how much water would still be above the summit. How deep did you think it was?",
+    "tags": [
+     "#Geography",
+     "#Ocean"
+    ]
+   },
+   "twitter": {
+    "text": "Drop Everest into the deepest point of the ocean and the summit is still more than 2 km under water. A map story.",
+    "tags": [
+     "#Geography",
+     "#Ocean"
+    ]
+   },
+   "threads": {
+    "text": "There is a spot near Guam where the ocean is so deep that Everest would disappear with two kilometres of water to spare. One-minute map story.",
+    "tags": [
+     "#Ocean"
+    ]
+   }
+  },
+  "cover": {
+   "key_t": 27.0
+  }
+ },
+ "geo": {
+  "fit_bbox": [
+   136,
+   6,
+   150,
+   18
+  ],
+  "far_bbox": [
+   80,
+   -12,
+   165,
+   40
+  ],
+  "resolution": "50m",
+  "k_max": 2.4,
+  "layers": [],
+  "pins": [
+   {
+    "id": "cd",
+    "lonlat": [
+     142.59,
+     11.37
+    ],
+    "label": "Challenger Deep",
+    "side": "right"
+   },
+   {
+    "id": "guam",
+    "lonlat": [
+     144.79,
+     13.44
+    ],
+    "label": "Guam",
+    "side": "right"
+   },
+   {
+    "id": "ev",
+    "lonlat": [
+     86.925,
+     27.988
+    ],
+    "label": "Mount Everest",
+    "side": "left"
+   }
+  ],
+  "labels": [
+   {
+    "id": "trench",
+    "lonlat": [
+     143.6,
+     10.3
+    ],
+    "text": "MARIANA TRENCH",
+    "cls": "tag",
+    "in": "s02+99",
+    "out": null
+   }
+  ],
+  "scalebar": {
+   "km": 200,
+   "lonlat": [
+    136.6,
+    6.6
+   ]
+  },
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "trenchline",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "trench",
+       "properties": {
+        "name": "Mariana Trench axis (approx.)"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          147.6,
+          18.6
+         ],
+         [
+          147.2,
+          16.2
+         ],
+         [
+          146.5,
+          14.0
+         ],
+         [
+          145.4,
+          12.3
+         ],
+         [
+          143.9,
+          11.4
+         ],
+         [
+          142.59,
+          11.37
+         ],
+         [
+          141.5,
+          11.5
+         ],
+         [
+          140.0,
+          11.9
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "kind": "route",
+    "id": "flight",
+    "cls": "river dashed",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "flight",
+       "properties": {
+        "name": "Everest → Challenger Deep"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          86.925,
+          27.988
+         ],
+         [
+          87.947,
+          27.889
+         ],
+         [
+          88.967,
+          27.782
+         ],
+         [
+          89.985,
+          27.668
+         ],
+         [
+          91.0,
+          27.547
+         ],
+         [
+          92.014,
+          27.418
+         ],
+         [
+          93.025,
+          27.282
+         ],
+         [
+          94.033,
+          27.138
+         ],
+         [
+          95.039,
+          26.988
+         ],
+         [
+          96.042,
+          26.83
+         ],
+         [
+          97.042,
+          26.665
+         ],
+         [
+          98.039,
+          26.494
+         ],
+         [
+          99.034,
+          26.315
+         ],
+         [
+          100.025,
+          26.129
+         ],
+         [
+          101.012,
+          25.937
+         ],
+         [
+          101.997,
+          25.738
+         ],
+         [
+          102.978,
+          25.533
+         ],
+         [
+          103.956,
+          25.321
+         ],
+         [
+          104.931,
+          25.102
+         ],
+         [
+          105.901,
+          24.878
+         ],
+         [
+          106.869,
+          24.646
+         ],
+         [
+          107.832,
+          24.409
+         ],
+         [
+          108.792,
+          24.166
+         ],
+         [
+          109.749,
+          23.917
+         ],
+         [
+          110.701,
+          23.661
+         ],
+         [
+          111.65,
+          23.401
+         ],
+         [
+          112.595,
+          23.134
+         ],
+         [
+          113.536,
+          22.862
+         ],
+         [
+          114.474,
+          22.584
+         ],
+         [
+          115.407,
+          22.301
+         ],
+         [
+          116.337,
+          22.012
+         ],
+         [
+          117.263,
+          21.718
+         ],
+         [
+          118.185,
+          21.419
+         ],
+         [
+          119.104,
+          21.115
+         ],
+         [
+          120.018,
+          20.807
+         ],
+         [
+          120.929,
+          20.493
+         ],
+         [
+          121.836,
+          20.175
+         ],
+         [
+          122.74,
+          19.852
+         ],
+         [
+          123.639,
+          19.524
+         ],
+         [
+          124.535,
+          19.192
+         ],
+         [
+          125.428,
+          18.856
+         ],
+         [
+          126.317,
+          18.515
+         ],
+         [
+          127.202,
+          18.17
+         ],
+         [
+          128.084,
+          17.822
+         ],
+         [
+          128.962,
+          17.469
+         ],
+         [
+          129.837,
+          17.113
+         ],
+         [
+          130.708,
+          16.752
+         ],
+         [
+          131.576,
+          16.389
+         ],
+         [
+          132.441,
+          16.021
+         ],
+         [
+          133.303,
+          15.65
+         ],
+         [
+          134.162,
+          15.276
+         ],
+         [
+          135.017,
+          14.898
+         ],
+         [
+          135.87,
+          14.518
+         ],
+         [
+          136.719,
+          14.134
+         ],
+         [
+          137.566,
+          13.747
+         ],
+         [
+          138.41,
+          13.358
+         ],
+         [
+          139.251,
+          12.965
+         ],
+         [
+          140.09,
+          12.57
+         ],
+         [
+          140.926,
+          12.173
+         ],
+         [
+          141.759,
+          11.773
+         ],
+         [
+          142.59,
+          11.37
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "cams": {
+   "start": [
+    0.7,
+    [
+     142.0,
+     12.5
+    ]
+   ],
+   "open": [
+    1.8,
+    [
+     142.6,
+     11.4
+    ]
+   ]
+  },
+  "pin_beats": [],
+  "subject": {
+   "fid": "trench",
+   "layer": "trenchline"
+  },
+  "projection_reason": "satellite raster (Web Mercator tiles) for an ocean-depth story; the claims are vertical numbers stated on screen, no area comparison (P1/P2)"
+ },
+ "open": {
+  "vo": {
+   "text": "Somewhere under this patch of blue is a hole deep enough to swallow the tallest mountain on Earth.",
+   "cues": {
+    "blue": "blue",
+    "hole": "hole",
+    "swallow": "swallow",
+    "earth": "earth"
+   }
+  },
+  "tone": "urgent",
+  "energy": 4,
+  "pause_after": 0.45,
+  "cam_dur": 2.4,
+  "cam_hold": [
+   1.82,
+   [
+    142.6,
+    11.4
+   ]
+  ],
+  "kw": {
+   "text": "it *swallows* mountains",
+   "at": "@@swallow-0.3"
+  },
+  "direction": "plunge from wide Pacific onto empty blue; the trench line draws through on 'hole'; the pin lands on 'swallow'",
+  "devices": [
+   {
+    "at": "@@hole-0.2",
+    "do": "geo.route_draw",
+    "until": "@@swallow+0.3",
+    "args": {
+     "rid": "trench",
+     "layer": "trenchline"
+    }
+   },
+   {
+    "at": "@@swallow",
+    "do": "geo.pin_in",
+    "args": {
+     "pid": "cd"
+    }
+   }
+  ]
+ },
+ "beats": [
+  {
+   "vo": {
+    "text": "This is Challenger Deep, at the southern end of the Mariana Trench, about 300 kilometres south-west of Guam.",
+    "cues": {
+     "challenger": "challenger",
+     "southern": "southern",
+     "trench": "trench",
+     "guam": "guam"
+    }
+   },
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "pull back so the whole trench arc is in frame; TRENCH tag; Guam pin drops to the north-east",
+   "cam": [
+    1.0,
+    [
+     144.0,
+     12.6
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    1.0,
+    [
+     144.2,
+     12.8
+    ]
+   ],
+   "kw": {
+    "text": "*Challenger Deep*",
+    "at": "@@challenger-0.05",
+    "until": "@@trench+0.6"
+   },
+   "devices": [
+    {
+     "at": "@@southern",
+     "do": "geo.route_draw",
+     "until": "@@trench+0.4",
+     "args": {
+      "rid": "trench",
+      "layer": "trenchline"
+     }
+    },
+    {
+     "at": "@@trench+0.2",
+     "do": "geo.label_in",
+     "args": {
+      "lid": "trench"
+     }
+    },
+    {
+     "at": "@@guam",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "guam"
+     }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.3",
+     "@@guam-0.3",
+     [
+      1.0,
+      [
+       144.2,
+       12.8
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@guam-0.3",
+     "@@guam+0.6",
+     [
+      1.1,
+      [
+       144.3,
+       12.9
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@guam+0.6",
+     "@.end",
+     [
+      1.1,
+      [
+       144.3,
+       12.9
+      ]
+     ],
+     "none"
+    ]
+   ]
+  },
+  {
+   "vo": {
+    "text": "The sea floor here is about 10,935 metres down. Nearly eleven kilometres of water, pressing down with more than a thousand times the pressure at the surface.",
+    "cues": {
+     "floor": "floor",
+     "10935": "10,935",
+     "eleven": "eleven",
+     "pressure": "pressure"
+    }
+   },
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "tight on the pin; the depth counter rolls all the way down; slow push in as the number climbs",
+   "cam": [
+    1.9,
+    [
+     142.6,
+     11.4
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.92,
+    [
+     142.6,
+     11.4
+    ]
+   ],
+   "kw": {
+    "text": "*10,935 m* down",
+    "at": "@@10935-0.1",
+    "until": "@@pressure-0.3"
+   },
+   "card": {
+    "kicker": "Pressure",
+    "text": "over 1,000× the surface",
+    "at": "@@pressure-0.2",
+    "y": 1010
+   },
+   "elements": [
+    {
+     "id": "depth",
+     "type": "counter",
+     "start": 0,
+     "end": 10935,
+     "y": 560,
+     "label": "metres down · Challenger Deep",
+     "fmt": "int",
+     "size": 150
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@floor",
+     "do": "chart.counter_run",
+     "id": "depth",
+     "until": "@@eleven+0.3",
+     "args": {
+      "steps": 16
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "depth"
+    },
+    {
+     "at": "@+0.2",
+     "do": "geo.label_out",
+     "args": {
+      "lid": "trench"
+     }
+    },
+    {
+     "at": "@+0.3",
+     "do": "geo.pin_out",
+     "args": {
+      "pid": "guam"
+     }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.2",
+     "@@eleven-0.3",
+     [
+      1.92,
+      [
+       142.6,
+       11.4
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@eleven-0.3",
+     "@@eleven+0.8",
+     [
+      2.3,
+      [
+       142.6,
+       11.4
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@eleven+0.8",
+     "@.end",
+     [
+      2.32,
+      [
+       142.6,
+       11.4
+      ]
+     ],
+     "none"
+    ]
+   ]
+  },
+  {
+   "vo": {
+    "text": "Now take Mount Everest, 8,849 metres high, and fly it from the Himalaya to this spot.",
+    "cues": {
+     "everest": "everest",
+     "8849": "8,849",
+     "fly": "fly",
+     "spot": "spot"
+    }
+   },
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "zoom out to show both: Everest pin in the Himalaya; the mountain prop pops on the peak, then arcs across Asia to the trench",
+   "cam": [
+    0.35,
+    [
+     115,
+     20
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.35,
+    [
+     115,
+     20
+    ]
+   ],
+   "kw": {
+    "text": "Everest · *8,849 m*",
+    "at": "@@8849-0.3",
+    "until": "@@spot+0.4"
+   },
+   "elements": [
+    {
+     "id": "mtn",
+     "type": "rig",
+     "rig": "mountain",
+     "x": 540,
+     "y": 900,
+     "size": 220
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@everest",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "ev"
+     }
+    },
+    {
+     "at": "@@everest",
+     "do": "prop.anchor",
+     "id": "mtn",
+     "until": "@@fly",
+     "args": {
+      "lonlat": [
+       86.925,
+       27.988
+      ],
+      "dx": 0,
+      "dy": -70
+     }
+    },
+    {
+     "at": "@@everest+0.2",
+     "do": "prop.pop",
+     "id": "mtn",
+     "args": {
+      "frm": "rise"
+     }
+    },
+    {
+     "at": "@@fly-0.2",
+     "do": "geo.route_draw",
+     "until": "@@spot+0.2",
+     "args": {
+      "rid": "flight",
+      "layer": "flight"
+     }
+    },
+    {
+     "at": "@@fly",
+     "do": "prop.orbit",
+     "id": "mtn",
+     "until": "@@spot+0.2",
+     "args": {
+      "a": [
+       86.925,
+       27.988
+      ],
+      "b": [
+       142.59,
+       11.37
+      ],
+      "height": 260,
+      "roll": 6,
+      "dy": -70
+     }
+    },
+    {
+     "at": "@@spot+0.2",
+     "do": "prop.anchor",
+     "id": "mtn",
+     "until": "s05@drop",
+     "args": {
+      "lonlat": [
+       142.59,
+       11.37
+      ],
+      "dx": 0,
+      "dy": -70
+     }
+    },
+    {
+     "at": "@@spot+0.2",
+     "do": "geo.pin_out",
+     "args": {
+      "pid": "ev"
+     }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.3",
+     "@@fly",
+     [
+      0.35,
+      [
+       115,
+       20
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@fly",
+     "@@spot+0.3",
+     [
+      0.9,
+      [
+       142.6,
+       11.6
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@spot+0.3",
+     "@.end",
+     [
+      0.92,
+      [
+       142.6,
+       11.6
+      ]
+     ],
+     "none"
+    ]
+   ]
+  },
+  {
+   "vo": {
+    "text": "Drop it in. The whole mountain disappears, and its summit would still be more than two kilometres under the surface.",
+    "cues": {
+     "drop": "drop",
+     "disappears": "disappears",
+     "summit": "summit",
+     "surface": "surface"
+    }
+   },
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "climax": true,
+   "direction": "the mountain falls into the trench spot with a splash and is gone; push in on the empty water; card with the 2 km margin",
+   "cam": [
+    1.6,
+    [
+     142.6,
+     11.4
+    ]
+   ],
+   "cam_dur": 1.0,
+   "cam_hold": [
+    1.62,
+    [
+     142.6,
+     11.4
+    ]
+   ],
+   "kw": {
+    "text": "the whole mountain *disappears*",
+    "at": "@@disappears-0.1",
+    "until": "@@summit-0.2"
+   },
+   "card": {
+    "kicker": "Still 2 km under",
+    "text": "10,935 m deep − 8,849 m tall = 2,086 m of water",
+    "at": "@@summit-0.1",
+    "y": 1010
+   },
+   "elements": [
+    {
+     "id": "mtn2",
+     "type": "rig",
+     "rig": "mountain",
+     "x": 540,
+     "y": 900,
+     "size": 220
+    },
+    {
+     "id": "spl",
+     "type": "rig",
+     "rig": "splash",
+     "x": 540,
+     "y": 900,
+     "size": 300
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@drop",
+     "do": "prop.out",
+     "id": "mtn"
+    },
+    {
+     "at": "@@drop",
+     "do": "prop.fall",
+     "id": "mtn2",
+     "args": {
+      "lonlat": [
+       142.59,
+       11.37
+      ],
+      "dx": 0,
+      "dy": -520,
+      "dur": 0.9,
+      "splash": "spl"
+     }
+    },
+    {
+     "at": "@@disappears",
+     "do": "fx.flash",
+     "args": {
+      "peak": 0.6
+     }
+    },
+    {
+     "at": "@@surface",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "trench",
+      "layer": "trenchline",
+      "dur": 0.7
+     }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.0",
+     "@@summit-0.3",
+     [
+      1.62,
+      [
+       142.6,
+       11.4
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@summit-0.3",
+     "@@summit+0.7",
+     [
+      2.1,
+      [
+       142.6,
+       11.4
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@summit+0.7",
+     "@.end",
+     [
+      2.12,
+      [
+       142.6,
+       11.4
+      ]
+     ],
+     "none"
+    ]
+   ]
+  }
+ ],
+ "close": {
+  "vo": {
+   "text": "The deepest place on Earth: a hole so deep the highest mountain simply vanishes into it.",
+   "cues": {
+    "deepest": "deepest",
+    "hole": "hole",
+    "vanishes": "vanishes"
+   }
+  },
+  "text": "Everest simply *vanishes*",
+  "tone": "revelatory",
+  "energy": 5,
+  "pause_after": 0.5,
+  "y": 760,
+  "cam": [
+   1.2,
+   [
+    142.6,
+    11.6
+   ]
+  ],
+  "cam_dur": 1.6,
+  "devices": [
+   {
+    "at": "@@hole",
+    "do": "geo.route_draw",
+    "until": "@@vanishes+0.4",
+    "args": {
+     "rid": "trench",
+     "layer": "trenchline"
+    }
+   }
+  ]
+ },
+ "cta": {
+  "vo": {
+   "text": "Follow for a new map story every day."
+  }
+ },
+ "outro_headline": "KNOW A STRANGER PLACE?",
+ "research": {
+  "topic": "Challenger Deep, at the southern end of the Mariana Trench about 300 km south-west of Guam, is the deepest known point in the ocean at about 10,935 m (2020 survey, ±6 m); Mount Everest is 8,849 m (2020 Nepal–China survey), so its summit would be about 2,086 m under water; pressure exceeds 1,000 atmospheres.",
+  "myths": [
+   {
+    "myth": "Challenger Deep is a narrow vertical shaft.",
+    "reality": "It is a slot-shaped depression in the trench floor, several kilometres long; the 'hole' is a long, deep valley, not a well."
+   }
+  ],
+  "landscape": {
+   "our_gap": "Mariana Trench Shorts are side-view infographics or submarine footage; nobody pins the spot on the satellite map, counts the depth down, and actually drops Everest in with the margin stated.",
+   "existing": [
+    {
+     "title": "How deep is the Mariana Trench?",
+     "format": "side-view infographic animation",
+     "gap": "no map location"
+    },
+    {
+     "title": "Everest vs Mariana Trench",
+     "format": "comparison graphic",
+     "gap": "no narrative, no spot"
+    },
+    {
+     "title": "Deepest dive ever (Victor Vescovo)",
+     "format": "news footage",
+     "gap": "no scale"
+    }
+   ]
+  },
+  "sources": {
+   "noaa_deep": {
+    "type": "primary",
+    "publisher": "NOAA Ocean Exploration",
+    "title": "How deep is the ocean? / Challenger Deep",
+    "url": "https://oceanexplorer.noaa.gov/facts/deepest.html",
+    "date": "2026-11-19",
+    "notes": "Challenger Deep in the Mariana Trench is the deepest known point, about 10,935 m; it lies south-west of Guam."
+   },
+   "noaa_pressure": {
+    "type": "primary",
+    "publisher": "NOAA National Ocean Service",
+    "title": "How does pressure change with ocean depth?",
+    "url": "https://oceanservice.noaa.gov/facts/pressure.html",
+    "date": "2026-11-19",
+    "notes": "Pressure increases about 1 atm per 10 m; at the bottom of Challenger Deep pressure is over 1,000 atmospheres (more than 8 tons per square inch)."
+   },
+   "stewart_jamieson": {
+    "type": "scholarly",
+    "publisher": "Earth-Science Reviews (Stewart & Jamieson 2019)",
+    "title": "The five deeps: the location and depth of the deepest place in each of the world's oceans",
+    "url": "https://doi.org/10.1016/j.earscirev.2019.102896",
+    "date": "2026-11-19",
+    "notes": "Challenger Deep 10,935 ± 6 m (Five Deeps Expedition multibeam survey)."
+   },
+   "wiki_cd": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Challenger Deep",
+    "url": "https://en.wikipedia.org/wiki/Challenger_Deep",
+    "date": "2026-11-19",
+    "notes": "Depth about 10,935 m (±6 m); located at the southern end of the Mariana Trench, about 320 km south-west of Guam; pressure about 1,086 bar."
+   },
+   "everest_2020": {
+    "type": "primary",
+    "publisher": "Government of Nepal Survey Department / Government of China (joint announcement, 8 Dec 2020)",
+    "title": "Revised height of Sagarmatha / Mount Everest: 8,848.86 m",
+    "url": "https://www.bbc.com/news/world-asia-55218443",
+    "date": "2026-11-19",
+    "notes": "Nepal and China jointly announced Everest's height as 8,848.86 m (rounded 8,849 m) on 8 December 2020."
+   },
+   "nat_geo_everest": {
+    "type": "reference",
+    "publisher": "National Geographic",
+    "title": "Mount Everest is two feet taller, China and Nepal agree",
+    "url": "https://www.nationalgeographic.com/science/article/mount-everest-is-two-feet-taller-china-and-nepal-agree",
+    "date": "2026-11-19",
+    "notes": "Everest's official height is 8,848.86 m (29,031.7 ft)."
+   },
+   "worldatlas": {
+    "type": "reference",
+    "publisher": "WorldAtlas",
+    "title": "Challenger Deep: the deepest point on Earth",
+    "url": "https://www.worldatlas.com/places/challenger-deep-mariana-trench.html",
+    "date": "2026-11-19",
+    "notes": "If Everest were placed in Challenger Deep its summit would still be more than 2 km below the surface."
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Challenger Deep, at the southern end of the Mariana Trench about 300 km south-west of Guam, is the deepest known point in the ocean at about 10,935 m.",
+    "sources": [
+     "noaa_deep",
+     "stewart_jamieson",
+     "wiki_cd"
+    ],
+    "vo": [
+     "this is challenger deep, at the southern end of the mariana trench, about 300 kilometres south-west of guam",
+     "the sea floor here is about 10,935 metres down",
+     "nearly eleven kilometres of water",
+     "somewhere under this patch of blue is a hole deep enough to swallow the tallest mountain on earth",
+     "the deepest place on earth: a hole so deep the highest mountain simply vanishes into it"
+    ],
+    "screen": [
+     "Challenger Deep",
+     "Guam",
+     "MARIANA TRENCH",
+     "10,935 m down",
+     "metres down · Challenger Deep",
+     "The hole that would swallow Everest",
+     "it swallows mountains",
+     "Everest simply vanishes",
+     "Challenger Deep · Mariana Trench"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Pressure at the bottom of Challenger Deep is more than 1,000 times atmospheric pressure at the surface.",
+    "sources": [
+     "noaa_pressure",
+     "wiki_cd"
+    ],
+    "vo": [
+     "pressing down with more than a thousand times the pressure at the surface"
+    ],
+    "screen": [
+     "Pressure",
+     "over 1,000× the surface"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Mount Everest is 8,849 m high (8,848.86 m, 2020 Nepal–China survey).",
+    "sources": [
+     "everest_2020",
+     "nat_geo_everest"
+    ],
+    "vo": [
+     "now take mount everest, 8,849 metres high, and fly it from the himalaya to this spot"
+    ],
+    "screen": [
+     "Mount Everest",
+     "Everest · 8,849 m"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "core",
+    "text": "Placed in Challenger Deep, Everest's summit would be about 2,086 m (more than 2 km) below the surface.",
+    "sources": [
+     "worldatlas",
+     "noaa_deep",
+     "everest_2020"
+    ],
+    "vo": [
+     "drop it in. the whole mountain disappears, and its summit would still be more than two kilometres under the surface"
+    ],
+    "screen": [
+     "the whole mountain disappears",
+     "Still 2 km under",
+     "10,935 m deep − 8,849 m tall = 2,086 m of water"
+    ]
+   }
+  ]
+ }
+}

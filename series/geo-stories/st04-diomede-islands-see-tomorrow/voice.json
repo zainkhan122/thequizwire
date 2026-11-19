@@ -1,0 +1,128 @@
+{
+ "version": 1,
+ "episode": "st04-diomede-islands-see-tomorrow",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "Two islands less than four kilometres apart, with the International Date Line between them, so one is almost a full day ahead of the other; one is a US village, the other a Russian military post.",
+ "pacing_profile": "documentary: cold open, place, why in 2–5 beats, twist, close answers the open, short CTA (docs/STORY_GUIDELINES.md §2)",
+ "pause_policy": "Pause only at the marked ellipses.",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v01",
+ "title": "The island where you can see tomorrow",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "tight on the village shore, a figure waves, the pull-out reveals the second island right there",
+   "text": "From this beach, you can look across the water and see tomorrow.",
+   "cues": {
+    "beach": "beach",
+    "water": "water",
+    "tomorrow": "tomorrow"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "the gap line draws from the village to the Russian island; counter on the distance; Russia fills in solid",
+   "text": "This is Little Diomede, an American village in the Bering Strait. That is Big Diomede, Russian territory, just 3.8 kilometres away.",
+   "cues": {
+    "little": "little",
+    "american": "american",
+    "big": "big",
+    "russian": "russian",
+    "kilometres": "kilometres"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "direction": "the dashed line draws down the strait between the islands; TODAY and TOMORROW tags stamp either side; card with the 21-hour gap",
+   "text": "Between them runs the International Date Line. Cross it, and the calendar jumps. Big Diomede is 21 hours ahead.",
+   "cues": {
+    "between": "between",
+    "date": "date",
+    "cross": "cross",
+    "jumps": "jumps",
+    "ahead": "ahead"
+   },
+   "climax": true
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "figures stand on Big Diomede, get crossed out and vanish; the tags come off; the camera drifts west toward the mainland",
+   "text": "Nobody lives on the Russian side any more. Its villagers were moved to the mainland in 1948, and today only a border post and a weather station remain.",
+   "cues": {
+    "nobody": "nobody",
+    "moved": "moved",
+    "1948": "1948",
+    "border": "border",
+    "remain": "remain"
+   }
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "back to the village; figures pop in on the US shore and wave at the Russian island; the gap line redraws",
+   "text": "On the American side, about 80 people still live in the village, facing Russia, facing tomorrow, across water you could row in an hour.",
+   "cues": {
+    "american": "american",
+    "80": "80",
+    "facing": "facing",
+    "row": "row"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "direction": "answer the opening line with the same noun",
+   "text": "Two islands, one short row apart, and tomorrow is always on the other side of the water.",
+   "cues": {
+    "islands": "islands",
+    "row": "row",
+    "water": "water"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 2,
+   "pause_after": 0.0,
+   "direction": "short follow — the outro visual does the work",
+   "text": "Follow for a new map story every day.",
+   "cues": {}
+  }
+ ]
+}

@@ -1,0 +1,731 @@
+{
+ "version": 3,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "kw01",
+   "type": "kw",
+   "text": "wider than *the Moon*"
+  },
+  {
+   "id": "kw02",
+   "type": "kw",
+   "text": "west to east"
+  },
+  {
+   "id": "kw03",
+   "type": "kw",
+   "text": "almost *4,000 km*"
+  },
+  {
+   "id": "wkm",
+   "type": "counter",
+   "start": 0,
+   "end": 3990,
+   "y": 560,
+   "label": "km · Steep Point to Cape Byron",
+   "fmt": "int",
+   "size": 150
+  },
+  {
+   "id": "kw04",
+   "type": "kw",
+   "text": "Moon: *3,474 km*"
+  },
+  {
+   "id": "f04",
+   "type": "fact",
+   "kicker": "500 km short",
+   "text": "Australia 3,990 km · Moon 3,474 km",
+   "y": 1010
+  },
+  {
+   "id": "mkm",
+   "type": "counter",
+   "start": 0,
+   "end": 3474,
+   "y": 560,
+   "label": "km · the Moon, edge to edge",
+   "fmt": "int",
+   "size": 150
+  },
+  {
+   "id": "kw05",
+   "type": "kw",
+   "text": "point to point: *Australia wins*"
+  },
+  {
+   "id": "f05",
+   "type": "fact",
+   "kicker": "But as a sphere",
+   "text": "the Moon is about five Australias",
+   "y": 1010
+  },
+  {
+   "id": "close",
+   "type": "close",
+   "text": "Coast to coast: *wider than the Moon*",
+   "y": 760
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     134,
+     -27
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s01.end",
+   "args": {
+    "k": 0.52,
+    "lonlat": [
+     134,
+     -27
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": 0,
+   "do": "title_in"
+  },
+  {
+   "at": "s02+0.3",
+   "do": "title_out"
+  },
+  {
+   "at": "s01@moon-0.2",
+   "do": "kw_in",
+   "id": "kw01",
+   "until": "s01.end"
+  },
+  {
+   "at": "s01@country+0.7",
+   "do": "geo.highlight_in",
+   "args": {
+    "fid": "036",
+    "layer": "tint",
+    "dur": 0.6
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s01@country",
+   "do": "geo.route_draw",
+   "stage": "stage_map",
+   "until": "s01@country+1.5",
+   "args": {
+    "rid": "036",
+    "layer": "edge_tint"
+   }
+  },
+  {
+   "at": "s01@country+2.2",
+   "do": "geo.route_out",
+   "stage": "stage_map",
+   "args": {
+    "rid": "036",
+    "layer": "edge_tint",
+    "dur": 0.8
+   }
+  },
+  {
+   "at": "s02",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02+1.2",
+   "args": {
+    "k": 1.3,
+    "lonlat": [
+     114.5,
+     -26.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s02+1.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02+2.4",
+   "args": {
+    "k": 1.3,
+    "lonlat": [
+     114.5,
+     -26.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s02+1.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02@easternmost-0.3",
+   "args": {
+    "k": 1.3,
+    "lonlat": [
+     114.5,
+     -26.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s02@easternmost-0.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02@byron+0.3",
+   "args": {
+    "k": 1.3,
+    "lonlat": [
+     152.5,
+     -28.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s02@byron+0.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02.end",
+   "args": {
+    "k": 1.28,
+    "lonlat": [
+     152.5,
+     -28.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s02@steep-0.1",
+   "do": "kw_in",
+   "id": "kw02"
+  },
+  {
+   "at": "s02@byron+0.6",
+   "do": "kw_out",
+   "id": "kw02"
+  },
+  {
+   "at": "s02@westernmost",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "036",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s02@steep",
+   "do": "geo.pin_in",
+   "args": {
+    "pid": "sp"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s02@byron",
+   "do": "geo.pin_in",
+   "args": {
+    "pid": "cb"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s03",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03+1.2",
+   "args": {
+    "k": 0.6,
+    "lonlat": [
+     134,
+     -28
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s03+1.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03+2.4",
+   "args": {
+    "k": 0.6,
+    "lonlat": [
+     134,
+     -28
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s03+1.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.61,
+    "lonlat": [
+     134,
+     -28
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s03@4000-0.2",
+   "do": "kw_in",
+   "id": "kw03"
+  },
+  {
+   "at": "s03.end",
+   "do": "kw_out",
+   "id": "kw03"
+  },
+  {
+   "at": "s03@between",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "036",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s03@kilometres",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "036",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s03@between",
+   "do": "geo.route_draw",
+   "until": "s03@kilometres+0.2",
+   "args": {
+    "rid": "width",
+    "layer": "width"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s03@between+0.2",
+   "do": "chart.counter_run",
+   "id": "wkm",
+   "until": "s03@kilometres+0.3",
+   "args": {
+    "steps": 14
+   }
+  },
+  {
+   "at": "s03.end+0.2",
+   "do": "chart.out",
+   "id": "wkm"
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.0",
+   "args": {
+    "k": 0.6,
+    "lonlat": [
+     134,
+     -28
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.0",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+2.2",
+   "args": {
+    "k": 0.6,
+    "lonlat": [
+     134,
+     -28
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+1.0",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04@here-0.4",
+   "args": {
+    "k": 0.6,
+    "lonlat": [
+     134,
+     -28
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04@here-0.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04@short+0.3",
+   "args": {
+    "k": 1.4,
+    "lonlat": [
+     150.5,
+     -29.0
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04@short+0.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 1.42,
+    "lonlat": [
+     150.5,
+     -29.0
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04@3474-0.3",
+   "do": "kw_in",
+   "id": "kw04"
+  },
+  {
+   "at": "s04@here-0.3",
+   "do": "kw_out",
+   "id": "kw04"
+  },
+  {
+   "at": "s04@short-0.2",
+   "do": "fact_in",
+   "id": "f04"
+  },
+  {
+   "at": "s04.end",
+   "do": "hide",
+   "id": "f04",
+   "args": {
+    "dur": 0.3
+   }
+  },
+  {
+   "at": "s04@moon",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "036",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s04@lay",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "036",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s04@moon",
+   "do": "chart.counter_run",
+   "id": "mkm",
+   "until": "s04@3474+0.5",
+   "args": {
+    "steps": 14
+   }
+  },
+  {
+   "at": "s04@lay+0.6",
+   "do": "chart.out",
+   "id": "mkm"
+  },
+  {
+   "at": "s04@lay",
+   "do": "geo.route_draw",
+   "until": "s04@here+0.1",
+   "args": {
+    "rid": "moon",
+    "layer": "moon"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s04@here",
+   "do": "geo.pin_in",
+   "args": {
+    "pid": "me"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s04@here",
+   "do": "fx.flash",
+   "args": {
+    "peak": 0.5
+   }
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 0.55,
+    "lonlat": [
+     134,
+     -27
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+2.5",
+   "args": {
+    "k": 0.55,
+    "lonlat": [
+     134,
+     -27
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 0.56,
+    "lonlat": [
+     134,
+     -27
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@point-0.1",
+   "do": "kw_in",
+   "id": "kw05"
+  },
+  {
+   "at": "s05@wider+0.9",
+   "do": "kw_out",
+   "id": "kw05"
+  },
+  {
+   "at": "s05@sphere-0.1",
+   "do": "fact_in",
+   "id": "f05"
+  },
+  {
+   "at": "s05@point-0.3",
+   "do": "hide",
+   "id": "f05",
+   "args": {
+    "dur": 0.3
+   }
+  },
+  {
+   "at": "s05@surface",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "036",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s05+0.2",
+   "do": "geo.pin_out",
+   "args": {
+    "pid": "me"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s05@wider-0.2",
+   "do": "geo.route_draw",
+   "until": "s05@wider+0.8",
+   "args": {
+    "rid": "width",
+    "layer": "width"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s05@wider",
+   "do": "geo.highlight_pulse",
+   "args": {
+    "fid": "036",
+    "layer": "tint",
+    "dur": 0.7
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.6",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     134,
+     -27
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.6",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 0.48,
+    "lonlat": [
+     134,
+     -27
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06+0.3",
+   "do": "close_in",
+   "id": "close",
+   "until": "s06.end"
+  },
+  {
+   "at": "s06@continent",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "036",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s06@coast",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "036",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s06@moon",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "036",
+    "layer": "tint",
+    "dur": 0.6
+   }
+  },
+  {
+   "at": "s06@coast",
+   "do": "geo.route_draw",
+   "until": "s06@moon+0.5",
+   "args": {
+    "rid": "width",
+    "layer": "width"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s02+1.2",
+   "do": "geo.scalebar_in",
+   "stage": "stage_map"
+  },
+  {
+   "at": "s07",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s07+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     134,
+     -27
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s07",
+   "do": "cta_in",
+   "until": "end-1.0"
+  }
+ ],
+ "captions": {
+  "roles": [],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

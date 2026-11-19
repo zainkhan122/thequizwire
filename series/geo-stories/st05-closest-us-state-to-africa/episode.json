@@ -1,0 +1,126 @@
+{
+ "id": "st05-closest-us-state-to-africa",
+ "format": "story-v1",
+ "series": "geo-stories",
+ "number": 5,
+ "title": "The US state closest to Africa is not Florida",
+ "seed": 5105,
+ "difficulty": "STORY",
+ "story": {
+  "place": "Maine · USA",
+  "headline": "The US state closest to Africa is *not Florida*",
+  "search_term": "closest us state to africa",
+  "shape": "why-here-not-there",
+  "close": "Not Florida. *Maine.*",
+  "cover": {
+   "place": "",
+   "headline": "Closest to Africa? *Not Florida*"
+  },
+  "outro": {
+   "headline": "KNOW A STRANGER PLACE?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "cold-open",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "The US state closest to Africa is not Florida 🧭",
+  "premise": "Florida is the state closest to Africa, right? Wrong, and the map shows why",
+  "bait": "Did you guess Florida? Be honest 👇",
+  "keywords": [
+   "closest us state to africa",
+   "maine africa distance",
+   "great circle route",
+   "florida africa distance",
+   "map facts",
+   "earth is round map",
+   "geography story",
+   "map story"
+  ],
+  "description": "Everyone says Florida. The map says otherwise. This map story draws the shortest route from the United States to Africa, measures it, then draws Florida's for comparison, and explains why the curve of the Earth pulls the answer north.\nDid you guess Florida? Be honest in the comments.",
+  "hashtags": [
+   "#Geography",
+   "#MapStory",
+   "#Maps",
+   "#Shorts"
+  ],
+  "tags": [
+   "GeoStories",
+   "Maps"
+  ],
+  "cover_emoji": "",
+  "cover_emoji_why": "stories carry no icon on the cover (title + place only)",
+  "copy": {
+   "spoilers": [
+    "5,076",
+    "5076",
+    "quoddy",
+    "el beddouza"
+   ],
+   "youtube": {
+    "title": "The US state closest to Africa is not Florida 🧭",
+    "description": "Everyone says Florida. The map says otherwise. This map story draws the shortest route from the United States to Africa, measures it, then draws Florida's for comparison, and explains why the curve of the Earth pulls the answer north.\nDid you guess Florida? Be honest in the comments.",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Maps",
+     "#Shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Closest US state to Africa? Not Florida 🧭\nThe shortest line from the United States to Africa starts far to the north, and this map story draws it, measures it, and compares it with Florida's. The curve of the Earth decides.\nDid you guess Florida?",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Maps",
+     "#GeoReels",
+     "#DidYouKnow"
+    ]
+   },
+   "facebook": {
+    "text": "Everyone says Florida. The map says otherwise. This map story draws the shortest route from the United States to Africa, measures it, draws Florida's route for comparison, and shows why the curve of the Earth pulls the answer north. Did you guess Florida? Be honest.",
+    "tags": [
+     "#Geography",
+     "#Maps"
+    ]
+   },
+   "twitter": {
+    "text": "The US state closest to Africa is not Florida. A map story with the lines drawn.",
+    "tags": [
+     "#Geography",
+     "#Maps"
+    ]
+   },
+   "threads": {
+    "text": "Closest US state to Africa? Almost everyone says Florida. The great-circle line says somewhere much colder. One-minute map story.",
+    "tags": [
+     "#Maps"
+    ]
+   }
+  },
+  "cover": {
+   "key_t": 20.0
+  }
+ },
+ "variety": {
+  "question": "story",
+  "story_shape": "why-here-not-there",
+  "hook": "cold-open",
+  "opener": "wide-drift",
+  "reveal": "none",
+  "beats": [
+   "route",
+   "counter",
+   "route",
+   "compare"
+  ],
+  "cast": "none",
+  "music": "bed:drone"
+ },
+ "status": "draft"
+}

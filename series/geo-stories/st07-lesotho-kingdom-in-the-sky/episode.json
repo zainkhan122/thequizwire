@@ -1,0 +1,126 @@
+{
+ "id": "st07-lesotho-kingdom-in-the-sky",
+ "format": "story-v1",
+ "series": "geo-stories",
+ "number": 7,
+ "title": "The country whose lowest point beats Britain's highest",
+ "seed": 5107,
+ "difficulty": "STORY",
+ "story": {
+  "place": "Lesotho · Southern Africa",
+  "headline": "The country whose *lowest point* beats Britain's highest",
+  "search_term": "lesotho",
+  "shape": "the-edge-case",
+  "close": "Nowhere to go *but up*",
+  "cover": {
+   "place": "",
+   "headline": "Its *lowest point* is higher than Ben Nevis"
+  },
+  "outro": {
+   "headline": "KNOW A STRANGER PLACE?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "cold-open",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "The country whose lowest point beats Britain's highest mountain ⛰️",
+  "premise": "There is a country where the lowest spot is higher than Britain's highest mountain",
+  "bait": "Could you live 1.4 km up, minimum? 👇",
+  "keywords": [
+   "lesotho",
+   "kingdom in the sky",
+   "highest low point",
+   "country entirely above 1000 m",
+   "enclave country",
+   "lesotho south africa",
+   "geography story",
+   "map story"
+  ],
+  "description": "There is a kingdom in southern Africa where you cannot get below 1,400 metres: its lowest river junction is higher than the summit of Ben Nevis. This map story finds that lowest point, climbs to the highest, and pulls back to show the whole country sealed inside its only neighbour.\nCould you live 1.4 km up, minimum? Tell us below.",
+  "hashtags": [
+   "#Geography",
+   "#MapStory",
+   "#Africa",
+   "#Shorts"
+  ],
+  "tags": [
+   "GeoStories",
+   "Africa"
+  ],
+  "cover_emoji": "",
+  "cover_emoji_why": "stories carry no icon on the cover (title + place only)",
+  "copy": {
+   "spoilers": [
+    "1400",
+    "3,482",
+    "thabana",
+    "makhaleng"
+   ],
+   "youtube": {
+    "title": "The country whose lowest point beats Britain's highest mountain ⛰️",
+    "description": "There is a kingdom in southern Africa where you cannot get below 1,400 metres: its lowest river junction is higher than the summit of Ben Nevis. This map story finds that lowest point, climbs to the highest, and pulls back to show the whole country sealed inside its only neighbour.\nCould you live 1.4 km up, minimum? Tell us below.",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Africa",
+     "#Shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Its lowest point is higher than Ben Nevis ⛰️\nA kingdom in southern Africa where you cannot get below 1,400 metres. This map story finds its lowest river junction, climbs to its highest peak, and pulls back to show the whole country sealed inside one neighbour.\nCould you live 1.4 km up, minimum?",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Africa",
+     "#GeoReels",
+     "#DidYouKnow"
+    ]
+   },
+   "facebook": {
+    "text": "There is a kingdom in southern Africa where you cannot get below 1,400 metres: its lowest river junction is higher than the summit of Ben Nevis. This map story finds that lowest point, climbs to the highest, and pulls back to show the whole country sealed inside its only neighbour. Could you live 1.4 km up, minimum?",
+    "tags": [
+     "#Geography",
+     "#Africa"
+    ]
+   },
+   "twitter": {
+    "text": "A country whose lowest point is higher than Britain's highest mountain. A map story.",
+    "tags": [
+     "#Geography",
+     "#Africa"
+    ]
+   },
+   "threads": {
+    "text": "A kingdom where the lowest spot in the whole country is higher than the top of Ben Nevis, and the whole thing sits inside one neighbour. One-minute map story.",
+    "tags": [
+     "#Lesotho"
+    ]
+   }
+  },
+  "cover": {
+   "key_t": 19.0
+  }
+ },
+ "variety": {
+  "question": "story",
+  "story_shape": "the-edge-case",
+  "hook": "cold-open",
+  "opener": "plunge",
+  "reveal": "none",
+  "beats": [
+   "pin",
+   "counter",
+   "compare",
+   "pin"
+  ],
+  "cast": "none",
+  "music": "bed:drone"
+ },
+ "status": "draft"
+}

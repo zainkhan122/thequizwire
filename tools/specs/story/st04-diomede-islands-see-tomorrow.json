@@ -1,0 +1,1277 @@
+{
+ "id": "st04-diomede-islands-see-tomorrow",
+ "series": "geo-stories",
+ "number": 4,
+ "seed": 5104,
+ "place": "Diomede Islands · Bering Strait",
+ "headline": "The island where you can *see tomorrow*",
+ "search_term": "diomede islands",
+ "cover": {
+  "place": "",
+  "headline": "Look across. That's *tomorrow*."
+ },
+ "intent": "Two islands less than four kilometres apart, with the International Date Line between them, so one is almost a full day ahead of the other; one is a US village, the other a Russian military post.",
+ "variety": {
+  "shape": "line-that-shouldnt-exist",
+  "opener": "mystery-zoom-out",
+  "music": "bed:drone",
+  "cast": "none",
+  "beats": [
+   "pin",
+   "route",
+   "counter",
+   "label"
+  ]
+ },
+ "post": {
+  "premise": "Two islands you could row between, 21 hours apart on the calendar",
+  "bait": "Would you live where tomorrow is across the water? 👇",
+  "keywords": [
+   "diomede islands",
+   "international date line",
+   "yesterday and tomorrow islands",
+   "bering strait",
+   "russia alaska distance",
+   "big diomede little diomede",
+   "geography story",
+   "map story"
+  ],
+  "tags": [
+   "GeoStories",
+   "Arctic"
+  ],
+  "copy": {
+   "spoilers": [
+    "3.8",
+    "1948",
+    "chukotka"
+   ],
+   "youtube": {
+    "title": "The island where you can see tomorrow 🕛",
+    "description": "In the Bering Strait, two islands sit less than four kilometres apart. The International Date Line runs between them, so the one you can see across the water is almost a full day ahead. This map story draws the line, measures the gap, and shows who lives on each side.\nWould you live where tomorrow is across the water? Tell us below.",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Arctic",
+     "#Shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Look across the water. That's tomorrow 🕛\nTwo islands in the Bering Strait, less than four kilometres apart, with the International Date Line between them. One is a US village, the other a Russian post. Here is the line, the gap, and the 21-hour jump.\nWould you live here?",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Arctic",
+     "#GeoReels",
+     "#DidYouKnow"
+    ]
+   },
+   "facebook": {
+    "text": "In the Bering Strait, two islands sit less than four kilometres apart, and the International Date Line runs between them. Stand on the American one and the island you can see is already in tomorrow. This map story draws the line, measures the gap, and shows who lives on each side. Would you live there?",
+    "tags": [
+     "#Geography",
+     "#Arctic"
+    ]
+   },
+   "twitter": {
+    "text": "Two islands, under 4 km apart, 21 hours apart on the calendar. A map story.",
+    "tags": [
+     "#Geography",
+     "#Arctic"
+    ]
+   },
+   "threads": {
+    "text": "Two islands in the Bering Strait you could row between, and the one across the water is already in tomorrow. One-minute map story on the Date Line.",
+    "tags": [
+     "#Diomede"
+    ]
+   }
+  },
+  "cover": {
+   "key_t": 14.0
+  }
+ },
+ "geo": {
+  "fit_bbox": [
+   -169.7,
+   65.5,
+   -168.3,
+   66.0
+  ],
+  "far_bbox": [
+   -180,
+   57,
+   -150,
+   72
+  ],
+  "resolution": "50m",
+  "k_max": 2.6,
+  "layers": [],
+  "pins": [
+   {
+    "id": "ld",
+    "lonlat": [
+     -168.93,
+     65.755
+    ],
+    "label": "Little Diomede · USA",
+    "side": "right"
+   },
+   {
+    "id": "bd",
+    "lonlat": [
+     -169.05,
+     65.78
+    ],
+    "label": "Big Diomede · Russia",
+    "side": "left"
+   }
+  ],
+  "labels": [
+   {
+    "id": "today",
+    "lonlat": [
+     -168.8,
+     65.9
+    ],
+    "text": "TODAY",
+    "cls": "tag",
+    "in": "s04+99",
+    "out": null
+   },
+   {
+    "id": "tmrw",
+    "lonlat": [
+     -169.25,
+     65.9
+    ],
+    "text": "TOMORROW",
+    "cls": "tag",
+    "in": "s04+99",
+    "out": null
+   }
+  ],
+  "scalebar": {
+   "km": 2,
+   "lonlat": [
+    -169.62,
+    65.56
+   ]
+  },
+  "extra_layers": [
+   {
+    "kind": "area",
+    "id": "isl_us",
+    "cls": "highlight tint",
+    "perFeature": true,
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "ld",
+       "properties": {
+        "name": "Little Diomede (Natural Earth 10m outline)"
+       },
+       "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+         [
+          [
+           -168.9083,
+           65.769
+          ],
+          [
+           -168.9011,
+           65.7622
+          ],
+          [
+           -168.9011,
+           65.747
+          ],
+          [
+           -168.9083,
+           65.7402
+          ],
+          [
+           -168.9263,
+           65.7402
+          ],
+          [
+           -168.9407,
+           65.7436
+          ],
+          [
+           -168.9515,
+           65.7538
+          ],
+          [
+           -168.9443,
+           65.7639
+          ],
+          [
+           -168.9191,
+           65.769
+          ],
+          [
+           -168.9083,
+           65.769
+          ]
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "kind": "area",
+    "id": "isl_ru",
+    "cls": "highlight solid",
+    "perFeature": true,
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "bd",
+       "properties": {
+        "name": "Big Diomede (Natural Earth 10m outline)"
+       },
+       "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+         [
+          [
+           -169.0847,
+           65.8162
+          ],
+          [
+           -169.0631,
+           65.8281
+          ],
+          [
+           -169.0415,
+           65.8281
+          ],
+          [
+           -168.9947,
+           65.8162
+          ],
+          [
+           -169.0091,
+           65.796
+          ],
+          [
+           -169.0271,
+           65.774
+          ],
+          [
+           -169.0523,
+           65.7571
+          ],
+          [
+           -169.0775,
+           65.7554
+          ],
+          [
+           -169.0955,
+           65.7622
+          ],
+          [
+           -169.0991,
+           65.7791
+          ],
+          [
+           -169.0919,
+           65.7993
+          ],
+          [
+           -169.0847,
+           65.8162
+          ]
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "kind": "route",
+    "id": "gap",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "gap",
+       "properties": {
+        "name": "3.8 km between the islands"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -168.93,
+          65.755
+         ],
+         [
+          -169.05,
+          65.78
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "kind": "route",
+    "id": "idl",
+    "cls": "river dashed",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "idl",
+       "properties": {
+        "name": "International Date Line"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -168.972,
+          64.0
+         ],
+         [
+          -168.972,
+          65.6
+         ],
+         [
+          -168.972,
+          65.9
+         ],
+         [
+          -168.972,
+          67.5
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "cams": {
+   "start": [
+    0.9,
+    [
+     -168.99,
+     65.76
+    ]
+   ],
+   "open": [
+    2.4,
+    [
+     -168.95,
+     65.76
+    ]
+   ]
+  },
+  "pin_beats": [],
+  "subject": {
+   "fid": "ld",
+   "layer": "isl_us"
+  },
+  "projection_reason": "satellite raster (Web Mercator tiles) for a strait story; the only distance claim is a stated number carried by the scalebar, no area comparison (P1/P2)"
+ },
+ "open": {
+  "vo": {
+   "text": "From this beach, you can look across the water and see tomorrow.",
+   "cues": {
+    "beach": "beach",
+    "water": "water",
+    "tomorrow": "tomorrow"
+   }
+  },
+  "tone": "urgent",
+  "energy": 4,
+  "pause_after": 0.45,
+  "kw": {
+   "text": "look across: *tomorrow*",
+   "at": "@@tomorrow-0.2"
+  },
+  "direction": "tight on the village shore, a figure waves, the pull-out reveals the second island right there",
+  "elements": [
+   {
+    "id": "p0",
+    "type": "rig",
+    "rig": "person",
+    "x": 540,
+    "y": 900,
+    "size": 150,
+    "shirt": "#e76f51"
+   }
+  ],
+  "devices": [
+   {
+    "at": "@@beach",
+    "do": "geo.pin_in",
+    "args": {
+     "pid": "ld"
+    }
+   },
+   {
+    "at": "@@beach",
+    "do": "prop.anchor",
+    "id": "p0",
+    "until": "s02@kilometres+0.5",
+    "args": {
+     "lonlat": [
+      -168.93,
+      65.755
+     ],
+     "dx": -60,
+     "dy": -50
+    }
+   },
+   {
+    "at": "@@beach+0.2",
+    "do": "prop.pop",
+    "id": "p0",
+    "args": {
+     "frm": "rise"
+    }
+   },
+   {
+    "at": "@@water",
+    "do": "prop.wave",
+    "id": "p0",
+    "until": "s02@kilometres",
+    "args": {
+     "parts": [
+      "arm"
+     ],
+     "pivots": [
+      [
+       28,
+       -12
+      ]
+     ],
+     "swing": 22,
+     "period": 0.45
+    }
+   },
+   {
+    "at": "@@tomorrow",
+    "do": "geo.pin_in",
+    "args": {
+     "pid": "bd"
+    }
+   }
+  ]
+ },
+ "beats": [
+  {
+   "vo": {
+    "text": "This is Little Diomede, an American village in the Bering Strait. That is Big Diomede, Russian territory, just 3.8 kilometres away.",
+    "cues": {
+     "little": "little",
+     "american": "american",
+     "big": "big",
+     "russian": "russian",
+     "kilometres": "kilometres"
+    }
+   },
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "the gap line draws from the village to the Russian island; counter on the distance; Russia fills in solid",
+   "cam": [
+    1.6,
+    [
+     -168.99,
+     65.76
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.62,
+    [
+     -168.99,
+     65.765
+    ]
+   ],
+   "kw": {
+    "text": "just *3.8 km* apart",
+    "at": "@@big-0.1",
+    "until": "@@kilometres+0.9"
+   },
+   "elements": [
+    {
+     "id": "gapkm",
+     "type": "counter",
+     "start": 0,
+     "end": 3800,
+     "y": 560,
+     "label": "metres across the gap",
+     "fmt": "int",
+     "size": 150
+    }
+   ],
+   "highlights": [
+    {
+     "fid": "ld",
+     "layer": "isl_us",
+     "at": "@@american-0.2"
+    },
+    {
+     "fid": "bd",
+     "layer": "isl_ru",
+     "at": "@@russian-0.2"
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@big-0.2",
+     "do": "geo.route_draw",
+     "until": "@@russian+0.3",
+     "args": {
+      "rid": "gap",
+      "layer": "gap"
+     }
+    },
+    {
+     "at": "@@kilometres-1.0",
+     "do": "chart.counter_run",
+     "id": "gapkm",
+     "until": "@@kilometres+0.5",
+     "args": {
+      "steps": 10
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "gapkm"
+    },
+    {
+     "at": "@@kilometres+0.6",
+     "do": "prop.out",
+     "id": "p0"
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.2",
+     "@@kilometres-0.4",
+     [
+      1.62,
+      [
+       -168.99,
+       65.765
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@kilometres-0.4",
+     "@@kilometres+0.6",
+     [
+      2.0,
+      [
+       -169.0,
+       65.765
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@kilometres+0.6",
+     "@.end",
+     [
+      2.02,
+      [
+       -169.0,
+       65.765
+      ]
+     ],
+     "none"
+    ]
+   ]
+  },
+  {
+   "vo": {
+    "text": "Between them runs the International Date Line. Cross it, and the calendar jumps. Big Diomede is 21 hours ahead.",
+    "cues": {
+     "between": "between",
+     "date": "date",
+     "cross": "cross",
+     "jumps": "jumps",
+     "ahead": "ahead"
+    }
+   },
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "climax": true,
+   "direction": "the dashed line draws down the strait between the islands; TODAY and TOMORROW tags stamp either side; card with the 21-hour gap",
+   "cam": [
+    1.4,
+    [
+     -168.99,
+     65.78
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.42,
+    [
+     -168.99,
+     65.78
+    ]
+   ],
+   "kw": {
+    "text": "the *date line* between them",
+    "at": "@@date-0.1",
+    "until": "@@jumps+0.3"
+   },
+   "card": {
+    "kicker": "21 hours apart",
+    "text": "Alaska UTC−9 · Chukotka UTC+12",
+    "at": "@@ahead-0.3",
+    "y": 1010
+   },
+   "devices": [
+    {
+     "at": "@@between-0.1",
+     "do": "geo.route_draw",
+     "until": "@@date+0.6",
+     "args": {
+      "rid": "idl",
+      "layer": "idl"
+     }
+    },
+    {
+     "at": "@@cross",
+     "do": "geo.label_in",
+     "args": {
+      "lid": "today"
+     }
+    },
+    {
+     "at": "@@jumps",
+     "do": "geo.label_in",
+     "args": {
+      "lid": "tmrw"
+     }
+    },
+    {
+     "at": "@@jumps",
+     "do": "fx.flash",
+     "args": {
+      "peak": 0.6
+     }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.2",
+     "@@ahead-0.4",
+     [
+      1.42,
+      [
+       -168.99,
+       65.78
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@ahead-0.4",
+     "@@ahead+0.6",
+     [
+      1.25,
+      [
+       -168.99,
+       65.78
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@ahead+0.6",
+     "@.end",
+     [
+      1.24,
+      [
+       -168.99,
+       65.78
+      ]
+     ],
+     "none"
+    ]
+   ]
+  },
+  {
+   "vo": {
+    "text": "Nobody lives on the Russian side any more. Its villagers were moved to the mainland in 1948, and today only a border post and a weather station remain.",
+    "cues": {
+     "nobody": "nobody",
+     "moved": "moved",
+     "1948": "1948",
+     "border": "border",
+     "remain": "remain"
+    }
+   },
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "figures stand on Big Diomede, get crossed out and vanish; the tags come off; the camera drifts west toward the mainland",
+   "cam": [
+    1.3,
+    [
+     -169.1,
+     65.77
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.32,
+    [
+     -169.1,
+     65.77
+    ]
+   ],
+   "kw": {
+    "text": "emptied in *1948*",
+    "at": "@@moved-0.1",
+    "until": "@@remain+0.4"
+   },
+   "elements": [
+    {
+     "id": "r1",
+     "type": "rig",
+     "rig": "person",
+     "x": 540,
+     "y": 900,
+     "size": 140,
+     "shirt": "#2a9d8f"
+    },
+    {
+     "id": "r2",
+     "type": "rig",
+     "rig": "person",
+     "x": 540,
+     "y": 900,
+     "size": 140,
+     "shirt": "#e9c46a"
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@nobody-0.2",
+     "do": "prop.anchor",
+     "id": "r1",
+     "until": "@@1948+1.4",
+     "args": {
+      "lonlat": [
+       -169.05,
+       65.78
+      ],
+      "dx": -40,
+      "dy": -50
+     }
+    },
+    {
+     "at": "@@nobody-0.2",
+     "do": "prop.anchor",
+     "id": "r2",
+     "until": "@@1948+1.4",
+     "args": {
+      "lonlat": [
+       -169.05,
+       65.78
+      ],
+      "dx": 40,
+      "dy": -40
+     }
+    },
+    {
+     "at": "@@nobody",
+     "do": "prop.pop",
+     "id": "r1",
+     "args": {
+      "frm": "rise"
+     }
+    },
+    {
+     "at": "@@nobody+0.15",
+     "do": "prop.pop",
+     "id": "r2",
+     "args": {
+      "frm": "rise"
+     }
+    },
+    {
+     "at": "@@moved",
+     "do": "prop.cross",
+     "id": "r1"
+    },
+    {
+     "at": "@@moved+0.2",
+     "do": "prop.cross",
+     "id": "r2"
+    },
+    {
+     "at": "@@1948+0.8",
+     "do": "prop.out",
+     "id": "r1"
+    },
+    {
+     "at": "@@1948+1.0",
+     "do": "prop.out",
+     "id": "r2"
+    },
+    {
+     "at": "@+0.2",
+     "do": "geo.label_out",
+     "args": {
+      "lid": "today"
+     }
+    },
+    {
+     "at": "@+0.3",
+     "do": "geo.label_out",
+     "args": {
+      "lid": "tmrw"
+     }
+    },
+    {
+     "at": "@@border",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "bd",
+      "layer": "isl_ru",
+      "dur": 0.7
+     }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.2",
+     "@@border-0.4",
+     [
+      1.32,
+      [
+       -169.1,
+       65.77
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@border-0.4",
+     "@@border+0.7",
+     [
+      0.9,
+      [
+       -169.3,
+       65.8
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@border+0.7",
+     "@.end",
+     [
+      0.88,
+      [
+       -169.3,
+       65.8
+      ]
+     ],
+     "none"
+    ]
+   ]
+  },
+  {
+   "vo": {
+    "text": "On the American side, about 80 people still live in the village, facing Russia, facing tomorrow, across water you could row in an hour.",
+    "cues": {
+     "american": "american",
+     "80": "80",
+     "facing": "facing",
+     "row": "row"
+    }
+   },
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "back to the village; figures pop in on the US shore and wave at the Russian island; the gap line redraws",
+   "cam": [
+    1.7,
+    [
+     -168.95,
+     65.76
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.72,
+    [
+     -168.95,
+     65.76
+    ]
+   ],
+   "kw": {
+    "text": "about *80* people",
+    "at": "@@80-0.2",
+    "until": "@@row+0.5"
+   },
+   "elements": [
+    {
+     "id": "a1",
+     "type": "rig",
+     "rig": "person",
+     "x": 540,
+     "y": 900,
+     "size": 140,
+     "shirt": "#e76f51"
+    },
+    {
+     "id": "a2",
+     "type": "rig",
+     "rig": "person",
+     "x": 540,
+     "y": 900,
+     "size": 140,
+     "shirt": "#264653"
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@american",
+     "do": "prop.anchor",
+     "id": "a1",
+     "until": "s06.end",
+     "args": {
+      "lonlat": [
+       -168.93,
+       65.755
+      ],
+      "dx": -70,
+      "dy": -50
+     }
+    },
+    {
+     "at": "@@american",
+     "do": "prop.anchor",
+     "id": "a2",
+     "until": "s06.end",
+     "args": {
+      "lonlat": [
+       -168.93,
+       65.755
+      ],
+      "dx": -20,
+      "dy": -60
+     }
+    },
+    {
+     "at": "@@american+0.2",
+     "do": "prop.pop",
+     "id": "a1",
+     "args": {
+      "frm": "rise"
+     }
+    },
+    {
+     "at": "@@80",
+     "do": "prop.pop",
+     "id": "a2",
+     "args": {
+      "frm": "rise"
+     }
+    },
+    {
+     "at": "@@facing",
+     "do": "prop.wave",
+     "id": "a1",
+     "until": "s06.end",
+     "args": {
+      "parts": [
+       "arm"
+      ],
+      "pivots": [
+       [
+        28,
+        -12
+       ]
+      ],
+      "swing": 22,
+      "period": 0.45
+     }
+    },
+    {
+     "at": "@@facing+0.2",
+     "do": "prop.hop",
+     "id": "a2",
+     "until": "@.end"
+    },
+    {
+     "at": "@@row-0.2",
+     "do": "geo.route_draw",
+     "until": "@@row+0.8",
+     "args": {
+      "rid": "gap",
+      "layer": "gap"
+     }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.2",
+     "@@facing-0.3",
+     [
+      1.72,
+      [
+       -168.95,
+       65.76
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@facing-0.3",
+     "@@facing+0.8",
+     [
+      1.5,
+      [
+       -168.99,
+       65.765
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@facing+0.8",
+     "@.end",
+     [
+      1.48,
+      [
+       -168.99,
+       65.765
+      ]
+     ],
+     "none"
+    ]
+   ]
+  }
+ ],
+ "close": {
+  "vo": {
+   "text": "Two islands, one short row apart, and tomorrow is always on the other side of the water.",
+   "cues": {
+    "islands": "islands",
+    "row": "row",
+    "water": "water"
+   }
+  },
+  "text": "*Tomorrow*, one row away",
+  "tone": "revelatory",
+  "energy": 5,
+  "pause_after": 0.5,
+  "y": 760,
+  "cam": [
+   1.1,
+   [
+    -168.99,
+    65.77
+   ]
+  ],
+  "cam_dur": 1.6,
+  "devices": [
+   {
+    "at": "@@water",
+    "do": "geo.route_draw",
+    "until": "@@water+0.8",
+    "args": {
+     "rid": "idl",
+     "layer": "idl"
+    }
+   }
+  ]
+ },
+ "cta": {
+  "vo": {
+   "text": "Follow for a new map story every day."
+  }
+ },
+ "outro_headline": "KNOW A STRANGER PLACE?",
+ "research": {
+  "topic": "Little Diomede (USA, ~80 residents) and Big Diomede (Russia, no civilians since 1948) lie about 3.8 km apart in the Bering Strait with the International Date Line between them; Alaska (UTC−9) and Chukotka (UTC+12) differ by 21 hours.",
+  "myths": [
+   {
+    "myth": "You can see Russia from mainland Alaska on a clear day.",
+    "reality": "From Little Diomede you can see Big Diomede 3.8 km away; the Russian mainland is visible only from the islands or high ground on the Seward Peninsula in exceptional conditions."
+   }
+  ],
+  "landscape": {
+   "our_gap": "Diomede Shorts are trivia voiceovers over a stock photo; nobody draws the Date Line down the strait on the satellite map, measures the 3.8 km gap to scale, and shows who is actually on each island.",
+   "existing": [
+    {
+     "title": "Yesterday and Tomorrow Islands",
+     "format": "narrated stock photos",
+     "gap": "no map of the line"
+    },
+    {
+     "title": "Can you see Russia from Alaska?",
+     "format": "talking head",
+     "gap": "no distance drawn"
+    },
+    {
+     "title": "Big Diomede abandoned village",
+     "format": "urbex photo slideshow",
+     "gap": "no geography"
+    }
+   ]
+  },
+  "sources": {
+   "nasa_eo": {
+    "type": "primary",
+    "publisher": "NASA Earth Observatory",
+    "title": "Yesterday and Tomorrow Islands",
+    "url": "https://earthobservatory.nasa.gov/images/148656/yesterday-and-tomorrow-islands",
+    "date": "2026-11-19",
+    "notes": "Big Diomede (Russia) and Little Diomede (USA) are about 3.8 km apart; the International Date Line runs between them, so Big Diomede is almost a day ahead; Big Diomede's residents were relocated to the mainland in 1948."
+   },
+   "arctic_portal": {
+    "type": "reference",
+    "publisher": "Arctic Portal",
+    "title": "Diomede Islands",
+    "url": "https://arcticportal.org/ap-library/yar-features/diomede-islands",
+    "date": "2026-11-19",
+    "notes": "Little Diomede village has about 77 residents (2023); Big Diomede hosts only a Russian border guard post and weather station; 21-hour time difference across the strait."
+   },
+   "wiki_diomede": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Diomede Islands",
+    "url": "https://en.wikipedia.org/wiki/Diomede_Islands",
+    "date": "2026-11-19",
+    "notes": "Islands 3.8 km apart; IDL between them; Big Diomede uninhabited since 1948 relocation; Little Diomede population 77 (2023)."
+   },
+   "census": {
+    "type": "primary",
+    "publisher": "US Census Bureau",
+    "title": "Diomede city, Alaska — population",
+    "url": "https://data.census.gov/profile/Diomede_city,_Alaska",
+    "date": "2026-11-19",
+    "notes": "Diomede (Little Diomede) city population: 83 (2020 census)."
+   },
+   "timeanddate": {
+    "type": "reference",
+    "publisher": "timeanddate.com",
+    "title": "Time zones: Alaska (AKST, UTC−9) and Anadyr (UTC+12)",
+    "url": "https://www.timeanddate.com/time/zone/russia/anadyr",
+    "date": "2026-11-19",
+    "notes": "Anadyr/Chukotka is UTC+12 year-round; Alaska standard time is UTC−9: a 21-hour difference in winter."
+   },
+   "noaa_dateline": {
+    "type": "primary",
+    "publisher": "NOAA National Ocean Service",
+    "title": "Where is the International Date Line?",
+    "url": "https://oceanservice.noaa.gov/facts/international-date-line.html",
+    "date": "2026-11-19",
+    "notes": "The International Date Line passes through the Bering Strait between the Diomede Islands."
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Little Diomede (USA) and Big Diomede (Russia) are about 3.8 km apart in the Bering Strait.",
+    "sources": [
+     "nasa_eo",
+     "wiki_diomede",
+     "arctic_portal"
+    ],
+    "vo": [
+     "this is little diomede, an american village in the bering strait. that is big diomede, russian territory, just 3.8 kilometres away",
+     "from this beach, you can look across the water and see tomorrow",
+     "two islands, one short row apart, and tomorrow is always on the other side of the water",
+     "across water you could row in an hour"
+    ],
+    "screen": [
+     "Little Diomede · USA",
+     "Big Diomede · Russia",
+     "just 3.8 km apart",
+     "metres across the gap",
+     "look across: tomorrow",
+     "The island where you can see tomorrow",
+     "Tomorrow, one row away",
+     "Diomede Islands · Bering Strait"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "The International Date Line runs between the two islands; Alaska is UTC−9 and Chukotka UTC+12, so Big Diomede is 21 hours ahead.",
+    "sources": [
+     "nasa_eo",
+     "noaa_dateline",
+     "timeanddate",
+     "arctic_portal"
+    ],
+    "vo": [
+     "between them runs the international date line. cross it, and the calendar jumps. big diomede is 21 hours ahead"
+    ],
+    "screen": [
+     "the date line between them",
+     "21 hours apart",
+     "Alaska UTC−9 · Chukotka UTC+12",
+     "TODAY",
+     "TOMORROW"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Big Diomede's civilian population was relocated to the Soviet mainland in 1948; only a border post and weather station remain.",
+    "sources": [
+     "nasa_eo",
+     "wiki_diomede",
+     "arctic_portal"
+    ],
+    "vo": [
+     "nobody lives on the russian side any more. its villagers were moved to the mainland in 1948, and today only a border post and a weather station remain"
+    ],
+    "screen": [
+     "emptied in 1948"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "core",
+    "text": "About 80 people live in the village of Diomede on Little Diomede (83 in the 2020 census; 77 in 2023), which faces Russia.",
+    "sources": [
+     "census",
+     "arctic_portal",
+     "wiki_diomede"
+    ],
+    "vo": [
+     "on the american side, about 80 people still live in the village, facing russia, facing tomorrow"
+    ],
+    "screen": [
+     "about 80 people"
+    ]
+   }
+  ]
+ }
+}

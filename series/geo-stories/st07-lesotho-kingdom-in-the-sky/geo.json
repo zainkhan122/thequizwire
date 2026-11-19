@@ -1,0 +1,264 @@
+{
+ "version": 1,
+ "episode": "st07-lesotho-kingdom-in-the-sky",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "10m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     26.6,
+     -30.9,
+     29.8,
+     -28.4
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "tint",
+     "ids": [
+      "426"
+     ],
+     "cls": "tint",
+     "note": "Lesotho, the subject"
+    },
+    {
+     "kind": "feature",
+     "id": "edge_tint",
+     "ids": [
+      "426"
+     ],
+     "cls": "draw trace",
+     "note": "outline trace for tint"
+    },
+    {
+     "kind": "highlight",
+     "id": "solid",
+     "ids": [
+      "710"
+     ],
+     "cls": "solid",
+     "note": "South Africa, the only neighbour"
+    },
+    {
+     "kind": "route",
+     "id": "climb",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "climb",
+        "properties": {
+         "name": "lowest to highest point"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           27.03,
+           -30.32
+          ],
+          [
+           27.105,
+           -30.292
+          ],
+          [
+           27.181,
+           -30.265
+          ],
+          [
+           27.256,
+           -30.237
+          ],
+          [
+           27.331,
+           -30.209
+          ],
+          [
+           27.406,
+           -30.181
+          ],
+          [
+           27.481,
+           -30.153
+          ],
+          [
+           27.556,
+           -30.125
+          ],
+          [
+           27.631,
+           -30.097
+          ],
+          [
+           27.706,
+           -30.069
+          ],
+          [
+           27.781,
+           -30.041
+          ],
+          [
+           27.856,
+           -30.013
+          ],
+          [
+           27.931,
+           -29.985
+          ],
+          [
+           28.005,
+           -29.956
+          ],
+          [
+           28.08,
+           -29.928
+          ],
+          [
+           28.155,
+           -29.9
+          ],
+          [
+           28.229,
+           -29.871
+          ],
+          [
+           28.304,
+           -29.843
+          ],
+          [
+           28.379,
+           -29.815
+          ],
+          [
+           28.453,
+           -29.786
+          ],
+          [
+           28.528,
+           -29.758
+          ],
+          [
+           28.602,
+           -29.729
+          ],
+          [
+           28.676,
+           -29.7
+          ],
+          [
+           28.751,
+           -29.672
+          ],
+          [
+           28.825,
+           -29.643
+          ],
+          [
+           28.899,
+           -29.614
+          ],
+          [
+           28.974,
+           -29.586
+          ],
+          [
+           29.048,
+           -29.557
+          ],
+          [
+           29.122,
+           -29.528
+          ],
+          [
+           29.196,
+           -29.499
+          ],
+          [
+           29.27,
+           -29.47
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "pins": [
+    {
+     "id": "low",
+     "lonlat": [
+      27.03,
+      -30.32
+     ],
+     "label": "Lowest point · 1,400 m",
+     "side": "left"
+    },
+    {
+     "id": "high",
+     "lonlat": [
+      29.27,
+      -29.47
+     ],
+     "label": "Thabana Ntlenyana · 3,482 m",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "sky",
+     "lonlat": [
+      28.3,
+      -29.0
+     ],
+     "text": "KINGDOM IN THE SKY",
+     "cls": "tag",
+     "in": "s02+99",
+     "out": null
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.6,
+    "far": {
+     "bbox": [
+      14,
+      -37,
+      38,
+      -20
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles); the claims are elevations stated on screen; the enclave shape is shown by the traced border, no area comparison (P1/P2)",
+   "scalebar": {
+    "km": 50,
+    "lonlat": [
+     26.8,
+     -30.75
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,126 @@
+{
+ "id": "st06-challenger-deep-swallows-everest",
+ "format": "story-v1",
+ "series": "geo-stories",
+ "number": 6,
+ "title": "The hole that would swallow Everest",
+ "seed": 5106,
+ "difficulty": "STORY",
+ "story": {
+  "place": "Challenger Deep · Mariana Trench",
+  "headline": "The hole that would *swallow Everest*",
+  "search_term": "challenger deep",
+  "shape": "number-nobody-believes",
+  "close": "Everest simply *vanishes*",
+  "cover": {
+   "place": "",
+   "headline": "Drop Everest in. *It's gone.*"
+  },
+  "outro": {
+   "headline": "KNOW A STRANGER PLACE?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "cold-open",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "The hole in the ocean that would swallow Everest 🌊",
+  "premise": "The deepest hole in the ocean is deeper than Everest is tall, by a lot",
+  "bait": "How deep did you think it was? 👇",
+  "keywords": [
+   "challenger deep",
+   "mariana trench depth",
+   "deepest point in the ocean",
+   "everest in mariana trench",
+   "how deep is the ocean",
+   "deepest place on earth",
+   "geography story",
+   "map story"
+  ],
+  "description": "South-west of Guam the sea floor drops into Challenger Deep, the deepest known point on Earth. This map story pins it, counts the way down, and drops Mount Everest into the trench to show how much water would still be above its summit.\nHow deep did you think it was? Tell us below.",
+  "hashtags": [
+   "#Geography",
+   "#MapStory",
+   "#Ocean",
+   "#Shorts"
+  ],
+  "tags": [
+   "GeoStories",
+   "Ocean"
+  ],
+  "cover_emoji": "",
+  "cover_emoji_why": "stories carry no icon on the cover (title + place only)",
+  "copy": {
+   "spoilers": [
+    "10,935",
+    "10935",
+    "8,849",
+    "2,086"
+   ],
+   "youtube": {
+    "title": "The hole in the ocean that would swallow Everest 🌊",
+    "description": "South-west of Guam the sea floor drops into Challenger Deep, the deepest known point on Earth. This map story pins it, counts the way down, and drops Mount Everest into the trench to show how much water would still be above its summit.\nHow deep did you think it was? Tell us below.",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Ocean",
+     "#Shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Drop Everest in. It vanishes 🌊\nSouth-west of Guam the sea floor falls into Challenger Deep, the deepest known point on Earth. This map story counts the way down, then drops the tallest mountain in and shows how much water would still be above it.\nHow deep did you think it was?",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Ocean",
+     "#GeoReels",
+     "#DidYouKnow"
+    ]
+   },
+   "facebook": {
+    "text": "South-west of Guam the sea floor drops into Challenger Deep, the deepest known point on Earth. This map story pins it, counts the way down, and drops Mount Everest into the trench to show how much water would still be above the summit. How deep did you think it was?",
+    "tags": [
+     "#Geography",
+     "#Ocean"
+    ]
+   },
+   "twitter": {
+    "text": "Drop Everest into the deepest point of the ocean and the summit is still more than 2 km under water. A map story.",
+    "tags": [
+     "#Geography",
+     "#Ocean"
+    ]
+   },
+   "threads": {
+    "text": "There is a spot near Guam where the ocean is so deep that Everest would disappear with two kilometres of water to spare. One-minute map story.",
+    "tags": [
+     "#Ocean"
+    ]
+   }
+  },
+  "cover": {
+   "key_t": 27.0
+  }
+ },
+ "variety": {
+  "question": "story",
+  "story_shape": "number-nobody-believes",
+  "hook": "cold-open",
+  "opener": "plunge",
+  "reveal": "none",
+  "beats": [
+   "pin",
+   "counter",
+   "travel",
+   "compare"
+  ],
+  "cast": "none",
+  "music": "bed:drone"
+ },
+ "status": "draft"
+}

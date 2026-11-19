@@ -1,0 +1,173 @@
+{
+ "version": 1,
+ "episode": "st08-australia-wider-than-the-moon",
+ "topic": "Australia spans about 3,990 km from Steep Point (WA, westernmost) to Cape Byron (NSW, easternmost), while the Moon's mean diameter is 3,474.8 km; the Moon's diameter laid along that line ends about 500 km short of the east coast; the Moon's surface (37.9 million km²) is about five times Australia's land (7.69 million km²).",
+ "researched": "2026-11-19",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Australia is bigger than the Moon.",
+   "reality": "Only wider, point to point. The Moon's surface is about 37.9 million km², roughly five times Australia's 7.69 million km²."
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right",
+  "^GEO STORIES",
+  "^KNOW A STRANGER PLACE\\?$"
+ ],
+ "landscape": {
+  "our_gap": "Wider-than-the-Moon posts are a flat Moon disc pasted over a map; nobody draws the real end-to-end geodesic on the satellite map, lays the Moon's diameter along the same line, and pins where it runs out.",
+  "existing": [
+   {
+    "title": "Australia is wider than the Moon",
+    "format": "static image meme",
+    "gap": "no measured line"
+   },
+   {
+    "title": "Moon compared to countries",
+    "format": "comparison graphic",
+    "gap": "no narrative"
+   },
+   {
+    "title": "Australia facts you did not know",
+    "format": "listicle",
+    "gap": "no points named"
+   }
+  ]
+ },
+ "sources": {
+  "ga_dims": {
+   "type": "primary",
+   "publisher": "Geoscience Australia",
+   "title": "Dimensions of Australia / Continental extremities",
+   "url": "https://www.ga.gov.au/scientific-topics/national-location-information/dimensions",
+   "date": "2026-11-19",
+   "notes": "Mainland extremities: Steep Point 26°09′S 113°09′E (west), Cape Byron 28°38′S 153°38′E (east); the mainland spans about 4,000 km east–west; land 7,692,024 km²."
+  },
+  "nasa_moon": {
+   "type": "primary",
+   "publisher": "NASA Goddard — Planetary Fact Sheet",
+   "title": "Moon Fact Sheet",
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+   "date": "2026-11-19",
+   "notes": "Moon mean diameter 3,474.8 km; surface 3.793 × 10^7 km²."
+  },
+  "ngs_geodesic": {
+   "type": "primary",
+   "publisher": "NOAA National Geodetic Survey",
+   "title": "Inverse / geodesic distance computation",
+   "url": "https://geodesy.noaa.gov/cgi-bin/Inv_Fwd/inverse2.prl",
+   "date": "2026-11-19",
+   "notes": "Great-circle computation reproduced in-house (haversine on mean Earth radius): Steep Point–Cape Byron 3,988 km; the 3,474 km mark along that arc falls near 148°E in north-western New South Wales, about 510 km short of Cape Byron."
+  },
+  "wiki_extreme": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "List of extreme points of Australia",
+   "url": "https://en.wikipedia.org/wiki/List_of_extreme_points_of_Australia",
+   "date": "2026-11-19",
+   "notes": "Westernmost mainland point Steep Point (WA); easternmost mainland point Cape Byron (NSW)."
+  },
+  "jagran": {
+   "type": "press",
+   "publisher": "Jagran Josh",
+   "title": "Is Australia wider than the Moon?",
+   "url": "https://www.jagranjosh.com/general-knowledge/is-australia-wider-than-the-moon-1748763524-1",
+   "date": "2026-11-19",
+   "notes": "Australia about 4,000 km east to west versus the Moon's 3,474 km diameter; the Moon has about five times Australia's surface."
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Australia's westernmost mainland point is Steep Point (WA) and its easternmost is Cape Byron (NSW); the great-circle distance between them is about 3,990 km (almost 4,000 km).",
+   "sources": [
+    "ga_dims",
+    "wiki_extreme",
+    "ngs_geodesic",
+    "jagran"
+   ],
+   "vo": [
+    "australia's westernmost point is steep point, a cliff on the indian ocean. its easternmost is cape byron, a lighthouse on the pacific",
+    "between them, almost 4,000 kilometres",
+    "this country is wider than the moon. not on a trick map. in kilometres",
+    "one continent, coast to coast, wider than the moon",
+    "but point to point, australia is the wider of the two"
+   ],
+   "screen": [
+    "Steep Point · westernmost",
+    "Cape Byron · easternmost",
+    "west to east",
+    "almost 4,000 km",
+    "km · Steep Point to Cape Byron",
+    "wider than the Moon",
+    "The country that is wider than the Moon",
+    "Wider than the Moon",
+    "Coast to coast: wider than the Moon",
+    "point to point: Australia wins",
+    "Australia"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "The Moon's diameter is 3,474 km; laid along the Steep Point–Cape Byron line it ends in north-western New South Wales about 500 km short of the east coast.",
+   "sources": [
+    "nasa_moon",
+    "ngs_geodesic",
+    "jagran"
+   ],
+   "vo": [
+    "the moon, edge to edge, is 3,474 kilometres. lay it along the same line from steep point and it runs out here, in the outback of new south wales, 500 kilometres short of the coast"
+   ],
+   "screen": [
+    "Moon: 3,474 km",
+    "km · the Moon, edge to edge",
+    "the Moon ends here",
+    "500 km short",
+    "Australia 3,990 km · Moon 3,474 km"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "The Moon's surface (about 37.9 million km²) is roughly five times Australia's land (7.69 million km²).",
+   "sources": [
+    "nasa_moon",
+    "ga_dims",
+    "jagran"
+   ],
+   "vo": [
+    "the moon is a sphere, so it still has far more surface than this one flat continent"
+   ],
+   "screen": [
+    "But as a sphere",
+    "the Moon is about five Australias"
+   ]
+  }
+ ]
+}

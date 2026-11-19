@@ -1,0 +1,127 @@
+{
+ "version": 1,
+ "episode": "st07-lesotho-kingdom-in-the-sky",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "Lesotho is the only country lying entirely above 1,000 m; its lowest point, where the Makhaleng meets the Orange River, is 1,400 m up, higher than the summit of Ben Nevis, and the whole kingdom is an island inside South Africa.",
+ "pacing_profile": "documentary: cold open, place, why in 2–5 beats, twist, close answers the open, short CTA (docs/STORY_GUIDELINES.md §2)",
+ "pause_policy": "Pause only at the marked ellipses.",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v01",
+ "title": "The country whose lowest point beats Britain's highest",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "plunge from the southern tip of Africa onto the highlands; the border draws itself on 'country'",
+   "text": "There is a country where you cannot get down to sea level. You cannot even get close.",
+   "cues": {
+    "country": "country",
+    "sea": "sea",
+    "close": "close"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "push to the south-west corner; the lowest-point pin drops in the river junction; counter climbs to 1,400",
+   "text": "This is Lesotho. Its lowest point is here, where two rivers meet on the border, and even that is 1,400 metres above the sea.",
+   "cues": {
+    "lesotho": "lesotho",
+    "lowest": "lowest",
+    "rivers": "rivers",
+    "1400": "1,400",
+    "sea": "sea"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "direction": "a mountain prop pops beside the pin, standing for Ben Nevis; card with both numbers; flash on 'bottom'",
+   "text": "That is the highest low point of any country on Earth. Ben Nevis, the tallest mountain in Britain, is 1,345 metres. It would not reach the bottom of Lesotho.",
+   "cues": {
+    "highest": "highest",
+    "ben": "ben",
+    "1345": "1,345",
+    "bottom": "bottom"
+   },
+   "climax": true
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "camera rides a line from the low point north-east to the summit; the peak pin drops; the SKY tag stamps the highlands",
+   "text": "From there the land only climbs, up to Thabana Ntlenyana at 3,482 metres. More than 80 percent of the country sits above 1,800 metres. They call it the Kingdom in the Sky.",
+   "cues": {
+    "climbs": "climbs",
+    "thabana": "thabana",
+    "3482": "3,482",
+    "80": "80",
+    "kingdom": "kingdom"
+   }
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "pull right out; South Africa fills solid around it so the country reads as a hole; border pulses",
+   "text": "And it is an island. Lesotho is completely surrounded by South Africa, one of only three countries on Earth locked inside another.",
+   "cues": {
+    "island": "island",
+    "surrounded": "surrounded",
+    "three": "three",
+    "another": "another"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "direction": "answer the opening line with the same noun",
+   "text": "A whole country where the lowest you can go is still higher than Britain's highest mountain.",
+   "cues": {
+    "country": "country",
+    "lowest": "lowest",
+    "mountain": "mountain"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 2,
+   "pause_after": 0.0,
+   "direction": "short follow — the outro visual does the work",
+   "text": "Follow for a new map story every day.",
+   "cues": {}
+  }
+ ]
+}

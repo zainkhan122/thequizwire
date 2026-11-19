@@ -7,6 +7,7 @@ A prop is an inline-SVG rig (`rig` element in visuals.json) with named sub-parts
   person   little figure, waving arm {id}_arm, red cross {id}_x (hidden until prop.cross)
   flag     flag on a pole; cloth {id}_cloth is a flag-icons SVG (assets/geo/flags/<cc>.svg)
   tag      small text tag (one word) — for "?" / "NO" / years
+  mountain a peak with a snow cap and a summit flag (prop.fall it into a trench)
 Devices (visuals.json beats, do = "prop.<verb>", stage = the geo stage they anchor to):
   prop.anchor  t0..t1  keep the prop glued to a lon/lat (+dx,dy px) while the camera moves
   prop.pop / prop.out  show / hide (pop = scale burst, rise = grows from its baseline)
@@ -61,6 +62,13 @@ def _flag(i, cc):
             f'<g id="{i}_cloth"><image href="assets/geo/flags/{cc.lower()}.svg" x="-56" y="-92" width="150" height="100" preserveAspectRatio="none"/>'
             f'<rect x="-56" y="-92" width="150" height="100" fill="none" stroke="#2b2f36" stroke-width="5"/></g>')
 
+def _mountain(i):
+    return (f'<path d="M-96 90 L-30 -70 L-6 -30 L14 -82 L96 90Z" fill="#6b7280" stroke="#2b2f36" stroke-width="6" stroke-linejoin="round"/>'
+            f'<path d="M-30 -70 L-14 -32 L-2 -44 L8 -30 L14 -82 L0 -90Z" fill="#fff" stroke="#2b2f36" stroke-width="4" stroke-linejoin="round"/>'
+            f'<path d="M-60 20 L-40 -20 M40 10 L60 50" stroke="#4b5563" stroke-width="5" stroke-linecap="round"/>'
+            f'<g id="{i}_flag"><path d="M14 -82 v-30" stroke="#2b2f36" stroke-width="4"/><path d="M14 -112 l26 7 l-26 7z" fill="#e5322d"/></g>'
+            f'<g id="{i}_flame" opacity="0"><path d="M-70 -70 Q-90 -110 -60 -140 Q-50 -110 -30 -120 Q-40 -90 -40 -70Z" fill="#ff9f1c" stroke="#e5322d" stroke-width="4"/></g>')
+
 def _tag(i, text, color):
     t = html.escape(text, quote=False)
     return (f'<rect x="-90" y="-46" width="180" height="92" rx="20" fill="{color}" stroke="#1b1b1b" stroke-width="6"/>'
@@ -71,7 +79,7 @@ def rig_html(el):
     via negative margins (GSAP owns transform; the anchor device owns left/top)."""
     i, kind, size = el["id"], el["rig"], int(el.get("size", 200))
     body = {"sat": lambda: _sat(i), "fallsat": lambda: _fallsat(i), "splash": lambda: _splash(i),
-            "person": lambda: _person(i, el.get("shirt", "#2a9d8f")), "flag": lambda: _flag(i, el["flag"]),
+            "person": lambda: _person(i, el.get("shirt", "#2a9d8f")), "flag": lambda: _flag(i, el["flag"]), "mountain": lambda: _mountain(i),
             "tag": lambda: _tag(i, el.get("text", "?"), el.get("color", "#e5322d"))}[kind]()
     vb = "-100 -160 200 260" if kind == "fallsat" else "-100 -100 200 200"
     h = int(size * 1.3) if kind == "fallsat" else size

@@ -1,0 +1,199 @@
+{
+ "version": 1,
+ "episode": "st06-challenger-deep-swallows-everest",
+ "topic": "Challenger Deep, at the southern end of the Mariana Trench about 300 km south-west of Guam, is the deepest known point in the ocean at about 10,935 m (2020 survey, ±6 m); Mount Everest is 8,849 m (2020 Nepal–China survey), so its summit would be about 2,086 m under water; pressure exceeds 1,000 atmospheres.",
+ "researched": "2026-11-19",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Challenger Deep is a narrow vertical shaft.",
+   "reality": "It is a slot-shaped depression in the trench floor, several kilometres long; the 'hole' is a long, deep valley, not a well."
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right",
+  "^GEO STORIES",
+  "^KNOW A STRANGER PLACE\\?$"
+ ],
+ "landscape": {
+  "our_gap": "Mariana Trench Shorts are side-view infographics or submarine footage; nobody pins the spot on the satellite map, counts the depth down, and actually drops Everest in with the margin stated.",
+  "existing": [
+   {
+    "title": "How deep is the Mariana Trench?",
+    "format": "side-view infographic animation",
+    "gap": "no map location"
+   },
+   {
+    "title": "Everest vs Mariana Trench",
+    "format": "comparison graphic",
+    "gap": "no narrative, no spot"
+   },
+   {
+    "title": "Deepest dive ever (Victor Vescovo)",
+    "format": "news footage",
+    "gap": "no scale"
+   }
+  ]
+ },
+ "sources": {
+  "noaa_deep": {
+   "type": "primary",
+   "publisher": "NOAA Ocean Exploration",
+   "title": "How deep is the ocean? / Challenger Deep",
+   "url": "https://oceanexplorer.noaa.gov/facts/deepest.html",
+   "date": "2026-11-19",
+   "notes": "Challenger Deep in the Mariana Trench is the deepest known point, about 10,935 m; it lies south-west of Guam."
+  },
+  "noaa_pressure": {
+   "type": "primary",
+   "publisher": "NOAA National Ocean Service",
+   "title": "How does pressure change with ocean depth?",
+   "url": "https://oceanservice.noaa.gov/facts/pressure.html",
+   "date": "2026-11-19",
+   "notes": "Pressure increases about 1 atm per 10 m; at the bottom of Challenger Deep pressure is over 1,000 atmospheres (more than 8 tons per square inch)."
+  },
+  "stewart_jamieson": {
+   "type": "scholarly",
+   "publisher": "Earth-Science Reviews (Stewart & Jamieson 2019)",
+   "title": "The five deeps: the location and depth of the deepest place in each of the world's oceans",
+   "url": "https://doi.org/10.1016/j.earscirev.2019.102896",
+   "date": "2026-11-19",
+   "notes": "Challenger Deep 10,935 ± 6 m (Five Deeps Expedition multibeam survey)."
+  },
+  "wiki_cd": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Challenger Deep",
+   "url": "https://en.wikipedia.org/wiki/Challenger_Deep",
+   "date": "2026-11-19",
+   "notes": "Depth about 10,935 m (±6 m); located at the southern end of the Mariana Trench, about 320 km south-west of Guam; pressure about 1,086 bar."
+  },
+  "everest_2020": {
+   "type": "primary",
+   "publisher": "Government of Nepal Survey Department / Government of China (joint announcement, 8 Dec 2020)",
+   "title": "Revised height of Sagarmatha / Mount Everest: 8,848.86 m",
+   "url": "https://www.bbc.com/news/world-asia-55218443",
+   "date": "2026-11-19",
+   "notes": "Nepal and China jointly announced Everest's height as 8,848.86 m (rounded 8,849 m) on 8 December 2020."
+  },
+  "nat_geo_everest": {
+   "type": "reference",
+   "publisher": "National Geographic",
+   "title": "Mount Everest is two feet taller, China and Nepal agree",
+   "url": "https://www.nationalgeographic.com/science/article/mount-everest-is-two-feet-taller-china-and-nepal-agree",
+   "date": "2026-11-19",
+   "notes": "Everest's official height is 8,848.86 m (29,031.7 ft)."
+  },
+  "worldatlas": {
+   "type": "reference",
+   "publisher": "WorldAtlas",
+   "title": "Challenger Deep: the deepest point on Earth",
+   "url": "https://www.worldatlas.com/places/challenger-deep-mariana-trench.html",
+   "date": "2026-11-19",
+   "notes": "If Everest were placed in Challenger Deep its summit would still be more than 2 km below the surface."
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Challenger Deep, at the southern end of the Mariana Trench about 300 km south-west of Guam, is the deepest known point in the ocean at about 10,935 m.",
+   "sources": [
+    "noaa_deep",
+    "stewart_jamieson",
+    "wiki_cd"
+   ],
+   "vo": [
+    "this is challenger deep, at the southern end of the mariana trench, about 300 kilometres south-west of guam",
+    "the sea floor here is about 10,935 metres down",
+    "nearly eleven kilometres of water",
+    "somewhere under this patch of blue is a hole deep enough to swallow the tallest mountain on earth",
+    "the deepest place on earth: a hole so deep the highest mountain simply vanishes into it"
+   ],
+   "screen": [
+    "Challenger Deep",
+    "Guam",
+    "MARIANA TRENCH",
+    "10,935 m down",
+    "metres down · Challenger Deep",
+    "The hole that would swallow Everest",
+    "it swallows mountains",
+    "Everest simply vanishes",
+    "Challenger Deep · Mariana Trench"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Pressure at the bottom of Challenger Deep is more than 1,000 times atmospheric pressure at the surface.",
+   "sources": [
+    "noaa_pressure",
+    "wiki_cd"
+   ],
+   "vo": [
+    "pressing down with more than a thousand times the pressure at the surface"
+   ],
+   "screen": [
+    "Pressure",
+    "over 1,000× the surface"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Mount Everest is 8,849 m high (8,848.86 m, 2020 Nepal–China survey).",
+   "sources": [
+    "everest_2020",
+    "nat_geo_everest"
+   ],
+   "vo": [
+    "now take mount everest, 8,849 metres high, and fly it from the himalaya to this spot"
+   ],
+   "screen": [
+    "Mount Everest",
+    "Everest · 8,849 m"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "Placed in Challenger Deep, Everest's summit would be about 2,086 m (more than 2 km) below the surface.",
+   "sources": [
+    "worldatlas",
+    "noaa_deep",
+    "everest_2020"
+   ],
+   "vo": [
+    "drop it in. the whole mountain disappears, and its summit would still be more than two kilometres under the surface"
+   ],
+   "screen": [
+    "the whole mountain disappears",
+    "Still 2 km under",
+    "10,935 m deep − 8,849 m tall = 2,086 m of water"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1429 @@
+{
+ "id": "st05-closest-us-state-to-africa",
+ "series": "geo-stories",
+ "number": 5,
+ "seed": 5105,
+ "place": "Maine · USA",
+ "headline": "The US state closest to Africa is *not Florida*",
+ "search_term": "closest us state to africa",
+ "cover": {
+  "place": "",
+  "headline": "Closest to Africa? *Not Florida*"
+ },
+ "intent": "The US state nearest to Africa is Maine, not Florida, because the Earth is round and the great-circle route to Morocco bends north; the numbers are 5,076 km from Maine versus more than 6,300 km from Florida.",
+ "variety": {
+  "shape": "why-here-not-there",
+  "opener": "wide-drift",
+  "music": "bed:drone",
+  "cast": "none",
+  "beats": [
+   "route",
+   "counter",
+   "route",
+   "compare"
+  ]
+ },
+ "post": {
+  "premise": "Florida is the state closest to Africa, right? Wrong, and the map shows why",
+  "bait": "Did you guess Florida? Be honest 👇",
+  "keywords": [
+   "closest us state to africa",
+   "maine africa distance",
+   "great circle route",
+   "florida africa distance",
+   "map facts",
+   "earth is round map",
+   "geography story",
+   "map story"
+  ],
+  "tags": [
+   "GeoStories",
+   "Maps"
+  ],
+  "copy": {
+   "spoilers": [
+    "5,076",
+    "5076",
+    "quoddy",
+    "el beddouza"
+   ],
+   "youtube": {
+    "title": "The US state closest to Africa is not Florida 🧭",
+    "description": "Everyone says Florida. The map says otherwise. This map story draws the shortest route from the United States to Africa, measures it, then draws Florida's for comparison, and explains why the curve of the Earth pulls the answer north.\nDid you guess Florida? Be honest in the comments.",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Maps",
+     "#Shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Closest US state to Africa? Not Florida 🧭\nThe shortest line from the United States to Africa starts far to the north, and this map story draws it, measures it, and compares it with Florida's. The curve of the Earth decides.\nDid you guess Florida?",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Maps",
+     "#GeoReels",
+     "#DidYouKnow"
+    ]
+   },
+   "facebook": {
+    "text": "Everyone says Florida. The map says otherwise. This map story draws the shortest route from the United States to Africa, measures it, draws Florida's route for comparison, and shows why the curve of the Earth pulls the answer north. Did you guess Florida? Be honest.",
+    "tags": [
+     "#Geography",
+     "#Maps"
+    ]
+   },
+   "twitter": {
+    "text": "The US state closest to Africa is not Florida. A map story with the lines drawn.",
+    "tags": [
+     "#Geography",
+     "#Maps"
+    ]
+   },
+   "threads": {
+    "text": "Closest US state to Africa? Almost everyone says Florida. The great-circle line says somewhere much colder. One-minute map story.",
+    "tags": [
+     "#Maps"
+    ]
+   }
+  },
+  "cover": {
+   "key_t": 20.0
+  }
+ },
+ "geo": {
+  "fit_bbox": [
+   -86,
+   20,
+   -4,
+   50
+  ],
+  "far_bbox": [
+   -110,
+   2,
+   25,
+   65
+  ],
+  "resolution": "110m",
+  "k_max": 2.0,
+  "layers": [
+   {
+    "id": "tint",
+    "ids": [
+     "840"
+    ],
+    "cls": "tint",
+    "note": "United States, the subject",
+    "trace": false
+   },
+   {
+    "id": "solid",
+    "ids": [
+     "504"
+    ],
+    "cls": "solid",
+    "note": "Morocco, the nearest African coast",
+    "trace": false
+   }
+  ],
+  "pins": [
+   {
+    "id": "qh",
+    "lonlat": [
+     -66.95,
+     44.815
+    ],
+    "label": "West Quoddy Head · Maine",
+    "side": "left"
+   },
+   {
+    "id": "eb",
+    "lonlat": [
+     -9.27,
+     32.54
+    ],
+    "label": "El Beddouza · Morocco",
+    "side": "right"
+   },
+   {
+    "id": "fl",
+    "lonlat": [
+     -80.03,
+     26.7
+    ],
+    "label": "Florida",
+    "side": "left"
+   },
+   {
+    "id": "dk",
+    "lonlat": [
+     -15.95,
+     23.7
+    ],
+    "label": "Western Sahara coast",
+    "side": "right"
+   }
+  ],
+  "labels": [],
+  "scalebar": {
+   "km": 1000,
+   "lonlat": [
+    -84,
+    22
+   ]
+  },
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "maine",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "maine",
+       "properties": {
+        "name": "Maine → Morocco great circle, 5,076 km"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -66.95,
+          44.815
+         ],
+         [
+          -65.88,
+          44.878
+         ],
+         [
+          -64.808,
+          44.931
+         ],
+         [
+          -63.734,
+          44.974
+         ],
+         [
+          -62.659,
+          45.007
+         ],
+         [
+          -61.583,
+          45.03
+         ],
+         [
+          -60.506,
+          45.042
+         ],
+         [
+          -59.429,
+          45.045
+         ],
+         [
+          -58.352,
+          45.037
+         ],
+         [
+          -57.275,
+          45.019
+         ],
+         [
+          -56.2,
+          44.992
+         ],
+         [
+          -55.125,
+          44.954
+         ],
+         [
+          -54.052,
+          44.906
+         ],
+         [
+          -52.981,
+          44.848
+         ],
+         [
+          -51.913,
+          44.78
+         ],
+         [
+          -50.847,
+          44.702
+         ],
+         [
+          -49.784,
+          44.614
+         ],
+         [
+          -48.725,
+          44.516
+         ],
+         [
+          -47.669,
+          44.409
+         ],
+         [
+          -46.617,
+          44.292
+         ],
+         [
+          -45.57,
+          44.165
+         ],
+         [
+          -44.527,
+          44.029
+         ],
+         [
+          -43.489,
+          43.883
+         ],
+         [
+          -42.457,
+          43.728
+         ],
+         [
+          -41.43,
+          43.564
+         ],
+         [
+          -40.409,
+          43.391
+         ],
+         [
+          -39.393,
+          43.208
+         ],
+         [
+          -38.384,
+          43.017
+         ],
+         [
+          -37.382,
+          42.817
+         ],
+         [
+          -36.385,
+          42.608
+         ],
+         [
+          -35.396,
+          42.391
+         ],
+         [
+          -34.414,
+          42.165
+         ],
+         [
+          -33.439,
+          41.931
+         ],
+         [
+          -32.471,
+          41.688
+         ],
+         [
+          -31.51,
+          41.438
+         ],
+         [
+          -30.557,
+          41.179
+         ],
+         [
+          -29.612,
+          40.913
+         ],
+         [
+          -28.674,
+          40.64
+         ],
+         [
+          -27.744,
+          40.358
+         ],
+         [
+          -26.822,
+          40.069
+         ],
+         [
+          -25.907,
+          39.774
+         ],
+         [
+          -25.001,
+          39.47
+         ],
+         [
+          -24.103,
+          39.16
+         ],
+         [
+          -23.212,
+          38.843
+         ],
+         [
+          -22.33,
+          38.52
+         ],
+         [
+          -21.455,
+          38.19
+         ],
+         [
+          -20.589,
+          37.853
+         ],
+         [
+          -19.73,
+          37.51
+         ],
+         [
+          -18.879,
+          37.161
+         ],
+         [
+          -18.037,
+          36.806
+         ],
+         [
+          -17.202,
+          36.445
+         ],
+         [
+          -16.375,
+          36.079
+         ],
+         [
+          -15.555,
+          35.706
+         ],
+         [
+          -14.744,
+          35.328
+         ],
+         [
+          -13.939,
+          34.945
+         ],
+         [
+          -13.143,
+          34.557
+         ],
+         [
+          -12.354,
+          34.163
+         ],
+         [
+          -11.572,
+          33.765
+         ],
+         [
+          -10.797,
+          33.361
+         ],
+         [
+          -10.03,
+          32.953
+         ],
+         [
+          -9.27,
+          32.54
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "kind": "route",
+    "id": "florida",
+    "cls": "river dashed",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "florida",
+       "properties": {
+        "name": "Florida → Africa great circle, about 6,390 km"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -80.03,
+          26.7
+         ],
+         [
+          -78.981,
+          26.9
+         ],
+         [
+          -77.928,
+          27.092
+         ],
+         [
+          -76.872,
+          27.276
+         ],
+         [
+          -75.813,
+          27.452
+         ],
+         [
+          -74.75,
+          27.62
+         ],
+         [
+          -73.684,
+          27.78
+         ],
+         [
+          -72.615,
+          27.932
+         ],
+         [
+          -71.543,
+          28.075
+         ],
+         [
+          -70.468,
+          28.21
+         ],
+         [
+          -69.39,
+          28.337
+         ],
+         [
+          -68.31,
+          28.455
+         ],
+         [
+          -67.228,
+          28.565
+         ],
+         [
+          -66.144,
+          28.666
+         ],
+         [
+          -65.057,
+          28.759
+         ],
+         [
+          -63.969,
+          28.842
+         ],
+         [
+          -62.879,
+          28.917
+         ],
+         [
+          -61.788,
+          28.984
+         ],
+         [
+          -60.695,
+          29.041
+         ],
+         [
+          -59.601,
+          29.09
+         ],
+         [
+          -58.506,
+          29.129
+         ],
+         [
+          -57.411,
+          29.16
+         ],
+         [
+          -56.314,
+          29.182
+         ],
+         [
+          -55.218,
+          29.195
+         ],
+         [
+          -54.121,
+          29.199
+         ],
+         [
+          -53.025,
+          29.194
+         ],
+         [
+          -51.928,
+          29.18
+         ],
+         [
+          -50.832,
+          29.157
+         ],
+         [
+          -49.737,
+          29.125
+         ],
+         [
+          -48.642,
+          29.084
+         ],
+         [
+          -47.548,
+          29.035
+         ],
+         [
+          -46.456,
+          28.976
+         ],
+         [
+          -45.364,
+          28.909
+         ],
+         [
+          -44.274,
+          28.833
+         ],
+         [
+          -43.186,
+          28.749
+         ],
+         [
+          -42.1,
+          28.655
+         ],
+         [
+          -41.016,
+          28.553
+         ],
+         [
+          -39.934,
+          28.442
+         ],
+         [
+          -38.854,
+          28.323
+         ],
+         [
+          -37.777,
+          28.195
+         ],
+         [
+          -36.703,
+          28.059
+         ],
+         [
+          -35.631,
+          27.915
+         ],
+         [
+          -34.562,
+          27.762
+         ],
+         [
+          -33.496,
+          27.601
+         ],
+         [
+          -32.434,
+          27.432
+         ],
+         [
+          -31.375,
+          27.255
+         ],
+         [
+          -30.319,
+          27.07
+         ],
+         [
+          -29.267,
+          26.877
+         ],
+         [
+          -28.218,
+          26.677
+         ],
+         [
+          -27.173,
+          26.468
+         ],
+         [
+          -26.133,
+          26.252
+         ],
+         [
+          -25.096,
+          26.029
+         ],
+         [
+          -24.063,
+          25.798
+         ],
+         [
+          -23.034,
+          25.56
+         ],
+         [
+          -22.009,
+          25.315
+         ],
+         [
+          -20.988,
+          25.063
+         ],
+         [
+          -19.972,
+          24.804
+         ],
+         [
+          -18.96,
+          24.538
+         ],
+         [
+          -17.952,
+          24.265
+         ],
+         [
+          -16.949,
+          23.986
+         ],
+         [
+          -15.95,
+          23.7
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "cams": {
+   "start": [
+    0.45,
+    [
+     -45,
+     36
+    ]
+   ],
+   "open": [
+    0.5,
+    [
+     -44,
+     37
+    ]
+   ]
+  },
+  "pin_beats": [],
+  "subject": {
+   "fid": "840",
+   "layer": "tint"
+  },
+  "projection_reason": "satellite raster (Web Mercator tiles); both routes are true great circles drawn as geodesics, the comparison is carried by the stated kilometre figures and the scalebar, not by visual length (P1/P2)"
+ },
+ "open": {
+  "vo": {
+   "text": "Which American state is closest to Africa? Almost everyone says Florida. Almost everyone is wrong.",
+   "cues": {
+    "africa": "africa",
+    "florida": "florida",
+    "wrong": "wrong"
+   }
+  },
+  "tone": "urgent",
+  "energy": 4,
+  "pause_after": 0.45,
+  "kw": {
+   "text": "everyone says *Florida*",
+   "at": "@@florida-0.2"
+  },
+  "direction": "wide Atlantic drift; Florida pin drops on the guess; a red NO tag stamps it on 'wrong'",
+  "elements": [
+   {
+    "id": "no",
+    "type": "rig",
+    "rig": "tag",
+    "x": 540,
+    "y": 900,
+    "size": 150,
+    "text": "NO",
+    "color": "#e5322d"
+   }
+  ],
+  "devices": [
+   {
+    "at": "@@florida",
+    "do": "geo.pin_in",
+    "args": {
+     "pid": "fl"
+    }
+   },
+   {
+    "at": "@@wrong-0.1",
+    "do": "prop.anchor",
+    "id": "no",
+    "until": "s02+1.0",
+    "args": {
+     "lonlat": [
+      -80.03,
+      26.7
+     ],
+     "dx": 90,
+     "dy": -90
+    }
+   },
+   {
+    "at": "@@wrong",
+    "do": "prop.pop",
+    "id": "no",
+    "args": {
+     "dur": 0.3
+    }
+   },
+   {
+    "at": "@@wrong",
+    "do": "fx.flash",
+    "args": {
+     "peak": 0.5
+    }
+   }
+  ]
+ },
+ "beats": [
+  {
+   "vo": {
+    "text": "The shortest line from the United States to Africa starts up here, at West Quoddy Head in Maine, and lands at El Beddouza in Morocco.",
+    "cues": {
+     "shortest": "shortest",
+     "here": "here",
+     "maine": "maine",
+     "lands": "lands",
+     "morocco": "morocco"
+    }
+   },
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "camera jumps north to Maine; the Maine pin drops; the great-circle line draws across the Atlantic and the Morocco pin lands",
+   "cam": [
+    1.3,
+    [
+     -66.5,
+     44.5
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.3,
+    [
+     -66.0,
+     44.5
+    ]
+   ],
+   "kw": {
+    "text": "it *starts in Maine*",
+    "at": "@@shortest-0.1",
+    "until": "@@lands-0.2"
+   },
+   "highlights": [
+    {
+     "fid": "840",
+     "layer": "tint",
+     "at": "@@here-0.2"
+    },
+    {
+     "fid": "504",
+     "layer": "solid",
+     "at": "@@morocco-0.3"
+    }
+   ],
+   "devices": [
+    {
+     "at": "@+0.6",
+     "do": "prop.out",
+     "id": "no"
+    },
+    {
+     "at": "@+0.6",
+     "do": "geo.pin_out",
+     "args": {
+      "pid": "fl"
+     }
+    },
+    {
+     "at": "@@here",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "qh"
+     }
+    },
+    {
+     "at": "@@maine+0.2",
+     "do": "geo.route_draw",
+     "until": "@@morocco+0.2",
+     "args": {
+      "rid": "maine",
+      "layer": "maine"
+     }
+    },
+    {
+     "at": "@@morocco",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "eb"
+     }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.2",
+     "@@maine+0.2",
+     [
+      1.3,
+      [
+       -66.0,
+       44.5
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@maine+0.2",
+     "@@morocco+0.3",
+     [
+      0.55,
+      [
+       -40,
+       40
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@morocco+0.3",
+     "@.end",
+     [
+      0.54,
+      [
+       -40,
+       40
+      ]
+     ],
+     "none"
+    ]
+   ]
+  },
+  {
+   "vo": {
+    "text": "That line is 5,076 kilometres long.",
+    "cues": {
+     "line": "line",
+     "5076": "5,076",
+     "long": "long"
+    }
+   },
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.5,
+   "direction": "hold the whole line; the counter rolls up to the distance",
+   "cam": [
+    0.55,
+    [
+     -40,
+     40
+    ]
+   ],
+   "cam_dur": 1.0,
+   "cam_hold": [
+    0.56,
+    [
+     -40,
+     40
+    ]
+   ],
+   "kw": {
+    "text": "*5,076 km*",
+    "at": "@@5076-0.2",
+    "until": "@.end"
+   },
+   "elements": [
+    {
+     "id": "km1",
+     "type": "counter",
+     "start": 0,
+     "end": 5076,
+     "y": 560,
+     "label": "km · Maine to Morocco",
+     "fmt": "int",
+     "size": 150
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@line-0.2",
+     "do": "chart.counter_run",
+     "id": "km1",
+     "until": "@@long+0.4",
+     "args": {
+      "steps": 14
+     }
+    },
+    {
+     "at": "@.end+0.3",
+     "do": "chart.out",
+     "id": "km1"
+    },
+    {
+     "at": "@@long",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "504",
+      "layer": "solid",
+      "dur": 0.6
+     }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.0",
+     "@.end",
+     [
+      0.57,
+      [
+       -40,
+       40
+      ]
+     ],
+     "none"
+    ]
+   ]
+  },
+  {
+   "vo": {
+    "text": "Now Florida. From its east coast to the nearest African shore is more than 6,300 kilometres. Florida loses by over a thousand.",
+    "cues": {
+     "florida": "florida",
+     "coast": "coast",
+     "shore": "shore",
+     "6300": "6,300",
+     "loses": "loses"
+    }
+   },
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "pin back on Florida; its dashed line draws south-east to the Sahara coast; second counter; the Maine line pulses as the winner",
+   "cam": [
+    0.6,
+    [
+     -50,
+     32
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    0.6,
+    [
+     -50,
+     32
+    ]
+   ],
+   "kw": {
+    "text": "Florida: *more than 6,300 km*",
+    "at": "@@6300-0.3",
+    "until": "@@loses+0.9"
+   },
+   "elements": [
+    {
+     "id": "km2",
+     "type": "counter",
+     "start": 0,
+     "end": 6390,
+     "y": 560,
+     "label": "km · Florida to the nearest African shore",
+     "fmt": "int",
+     "size": 150
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@florida",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "fl"
+     }
+    },
+    {
+     "at": "@@coast",
+     "do": "geo.route_draw",
+     "until": "@@shore+0.3",
+     "args": {
+      "rid": "florida",
+      "layer": "florida"
+     }
+    },
+    {
+     "at": "@@shore",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "dk"
+     }
+    },
+    {
+     "at": "@@shore-0.2",
+     "do": "chart.counter_run",
+     "id": "km2",
+     "until": "@@6300+0.5",
+     "args": {
+      "steps": 14
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "km2"
+    },
+    {
+     "at": "@@loses+0.2",
+     "do": "geo.pin_out",
+     "args": {
+      "pid": "dk"
+     }
+    },
+    {
+     "at": "@@loses+0.3",
+     "do": "geo.pin_out",
+     "args": {
+      "pid": "fl"
+     }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.2",
+     "@@loses-0.3",
+     [
+      0.6,
+      [
+       -50,
+       32
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@loses-0.3",
+     "@@loses+0.7",
+     [
+      0.55,
+      [
+       -45,
+       37
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@loses+0.7",
+     "@.end",
+     [
+      0.54,
+      [
+       -45,
+       37
+      ]
+     ],
+     "none"
+    ]
+   ]
+  },
+  {
+   "vo": {
+    "text": "Why? Because the Earth is a ball. The shortest path between two points bends toward the pole, and Africa's bulge leans north too, so the nearest meeting point is up in the cold.",
+    "cues": {
+     "ball": "ball",
+     "bends": "bends",
+     "bulge": "bulge",
+     "cold": "cold"
+    }
+   },
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "climax": true,
+   "direction": "the Maine line redraws as the camera rides it, arcing north; Morocco pulses on 'bulge'; push to the Maine end on 'cold'; card",
+   "cam": [
+    0.5,
+    [
+     -42,
+     40
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    0.5,
+    [
+     -42,
+     40
+    ]
+   ],
+   "kw": {
+    "text": "the shortest path *bends north*",
+    "at": "@@bends-0.1",
+    "until": "@@cold-0.3"
+   },
+   "card": {
+    "kicker": "Great circle",
+    "text": "Maine 5,076 km · Florida 6,300+ km",
+    "at": "@@cold-0.2",
+    "y": 1010
+   },
+   "devices": [
+    {
+     "at": "@@ball",
+     "do": "geo.route_draw",
+     "until": "@@bulge+0.2",
+     "args": {
+      "rid": "maine",
+      "layer": "maine"
+     }
+    },
+    {
+     "at": "@@bulge",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "504",
+      "layer": "solid",
+      "dur": 0.7
+     }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.2",
+     "@@cold-0.5",
+     [
+      0.5,
+      [
+       -42,
+       40
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@cold-0.5",
+     "@@cold+0.6",
+     [
+      1.0,
+      [
+       -64,
+       44.5
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@cold+0.6",
+     "@.end",
+     [
+      1.02,
+      [
+       -64,
+       44.5
+      ]
+     ],
+     "none"
+    ]
+   ]
+  }
+ ],
+ "close": {
+  "vo": {
+   "text": "Closest to Africa: not the beaches of Florida, but the rocks of Maine.",
+   "cues": {
+    "africa": "africa",
+    "florida": "florida",
+    "maine": "maine"
+   }
+  },
+  "text": "Not Florida. *Maine.*",
+  "tone": "revelatory",
+  "energy": 5,
+  "pause_after": 0.5,
+  "y": 760,
+  "cam": [
+   0.5,
+   [
+    -42,
+    40
+   ]
+  ],
+  "cam_dur": 1.6,
+  "devices": [
+   {
+    "at": "@@maine",
+    "do": "geo.highlight_pulse",
+    "args": {
+     "fid": "840",
+     "layer": "tint",
+     "dur": 0.7
+    }
+   }
+  ]
+ },
+ "cta": {
+  "vo": {
+   "text": "Follow for a new map story every day."
+  }
+ },
+ "outro_headline": "KNOW A STRANGER PLACE?",
+ "research": {
+  "topic": "Maine, not Florida, is the US state closest to Africa: West Quoddy Head (Lubec, Maine) to El Beddouza, Morocco is about 5,076 km by great circle, while Florida's east coast is more than 6,300 km from the nearest African shore (Western Sahara coast); the reason is great-circle geometry on a sphere.",
+  "myths": [
+   {
+    "myth": "Florida is the closest US state to Africa because it is the furthest south and east on the map.",
+    "reality": "On a globe the shortest line bends north; Maine's easternmost point is about 5,076 km from Morocco while Florida is more than 6,300 km from any African coast."
+   }
+  ],
+  "landscape": {
+   "our_gap": "Maine-is-closest clips are a single flat map screenshot with text; nobody draws both true great circles on the satellite map, counts both distances, and pushes to each end so the curve is felt.",
+   "existing": [
+    {
+     "title": "Closest US state to Africa (surprising)",
+     "format": "flat map screenshot",
+     "gap": "no geodesic lines drawn"
+    },
+    {
+     "title": "Map facts that sound fake",
+     "format": "listicle",
+     "gap": "no numbers"
+    },
+    {
+     "title": "Great circle routes explained",
+     "format": "educational talking head",
+     "gap": "not about this question"
+    }
+   ]
+  },
+  "sources": {
+   "mapsofworld": {
+    "type": "reference",
+    "publisher": "Maps of World",
+    "title": "Which US state is closest to Africa?",
+    "url": "https://www.mapsofworld.com/answers/geography/which-us-state-is-closest-to-africa/",
+    "date": "2026-11-19",
+    "notes": "Maine; West Quoddy Head to El Beddouza, Morocco about 5,076 km (3,154 mi); Florida is further."
+   },
+   "sat": {
+    "type": "reference",
+    "publisher": "The Southern African Times",
+    "title": "The closest US state to Africa is Maine, not Florida",
+    "url": "https://www.thesouthernafricantimes.com/",
+    "date": "2026-11-19",
+    "notes": "Great-circle distance Quoddy Head–El Beddouza ≈ 5,076 km; Florida's shortest distance to Africa exceeds 6,300 km."
+   },
+   "wiki_quoddy": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "West Quoddy Head",
+    "url": "https://en.wikipedia.org/wiki/West_Quoddy_Head",
+    "date": "2026-11-19",
+    "notes": "Easternmost point of the contiguous United States, Lubec, Maine, 44°48′55″N 66°57′0″W."
+   },
+   "ngs_geodesic": {
+    "type": "primary",
+    "publisher": "NOAA National Geodetic Survey",
+    "title": "Inverse / geodesic distance computation",
+    "url": "https://geodesy.noaa.gov/cgi-bin/Inv_Fwd/inverse2.prl",
+    "date": "2026-11-19",
+    "notes": "Great-circle computation (haversine on the mean Earth radius) reproduced in-house: Quoddy Head–El Beddouza 5,078 km; Palm Beach–Western Sahara coast near Dakhla 6,387 km; Palm Beach–El Beddouza 6,746 km."
+   },
+   "britannica_gc": {
+    "type": "scholarly",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Great circle",
+    "url": "https://www.britannica.com/science/great-circle",
+    "date": "2026-11-19",
+    "notes": "A great-circle arc is the shortest path between two points on a sphere; on a Mercator map such routes appear to bow toward the poles."
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The closest US state to Africa is Maine: West Quoddy Head to El Beddouza, Morocco is about 5,076 km (great circle).",
+    "sources": [
+     "mapsofworld",
+     "sat",
+     "ngs_geodesic",
+     "wiki_quoddy"
+    ],
+    "vo": [
+     "the shortest line from the united states to africa starts up here, at west quoddy head in maine, and lands at el beddouza in morocco",
+     "that line is 5,076 kilometres long",
+     "closest to africa: not the beaches of florida, but the rocks of maine",
+     "which american state is closest to africa"
+    ],
+    "screen": [
+     "West Quoddy Head · Maine",
+     "El Beddouza · Morocco",
+     "it starts in Maine",
+     "5,076 km",
+     "km · Maine to Morocco",
+     "Great circle",
+     "Maine 5,076 km · Florida 6,300+ km",
+     "Not Florida. Maine.",
+     "The US state closest to Africa is not Florida",
+     "Maine · USA"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Florida's east coast is more than 6,300 km from the nearest African shore (Western Sahara coast near Dakhla ≈ 6,387 km; Morocco ≈ 6,746 km).",
+    "sources": [
+     "ngs_geodesic",
+     "sat",
+     "mapsofworld"
+    ],
+    "vo": [
+     "almost everyone says florida. almost everyone is wrong",
+     "now florida. from its east coast to the nearest african shore is more than 6,300 kilometres. florida loses by over a thousand"
+    ],
+    "screen": [
+     "everyone says Florida",
+     "Florida",
+     "Western Sahara coast",
+     "Florida: more than 6,300 km",
+     "km · Florida to the nearest African shore",
+     "NO"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "The shortest path between two points on a sphere is a great-circle arc, which bends poleward relative to a flat Mercator map.",
+    "sources": [
+     "britannica_gc",
+     "ngs_geodesic"
+    ],
+    "vo": [
+     "why? because the earth is a ball. the shortest path between two points bends toward the pole, and africa's bulge leans north too, so the nearest meeting point is up in the cold"
+    ],
+    "screen": [
+     "the shortest path bends north"
+    ]
+   }
+  ]
+ }
+}

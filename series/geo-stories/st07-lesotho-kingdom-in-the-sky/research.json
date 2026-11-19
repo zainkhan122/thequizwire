@@ -1,0 +1,193 @@
+{
+ "version": 1,
+ "episode": "st07-lesotho-kingdom-in-the-sky",
+ "topic": "Lesotho is the only independent state lying entirely above 1,000 m; its lowest point, the junction of the Orange (Senqu) and Makhaleng rivers, is 1,400 m, the highest low point of any country, above Ben Nevis (1,345 m); its highest point is Thabana Ntlenyana (3,482 m); over 80% of the country is above 1,800 m; it is entirely enclaved by South Africa, one of three enclaved states with San Marino and Vatican City.",
+ "researched": "2026-11-19",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Nepal or Bhutan is the highest country, so it must have the highest low point.",
+   "reality": "Nepal's lowest point is about 60 m and Bhutan's about 97 m; only Lesotho never drops below 1,000 m."
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right",
+  "^GEO STORIES",
+  "^KNOW A STRANGER PLACE\\?$"
+ ],
+ "landscape": {
+  "our_gap": "Lesotho elevation clips are a flag and a list; nobody pins the actual lowest river junction on the satellite map, counts its height, stands Ben Nevis next to it, climbs to the summit, and pulls out to the enclave.",
+  "existing": [
+   {
+    "title": "The only country entirely above 1,000 m",
+    "format": "trivia voiceover",
+    "gap": "no map of the low point"
+   },
+   {
+    "title": "Countries inside countries",
+    "format": "listicle",
+    "gap": "no elevation story"
+   },
+   {
+    "title": "Kingdom in the Sky travel vlog",
+    "format": "travel vlog",
+    "gap": "no geography numbers"
+   }
+  ]
+ },
+ "sources": {
+  "wiki_geo": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Geography of Lesotho",
+   "url": "https://en.wikipedia.org/wiki/Geography_of_Lesotho",
+   "date": "2026-11-19",
+   "notes": "Lowest point: junction of the Orange and Makhaleng rivers, 1,400 m, the highest low point of any country; only state entirely above 1,000 m; highest point Thabana Ntlenyana 3,482 m; over 80% above 1,800 m; enclaved by South Africa with San Marino and Vatican City the other enclaved states."
+  },
+  "cia": {
+   "type": "primary",
+   "publisher": "CIA World Factbook",
+   "title": "Lesotho — Geography",
+   "url": "https://www.cia.gov/the-world-factbook/countries/lesotho/",
+   "date": "2026-11-19",
+   "notes": "Lowest point: junction of the Orange and Makhaleng Rivers 1,400 m; highest point Thabana Ntlenyana 3,482 m; landlocked, completely surrounded by South Africa."
+  },
+  "ifl": {
+   "type": "press",
+   "publisher": "IFLScience",
+   "title": "Just one country on Earth sits entirely above an altitude of 1,000 meters",
+   "url": "https://www.iflscience.com/just-one-country-on-earth-sits-entirely-above-an-altitude-of-1000-meters-76960",
+   "date": "2026-11-19",
+   "notes": "Lesotho never dips below 1,400 m; higher than the tallest mountains of the UK, Ireland, the Netherlands and others."
+  },
+  "os_ben": {
+   "type": "primary",
+   "publisher": "Ordnance Survey",
+   "title": "Ben Nevis height re-measured: 1,345 m",
+   "url": "https://www.ordnancesurvey.co.uk/newsroom/news/ben-nevis-grows-by-a-metre",
+   "date": "2026-11-19",
+   "notes": "Ordnance Survey's 2016 GNSS survey put Ben Nevis at 1,345 m (4,413 ft), Britain's highest mountain."
+  },
+  "britannica_lesotho": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Lesotho",
+   "url": "https://www.britannica.com/place/Lesotho",
+   "date": "2026-11-19",
+   "notes": "Lesotho is entirely surrounded by South Africa; the whole country lies above 1,000 m; Thabana Ntlenyana 3,482 m."
+  },
+  "britannica_ben": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Ben Nevis",
+   "url": "https://www.britannica.com/place/Ben-Nevis",
+   "date": "2026-11-19",
+   "notes": "Highest mountain in the British Isles, 1,345 m."
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Lesotho's lowest point, the junction of the Orange (Senqu) and Makhaleng rivers on the South African border, is 1,400 m, the highest low point of any country; it is the only country entirely above 1,000 m.",
+   "sources": [
+    "cia",
+    "wiki_geo",
+    "ifl",
+    "britannica_lesotho"
+   ],
+   "vo": [
+    "there is a country where you cannot get down to sea level. you cannot even get close",
+    "this is lesotho. its lowest point is here, where two rivers meet on the border, and even that is 1,400 metres above the sea",
+    "that is the highest low point of any country on earth",
+    "a whole country where the lowest you can go is still higher than britain's highest mountain"
+   ],
+   "screen": [
+    "Lowest point · 1,400 m",
+    "lowest point: 1,400 m",
+    "metres above sea level · the lowest spot",
+    "the highest low point",
+    "you cannot get down",
+    "Nowhere to go but up",
+    "The country whose lowest point beats Britain's highest",
+    "Lesotho · Southern Africa"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Ben Nevis, Britain's highest mountain, is 1,345 m, lower than Lesotho's lowest point.",
+   "sources": [
+    "os_ben",
+    "britannica_ben",
+    "ifl"
+   ],
+   "vo": [
+    "ben nevis, the tallest mountain in britain, is 1,345 metres. it would not reach the bottom of lesotho"
+   ],
+   "screen": [
+    "Ben Nevis 1,345 m",
+    "lower than Lesotho's lowest point, 1,400 m"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Thabana Ntlenyana (3,482 m) is Lesotho's highest point; over 80% of the country lies above 1,800 m; it is nicknamed the Kingdom in the Sky.",
+   "sources": [
+    "cia",
+    "wiki_geo",
+    "britannica_lesotho"
+   ],
+   "vo": [
+    "from there the land only climbs, up to thabana ntlenyana at 3,482 metres. more than 80 percent of the country sits above 1,800 metres. they call it the kingdom in the sky"
+   ],
+   "screen": [
+    "Thabana Ntlenyana · 3,482 m",
+    "summit: 3,482 m",
+    "80% of Lesotho",
+    "lies above 1,800 m",
+    "KINGDOM IN THE SKY"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "core",
+   "text": "Lesotho is completely surrounded by South Africa, one of only three countries enclaved within another (with San Marino and Vatican City).",
+   "sources": [
+    "cia",
+    "wiki_geo",
+    "britannica_lesotho"
+   ],
+   "vo": [
+    "and it is an island. lesotho is completely surrounded by south africa, one of only three countries on earth locked inside another"
+   ],
+   "screen": [
+    "completely surrounded"
+   ]
+  }
+ ]
+}

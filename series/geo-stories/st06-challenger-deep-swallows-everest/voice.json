@@ -1,0 +1,126 @@
+{
+ "version": 1,
+ "episode": "st06-challenger-deep-swallows-everest",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "The deepest point in the ocean, Challenger Deep, is about 10,935 m down; Mount Everest is 8,849 m tall, so the whole mountain would sit under more than two kilometres of water.",
+ "pacing_profile": "documentary: cold open, place, why in 2–5 beats, twist, close answers the open, short CTA (docs/STORY_GUIDELINES.md §2)",
+ "pause_policy": "Pause only at the marked ellipses.",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v01",
+ "title": "The hole that would swallow Everest",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "plunge from wide Pacific onto empty blue; the trench line draws through on 'hole'; the pin lands on 'swallow'",
+   "text": "Somewhere under this patch of blue is a hole deep enough to swallow the tallest mountain on Earth.",
+   "cues": {
+    "blue": "blue",
+    "hole": "hole",
+    "swallow": "swallow",
+    "earth": "earth"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "pull back so the whole trench arc is in frame; TRENCH tag; Guam pin drops to the north-east",
+   "text": "This is Challenger Deep, at the southern end of the Mariana Trench, about 300 kilometres south-west of Guam.",
+   "cues": {
+    "challenger": "challenger",
+    "southern": "southern",
+    "trench": "trench",
+    "guam": "guam"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "story",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "tight on the pin; the depth counter rolls all the way down; slow push in as the number climbs",
+   "text": "The sea floor here is about 10,935 metres down. Nearly eleven kilometres of water, pressing down with more than a thousand times the pressure at the surface.",
+   "cues": {
+    "floor": "floor",
+    "10935": "10,935",
+    "eleven": "eleven",
+    "pressure": "pressure"
+   }
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "zoom out to show both: Everest pin in the Himalaya; the mountain prop pops on the peak, then arcs across Asia to the trench",
+   "text": "Now take Mount Everest, 8,849 metres high, and fly it from the Himalaya to this spot.",
+   "cues": {
+    "everest": "everest",
+    "8849": "8,849",
+    "fly": "fly",
+    "spot": "spot"
+   }
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "direction": "the mountain falls into the trench spot with a splash and is gone; push in on the empty water; card with the 2 km margin",
+   "text": "Drop it in. The whole mountain disappears, and its summit would still be more than two kilometres under the surface.",
+   "cues": {
+    "drop": "drop",
+    "disappears": "disappears",
+    "summit": "summit",
+    "surface": "surface"
+   },
+   "climax": true
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "direction": "answer the opening line with the same noun",
+   "text": "The deepest place on Earth: a hole so deep the highest mountain simply vanishes into it.",
+   "cues": {
+    "deepest": "deepest",
+    "hole": "hole",
+    "vanishes": "vanishes"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 2,
+   "pause_after": 0.0,
+   "direction": "short follow — the outro visual does the work",
+   "text": "Follow for a new map story every day.",
+   "cues": {}
+  }
+ ]
+}

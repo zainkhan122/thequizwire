@@ -1,0 +1,1316 @@
+{
+ "id": "st08-australia-wider-than-the-moon",
+ "series": "geo-stories",
+ "number": 8,
+ "seed": 5108,
+ "place": "Australia",
+ "headline": "The country that is *wider than the Moon*",
+ "search_term": "australia wider than the moon",
+ "cover": {
+  "place": "",
+  "headline": "*Wider than the Moon*"
+ },
+ "intent": "Australia measures almost 4,000 km from its westernmost to its easternmost point, while the Moon's diameter is 3,474 km, so laid across the continent the Moon would fall about 500 km short of the east coast.",
+ "variety": {
+  "shape": "number-nobody-believes",
+  "opener": "wide-drift",
+  "music": "bed:drone",
+  "cast": "none",
+  "beats": [
+   "pin",
+   "route",
+   "counter",
+   "compare"
+  ]
+ },
+ "post": {
+  "premise": "Lay the Moon across this country and it does not reach the other coast",
+  "bait": "Did you know the Moon was that small? 👇",
+  "keywords": [
+   "australia wider than the moon",
+   "how wide is australia",
+   "moon diameter",
+   "steep point cape byron",
+   "scale of the moon",
+   "geography story",
+   "map story"
+  ],
+  "tags": [
+   "GeoStories",
+   "Space"
+  ],
+  "copy": {
+   "spoilers": [
+    "3474",
+    "3,990",
+    "steep point",
+    "cape byron",
+    "new south wales"
+   ],
+   "youtube": {
+    "title": "The country that is wider than the Moon 🌕",
+    "description": "From its westernmost rock to its easternmost cape, Australia is almost 4,000 kilometres across. The Moon is 3,474 kilometres wide. This map story draws the full width, then lays the Moon's diameter along it and shows where it runs out.\nDid you know the Moon was that small? Tell us below.",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Space",
+     "#Shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Wider than the Moon 🌕\nFrom its westernmost rock to its easternmost cape, Australia is almost 4,000 km across. The Moon is 3,474 km wide. This map story draws the full width, lays the Moon along it, and shows where it runs out.\nDid you know the Moon was that small?",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Space",
+     "#GeoReels",
+     "#DidYouKnow"
+    ]
+   },
+   "facebook": {
+    "text": "From its westernmost rock to its easternmost cape, Australia is almost 4,000 kilometres across. The Moon is 3,474 kilometres wide. This map story draws the full width, then lays the Moon's diameter along it and shows where it runs out. Did you know the Moon was that small?",
+    "tags": [
+     "#Geography",
+     "#Space"
+    ]
+   },
+   "twitter": {
+    "text": "Lay the Moon across Australia and it does not reach the east coast. A map story.",
+    "tags": [
+     "#Geography",
+     "#Space"
+    ]
+   },
+   "threads": {
+    "text": "Australia is wider than the Moon. Not a trick: lay the Moon's diameter from the west coast and it runs out 500 km before the east coast. One-minute map story.",
+    "tags": [
+     "#Australia"
+    ]
+   }
+  },
+  "cover": {
+   "key_t": 22.0
+  }
+ },
+ "geo": {
+  "fit_bbox": [
+   110,
+   -45,
+   157,
+   -9
+  ],
+  "far_bbox": [
+   90,
+   -52,
+   180,
+   5
+  ],
+  "resolution": "50m",
+  "k_max": 2.2,
+  "size_claim_device": "route",
+  "layers": [
+   {
+    "id": "tint",
+    "ids": [
+     "036"
+    ],
+    "cls": "tint",
+    "note": "Australia, the subject"
+   }
+  ],
+  "pins": [
+   {
+    "id": "sp",
+    "lonlat": [
+     113.155,
+     -26.153
+    ],
+    "label": "Steep Point · westernmost",
+    "side": "left"
+   },
+   {
+    "id": "cb",
+    "lonlat": [
+     153.637,
+     -28.638
+    ],
+    "label": "Cape Byron · easternmost",
+    "side": "right"
+   },
+   {
+    "id": "me",
+    "lonlat": [
+     148.385,
+     -29.007
+    ],
+    "label": "the Moon ends here",
+    "side": "right"
+   }
+  ],
+  "labels": [],
+  "scalebar": {
+   "km": 1000,
+   "lonlat": [
+    111,
+    -43.5
+   ]
+  },
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "width",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "width",
+       "properties": {
+        "name": "Steep Point → Cape Byron, about 3,990 km"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          113.155,
+          -26.153
+         ],
+         [
+          113.803,
+          -26.29
+         ],
+         [
+          114.453,
+          -26.425
+         ],
+         [
+          115.105,
+          -26.556
+         ],
+         [
+          115.758,
+          -26.684
+         ],
+         [
+          116.412,
+          -26.81
+         ],
+         [
+          117.068,
+          -26.932
+         ],
+         [
+          117.725,
+          -27.052
+         ],
+         [
+          118.383,
+          -27.168
+         ],
+         [
+          119.043,
+          -27.281
+         ],
+         [
+          119.705,
+          -27.391
+         ],
+         [
+          120.367,
+          -27.498
+         ],
+         [
+          121.031,
+          -27.602
+         ],
+         [
+          121.696,
+          -27.703
+         ],
+         [
+          122.362,
+          -27.801
+         ],
+         [
+          123.03,
+          -27.895
+         ],
+         [
+          123.698,
+          -27.986
+         ],
+         [
+          124.368,
+          -28.074
+         ],
+         [
+          125.039,
+          -28.158
+         ],
+         [
+          125.711,
+          -28.24
+         ],
+         [
+          126.384,
+          -28.318
+         ],
+         [
+          127.057,
+          -28.393
+         ],
+         [
+          127.732,
+          -28.464
+         ],
+         [
+          128.408,
+          -28.532
+         ],
+         [
+          129.084,
+          -28.597
+         ],
+         [
+          129.761,
+          -28.658
+         ],
+         [
+          130.439,
+          -28.716
+         ],
+         [
+          131.118,
+          -28.771
+         ],
+         [
+          131.798,
+          -28.822
+         ],
+         [
+          132.478,
+          -28.87
+         ],
+         [
+          133.159,
+          -28.914
+         ],
+         [
+          133.84,
+          -28.955
+         ],
+         [
+          134.522,
+          -28.993
+         ],
+         [
+          135.204,
+          -29.027
+         ],
+         [
+          135.887,
+          -29.058
+         ],
+         [
+          136.57,
+          -29.085
+         ],
+         [
+          137.253,
+          -29.109
+         ],
+         [
+          137.937,
+          -29.129
+         ],
+         [
+          138.621,
+          -29.146
+         ],
+         [
+          139.305,
+          -29.159
+         ],
+         [
+          139.989,
+          -29.169
+         ],
+         [
+          140.674,
+          -29.175
+         ],
+         [
+          141.358,
+          -29.178
+         ],
+         [
+          142.043,
+          -29.178
+         ],
+         [
+          142.727,
+          -29.174
+         ],
+         [
+          143.411,
+          -29.166
+         ],
+         [
+          144.096,
+          -29.155
+         ],
+         [
+          144.78,
+          -29.14
+         ],
+         [
+          145.464,
+          -29.122
+         ],
+         [
+          146.147,
+          -29.101
+         ],
+         [
+          146.831,
+          -29.076
+         ],
+         [
+          147.514,
+          -29.048
+         ],
+         [
+          148.196,
+          -29.016
+         ],
+         [
+          148.878,
+          -28.981
+         ],
+         [
+          149.56,
+          -28.942
+         ],
+         [
+          150.241,
+          -28.9
+         ],
+         [
+          150.922,
+          -28.854
+         ],
+         [
+          151.601,
+          -28.805
+         ],
+         [
+          152.281,
+          -28.753
+         ],
+         [
+          152.959,
+          -28.697
+         ],
+         [
+          153.637,
+          -28.638
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "kind": "route",
+    "id": "moon",
+    "cls": "river dashed",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "moon",
+       "properties": {
+        "name": "Moon diameter laid along the same line, 3,474 km"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          113.155,
+          -26.153
+         ],
+         [
+          113.72,
+          -26.273
+         ],
+         [
+          114.286,
+          -26.39
+         ],
+         [
+          114.853,
+          -26.506
+         ],
+         [
+          115.421,
+          -26.619
+         ],
+         [
+          115.991,
+          -26.729
+         ],
+         [
+          116.561,
+          -26.838
+         ],
+         [
+          117.133,
+          -26.944
+         ],
+         [
+          117.705,
+          -27.048
+         ],
+         [
+          118.279,
+          -27.15
+         ],
+         [
+          118.854,
+          -27.249
+         ],
+         [
+          119.429,
+          -27.346
+         ],
+         [
+          120.006,
+          -27.441
+         ],
+         [
+          120.584,
+          -27.533
+         ],
+         [
+          121.162,
+          -27.622
+         ],
+         [
+          121.742,
+          -27.71
+         ],
+         [
+          122.323,
+          -27.795
+         ],
+         [
+          122.904,
+          -27.877
+         ],
+         [
+          123.486,
+          -27.957
+         ],
+         [
+          124.069,
+          -28.035
+         ],
+         [
+          124.653,
+          -28.11
+         ],
+         [
+          125.238,
+          -28.183
+         ],
+         [
+          125.824,
+          -28.253
+         ],
+         [
+          126.41,
+          -28.321
+         ],
+         [
+          126.997,
+          -28.386
+         ],
+         [
+          127.585,
+          -28.449
+         ],
+         [
+          128.173,
+          -28.509
+         ],
+         [
+          128.762,
+          -28.566
+         ],
+         [
+          129.352,
+          -28.622
+         ],
+         [
+          129.942,
+          -28.674
+         ],
+         [
+          130.533,
+          -28.724
+         ],
+         [
+          131.125,
+          -28.771
+         ],
+         [
+          131.716,
+          -28.816
+         ],
+         [
+          132.309,
+          -28.858
+         ],
+         [
+          132.902,
+          -28.898
+         ],
+         [
+          133.495,
+          -28.935
+         ],
+         [
+          134.089,
+          -28.969
+         ],
+         [
+          134.683,
+          -29.001
+         ],
+         [
+          135.278,
+          -29.031
+         ],
+         [
+          135.873,
+          -29.057
+         ],
+         [
+          136.468,
+          -29.081
+         ],
+         [
+          137.063,
+          -29.102
+         ],
+         [
+          137.659,
+          -29.121
+         ],
+         [
+          138.254,
+          -29.137
+         ],
+         [
+          138.85,
+          -29.151
+         ],
+         [
+          139.447,
+          -29.161
+         ],
+         [
+          140.043,
+          -29.17
+         ],
+         [
+          140.639,
+          -29.175
+         ],
+         [
+          141.235,
+          -29.178
+         ],
+         [
+          141.832,
+          -29.178
+         ],
+         [
+          142.428,
+          -29.176
+         ],
+         [
+          143.025,
+          -29.171
+         ],
+         [
+          143.621,
+          -29.163
+         ],
+         [
+          144.217,
+          -29.153
+         ],
+         [
+          144.813,
+          -29.14
+         ],
+         [
+          145.409,
+          -29.124
+         ],
+         [
+          146.004,
+          -29.106
+         ],
+         [
+          146.6,
+          -29.085
+         ],
+         [
+          147.195,
+          -29.061
+         ],
+         [
+          147.79,
+          -29.035
+         ],
+         [
+          148.385,
+          -29.007
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "cams": {
+   "start": [
+    0.5,
+    [
+     134,
+     -27
+    ]
+   ],
+   "open": [
+    0.52,
+    [
+     134,
+     -27
+    ]
+   ]
+  },
+  "pin_beats": [],
+  "subject": {
+   "fid": "036",
+   "layer": "tint"
+  },
+  "projection_reason": "satellite raster (Web Mercator tiles); both lengths are geodesics along the same great circle drawn to the same scale, and the comparison is stated in kilometres on screen (P1/P2); no claim about extent is made"
+ },
+ "open": {
+  "vo": {
+   "text": "This country is wider than the Moon. Not on a trick map. In kilometres.",
+   "cues": {
+    "country": "country",
+    "moon": "moon",
+    "kilometres": "kilometres"
+   }
+  },
+  "tone": "urgent",
+  "energy": 4,
+  "pause_after": 0.45,
+  "kw": {
+   "text": "wider than *the Moon*",
+   "at": "@@moon-0.2"
+  },
+  "direction": "slow drift over the whole continent; the border traces itself on 'country'; nothing else until the beats",
+  "devices": [
+   {
+    "at": "@@country",
+    "do": "geo.highlight_in",
+    "args": {
+     "fid": "036",
+     "layer": "tint",
+     "dur": 0.6
+    }
+   }
+  ]
+ },
+ "beats": [
+  {
+   "vo": {
+    "text": "Australia's westernmost point is Steep Point, a cliff on the Indian Ocean. Its easternmost is Cape Byron, a lighthouse on the Pacific.",
+    "cues": {
+     "westernmost": "westernmost",
+     "steep": "steep",
+     "easternmost": "easternmost",
+     "byron": "byron"
+    }
+   },
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "push west, pin drops on Steep Point; sweep east across the continent, pin drops on Cape Byron",
+   "cam": [
+    1.3,
+    [
+     114.5,
+     -26.5
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.3,
+    [
+     114.5,
+     -26.5
+    ]
+   ],
+   "kw": {
+    "text": "west to east",
+    "at": "@@steep-0.1",
+    "until": "@@byron+0.6"
+   },
+   "devices": [
+    {
+     "at": "@@steep",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "sp"
+     }
+    },
+    {
+     "at": "@@byron",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "cb"
+     }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.2",
+     "@@easternmost-0.3",
+     [
+      1.3,
+      [
+       114.5,
+       -26.5
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@easternmost-0.3",
+     "@@byron+0.3",
+     [
+      1.3,
+      [
+       152.5,
+       -28.5
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@byron+0.3",
+     "@.end",
+     [
+      1.28,
+      [
+       152.5,
+       -28.5
+      ]
+     ],
+     "none"
+    ]
+   ]
+  },
+  {
+   "vo": {
+    "text": "Between them, almost 4,000 kilometres.",
+    "cues": {
+     "between": "between",
+     "4000": "4,000",
+     "kilometres": "kilometres"
+    }
+   },
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.5,
+   "direction": "pull out to the whole continent; the width line draws from west to east; counter rolls to 3,990",
+   "cam": [
+    0.6,
+    [
+     134,
+     -28
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    0.6,
+    [
+     134,
+     -28
+    ]
+   ],
+   "kw": {
+    "text": "almost *4,000 km*",
+    "at": "@@4000-0.2",
+    "until": "@.end"
+   },
+   "elements": [
+    {
+     "id": "wkm",
+     "type": "counter",
+     "start": 0,
+     "end": 3990,
+     "y": 560,
+     "label": "km · Steep Point to Cape Byron",
+     "fmt": "int",
+     "size": 150
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@between",
+     "do": "geo.route_draw",
+     "until": "@@kilometres+0.2",
+     "args": {
+      "rid": "width",
+      "layer": "width"
+     }
+    },
+    {
+     "at": "@@between+0.2",
+     "do": "chart.counter_run",
+     "id": "wkm",
+     "until": "@@kilometres+0.3",
+     "args": {
+      "steps": 14
+     }
+    },
+    {
+     "at": "@.end+0.2",
+     "do": "chart.out",
+     "id": "wkm"
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.2",
+     "@.end",
+     [
+      0.61,
+      [
+       134,
+       -28
+      ]
+     ],
+     "none"
+    ]
+   ]
+  },
+  {
+   "vo": {
+    "text": "The Moon, edge to edge, is 3,474 kilometres. Lay it along the same line from Steep Point and it runs out here, in the outback of New South Wales, 500 kilometres short of the coast.",
+    "cues": {
+     "moon": "moon",
+     "3474": "3,474",
+     "lay": "lay",
+     "here": "here",
+     "short": "short"
+    }
+   },
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "climax": true,
+   "direction": "the dashed Moon line draws along the same path and stops; a pin marks where it ends; push in on the gap to the coast; card",
+   "cam": [
+    0.6,
+    [
+     134,
+     -28
+    ]
+   ],
+   "cam_dur": 1.0,
+   "cam_hold": [
+    0.6,
+    [
+     134,
+     -28
+    ]
+   ],
+   "kw": {
+    "text": "Moon: *3,474 km*",
+    "at": "@@3474-0.3",
+    "until": "@@here-0.3"
+   },
+   "card": {
+    "kicker": "500 km short",
+    "text": "Australia 3,990 km · Moon 3,474 km",
+    "at": "@@short-0.2",
+    "y": 1010
+   },
+   "elements": [
+    {
+     "id": "mkm",
+     "type": "counter",
+     "start": 0,
+     "end": 3474,
+     "y": 560,
+     "label": "km · the Moon, edge to edge",
+     "fmt": "int",
+     "size": 150
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@moon",
+     "do": "chart.counter_run",
+     "id": "mkm",
+     "until": "@@3474+0.5",
+     "args": {
+      "steps": 14
+     }
+    },
+    {
+     "at": "@@lay+0.6",
+     "do": "chart.out",
+     "id": "mkm"
+    },
+    {
+     "at": "@@lay",
+     "do": "geo.route_draw",
+     "until": "@@here+0.1",
+     "args": {
+      "rid": "moon",
+      "layer": "moon"
+     }
+    },
+    {
+     "at": "@@here",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "me"
+     }
+    },
+    {
+     "at": "@@here",
+     "do": "fx.flash",
+     "args": {
+      "peak": 0.5
+     }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.0",
+     "@@here-0.4",
+     [
+      0.6,
+      [
+       134,
+       -28
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@here-0.4",
+     "@@short+0.3",
+     [
+      1.4,
+      [
+       150.5,
+       -29.0
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@short+0.3",
+     "@.end",
+     [
+      1.42,
+      [
+       150.5,
+       -29.0
+      ]
+     ],
+     "none"
+    ]
+   ]
+  },
+  {
+   "vo": {
+    "text": "The Moon is a sphere, so it still has far more surface than this one flat continent. But point to point, Australia is the wider of the two.",
+    "cues": {
+     "sphere": "sphere",
+     "surface": "surface",
+     "point": "point",
+     "wider": "wider"
+    }
+   },
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "honest caveat: pull out to the whole width again; the full line redraws on 'wider'; the country pulses",
+   "cam": [
+    0.55,
+    [
+     134,
+     -27
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.55,
+    [
+     134,
+     -27
+    ]
+   ],
+   "kw": {
+    "text": "point to point: *Australia wins*",
+    "at": "@@point-0.1",
+    "until": "@@wider+0.9"
+   },
+   "card": {
+    "kicker": "But as a sphere",
+    "text": "the Moon is about five Australias",
+    "at": "@@sphere-0.1",
+    "until": "@@point-0.3",
+    "y": 1010
+   },
+   "devices": [
+    {
+     "at": "@+0.2",
+     "do": "geo.pin_out",
+     "args": {
+      "pid": "me"
+     }
+    },
+    {
+     "at": "@@wider-0.2",
+     "do": "geo.route_draw",
+     "until": "@@wider+0.8",
+     "args": {
+      "rid": "width",
+      "layer": "width"
+     }
+    },
+    {
+     "at": "@@wider",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "036",
+      "layer": "tint",
+      "dur": 0.7
+     }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.3",
+     "@.end",
+     [
+      0.56,
+      [
+       134,
+       -27
+      ]
+     ],
+     "none"
+    ]
+   ]
+  }
+ ],
+ "close": {
+  "vo": {
+   "text": "One continent, coast to coast, wider than the Moon.",
+   "cues": {
+    "continent": "continent",
+    "coast": "coast",
+    "moon": "moon"
+   }
+  },
+  "text": "Coast to coast: *wider than the Moon*",
+  "tone": "revelatory",
+  "energy": 5,
+  "pause_after": 0.5,
+  "y": 760,
+  "cam": [
+   0.5,
+   [
+    134,
+    -27
+   ]
+  ],
+  "cam_dur": 1.6,
+  "devices": [
+   {
+    "at": "@@coast",
+    "do": "geo.route_draw",
+    "until": "@@moon+0.5",
+    "args": {
+     "rid": "width",
+     "layer": "width"
+    }
+   }
+  ]
+ },
+ "cta": {
+  "vo": {
+   "text": "Follow for a new map story every day."
+  }
+ },
+ "outro_headline": "KNOW A STRANGER PLACE?",
+ "research": {
+  "topic": "Australia spans about 3,990 km from Steep Point (WA, westernmost) to Cape Byron (NSW, easternmost), while the Moon's mean diameter is 3,474.8 km; the Moon's diameter laid along that line ends about 500 km short of the east coast; the Moon's surface (37.9 million km²) is about five times Australia's land (7.69 million km²).",
+  "myths": [
+   {
+    "myth": "Australia is bigger than the Moon.",
+    "reality": "Only wider, point to point. The Moon's surface is about 37.9 million km², roughly five times Australia's 7.69 million km²."
+   }
+  ],
+  "landscape": {
+   "our_gap": "Wider-than-the-Moon posts are a flat Moon disc pasted over a map; nobody draws the real end-to-end geodesic on the satellite map, lays the Moon's diameter along the same line, and pins where it runs out.",
+   "existing": [
+    {
+     "title": "Australia is wider than the Moon",
+     "format": "static image meme",
+     "gap": "no measured line"
+    },
+    {
+     "title": "Moon compared to countries",
+     "format": "comparison graphic",
+     "gap": "no narrative"
+    },
+    {
+     "title": "Australia facts you did not know",
+     "format": "listicle",
+     "gap": "no points named"
+    }
+   ]
+  },
+  "sources": {
+   "ga_dims": {
+    "type": "primary",
+    "publisher": "Geoscience Australia",
+    "title": "Dimensions of Australia / Continental extremities",
+    "url": "https://www.ga.gov.au/scientific-topics/national-location-information/dimensions",
+    "date": "2026-11-19",
+    "notes": "Mainland extremities: Steep Point 26°09′S 113°09′E (west), Cape Byron 28°38′S 153°38′E (east); the mainland spans about 4,000 km east–west; land 7,692,024 km²."
+   },
+   "nasa_moon": {
+    "type": "primary",
+    "publisher": "NASA Goddard — Planetary Fact Sheet",
+    "title": "Moon Fact Sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+    "date": "2026-11-19",
+    "notes": "Moon mean diameter 3,474.8 km; surface 3.793 × 10^7 km²."
+   },
+   "ngs_geodesic": {
+    "type": "primary",
+    "publisher": "NOAA National Geodetic Survey",
+    "title": "Inverse / geodesic distance computation",
+    "url": "https://geodesy.noaa.gov/cgi-bin/Inv_Fwd/inverse2.prl",
+    "date": "2026-11-19",
+    "notes": "Great-circle computation reproduced in-house (haversine on mean Earth radius): Steep Point–Cape Byron 3,988 km; the 3,474 km mark along that arc falls near 148°E in north-western New South Wales, about 510 km short of Cape Byron."
+   },
+   "wiki_extreme": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "List of extreme points of Australia",
+    "url": "https://en.wikipedia.org/wiki/List_of_extreme_points_of_Australia",
+    "date": "2026-11-19",
+    "notes": "Westernmost mainland point Steep Point (WA); easternmost mainland point Cape Byron (NSW)."
+   },
+   "jagran": {
+    "type": "press",
+    "publisher": "Jagran Josh",
+    "title": "Is Australia wider than the Moon?",
+    "url": "https://www.jagranjosh.com/general-knowledge/is-australia-wider-than-the-moon-1748763524-1",
+    "date": "2026-11-19",
+    "notes": "Australia about 4,000 km east to west versus the Moon's 3,474 km diameter; the Moon has about five times Australia's surface."
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Australia's westernmost mainland point is Steep Point (WA) and its easternmost is Cape Byron (NSW); the great-circle distance between them is about 3,990 km (almost 4,000 km).",
+    "sources": [
+     "ga_dims",
+     "wiki_extreme",
+     "ngs_geodesic",
+     "jagran"
+    ],
+    "vo": [
+     "australia's westernmost point is steep point, a cliff on the indian ocean. its easternmost is cape byron, a lighthouse on the pacific",
+     "between them, almost 4,000 kilometres",
+     "this country is wider than the moon. not on a trick map. in kilometres",
+     "one continent, coast to coast, wider than the moon",
+     "but point to point, australia is the wider of the two"
+    ],
+    "screen": [
+     "Steep Point · westernmost",
+     "Cape Byron · easternmost",
+     "west to east",
+     "almost 4,000 km",
+     "km · Steep Point to Cape Byron",
+     "wider than the Moon",
+     "The country that is wider than the Moon",
+     "Wider than the Moon",
+     "Coast to coast: wider than the Moon",
+     "point to point: Australia wins",
+     "Australia"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "The Moon's diameter is 3,474 km; laid along the Steep Point–Cape Byron line it ends in north-western New South Wales about 500 km short of the east coast.",
+    "sources": [
+     "nasa_moon",
+     "ngs_geodesic",
+     "jagran"
+    ],
+    "vo": [
+     "the moon, edge to edge, is 3,474 kilometres. lay it along the same line from steep point and it runs out here, in the outback of new south wales, 500 kilometres short of the coast"
+    ],
+    "screen": [
+     "Moon: 3,474 km",
+     "km · the Moon, edge to edge",
+     "the Moon ends here",
+     "500 km short",
+     "Australia 3,990 km · Moon 3,474 km"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "The Moon's surface (about 37.9 million km²) is roughly five times Australia's land (7.69 million km²).",
+    "sources": [
+     "nasa_moon",
+     "ga_dims",
+     "jagran"
+    ],
+    "vo": [
+     "the moon is a sphere, so it still has far more surface than this one flat continent"
+    ],
+    "screen": [
+     "But as a sphere",
+     "the Moon is about five Australias"
+    ]
+   }
+  ]
+ }
+}

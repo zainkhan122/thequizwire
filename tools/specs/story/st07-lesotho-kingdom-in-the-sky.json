@@ -1,0 +1,1061 @@
+{
+ "id": "st07-lesotho-kingdom-in-the-sky",
+ "series": "geo-stories",
+ "number": 7,
+ "seed": 5107,
+ "place": "Lesotho · Southern Africa",
+ "headline": "The country whose *lowest point* beats Britain's highest",
+ "search_term": "lesotho",
+ "cover": {
+  "place": "",
+  "headline": "Its *lowest point* is higher than Ben Nevis"
+ },
+ "intent": "Lesotho is the only country lying entirely above 1,000 m; its lowest point, where the Makhaleng meets the Orange River, is 1,400 m up, higher than the summit of Ben Nevis, and the whole kingdom is an island inside South Africa.",
+ "variety": {
+  "shape": "the-edge-case",
+  "opener": "plunge",
+  "music": "bed:drone",
+  "cast": "none",
+  "beats": [
+   "pin",
+   "counter",
+   "compare",
+   "pin"
+  ]
+ },
+ "post": {
+  "premise": "There is a country where the lowest spot is higher than Britain's highest mountain",
+  "bait": "Could you live 1.4 km up, minimum? 👇",
+  "keywords": [
+   "lesotho",
+   "kingdom in the sky",
+   "highest low point",
+   "country entirely above 1000 m",
+   "enclave country",
+   "lesotho south africa",
+   "geography story",
+   "map story"
+  ],
+  "tags": [
+   "GeoStories",
+   "Africa"
+  ],
+  "copy": {
+   "spoilers": [
+    "1400",
+    "3,482",
+    "thabana",
+    "makhaleng"
+   ],
+   "youtube": {
+    "title": "The country whose lowest point beats Britain's highest mountain ⛰️",
+    "description": "There is a kingdom in southern Africa where you cannot get below 1,400 metres: its lowest river junction is higher than the summit of Ben Nevis. This map story finds that lowest point, climbs to the highest, and pulls back to show the whole country sealed inside its only neighbour.\nCould you live 1.4 km up, minimum? Tell us below.",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Africa",
+     "#Shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Its lowest point is higher than Ben Nevis ⛰️\nA kingdom in southern Africa where you cannot get below 1,400 metres. This map story finds its lowest river junction, climbs to its highest peak, and pulls back to show the whole country sealed inside one neighbour.\nCould you live 1.4 km up, minimum?",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Africa",
+     "#GeoReels",
+     "#DidYouKnow"
+    ]
+   },
+   "facebook": {
+    "text": "There is a kingdom in southern Africa where you cannot get below 1,400 metres: its lowest river junction is higher than the summit of Ben Nevis. This map story finds that lowest point, climbs to the highest, and pulls back to show the whole country sealed inside its only neighbour. Could you live 1.4 km up, minimum?",
+    "tags": [
+     "#Geography",
+     "#Africa"
+    ]
+   },
+   "twitter": {
+    "text": "A country whose lowest point is higher than Britain's highest mountain. A map story.",
+    "tags": [
+     "#Geography",
+     "#Africa"
+    ]
+   },
+   "threads": {
+    "text": "A kingdom where the lowest spot in the whole country is higher than the top of Ben Nevis, and the whole thing sits inside one neighbour. One-minute map story.",
+    "tags": [
+     "#Lesotho"
+    ]
+   }
+  },
+  "cover": {
+   "key_t": 19.0
+  }
+ },
+ "geo": {
+  "fit_bbox": [
+   26.6,
+   -30.9,
+   29.8,
+   -28.4
+  ],
+  "far_bbox": [
+   14,
+   -37,
+   38,
+   -20
+  ],
+  "resolution": "10m",
+  "k_max": 2.6,
+  "layers": [
+   {
+    "id": "tint",
+    "ids": [
+     "426"
+    ],
+    "cls": "tint",
+    "note": "Lesotho, the subject"
+   },
+   {
+    "id": "solid",
+    "ids": [
+     "710"
+    ],
+    "cls": "solid",
+    "note": "South Africa, the only neighbour",
+    "trace": false
+   }
+  ],
+  "pins": [
+   {
+    "id": "low",
+    "lonlat": [
+     27.03,
+     -30.32
+    ],
+    "label": "Lowest point · 1,400 m",
+    "side": "left"
+   },
+   {
+    "id": "high",
+    "lonlat": [
+     29.27,
+     -29.47
+    ],
+    "label": "Thabana Ntlenyana · 3,482 m",
+    "side": "right"
+   }
+  ],
+  "labels": [
+   {
+    "id": "sky",
+    "lonlat": [
+     28.3,
+     -29.0
+    ],
+    "text": "KINGDOM IN THE SKY",
+    "cls": "tag",
+    "in": "s02+99",
+    "out": null
+   }
+  ],
+  "scalebar": {
+   "km": 50,
+   "lonlat": [
+    26.8,
+    -30.75
+   ]
+  },
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "climb",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "climb",
+       "properties": {
+        "name": "lowest to highest point"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          27.03,
+          -30.32
+         ],
+         [
+          27.105,
+          -30.292
+         ],
+         [
+          27.181,
+          -30.265
+         ],
+         [
+          27.256,
+          -30.237
+         ],
+         [
+          27.331,
+          -30.209
+         ],
+         [
+          27.406,
+          -30.181
+         ],
+         [
+          27.481,
+          -30.153
+         ],
+         [
+          27.556,
+          -30.125
+         ],
+         [
+          27.631,
+          -30.097
+         ],
+         [
+          27.706,
+          -30.069
+         ],
+         [
+          27.781,
+          -30.041
+         ],
+         [
+          27.856,
+          -30.013
+         ],
+         [
+          27.931,
+          -29.985
+         ],
+         [
+          28.005,
+          -29.956
+         ],
+         [
+          28.08,
+          -29.928
+         ],
+         [
+          28.155,
+          -29.9
+         ],
+         [
+          28.229,
+          -29.871
+         ],
+         [
+          28.304,
+          -29.843
+         ],
+         [
+          28.379,
+          -29.815
+         ],
+         [
+          28.453,
+          -29.786
+         ],
+         [
+          28.528,
+          -29.758
+         ],
+         [
+          28.602,
+          -29.729
+         ],
+         [
+          28.676,
+          -29.7
+         ],
+         [
+          28.751,
+          -29.672
+         ],
+         [
+          28.825,
+          -29.643
+         ],
+         [
+          28.899,
+          -29.614
+         ],
+         [
+          28.974,
+          -29.586
+         ],
+         [
+          29.048,
+          -29.557
+         ],
+         [
+          29.122,
+          -29.528
+         ],
+         [
+          29.196,
+          -29.499
+         ],
+         [
+          29.27,
+          -29.47
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "cams": {
+   "start": [
+    0.5,
+    [
+     28.2,
+     -29.6
+    ]
+   ],
+   "open": [
+    1.0,
+    [
+     28.2,
+     -29.6
+    ]
+   ]
+  },
+  "pin_beats": [],
+  "subject": {
+   "fid": "426",
+   "layer": "tint"
+  },
+  "projection_reason": "satellite raster (Web Mercator tiles); the claims are elevations stated on screen; the enclave shape is shown by the traced border, no area comparison (P1/P2)"
+ },
+ "open": {
+  "vo": {
+   "text": "There is a country where you cannot get down to sea level. You cannot even get close.",
+   "cues": {
+    "country": "country",
+    "sea": "sea",
+    "close": "close"
+   }
+  },
+  "tone": "urgent",
+  "energy": 4,
+  "pause_after": 0.45,
+  "cam_dur": 2.4,
+  "cam_hold": [
+   1.02,
+   [
+    28.2,
+    -29.6
+   ]
+  ],
+  "kw": {
+   "text": "you *cannot get down*",
+   "at": "@@sea-0.3"
+  },
+  "direction": "plunge from the southern tip of Africa onto the highlands; the border draws itself on 'country'",
+  "devices": [
+   {
+    "at": "@@country",
+    "do": "geo.highlight_in",
+    "args": {
+     "fid": "426",
+     "layer": "tint",
+     "dur": 0.6
+    }
+   }
+  ]
+ },
+ "beats": [
+  {
+   "vo": {
+    "text": "This is Lesotho. Its lowest point is here, where two rivers meet on the border, and even that is 1,400 metres above the sea.",
+    "cues": {
+     "lesotho": "lesotho",
+     "lowest": "lowest",
+     "rivers": "rivers",
+     "1400": "1,400",
+     "sea": "sea"
+    }
+   },
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "push to the south-west corner; the lowest-point pin drops in the river junction; counter climbs to 1,400",
+   "cam": [
+    1.6,
+    [
+     27.3,
+     -30.2
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.62,
+    [
+     27.3,
+     -30.2
+    ]
+   ],
+   "kw": {
+    "text": "lowest point: *1,400 m*",
+    "at": "@@1400-0.3",
+    "until": "@@sea+0.8"
+   },
+   "elements": [
+    {
+     "id": "lowm",
+     "type": "counter",
+     "start": 0,
+     "end": 1400,
+     "y": 560,
+     "label": "metres above sea level · the lowest spot",
+     "fmt": "int",
+     "size": 150
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@lowest",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "low"
+     }
+    },
+    {
+     "at": "@@rivers",
+     "do": "chart.counter_run",
+     "id": "lowm",
+     "until": "@@1400+0.5",
+     "args": {
+      "steps": 12
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "lowm"
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.2",
+     "@@rivers-0.3",
+     [
+      1.62,
+      [
+       27.3,
+       -30.2
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@rivers-0.3",
+     "@@rivers+0.6",
+     [
+      2.2,
+      [
+       27.05,
+       -30.3
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@rivers+0.6",
+     "@.end",
+     [
+      2.22,
+      [
+       27.05,
+       -30.3
+      ]
+     ],
+     "none"
+    ]
+   ]
+  },
+  {
+   "vo": {
+    "text": "That is the highest low point of any country on Earth. Ben Nevis, the tallest mountain in Britain, is 1,345 metres. It would not reach the bottom of Lesotho.",
+    "cues": {
+     "highest": "highest",
+     "ben": "ben",
+     "1345": "1,345",
+     "bottom": "bottom"
+    }
+   },
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "climax": true,
+   "direction": "a mountain prop pops beside the pin, standing for Ben Nevis; card with both numbers; flash on 'bottom'",
+   "cam": [
+    2.0,
+    [
+     27.1,
+     -30.25
+    ]
+   ],
+   "cam_dur": 1.0,
+   "cam_hold": [
+    2.02,
+    [
+     27.1,
+     -30.25
+    ]
+   ],
+   "kw": {
+    "text": "the *highest low point*",
+    "at": "@@highest-0.1",
+    "until": "@@ben-0.2"
+   },
+   "card": {
+    "kicker": "Ben Nevis 1,345 m",
+    "text": "lower than Lesotho's lowest point, 1,400 m",
+    "at": "@@1345-0.2",
+    "y": 1010
+   },
+   "elements": [
+    {
+     "id": "ben",
+     "type": "rig",
+     "rig": "mountain",
+     "x": 540,
+     "y": 900,
+     "size": 200
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@ben-0.2",
+     "do": "prop.anchor",
+     "id": "ben",
+     "until": "@@bottom+1.0",
+     "args": {
+      "lonlat": [
+       27.03,
+       -30.32
+      ],
+      "dx": 110,
+      "dy": 60
+     }
+    },
+    {
+     "at": "@@ben",
+     "do": "prop.pop",
+     "id": "ben",
+     "args": {
+      "frm": "rise"
+     }
+    },
+    {
+     "at": "@@bottom",
+     "do": "fx.flash",
+     "args": {
+      "peak": 0.5
+     }
+    },
+    {
+     "at": "@@bottom+0.9",
+     "do": "prop.out",
+     "id": "ben"
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.0",
+     "@@bottom-0.4",
+     [
+      2.02,
+      [
+       27.1,
+       -30.25
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@bottom-0.4",
+     "@@bottom+0.7",
+     [
+      1.7,
+      [
+       27.3,
+       -30.1
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@bottom+0.7",
+     "@.end",
+     [
+      1.68,
+      [
+       27.3,
+       -30.1
+      ]
+     ],
+     "none"
+    ]
+   ]
+  },
+  {
+   "vo": {
+    "text": "From there the land only climbs, up to Thabana Ntlenyana at 3,482 metres. More than 80 percent of the country sits above 1,800 metres. They call it the Kingdom in the Sky.",
+    "cues": {
+     "climbs": "climbs",
+     "thabana": "thabana",
+     "3482": "3,482",
+     "80": "80",
+     "kingdom": "kingdom"
+    }
+   },
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "camera rides a line from the low point north-east to the summit; the peak pin drops; the SKY tag stamps the highlands",
+   "cam": [
+    1.3,
+    [
+     28.2,
+     -29.8
+    ]
+   ],
+   "cam_dur": 1.2,
+   "cam_hold": [
+    1.3,
+    [
+     28.2,
+     -29.8
+    ]
+   ],
+   "kw": {
+    "text": "summit: *3,482 m*",
+    "at": "@@3482-0.3",
+    "until": "@@80-0.2"
+   },
+   "card": {
+    "kicker": "80% of Lesotho",
+    "text": "lies above 1,800 m",
+    "at": "@@80-0.1",
+    "until": "@@kingdom+1.2",
+    "y": 1010
+   },
+   "devices": [
+    {
+     "at": "@+0.2",
+     "do": "geo.pin_out",
+     "args": {
+      "pid": "low"
+     }
+    },
+    {
+     "at": "@@climbs-0.2",
+     "do": "geo.route_draw",
+     "until": "@@thabana+0.3",
+     "args": {
+      "rid": "climb",
+      "layer": "climb"
+     }
+    },
+    {
+     "at": "@@thabana+0.2",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "high"
+     }
+    },
+    {
+     "at": "@@kingdom",
+     "do": "geo.label_in",
+     "args": {
+      "lid": "sky"
+     }
+    },
+    {
+     "at": "@@kingdom",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "426",
+      "layer": "tint",
+      "dur": 0.7
+     }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.2",
+     "@@thabana-0.3",
+     [
+      1.3,
+      [
+       28.2,
+       -29.8
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@thabana-0.3",
+     "@@thabana+0.6",
+     [
+      2.0,
+      [
+       29.1,
+       -29.5
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@3482+0.6",
+     "@@80",
+     [
+      1.1,
+      [
+       28.3,
+       -29.6
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@80",
+     "@.end",
+     [
+      1.08,
+      [
+       28.3,
+       -29.6
+      ]
+     ],
+     "none"
+    ]
+   ]
+  },
+  {
+   "vo": {
+    "text": "And it is an island. Lesotho is completely surrounded by South Africa, one of only three countries on Earth locked inside another.",
+    "cues": {
+     "island": "island",
+     "surrounded": "surrounded",
+     "three": "three",
+     "another": "another"
+    }
+   },
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "pull right out; South Africa fills solid around it so the country reads as a hole; border pulses",
+   "cam": [
+    0.55,
+    [
+     26.5,
+     -29.5
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.55,
+    [
+     26.5,
+     -29.5
+    ]
+   ],
+   "kw": {
+    "text": "*completely surrounded*",
+    "at": "@@surrounded-0.1",
+    "until": "@@another+0.6"
+   },
+   "highlights": [
+    {
+     "fid": "710",
+     "layer": "solid",
+     "at": "@@surrounded-0.2"
+    }
+   ],
+   "devices": [
+    {
+     "at": "@+0.3",
+     "do": "geo.label_out",
+     "args": {
+      "lid": "sky"
+     }
+    },
+    {
+     "at": "@+0.4",
+     "do": "geo.pin_out",
+     "args": {
+      "pid": "high"
+     }
+    },
+    {
+     "at": "@@island",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "426",
+      "layer": "tint",
+      "dur": 0.7
+     }
+    },
+    {
+     "at": "@@three",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "426",
+      "layer": "tint",
+      "dur": 0.7
+     }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.3",
+     "@@three-0.3",
+     [
+      0.55,
+      [
+       26.5,
+       -29.5
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@three-0.3",
+     "@@three+0.7",
+     [
+      0.75,
+      [
+       28.0,
+       -29.6
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@three+0.7",
+     "@.end",
+     [
+      0.74,
+      [
+       28.0,
+       -29.6
+      ]
+     ],
+     "none"
+    ]
+   ]
+  }
+ ],
+ "close": {
+  "vo": {
+   "text": "A whole country where the lowest you can go is still higher than Britain's highest mountain.",
+   "cues": {
+    "country": "country",
+    "lowest": "lowest",
+    "mountain": "mountain"
+   }
+  },
+  "text": "Nowhere to go *but up*",
+  "tone": "revelatory",
+  "energy": 5,
+  "pause_after": 0.5,
+  "y": 760,
+  "cam": [
+   0.95,
+   [
+    28.2,
+    -29.6
+   ]
+  ],
+  "cam_dur": 1.6,
+  "devices": [
+   {
+    "at": "@@lowest",
+    "do": "geo.pin_in",
+    "args": {
+     "pid": "low"
+    }
+   }
+  ]
+ },
+ "cta": {
+  "vo": {
+   "text": "Follow for a new map story every day."
+  }
+ },
+ "outro_headline": "KNOW A STRANGER PLACE?",
+ "research": {
+  "topic": "Lesotho is the only independent state lying entirely above 1,000 m; its lowest point, the junction of the Orange (Senqu) and Makhaleng rivers, is 1,400 m, the highest low point of any country, above Ben Nevis (1,345 m); its highest point is Thabana Ntlenyana (3,482 m); over 80% of the country is above 1,800 m; it is entirely enclaved by South Africa, one of three enclaved states with San Marino and Vatican City.",
+  "myths": [
+   {
+    "myth": "Nepal or Bhutan is the highest country, so it must have the highest low point.",
+    "reality": "Nepal's lowest point is about 60 m and Bhutan's about 97 m; only Lesotho never drops below 1,000 m."
+   }
+  ],
+  "landscape": {
+   "our_gap": "Lesotho elevation clips are a flag and a list; nobody pins the actual lowest river junction on the satellite map, counts its height, stands Ben Nevis next to it, climbs to the summit, and pulls out to the enclave.",
+   "existing": [
+    {
+     "title": "The only country entirely above 1,000 m",
+     "format": "trivia voiceover",
+     "gap": "no map of the low point"
+    },
+    {
+     "title": "Countries inside countries",
+     "format": "listicle",
+     "gap": "no elevation story"
+    },
+    {
+     "title": "Kingdom in the Sky travel vlog",
+     "format": "travel vlog",
+     "gap": "no geography numbers"
+    }
+   ]
+  },
+  "sources": {
+   "wiki_geo": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Geography of Lesotho",
+    "url": "https://en.wikipedia.org/wiki/Geography_of_Lesotho",
+    "date": "2026-11-19",
+    "notes": "Lowest point: junction of the Orange and Makhaleng rivers, 1,400 m, the highest low point of any country; only state entirely above 1,000 m; highest point Thabana Ntlenyana 3,482 m; over 80% above 1,800 m; enclaved by South Africa with San Marino and Vatican City the other enclaved states."
+   },
+   "cia": {
+    "type": "primary",
+    "publisher": "CIA World Factbook",
+    "title": "Lesotho — Geography",
+    "url": "https://www.cia.gov/the-world-factbook/countries/lesotho/",
+    "date": "2026-11-19",
+    "notes": "Lowest point: junction of the Orange and Makhaleng Rivers 1,400 m; highest point Thabana Ntlenyana 3,482 m; landlocked, completely surrounded by South Africa."
+   },
+   "ifl": {
+    "type": "press",
+    "publisher": "IFLScience",
+    "title": "Just one country on Earth sits entirely above an altitude of 1,000 meters",
+    "url": "https://www.iflscience.com/just-one-country-on-earth-sits-entirely-above-an-altitude-of-1000-meters-76960",
+    "date": "2026-11-19",
+    "notes": "Lesotho never dips below 1,400 m; higher than the tallest mountains of the UK, Ireland, the Netherlands and others."
+   },
+   "os_ben": {
+    "type": "primary",
+    "publisher": "Ordnance Survey",
+    "title": "Ben Nevis height re-measured: 1,345 m",
+    "url": "https://www.ordnancesurvey.co.uk/newsroom/news/ben-nevis-grows-by-a-metre",
+    "date": "2026-11-19",
+    "notes": "Ordnance Survey's 2016 GNSS survey put Ben Nevis at 1,345 m (4,413 ft), Britain's highest mountain."
+   },
+   "britannica_lesotho": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Lesotho",
+    "url": "https://www.britannica.com/place/Lesotho",
+    "date": "2026-11-19",
+    "notes": "Lesotho is entirely surrounded by South Africa; the whole country lies above 1,000 m; Thabana Ntlenyana 3,482 m."
+   },
+   "britannica_ben": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Ben Nevis",
+    "url": "https://www.britannica.com/place/Ben-Nevis",
+    "date": "2026-11-19",
+    "notes": "Highest mountain in the British Isles, 1,345 m."
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Lesotho's lowest point, the junction of the Orange (Senqu) and Makhaleng rivers on the South African border, is 1,400 m, the highest low point of any country; it is the only country entirely above 1,000 m.",
+    "sources": [
+     "cia",
+     "wiki_geo",
+     "ifl",
+     "britannica_lesotho"
+    ],
+    "vo": [
+     "there is a country where you cannot get down to sea level. you cannot even get close",
+     "this is lesotho. its lowest point is here, where two rivers meet on the border, and even that is 1,400 metres above the sea",
+     "that is the highest low point of any country on earth",
+     "a whole country where the lowest you can go is still higher than britain's highest mountain"
+    ],
+    "screen": [
+     "Lowest point · 1,400 m",
+     "lowest point: 1,400 m",
+     "metres above sea level · the lowest spot",
+     "the highest low point",
+     "you cannot get down",
+     "Nowhere to go but up",
+     "The country whose lowest point beats Britain's highest",
+     "Lesotho · Southern Africa"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Ben Nevis, Britain's highest mountain, is 1,345 m, lower than Lesotho's lowest point.",
+    "sources": [
+     "os_ben",
+     "britannica_ben",
+     "ifl"
+    ],
+    "vo": [
+     "ben nevis, the tallest mountain in britain, is 1,345 metres. it would not reach the bottom of lesotho"
+    ],
+    "screen": [
+     "Ben Nevis 1,345 m",
+     "lower than Lesotho's lowest point, 1,400 m"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Thabana Ntlenyana (3,482 m) is Lesotho's highest point; over 80% of the country lies above 1,800 m; it is nicknamed the Kingdom in the Sky.",
+    "sources": [
+     "cia",
+     "wiki_geo",
+     "britannica_lesotho"
+    ],
+    "vo": [
+     "from there the land only climbs, up to thabana ntlenyana at 3,482 metres. more than 80 percent of the country sits above 1,800 metres. they call it the kingdom in the sky"
+    ],
+    "screen": [
+     "Thabana Ntlenyana · 3,482 m",
+     "summit: 3,482 m",
+     "80% of Lesotho",
+     "lies above 1,800 m",
+     "KINGDOM IN THE SKY"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "core",
+    "text": "Lesotho is completely surrounded by South Africa, one of only three countries enclaved within another (with San Marino and Vatican City).",
+    "sources": [
+     "cia",
+     "wiki_geo",
+     "britannica_lesotho"
+    ],
+    "vo": [
+     "and it is an island. lesotho is completely surrounded by south africa, one of only three countries on earth locked inside another"
+    ],
+    "screen": [
+     "completely surrounded"
+    ]
+   }
+  ]
+ }
+}

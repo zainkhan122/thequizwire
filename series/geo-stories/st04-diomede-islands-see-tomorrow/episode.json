@@ -1,0 +1,125 @@
+{
+ "id": "st04-diomede-islands-see-tomorrow",
+ "format": "story-v1",
+ "series": "geo-stories",
+ "number": 4,
+ "title": "The island where you can see tomorrow",
+ "seed": 5104,
+ "difficulty": "STORY",
+ "story": {
+  "place": "Diomede Islands · Bering Strait",
+  "headline": "The island where you can *see tomorrow*",
+  "search_term": "diomede islands",
+  "shape": "line-that-shouldnt-exist",
+  "close": "*Tomorrow*, one row away",
+  "cover": {
+   "place": "",
+   "headline": "Look across. That's *tomorrow*."
+  },
+  "outro": {
+   "headline": "KNOW A STRANGER PLACE?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "cold-open",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "The island where you can see tomorrow 🕛",
+  "premise": "Two islands you could row between, 21 hours apart on the calendar",
+  "bait": "Would you live where tomorrow is across the water? 👇",
+  "keywords": [
+   "diomede islands",
+   "international date line",
+   "yesterday and tomorrow islands",
+   "bering strait",
+   "russia alaska distance",
+   "big diomede little diomede",
+   "geography story",
+   "map story"
+  ],
+  "description": "In the Bering Strait, two islands sit less than four kilometres apart. The International Date Line runs between them, so the one you can see across the water is almost a full day ahead. This map story draws the line, measures the gap, and shows who lives on each side.\nWould you live where tomorrow is across the water? Tell us below.",
+  "hashtags": [
+   "#Geography",
+   "#MapStory",
+   "#Arctic",
+   "#Shorts"
+  ],
+  "tags": [
+   "GeoStories",
+   "Arctic"
+  ],
+  "cover_emoji": "",
+  "cover_emoji_why": "stories carry no icon on the cover (title + place only)",
+  "copy": {
+   "spoilers": [
+    "3.8",
+    "1948",
+    "chukotka"
+   ],
+   "youtube": {
+    "title": "The island where you can see tomorrow 🕛",
+    "description": "In the Bering Strait, two islands sit less than four kilometres apart. The International Date Line runs between them, so the one you can see across the water is almost a full day ahead. This map story draws the line, measures the gap, and shows who lives on each side.\nWould you live where tomorrow is across the water? Tell us below.",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Arctic",
+     "#Shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Look across the water. That's tomorrow 🕛\nTwo islands in the Bering Strait, less than four kilometres apart, with the International Date Line between them. One is a US village, the other a Russian post. Here is the line, the gap, and the 21-hour jump.\nWould you live here?",
+    "tags": [
+     "#Geography",
+     "#MapStory",
+     "#Arctic",
+     "#GeoReels",
+     "#DidYouKnow"
+    ]
+   },
+   "facebook": {
+    "text": "In the Bering Strait, two islands sit less than four kilometres apart, and the International Date Line runs between them. Stand on the American one and the island you can see is already in tomorrow. This map story draws the line, measures the gap, and shows who lives on each side. Would you live there?",
+    "tags": [
+     "#Geography",
+     "#Arctic"
+    ]
+   },
+   "twitter": {
+    "text": "Two islands, under 4 km apart, 21 hours apart on the calendar. A map story.",
+    "tags": [
+     "#Geography",
+     "#Arctic"
+    ]
+   },
+   "threads": {
+    "text": "Two islands in the Bering Strait you could row between, and the one across the water is already in tomorrow. One-minute map story on the Date Line.",
+    "tags": [
+     "#Diomede"
+    ]
+   }
+  },
+  "cover": {
+   "key_t": 14.0
+  }
+ },
+ "variety": {
+  "question": "story",
+  "story_shape": "line-that-shouldnt-exist",
+  "hook": "cold-open",
+  "opener": "mystery-zoom-out",
+  "reveal": "none",
+  "beats": [
+   "pin",
+   "route",
+   "counter",
+   "label"
+  ],
+  "cast": "none",
+  "music": "bed:drone"
+ },
+ "status": "draft"
+}

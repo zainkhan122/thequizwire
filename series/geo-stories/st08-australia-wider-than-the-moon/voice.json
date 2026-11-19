@@ -1,0 +1,125 @@
+{
+ "version": 1,
+ "episode": "st08-australia-wider-than-the-moon",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "Australia measures almost 4,000 km from its westernmost to its easternmost point, while the Moon's diameter is 3,474 km, so laid across the continent the Moon would fall about 500 km short of the east coast.",
+ "pacing_profile": "documentary: cold open, place, why in 2–5 beats, twist, close answers the open, short CTA (docs/STORY_GUIDELINES.md §2)",
+ "pause_policy": "Pause only at the marked ellipses.",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v01",
+ "title": "The country that is wider than the Moon",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "slow drift over the whole continent; the border traces itself on 'country'; nothing else until the beats",
+   "text": "This country is wider than the Moon. Not on a trick map. In kilometres.",
+   "cues": {
+    "country": "country",
+    "moon": "moon",
+    "kilometres": "kilometres"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "push west, pin drops on Steep Point; sweep east across the continent, pin drops on Cape Byron",
+   "text": "Australia's westernmost point is Steep Point, a cliff on the Indian Ocean. Its easternmost is Cape Byron, a lighthouse on the Pacific.",
+   "cues": {
+    "westernmost": "westernmost",
+    "steep": "steep",
+    "easternmost": "easternmost",
+    "byron": "byron"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "story",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.5,
+   "direction": "pull out to the whole continent; the width line draws from west to east; counter rolls to 3,990",
+   "text": "Between them, almost 4,000 kilometres.",
+   "cues": {
+    "between": "between",
+    "4000": "4,000",
+    "kilometres": "kilometres"
+   }
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "direction": "the dashed Moon line draws along the same path and stops; a pin marks where it ends; push in on the gap to the coast; card",
+   "text": "The Moon, edge to edge, is 3,474 kilometres. Lay it along the same line from Steep Point and it runs out here, in the outback of New South Wales, 500 kilometres short of the coast.",
+   "cues": {
+    "moon": "moon",
+    "3474": "3,474",
+    "lay": "lay",
+    "here": "here",
+    "short": "short"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "honest caveat: pull out to the whole width again; the full line redraws on 'wider'; the country pulses",
+   "text": "The Moon is a sphere, so it still has far more surface than this one flat continent. But point to point, Australia is the wider of the two.",
+   "cues": {
+    "sphere": "sphere",
+    "surface": "surface",
+    "point": "point",
+    "wider": "wider"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 5,
+   "pause_after": 0.5,
+   "direction": "answer the opening line with the same noun",
+   "text": "One continent, coast to coast, wider than the Moon.",
+   "cues": {
+    "continent": "continent",
+    "coast": "coast",
+    "moon": "moon"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 2,
+   "pause_after": 0.0,
+   "direction": "short follow — the outro visual does the work",
+   "text": "Follow for a new map story every day.",
+   "cues": {}
+  }
+ ]
+}
