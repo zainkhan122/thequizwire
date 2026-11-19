@@ -1,6 +1,6 @@
 # Geo Stories — guidelines (not templates)
 
-Fifth feed topic (owner 2026-11-18): narrated map-story Shorts, no MCQ. Up to 60 s, all channels, cover = title + place.
+Fifth feed topic (owner 2026-11-18): narrated map-story Shorts, no MCQ. Up to 60 s, all channels, cover = title only (owner 2026-11-19: naming the place on the cover gives the curiosity away).
 Built inside the existing engine in three phases: **1** format + keyword captions + SFX + highlight styles ·
 **2** camera grammar + map icons + zones/areas · **3** depth (parallax shadow under highlights, then terrain if stats
 justify it). `docs/AUDIT_GEO_STORIES.md` has the reasoning. Everything below is a guideline with a reason; a story
@@ -53,7 +53,7 @@ Story shapes (variety axis `story_shape`; never two days in a row, never the pre
   Level −14 dB under the voice, ducked; one effect per beat (the first wins inside 0.35 s).
 
 ## 5. Cover
-Style B frame, **title + place**: PLACE kicker (yellow), the headline (≤ 7 words, white, one yellow keyword), the
+Style B frame, **title only** (owner 2026-11-19: no place kicker — naming the country gives the curiosity away): the headline (≤ 7 words, white, one yellow keyword), the
 series tag "GEO STORIES · #n", brand footer. No options, no timer, no map that gives the twist away. The cover must
 not reveal the twist (same hard rule as the quiz covers).
 

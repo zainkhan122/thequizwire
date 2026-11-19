@@ -359,17 +359,18 @@ def style_story(C):
     """Geo Stories (format story-v1, docs/STORY_GUIDELINES.md §6): title + place only. Big headline with the *keyword* in yellow,
     place line above in the series colour, series chip, logo. No sticker, no options, no quiz pill."""
     E = C["E"]; st = E.get("story") or {}; cv = st.get("cover") or {}
-    head = cv.get("headline") or st.get("headline") or E.get("title", ""); place_ = cv.get("place") or st.get("place", "")
+    head = cv.get("headline") or st.get("headline") or E.get("title", ""); place_ = cv.get("place", "")                         # place only when authored on the cover
     kw = " ".join(re.findall(r"\*([^*]+)\*", head)); text = head.replace("*", "")
     src = C.get("key") if C["cover"].get("key_t") is not None and C.get("key") is not None else C["bg"]      # post.cover.key_t pins the background frame (frame 0 carries the series chip)
     bg = cover_fit(src, 1.22, anchor=tuple(C["cover"]["bg_anchor"])).filter(ImageFilter.GaussianBlur(3)); im = bg.convert("RGBA")
     darken(im, 0, 700, 130, 30); darken(im, 980, H, 20, 225); vignette(im, 140)
     color = hex_rgb(C["S"]["color"])
     series_chip(im, (60, 96), C["S"], C["number"], color)
-    fp = anton(58); pw = int(fp.getlength(place_.upper()) + 72)
-    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(layer)
-    d.rounded_rectangle((60, 1010, 60 + pw, 1010 + 92), 16, fill=color + (255,)); d.text((96, 1024), place_.upper(), font=fp, fill=(16, 16, 20, 255))
-    im.alpha_composite(layer)
+    if place_:                                                               # owner 2026-11-19: the place line gives the curiosity away — stories ship without it (cover.place == "")
+        fp = anton(58); pw = int(fp.getlength(place_.upper()) + 72)
+        layer = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(layer)
+        d.rounded_rectangle((60, 1010, 60 + pw, 1010 + 92), 16, fill=color + (255,)); d.text((96, 1024), place_.upper(), font=fp, fill=(16, 16, 20, 255))
+        im.alpha_composite(layer)
     f, lines = fit_question(text, kw, 150, 960, 3, min_size=100)
     bottom = draw_question(im, lines, f, 1140, WHITE + (255,), YELLOW + (255,), 8, (12, 12, 14, 255), align="left", left=60, max_w=960, line_h=0.98)
     logo_bug(im, (60, min(bottom + 70, 1760)), 80, align="left")

@@ -272,7 +272,7 @@
    "emoji": "🛰️",
    "topic": "geography story",
    "youtube_category": "27",
-   "playlist": null,
+   "playlist": "Geo Stories",
    "hashtags": {
     "youtube": [
      "#Geography",
@@ -301,7 +301,7 @@
     "satellite map"
    ],
    "playlist_id": null,
-   "playlist_note": "owner creates the YouTube playlist; set playlist_id here — never create by title"
+   "playlist_note": "owner 2026-11-19: create 'Geo Stories' on the channel (yt_enrich playlists) and add every story Short to it"
   }
  },
  "youtube_api": {

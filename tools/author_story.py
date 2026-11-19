@@ -36,7 +36,7 @@ def build(S):
     headline_plain = S["headline"].replace("*", "")
     E = {"id": ep, "format": "story-v1", "series": series, "number": n, "title": headline_plain, "seed": S["seed"], "difficulty": "STORY",
          "story": {"place": S["place"], "headline": S["headline"], "search_term": S["search_term"], "shape": shape, "close": S["close"]["text"],
-                   "cover": S.get("cover", {"place": S["place"], "headline": S["headline"]}), "outro": {"headline": S.get("outro_headline", "KNOW A STRANGER PLACE?"), "url": "thequizwire.com"}},
+                   "cover": S.get("cover", {"place": "", "headline": S["headline"]}), "outro": {"headline": S.get("outro_headline", "KNOW A STRANGER PLACE?"), "url": "thequizwire.com"}},
          "hook_type": "cold-open", "promise": {"min_motion": 0.7}, "credits": ["Natural Earth"],
          "post": {"title": S["post"]["copy"]["youtube"]["title"], "premise": S["post"]["premise"], "bait": S["post"]["bait"], "keywords": S["post"]["keywords"],
                   "description": S["post"]["copy"]["youtube"]["description"], "hashtags": S["post"]["copy"]["youtube"].get("tags", []), "tags": S["post"]["tags"],
