@@ -40,7 +40,8 @@ def build(S):
          "hook_type": "cold-open", "promise": {"min_motion": 0.7}, "credits": ["Natural Earth"],
          "post": {"title": S["post"]["copy"]["youtube"]["title"], "premise": S["post"]["premise"], "bait": S["post"]["bait"], "keywords": S["post"]["keywords"],
                   "description": S["post"]["copy"]["youtube"]["description"], "hashtags": S["post"]["copy"]["youtube"].get("tags", []), "tags": S["post"]["tags"],
-                  "cover_emoji": "", "cover_emoji_why": "stories carry no icon on the cover (title + place only)", "copy": S["post"]["copy"]},
+                  "cover_emoji": "", "cover_emoji_why": "stories carry no icon on the cover (title + place only)", "copy": S["post"]["copy"],
+                  **({"cover": S["post"]["cover"]} if S["post"].get("cover") else {})},
          "variety": {"question": "story", "story_shape": shape, "hook": "cold-open", "opener": opener, "reveal": "none", "beats": S["variety"]["beats"],
                      "cast": S["variety"].get("cast", "none"), "music": S["variety"].get("music", "bed:drone")},
          "status": "draft"}

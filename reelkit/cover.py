@@ -361,7 +361,8 @@ def style_story(C):
     E = C["E"]; st = E.get("story") or {}; cv = st.get("cover") or {}
     head = cv.get("headline") or st.get("headline") or E.get("title", ""); place_ = cv.get("place") or st.get("place", "")
     kw = " ".join(re.findall(r"\*([^*]+)\*", head)); text = head.replace("*", "")
-    bg = cover_fit(C["bg"], 1.22, anchor=tuple(C["cover"]["bg_anchor"])).filter(ImageFilter.GaussianBlur(3)); im = bg.convert("RGBA")
+    src = C.get("key") if C["cover"].get("key_t") is not None and C.get("key") is not None else C["bg"]      # post.cover.key_t pins the background frame (frame 0 carries the series chip)
+    bg = cover_fit(src, 1.22, anchor=tuple(C["cover"]["bg_anchor"])).filter(ImageFilter.GaussianBlur(3)); im = bg.convert("RGBA")
     darken(im, 0, 700, 130, 30); darken(im, 980, H, 20, 225); vignette(im, 140)
     color = hex_rgb(C["S"]["color"])
     series_chip(im, (60, 96), C["S"], C["number"], color)

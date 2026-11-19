@@ -48,7 +48,7 @@
    ],
    "youtube": {
     "title": "Bolivia navy: the fleet of a country with no sea 🛰️",
-    "description": "Bolivia lost its only coast to Chile in a nineteenth-century war and has spent more than a century asking for it back, in parades, in treaties and in court. Yet it still keeps a navy. This map story shows the shore it once held, how it was taken, and where its sailors actually train today.\nWould you give the coast back? Tell us below.",
+    "description": "Bolivia has a navy but no coastline. Where does it sail?\nIt lost its only coast to Chile in a nineteenth-century war and has spent more than a century asking for it back, in parades, in treaties and in court. Yet it still keeps a navy. This map story shows the shore it once held, how it was taken, and where its sailors actually train today.\nWould you give the coast back? Tell us below.",
     "tags": [
      "#Geography",
      "#MapStory",
@@ -83,10 +83,12 @@
    "threads": {
     "text": "Bolivia lost its only coast in the 1880s and never accepted it. It still keeps a navy — so where does it sail? A one-minute map story.",
     "tags": [
-     "#Geography",
-     "#MapStory"
+     "#Bolivia"
     ]
    }
+  },
+  "cover": {
+   "key_t": 26.1
   }
  },
  "open": {

@@ -123,7 +123,7 @@ def spoiler_terms(E, V, post):
     """Everything that identifies the answer: the option itself, its demonyms/places, authored extras, numbers on the fact cards."""
     ans = answer_text(E); terms = set()
     for w in re.findall(r"[A-Za-z]{3,}", ans): terms.add(w.lower())
-    terms.add(ans.lower())
+    if ans: terms.add(ans.lower())                                           # story-v1 has no answer: only the authored copy.spoilers apply
     terms |= set(DEMONYMS.get(ans.lower(), []))
     terms |= {str(t).lower() for t in post.get("copy", {}).get("spoilers", [])}
     nums = set()
@@ -379,8 +379,9 @@ def check(kit):
         if BANNED.search(text): F.append(f"{name}: tease of a next/tomorrow video (owner rule: no announcements)")
         for h in re.findall(r"#\S+", text):
             if not HASHTAG.match(h): F.append(f"{name}: malformed hashtag {h!r}")
-    if not kit.get("answer"): F.append("no answer text (quiz.options/correct missing)")
-    if yt["title"] and not re.search(r"\?", yt["title"]) and not re.search(r"\b(which|where|who|what|how|why)\b", yt["title"], re.I): W.append("YT title is not a question (quiz titles that ask outperform statements for us)")
+    story = not kit.get("answer") and not kit.get("question", "").rstrip().endswith("?")   # story-v1 kits: no answer, headline is a statement
+    if not kit.get("answer") and not story: F.append("no answer text (quiz.options/correct missing)")
+    if not story and yt["title"] and not re.search(r"\?", yt["title"]) and not re.search(r"\b(which|where|who|what|how|why)\b", yt["title"], re.I): W.append("YT title is not a question (quiz titles that ask outperform statements for us)")
     return {"fail": F, "warn": W}
 
 
