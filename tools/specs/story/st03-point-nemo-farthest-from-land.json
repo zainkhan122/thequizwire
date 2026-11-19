@@ -90,6 +90,9 @@
      "#PointNemo"
     ]
    }
+  },
+  "cover": {
+   "key_t": 33.0
   }
  },
  "open": {
@@ -441,7 +444,7 @@
    ],
    "devices": [
     {
-     "at": "@@fall-0.5",
+     "at": "@@useful-0.2",
      "do": "geo.pin_out",
      "stage": "stage_map",
      "args": {
