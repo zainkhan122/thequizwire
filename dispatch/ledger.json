@@ -4633,6 +4633,105 @@
    "recorded_at": "2026-11-19T04:59:32+00:00",
    "title": null,
    "account": "BUFFER_API_KEY"
+  },
+  {
+   "episode": "st01-bolivia-navy-no-coast",
+   "platform": "instagram",
+   "post_id": "",
+   "channel_id": "695bfd29457dae6a34df0f74",
+   "state": "manual",
+   "media_url": "",
+   "recorded_at": "2026-11-19T07:18:48+00:00",
+   "account": "BUFFER_API_KEY_2",
+   "note": "owner uploaded by hand in Buffer on 2026-11-19 (account 2 API-limited); do not auto-dispatch"
+  },
+  {
+   "episode": "st01-bolivia-navy-no-coast",
+   "platform": "facebook",
+   "post_id": "",
+   "channel_id": "695a159a457dae6a34d901bc",
+   "state": "manual",
+   "media_url": "",
+   "recorded_at": "2026-11-19T07:18:48+00:00",
+   "account": "BUFFER_API_KEY_2",
+   "note": "owner uploaded by hand in Buffer on 2026-11-19 (account 2 API-limited); do not auto-dispatch"
+  },
+  {
+   "episode": "st01-bolivia-navy-no-coast",
+   "platform": "twitter",
+   "post_id": "",
+   "channel_id": "69f30e2a5c4c051afaf58634",
+   "state": "manual",
+   "media_url": "",
+   "recorded_at": "2026-11-19T07:18:48+00:00",
+   "account": "BUFFER_API_KEY_2",
+   "note": "owner uploaded by hand in Buffer on 2026-11-19 (account 2 API-limited); do not auto-dispatch"
+  },
+  {
+   "episode": "st02-bir-tawil-land-nobody-wants",
+   "platform": "instagram",
+   "post_id": "",
+   "channel_id": "695bfd29457dae6a34df0f74",
+   "state": "manual",
+   "media_url": "",
+   "recorded_at": "2026-11-19T07:18:48+00:00",
+   "account": "BUFFER_API_KEY_2",
+   "note": "owner uploaded by hand in Buffer on 2026-11-19 (account 2 API-limited); do not auto-dispatch"
+  },
+  {
+   "episode": "st02-bir-tawil-land-nobody-wants",
+   "platform": "facebook",
+   "post_id": "",
+   "channel_id": "695a159a457dae6a34d901bc",
+   "state": "manual",
+   "media_url": "",
+   "recorded_at": "2026-11-19T07:18:48+00:00",
+   "account": "BUFFER_API_KEY_2",
+   "note": "owner uploaded by hand in Buffer on 2026-11-19 (account 2 API-limited); do not auto-dispatch"
+  },
+  {
+   "episode": "st02-bir-tawil-land-nobody-wants",
+   "platform": "twitter",
+   "post_id": "",
+   "channel_id": "69f30e2a5c4c051afaf58634",
+   "state": "manual",
+   "media_url": "",
+   "recorded_at": "2026-11-19T07:18:48+00:00",
+   "account": "BUFFER_API_KEY_2",
+   "note": "owner uploaded by hand in Buffer on 2026-11-19 (account 2 API-limited); do not auto-dispatch"
+  },
+  {
+   "episode": "st03-point-nemo-farthest-from-land",
+   "platform": "instagram",
+   "post_id": "",
+   "channel_id": "695bfd29457dae6a34df0f74",
+   "state": "manual",
+   "media_url": "",
+   "recorded_at": "2026-11-19T07:18:48+00:00",
+   "account": "BUFFER_API_KEY_2",
+   "note": "owner uploaded by hand in Buffer on 2026-11-19 (account 2 API-limited); do not auto-dispatch"
+  },
+  {
+   "episode": "st03-point-nemo-farthest-from-land",
+   "platform": "facebook",
+   "post_id": "",
+   "channel_id": "695a159a457dae6a34d901bc",
+   "state": "manual",
+   "media_url": "",
+   "recorded_at": "2026-11-19T07:18:48+00:00",
+   "account": "BUFFER_API_KEY_2",
+   "note": "owner uploaded by hand in Buffer on 2026-11-19 (account 2 API-limited); do not auto-dispatch"
+  },
+  {
+   "episode": "st03-point-nemo-farthest-from-land",
+   "platform": "twitter",
+   "post_id": "",
+   "channel_id": "69f30e2a5c4c051afaf58634",
+   "state": "manual",
+   "media_url": "",
+   "recorded_at": "2026-11-19T07:18:48+00:00",
+   "account": "BUFFER_API_KEY_2",
+   "note": "owner uploaded by hand in Buffer on 2026-11-19 (account 2 API-limited); do not auto-dispatch"
   }
  ]
 }
