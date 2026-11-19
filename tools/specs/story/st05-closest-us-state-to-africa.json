@@ -135,7 +135,7 @@
      44.815
     ],
     "label": "West Quoddy Head · Maine",
-    "side": "left"
+    "side": "right"
    },
    {
     "id": "eb",
@@ -144,7 +144,7 @@
      32.54
     ],
     "label": "El Beddouza · Morocco",
-    "side": "right"
+    "side": "left"
    },
    {
     "id": "fl",
@@ -162,7 +162,7 @@
      23.7
     ],
     "label": "Western Sahara coast",
-    "side": "right"
+    "side": "left"
    }
   ],
   "labels": [],
@@ -709,17 +709,17 @@
   ],
   "cams": {
    "start": [
-    0.45,
+    0.62,
     [
-     -45,
-     36
+     -46,
+     33
     ]
    ],
    "open": [
-    0.5,
+    0.68,
     [
-     -44,
-     37
+     -46,
+     33.5
     ]
    ]
   },
@@ -760,6 +760,20 @@
    }
   ],
   "devices": [
+   {
+    "at": "@+0.1",
+    "do": "geo.pin_out",
+    "args": {
+     "pid": "qh"
+    }
+   },
+   {
+    "at": "@+0.2",
+    "do": "geo.pin_out",
+    "args": {
+     "pid": "eb"
+    }
+   },
    {
     "at": "@@florida",
     "do": "geo.pin_in",
@@ -900,10 +914,10 @@
      "@@maine+0.2",
      "@@morocco+0.3",
      [
-      0.55,
+      0.72,
       [
-       -40,
-       40
+       -44,
+       34
       ]
      ],
      "power2.inOut"
@@ -912,10 +926,10 @@
      "@@morocco+0.3",
      "@.end",
      [
-      0.54,
+      0.71,
       [
-       -40,
-       40
+       -44,
+       34
       ]
      ],
      "none"
@@ -936,18 +950,18 @@
    "pause_after": 0.5,
    "direction": "hold the whole line; the counter rolls up to the distance",
    "cam": [
-    0.55,
+    0.72,
     [
-     -40,
-     40
+     -44,
+     34
     ]
    ],
    "cam_dur": 1.0,
    "cam_hold": [
-    0.56,
+    0.73,
     [
-     -40,
-     40
+     -44,
+     34
     ]
    ],
    "kw": {
@@ -961,7 +975,7 @@
      "type": "counter",
      "start": 0,
      "end": 5076,
-     "y": 560,
+     "y": 360,
      "label": "km · Maine to Morocco",
      "fmt": "int",
      "size": 150
@@ -997,10 +1011,10 @@
      "@+1.0",
      "@.end",
      [
-      0.57,
+      0.74,
       [
-       -40,
-       40
+       -44,
+       34
       ]
      ],
      "none"
@@ -1023,18 +1037,18 @@
    "pause_after": 0.45,
    "direction": "pin back on Florida; its dashed line draws south-east to the Sahara coast; second counter; the Maine line pulses as the winner",
    "cam": [
-    0.6,
+    0.72,
     [
-     -50,
-     32
+     -48,
+     30
     ]
    ],
    "cam_dur": 1.2,
    "cam_hold": [
-    0.6,
+    0.72,
     [
-     -50,
-     32
+     -48,
+     30
     ]
    ],
    "kw": {
@@ -1048,13 +1062,27 @@
      "type": "counter",
      "start": 0,
      "end": 6390,
-     "y": 560,
+     "y": 360,
      "label": "km · Florida to the nearest African shore",
      "fmt": "int",
      "size": 150
     }
    ],
    "devices": [
+    {
+     "at": "@+0.1",
+     "do": "geo.pin_out",
+     "args": {
+      "pid": "qh"
+     }
+    },
+    {
+     "at": "@+0.2",
+     "do": "geo.pin_out",
+     "args": {
+      "pid": "eb"
+     }
+    },
     {
      "at": "@@florida",
      "do": "geo.pin_in",
@@ -1112,10 +1140,10 @@
      "@+1.2",
      "@@loses-0.3",
      [
-      0.6,
+      0.72,
       [
-       -50,
-       32
+       -48,
+       30
       ]
      ],
      "none"
@@ -1124,10 +1152,10 @@
      "@@loses-0.3",
      "@@loses+0.7",
      [
-      0.55,
+      0.72,
       [
        -45,
-       37
+       33
       ]
      ],
      "power2.inOut"
@@ -1136,10 +1164,10 @@
      "@@loses+0.7",
      "@.end",
      [
-      0.54,
+      0.71,
       [
        -45,
-       37
+       33
       ]
      ],
      "none"
@@ -1162,18 +1190,18 @@
    "climax": true,
    "direction": "the Maine line redraws as the camera rides it, arcing north; Morocco pulses on 'bulge'; push to the Maine end on 'cold'; card",
    "cam": [
-    0.5,
+    0.7,
     [
-     -42,
-     40
+     -44,
+     35
     ]
    ],
    "cam_dur": 1.2,
    "cam_hold": [
-    0.5,
+    0.7,
     [
-     -42,
-     40
+     -44,
+     35
     ]
    ],
    "kw": {
@@ -1198,6 +1226,20 @@
      }
     },
     {
+     "at": "@@ball+0.3",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "qh"
+     }
+    },
+    {
+     "at": "@@bulge",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "eb"
+     }
+    },
+    {
      "at": "@@bulge",
      "do": "geo.highlight_pulse",
      "args": {
@@ -1212,10 +1254,10 @@
      "@+1.2",
      "@@cold-0.5",
      [
-      0.5,
+      0.7,
       [
-       -42,
-       40
+       -44,
+       35
       ]
      ],
      "none"
@@ -1262,10 +1304,10 @@
   "pause_after": 0.5,
   "y": 760,
   "cam": [
-   0.5,
+   0.7,
    [
-    -42,
-    40
+    -44,
+    35
    ]
   ],
   "cam_dur": 1.6,

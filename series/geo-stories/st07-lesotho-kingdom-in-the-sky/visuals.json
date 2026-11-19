@@ -59,7 +59,7 @@
    "rig": "mountain",
    "x": 540,
    "y": 900,
-   "size": 200
+   "size": 260
   },
   {
    "id": "kw04",
@@ -395,8 +395,8 @@
      27.03,
      -30.32
     ],
-    "dx": 110,
-    "dy": 60
+    "dx": -150,
+    "dy": -80
    },
    "stage": "stage_map"
   },
@@ -785,9 +785,11 @@
   },
   {
    "at": "s06@lowest",
-   "do": "geo.pin_in",
+   "do": "geo.highlight_pulse",
    "args": {
-    "pid": "low"
+    "fid": "426",
+    "layer": "tint",
+    "dur": 0.7
    },
    "stage": "stage_map"
   },

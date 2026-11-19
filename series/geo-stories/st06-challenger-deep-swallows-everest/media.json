@@ -1,4 +1,5 @@
 {
+ "version": 1,
  "files": {},
  "generated": {
   "brand/cursor.svg": {
@@ -75,12 +76,12 @@
   },
   "geo/main_basemap_far.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 713056,
+   "bytes": 786059,
    "credit": "NASA Blue Marble",
    "kind": "image",
    "licence": "PD-USGov",
    "provider": "NASA GIBS",
-   "source": "BlueMarble_ShadedRelief_Bathymetry z5 (72 tiles)"
+   "source": "BlueMarble_ShadedRelief_Bathymetry z5 (80 tiles)"
   },
   "mix.wav": {
    "ai_voice": "Kokoro am_michael",
@@ -108,6 +109,5 @@
    "provider": "Twemoji (Twitter, Inc. and other contributors)",
    "source": "https://github.com/twitter/twemoji"
   }
- },
- "version": 1
+ }
 }

@@ -581,8 +581,8 @@
       113.155,
       -26.153
      ],
-     "label": "Steep Point · westernmost",
-     "side": "left"
+     "label": "Steep Point",
+     "side": "right"
     },
     {
      "id": "cb",
@@ -590,8 +590,8 @@
       153.637,
       -28.638
      ],
-     "label": "Cape Byron · easternmost",
-     "side": "right"
+     "label": "Cape Byron",
+     "side": "left"
     },
     {
      "id": "me",
@@ -600,7 +600,7 @@
       -29.007
      ],
      "label": "the Moon ends here",
-     "side": "right"
+     "side": "left"
     }
    ],
    "labels": [],

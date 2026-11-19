@@ -121,8 +121,8 @@
     "ids": [
      "710"
     ],
-    "cls": "solid",
-    "note": "South Africa, the only neighbour",
+    "cls": "tint",
+    "note": "South Africa, the only neighbour (light tint so the satellite stays visible)",
     "trace": false
    }
   ],
@@ -134,7 +134,7 @@
      -30.32
     ],
     "label": "Lowest point · 1,400 m",
-    "side": "left"
+    "side": "right"
    },
    {
     "id": "high",
@@ -143,7 +143,7 @@
      -29.47
     ],
     "label": "Thabana Ntlenyana · 3,482 m",
-    "side": "right"
+    "side": "left"
    }
   ],
   "labels": [
@@ -532,7 +532,7 @@
      "rig": "mountain",
      "x": 540,
      "y": 900,
-     "size": 200
+     "size": 260
     }
    ],
    "devices": [
@@ -546,8 +546,8 @@
        27.03,
        -30.32
       ],
-      "dx": 110,
-      "dy": 60
+      "dx": -150,
+      "dy": -80
      }
     },
     {
@@ -884,9 +884,11 @@
   "devices": [
    {
     "at": "@@lowest",
-    "do": "geo.pin_in",
+    "do": "geo.highlight_pulse",
     "args": {
-     "pid": "low"
+     "fid": "426",
+     "layer": "tint",
+     "dur": 0.7
     }
    }
   ]

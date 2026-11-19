@@ -51,7 +51,7 @@
    "type": "counter",
    "start": 0,
    "end": 5076,
-   "y": 560,
+   "y": 360,
    "label": "km · Maine to Morocco",
    "fmt": "int",
    "size": 150
@@ -66,7 +66,7 @@
    "type": "counter",
    "start": 0,
    "end": 6390,
-   "y": 560,
+   "y": 360,
    "label": "km · Florida to the nearest African shore",
    "fmt": "int",
    "size": 150
@@ -96,10 +96,10 @@
    "do": "geo.cam_set",
    "stage": "stage_map",
    "args": {
-    "k": 0.45,
+    "k": 0.62,
     "lonlat": [
-     -45,
-     36
+     -46,
+     33
     ]
    }
   },
@@ -109,10 +109,10 @@
    "stage": "stage_map",
    "until": "s01.end",
    "args": {
-    "k": 0.5,
+    "k": 0.68,
     "lonlat": [
-     -44,
-     37
+     -46,
+     33.5
     ],
     "ease": "none"
    }
@@ -130,6 +130,22 @@
    "do": "kw_in",
    "id": "kw01",
    "until": "s01.end"
+  },
+  {
+   "at": "s01+0.1",
+   "do": "geo.pin_out",
+   "args": {
+    "pid": "qh"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s01+0.2",
+   "do": "geo.pin_out",
+   "args": {
+    "pid": "eb"
+   },
+   "stage": "stage_map"
   },
   {
    "at": "s01@florida",
@@ -218,10 +234,10 @@
    "stage": "stage_map",
    "until": "s02@morocco+0.3",
    "args": {
-    "k": 0.55,
+    "k": 0.72,
     "lonlat": [
-     -40,
-     40
+     -44,
+     34
     ],
     "ease": "power2.inOut"
    }
@@ -232,10 +248,10 @@
    "stage": "stage_map",
    "until": "s02.end",
    "args": {
-    "k": 0.54,
+    "k": 0.71,
     "lonlat": [
-     -40,
-     40
+     -44,
+     34
     ],
     "ease": "none"
    }
@@ -316,10 +332,10 @@
    "stage": "stage_map",
    "until": "s03+1.0",
    "args": {
-    "k": 0.55,
+    "k": 0.72,
     "lonlat": [
-     -40,
-     40
+     -44,
+     34
     ],
     "ease": "power2.inOut"
    }
@@ -330,10 +346,10 @@
    "stage": "stage_map",
    "until": "s03+2.2",
    "args": {
-    "k": 0.56,
+    "k": 0.73,
     "lonlat": [
-     -40,
-     40
+     -44,
+     34
     ],
     "ease": "none"
    }
@@ -344,10 +360,10 @@
    "stage": "stage_map",
    "until": "s03.end",
    "args": {
-    "k": 0.57,
+    "k": 0.74,
     "lonlat": [
-     -40,
-     40
+     -44,
+     34
     ],
     "ease": "none"
    }
@@ -412,10 +428,10 @@
    "stage": "stage_map",
    "until": "s04+1.2",
    "args": {
-    "k": 0.6,
+    "k": 0.72,
     "lonlat": [
-     -50,
-     32
+     -48,
+     30
     ],
     "ease": "power2.inOut"
    }
@@ -426,10 +442,10 @@
    "stage": "stage_map",
    "until": "s04+2.4",
    "args": {
-    "k": 0.6,
+    "k": 0.72,
     "lonlat": [
-     -50,
-     32
+     -48,
+     30
     ],
     "ease": "none"
    }
@@ -440,10 +456,10 @@
    "stage": "stage_map",
    "until": "s04@loses-0.3",
    "args": {
-    "k": 0.6,
+    "k": 0.72,
     "lonlat": [
-     -50,
-     32
+     -48,
+     30
     ],
     "ease": "none"
    }
@@ -454,10 +470,10 @@
    "stage": "stage_map",
    "until": "s04@loses+0.7",
    "args": {
-    "k": 0.55,
+    "k": 0.72,
     "lonlat": [
      -45,
-     37
+     33
     ],
     "ease": "power2.inOut"
    }
@@ -468,10 +484,10 @@
    "stage": "stage_map",
    "until": "s04.end",
    "args": {
-    "k": 0.54,
+    "k": 0.71,
     "lonlat": [
      -45,
-     37
+     33
     ],
     "ease": "none"
    }
@@ -515,6 +531,22 @@
     "layer": "tint",
     "dur": 0.6
    }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.pin_out",
+   "args": {
+    "pid": "qh"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s04+0.2",
+   "do": "geo.pin_out",
+   "args": {
+    "pid": "eb"
+   },
+   "stage": "stage_map"
   },
   {
    "at": "s04@florida",
@@ -578,10 +610,10 @@
    "stage": "stage_map",
    "until": "s05+1.2",
    "args": {
-    "k": 0.5,
+    "k": 0.7,
     "lonlat": [
-     -42,
-     40
+     -44,
+     35
     ],
     "ease": "power2.inOut"
    }
@@ -592,10 +624,10 @@
    "stage": "stage_map",
    "until": "s05+2.4",
    "args": {
-    "k": 0.5,
+    "k": 0.7,
     "lonlat": [
-     -42,
-     40
+     -44,
+     35
     ],
     "ease": "none"
    }
@@ -606,10 +638,10 @@
    "stage": "stage_map",
    "until": "s05@cold-0.5",
    "args": {
-    "k": 0.5,
+    "k": 0.7,
     "lonlat": [
-     -42,
-     40
+     -44,
+     35
     ],
     "ease": "none"
    }
@@ -696,6 +728,22 @@
    "stage": "stage_map"
   },
   {
+   "at": "s05@ball+0.3",
+   "do": "geo.pin_in",
+   "args": {
+    "pid": "qh"
+   },
+   "stage": "stage_map"
+  },
+  {
+   "at": "s05@bulge",
+   "do": "geo.pin_in",
+   "args": {
+    "pid": "eb"
+   },
+   "stage": "stage_map"
+  },
+  {
    "at": "s05@bulge",
    "do": "geo.highlight_pulse",
    "args": {
@@ -711,10 +759,10 @@
    "stage": "stage_map",
    "until": "s06+1.6",
    "args": {
-    "k": 0.5,
+    "k": 0.7,
     "lonlat": [
-     -42,
-     40
+     -44,
+     35
     ],
     "ease": "power2.inOut"
    }
@@ -725,10 +773,10 @@
    "stage": "stage_map",
    "until": "s06.end",
    "args": {
-    "k": 0.48,
+    "k": 0.672,
     "lonlat": [
-     -42,
-     40
+     -44,
+     35
     ],
     "ease": "none"
    }
@@ -798,10 +846,10 @@
    "stage": "stage_map",
    "until": "end-0.3",
    "args": {
-    "k": 0.45,
+    "k": 0.62,
     "lonlat": [
-     -45,
-     36
+     -46,
+     33
     ],
     "ease": "power1.inOut"
    }

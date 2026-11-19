@@ -125,8 +125,8 @@
      113.155,
      -26.153
     ],
-    "label": "Steep Point · westernmost",
-    "side": "left"
+    "label": "Steep Point",
+    "side": "right"
    },
    {
     "id": "cb",
@@ -134,8 +134,8 @@
      153.637,
      -28.638
     ],
-    "label": "Cape Byron · easternmost",
-    "side": "right"
+    "label": "Cape Byron",
+    "side": "left"
    },
    {
     "id": "me",
@@ -144,7 +144,7 @@
      -29.007
     ],
     "label": "the Moon ends here",
-    "side": "right"
+    "side": "left"
    }
   ],
   "labels": [],
@@ -691,14 +691,14 @@
   ],
   "cams": {
    "start": [
-    0.5,
+    0.72,
     [
      134,
      -27
     ]
    ],
    "open": [
-    0.52,
+    0.76,
     [
      134,
      -27
@@ -845,7 +845,7 @@
    "pause_after": 0.5,
    "direction": "pull out to the whole continent; the width line draws from west to east; counter rolls to 3,990",
    "cam": [
-    0.6,
+    0.95,
     [
      134,
      -28
@@ -853,7 +853,7 @@
    ],
    "cam_dur": 1.2,
    "cam_hold": [
-    0.6,
+    0.95,
     [
      134,
      -28
@@ -906,7 +906,7 @@
      "@+1.2",
      "@.end",
      [
-      0.61,
+      0.96,
       [
        134,
        -28
@@ -933,7 +933,7 @@
    "climax": true,
    "direction": "the dashed Moon line draws along the same path and stops; a pin marks where it ends; push in on the gap to the coast; card",
    "cam": [
-    0.6,
+    0.95,
     [
      134,
      -28
@@ -941,7 +941,7 @@
    ],
    "cam_dur": 1.0,
    "cam_hold": [
-    0.6,
+    0.95,
     [
      134,
      -28
@@ -995,6 +995,13 @@
      }
     },
     {
+     "at": "@@here-0.1",
+     "do": "geo.pin_out",
+     "args": {
+      "pid": "cb"
+     }
+    },
+    {
      "at": "@@here",
      "do": "geo.pin_in",
      "args": {
@@ -1014,7 +1021,7 @@
      "@+1.0",
      "@@here-0.4",
      [
-      0.6,
+      0.95,
       [
        134,
        -28
@@ -1063,7 +1070,7 @@
    "pause_after": 0.45,
    "direction": "honest caveat: pull out to the whole width again; the full line redraws on 'wider'; the country pulses",
    "cam": [
-    0.55,
+    0.9,
     [
      134,
      -27
@@ -1071,7 +1078,7 @@
    ],
    "cam_dur": 1.3,
    "cam_hold": [
-    0.55,
+    0.9,
     [
      134,
      -27
@@ -1098,6 +1105,13 @@
      }
     },
     {
+     "at": "@+0.5",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "cb"
+     }
+    },
+    {
      "at": "@@wider-0.2",
      "do": "geo.route_draw",
      "until": "@@wider+0.8",
@@ -1121,7 +1135,7 @@
      "@+1.3",
      "@.end",
      [
-      0.56,
+      0.91,
       [
        134,
        -27
@@ -1147,7 +1161,7 @@
   "pause_after": 0.5,
   "y": 760,
   "cam": [
-   0.5,
+   0.9,
    [
     134,
     -27
@@ -1261,8 +1275,8 @@
      "but point to point, australia is the wider of the two"
     ],
     "screen": [
-     "Steep Point · westernmost",
-     "Cape Byron · easternmost",
+     "Steep Point",
+     "Cape Byron",
      "west to east",
      "almost 4,000 km",
      "km · Steep Point to Cape Byron",

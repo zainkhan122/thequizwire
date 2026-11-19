@@ -582,7 +582,7 @@
       44.815
      ],
      "label": "West Quoddy Head · Maine",
-     "side": "left"
+     "side": "right"
     },
     {
      "id": "eb",
@@ -591,7 +591,7 @@
       32.54
      ],
      "label": "El Beddouza · Morocco",
-     "side": "right"
+     "side": "left"
     },
     {
      "id": "fl",
@@ -609,7 +609,7 @@
       23.7
      ],
      "label": "Western Sahara coast",
-     "side": "right"
+     "side": "left"
     }
    ],
    "labels": [],

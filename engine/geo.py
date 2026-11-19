@@ -213,6 +213,9 @@ class Scene:
         sel = f"#{self.id}_{layer}_{rid}"                                   # route paths carry pathLength="1000" (geo-runtime; with 1 GSAP snapped the px offset to whole numbers → the draw popped instead of drawing), so no length measuring at script time;
         # opacity sits in BOTH var sets: a from-only property is tweened back to the CSS value (0) by GSAP, which hid every drawn route in the renderer
         self.G.J(f"tl.fromTo('{sel}',{{strokeDasharray:'1000 1000',strokeDashoffset:1000,opacity:1}},{{strokeDashoffset:0,opacity:1,duration:{f(t1 - t0)},ease:'power1.inOut',immediateRender:false}},{f(t0)});")
+        # Chromium scales the dash pattern of a non-scaling-stroke path by the camera transform (k): at k ≈ 3 a finished '1000 1000' dash shows only
+        # 1000/k of the route and a hole opens mid-line (st04 Diomede). Once drawn, drop the dash so the whole route stays visible at every zoom.
+        self.G.J(f"tl.set('{sel}',{{strokeDasharray:'none'}},{f(t1 + 0.02)});")
 
     def travel(self, t0, t1, rid, sid, layer="route", ease="power1.inOut", offset=(0, 0)):
         """M2 device: move the screen element #sid (a sticker / character) along the route path rid, from start to end, between t0 and t1.
