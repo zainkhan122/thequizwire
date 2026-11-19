@@ -56,9 +56,27 @@
    "provider": "Simple Icons",
    "source": "https://github.com/simple-icons/simple-icons"
   },
+  "geo/flags/eg.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 8717,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/flags/sd.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 505,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
   "geo/main.json": {
    "by": "reelkit/geodata.py",
-   "bytes": 99154,
+   "bytes": 99217,
    "credit": "Natural Earth",
    "kind": "data",
    "licence": "PD",

@@ -277,9 +277,14 @@
     const cx = e && e.getAttribute ? e.getAttribute("data-cx") : null;
     return cx ? `${cx} ${e.getAttribute("data-cy")}` : "0 0";
   }
+  function toScreen(id, lonlat) {   // lon/lat -> [x, y] in scene px at the CURRENT camera (props anchor sprites to the map with it, every frame)
+    const S = scenes[id]; if (!S || !S.C || !S.C.proj) return null;
+    if (S.spec.projection === "orthographic") { if (!visibleOnGlobe(S.C.proj, lonlat)) return null; const p = S.C.proj(lonlat); return p ? [p[0], p[1]] : null; }
+    const p = S.C.proj(lonlat); if (!p) return null; return screenXY(S, p[0], p[1]);
+  }
   function cam(id) { return scenes[id].cam; }
   function setCam(id, v) { Object.assign(scenes[id].cam, camTarget(id, { ...v, duration: 0 })); apply(id); }
   function pathLength(id, layerId) { const e = scenes[id].g.querySelector("#" + CSS.escape(id + "_" + layerId)); return e && e.getTotalLength ? e.getTotalLength() : 0; }
 
-  return { compute, mount, apply, cam, camTarget, setCam, focus, pathLength, centroid, bboxFeature, PROJ_KIND, scenes };
+  return { compute, mount, apply, cam, camTarget, setCam, focus, toScreen, pathLength, centroid, bboxFeature, PROJ_KIND, scenes };
 });

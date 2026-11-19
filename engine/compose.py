@@ -29,7 +29,7 @@ from pathlib import Path
 ENGINE = Path(__file__).resolve().parent
 REPO = ENGINE.parent
 sys.path.insert(0, str(ENGINE))
-import fx, geo, quiz, charts, story  # noqa: E402
+import fx, geo, quiz, charts, story, props  # noqa: E402
 
 FONTS = ["Anton-Regular.ttf", "Oswald.ttf", "DMSerifDisplay-Regular.ttf", "DMSerifDisplay-Italic.ttf", "SpecialElite-Regular.ttf", "LilitaOne-Regular.ttf"]
 INK, CREAM, SEA = "#0B1620", "#EFE6D2", "#0F2A3A"
@@ -57,6 +57,7 @@ class Composer:
         self.Q = quiz.Quiz(self.J, self.series, self.E.get("number"))
         self.CH = charts.Charts(self.J)
         self.ST = story.Story(self.J)
+        self.PR = None                                                    # props.Props, built once stages exist (see stage())
         self.stages, self.credit_bits = {}, list(self.E.get("credits", []))
 
     # ---------------------------------------------------------------- time expressions
@@ -130,6 +131,7 @@ class Composer:
             src = f"assets/stickers/{el['emoji'].lower()}.svg" if el.get("emoji") else el["src"]
             self.body.append(self.Q.sticker(el["id"], src, el["x"], el["y"], size=el.get("size", 240), rot=el.get("rot", 0), z=el.get("z", 60)))
             if el.get("credit"): self.credit_bits.append(el["credit"])
+        elif k == "rig": self.body.append(props.rig_html(el))                                                            # animated prop (engine/props.py)
         elif k == "character":
             self.body.append(self.Q.character(el["id"], el["flag"], face=el.get("face", "happy"), x=el["x"], y=el["y"], size=el.get("size", 200), rot=el.get("rot", 0), z=el.get("z", 62)))
         elif k in ("counter", "bars", "compare", "callouts", "strip", "split", "erase"):
@@ -148,6 +150,12 @@ class Composer:
             sc = self.stages[b["stage"]]; m = getattr(sc, do[4:])
             if do in ("geo.cam_to", "geo.spin", "geo.route_draw", "geo.fade", "geo.travel"): m(t, t1 if t1 is not None else t + float(b.get("dur", 1.2)), **args)
             else: m(t, **args)
+        elif do.startswith("prop."):                                                                                   # engine/props.py devices
+            if self.PR is None: self.PR = props.Props(self.J, self.stages)
+            m = getattr(self.PR, do[5:])
+            st = {"stage": b["stage"]} if do in ("prop.anchor", "prop.orbit", "prop.fall") else {}
+            if do in ("prop.anchor", "prop.orbit", "prop.wave", "prop.flutter", "prop.hop"): m(t, t1 if t1 is not None else t + float(b.get("dur", 1.2)), b["id"], **st, **args)
+            else: m(t, b["id"], **st, **args)
         elif do.startswith("chart."):
             m = getattr(self.CH, do[6:])
             if do in ("chart.counter_run", "chart.erase_run"): m(t, t1 if t1 is not None else t + float(b.get("dur", 1.5)), b["id"], **args)
@@ -279,7 +287,7 @@ html,body{{width:1080px;height:1920px;overflow:hidden;background:{INK}}}
 .clip{{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden}}
 .kb{{position:absolute;left:-108px;top:-201px;width:1296px;height:2322px;transform-origin:50% 50%}}
 .kb img{{position:absolute;left:0;top:0;width:1296px;height:2322px;object-fit:cover}}
-{fx.CSS}{geo.CSS}{quiz.CSS}{charts.CSS}{story.CSS}
+{fx.CSS}{geo.CSS}{quiz.CSS}{charts.CSS}{story.CSS}{props.CSS}
 """
         title = f"{self.series['name']} #{self.E.get('number', '')}: {self.E['title']}"
         audio = f'<audio id="mix" src="assets/mix.wav" data-start="0" data-duration="{f(self.TOTAL)}" data-track-index="9"></audio>' if (hf / "assets" / "mix.wav").exists() else ""

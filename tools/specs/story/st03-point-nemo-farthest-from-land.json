@@ -115,7 +115,6 @@
    {
     "at": "@@point",
     "do": "geo.pin_in",
-    "stage": "stage_map",
     "args": {
      "pid": "nemo"
     }
@@ -128,6 +127,54 @@
      "layer": "ring",
      "dur": 0.7
     }
+   },
+   {
+    "at": "@@orbit-1.2",
+    "do": "prop.pop",
+    "id": "sat0",
+    "args": {
+     "dur": 0.3
+    }
+   },
+   {
+    "at": "@@orbit-1.2",
+    "do": "prop.orbit",
+    "id": "sat0",
+    "until": "@.end+0.3",
+    "args": {
+     "a": [
+      -150,
+      -44
+     ],
+     "b": [
+      -96,
+      -44
+     ],
+     "height": 260,
+     "roll": 8
+    }
+   },
+   {
+    "at": "@@orbit-1.2",
+    "do": "prop.wave",
+    "id": "sat0",
+    "until": "@.end+0.3"
+   },
+   {
+    "at": "@.end+0.3",
+    "do": "prop.out",
+    "id": "sat0"
+   }
+  ],
+  "direction": "tight on empty ocean, the pin drops, the satellite crosses overhead with the crew waving, then the pull-out reveals how alone it is",
+  "elements": [
+   {
+    "id": "sat0",
+    "type": "rig",
+    "rig": "sat",
+    "x": 540,
+    "y": 900,
+    "size": 230
    }
   ]
  },
@@ -146,20 +193,20 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "pull back; the empty circle draws on 'farthest'; counter on the distance",
+   "direction": "camera rides the line north to the nearest coast; a lone figure waves from the beach; counter on the distance",
    "cam": [
-    0.42,
+    0.6,
     [
-     -123.4,
-     -46.0
+     -123.393,
+     -48.877
     ]
    ],
-   "cam_dur": 1.8,
+   "cam_dur": 1.2,
    "cam_hold": [
-    0.4,
+    0.62,
     [
-     -123.0,
-     -46.0
+     -123.4,
+     -47.5
     ]
    ],
    "kw": {
@@ -177,6 +224,15 @@
      "label": "km to the nearest land",
      "fmt": "int",
      "size": 150
+    },
+    {
+     "id": "p1",
+     "type": "rig",
+     "rig": "person",
+     "x": 540,
+     "y": 900,
+     "size": 140,
+     "shirt": "#e76f51"
     }
    ],
    "devices": [
@@ -190,12 +246,69 @@
      }
     },
     {
-     "at": "@@coast+0.2",
+     "at": "@@farthest+0.3",
      "do": "geo.highlight_in",
      "args": {
       "fid": "ring",
       "layer": "ring",
       "dur": 0.6
+     }
+    },
+    {
+     "at": "@@coast-0.3",
+     "do": "geo.route_draw",
+     "until": "@@coast+0.6",
+     "args": {
+      "rid": "s1",
+      "layer": "spokes"
+     }
+    },
+    {
+     "at": "@@coast+0.4",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "ducie"
+     }
+    },
+    {
+     "at": "@@coast+0.3",
+     "do": "prop.anchor",
+     "id": "p1",
+     "until": "s04@nobody+1.2",
+     "args": {
+      "lonlat": [
+       -124.78,
+       -24.68
+      ],
+      "dx": -70,
+      "dy": -40
+     }
+    },
+    {
+     "at": "@@coast+0.5",
+     "do": "prop.pop",
+     "id": "p1",
+     "args": {
+      "frm": "rise"
+     }
+    },
+    {
+     "at": "@@coast+0.9",
+     "do": "prop.wave",
+     "id": "p1",
+     "until": "@.end",
+     "args": {
+      "parts": [
+       "arm"
+      ],
+      "pivots": [
+       [
+        28,
+        -12
+       ]
+      ],
+      "swing": 22,
+      "period": 0.45
      }
     },
     {
@@ -212,6 +325,44 @@
      "do": "chart.out",
      "id": "dist"
     }
+   ],
+   "cam_path": [
+    [
+     "@+1.2",
+     "@@coast-0.4",
+     [
+      0.62,
+      [
+       -123.4,
+       -46.5
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@coast-0.4",
+     "@@coast+0.7",
+     [
+      0.95,
+      [
+       -124.3,
+       -33.0
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@coast+0.7",
+     "@.end",
+     [
+      1.0,
+      [
+       -124.4,
+       -31.5
+      ]
+     ],
+     "none"
+    ]
    ]
   },
   {
@@ -228,20 +379,20 @@
    "tone": "neutral",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "three pins land on their names; three spokes draw from the centre",
+   "direction": "pull out: three spokes fire from the centre, a figure lands on each speck",
    "cam": [
-    0.4,
+    0.36,
     [
-     -122.0,
-     -48.0
+     -120.5,
+     -50.0
     ]
    ],
-   "cam_dur": 1.4,
+   "cam_dur": 1.3,
    "cam_hold": [
-    0.39,
+    0.37,
     [
-     -121.5,
-     -48.5
+     -120.0,
+     -50.5
     ]
    ],
    "kw": {
@@ -250,31 +401,6 @@
     "until": "@@maher-0.3"
    },
    "devices": [
-    {
-     "at": "@@ducie",
-     "do": "geo.pin_in",
-     "stage": "stage_map",
-     "args": {
-      "pid": "ducie"
-     }
-    },
-    {
-     "at": "@@ducie-0.2",
-     "do": "geo.route_draw",
-     "until": "@@ducie+0.6",
-     "args": {
-      "rid": "s1",
-      "layer": "spokes"
-     }
-    },
-    {
-     "at": "@@motu",
-     "do": "geo.pin_in",
-     "stage": "stage_map",
-     "args": {
-      "pid": "motu"
-     }
-    },
     {
      "at": "@@motu-0.2",
      "do": "geo.route_draw",
@@ -285,12 +411,39 @@
      }
     },
     {
-     "at": "@@maher",
+     "at": "@@motu",
      "do": "geo.pin_in",
-     "stage": "stage_map",
      "args": {
-      "pid": "maher"
+      "pid": "motu"
      }
+    },
+    {
+     "at": "@@motu",
+     "do": "prop.anchor",
+     "id": "p2",
+     "until": "s04@nobody+1.4",
+     "args": {
+      "lonlat": [
+       -109.45,
+       -27.2
+      ],
+      "dx": 70,
+      "dy": -40
+     }
+    },
+    {
+     "at": "@@motu+0.2",
+     "do": "prop.pop",
+     "id": "p2",
+     "args": {
+      "frm": "rise"
+     }
+    },
+    {
+     "at": "@@motu+0.5",
+     "do": "prop.hop",
+     "id": "p2",
+     "until": "@.end"
     },
     {
      "at": "@@maher-0.2",
@@ -300,6 +453,108 @@
       "rid": "s3",
       "layer": "spokes"
      }
+    },
+    {
+     "at": "@@maher",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "maher"
+     }
+    },
+    {
+     "at": "@@maher",
+     "do": "prop.anchor",
+     "id": "p3",
+     "until": "s04@nobody+1.6",
+     "args": {
+      "lonlat": [
+       -126.95,
+       -72.98
+      ],
+      "dx": 70,
+      "dy": -40
+     }
+    },
+    {
+     "at": "@@maher+0.2",
+     "do": "prop.pop",
+     "id": "p3",
+     "args": {
+      "frm": "rise"
+     }
+    },
+    {
+     "at": "@@maher+0.5",
+     "do": "prop.hop",
+     "id": "p3",
+     "until": "@.end"
+    },
+    {
+     "at": "@@three",
+     "do": "geo.highlight_pulse",
+     "args": {
+      "fid": "ring",
+      "layer": "ring",
+      "dur": 0.6
+     }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.3",
+     "@@maher-0.3",
+     [
+      0.38,
+      [
+       -120.0,
+       -51.0
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@maher-0.3",
+     "@@maher+0.6",
+     [
+      0.42,
+      [
+       -121.5,
+       -56.0
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@maher+0.6",
+     "@.end",
+     [
+      0.43,
+      [
+       -121.5,
+       -55.0
+      ]
+     ],
+     "none"
+    ]
+   ],
+   "elements": [
+    {
+     "id": "p2",
+     "type": "rig",
+     "rig": "person",
+     "x": 540,
+     "y": 900,
+     "size": 140,
+     "shirt": "#2a9d8f"
+    },
+    {
+     "id": "p3",
+     "type": "rig",
+     "rig": "person",
+     "x": 540,
+     "y": 900,
+     "size": 140,
+     "shirt": "#e9c46a"
     }
    ]
   },
@@ -317,20 +572,20 @@
    "energy": 5,
    "pause_after": 0.5,
    "climax": true,
-   "direction": "tighten back onto the point; satellite sticker arcs over on 'station'; card with the altitude",
+   "direction": "three red crosses stamp the figures out; the station arcs right over the point with the crew waving; card with the altitude",
    "cam": [
-    0.75,
+    0.5,
     [
-     -123.4,
-     -48.9
+     -120.5,
+     -50.0
     ]
    ],
-   "cam_dur": 1.6,
+   "cam_dur": 1.0,
    "cam_hold": [
-    0.78,
+    0.5,
     [
-     -123.2,
-     -48.7
+     -120.5,
+     -50.0
     ]
    ],
    "kw": {
@@ -343,55 +598,152 @@
     "at": "@@closest-0.2",
     "y": 1010
    },
-   "sticker": {
-    "id": "st_sat",
-    "emoji": "1f6f0",
-    "x": 700,
-    "y": 520,
-    "size": 200,
-    "rot": -14,
-    "at": "@@station",
-    "until": "@.end",
-    "from": "pop"
-   },
    "devices": [
     {
-     "at": "@+0.1",
+     "at": "@@nobody+0.1",
+     "do": "prop.cross",
+     "id": "p1"
+    },
+    {
+     "at": "@@nobody+0.3",
+     "do": "prop.cross",
+     "id": "p2"
+    },
+    {
+     "at": "@@nobody+0.5",
+     "do": "prop.cross",
+     "id": "p3"
+    },
+    {
+     "at": "@@nobody+1.1",
+     "do": "prop.out",
+     "id": "p1"
+    },
+    {
+     "at": "@@nobody+1.3",
+     "do": "prop.out",
+     "id": "p2"
+    },
+    {
+     "at": "@@nobody+1.5",
+     "do": "prop.out",
+     "id": "p3"
+    },
+    {
+     "at": "@@nobody+1.0",
      "do": "geo.pin_out",
-     "stage": "stage_map",
      "args": {
       "pid": "ducie"
      }
     },
     {
-     "at": "@+0.1",
+     "at": "@@nobody+1.2",
      "do": "geo.pin_out",
-     "stage": "stage_map",
      "args": {
       "pid": "motu"
      }
     },
     {
-     "at": "@+0.1",
+     "at": "@@nobody+1.4",
      "do": "geo.pin_out",
-     "stage": "stage_map",
      "args": {
       "pid": "maher"
      }
     },
     {
-     "at": "@@overhead",
-     "do": "sticker_pulse",
-     "id": "st_sat"
+     "at": "@@station-0.2",
+     "do": "prop.pop",
+     "id": "sat1",
+     "args": {
+      "dur": 0.3
+     }
     },
     {
-     "at": "@@nobody",
+     "at": "@@station-0.2",
+     "do": "prop.orbit",
+     "id": "sat1",
+     "until": "@.end",
+     "args": {
+      "a": [
+       -131,
+       -49.2
+      ],
+      "b": [
+       -115.5,
+       -49.2
+      ],
+      "height": 300,
+      "roll": 10,
+      "dy": -40
+     }
+    },
+    {
+     "at": "@@station-0.2",
+     "do": "prop.wave",
+     "id": "sat1",
+     "until": "@.end"
+    },
+    {
+     "at": "@.end",
+     "do": "prop.out",
+     "id": "sat1"
+    },
+    {
+     "at": "@@overhead",
      "do": "geo.highlight_pulse",
      "args": {
       "fid": "ring",
       "layer": "ring",
       "dur": 0.7
      }
+    }
+   ],
+   "cam_path": [
+    [
+     "@+1.0",
+     "@@station-0.6",
+     [
+      0.5,
+      [
+       -120.5,
+       -50.0
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@station-0.6",
+     "@@station+0.9",
+     [
+      1.05,
+      [
+       -123.4,
+       -48.0
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@station+0.9",
+     "@.end",
+     [
+      1.1,
+      [
+       -123.4,
+       -48.2
+      ]
+     ],
+     "none"
+    ]
+   ],
+   "elements": [
+    {
+     "id": "sat1",
+     "type": "rig",
+     "rig": "sat",
+     "x": 540,
+     "y": 900,
+     "size": 320
     }
    ]
   },
@@ -409,20 +761,20 @@
    "tone": "resolute",
    "energy": 4,
    "pause_after": 0.5,
-   "direction": "the circle fills; counter of spacecraft on 'hundred'; the sticker falls in",
+   "direction": "spacecraft streak in one after another and splash around the point; counter runs; the last, biggest one is Mir",
    "cam": [
-    0.6,
+    0.8,
     [
      -123.4,
-     -47.5
+     -47.8
     ]
    ],
-   "cam_dur": 1.5,
+   "cam_dur": 1.2,
    "cam_hold": [
-    0.62,
+    0.8,
     [
-     -123.0,
-     -47.5
+     -123.2,
+     -47.8
     ]
    ],
    "kw": {
@@ -436,17 +788,112 @@
      "type": "counter",
      "start": 0,
      "end": 263,
-     "y": 560,
+     "y": 1180,
      "label": "spacecraft brought down here (1971–2016)",
      "fmt": "int",
      "size": 150
+    },
+    {
+     "id": "d1",
+     "type": "rig",
+     "rig": "fallsat",
+     "x": 540,
+     "y": 900,
+     "size": 136
+    },
+    {
+     "id": "d1s",
+     "type": "rig",
+     "rig": "splash",
+     "x": 540,
+     "y": 900,
+     "size": 190
+    },
+    {
+     "id": "d2",
+     "type": "rig",
+     "rig": "fallsat",
+     "x": 540,
+     "y": 900,
+     "size": 144
+    },
+    {
+     "id": "d2s",
+     "type": "rig",
+     "rig": "splash",
+     "x": 540,
+     "y": 900,
+     "size": 190
+    },
+    {
+     "id": "d3",
+     "type": "rig",
+     "rig": "fallsat",
+     "x": 540,
+     "y": 900,
+     "size": 152
+    },
+    {
+     "id": "d3s",
+     "type": "rig",
+     "rig": "splash",
+     "x": 540,
+     "y": 900,
+     "size": 190
+    },
+    {
+     "id": "d4",
+     "type": "rig",
+     "rig": "fallsat",
+     "x": 540,
+     "y": 900,
+     "size": 136
+    },
+    {
+     "id": "d4s",
+     "type": "rig",
+     "rig": "splash",
+     "x": 540,
+     "y": 900,
+     "size": 190
+    },
+    {
+     "id": "d5",
+     "type": "rig",
+     "rig": "fallsat",
+     "x": 540,
+     "y": 900,
+     "size": 144
+    },
+    {
+     "id": "d5s",
+     "type": "rig",
+     "rig": "splash",
+     "x": 540,
+     "y": 900,
+     "size": 190
+    },
+    {
+     "id": "mir",
+     "type": "rig",
+     "rig": "fallsat",
+     "x": 540,
+     "y": 900,
+     "size": 210
+    },
+    {
+     "id": "mirs",
+     "type": "rig",
+     "rig": "splash",
+     "x": 540,
+     "y": 900,
+     "size": 280
     }
    ],
    "devices": [
     {
      "at": "@@useful-0.2",
      "do": "geo.pin_out",
-     "stage": "stage_map",
      "args": {
       "pid": "nemo"
      }
@@ -461,28 +908,146 @@
      }
     },
     {
+     "at": "@@mir+0.6",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "nemo"
+     }
+    },
+    {
      "at": "@.end",
      "do": "chart.out",
      "id": "craft"
     },
     {
-     "at": "@@fall",
-     "do": "geo.highlight_pulse",
+     "at": "@@dead+0.10",
+     "do": "prop.fall",
+     "id": "d1",
      "args": {
-      "fid": "ring",
-      "layer": "ring",
-      "dur": 0.7
+      "lonlat": [
+       -120.2,
+       -46.2
+      ],
+      "dx": 420,
+      "dy": -900,
+      "dur": 1.15,
+      "splash": "d1s"
      }
     },
     {
-     "at": "@@mir",
-     "do": "geo.highlight_pulse",
+     "at": "@@dead+0.65",
+     "do": "prop.fall",
+     "id": "d2",
      "args": {
-      "fid": "ring",
-      "layer": "ring",
-      "dur": 0.7
+      "lonlat": [
+       -126.8,
+       -50.4
+      ],
+      "dx": -380,
+      "dy": -880,
+      "dur": 1.15,
+      "splash": "d2s"
+     }
+    },
+    {
+     "at": "@@dead+1.20",
+     "do": "prop.fall",
+     "id": "d3",
+     "args": {
+      "lonlat": [
+       -121.6,
+       -51.6
+      ],
+      "dx": 300,
+      "dy": -920,
+      "dur": 1.15,
+      "splash": "d3s"
+     }
+    },
+    {
+     "at": "@@dead+1.75",
+     "do": "prop.fall",
+     "id": "d4",
+     "args": {
+      "lonlat": [
+       -118.4,
+       -49.6
+      ],
+      "dx": 460,
+      "dy": -860,
+      "dur": 1.15,
+      "splash": "d4s"
+     }
+    },
+    {
+     "at": "@@dead+2.30",
+     "do": "prop.fall",
+     "id": "d5",
+     "args": {
+      "lonlat": [
+       -125.6,
+       -45.4
+      ],
+      "dx": -300,
+      "dy": -900,
+      "dur": 1.15,
+      "splash": "d5s"
+     }
+    },
+    {
+     "at": "@@mir-0.9",
+     "do": "prop.fall",
+     "id": "mir",
+     "args": {
+      "lonlat": [
+       -123.393,
+       -48.877
+      ],
+      "dx": 520,
+      "dy": -1000,
+      "dur": 1.1,
+      "splash": "mirs",
+      "spin": 35
      }
     }
+   ],
+   "cam_path": [
+    [
+     "@+1.2",
+     "@@mir-0.5",
+     [
+      0.82,
+      [
+       -123.0,
+       -47.6
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@mir-0.5",
+     "@@mir+0.8",
+     [
+      1.0,
+      [
+       -123.4,
+       -48.4
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@mir+0.8",
+     "@.end",
+     [
+      1.02,
+      [
+       -123.4,
+       -48.4
+      ]
+     ],
+     "none"
+    ]
    ]
   }
  ],
@@ -501,22 +1066,45 @@
   "pause_after": 0.5,
   "y": 760,
   "cam": [
-   0.38,
+   0.5,
    [
     -123.4,
-    -45.0
+    -47.5
    ]
   ],
-  "cam_dur": 1.8,
+  "cam_dur": 1.6,
   "devices": [
    {
-    "at": "@@orbit",
-    "do": "geo.highlight_pulse",
+    "at": "@+0.2",
+    "do": "prop.pop",
+    "id": "sat2",
     "args": {
-     "fid": "ring",
-     "layer": "ring",
-     "dur": 0.8
+     "dur": 0.3
     }
+   },
+   {
+    "at": "@+0.2",
+    "do": "prop.orbit",
+    "id": "sat2",
+    "until": "@.end+0.5",
+    "args": {
+     "a": [
+      -146,
+      -43
+     ],
+     "b": [
+      -100,
+      -43
+     ],
+     "height": 220,
+     "roll": 8
+    }
+   },
+   {
+    "at": "@+0.2",
+    "do": "prop.wave",
+    "id": "sat2",
+    "until": "@.end+0.5"
    }
   ]
  },
@@ -1305,17 +1893,17 @@
   },
   "cams": {
    "start": [
-    0.3,
+    0.34,
     [
      -123.4,
      -47.0
     ]
    ],
    "open": [
-    0.9,
+    1.4,
     [
      -123.4,
-     -48.8
+     -48.9
     ]
    ]
   },
@@ -1501,5 +2089,15 @@
     ]
    }
   ]
- }
+ },
+ "extra_elements": [
+  {
+   "id": "sat2",
+   "type": "rig",
+   "rig": "sat",
+   "x": 540,
+   "y": 900,
+   "size": 210
+  }
+ ]
 }

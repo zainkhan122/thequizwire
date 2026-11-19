@@ -114,6 +114,62 @@
   },
   "devices": [
    {
+    "at": "@@egypt-0.1",
+    "do": "prop.anchor",
+    "id": "fl_eg",
+    "until": "s04@straight-0.3",
+    "args": {
+     "lonlat": [
+      32.4,
+      24.3
+     ],
+     "dy": -70
+    }
+   },
+   {
+    "at": "@@egypt",
+    "do": "prop.pop",
+    "id": "fl_eg",
+    "args": {
+     "frm": "rise",
+     "dur": 0.6
+    }
+   },
+   {
+    "at": "@@egypt+0.4",
+    "do": "prop.flutter",
+    "id": "fl_eg",
+    "until": "s06.end"
+   },
+   {
+    "at": "@@sudan-0.1",
+    "do": "prop.anchor",
+    "id": "fl_sd",
+    "until": "s04@second-0.3",
+    "args": {
+     "lonlat": [
+      32.4,
+      20.1
+     ],
+     "dy": -70
+    }
+   },
+   {
+    "at": "@@sudan",
+    "do": "prop.pop",
+    "id": "fl_sd",
+    "args": {
+     "frm": "rise",
+     "dur": 0.6
+    }
+   },
+   {
+    "at": "@@sudan+0.4",
+    "do": "prop.flutter",
+    "id": "fl_sd",
+    "until": "s06.end"
+   },
+   {
     "at": "@@egypt",
     "do": "geo.highlight_in",
     "args": {
@@ -132,6 +188,37 @@
     }
    },
    {
+    "at": "@@nobody",
+    "do": "geo.highlight_in",
+    "args": {
+     "fid": "bir_tawil",
+     "layer": "void",
+     "dur": 0.5
+    }
+   },
+   {
+    "at": "@@nobody-0.1",
+    "do": "prop.anchor",
+    "id": "q1",
+    "until": "s02+0.6",
+    "args": {
+     "lonlat": [
+      33.9,
+      21.85
+     ],
+     "dy": -90
+    }
+   },
+   {
+    "at": "@@nobody",
+    "do": "prop.pop",
+    "id": "q1",
+    "args": {
+     "frm": "drop",
+     "dur": 0.7
+    }
+   },
+   {
     "at": "@@refused",
     "do": "geo.highlight_pulse",
     "args": {
@@ -141,13 +228,50 @@
     }
    },
    {
-    "at": "@@nobody",
-    "do": "geo.highlight_in",
+    "at": "@@refused",
+    "do": "prop.hop",
+    "id": "q1",
+    "until": "@.end",
     "args": {
-     "fid": "bir_tawil",
-     "layer": "void",
-     "dur": 0.5
+     "lift": 26,
+     "period": 0.3
     }
+   },
+   {
+    "at": "s02+0.3",
+    "do": "prop.out",
+    "id": "q1"
+   }
+  ],
+  "direction": "wide drift over the border; the two flags rise on their names; a big question mark lands on the patch nobody wants and shakes on 'refused'",
+  "elements": [
+   {
+    "id": "fl_eg",
+    "type": "rig",
+    "rig": "flag",
+    "x": 540,
+    "y": 900,
+    "flag": "eg",
+    "size": 230
+   },
+   {
+    "id": "fl_sd",
+    "type": "rig",
+    "rig": "flag",
+    "x": 540,
+    "y": 900,
+    "flag": "sd",
+    "size": 230
+   },
+   {
+    "id": "q1",
+    "type": "rig",
+    "rig": "tag",
+    "x": 540,
+    "y": 900,
+    "text": "?",
+    "color": "#e5322d",
+    "size": 170
    }
   ]
  },
@@ -164,20 +288,20 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.4,
-   "direction": "the 1899 line draws across on 'parallel'",
+   "direction": "the camera rides the pen: the 1899 line draws itself west to east along the parallel while we track it",
    "cam": [
-    1.6,
+    2.0,
     [
-     34.6,
-     22.2
+     31.9,
+     22.1
     ]
    ],
-   "cam_dur": 1.5,
+   "cam_dur": 0.9,
    "cam_hold": [
-    1.65,
+    2.0,
     [
-     34.8,
-     22.2
+     32.2,
+     22.1
     ]
    ],
    "kw": {
@@ -201,6 +325,32 @@
       "lid": "l1899"
      }
     }
+   ],
+   "cam_path": [
+    [
+     "@@parallel-0.2",
+     "@@straight+0.6",
+     [
+      2.0,
+      [
+       36.0,
+       22.1
+      ]
+     ],
+     "power1.inOut"
+    ],
+    [
+     "@@straight+0.6",
+     "@.end",
+     [
+      1.7,
+      [
+       34.6,
+       22.3
+      ]
+     ],
+     "power2.inOut"
+    ]
    ]
   },
   {
@@ -216,20 +366,20 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "the 1902 administrative line draws on 'second'; the two bends pulse on north / south",
+   "direction": "second line: track the pen along it — the bend north to the sea, then the bend south into the desert",
    "cam": [
-    1.75,
+    2.1,
     [
-     35.0,
-     22.3
+     33.6,
+     21.9
     ]
    ],
-   "cam_dur": 1.4,
+   "cam_dur": 0.8,
    "cam_hold": [
-    1.8,
+    2.1,
     [
-     35.1,
-     22.3
+     33.7,
+     21.9
     ]
    ],
    "kw": {
@@ -272,6 +422,56 @@
       "dur": 0.7
      }
     }
+   ],
+   "cam_path": [
+    [
+     "@@second-0.2",
+     "@@tribes+0.4",
+     [
+      2.0,
+      [
+       35.2,
+       22.5
+      ]
+     ],
+     "power1.inOut"
+    ],
+    [
+     "@@north-0.2",
+     "@@north+0.6",
+     [
+      2.3,
+      [
+       36.2,
+       22.9
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@south-0.3",
+     "@@south+0.6",
+     [
+      2.4,
+      [
+       33.9,
+       21.8
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@south+0.6",
+     "@.end",
+     [
+      1.8,
+      [
+       34.8,
+       22.3
+      ]
+     ],
+     "power2.inOut"
+    ]
    ]
   },
   {
@@ -287,19 +487,19 @@
    "tone": "neutral",
    "energy": 4,
    "pause_after": 0.45,
-   "direction": "the coastal triangle lights on 'coastal'; the disputed plate is on screen with it",
+   "direction": "each flag jumps onto the coastal triangle on its line — both end up standing on the same prize; card with the area",
    "cam": [
-    1.8,
+    1.9,
     [
-     35.5,
+     34.6,
      22.5
     ]
    ],
-   "cam_dur": 1.5,
+   "cam_dur": 1.0,
    "cam_hold": [
-    1.84,
+    1.9,
     [
-     35.6,
+     34.7,
      22.5
     ]
    ],
@@ -316,12 +516,96 @@
    },
    "devices": [
     {
+     "at": "@@straight-0.3",
+     "do": "prop.orbit",
+     "id": "fl_eg",
+     "until": "@@straight+0.6",
+     "args": {
+      "a": [
+       32.4,
+       24.3
+      ],
+      "b": [
+       35.25,
+       22.95
+      ],
+      "height": 160,
+      "roll": 12,
+      "dy": -70
+     }
+    },
+    {
+     "at": "@@straight+0.6",
+     "do": "prop.anchor",
+     "id": "fl_eg",
+     "until": "s06.end",
+     "args": {
+      "lonlat": [
+       35.25,
+       22.95
+      ],
+      "dy": -70
+     }
+    },
+    {
+     "at": "@@straight+0.6",
+     "do": "prop.hop",
+     "id": "fl_eg",
+     "until": "@@straight+1.4",
+     "args": {
+      "lift": 18,
+      "period": 0.35
+     }
+    },
+    {
+     "at": "@@second-0.3",
+     "do": "prop.orbit",
+     "id": "fl_sd",
+     "until": "@@second+0.6",
+     "args": {
+      "a": [
+       32.4,
+       20.1
+      ],
+      "b": [
+       35.95,
+       22.35
+      ],
+      "height": 160,
+      "roll": -12,
+      "dy": -70
+     }
+    },
+    {
+     "at": "@@second+0.6",
+     "do": "prop.anchor",
+     "id": "fl_sd",
+     "until": "s06.end",
+     "args": {
+      "lonlat": [
+       35.95,
+       22.35
+      ],
+      "dy": -70
+     }
+    },
+    {
+     "at": "@@second+0.6",
+     "do": "prop.hop",
+     "id": "fl_sd",
+     "until": "@@second+1.4",
+     "args": {
+      "lift": 18,
+      "period": 0.35
+     }
+    },
+    {
      "at": "@@coastal-0.1",
      "do": "geo.highlight_in",
      "args": {
       "fid": "halayib_triangle",
       "layer": "prize",
-      "dur": 0.5
+      "dur": 0.6
      }
     },
     {
@@ -332,23 +616,40 @@
      }
     },
     {
-     "at": "@@straight",
+     "at": "@@towns",
      "do": "geo.highlight_pulse",
      "args": {
       "fid": "halayib_triangle",
       "layer": "prize",
-      "dur": 0.6
-     }
-    },
-    {
-     "at": "@@second",
-     "do": "geo.highlight_pulse",
-     "args": {
-      "fid": "halayib_triangle",
-      "layer": "prize",
-      "dur": 0.6
+      "dur": 0.7
      }
     }
+   ],
+   "cam_path": [
+    [
+     "@@coastal-0.4",
+     "@@coastal+0.8",
+     [
+      2.4,
+      [
+       35.5,
+       22.7
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@coastal+0.8",
+     "@.end",
+     [
+      2.5,
+      [
+       35.5,
+       22.7
+      ]
+     ],
+     "none"
+    ]
    ]
   },
   {
@@ -365,7 +666,7 @@
    "energy": 5,
    "pause_after": 0.5,
    "climax": true,
-   "direction": "tighten onto Bir Tawil; the void fills; counter on the area",
+   "direction": "back to the small patch: two red NOs slam down on it, one from each side; the size comparison lands; both flags shake their heads",
    "cam": [
     2.6,
     [
@@ -405,6 +706,26 @@
      "x": 90,
      "w": 900,
      "max_h": 420
+    },
+    {
+     "id": "no1",
+     "type": "rig",
+     "rig": "tag",
+     "x": 540,
+     "y": 900,
+     "text": "NO",
+     "color": "#e5322d",
+     "size": 170
+    },
+    {
+     "id": "no2",
+     "type": "rig",
+     "rig": "tag",
+     "x": 540,
+     "y": 900,
+     "text": "NO",
+     "color": "#e5322d",
+     "size": 170
     }
    ],
    "devices": [
@@ -439,12 +760,76 @@
      "id": "area"
     },
     {
+     "at": "@@claim-0.1",
+     "do": "prop.anchor",
+     "id": "no1",
+     "until": "s06.end",
+     "args": {
+      "lonlat": [
+       33.55,
+       22.15
+      ],
+      "dy": -60
+     }
+    },
+    {
+     "at": "@@claim",
+     "do": "prop.pop",
+     "id": "no1",
+     "args": {
+      "frm": "drop",
+      "dur": 0.6
+     }
+    },
+    {
+     "at": "@@neither-0.1",
+     "do": "prop.anchor",
+     "id": "no2",
+     "until": "s06.end",
+     "args": {
+      "lonlat": [
+       34.3,
+       21.55
+      ],
+      "dy": -60
+     }
+    },
+    {
+     "at": "@@neither",
+     "do": "prop.pop",
+     "id": "no2",
+     "args": {
+      "frm": "drop",
+      "dur": 0.6
+     }
+    },
+    {
      "at": "@@neither",
      "do": "geo.highlight_pulse",
      "args": {
       "fid": "bir_tawil",
       "layer": "void",
       "dur": 0.7
+     }
+    },
+    {
+     "at": "@@neither+0.2",
+     "do": "prop.flutter",
+     "id": "fl_eg",
+     "until": "@@neither+1.4",
+     "args": {
+      "skew": 16,
+      "period": 0.3
+     }
+    },
+    {
+     "at": "@@neither+0.2",
+     "do": "prop.flutter",
+     "id": "fl_sd",
+     "until": "@@neither+1.4",
+     "args": {
+      "skew": 16,
+      "period": 0.3
      }
     }
    ]
@@ -465,10 +850,10 @@
   "pause_after": 0.5,
   "y": 760,
   "cam": [
-   1.4,
+   1.5,
    [
-    34.8,
-    22.2
+    34.7,
+    22.95
    ]
   ],
   "cam_dur": 1.8,
@@ -481,6 +866,46 @@
      "layer": "prize",
      "dur": 0.7
     }
+   },
+   {
+    "at": "@@purpose",
+    "do": "prop.hop",
+    "id": "no1",
+    "until": "@@purpose+0.6",
+    "args": {
+     "lift": 20,
+     "period": 0.3
+    }
+   },
+   {
+    "at": "@@purpose",
+    "do": "prop.hop",
+    "id": "no2",
+    "until": "@@purpose+0.6",
+    "args": {
+     "lift": 20,
+     "period": 0.3
+    }
+   },
+   {
+    "at": "@.end+0.2",
+    "do": "prop.out",
+    "id": "no1"
+   },
+   {
+    "at": "@.end+0.2",
+    "do": "prop.out",
+    "id": "no2"
+   },
+   {
+    "at": "@.end+0.2",
+    "do": "prop.out",
+    "id": "fl_eg"
+   },
+   {
+    "at": "@.end+0.2",
+    "do": "prop.out",
+    "id": "fl_sd"
    }
   ]
  },

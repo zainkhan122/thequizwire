@@ -4,7 +4,7 @@
 Spec keys:
   id, series ("geo-stories"), number, seed, place, headline ("*keyword*" allowed), search_term, cover{place, headline}, shape, intent,
   post{copy{youtube,instagram,facebook,twitter,threads,spoilers}, keywords, premise, bait, tags}, variety{shape, opener, music, cast, beats[]},
-  open{vo{text,cues}, tone, energy, pause_after, kw?{text, at}, cam, cam_hold?, cam_dur?, devices[]}          # cold open: title block on screen
+  open{vo{text,cues}, tone, energy, pause_after, kw?{text, at}, cam, cam_hold?, cam_dur?, elements[], devices[]}          # cold open: title block on screen
   beats[]{vo{text,cues}, tone, energy, pause_after, direction, kw{text,at}|null, card?{kicker,text,at}, sticker?, photo?, cam, cam_hold?, cam_dur?,
           cam_ease?, highlights[{fid, layer, at}], pulse?, elements[], devices[]}                            # times: "@@cue" · "@+1.2" · "@.end" (relative to the beat's scene)
   close{vo{text,cues}, text (screen line, *keyword*), tone, pause_after, cam?}                                # the answer to the opening line
@@ -96,17 +96,18 @@ def build(S):
         return []
     k0, c0 = cams["start"]
     if opener == "mystery-zoom-out":
-        B += [{"at": 0, "do": "geo.cam_set", "stage": M, "args": {"k": 0.5, "lonlat": cams["open"][1]}}, cam("s01", "s01.end", [max(0.3, k0), c0], "power1.inOut")]
+        B += [{"at": 0, "do": "geo.cam_set", "stage": M, "args": {"k": cams["open"][0], "lonlat": cams["open"][1]}}, cam("s01", "s01.end", [max(0.3, k0), c0], "power1.inOut")]   # mystery: tight on the spot, then the pull-out reveals the scale
     else:                                                                                   # plunge / wide-drift / night-lights: continuous move under the title
         B += [{"at": 0, "do": "geo.cam_set", "stage": M, "args": {"k": k0, "lonlat": c0}}, cam("s01", "s01.end" if opener != "plunge" else "s01+%.1f" % O.get("cam_dur", 2.4), cams["open"], "power2.inOut" if opener == "plunge" else "none")]
         if opener == "plunge" and O.get("cam_hold"): B.append(cam("s01+%.1f" % O.get("cam_dur", 2.4), "s01.end", O["cam_hold"], "none"))
     B += [{"at": 0, "do": "title_in"}, {"at": "s02+0.3", "do": "title_out"}]
     if O.get("kw"):
         els.append({"id": "kw01", "type": "kw", "text": O["kw"]["text"]}); B.append({"at": rel(O["kw"].get("at", "@+1.2"), "s01"), "do": "kw_in", "id": "kw01", "until": "s01.end"})
+    els += O.get("elements", [])
     for d in O.get("devices", []):
         d = dict(d); d["at"] = rel(d.get("at", 0), "s01"); d["until"] = rel(d["until"], "s01") if "until" in d else None
         if d["until"] is None: d.pop("until")
-        if str(d["do"]).startswith("geo."): d.setdefault("stage", M)
+        if str(d["do"]).startswith(("geo.", "prop.")): d.setdefault("stage", M)
         B.append(d); B += trace_for(d)
     for i, b in enumerate(beats):
         s = sc(i + 2); nxt = sc(i + 3)
@@ -155,7 +156,7 @@ def build(S):
         for d in b.get("devices", []):
             d = dict(d); d["at"] = rel(d.get("at", 0), s)
             if "until" in d: d["until"] = rel(d["until"], s)
-            if str(d["do"]).startswith("geo."): d.setdefault("stage", M)
+            if str(d["do"]).startswith(("geo.", "prop.")): d.setdefault("stage", M)
             B.append(d)
     # close
     els.append({"id": "close", "type": "close", "text": C["text"], **({"y": C["y"]} if C.get("y") else {})})
@@ -169,7 +170,7 @@ def build(S):
     for d in C.get("devices", []):
         d = dict(d); d["at"] = rel(d.get("at", 0), CLOSE)
         if "until" in d: d["until"] = rel(d["until"], CLOSE)
-        if str(d["do"]).startswith("geo."): d.setdefault("stage", M)
+        if str(d["do"]).startswith(("geo.", "prop.")): d.setdefault("stage", M)
         B.append(d); B += trace_for(d)
     for L in g.get("labels", []):
         B.append({"at": L.get("in", "s02+1.0"), "do": "geo.label_in", "stage": M, "args": {"lid": L["id"]}})

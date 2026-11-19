@@ -44,6 +44,15 @@ Story shapes (variety axis `story_shape`; never two days in a row, never the pre
   blue at the edges at any time (far bbox rule). Hard cuts only between acts; eased moves inside an act.
 - **One visual event per idea change, ≥ 15 events / 10 s, nothing static > 2.5 s** (pacelint, unchanged).
 - Cards for numbers and names; photos (PD/CC0) only when the thing itself is the story; stickers sparingly.
+- **Animate the thing itself (owner 2026-11-19).** When the narration names an object, a process or a result, the
+  screen shows it moving — not a pin and a caption. Props live in `engine/props.py` (`rig` elements + `prop.*` devices,
+  all glued to a lon/lat through every camera move): `sat` (station with the crew waving: `prop.orbit` + `prop.wave`),
+  `fallsat` + `splash` (`prop.fall` — re-entries streak in and ring out), `person` (`prop.pop` rise, `prop.hop`,
+  `prop.cross` when "nobody lives there"), `flag` (`prop.pop` rise + `prop.flutter`; `prop.orbit` to make it jump onto a
+  claim), `tag` (a word/year/"?"/"NO", `prop.pop drop`). Rules of thumb: a flag rises on the country's name; a line
+  draws with the camera riding it (`cam_path`); a number counts; a claim is a flag landing on the place; a refusal is a
+  red NO or a red cross. Every beat gets ≥ 1 camera move with a real change of scale (push ≥ 1.3× or pull ≤ 0.75×),
+  not only the drift. Ship-check: contact sheet — if two neighbouring frames look the same, the beat is dead.
 - Title block, captions and cards never enter the right action column or the bottom safe band (placelint dead zones).
 
 ## 4. Sound
