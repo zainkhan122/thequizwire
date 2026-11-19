@@ -145,11 +145,11 @@ jobs:
           if-no-files-found: ignore
           retention-days: 5
   dispatch:
-    needs: render
+    needs: [plan, render]
     if: ${{ inputs.dispatch == true && !cancelled() }}        # runs after the matrix even if some episodes failed: dispatch.sh skips unrendered ones
     uses: ./.github/workflows/dispatch.yml
     with:
-      episodes: ${{ inputs.episodes }}
+      episodes: ${{ join(fromJSON(needs.plan.outputs.eps), ' ') }}   # resolved series/<series>/<id> paths (11-19: a bare id reached dispatch.sh → "no .mp4 in release(s)", nothing posted)
       tag: ${{ inputs.tag }}
       run: ${{ github.run_number }}
       live: true
