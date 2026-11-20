@@ -4860,6 +4860,27 @@
    "yt_thumbnail_src": "hosted",
    "yt_playlist_id": "PLDkNbd8c789Y",
    "yt_series_item": "UExEa05iZDhjNzg5WS4wOTA3OTZBNzVEMTUzOTMy"
+  },
+  {
+   "episode": "st06-challenger-deep-swallows-everest",
+   "platform": "youtube",
+   "post_id": "yt:G9V-wFMybpA",
+   "channel_id": "6a72ff4f99afb44349064208",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/0d9f8904d2c3/The-hole-that-would-swallow-Everest.mp4",
+   "due_at": "2026-11-24T00:00:00Z",
+   "created_at": "2026-11-20T16:41:10+00:00",
+   "recorded_at": "2026-11-20T16:41:10+00:00",
+   "title": "The hole in the ocean that would swallow Everest 🌊",
+   "account": "YT_OAUTH",
+   "provider": "youtube-direct",
+   "yt_video_id": "G9V-wFMybpA",
+   "external_link": "https://youtu.be/G9V-wFMybpA",
+   "yt_tags_at": "2026-11-20T16:41:10+00:00",
+   "yt_thumbnail_at": "2026-11-20T16:41:16+00:00",
+   "yt_thumbnail_src": "hosted",
+   "yt_playlist_id": "PLDkNbd8c789Y",
+   "yt_series_item": "UExEa05iZDhjNzg5WS4xMkVGQjNCMUM1N0RFNEUx"
   }
  ]
 }
