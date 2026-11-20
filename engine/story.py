@@ -94,6 +94,12 @@ CSS = """
 .v3 .sclose.m{font-size:72px} .v3 .sclose.s{font-size:62px} .v3 .sclose b{color:#FFD400;font-weight:400}
 .v3 .scredit{position:absolute;left:60px;width:960px;top:1760px;text-align:center;font-family:'Oswald';font-size:22px;letter-spacing:.04em;color:rgba(255,255,255,.78);text-shadow:0 2px 6px rgba(0,0,0,.9);z-index:95;visibility:hidden;opacity:0}
 .geo .g-highlight.tint{fill:rgba(95,182,242,.5);stroke:#fff;stroke-width:2.2}
+/* custom-polygon areas used as highlights (geo.json extra_layers kind:area, cls "highlight …"): same palette as g-highlight, hidden until highlight_in */
+.geo .g-area.highlight{opacity:0}
+.geo .g-area.highlight.tint{fill:rgba(95,182,242,.5);stroke:#fff;stroke-width:2.2}
+.geo .g-area.highlight.solid{fill:#F39A1E;stroke:#fff;stroke-width:2.4}
+.geo .g-area.highlight.neon{fill:rgba(255,230,0,.14);stroke:#FFE600;stroke-width:4;filter:drop-shadow(0 0 8px rgba(255,230,0,.9)) drop-shadow(0 0 22px rgba(255,200,0,.6))}
+.geo .g-area.highlight.neonblue{fill:rgba(54,201,255,.16);stroke:#36C9FF;stroke-width:4;filter:drop-shadow(0 0 8px rgba(54,201,255,.9)) drop-shadow(0 0 22px rgba(54,201,255,.6))}
 .geo .g-highlight.solid{fill:#F39A1E;stroke:#fff;stroke-width:2.4}
 .geo .g-highlight.glow{fill:rgba(255,138,30,.72);stroke:#FFD9A0;stroke-width:2.4;filter:drop-shadow(0 0 10px rgba(255,138,30,.95)) drop-shadow(0 0 26px rgba(255,120,0,.6))}
 .geo .g-highlight.zone1{fill:rgba(63,157,232,.62);stroke:#fff;stroke-width:1.8} .geo .g-highlight.zone2{fill:rgba(92,196,90,.62);stroke:#fff;stroke-width:1.8}

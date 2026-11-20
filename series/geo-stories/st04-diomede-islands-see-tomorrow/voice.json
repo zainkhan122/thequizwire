@@ -22,7 +22,7 @@
    "tone": "urgent",
    "energy": 4,
    "pause_after": 0.45,
-   "direction": "tight on the village shore, a figure waves, the pull-out reveals the second island right there",
+   "direction": "CRITICAL opener: high-altitude view of the Bering Sea, Alaska right, Chukotka left; a hyper-smooth kinetic plunge straight down into the strait and onto the two islands as their neon outlines trace themselves; a figure rises on the village shore and waves across the water",
    "text": "From this beach, you can look across the water and see tomorrow.",
    "cues": {
     "beach": "beach",
@@ -37,7 +37,7 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "the gap line draws from the village to the Russian island; counter on the distance; Russia fills in solid",
+   "direction": "the US flag rises on Little Diomede on 'American', the Russian flag on Big Diomede on 'Russian'; the neon-blue gap line draws across; the metres counter is the only text; the camera eases out so both islands and the flags fill the frame",
    "text": "This is Little Diomede, an American village in the Bering Strait. That is Big Diomede, Russian territory, just 3.8 kilometres away.",
    "cues": {
     "little": "little",
@@ -54,7 +54,7 @@
    "tone": "revelatory",
    "energy": 5,
    "pause_after": 0.5,
-   "direction": "the dashed line draws down the strait between the islands; TODAY and TOMORROW tags stamp either side; card with the 21-hour gap",
+   "direction": "the neon dashed date line draws down the strait while the camera rides it from north to south between the islands; TODAY and TOMORROW tags stamp either side with a flash; pull back for the 21-hour card",
    "text": "Between them runs the International Date Line. Cross it, and the calendar jumps. Big Diomede is 21 hours ahead.",
    "cues": {
     "between": "between",
@@ -72,7 +72,7 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "figures stand on Big Diomede, get crossed out and vanish; the tags come off; the camera drifts west toward the mainland",
+   "direction": "dive onto Big Diomede: two figures rise, get the red cross and vanish on '1948'; the tags come off; a long pull-out drifts west toward the Chukotka mainland on 'border post'",
    "text": "Nobody lives on the Russian side any more. Its villagers were moved to the mainland in 1948, and today only a border post and a weather station remain.",
    "cues": {
     "nobody": "nobody",
@@ -89,7 +89,7 @@
    "tone": "neutral",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "back to the village; figures pop in on the US shore and wave at the Russian island; the gap line redraws",
+   "direction": "swing back east and dive onto the village: two figures rise and wave at Russia, one hops; the gap line redraws on 'row'; the camera pushes onto the shore",
    "text": "On the American side, about 80 people still live in the village, facing Russia, facing tomorrow, across water you could row in an hour.",
    "cues": {
     "american": "american",

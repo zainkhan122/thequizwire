@@ -22,7 +22,7 @@
    "tone": "urgent",
    "energy": 4,
    "pause_after": 0.45,
-   "direction": "plunge from wide Pacific onto empty blue; the trench line draws through on 'hole'; the pin lands on 'swallow'",
+   "direction": "CRITICAL opener: high-altitude view of the western Pacific from the Philippines to the Marianas, then a hyper-smooth kinetic plunge straight down onto the empty blue of the trench as the neon trench line draws through; the pin pings on 'swallow'",
    "text": "Somewhere under this patch of blue is a hole deep enough to swallow the tallest mountain on Earth.",
    "cues": {
     "blue": "blue",
@@ -38,7 +38,7 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "pull back so the whole trench arc is in frame; TRENCH tag; Guam pin drops to the north-east",
+   "direction": "pull back so the whole trench arc is in frame while the neon line redraws north; the TRENCH tag plates; a tracking pan north-east and the Guam pin pings",
    "text": "This is Challenger Deep, at the southern end of the Mariana Trench, about 300 kilometres south-west of Guam.",
    "cues": {
     "challenger": "challenger",
@@ -54,7 +54,7 @@
    "tone": "neutral",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "tight on the pin; the depth counter rolls all the way down; slow push in as the number climbs",
+   "direction": "dive from Guam back onto the Challenger Deep pin (k 3); the depth counter is the only text and rolls to 10,935 as the camera keeps pushing; the pressure card follows once the counter is gone",
    "text": "The sea floor here is about 10,935 metres down. Nearly eleven kilometres of water, pressing down with more than a thousand times the pressure at the surface.",
    "cues": {
     "floor": "floor",
@@ -70,7 +70,7 @@
    "tone": "resolute",
    "energy": 4,
    "pause_after": 0.45,
-   "direction": "zoom out to show both: Everest pin in the Himalaya; the mountain prop pops on the peak, then arcs across Asia to the trench",
+   "direction": "one long pull-out from the trench to a view of all of Asia; the Everest pin pings in the Himalaya and the mountain rises on the peak; on 'fly' it arcs across Asia along the dashed neon-blue line and the camera tracks it all the way down onto the trench",
    "text": "Now take Mount Everest, 8,849 metres high, and fly it from the Himalaya to this spot.",
    "cues": {
     "everest": "everest",

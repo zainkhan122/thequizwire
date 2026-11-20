@@ -347,7 +347,7 @@ def prep(ep: Path, out: Path, fixtures=None, quiet=False):
                 import math as _m2
                 hw = 540 / (ppd * kk) * padf; hh = 960 * _m2.cos(_m2.radians(min(abs(lat), 80))) / (ppd * kk) * padf
                 nb = [lon - hw, lat - hh, lon + hw, lat + hh]
-                nmeta = _bm.stitch(nb, int(1080 * kk * 1.1), out / f"{sid}_basemap_near{j}.jpg", bm.get("layer", "bluemarble"))
+                nmeta = _bm.stitch(nb, int(1080 * padf * 1.6), out / f"{sid}_basemap_near{j}.jpg", bm.get("layer", "bluemarble"))   # the patch spans pad × one viewport width on screen (not k × the fit): 1.6 biases pick_zoom one level sharper. (2026-11-20: k × 1080 oversampled 4×, 18-Mpx JPEGs → Chromium re-decoded every frame, 7 s/frame)
                 near_out.append({"src": f"{sid}_basemap_near{j}.jpg", **{k: nmeta[k] for k in ("scale", "translate", "size", "zoom")}})
                 gen[f"geo/{sid}_basemap_near{j}.jpg"] = {"kind": "image", "licence": nmeta["licence"], "provider": nmeta["provider"], "by": "reelkit/basemap.py",
                                                          "source": f"{nmeta['layer']} z{nmeta['zoom']} ({nmeta['tiles']} tiles)", "credit": nmeta["credit"], "bytes": nmeta["bytes"]}

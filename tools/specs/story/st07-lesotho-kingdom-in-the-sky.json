@@ -20,7 +20,8 @@
    "pin",
    "counter",
    "compare",
-   "pin"
+   "travel",
+   "route"
   ]
  },
  "post": {
@@ -100,10 +101,10 @@
    -28.4
   ],
   "far_bbox": [
-   14,
-   -37,
-   38,
-   -20
+   8,
+   -40,
+   45,
+   -12
   ],
   "resolution": "10m",
   "k_max": 2.6,
@@ -113,8 +114,8 @@
     "ids": [
      "426"
     ],
-    "cls": "tint",
-    "note": "Lesotho, the subject"
+    "cls": "neon",
+    "note": "Lesotho, the subject — glowing border, faint fill"
    },
    {
     "id": "solid",
@@ -133,7 +134,7 @@
      27.03,
      -30.32
     ],
-    "label": "Lowest point · 1,400 m",
+    "label": "Lowest point",
     "side": "right"
    },
    {
@@ -142,7 +143,7 @@
      29.27,
      -29.47
     ],
-    "label": "Thabana Ntlenyana · 3,482 m",
+    "label": "Thabana Ntlenyana",
     "side": "left"
    }
   ],
@@ -170,7 +171,7 @@
    {
     "kind": "route",
     "id": "climb",
-    "cls": "river",
+    "cls": "neon blue",
     "geojson": {
      "type": "FeatureCollection",
      "features": [
@@ -316,16 +317,16 @@
   ],
   "cams": {
    "start": [
-    0.5,
+    0.1,
     [
-     28.2,
-     -29.6
+     25,
+     -27
     ]
    ],
    "open": [
-    1.0,
+    0.6,
     [
-     28.2,
+     28.0,
      -29.6
     ]
    ]
@@ -335,7 +336,29 @@
    "fid": "426",
    "layer": "tint"
   },
-  "projection_reason": "satellite raster (Web Mercator tiles); the claims are elevations stated on screen; the enclave shape is shown by the traced border, no area comparison (P1/P2)"
+  "projection_reason": "satellite raster (Sentinel-2 cloudless, Web Mercator); the claims are elevations stated on screen; the enclave shape is shown by the traced neon border, no area comparison (P1/P2)",
+  "basemap": "s2",
+  "k_min": 0.09,
+  "pad_deg": 2.5,
+  "neon": true,
+  "near": [
+   {
+    "lonlat": [
+     27.03,
+     -30.32
+    ],
+    "k": 3.6,
+    "pad": 1.5
+   },
+   {
+    "lonlat": [
+     29.27,
+     -29.47
+    ],
+    "k": 3.0,
+    "pad": 1.5
+   }
+  ]
  },
  "open": {
   "vo": {
@@ -349,20 +372,39 @@
   "tone": "urgent",
   "energy": 4,
   "pause_after": 0.45,
-  "cam_dur": 2.4,
-  "cam_hold": [
-   1.02,
-   [
-    28.2,
-    -29.6
-   ]
-  ],
+  "cam_dur": 1.4,
   "kw": {
    "text": "you *cannot get down*",
    "at": "@@sea-0.3"
   },
-  "direction": "plunge from the southern tip of Africa onto the highlands; the border draws itself on 'country'",
+  "direction": "CRITICAL opener: high-altitude view of all of southern Africa, then a hyper-smooth kinetic plunge down onto the highlands while the neon border traces itself on 'country'; the push never stops",
   "devices": [
+   {
+    "at": "@+1.4",
+    "do": "geo.cam_to",
+    "until": "@+3.0",
+    "args": {
+     "k": 1.15,
+     "lonlat": [
+      28.2,
+      -29.6
+     ],
+     "ease": "power2.out"
+    }
+   },
+   {
+    "at": "@+3.0",
+    "do": "geo.cam_to",
+    "until": "@.end",
+    "args": {
+     "k": 1.2,
+     "lonlat": [
+      28.15,
+      -29.65
+     ],
+     "ease": "none"
+    }
+   },
    {
     "at": "@@country",
     "do": "geo.highlight_in",
@@ -389,27 +431,23 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "push to the south-west corner; the lowest-point pin drops in the river junction; counter climbs to 1,400",
+   "direction": "dive onto the south-west corner where the two rivers meet (pin + ping); the counter climbs to 1,400 as the camera keeps pushing in on the junction",
    "cam": [
-    1.6,
+    3.4,
     [
-     27.3,
-     -30.2
+     27.1,
+     -30.3
     ]
    ],
-   "cam_dur": 1.2,
+   "cam_dur": 1.5,
    "cam_hold": [
-    1.62,
+    3.5,
     [
-     27.3,
-     -30.2
+     27.07,
+     -30.31
     ]
    ],
-   "kw": {
-    "text": "lowest point: *1,400 m*",
-    "at": "@@1400-0.3",
-    "until": "@@sea+0.8"
-   },
+   "kw": null,
    "elements": [
     {
      "id": "lowm",
@@ -431,6 +469,14 @@
      }
     },
     {
+     "at": "@@lowest+0.05",
+     "do": "geo.pin_ping",
+     "args": {
+      "pid": "low",
+      "n": 2
+     }
+    },
+    {
      "at": "@@rivers",
      "do": "chart.counter_run",
      "id": "lowm",
@@ -440,49 +486,50 @@
      }
     },
     {
-     "at": "@.end",
+     "at": "@@sea+0.6",
      "do": "chart.out",
      "id": "lowm"
     }
    ],
    "cam_path": [
     [
-     "@+1.2",
+     "@+1.5",
      "@@rivers-0.3",
      [
-      1.62,
+      3.5,
       [
-       27.3,
-       -30.2
+       27.07,
+       -30.31
       ]
      ],
      "none"
     ],
     [
      "@@rivers-0.3",
-     "@@rivers+0.6",
+     "@@sea",
      [
-      2.2,
+      3.7,
       [
-       27.05,
-       -30.3
+       27.04,
+       -30.32
       ]
      ],
-     "power2.inOut"
+     "power1.inOut"
     ],
     [
-     "@@rivers+0.6",
+     "@@sea",
      "@.end",
      [
-      2.22,
+      3.72,
       [
-       27.05,
-       -30.3
+       27.04,
+       -30.32
       ]
      ],
      "none"
     ]
-   ]
+   ],
+   "cam_ease": "power3.inOut"
   },
   {
    "vo": {
@@ -498,19 +545,19 @@
    "energy": 5,
    "pause_after": 0.5,
    "climax": true,
-   "direction": "a mountain prop pops beside the pin, standing for Ben Nevis; card with both numbers; flash on 'bottom'",
+   "direction": "a mountain rises beside the pin on 'Ben' standing for Ben Nevis and the camera eases back to make room; the card lands with both numbers; a flash on 'bottom' and the mountain sinks away",
    "cam": [
-    2.0,
+    2.4,
     [
-     27.1,
+     27.15,
      -30.25
     ]
    ],
-   "cam_dur": 1.0,
+   "cam_dur": 1.1,
    "cam_hold": [
-    2.02,
+    2.4,
     [
-     27.1,
+     27.15,
      -30.25
     ]
    ],
@@ -523,7 +570,7 @@
     "kicker": "Ben Nevis 1,345 m",
     "text": "lower than Lesotho's lowest point, 1,400 m",
     "at": "@@1345-0.2",
-    "y": 1010
+    "y": 1150
    },
    "elements": [
     {
@@ -573,12 +620,12 @@
    ],
    "cam_path": [
     [
-     "@+1.0",
+     "@+1.1",
      "@@bottom-0.4",
      [
-      2.02,
+      2.4,
       [
-       27.1,
+       27.15,
        -30.25
       ]
      ],
@@ -590,7 +637,7 @@
      [
       1.7,
       [
-       27.3,
+       27.4,
        -30.1
       ]
      ],
@@ -602,13 +649,14 @@
      [
       1.68,
       [
-       27.3,
+       27.4,
        -30.1
       ]
      ],
      "none"
     ]
-   ]
+   ],
+   "cam_ease": "power2.inOut"
   },
   {
    "vo": {
@@ -624,20 +672,20 @@
    "tone": "resolute",
    "energy": 4,
    "pause_after": 0.45,
-   "direction": "camera rides a line from the low point north-east to the summit; the peak pin drops; the SKY tag stamps the highlands",
+   "direction": "the neon-blue line draws from the low point north-east across the highlands and the camera rides it; dive onto the summit (pin + ping); pull out so the whole kingdom is in frame for the 80 % card and the SKY tag",
    "cam": [
-    1.3,
+    1.6,
     [
-     28.2,
-     -29.8
+     27.6,
+     -30.0
     ]
    ],
-   "cam_dur": 1.2,
+   "cam_dur": 1.0,
    "cam_hold": [
-    1.3,
+    1.6,
     [
-     28.2,
-     -29.8
+     27.6,
+     -30.0
     ]
    ],
    "kw": {
@@ -650,7 +698,7 @@
     "text": "lies above 1,800 m",
     "at": "@@80-0.1",
     "until": "@@kingdom+1.2",
-    "y": 1010
+    "y": 1150
    },
    "devices": [
     {
@@ -677,6 +725,14 @@
      }
     },
     {
+     "at": "@@thabana+0.25",
+     "do": "geo.pin_ping",
+     "args": {
+      "pid": "high",
+      "n": 2
+     }
+    },
+    {
      "at": "@@kingdom",
      "do": "geo.label_in",
      "args": {
@@ -695,34 +751,34 @@
    ],
    "cam_path": [
     [
-     "@+1.2",
-     "@@thabana-0.3",
+     "@+1.0",
+     "@@climbs",
      [
-      1.3,
+      1.6,
       [
-       28.2,
-       -29.8
+       27.6,
+       -30.0
       ]
      ],
      "none"
     ],
     [
-     "@@thabana-0.3",
-     "@@thabana+0.6",
+     "@@climbs",
+     "@@thabana+0.3",
      [
-      2.0,
+      3.0,
       [
-       29.1,
+       29.2,
        -29.5
       ]
      ],
-     "power2.inOut"
+     "power1.inOut"
     ],
     [
-     "@@3482+0.6",
+     "@@3482+0.5",
      "@@80",
      [
-      1.1,
+      1.05,
       [
        28.3,
        -29.6
@@ -734,7 +790,7 @@
      "@@80",
      "@.end",
      [
-      1.08,
+      1.03,
       [
        28.3,
        -29.6
@@ -742,7 +798,8 @@
      ],
      "none"
     ]
-   ]
+   ],
+   "cam_ease": "power2.inOut"
   },
   {
    "vo": {
@@ -759,18 +816,18 @@
    "pause_after": 0.45,
    "direction": "pull right out; South Africa fills solid around it so the country reads as a hole; border pulses",
    "cam": [
-    0.55,
+    0.5,
     [
-     26.5,
-     -29.5
+     26.8,
+     -29.6
     ]
    ],
-   "cam_dur": 1.3,
+   "cam_dur": 1.4,
    "cam_hold": [
-    0.55,
+    0.5,
     [
-     26.5,
-     -29.5
+     26.8,
+     -29.6
     ]
    ],
    "kw": {
@@ -821,13 +878,13 @@
    ],
    "cam_path": [
     [
-     "@+1.3",
+     "@+1.4",
      "@@three-0.3",
      [
-      0.55,
+      0.5,
       [
-       26.5,
-       -29.5
+       26.8,
+       -29.6
       ]
      ],
      "none"
@@ -836,7 +893,7 @@
      "@@three-0.3",
      "@@three+0.7",
      [
-      0.75,
+      0.8,
       [
        28.0,
        -29.6
@@ -848,7 +905,7 @@
      "@@three+0.7",
      "@.end",
      [
-      0.74,
+      0.79,
       [
        28.0,
        -29.6
@@ -856,7 +913,8 @@
      ],
      "none"
     ]
-   ]
+   ],
+   "cam_ease": "power2.inOut"
   }
  ],
  "close": {
@@ -874,21 +932,30 @@
   "pause_after": 0.5,
   "y": 760,
   "cam": [
-   0.95,
+   1.0,
    [
     28.2,
     -29.6
    ]
   ],
-  "cam_dur": 1.6,
+  "cam_dur": 1.8,
   "devices": [
    {
-    "at": "@@lowest",
+    "at": "@@country",
     "do": "geo.highlight_pulse",
     "args": {
      "fid": "426",
      "layer": "tint",
      "dur": 0.7
+    }
+   },
+   {
+    "at": "@@lowest",
+    "do": "geo.route_draw",
+    "until": "@@mountain+0.3",
+    "args": {
+     "rid": "climb",
+     "layer": "climb"
     }
    }
   ]
@@ -995,8 +1062,7 @@
      "a whole country where the lowest you can go is still higher than britain's highest mountain"
     ],
     "screen": [
-     "Lowest point · 1,400 m",
-     "lowest point: 1,400 m",
+     "Lowest point",
      "metres above sea level · the lowest spot",
      "the highest low point",
      "you cannot get down",
@@ -1035,7 +1101,7 @@
      "from there the land only climbs, up to thabana ntlenyana at 3,482 metres. more than 80 percent of the country sits above 1,800 metres. they call it the kingdom in the sky"
     ],
     "screen": [
-     "Thabana Ntlenyana · 3,482 m",
+     "Thabana Ntlenyana",
      "summit: 3,482 m",
      "80% of Lesotho",
      "lies above 1,800 m",
@@ -1059,5 +1125,6 @@
     ]
    }
   ]
- }
+ },
+ "screen_credit": "Satellite imagery: Sentinel-2 cloudless by EOX (CC BY 4.0) · Contains modified Copernicus Sentinel data 2020 · Natural Earth"
 }

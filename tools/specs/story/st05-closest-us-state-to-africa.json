@@ -13,14 +13,15 @@
  "intent": "The US state nearest to Africa is Maine, not Florida, because the Earth is round and the great-circle route to Morocco bends north; the numbers are 5,076 km from Maine versus more than 6,300 km from Florida.",
  "variety": {
   "shape": "why-here-not-there",
-  "opener": "wide-drift",
+  "opener": "plunge",
   "music": "bed:drone",
   "cast": "none",
   "beats": [
    "route",
    "counter",
-   "route",
-   "compare"
+   "travel",
+   "compare",
+   "pin"
   ]
  },
  "post": {
@@ -100,22 +101,22 @@
    50
   ],
   "far_bbox": [
-   -110,
-   2,
-   25,
-   65
+   -125,
+   -5,
+   30,
+   70
   ],
   "resolution": "110m",
-  "k_max": 2.0,
+  "k_max": 2.6,
   "layers": [
    {
     "id": "tint",
     "ids": [
      "840"
     ],
-    "cls": "tint",
-    "note": "United States, the subject",
-    "trace": false
+    "cls": "neon",
+    "note": "United States, the subject — glowing border",
+    "trace": true
    },
    {
     "id": "solid",
@@ -134,7 +135,7 @@
      -66.95,
      44.815
     ],
-    "label": "West Quoddy Head · Maine",
+    "label": "West Quoddy Head",
     "side": "right"
    },
    {
@@ -143,7 +144,7 @@
      -9.27,
      32.54
     ],
-    "label": "El Beddouza · Morocco",
+    "label": "El Beddouza",
     "side": "left"
    },
    {
@@ -177,7 +178,7 @@
    {
     "kind": "route",
     "id": "maine",
-    "cls": "river",
+    "cls": "neon",
     "geojson": {
      "type": "FeatureCollection",
      "features": [
@@ -443,7 +444,7 @@
    {
     "kind": "route",
     "id": "florida",
-    "cls": "river dashed",
+    "cls": "neon blue dashed",
     "geojson": {
      "type": "FeatureCollection",
      "features": [
@@ -709,17 +710,17 @@
   ],
   "cams": {
    "start": [
-    0.62,
+    0.4,
     [
-     -46,
-     33
+     -50,
+     30
     ]
    ],
    "open": [
-    0.68,
+    0.9,
     [
-     -46,
-     33.5
+     -62,
+     31
     ]
    ]
   },
@@ -728,7 +729,37 @@
    "fid": "840",
    "layer": "tint"
   },
-  "projection_reason": "satellite raster (Web Mercator tiles); both routes are true great circles drawn as geodesics, the comparison is carried by the stated kilometre figures and the scalebar, not by visual length (P1/P2)"
+  "projection_reason": "satellite raster (Sentinel-2 cloudless, Web Mercator); both routes are true great circles drawn as geodesics, the comparison is carried by the stated kilometre figures and the scalebar, not by visual length (P1/P2)",
+  "basemap": "s2",
+  "k_min": 0.35,
+  "pad_deg": 6,
+  "neon": true,
+  "near": [
+   {
+    "lonlat": [
+     -66.95,
+     44.815
+    ],
+    "k": 6,
+    "pad": 1.4
+   },
+   {
+    "lonlat": [
+     -9.27,
+     32.54
+    ],
+    "k": 6,
+    "pad": 1.4
+   },
+   {
+    "lonlat": [
+     -80.03,
+     26.7
+    ],
+    "k": 4.5,
+    "pad": 1.4
+   }
+  ]
  },
  "open": {
   "vo": {
@@ -746,7 +777,7 @@
    "text": "everyone says *Florida*",
    "at": "@@florida-0.2"
   },
-  "direction": "wide Atlantic drift; Florida pin drops on the guess; a red NO tag stamps it on 'wrong'",
+  "direction": "CRITICAL opener: high-altitude view of the whole North Atlantic, then a hyper-smooth kinetic plunge down onto Florida while the US neon border traces itself; the Florida pin pings on the guess and a red NO stamps it on 'wrong'",
   "elements": [
    {
     "id": "no",
@@ -761,17 +792,38 @@
   ],
   "devices": [
    {
-    "at": "@+0.1",
-    "do": "geo.pin_out",
+    "at": "@+1.4",
+    "do": "geo.cam_to",
+    "until": "@+3.2",
     "args": {
-     "pid": "qh"
+     "k": 4.5,
+     "lonlat": [
+      -80.3,
+      27.2
+     ],
+     "ease": "power2.out"
     }
    },
    {
-    "at": "@+0.2",
-    "do": "geo.pin_out",
+    "at": "@+3.2",
+    "do": "geo.cam_to",
+    "until": "@.end",
     "args": {
-     "pid": "eb"
+     "k": 4.6,
+     "lonlat": [
+      -80.2,
+      27.0
+     ],
+     "ease": "none"
+    }
+   },
+   {
+    "at": "@@africa",
+    "do": "geo.highlight_in",
+    "args": {
+     "fid": "840",
+     "layer": "tint",
+     "dur": 0.6
     }
    },
    {
@@ -779,6 +831,14 @@
     "do": "geo.pin_in",
     "args": {
      "pid": "fl"
+    }
+   },
+   {
+    "at": "@@florida+0.05",
+    "do": "geo.pin_ping",
+    "args": {
+     "pid": "fl",
+     "n": 2
     }
    },
    {
@@ -810,7 +870,8 @@
      "peak": 0.5
     }
    }
-  ]
+  ],
+  "cam_dur": 1.4
  },
  "beats": [
   {
@@ -827,20 +888,20 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "camera jumps north to Maine; the Maine pin drops; the great-circle line draws across the Atlantic and the Morocco pin lands",
+   "direction": "tracking pan north up the US east coast and a dive onto West Quoddy Head (pin + ping); a plane takes off and the camera rides the neon great circle with it across the Atlantic; dive onto El Beddouza (pin + ping); Morocco fills solid",
    "cam": [
-    1.3,
+    6.0,
     [
-     -66.5,
-     44.5
+     -66.8,
+     44.8
     ]
    ],
-   "cam_dur": 1.2,
+   "cam_dur": 1.6,
    "cam_hold": [
-    1.3,
+    6.1,
     [
-     -66.0,
-     44.5
+     -66.85,
+     44.78
     ]
    ],
    "kw": {
@@ -849,11 +910,6 @@
     "until": "@@lands-0.2"
    },
    "highlights": [
-    {
-     "fid": "840",
-     "layer": "tint",
-     "at": "@@here-0.2"
-    },
     {
      "fid": "504",
      "layer": "solid",
@@ -881,12 +937,65 @@
      }
     },
     {
+     "at": "@@here+0.05",
+     "do": "geo.pin_ping",
+     "args": {
+      "pid": "qh",
+      "n": 2
+     }
+    },
+    {
+     "at": "@@maine",
+     "do": "prop.anchor",
+     "id": "plane",
+     "until": "@@maine+0.3",
+     "args": {
+      "lonlat": [
+       -66.95,
+       44.815
+      ],
+      "dx": 0,
+      "dy": 0
+     }
+    },
+    {
+     "at": "@@maine",
+     "do": "prop.pop",
+     "id": "plane",
+     "args": {
+      "frm": "pop"
+     }
+    },
+    {
      "at": "@@maine+0.2",
      "do": "geo.route_draw",
-     "until": "@@morocco+0.2",
+     "until": "@@morocco+0.1",
      "args": {
       "rid": "maine",
       "layer": "maine"
+     }
+    },
+    {
+     "at": "@@maine+0.3",
+     "do": "geo.travel",
+     "until": "@@morocco",
+     "args": {
+      "rid": "maine",
+      "layer": "maine",
+      "sid": "plane",
+      "ease": "power1.inOut",
+      "offset": [
+       75,
+       75
+      ]
+     }
+    },
+    {
+     "at": "@@morocco",
+     "do": "prop.out",
+     "id": "plane",
+     "args": {
+      "dur": 0.35
      }
     },
     {
@@ -895,45 +1004,78 @@
      "args": {
       "pid": "eb"
      }
+    },
+    {
+     "at": "@@morocco+0.05",
+     "do": "geo.pin_ping",
+     "args": {
+      "pid": "eb",
+      "n": 2
+     }
     }
    ],
    "cam_path": [
     [
-     "@+1.2",
-     "@@maine+0.2",
+     "@+1.6",
+     "@@maine+0.3",
      [
-      1.3,
+      6.1,
       [
-       -66.0,
-       44.5
+       -66.85,
+       44.78
       ]
      ],
      "none"
     ],
     [
-     "@@maine+0.2",
-     "@@morocco+0.3",
+     "@@maine+0.3",
+     "@@lands",
      [
-      0.72,
+      1.0,
       [
-       -44,
-       34
+       -38,
+       40
       ]
      ],
      "power2.inOut"
     ],
     [
-     "@@morocco+0.3",
+     "@@lands",
+     "@@morocco+0.1",
+     [
+      6.0,
+      [
+       -9.5,
+       32.6
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@morocco+0.1",
      "@.end",
      [
-      0.71,
+      6.1,
       [
-       -44,
-       34
+       -9.45,
+       32.55
       ]
      ],
      "none"
     ]
+   ],
+   "cam_ease": "power3.inOut",
+   "elements": [
+    {
+     "id": "plane",
+     "type": "rig",
+     "rig": "plane",
+     "x": 540,
+     "y": 900,
+     "size": 150,
+     "rot": 30,
+     "z": 62
+    }
    ]
   },
   {
@@ -948,27 +1090,23 @@
    "tone": "neutral",
    "energy": 3,
    "pause_after": 0.5,
-   "direction": "hold the whole line; the counter rolls up to the distance",
+   "direction": "one long pull-out from Morocco to the whole Atlantic with the neon line lit end to end; the counter rolls to 5,076 (the only text on screen); Morocco pulses",
    "cam": [
     0.72,
     [
-     -44,
-     34
+     -40,
+     36
     ]
    ],
-   "cam_dur": 1.0,
+   "cam_dur": 1.4,
    "cam_hold": [
-    0.73,
+    0.72,
     [
-     -44,
-     34
+     -40,
+     36
     ]
    ],
-   "kw": {
-    "text": "*5,076 km*",
-    "at": "@@5076-0.2",
-    "until": "@.end"
-   },
+   "kw": null,
    "elements": [
     {
      "id": "km1",
@@ -992,7 +1130,7 @@
      }
     },
     {
-     "at": "@.end+0.3",
+     "at": "@@long+0.8",
      "do": "chart.out",
      "id": "km1"
     },
@@ -1008,18 +1146,19 @@
    ],
    "cam_path": [
     [
-     "@+1.0",
+     "@+1.4",
      "@.end",
      [
-      0.74,
+      0.7,
       [
-       -44,
-       34
+       -39,
+       36.5
       ]
      ],
      "none"
     ]
-   ]
+   ],
+   "cam_ease": "power2.inOut"
   },
   {
    "vo": {
@@ -1035,27 +1174,23 @@
    "tone": "resolute",
    "energy": 4,
    "pause_after": 0.45,
-   "direction": "pin back on Florida; its dashed line draws south-east to the Sahara coast; second counter; the Maine line pulses as the winner",
+   "direction": "dive onto Florida (pin + ping); the dashed neon-blue line draws south-east while the camera tracks it to the Western Sahara coast (pin + ping); the second counter rolls; the Maine line pulses as the winner on 'loses'",
    "cam": [
-    0.72,
+    4.5,
     [
-     -48,
-     30
+     -80.1,
+     27.0
     ]
    ],
    "cam_dur": 1.2,
    "cam_hold": [
-    0.72,
+    4.6,
     [
-     -48,
-     30
+     -80.0,
+     26.9
     ]
    ],
-   "kw": {
-    "text": "Florida: *more than 6,300 km*",
-    "at": "@@6300-0.3",
-    "until": "@@loses+0.9"
-   },
+   "kw": null,
    "elements": [
     {
      "id": "km2",
@@ -1070,24 +1205,18 @@
    ],
    "devices": [
     {
-     "at": "@+0.1",
-     "do": "geo.pin_out",
-     "args": {
-      "pid": "qh"
-     }
-    },
-    {
-     "at": "@+0.2",
-     "do": "geo.pin_out",
-     "args": {
-      "pid": "eb"
-     }
-    },
-    {
      "at": "@@florida",
      "do": "geo.pin_in",
      "args": {
       "pid": "fl"
+     }
+    },
+    {
+     "at": "@@florida+0.05",
+     "do": "geo.pin_ping",
+     "args": {
+      "pid": "fl",
+      "n": 2
      }
     },
     {
@@ -1107,6 +1236,14 @@
      }
     },
     {
+     "at": "@@shore+0.05",
+     "do": "geo.pin_ping",
+     "args": {
+      "pid": "dk",
+      "n": 2
+     }
+    },
+    {
      "at": "@@shore-0.2",
      "do": "chart.counter_run",
      "id": "km2",
@@ -1116,9 +1253,18 @@
      }
     },
     {
-     "at": "@.end",
+     "at": "@@loses-0.2",
      "do": "chart.out",
      "id": "km2"
+    },
+    {
+     "at": "@@loses",
+     "do": "geo.route_draw",
+     "until": "@@loses+0.9",
+     "args": {
+      "rid": "maine",
+      "layer": "maine"
+     }
     },
     {
      "at": "@@loses+0.2",
@@ -1138,12 +1284,36 @@
    "cam_path": [
     [
      "@+1.2",
+     "@@coast",
+     [
+      4.6,
+      [
+       -80.0,
+       26.9
+      ]
+     ],
+     "none"
+    ],
+    [
+     "@@coast",
+     "@@shore+0.2",
+     [
+      1.0,
+      [
+       -45,
+       27
+      ]
+     ],
+     "power2.inOut"
+    ],
+    [
+     "@@shore+0.2",
      "@@loses-0.3",
      [
-      0.72,
+      1.0,
       [
-       -48,
-       30
+       -45,
+       27
       ]
      ],
      "none"
@@ -1172,7 +1342,8 @@
      ],
      "none"
     ]
-   ]
+   ],
+   "cam_ease": "power2.inOut"
   },
   {
    "vo": {
@@ -1188,32 +1359,32 @@
    "energy": 5,
    "pause_after": 0.5,
    "climax": true,
-   "direction": "the Maine line redraws as the camera rides it, arcing north; Morocco pulses on 'bulge'; push to the Maine end on 'cold'; card",
+   "direction": "the plane takes off from Maine again and the camera rides the arcing neon line north-east with it; Morocco pulses on 'bulge'; the camera settles over the whole arc for the card on 'cold'",
    "cam": [
-    0.7,
+    1.6,
     [
-     -44,
-     35
+     -62,
+     44
     ]
    ],
    "cam_dur": 1.2,
    "cam_hold": [
-    0.7,
+    1.6,
     [
-     -44,
-     35
+     -62,
+     44
     ]
    ],
    "kw": {
     "text": "the shortest path *bends north*",
     "at": "@@bends-0.1",
-    "until": "@@cold-0.3"
+    "until": "@@cold-0.5"
    },
    "card": {
     "kicker": "Great circle",
     "text": "Maine 5,076 km · Florida 6,300+ km",
     "at": "@@cold-0.2",
-    "y": 1010
+    "y": 1150
    },
    "devices": [
     {
@@ -1226,17 +1397,48 @@
      }
     },
     {
-     "at": "@@ball+0.3",
-     "do": "geo.pin_in",
+     "at": "@@ball",
+     "do": "prop.anchor",
+     "id": "plane2",
+     "until": "@@ball+0.3",
      "args": {
-      "pid": "qh"
+      "lonlat": [
+       -66.95,
+       44.815
+      ],
+      "dx": 0,
+      "dy": 0
      }
     },
     {
-     "at": "@@bulge",
-     "do": "geo.pin_in",
+     "at": "@@ball",
+     "do": "prop.pop",
+     "id": "plane2",
      "args": {
-      "pid": "eb"
+      "frm": "pop"
+     }
+    },
+    {
+     "at": "@@ball+0.3",
+     "do": "geo.travel",
+     "until": "@@bulge+0.2",
+     "args": {
+      "rid": "maine",
+      "layer": "maine",
+      "sid": "plane2",
+      "ease": "power1.inOut",
+      "offset": [
+       75,
+       75
+      ]
+     }
+    },
+    {
+     "at": "@@bulge+0.2",
+     "do": "prop.out",
+     "id": "plane2",
+     "args": {
+      "dur": 0.35
      }
     },
     {
@@ -1252,40 +1454,65 @@
    "cam_path": [
     [
      "@+1.2",
-     "@@cold-0.5",
+     "@@bends",
      [
-      0.7,
+      1.6,
       [
-       -44,
-       35
+       -62,
+       44
       ]
      ],
      "none"
     ],
     [
-     "@@cold-0.5",
-     "@@cold+0.6",
+     "@@bends",
+     "@@bulge+0.2",
      [
-      1.0,
+      1.3,
       [
-       -64,
-       44.5
+       -30,
+       42
+      ]
+     ],
+     "power1.inOut"
+    ],
+    [
+     "@@bulge+0.2",
+     "@@cold+0.4",
+     [
+      0.72,
+      [
+       -42,
+       36
       ]
      ],
      "power2.inOut"
     ],
     [
-     "@@cold+0.6",
+     "@@cold+0.4",
      "@.end",
      [
-      1.02,
+      0.71,
       [
-       -64,
-       44.5
+       -42,
+       36
       ]
      ],
      "none"
     ]
+   ],
+   "cam_ease": "power2.inOut",
+   "elements": [
+    {
+     "id": "plane2",
+     "type": "rig",
+     "rig": "plane",
+     "x": 540,
+     "y": 900,
+     "size": 150,
+     "rot": 30,
+     "z": 62
+    }
    ]
   }
  ],
@@ -1304,14 +1531,23 @@
   "pause_after": 0.5,
   "y": 1180,
   "cam": [
-   0.7,
+   0.78,
    [
-    -44,
-    35
+    -45,
+    37
    ]
   ],
-  "cam_dur": 1.6,
+  "cam_dur": 1.8,
   "devices": [
+   {
+    "at": "@@africa",
+    "do": "geo.highlight_pulse",
+    "args": {
+     "fid": "504",
+     "layer": "solid",
+     "dur": 0.7
+    }
+   },
    {
     "at": "@@maine",
     "do": "geo.highlight_pulse",
@@ -1319,6 +1555,15 @@
      "fid": "840",
      "layer": "tint",
      "dur": 0.7
+    }
+   },
+   {
+    "at": "@@maine",
+    "do": "geo.route_draw",
+    "until": "@@maine+0.9",
+    "args": {
+     "rid": "maine",
+     "layer": "maine"
     }
    }
   ]
@@ -1417,10 +1662,9 @@
      "which american state is closest to africa"
     ],
     "screen": [
-     "West Quoddy Head · Maine",
-     "El Beddouza · Morocco",
+     "West Quoddy Head",
+     "El Beddouza",
      "it starts in Maine",
-     "5,076 km",
      "km · Maine to Morocco",
      "Great circle",
      "Maine 5,076 km · Florida 6,300+ km",
@@ -1446,7 +1690,6 @@
      "everyone says Florida",
      "Florida",
      "Western Sahara coast",
-     "Florida: more than 6,300 km",
      "km · Florida to the nearest African shore",
      "NO"
     ]
@@ -1467,5 +1710,6 @@
     ]
    }
   ]
- }
+ },
+ "screen_credit": "Satellite imagery: Sentinel-2 cloudless by EOX (CC BY 4.0) · Contains modified Copernicus Sentinel data 2020 · Natural Earth"
 }

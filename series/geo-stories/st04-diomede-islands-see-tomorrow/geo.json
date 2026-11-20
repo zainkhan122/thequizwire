@@ -26,7 +26,7 @@
     {
      "kind": "area",
      "id": "isl_us",
-     "cls": "highlight tint",
+     "cls": "highlight neon",
      "perFeature": true,
      "geojson": {
       "type": "FeatureCollection",
@@ -91,7 +91,7 @@
     {
      "kind": "area",
      "id": "isl_ru",
-     "cls": "highlight solid",
+     "cls": "highlight neonblue",
      "perFeature": true,
      "geojson": {
       "type": "FeatureCollection",
@@ -164,7 +164,7 @@
     {
      "kind": "route",
      "id": "gap",
-     "cls": "river",
+     "cls": "neon blue",
      "geojson": {
       "type": "FeatureCollection",
       "features": [
@@ -194,7 +194,7 @@
     {
      "kind": "route",
      "id": "idl",
-     "cls": "river",
+     "cls": "neon dashed",
      "geojson": {
       "type": "FeatureCollection",
       "features": [
@@ -232,6 +232,138 @@
        }
       ]
      }
+    },
+    {
+     "kind": "route",
+     "id": "edge_us",
+     "cls": "neon",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "edge_us",
+        "properties": {
+         "name": "Little Diomede outline"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           -168.9083,
+           65.769
+          ],
+          [
+           -168.9011,
+           65.7622
+          ],
+          [
+           -168.9011,
+           65.747
+          ],
+          [
+           -168.9083,
+           65.7402
+          ],
+          [
+           -168.9263,
+           65.7402
+          ],
+          [
+           -168.9407,
+           65.7436
+          ],
+          [
+           -168.9515,
+           65.7538
+          ],
+          [
+           -168.9443,
+           65.7639
+          ],
+          [
+           -168.9191,
+           65.769
+          ],
+          [
+           -168.9083,
+           65.769
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    },
+    {
+     "kind": "route",
+     "id": "edge_ru",
+     "cls": "neon",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "edge_ru",
+        "properties": {
+         "name": "Big Diomede outline"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           -169.0847,
+           65.8162
+          ],
+          [
+           -169.0631,
+           65.8281
+          ],
+          [
+           -169.0415,
+           65.8281
+          ],
+          [
+           -168.9947,
+           65.8162
+          ],
+          [
+           -169.0091,
+           65.796
+          ],
+          [
+           -169.0271,
+           65.774
+          ],
+          [
+           -169.0523,
+           65.7571
+          ],
+          [
+           -169.0775,
+           65.7554
+          ],
+          [
+           -169.0955,
+           65.7622
+          ],
+          [
+           -169.0991,
+           65.7791
+          ],
+          [
+           -169.0919,
+           65.7993
+          ],
+          [
+           -169.0847,
+           65.8162
+          ]
+         ]
+        }
+       }
+      ]
+     }
     }
    ],
    "pins": [
@@ -251,15 +383,15 @@
       65.78
      ],
      "label": "Big Diomede · Russia",
-     "side": "right"
+     "side": "left"
     }
    ],
    "labels": [
     {
      "id": "today",
      "lonlat": [
-      -168.87,
-      65.86
+      -168.86,
+      65.87
      ],
      "text": "TODAY",
      "cls": "tag",
@@ -269,8 +401,8 @@
     {
      "id": "tmrw",
      "lonlat": [
-      -169.1,
-      65.86
+      -169.09,
+      65.87
      ],
      "text": "TOMORROW",
      "cls": "tag",
@@ -283,19 +415,30 @@
     "Natural Earth"
    ],
    "basemap": {
-    "layer": "bluemarble",
-    "k_max": 6,
+    "layer": "s2",
+    "k_max": 2.6,
     "far": {
      "bbox": [
       -180,
-      57,
-      -150,
-      72
+      52,
+      -148,
+      76
      ],
-     "k_min": 0.3
-    }
+     "k_min": 0.07
+    },
+    "pad_deg": 1.2,
+    "near": [
+     {
+      "lonlat": [
+       -168.99,
+       65.77
+      ],
+      "k": 4.6,
+      "pad": 1.15
+     }
+    ]
    },
-   "projection_reason": "satellite raster (Web Mercator tiles) for a strait story; the only distance claim is a stated number carried by the scalebar, no area comparison (P1/P2)",
+   "projection_reason": "satellite raster (Sentinel-2 cloudless, Web Mercator) for a strait story; the only distance claim is a stated number carried by the counter and the scalebar, no area comparison (P1/P2)",
    "scalebar": {
     "km": 2,
     "lonlat": [

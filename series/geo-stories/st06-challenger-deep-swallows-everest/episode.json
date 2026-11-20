@@ -117,7 +117,8 @@
    "pin",
    "counter",
    "travel",
-   "compare"
+   "compare",
+   "route"
   ],
   "cast": "none",
   "music": "bed:drone"

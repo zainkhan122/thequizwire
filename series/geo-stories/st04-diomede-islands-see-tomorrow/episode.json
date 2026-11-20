@@ -28,6 +28,7 @@
  "credits": [
   "Natural Earth"
  ],
+ "screen_credit": "Satellite imagery: Sentinel-2 cloudless by EOX (CC BY 4.0) · Contains modified Copernicus Sentinel data 2020 · Natural Earth",
  "post": {
   "title": "The island where you can see tomorrow 🕛",
   "premise": "Two islands you could row between, 21 hours apart on the calendar",
@@ -110,13 +111,14 @@
   "question": "story",
   "story_shape": "line-that-shouldnt-exist",
   "hook": "cold-open",
-  "opener": "mystery-zoom-out",
+  "opener": "plunge",
   "reveal": "none",
   "beats": [
    "pin",
    "route",
    "counter",
-   "label"
+   "label",
+   "flag"
   ],
   "cast": "none",
   "music": "bed:drone"

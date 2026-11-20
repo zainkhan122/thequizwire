@@ -28,6 +28,7 @@
  "credits": [
   "Natural Earth"
  ],
+ "screen_credit": "Satellite imagery: Sentinel-2 cloudless by EOX (CC BY 4.0) · Contains modified Copernicus Sentinel data 2020 · Natural Earth",
  "post": {
   "title": "The US state closest to Africa is not Florida 🧭",
   "premise": "Florida is the state closest to Africa, right? Wrong, and the map shows why",
@@ -111,13 +112,14 @@
   "question": "story",
   "story_shape": "why-here-not-there",
   "hook": "cold-open",
-  "opener": "wide-drift",
+  "opener": "plunge",
   "reveal": "none",
   "beats": [
    "route",
    "counter",
-   "route",
-   "compare"
+   "travel",
+   "compare",
+   "pin"
   ],
   "cast": "none",
   "music": "bed:drone"

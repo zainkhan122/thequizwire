@@ -20,7 +20,8 @@
    "pin",
    "counter",
    "travel",
-   "compare"
+   "compare",
+   "route"
   ]
  },
  "post": {
@@ -100,13 +101,13 @@
    18
   ],
   "far_bbox": [
-   80,
-   -12,
-   165,
-   40
+   70,
+   -15,
+   170,
+   42
   ],
   "resolution": "50m",
-  "k_max": 2.4,
+  "k_max": 2.6,
   "layers": [],
   "pins": [
    {
@@ -161,7 +162,7 @@
    {
     "kind": "route",
     "id": "trenchline",
-    "cls": "river",
+    "cls": "neon",
     "geojson": {
      "type": "FeatureCollection",
      "features": [
@@ -215,7 +216,7 @@
    {
     "kind": "route",
     "id": "flight",
-    "cls": "river dashed",
+    "cls": "neon blue dashed",
     "geojson": {
      "type": "FeatureCollection",
      "features": [
@@ -481,17 +482,17 @@
   ],
   "cams": {
    "start": [
-    0.7,
+    0.3,
     [
-     142.0,
-     12.5
+     120,
+     14
     ]
    ],
    "open": [
-    1.8,
+    0.9,
     [
-     142.6,
-     11.4
+     142.5,
+     11.8
     ]
    ]
   },
@@ -500,7 +501,21 @@
    "fid": "trench",
    "layer": "trenchline"
   },
-  "projection_reason": "satellite raster (Web Mercator tiles) for an ocean-depth story; the claims are vertical numbers stated on screen, no area comparison (P1/P2)"
+  "projection_reason": "NASA Blue Marble shaded-relief + bathymetry raster (Web Mercator tiles) — the sea-floor relief IS the subject, which the Sentinel-2 optical mosaic cannot show (open ocean renders near-black); the claims are vertical numbers stated on screen, no area comparison (P1/P2)",
+  "basemap": "bluemarble",
+  "k_min": 0.28,
+  "pad_deg": 4,
+  "neon": true,
+  "near": [
+   {
+    "lonlat": [
+     142.59,
+     11.37
+    ],
+    "k": 3.2,
+    "pad": 1.5
+   }
+  ]
  },
  "open": {
   "vo": {
@@ -515,20 +530,39 @@
   "tone": "urgent",
   "energy": 4,
   "pause_after": 0.45,
-  "cam_dur": 2.4,
-  "cam_hold": [
-   1.82,
-   [
-    142.6,
-    11.4
-   ]
-  ],
+  "cam_dur": 1.4,
   "kw": {
    "text": "it *swallows* mountains",
    "at": "@@swallow-0.3"
   },
-  "direction": "plunge from wide Pacific onto empty blue; the trench line draws through on 'hole'; the pin lands on 'swallow'",
+  "direction": "CRITICAL opener: high-altitude view of the western Pacific from the Philippines to the Marianas, then a hyper-smooth kinetic plunge straight down onto the empty blue of the trench as the neon trench line draws through; the pin pings on 'swallow'",
   "devices": [
+   {
+    "at": "@+1.4",
+    "do": "geo.cam_to",
+    "until": "@+3.0",
+    "args": {
+     "k": 1.9,
+     "lonlat": [
+      142.65,
+      11.45
+     ],
+     "ease": "power2.out"
+    }
+   },
+   {
+    "at": "@+3.0",
+    "do": "geo.cam_to",
+    "until": "@.end",
+    "args": {
+     "k": 1.95,
+     "lonlat": [
+      142.7,
+      11.5
+     ],
+     "ease": "none"
+    }
+   },
    {
     "at": "@@hole-0.2",
     "do": "geo.route_draw",
@@ -543,6 +577,14 @@
     "do": "geo.pin_in",
     "args": {
      "pid": "cd"
+    }
+   },
+   {
+    "at": "@@swallow+0.05",
+    "do": "geo.pin_ping",
+    "args": {
+     "pid": "cd",
+     "n": 2
     }
    }
   ]
@@ -561,20 +603,20 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "pull back so the whole trench arc is in frame; TRENCH tag; Guam pin drops to the north-east",
+   "direction": "pull back so the whole trench arc is in frame while the neon line redraws north; the TRENCH tag plates; a tracking pan north-east and the Guam pin pings",
    "cam": [
-    1.0,
+    0.95,
     [
-     144.0,
-     12.6
+     143.8,
+     12.4
     ]
    ],
    "cam_dur": 1.3,
    "cam_hold": [
-    1.0,
+    0.95,
     [
-     144.2,
-     12.8
+     143.9,
+     12.5
     ]
    ],
    "kw": {
@@ -605,29 +647,37 @@
      "args": {
       "pid": "guam"
      }
+    },
+    {
+     "at": "@@guam+0.05",
+     "do": "geo.pin_ping",
+     "args": {
+      "pid": "guam",
+      "n": 2
+     }
     }
    ],
    "cam_path": [
     [
      "@+1.3",
-     "@@guam-0.3",
+     "@@guam-0.4",
      [
-      1.0,
+      0.95,
       [
-       144.2,
-       12.8
+       143.9,
+       12.5
       ]
      ],
      "none"
     ],
     [
-     "@@guam-0.3",
+     "@@guam-0.4",
      "@@guam+0.6",
      [
-      1.1,
+      1.6,
       [
-       144.3,
-       12.9
+       144.5,
+       13.2
       ]
      ],
      "power2.inOut"
@@ -636,15 +686,16 @@
      "@@guam+0.6",
      "@.end",
      [
-      1.1,
+      1.62,
       [
-       144.3,
-       12.9
+       144.55,
+       13.25
       ]
      ],
      "none"
     ]
-   ]
+   ],
+   "cam_ease": "power2.inOut"
   },
   {
    "vo": {
@@ -659,32 +710,28 @@
    "tone": "neutral",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "tight on the pin; the depth counter rolls all the way down; slow push in as the number climbs",
+   "direction": "dive from Guam back onto the Challenger Deep pin (k 3); the depth counter is the only text and rolls to 10,935 as the camera keeps pushing; the pressure card follows once the counter is gone",
    "cam": [
-    1.9,
+    3.0,
     [
-     142.6,
+     142.62,
      11.4
     ]
    ],
-   "cam_dur": 1.2,
+   "cam_dur": 1.4,
    "cam_hold": [
-    1.92,
+    3.05,
     [
-     142.6,
+     142.62,
      11.4
     ]
    ],
-   "kw": {
-    "text": "*10,935 m* down",
-    "at": "@@10935-0.1",
-    "until": "@@pressure-0.3"
-   },
+   "kw": null,
    "card": {
     "kicker": "Pressure",
     "text": "over 1,000× the surface",
-    "at": "@@pressure-0.2",
-    "y": 1010
+    "at": "@@pressure-0.1",
+    "y": 1150
    },
    "elements": [
     {
@@ -692,7 +739,7 @@
      "type": "counter",
      "start": 0,
      "end": 10935,
-     "y": 560,
+     "y": 330,
      "label": "metres down · Challenger Deep",
      "fmt": "int",
      "size": 150
@@ -709,7 +756,7 @@
      }
     },
     {
-     "at": "@.end",
+     "at": "@@pressure-0.4",
      "do": "chart.out",
      "id": "depth"
     },
@@ -726,16 +773,24 @@
      "args": {
       "pid": "guam"
      }
+    },
+    {
+     "at": "@@eleven",
+     "do": "geo.pin_ping",
+     "args": {
+      "pid": "cd",
+      "n": 3
+     }
     }
    ],
    "cam_path": [
     [
-     "@+1.2",
+     "@+1.4",
      "@@eleven-0.3",
      [
-      1.92,
+      3.05,
       [
-       142.6,
+       142.62,
        11.4
       ]
      ],
@@ -743,29 +798,30 @@
     ],
     [
      "@@eleven-0.3",
-     "@@eleven+0.8",
+     "@@pressure",
      [
-      2.3,
+      3.3,
       [
        142.6,
-       11.4
+       11.38
       ]
      ],
-     "power2.inOut"
+     "power1.inOut"
     ],
     [
-     "@@eleven+0.8",
+     "@@pressure",
      "@.end",
      [
-      2.32,
+      3.32,
       [
        142.6,
-       11.4
+       11.38
       ]
      ],
      "none"
     ]
-   ]
+   ],
+   "cam_ease": "power3.inOut"
   },
   {
    "vo": {
@@ -780,20 +836,20 @@
    "tone": "resolute",
    "energy": 4,
    "pause_after": 0.45,
-   "direction": "zoom out to show both: Everest pin in the Himalaya; the mountain prop pops on the peak, then arcs across Asia to the trench",
+   "direction": "one long pull-out from the trench to a view of all of Asia; the Everest pin pings in the Himalaya and the mountain rises on the peak; on 'fly' it arcs across Asia along the dashed neon-blue line and the camera tracks it all the way down onto the trench",
    "cam": [
     0.3,
     [
-     100,
-     16
+     112,
+     18
     ]
    ],
-   "cam_dur": 1.3,
+   "cam_dur": 1.6,
    "cam_hold": [
     0.3,
     [
-     100,
-     16
+     112,
+     18
     ]
    ],
    "kw": {
@@ -817,6 +873,14 @@
      "do": "geo.pin_in",
      "args": {
       "pid": "ev"
+     }
+    },
+    {
+     "at": "@@everest+0.05",
+     "do": "geo.pin_ping",
+     "args": {
+      "pid": "ev",
+      "n": 2
      }
     },
     {
@@ -893,13 +957,13 @@
    ],
    "cam_path": [
     [
-     "@+1.3",
+     "@+1.6",
      "@@fly",
      [
       0.3,
       [
-       100,
-       16
+       112,
+       18
       ]
      ],
      "none"
@@ -908,7 +972,7 @@
      "@@fly",
      "@@spot+0.3",
      [
-      0.9,
+      1.3,
       [
        142.6,
        11.6
@@ -920,7 +984,7 @@
      "@@spot+0.3",
      "@.end",
      [
-      0.92,
+      1.32,
       [
        142.6,
        11.6
@@ -928,7 +992,8 @@
      ],
      "none"
     ]
-   ]
+   ],
+   "cam_ease": "power2.inOut"
   },
   {
    "vo": {
@@ -946,7 +1011,7 @@
    "climax": true,
    "direction": "the mountain falls into the trench spot with a splash and is gone; push in on the empty water; card with the 2 km margin",
    "cam": [
-    1.6,
+    1.7,
     [
      142.6,
      11.4
@@ -954,7 +1019,7 @@
    ],
    "cam_dur": 1.0,
    "cam_hold": [
-    1.62,
+    1.72,
     [
      142.6,
      11.4
@@ -969,7 +1034,7 @@
     "kicker": "Still 2 km under",
     "text": "10,935 m deep − 8,849 m tall = 2,086 m of water",
     "at": "@@summit-0.1",
-    "y": 1010
+    "y": 1150
    },
    "elements": [
     {
@@ -1025,6 +1090,14 @@
       "layer": "trenchline",
       "dur": 0.7
      }
+    },
+    {
+     "at": "@@drop+0.9",
+     "do": "geo.pin_ping",
+     "args": {
+      "pid": "cd",
+      "n": 3
+     }
     }
    ],
    "cam_path": [
@@ -1032,7 +1105,7 @@
      "@+1.0",
      "@@summit-0.3",
      [
-      1.62,
+      1.72,
       [
        142.6,
        11.4
@@ -1044,7 +1117,7 @@
      "@@summit-0.3",
      "@@summit+0.7",
      [
-      2.1,
+      2.6,
       [
        142.6,
        11.4
@@ -1056,7 +1129,7 @@
      "@@summit+0.7",
      "@.end",
      [
-      2.12,
+      2.62,
       [
        142.6,
        11.4
@@ -1082,13 +1155,13 @@
   "pause_after": 0.5,
   "y": 1180,
   "cam": [
-   1.2,
+   1.0,
    [
-    142.6,
-    11.6
+    143.0,
+    11.9
    ]
   ],
-  "cam_dur": 1.6,
+  "cam_dur": 1.8,
   "devices": [
    {
     "at": "@@deepest",
@@ -1221,7 +1294,6 @@
      "Challenger Deep",
      "Guam",
      "MARIANA TRENCH",
-     "10,935 m down",
      "metres down · Challenger Deep",
      "The hole that would swallow Everest",
      "it swallows mountains",

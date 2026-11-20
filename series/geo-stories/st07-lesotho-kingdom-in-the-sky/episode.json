@@ -28,6 +28,7 @@
  "credits": [
   "Natural Earth"
  ],
+ "screen_credit": "Satellite imagery: Sentinel-2 cloudless by EOX (CC BY 4.0) · Contains modified Copernicus Sentinel data 2020 · Natural Earth",
  "post": {
   "title": "The country whose lowest point beats Britain's highest mountain ⛰️",
   "premise": "There is a country where the lowest spot is higher than Britain's highest mountain",
@@ -117,7 +118,8 @@
    "pin",
    "counter",
    "compare",
-   "pin"
+   "travel",
+   "route"
   ],
   "cast": "none",
   "music": "bed:drone"

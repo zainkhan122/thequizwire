@@ -29,8 +29,17 @@
      "ids": [
       "840"
      ],
-     "cls": "tint",
-     "note": "United States, the subject"
+     "cls": "neon",
+     "note": "United States, the subject — glowing border"
+    },
+    {
+     "kind": "feature",
+     "id": "edge_tint",
+     "ids": [
+      "840"
+     ],
+     "cls": "draw trace neon",
+     "note": "outline trace for tint"
     },
     {
      "kind": "highlight",
@@ -44,7 +53,7 @@
     {
      "kind": "route",
      "id": "maine",
-     "cls": "river",
+     "cls": "neon",
      "geojson": {
       "type": "FeatureCollection",
       "features": [
@@ -310,7 +319,7 @@
     {
      "kind": "route",
      "id": "florida",
-     "cls": "river dashed",
+     "cls": "neon blue dashed",
      "geojson": {
       "type": "FeatureCollection",
       "features": [
@@ -581,7 +590,7 @@
       -66.95,
       44.815
      ],
-     "label": "West Quoddy Head · Maine",
+     "label": "West Quoddy Head",
      "side": "right"
     },
     {
@@ -590,7 +599,7 @@
       -9.27,
       32.54
      ],
-     "label": "El Beddouza · Morocco",
+     "label": "El Beddouza",
      "side": "left"
     },
     {
@@ -618,19 +627,46 @@
     "Natural Earth"
    ],
    "basemap": {
-    "layer": "bluemarble",
-    "k_max": 2.0,
+    "layer": "s2",
+    "k_max": 2.6,
     "far": {
      "bbox": [
-      -110,
-      2,
-      25,
-      65
+      -125,
+      -5,
+      30,
+      70
      ],
-     "k_min": 0.3
-    }
+     "k_min": 0.35
+    },
+    "pad_deg": 6,
+    "near": [
+     {
+      "lonlat": [
+       -66.95,
+       44.815
+      ],
+      "k": 6,
+      "pad": 1.4
+     },
+     {
+      "lonlat": [
+       -9.27,
+       32.54
+      ],
+      "k": 6,
+      "pad": 1.4
+     },
+     {
+      "lonlat": [
+       -80.03,
+       26.7
+      ],
+      "k": 4.5,
+      "pad": 1.4
+     }
+    ]
    },
-   "projection_reason": "satellite raster (Web Mercator tiles); both routes are true great circles drawn as geodesics, the comparison is carried by the stated kilometre figures and the scalebar, not by visual length (P1/P2)",
+   "projection_reason": "satellite raster (Sentinel-2 cloudless, Web Mercator); both routes are true great circles drawn as geodesics, the comparison is carried by the stated kilometre figures and the scalebar, not by visual length (P1/P2)",
    "scalebar": {
     "km": 1000,
     "lonlat": [

@@ -29,8 +29,8 @@
      "ids": [
       "426"
      ],
-     "cls": "tint",
-     "note": "Lesotho, the subject"
+     "cls": "neon",
+     "note": "Lesotho, the subject — glowing border, faint fill"
     },
     {
      "kind": "feature",
@@ -38,7 +38,7 @@
      "ids": [
       "426"
      ],
-     "cls": "draw trace",
+     "cls": "draw trace neon",
      "note": "outline trace for tint"
     },
     {
@@ -53,7 +53,7 @@
     {
      "kind": "route",
      "id": "climb",
-     "cls": "river",
+     "cls": "neon blue",
      "geojson": {
       "type": "FeatureCollection",
       "features": [
@@ -204,7 +204,7 @@
       27.03,
       -30.32
      ],
-     "label": "Lowest point · 1,400 m",
+     "label": "Lowest point",
      "side": "right"
     },
     {
@@ -213,7 +213,7 @@
       29.27,
       -29.47
      ],
-     "label": "Thabana Ntlenyana · 3,482 m",
+     "label": "Thabana Ntlenyana",
      "side": "left"
     }
    ],
@@ -235,19 +235,38 @@
     "Natural Earth"
    ],
    "basemap": {
-    "layer": "bluemarble",
+    "layer": "s2",
     "k_max": 2.6,
     "far": {
      "bbox": [
-      14,
-      -37,
-      38,
-      -20
+      8,
+      -40,
+      45,
+      -12
      ],
-     "k_min": 0.3
-    }
+     "k_min": 0.09
+    },
+    "pad_deg": 2.5,
+    "near": [
+     {
+      "lonlat": [
+       27.03,
+       -30.32
+      ],
+      "k": 3.6,
+      "pad": 1.5
+     },
+     {
+      "lonlat": [
+       29.27,
+       -29.47
+      ],
+      "k": 3.0,
+      "pad": 1.5
+     }
+    ]
    },
-   "projection_reason": "satellite raster (Web Mercator tiles); the claims are elevations stated on screen; the enclave shape is shown by the traced border, no area comparison (P1/P2)",
+   "projection_reason": "satellite raster (Sentinel-2 cloudless, Web Mercator); the claims are elevations stated on screen; the enclave shape is shown by the traced neon border, no area comparison (P1/P2)",
    "scalebar": {
     "km": 50,
     "lonlat": [

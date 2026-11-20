@@ -26,7 +26,7 @@
     {
      "kind": "route",
      "id": "trenchline",
-     "cls": "river",
+     "cls": "neon",
      "geojson": {
       "type": "FeatureCollection",
       "features": [
@@ -80,7 +80,7 @@
     {
      "kind": "route",
      "id": "flight",
-     "cls": "river dashed",
+     "cls": "neon blue dashed",
      "geojson": {
       "type": "FeatureCollection",
       "features": [
@@ -392,18 +392,29 @@
    ],
    "basemap": {
     "layer": "bluemarble",
-    "k_max": 2.4,
+    "k_max": 2.6,
     "far": {
      "bbox": [
-      80,
-      -12,
-      165,
-      40
+      70,
+      -15,
+      170,
+      42
      ],
-     "k_min": 0.3
-    }
+     "k_min": 0.28
+    },
+    "pad_deg": 4,
+    "near": [
+     {
+      "lonlat": [
+       142.59,
+       11.37
+      ],
+      "k": 3.2,
+      "pad": 1.5
+     }
+    ]
    },
-   "projection_reason": "satellite raster (Web Mercator tiles) for an ocean-depth story; the claims are vertical numbers stated on screen, no area comparison (P1/P2)",
+   "projection_reason": "NASA Blue Marble shaded-relief + bathymetry raster (Web Mercator tiles) — the sea-floor relief IS the subject, which the Sentinel-2 optical mosaic cannot show (open ocean renders near-black); the claims are vertical numbers stated on screen, no area comparison (P1/P2)",
    "scalebar": {
     "km": 200,
     "lonlat": [

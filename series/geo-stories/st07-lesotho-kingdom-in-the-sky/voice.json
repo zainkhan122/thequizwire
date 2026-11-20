@@ -22,7 +22,7 @@
    "tone": "urgent",
    "energy": 4,
    "pause_after": 0.45,
-   "direction": "plunge from the southern tip of Africa onto the highlands; the border draws itself on 'country'",
+   "direction": "CRITICAL opener: high-altitude view of all of southern Africa, then a hyper-smooth kinetic plunge down onto the highlands while the neon border traces itself on 'country'; the push never stops",
    "text": "There is a country where you cannot get down to sea level. You cannot even get close.",
    "cues": {
     "country": "country",
@@ -37,7 +37,7 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "push to the south-west corner; the lowest-point pin drops in the river junction; counter climbs to 1,400",
+   "direction": "dive onto the south-west corner where the two rivers meet (pin + ping); the counter climbs to 1,400 as the camera keeps pushing in on the junction",
    "text": "This is Lesotho. Its lowest point is here, where two rivers meet on the border, and even that is 1,400 metres above the sea.",
    "cues": {
     "lesotho": "lesotho",
@@ -54,7 +54,7 @@
    "tone": "revelatory",
    "energy": 5,
    "pause_after": 0.5,
-   "direction": "a mountain prop pops beside the pin, standing for Ben Nevis; card with both numbers; flash on 'bottom'",
+   "direction": "a mountain rises beside the pin on 'Ben' standing for Ben Nevis and the camera eases back to make room; the card lands with both numbers; a flash on 'bottom' and the mountain sinks away",
    "text": "That is the highest low point of any country on Earth. Ben Nevis, the tallest mountain in Britain, is 1,345 metres. It would not reach the bottom of Lesotho.",
    "cues": {
     "highest": "highest",
@@ -71,7 +71,7 @@
    "tone": "resolute",
    "energy": 4,
    "pause_after": 0.45,
-   "direction": "camera rides a line from the low point north-east to the summit; the peak pin drops; the SKY tag stamps the highlands",
+   "direction": "the neon-blue line draws from the low point north-east across the highlands and the camera rides it; dive onto the summit (pin + ping); pull out so the whole kingdom is in frame for the 80 % card and the SKY tag",
    "text": "From there the land only climbs, up to Thabana Ntlenyana at 3,482 metres. More than 80 percent of the country sits above 1,800 metres. They call it the Kingdom in the Sky.",
    "cues": {
     "climbs": "climbs",

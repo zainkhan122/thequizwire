@@ -13,14 +13,15 @@
  "intent": "Two islands less than four kilometres apart, with the International Date Line between them, so one is almost a full day ahead of the other; one is a US village, the other a Russian military post.",
  "variety": {
   "shape": "line-that-shouldnt-exist",
-  "opener": "mystery-zoom-out",
+  "opener": "plunge",
   "music": "bed:drone",
   "cast": "none",
   "beats": [
    "pin",
    "route",
    "counter",
-   "label"
+   "label",
+   "flag"
   ]
  },
  "post": {
@@ -100,12 +101,12 @@
   ],
   "far_bbox": [
    -180,
-   57,
-   -150,
-   72
+   52,
+   -148,
+   76
   ],
   "resolution": "50m",
-  "k_max": 6,
+  "k_max": 2.6,
   "layers": [],
   "pins": [
    {
@@ -124,15 +125,15 @@
      65.78
     ],
     "label": "Big Diomede · Russia",
-    "side": "right"
+    "side": "left"
    }
   ],
   "labels": [
    {
     "id": "today",
     "lonlat": [
-     -168.87,
-     65.86
+     -168.86,
+     65.87
     ],
     "text": "TODAY",
     "cls": "tag",
@@ -142,8 +143,8 @@
    {
     "id": "tmrw",
     "lonlat": [
-     -169.1,
-     65.86
+     -169.09,
+     65.87
     ],
     "text": "TOMORROW",
     "cls": "tag",
@@ -162,7 +163,7 @@
    {
     "kind": "area",
     "id": "isl_us",
-    "cls": "highlight tint",
+    "cls": "highlight neon",
     "perFeature": true,
     "geojson": {
      "type": "FeatureCollection",
@@ -227,7 +228,7 @@
    {
     "kind": "area",
     "id": "isl_ru",
-    "cls": "highlight solid",
+    "cls": "highlight neonblue",
     "perFeature": true,
     "geojson": {
      "type": "FeatureCollection",
@@ -300,7 +301,7 @@
    {
     "kind": "route",
     "id": "gap",
-    "cls": "river",
+    "cls": "neon blue",
     "geojson": {
      "type": "FeatureCollection",
      "features": [
@@ -330,7 +331,7 @@
    {
     "kind": "route",
     "id": "idl",
-    "cls": "river",
+    "cls": "neon dashed",
     "geojson": {
      "type": "FeatureCollection",
      "features": [
@@ -368,21 +369,153 @@
       }
      ]
     }
+   },
+   {
+    "kind": "route",
+    "id": "edge_us",
+    "cls": "neon",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "edge_us",
+       "properties": {
+        "name": "Little Diomede outline"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -168.9083,
+          65.769
+         ],
+         [
+          -168.9011,
+          65.7622
+         ],
+         [
+          -168.9011,
+          65.747
+         ],
+         [
+          -168.9083,
+          65.7402
+         ],
+         [
+          -168.9263,
+          65.7402
+         ],
+         [
+          -168.9407,
+          65.7436
+         ],
+         [
+          -168.9515,
+          65.7538
+         ],
+         [
+          -168.9443,
+          65.7639
+         ],
+         [
+          -168.9191,
+          65.769
+         ],
+         [
+          -168.9083,
+          65.769
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "kind": "route",
+    "id": "edge_ru",
+    "cls": "neon",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "edge_ru",
+       "properties": {
+        "name": "Big Diomede outline"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          -169.0847,
+          65.8162
+         ],
+         [
+          -169.0631,
+          65.8281
+         ],
+         [
+          -169.0415,
+          65.8281
+         ],
+         [
+          -168.9947,
+          65.8162
+         ],
+         [
+          -169.0091,
+          65.796
+         ],
+         [
+          -169.0271,
+          65.774
+         ],
+         [
+          -169.0523,
+          65.7571
+         ],
+         [
+          -169.0775,
+          65.7554
+         ],
+         [
+          -169.0955,
+          65.7622
+         ],
+         [
+          -169.0991,
+          65.7791
+         ],
+         [
+          -169.0919,
+          65.7993
+         ],
+         [
+          -169.0847,
+          65.8162
+         ]
+        ]
+       }
+      }
+     ]
+    }
    }
   ],
   "cams": {
    "start": [
-    1.78,
+    0.085,
     [
-     -168.95,
-     65.76
+     -171.5,
+     64.0
     ]
    ],
    "open": [
-    4.75,
+    0.9,
     [
-     -168.95,
-     65.76
+     -169.0,
+     65.75
     ]
    ]
   },
@@ -391,7 +524,21 @@
    "fid": "ld",
    "layer": "isl_us"
   },
-  "projection_reason": "satellite raster (Web Mercator tiles) for a strait story; the only distance claim is a stated number carried by the scalebar, no area comparison (P1/P2)"
+  "projection_reason": "satellite raster (Sentinel-2 cloudless, Web Mercator) for a strait story; the only distance claim is a stated number carried by the counter and the scalebar, no area comparison (P1/P2)",
+  "basemap": "s2",
+  "k_min": 0.07,
+  "pad_deg": 1.2,
+  "neon": true,
+  "near": [
+   {
+    "lonlat": [
+     -168.99,
+     65.77
+    ],
+    "k": 4.6,
+    "pad": 1.15
+   }
+  ]
  },
  "open": {
   "vo": {
@@ -409,7 +556,8 @@
    "text": "look across: *tomorrow*",
    "at": "@@tomorrow-0.2"
   },
-  "direction": "tight on the village shore, a figure waves, the pull-out reveals the second island right there",
+  "direction": "CRITICAL opener: high-altitude view of the Bering Sea, Alaska right, Chukotka left; a hyper-smooth kinetic plunge straight down into the strait and onto the two islands as their neon outlines trace themselves; a figure rises on the village shore and waves across the water",
+  "cam_dur": 1.5,
   "elements": [
    {
     "id": "p0",
@@ -423,14 +571,57 @@
   ],
   "devices": [
    {
+    "at": "@+1.5",
+    "do": "geo.cam_to",
+    "until": "@+3.1",
+    "args": {
+     "k": 4.6,
+     "lonlat": [
+      -168.99,
+      65.768
+     ],
+     "ease": "power2.out"
+    }
+   },
+   {
+    "at": "@+3.1",
+    "do": "geo.cam_to",
+    "until": "@.end",
+    "args": {
+     "k": 4.75,
+     "lonlat": [
+      -168.985,
+      65.766
+     ],
+     "ease": "none"
+    }
+   },
+   {
     "at": "@@beach",
+    "do": "geo.route_draw",
+    "until": "@@beach+1.0",
+    "args": {
+     "rid": "edge_us",
+     "layer": "edge_us"
+    }
+   },
+   {
+    "at": "@@beach+0.3",
     "do": "geo.pin_in",
     "args": {
      "pid": "ld"
     }
    },
    {
-    "at": "@@beach",
+    "at": "@@beach+0.35",
+    "do": "geo.pin_ping",
+    "args": {
+     "pid": "ld",
+     "n": 2
+    }
+   },
+   {
+    "at": "@@beach+0.3",
     "do": "prop.anchor",
     "id": "p0",
     "until": "s02@kilometres+0.5",
@@ -444,7 +635,7 @@
     }
    },
    {
-    "at": "@@beach+0.2",
+    "at": "@@beach+0.5",
     "do": "prop.pop",
     "id": "p0",
     "args": {
@@ -471,10 +662,27 @@
     }
    },
    {
+    "at": "@@tomorrow-0.2",
+    "do": "geo.route_draw",
+    "until": "@@tomorrow+0.8",
+    "args": {
+     "rid": "edge_ru",
+     "layer": "edge_ru"
+    }
+   },
+   {
     "at": "@@tomorrow",
     "do": "geo.pin_in",
     "args": {
      "pid": "bd"
+    }
+   },
+   {
+    "at": "@@tomorrow+0.05",
+    "do": "geo.pin_ping",
+    "args": {
+     "pid": "bd",
+     "n": 2
     }
    }
   ]
@@ -494,37 +702,53 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "the gap line draws from the village to the Russian island; counter on the distance; Russia fills in solid",
+   "direction": "the US flag rises on Little Diomede on 'American', the Russian flag on Big Diomede on 'Russian'; the neon-blue gap line draws across; the metres counter is the only text; the camera eases out so both islands and the flags fill the frame",
    "cam": [
-    3.17,
+    3.4,
     [
-     -168.95,
-     65.76
+     -168.99,
+     65.768
     ]
    ],
-   "cam_dur": 1.2,
+   "cam_dur": 1.3,
    "cam_hold": [
-    3.2,
+    3.3,
     [
-     -168.95,
-     65.765
+     -168.99,
+     65.77
     ]
    ],
-   "kw": {
-    "text": "just *3.8 km* apart",
-    "at": "@@big-0.1",
-    "until": "@@kilometres+0.9"
-   },
+   "kw": null,
    "elements": [
     {
      "id": "gapkm",
      "type": "counter",
      "start": 0,
      "end": 3800,
-     "y": 430,
+     "y": 330,
      "label": "metres across the gap",
      "fmt": "int",
      "size": 150
+    },
+    {
+     "id": "fus",
+     "type": "rig",
+     "rig": "flag",
+     "flag": "us",
+     "x": 540,
+     "y": 900,
+     "size": 150,
+     "z": 62
+    },
+    {
+     "id": "fru",
+     "type": "rig",
+     "rig": "flag",
+     "flag": "ru",
+     "x": 540,
+     "y": 900,
+     "size": 150,
+     "z": 62
     }
    ],
    "highlights": [
@@ -540,6 +764,62 @@
     }
    ],
    "devices": [
+    {
+     "at": "@@american-0.2",
+     "do": "prop.anchor",
+     "id": "fus",
+     "until": "s07.end",
+     "args": {
+      "lonlat": [
+       -168.915,
+       65.75
+      ],
+      "dx": 30,
+      "dy": -40
+     }
+    },
+    {
+     "at": "@@american",
+     "do": "prop.pop",
+     "id": "fus",
+     "args": {
+      "frm": "rise"
+     }
+    },
+    {
+     "at": "@@american+0.3",
+     "do": "prop.flutter",
+     "id": "fus",
+     "until": "s07.end"
+    },
+    {
+     "at": "@@russian-0.2",
+     "do": "prop.anchor",
+     "id": "fru",
+     "until": "s07.end",
+     "args": {
+      "lonlat": [
+       -169.07,
+       65.8
+      ],
+      "dx": -20,
+      "dy": -40
+     }
+    },
+    {
+     "at": "@@russian",
+     "do": "prop.pop",
+     "id": "fru",
+     "args": {
+      "frm": "rise"
+     }
+    },
+    {
+     "at": "@@russian+0.3",
+     "do": "prop.flutter",
+     "id": "fru",
+     "until": "s07.end"
+    },
     {
      "at": "@@big-0.2",
      "do": "geo.route_draw",
@@ -559,7 +839,7 @@
      }
     },
     {
-     "at": "@.end",
+     "at": "@@kilometres+0.9",
      "do": "chart.out",
      "id": "gapkm"
     },
@@ -571,42 +851,43 @@
    ],
    "cam_path": [
     [
-     "@+1.2",
-     "@@kilometres-0.4",
+     "@+1.3",
+     "@@big-0.2",
      [
-      3.2,
+      3.3,
       [
-       -168.95,
-       65.765
+       -168.99,
+       65.77
       ]
      ],
      "none"
     ],
     [
-     "@@kilometres-0.4",
-     "@@kilometres+0.6",
+     "@@big-0.2",
+     "@@kilometres",
      [
-      3.96,
+      2.7,
       [
-       -168.95,
-       65.765
+       -168.99,
+       65.772
       ]
      ],
      "power2.inOut"
     ],
     [
-     "@@kilometres+0.6",
+     "@@kilometres",
      "@.end",
      [
-      4.0,
+      2.65,
       [
-       -168.95,
-       65.765
+       -168.99,
+       65.772
       ]
      ],
      "none"
     ]
-   ]
+   ],
+   "cam_ease": "power2.inOut"
   },
   {
    "vo": {
@@ -623,20 +904,20 @@
    "energy": 5,
    "pause_after": 0.5,
    "climax": true,
-   "direction": "the dashed line draws down the strait between the islands; TODAY and TOMORROW tags stamp either side; card with the 21-hour gap",
+   "direction": "the neon dashed date line draws down the strait while the camera rides it from north to south between the islands; TODAY and TOMORROW tags stamp either side with a flash; pull back for the 21-hour card",
    "cam": [
-    2.77,
+    2.9,
     [
-     -168.95,
-     65.78
+     -168.972,
+     65.88
     ]
    ],
-   "cam_dur": 1.2,
+   "cam_dur": 1.0,
    "cam_hold": [
-    2.81,
+    2.9,
     [
-     -168.95,
-     65.78
+     -168.972,
+     65.86
     ]
    ],
    "kw": {
@@ -647,14 +928,14 @@
    "card": {
     "kicker": "21 hours apart",
     "text": "Alaska UTC−9 · Chukotka UTC+12",
-    "at": "@@ahead-0.3",
-    "y": 1120
+    "at": "@@ahead-0.2",
+    "y": 1150
    },
    "devices": [
     {
      "at": "@@between-0.1",
      "do": "geo.route_draw",
-     "until": "@@date+0.6",
+     "until": "@@date+0.8",
      "args": {
       "rid": "idl",
       "layer": "idl"
@@ -684,42 +965,43 @@
    ],
    "cam_path": [
     [
-     "@+1.2",
-     "@@ahead-0.4",
+     "@+1.0",
+     "@@date+0.9",
      [
-      2.81,
+      3.1,
       [
-       -168.95,
-       65.78
+       -168.972,
+       65.7
       ]
      ],
-     "none"
+     "power1.inOut"
     ],
     [
-     "@@ahead-0.4",
-     "@@ahead+0.6",
+     "@@date+0.9",
+     "@@ahead-0.3",
      [
-      2.48,
+      2.5,
       [
-       -168.95,
-       65.78
+       -168.98,
+       65.79
       ]
      ],
      "power2.inOut"
     ],
     [
-     "@@ahead+0.6",
+     "@@ahead-0.3",
      "@.end",
      [
-      2.46,
+      2.45,
       [
-       -168.95,
-       65.78
+       -168.98,
+       65.79
       ]
      ],
      "none"
     ]
-   ]
+   ],
+   "cam_ease": "power2.inOut"
   },
   {
    "vo": {
@@ -735,20 +1017,20 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "figures stand on Big Diomede, get crossed out and vanish; the tags come off; the camera drifts west toward the mainland",
+   "direction": "dive onto Big Diomede: two figures rise, get the red cross and vanish on '1948'; the tags come off; a long pull-out drifts west toward the Chukotka mainland on 'border post'",
    "cam": [
-    2.57,
+    3.6,
     [
-     -168.98,
-     65.77
+     -169.05,
+     65.785
     ]
    ],
    "cam_dur": 1.2,
    "cam_hold": [
-    2.61,
+    3.6,
     [
-     -168.98,
-     65.77
+     -169.05,
+     65.785
     ]
    ],
    "kw": {
@@ -868,41 +1150,42 @@
    "cam_path": [
     [
      "@+1.2",
-     "@@border-0.4",
+     "@@1948+0.6",
      [
-      2.61,
+      3.5,
       [
-       -168.98,
-       65.77
+       -169.055,
+       65.787
       ]
      ],
      "none"
     ],
     [
-     "@@border-0.4",
-     "@@border+0.7",
+     "@@1948+0.6",
+     "@@remain",
      [
-      1.78,
+      1.6,
       [
-       -168.98,
-       65.77
+       -169.25,
+       65.78
       ]
      ],
      "power2.inOut"
     ],
     [
-     "@@border+0.7",
+     "@@remain",
      "@.end",
      [
-      1.75,
+      1.55,
       [
-       -168.98,
-       65.77
+       -169.28,
+       65.78
       ]
      ],
      "none"
     ]
-   ]
+   ],
+   "cam_ease": "power2.inOut"
   },
   {
    "vo": {
@@ -917,19 +1200,19 @@
    "tone": "neutral",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "back to the village; figures pop in on the US shore and wave at the Russian island; the gap line redraws",
+   "direction": "swing back east and dive onto the village: two figures rise and wave at Russia, one hops; the gap line redraws on 'row'; the camera pushes onto the shore",
    "cam": [
-    2.8,
+    3.2,
     [
-     -168.98,
+     -168.95,
      65.76
     ]
    ],
-   "cam_dur": 1.2,
+   "cam_dur": 1.3,
    "cam_hold": [
-    2.83,
+    3.25,
     [
-     -168.98,
+     -168.95,
      65.76
     ]
    ],
@@ -1050,12 +1333,12 @@
    ],
    "cam_path": [
     [
-     "@+1.2",
+     "@+1.3",
      "@@facing-0.3",
      [
-      2.83,
+      3.25,
       [
-       -168.98,
+       -168.95,
        65.76
       ]
      ],
@@ -1063,29 +1346,30 @@
     ],
     [
      "@@facing-0.3",
-     "@@facing+0.8",
+     "@@row",
      [
-      2.97,
+      2.6,
       [
-       -168.95,
-       65.765
+       -168.99,
+       65.768
       ]
      ],
      "power2.inOut"
     ],
     [
-     "@@facing+0.8",
+     "@@row",
      "@.end",
      [
-      2.93,
+      2.55,
       [
-       -168.95,
-       65.765
+       -168.99,
+       65.768
       ]
      ],
      "none"
     ]
-   ]
+   ],
+   "cam_ease": "power2.inOut"
   }
  ],
  "close": {
@@ -1103,13 +1387,13 @@
   "pause_after": 0.5,
   "y": 1180,
   "cam": [
-   2.18,
+   2.1,
    [
-    -168.97,
-    65.8
+    -168.98,
+    65.79
    ]
   ],
-  "cam_dur": 1.6,
+  "cam_dur": 1.8,
   "devices": [
    {
     "at": "@+0.1",
@@ -1123,6 +1407,24 @@
     "do": "geo.pin_out",
     "args": {
      "pid": "bd"
+    }
+   },
+   {
+    "at": "@@islands",
+    "do": "geo.highlight_pulse",
+    "args": {
+     "fid": "ld",
+     "layer": "isl_us",
+     "dur": 0.8
+    }
+   },
+   {
+    "at": "@@islands+0.2",
+    "do": "geo.highlight_pulse",
+    "args": {
+     "fid": "bd",
+     "layer": "isl_ru",
+     "dur": 0.8
     }
    },
    {
@@ -1239,12 +1541,12 @@
     "screen": [
      "Little Diomede · USA",
      "Big Diomede · Russia",
-     "just 3.8 km apart",
      "metres across the gap",
      "look across: tomorrow",
      "The island where you can see tomorrow",
      "Tomorrow, one row away",
-     "Diomede Islands · Bering Strait"
+     "Diomede Islands · Bering Strait",
+     "metres across the gap"
     ]
    },
    {
@@ -1301,5 +1603,6 @@
     ]
    }
   ]
- }
+ },
+ "screen_credit": "Satellite imagery: Sentinel-2 cloudless by EOX (CC BY 4.0) · Contains modified Copernicus Sentinel data 2020 · Natural Earth"
 }
