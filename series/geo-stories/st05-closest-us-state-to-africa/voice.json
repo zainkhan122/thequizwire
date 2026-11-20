@@ -37,7 +37,7 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "tracking pan north up the US east coast and a dive onto West Quoddy Head (pin + ping); a plane takes off and the camera rides the neon great circle with it across the Atlantic; dive onto El Beddouza (pin + ping); Morocco fills solid",
+   "direction": "tracking pan north up the US east coast and a slow dive onto West Quoddy Head (pin + ping); the camera starts lifting as the plane takes off and rides the neon great circle with it across the Atlantic in one continuous arc; eases down onto El Beddouza (pin + ping, upper-right so the ocean lower-left stays free); Morocco fills solid",
    "text": "The shortest line from the United States to Africa starts up here, at West Quoddy Head in Maine, and lands at El Beddouza in Morocco.",
    "cues": {
     "shortest": "shortest",
@@ -54,7 +54,7 @@
    "tone": "neutral",
    "energy": 3,
    "pause_after": 0.5,
-   "direction": "one long pull-out from Morocco to the whole Atlantic with the neon line lit end to end; the counter rolls to 5,076 (the only text on screen); Morocco pulses",
+   "direction": "one long pull-out from Morocco to the whole Atlantic with the neon line lit end to end; the counter rolls to 5,076 in the empty ocean lower-left (never over the line, the coast or the Morocco fill); Morocco pulses",
    "text": "That line is 5,076 kilometres long.",
    "cues": {
     "line": "line",
@@ -69,7 +69,7 @@
    "tone": "resolute",
    "energy": 4,
    "pause_after": 0.45,
-   "direction": "dive onto Florida (pin + ping); the dashed neon-blue line draws south-east while the camera tracks it to the Western Sahara coast (pin + ping); the second counter rolls; the Maine line pulses as the winner on 'loses'",
+   "direction": "dive onto Florida (pin + ping); the dashed neon-blue line draws south-east while the camera tracks it to the Western Sahara coast (pin + ping); the second counter rolls; the Maine line pulses as the winner on 'loses'; the counter sits in the empty South Atlantic below both lines, clear of every pin and label",
    "text": "Now Florida. From its east coast to the nearest African shore is more than 6,300 kilometres. Florida loses by over a thousand.",
    "cues": {
     "florida": "florida",

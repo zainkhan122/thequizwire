@@ -31,10 +31,12 @@
    "type": "counter",
    "start": 0,
    "end": 1400,
-   "y": 330,
-   "label": "metres above sea level · the lowest spot",
+   "y": 1150,
+   "label": "metres above the sea",
    "fmt": "int",
-   "size": 150
+   "size": 120,
+   "x": 20,
+   "w": 640
   },
   {
    "id": "kw03",
@@ -71,13 +73,14 @@
   {
    "id": "kw05",
    "type": "kw",
-   "text": "*completely surrounded*"
+   "text": "*completely surrounded*",
+   "y": 300
   },
   {
    "id": "close",
    "type": "close",
    "text": "Nowhere to go *but up*",
-   "y": 760
+   "y": 1000
   }
  ],
  "beats": [
@@ -131,7 +134,7 @@
      28.2,
      -29.6
     ],
-    "ease": "power2.out"
+    "ease": "power2.inOut"
    },
    "stage": "stage_map"
   },
@@ -183,40 +186,26 @@
    "at": "s02",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s02+1.5",
+   "until": "s02+1.6",
    "args": {
     "k": 3.4,
     "lonlat": [
-     27.1,
-     -30.3
+     27.21,
+     -30.51
     ],
     "ease": "power3.inOut"
    }
   },
   {
-   "at": "s02+1.5",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s02+2.7",
-   "args": {
-    "k": 3.5,
-    "lonlat": [
-     27.07,
-     -30.31
-    ],
-    "ease": "none"
-   }
-  },
-  {
-   "at": "s02+1.5",
+   "at": "s02+1.6",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s02@rivers-0.3",
    "args": {
     "k": 3.5,
     "lonlat": [
-     27.07,
-     -30.31
+     27.2,
+     -30.52
     ],
     "ease": "none"
    }
@@ -229,8 +218,8 @@
    "args": {
     "k": 3.7,
     "lonlat": [
-     27.04,
-     -30.32
+     27.22,
+     -30.5
     ],
     "ease": "power1.inOut"
    }
@@ -243,8 +232,8 @@
    "args": {
     "k": 3.72,
     "lonlat": [
-     27.04,
-     -30.32
+     27.22,
+     -30.5
     ],
     "ease": "none"
    }
@@ -314,40 +303,26 @@
    "at": "s03",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s03+1.1",
+   "until": "s03+1.3",
    "args": {
     "k": 2.4,
     "lonlat": [
      27.15,
-     -30.25
+     -30.61
     ],
     "ease": "power2.inOut"
    }
   },
   {
-   "at": "s03+1.1",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s03+2.3",
-   "args": {
-    "k": 2.4,
-    "lonlat": [
-     27.15,
-     -30.25
-    ],
-    "ease": "none"
-   }
-  },
-  {
-   "at": "s03+1.1",
+   "at": "s03+1.3",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s03@bottom-0.4",
    "args": {
-    "k": 2.4,
+    "k": 2.42,
     "lonlat": [
-     27.15,
-     -30.25
+     27.16,
+     -30.6
     ],
     "ease": "none"
    }
@@ -356,26 +331,26 @@
    "at": "s03@bottom-0.4",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s03@bottom+0.7",
+   "until": "s03@bottom+0.8",
    "args": {
     "k": 1.7,
     "lonlat": [
-     27.4,
-     -30.1
+     27.2,
+     -30.55
     ],
     "ease": "power2.inOut"
    }
   },
   {
-   "at": "s03@bottom+0.7",
+   "at": "s03@bottom+0.8",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s03.end",
    "args": {
     "k": 1.68,
     "lonlat": [
-     27.4,
-     -30.1
+     27.2,
+     -30.55
     ],
     "ease": "none"
    }
@@ -410,8 +385,8 @@
    "until": "s03@bottom+1.0",
    "args": {
     "lonlat": [
-     27.03,
-     -30.32
+     27.35,
+     -30.28
     ],
     "dx": -150,
     "dy": -80
@@ -448,24 +423,10 @@
    "args": {
     "k": 1.6,
     "lonlat": [
-     27.6,
-     -30.0
+     27.7,
+     -30.3
     ],
     "ease": "power2.inOut"
-   }
-  },
-  {
-   "at": "s04+1.0",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s04+2.2",
-   "args": {
-    "k": 1.6,
-    "lonlat": [
-     27.6,
-     -30.0
-    ],
-    "ease": "none"
    }
   },
   {
@@ -476,8 +437,8 @@
    "args": {
     "k": 1.6,
     "lonlat": [
-     27.6,
-     -30.0
+     27.7,
+     -30.3
     ],
     "ease": "none"
    }
@@ -486,14 +447,28 @@
    "at": "s04@climbs",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s04@thabana+0.3",
+   "until": "s04@thabana+0.4",
    "args": {
-    "k": 3.0,
+    "k": 2.0,
     "lonlat": [
-     29.2,
-     -29.5
+     28.94,
+     -30.04
     ],
     "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04@thabana+0.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04@3482+0.5",
+   "args": {
+    "k": 2.05,
+    "lonlat": [
+     28.95,
+     -30.03
+    ],
+    "ease": "none"
    }
   },
   {
@@ -505,7 +480,7 @@
     "k": 1.05,
     "lonlat": [
      28.3,
-     -29.6
+     -30.55
     ],
     "ease": "power2.inOut"
    }
@@ -519,7 +494,7 @@
     "k": 1.03,
     "lonlat": [
      28.3,
-     -29.6
+     -30.56
     ],
     "ease": "none"
    }
@@ -545,16 +520,6 @@
    "id": "f04",
    "args": {
     "dur": 0.3
-   }
-  },
-  {
-   "at": "s04@thabana",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "426",
-    "layer": "tint",
-    "dur": 0.6
    }
   },
   {
@@ -614,39 +579,25 @@
    "at": "s05",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s05+1.4",
+   "until": "s05+1.6",
    "args": {
     "k": 0.5,
     "lonlat": [
-     26.8,
+     27.6,
      -29.6
     ],
     "ease": "power2.inOut"
    }
   },
   {
-   "at": "s05+1.4",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s05+2.5999999999999996",
-   "args": {
-    "k": 0.5,
-    "lonlat": [
-     26.8,
-     -29.6
-    ],
-    "ease": "none"
-   }
-  },
-  {
-   "at": "s05+1.4",
+   "at": "s05+1.6",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s05@three-0.3",
    "args": {
-    "k": 0.5,
+    "k": 0.51,
     "lonlat": [
-     26.8,
+     27.62,
      -29.6
     ],
     "ease": "none"
@@ -656,7 +607,7 @@
    "at": "s05@three-0.3",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s05@three+0.7",
+   "until": "s05@three+0.8",
    "args": {
     "k": 0.8,
     "lonlat": [
@@ -667,7 +618,7 @@
    }
   },
   {
-   "at": "s05@three+0.7",
+   "at": "s05@three+0.8",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s05.end",
@@ -750,18 +701,18 @@
    "at": "s06",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s06+1.8",
+   "until": "s06+1.2",
    "args": {
     "k": 1.0,
     "lonlat": [
      28.2,
-     -29.6
+     -30.45
     ],
     "ease": "power2.inOut"
    }
   },
   {
-   "at": "s06+1.8",
+   "at": "s06+1.2",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s06.end",
@@ -769,13 +720,13 @@
     "k": 0.96,
     "lonlat": [
      28.2,
-     -29.6
+     -30.45
     ],
     "ease": "none"
    }
   },
   {
-   "at": "s06+0.3",
+   "at": "s06+1.2",
    "do": "close_in",
    "id": "close",
    "until": "s06.end"

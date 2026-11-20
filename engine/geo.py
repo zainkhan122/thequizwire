@@ -138,6 +138,8 @@ class Scene:
     def cam_set(self, t, **kw):
         """Instant camera state at time t (use at scene start)."""
         self.G.J(f"tl.set(GeoRT.cam('{self.id}'), GeoRT.camTarget('{self.id}', {self._cam_vars(dur=0, **kw)}), {f(t)});")
+        if t <= 0.001:                                                           # frame 0: a paused timeline seeked to 0 never renders a set() placed AT 0 →
+            self.G.J(f"GeoRT.setCam('{self.id}', {self._cam_vars(dur=0, **kw)});")   # the first frame showed the fitted view (k=1) then popped (2026-11-20)
 
     def cam_to(self, t0, t1, **kw):
         """Smooth camera move t0->t1 (k = zoom factor about the anchor; lonlat|bbox|xy = focus). Globe: lonlat rotates to it."""

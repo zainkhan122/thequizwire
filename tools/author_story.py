@@ -107,7 +107,7 @@ def build(S):
         if opener == "plunge" and O.get("cam_hold"): B.append(cam("s01+%.1f" % O.get("cam_dur", 2.4), "s01.end", O["cam_hold"], "none"))
     B += [{"at": 0, "do": "title_in"}, {"at": "s02+0.3", "do": "title_out"}]
     if O.get("kw"):
-        els.append({"id": "kw01", "type": "kw", "text": O["kw"]["text"]}); B.append({"at": rel(O["kw"].get("at", "@+1.2"), "s01"), "do": "kw_in", "id": "kw01", "until": "s01.end"})
+        els.append({"id": "kw01", "type": "kw", "text": O["kw"]["text"], **({"y": O["kw"]["y"]} if O["kw"].get("y") else {})}); B.append({"at": rel(O["kw"].get("at", "@+1.2"), "s01"), "do": "kw_in", "id": "kw01", "until": "s01.end"})
     els += O.get("elements", [])
     for d in O.get("devices", []):
         d = dict(d); d["at"] = rel(d.get("at", 0), "s01"); d["until"] = rel(d["until"], "s01") if "until" in d else None
@@ -119,7 +119,7 @@ def build(S):
         if b.get("cam"):
             glide = float(b.get("cam_dur", 1.4)); B.append(cam(s, f"{s}+{glide}", b["cam"], b.get("cam_ease", "power2.inOut")))
             hold = b.get("cam_hold") or [round(b["cam"][0] * 1.03, 3), b["cam"][1]]                       # slow drift after the glide (never a frozen frame)
-            B.append(cam(f"{s}+{glide}", f"{s}+{glide + 1.2}", hold, "none"))
+            if not b.get("cam_path"): B.append(cam(f"{s}+{glide}", f"{s}+{glide + 1.2}", hold, "none"))   # authored cam_path owns the time after the glide (two tweens on one cam = jitter; motionlint SHAKY)
             if b.get("cam_path"):                                                                         # authored extra moves: [[at, until, [k, lonlat], ease?], ...]
                 for mv in b["cam_path"]: B.append(cam(rel(mv[0], s), rel(mv[1], s), mv[2], mv[3] if len(mv) > 3 else "power2.inOut"))
             else:                                                                                         # default: a second, firmer push on the last cue, then a slow drift out
@@ -133,7 +133,7 @@ def build(S):
             if h.get("out"): B.append({"at": rel(h["out"], s), "do": "geo.highlight_out", "stage": M, "args": {"fid": h["fid"], "layer": h["layer"]}})
         if b.get("pulse"): B.append({"at": rel(b["pulse"]["at"], s), "do": "geo.highlight_pulse", "stage": M, "args": {"fid": b["pulse"]["fid"], "layer": b["pulse"]["layer"], "dur": 0.7}})
         if b.get("kw"):
-            kid = f"kw{i + 2:02d}"; els.append({"id": kid, "type": "kw", "text": b["kw"]["text"]})
+            kid = f"kw{i + 2:02d}"; els.append({"id": kid, "type": "kw", "text": b["kw"]["text"], **({"y": b["kw"]["y"]} if b["kw"].get("y") else {})})   # kw.y: move the caption off map action (motionlint)
             B.append({"at": rel(b["kw"].get("at", "@+0.6"), s), "do": "kw_in", "id": kid})
             B.append({"at": rel(b["kw"].get("until", "@.end"), s), "do": "kw_out", "id": kid})
         if b.get("card"):

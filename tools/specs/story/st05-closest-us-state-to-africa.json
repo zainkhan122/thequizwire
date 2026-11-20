@@ -801,7 +801,7 @@
       -80.3,
       27.2
      ],
-     "ease": "power2.out"
+     "ease": "power2.inOut"
     }
    },
    {
@@ -888,7 +888,7 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "tracking pan north up the US east coast and a dive onto West Quoddy Head (pin + ping); a plane takes off and the camera rides the neon great circle with it across the Atlantic; dive onto El Beddouza (pin + ping); Morocco fills solid",
+   "direction": "tracking pan north up the US east coast and a slow dive onto West Quoddy Head (pin + ping); the camera starts lifting as the plane takes off and rides the neon great circle with it across the Atlantic in one continuous arc; eases down onto El Beddouza (pin + ping, upper-right so the ocean lower-left stays free); Morocco fills solid",
    "cam": [
     6.0,
     [
@@ -896,7 +896,7 @@
      44.8
     ]
    ],
-   "cam_dur": 1.6,
+   "cam_dur": 2.4,
    "cam_hold": [
     6.1,
     [
@@ -1016,8 +1016,8 @@
    ],
    "cam_path": [
     [
-     "@+1.6",
-     "@@maine+0.3",
+     "@+2.4",
+     "@@here+0.5",
      [
       6.1,
       [
@@ -1028,7 +1028,19 @@
      "none"
     ],
     [
-     "@@maine+0.3",
+     "@@here+0.5",
+     "@@maine+0.1",
+     [
+      2.6,
+      [
+       -62,
+       43.5
+      ]
+     ],
+     "power1.inOut"
+    ],
+    [
+     "@@maine+0.1",
      "@@lands",
      [
       1.0,
@@ -1037,28 +1049,28 @@
        40
       ]
      ],
-     "power2.inOut"
+     "power1.inOut"
     ],
     [
      "@@lands",
-     "@@morocco+0.1",
+     "@@morocco+0.3",
      [
       6.0,
       [
-       -9.5,
-       32.6
+       -14.6,
+       31.7
       ]
      ],
      "power2.inOut"
     ],
     [
-     "@@morocco+0.1",
+     "@@morocco+0.3",
      "@.end",
      [
       6.1,
       [
-       -9.45,
-       32.55
+       -14.7,
+       31.65
       ]
      ],
      "none"
@@ -1090,19 +1102,19 @@
    "tone": "neutral",
    "energy": 3,
    "pause_after": 0.5,
-   "direction": "one long pull-out from Morocco to the whole Atlantic with the neon line lit end to end; the counter rolls to 5,076 (the only text on screen); Morocco pulses",
+   "direction": "one long pull-out from Morocco to the whole Atlantic with the neon line lit end to end; the counter rolls to 5,076 in the empty ocean lower-left (never over the line, the coast or the Morocco fill); Morocco pulses",
    "cam": [
     0.72,
     [
-     -40,
+     -37,
      36
     ]
    ],
-   "cam_dur": 1.4,
+   "cam_dur": 2.0,
    "cam_hold": [
     0.72,
     [
-     -40,
+     -37,
      36
     ]
    ],
@@ -1113,10 +1125,12 @@
      "type": "counter",
      "start": 0,
      "end": 5076,
-     "y": 300,
-     "label": "km · Maine to Morocco",
+     "y": 1150,
+     "label": "km · from Maine",
      "fmt": "int",
-     "size": 150
+     "size": 110,
+     "x": 20,
+     "w": 480
     }
    ],
    "devices": [
@@ -1146,12 +1160,12 @@
    ],
    "cam_path": [
     [
-     "@+1.4",
+     "@+2.0",
      "@.end",
      [
       0.7,
       [
-       -39,
+       -36,
        36.5
       ]
      ],
@@ -1174,7 +1188,7 @@
    "tone": "resolute",
    "energy": 4,
    "pause_after": 0.45,
-   "direction": "dive onto Florida (pin + ping); the dashed neon-blue line draws south-east while the camera tracks it to the Western Sahara coast (pin + ping); the second counter rolls; the Maine line pulses as the winner on 'loses'",
+   "direction": "dive onto Florida (pin + ping); the dashed neon-blue line draws south-east while the camera tracks it to the Western Sahara coast (pin + ping); the second counter rolls; the Maine line pulses as the winner on 'loses'; the counter sits in the empty South Atlantic below both lines, clear of every pin and label",
    "cam": [
     4.5,
     [
@@ -1182,7 +1196,7 @@
      27.0
     ]
    ],
-   "cam_dur": 1.2,
+   "cam_dur": 1.4,
    "cam_hold": [
     4.6,
     [
@@ -1197,7 +1211,7 @@
      "type": "counter",
      "start": 0,
      "end": 6390,
-     "y": 300,
+     "y": 1100,
      "label": "km · Florida to the nearest African shore",
      "fmt": "int",
      "size": 150
@@ -1283,13 +1297,13 @@
    ],
    "cam_path": [
     [
-     "@+1.2",
+     "@+1.4",
      "@@coast",
      [
-      4.6,
+      4.5,
       [
-       -80.0,
-       26.9
+       -80.1,
+       27.0
       ]
      ],
      "none"
@@ -1300,7 +1314,7 @@
      [
       1.0,
       [
-       -45,
+       -52,
        27
       ]
      ],
@@ -1312,7 +1326,7 @@
      [
       1.0,
       [
-       -45,
+       -52,
        27
       ]
      ],
@@ -1324,7 +1338,7 @@
      [
       0.72,
       [
-       -45,
+       -52,
        33
       ]
      ],
@@ -1336,14 +1350,14 @@
      [
       0.71,
       [
-       -45,
+       -52,
        33
       ]
      ],
      "none"
     ]
    ],
-   "cam_ease": "power2.inOut"
+   "cam_ease": "power1.inOut"
   },
   {
    "vo": {
@@ -1665,7 +1679,7 @@
      "West Quoddy Head",
      "El Beddouza",
      "it starts in Maine",
-     "km · Maine to Morocco",
+     "km · from Maine",
      "Great circle",
      "Maine 5,076 km · Florida 6,300+ km",
      "Not Florida. Maine.",

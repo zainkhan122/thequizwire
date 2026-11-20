@@ -482,7 +482,7 @@
   ],
   "cams": {
    "start": [
-    0.3,
+    0.25,
     [
      120,
      14
@@ -503,7 +503,7 @@
   },
   "projection_reason": "NASA Blue Marble shaded-relief + bathymetry raster (Web Mercator tiles) — the sea-floor relief IS the subject, which the Sentinel-2 optical mosaic cannot show (open ocean renders near-black); the claims are vertical numbers stated on screen, no area comparison (P1/P2)",
   "basemap": "bluemarble",
-  "k_min": 0.28,
+  "k_min": 0.18,
   "pad_deg": 4,
   "neon": true,
   "near": [
@@ -547,7 +547,7 @@
       142.65,
       11.45
      ],
-     "ease": "power2.out"
+     "ease": "power2.inOut"
     }
    },
    {
@@ -710,20 +710,20 @@
    "tone": "neutral",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "dive from Guam back onto the Challenger Deep pin (k 3); the depth counter is the only text and rolls to 10,935 as the camera keeps pushing; the pressure card follows once the counter is gone",
+   "direction": "short dive from Guam onto the Challenger Deep pin (k 3); the depth counter rolls to 10,935 in the clear water below the trench line as the camera keeps pushing; the pressure card follows once the counter is gone",
    "cam": [
     3.0,
     [
      142.62,
-     11.4
+     11.45
     ]
    ],
-   "cam_dur": 1.4,
+   "cam_dur": 1.0,
    "cam_hold": [
     3.05,
     [
      142.62,
-     11.4
+     11.45
     ]
    ],
    "kw": null,
@@ -739,15 +739,15 @@
      "type": "counter",
      "start": 0,
      "end": 10935,
-     "y": 330,
+     "y": 1150,
      "label": "metres down · Challenger Deep",
      "fmt": "int",
-     "size": 150
+     "size": 140
     }
    ],
    "devices": [
     {
-     "at": "@@floor",
+     "at": "@@floor+0.45",
      "do": "chart.counter_run",
      "id": "depth",
      "until": "@@eleven+0.3",
@@ -785,13 +785,13 @@
    ],
    "cam_path": [
     [
-     "@+1.4",
+     "@+1.0",
      "@@eleven-0.3",
      [
-      3.05,
+      3.08,
       [
        142.62,
-       11.4
+       11.45
       ]
      ],
      "none"
@@ -803,7 +803,7 @@
       3.3,
       [
        142.6,
-       11.38
+       11.43
       ]
      ],
      "power1.inOut"
@@ -815,7 +815,7 @@
       3.32,
       [
        142.6,
-       11.38
+       11.43
       ]
      ],
      "none"
@@ -836,20 +836,20 @@
    "tone": "resolute",
    "energy": 4,
    "pause_after": 0.45,
-   "direction": "one long pull-out from the trench to a view of all of Asia; the Everest pin pings in the Himalaya and the mountain rises on the peak; on 'fly' it arcs across Asia along the dashed neon-blue line and the camera tracks it all the way down onto the trench",
+   "direction": "one long, even pull-out from the trench until all of Asia is in frame with Everest at the far left; the Everest pin pings on '8,849' and the mountain rises beside the peak; on 'fly' it arcs across Asia along the dashed neon-blue line and the camera flies with it, centred on the mountain, descending onto the trench pin as it arrives",
    "cam": [
-    0.3,
+    1.0,
     [
-     112,
-     18
+     142.6,
+     11.5
     ]
    ],
-   "cam_dur": 1.6,
+   "cam_dur": 1.2,
    "cam_hold": [
-    0.3,
+    1.0,
     [
-     112,
-     18
+     142.6,
+     11.5
     ]
    ],
    "kw": {
@@ -869,14 +869,14 @@
    ],
    "devices": [
     {
-     "at": "@@everest",
+     "at": "@@8849",
      "do": "geo.pin_in",
      "args": {
       "pid": "ev"
      }
     },
     {
-     "at": "@@everest+0.05",
+     "at": "@@8849+0.05",
      "do": "geo.pin_ping",
      "args": {
       "pid": "ev",
@@ -884,7 +884,7 @@
      }
     },
     {
-     "at": "@@everest",
+     "at": "@@8849",
      "do": "prop.anchor",
      "id": "mtn",
      "until": "@@fly",
@@ -893,12 +893,12 @@
        86.925,
        27.988
       ],
-      "dx": -130,
-      "dy": -60
+      "dx": -60,
+      "dy": -90
      }
     },
     {
-     "at": "@@everest+0.2",
+     "at": "@@8849+0.8",
      "do": "prop.pop",
      "id": "mtn",
      "args": {
@@ -908,7 +908,7 @@
     {
      "at": "@@fly-0.2",
      "do": "geo.route_draw",
-     "until": "@@spot+0.2",
+     "until": "@@spot+0.3",
      "args": {
       "rid": "flight",
       "layer": "flight"
@@ -918,7 +918,7 @@
      "at": "@@fly",
      "do": "prop.orbit",
      "id": "mtn",
-     "until": "@@spot+0.2",
+     "until": "@@spot+0.4",
      "args": {
       "a": [
        86.925,
@@ -934,7 +934,7 @@
      }
     },
     {
-     "at": "@@spot+0.2",
+     "at": "@@spot+0.4",
      "do": "prop.anchor",
      "id": "mtn",
      "until": "s05@drop",
@@ -948,52 +948,110 @@
      }
     },
     {
-     "at": "@@spot+0.2",
+     "at": "@@spot+0.4",
+     "do": "geo.pin_ping",
+     "args": {
+      "pid": "cd",
+      "n": 2
+     }
+    },
+    {
+     "at": "@@spot+0.3",
      "do": "geo.pin_out",
      "args": {
       "pid": "ev"
+     }
+    },
+    {
+     "at": "@+0.9",
+     "do": "geo.pin_out",
+     "args": {
+      "pid": "cd"
+     }
+    },
+    {
+     "at": "@@spot-0.2",
+     "do": "geo.pin_in",
+     "args": {
+      "pid": "cd"
      }
     }
    ],
    "cam_path": [
     [
-     "@+1.6",
-     "@@fly",
+     "@+1.2",
+     "@@8849+0.7",
      [
-      0.3,
+      0.2,
       [
        112,
-       18
+       19
+      ]
+     ],
+     "power1.inOut"
+    ],
+    [
+     "@@8849+0.7",
+     "@@fly-0.3",
+     [
+      0.2,
+      [
+       112,
+       19
       ]
      ],
      "none"
     ],
     [
-     "@@fly",
-     "@@spot+0.3",
+     "@@fly-0.3",
+     "@@fly+0.9",
      [
-      1.3,
+      0.45,
       [
-       142.6,
-       11.6
+       112,
+       19
       ]
      ],
-     "power2.inOut"
+     "power1.inOut"
     ],
     [
-     "@@spot+0.3",
-     "@.end",
+     "@@fly+0.9",
+     "@@fly+1.35",
      [
-      1.32,
+      0.65,
+      [
+       128.7,
+       15.5
+      ]
+     ],
+     "power1.in"
+    ],
+    [
+     "@@fly+1.35",
+     "@@spot+0.5",
+     [
+      1.0,
       [
        142.6,
-       11.6
+       11.5
+      ]
+     ],
+     "power1.out"
+    ],
+    [
+     "@@spot+0.5",
+     "@.end",
+     [
+      1.02,
+      [
+       142.6,
+       11.5
       ]
      ],
      "none"
     ]
    ],
-   "cam_ease": "power2.inOut"
+   "cam_ease": "power1.inOut"
   },
   {
    "vo": {
@@ -1017,7 +1075,7 @@
      11.4
     ]
    ],
-   "cam_dur": 1.0,
+   "cam_dur": 1.2,
    "cam_hold": [
     1.72,
     [

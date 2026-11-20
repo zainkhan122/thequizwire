@@ -131,8 +131,8 @@
    {
     "id": "low",
     "lonlat": [
-     27.03,
-     -30.32
+     27.35,
+     -30.28
     ],
     "label": "Lowest point",
     "side": "right"
@@ -185,8 +185,8 @@
         "type": "LineString",
         "coordinates": [
          [
-          27.03,
-          -30.32
+          27.35,
+          -30.28
          ],
          [
           27.105,
@@ -344,8 +344,8 @@
   "near": [
    {
     "lonlat": [
-     27.03,
-     -30.32
+     27.35,
+     -30.28
     ],
     "k": 3.6,
     "pad": 1.5
@@ -389,7 +389,7 @@
       28.2,
       -29.6
      ],
-     "ease": "power2.out"
+     "ease": "power2.inOut"
     }
    },
    {
@@ -431,20 +431,20 @@
    "tone": "resolute",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "dive onto the south-west corner where the two rivers meet (pin + ping); the counter climbs to 1,400 as the camera keeps pushing in on the junction",
+   "direction": "slow dive onto the south-west corner where the two rivers meet (pin + ping) framed upper-right, so the counter climbs to 1,400 over South African ground lower-left, never over the kingdom's tint or border",
    "cam": [
     3.4,
     [
-     27.1,
-     -30.3
+     27.21,
+     -30.51
     ]
    ],
-   "cam_dur": 1.5,
+   "cam_dur": 1.6,
    "cam_hold": [
     3.5,
     [
-     27.07,
-     -30.31
+     27.2,
+     -30.52
     ]
    ],
    "kw": null,
@@ -454,10 +454,12 @@
      "type": "counter",
      "start": 0,
      "end": 1400,
-     "y": 330,
-     "label": "metres above sea level · the lowest spot",
+     "y": 1150,
+     "label": "metres above the sea",
      "fmt": "int",
-     "size": 150
+     "size": 120,
+     "x": 20,
+     "w": 640
     }
    ],
    "devices": [
@@ -493,13 +495,13 @@
    ],
    "cam_path": [
     [
-     "@+1.5",
+     "@+1.6",
      "@@rivers-0.3",
      [
       3.5,
       [
-       27.07,
-       -30.31
+       27.2,
+       -30.52
       ]
      ],
      "none"
@@ -510,8 +512,8 @@
      [
       3.7,
       [
-       27.04,
-       -30.32
+       27.22,
+       -30.5
       ]
      ],
      "power1.inOut"
@@ -522,8 +524,8 @@
      [
       3.72,
       [
-       27.04,
-       -30.32
+       27.22,
+       -30.5
       ]
      ],
      "none"
@@ -545,20 +547,20 @@
    "energy": 5,
    "pause_after": 0.5,
    "climax": true,
-   "direction": "a mountain rises beside the pin on 'Ben' standing for Ben Nevis and the camera eases back to make room; the card lands with both numbers; a flash on 'bottom' and the mountain sinks away",
+   "direction": "the camera eases back with the low point still upper-right; a mountain rises beside the pin on 'Ben' standing for Ben Nevis; the caption and the card land in the empty South African lowlands below the border; a flash on 'bottom' and the mountain sinks away",
    "cam": [
     2.4,
     [
      27.15,
-     -30.25
+     -30.61
     ]
    ],
-   "cam_dur": 1.1,
+   "cam_dur": 1.3,
    "cam_hold": [
     2.4,
     [
      27.15,
-     -30.25
+     -30.61
     ]
    ],
    "kw": {
@@ -590,8 +592,8 @@
      "until": "@@bottom+1.0",
      "args": {
       "lonlat": [
-       27.03,
-       -30.32
+       27.35,
+       -30.28
       ],
       "dx": -150,
       "dy": -80
@@ -620,37 +622,37 @@
    ],
    "cam_path": [
     [
-     "@+1.1",
+     "@+1.3",
      "@@bottom-0.4",
      [
-      2.4,
+      2.42,
       [
-       27.15,
-       -30.25
+       27.16,
+       -30.6
       ]
      ],
      "none"
     ],
     [
      "@@bottom-0.4",
-     "@@bottom+0.7",
+     "@@bottom+0.8",
      [
       1.7,
       [
-       27.4,
-       -30.1
+       27.2,
+       -30.55
       ]
      ],
      "power2.inOut"
     ],
     [
-     "@@bottom+0.7",
+     "@@bottom+0.8",
      "@.end",
      [
       1.68,
       [
-       27.4,
-       -30.1
+       27.2,
+       -30.55
       ]
      ],
      "none"
@@ -672,20 +674,20 @@
    "tone": "resolute",
    "energy": 4,
    "pause_after": 0.45,
-   "direction": "the neon-blue line draws from the low point north-east across the highlands and the camera rides it; dive onto the summit (pin + ping); pull out so the whole kingdom is in frame for the 80 % card and the SKY tag",
+   "direction": "the neon-blue line draws from the low point north-east across the highlands and the camera rides it; it settles with the summit upper-right (pin + ping) so the caption sits over South Africa south of the escarpment; one slow pull-out parks the whole kingdom in the top half for the 80% card and the SKY tag",
    "cam": [
     1.6,
     [
-     27.6,
-     -30.0
+     27.7,
+     -30.3
     ]
    ],
    "cam_dur": 1.0,
    "cam_hold": [
     1.6,
     [
-     27.6,
-     -30.0
+     27.7,
+     -30.3
     ]
    ],
    "kw": {
@@ -756,23 +758,35 @@
      [
       1.6,
       [
-       27.6,
-       -30.0
+       27.7,
+       -30.3
       ]
      ],
      "none"
     ],
     [
      "@@climbs",
-     "@@thabana+0.3",
+     "@@thabana+0.4",
      [
-      3.0,
+      2.0,
       [
-       29.2,
-       -29.5
+       28.94,
+       -30.04
       ]
      ],
      "power1.inOut"
+    ],
+    [
+     "@@thabana+0.4",
+     "@@3482+0.5",
+     [
+      2.05,
+      [
+       28.95,
+       -30.03
+      ]
+     ],
+     "none"
     ],
     [
      "@@3482+0.5",
@@ -781,7 +795,7 @@
       1.05,
       [
        28.3,
-       -29.6
+       -30.55
       ]
      ],
      "power2.inOut"
@@ -793,7 +807,7 @@
       1.03,
       [
        28.3,
-       -29.6
+       -30.56
       ]
      ],
      "none"
@@ -814,26 +828,27 @@
    "tone": "neutral",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "pull right out; South Africa fills solid around it so the country reads as a hole; border pulses",
+   "direction": "pull right out with the kingdom held mid-frame; South Africa's neon-blue border glows around it so the country reads as a hole; border pulses; the caption sits in the empty sky above the country",
    "cam": [
     0.5,
     [
-     26.8,
+     27.6,
      -29.6
     ]
    ],
-   "cam_dur": 1.4,
+   "cam_dur": 1.6,
    "cam_hold": [
     0.5,
     [
-     26.8,
+     27.6,
      -29.6
     ]
    ],
    "kw": {
     "text": "*completely surrounded*",
     "at": "@@surrounded-0.1",
-    "until": "@@another+0.6"
+    "until": "@@another+0.6",
+    "y": 300
    },
    "highlights": [
     {
@@ -878,12 +893,12 @@
    ],
    "cam_path": [
     [
-     "@+1.4",
+     "@+1.6",
      "@@three-0.3",
      [
-      0.5,
+      0.51,
       [
-       26.8,
+       27.62,
        -29.6
       ]
      ],
@@ -891,7 +906,7 @@
     ],
     [
      "@@three-0.3",
-     "@@three+0.7",
+     "@@three+0.8",
      [
       0.8,
       [
@@ -902,7 +917,7 @@
      "power2.inOut"
     ],
     [
-     "@@three+0.7",
+     "@@three+0.8",
      "@.end",
      [
       0.79,
@@ -930,15 +945,14 @@
   "tone": "revelatory",
   "energy": 5,
   "pause_after": 0.5,
-  "y": 760,
   "cam": [
    1.0,
    [
     28.2,
-    -29.6
+    -30.45
    ]
   ],
-  "cam_dur": 1.8,
+  "cam_dur": 1.2,
   "devices": [
    {
     "at": "@@country",
@@ -958,7 +972,9 @@
      "layer": "climb"
     }
    }
-  ]
+  ],
+  "y": 1000,
+  "at": "@+1.2"
  },
  "cta": {
   "vo": {
@@ -1063,7 +1079,7 @@
     ],
     "screen": [
      "Lowest point",
-     "metres above sea level · the lowest spot",
+     "metres above the sea",
      "the highest low point",
      "you cannot get down",
      "Nowhere to go but up",

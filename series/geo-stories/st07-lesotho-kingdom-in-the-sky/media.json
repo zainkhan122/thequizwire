@@ -84,7 +84,7 @@
   },
   "geo/main_basemap_near0.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 1446882,
+   "bytes": 1459596,
    "credit": "Sentinel-2 cloudless by EOX (Contains modified Copernicus Sentinel data 2020)",
    "kind": "image",
    "licence": "CC-BY-4.0",

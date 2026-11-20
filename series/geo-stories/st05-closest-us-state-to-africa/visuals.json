@@ -56,17 +56,19 @@
    "type": "counter",
    "start": 0,
    "end": 5076,
-   "y": 300,
-   "label": "km · Maine to Morocco",
+   "y": 1150,
+   "label": "km · from Maine",
    "fmt": "int",
-   "size": 150
+   "size": 110,
+   "x": 20,
+   "w": 480
   },
   {
    "id": "km2",
    "type": "counter",
    "start": 0,
    "end": 6390,
-   "y": 300,
+   "y": 1100,
    "label": "km · Florida to the nearest African shore",
    "fmt": "int",
    "size": 150
@@ -151,7 +153,7 @@
      -80.3,
      27.2
     ],
-    "ease": "power2.out"
+    "ease": "power2.inOut"
    },
    "stage": "stage_map"
   },
@@ -251,7 +253,7 @@
    "at": "s02",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s02+1.6",
+   "until": "s02+2.4",
    "args": {
     "k": 6.0,
     "lonlat": [
@@ -262,10 +264,10 @@
    }
   },
   {
-   "at": "s02+1.6",
+   "at": "s02+2.4",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s02+2.8",
+   "until": "s02@here+0.5",
    "args": {
     "k": 6.1,
     "lonlat": [
@@ -276,21 +278,21 @@
    }
   },
   {
-   "at": "s02+1.6",
+   "at": "s02@here+0.5",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s02@maine+0.3",
+   "until": "s02@maine+0.1",
    "args": {
-    "k": 6.1,
+    "k": 2.6,
     "lonlat": [
-     -66.85,
-     44.78
+     -62,
+     43.5
     ],
-    "ease": "none"
+    "ease": "power1.inOut"
    }
   },
   {
-   "at": "s02@maine+0.3",
+   "at": "s02@maine+0.1",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s02@lands",
@@ -300,33 +302,33 @@
      -38,
      40
     ],
-    "ease": "power2.inOut"
+    "ease": "power1.inOut"
    }
   },
   {
    "at": "s02@lands",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s02@morocco+0.1",
+   "until": "s02@morocco+0.3",
    "args": {
     "k": 6.0,
     "lonlat": [
-     -9.5,
-     32.6
+     -14.6,
+     31.7
     ],
     "ease": "power2.inOut"
    }
   },
   {
-   "at": "s02@morocco+0.1",
+   "at": "s02@morocco+0.3",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s02.end",
    "args": {
     "k": 6.1,
     "lonlat": [
-     -9.45,
-     32.55
+     -14.7,
+     31.65
     ],
     "ease": "none"
    }
@@ -350,16 +352,6 @@
    "at": "s02@lands-0.2",
    "do": "kw_out",
    "id": "kw02"
-  },
-  {
-   "at": "s02@here",
-   "do": "geo.highlight_pulse",
-   "stage": "stage_map",
-   "args": {
-    "fid": "840",
-    "layer": "tint",
-    "dur": 0.6
-   }
   },
   {
    "at": "s02+0.6",
@@ -472,39 +464,25 @@
    "at": "s03",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s03+1.4",
+   "until": "s03+2.0",
    "args": {
     "k": 0.72,
     "lonlat": [
-     -40,
+     -37,
      36
     ],
     "ease": "power2.inOut"
    }
   },
   {
-   "at": "s03+1.4",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s03+2.5999999999999996",
-   "args": {
-    "k": 0.72,
-    "lonlat": [
-     -40,
-     36
-    ],
-    "ease": "none"
-   }
-  },
-  {
-   "at": "s03+1.4",
+   "at": "s03+2.0",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s03.end",
    "args": {
     "k": 0.7,
     "lonlat": [
-     -39,
+     -36,
      36.5
     ],
     "ease": "none"
@@ -568,40 +546,26 @@
    "at": "s04",
    "do": "geo.cam_to",
    "stage": "stage_map",
-   "until": "s04+1.2",
+   "until": "s04+1.4",
    "args": {
     "k": 4.5,
     "lonlat": [
      -80.1,
      27.0
     ],
-    "ease": "power2.inOut"
+    "ease": "power1.inOut"
    }
   },
   {
-   "at": "s04+1.2",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s04+2.4",
-   "args": {
-    "k": 4.6,
-    "lonlat": [
-     -80.0,
-     26.9
-    ],
-    "ease": "none"
-   }
-  },
-  {
-   "at": "s04+1.2",
+   "at": "s04+1.4",
    "do": "geo.cam_to",
    "stage": "stage_map",
    "until": "s04@coast",
    "args": {
-    "k": 4.6,
+    "k": 4.5,
     "lonlat": [
-     -80.0,
-     26.9
+     -80.1,
+     27.0
     ],
     "ease": "none"
    }
@@ -614,7 +578,7 @@
    "args": {
     "k": 1.0,
     "lonlat": [
-     -45,
+     -52,
      27
     ],
     "ease": "power2.inOut"
@@ -628,7 +592,7 @@
    "args": {
     "k": 1.0,
     "lonlat": [
-     -45,
+     -52,
      27
     ],
     "ease": "none"
@@ -642,7 +606,7 @@
    "args": {
     "k": 0.72,
     "lonlat": [
-     -45,
+     -52,
      33
     ],
     "ease": "power2.inOut"
@@ -656,7 +620,7 @@
    "args": {
     "k": 0.71,
     "lonlat": [
-     -45,
+     -52,
      33
     ],
     "ease": "none"
@@ -778,20 +742,6 @@
      44
     ],
     "ease": "power2.inOut"
-   }
-  },
-  {
-   "at": "s05+1.2",
-   "do": "geo.cam_to",
-   "stage": "stage_map",
-   "until": "s05+2.4",
-   "args": {
-    "k": 1.6,
-    "lonlat": [
-     -62,
-     44
-    ],
-    "ease": "none"
    }
   },
   {

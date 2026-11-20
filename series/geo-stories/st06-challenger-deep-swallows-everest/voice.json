@@ -54,7 +54,7 @@
    "tone": "neutral",
    "energy": 3,
    "pause_after": 0.45,
-   "direction": "dive from Guam back onto the Challenger Deep pin (k 3); the depth counter is the only text and rolls to 10,935 as the camera keeps pushing; the pressure card follows once the counter is gone",
+   "direction": "short dive from Guam onto the Challenger Deep pin (k 3); the depth counter rolls to 10,935 in the clear water below the trench line as the camera keeps pushing; the pressure card follows once the counter is gone",
    "text": "The sea floor here is about 10,935 metres down. Nearly eleven kilometres of water, pressing down with more than a thousand times the pressure at the surface.",
    "cues": {
     "floor": "floor",
@@ -70,7 +70,7 @@
    "tone": "resolute",
    "energy": 4,
    "pause_after": 0.45,
-   "direction": "one long pull-out from the trench to a view of all of Asia; the Everest pin pings in the Himalaya and the mountain rises on the peak; on 'fly' it arcs across Asia along the dashed neon-blue line and the camera tracks it all the way down onto the trench",
+   "direction": "one long, even pull-out from the trench until all of Asia is in frame with Everest at the far left; the Everest pin pings on '8,849' and the mountain rises beside the peak; on 'fly' it arcs across Asia along the dashed neon-blue line and the camera flies with it, centred on the mountain, descending onto the trench pin as it arrives",
    "text": "Now take Mount Everest, 8,849 metres high, and fly it from the Himalaya to this spot.",
    "cues": {
     "everest": "everest",
