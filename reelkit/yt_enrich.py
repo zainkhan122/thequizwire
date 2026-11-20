@@ -26,7 +26,7 @@ Without secrets, `run --dry-run` prints the plan offline (used by selftest). Pub
 existing title/description/category and only adds tags.
 """
 import argparse, json, os, re, subprocess, sys, tempfile, time, urllib.error, urllib.parse, urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -483,13 +483,78 @@ def cmd_run(a):
     print(f"yt_enrich: thumbnails {done['thumb']} · series items {done['series']} · channel items {done['channel']} · tags {done['tags']} · {yt.units} units this run, {yt.spent()} today · {left} video(s) still pending" + (f" · stopped: {stopped}" if stopped else ""))
 
 
+def cmd_upload(a):
+    """Direct YouTube Data API upload (videos.insert, 1600 units) scheduled via publishAt — the path for a short Buffer refuses
+    (its YouTube channel has a 2 posts/day cap). The video is uploaded PRIVATE with status.publishAt; YouTube flips it public at
+    that instant. Copy comes from out/postkit.json (same text Buffer would post); cover set as thumbnail; series playlist added;
+    ledger row {platform: youtube, state: scheduled, provider: youtube-direct} so a later Buffer dispatch skips the channel."""
+    c = cfg(); A = c["youtube_api"]; ep_dir = Path(a.episode); ep = ep_dir.name; slug = series_of(c, ep); S = c["series"].get(slug) if slug else None
+    kit_p = ep_dir / "out/postkit.json"
+    if not kit_p.exists():                                                        # clean checkout (Actions): build the copy, gate included
+        r = subprocess.run([sys.executable, str(ROOT / "reelkit/postkit.py"), "build", str(ep_dir)], capture_output=True, text=True)
+        if r.returncode or not kit_p.exists(): sys.exit(f"yt_enrich: postkit build failed:\n{(r.stdout + r.stderr)[-600:]}")
+    y = json.loads(kit_p.read_text())["youtube"]
+    L = json.loads(LEDGER.read_text()) if LEDGER.exists() else {"posts": []}
+    have = [p for p in L["posts"] if p["episode"] == ep and p["platform"] == "youtube" and p.get("state") in ("scheduled", "sent", "sending")]
+    if have and not a.force: sys.exit(f"yt_enrich: {ep} already has a YouTube post ({have[-1].get('post_id')}, {have[-1]['state']}) — use --force to upload anyway")
+    when = datetime.fromisoformat(a.publish_at.replace("Z", "+00:00")).astimezone(timezone.utc)
+    if when < datetime.now(timezone.utc) + timedelta(minutes=15): sys.exit("yt_enrich: --publish-at must be ≥ 15 min in the future")
+    st, media = fetch(a.media_url, limit=200_000_000)
+    if st != 200 or len(media) < 100_000 or media[4:8] not in (b"ftyp", b"moov"): sys.exit(f"yt_enrich: media fetch failed ({st}, {len(media)} bytes) — {a.media_url}")
+    body = {"snippet": {"title": y["title"], "description": y["description"], "tags": (y.get("keywords") or [])[:30], "categoryId": y.get("categoryId", "27"),
+                        "defaultLanguage": "en", "defaultAudioLanguage": "en"},
+            "status": {"privacyStatus": "private", "publishAt": when.strftime("%Y-%m-%dT%H:%M:%SZ"), "selfDeclaredMadeForKids": bool(y.get("madeForKids", False)),
+                       "embeddable": bool(y.get("embeddable", True)), "license": y.get("license", "youtube"), "containsSyntheticMedia": bool(y.get("isAiGenerated", False))}}
+    print(f"upload: {ep} · {len(media) // 1024 // 1024} MB · publishAt {body['status']['publishAt']} · title \"{y['title']}\"")
+    yt = YT(a.dry_run, offline=a.dry_run and not all(creds(required=False)), cap=A["daily_units_cap"])
+    if a.dry_run: print("   DRY videos.insert (1600 units) + thumbnails.set (50) + playlistItems.insert (50)"); return
+    yt._charge(1600)
+    params = urllib.parse.urlencode({"uploadType": "resumable", "part": "snippet,status", "notifySubscribers": "true" if y.get("notifySubscribers", True) else "false"})
+    r = urllib.request.Request(f"{UPLOAD}/videos?{params}", data=json.dumps(body).encode(), method="POST",
+                               headers={"Authorization": f"Bearer {yt.tok}", "Content-Type": "application/json; charset=UTF-8", "X-Upload-Content-Type": "video/mp4",
+                                        "X-Upload-Content-Length": str(len(media)), "User-Agent": UA})
+    try:
+        with urllib.request.urlopen(r, timeout=120) as resp: loc = resp.headers.get("Location")
+    except urllib.error.HTTPError as e: sys.exit(f"yt_enrich: resumable session refused ({e.code}): {e.read()[:400].decode(errors='replace')}")
+    if not loc: sys.exit("yt_enrich: no upload session URL")
+    vid = None
+    for i in range(3):
+        r = urllib.request.Request(loc, data=media, method="PUT", headers={"Authorization": f"Bearer {yt.tok}", "Content-Type": "video/mp4", "Content-Length": str(len(media)), "User-Agent": UA})
+        try:
+            with urllib.request.urlopen(r, timeout=900) as resp: d = json.loads(resp.read() or b"{}"); vid = d.get("id"); break
+        except urllib.error.HTTPError as e:
+            raw = e.read()[:400].decode(errors="replace")
+            if e.code >= 500 and i < 2: time.sleep(10 * (i + 1)); continue
+            sys.exit(f"yt_enrich: upload failed ({e.code}): {raw}")
+    if not vid: sys.exit("yt_enrich: upload returned no video id")
+    link = f"https://youtu.be/{vid}"; print(f"   uploaded → {link} (private until publishAt)")
+    row = {"episode": ep, "platform": "youtube", "post_id": f"yt:{vid}", "channel_id": c["buffer"]["channels"]["youtube"]["buffer_id"], "state": "scheduled",
+           "media_url": a.media_url, "due_at": body["status"]["publishAt"], "created_at": now(), "recorded_at": now(), "title": y["title"], "account": "YT_OAUTH",
+           "provider": "youtube-direct", "yt_video_id": vid, "external_link": link, "yt_tags_at": now()}
+    out = []
+    try:
+        b, src = cover_bytes(row, ep_dir, A["max_cover_bytes"])
+        if b: yt.set_thumbnail(vid, b); row.update({"yt_thumbnail_at": now(), "yt_thumbnail_src": src}); out.append(f"thumb set ({src})")
+        else: out.append("thumb: NO COVER")
+    except Exception as e: row["yt_thumbnail_error"] = str(e)[:200]; out.append(f"thumb: {str(e)[:120]}")
+    try:
+        if S:
+            pid = ensure_playlist(yt, c, S["playlist"], f"{S['name']} — a new {S['topic']} every day from TheQuizWire.", S, "playlist_id", {})
+            item = yt.in_playlist(pid, vid) or yt.add_to_playlist(pid, vid); row.update({"yt_playlist_id": pid, "yt_series_item": item}); out.append(f"playlist {S['playlist']}")
+    except Exception as e: out.append(f"playlist: {str(e)[:120]}")
+    L["posts"].append(row); LEDGER.write_text(json.dumps(L, indent=1, ensure_ascii=False) + "\n"); CFG_PATH.write_text(json.dumps(c, indent=1, ensure_ascii=False) + "\n")
+    quota_save(yt.q, {"units": yt.spent(), "last_run": now()})
+    print(f"   {ep} ({vid}): scheduled {body['status']['publishAt']} · " + " · ".join(out) + f"\nyt_enrich: {yt.units} quota units")
+
+
 def main():
     ap = argparse.ArgumentParser(); sp = ap.add_subparsers(dest="cmd", required=True)
     sp.add_parser("auth"); sp.add_parser("whoami")
     for n in ("run", "playlists"): sp.add_parser(n).add_argument("--dry-run", action="store_true")
     sp.add_parser("audit"); m = sp.add_parser("merge"); m.add_argument("src"); m.add_argument("dst"); m.add_argument("--dry-run", action="store_true")
     t = sp.add_parser("thumb"); t.add_argument("episode"); t.add_argument("--force", action="store_true"); t.add_argument("--dry-run", action="store_true")
-    a = ap.parse_args(); {"auth": cmd_auth, "whoami": cmd_whoami, "run": cmd_run, "playlists": cmd_playlists, "thumb": cmd_thumb, "audit": cmd_audit, "merge": cmd_merge}[a.cmd](a)
+    u = sp.add_parser("upload"); u.add_argument("episode"); u.add_argument("--media-url", required=True); u.add_argument("--publish-at", required=True, help="ISO-8601 UTC, e.g. 2026-11-21T00:00:00Z"); u.add_argument("--force", action="store_true"); u.add_argument("--dry-run", action="store_true")
+    a = ap.parse_args(); {"upload": cmd_upload, "auth": cmd_auth, "whoami": cmd_whoami, "run": cmd_run, "playlists": cmd_playlists, "thumb": cmd_thumb, "audit": cmd_audit, "merge": cmd_merge}[a.cmd](a)
 
 
 if __name__ == "__main__":
