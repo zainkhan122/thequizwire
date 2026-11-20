@@ -373,7 +373,7 @@
    {
     "kind": "route",
     "id": "edge_us",
-    "cls": "neon",
+    "cls": "neon yellow",
     "geojson": {
      "type": "FeatureCollection",
      "features": [
@@ -435,7 +435,7 @@
    {
     "kind": "route",
     "id": "edge_ru",
-    "cls": "neon",
+    "cls": "neon blue",
     "geojson": {
      "type": "FeatureCollection",
      "features": [
@@ -1329,6 +1329,16 @@
      "at": "s06.end",
      "do": "prop.out",
      "id": "a2"
+    },
+    {
+     "at": "s06.end",
+     "do": "prop.out",
+     "id": "fus"
+    },
+    {
+     "at": "s06.end",
+     "do": "prop.out",
+     "id": "fru"
     }
    ],
    "cam_path": [

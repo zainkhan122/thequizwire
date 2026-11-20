@@ -1021,6 +1021,18 @@
    "stage": "stage_map"
   },
   {
+   "at": "s06.end",
+   "do": "prop.out",
+   "id": "fus",
+   "stage": "stage_map"
+  },
+  {
+   "at": "s06.end",
+   "do": "prop.out",
+   "id": "fru",
+   "stage": "stage_map"
+  },
+  {
    "at": "s06",
    "do": "geo.cam_to",
    "stage": "stage_map",

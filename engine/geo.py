@@ -344,6 +344,7 @@ CSS = f"""
 .geo .g-highlight.neon{{fill:rgba(255,230,0,.10);stroke:#FFE600;stroke-width:4}}
 .geo .g-route.neon{{stroke:#FF3B3B;stroke-width:8}}
 .geo .g-route.neon.blue{{stroke:#36C9FF}}
+.geo .g-route.neon.yellow{{stroke:#FFE600}}
 .geo .g-route.neon.dashed{{stroke-dasharray:18 14}}
 .geo .geo-label{{position:absolute;width:0;height:0}}
 .geo .geo-label .lbl,.geo .geo-label>span{{position:absolute;left:0;top:0;transform:translate(-50%,-50%);white-space:nowrap}}

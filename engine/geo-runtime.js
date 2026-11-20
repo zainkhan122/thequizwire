@@ -293,7 +293,7 @@
   // and everything under a near patch whose solid core (inner 62 % of its feathered ellipse) covers the whole viewport.
   function neonGlow(cls) {   // inline styles for the two glow copies (class rules on the parent <g> inherit; these override width/alpha/fill)
     const blue = /\b(neonblue|blue)\b/.test(cls), route = /\bg-route\b/.test(cls), draw = /\bdraw\b/.test(cls);
-    const col = blue ? "54,201,255" : route ? "255,59,59" : "255,230,0", w = route ? 8 : draw ? 7 : 4;
+    const col = blue ? "54,201,255" : (route && !/\byellow\b/.test(cls)) ? "255,59,59" : "255,230,0", w = route ? 8 : draw ? 7 : 4;
     return [[4.5, .16], [2.2, .32]].map(([m, o]) => `fill:none;stroke:rgb(${col});stroke-width:${w * m}px;stroke-opacity:${o};stroke-linejoin:round;stroke-linecap:round`);
   }
   const firstPath = e => e && e.tagName === "g" && !e.querySelector(".lift-outline") ? e.querySelector("path:last-child") : e;   // neon groups → their crisp path
