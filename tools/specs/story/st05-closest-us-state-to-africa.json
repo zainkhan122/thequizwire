@@ -1212,9 +1212,11 @@
      "start": 0,
      "end": 6390,
      "y": 1100,
-     "label": "km · Florida to the nearest African shore",
+     "label": "km · Florida to Africa",
      "fmt": "int",
-     "size": 150
+     "size": 150,
+     "x": 120,
+     "w": 840
     }
    ],
    "devices": [
@@ -1704,7 +1706,7 @@
      "everyone says Florida",
      "Florida",
      "Western Sahara coast",
-     "km · Florida to the nearest African shore",
+     "km · Florida to Africa",
      "NO"
     ]
    },
