@@ -1,0 +1,148 @@
+{
+ "id": "ep16-who-discovered-penicillin-britain-fleming",
+ "format": "quiz-v3",
+ "series": "body-brain",
+ "number": 16,
+ "title": "Which country DISCOVERED penicillin?",
+ "difficulty": "EASY",
+ "seed": 3916,
+ "quiz": {
+  "question": "Which country DISCOVERED penicillin?",
+  "keyword": "DISCOVERED",
+  "options": [
+   "United States",
+   "Germany",
+   "Britain"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Britain",
+  "answer_sub": "a dish left out over the holidays",
+  "option_meta": [
+   {
+    "flag": "us"
+   },
+   {
+    "flag": "de"
+   },
+   {
+    "flag": "gb"
+   }
+  ],
+  "banner": "Britain",
+  "banner_sub": "✓  C was right · a dish left out over the holidays",
+  "outro": {
+   "headline": "CHALLENGE A FRIEND",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country DISCOVERED penicillin? 🧫",
+  "premise": "The drug that changed medicine started as a dirty dish",
+  "bait": "United States, Germany or Britain — which did you pick? 👇",
+  "keywords": [
+   "who discovered penicillin",
+   "penicillin discovery",
+   "history of antibiotics",
+   "first antibiotic",
+   "penicillin mould dish",
+   "body quiz",
+   "medical history quiz",
+   "science facts"
+  ],
+  "description": "The drug that changed medicine started as a dirty dish. United States, Germany or Britain — which did you pick? 👇\n\nSources: Nobel Prize Outreach; American Chemical Society; Science Museum Group; Encyclopaedia Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nBody & Brain #16",
+  "hashtags": [
+   "#BodyFacts",
+   "#BrainQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "BodyQuiz",
+   "MedicalHistory"
+  ],
+  "cover_emoji": "🧫",
+  "cover_emoji_why": "a petri dish names the subject (a mould in a dish) and belongs to no country; it says nothing about whose laboratory it sat in",
+  "copy": {
+   "spoilers": [
+    "britain",
+    "british",
+    "united kingdom",
+    "england",
+    "english",
+    "london",
+    "scotland",
+    "scottish",
+    "fleming",
+    "florey",
+    "chain",
+    "oxford",
+    "st mary's",
+    "heatley"
+   ],
+   "youtube": {
+    "title": "Who discovered penicillin? A holiday and a dirty dish 🧫",
+    "description": "The factories, the chemists, or the third one? A doctor came back from holiday, picked up a dish he had left out, and saw a mould killing the bacteria around it. Then nothing happened for more than a decade: nobody could make enough. The first patient improved, and the supply ran out. Three men shared a Nobel Prize; a fourth was left out.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#penicillin",
+     "#medicalhistory",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country DISCOVERED penicillin? 🧫\nThe factories, the chemists, or the other one? A doctor came back from holiday, picked up a dish he had left out, and saw a mould killing the bacteria around it. Then nobody could make enough of it for more than a decade.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#penicillin",
+     "#medicalhistory",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country discovered penicillin — the United States, Germany or Britain?\nA doctor came back from holiday, picked up a dish he had left out, and saw a mould killing the bacteria around it. Then nothing happened for more than a decade: nobody could make enough. The first patient improved, and the supply ran out. Choose your flag before the dish appears.",
+    "tags": [
+     "#bodyquiz",
+     "#penicillin"
+    ]
+   },
+   "twitter": {
+    "text": "Which country DISCOVERED penicillin?\nUnited States, Germany or Britain? A holiday, a dirty dish, and a mould that killed everything around it.",
+    "tags": [
+     "#BodyQuiz",
+     "#Penicillin"
+    ]
+   },
+   "threads": {
+    "text": "Which country discovered penicillin — the United States, Germany or Britain? A doctor came back from holiday, picked up a dish he had left out, and saw a mould killing the bacteria around it; then nobody could make enough of it for more than a decade.",
+    "tags": [
+     "#antibiotics"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "photo",
+   "split",
+   "flash",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:us + emoji-set:lab",
+  "music": "bed:brass"
+ },
+ "status": "draft"
+}

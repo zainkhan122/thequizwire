@@ -1,0 +1,162 @@
+{
+ "version": 1,
+ "episode": "ep22-deepest-diving-mammal-cuviers-beaked-whale",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -128,
+     22,
+     -66,
+     48
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "840"
+     ],
+     "cls": "",
+     "note": "United States — both record dives were logged off its coasts (California 2014, North Carolina 2020)",
+     "lift": "color",
+     "color": "#FFD400"
+    },
+    {
+     "kind": "area",
+     "id": "basin",
+     "cls": "zone",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "snb",
+        "properties": {
+         "name": "San Nicolas Basin — the 2014 tagging ground"
+        },
+        "geometry": {
+         "type": "Polygon",
+         "coordinates": [
+          [
+           [
+            -120.6,
+            32.4
+           ],
+           [
+            -118.4,
+            32.4
+           ],
+           [
+            -118.0,
+            33.3
+           ],
+           [
+            -119.0,
+            33.9
+           ],
+           [
+            -120.4,
+            33.5
+           ],
+           [
+            -120.6,
+            32.4
+           ]
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic outline of the deep basin south of the Channel Islands where the tagged whales were tracked"
+    }
+   ],
+   "pins": [
+    {
+     "id": "snb",
+     "lonlat": [
+      -119.4,
+      33.0
+     ],
+     "label": "San Nicolas Basin",
+     "side": "left"
+    },
+    {
+     "id": "hat",
+     "lonlat": [
+      -75.5,
+      35.25
+     ],
+     "label": "Cape Hatteras",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "rec",
+     "lonlat": [
+      -123.5,
+      31.3
+     ],
+     "text": "2,992 m · record depth",
+     "cls": "tag",
+     "in": "s06@lungs+0.3",
+     "out": "s06.end"
+    },
+    {
+     "id": "atm",
+     "lonlat": [
+      -114.5,
+      30.2
+     ],
+     "text": "300 atmospheres",
+     "cls": "tag",
+     "in": "s06@pressure+0.2",
+     "out": "s06.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -165,
+      -10,
+      -25,
+      65
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 500,
+    "lonlat": [
+     -127,
+     23.5
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

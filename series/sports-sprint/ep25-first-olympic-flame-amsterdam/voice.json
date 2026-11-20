@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep25-first-olympic-flame-amsterdam",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A tradition traced to its real start: the small host lifts into its flag, the stadium tower is pinned, the Greek flag-ball thinks while the 1896 card says no flame, and then a runner draws the 1936 route from Olympia across seven countries to Berlin with a flash at the lighting in Olympia and a tag for the 3,187 kilometres.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "In which city did the Olympic flame FIRST burn?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "In which city did the Olympic flame first burn?",
+   "cues": {
+    "which": "which",
+    "first": "first"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Athens, Amsterdam, or Berlin?",
+   "cues": {
+    "a": "athens",
+    "b": "amsterdam",
+    "c": "berlin"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "Amsterdam. In 1928 a flame burned on the stadium's Marathon Tower, lit by a city electricity worker.",
+   "cues": {
+    "answer": "amsterdam",
+    "tower": "tower",
+    "worker": "worker"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.35,
+   "direction": "ease back over the Low Countries; the Greek flag-ball thinks on 'Athens' with the 1896 card; a candle-out sticker on 'flame'; a tower sticker on 'tower' as the Netherlands pulses; the card leaves at the end",
+   "text": "Athens revived the Games in 1896 with no flame at all. The Dutch tower simply showed where the Games were.",
+   "cues": {
+    "athens": "athens",
+    "flame": "flame",
+    "tower": "tower"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "pull out so Greece and Germany share the frame; the Olympia pin on 'relay'; a white flash on 'Olympia' as a runner sticker rides the drawn line from Olympia to Berlin until 'runners', then the Berlin pin and the kilometres tag; the Netherlands pulses",
+   "text": "The relay came in 1936: lit in Olympia, carried 3,187 kilometres to Berlin by 3,331 runners.",
+   "cues": {
+    "relay": "relay",
+    "olympia": "olympia",
+    "runners": "runners"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 3,
+   "pause_after": 0.5,
+   "direction": "hold on central Europe with the route lit; a calendar sticker and the days tag on 'twelve'; a clapperboard sticker on 'propaganda' as the German flag-ball thinks; a torch sticker on 'copies' as the Netherlands pulses; the pins leave at the end",
+   "text": "Twelve days, seven countries, filmed for Nazi propaganda. Every relay since copies that idea.",
+   "cues": {
+    "twelve": "twelve",
+    "propaganda": "propaganda",
+    "copies": "copies"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "Lit in Amsterdam first. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

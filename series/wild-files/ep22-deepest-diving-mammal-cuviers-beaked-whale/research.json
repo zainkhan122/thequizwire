@@ -1,0 +1,210 @@
+{
+ "version": 1,
+ "episode": "ep22-deepest-diving-mammal-cuviers-beaked-whale",
+ "topic": "Deepest and longest dives recorded for any mammal: Cuvier's beaked whale (Ziphius cavirostris). Schorr et al. (PLoS ONE, 2014) tagged eight whales off Southern California and logged a dive to 2,992 m (and one of 137.5 min). Quick et al. (Journal of Experimental Biology, 2020) analysed 3,680 dives from 23 whales off Cape Hatteras, North Carolina, and recorded a dive of 222 min (3 h 42 min), the longest for any mammal. Sperm whales are recorded to about 2,250 m; southern elephant seals to about 2,388 m. Beaked whales survive by letting the lungs collapse, slowing the heart and storing oxygen in muscle myoglobin; at 3,000 m the pressure is roughly 300 atmospheres.",
+ "researched": "2026-11-20",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The sperm whale, the famous squid hunter, is the deepest-diving mammal.",
+   "reality": "Sperm whales reach about 2,250 m; the deepest dive ever recorded for a mammal is a Cuvier's beaked whale at 2,992 m, and the same species holds the duration record at 222 minutes.",
+   "sources": [
+    "schorr2014",
+    "quick2020",
+    "noaa_cuvier"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Deep-dive clips are top-10 lists with stock footage; nobody drops the three depths to scale, raises the record-holder out of the basin where it was tagged and pins the second record site as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=deepest+diving+mammal",
+    "title": "Search: deepest diving mammal",
+    "angle": "countdown lists",
+    "misses": "no map, no mechanism"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=cuvier%27s+beaked+whale",
+    "title": "Search: the record holder on film",
+    "angle": "documentary clips",
+    "misses": "no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=sperm+whale+dive+depth",
+    "title": "Search: sperm whale dive depth",
+    "angle": "single-species explainers",
+    "misses": "no comparison"
+   }
+  ]
+ },
+ "sources": {
+  "schorr2014": {
+   "type": "scholarly",
+   "publisher": "Schorr, G. S. et al., PLoS ONE 9(3): e92633 (2014)",
+   "title": "First Long-Term Behavioral Records from Cuvier's Beaked Whales (Ziphius cavirostris) Reveal Record-Breaking Dives",
+   "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0092633",
+   "date": "2026-11-20",
+   "notes": "satellite tags on eight whales off Southern California: maximum depth 2,992 m and duration 137.5 min — records for any mammal at the time"
+  },
+  "quick2020": {
+   "type": "scholarly",
+   "publisher": "Quick, N. J. et al., Journal of Experimental Biology 223 (2020)",
+   "title": "Extreme diving in mammals: first estimates of behavioural aerobic dive limits in Cuvier's beaked whales",
+   "url": "https://journals.biologists.com/jeb/article/223/18/jeb222109/224986/Extreme-diving-in-mammals-first-estimates-of",
+   "date": "2026-11-20",
+   "notes": "3,680 dives from 23 whales off Cape Hatteras; longest dive 222 min — the longest recorded for any mammal"
+  },
+  "noaa_cuvier": {
+   "type": "primary",
+   "publisher": "NOAA Fisheries",
+   "title": "Cuvier's Beaked Whale — species directory",
+   "url": "https://www.fisheries.noaa.gov/species/cuviers-beaked-whale",
+   "date": "2026-11-20",
+   "notes": "deepest and longest dives of any mammal: 2,992 m and 222 min; deep offshore waters worldwide"
+  },
+  "wiki_cuvier": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Cuvier's beaked whale",
+   "url": "https://en.wikipedia.org/wiki/Cuvier%27s_beaked_whale",
+   "date": "2026-11-20",
+   "notes": "record dives of 2,992 m (2014, off California) and 222 minutes (2020); typical foraging dives beyond 800 m"
+  },
+  "ocr_cuvier": {
+   "type": "reference",
+   "publisher": "Ocean Conservation Research",
+   "title": "Cuvier's Beaked Whale — sounds and facts",
+   "url": "https://ocr.org/sounds/cuviers-beaked-whale/",
+   "date": "2026-11-20",
+   "notes": "deepest dive 2,992 m, longest 222 min; at 3,000 m roughly 300 atmospheres; lungs and air spaces collapse on descent"
+  },
+  "wiki_sperm": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Sperm whale",
+   "url": "https://en.wikipedia.org/wiki/Sperm_whale",
+   "date": "2026-11-20",
+   "notes": "routinely dives 1,000–2,000 m; deepest confirmed dives about 2,250 m"
+  },
+  "wiki_eseal": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Southern elephant seal",
+   "url": "https://en.wikipedia.org/wiki/Southern_elephant_seal",
+   "date": "2026-11-20",
+   "notes": "deepest recorded dive 2,388 m; dives of up to two hours"
+  },
+  "brit_beaked": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Beaked whale",
+   "url": "https://www.britannica.com/animal/beaked-whale",
+   "date": "2026-11-20",
+   "notes": "deep-diving toothed whales; Cuvier's beaked whale the most widespread, in deep offshore waters"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "A Cuvier's beaked whale tagged off Southern California dived to 2,992 m — the deepest dive ever recorded for a mammal.",
+   "sources": [
+    "schorr2014",
+    "noaa_cuvier",
+    "wiki_cuvier"
+   ],
+   "vo": [
+    "which mammal dives the deepest",
+    "sperm whale, elephant seal, or beaked whale",
+    "cuvier's beaked whale. off california, a tagged whale reached 2,992 metres, the deepest dive ever recorded for a mammal",
+    "three hours, one breath"
+   ],
+   "screen": [
+    "2,992 m",
+    "Beaked whale",
+    "San Nicolas Basin",
+    "2,992 m · record depth"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "detail",
+   "text": "Sperm whales are recorded to about 2,250 m and southern elephant seals to about 2,388 m — both shallower than the beaked whale's record.",
+   "sources": [
+    "wiki_sperm",
+    "wiki_eseal",
+    "noaa_cuvier"
+   ],
+   "vo": [
+    "a sperm whale manages about 2,250 metres; an elephant seal just under 2,400. both fall short"
+   ],
+   "screen": [
+    "2,250 m",
+    "2,388 m",
+    "Sperm whale",
+    "Elephant seal"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Beaked whales survive the depth because their lungs collapse, the heart rate drops and oxygen is stored in the muscles; at about 3,000 m the pressure is roughly 300 atmospheres.",
+   "sources": [
+    "ocr_cuvier",
+    "noaa_cuvier",
+    "brit_beaked"
+   ],
+   "vo": [
+    "its lungs collapse on purpose, its heart slows, and its muscles store the oxygen under 300 times surface pressure"
+   ],
+   "screen": [
+    "300 atmospheres"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Off Cape Hatteras, North Carolina, a Cuvier's beaked whale stayed submerged for 222 minutes (3 h 42 min) — the longest dive recorded for any mammal.",
+   "sources": [
+    "quick2020",
+    "noaa_cuvier",
+    "wiki_cuvier"
+   ],
+   "vo": [
+    "off cape hatteras, one stayed under for 3 hours and 42 minutes, the longest dive ever recorded for a mammal"
+   ],
+   "screen": [
+    "3 h 42 min",
+    "one breath · off Cape Hatteras",
+    "Cape Hatteras"
+   ]
+  }
+ ]
+}

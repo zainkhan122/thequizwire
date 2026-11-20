@@ -1,0 +1,143 @@
+{
+ "id": "ep22-deepest-diving-mammal-cuviers-beaked-whale",
+ "format": "quiz-v3",
+ "series": "wild-files",
+ "number": 22,
+ "title": "Which mammal dives the DEEPEST?",
+ "difficulty": "HARD",
+ "seed": 3922,
+ "quiz": {
+  "question": "Which mammal dives the DEEPEST?",
+  "keyword": "DEEPEST",
+  "options": [
+   "Sperm whale",
+   "Elephant seal",
+   "Beaked whale"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Beaked whale",
+  "answer_sub": "2,992 metres on one breath",
+  "option_meta": [
+   {
+    "emoji": "1f40b"
+   },
+   {
+    "emoji": "1f9ad"
+   },
+   {
+    "emoji": "1f42c"
+   }
+  ],
+  "banner": "Beaked whale",
+  "banner_sub": "✓  C was right · 2,992 metres on one breath",
+  "outro": {
+   "headline": "1 FOR 1?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which mammal dives the DEEPEST? 🤿",
+  "premise": "The deepest-diving mammal is one most people have never heard of",
+  "bait": "Sperm whale, elephant seal or beaked whale — which did you pick? 👇",
+  "keywords": [
+   "which mammal dives the deepest",
+   "deepest diving mammal",
+   "deepest dive ever recorded",
+   "how deep can a whale dive",
+   "whale dive depth",
+   "animal facts",
+   "wildlife quiz",
+   "animal quiz"
+  ],
+  "description": "The deepest-diving mammal is one most people have never heard of. Sperm whale, elephant seal or beaked whale — which did you pick? 👇\n\nSources: Schorr et al. 2014 (PLoS ONE); Quick et al. 2020 (J. Exp. Biol.); NOAA Fisheries.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #22",
+  "hashtags": [
+   "#AnimalQuiz",
+   "#WildlifeFacts",
+   "#thequizwire"
+  ],
+  "tags": [
+   "AnimalQuiz",
+   "DeepSea"
+  ],
+  "cover_emoji": "🤿",
+  "cover_emoji_why": "a diving mask names the subject (the dive) and belongs to none of the three animals; it points at no option",
+  "copy": {
+   "spoilers": [
+    "cuvier",
+    "beaked",
+    "ziphius",
+    "2,992",
+    "222",
+    "3 hours",
+    "42 minutes",
+    "hatteras",
+    "san nicolas"
+   ],
+   "youtube": {
+    "title": "The deepest diving mammal? Scientists tagged it 🤿",
+    "description": "The famous squid hunter, the giant seal, or the third one? Scientists glued satellite tags to all of them and one went down almost three kilometres and, on another dive, stayed under for longer than a feature film. Its lungs collapse on purpose.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#wildlife",
+     "#ocean",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which mammal dives the DEEPEST? 🤿\nThe famous squid hunter, the giant seal, or the third one? Scientists tagged all of them; one went down almost three kilometres and, on another dive, stayed under longer than a feature film. Its lungs collapse on purpose.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#wildlife",
+     "#ocean",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which mammal dives the deepest — the sperm whale, the elephant seal or the beaked whale?\nScientists tagged all three and one went down almost three kilometres on a single breath; on another dive it stayed under for longer than a feature film. Its lungs collapse on purpose. Pick before the bars drop.",
+    "tags": [
+     "#animalquiz",
+     "#deepsea"
+    ]
+   },
+   "twitter": {
+    "text": "Which mammal dives the DEEPEST?\nSperm whale, elephant seal or beaked whale? Almost three kilometres down, on one breath.",
+    "tags": [
+     "#AnimalQuiz",
+     "#Ocean"
+    ]
+   },
+   "threads": {
+    "text": "Which mammal dives the deepest — the sperm whale, the elephant seal or the beaked whale? Scientists tagged all three; one went almost three kilometres down on a single breath and, on another dive, stayed under longer than a feature film.",
+    "tags": [
+     "#deepsea"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-animal",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "bars",
+   "rise",
+   "flash",
+   "pin",
+   "label"
+  ],
+  "cast": "emoji-set:ocean + flagball:none",
+  "music": "bed:deep"
+ },
+ "status": "draft"
+}

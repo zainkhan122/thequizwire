@@ -1,0 +1,143 @@
+{
+ "id": "ep25-first-olympic-flame-amsterdam",
+ "format": "quiz-v3",
+ "series": "sports-sprint",
+ "number": 25,
+ "title": "In which city did the Olympic flame FIRST burn?",
+ "difficulty": "HARD",
+ "seed": 6225,
+ "quiz": {
+  "question": "In which city did the Olympic flame FIRST burn?",
+  "keyword": "FIRST",
+  "options": [
+   "Athens",
+   "Amsterdam",
+   "Berlin"
+  ],
+  "correct": 1,
+  "beat": 3.0,
+  "answer_line": "Amsterdam",
+  "answer_sub": "1928 · a bowl on the Marathon Tower",
+  "option_meta": [
+   {
+    "flag": "gr"
+   },
+   {
+    "flag": "nl"
+   },
+   {
+    "flag": "de"
+   }
+  ],
+  "banner": "Amsterdam",
+  "banner_sub": "✓  B was right · 1928 · a bowl on the Marathon Tower",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "In which city did the Olympic flame FIRST burn? 🔥",
+  "premise": "The first Olympic flame was not lit in Greece",
+  "bait": "Athens, Amsterdam or Berlin — which did you pick? 👇",
+  "keywords": [
+   "first olympic flame",
+   "olympic flame history",
+   "where was the first olympic flame lit",
+   "olympic torch relay history",
+   "first olympic torch relay",
+   "olympics quiz",
+   "sports trivia",
+   "sports quiz"
+  ],
+  "description": "The first Olympic flame was not lit in Greece. Athens, Amsterdam or Berlin — which did you pick? 👇\n\nSources: Wikipedia (Olympic flame; 1936 torch relay); Encyclopaedia Britannica; IOC.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nSports Sprint #25",
+  "hashtags": [
+   "#SportsQuiz",
+   "#SportsTrivia",
+   "#thequizwire"
+  ],
+  "tags": [
+   "SportsQuiz",
+   "Olympics"
+  ],
+  "cover_emoji": "🔥",
+  "cover_emoji_why": "a flame names the subject and belongs to all three cities' Games; it points at no option",
+  "copy": {
+   "spoilers": [
+    "amsterdam",
+    "dutch",
+    "netherlands",
+    "holland",
+    "marathon tower",
+    "jan wils",
+    "1928",
+    "3,187",
+    "3,331"
+   ],
+   "youtube": {
+    "title": "Where did the first Olympic flame burn? Not where you think 🔥",
+    "description": "The city that revived the Games, the city of the first torch relay, or the third one? The first Olympic flame was lit by an electricity worker in a bowl on top of a stadium tower, with no relay and no Olympia. The relay came eight years later, and it was built as a propaganda show.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#olympics",
+     "#sports",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "In which city did the Olympic flame FIRST burn? 🔥\nThe city that revived the Games, the city of the first torch relay, or the third one? The first flame was lit by an electricity worker in a bowl on top of a stadium tower — no relay, no Olympia. The relay came eight years later, built as a propaganda show.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#olympics",
+     "#sports",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "In which city did the Olympic flame first burn — Athens, Amsterdam or Berlin?\nThe first flame was lit by an electricity worker in a bowl on top of a stadium tower, with no relay and no Olympia. The relay came eight years later, thousands of runners across seven countries, built as a propaganda show. Pick before the torch moves.",
+    "tags": [
+     "#sportsquiz",
+     "#olympicflame"
+    ]
+   },
+   "twitter": {
+    "text": "In which city did the Olympic flame FIRST burn?\nAthens, Amsterdam or Berlin? No relay, no Olympia — an electricity worker and a bowl on a tower.",
+    "tags": [
+     "#SportsQuiz",
+     "#Olympics"
+    ]
+   },
+   "threads": {
+    "text": "In which city did the Olympic flame first burn — Athens, Amsterdam or Berlin? The first flame was lit by an electricity worker in a bowl on top of a stadium tower, with no relay and no Olympia; the relay came eight years later as a propaganda show.",
+    "tags": [
+     "#torchrelay"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "flag-lift",
+  "beats": [
+   "route",
+   "travel",
+   "flash",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:nl + flagball:gr + flagball:de + emoji-set:olympic",
+  "music": "bed:epic"
+ },
+ "status": "draft"
+}

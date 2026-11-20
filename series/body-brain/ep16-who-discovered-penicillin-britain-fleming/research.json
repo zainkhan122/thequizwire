@@ -1,0 +1,216 @@
+{
+ "version": 1,
+ "episode": "ep16-who-discovered-penicillin-britain-fleming",
+ "topic": "Discovery of penicillin: on 3 September 1928 Alexander Fleming, bacteriologist at St Mary's Hospital, London, returning from holiday, noticed a Penicillium mould on a staphylococcus culture plate with a clear zone where the bacteria had been killed; he published in 1929 (British Journal of Experimental Pathology) but could not purify or stabilise the substance. In 1939–40 Howard Florey, Ernst Chain, Norman Heatley and colleagues at the Sir William Dunn School of Pathology, Oxford, produced usable penicillin and showed in May 1940 that it protected mice (Lancet, August 1940). The first patient, Oxford policeman Albert Alexander, was treated on 12 February 1941 and improved markedly, but the supply ran out and he died in March 1941. Large-scale production was developed in the United States (Peoria USDA laboratory, Pfizer, Merck and others) from 1941; penicillin became available to the US public in March 1945. Germany's leading antibacterials of the time were the sulfonamides (Prontosil, Gerhard Domagk, 1935). The Nobel Prize in Physiology or Medicine 1945 was shared equally by Fleming, Chain and Florey; Heatley received no prize.",
+ "researched": "2026-11-20",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Penicillin was an American wartime invention.",
+   "reality": "The United States industrialised production from 1941 onward, but the mould was observed at St Mary's Hospital, London, in 1928 and first turned into a working drug at Oxford in 1940.",
+   "sources": [
+    "acs_landmark",
+    "brit_penicillin"
+   ]
+  },
+  {
+   "myth": "Fleming discovered it, made it, and cured people with it.",
+   "reality": "Fleming observed and named it but could not purify it; the Oxford team of Florey, Chain and Heatley made it usable twelve years later, and the first patient was treated in 1941.",
+   "sources": [
+    "nobel_1945",
+    "sci_museum"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Penicillin clips retell the Fleming anecdote as a talking head; nobody raises the real wartime production photo out of the country on a map, splits FOUND 1928 from MADE 1940, and names the man the Nobel left out as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=who+discovered+penicillin",
+    "title": "Search: who discovered penicillin",
+    "angle": "biography",
+    "misses": "no map, no quiz"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=penicillin+discovery+story",
+    "title": "Search: penicillin discovery story",
+    "angle": "history explainers",
+    "misses": "no country framing"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=how+do+antibiotics+work",
+    "title": "Search: how do antibiotics work",
+    "angle": "biology explainers",
+    "misses": "no story"
+   }
+  ]
+ },
+ "sources": {
+  "nobel_1945": {
+   "type": "primary",
+   "publisher": "Nobel Prize Outreach",
+   "title": "The Nobel Prize in Physiology or Medicine 1945",
+   "url": "https://www.nobelprize.org/prizes/medicine/1945/summary/",
+   "date": "2026-11-17",
+   "notes": "awarded jointly to Sir Alexander Fleming, Ernst Boris Chain and Sir Howard Walter Florey 'for the discovery of penicillin and its curative effect in various infectious diseases'"
+  },
+  "nobel_fleming": {
+   "type": "primary",
+   "publisher": "Nobel Prize Outreach",
+   "title": "Sir Alexander Fleming — Biographical",
+   "url": "https://www.nobelprize.org/prizes/medicine/1945/fleming/biographical/",
+   "date": "2026-11-17",
+   "notes": "bacteriologist at St Mary's Hospital, London; observed the penicillin mould in 1928; published 1929"
+  },
+  "acs_landmark": {
+   "type": "primary",
+   "publisher": "American Chemical Society",
+   "title": "Discovery and Development of Penicillin — National Historic Chemical Landmark",
+   "url": "https://www.acs.org/education/whatischemistry/landmarks/flemingpenicillin.html",
+   "date": "2026-11-17",
+   "notes": "Fleming's observation September 1928 at St Mary's; Oxford team 1939–41; Albert Alexander treated February 1941, died when supply ran out; US mass production from 1941; available to the public March 1945"
+  },
+  "sci_museum": {
+   "type": "reference",
+   "publisher": "Science Museum Group",
+   "title": "How was penicillin developed?",
+   "url": "https://www.sciencemuseum.org.uk/objects-and-stories/medicine/how-was-penicillin-developed",
+   "date": "2026-11-17",
+   "notes": "Fleming 1928 mould on a culture plate; Florey, Chain and Heatley at Oxford 1939–41 purified it and tested it on mice and the first patients; Heatley's contribution went unrecognised by the Nobel committee"
+  },
+  "brit_penicillin": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Penicillin",
+   "url": "https://www.britannica.com/science/penicillin",
+   "date": "2026-11-17",
+   "notes": "discovered 1928 by Alexander Fleming at St Mary's Hospital, London; developed as a drug by Florey and Chain at Oxford in 1940–41; Nobel Prize 1945"
+  },
+  "brit_domagk": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Gerhard Domagk",
+   "url": "https://www.britannica.com/biography/Gerhard-Domagk",
+   "date": "2026-11-17",
+   "notes": "German bacteriologist; discovered the antibacterial effect of Prontosil, the first sulfonamide drug, 1932–35; Nobel Prize 1939"
+  },
+  "wiki_discovery": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "History of penicillin",
+   "url": "https://en.wikipedia.org/wiki/History_of_penicillin",
+   "date": "2026-11-17",
+   "notes": "3 September 1928 observation; Lancet mouse paper August 1940; Albert Alexander treated 12 February 1941, died 15 March 1941; US production at Peoria and by Pfizer, Merck; Nobel 1945 shared equally, Heatley excluded"
+  },
+  "commons_flasks": {
+   "type": "primary",
+   "publisher": "Wikimedia Commons",
+   "title": "File:Synthetic Production of Penicillin TR1468.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Synthetic_Production_of_Penicillin_TR1468.jpg",
+   "date": "2026-11-17",
+   "notes": "Imperial War Museums photograph (1943), penicillin production in a British laboratory; public domain (Crown copyright expired)"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Penicillin was discovered in Britain: Alexander Fleming observed the mould killing bacteria on a culture plate at St Mary's Hospital, London, on returning from holiday in September 1928.",
+   "sources": [
+    "nobel_fleming",
+    "acs_landmark",
+    "brit_penicillin"
+   ],
+   "vo": [
+    "which country discovered penicillin",
+    "united states, germany, or britain",
+    "britain. in 1928 a london doctor came back from holiday and found mould killing bacteria in a dish",
+    "a dish of mould"
+   ],
+   "screen": [
+    "Britain",
+    "St Mary's · 1928"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "The United States industrialised penicillin production from 1941 and made it publicly available in March 1945; Germany's antibacterials of the period were the sulfonamides (Prontosil, Domagk).",
+   "sources": [
+    "acs_landmark",
+    "brit_domagk",
+    "wiki_discovery"
+   ],
+   "vo": [
+    "america mass-produced it in the war, and germany had other drugs. but the mould was spotted here"
+   ],
+   "screen": []
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "For about thirteen years nobody could produce penicillin in useful amounts; the first patient, Oxford policeman Albert Alexander, treated in February 1941, improved markedly but died when the supply ran out.",
+   "sources": [
+    "acs_landmark",
+    "sci_museum",
+    "wiki_discovery",
+    "commons_flasks"
+   ],
+   "vo": [
+    "nobody could make enough for thirteen years. the first patient, a policeman, improved, then the supply ran out"
+   ],
+   "screen": [
+    "1943 · making penicillin"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "The Oxford team of Florey, Chain and Heatley turned penicillin into a usable drug in 1940; the 1945 Nobel Prize in Physiology or Medicine went to Fleming, Chain and Florey, and Heatley was not included.",
+   "sources": [
+    "nobel_1945",
+    "sci_museum",
+    "brit_penicillin"
+   ],
+   "vo": [
+    "an oxford team made it a drug in 1940. three men shared the 1945 nobel prize, and a fourth was left out"
+   ],
+   "screen": [
+    "Oxford · 1940",
+    "1928",
+    "mould in a dish",
+    "1940",
+    "a drug that works",
+    "MADE",
+    "1945 NOBEL",
+    "Fleming, Florey and Chain"
+   ]
+  }
+ ]
+}

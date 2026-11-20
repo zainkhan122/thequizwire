@@ -1,0 +1,90 @@
+{
+ "version": 1,
+ "episode": "ep16-who-discovered-penicillin-britain-fleming",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -11,
+     49.5,
+     3,
+     59.5
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "826"
+     ],
+     "cls": "",
+     "note": "United Kingdom",
+     "lift": "color",
+     "color": "#FFD400"
+    }
+   ],
+   "pins": [
+    {
+     "id": "stm",
+     "lonlat": [
+      -0.17,
+      51.52
+     ],
+     "label": "St Mary's · 1928",
+     "side": "right"
+    },
+    {
+     "id": "oxf",
+     "lonlat": [
+      -1.26,
+      51.75
+     ],
+     "label": "Oxford · 1940",
+     "side": "left"
+    }
+   ],
+   "labels": [],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -35,
+      30,
+      30,
+      70
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 100,
+    "lonlat": [
+     -10.5,
+     49.8
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

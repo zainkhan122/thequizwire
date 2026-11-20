@@ -1,0 +1,976 @@
+{
+ "id": "ep22-deepest-diving-mammal-cuviers-beaked-whale",
+ "series": "wild-files",
+ "number": 22,
+ "seed": 3922,
+ "question": "Which mammal dives the DEEPEST?",
+ "keyword": "DEEPEST",
+ "difficulty": "HARD",
+ "options": [
+  {
+   "text": "Sperm whale",
+   "emoji": "1f40b",
+   "cue": "sperm"
+  },
+  {
+   "text": "Elephant seal",
+   "emoji": "1f9ad",
+   "cue": "elephant"
+  },
+  {
+   "text": "Beaked whale",
+   "emoji": "1f42c",
+   "cue": "beaked"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "2,992 metres on one breath",
+ "outro_headline": "1 FOR 1?",
+ "cover_emoji": "🤿",
+ "cover_emoji_why": "a diving mask names the subject (the dive) and belongs to none of the three animals; it points at no option",
+ "post": {
+  "premise": "The deepest-diving mammal is one most people have never heard of",
+  "bait": "Sperm whale, elephant seal or beaked whale — which did you pick? 👇",
+  "keywords": [
+   "which mammal dives the deepest",
+   "deepest diving mammal",
+   "deepest dive ever recorded",
+   "how deep can a whale dive",
+   "whale dive depth",
+   "animal facts",
+   "wildlife quiz",
+   "animal quiz"
+  ],
+  "tags": [
+   "AnimalQuiz",
+   "DeepSea"
+  ],
+  "sources_line": "Schorr et al. 2014 (PLoS ONE); Quick et al. 2020 (J. Exp. Biol.); NOAA Fisheries",
+  "copy": {
+   "spoilers": [
+    "cuvier",
+    "beaked",
+    "ziphius",
+    "2,992",
+    "222",
+    "3 hours",
+    "42 minutes",
+    "hatteras",
+    "san nicolas"
+   ],
+   "youtube": {
+    "title": "The deepest diving mammal? Scientists tagged it 🤿",
+    "description": "The famous squid hunter, the giant seal, or the third one? Scientists glued satellite tags to all of them and one went down almost three kilometres and, on another dive, stayed under for longer than a feature film. Its lungs collapse on purpose.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#wildlife",
+     "#ocean",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which mammal dives the DEEPEST? 🤿\nThe famous squid hunter, the giant seal, or the third one? Scientists tagged all of them; one went down almost three kilometres and, on another dive, stayed under longer than a feature film. Its lungs collapse on purpose.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#wildlife",
+     "#ocean",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which mammal dives the deepest — the sperm whale, the elephant seal or the beaked whale?\nScientists tagged all three and one went down almost three kilometres on a single breath; on another dive it stayed under for longer than a feature film. Its lungs collapse on purpose. Pick before the bars drop.",
+    "tags": [
+     "#animalquiz",
+     "#deepsea"
+    ]
+   },
+   "twitter": {
+    "text": "Which mammal dives the DEEPEST?\nSperm whale, elephant seal or beaked whale? Almost three kilometres down, on one breath.",
+    "tags": [
+     "#AnimalQuiz",
+     "#Ocean"
+    ]
+   },
+   "threads": {
+    "text": "Which mammal dives the deepest — the sperm whale, the elephant seal or the beaked whale? Scientists tagged all three; one went almost three kilometres down on a single breath and, on another dive, stayed under longer than a feature film.",
+    "tags": [
+     "#deepsea"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-animal",
+  "hook": "straight",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "bars",
+   "rise",
+   "flash",
+   "pin",
+   "label"
+  ],
+  "cast": "emoji-set:ocean + flagball:none",
+  "music": "bed:deep",
+  "outro": "1 FOR 1?"
+ },
+ "intent": "A pressure quiz: three dive depths drop as bars so the sperm whale and the seal fall short, a whale sticker rises out of the dark basin off California where the record was logged, a flash marks the crush of 300 atmospheres, and a pin lands on Cape Hatteras where one animal held its breath for three hours and forty-two minutes.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "deepest": "deepest"
+  },
+  "v04": {
+   "text": "Cuvier's beaked whale. Off California, a tagged whale reached 2,992 metres, the deepest dive ever recorded for a mammal.",
+   "cues": {
+    "answer": "beaked",
+    "california": "california",
+    "metres": "metres"
+   }
+  },
+  "v05": {
+   "text": "A sperm whale manages about 2,250 metres; an elephant seal just under 2,400. Both fall short.",
+   "cues": {
+    "sperm": "sperm",
+    "elephant": "elephant",
+    "short": "short"
+   }
+  },
+  "v06": {
+   "text": "Its lungs collapse on purpose, its heart slows, and its muscles store the oxygen under 300 times surface pressure.",
+   "cues": {
+    "lungs": "lungs",
+    "heart": "heart",
+    "pressure": "pressure"
+   }
+  },
+  "v07": {
+   "text": "Off Cape Hatteras, one stayed under for 3 hours and 42 minutes, the longest dive ever recorded for a mammal.",
+   "cues": {
+    "hatteras": "hatteras",
+    "hours": "hours",
+    "longest": "longest"
+   }
+  },
+  "v08": {
+   "text": "Three hours, one breath. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "3 h 42 min",
+   "text": "one breath · off Cape Hatteras"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": null,
+  "b": null
+ },
+ "research": {
+  "topic": "Deepest and longest dives recorded for any mammal: Cuvier's beaked whale (Ziphius cavirostris). Schorr et al. (PLoS ONE, 2014) tagged eight whales off Southern California and logged a dive to 2,992 m (and one of 137.5 min). Quick et al. (Journal of Experimental Biology, 2020) analysed 3,680 dives from 23 whales off Cape Hatteras, North Carolina, and recorded a dive of 222 min (3 h 42 min), the longest for any mammal. Sperm whales are recorded to about 2,250 m; southern elephant seals to about 2,388 m. Beaked whales survive by letting the lungs collapse, slowing the heart and storing oxygen in muscle myoglobin; at 3,000 m the pressure is roughly 300 atmospheres.",
+  "myths": [
+   {
+    "myth": "The sperm whale, the famous squid hunter, is the deepest-diving mammal.",
+    "reality": "Sperm whales reach about 2,250 m; the deepest dive ever recorded for a mammal is a Cuvier's beaked whale at 2,992 m, and the same species holds the duration record at 222 minutes.",
+    "sources": [
+     "schorr2014",
+     "quick2020",
+     "noaa_cuvier"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Deep-dive clips are top-10 lists with stock footage; nobody drops the three depths to scale, raises the record-holder out of the basin where it was tagged and pins the second record site as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=deepest+diving+mammal",
+     "title": "Search: deepest diving mammal",
+     "angle": "countdown lists",
+     "misses": "no map, no mechanism"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=cuvier%27s+beaked+whale",
+     "title": "Search: the record holder on film",
+     "angle": "documentary clips",
+     "misses": "no quiz"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=sperm+whale+dive+depth",
+     "title": "Search: sperm whale dive depth",
+     "angle": "single-species explainers",
+     "misses": "no comparison"
+    }
+   ]
+  },
+  "sources": {
+   "schorr2014": {
+    "type": "scholarly",
+    "publisher": "Schorr, G. S. et al., PLoS ONE 9(3): e92633 (2014)",
+    "title": "First Long-Term Behavioral Records from Cuvier's Beaked Whales (Ziphius cavirostris) Reveal Record-Breaking Dives",
+    "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0092633",
+    "date": "2026-11-20",
+    "notes": "satellite tags on eight whales off Southern California: maximum depth 2,992 m and duration 137.5 min — records for any mammal at the time"
+   },
+   "quick2020": {
+    "type": "scholarly",
+    "publisher": "Quick, N. J. et al., Journal of Experimental Biology 223 (2020)",
+    "title": "Extreme diving in mammals: first estimates of behavioural aerobic dive limits in Cuvier's beaked whales",
+    "url": "https://journals.biologists.com/jeb/article/223/18/jeb222109/224986/Extreme-diving-in-mammals-first-estimates-of",
+    "date": "2026-11-20",
+    "notes": "3,680 dives from 23 whales off Cape Hatteras; longest dive 222 min — the longest recorded for any mammal"
+   },
+   "noaa_cuvier": {
+    "type": "primary",
+    "publisher": "NOAA Fisheries",
+    "title": "Cuvier's Beaked Whale — species directory",
+    "url": "https://www.fisheries.noaa.gov/species/cuviers-beaked-whale",
+    "date": "2026-11-20",
+    "notes": "deepest and longest dives of any mammal: 2,992 m and 222 min; deep offshore waters worldwide"
+   },
+   "wiki_cuvier": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Cuvier's beaked whale",
+    "url": "https://en.wikipedia.org/wiki/Cuvier%27s_beaked_whale",
+    "date": "2026-11-20",
+    "notes": "record dives of 2,992 m (2014, off California) and 222 minutes (2020); typical foraging dives beyond 800 m"
+   },
+   "ocr_cuvier": {
+    "type": "reference",
+    "publisher": "Ocean Conservation Research",
+    "title": "Cuvier's Beaked Whale — sounds and facts",
+    "url": "https://ocr.org/sounds/cuviers-beaked-whale/",
+    "date": "2026-11-20",
+    "notes": "deepest dive 2,992 m, longest 222 min; at 3,000 m roughly 300 atmospheres; lungs and air spaces collapse on descent"
+   },
+   "wiki_sperm": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Sperm whale",
+    "url": "https://en.wikipedia.org/wiki/Sperm_whale",
+    "date": "2026-11-20",
+    "notes": "routinely dives 1,000–2,000 m; deepest confirmed dives about 2,250 m"
+   },
+   "wiki_eseal": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Southern elephant seal",
+    "url": "https://en.wikipedia.org/wiki/Southern_elephant_seal",
+    "date": "2026-11-20",
+    "notes": "deepest recorded dive 2,388 m; dives of up to two hours"
+   },
+   "brit_beaked": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Beaked whale",
+    "url": "https://www.britannica.com/animal/beaked-whale",
+    "date": "2026-11-20",
+    "notes": "deep-diving toothed whales; Cuvier's beaked whale the most widespread, in deep offshore waters"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "A Cuvier's beaked whale tagged off Southern California dived to 2,992 m — the deepest dive ever recorded for a mammal.",
+    "sources": [
+     "schorr2014",
+     "noaa_cuvier",
+     "wiki_cuvier"
+    ],
+    "vo": [
+     "which mammal dives the deepest",
+     "sperm whale, elephant seal, or beaked whale",
+     "cuvier's beaked whale. off california, a tagged whale reached 2,992 metres, the deepest dive ever recorded for a mammal",
+     "three hours, one breath"
+    ],
+    "screen": [
+     "2,992 m",
+     "Beaked whale",
+     "San Nicolas Basin",
+     "2,992 m · record depth"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "detail",
+    "text": "Sperm whales are recorded to about 2,250 m and southern elephant seals to about 2,388 m — both shallower than the beaked whale's record.",
+    "sources": [
+     "wiki_sperm",
+     "wiki_eseal",
+     "noaa_cuvier"
+    ],
+    "vo": [
+     "a sperm whale manages about 2,250 metres; an elephant seal just under 2,400. both fall short"
+    ],
+    "screen": [
+     "2,250 m",
+     "2,388 m",
+     "Sperm whale",
+     "Elephant seal"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Beaked whales survive the depth because their lungs collapse, the heart rate drops and oxygen is stored in the muscles; at about 3,000 m the pressure is roughly 300 atmospheres.",
+    "sources": [
+     "ocr_cuvier",
+     "noaa_cuvier",
+     "brit_beaked"
+    ],
+    "vo": [
+     "its lungs collapse on purpose, its heart slows, and its muscles store the oxygen under 300 times surface pressure"
+    ],
+    "screen": [
+     "300 atmospheres"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Off Cape Hatteras, North Carolina, a Cuvier's beaked whale stayed submerged for 222 minutes (3 h 42 min) — the longest dive recorded for any mammal.",
+    "sources": [
+     "quick2020",
+     "noaa_cuvier",
+     "wiki_cuvier"
+    ],
+    "vo": [
+     "off cape hatteras, one stayed under for 3 hours and 42 minutes, the longest dive ever recorded for a mammal"
+    ],
+    "screen": [
+     "3 h 42 min",
+     "one breath · off Cape Hatteras",
+     "Cape Hatteras"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -128,
+   22,
+   -66,
+   48
+  ],
+  "far_bbox": [
+   -165,
+   -10,
+   -25,
+   65
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "840"
+  ],
+  "highlight_note": "United States — both record dives were logged off its coasts (California 2014, North Carolina 2020)",
+  "extra_layers": [
+   {
+    "kind": "area",
+    "id": "basin",
+    "cls": "zone",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "snb",
+       "properties": {
+        "name": "San Nicolas Basin — the 2014 tagging ground"
+       },
+       "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+         [
+          [
+           -120.6,
+           32.4
+          ],
+          [
+           -118.4,
+           32.4
+          ],
+          [
+           -118.0,
+           33.3
+          ],
+          [
+           -119.0,
+           33.9
+          ],
+          [
+           -120.4,
+           33.5
+          ],
+          [
+           -120.6,
+           32.4
+          ]
+         ]
+        ]
+       }
+      }
+     ]
+    },
+    "note": "schematic outline of the deep basin south of the Channel Islands where the tagged whales were tracked"
+   }
+  ],
+  "labels": [
+   {
+    "id": "rec",
+    "lonlat": [
+     -123.5,
+     31.3
+    ],
+    "text": "2,992 m · record depth",
+    "cls": "tag",
+    "in": "s06@lungs+0.3",
+    "out": "s06.end"
+   },
+   {
+    "id": "atm",
+    "lonlat": [
+     -114.5,
+     30.2
+    ],
+    "text": "300 atmospheres",
+    "cls": "tag",
+    "in": "s06@pressure+0.2",
+    "out": "s06.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "snb",
+    "lonlat": [
+     -119.4,
+     33.0
+    ],
+    "label": "San Nicolas Basin",
+    "side": "left"
+   },
+   {
+    "id": "hat",
+    "lonlat": [
+     -75.5,
+     35.25
+    ],
+    "label": "Cape Hatteras",
+    "side": "right"
+   }
+  ],
+  "scalebar": {
+   "km": 500,
+   "lonlat": [
+    -127,
+    23.5
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s04@california",
+    "pid": "snb"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.45,
+    [
+     -100,
+     32
+    ]
+   ],
+   "s01": [
+    0.45,
+    [
+     -101,
+     31
+    ]
+   ],
+   "s04": [
+    1.0,
+    [
+     -119,
+     33
+    ]
+   ],
+   "s04b": [
+    1.05,
+    [
+     -119.2,
+     33.2
+    ]
+   ],
+   "s05": [
+    0.9,
+    [
+     -118,
+     33.5
+    ]
+   ],
+   "s05b": [
+    0.94,
+    [
+     -118.3,
+     33.3
+    ]
+   ],
+   "s06": [
+    1.15,
+    [
+     -119.5,
+     33.0
+    ]
+   ],
+   "s06b": [
+    1.2,
+    [
+     -119.6,
+     33.1
+    ]
+   ],
+   "s07": [
+    0.9,
+    [
+     -76.5,
+     35
+    ]
+   ],
+   "s07b": [
+    0.94,
+    [
+     -76.3,
+     35.2
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "A sperm whale manages about 2,250 metres; an elephant seal just under 2,400. Both fall short.",
+    "cues": {
+     "sperm": "sperm",
+     "elephant": "elephant",
+     "short": "short"
+    }
+   },
+   "direction": "ease back over the California Bight; three depths drop as bars on 'sperm' with the beaked whale's bar reaching far below the others; a whale sticker on 'sperm', a seal sticker on 'elephant'; the coast pulses on 'short'",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.9,
+    [
+     -118,
+     33.5
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.94,
+    [
+     -118.3,
+     33.3
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "depth",
+     "type": "bars",
+     "rows": [
+      [
+       "Sperm whale",
+       2250,
+       "2,250 m"
+      ],
+      [
+       "Elephant seal",
+       2388,
+       "2,388 m"
+      ],
+      [
+       "Beaked whale",
+       2992,
+       "2,992 m"
+      ]
+     ],
+     "unit": "deepest recorded dive",
+     "y": 300,
+     "x": 60,
+     "w": 900
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@sperm-0.2",
+     "do": "chart.bars_in",
+     "id": "depth",
+     "args": {
+      "dur": 1.0,
+      "stagger": 0.3
+     }
+    },
+    {
+     "at": "@@sperm",
+     "do": "sticker_in",
+     "id": "st_sperm"
+    },
+    {
+     "at": "@@sperm+0.4",
+     "do": "sticker_pulse",
+     "id": "st_sperm"
+    },
+    {
+     "at": "@@elephant",
+     "do": "sticker_out",
+     "id": "st_sperm"
+    },
+    {
+     "at": "@@elephant",
+     "do": "sticker_in",
+     "id": "st_seal"
+    },
+    {
+     "at": "@@elephant+0.4",
+     "do": "sticker_pulse",
+     "id": "st_seal"
+    },
+    {
+     "at": "@@elephant+0.9",
+     "do": "sticker_pulse",
+     "id": "st_seal"
+    },
+    {
+     "at": "@@short+0.2",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "840",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_seal"
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "depth"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Its lungs collapse on purpose, its heart slows, and its muscles store the oxygen under 300 times surface pressure.",
+    "cues": {
+     "lungs": "lungs",
+     "heart": "heart",
+     "pressure": "pressure"
+    }
+   },
+   "direction": "tighten on the basin south of the Channel Islands; on 'lungs' the dark basin outline appears and a whale sticker rises out of it with the record tag; a lungs sticker on 'lungs', a heart on 'heart'; a white flash on 'pressure' with the 300 atmospheres tag as the coast pulses",
+   "energy": 3,
+   "tone": "suspense",
+   "pause_after": 0.5,
+   "cam": [
+    1.15,
+    [
+     -119.5,
+     33.0
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.2,
+    [
+     -119.6,
+     33.1
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@lungs",
+     "do": "geo.highlight_in",
+     "stage": "stage_map",
+     "args": {
+      "fid": "snb",
+      "layer": "basin",
+      "dur": 0.5
+     }
+    },
+    {
+     "at": "@@lungs+0.15",
+     "do": "sticker_in",
+     "id": "st_whale"
+    },
+    {
+     "at": "@@lungs+0.2",
+     "do": "geo.rise",
+     "stage": "stage_map",
+     "args": {
+      "fid": "snb",
+      "eid": "st_whale",
+      "layer": "basin",
+      "dur": 0.8,
+      "lift": 10
+     }
+    },
+    {
+     "at": "@@lungs+0.6",
+     "do": "sticker_in",
+     "id": "st_lungs"
+    },
+    {
+     "at": "@@lungs+1.0",
+     "do": "sticker_pulse",
+     "id": "st_lungs"
+    },
+    {
+     "at": "@@heart",
+     "do": "sticker_out",
+     "id": "st_lungs"
+    },
+    {
+     "at": "@@heart",
+     "do": "sticker_in",
+     "id": "st_heart"
+    },
+    {
+     "at": "@@heart+0.4",
+     "do": "sticker_pulse",
+     "id": "st_heart"
+    },
+    {
+     "at": "@@heart+0.9",
+     "do": "sticker_pulse",
+     "id": "st_heart"
+    },
+    {
+     "at": "@@pressure",
+     "do": "sticker_out",
+     "id": "st_heart"
+    },
+    {
+     "at": "@@pressure+0.1",
+     "do": "fx.flash",
+     "args": {
+      "peak": 0.9,
+      "out": 0.3
+     }
+    },
+    {
+     "at": "@@pressure+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "840",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_whale"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.highlight_out",
+     "stage": "stage_map",
+     "args": {
+      "fid": "snb",
+      "layer": "basin",
+      "dur": 0.4
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Off Cape Hatteras, one stayed under for 3 hours and 42 minutes, the longest dive ever recorded for a mammal.",
+    "cues": {
+     "hatteras": "hatteras",
+     "hours": "hours",
+     "longest": "longest"
+    }
+   },
+   "direction": "glide across the continent to the Carolina coast; the Cape Hatteras pin on 'Hatteras'; a stopwatch sticker and the 3 h 42 min card on 'hours'; a trophy sticker on 'longest' as the coast pulses; both pins leave at the end",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "3 h 42 min",
+    "text": "one breath · off Cape Hatteras"
+   },
+   "card_at": null,
+   "cam": [
+    0.9,
+    [
+     -76.5,
+     35
+    ]
+   ],
+   "cam_dur": 1.6,
+   "cam_hold": [
+    0.94,
+    [
+     -76.3,
+     35.2
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@hatteras",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "hat"
+     }
+    },
+    {
+     "at": "@@hours",
+     "do": "sticker_in",
+     "id": "st_watch"
+    },
+    {
+     "at": "@@hours+0.4",
+     "do": "sticker_pulse",
+     "id": "st_watch"
+    },
+    {
+     "at": "@@hours+0.3",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@longest",
+     "do": "sticker_out",
+     "id": "st_watch"
+    },
+    {
+     "at": "@@longest",
+     "do": "sticker_in",
+     "id": "st_trophy"
+    },
+    {
+     "at": "@@longest+0.4",
+     "do": "sticker_pulse",
+     "id": "st_trophy"
+    },
+    {
+     "at": "@@longest+0.9",
+     "do": "sticker_pulse",
+     "id": "st_trophy"
+    },
+    {
+     "at": "@@longest+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "840",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_trophy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "hat"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "snb"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_sperm",
+   "type": "sticker",
+   "emoji": "1f40b",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_seal",
+   "type": "sticker",
+   "emoji": "1f9ad",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_whale",
+   "type": "sticker",
+   "emoji": "1f42c",
+   "x": 540,
+   "y": 900,
+   "size": 150,
+   "rot": 0
+  },
+  {
+   "id": "st_lungs",
+   "type": "sticker",
+   "emoji": "1fac1",
+   "x": 130,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_heart",
+   "type": "sticker",
+   "emoji": "2764",
+   "x": 130,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_watch",
+   "type": "sticker",
+   "emoji": "23f1",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_trophy",
+   "type": "sticker",
+   "emoji": "1f3c6",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  }
+ ]
+}

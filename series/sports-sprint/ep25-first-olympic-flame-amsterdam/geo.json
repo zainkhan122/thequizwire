@@ -1,0 +1,218 @@
+{
+ "version": 1,
+ "episode": "ep25-first-olympic-flame-amsterdam",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -2,
+     37,
+     28,
+     56
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "528"
+     ],
+     "cls": "",
+     "note": "Netherlands",
+     "lift": "flag",
+     "flag": "nl"
+    },
+    {
+     "kind": "route",
+     "id": "relay",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "r36",
+        "properties": {
+         "name": "1936 relay — Olympia to Berlin"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           21.63,
+           37.64
+          ],
+          [
+           23.73,
+           37.98
+          ],
+          [
+           22.5,
+           38.48
+          ],
+          [
+           22.94,
+           40.64
+          ],
+          [
+           23.32,
+           42.7
+          ],
+          [
+           20.46,
+           44.82
+          ],
+          [
+           19.04,
+           47.5
+          ],
+          [
+           16.37,
+           48.21
+          ],
+          [
+           14.42,
+           50.09
+          ],
+          [
+           13.74,
+           51.05
+          ],
+          [
+           13.4,
+           52.52
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic line through the relay's main cities (Olympia, Athens, Delphi, Thessaloniki, Sofia, Belgrade, Budapest, Vienna, Prague, Dresden, Berlin)"
+    }
+   ],
+   "pins": [
+    {
+     "id": "ams",
+     "lonlat": [
+      4.85,
+      52.34
+     ],
+     "label": "Amsterdam",
+     "side": "right"
+    },
+    {
+     "id": "oly",
+     "lonlat": [
+      21.63,
+      37.64
+     ],
+     "label": "Olympia",
+     "side": "left"
+    },
+    {
+     "id": "ber",
+     "lonlat": [
+      13.4,
+      52.52
+     ],
+     "label": "Berlin",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "mt",
+     "lonlat": [
+      2.0,
+      53.6
+     ],
+     "text": "Marathon Tower",
+     "cls": "tag",
+     "in": "s04@tower+0.2",
+     "out": "s05.end"
+    },
+    {
+     "id": "km",
+     "lonlat": [
+      24.5,
+      45.5
+     ],
+     "text": "3,187 km · 3,331 runners",
+     "cls": "tag",
+     "in": "s06@runners+0.1",
+     "out": "s06.end"
+    },
+    {
+     "id": "days",
+     "lonlat": [
+      8.5,
+      46.0
+     ],
+     "text": "12 days · 7 countries",
+     "cls": "tag",
+     "in": "s07@twelve+0.2",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [
+    {
+     "id": "kosovo",
+     "ne_name": "Kosovo",
+     "name": "Kosovo",
+     "controller": "Republic of Kosovo (self-governing since 2008)",
+     "claimants": [
+      "Serbia"
+     ],
+     "note": "recognised by ~100 UN members, not by Serbia",
+     "as_of": "2026-11",
+     "source": "docs/border_registry.json#kosovo",
+     "label_at": [
+      20.9,
+      42.6
+     ],
+     "plate_cls": "small"
+    }
+   ],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -35,
+      20,
+      65,
+      72
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 300,
+    "lonlat": [
+     -1,
+     37.8
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,232 @@
+{
+ "version": 1,
+ "episode": "ep25-first-olympic-flame-amsterdam",
+ "topic": "The first Olympic flame of the modern Games burned at the 1928 Summer Olympics in Amsterdam, in a bowl on top of the Marathon Tower of the Olympic Stadium designed by architect Jan Wils; it was lit by an employee of the Amsterdam electricity utility and served to show where the Games were. The 1896 Athens Games had no flame. Los Angeles 1932 repeated the stadium flame. The torch relay was introduced by Carl Diem for Berlin 1936: the flame was lit by the sun in Olympia on 20 July 1936 and carried 3,187 km by 3,331 runners in twelve days and eleven nights through Greece, Bulgaria, Yugoslavia, Hungary, Austria, Czechoslovakia and Germany, arriving on 1 August 1936; Leni Riefenstahl filmed it for the Nazi regime. Every Games since has held a relay from Olympia.",
+ "researched": "2026-11-20",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The Olympic flame has been lit in Greece since the first modern Games in 1896.",
+   "reality": "The 1896 Games had no flame; the first flame burned in Amsterdam in 1928, lit on site, and the relay from Olympia began only in 1936 for Berlin.",
+   "sources": [
+    "wiki_flame",
+    "wiki_relay1936",
+    "brit_olympics"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Olympic-flame explainers are long histories or relay highlight reels; nobody lifts the real first host into its flag, pins the tower, and then runs the 1936 route across seven countries as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=olympic+flame+history",
+    "title": "Search: Olympic flame history",
+    "angle": "long explainers",
+    "misses": "no quiz, no map"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=first+olympic+torch+relay+1936",
+    "title": "Search: the 1936 relay",
+    "angle": "archive footage",
+    "misses": "no 1928 twist"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=olympics+quiz",
+    "title": "Search: Olympics quiz",
+    "angle": "list quizzes",
+    "misses": "no story"
+   }
+  ]
+ },
+ "sources": {
+  "wiki_flame": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Olympic flame",
+   "url": "https://en.wikipedia.org/wiki/Olympic_flame",
+   "date": "2026-11-20",
+   "notes": "first symbolic flame at Amsterdam 1928 in a bowl on the Marathon Tower, idea of architect Jan Wils, lit by an employee of the Amsterdam electric utility; torch relay introduced by Carl Diem for Berlin 1936; 3,187 km, 3,331 runners, twelve days and eleven nights"
+  },
+  "wiki_relay1936": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "1936 Summer Olympics torch relay",
+   "url": "https://en.wikipedia.org/wiki/1936_Summer_Olympics_torch_relay",
+   "date": "2026-11-20",
+   "notes": "first torch relay: Olympia 20 July to Berlin 1 August 1936; 3,187 km; 3,331 torchbearers; Greece, Bulgaria, Yugoslavia, Hungary, Austria, Czechoslovakia, Germany; flame in Amsterdam 1928 and Los Angeles 1932 lit on site at the stadium"
+  },
+  "wiki_1928": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "1928 Summer Olympics",
+   "url": "https://en.wikipedia.org/wiki/1928_Summer_Olympics",
+   "date": "2026-11-20",
+   "notes": "Amsterdam 1928 introduced the Olympic flame, which burned throughout the Games on the Marathon Tower of the Olympic Stadium"
+  },
+  "wiki_1896": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "1896 Summer Olympics",
+   "url": "https://en.wikipedia.org/wiki/1896_Summer_Olympics",
+   "date": "2026-11-20",
+   "notes": "the first modern Olympic Games, Athens, April 1896"
+  },
+  "wiki_stadium": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Olympisch Stadion (Amsterdam)",
+   "url": "https://en.wikipedia.org/wiki/Olympisch_Stadion_(Amsterdam)",
+   "date": "2026-11-20",
+   "notes": "designed by Jan Wils for the 1928 Games; the Marathon Tower carried the first Olympic flame"
+  },
+  "brit_olympics": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Olympic Games — The Olympic flame and torch relay",
+   "url": "https://www.britannica.com/sports/Olympic-Games",
+   "date": "2026-11-20",
+   "notes": "the Olympic flame was first used at Amsterdam 1928; the torch relay from Olympia was introduced at Berlin 1936"
+  },
+  "ioc_relay": {
+   "type": "primary",
+   "publisher": "International Olympic Committee",
+   "title": "Olympic Torch Relay — history",
+   "url": "https://olympics.com/ioc/olympic-torch-relay",
+   "date": "2026-11-20",
+   "notes": "the flame first appeared at Amsterdam 1928; the first torch relay was staged for Berlin 1936, from Olympia to the host city"
+  },
+  "border_registry": {
+   "type": "primary",
+   "publisher": "Natural Earth 10m admin-0 disputed areas (via docs/border_registry.json)",
+   "title": "Disputed areas: Kosovo",
+   "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/",
+   "date": "2026-11-20",
+   "notes": "Kosovo: self-governing since 2008, recognised by about 100 UN members, claimed by Serbia"
+  },
+  "wiki_riefenstahl": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Olympia (1938 film)",
+   "url": "https://en.wikipedia.org/wiki/Olympia_(1938_film)",
+   "date": "2026-11-20",
+   "notes": "Leni Riefenstahl's film of the 1936 Berlin Games, commissioned by the Nazi regime, opens with the torch relay from Olympia"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The first Olympic flame of the modern Games burned in Amsterdam in 1928, in a bowl on top of the Olympic Stadium's Marathon Tower, lit by an employee of the city's electricity utility.",
+   "sources": [
+    "wiki_flame",
+    "wiki_1928",
+    "brit_olympics",
+    "ioc_relay"
+   ],
+   "vo": [
+    "in which city did the olympic flame first burn",
+    "athens, amsterdam, or berlin",
+    "amsterdam. in 1928 a flame burned on the stadium's marathon tower, lit by a city electricity worker",
+    "lit in amsterdam first"
+   ],
+   "screen": [
+    "Amsterdam",
+    "Marathon Tower"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "detail",
+   "text": "The 1896 Athens Games had no Olympic flame; the Amsterdam tower's purpose was to show where the Games were being held.",
+   "sources": [
+    "wiki_flame",
+    "wiki_1896",
+    "brit_olympics",
+    "ioc_relay"
+   ],
+   "vo": [
+    "athens revived the games in 1896 with no flame at all. the dutch tower simply showed where the games were"
+   ],
+   "screen": [
+    "1896",
+    "Athens · the Games return, no flame"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "The torch relay began in 1936 for Berlin: the flame was lit in Olympia and carried 3,187 km by 3,331 runners.",
+   "sources": [
+    "wiki_relay1936",
+    "wiki_flame",
+    "brit_olympics",
+    "ioc_relay"
+   ],
+   "vo": [
+    "the relay came in 1936: lit in olympia, carried 3,187 kilometres to berlin by 3,331 runners"
+   ],
+   "screen": [
+    "Olympia",
+    "Berlin",
+    "3,187 km · 3,331 runners"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "The 1936 relay took twelve days through seven countries, was filmed for Nazi propaganda by Leni Riefenstahl, and every Games since has held a relay from Olympia.",
+   "sources": [
+    "wiki_relay1936",
+    "wiki_riefenstahl",
+    "ioc_relay"
+   ],
+   "vo": [
+    "twelve days, seven countries, filmed for nazi propaganda. every relay since copies that idea"
+   ],
+   "screen": [
+    "12 days · 7 countries"
+   ]
+  },
+  {
+   "id": "C05",
+   "weight": "framing",
+   "text": "Border policy plate: the relay close-up shows Kosovo, labelled with who administers it and who claims it, per docs/BORDER_POLICY.md. No sovereignty asserted.",
+   "sources": [
+    "border_registry"
+   ],
+   "vo": [],
+   "screen": [
+    "Kosovo",
+    "Administered by Republic of Kosovo (self-governing since 2008)",
+    "Claimed by Serbia",
+    "recognised by ~100 UN members, not by Serbia"
+   ]
+  }
+ ]
+}

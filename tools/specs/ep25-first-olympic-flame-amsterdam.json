@@ -1,0 +1,1044 @@
+{
+ "id": "ep25-first-olympic-flame-amsterdam",
+ "series": "sports-sprint",
+ "number": 25,
+ "seed": 6225,
+ "question": "In which city did the Olympic flame FIRST burn?",
+ "keyword": "FIRST",
+ "difficulty": "HARD",
+ "options": [
+  {
+   "text": "Athens",
+   "flag": "gr",
+   "cue": "athens"
+  },
+  {
+   "text": "Amsterdam",
+   "flag": "nl",
+   "cue": "amsterdam"
+  },
+  {
+   "text": "Berlin",
+   "flag": "de",
+   "cue": "berlin"
+  }
+ ],
+ "correct": 1,
+ "answer_sub": "1928 · a bowl on the Marathon Tower",
+ "outro_headline": "TOO EASY?",
+ "cover_emoji": "🔥",
+ "cover_emoji_why": "a flame names the subject and belongs to all three cities' Games; it points at no option",
+ "post": {
+  "premise": "The first Olympic flame was not lit in Greece",
+  "bait": "Athens, Amsterdam or Berlin — which did you pick? 👇",
+  "keywords": [
+   "first olympic flame",
+   "olympic flame history",
+   "where was the first olympic flame lit",
+   "olympic torch relay history",
+   "first olympic torch relay",
+   "olympics quiz",
+   "sports trivia",
+   "sports quiz"
+  ],
+  "tags": [
+   "SportsQuiz",
+   "Olympics"
+  ],
+  "sources_line": "Wikipedia (Olympic flame; 1936 torch relay); Encyclopaedia Britannica; IOC",
+  "copy": {
+   "spoilers": [
+    "amsterdam",
+    "dutch",
+    "netherlands",
+    "holland",
+    "marathon tower",
+    "jan wils",
+    "1928",
+    "3,187",
+    "3,331"
+   ],
+   "youtube": {
+    "title": "Where did the first Olympic flame burn? Not where you think 🔥",
+    "description": "The city that revived the Games, the city of the first torch relay, or the third one? The first Olympic flame was lit by an electricity worker in a bowl on top of a stadium tower, with no relay and no Olympia. The relay came eight years later, and it was built as a propaganda show.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#olympics",
+     "#sports",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "In which city did the Olympic flame FIRST burn? 🔥\nThe city that revived the Games, the city of the first torch relay, or the third one? The first flame was lit by an electricity worker in a bowl on top of a stadium tower — no relay, no Olympia. The relay came eight years later, built as a propaganda show.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#olympics",
+     "#sports",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "In which city did the Olympic flame first burn — Athens, Amsterdam or Berlin?\nThe first flame was lit by an electricity worker in a bowl on top of a stadium tower, with no relay and no Olympia. The relay came eight years later, thousands of runners across seven countries, built as a propaganda show. Pick before the torch moves.",
+    "tags": [
+     "#sportsquiz",
+     "#olympicflame"
+    ]
+   },
+   "twitter": {
+    "text": "In which city did the Olympic flame FIRST burn?\nAthens, Amsterdam or Berlin? No relay, no Olympia — an electricity worker and a bowl on a tower.",
+    "tags": [
+     "#SportsQuiz",
+     "#Olympics"
+    ]
+   },
+   "threads": {
+    "text": "In which city did the Olympic flame first burn — Athens, Amsterdam or Berlin? The first flame was lit by an electricity worker in a bowl on top of a stadium tower, with no relay and no Olympia; the relay came eight years later as a propaganda show.",
+    "tags": [
+     "#torchrelay"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "straight",
+  "opener": "wide-drift",
+  "reveal": "flag-lift",
+  "beats": [
+   "route",
+   "travel",
+   "flash",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:nl + flagball:gr + flagball:de + emoji-set:olympic",
+  "music": "bed:epic",
+  "outro": "TOO EASY?"
+ },
+ "intent": "A tradition traced to its real start: the small host lifts into its flag, the stadium tower is pinned, the Greek flag-ball thinks while the 1896 card says no flame, and then a runner draws the 1936 route from Olympia across seven countries to Berlin with a flash at the lighting in Olympia and a tag for the 3,187 kilometres.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "first": "first"
+  },
+  "v04": {
+   "text": "Amsterdam. In 1928 a flame burned on the stadium's Marathon Tower, lit by a city electricity worker.",
+   "cues": {
+    "answer": "amsterdam",
+    "tower": "tower",
+    "worker": "worker"
+   }
+  },
+  "v05": {
+   "text": "Athens revived the Games in 1896 with no flame at all. The Dutch tower simply showed where the Games were.",
+   "cues": {
+    "athens": "athens",
+    "flame": "flame",
+    "tower": "tower"
+   }
+  },
+  "v06": {
+   "text": "The relay came in 1936: lit in Olympia, carried 3,187 kilometres to Berlin by 3,331 runners.",
+   "cues": {
+    "relay": "relay",
+    "olympia": "olympia",
+    "runners": "runners"
+   }
+  },
+  "v07": {
+   "text": "Twelve days, seven countries, filmed for Nazi propaganda. Every relay since copies that idea.",
+   "cues": {
+    "twelve": "twelve",
+    "propaganda": "propaganda",
+    "copies": "copies"
+   }
+  },
+  "v08": {
+   "text": "Lit in Amsterdam first. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "1896",
+   "text": "Athens · the Games return, no flame"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "nl",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "gr",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "The first Olympic flame of the modern Games burned at the 1928 Summer Olympics in Amsterdam, in a bowl on top of the Marathon Tower of the Olympic Stadium designed by architect Jan Wils; it was lit by an employee of the Amsterdam electricity utility and served to show where the Games were. The 1896 Athens Games had no flame. Los Angeles 1932 repeated the stadium flame. The torch relay was introduced by Carl Diem for Berlin 1936: the flame was lit by the sun in Olympia on 20 July 1936 and carried 3,187 km by 3,331 runners in twelve days and eleven nights through Greece, Bulgaria, Yugoslavia, Hungary, Austria, Czechoslovakia and Germany, arriving on 1 August 1936; Leni Riefenstahl filmed it for the Nazi regime. Every Games since has held a relay from Olympia.",
+  "myths": [
+   {
+    "myth": "The Olympic flame has been lit in Greece since the first modern Games in 1896.",
+    "reality": "The 1896 Games had no flame; the first flame burned in Amsterdam in 1928, lit on site, and the relay from Olympia began only in 1936 for Berlin.",
+    "sources": [
+     "wiki_flame",
+     "wiki_relay1936",
+     "brit_olympics"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Olympic-flame explainers are long histories or relay highlight reels; nobody lifts the real first host into its flag, pins the tower, and then runs the 1936 route across seven countries as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=olympic+flame+history",
+     "title": "Search: Olympic flame history",
+     "angle": "long explainers",
+     "misses": "no quiz, no map"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=first+olympic+torch+relay+1936",
+     "title": "Search: the 1936 relay",
+     "angle": "archive footage",
+     "misses": "no 1928 twist"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=olympics+quiz",
+     "title": "Search: Olympics quiz",
+     "angle": "list quizzes",
+     "misses": "no story"
+    }
+   ]
+  },
+  "sources": {
+   "wiki_flame": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Olympic flame",
+    "url": "https://en.wikipedia.org/wiki/Olympic_flame",
+    "date": "2026-11-20",
+    "notes": "first symbolic flame at Amsterdam 1928 in a bowl on the Marathon Tower, idea of architect Jan Wils, lit by an employee of the Amsterdam electric utility; torch relay introduced by Carl Diem for Berlin 1936; 3,187 km, 3,331 runners, twelve days and eleven nights"
+   },
+   "wiki_relay1936": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "1936 Summer Olympics torch relay",
+    "url": "https://en.wikipedia.org/wiki/1936_Summer_Olympics_torch_relay",
+    "date": "2026-11-20",
+    "notes": "first torch relay: Olympia 20 July to Berlin 1 August 1936; 3,187 km; 3,331 torchbearers; Greece, Bulgaria, Yugoslavia, Hungary, Austria, Czechoslovakia, Germany; flame in Amsterdam 1928 and Los Angeles 1932 lit on site at the stadium"
+   },
+   "wiki_1928": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "1928 Summer Olympics",
+    "url": "https://en.wikipedia.org/wiki/1928_Summer_Olympics",
+    "date": "2026-11-20",
+    "notes": "Amsterdam 1928 introduced the Olympic flame, which burned throughout the Games on the Marathon Tower of the Olympic Stadium"
+   },
+   "wiki_1896": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "1896 Summer Olympics",
+    "url": "https://en.wikipedia.org/wiki/1896_Summer_Olympics",
+    "date": "2026-11-20",
+    "notes": "the first modern Olympic Games, Athens, April 1896"
+   },
+   "wiki_stadium": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Olympisch Stadion (Amsterdam)",
+    "url": "https://en.wikipedia.org/wiki/Olympisch_Stadion_(Amsterdam)",
+    "date": "2026-11-20",
+    "notes": "designed by Jan Wils for the 1928 Games; the Marathon Tower carried the first Olympic flame"
+   },
+   "brit_olympics": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Olympic Games — The Olympic flame and torch relay",
+    "url": "https://www.britannica.com/sports/Olympic-Games",
+    "date": "2026-11-20",
+    "notes": "the Olympic flame was first used at Amsterdam 1928; the torch relay from Olympia was introduced at Berlin 1936"
+   },
+   "ioc_relay": {
+    "type": "primary",
+    "publisher": "International Olympic Committee",
+    "title": "Olympic Torch Relay — history",
+    "url": "https://olympics.com/ioc/olympic-torch-relay",
+    "date": "2026-11-20",
+    "notes": "the flame first appeared at Amsterdam 1928; the first torch relay was staged for Berlin 1936, from Olympia to the host city"
+   },
+   "border_registry": {
+    "type": "primary",
+    "publisher": "Natural Earth 10m admin-0 disputed areas (via docs/border_registry.json)",
+    "title": "Disputed areas: Kosovo",
+    "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/",
+    "date": "2026-11-20",
+    "notes": "Kosovo: self-governing since 2008, recognised by about 100 UN members, claimed by Serbia"
+   },
+   "wiki_riefenstahl": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Olympia (1938 film)",
+    "url": "https://en.wikipedia.org/wiki/Olympia_(1938_film)",
+    "date": "2026-11-20",
+    "notes": "Leni Riefenstahl's film of the 1936 Berlin Games, commissioned by the Nazi regime, opens with the torch relay from Olympia"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The first Olympic flame of the modern Games burned in Amsterdam in 1928, in a bowl on top of the Olympic Stadium's Marathon Tower, lit by an employee of the city's electricity utility.",
+    "sources": [
+     "wiki_flame",
+     "wiki_1928",
+     "brit_olympics",
+     "ioc_relay"
+    ],
+    "vo": [
+     "in which city did the olympic flame first burn",
+     "athens, amsterdam, or berlin",
+     "amsterdam. in 1928 a flame burned on the stadium's marathon tower, lit by a city electricity worker",
+     "lit in amsterdam first"
+    ],
+    "screen": [
+     "Amsterdam",
+     "Marathon Tower"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "detail",
+    "text": "The 1896 Athens Games had no Olympic flame; the Amsterdam tower's purpose was to show where the Games were being held.",
+    "sources": [
+     "wiki_flame",
+     "wiki_1896",
+     "brit_olympics",
+     "ioc_relay"
+    ],
+    "vo": [
+     "athens revived the games in 1896 with no flame at all. the dutch tower simply showed where the games were"
+    ],
+    "screen": [
+     "1896",
+     "Athens · the Games return, no flame"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "The torch relay began in 1936 for Berlin: the flame was lit in Olympia and carried 3,187 km by 3,331 runners.",
+    "sources": [
+     "wiki_relay1936",
+     "wiki_flame",
+     "brit_olympics",
+     "ioc_relay"
+    ],
+    "vo": [
+     "the relay came in 1936: lit in olympia, carried 3,187 kilometres to berlin by 3,331 runners"
+    ],
+    "screen": [
+     "Olympia",
+     "Berlin",
+     "3,187 km · 3,331 runners"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "The 1936 relay took twelve days through seven countries, was filmed for Nazi propaganda by Leni Riefenstahl, and every Games since has held a relay from Olympia.",
+    "sources": [
+     "wiki_relay1936",
+     "wiki_riefenstahl",
+     "ioc_relay"
+    ],
+    "vo": [
+     "twelve days, seven countries, filmed for nazi propaganda. every relay since copies that idea"
+    ],
+    "screen": [
+     "12 days · 7 countries"
+    ]
+   },
+   {
+    "id": "C05",
+    "weight": "framing",
+    "text": "Border policy plate: the relay close-up shows Kosovo, labelled with who administers it and who claims it, per docs/BORDER_POLICY.md. No sovereignty asserted.",
+    "sources": [
+     "border_registry"
+    ],
+    "vo": [],
+    "screen": [
+     "Kosovo",
+     "Administered by Republic of Kosovo (self-governing since 2008)",
+     "Claimed by Serbia",
+     "recognised by ~100 UN members, not by Serbia"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -2,
+   37,
+   28,
+   56
+  ],
+  "far_bbox": [
+   -35,
+   20,
+   65,
+   72
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "528"
+  ],
+  "highlight_note": "Netherlands",
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "relay",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "r36",
+       "properties": {
+        "name": "1936 relay — Olympia to Berlin"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          21.63,
+          37.64
+         ],
+         [
+          23.73,
+          37.98
+         ],
+         [
+          22.5,
+          38.48
+         ],
+         [
+          22.94,
+          40.64
+         ],
+         [
+          23.32,
+          42.7
+         ],
+         [
+          20.46,
+          44.82
+         ],
+         [
+          19.04,
+          47.5
+         ],
+         [
+          16.37,
+          48.21
+         ],
+         [
+          14.42,
+          50.09
+         ],
+         [
+          13.74,
+          51.05
+         ],
+         [
+          13.4,
+          52.52
+         ]
+        ]
+       }
+      }
+     ]
+    },
+    "note": "schematic line through the relay's main cities (Olympia, Athens, Delphi, Thessaloniki, Sofia, Belgrade, Budapest, Vienna, Prague, Dresden, Berlin)"
+   }
+  ],
+  "labels": [
+   {
+    "id": "mt",
+    "lonlat": [
+     2.0,
+     53.6
+    ],
+    "text": "Marathon Tower",
+    "cls": "tag",
+    "in": "s04@tower+0.2",
+    "out": "s05.end"
+   },
+   {
+    "id": "km",
+    "lonlat": [
+     24.5,
+     45.5
+    ],
+    "text": "3,187 km · 3,331 runners",
+    "cls": "tag",
+    "in": "s06@runners+0.1",
+    "out": "s06.end"
+   },
+   {
+    "id": "days",
+    "lonlat": [
+     8.5,
+     46.0
+    ],
+    "text": "12 days · 7 countries",
+    "cls": "tag",
+    "in": "s07@twelve+0.2",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "ams",
+    "lonlat": [
+     4.85,
+     52.34
+    ],
+    "label": "Amsterdam",
+    "side": "right"
+   },
+   {
+    "id": "oly",
+    "lonlat": [
+     21.63,
+     37.64
+    ],
+    "label": "Olympia",
+    "side": "left"
+   },
+   {
+    "id": "ber",
+    "lonlat": [
+     13.4,
+     52.52
+    ],
+    "label": "Berlin",
+    "side": "right"
+   }
+  ],
+  "scalebar": {
+   "km": 300,
+   "lonlat": [
+    -1,
+    37.8
+   ]
+  },
+  "disputed": [
+   {
+    "id": "kosovo",
+    "ne_name": "Kosovo",
+    "name": "Kosovo",
+    "controller": "Republic of Kosovo (self-governing since 2008)",
+    "claimants": [
+     "Serbia"
+    ],
+    "note": "recognised by ~100 UN members, not by Serbia",
+    "as_of": "2026-11",
+    "source": "docs/border_registry.json#kosovo",
+    "label_at": [
+     20.9,
+     42.6
+    ],
+    "plate_cls": "small"
+   }
+  ],
+  "pin_beats": [
+   {
+    "at": "s04@tower",
+    "pid": "ams"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.5,
+    [
+     12,
+     46
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     11,
+     46.5
+    ]
+   ],
+   "s04": [
+    1.2,
+    [
+     5,
+     52.3
+    ]
+   ],
+   "s04b": [
+    1.25,
+    [
+     4.9,
+     52.2
+    ]
+   ],
+   "s05": [
+    1.0,
+    [
+     6,
+     51.5
+    ]
+   ],
+   "s05b": [
+    1.04,
+    [
+     6.3,
+     51.3
+    ]
+   ],
+   "s06": [
+    0.6,
+    [
+     17.5,
+     45.5
+    ]
+   ],
+   "s06b": [
+    0.62,
+    [
+     17.8,
+     45.8
+    ]
+   ],
+   "s07": [
+    0.62,
+    [
+     16.5,
+     46.5
+    ]
+   ],
+   "s07b": [
+    0.65,
+    [
+     16.2,
+     46.8
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Athens revived the Games in 1896 with no flame at all. The Dutch tower simply showed where the Games were.",
+    "cues": {
+     "athens": "athens",
+     "flame": "flame",
+     "tower": "tower"
+    }
+   },
+   "direction": "ease back over the Low Countries; the Greek flag-ball thinks on 'Athens' with the 1896 card; a candle-out sticker on 'flame'; a tower sticker on 'tower' as the Netherlands pulses; the card leaves at the end",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "card": {
+    "kicker": "1896",
+    "text": "Athens · the Games return, no flame"
+   },
+   "card_at": null,
+   "cam": [
+    1.0,
+    [
+     6,
+     51.5
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    1.04,
+    [
+     6.3,
+     51.3
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@athens",
+     "do": "character_in",
+     "id": "gr_think"
+    },
+    {
+     "at": "@@athens+0.3",
+     "do": "fact_in",
+     "id": "f2",
+     "until": "@@tower-0.2"
+    },
+    {
+     "at": "@@flame",
+     "do": "sticker_in",
+     "id": "st_nofire"
+    },
+    {
+     "at": "@@flame+0.4",
+     "do": "sticker_pulse",
+     "id": "st_nofire"
+    },
+    {
+     "at": "@@tower",
+     "do": "sticker_out",
+     "id": "st_nofire"
+    },
+    {
+     "at": "@@tower",
+     "do": "sticker_in",
+     "id": "st_tower"
+    },
+    {
+     "at": "@@tower+0.4",
+     "do": "sticker_pulse",
+     "id": "st_tower"
+    },
+    {
+     "at": "@@tower+0.9",
+     "do": "sticker_pulse",
+     "id": "st_tower"
+    },
+    {
+     "at": "@@tower+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "528",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_tower"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "gr_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The relay came in 1936: lit in Olympia, carried 3,187 kilometres to Berlin by 3,331 runners.",
+    "cues": {
+     "relay": "relay",
+     "olympia": "olympia",
+     "runners": "runners"
+    }
+   },
+   "direction": "pull out so Greece and Germany share the frame; the Olympia pin on 'relay'; a white flash on 'Olympia' as a runner sticker rides the drawn line from Olympia to Berlin until 'runners', then the Berlin pin and the kilometres tag; the Netherlands pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    0.6,
+    [
+     17.5,
+     45.5
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.62,
+    [
+     17.8,
+     45.8
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@relay",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "oly"
+     }
+    },
+    {
+     "at": "@@olympia",
+     "do": "fx.flash",
+     "args": {
+      "peak": 0.9,
+      "out": 0.3
+     }
+    },
+    {
+     "at": "@@olympia+0.2",
+     "do": "sticker_in",
+     "id": "st_runner"
+    },
+    {
+     "at": "@@olympia+0.2",
+     "do": "geo.route_draw",
+     "stage": "stage_map",
+     "until": "@@runners",
+     "args": {
+      "rid": "r36",
+      "layer": "relay"
+     }
+    },
+    {
+     "at": "@@olympia+0.2",
+     "do": "geo.travel",
+     "stage": "stage_map",
+     "until": "@@runners",
+     "args": {
+      "rid": "r36",
+      "layer": "relay",
+      "sid": "st_runner",
+      "offset": [
+       0,
+       -50
+      ]
+     }
+    },
+    {
+     "at": "@@runners+0.2",
+     "do": "sticker_out",
+     "id": "st_runner"
+    },
+    {
+     "at": "@@runners",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "ber"
+     }
+    },
+    {
+     "at": "@@runners+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "528",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Twelve days, seven countries, filmed for Nazi propaganda. Every relay since copies that idea.",
+    "cues": {
+     "twelve": "twelve",
+     "propaganda": "propaganda",
+     "copies": "copies"
+    }
+   },
+   "direction": "hold on central Europe with the route lit; a calendar sticker and the days tag on 'twelve'; a clapperboard sticker on 'propaganda' as the German flag-ball thinks; a torch sticker on 'copies' as the Netherlands pulses; the pins leave at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "cam": [
+    0.62,
+    [
+     16.5,
+     46.5
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    0.65,
+    [
+     16.2,
+     46.8
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@twelve",
+     "do": "sticker_in",
+     "id": "st_cal"
+    },
+    {
+     "at": "@@twelve+0.4",
+     "do": "sticker_pulse",
+     "id": "st_cal"
+    },
+    {
+     "at": "@@propaganda",
+     "do": "sticker_out",
+     "id": "st_cal"
+    },
+    {
+     "at": "@@propaganda",
+     "do": "sticker_in",
+     "id": "st_clap"
+    },
+    {
+     "at": "@@propaganda+0.4",
+     "do": "sticker_pulse",
+     "id": "st_clap"
+    },
+    {
+     "at": "@@propaganda+0.2",
+     "do": "character_in",
+     "id": "de_think"
+    },
+    {
+     "at": "@@copies",
+     "do": "sticker_out",
+     "id": "st_clap"
+    },
+    {
+     "at": "@@copies",
+     "do": "sticker_in",
+     "id": "st_torch"
+    },
+    {
+     "at": "@@copies+0.4",
+     "do": "sticker_pulse",
+     "id": "st_torch"
+    },
+    {
+     "at": "@@copies+0.9",
+     "do": "sticker_pulse",
+     "id": "st_torch"
+    },
+    {
+     "at": "@@copies+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "528",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_torch"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "de_think"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "oly"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "ber"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "ams"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_nofire",
+   "type": "sticker",
+   "emoji": "1f56f",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_tower",
+   "type": "sticker",
+   "emoji": "1f5fc",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_runner",
+   "type": "sticker",
+   "emoji": "1f3c3",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "st_cal",
+   "type": "sticker",
+   "emoji": "1f4c5",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_clap",
+   "type": "sticker",
+   "emoji": "1f3ac",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_torch",
+   "type": "sticker",
+   "emoji": "1f525",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "gr_think",
+   "type": "character",
+   "flag": "gr",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "de_think",
+   "type": "character",
+   "flag": "de",
+   "face": "think",
+   "x": 300,
+   "y": 1130,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

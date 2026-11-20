@@ -1,0 +1,241 @@
+{
+ "files": {
+  "media/photos/ph_flasks.jpg": {
+   "by": "reelkit/photos.py",
+   "commons": "File:Synthetic Production of Penicillin TR1468.jpg",
+   "credit": "Official photographer — Public domain — https://commons.wikimedia.org/wiki/File:Synthetic_Production_of_Penicillin_TR1468.jpg",
+   "kind": "photo",
+   "licence": "PD",
+   "licence_url": "",
+   "provider": "Wikimedia Commons",
+   "screen_credit": "📷 Official photographer · Public domain",
+   "sha256": "dd4b4915c8486a905c5a51a1c1ca134b76259a1c1fd2b06e02e9e962dc0bc1fb",
+   "size": 774474,
+   "source": "https://commons.wikimedia.org/wiki/File:Synthetic_Production_of_Penicillin_TR1468.jpg"
+  }
+ },
+ "generated": {
+  "brand/cursor.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 224,
+   "credit": "thequizwire",
+   "kind": "image",
+   "licence": "own",
+   "provider": "thequizwire (hand-made)",
+   "source": "brand/cursor.svg"
+  },
+  "brand/facebook.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 542,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "brand/instagram.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 2101,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "brand/logo.png": {
+   "by": "reelkit/brand.py",
+   "bytes": 81177,
+   "credit": "TheQuizWire",
+   "kind": "image",
+   "licence": "own",
+   "provider": "TheQuizWire (channel brand, owner-supplied 2026-10-15)",
+   "source": "owner upload logo-The-Quiz-Wire-icon-transparent.png"
+  },
+  "brand/threads.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 1287,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "brand/x.svg": {
+   "by": "reelkit/brand.py",
+   "bytes": 252,
+   "credit": "Simple Icons",
+   "kind": "image",
+   "licence": "CC0-1.0",
+   "provider": "Simple Icons",
+   "source": "https://github.com/simple-icons/simple-icons"
+  },
+  "geo/flags/de.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 221,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/flags/gb.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 504,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/flags/un.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 18702,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/flags/us.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 648,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/main.json": {
+   "by": "reelkit/geodata.py",
+   "bytes": 208765,
+   "credit": "Natural Earth",
+   "kind": "data",
+   "licence": "PD",
+   "provider": "Natural Earth",
+   "source": "world-atlas 2.0.2 50m"
+  },
+  "geo/main_basemap.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 758123,
+   "credit": "NASA Blue Marble",
+   "kind": "image",
+   "licence": "PD-USGov",
+   "provider": "NASA GIBS",
+   "source": "BlueMarble_ShadedRelief_Bathymetry z7 (126 tiles)"
+  },
+  "geo/main_basemap_far.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 468803,
+   "credit": "NASA Blue Marble",
+   "kind": "image",
+   "licence": "PD-USGov",
+   "provider": "NASA GIBS",
+   "source": "BlueMarble_ShadedRelief_Bathymetry z5 (49 tiles)"
+  },
+  "photos/ph_flasks.jpg": {
+   "kind": "photo",
+   "licence": "PD",
+   "provider": "Wikimedia Commons",
+   "source": "https://commons.wikimedia.org/wiki/File:Synthetic_Production_of_Penicillin_TR1468.jpg",
+   "credit": "Official photographer — Public domain — https://commons.wikimedia.org/wiki/File:Synthetic_Production_of_Penicillin_TR1468.jpg",
+   "screen_credit": "📷 Official photographer · Public domain",
+   "derived_from": "media/photos/ph_flasks.jpg",
+   "op": "copy",
+   "by": "reelkit/photos.py",
+   "bytes": 774474
+  },
+  "stickers/1f3c5.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 967,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f3ed.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1401,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f447.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 558,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f44d.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1663,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f46e.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 3890,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f48a.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 411,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f514.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 314,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f6ab.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 363,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1faab.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1196,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/23f3.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 548,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  }
+ },
+ "release": "media-ep16-who-discovered-penicillin-britain-fleming",
+ "repo": "zainkhan122/thequizwire",
+ "version": 1
+}
