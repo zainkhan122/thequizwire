@@ -1,5 +1,4 @@
 {
- "version": 1,
  "files": {},
  "generated": {
   "brand/cursor.svg": {
@@ -56,9 +55,27 @@
    "provider": "Simple Icons",
    "source": "https://github.com/simple-icons/simple-icons"
   },
+  "geo/flags/ru.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 225,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/flags/us.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 648,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
   "geo/main.json": {
    "by": "reelkit/geodata.py",
-   "bytes": 118935,
+   "bytes": 119266,
    "credit": "Natural Earth",
    "kind": "data",
    "licence": "PD",
@@ -67,21 +84,30 @@
   },
   "geo/main_basemap.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 55434,
-   "credit": "NASA Blue Marble",
+   "bytes": 245093,
+   "credit": "Sentinel-2 cloudless by EOX (Contains modified Copernicus Sentinel data 2020)",
    "kind": "image",
-   "licence": "PD-USGov",
-   "provider": "NASA GIBS",
-   "source": "BlueMarble_ShadedRelief_Bathymetry z8 (9 tiles)"
+   "licence": "CC-BY-4.0",
+   "provider": "EOX IT Services GmbH",
+   "source": "s2cloudless-2020_3857 z10 (252 tiles)"
   },
   "geo/main_basemap_far.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 1186447,
-   "credit": "NASA Blue Marble",
+   "bytes": 377539,
+   "credit": "Sentinel-2 cloudless by EOX (Contains modified Copernicus Sentinel data 2020)",
    "kind": "image",
-   "licence": "PD-USGov",
-   "provider": "NASA GIBS",
-   "source": "BlueMarble_ShadedRelief_Bathymetry z7 (154 tiles)"
+   "licence": "CC-BY-4.0",
+   "provider": "EOX IT Services GmbH",
+   "source": "s2cloudless-2020_3857 z6 (72 tiles)"
+  },
+  "geo/main_basemap_near0.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 267241,
+   "credit": "Sentinel-2 cloudless by EOX (Contains modified Copernicus Sentinel data 2020)",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "EOX IT Services GmbH",
+   "source": "s2cloudless-2020_3857 z13 (135 tiles)"
   },
   "mix.wav": {
    "ai_voice": "Kokoro am_michael",
@@ -109,5 +135,6 @@
    "provider": "Twemoji (Twitter, Inc. and other contributors)",
    "source": "https://github.com/twitter/twemoji"
   }
- }
+ },
+ "version": 1
 }

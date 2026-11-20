@@ -1,5 +1,4 @@
 {
- "version": 1,
  "files": {},
  "generated": {
   "brand/cursor.svg": {
@@ -58,7 +57,7 @@
   },
   "geo/main.json": {
    "by": "reelkit/geodata.py",
-   "bytes": 141256,
+   "bytes": 141418,
    "credit": "Natural Earth",
    "kind": "data",
    "licence": "PD",
@@ -67,21 +66,30 @@
   },
   "geo/main_basemap.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 254238,
+   "bytes": 265173,
    "credit": "NASA Blue Marble",
    "kind": "image",
    "licence": "PD-USGov",
    "provider": "NASA GIBS",
-   "source": "BlueMarble_ShadedRelief_Bathymetry z7 (90 tiles)"
+   "source": "BlueMarble_ShadedRelief_Bathymetry z7 (81 tiles)"
   },
   "geo/main_basemap_far.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 786059,
+   "bytes": 849914,
    "credit": "NASA Blue Marble",
    "kind": "image",
    "licence": "PD-USGov",
    "provider": "NASA GIBS",
-   "source": "BlueMarble_ShadedRelief_Bathymetry z5 (80 tiles)"
+   "source": "BlueMarble_ShadedRelief_Bathymetry z5 (110 tiles)"
+  },
+  "geo/main_basemap_near0.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 136805,
+   "credit": "NASA Blue Marble",
+   "kind": "image",
+   "licence": "PD-USGov",
+   "provider": "NASA GIBS",
+   "source": "BlueMarble_ShadedRelief_Bathymetry z8 (45 tiles)"
   },
   "mix.wav": {
    "ai_voice": "Kokoro am_michael",
@@ -109,5 +117,6 @@
    "provider": "Twemoji (Twitter, Inc. and other contributors)",
    "source": "https://github.com/twitter/twemoji"
   }
- }
+ },
+ "version": 1
 }

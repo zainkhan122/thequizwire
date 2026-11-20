@@ -43,7 +43,7 @@
    "geography story",
    "map story"
   ],
-  "description": "In the Bering Strait, two islands sit less than four kilometres apart. The International Date Line runs between them, so the one you can see across the water is almost a full day ahead. This map story draws the line, measures the gap, and shows who lives on each side.\nWould you live where tomorrow is across the water? Tell us below.",
+  "description": "The Diomede Islands: four kilometres apart, almost a day apart on the calendar.\nIn the Bering Strait, two islands sit less than four kilometres apart. The International Date Line runs between them, so the one you can see across the water is almost a full day ahead. This map story draws the line, measures the gap, and shows who lives on each side.\nWould you live where tomorrow is across the water? Tell us below.",
   "hashtags": [
    "#Geography",
    "#MapStory",
@@ -64,7 +64,7 @@
    ],
    "youtube": {
     "title": "The island where you can see tomorrow 🕛",
-    "description": "In the Bering Strait, two islands sit less than four kilometres apart. The International Date Line runs between them, so the one you can see across the water is almost a full day ahead. This map story draws the line, measures the gap, and shows who lives on each side.\nWould you live where tomorrow is across the water? Tell us below.",
+    "description": "The Diomede Islands: four kilometres apart, almost a day apart on the calendar.\nIn the Bering Strait, two islands sit less than four kilometres apart. The International Date Line runs between them, so the one you can see across the water is almost a full day ahead. This map story draws the line, measures the gap, and shows who lives on each side.\nWould you live where tomorrow is across the water? Tell us below.",
     "tags": [
      "#Geography",
      "#MapStory",
@@ -73,7 +73,7 @@
     ]
    },
    "instagram": {
-    "caption": "Look across the water. That's tomorrow 🕛\nTwo islands in the Bering Strait, less than four kilometres apart, with the International Date Line between them. One is a US village, the other a Russian post. Here is the line, the gap, and the 21-hour jump.\nWould you live here?",
+    "caption": "Look across the water. That's tomorrow 🕛\nTwo islands in the Bering Strait, less than four kilometres apart, with the International Date Line between them. One is a US village, the other a Russian post. Here is the line, the gap, and the jump on the calendar.\nWould you live here?",
     "tags": [
      "#Geography",
      "#MapStory",
@@ -90,7 +90,7 @@
     ]
    },
    "twitter": {
-    "text": "Two islands, under 4 km apart, 21 hours apart on the calendar. A map story.",
+    "text": "Two islands, under 4 km apart, almost a full day apart on the calendar. A map story.",
     "tags": [
      "#Geography",
      "#Arctic"
@@ -123,5 +123,5 @@
   "cast": "none",
   "music": "bed:drone"
  },
- "status": "draft"
+ "status": "ready"
 }

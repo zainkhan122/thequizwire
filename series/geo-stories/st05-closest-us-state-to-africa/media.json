@@ -1,5 +1,4 @@
 {
- "version": 1,
  "files": {},
  "generated": {
   "brand/cursor.svg": {
@@ -58,7 +57,7 @@
   },
   "geo/main.json": {
    "by": "reelkit/geodata.py",
-   "bytes": 68944,
+   "bytes": 69434,
    "credit": "Natural Earth",
    "kind": "data",
    "licence": "PD",
@@ -67,21 +66,48 @@
   },
   "geo/main_basemap.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 652868,
-   "credit": "NASA Blue Marble",
+   "bytes": 493419,
+   "credit": "Sentinel-2 cloudless by EOX (Contains modified Copernicus Sentinel data 2020)",
    "kind": "image",
-   "licence": "PD-USGov",
-   "provider": "NASA GIBS",
-   "source": "BlueMarble_ShadedRelief_Bathymetry z4 (56 tiles)"
+   "licence": "CC-BY-4.0",
+   "provider": "EOX IT Services GmbH",
+   "source": "s2cloudless-2020_3857 z5 (60 tiles)"
   },
   "geo/main_basemap_far.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 326978,
-   "credit": "NASA Blue Marble",
+   "bytes": 334285,
+   "credit": "Sentinel-2 cloudless by EOX (Contains modified Copernicus Sentinel data 2020)",
    "kind": "image",
-   "licence": "PD-USGov",
-   "provider": "NASA GIBS",
-   "source": "BlueMarble_ShadedRelief_Bathymetry z3 (28 tiles)"
+   "licence": "CC-BY-4.0",
+   "provider": "EOX IT Services GmbH",
+   "source": "s2cloudless-2020_3857 z3 (48 tiles)"
+  },
+  "geo/main_basemap_near0.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 788325,
+   "credit": "Sentinel-2 cloudless by EOX (Contains modified Copernicus Sentinel data 2020)",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "EOX IT Services GmbH",
+   "source": "s2cloudless-2020_3857 z7 (104 tiles)"
+  },
+  "geo/main_basemap_near1.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 872756,
+   "credit": "Sentinel-2 cloudless by EOX (Contains modified Copernicus Sentinel data 2020)",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "EOX IT Services GmbH",
+   "source": "s2cloudless-2020_3857 z7 (104 tiles)"
+  },
+  "geo/main_basemap_near2.jpg": {
+   "by": "reelkit/basemap.py",
+   "bytes": 645756,
+   "credit": "Sentinel-2 cloudless by EOX (Contains modified Copernicus Sentinel data 2020)",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "EOX IT Services GmbH",
+   "source": "s2cloudless-2020_3857 z7 (170 tiles)"
   },
   "mix.wav": {
    "ai_voice": "Kokoro am_michael",
@@ -109,5 +135,6 @@
    "provider": "Twemoji (Twitter, Inc. and other contributors)",
    "source": "https://github.com/twitter/twemoji"
   }
- }
+ },
+ "version": 1
 }
