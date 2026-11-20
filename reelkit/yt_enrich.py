@@ -225,10 +225,18 @@ def cover_bytes(row, ep_dir, limit, log=print):
     """Cover JPG for a ledger row: hosted sidecar (media_url .mp4 → _cover.jpg) → GitHub release asset → regenerate from the hosted MP4."""
     stem = Path(urllib.parse.urlparse(row.get("media_url") or "").path).stem
     if ep_dir and (Path(ep_dir) / "cover" / "spec.json").exists():                                 # approved bespoke cover (owner rule 2026-11-20) wins over any hosted/rendered copy
-        try:
-            sys.path.insert(0, str(ROOT / "reelkit")); import cover_scroll
-            b = cover_scroll.approved_cover_bytes(ep_dir)
+        try:                                                                                        # (no PIL here: CI runs this without reelkit deps)
+            loc = Path(ep_dir) / "cover" / "cover.jpg"; url = json.loads((Path(ep_dir) / "cover" / "spec.json").read_text()).get("cover_url")
+            if loc.exists(): b = loc.read_bytes()
+            elif url:
+                hdr = {"User-Agent": UA} if "UA" in globals() else {}
+                if "api.github.com" in url:
+                    tok = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN") or ""
+                    hdr.update({"Authorization": f"Bearer {tok}", "Accept": "application/octet-stream"})
+                with urllib.request.urlopen(urllib.request.Request(url, headers=hdr), timeout=120) as r: b = r.read()
+            else: b = None
             if b and is_jpeg(b) and len(b) <= limit: return b, "approved"
+            log(f"      approved cover unavailable: {'not a JPEG/too big' if b else 'no cover.jpg / cover_url'}")
         except Exception as e: log(f"      approved cover unavailable: {e}")
     if row.get("media_url"):
         url = row["media_url"][:-4] + "_cover.jpg" if row["media_url"].endswith(".mp4") else None
