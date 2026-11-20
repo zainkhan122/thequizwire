@@ -4732,6 +4732,19 @@
    "recorded_at": "2026-11-19T07:18:48+00:00",
    "account": "BUFFER_API_KEY_2",
    "note": "owner uploaded by hand in Buffer on 2026-11-19 (account 2 API-limited); do not auto-dispatch"
+  },
+  {
+   "episode": "st08-australia-wider-than-the-moon",
+   "platform": "threads",
+   "post_id": "6b000e040f5eda1a57d7da68",
+   "channel_id": "6a6dd3b24b2d03035f7e82e8",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/abbfd79b5258/The-country-that-is-wider-than-the-Moon.mp4",
+   "due_at": "2026-11-21T00:00:00.000Z",
+   "created_at": "2026-11-20T09:08:20.271Z",
+   "recorded_at": "2026-11-20T09:08:20+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY"
   }
  ]
 }
