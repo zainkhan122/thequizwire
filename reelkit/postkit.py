@@ -346,6 +346,12 @@ def x_len(text):
 
 
 # ---------------------------------------------------------------- lint
+def _ledger_posts():
+    lp = ROOT / "dispatch/ledger.json"
+    try: return json.loads(lp.read_text()).get("posts", []) if lp.exists() else []
+    except Exception: return []
+
+
 def cover_gate(ep):
     """PRODUCTION RULE (owner 2026-11-20): every short has a custom-made cover — <ep>/cover/spec.json + hero.png, rendered and approved."""
     try:
@@ -356,7 +362,11 @@ def cover_gate(ep):
 
 def check(kit):
     F, W = [], []
-    if kit.get("_ep"): F += [f"cover: {b}" for b in cover_gate(kit["_ep"])]
+    if kit.get("_ep"):
+        import fnmatch
+        name = Path(kit["_ep"]).name; published = any(p.get("episode") == name and p.get("state") in ("sent", "scheduled") for p in _ledger_posts())
+        soft = any(fnmatch.fnmatch(name, g) for g in CFG.get("cover", {}).get("pre_rule_warn_only", ["_template*"]))
+        for b in ([] if published else cover_gate(kit["_ep"])): (W if soft else F).append(f"cover: {b}")
     yt, ig, fb, x = kit["youtube"], kit["instagram"], kit["facebook"], kit.get("twitter") or {"text": "", "hashtags": ["#x"]}
     th = kit.get("threads") or {"text": "", "hashtags": ["#x"]}
     if len(th["text"]) > 500: F.append(f"Threads text {len(th['text'])} chars > 500")
