@@ -46,12 +46,13 @@
   "hashtags": [
    "#Geography",
    "#MapStory",
+   "#MarianaTrench",
    "#Ocean",
    "#Shorts"
   ],
   "tags": [
    "GeoStories",
-   "Ocean"
+   "MarianaTrench"
   ],
   "cover_emoji": "",
   "cover_emoji_why": "stories carry no icon on the cover (title + place only)",
@@ -68,6 +69,7 @@
     "tags": [
      "#Geography",
      "#MapStory",
+     "#MarianaTrench",
      "#Ocean",
      "#Shorts"
     ]
@@ -77,7 +79,7 @@
     "tags": [
      "#Geography",
      "#MapStory",
-     "#Ocean",
+     "#MarianaTrench",
      "#GeoReels",
      "#DidYouKnow"
     ]
@@ -86,20 +88,20 @@
     "text": "South-west of Guam the sea floor drops into Challenger Deep, the deepest known point on Earth. This map story pins it, counts the way down, and drops Mount Everest into the trench to show how much water would still be above the summit. How deep did you think it was?",
     "tags": [
      "#Geography",
-     "#Ocean"
+     "#MarianaTrench"
     ]
    },
    "twitter": {
     "text": "Drop Everest into the deepest point of the ocean and the summit is still more than 2 km under water. A map story.",
     "tags": [
      "#Geography",
-     "#Ocean"
+     "#MarianaTrench"
     ]
    },
    "threads": {
     "text": "There is a spot near Guam where the ocean is so deep that Everest would disappear with two kilometres of water to spare. One-minute map story.",
     "tags": [
-     "#Ocean"
+     "#MarianaTrench"
     ]
    }
   },
