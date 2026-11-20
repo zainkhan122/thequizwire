@@ -454,10 +454,18 @@ def burn(video, cover, out, secs=0.3, fps=30):
     """Prepend the cover as the first `secs` of the master (audio delayed to match) so frame 0 of the reel IS the cover
     on Instagram/Facebook/X/Threads. Re-encodes (libx264 crf 18, AAC) with faststart; sizes stay within a few MB."""
     ms = int(secs * 1000)
-    cmd = [ffmpeg_exe(), "-v", "error", "-y", "-loop", "1", "-framerate", str(fps), "-t", f"{secs}", "-i", str(cover), "-i", str(video),
-           "-filter_complex", f"[0:v]scale={W}:{H},format=yuv420p,setsar=1[c];[1:v]format=yuv420p,setsar=1[m];[c][m]concat=n=2:v=1:a=0[v];[1:a]adelay={ms}|{ms}[a]",
-           "-map", "[v]", "-map", "[a]", "-r", str(fps), "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p",
-           "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out)]
+    # scale the cover to the video's own size (concat needs identical geometry): local_render previews are 540×960, masters 1080×1920
+    try:                                                                      # (no ffprobe in the imageio-ffmpeg wheel: parse ffmpeg -i)
+        import re as _re
+        info = subprocess.run([ffmpeg_exe(), "-hide_banner", "-i", str(video)], capture_output=True, text=True).stderr
+        vw, vh = map(int, _re.search(r"Video:.*?\b(\d{2,5})x(\d{2,5})\b", info).groups())
+        has_audio = "Audio:" in info
+    except Exception: vw, vh, has_audio = W, H, True
+    fg = f"[0:v]scale={vw}:{vh},format=yuv420p,setsar=1[c];[1:v]format=yuv420p,setsar=1[m];[c][m]concat=n=2:v=1:a=0[v]"
+    cmd = [ffmpeg_exe(), "-v", "error", "-y", "-loop", "1", "-framerate", str(fps), "-t", f"{secs}", "-i", str(cover), "-i", str(video)]
+    if has_audio: cmd += ["-filter_complex", fg + f";[1:a]adelay={ms}|{ms}[a]", "-map", "[v]", "-map", "[a]", "-c:a", "aac", "-b:a", "192k"]
+    else: cmd += ["-filter_complex", fg, "-map", "[v]", "-an"]                 # silent review renders (no mix yet) still get their cover frame
+    cmd += ["-r", str(fps), "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(out)]
     subprocess.run(cmd, check=True)
     return out
 

@@ -264,6 +264,17 @@
     S.C.pins.forEach((p, i) => { const e = S.pinEls[i]; if (!e) return; const [x, y] = screenXY(S, p.mx, p.my); e.style.left = x + "px"; e.style.top = y + "px"; });
     S.C.labels.forEach((l, i) => { const e = S.lblEls[i]; if (!e) return; const [x, y] = screenXY(S, l.mx + (l.dx || 0), l.my + (l.dy || 0)); e.style.left = x + "px"; e.style.top = y + "px"; });
     if (S.scaleEl) { const bar = S.scaleEl.querySelector(".bar"); if (bar) bar.style.width = (S.C.scalebar.px * c.k) + "px"; }
+    runHooks(id);
+  }
+  // Props glued to a lon/lat (engine/props.py prop.anchor / prop.orbit / prop.fall) re-place themselves in their own tween's onUpdate, which GSAP
+  // runs BEFORE a later-inserted camera tween's onUpdate → under seek-based rendering every prop lagged the camera by one frame (2026-11-20).
+  // They now also register {t0, t1, f} here and apply() re-runs every hook that is live at the timeline's current time, after the camera moved.
+  const hooks = {};
+  function hook(id, t0, t1, f) { (hooks[id] = hooks[id] || []).push({ t0, t1, f }); }
+  function runHooks(id) {
+    const H = hooks[id]; if (!H || !H.length) return;
+    const tl = window.__timelines && window.__timelines.main; const T = tl ? tl.time() : null;
+    for (const h of H) if (T == null || (T >= h.t0 - 0.001 && T <= h.t1 + 0.001)) h.f();
   }
 
   function focus(id, where) {   // where: {lonlat:[..]} | {bbox:[w,s,e,n]} | {xy:[mx,my]}
@@ -307,5 +318,5 @@
   function setCam(id, v) { Object.assign(scenes[id].cam, camTarget(id, { ...v, duration: 0 })); apply(id); }
   function pathLength(id, layerId) { const e = scenes[id].g.querySelector("#" + CSS.escape(id + "_" + layerId)); return e && e.getTotalLength ? e.getTotalLength() : 0; }
 
-  return { compute, mount, apply, cam, camTarget, setCam, focus, toScreen, pathLength, centroid, bboxFeature, PROJ_KIND, scenes };
+  return { compute, mount, apply, cam, camTarget, setCam, focus, toScreen, pathLength, centroid, bboxFeature, PROJ_KIND, scenes, hook };
 });

@@ -47,8 +47,8 @@
      "ids": [
       "710"
      ],
-     "cls": "tint",
-     "note": "South Africa, the only neighbour (light tint so the satellite stays visible)"
+     "cls": "neonblue",
+     "note": "South Africa, the only neighbour — glowing blue border, faint fill (a 50% tint washed the satellite out)"
     },
     {
      "kind": "route",
@@ -275,7 +275,7 @@
     ],
     "at": [
      60,
-     1130
+     1480
     ]
    }
   }

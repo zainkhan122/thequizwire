@@ -84,7 +84,7 @@ def build(S):
                              **({"discs": g["discs"]} if g.get("discs") else {}),
                              "projection_reason": g.get("projection_reason", "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)"),
                              **({"size_claim_device": g["size_claim_device"]} if g.get("size_claim_device") else {}),
-                             **({"scalebar": {"km": g["scalebar"]["km"], "lonlat": g["scalebar"]["lonlat"], "at": [60, 1130]}} if g.get("scalebar") else {})}}}
+                             **({"scalebar": {"km": g["scalebar"]["km"], "lonlat": g["scalebar"]["lonlat"], "at": [60, 1480]}} if g.get("scalebar") else {})}}}
     # ---------------- visuals
     M = "stage_map"; cams = g["cams"]
     def cam(at, until, c, ease): return {"at": at, "do": "geo.cam_to", "stage": M, "until": until, "args": {"k": c[0], "lonlat": c[1], "ease": ease}}

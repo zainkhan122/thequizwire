@@ -121,7 +121,9 @@ class Props:
                 f"el.style.left=({bx}+p[0]+{var}.dx)+'px';el.style.top=({by}+p[1]+{var}.dy)+'px';}};")
 
     def anchor(self, t0, t1, eid, stage, lonlat, dx=0, dy=0):
-        self.J("{const o={dx:%s,dy:%s,k:0};%s tl.to(o,{k:1,duration:%s,ease:'none',onStart:put,onUpdate:put},%s);}" % (dx, dy, self._put(eid, stage, lonlat), f(max(0.05, t1 - t0)), f(t0)))
+        sid = self._scene(stage)[0]
+        self.J("{const o={dx:%s,dy:%s,k:0};%s tl.to(o,{k:1,duration:%s,ease:'none',onStart:put,onUpdate:put},%s);if(window.GeoRT&&GeoRT.hook)GeoRT.hook('%s',%s,%s,put);}"
+               % (dx, dy, self._put(eid, stage, lonlat), f(max(0.05, t1 - t0)), f(t0), sid, f(t0), f(t1)))   # hook: re-placed after every camera apply (no one-frame lag)
 
     def pop(self, t, eid, dur=0.45, frm="pop"):
         if frm == "rise": self.J(f"tl.fromTo('#{eid}',{{autoAlpha:0,scaleY:0.05,scaleX:0.7,transformOrigin:'50% 100%'}},{{autoAlpha:1,scaleY:1,scaleX:1,duration:{f(max(dur, 0.5))},ease:'back.out(1.7)',immediateRender:false}},{f(t)});")
@@ -136,7 +138,7 @@ class Props:
         sid, bx, by = self._scene(stage)
         self.J("{const o={p:0};const el=document.getElementById('%s');const put=()=>{if(!el||!window.GeoRT||!GeoRT.toScreen)return;const A=GeoRT.toScreen('%s',[%s,%s]),B=GeoRT.toScreen('%s',[%s,%s]);if(!A||!B)return;"
                "const x=A[0]+(B[0]-A[0])*o.p,y=A[1]+(B[1]-A[1])*o.p-%s*Math.sin(Math.PI*o.p)+%s;el.style.left=(%s+x)+'px';el.style.top=(%s+y)+'px';};"
-               "tl.to(o,{p:1,duration:%s,ease:'none',onStart:put,onUpdate:put},%s);}" % (eid, sid, a[0], a[1], sid, b[0], b[1], height, dy, bx, by, f(t1 - t0), f(t0)))
+               "tl.to(o,{p:1,duration:%s,ease:'none',onStart:put,onUpdate:put},%s);if(window.GeoRT&&GeoRT.hook)GeoRT.hook('%s',%s,%s,put);}" % (eid, sid, a[0], a[1], sid, b[0], b[1], height, dy, bx, by, f(t1 - t0), f(t0), sid, f(t0), f(t1)))
         if roll: self.J(f"tl.fromTo('#{eid}',{{rotation:{-roll}}},{{rotation:{roll},duration:{f((t1 - t0) / 2)},ease:'sine.inOut',yoyo:true,repeat:1,immediateRender:false}},{f(t0)});")
 
     def wave(self, t0, t1, eid, parts=("armL", "armR"), pivots=((-22, 10), (22, 10)), swing=28, period=0.5):

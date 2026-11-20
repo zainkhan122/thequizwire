@@ -101,6 +101,8 @@ CSS = """
 .geo .g-area.highlight.neon{fill:rgba(255,230,0,.14);stroke:#FFE600;stroke-width:4;filter:drop-shadow(0 0 8px rgba(255,230,0,.9)) drop-shadow(0 0 22px rgba(255,200,0,.6))}
 .geo .g-area.highlight.neonblue{fill:rgba(54,201,255,.16);stroke:#36C9FF;stroke-width:4;filter:drop-shadow(0 0 8px rgba(54,201,255,.9)) drop-shadow(0 0 22px rgba(54,201,255,.6))}
 .geo .g-highlight.solid{fill:#F39A1E;stroke:#fff;stroke-width:2.4}
+.geo .g-highlight.neon{fill:rgba(255,230,0,.14);stroke:#FFE600;stroke-width:4;filter:drop-shadow(0 0 8px rgba(255,230,0,.9)) drop-shadow(0 0 22px rgba(255,200,0,.6))}
+.geo .g-highlight.neonblue{fill:rgba(54,201,255,.16);stroke:#36C9FF;stroke-width:4;filter:drop-shadow(0 0 8px rgba(54,201,255,.9)) drop-shadow(0 0 22px rgba(54,201,255,.6))}
 .geo .g-highlight.glow{fill:rgba(255,138,30,.72);stroke:#FFD9A0;stroke-width:2.4;filter:drop-shadow(0 0 10px rgba(255,138,30,.95)) drop-shadow(0 0 26px rgba(255,120,0,.6))}
 .geo .g-highlight.zone1{fill:rgba(63,157,232,.62);stroke:#fff;stroke-width:1.8} .geo .g-highlight.zone2{fill:rgba(92,196,90,.62);stroke:#fff;stroke-width:1.8}
 .geo .g-highlight.zone3{fill:rgba(240,162,60,.62);stroke:#fff;stroke-width:1.8} .geo .g-highlight.zone4{fill:rgba(236,91,91,.62);stroke:#fff;stroke-width:1.8}

@@ -27,7 +27,7 @@ LAYERS = {"bluemarble": ("BlueMarble_ShadedRelief_Bathymetry", "GoogleMapsCompat
           # Attribution is REQUIRED: the episode shows the screen credit in the outro and carries it in the post description.
           "s2": ("s2cloudless-2020_3857", "g", "jpg", 14, "Sentinel-2 cloudless by EOX (Contains modified Copernicus Sentinel data 2020)", EOX, "CC-BY-4.0", "EOX IT Services GmbH")}
 CACHE = pathlib.Path.home() / ".cache" / "basemap"
-MAX_W, MAX_H, MAX_BYTES = 8192, 8192, 14_000_000      # Chromium decodes 8k JPEGs fine; a z7 continent at 1080×1920 needs ~6k px to stay crisp at k ≈ 3
+MAX_W, MAX_H, MAX_BYTES, MAX_PX = 8192, 8192, 14_000_000, 8_000_000      # Chromium decodes 8k JPEGs fine; a z7 continent at 1080×1920 needs ~6k px to stay crisp at k ≈ 3
 UA = "quizwire/1 (github zainkhan122/thequizwire)"
 
 
@@ -84,6 +84,11 @@ def stitch(bbox, width_px, out_path, layer="bluemarble", quality=86):
         from PIL import ImageEnhance                                          # (no run-time CSS filter — SVG filters composite unreliably under UI glass)
         img = ImageEnhance.Contrast(ImageEnhance.Brightness(img).enhance(1.75)).enhance(1.45)
         img = ImageEnhance.Color(img).enhance(1.25)
+    r = 1.0                                                                   # tile-grid rounding can hand back ~2× width_px: cap the decoded size
+    if img.width * img.height > MAX_PX:                                       # (Chromium re-decodes the JPEG on every seek → >10 Mpx means ~7 s/frame)
+        r = (MAX_PX / (img.width * img.height)) ** 0.5
+        img = img.resize((max(1, round(img.width * r)), max(1, round(img.height * r))), Image.LANCZOS)
+        r = img.width / ((x1 - x0 + 1) * 256)
     out_path = pathlib.Path(out_path); out_path.parent.mkdir(parents=True, exist_ok=True)
     q = quality
     while True:
@@ -91,9 +96,9 @@ def stitch(bbox, width_px, out_path, layer="bluemarble", quality=86):
         if buf.tell() <= MAX_BYTES or q <= 60: break
         q -= 6
     out_path.write_bytes(buf.getvalue())
-    s = 256 * n / (2 * math.pi)
+    s = 256 * n / (2 * math.pi) * r
     return {"layer": name, "zoom": z, "tiles": len(tiles), "size": list(img.size), "bytes": buf.tell(), "quality": q,
-            "scale": s, "translate": [s * math.pi - x0 * 256, s * math.pi - y0 * 256], "bbox": [lon0, lat0, lon1, lat1],
+            "scale": s, "translate": [s * math.pi - x0 * 256 * r, s * math.pi - y0 * 256 * r], "bbox": [lon0, lat0, lon1, lat1],
             "credit": credit, "licence": licence, "provider": provider}
 
 
