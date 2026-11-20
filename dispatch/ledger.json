@@ -4839,6 +4839,27 @@
    "recorded_at": "2026-11-20T16:36:31+00:00",
    "title": null,
    "account": "BUFFER_API_KEY"
+  },
+  {
+   "episode": "st05-closest-us-state-to-africa",
+   "platform": "youtube",
+   "post_id": "yt:xBiXnZMHbSU",
+   "channel_id": "6a72ff4f99afb44349064208",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/ede3078b16ef/The-US-state-closest-to-Africa-is-not-Florida.mp4",
+   "due_at": "2026-11-23T00:00:00Z",
+   "created_at": "2026-11-20T16:37:45+00:00",
+   "recorded_at": "2026-11-20T16:37:45+00:00",
+   "title": "The US state closest to Africa is not Florida 🧭",
+   "account": "YT_OAUTH",
+   "provider": "youtube-direct",
+   "yt_video_id": "xBiXnZMHbSU",
+   "external_link": "https://youtu.be/xBiXnZMHbSU",
+   "yt_tags_at": "2026-11-20T16:37:45+00:00",
+   "yt_thumbnail_at": "2026-11-20T16:37:50+00:00",
+   "yt_thumbnail_src": "hosted",
+   "yt_playlist_id": "PLDkNbd8c789Y",
+   "yt_series_item": "UExEa05iZDhjNzg5WS4wOTA3OTZBNzVEMTUzOTMy"
   }
  ]
 }
