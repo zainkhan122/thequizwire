@@ -207,6 +207,19 @@ def main():
             old = json.loads(pm.read_text()); files["media.json"] = {**files["media.json"], **{k: old[k] for k in ("files", "release", "repo", "generated") if k in old}}
         except Exception: pass
     for name, data in files.items(): (out / name).write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n")
+    # PRODUCTION RULE (owner 2026-11-20): every short ships with a custom-made cover. The spec stub is written once; the agent
+    # fills hero_prompt/head/badge/stickers, generates cover/hero.png from hero_prompt, renders cover/cover.jpg, gets approval
+    # (spec.approved). postkit check / cover.py --burn FAIL until then. Never overwritten (approved covers survive re-authoring).
+    cov = out / "cover" / "spec.json"
+    if not cov.exists():
+        cov.parent.mkdir(exist_ok=True)
+        stub = {"status": "draft", "bg": "hero.png",
+                "hero_prompt": f"Vertical 9:16 poster illustration, no text, no letters. <the one image that sells: {S['headline'].replace('*', '')}>. Saturated, high contrast, viral YouTube thumbnail style. Keep the bottom third dark and simple for a headline overlay.",
+                "head": S.get("cover", {}).get("headline", S["headline"]).upper(), "head_top": 1180, "head_size": 180,
+                "badge": "<5-word curiosity tag, no spoiler>", "badge_color": "#FF2D2D", "badge_xy": [60, 1050],
+                "stickers": [["1f92f", 260, [780, 1440], -12]], "burst": None, "marks": [], "anchor": [0.5, 0.3],
+                "_rules": "no place/answer spoilers on the cover; hero art carries no text; owner approves the contact sheet before dispatch"}
+        cov.write_text(json.dumps(stub, indent=1, ensure_ascii=False) + "\n"); print(f"wrote {cov} (DRAFT — fill, generate hero.png, render, approve)")
     print(f"wrote {out} ({len(files)} files)")
 
 

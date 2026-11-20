@@ -1,0 +1,39 @@
+{
+ "bg": "hero.jpg",
+ "anchor": [
+  0.5,
+  0.3
+ ],
+ "head": "SEE *TOMORROW* FROM HERE",
+ "head_top": 1200,
+ "head_size": 180,
+ "badge": "4 KM APART  ·  21 HOURS APART",
+ "badge_color": "#4FD1E0",
+ "badge_xy": [
+  60,
+  1070
+ ],
+ "stickers": [
+  [
+   "1f440",
+   210,
+   [
+    820,
+    1560
+   ],
+   10
+  ],
+  [
+   "23f0",
+   200,
+   [
+    60,
+    760
+   ],
+   -14
+  ]
+ ],
+ "approved": "2026-11-20 owner (contact sheet review/v2/covers3/contact.jpg)",
+ "hero_url": "https://api.github.com/repos/zainkhan122/thequizwire/releases/assets/773012245",
+ "cover_url": "https://api.github.com/repos/zainkhan122/thequizwire/releases/assets/773012306"
+}

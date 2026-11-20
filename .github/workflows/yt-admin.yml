@@ -17,6 +17,7 @@ jobs:
       YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
       YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
       YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+      GH_TOKEN: ${{ github.token }}           # approved covers are release assets (covers tag) → cover_scroll.fetch
     steps:
       - uses: actions/checkout@v4
       - run: python3 reelkit/yt_enrich.py ${{ inputs.args }} | tee -a "$GITHUB_STEP_SUMMARY"

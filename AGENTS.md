@@ -51,6 +51,10 @@ Never render video, decode media, or install HyperFrames/Chrome in the sandbox (
 - **Clips** (`clips.json`): `maptile` (VersaTiles docker, CI only, ≤ 8 s, `args` per docs/MAPTILE.md), `url` archive (licence fields required), Wan/LTX only if a clip is truly needed (history rules). Everything goes through the clip cache; a clip is generated once.
 - **Provenance allow-list** (`reelkit/provenance.py`): PD, PD-USGov, CC0, CC BY 3.0/4.0, OFL, Apache-2.0, ISC, MIT, BSD-3, ODbL (maps, attribution), Copernicus, own/own-ai/own-tts, GSAP-Standard. SA/NC/ND/unknown/fair-use refused.
 - **svgraster.py limits:** the browser-less PNG preview renders paths, circles, rects, text (basic) — no filters, gradients or foreignObject; it is a preview, not a frame check (HyperFrames snaps on CI are).
+- **Custom cover per short (owner 2026-11-20).** `<ep>/cover/spec.json` + hero art + owner-approved `cover.jpg` are REQUIRED to
+  publish: `postkit check` and `cover.py --burn` fail without them (`reelkit/cover_scroll.py`, `docs/STORY_GUIDELINES.md`).
+  Authoring sequence: `author_story.py` → fill spec (hero_prompt/head/badge/stickers) → generate hero.jpg → `cover_scroll.py <ep>
+  --jpg <ep>/cover/cover.jpg` → contact sheet to owner → `approved` → `mediahost.py cover <ep>` → commit spec.json.
 - **Deliverables** are named after the question (`reelkit/naming.py` from `episode.json.title`); never `final.mp4` in a Release.
 - **Secrets** only in `~/.cache/secrets/`; nothing posts to YouTube; the owner uploads from `POST_KIT.md`.
 

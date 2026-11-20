@@ -1,0 +1,30 @@
+{
+ "bg": "hero.jpg",
+ "anchor": [
+  0.5,
+  0.3
+ ],
+ "head": "ITS *LOWEST POINT* BEATS BRITAIN'S HIGHEST",
+ "head_top": 1130,
+ "head_size": 160,
+ "badge": "THE KINGDOM IN THE SKY",
+ "badge_color": "#FFD400",
+ "badge_xy": [
+  60,
+  1000
+ ],
+ "stickers": [
+  [
+   "1f92f",
+   250,
+   [
+    800,
+    1500
+   ],
+   12
+  ]
+ ],
+ "approved": "2026-11-20 owner (contact sheet review/v2/covers3/contact.jpg)",
+ "hero_url": "https://api.github.com/repos/zainkhan122/thequizwire/releases/assets/773012591",
+ "cover_url": "https://api.github.com/repos/zainkhan122/thequizwire/releases/assets/773012640"
+}

@@ -42,3 +42,7 @@ secrets/
 # clip cache index lock (reelkit/clipcache.py)
 reelkit/cache/*.lock
 tools/specs/_gen/
+
+# covers: hero art + approved JPG are hosted in the media repo (mediahost.py cover); only spec.json is tracked
+series/*/*/cover/*.jpg
+series/*/*/cover/*.png

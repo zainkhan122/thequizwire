@@ -1,0 +1,40 @@
+{
+ "bg": "hero.jpg",
+ "anchor": [
+  0.5,
+  0.25
+ ],
+ "head": "*NOT FLORIDA*?!",
+ "head_top": 1400,
+ "head_size": 200,
+ "badge": "CLOSEST US STATE TO AFRICA",
+ "badge_color": "#FFD400",
+ "badge_xy": [
+  60,
+  1270
+ ],
+ "marks": [
+  {
+   "x": [
+    150,
+    1090
+   ],
+   "size": 200
+  }
+ ],
+ "stickers": [
+  [
+   "1f92f",
+   250,
+   [
+    800,
+    560
+   ],
+   12
+  ]
+ ],
+ "fade_from": 1230,
+ "approved": "2026-11-20 owner (contact sheet review/v2/covers3/contact.jpg)",
+ "hero_url": "https://api.github.com/repos/zainkhan122/thequizwire/releases/assets/773012367",
+ "cover_url": "https://api.github.com/repos/zainkhan122/thequizwire/releases/assets/773012420"
+}

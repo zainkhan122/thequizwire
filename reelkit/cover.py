@@ -25,6 +25,7 @@ Styles (all share fonts, yellow #FFD400, series chip, logo bug):
 import argparse, hashlib, json, math, os, random, re, subprocess, sys, urllib.request
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
+sys.path.insert(0, str(Path(__file__).resolve().parent))   # cover_scroll (bespoke production covers)
 
 ROOT = Path(__file__).resolve().parents[1]
 W, H = 1080, 1920
@@ -494,6 +495,22 @@ def main():
     if a.verify:
         if not a.jpg: sys.exit("cover: --verify needs --jpg <cover.jpg>")
         verify(a.verify, a.jpg); return
+    # PRODUCTION RULE (owner 2026-11-20): every short ships with a custom-made cover (<ep>/cover/spec.json + hero.png, approved).
+    # The publish path (--burn) refuses to fall back to a template; templates remain for previews/old episodes (--style).
+    import cover_scroll
+    if (Path(a.episode) / "cover" / "spec.json").exists() and not a.all:
+        bad = cover_scroll.check(a.episode, need_approval=bool(a.burn))
+        if bad: sys.exit("cover: " + "; ".join(bad))
+        im = cover_scroll.build(a.episode, json.loads((Path(a.episode) / "cover" / "spec.json").read_text()))
+        out = Path(a.out) if a.out else Path(a.episode) / "out" / "cover.png"; out.parent.mkdir(parents=True, exist_ok=True); im.save(out, optimize=True)
+        print(f"cover bespoke: {out} ({im.width}×{im.height}) · {Path(a.episode).name}/cover/spec.json")
+        if a.jpg: im.save(a.jpg, quality=92, optimize=True); print(f"  jpg → {a.jpg}")
+        if a.burn and a.video: burn(a.video, out, a.burn); print(f"  burned → {a.burn}")
+        return
+    if a.burn and not os.environ.get("COVER_ALLOW_TEMPLATE"):
+        sys.exit(f"cover: {Path(a.episode).name} has no cover/spec.json — every short needs a custom-made cover before publishing "
+                 "(owner rule 2026-11-20). Author <ep>/cover/spec.json, generate cover/hero.png, render + get approval. "
+                 "COVER_ALLOW_TEMPLATE=1 only for re-publishing pre-rule episodes.")
     C = context(a.episode, a.frame, a.video)
     if C["E"].get("format") == "story-v1" and not a.all: a.style = "story"                                 # stories always get the title + place card
     for s in (STYLES if a.all else [a.style]):

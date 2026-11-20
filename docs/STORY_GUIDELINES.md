@@ -65,6 +65,15 @@ Story shapes (variety axis `story_shape`; never two days in a row, never the pre
 Style B frame, **title only** (owner 2026-11-19: no place kicker — naming the country gives the curiosity away): the headline (≤ 7 words, white, one yellow keyword), the
 series tag "GEO STORIES · #n", brand footer. No options, no timer, no map that gives the twist away. The cover must
 not reveal the twist (same hard rule as the quiz covers).
+- **Every short gets a CUSTOM-MADE cover — production rule, not a note (owner 2026-11-20: "not just a line").** No template
+  frame-grabs. Per episode `<ep>/cover/spec.json` (written as a DRAFT stub by `tools/author_story.py`) is filled by the agent:
+  `hero_prompt` → one bespoke 9:16 hero illustration (image generation, NO text in the art) saved as `cover/hero.jpg`;
+  `head` (giant punchy headline, `*keyword*` in yellow), `badge` (tilted curiosity tag), optional `burst`/`marks` (starburst
+  number, red ✕), `stickers` (Twemoji). `reelkit/cover_scroll.py <ep> --jpg <ep>/cover/cover.jpg` renders it; the owner sees a
+  contact sheet and approves → `spec.approved = "<date> owner"`; `reelkit/mediahost.py cover <ep>` hosts hero + cover as
+  `covers` release assets (repo carries no images) and writes `hero_url`/`cover_url`. Gates: `postkit.py check` FAILs without
+  an approved cover; `cover.py --burn` (dispatch.sh) refuses to template; `yt_enrich` uses the approved JPG as the thumbnail.
+  Cover rules: no place/answer spoiler, hero art carries no text, headline ≤ 4 lines, nothing important below y 1800.
 - **Frame 0 IS the cover — production rule, not a note (owner 2026-11-19).** Instagram, Facebook, X and Threads show
   the first frame of a reel as its cover, so every published master opens on its cover card for 0.3 s (audio shifted to
   match). Enforced in three places: `reelkit/local_render.py` burns it into every full local render (what you review is

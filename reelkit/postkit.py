@@ -230,7 +230,7 @@ def build_v4(ep, E, V, R, S, post, copy):
     fb = {"text": with_tags(g("facebook", "text"), "facebook"), "firstComment": "", "hashtags": tags("facebook")}
     x = {"text": with_tags(g("twitter", "text"), "twitter"), "hashtags": tags("twitter"), "isAiGenerated": bool(CFG["disclosure"].get("twitter_is_ai_generated", True))}
     th = {"text": with_tags(g("threads", "text"), "threads"), "hashtags": tags("threads")}
-    kit = {"episode": Path(ep).name, "series": slug, "question": question, "answer": ans, "built_at": datetime.now(timezone.utc).isoformat(timespec=("seconds")),
+    kit = {"_ep": str(ep), "episode": Path(ep).name, "series": slug, "question": question, "answer": ans, "built_at": datetime.now(timezone.utc).isoformat(timespec=("seconds")),
            "copy_version": 4, "youtube": yt, "instagram": ig, "facebook": fb, "twitter": x, "threads": th}
     kit["checks"] = check(kit); F, W = kit["checks"]["fail"], kit["checks"]["warn"]
     texts = {"YT title": yt["title"], "YT": yt["description"], "IG": ig["caption"], "FB": fb["text"], "X": x["text"], "Threads": th["text"]}
@@ -320,7 +320,7 @@ def build(ep):
     th_text = "\n".join([q_clean, "", f"{cta} {like_so.replace('{handle}', '@thequizwire')}", "", " ".join(th_tags)])
     th = {"text": th_text, "hashtags": th_tags}
 
-    kit = {"episode": Path(ep).name, "series": slug, "question": question, "answer": ans, "built_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+    kit = {"_ep": str(ep), "episode": Path(ep).name, "series": slug, "question": question, "answer": ans, "built_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
            "youtube": yt, "instagram": ig, "facebook": fb, "twitter": x, "threads": th}
     kit["checks"] = check(kit); F, W = kit["checks"]["fail"], kit["checks"]["warn"]
     if missing: F.insert(0, f"post.copy missing: {', '.join(missing)} (write the comment CTA and the like/subscribe CTA for this episode)")
@@ -346,8 +346,17 @@ def x_len(text):
 
 
 # ---------------------------------------------------------------- lint
+def cover_gate(ep):
+    """PRODUCTION RULE (owner 2026-11-20): every short has a custom-made cover — <ep>/cover/spec.json + hero.png, rendered and approved."""
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent)); import cover_scroll
+        return cover_scroll.check(ep)
+    except Exception as e: return [f"cover gate error: {e}"]
+
+
 def check(kit):
     F, W = [], []
+    if kit.get("_ep"): F += [f"cover: {b}" for b in cover_gate(kit["_ep"])]
     yt, ig, fb, x = kit["youtube"], kit["instagram"], kit["facebook"], kit.get("twitter") or {"text": "", "hashtags": ["#x"]}
     th = kit.get("threads") or {"text": "", "hashtags": ["#x"]}
     if len(th["text"]) > 500: F.append(f"Threads text {len(th['text'])} chars > 500")

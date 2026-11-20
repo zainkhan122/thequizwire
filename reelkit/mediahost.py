@@ -7,6 +7,8 @@
   python3 reelkit/mediahost.py verify <url>                # public · direct · https · video/mp4 · ftyp
   python3 reelkit/mediahost.py prune [--apply]             # delete files whose posts were all sent ≥ retention days ago
   python3 reelkit/mediahost.py ls                          # list hosted files
+  python3 reelkit/mediahost.py cover <ep> [<ep> …]         # host <ep>/cover/hero.* + cover.jpg at covers/<ep>/… (Contents API, kept
+                                                           #   out of prune) and write hero_url / cover_url into <ep>/cover/spec.json
 
 Why a second repo: this repo is private, so its Release assets need a token (Buffer cannot fetch them) and GitHub
 Pages is unavailable on the Free plan for private repos. A public media-only repo gives direct, permanent HTTPS URLs
@@ -239,6 +241,45 @@ def cmd_ls(a):
     print(f"mediahost: {len(idx['files'])} file(s) · {sum(v['size'] for v in idx['files'].values()) / 1e6:.0f} MB")
 
 
+COVERS_TAG = "covers"
+
+
+def gh(method, url, data=None, raw=False, ctype=None, ok404=False):
+    tok = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN") or token()
+    hdr = {"Authorization": f"Bearer {tok}", "Accept": "application/vnd.github+json", "User-Agent": UA}
+    if ctype: hdr["Content-Type"] = ctype
+    body = data if raw else (json.dumps(data).encode() if data is not None else None)
+    r = urllib.request.Request(url, data=body, method=method, headers=hdr)
+    try:
+        with urllib.request.urlopen(r, timeout=120) as resp: return json.loads(resp.read() or b"{}")
+    except urllib.error.HTTPError as e:
+        if ok404 and e.code == 404: return None
+        sys.exit(f"mediahost: {method} {url} → HTTP {e.code}: {e.read()[:300]}")
+
+
+def cmd_cover(a):
+    """PRODUCTION RULE (owner 2026-11-20): every short has a custom-made cover. The code repo carries no images (repo_guard), so the
+    hero art + the approved cover JPG are release assets of the rolling `covers` release on the (private) code repo —
+    <ep>_hero.jpg / <ep>_cover.jpg — and spec.json records hero_url / cover_url (API asset URLs; cover_scroll / yt_enrich fetch them
+    with GH_TOKEN/GITHUB_TOKEN, which every workflow has). Re-running replaces the assets (a redesign = new upload)."""
+    repo = os.environ.get("GITHUB_REPOSITORY", "zainkhan122/thequizwire")
+    rel = gh("GET", f"{API}/repos/{repo}/releases/tags/{COVERS_TAG}", ok404=True)
+    if not rel: rel = gh("POST", f"{API}/repos/{repo}/releases", {"tag_name": COVERS_TAG, "name": "covers (hero art + approved covers)", "body": "Rolling store for <ep>_hero.jpg / <ep>_cover.jpg — see reelkit/cover_scroll.py", "prerelease": True})
+    have = {x["name"]: x for x in rel.get("assets", [])}
+    for ep in a.episodes:
+        ep = Path(ep); sp = ep / "cover" / "spec.json"
+        if not sp.exists(): sys.exit(f"mediahost cover: {sp} missing")
+        spec = json.loads(sp.read_text()); done = []
+        for key, name, asset in (("hero_url", spec.get("bg", "hero.jpg"), f"{ep.name}_hero{Path(spec.get('bg', 'hero.jpg')).suffix}"), ("cover_url", "cover.jpg", f"{ep.name}_cover.jpg")):
+            f = ep / "cover" / name
+            if not f.exists(): print(f"   {ep.name}: {name} not local — keeping {key}={spec.get(key)}"); continue
+            if asset in have: gh("DELETE", have[asset]["url"])
+            up = rel["upload_url"].split("{")[0] + f"?name={asset}"
+            r = gh("POST", up, f.read_bytes(), raw=True, ctype="image/jpeg" if f.suffix in (".jpg", ".jpeg") else "image/png")
+            spec[key] = r["url"]; done.append(f"{asset} {f.stat().st_size // 1024} KB")
+        sp.write_text(json.dumps(spec, indent=1, ensure_ascii=False) + "\n"); print(f"   {ep.name}: hosted {', '.join(done)} → spec.json")
+
+
 def cmd_prune(a):
     idx, isha = load_index(); L = json.loads(LEDGER.read_text()) if LEDGER.exists() else {"posts": []}
     keep_days = int(CFG.get("retention_days_after_sent", 14)); cutoff = datetime.now(timezone.utc) - timedelta(days=keep_days)
@@ -269,8 +310,9 @@ def main():
     p = sp.add_parser("push"); p.add_argument("episode", nargs="+"); p.add_argument("--file"); p.add_argument("--wait", default="900"); p.add_argument("--no-wait", action="store_true", help="upload + index only; verify later with `verify`")
     p = sp.add_parser("verify"); p.add_argument("url"); p.add_argument("--wait", default="0")
     p = sp.add_parser("prune"); p.add_argument("--apply", action="store_true")
+    p = sp.add_parser("cover"); p.add_argument("episodes", nargs="+")
     a = ap.parse_args()
-    {"setup": cmd_setup, "push": cmd_push, "verify": cmd_verify, "ls": cmd_ls, "prune": cmd_prune}[a.cmd](a)
+    {"setup": cmd_setup, "push": cmd_push, "verify": cmd_verify, "ls": cmd_ls, "prune": cmd_prune, "cover": cmd_cover}[a.cmd](a)
 
 
 if __name__ == "__main__":

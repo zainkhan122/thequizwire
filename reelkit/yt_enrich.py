@@ -224,6 +224,12 @@ def is_jpeg(b): return len(b) > 4 and b[:3] == b"\xff\xd8\xff"
 def cover_bytes(row, ep_dir, limit, log=print):
     """Cover JPG for a ledger row: hosted sidecar (media_url .mp4 → _cover.jpg) → GitHub release asset → regenerate from the hosted MP4."""
     stem = Path(urllib.parse.urlparse(row.get("media_url") or "").path).stem
+    if ep_dir and (Path(ep_dir) / "cover" / "spec.json").exists():                                 # approved bespoke cover (owner rule 2026-11-20) wins over any hosted/rendered copy
+        try:
+            sys.path.insert(0, str(ROOT / "reelkit")); import cover_scroll
+            b = cover_scroll.approved_cover_bytes(ep_dir)
+            if b and is_jpeg(b) and len(b) <= limit: return b, "approved"
+        except Exception as e: log(f"      approved cover unavailable: {e}")
     if row.get("media_url"):
         url = row["media_url"][:-4] + "_cover.jpg" if row["media_url"].endswith(".mp4") else None
         if url:
@@ -402,8 +408,8 @@ def cmd_merge(a, yt=None):
 
 def cmd_thumb(a):
     c = cfg(); A = c["youtube_api"]; L = json.loads(LEDGER.read_text()); ep = Path(a.episode).name
-    rows = [p for p in L["posts"] if p["platform"] == "youtube" and p["episode"] == ep and p.get("state") == "sent"]
-    if not rows: sys.exit(f"yt_enrich: no sent YouTube post for {ep}")
+    rows = [p for p in L["posts"] if p["platform"] == "youtube" and p["episode"] == ep and (p.get("state") == "sent" or p.get("yt_video_id"))]   # sent, or direct-uploaded + scheduled (publishAt)
+    if not rows: sys.exit(f"yt_enrich: no sent/uploaded YouTube post for {ep}")
     p = rows[-1]; yt = YT(a.dry_run, cap=A["daily_units_cap"])
     vid = resolve_video_id(yt, p, {})
     if not vid: sys.exit("yt_enrich: video id unknown")
