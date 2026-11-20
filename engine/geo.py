@@ -226,7 +226,7 @@ class Scene:
         """M2 device: move the screen element #sid (a sticker / character) along the route path rid, from start to end, between t0 and t1.
         Position is sampled every frame from the SVG path in screen space, so it keeps following the path while the camera moves."""
         sel = f"{self.id}_{layer}_{rid}"; ox, oy = offset
-        self.G.J("{const o={p:0},el=document.getElementById('%s'),path=document.getElementById('%s');"
+        self.G.J("{const o={p:0},el=document.getElementById('%s');let path=document.getElementById('%s');if(path&&path.tagName==='g')path=path.querySelector('path:last-child');"
                  "const put=()=>{if(!path||!el||!path.getPointAtLength||!path.getScreenCTM)return;const L=path.getTotalLength();if(!L)return;const pt=path.getPointAtLength(o.p*L).matrixTransform(path.getScreenCTM());"
                  "const st=el.closest('.stage3')||document.body,r=st.getBoundingClientRect(),sx=1080/r.width,sy=1920/r.height;"
                  "el.style.left=((pt.x-r.left)*sx-el.offsetWidth/2+%d)+'px';el.style.top=((pt.y-r.top)*sy-el.offsetHeight/2+%d)+'px';};"
@@ -340,10 +340,10 @@ CSS = f"""
 .geo .geo-pin .ping{{position:absolute;left:-22px;top:-22px;width:44px;height:44px;border-radius:50%;border:5px solid #FF2D2D;opacity:0;pointer-events:none}}
 .geo .g-disc{{opacity:0}}
 /* owner 2026-11-19 — neon map lines: glowing border trace / route over the bright satellite raster */
-.geo .g-feature.draw.neon{{stroke:#FFE600;stroke-width:7;filter:drop-shadow(0 0 6px rgba(255,230,0,.95)) drop-shadow(0 0 18px rgba(255,200,0,.75)) drop-shadow(0 0 2px rgba(0,0,0,.9))}}
-.geo .g-highlight.neon{{fill:rgba(255,230,0,.10);stroke:#FFE600;stroke-width:4;filter:drop-shadow(0 0 8px rgba(255,230,0,.9)) drop-shadow(0 0 22px rgba(255,200,0,.6))}}
-.geo .g-route.neon{{stroke:#FF3B3B;stroke-width:8;filter:drop-shadow(0 0 6px rgba(255,59,59,.95)) drop-shadow(0 0 18px rgba(255,59,59,.7)) drop-shadow(0 0 2px rgba(0,0,0,.9))}}
-.geo .g-route.neon.blue{{stroke:#36C9FF;filter:drop-shadow(0 0 6px rgba(54,201,255,.95)) drop-shadow(0 0 18px rgba(54,201,255,.7)) drop-shadow(0 0 2px rgba(0,0,0,.9))}}
+.geo .g-feature.draw.neon{{stroke:#FFE600;stroke-width:7}}
+.geo .g-highlight.neon{{fill:rgba(255,230,0,.10);stroke:#FFE600;stroke-width:4}}
+.geo .g-route.neon{{stroke:#FF3B3B;stroke-width:8}}
+.geo .g-route.neon.blue{{stroke:#36C9FF}}
 .geo .g-route.neon.dashed{{stroke-dasharray:18 14}}
 .geo .geo-label{{position:absolute;width:0;height:0}}
 .geo .geo-label .lbl,.geo .geo-label>span{{position:absolute;left:0;top:0;transform:translate(-50%,-50%);white-space:nowrap}}

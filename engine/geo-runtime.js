@@ -181,7 +181,16 @@
     };
     const svgLayers = `<defs><filter id="${id}_liftShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity="0.6"></feDropShadow></filter>` +
       `<radialGradient id="${id}_ocean" cx="38%" cy="32%" r="78%"><stop offset="0" stop-color="#1e5a9c"></stop><stop offset="0.55" stop-color="#0c3366"></stop><stop offset="1" stop-color="#061a3a"></stop></radialGradient></defs>` +
-      C.paths.map(p => p.lift ? liftMarkup(p) : `<path id="${id}_${p.id}" class="${p.cls.trim()}" d="${p.d}" vector-effect="non-scaling-stroke"${/\b(g-route|draw)\b/.test(p.cls) ? ' pathLength="1000"' : ""}${p.sphere ? ` style="fill:url(#${id}_ocean)"` : ""}></path>`).join("");
+      C.paths.map(p => {
+        if (p.lift) return liftMarkup(p);
+        const pl = /\b(g-route|draw)\b/.test(p.cls) ? ' pathLength="1000"' : "", st = p.sphere ? ` style="fill:url(#${id}_ocean)"` : "";
+        if (!/\bneon\b/.test(p.cls)) return `<path id="${id}_${p.id}" class="${p.cls.trim()}" d="${p.d}" vector-effect="non-scaling-stroke"${pl}${st}></path>`;
+        // neon glow (2026-11-20): SVG drop-shadow filters on a zoomed country outline cost ~2 s per frame under the renderer, so the glow is two
+        // wider, fainter copies of the path under the crisp one. The id + class sit on a <g>: opacity / scale / dash tweens aimed at #id hit the
+        // group (dasharray + dashoffset inherit into the pathLength-normalised children), so highlight_in / route_draw / travel need no changes.
+        return `<g id="${id}_${p.id}" class="${p.cls.trim()}">` + neonGlow(p.cls).map(s => `<path d="${p.d}" vector-effect="non-scaling-stroke"${pl} style="${s}"></path>`).join("") +
+               `<path d="${p.d}" vector-effect="non-scaling-stroke"${pl}${st}></path></g>`;
+      }).join("");
     let raster = "";
     if (data && data.basemap && spec.projection === "mercator") {          // v3: PD raster (Web Mercator tiles) aligned under the fitted projection
       const ref = spec.fit && spec.fit.bbox ? [(spec.fit.bbox[0] + spec.fit.bbox[2]) / 2, (spec.fit.bbox[1] + spec.fit.bbox[3]) / 2] : [0, 0];
@@ -252,7 +261,8 @@
         if (p.lift) {                                                       // lifted group: clip + shadow + fill + outline share one outline
           e.querySelectorAll("path").forEach(q => q.setAttribute("d", p.d));
           if (p.lift.centroid && isFinite(p.lift.centroid[0])) { e.setAttribute("data-cx", p.lift.centroid[0].toFixed(1)); e.setAttribute("data-cy", p.lift.centroid[1].toFixed(1)); }
-        } else e.setAttribute("d", p.d);
+        } else if (e.tagName === "g") e.querySelectorAll("path").forEach(q => q.setAttribute("d", p.d));
+        else e.setAttribute("d", p.d);
       }
       const pts = points(S.spec, proj);
       pts.pins.forEach((p, i) => { const e = S.pinEls[i]; if (!e) return; e.style.left = p.mx + "px"; e.style.top = p.my + "px"; e.classList.toggle("back", !p.vis); });
@@ -261,6 +271,7 @@
     }
     const c = S.cam, tx = S.anchor[0] - c.x * c.k, ty = S.anchor[1] - c.y * c.k;
     S.g.setAttribute("transform", `matrix(${c.k} 0 0 ${c.k} ${tx} ${ty})`);
+    cullRasters(S);
     S.C.pins.forEach((p, i) => { const e = S.pinEls[i]; if (!e) return; const [x, y] = screenXY(S, p.mx, p.my); e.style.left = x + "px"; e.style.top = y + "px"; });
     S.C.labels.forEach((l, i) => { const e = S.lblEls[i]; if (!e) return; const [x, y] = screenXY(S, l.mx + (l.dx || 0), l.my + (l.dy || 0)); e.style.left = x + "px"; e.style.top = y + "px"; });
     if (S.scaleEl) { const bar = S.scaleEl.querySelector(".bar"); if (bar) bar.style.width = (S.C.scalebar.px * c.k) + "px"; }
@@ -275,6 +286,42 @@
     const H = hooks[id]; if (!H || !H.length) return;
     const tl = window.__timelines && window.__timelines.main; const T = tl ? tl.time() : null;
     for (const h of H) if (T == null || (T >= h.t0 - 0.001 && T <= h.t1 + 0.001)) h.f();
+  }
+
+  // Raster culling (2026-11-20): with the 10-Mpx base raster AND a masked near patch both on screen Chromium composites every
+  // frame in software (~2.3 s per screenshot at k ≈ 3.4; 0.25 s with either one hidden). Hide rasters that are off-screen,
+  // and everything under a near patch whose solid core (inner 62 % of its feathered ellipse) covers the whole viewport.
+  function neonGlow(cls) {   // inline styles for the two glow copies (class rules on the parent <g> inherit; these override width/alpha/fill)
+    const blue = /\b(neonblue|blue)\b/.test(cls), route = /\bg-route\b/.test(cls), draw = /\bdraw\b/.test(cls);
+    const col = blue ? "54,201,255" : route ? "255,59,59" : "255,230,0", w = route ? 8 : draw ? 7 : 4;
+    return [[4.5, .16], [2.2, .32]].map(([m, o]) => `fill:none;stroke:rgb(${col});stroke-width:${w * m}px;stroke-opacity:${o};stroke-linejoin:round;stroke-linecap:round`);
+  }
+  const firstPath = e => e && e.tagName === "g" && !e.querySelector(".lift-outline") ? e.querySelector("path:last-child") : e;   // neon groups → their crisp path
+
+  function cullRasters(S) {
+    if (!S.rasters) S.rasters = [...S.g.querySelectorAll("image.geo-basemap")];
+    if (!S.rasters.length || typeof S.el.getBoundingClientRect !== "function") return;
+    let V; try { V = S.el.getBoundingClientRect(); } catch (e) { return; } if (!V || !V.width) return;
+    const sx = V.width / S.W, m = 40 * sx;                                        // CSS scale of the stage; 40 px margin
+    if (S.fMain == null) {                                                         // base raster px → scene px (from its matrix); near patches
+      const base = S.rasters.find(e => !e.getAttribute("mask") && !/_far$/.test(e.id));   // only earn their keep once the base would be upsampled
+      const mt = base && /matrix\(([-\d.e]+)/.exec(base.getAttribute("transform") || ""); S.fMain = mt ? parseFloat(mt[1]) : 0;
+    }
+    const covered = [], upsampled = S.fMain * S.cam.k > 1.05;
+    for (let i = S.rasters.length - 1; i >= 0; i--) {                             // top-most first
+      const e = S.rasters[i]; e.style.visibility = ""; const r = e.getBoundingClientRect();
+      const off = r.right < V.left - m || r.left > V.right + m || r.bottom < V.top - m || r.top > V.bottom + m;
+      if (off || covered.length || (e.getAttribute("mask") && !upsampled)) { e.style.visibility = "hidden"; continue; }
+      if (e.getAttribute("mask")) {                                                // feathered patch: does its solid core hold all 4 viewport corners?
+        const cx = (r.left + r.right) / 2, cy = (r.top + r.bottom) / 2, rx = r.width / 2 * 0.6, ry = r.height / 2 * 0.6;
+        const inside = (x, y) => ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 <= 1;
+        if (inside(V.left, V.top) && inside(V.right, V.top) && inside(V.left, V.bottom) && inside(V.right, V.bottom)) covered.push(e);
+      } else covered.push(e);                                                      // an opaque raster fully on screen hides everything below it
+      if (!off && covered.length && covered[covered.length - 1] === e && !e.getAttribute("mask")) {
+        const full = r.left <= V.left - m && r.right >= V.right + m && r.top <= V.top - m && r.bottom >= V.bottom + m;
+        if (!full) covered.pop();
+      }
+    }
   }
 
   function focus(id, where) {   // where: {lonlat:[..]} | {bbox:[w,s,e,n]} | {xy:[mx,my]}
@@ -316,7 +363,7 @@
   }
   function cam(id) { return scenes[id].cam; }
   function setCam(id, v) { Object.assign(scenes[id].cam, camTarget(id, { ...v, duration: 0 })); apply(id); }
-  function pathLength(id, layerId) { const e = scenes[id].g.querySelector("#" + CSS.escape(id + "_" + layerId)); return e && e.getTotalLength ? e.getTotalLength() : 0; }
+  function pathLength(id, layerId) { const e = firstPath(scenes[id].g.querySelector("#" + CSS.escape(id + "_" + layerId))); return e && e.getTotalLength ? e.getTotalLength() : 0; }
 
   return { compute, mount, apply, cam, camTarget, setCam, focus, toScreen, pathLength, centroid, bboxFeature, PROJ_KIND, scenes, hook };
 });

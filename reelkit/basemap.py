@@ -27,7 +27,7 @@ LAYERS = {"bluemarble": ("BlueMarble_ShadedRelief_Bathymetry", "GoogleMapsCompat
           # Attribution is REQUIRED: the episode shows the screen credit in the outro and carries it in the post description.
           "s2": ("s2cloudless-2020_3857", "g", "jpg", 14, "Sentinel-2 cloudless by EOX (Contains modified Copernicus Sentinel data 2020)", EOX, "CC-BY-4.0", "EOX IT Services GmbH")}
 CACHE = pathlib.Path.home() / ".cache" / "basemap"
-MAX_W, MAX_H, MAX_BYTES, MAX_PX = 8192, 8192, 14_000_000, 8_000_000      # Chromium decodes 8k JPEGs fine; a z7 continent at 1080×1920 needs ~6k px to stay crisp at k ≈ 3
+MAX_W, MAX_H, MAX_BYTES, MAX_PX = 8192, 8192, 14_000_000, 5_000_000      # Chromium decodes 8k JPEGs fine; a z7 continent at 1080×1920 needs ~6k px to stay crisp at k ≈ 3
 UA = "quizwire/1 (github zainkhan122/thequizwire)"
 
 
