@@ -4800,6 +4800,45 @@
    "yt_thumbnail_src": "hosted",
    "yt_playlist_id": "PLDkNbd8c789Y",
    "yt_series_item": "UExEa05iZDhjNzg5WS41MjE1MkI0OTQ2QzJGNzNG"
+  },
+  {
+   "episode": "st05-closest-us-state-to-africa",
+   "platform": "threads",
+   "post_id": "6b00770afcc25b86564773ab",
+   "channel_id": "6a6dd3b24b2d03035f7e82e8",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/ede3078b16ef/The-US-state-closest-to-Africa-is-not-Florida.mp4",
+   "due_at": "2026-11-23T00:00:00.000Z",
+   "created_at": "2026-11-20T16:36:26.756Z",
+   "recorded_at": "2026-11-20T16:36:26+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY"
+  },
+  {
+   "episode": "st06-challenger-deep-swallows-everest",
+   "platform": "threads",
+   "post_id": "6b00770c6eabfb806cce40c3",
+   "channel_id": "6a6dd3b24b2d03035f7e82e8",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/0d9f8904d2c3/The-hole-that-would-swallow-Everest.mp4",
+   "due_at": "2026-11-24T00:00:00.000Z",
+   "created_at": "2026-11-20T16:36:28.966Z",
+   "recorded_at": "2026-11-20T16:36:29+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY"
+  },
+  {
+   "episode": "st07-lesotho-kingdom-in-the-sky",
+   "platform": "threads",
+   "post_id": "6b00770fc9797a17652e6f9e",
+   "channel_id": "6a6dd3b24b2d03035f7e82e8",
+   "state": "scheduled",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/60f092917fa6/The-country-whose-lowest-point-beats-Britains-highest.mp4",
+   "due_at": "2026-11-25T00:00:00.000Z",
+   "created_at": "2026-11-20T16:36:31.244Z",
+   "recorded_at": "2026-11-20T16:36:31+00:00",
+   "title": null,
+   "account": "BUFFER_API_KEY"
   }
  ]
 }
