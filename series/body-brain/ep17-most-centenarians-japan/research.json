@@ -1,0 +1,250 @@
+{
+ "version": 1,
+ "episode": "ep17-most-centenarians-japan",
+ "topic": "Japan has the most centenarians of any country: 99,763 people aged 100+ as of 1 September 2025 (Ministry of Health, Labour and Welfare), about 88% of them women; the first survey in 1963 counted 153. That is roughly 80 per 100,000 people. The United States counted about 80,000 centenarians in the 2020 census (about 24–30 per 100,000); China is estimated at roughly 50,000–60,000 (UN WPP 2024), under 5 per 100,000, despite ten times Japan's population. Okinawa is known for longevity. Since 1963 the government has given each new centenarian a silver sake cup; in 2016 it switched to silver-plated because of the cost of rising numbers.",
+ "researched": "2026-11-23",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The country with the most people must have the most centenarians — China.",
+   "reality": "China has roughly 50,000–60,000 people aged 100+; Japan, with a tenth of the population, has nearly 100,000.",
+   "sources": [
+    "mhlw_2025",
+    "un_wpp"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Centenarian clips are blue-zone diet explainers; nobody runs the 153-to-99,000 counter, splits then against now, and bars the per-person rate against China and America as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=most+centenarians",
+    "title": "Search: most centenarians",
+    "angle": "blue-zone diet talks",
+    "misses": "no numbers over time"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=japan+centenarians",
+    "title": "Search: the country by name",
+    "angle": "news clips",
+    "misses": "answer in the title"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=how+to+live+to+100",
+    "title": "Search: how to live to 100",
+    "angle": "self-help",
+    "misses": "no country, no map"
+   }
+  ]
+ },
+ "sources": {
+  "mhlw_2025": {
+   "type": "primary",
+   "publisher": "Japan Ministry of Health, Labour and Welfare",
+   "title": "Centenarians in Japan, Respect for the Aged Day 2025",
+   "url": "https://www.mhlw.go.jp/",
+   "date": "2026-11-20",
+   "notes": "99,763 centenarians as of 1 September 2025, a record for the 55th straight year; about 88% women; 153 in the first survey in 1963"
+  },
+  "nhk_2025": {
+   "type": "press",
+   "publisher": "NHK World",
+   "title": "Japan's centenarian population tops 99,000",
+   "url": "https://www3.nhk.or.jp/nhkworld/",
+   "date": "2026-11-20",
+   "notes": "99,763 centenarians; women 87,784; rate about 80 per 100,000 population"
+  },
+  "un_wpp": {
+   "type": "primary",
+   "publisher": "United Nations, World Population Prospects 2024",
+   "title": "Population aged 100+ by country",
+   "url": "https://population.un.org/wpp/",
+   "date": "2026-11-20",
+   "notes": "Japan the largest centenarian population; China estimated at roughly 50,000–60,000; United States roughly 80,000–100,000 depending on year and estimate"
+  },
+  "census_us": {
+   "type": "primary",
+   "publisher": "US Census Bureau",
+   "title": "2020 Census: centenarians",
+   "url": "https://www.census.gov/",
+   "date": "2026-11-20",
+   "notes": "about 80,000 people aged 100+ in 2020, roughly 24–30 per 100,000 population"
+  },
+  "pew_cent": {
+   "type": "reference",
+   "publisher": "Pew Research Center",
+   "title": "World's centenarian population projected to grow eightfold by 2050",
+   "url": "https://www.pewresearch.org/",
+   "date": "2026-11-20",
+   "notes": "Japan has the highest centenarian rate of any large country"
+  },
+  "brit_okinawa": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Okinawa",
+   "url": "https://www.britannica.com/place/Okinawa-prefecture-Japan",
+   "date": "2026-11-20",
+   "notes": "the prefecture is known for the longevity of its people"
+  },
+  "japan_times_cup": {
+   "type": "press",
+   "publisher": "The Japan Times",
+   "title": "Government to downgrade silver cups for centenarians as numbers soar",
+   "url": "https://www.japantimes.co.jp/",
+   "date": "2026-11-20",
+   "notes": "since 1963 a silver sake cup for each new centenarian; switched to silver-plated in 2016 to cut costs"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 countries, 50m",
+   "url": "https://www.naturalearthdata.com/",
+   "date": "2026-11-20",
+   "notes": "country polygons for the fill"
+  },
+  "border_registry": {
+   "type": "reference",
+   "publisher": "thequizwire docs/border_registry.json (CIA World Factbook; Japan MOFA)",
+   "title": "Border policy registry — kuril, senkaku, dokdo",
+   "url": "https://www.cia.gov/the-world-factbook/countries/japan/#transnational-issues",
+   "date": "2026-10",
+   "notes": "controller/claimant wording for the three plates"
+  },
+  "mofa_kuril": {
+   "type": "primary",
+   "publisher": "Ministry of Foreign Affairs of Japan",
+   "title": "Japan's Northern Territories",
+   "url": "https://www.mofa.go.jp/region/europe/russia/territory/",
+   "date": "2026-10",
+   "notes": "the four southern Kuril islands are administered by Russia and claimed by Japan"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Japan has the most people aged 100 or more, nearly 100,000 (99,763 in September 2025).",
+   "sources": [
+    "mhlw_2025",
+    "nhk_2025",
+    "un_wpp"
+   ],
+   "vo": [
+    "where do the most people aged 100 or more live",
+    "united states, china, or japan",
+    "japan. nearly 100,000 people who have passed their hundredth birthday",
+    "nearly 100,000 birthdays. follow us"
+   ],
+   "screen": [
+    "Japan",
+    "United States",
+    "China",
+    "≈ 99,000",
+    "people aged 100 or more",
+    "people aged 100+"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "The first survey in 1963 counted 153 centenarians; today about 99,000, about 88% of them women.",
+   "sources": [
+    "mhlw_2025",
+    "nhk_2025"
+   ],
+   "vo": [
+    "when the count began in 1963, there were 153. today it is around 99,000, mostly women"
+   ],
+   "screen": [
+    "153",
+    "centenarians in 1963",
+    "99,000+",
+    "centenarians today"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Per 100,000 people Japan has about 80 centenarians, the United States about 30 and China under 5.",
+   "sources": [
+    "nhk_2025",
+    "census_us",
+    "un_wpp",
+    "pew_cent"
+   ],
+   "vo": [
+    "china has far more people, but per person japan has about 80 centenarians per 100,000. america has around 30"
+   ],
+   "screen": [
+    "80",
+    "30",
+    "4"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Okinawa is known for longevity; since 1963 the government has given each new centenarian a silver sake cup, downgraded to silver-plated in 2016 as numbers rose.",
+   "sources": [
+    "brit_okinawa",
+    "japan_times_cup"
+   ],
+   "vo": [
+    "okinawa is the famous island of long lives. the government once sent every new centenarian a silver cup, until there were too many"
+   ],
+   "screen": [
+    "Okinawa",
+    "island of long lives",
+    "SILVER CUP",
+    "for every new centenarian"
+   ]
+  },
+  {
+   "id": "C05",
+   "weight": "detail",
+   "text": "Map policy plates: the Kuril Islands are administered by Russia and claimed by Japan; the Senkaku / Diaoyu Islands administered by Japan, claimed by China and Taiwan; Dokdo / Takeshima administered by South Korea, claimed by Japan.",
+   "sources": [
+    "border_registry",
+    "mofa_kuril"
+   ],
+   "vo": [],
+   "screen": [
+    "Kuril Islands",
+    "Senkaku / Diaoyu Islands",
+    "Dokdo / Takeshima",
+    "Administered by Russia",
+    "Administered by Japan",
+    "Administered by South Korea",
+    "claimed by Japan",
+    "claimed by Japan (southern four islands)",
+    "claimed by People's Republic of China, Taiwan"
+   ]
+  }
+ ]
+}

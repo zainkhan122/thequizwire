@@ -1,10 +1,5 @@
 {
- "files": {
-  "cover/hero.jpg": {
-   "sha256": "e4aafd71716252ee92f3987a3b4188452da76a50e2f9415add108c08e3a442d3",
-   "size": 267546
-  }
- },
+ "files": {},
  "generated": {
   "brand/cursor.svg": {
    "by": "reelkit/brand.py",
@@ -60,9 +55,18 @@
    "provider": "Simple Icons",
    "source": "https://github.com/simple-icons/simple-icons"
   },
-  "geo/flags/gb.svg": {
+  "geo/flags/cn.svg": {
    "by": "reelkit/flags.py",
-   "bytes": 504,
+   "bytes": 813,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/flags/jp.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 470,
    "credit": "flag-icons",
    "kind": "image",
    "licence": "MIT",
@@ -87,54 +91,62 @@
    "provider": "flag-icons (lipis)",
    "source": "https://github.com/lipis/flag-icons"
   },
-  "geo/flags/za.svg": {
-   "by": "reelkit/flags.py",
-   "bytes": 860,
-   "credit": "flag-icons",
-   "kind": "image",
-   "licence": "MIT",
-   "provider": "flag-icons (lipis)",
-   "source": "https://github.com/lipis/flag-icons"
-  },
   "geo/main.json": {
    "by": "reelkit/geodata.py",
-   "bytes": 39666,
+   "bytes": 179962,
    "credit": "Natural Earth",
    "kind": "data",
    "licence": "PD",
    "provider": "Natural Earth",
-   "source": "world-atlas 2.0.2 50m"
+   "source": "world-atlas 2.0.2 50m + ne_10m_admin_0_disputed_areas"
   },
   "geo/main_basemap.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 463260,
+   "bytes": 725390,
    "credit": "NASA Black Marble",
    "kind": "image",
    "licence": "PD-USGov",
    "provider": "NASA GIBS",
-   "source": "VIIRS_CityLights_2012 z7 (144 tiles)"
+   "source": "VIIRS_CityLights_2012 z6 (110 tiles)"
   },
   "geo/main_basemap_far.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 426442,
+   "bytes": 307285,
    "credit": "NASA Black Marble",
    "kind": "image",
    "licence": "PD-USGov",
    "provider": "NASA GIBS",
-   "source": "VIIRS_CityLights_2012 z5 (72 tiles)"
+   "source": "VIIRS_CityLights_2012 z4 (50 tiles)"
   },
-  "stickers/1f3e5.svg": {
+  "mix.wav": {
+   "ai_voice": "Kokoro am_michael",
+   "by": "reelkit/quizscore.py (procedural bed/ticks/sting) + Kokoro VO takes",
+   "derived_from": "procedural reelkit/synth.py + Kokoro takes vo/*",
+   "kind": "mix",
+   "licence": "own",
+   "provider": "build"
+  },
+  "stickers/1f334.svg": {
    "by": "reelkit/stickers.py",
-   "bytes": 750,
+   "bytes": 2846,
    "credit": "Twemoji",
    "kind": "image",
    "licence": "CC-BY-4.0",
    "provider": "Twemoji (Twitter, Inc. and other contributors)",
    "source": "https://github.com/twitter/twemoji"
   },
-  "stickers/1f415.svg": {
+  "stickers/1f382.svg": {
    "by": "reelkit/stickers.py",
-   "bytes": 2506,
+   "bytes": 2045,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f3c6.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1237,
    "credit": "Twemoji",
    "kind": "image",
    "licence": "CC-BY-4.0",
@@ -150,9 +162,27 @@
    "provider": "Twemoji (Twitter, Inc. and other contributors)",
    "source": "https://github.com/twitter/twemoji"
   },
-  "stickers/1f4c5.svg": {
+  "stickers/1f465.svg": {
    "by": "reelkit/stickers.py",
-   "bytes": 1923,
+   "bytes": 1092,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f475.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1460,
+   "credit": "Twemoji",
+   "kind": "image",
+   "licence": "CC-BY-4.0",
+   "provider": "Twemoji (Twitter, Inc. and other contributors)",
+   "source": "https://github.com/twitter/twemoji"
+  },
+  "stickers/1f4b0.svg": {
+   "by": "reelkit/stickers.py",
+   "bytes": 1314,
    "credit": "Twemoji",
    "kind": "image",
    "licence": "CC-BY-4.0",
@@ -167,36 +197,7 @@
    "licence": "CC-BY-4.0",
    "provider": "Twemoji (Twitter, Inc. and other contributors)",
    "source": "https://github.com/twitter/twemoji"
-  },
-  "stickers/1f9d1-200d-2695-fe0f.svg": {
-   "by": "reelkit/stickers.py",
-   "bytes": 2083,
-   "credit": "Twemoji",
-   "kind": "image",
-   "licence": "CC-BY-4.0",
-   "provider": "Twemoji (Twitter, Inc. and other contributors)",
-   "source": "https://github.com/twitter/twemoji"
-  },
-  "stickers/1fac0.svg": {
-   "by": "reelkit/stickers.py",
-   "bytes": 6997,
-   "credit": "Twemoji",
-   "kind": "image",
-   "licence": "CC-BY-4.0",
-   "provider": "Twemoji (Twitter, Inc. and other contributors)",
-   "source": "https://github.com/twitter/twemoji"
-  },
-  "stickers/2728.svg": {
-   "by": "reelkit/stickers.py",
-   "bytes": 1052,
-   "credit": "Twemoji",
-   "kind": "image",
-   "licence": "CC-BY-4.0",
-   "provider": "Twemoji (Twitter, Inc. and other contributors)",
-   "source": "https://github.com/twitter/twemoji"
   }
  },
- "release": "media-ep17-first-heart-transplant-south-africa-barnard",
- "repo": "zainkhan122/thequizwire",
  "version": 1
 }

@@ -125,7 +125,8 @@
      "k_min": 0.3
     }
    },
-   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; the only size comparison (bird vs sparrow vs pigeon) is carried by the to-scale bars chart 'size', not by map shapes (P1)",
+   "size_claim_device": "size",
    "scalebar": {
     "km": 200,
     "lonlat": [

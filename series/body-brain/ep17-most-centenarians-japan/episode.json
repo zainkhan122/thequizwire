@@ -1,0 +1,141 @@
+{
+ "id": "ep17-most-centenarians-japan",
+ "format": "quiz-v3",
+ "series": "body-brain",
+ "number": 17,
+ "title": "Where do the MOST people aged 100 or more live?",
+ "difficulty": "MEDIUM",
+ "seed": 1717,
+ "quiz": {
+  "question": "Where do the MOST people aged 100 or more live?",
+  "keyword": "MOST",
+  "options": [
+   "United States",
+   "China",
+   "Japan"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Japan",
+  "answer_sub": "nearly 100,000 centenarians",
+  "option_meta": [
+   {
+    "flag": "us"
+   },
+   {
+    "flag": "cn"
+   },
+   {
+    "flag": "jp"
+   }
+  ],
+  "banner": "Japan",
+  "banner_sub": "✓  C was right · nearly 100,000 centenarians",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Where do the MOST people aged 100 or more live? 🎂",
+  "premise": "One country has nearly 100,000 people aged 100 or more",
+  "bait": "United States, China or Japan — which did you pick? 👇",
+  "keywords": [
+   "most centenarians",
+   "which country has the most centenarians",
+   "people over 100",
+   "longevity facts",
+   "body quiz",
+   "health quiz",
+   "oldest population",
+   "100 years old"
+  ],
+  "description": "One country has nearly 100,000 people aged 100 or more. United States, China or Japan — which did you pick? 👇\n\nSources: Japan Ministry of Health, Labour and Welfare; UN World Population Prospects; US Census Bureau.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nBody & Brain #17",
+  "hashtags": [
+   "#BodyFacts",
+   "#BrainQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "BodyQuiz",
+   "Longevity"
+  ],
+  "cover_emoji": "🎂",
+  "cover_emoji_why": "a birthday cake names the subject (a 100th birthday); it is not the flag or emoji of any option",
+  "copy": {
+   "spoilers": [
+    "japan",
+    "japanese",
+    "okinawa",
+    "99,000",
+    "99,763",
+    "80 per",
+    "tokyo"
+   ],
+   "youtube": {
+    "title": "Where do the most people aged 100 or more live? 🎂",
+    "description": "The biggest economy, the biggest population, or the third one? One country has nearly a hundred thousand people who have blown out 100 candles, 9 in 10 of them women, and it used to send every one of them a solid silver cup — until there were too many.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#centenarians",
+     "#longevity",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Where do the MOST people aged 100 or more live? 🎂\nThe biggest economy, the biggest population, or the third one? One country has nearly a hundred thousand people who have blown out 100 candles, 9 in 10 of them women.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#centenarians",
+     "#healthfacts",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country has the most people aged 100 or more — United States, China or Japan?\nOne country has nearly a hundred thousand people who have blown out 100 candles, 9 in 10 of them women, and it used to send every one of them a solid silver cup until there were too many. Choose a flag before the then-and-now panels slide in.",
+    "tags": [
+     "#bodyquiz",
+     "#livingto100"
+    ]
+   },
+   "twitter": {
+    "text": "Where do the MOST people aged 100 or more live?\nUnited States, China or Japan? Nearly a hundred thousand of them, 9 in 10 women — and the biggest population is not the answer.",
+    "tags": [
+     "#BodyQuiz",
+     "#LivingTo100"
+    ]
+   },
+   "threads": {
+    "text": "Which country has the most people aged 100 or more — United States, China or Japan? One country has nearly a hundred thousand people who have blown out 100 candles, 9 in 10 of them women, and it used to send every one of them a solid silver cup until there were too many.",
+    "tags": [
+     "#centenarians"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "night-lights",
+  "reveal": "fill-pulse",
+  "beats": [
+   "counter",
+   "split",
+   "bars",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:jp + flagball:cn + flagball:us + emoji-set:birthday",
+  "music": "bed:warm"
+ },
+ "status": "draft"
+}

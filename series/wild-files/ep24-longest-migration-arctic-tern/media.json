@@ -66,12 +66,12 @@
   },
   "geo/main.json": {
    "by": "reelkit/geodata.py",
-   "bytes": 635359,
+   "bytes": 92936,
    "credit": "Natural Earth",
    "kind": "data",
    "licence": "PD",
    "provider": "Natural Earth",
-   "source": "world-atlas 2.0.2 50m"
+   "source": "world-atlas 2.0.2 110m"
   },
   "geo/main_basemap.jpg": {
    "by": "reelkit/basemap.py",

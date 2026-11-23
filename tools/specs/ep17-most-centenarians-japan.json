@@ -1,0 +1,1109 @@
+{
+ "id": "ep17-most-centenarians-japan",
+ "series": "body-brain",
+ "number": 17,
+ "seed": 1717,
+ "question": "Where do the MOST people aged 100 or more live?",
+ "keyword": "MOST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "United States",
+   "flag": "us",
+   "cue": "united"
+  },
+  {
+   "text": "China",
+   "flag": "cn",
+   "cue": "china"
+  },
+  {
+   "text": "Japan",
+   "flag": "jp",
+   "cue": "japan"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "nearly 100,000 centenarians",
+ "outro_headline": "TOO EASY?",
+ "cover_emoji": "🎂",
+ "cover_emoji_why": "a birthday cake names the subject (a 100th birthday); it is not the flag or emoji of any option",
+ "post": {
+  "premise": "One country has nearly 100,000 people aged 100 or more",
+  "bait": "United States, China or Japan — which did you pick? 👇",
+  "keywords": [
+   "most centenarians",
+   "which country has the most centenarians",
+   "people over 100",
+   "longevity facts",
+   "body quiz",
+   "health quiz",
+   "oldest population",
+   "100 years old"
+  ],
+  "tags": [
+   "BodyQuiz",
+   "Longevity"
+  ],
+  "sources_line": "Japan Ministry of Health, Labour and Welfare; UN World Population Prospects; US Census Bureau",
+  "copy": {
+   "spoilers": [
+    "japan",
+    "japanese",
+    "okinawa",
+    "99,000",
+    "99,763",
+    "80 per",
+    "tokyo"
+   ],
+   "youtube": {
+    "title": "Where do the most people aged 100 or more live? 🎂",
+    "description": "The biggest economy, the biggest population, or the third one? One country has nearly a hundred thousand people who have blown out 100 candles, 9 in 10 of them women, and it used to send every one of them a solid silver cup — until there were too many.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#centenarians",
+     "#longevity",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Where do the MOST people aged 100 or more live? 🎂\nThe biggest economy, the biggest population, or the third one? One country has nearly a hundred thousand people who have blown out 100 candles, 9 in 10 of them women.\nWhich did you pick?",
+    "tags": [
+     "#bodyquiz",
+     "#centenarians",
+     "#healthfacts",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country has the most people aged 100 or more — United States, China or Japan?\nOne country has nearly a hundred thousand people who have blown out 100 candles, 9 in 10 of them women, and it used to send every one of them a solid silver cup until there were too many. Choose a flag before the then-and-now panels slide in.",
+    "tags": [
+     "#bodyquiz",
+     "#livingto100"
+    ]
+   },
+   "twitter": {
+    "text": "Where do the MOST people aged 100 or more live?\nUnited States, China or Japan? Nearly a hundred thousand of them, 9 in 10 women — and the biggest population is not the answer.",
+    "tags": [
+     "#BodyQuiz",
+     "#LivingTo100"
+    ]
+   },
+   "threads": {
+    "text": "Which country has the most people aged 100 or more — United States, China or Japan? One country has nearly a hundred thousand people who have blown out 100 candles, 9 in 10 of them women, and it used to send every one of them a solid silver cup until there were too many.",
+    "tags": [
+     "#centenarians"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "misconception",
+  "opener": "night-lights",
+  "reveal": "fill-pulse",
+  "beats": [
+   "counter",
+   "split",
+   "bars",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:jp + flagball:cn + flagball:us + emoji-set:birthday",
+  "music": "bed:warm",
+  "outro": "TOO EASY?"
+ },
+ "intent": "A number that keeps climbing: a THEN/NOW split puts 153 centenarians in 1963 against today while the counter runs to 99,000, per-person bars show why China's billion does not win, and a pin lands on the island famous for long lives with the silver-cup card.",
+ "voice": {
+  "v01_cues": {
+   "where": "where",
+   "most": "most"
+  },
+  "v04": {
+   "text": "Japan. Nearly 100,000 people who have passed their hundredth birthday.",
+   "cues": {
+    "answer": "japan",
+    "nearly": "nearly",
+    "birthday": "birthday"
+   }
+  },
+  "v05": {
+   "text": "When the count began in 1963, there were 153. Today it is around 99,000, mostly women.",
+   "cues": {
+    "count": "count",
+    "today": "today",
+    "women": "women"
+   }
+  },
+  "v06": {
+   "text": "China has far more people, but per person Japan has about 80 centenarians per 100,000. America has around 30.",
+   "cues": {
+    "china": "china",
+    "person": "person",
+    "america": "america"
+   }
+  },
+  "v07": {
+   "text": "Okinawa is the famous island of long lives. The government once sent every new centenarian a silver cup, until there were too many.",
+   "cues": {
+    "okinawa": "okinawa",
+    "cup": "cup",
+    "many": "many"
+   }
+  },
+  "v08": {
+   "text": "Nearly 100,000 birthdays. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "≈ 99,000",
+   "text": "people aged 100 or more"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "jp",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "cn",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "Japan has the most centenarians of any country: 99,763 people aged 100+ as of 1 September 2025 (Ministry of Health, Labour and Welfare), about 88% of them women; the first survey in 1963 counted 153. That is roughly 80 per 100,000 people. The United States counted about 80,000 centenarians in the 2020 census (about 24–30 per 100,000); China is estimated at roughly 50,000–60,000 (UN WPP 2024), under 5 per 100,000, despite ten times Japan's population. Okinawa is known for longevity. Since 1963 the government has given each new centenarian a silver sake cup; in 2016 it switched to silver-plated because of the cost of rising numbers.",
+  "myths": [
+   {
+    "myth": "The country with the most people must have the most centenarians — China.",
+    "reality": "China has roughly 50,000–60,000 people aged 100+; Japan, with a tenth of the population, has nearly 100,000.",
+    "sources": [
+     "mhlw_2025",
+     "un_wpp"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Centenarian clips are blue-zone diet explainers; nobody runs the 153-to-99,000 counter, splits then against now, and bars the per-person rate against China and America as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=most+centenarians",
+     "title": "Search: most centenarians",
+     "angle": "blue-zone diet talks",
+     "misses": "no numbers over time"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=japan+centenarians",
+     "title": "Search: the country by name",
+     "angle": "news clips",
+     "misses": "answer in the title"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=how+to+live+to+100",
+     "title": "Search: how to live to 100",
+     "angle": "self-help",
+     "misses": "no country, no map"
+    }
+   ]
+  },
+  "sources": {
+   "mhlw_2025": {
+    "type": "primary",
+    "publisher": "Japan Ministry of Health, Labour and Welfare",
+    "title": "Centenarians in Japan, Respect for the Aged Day 2025",
+    "url": "https://www.mhlw.go.jp/",
+    "date": "2026-11-20",
+    "notes": "99,763 centenarians as of 1 September 2025, a record for the 55th straight year; about 88% women; 153 in the first survey in 1963"
+   },
+   "nhk_2025": {
+    "type": "press",
+    "publisher": "NHK World",
+    "title": "Japan's centenarian population tops 99,000",
+    "url": "https://www3.nhk.or.jp/nhkworld/",
+    "date": "2026-11-20",
+    "notes": "99,763 centenarians; women 87,784; rate about 80 per 100,000 population"
+   },
+   "un_wpp": {
+    "type": "primary",
+    "publisher": "United Nations, World Population Prospects 2024",
+    "title": "Population aged 100+ by country",
+    "url": "https://population.un.org/wpp/",
+    "date": "2026-11-20",
+    "notes": "Japan the largest centenarian population; China estimated at roughly 50,000–60,000; United States roughly 80,000–100,000 depending on year and estimate"
+   },
+   "census_us": {
+    "type": "primary",
+    "publisher": "US Census Bureau",
+    "title": "2020 Census: centenarians",
+    "url": "https://www.census.gov/",
+    "date": "2026-11-20",
+    "notes": "about 80,000 people aged 100+ in 2020, roughly 24–30 per 100,000 population"
+   },
+   "pew_cent": {
+    "type": "reference",
+    "publisher": "Pew Research Center",
+    "title": "World's centenarian population projected to grow eightfold by 2050",
+    "url": "https://www.pewresearch.org/",
+    "date": "2026-11-20",
+    "notes": "Japan has the highest centenarian rate of any large country"
+   },
+   "brit_okinawa": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Okinawa",
+    "url": "https://www.britannica.com/place/Okinawa-prefecture-Japan",
+    "date": "2026-11-20",
+    "notes": "the prefecture is known for the longevity of its people"
+   },
+   "japan_times_cup": {
+    "type": "press",
+    "publisher": "The Japan Times",
+    "title": "Government to downgrade silver cups for centenarians as numbers soar",
+    "url": "https://www.japantimes.co.jp/",
+    "date": "2026-11-20",
+    "notes": "since 1963 a silver sake cup for each new centenarian; switched to silver-plated in 2016 to cut costs"
+   },
+   "natural_earth": {
+    "type": "primary",
+    "publisher": "Natural Earth",
+    "title": "Admin 0 countries, 50m",
+    "url": "https://www.naturalearthdata.com/",
+    "date": "2026-11-20",
+    "notes": "country polygons for the fill"
+   },
+   "border_registry": {
+    "type": "reference",
+    "publisher": "thequizwire docs/border_registry.json (CIA World Factbook; Japan MOFA)",
+    "title": "Border policy registry — kuril, senkaku, dokdo",
+    "url": "https://www.cia.gov/the-world-factbook/countries/japan/#transnational-issues",
+    "date": "2026-10",
+    "notes": "controller/claimant wording for the three plates"
+   },
+   "mofa_kuril": {
+    "type": "primary",
+    "publisher": "Ministry of Foreign Affairs of Japan",
+    "title": "Japan's Northern Territories",
+    "url": "https://www.mofa.go.jp/region/europe/russia/territory/",
+    "date": "2026-10",
+    "notes": "the four southern Kuril islands are administered by Russia and claimed by Japan"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Japan has the most people aged 100 or more, nearly 100,000 (99,763 in September 2025).",
+    "sources": [
+     "mhlw_2025",
+     "nhk_2025",
+     "un_wpp"
+    ],
+    "vo": [
+     "where do the most people aged 100 or more live",
+     "united states, china, or japan",
+     "japan. nearly 100,000 people who have passed their hundredth birthday",
+     "nearly 100,000 birthdays. follow us"
+    ],
+    "screen": [
+     "Japan",
+     "United States",
+     "China",
+     "≈ 99,000",
+     "people aged 100 or more",
+     "people aged 100+"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "The first survey in 1963 counted 153 centenarians; today about 99,000, about 88% of them women.",
+    "sources": [
+     "mhlw_2025",
+     "nhk_2025"
+    ],
+    "vo": [
+     "when the count began in 1963, there were 153. today it is around 99,000, mostly women"
+    ],
+    "screen": [
+     "153",
+     "centenarians in 1963",
+     "99,000+",
+     "centenarians today"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Per 100,000 people Japan has about 80 centenarians, the United States about 30 and China under 5.",
+    "sources": [
+     "nhk_2025",
+     "census_us",
+     "un_wpp",
+     "pew_cent"
+    ],
+    "vo": [
+     "china has far more people, but per person japan has about 80 centenarians per 100,000. america has around 30"
+    ],
+    "screen": [
+     "80",
+     "30",
+     "4"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Okinawa is known for longevity; since 1963 the government has given each new centenarian a silver sake cup, downgraded to silver-plated in 2016 as numbers rose.",
+    "sources": [
+     "brit_okinawa",
+     "japan_times_cup"
+    ],
+    "vo": [
+     "okinawa is the famous island of long lives. the government once sent every new centenarian a silver cup, until there were too many"
+    ],
+    "screen": [
+     "Okinawa",
+     "island of long lives",
+     "SILVER CUP",
+     "for every new centenarian"
+    ]
+   },
+   {
+    "id": "C05",
+    "weight": "detail",
+    "text": "Map policy plates: the Kuril Islands are administered by Russia and claimed by Japan; the Senkaku / Diaoyu Islands administered by Japan, claimed by China and Taiwan; Dokdo / Takeshima administered by South Korea, claimed by Japan.",
+    "sources": [
+     "border_registry",
+     "mofa_kuril"
+    ],
+    "vo": [],
+    "screen": [
+     "Kuril Islands",
+     "Senkaku / Diaoyu Islands",
+     "Dokdo / Takeshima",
+     "Administered by Russia",
+     "Administered by Japan",
+     "Administered by South Korea",
+     "claimed by Japan",
+     "claimed by Japan (southern four islands)",
+     "claimed by People's Republic of China, Taiwan"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   122,
+   24,
+   150,
+   46.5
+  ],
+  "far_bbox": [
+   95,
+   5,
+   175,
+   60
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "392"
+  ],
+  "highlight_note": "Japan",
+  "labels": [
+   {
+    "id": "ok",
+    "lonlat": [
+     128.5,
+     25.3
+    ],
+    "text": "Okinawa",
+    "cls": "tag",
+    "in": "s07@okinawa+0.2",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "oki",
+    "lonlat": [
+     127.7,
+     26.3
+    ],
+    "label": "island of long lives",
+    "side": "right"
+   }
+  ],
+  "scalebar": {
+   "km": 500,
+   "lonlat": [
+    123,
+    25
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s07@okinawa",
+    "pid": "oki"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.42,
+    [
+     112,
+     22
+    ]
+   ],
+   "s01": [
+    0.42,
+    [
+     110,
+     20
+    ]
+   ],
+   "s04": [
+    0.9,
+    [
+     137,
+     37
+    ]
+   ],
+   "s04b": [
+    0.94,
+    [
+     137.3,
+     36.8
+    ]
+   ],
+   "s05": [
+    0.85,
+    [
+     136,
+     36.5
+    ]
+   ],
+   "s05b": [
+    0.89,
+    [
+     136.3,
+     36.3
+    ]
+   ],
+   "s06": [
+    0.8,
+    [
+     135,
+     36
+    ]
+   ],
+   "s06b": [
+    0.84,
+    [
+     135.3,
+     35.8
+    ]
+   ],
+   "s07": [
+    1.1,
+    [
+     130,
+     30
+    ]
+   ],
+   "s07b": [
+    1.14,
+    [
+     129.8,
+     29.8
+    ]
+   ]
+  },
+  "disputed": [
+   {
+    "id": "kuril",
+    "ne_name": null,
+    "name": "Kuril Islands",
+    "controller": "Russia (since 1945)",
+    "claimants": [
+     "Japan (southern four islands)"
+    ],
+    "as_of": "2026-10",
+    "source": "docs/border_registry.json#kuril",
+    "label_at": [
+     147.0,
+     44.5
+    ],
+    "plate_cls": "small",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        145.4,
+        43.6
+       ],
+       [
+        148.6,
+        43.6
+       ],
+       [
+        148.6,
+        45.4
+       ],
+       [
+        145.4,
+        45.4
+       ],
+       [
+        145.4,
+        43.6
+       ]
+      ]
+     ]
+    },
+    "note": "schematic marker polygon — Natural Earth 50m carries no polygon for these islets"
+   },
+   {
+    "id": "senkaku",
+    "ne_name": null,
+    "name": "Senkaku / Diaoyu Islands",
+    "controller": "Japan",
+    "claimants": [
+     "People's Republic of China",
+     "Taiwan"
+    ],
+    "as_of": "2026-10",
+    "source": "docs/border_registry.json#senkaku",
+    "label_at": [
+     123.5,
+     25.75
+    ],
+    "plate_cls": "small",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        123.15,
+        25.5
+       ],
+       [
+        123.85,
+        25.5
+       ],
+       [
+        123.85,
+        26.0
+       ],
+       [
+        123.15,
+        26.0
+       ],
+       [
+        123.15,
+        25.5
+       ]
+      ]
+     ]
+    },
+    "note": "schematic marker polygon — Natural Earth 50m carries no polygon for these islets"
+   },
+   {
+    "id": "dokdo",
+    "ne_name": null,
+    "name": "Dokdo / Takeshima",
+    "controller": "South Korea",
+    "claimants": [
+     "Japan"
+    ],
+    "as_of": "2026-10",
+    "source": "docs/border_registry.json#dokdo",
+    "label_at": [
+     131.87,
+     37.24
+    ],
+    "plate_cls": "small",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        131.62,
+        37.04
+       ],
+       [
+        132.12,
+        37.04
+       ],
+       [
+        132.12,
+        37.440000000000005
+       ],
+       [
+        131.62,
+        37.440000000000005
+       ],
+       [
+        131.62,
+        37.04
+       ]
+      ]
+     ]
+    },
+    "note": "schematic marker polygon — Natural Earth 50m carries no polygon for these islets"
+   }
+  ]
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "When the count began in 1963, there were 153. Today it is around 99,000, mostly women.",
+    "cues": {
+     "count": "count",
+     "today": "today",
+     "women": "women"
+    }
+   },
+   "direction": "ease back so the whole archipelago sits in frame; the THEN/NOW split slides in on 'count' — 153 against 99,000+; a cake sticker on 'count'; the counter runs to 99,000 from 'today' to 'women'; a grandmother sticker on 'women' as Japan pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.85,
+    [
+     136,
+     36.5
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.89,
+    [
+     136.3,
+     36.3
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "then",
+     "type": "split",
+     "left": {
+      "kicker": "153",
+      "text": "centenarians in 1963"
+     },
+     "right": {
+      "kicker": "99,000+",
+      "text": "centenarians today"
+     },
+     "label_left": "THEN",
+     "label_right": "NOW",
+     "y": 310,
+     "h": 540,
+     "x": 60,
+     "w": 620
+    },
+    {
+     "id": "cnt",
+     "type": "counter",
+     "start": 153,
+     "end": 99000,
+     "y": 900,
+     "label": "people aged 100+",
+     "fmt": "int",
+     "size": 150
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@count-0.2",
+     "do": "chart.split_in",
+     "id": "then"
+    },
+    {
+     "at": "@@count",
+     "do": "sticker_in",
+     "id": "st_cake"
+    },
+    {
+     "at": "@@count+0.4",
+     "do": "sticker_pulse",
+     "id": "st_cake"
+    },
+    {
+     "at": "@@today-0.2",
+     "do": "sticker_out",
+     "id": "st_cake"
+    },
+    {
+     "at": "@@today",
+     "do": "chart.counter_run",
+     "id": "cnt",
+     "until": "@@women+0.2"
+    },
+    {
+     "at": "@@women",
+     "do": "sticker_in",
+     "id": "st_granny"
+    },
+    {
+     "at": "@@women+0.4",
+     "do": "sticker_pulse",
+     "id": "st_granny"
+    },
+    {
+     "at": "@@women+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "392",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_granny"
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "then"
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "cnt"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "China has far more people, but per person Japan has about 80 centenarians per 100,000. America has around 30.",
+    "cues": {
+     "china": "china",
+     "person": "person",
+     "america": "america"
+    }
+   },
+   "direction": "hold wide; the Chinese flag-ball thinks on 'China' with a crowd sticker; three per-person bars rise on 'person' with Japan towering; a US flag-ball thinks on 'America' as Japan pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.8,
+    [
+     135,
+     36
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.84,
+    [
+     135.3,
+     35.8
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "rate",
+     "type": "bars",
+     "rows": [
+      [
+       "Japan",
+       80,
+       "80"
+      ],
+      [
+       "United States",
+       30,
+       "30"
+      ],
+      [
+       "China",
+       4,
+       "4"
+      ]
+     ],
+     "unit": "centenarians per 100,000 people",
+     "y": 300,
+     "x": 60,
+     "w": 900
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@china",
+     "do": "character_in",
+     "id": "cn_think"
+    },
+    {
+     "at": "@@china+0.2",
+     "do": "sticker_in",
+     "id": "st_people"
+    },
+    {
+     "at": "@@china+0.6",
+     "do": "sticker_pulse",
+     "id": "st_people"
+    },
+    {
+     "at": "@@person-0.3",
+     "do": "sticker_out",
+     "id": "st_people"
+    },
+    {
+     "at": "@@person-0.3",
+     "do": "character_out",
+     "id": "cn_think"
+    },
+    {
+     "at": "@@person-0.2",
+     "do": "chart.bars_in",
+     "id": "rate",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.25
+     }
+    },
+    {
+     "at": "@@america",
+     "do": "character_in",
+     "id": "us_think"
+    },
+    {
+     "at": "@@america+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "392",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "rate"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "us_think"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Okinawa is the famous island of long lives. The government once sent every new centenarian a silver cup, until there were too many.",
+    "cues": {
+     "okinawa": "okinawa",
+     "cup": "cup",
+     "many": "many"
+    }
+   },
+   "direction": "push south-west to the islands; the Okinawa pin and tag land on 'Okinawa' with a palm sticker; the SILVER CUP card and a trophy sticker on 'cup'; the Japanese flag-ball grins on 'many' with a money-bag sticker as Japan pulses; pin leaves at the end",
+   "energy": 3,
+   "tone": "tender",
+   "pause_after": 0.8,
+   "card": {
+    "kicker": "SILVER CUP",
+    "text": "for every new centenarian"
+   },
+   "card_at": null,
+   "cam": [
+    1.1,
+    [
+     130,
+     30
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.14,
+    [
+     129.8,
+     29.8
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@okinawa+0.1",
+     "do": "sticker_in",
+     "id": "st_palm"
+    },
+    {
+     "at": "@@okinawa+0.5",
+     "do": "sticker_pulse",
+     "id": "st_palm"
+    },
+    {
+     "at": "@@cup-0.2",
+     "do": "sticker_out",
+     "id": "st_palm"
+    },
+    {
+     "at": "@@cup",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@@many+0.2"
+    },
+    {
+     "at": "@@cup+0.2",
+     "do": "sticker_in",
+     "id": "st_cup"
+    },
+    {
+     "at": "@@cup+0.6",
+     "do": "sticker_pulse",
+     "id": "st_cup"
+    },
+    {
+     "at": "@@many",
+     "do": "sticker_out",
+     "id": "st_cup"
+    },
+    {
+     "at": "@@many",
+     "do": "character_in",
+     "id": "jp_happy"
+    },
+    {
+     "at": "@@many+0.2",
+     "do": "sticker_in",
+     "id": "st_money"
+    },
+    {
+     "at": "@@many+0.6",
+     "do": "sticker_pulse",
+     "id": "st_money"
+    },
+    {
+     "at": "@@many+0.4",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "392",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_money"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "jp_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "oki"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_cake",
+   "type": "sticker",
+   "emoji": "1f382",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_granny",
+   "type": "sticker",
+   "emoji": "1f475",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_people",
+   "type": "sticker",
+   "emoji": "1f465",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_palm",
+   "type": "sticker",
+   "emoji": "1f334",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_cup",
+   "type": "sticker",
+   "emoji": "1f3c6",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_money",
+   "type": "sticker",
+   "emoji": "1f4b0",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "cn_think",
+   "type": "character",
+   "flag": "cn",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "us_think",
+   "type": "character",
+   "flag": "us",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "jp_happy",
+   "type": "character",
+   "flag": "jp",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

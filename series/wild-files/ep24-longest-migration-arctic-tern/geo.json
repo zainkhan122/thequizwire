@@ -4,7 +4,7 @@
  "policy": "docs/BORDER_POLICY.md",
  "scenes": {
   "main": {
-   "resolution": "50m",
+   "resolution": "110m",
    "projection": "mercator",
    "fit": {
     "type": "bbox",
@@ -199,10 +199,10 @@
     "k_max": 2.0,
     "far": {
      "bbox": [
-      -180,
-      -85,
-      60,
-      88
+      -110,
+      -80,
+      45,
+      85
      ],
      "k_min": 0.3
     }

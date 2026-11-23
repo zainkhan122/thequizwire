@@ -24,30 +24,19 @@
   {
    "id": "f1",
    "type": "fact",
-   "kicker": "1967",
-   "text": "a Cape Town hospital, December"
+   "kicker": "≈ 99,000",
+   "text": "people aged 100 or more"
   },
   {
-   "id": "ph_barnard",
-   "type": "photo",
-   "commons": "File:Christiaan Barnard 1968.jpg",
-   "caption": "1968 · Christiaan Barnard",
-   "x": 90,
-   "y": 330,
-   "w": 380,
-   "h": 480,
-   "rot": -3
-  },
-  {
-   "id": "surv",
+   "id": "then",
    "type": "split",
    "left": {
-    "kicker": "18 DAYS",
-    "text": "the first patient lived"
+    "kicker": "153",
+    "text": "centenarians in 1963"
    },
    "right": {
-    "kicker": "12+ YEARS",
-    "text": "median survival today"
+    "kicker": "99,000+",
+    "text": "centenarians today"
    },
    "label_left": "THEN",
    "label_right": "NOW",
@@ -57,67 +46,108 @@
    "w": 620
   },
   {
-   "id": "yr",
+   "id": "cnt",
    "type": "counter",
-   "start": 0,
-   "end": 6000,
-   "y": 330,
-   "label": "heart transplants a year",
+   "start": 153,
+   "end": 99000,
+   "y": 900,
+   "label": "people aged 100+",
    "fmt": "int",
-   "size": 170
+   "size": 150
   },
   {
-   "id": "st_dog",
+   "id": "rate",
+   "type": "bars",
+   "rows": [
+    [
+     "Japan",
+     80,
+     "80"
+    ],
+    [
+     "United States",
+     30,
+     "30"
+    ],
+    [
+     "China",
+     4,
+     "4"
+    ]
+   ],
+   "unit": "centenarians per 100,000 people",
+   "y": 300,
+   "x": 60,
+   "w": 900
+  },
+  {
+   "id": "f4",
+   "type": "fact",
+   "kicker": "SILVER CUP",
+   "text": "for every new centenarian"
+  },
+  {
+   "id": "st_cake",
    "type": "sticker",
-   "emoji": "1f415",
+   "emoji": "1f382",
    "x": 840,
    "y": 700,
    "size": 165,
    "rot": -6
   },
   {
-   "id": "st_hosp",
+   "id": "st_granny",
    "type": "sticker",
-   "emoji": "1f3e5",
-   "x": 840,
-   "y": 700,
-   "size": 165,
-   "rot": 6
-  },
-  {
-   "id": "st_cal",
-   "type": "sticker",
-   "emoji": "1f4c5",
-   "x": 840,
-   "y": 700,
-   "size": 165,
-   "rot": -6
-  },
-  {
-   "id": "st_spark",
-   "type": "sticker",
-   "emoji": "2728",
+   "emoji": "1f475",
    "x": 840,
    "y": 1010,
    "size": 165,
    "rot": 6
   },
   {
-   "id": "st_heart",
+   "id": "st_people",
    "type": "sticker",
-   "emoji": "1fac0",
+   "emoji": "1f465",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_palm",
+   "type": "sticker",
+   "emoji": "1f334",
    "x": 840,
    "y": 700,
    "size": 165,
    "rot": -6
   },
   {
-   "id": "st_surg",
+   "id": "st_cup",
    "type": "sticker",
-   "emoji": "1f9d1-200d-2695-fe0f",
+   "emoji": "1f3c6",
    "x": 840,
    "y": 1010,
    "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_money",
+   "type": "sticker",
+   "emoji": "1f4b0",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "cn_think",
+   "type": "character",
+   "flag": "cn",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
    "rot": 6
   },
   {
@@ -131,9 +161,9 @@
    "rot": 6
   },
   {
-   "id": "za_happy",
+   "id": "jp_happy",
    "type": "character",
-   "flag": "za",
+   "flag": "jp",
    "face": "happy",
    "x": 300,
    "y": 1000,
@@ -153,7 +183,7 @@
   {
    "id": "cha",
    "type": "character",
-   "flag": "za",
+   "flag": "jp",
    "face": "happy",
    "x": 230,
    "y": 1060,
@@ -163,7 +193,7 @@
   {
    "id": "chb",
    "type": "character",
-   "flag": "us",
+   "flag": "cn",
    "face": "think",
    "x": 850,
    "y": 1060,
@@ -192,8 +222,8 @@
    "args": {
     "k": 0.42,
     "lonlat": [
-     22,
-     -2
+     112,
+     22
     ]
    }
   },
@@ -205,8 +235,8 @@
    "args": {
     "k": 0.42,
     "lonlat": [
-     24,
-     -4
+     110,
+     20
     ],
     "ease": "none"
    }
@@ -219,8 +249,8 @@
    "args": {
     "k": 0.9,
     "lonlat": [
-     24.5,
-     -29.0
+     137,
+     37
     ],
     "ease": "power2.inOut"
    }
@@ -233,8 +263,8 @@
    "args": {
     "k": 0.94,
     "lonlat": [
-     24.2,
-     -29.3
+     137.3,
+     36.8
     ],
     "ease": "none"
    }
@@ -244,17 +274,17 @@
    "do": "geo.highlight_in",
    "stage": "stage_map",
    "args": {
-    "fid": "710",
+    "fid": "392",
     "layer": "hl",
     "dur": 0.5
    }
   },
   {
-   "at": "s05@here+0.2",
+   "at": "s07@okinawa+0.2",
    "do": "geo.label_in",
    "stage": "stage_map",
    "args": {
-    "lid": "ct67"
+    "lid": "ok"
    }
   },
   {
@@ -262,7 +292,16 @@
    "do": "geo.label_out",
    "stage": "stage_map",
    "args": {
-    "lid": "ct67"
+    "lid": "ok"
+   }
+  },
+  {
+   "at": "s04+3.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "392",
+    "layer": "hl"
    }
   },
   {
@@ -277,10 +316,10 @@
    "stage": "stage_map",
    "until": "s05+1.3",
    "args": {
-    "k": 1.2,
+    "k": 0.85,
     "lonlat": [
-     20.5,
-     -32.5
+     136,
+     36.5
     ],
     "ease": "power2.inOut"
    }
@@ -291,79 +330,56 @@
    "stage": "stage_map",
    "until": "s05.end",
    "args": {
-    "k": 1.26,
+    "k": 0.89,
     "lonlat": [
-     20.2,
-     -32.8
+     136.3,
+     36.3
     ],
     "ease": "none"
    }
   },
   {
-   "at": "s05+barnard",
-   "do": "geo.rise",
-   "stage": "stage_map",
-   "args": {
-    "fid": "710",
-    "eid": "ph_barnard",
-    "layer": "hl"
-   }
+   "at": "s05@count-0.2",
+   "do": "chart.split_in",
+   "id": "then"
   },
   {
-   "at": "s05+barnard",
-   "do": "photo_in",
-   "id": "ph_barnard",
-   "args": {
-    "frm": "pop",
-    "dur": 0.01
-   }
-  },
-  {
-   "at": "s05.end",
-   "do": "photo_out",
-   "id": "ph_barnard"
-  },
-  {
-   "at": "s05@american",
-   "do": "character_in",
-   "id": "us_think"
-  },
-  {
-   "at": "s05@american+0.2",
+   "at": "s05@count",
    "do": "sticker_in",
-   "id": "st_dog"
+   "id": "st_cake"
   },
   {
-   "at": "s05@american+0.6",
+   "at": "s05@count+0.4",
    "do": "sticker_pulse",
-   "id": "st_dog"
+   "id": "st_cake"
   },
   {
-   "at": "s05@barnard-0.3",
+   "at": "s05@today-0.2",
    "do": "sticker_out",
-   "id": "st_dog"
+   "id": "st_cake"
   },
   {
-   "at": "s05@barnard-0.3",
-   "do": "character_out",
-   "id": "us_think"
+   "at": "s05@today",
+   "do": "chart.counter_run",
+   "id": "cnt",
+   "until": "s05@women+0.2"
   },
   {
-   "at": "s05@here+0.1",
+   "at": "s05@women",
    "do": "sticker_in",
-   "id": "st_hosp"
+   "id": "st_granny"
   },
   {
-   "at": "s05@here+0.5",
+   "at": "s05@women+0.4",
    "do": "sticker_pulse",
-   "id": "st_hosp"
+   "id": "st_granny"
   },
   {
-   "at": "s05@here+0.3",
+   "at": "s05@women+0.3",
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {
-    "fid": "710",
+    "fid": "392",
     "dur": 0.7,
     "layer": "hl"
    }
@@ -371,12 +387,17 @@
   {
    "at": "s05.end",
    "do": "sticker_out",
-   "id": "st_hosp"
+   "id": "st_granny"
   },
   {
    "at": "s05.end",
-   "do": "photo_out",
-   "id": "ph_barnard"
+   "do": "chart.out",
+   "id": "then"
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "cnt"
   },
   {
    "at": "s06",
@@ -384,10 +405,10 @@
    "stage": "stage_map",
    "until": "s06+1.4",
    "args": {
-    "k": 1.3,
+    "k": 0.8,
     "lonlat": [
-     21.0,
-     -31.5
+     135,
+     36
     ],
     "ease": "power2.inOut"
    }
@@ -398,68 +419,72 @@
    "stage": "stage_map",
    "until": "s06.end",
    "args": {
-    "k": 1.36,
+    "k": 0.84,
     "lonlat": [
-     20.8,
-     -31.8
+     135.3,
+     35.8
     ],
     "ease": "none"
    }
   },
   {
-   "at": "s06@patient-0.2",
-   "do": "chart.split_in",
-   "id": "surv"
+   "at": "s06@china",
+   "do": "character_in",
+   "id": "cn_think"
   },
   {
-   "at": "s06@patient",
+   "at": "s06@china+0.2",
    "do": "sticker_in",
-   "id": "st_cal"
+   "id": "st_people"
   },
   {
-   "at": "s06@patient+0.4",
+   "at": "s06@china+0.6",
    "do": "sticker_pulse",
-   "id": "st_cal"
+   "id": "st_people"
   },
   {
-   "at": "s06@today",
+   "at": "s06@person-0.3",
    "do": "sticker_out",
-   "id": "st_cal"
+   "id": "st_people"
   },
   {
-   "at": "s06@years-0.2",
-   "do": "sticker_in",
-   "id": "st_spark"
+   "at": "s06@person-0.3",
+   "do": "character_out",
+   "id": "cn_think"
   },
   {
-   "at": "s06@years+0.2",
-   "do": "sticker_pulse",
-   "id": "st_spark"
+   "at": "s06@person-0.2",
+   "do": "chart.bars_in",
+   "id": "rate",
+   "args": {
+    "dur": 0.9,
+    "stagger": 0.25
+   }
   },
   {
-   "at": "s06@years+0.7",
-   "do": "sticker_pulse",
-   "id": "st_spark"
+   "at": "s06@america",
+   "do": "character_in",
+   "id": "us_think"
   },
   {
-   "at": "s06@years+0.3",
+   "at": "s06@america+0.3",
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {
-    "fid": "710",
+    "fid": "392",
     "dur": 0.7,
     "layer": "hl"
    }
   },
   {
    "at": "s06.end",
-   "do": "sticker_out",
-   "id": "st_spark"
+   "do": "chart.out",
+   "id": "rate"
   },
   {
    "at": "s06.end",
-   "do": "chart.out",
-   "id": "surv"
+   "do": "character_out",
+   "id": "us_think"
   },
   {
    "at": "s07",
@@ -467,10 +492,10 @@
    "stage": "stage_map",
    "until": "s07+1.5",
    "args": {
-    "k": 1.6,
+    "k": 1.1,
     "lonlat": [
-     19.5,
-     -33.6
+     130,
+     30
     ],
     "ease": "power2.inOut"
    }
@@ -481,61 +506,71 @@
    "stage": "stage_map",
    "until": "s08+0.2",
    "args": {
-    "k": 1.66,
+    "k": 1.14,
     "lonlat": [
-     19.3,
-     -33.8
+     129.8,
+     29.8
     ],
     "ease": "none"
    }
   },
   {
-   "at": "s07@hearts-0.3",
-   "do": "chart.counter_run",
-   "id": "yr",
-   "until": "s07@worldwide+0.3"
-  },
-  {
-   "at": "s07@hearts",
+   "at": "s07@okinawa+0.1",
    "do": "sticker_in",
-   "id": "st_heart"
+   "id": "st_palm"
   },
   {
-   "at": "s07@hearts+0.4",
+   "at": "s07@okinawa+0.5",
    "do": "sticker_pulse",
-   "id": "st_heart"
+   "id": "st_palm"
   },
   {
-   "at": "s07@worldwide",
-   "do": "sticker_pulse",
-   "id": "st_heart"
-  },
-  {
-   "at": "s07@theatre-0.3",
+   "at": "s07@cup-0.2",
    "do": "sticker_out",
-   "id": "st_heart"
+   "id": "st_palm"
   },
   {
-   "at": "s07@theatre",
+   "at": "s07@cup",
+   "do": "fact_in",
+   "id": "f4",
+   "until": "s07@many+0.2"
+  },
+  {
+   "at": "s07@cup+0.2",
    "do": "sticker_in",
-   "id": "st_surg"
+   "id": "st_cup"
   },
   {
-   "at": "s07@theatre+0.4",
+   "at": "s07@cup+0.6",
    "do": "sticker_pulse",
-   "id": "st_surg"
+   "id": "st_cup"
   },
   {
-   "at": "s07@theatre+0.1",
+   "at": "s07@many",
+   "do": "sticker_out",
+   "id": "st_cup"
+  },
+  {
+   "at": "s07@many",
    "do": "character_in",
-   "id": "za_happy"
+   "id": "jp_happy"
   },
   {
-   "at": "s07@theatre+0.5",
+   "at": "s07@many+0.2",
+   "do": "sticker_in",
+   "id": "st_money"
+  },
+  {
+   "at": "s07@many+0.6",
+   "do": "sticker_pulse",
+   "id": "st_money"
+  },
+  {
+   "at": "s07@many+0.4",
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {
-    "fid": "710",
+    "fid": "392",
     "dur": 0.7,
     "layer": "hl"
    }
@@ -543,19 +578,19 @@
   {
    "at": "s07.end",
    "do": "sticker_out",
-   "id": "st_surg"
+   "id": "st_money"
   },
   {
    "at": "s07.end",
    "do": "character_out",
-   "id": "za_happy"
+   "id": "jp_happy"
   },
   {
    "at": "s07.end",
    "do": "geo.pin_out",
    "stage": "stage_map",
    "args": {
-    "pid": "gsh"
+    "pid": "oki"
    }
   },
   {
@@ -574,8 +609,8 @@
    "args": {
     "k": 0.42,
     "lonlat": [
-     22,
-     -2
+     112,
+     22
     ],
     "ease": "power1.inOut"
    }
@@ -586,11 +621,11 @@
    "stage": "stage_map"
   },
   {
-   "at": "s05@here",
+   "at": "s07@okinawa",
    "do": "geo.pin_in",
    "stage": "stage_map",
    "args": {
-    "pid": "gsh"
+    "pid": "oki"
    }
   },
   {

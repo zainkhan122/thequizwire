@@ -152,7 +152,8 @@
     "POLE TO POLE",
     "and back, every year",
     "Greenland",
-    "Antarctic ice edge"
+    "Antarctic ice",
+    "winter feeding"
    ]
   },
   {
@@ -168,8 +169,7 @@
    ],
    "screen": [
     "70,000",
-    "km flown every year",
-    "whale · 8,000 km each way"
+    "km flown every year"
    ]
   },
   {
@@ -177,6 +177,7 @@
    "weight": "core",
    "text": "It breeds in the Arctic summer and feeds at the Antarctic ice edge, seeing two summers a year and more daylight than any other animal.",
    "sources": [
+    "pnas_tern",
     "audubon_tern",
     "brit_tern"
    ],

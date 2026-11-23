@@ -1,0 +1,225 @@
+{
+ "version": 1,
+ "episode": "ep17-most-centenarians-japan",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     122,
+     24,
+     150,
+     46.5
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "392"
+     ],
+     "cls": "",
+     "note": "Japan"
+    }
+   ],
+   "pins": [
+    {
+     "id": "oki",
+     "lonlat": [
+      127.7,
+      26.3
+     ],
+     "label": "island of long lives",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "ok",
+     "lonlat": [
+      128.5,
+      25.3
+     ],
+     "text": "Okinawa",
+     "cls": "tag",
+     "in": "s07@okinawa+0.2",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [
+    {
+     "id": "kuril",
+     "ne_name": null,
+     "name": "Kuril Islands",
+     "controller": "Russia (since 1945)",
+     "claimants": [
+      "Japan (southern four islands)"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#kuril",
+     "label_at": [
+      147.0,
+      44.5
+     ],
+     "plate_cls": "small",
+     "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+       [
+        [
+         145.4,
+         43.6
+        ],
+        [
+         148.6,
+         43.6
+        ],
+        [
+         148.6,
+         45.4
+        ],
+        [
+         145.4,
+         45.4
+        ],
+        [
+         145.4,
+         43.6
+        ]
+       ]
+      ]
+     },
+     "note": "schematic marker polygon — Natural Earth 50m carries no polygon for these islets"
+    },
+    {
+     "id": "senkaku",
+     "ne_name": null,
+     "name": "Senkaku / Diaoyu Islands",
+     "controller": "Japan",
+     "claimants": [
+      "People's Republic of China",
+      "Taiwan"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#senkaku",
+     "label_at": [
+      123.5,
+      25.75
+     ],
+     "plate_cls": "small",
+     "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+       [
+        [
+         123.15,
+         25.5
+        ],
+        [
+         123.85,
+         25.5
+        ],
+        [
+         123.85,
+         26.0
+        ],
+        [
+         123.15,
+         26.0
+        ],
+        [
+         123.15,
+         25.5
+        ]
+       ]
+      ]
+     },
+     "note": "schematic marker polygon — Natural Earth 50m carries no polygon for these islets"
+    },
+    {
+     "id": "dokdo",
+     "ne_name": null,
+     "name": "Dokdo / Takeshima",
+     "controller": "South Korea",
+     "claimants": [
+      "Japan"
+     ],
+     "as_of": "2026-10",
+     "source": "docs/border_registry.json#dokdo",
+     "label_at": [
+      131.87,
+      37.24
+     ],
+     "plate_cls": "small",
+     "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+       [
+        [
+         131.62,
+         37.04
+        ],
+        [
+         132.12,
+         37.04
+        ],
+        [
+         132.12,
+         37.440000000000005
+        ],
+        [
+         131.62,
+         37.440000000000005
+        ],
+        [
+         131.62,
+         37.04
+        ]
+       ]
+      ]
+     },
+     "note": "schematic marker polygon — Natural Earth 50m carries no polygon for these islets"
+    }
+   ],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "night",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      95,
+      5,
+      175,
+      60
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 500,
+    "lonlat": [
+     123,
+     25
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

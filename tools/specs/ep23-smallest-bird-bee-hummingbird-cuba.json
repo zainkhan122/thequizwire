@@ -331,8 +331,7 @@
      "Sparrow",
      "16 cm",
      "Pigeon",
-     "32 cm",
-     "body length"
+     "32 cm"
     ]
    },
    {
@@ -541,7 +540,9 @@
      22.1
     ]
    ]
-  }
+  },
+  "size_claim_device": "size",
+  "projection_reason": "satellite raster (Web Mercator tiles) under a location story; the only size comparison (bird vs sparrow vs pigeon) is carried by the to-scale bars chart 'size', not by map shapes (P1)"
  },
  "story": [
   {
