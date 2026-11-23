@@ -1,19 +1,19 @@
-# Channel stats — 2026-11-22T14:59Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
+# Channel stats — 2026-11-23T18:55Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
 
 ## Per series, all channels (7-day movement — what is trending for us)
-- geo-blitz: 40 posts · +2423 in 7 d · 19128 total
-- wild-files: 26 posts · +1725 in 7 d · 12420 total
-- sports-sprint: 26 posts · +325 in 7 d · 10789 total
+- wild-files: 26 posts · +1293 in 7 d · 12425 total
+- geo-blitz: 40 posts · +1024 in 7 d · 19130 total
+- sports-sprint: 26 posts · +2 in 7 d · 10789 total
 - body-brain: 18 posts · +1 in 7 d · 7331 total
 
 ## youtube — 56 posts · metric views · buffer insights · 56/56 sent posts with metrics
 last 24 h:
-- ep20-most-rugby-world-cups-south-africa (sports-sprint): +2 · 1141 total
-- ep28-river-most-water-amazon (geo-blitz): +2 · 1099 total
-- ep19-coldest-inhabited-oymyakon (geo-blitz): +1 · 1042 total
-- ep06-most-stroke-deaths-china (body-brain): +1 · 927 total
-- ep29-most-islands-sweden (geo-blitz): +0 · 1400 total
-series (7 d): geo-blitz +2416 (21) · wild-files +1721 (13) · sports-sprint +315 (13) · body-brain +1 (9)
+- ep16-most-camels-somalia (wild-files): +4 · 1200 total
+- ep28-river-most-water-amazon (geo-blitz): +2 · 1101 total
+- ep30-highest-capital-la-paz (geo-blitz): +1 · 1013 total
+- ep26-longest-coastline-canada (geo-blitz): +1 · 690 total
+- ep17-longest-flight-without-landing-swift (wild-files): +1 · 431 total
+series (7 d): wild-files +1289 (13) · geo-blitz +1017 (21) · sports-sprint +2 (13) · body-brain +1 (9)
 hours (first-24 h by publish hour): 12:00 n=5 med 161 · 19:00 n=4 med 715.5
 → slots: ['19:00', '12:00']
 
@@ -28,7 +28,7 @@ last 24 h:
 - ep18-most-world-cup-goals-mbappe (sports-sprint): +0 · 12 total
 - ep18-newest-un-member (geo-blitz): +0 · 11 total
 - ep14-cricket-world-cup-wins (sports-sprint): +0 · 11 total
-series (7 d): sports-sprint +10 (13) · geo-blitz +7 (19) · wild-files +4 (13) · body-brain +0 (9)
+series (7 d): geo-blitz +7 (19) · wild-files +4 (13) · sports-sprint +0 (13) · body-brain +0 (9)
 hours (first-24 h by publish hour): 10:00 n=4 med 1.5 · 19:00 n=4 med 2.0
 → slots: ['19:00', '10:00']
 
@@ -41,17 +41,17 @@ hours (first-24 h by publish hour): 10:00 n=4 med 1.5 · 19:00 n=4 med 2.0
 | episode | channel | sent (local) | metric | total | 24 h | 7 d | first 24 h | reactions | comments |
 |---|---|---|---|---|---|---|---|---|---|
 | ep30-highest-capital-la-paz | threads | Tue 19:00 | views | 2 | 0 | 2 | None | 0 | 0 |
-| ep30-highest-capital-la-paz | youtube | Tue 12:00 | views | 1012 | 0 | 1012 | 935 | 25 | 0 |
+| ep30-highest-capital-la-paz | youtube | Tue 12:00 | views | 1013 | 1 | 1013 | 935 | 25 | 0 |
 | ep19-biggest-eyes-colossal-squid | threads | Tue 10:00 | views | 4 | 0 | 4 | 3 | 0 | 0 |
 | ep29-most-islands-sweden | threads | Mon 19:00 | views | 5 | 0 | 5 | None | 0 | 0 |
-| ep19-biggest-eyes-colossal-squid | youtube | Mon 19:00 | views | 1283 | -1 | 1283 | None | 65 | 0 |
-| ep29-most-islands-sweden | youtube | Mon 12:00 | views | 1400 | 0 | 1400 | None | 75 | 0 |
-| ep21-first-f1-championship-race-silverstone | threads | Mon 10:00 | views | 10 | 0 | 10 | None | 0 | 0 |
-| ep17-longest-flight-without-landing-swift | threads | Sun 19:00 | views | 0 | 0 | 0 | None | 0 | 0 |
-| ep21-first-f1-championship-race-silverstone | youtube | Sun 19:00 | views | 313 | 0 | 313 | None | 15 | 0 |
-| ep17-longest-flight-without-landing-swift | youtube | Sun 12:00 | views | 430 | 0 | 430 | None | 81 | 0 |
+| ep19-biggest-eyes-colossal-squid | youtube | Mon 19:00 | views | 1283 | 0 | 1283 | None | 65 | 0 |
+| ep29-most-islands-sweden | youtube | Mon 12:00 | views | 1398 | -2 | None | None | 75 | 0 |
+| ep21-first-f1-championship-race-silverstone | threads | Mon 10:00 | views | 10 | 0 | None | None | 0 | 0 |
+| ep17-longest-flight-without-landing-swift | threads | Sun 19:00 | views | 0 | 0 | None | None | 0 | 0 |
+| ep21-first-f1-championship-race-silverstone | youtube | Sun 19:00 | views | 313 | 0 | None | None | 15 | 0 |
+| ep17-longest-flight-without-landing-swift | youtube | Sun 12:00 | views | 431 | 1 | None | None | 81 | 0 |
 | ep18-loudest-animal-sperm-whale | threads | Sat 19:00 | views | 9 | 0 | None | None | 0 | 0 |
-| ep28-river-most-water-amazon | youtube | Sat 19:00 | views | 1099 | 2 | None | None | 60 | 0 |
+| ep28-river-most-water-amazon | youtube | Sat 19:00 | views | 1101 | 2 | None | None | 60 | 0 |
 | ep18-loudest-animal-sperm-whale | youtube | Sat 12:00 | views | 1044 | 0 | None | None | 66 | 0 |
 | ep27-flattest-country-maldives | threads | Sat 10:00 | views | 9 | 0 | None | None | 0 | 0 |
 | ep12-first-insulin-injection-toronto | threads | Fri 19:00 | views | 8 | 0 | None | None | 0 | 0 |
@@ -60,12 +60,12 @@ hours (first-24 h by publish hour): 10:00 n=4 med 1.5 · 19:00 n=4 med 2.0
 | ep11-stethoscope-invented-paris-laennec | youtube | Thu 12:00 | views | 234 | 0 | None | None | 27 | 0 |
 | ep11-stethoscope-invented-paris-laennec | threads | Thu 10:00 | views | 1 | 0 | None | None | 0 | 0 |
 | ep26-longest-coastline-canada | threads | Wed 19:00 | views | 7 | 0 | None | None | 0 | 0 |
-| ep26-longest-coastline-canada | youtube | Wed 19:00 | views | 689 | 0 | None | None | 32 | 0 |
-| ep16-most-camels-somalia | youtube | Wed 12:00 | views | 1196 | 0 | None | None | 89 | 0 |
+| ep26-longest-coastline-canada | youtube | Wed 19:00 | views | 690 | 1 | None | None | 32 | 0 |
+| ep16-most-camels-somalia | youtube | Wed 12:00 | views | 1200 | 4 | None | None | 89 | 0 |
 | ep16-most-camels-somalia | threads | Wed 10:00 | views | 0 | 0 | None | None | 0 | 0 |
 | ep10-first-anaesthesia-boston-ether | threads | Tue 19:00 | views | 3 | 0 | None | None | 0 | 0 |
 | ep10-first-anaesthesia-boston-ether | youtube | Tue 19:00 | views | 1040 | 0 | None | None | 43 | 0 |
-| ep20-most-rugby-world-cups-south-africa | youtube | Tue 12:00 | views | 1141 | 2 | None | None | 62 | 0 |
+| ep20-most-rugby-world-cups-south-africa | youtube | Tue 12:00 | views | 1141 | 0 | None | None | 62 | 0 |
 | ep20-most-rugby-world-cups-south-africa | threads | Tue 10:00 | views | 3 | 0 | None | None | 0 | 0 |
 | ep19-most-medals-winter-olympics-2026-norway | youtube | Sun 12:00 | views | 996 | 0 | None | None | 15 | 0 |
 | ep19-most-medals-winter-olympics-2026-norway | threads | Sun 10:00 | views | 9 | 0 | None | None | 0 | 0 |
@@ -99,14 +99,14 @@ hours (first-24 h by publish hour): 10:00 n=4 med 1.5 · 19:00 n=4 med 2.0
 | ep13-most-wild-lions-tanzania | threads | Thu 10:00 | views | 2 | 0 | 0 | 0 | 0 | 0 |
 | ep16-most-olympics-hosted-usa | threads | Wed 19:00 | views | 4 | 0 | 0 | 4 | 0 | 0 |
 | ep16-most-olympics-hosted-usa | youtube | Wed 19:00 | views | 934 | 0 | 0 | 591 | 51 | 0 |
-| ep06-most-stroke-deaths-china | youtube | Wed 12:00 | views | 927 | 1 | 1 | 310 | 57 | 0 |
+| ep06-most-stroke-deaths-china | youtube | Wed 12:00 | views | 927 | 0 | 1 | 310 | 57 | 0 |
 | ep06-most-stroke-deaths-china | threads | Wed 10:00 | views | 3 | 0 | 0 | 3 | 0 | 0 |
 | ep19-coldest-inhabited-oymyakon | threads | Tue 19:00 | views | 0 | 0 | 0 | 0 | 0 | 0 |
-| ep19-coldest-inhabited-oymyakon | youtube | Tue 19:00 | views | 1042 | 1 | 1 | 920 | 25 | 0 |
+| ep19-coldest-inhabited-oymyakon | youtube | Tue 19:00 | views | 1042 | 0 | 1 | 920 | 25 | 0 |
 | ep15-first-davis-cup-boston | youtube | Tue 12:00 | views | 669 | 0 | 2 | 0 | 16 | 0 |
 | ep15-first-davis-cup-boston | threads | Tue 10:00 | views | 0 | 0 | 0 | 0 | 0 | 0 |
 | ep12-polar-bears-penguins | threads | Mon 19:00 | views | 0 | 0 | 0 | 0 | 0 | 0 |
-| ep12-polar-bears-penguins | youtube | Mon 19:00 | views | 724 | 0 | 2 | 446 | 16 | 0 |
+| ep12-polar-bears-penguins | youtube | Mon 19:00 | views | 724 | 0 | 1 | 446 | 16 | 0 |
 | ep05-first-heart-transplant | threads | Sun 10:00 | views | 4 | 0 | 0 | None | 0 | 0 |
 | ep14-cricket-world-cup-wins | threads | Sat 19:00 | views | 11 | 0 | 0 | None | 0 | 0 |
 | ep05-first-heart-transplant | youtube | Sat 19:00 | views | 1058 | 0 | 0 | None | 85 | 0 |
@@ -123,7 +123,7 @@ hours (first-24 h by publish hour): 10:00 n=4 med 1.5 · 19:00 n=4 med 2.0
 | ep12-most-world-cups-brazil | youtube | Wed 12:00 | views | 1026 | 0 | 0 | None | 48 | 0 |
 | ep10-komodo-dragons-indonesia | threads | Tue 19:00 | views | 7 | 0 | 0 | None | 1 | 0 |
 | ep17-deepest-lake-baikal | youtube | Tue 19:00 | views | 1008 | 0 | 2 | None | 124 | 2 |
-| ep10-komodo-dragons-indonesia | youtube | Tue 12:00 | views | 792 | 0 | 4 | None | 118 | 0 |
+| ep10-komodo-dragons-indonesia | youtube | Tue 12:00 | views | 792 | 0 | 3 | None | 118 | 0 |
 | ep04-tallest-men-netherlands | threads | Mon 19:00 | views | 1 | 0 | 0 | None | 0 | 0 |
 | ep04-tallest-men-netherlands | youtube | Mon 19:00 | views | 1203 | 0 | 0 | None | 69 | 1 |
 | ep11-first-modern-olympics-athens | youtube | Sun 12:00 | views | 1069 | 0 | 0 | None | 35 | 0 |
