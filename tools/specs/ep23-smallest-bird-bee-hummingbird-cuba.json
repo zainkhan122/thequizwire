@@ -1,0 +1,980 @@
+{
+ "id": "ep23-smallest-bird-bee-hummingbird-cuba",
+ "series": "wild-files",
+ "number": 23,
+ "seed": 2323,
+ "question": "Which country is home to the SMALLEST bird?",
+ "keyword": "SMALLEST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Brazil",
+   "flag": "br",
+   "cue": "brazil"
+  },
+  {
+   "text": "Costa Rica",
+   "flag": "cr",
+   "cue": "costa"
+  },
+  {
+   "text": "Cuba",
+   "flag": "cu",
+   "cue": "cuba"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "a bird lighter than a coin",
+ "outro_headline": "1 FOR 1?",
+ "cover_emoji": "🪶",
+ "cover_emoji_why": "a feather names the subject (a bird) and belongs to no country; it is not the emoji of any option or of the species",
+ "post": {
+  "premise": "The smallest bird on Earth weighs less than a coin",
+  "bait": "Brazil, Costa Rica or Cuba — which did you pick? 👇",
+  "keywords": [
+   "smallest bird in the world",
+   "which country is home to the smallest bird",
+   "smallest bird on earth",
+   "hummingbird facts",
+   "animal quiz",
+   "wildlife facts",
+   "bird facts",
+   "tiny animals"
+  ],
+  "tags": [
+   "AnimalQuiz",
+   "Birds"
+  ],
+  "sources_line": "Encyclopaedia Britannica; Cornell Lab of Ornithology; Guinness World Records",
+  "copy": {
+   "spoilers": [
+    "cuba",
+    "cuban",
+    "bee hummingbird",
+    "zapata",
+    "helenae",
+    "1,500",
+    "80",
+    "caribbean",
+    "havana"
+   ],
+   "youtube": {
+    "title": "Which country is home to the smallest bird on Earth? 🪶",
+    "description": "The Amazon giant, the rainforest paradise, or the third one? The smallest bird on Earth is about as long as your thumb and lighter than a coin, lives on one island and nowhere else, beats its wings dozens of times a second and lays an egg the size of a coffee bean.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#smallestbird",
+     "#wildlife",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country is home to the SMALLEST bird? 🪶\nThe Amazon giant, the rainforest paradise, or the third one? The smallest bird on Earth is about as long as your thumb and lighter than a coin, lives on one island and nowhere else, and lays an egg the size of a coffee bean.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#smallestbird",
+     "#tinyanimals",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country is home to the smallest bird — Brazil, Costa Rica or Cuba?\nIt is about as long as your thumb and lighter than a coin, lives on one island and nowhere else, beats its wings dozens of times a second and lays an egg the size of a coffee bean in a nest no bigger than a thimble. Pick your flag before the chart comes up.",
+    "tags": [
+     "#animalquiz",
+     "#smallestbird"
+    ]
+   },
+   "twitter": {
+    "text": "Which country is home to the SMALLEST bird?\nBrazil, Costa Rica or Cuba? Thumb-length, lighter than a coin, one island only — and the rainforest giants do not have it.",
+    "tags": [
+     "#AnimalQuiz",
+     "#SmallestBird"
+    ]
+   },
+   "threads": {
+    "text": "Which country is home to the smallest bird — Brazil, Costa Rica or Cuba? It is about as long as your thumb and lighter than a coin, lives on one island and nowhere else, beats its wings dozens of times a second and lays an egg the size of a coffee bean in a nest no bigger than a thimble.",
+    "tags": [
+     "#hummingbird"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "straight",
+  "opener": "wide-drift",
+  "reveal": "flag-lift",
+  "beats": [
+   "bars",
+   "rise",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:cu + flagball:br + flagball:cr + emoji-set:garden",
+  "music": "bed:pluck",
+  "outro": "1 FOR 1?"
+ },
+ "intent": "A size you can feel: a compare chart puts the bird beside a sparrow and a pigeon so it looks like a mistake, then the bird's own swamp rises out of the island with the bird sticker on it while a wing-beat sticker shivers, and the coffee-bean egg card closes on a pin in the swamp.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "smallest": "smallest"
+  },
+  "v04": {
+   "text": "Cuba. The bee hummingbird, about 6 centimetres long and lighter than a coin.",
+   "cues": {
+    "answer": "cuba",
+    "long": "long",
+    "coin": "coin"
+   }
+  },
+  "v05": {
+   "text": "Brazil and Costa Rica are hummingbird country. The smallest of all lives only on this island.",
+   "cues": {
+    "brazil": "brazil",
+    "costa": "costa",
+    "island": "island"
+   }
+  },
+  "v06": {
+   "text": "Its wings beat around 80 times a second, and it visits up to 1,500 flowers a day.",
+   "cues": {
+    "wings": "wings",
+    "second": "second",
+    "flowers": "flowers"
+   }
+  },
+  "v07": {
+   "text": "The egg is the size of a coffee bean, laid in a nest no bigger than a thimble.",
+   "cues": {
+    "egg": "egg",
+    "nest": "nest",
+    "thimble": "thimble"
+   }
+  },
+  "v08": {
+   "text": "Lighter than a coin. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "ABOUT 2 G",
+   "text": "lighter than a coin"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "cu",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "br",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "The smallest bird is the bee hummingbird (Mellisuga helenae), endemic to Cuba and the Isla de la Juventud: about 5.5–6.1 cm long and about 1.6–2 g, lighter than a US penny (2.5 g) (Britannica; Guinness World Records; Cornell Lab Birds of the World). Its wings beat about 80 times a second in normal flight (up to 200 in display), and it may visit up to 1,500 flowers a day (Cornell Lab; Wikipedia). The egg is roughly the size of a coffee bean (about 1 cm) and the cup nest about 2.5 cm across (Britannica; Cornell). Brazil and Costa Rica have far more hummingbird species but not this one. For scale: house sparrow about 14–16 cm, rock pigeon about 29–37 cm (Britannica). The Zapata Swamp in south-west Cuba is one of its strongholds.",
+  "myths": [
+   {
+    "myth": "The smallest bird must live in the biggest rainforest, Brazil.",
+    "reality": "Brazil has hundreds of hummingbird species, but the smallest bird of all is found only in Cuba.",
+    "sources": [
+     "brit_bee",
+     "cornell_bee"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Smallest-bird clips are slow-motion close-ups; nobody puts the bird to scale against a sparrow and a pigeon on a chart, lifts its swamp out of the island, and lands the coffee-bean egg as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=smallest+bird+in+the+world",
+     "title": "Search: smallest bird in the world",
+     "angle": "slow-motion close-ups",
+     "misses": "no scale, no map"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=bee+hummingbird",
+     "title": "Search: the species by name",
+     "angle": "nature footage",
+     "misses": "answer in the title"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=hummingbird+facts",
+     "title": "Search: hummingbird facts",
+     "angle": "list facts",
+     "misses": "no country, no comparison"
+    }
+   ]
+  },
+  "sources": {
+   "brit_bee": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Bee hummingbird",
+    "url": "https://www.britannica.com/animal/bee-hummingbird",
+    "date": "2026-11-20",
+    "notes": "smallest living bird; about 5.5–6 cm long, about 2 g; found only in Cuba; egg about the size of a coffee bean; nest about 2.5 cm wide"
+   },
+   "cornell_bee": {
+    "type": "scholarly",
+    "publisher": "Cornell Lab of Ornithology — Birds of the World",
+    "title": "Bee Hummingbird (Mellisuga helenae)",
+    "url": "https://birdsoftheworld.org/bow/species/beehum1/cur/introduction",
+    "date": "2026-11-20",
+    "notes": "endemic to Cuba and Isla de la Juventud; 5–6 cm, 1.6–2 g; wingbeats about 80 per second; visits up to 1,500 flowers a day"
+   },
+   "guinness_bird": {
+    "type": "reference",
+    "publisher": "Guinness World Records",
+    "title": "Smallest bird",
+    "url": "https://www.guinnessworldrecords.com/world-records/smallest-bird",
+    "date": "2026-11-20",
+    "notes": "bee hummingbird of Cuba and the Isle of Youth: males 57 mm long, 1.6 g"
+   },
+   "wiki_bee": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Bee hummingbird",
+    "url": "https://en.wikipedia.org/wiki/Bee_hummingbird",
+    "date": "2026-11-20",
+    "notes": "smallest known bird; 5–6 cm; about 2 g, lighter than a US penny; 80 wingbeats per second; up to 1,500 flowers a day; eggs the size of a coffee bean; nest about 2.5 cm"
+   },
+   "audubon_bee": {
+    "type": "reference",
+    "publisher": "National Audubon Society",
+    "title": "Bee Hummingbird",
+    "url": "https://www.audubon.org/",
+    "date": "2026-11-20",
+    "notes": "world's smallest bird, endemic to Cuba; Zapata Swamp among its best-known sites"
+   },
+   "brit_sparrow": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "House sparrow",
+    "url": "https://www.britannica.com/animal/house-sparrow",
+    "date": "2026-11-20",
+    "notes": "about 14–16 cm long"
+   },
+   "brit_pigeon": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Rock pigeon",
+    "url": "https://www.britannica.com/animal/rock-pigeon",
+    "date": "2026-11-20",
+    "notes": "about 29–37 cm long"
+   },
+   "cornell_hb": {
+    "type": "scholarly",
+    "publisher": "Cornell Lab of Ornithology",
+    "title": "Hummingbird species diversity by country",
+    "url": "https://www.allaboutbirds.org/",
+    "date": "2026-11-20",
+    "notes": "the Andes and the neotropics (Colombia, Ecuador, Peru, Brazil, Costa Rica) hold the great majority of the ~360 hummingbird species"
+   },
+   "natural_earth": {
+    "type": "primary",
+    "publisher": "Natural Earth",
+    "title": "Admin 0 countries, 50m",
+    "url": "https://www.naturalearthdata.com/",
+    "date": "2026-11-20",
+    "notes": "country polygons for the fill; the Zapata Swamp outline is schematic"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The smallest bird is the bee hummingbird, found only in Cuba: about 6 cm long and about 2 g, lighter than a coin.",
+    "sources": [
+     "brit_bee",
+     "cornell_bee",
+     "guinness_bird"
+    ],
+    "vo": [
+     "which country is home to the smallest bird",
+     "brazil, costa rica, or cuba",
+     "cuba. the bee hummingbird, about 6 centimetres long and lighter than a coin",
+     "lighter than a coin. follow us"
+    ],
+    "screen": [
+     "Cuba",
+     "Brazil",
+     "Costa Rica",
+     "ABOUT 2 G",
+     "lighter than a coin",
+     "Bee hummingbird",
+     "6 cm"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Brazil and Costa Rica hold many hummingbird species, but the bee hummingbird lives only on Cuba; a house sparrow is about 16 cm and a rock pigeon about 32 cm.",
+    "sources": [
+     "cornell_hb",
+     "brit_sparrow",
+     "brit_pigeon",
+     "cornell_bee"
+    ],
+    "vo": [
+     "brazil and costa rica are hummingbird country. the smallest of all lives only on this island"
+    ],
+    "screen": [
+     "Sparrow",
+     "16 cm",
+     "Pigeon",
+     "32 cm",
+     "body length"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Its wings beat about 80 times a second in normal flight and it can visit up to 1,500 flowers a day.",
+    "sources": [
+     "cornell_bee",
+     "wiki_bee"
+    ],
+    "vo": [
+     "its wings beat around 80 times a second, and it visits up to 1,500 flowers a day"
+    ],
+    "screen": [
+     "Zapata Swamp",
+     "its stronghold"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "The egg is about the size of a coffee bean and the nest about 2.5 cm across, no bigger than a thimble.",
+    "sources": [
+     "brit_bee",
+     "wiki_bee"
+    ],
+    "vo": [
+     "the egg is the size of a coffee bean, laid in a nest no bigger than a thimble"
+    ],
+    "screen": [
+     "COFFEE BEAN",
+     "the size of its egg"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -85.5,
+   19.3,
+   -73.5,
+   23.8
+  ],
+  "far_bbox": [
+   -105,
+   2,
+   -55,
+   38
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "192"
+  ],
+  "highlight_note": "Cuba",
+  "extra_layers": [
+   {
+    "kind": "area",
+    "id": "swamp",
+    "cls": "zone",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "zap",
+       "properties": {
+        "name": "Zapata Swamp (schematic)"
+       },
+       "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+         [
+          [
+           -82.2,
+           22.0
+          ],
+          [
+           -81.0,
+           22.0
+          ],
+          [
+           -80.9,
+           22.5
+          ],
+          [
+           -81.6,
+           22.75
+          ],
+          [
+           -82.2,
+           22.55
+          ],
+          [
+           -82.2,
+           22.0
+          ]
+         ]
+        ]
+       }
+      }
+     ]
+    },
+    "note": "schematic outline of the Zapata Swamp, the bird's best-known stronghold"
+   }
+  ],
+  "labels": [
+   {
+    "id": "zl",
+    "lonlat": [
+     -81.5,
+     21.5
+    ],
+    "text": "Zapata Swamp",
+    "cls": "tag",
+    "in": "s06@wings+0.3",
+    "out": "s06.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "zp",
+    "lonlat": [
+     -81.4,
+     22.3
+    ],
+    "label": "its stronghold",
+    "side": "right"
+   }
+  ],
+  "scalebar": {
+   "km": 200,
+   "lonlat": [
+    -85,
+    19.8
+   ]
+  },
+  "pin_beats": [],
+  "cams": {
+   "start": [
+    0.42,
+    [
+     -72,
+     14
+    ]
+   ],
+   "s01": [
+    0.42,
+    [
+     -70,
+     13
+    ]
+   ],
+   "s04": [
+    1.0,
+    [
+     -79.5,
+     21.8
+    ]
+   ],
+   "s04b": [
+    1.04,
+    [
+     -79.3,
+     21.7
+    ]
+   ],
+   "s05": [
+    0.9,
+    [
+     -80.0,
+     21.4
+    ]
+   ],
+   "s05b": [
+    0.94,
+    [
+     -79.8,
+     21.5
+    ]
+   ],
+   "s06": [
+    1.5,
+    [
+     -81.3,
+     22.2
+    ]
+   ],
+   "s06b": [
+    1.56,
+    [
+     -81.2,
+     22.3
+    ]
+   ],
+   "s07": [
+    1.3,
+    [
+     -80.6,
+     22.0
+    ]
+   ],
+   "s07b": [
+    1.36,
+    [
+     -80.4,
+     22.1
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Brazil and Costa Rica are hummingbird country. The smallest of all lives only on this island.",
+    "cues": {
+     "brazil": "brazil",
+     "costa": "costa",
+     "island": "island"
+    }
+   },
+   "direction": "ease back so the whole island sits in frame; the size compare rises on 'Brazil' with the bird a sliver beside a sparrow and a pigeon; the Brazilian flag-ball thinks on 'Brazil', the Costa Rican one on 'Costa'; the island pulses on 'island'",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.9,
+    [
+     -80.0,
+     21.4
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.94,
+    [
+     -79.8,
+     21.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "size",
+     "type": "bars",
+     "rows": [
+      [
+       "Bee hummingbird",
+       6,
+       "6 cm"
+      ],
+      [
+       "Sparrow",
+       16,
+       "16 cm"
+      ],
+      [
+       "Pigeon",
+       32,
+       "32 cm"
+      ]
+     ],
+     "unit": "body length",
+     "y": 300,
+     "x": 60,
+     "w": 900
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@brazil-0.2",
+     "do": "chart.bars_in",
+     "id": "size",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.25
+     }
+    },
+    {
+     "at": "@@brazil+0.2",
+     "do": "character_in",
+     "id": "br_think"
+    },
+    {
+     "at": "@@costa",
+     "do": "character_in",
+     "id": "cr_think"
+    },
+    {
+     "at": "@@island-0.3",
+     "do": "character_out",
+     "id": "br_think"
+    },
+    {
+     "at": "@@island-0.3",
+     "do": "character_out",
+     "id": "cr_think"
+    },
+    {
+     "at": "@@island",
+     "do": "sticker_in",
+     "id": "st_bird"
+    },
+    {
+     "at": "@@island+0.4",
+     "do": "sticker_pulse",
+     "id": "st_bird"
+    },
+    {
+     "at": "@@island+0.2",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "192",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "size"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_bird"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Its wings beat around 80 times a second, and it visits up to 1,500 flowers a day.",
+    "cues": {
+     "wings": "wings",
+     "second": "second",
+     "flowers": "flowers"
+    }
+   },
+   "direction": "tighten on the south-west of the island; the swamp outline lights and rises with the bird sticker on it on 'wings'; a wind sticker shivers on 'second'; a flower sticker on 'flowers' as the island pulses; the swamp settles at the end",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    1.5,
+    [
+     -81.3,
+     22.2
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.56,
+    [
+     -81.2,
+     22.3
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@wings-0.1",
+     "do": "sticker_in",
+     "id": "st_bird2"
+    },
+    {
+     "at": "@@wings-0.2",
+     "do": "geo.highlight_in",
+     "stage": "stage_map",
+     "args": {
+      "fid": "zap",
+      "layer": "swamp",
+      "dur": 0.5
+     }
+    },
+    {
+     "at": "@@wings",
+     "do": "geo.rise",
+     "stage": "stage_map",
+     "args": {
+      "fid": "zap",
+      "eid": "st_bird2",
+      "layer": "swamp",
+      "dur": 0.8,
+      "lift": 10
+     }
+    },
+    {
+     "at": "@@second",
+     "do": "sticker_in",
+     "id": "st_wind"
+    },
+    {
+     "at": "@@second+0.3",
+     "do": "sticker_pulse",
+     "id": "st_wind"
+    },
+    {
+     "at": "@@second+0.7",
+     "do": "sticker_pulse",
+     "id": "st_wind"
+    },
+    {
+     "at": "@@flowers-0.1",
+     "do": "sticker_out",
+     "id": "st_wind"
+    },
+    {
+     "at": "@@flowers",
+     "do": "sticker_in",
+     "id": "st_flower"
+    },
+    {
+     "at": "@@flowers+0.4",
+     "do": "sticker_pulse",
+     "id": "st_flower"
+    },
+    {
+     "at": "@@flowers+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "192",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_flower"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.highlight_out",
+     "stage": "stage_map",
+     "args": {
+      "fid": "zap",
+      "layer": "swamp",
+      "dur": 0.4
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_bird2"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The egg is the size of a coffee bean, laid in a nest no bigger than a thimble.",
+    "cues": {
+     "egg": "egg",
+     "nest": "nest",
+     "thimble": "thimble"
+    }
+   },
+   "direction": "ease back a little; the COFFEE BEAN card and an egg sticker on 'egg'; the stronghold pin lands on 'nest' with a nest sticker; the Cuban flag-ball grins on 'thimble' as the island pulses; the pin leaves at the end",
+   "energy": 3,
+   "tone": "tender",
+   "pause_after": 0.8,
+   "card": {
+    "kicker": "COFFEE BEAN",
+    "text": "the size of its egg"
+   },
+   "card_at": null,
+   "cam": [
+    1.3,
+    [
+     -80.6,
+     22.0
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.36,
+    [
+     -80.4,
+     22.1
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@egg+0.1",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@@thimble-0.2"
+    },
+    {
+     "at": "@@egg+0.3",
+     "do": "sticker_in",
+     "id": "st_egg"
+    },
+    {
+     "at": "@@egg+0.7",
+     "do": "sticker_pulse",
+     "id": "st_egg"
+    },
+    {
+     "at": "@@nest",
+     "do": "sticker_out",
+     "id": "st_egg"
+    },
+    {
+     "at": "@@nest",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "zp"
+     }
+    },
+    {
+     "at": "@@nest+0.1",
+     "do": "sticker_in",
+     "id": "st_nest"
+    },
+    {
+     "at": "@@nest+0.5",
+     "do": "sticker_pulse",
+     "id": "st_nest"
+    },
+    {
+     "at": "@@thimble",
+     "do": "sticker_out",
+     "id": "st_nest"
+    },
+    {
+     "at": "@@thimble",
+     "do": "character_in",
+     "id": "cu_happy"
+    },
+    {
+     "at": "@@thimble+0.4",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "192",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "cu_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "zp"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_bird",
+   "type": "sticker",
+   "emoji": "1f426",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_bird2",
+   "type": "sticker",
+   "emoji": "1f426",
+   "x": 540,
+   "y": 900,
+   "size": 120,
+   "rot": 0
+  },
+  {
+   "id": "st_wind",
+   "type": "sticker",
+   "emoji": "1f4a8",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_flower",
+   "type": "sticker",
+   "emoji": "1f33a",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_egg",
+   "type": "sticker",
+   "emoji": "1f95a",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_nest",
+   "type": "sticker",
+   "emoji": "1fab9",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "br_think",
+   "type": "character",
+   "flag": "br",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "cr_think",
+   "type": "character",
+   "flag": "cr",
+   "face": "think",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "cu_happy",
+   "type": "character",
+   "flag": "cu",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

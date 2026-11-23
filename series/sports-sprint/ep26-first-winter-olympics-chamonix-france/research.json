@@ -1,0 +1,198 @@
+{
+ "version": 1,
+ "episode": "ep26-first-winter-olympics-chamonix-france",
+ "topic": "The first Olympic Winter Games were held at Chamonix, France, 25 January–5 February 1924, at the foot of Mont Blanc. Staged as an 'International Winter Sports Week' attached to the Paris 1924 Games, they were retroactively designated the first Winter Olympics by the IOC in 1926 (olympics.com; Britannica). 16 nations and 258 athletes (247 men, 11 women) competed in 16 events (olympics.com). Norway topped the medal table with 17 medals (4 gold), Finland took 11 (4 gold); the host France won 3 medals, all bronze (Wikipedia 1924 Winter Olympics medal table; olympics.com). The second Winter Games were at St. Moritz, Switzerland, in 1928.",
+ "researched": "2026-11-23",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The Winter Olympics began in Switzerland or Norway, the countries of skiing.",
+   "reality": "They began in Chamonix, France, in 1924; Switzerland hosted the second Games in 1928 and Norway did not host until Oslo 1952.",
+   "sources": [
+    "oly_chamonix",
+    "brit_chamonix"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "First-Winter-Olympics clips are archive montages; nobody puts the host's bronze-only haul against Norway on bars, flashes the 1926 renaming, and counts the 258 athletes over a pin on the town as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=first+winter+olympics",
+    "title": "Search: first winter olympics",
+    "angle": "archive montages",
+    "misses": "no map, no medal comparison"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=chamonix+1924",
+    "title": "Search: the host town by name",
+    "angle": "history documentaries",
+    "misses": "answer in the title"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=winter+olympics+history",
+    "title": "Search: winter olympics history",
+    "angle": "long explainers",
+    "misses": "no single hook, no quiz"
+   }
+  ]
+ },
+ "sources": {
+  "oly_chamonix": {
+   "type": "primary",
+   "publisher": "International Olympic Committee — olympics.com",
+   "title": "Chamonix 1924 Olympic Winter Games",
+   "url": "https://olympics.com/en/olympic-games/chamonix-1924",
+   "date": "2026-11-20",
+   "notes": "25 January–5 February 1924; 16 NOCs, 258 athletes (11 women, 247 men), 16 events; held as International Winter Sports Week and designated the first Olympic Winter Games by the IOC in 1926"
+  },
+  "brit_chamonix": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Chamonix 1924 Olympic Winter Games",
+   "url": "https://www.britannica.com/event/Chamonix-1924-Olympic-Winter-Games",
+   "date": "2026-11-20",
+   "notes": "first occurrence of the Winter Olympics; held at Chamonix, France, at the base of Mont Blanc; originally called International Winter Sports Week; retroactively named the first Winter Games in 1926; Norway dominated"
+  },
+  "wiki_1924": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "1924 Winter Olympics",
+   "url": "https://en.wikipedia.org/wiki/1924_Winter_Olympics",
+   "date": "2026-11-20",
+   "notes": "medal table: Norway 17 (4-7-6), Finland 11 (4-4-3); France 3 (0-0-3); 16 nations, 258 athletes"
+  },
+  "oly_stmoritz": {
+   "type": "primary",
+   "publisher": "International Olympic Committee — olympics.com",
+   "title": "St. Moritz 1928 Olympic Winter Games",
+   "url": "https://olympics.com/en/olympic-games/st-moritz-1928",
+   "date": "2026-11-20",
+   "notes": "the second Olympic Winter Games, Switzerland, 1928"
+  },
+  "oly_norway": {
+   "type": "primary",
+   "publisher": "International Olympic Committee — olympics.com",
+   "title": "Chamonix 1924 medal table",
+   "url": "https://olympics.com/en/olympic-games/chamonix-1924/medals",
+   "date": "2026-11-20",
+   "notes": "Norway first with 17 medals, Finland 11; France 3 bronze"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 countries, 50m",
+   "url": "https://www.naturalearthdata.com/",
+   "date": "2026-11-20",
+   "notes": "country polygons for the fill"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The first Olympic Winter Games were held at Chamonix, France, in 1924, at the foot of Mont Blanc in the Alps.",
+   "sources": [
+    "oly_chamonix",
+    "brit_chamonix",
+    "wiki_1924"
+   ],
+   "vo": [
+    "which country hosted the first winter olympics",
+    "switzerland, norway, or france",
+    "france. a small ski town under the alps, in 1924",
+    "a ski week became the games. follow us"
+   ],
+   "screen": [
+    "France",
+    "Switzerland",
+    "Norway",
+    "1924",
+    "a ski town under the Alps",
+    "Chamonix",
+    "Chamonix · 1924"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Switzerland hosted the second Winter Games (St. Moritz 1928); at Chamonix Norway topped the medal table with 17 medals, Finland took 11 and the host France 3.",
+   "sources": [
+    "oly_stmoritz",
+    "wiki_1924",
+    "oly_norway"
+   ],
+   "vo": [
+    "switzerland hosted the next ones. norway sent the champions and went home with the most medals"
+   ],
+   "screen": [
+    "17",
+    "11",
+    "3",
+    "Finland",
+    "medals in 1924"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Chamonix 1924 was staged as an International Winter Sports Week and retroactively designated the first Olympic Winter Games by the IOC in 1926.",
+   "sources": [
+    "oly_chamonix",
+    "brit_chamonix"
+   ],
+   "vo": [
+    "it began as a winter sports week. only in 1926 did the olympic movement call it the first winter games"
+   ],
+   "screen": [
+    "1926",
+    "named the first Winter Games"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "16 nations and 258 athletes, 11 of them women, competed; France's three medals were all bronze.",
+   "sources": [
+    "oly_chamonix",
+    "wiki_1924",
+    "oly_norway"
+   ],
+   "vo": [
+    "16 nations, 258 athletes, 11 of them women, and the host took home nothing but bronze"
+   ],
+   "screen": [
+    "258",
+    "athletes from 16 nations",
+    "ONLY BRONZE",
+    "the host's 3 medals"
+   ]
+  }
+ ]
+}

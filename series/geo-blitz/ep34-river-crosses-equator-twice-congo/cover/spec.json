@@ -1,0 +1,47 @@
+{
+ "bg": "hero.jpg",
+ "anchor": [
+  0.5,
+  0.3
+ ],
+ "hero_prompt": "Vibrant stylised 9:16 illustration, bold poster style: a glowing dashed golden Equator line running horizontally across a lush green satellite-style view of a tropical river basin, a huge winding river in electric cyan curving up over the line and back below it in a giant arc, deep rainforest greens, dramatic sunlit clouds, saturated colours, high contrast, no text, no letters, no labels, no flags, no map names.",
+ "head": "THIS RIVER CROSSES THE EQUATOR *TWICE*?!",
+ "head_top": 1150,
+ "head_size": 168,
+ "badge": "AMAZON  ·  NILE  ·  CONGO?",
+ "badge_color": "#FFD400",
+ "badge_xy": [
+  60,
+  1020
+ ],
+ "burst": {
+  "text": "2×",
+  "xy": [
+   880,
+   330
+  ],
+  "r": 150,
+  "color": "#FF2D2D"
+ },
+ "stickers": [
+  [
+   "1f92f",
+   260,
+   [
+    770,
+    1470
+   ],
+   12
+  ],
+  [
+   "1f30d",
+   200,
+   [
+    80,
+    420
+   ],
+   -10
+  ]
+ ],
+ "status": "render"
+}

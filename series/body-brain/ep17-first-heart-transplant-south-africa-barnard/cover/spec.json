@@ -1,0 +1,47 @@
+{
+ "bg": "hero.jpg",
+ "anchor": [
+  0.5,
+  0.55
+ ],
+ "hero_prompt": "Vibrant stylised 9:16 illustration, bold poster style: a glowing anatomical human heart held in two gloved surgeon hands under a dramatic 1960s operating theatre lamp, deep teal and crimson palette, cinematic rim light, bold shapes, slight retro halftone texture, high contrast, no text, no letters, no flags, no faces, no logos.",
+ "head": "THE *FIRST* HEART TRANSPLANT WASN'T IN THE USA",
+ "head_top": 1120,
+ "head_size": 150,
+ "badge": "USA  \u00b7  BRITAIN  \u00b7  ???",
+ "badge_color": "#FF2D2D",
+ "badge_xy": [
+  60,
+  990
+ ],
+ "burst": {
+  "text": "18\nDAYS",
+  "xy": [
+   870,
+   330
+  ],
+  "r": 150,
+  "color": "#FFD400"
+ },
+ "stickers": [
+  [
+   "1f631",
+   250,
+   [
+    780,
+    1480
+   ],
+   12
+  ],
+  [
+   "1fac0",
+   200,
+   [
+    80,
+    760
+   ],
+   -10
+  ]
+ ],
+ "status": "render"
+}

@@ -1,0 +1,47 @@
+{
+ "bg": "hero.jpg",
+ "anchor": [
+  0.5,
+  0.35
+ ],
+ "hero_prompt": "Vibrant stylised 9:16 illustration, bold poster style: a giant human thumb held up against a glowing tropical sky with a tiny iridescent hummingbird silhouette hovering beside it, the bird smaller than the thumbnail, huge bright hibiscus flowers, saturated magenta, emerald and gold, dramatic rim light, high contrast, no text, no letters, no flags, no map.",
+ "head": "A BIRD *LIGHTER THAN A COIN*",
+ "head_top": 1170,
+ "head_size": 172,
+ "badge": "BRAZIL  ·  COSTA RICA  ·  ???",
+ "badge_color": "#FF2D2D",
+ "badge_xy": [
+  60,
+  1040
+ ],
+ "burst": {
+  "text": "2 G",
+  "xy": [
+   870,
+   340
+  ],
+  "r": 150,
+  "color": "#FFD400"
+ },
+ "stickers": [
+  [
+   "1f62e",
+   250,
+   [
+    780,
+    1480
+   ],
+   10
+  ],
+  [
+   "1fa99",
+   190,
+   [
+    90,
+    760
+   ],
+   -12
+  ]
+ ],
+ "status": "render"
+}

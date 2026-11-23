@@ -1,0 +1,143 @@
+{
+ "id": "ep24-longest-migration-arctic-tern",
+ "format": "quiz-v3",
+ "series": "wild-files",
+ "number": 24,
+ "title": "Which animal makes the LONGEST migration?",
+ "difficulty": "MEDIUM",
+ "seed": 2424,
+ "quiz": {
+  "question": "Which animal makes the LONGEST migration?",
+  "keyword": "LONGEST",
+  "options": [
+   "Humpback whale",
+   "Monarch butterfly",
+   "Arctic tern"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Arctic tern",
+  "answer_sub": "pole to pole, every single year",
+  "option_meta": [
+   {
+    "emoji": "1f40b"
+   },
+   {
+    "emoji": "1f98b"
+   },
+   {
+    "emoji": "1f426"
+   }
+  ],
+  "banner": "Arctic tern",
+  "banner_sub": "✓  C was right · pole to pole, every single year",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which animal makes the LONGEST migration? 🧭",
+  "premise": "One animal flies from pole to pole and back every year",
+  "bait": "Humpback whale, monarch butterfly or Arctic tern — which did you pick? 👇",
+  "keywords": [
+   "longest migration",
+   "which animal has the longest migration",
+   "longest animal migration",
+   "animal migration facts",
+   "animal quiz",
+   "wildlife facts",
+   "bird migration",
+   "nature trivia"
+  ],
+  "description": "One animal flies from pole to pole and back every year. Humpback whale, monarch butterfly or Arctic tern — which did you pick? 👇\n\nSources: Egevang et al., PNAS 2010; Audubon; Encyclopaedia Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #24",
+  "hashtags": [
+   "#AnimalQuiz",
+   "#WildlifeFacts",
+   "#thequizwire"
+  ],
+  "tags": [
+   "AnimalQuiz",
+   "Migration"
+  ],
+  "cover_emoji": "🧭",
+  "cover_emoji_why": "a compass names the subject (a journey) without showing a bird, a whale or a butterfly — none of the options",
+  "copy": {
+   "spoilers": [
+    "arctic tern",
+    "tern",
+    "greenland",
+    "iceland",
+    "antarctica",
+    "weddell",
+    "70,000",
+    "2.4 million",
+    "pole to pole"
+   ],
+   "youtube": {
+    "title": "Which animal makes the longest migration on Earth? Most people guess wrong 🧭",
+    "description": "The ocean giant, the famous butterfly, or the third one? The record holder weighs about as much as a bar of soap, sees two summers every year, and over its lifetime travels further than a trip to the Moon and back — three times.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#migration",
+     "#wildlife",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which animal makes the LONGEST migration? 🧭\nThe ocean giant, the famous butterfly, or the third one? The record holder weighs about as much as a bar of soap, sees two summers every year, and over its lifetime travels further than three trips to the Moon and back.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#migration",
+     "#birdfacts",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which animal makes the longest migration — humpback whale, monarch butterfly or Arctic tern?\nThe record holder weighs about as much as a bar of soap, sees two summers every year, and over its lifetime travels further than three trips to the Moon and back. Pick your animal before the line draws itself across the map.",
+    "tags": [
+     "#animalquiz",
+     "#migration"
+    ]
+   },
+   "twitter": {
+    "text": "Which animal makes the LONGEST migration?\nHumpback whale, monarch butterfly or Arctic tern? Weighs about as much as a bar of soap, sees two summers a year — and the whale is not even close.",
+    "tags": [
+     "#AnimalQuiz",
+     "#Migration"
+    ]
+   },
+   "threads": {
+    "text": "Which animal makes the longest migration — humpback whale, monarch butterfly or Arctic tern? The record holder weighs about as much as a bar of soap, sees two summers every year, and over its lifetime travels further than three trips to the Moon and back.",
+    "tags": [
+     "#birdmigration"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-animal",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "route-draw",
+  "beats": [
+   "route",
+   "travel",
+   "counter",
+   "pin",
+   "label"
+  ],
+  "cast": "emoji-set:ocean + flagball:none",
+  "music": "bed:bright"
+ },
+ "status": "draft"
+}

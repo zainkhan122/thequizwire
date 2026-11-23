@@ -1,0 +1,220 @@
+{
+ "version": 1,
+ "episode": "ep23-smallest-bird-bee-hummingbird-cuba",
+ "topic": "The smallest bird is the bee hummingbird (Mellisuga helenae), endemic to Cuba and the Isla de la Juventud: about 5.5–6.1 cm long and about 1.6–2 g, lighter than a US penny (2.5 g) (Britannica; Guinness World Records; Cornell Lab Birds of the World). Its wings beat about 80 times a second in normal flight (up to 200 in display), and it may visit up to 1,500 flowers a day (Cornell Lab; Wikipedia). The egg is roughly the size of a coffee bean (about 1 cm) and the cup nest about 2.5 cm across (Britannica; Cornell). Brazil and Costa Rica have far more hummingbird species but not this one. For scale: house sparrow about 14–16 cm, rock pigeon about 29–37 cm (Britannica). The Zapata Swamp in south-west Cuba is one of its strongholds.",
+ "researched": "2026-11-23",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The smallest bird must live in the biggest rainforest, Brazil.",
+   "reality": "Brazil has hundreds of hummingbird species, but the smallest bird of all is found only in Cuba.",
+   "sources": [
+    "brit_bee",
+    "cornell_bee"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Smallest-bird clips are slow-motion close-ups; nobody puts the bird to scale against a sparrow and a pigeon on a chart, lifts its swamp out of the island, and lands the coffee-bean egg as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=smallest+bird+in+the+world",
+    "title": "Search: smallest bird in the world",
+    "angle": "slow-motion close-ups",
+    "misses": "no scale, no map"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=bee+hummingbird",
+    "title": "Search: the species by name",
+    "angle": "nature footage",
+    "misses": "answer in the title"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=hummingbird+facts",
+    "title": "Search: hummingbird facts",
+    "angle": "list facts",
+    "misses": "no country, no comparison"
+   }
+  ]
+ },
+ "sources": {
+  "brit_bee": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Bee hummingbird",
+   "url": "https://www.britannica.com/animal/bee-hummingbird",
+   "date": "2026-11-20",
+   "notes": "smallest living bird; about 5.5–6 cm long, about 2 g; found only in Cuba; egg about the size of a coffee bean; nest about 2.5 cm wide"
+  },
+  "cornell_bee": {
+   "type": "scholarly",
+   "publisher": "Cornell Lab of Ornithology — Birds of the World",
+   "title": "Bee Hummingbird (Mellisuga helenae)",
+   "url": "https://birdsoftheworld.org/bow/species/beehum1/cur/introduction",
+   "date": "2026-11-20",
+   "notes": "endemic to Cuba and Isla de la Juventud; 5–6 cm, 1.6–2 g; wingbeats about 80 per second; visits up to 1,500 flowers a day"
+  },
+  "guinness_bird": {
+   "type": "reference",
+   "publisher": "Guinness World Records",
+   "title": "Smallest bird",
+   "url": "https://www.guinnessworldrecords.com/world-records/smallest-bird",
+   "date": "2026-11-20",
+   "notes": "bee hummingbird of Cuba and the Isle of Youth: males 57 mm long, 1.6 g"
+  },
+  "wiki_bee": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Bee hummingbird",
+   "url": "https://en.wikipedia.org/wiki/Bee_hummingbird",
+   "date": "2026-11-20",
+   "notes": "smallest known bird; 5–6 cm; about 2 g, lighter than a US penny; 80 wingbeats per second; up to 1,500 flowers a day; eggs the size of a coffee bean; nest about 2.5 cm"
+  },
+  "audubon_bee": {
+   "type": "reference",
+   "publisher": "National Audubon Society",
+   "title": "Bee Hummingbird",
+   "url": "https://www.audubon.org/",
+   "date": "2026-11-20",
+   "notes": "world's smallest bird, endemic to Cuba; Zapata Swamp among its best-known sites"
+  },
+  "brit_sparrow": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "House sparrow",
+   "url": "https://www.britannica.com/animal/house-sparrow",
+   "date": "2026-11-20",
+   "notes": "about 14–16 cm long"
+  },
+  "brit_pigeon": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Rock pigeon",
+   "url": "https://www.britannica.com/animal/rock-pigeon",
+   "date": "2026-11-20",
+   "notes": "about 29–37 cm long"
+  },
+  "cornell_hb": {
+   "type": "scholarly",
+   "publisher": "Cornell Lab of Ornithology",
+   "title": "Hummingbird species diversity by country",
+   "url": "https://www.allaboutbirds.org/",
+   "date": "2026-11-20",
+   "notes": "the Andes and the neotropics (Colombia, Ecuador, Peru, Brazil, Costa Rica) hold the great majority of the ~360 hummingbird species"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 countries, 50m",
+   "url": "https://www.naturalearthdata.com/",
+   "date": "2026-11-20",
+   "notes": "country polygons for the fill; the Zapata Swamp outline is schematic"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The smallest bird is the bee hummingbird, found only in Cuba: about 6 cm long and about 2 g, lighter than a coin.",
+   "sources": [
+    "brit_bee",
+    "cornell_bee",
+    "guinness_bird"
+   ],
+   "vo": [
+    "which country is home to the smallest bird",
+    "brazil, costa rica, or cuba",
+    "cuba. the bee hummingbird, about 6 centimetres long and lighter than a coin",
+    "lighter than a coin. follow us"
+   ],
+   "screen": [
+    "Cuba",
+    "Brazil",
+    "Costa Rica",
+    "ABOUT 2 G",
+    "lighter than a coin",
+    "Bee hummingbird",
+    "6 cm"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Brazil and Costa Rica hold many hummingbird species, but the bee hummingbird lives only on Cuba; a house sparrow is about 16 cm and a rock pigeon about 32 cm.",
+   "sources": [
+    "cornell_hb",
+    "brit_sparrow",
+    "brit_pigeon",
+    "cornell_bee"
+   ],
+   "vo": [
+    "brazil and costa rica are hummingbird country. the smallest of all lives only on this island"
+   ],
+   "screen": [
+    "Sparrow",
+    "16 cm",
+    "Pigeon",
+    "32 cm",
+    "body length"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "Its wings beat about 80 times a second in normal flight and it can visit up to 1,500 flowers a day.",
+   "sources": [
+    "cornell_bee",
+    "wiki_bee"
+   ],
+   "vo": [
+    "its wings beat around 80 times a second, and it visits up to 1,500 flowers a day"
+   ],
+   "screen": [
+    "Zapata Swamp",
+    "its stronghold"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "The egg is about the size of a coffee bean and the nest about 2.5 cm across, no bigger than a thimble.",
+   "sources": [
+    "brit_bee",
+    "wiki_bee"
+   ],
+   "vo": [
+    "the egg is the size of a coffee bean, laid in a nest no bigger than a thimble"
+   ],
+   "screen": [
+    "COFFEE BEAN",
+    "the size of its egg"
+   ]
+  }
+ ]
+}

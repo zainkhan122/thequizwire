@@ -1,0 +1,1115 @@
+{
+ "id": "ep34-river-crosses-equator-twice-congo",
+ "series": "geo-blitz",
+ "number": 34,
+ "seed": 4334,
+ "question": "Which river crosses the Equator TWICE?",
+ "keyword": "TWICE",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Amazon",
+   "flag": "br",
+   "cue": "amazon",
+   "lonlat": [
+    -58,
+    -3
+   ]
+  },
+  {
+   "text": "Nile",
+   "flag": "eg",
+   "cue": "nile",
+   "lonlat": [
+    31,
+    24
+   ]
+  },
+  {
+   "text": "Congo",
+   "flag": "cd",
+   "cue": "congo",
+   "lonlat": [
+    21,
+    -1
+   ]
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "a giant arc over the line and back",
+ "outro_headline": "DID YOU GET IT?",
+ "cover_emoji": "🧭",
+ "cover_emoji_why": "a compass states the subject (a line of latitude, a direction) and belongs to none of the three rivers",
+ "post": {
+  "premise": "One river crosses the Equator north, then south again",
+  "bait": "Amazon, Nile or Congo — which did you pick? 👇",
+  "keywords": [
+   "river that crosses the equator twice",
+   "which river crosses the equator twice",
+   "equator facts",
+   "deepest river in the world",
+   "africa rivers",
+   "geography quiz",
+   "map quiz",
+   "world map facts"
+  ],
+  "tags": [
+   "GeographyQuiz",
+   "Rivers"
+  ],
+  "sources_line": "Encyclopaedia Britannica; NASA Earth Observatory; US Geological Survey",
+  "copy": {
+   "spoilers": [
+    "congo",
+    "congolese",
+    "kinshasa",
+    "brazzaville",
+    "lualaba",
+    "kisangani",
+    "mbandaka",
+    "zaire",
+    "drc",
+    "4,700",
+    "220",
+    "boyoma",
+    "malebo",
+    "matadi",
+    "deepest"
+   ],
+   "youtube": {
+    "title": "Which river crosses the Equator twice? Most people guess wrong 🧭",
+    "description": "The Amazon giant, the longest river, or the third one? Only one river on Earth bends north over the Equator and then swings back south across it on its way to the sea. It also drops further below its surface than any other river, and near its end two capital cities stare at each other across the water, the closest pair in the world.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#rivers",
+     "#geography",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which river crosses the Equator TWICE? 🧭\nThe Amazon giant, the longest river, or the third one? Only one river bends north over the Equator and then swings back south across it on its way to the sea, and two capital cities stare at each other across its water near the end.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#rivers",
+     "#geography",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which river crosses the Equator twice — Amazon, Nile or Congo?\nOnly one river bends north over the line and then swings back south across it on its way to the sea. It also drops further below its surface than any other river, and near its end two capital cities stare at each other across the water, the closest pair in the world. Pick your river before the line is drawn.",
+    "tags": [
+     "#geoquiz",
+     "#rivers"
+    ]
+   },
+   "twitter": {
+    "text": "Which river crosses the Equator TWICE?\nAmazon, Nile or Congo? One giant arc north over the line and back south again — and the Amazon never even touches it.",
+    "tags": [
+     "#GeoQuiz",
+     "#Rivers"
+    ]
+   },
+   "threads": {
+    "text": "Which river crosses the Equator twice — Amazon, Nile or Congo? Only one bends north over the line and then swings back south across it on its way to the sea; it also drops further below its surface than any river on Earth, and two capital cities face each other across its water near the end.",
+    "tags": [
+     "#equator"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-record",
+  "hook": "straight",
+  "opener": "split-candidates",
+  "reveal": "route-draw",
+  "beats": [
+   "route",
+   "travel",
+   "counter",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:cd + flagball:br + emoji-set:river",
+  "music": "bed:warm",
+  "outro": "DID YOU GET IT?"
+ },
+ "intent": "A line and an arc: the Equator draws itself as a dashed yellow line on the reveal and the river draws over it, north then south, so the crossing is seen rather than said. A boat then rides the whole arc, a depth counter runs down to 220 while the river line pulses, and the two-capitals beat pins the closest pair of capitals facing each other across the water.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "twice": "twice"
+  },
+  "v04": {
+   "text": "The Congo. It bends north over the Equator, then swings back south across it on the way to the sea.",
+   "cues": {
+    "answer": "congo",
+    "north": "north",
+    "back": "back"
+   }
+  },
+  "v05": {
+   "text": "The Amazon stays just south of the line. The Nile never gets near it. Only this river makes the arc.",
+   "cues": {
+    "amazon": "amazon",
+    "nile": "nile",
+    "arc": "arc"
+   }
+  },
+  "v06": {
+   "text": "It is also the deepest river on Earth, over 220 metres down in places.",
+   "cues": {
+    "deepest": "deepest",
+    "metres": "metres",
+    "places": "places"
+   }
+  },
+  "v07": {
+   "text": "Near its end, a pair of capitals stare at each other across the water, the closest in the world.",
+   "cues": {
+    "capitals": "capitals",
+    "across": "across",
+    "closest": "closest"
+   }
+  },
+  "v08": {
+   "text": "Over the line and back. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "TWICE",
+   "text": "over the Equator, then back again"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "cd",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "br",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "The Congo River is the only major river to cross the Equator twice: the upper river (Lualaba) flows north across the Equator near Kisangani, the great bend carries it west, and it recrosses the Equator southbound near Mbandaka before reaching the Atlantic (Britannica; NASA Earth Observatory). Length about 4,700 km, second-largest discharge after the Amazon at about 41,000 m³/s (Britannica; USGS). It is the deepest river known: USGS measurements in the lower Congo in 2008 found depths exceeding 220 m (Oberg et al., USGS 2009; Britannica). The Amazon runs mostly a few degrees south of the Equator and the Nile begins near the Equator at Lake Victoria but flows north away from it. Kinshasa (DR Congo) and Brazzaville (Republic of the Congo) face each other across Pool Malebo, the closest pair of national capitals in the world (Britannica).",
+  "myths": [
+   {
+    "myth": "The Amazon, the biggest river, must be the one on the Equator.",
+    "reality": "The Amazon runs a few degrees south of the Equator and never crosses it; the Congo crosses it twice because of its great northern bend.",
+    "sources": [
+     "brit_congo",
+     "nasa_congo",
+     "brit_amazon"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Equator-crossing clips are text lists over stock footage; nobody draws the line and the arc together on a real map, runs the depth down as a counter, and pins the two facing capitals as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=congo+river+facts",
+     "title": "Search: congo river facts",
+     "angle": "documentary listicles",
+     "misses": "the arc is said, never drawn"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=river+crosses+equator+twice",
+     "title": "Search: river crosses equator twice",
+     "angle": "text-over-stock trivia",
+     "misses": "no map, no scale"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=deepest+river+in+the+world",
+     "title": "Search: deepest river in the world",
+     "angle": "depth facts",
+     "misses": "no geography of the river"
+    }
+   ]
+  },
+  "sources": {
+   "brit_congo": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Congo River",
+    "url": "https://www.britannica.com/place/Congo-River",
+    "date": "2026-11-20",
+    "notes": "about 4,700 km long; second only to the Amazon in discharge; the river crosses the Equator twice; depths of more than 220 m reported in the lower course"
+   },
+   "nasa_congo": {
+    "type": "primary",
+    "publisher": "NASA Earth Observatory",
+    "title": "The Congo River",
+    "url": "https://earthobservatory.nasa.gov/images/148405/the-congo-river",
+    "date": "2026-11-20",
+    "notes": "the river arcs north across the Equator and then back south of it before reaching the Atlantic; second largest river by discharge"
+   },
+   "usgs_congo": {
+    "type": "scholarly",
+    "publisher": "US Geological Survey (Oberg et al., 2009)",
+    "title": "Discharge and Other Hydraulic Measurements for Characterizing the Hydraulics of Lower Congo River, July 2008",
+    "url": "https://pubs.usgs.gov/of/2009/1164/",
+    "date": "2026-11-20",
+    "notes": "ADCP surveys of the lower Congo measured depths exceeding 220 m, the deepest known in any river; discharge about 41,000 m³/s"
+   },
+   "wiki_congo": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Congo River",
+    "url": "https://en.wikipedia.org/wiki/Congo_River",
+    "date": "2026-11-20",
+    "notes": "crosses the Equator twice; deepest river in the world with measured depths in excess of 220 m; length about 4,700 km"
+   },
+   "brit_amazon": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Amazon River",
+    "url": "https://www.britannica.com/place/Amazon-River",
+    "date": "2026-11-20",
+    "notes": "flows roughly parallel to and a few degrees south of the Equator across Brazil to the Atlantic"
+   },
+   "brit_nile": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Nile River",
+    "url": "https://www.britannica.com/place/Nile-River",
+    "date": "2026-11-20",
+    "notes": "rises south of the Equator and flows northward through north-eastern Africa to the Mediterranean"
+   },
+   "brit_kinshasa": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Kinshasa",
+    "url": "https://www.britannica.com/place/Kinshasa",
+    "date": "2026-11-20",
+    "notes": "lies on the south bank of Pool Malebo, directly opposite Brazzaville, capital of the Republic of the Congo"
+   },
+   "wiki_brazza": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "Brazzaville",
+    "url": "https://en.wikipedia.org/wiki/Brazzaville",
+    "date": "2026-11-20",
+    "notes": "Brazzaville and Kinshasa are the closest pair of national capitals in the world, facing each other across the Congo River"
+   },
+   "natural_earth": {
+    "type": "primary",
+    "publisher": "Natural Earth",
+    "title": "Admin 0 countries, 50m",
+    "url": "https://www.naturalearthdata.com/",
+    "date": "2026-11-20",
+    "notes": "country polygons for the fill and the basin view"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The Congo is the only major river to cross the Equator twice: its upper course flows north across the line near Kisangani and the river recrosses it southbound near Mbandaka on the way to the Atlantic.",
+    "sources": [
+     "brit_congo",
+     "nasa_congo",
+     "wiki_congo"
+    ],
+    "vo": [
+     "which river crosses the equator twice",
+     "amazon, nile, or congo",
+     "the congo. it bends north over the equator, then swings back south across it on the way to the sea",
+     "over the line and back. follow us"
+    ],
+    "screen": [
+     "Congo",
+     "Amazon",
+     "Nile",
+     "TWICE",
+     "over the Equator, then back again",
+     "Equator",
+     "1st crossing",
+     "2nd crossing"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "The Amazon runs a few degrees south of the Equator and never crosses it; the Nile rises near the Equator and flows north away from it.",
+    "sources": [
+     "brit_amazon",
+     "brit_nile",
+     "nasa_congo"
+    ],
+    "vo": [
+     "the amazon stays just south of the line. the nile never gets near it. only this river makes the arc"
+    ],
+    "screen": []
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "The Congo is the deepest river known, with measured depths exceeding 220 m in its lower course.",
+    "sources": [
+     "usgs_congo",
+     "brit_congo",
+     "wiki_congo"
+    ],
+    "vo": [
+     "it is also the deepest river on earth, over 220 metres down in places"
+    ],
+    "screen": [
+     "220",
+     "metres deep · the deepest river known",
+     "m"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Kinshasa and Brazzaville face each other across Pool Malebo on the lower Congo, the closest pair of national capitals in the world.",
+    "sources": [
+     "brit_kinshasa",
+     "wiki_brazza"
+    ],
+    "vo": [
+     "near its end, a pair of capitals stare at each other across the water, the closest in the world"
+    ],
+    "screen": [
+     "2 CAPITALS",
+     "facing each other across the river",
+     "Kinshasa",
+     "Brazzaville"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   11,
+   -7,
+   31,
+   5
+  ],
+  "far_bbox": [
+   -20,
+   -36,
+   56,
+   38
+  ],
+  "resolution": "50m",
+  "highlight_ids": [],
+  "highlight_note": "no country fill — the answer is a river, drawn as a route over the Equator line",
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "eq",
+    "cls": "neon yellow dashed",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "line",
+       "properties": {
+        "name": "Equator"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          8.0,
+          0.0
+         ],
+         [
+          34.0,
+          0.0
+         ]
+        ]
+       }
+      }
+     ]
+    },
+    "note": "the Equator as a dashed yellow line for the two crossings"
+   },
+   {
+    "kind": "route",
+    "id": "congo",
+    "cls": "river",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "main",
+       "properties": {
+        "name": "Congo main stem (schematic)"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          25.95,
+          -2.95
+         ],
+         [
+          25.9,
+          -1.6
+         ],
+         [
+          25.5,
+          -0.5
+         ],
+         [
+          25.4,
+          0.1
+         ],
+         [
+          25.19,
+          0.52
+         ],
+         [
+          24.4,
+          1.2
+         ],
+         [
+          23.3,
+          1.9
+         ],
+         [
+          22.47,
+          2.19
+         ],
+         [
+          21.5,
+          2.15
+         ],
+         [
+          20.3,
+          1.6
+         ],
+         [
+          19.2,
+          0.9
+         ],
+         [
+          18.26,
+          0.05
+         ],
+         [
+          17.7,
+          -0.6
+         ],
+         [
+          17.2,
+          -1.07
+         ],
+         [
+          16.23,
+          -2.17
+         ],
+         [
+          16.0,
+          -3.2
+         ],
+         [
+          15.3,
+          -4.3
+         ],
+         [
+          14.4,
+          -4.9
+         ],
+         [
+          13.45,
+          -5.82
+         ],
+         [
+          12.33,
+          -6.07
+         ]
+        ]
+       }
+      }
+     ]
+    },
+    "note": "schematic main stem from Kindu through the great bend to the mouth at Banana, for the draw-on and the boat"
+   }
+  ],
+  "extra_beats": [
+   {
+    "at": "s04+0.1",
+    "do": "geo.route_draw",
+    "stage": "stage_map",
+    "until": "s04@north",
+    "args": {
+     "rid": "line",
+     "layer": "eq"
+    }
+   },
+   {
+    "at": "s04@north-0.2",
+    "do": "geo.route_draw",
+    "stage": "stage_map",
+    "until": "s04.end",
+    "args": {
+     "rid": "main",
+     "layer": "congo"
+    }
+   }
+  ],
+  "labels": [
+   {
+    "id": "eqlab",
+    "lonlat": [
+     11.6,
+     0.0
+    ],
+    "text": "Equator",
+    "cls": "tag",
+    "in": "s04+0.3",
+    "out": "s05.end"
+   },
+   {
+    "id": "x1",
+    "lonlat": [
+     26.0,
+     0.9
+    ],
+    "text": "1st crossing",
+    "cls": "tag",
+    "in": "s05@arc+0.1",
+    "out": "s05.end"
+   },
+   {
+    "id": "x2",
+    "lonlat": [
+     18.6,
+     -0.9
+    ],
+    "text": "2nd crossing",
+    "cls": "tag",
+    "in": "s05@arc+0.4",
+    "out": "s05.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "kin",
+    "lonlat": [
+     15.31,
+     -4.32
+    ],
+    "label": "Kinshasa",
+    "side": "right"
+   },
+   {
+    "id": "bzv",
+    "lonlat": [
+     15.24,
+     -4.26
+    ],
+    "label": "Brazzaville",
+    "side": "left"
+   }
+  ],
+  "scalebar": {
+   "km": 500,
+   "lonlat": [
+    11.5,
+    -6.5
+   ]
+  },
+  "pin_beats": [],
+  "cams": {
+   "start": [
+    0.42,
+    [
+     12,
+     2
+    ]
+   ],
+   "s01": [
+    0.42,
+    [
+     10,
+     3
+    ]
+   ],
+   "s04": [
+    0.72,
+    [
+     19.5,
+     -2.0
+    ]
+   ],
+   "s04b": [
+    0.75,
+    [
+     19.8,
+     -2.2
+    ]
+   ],
+   "s05": [
+    0.7,
+    [
+     19.5,
+     -1.5
+    ]
+   ],
+   "s05b": [
+    0.73,
+    [
+     19.8,
+     -1.8
+    ]
+   ],
+   "s06": [
+    0.85,
+    [
+     16.5,
+     -3.0
+    ]
+   ],
+   "s06b": [
+    0.9,
+    [
+     16.2,
+     -3.4
+    ]
+   ],
+   "s07": [
+    1.3,
+    [
+     15.3,
+     -4.3
+    ]
+   ],
+   "s07b": [
+    1.36,
+    [
+     15.2,
+     -4.4
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "The Amazon stays just south of the line. The Nile never gets near it. Only this river makes the arc.",
+    "cues": {
+     "amazon": "amazon",
+     "nile": "nile",
+     "arc": "arc"
+    }
+   },
+   "direction": "hold on the basin with the line and the river both drawn; the Brazilian flag-ball thinks on 'Amazon'; an Egyptian flag-ball joins on 'Nile'; the two crossing tags land on 'arc' as the river line re-draws over the Equator",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.7,
+    [
+     19.5,
+     -1.5
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.73,
+    [
+     19.8,
+     -1.8
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@amazon",
+     "do": "character_in",
+     "id": "br_think"
+    },
+    {
+     "at": "@@amazon+0.3",
+     "do": "sticker_in",
+     "id": "st_south"
+    },
+    {
+     "at": "@@amazon+0.7",
+     "do": "sticker_pulse",
+     "id": "st_south"
+    },
+    {
+     "at": "@@nile",
+     "do": "sticker_out",
+     "id": "st_south"
+    },
+    {
+     "at": "@@nile",
+     "do": "character_in",
+     "id": "eg_think"
+    },
+    {
+     "at": "@@arc-0.2",
+     "do": "character_out",
+     "id": "br_think"
+    },
+    {
+     "at": "@@arc-0.2",
+     "do": "character_out",
+     "id": "eg_think"
+    },
+    {
+     "at": "@@arc",
+     "do": "geo.route_draw",
+     "stage": "stage_map",
+     "until": "@.end",
+     "args": {
+      "rid": "main",
+      "layer": "congo"
+     }
+    },
+    {
+     "at": "@@arc+0.2",
+     "do": "sticker_in",
+     "id": "st_arc"
+    },
+    {
+     "at": "@@arc+0.6",
+     "do": "sticker_pulse",
+     "id": "st_arc"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_arc"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "It is also the deepest river on Earth, over 220 metres down in places.",
+    "cues": {
+     "deepest": "deepest",
+     "metres": "metres",
+     "places": "places"
+    }
+   },
+   "direction": "push in toward the lower river; a boat rides the drawn line from the bend to the mouth; the depth counter runs up to 220 on 'deepest' while an anchor sticker drops; a wave sticker on 'places'",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    0.85,
+    [
+     16.5,
+     -3.0
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.9,
+    [
+     16.2,
+     -3.4
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "deep",
+     "type": "counter",
+     "start": 0,
+     "end": 220,
+     "y": 330,
+     "label": "metres deep · the deepest river known",
+     "fmt": "int",
+     "size": 170,
+     "suffix": " m"
+    }
+   ],
+   "devices": [
+    {
+     "at": "@+0.1",
+     "do": "sticker_in",
+     "id": "st_boat"
+    },
+    {
+     "at": "@+0.1",
+     "do": "geo.travel",
+     "stage": "stage_map",
+     "until": "@.end",
+     "args": {
+      "rid": "main",
+      "layer": "congo",
+      "sid": "st_boat",
+      "offset": [
+       0,
+       -50
+      ]
+     }
+    },
+    {
+     "at": "@@deepest-0.2",
+     "do": "chart.counter_run",
+     "id": "deep",
+     "until": "@@places+0.6"
+    },
+    {
+     "at": "@@deepest",
+     "do": "sticker_in",
+     "id": "st_anchor"
+    },
+    {
+     "at": "@@deepest+0.4",
+     "do": "sticker_pulse",
+     "id": "st_anchor"
+    },
+    {
+     "at": "@@metres+0.2",
+     "do": "sticker_pulse",
+     "id": "st_anchor"
+    },
+    {
+     "at": "@@places",
+     "do": "sticker_out",
+     "id": "st_anchor"
+    },
+    {
+     "at": "@@places",
+     "do": "sticker_in",
+     "id": "st_wave"
+    },
+    {
+     "at": "@@places+0.4",
+     "do": "sticker_pulse",
+     "id": "st_wave"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_wave"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_boat"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Near its end, a pair of capitals stare at each other across the water, the closest in the world.",
+    "cues": {
+     "capitals": "capitals",
+     "across": "across",
+     "closest": "closest"
+    }
+   },
+   "direction": "tighten on the pool where the river widens; the two capital pins land on 'capitals', one each side; the 2 CAPITALS card on 'across' with an eyes sticker; the Congolese flag-ball grins on 'closest'; both pins leave at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "2 CAPITALS",
+    "text": "facing each other across the river"
+   },
+   "card_at": null,
+   "cam": [
+    1.3,
+    [
+     15.3,
+     -4.3
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.36,
+    [
+     15.2,
+     -4.4
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@capitals",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "kin"
+     }
+    },
+    {
+     "at": "@@capitals+0.3",
+     "do": "geo.pin_in",
+     "stage": "stage_map",
+     "args": {
+      "pid": "bzv"
+     }
+    },
+    {
+     "at": "@@across+0.1",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@@closest+0.9"
+    },
+    {
+     "at": "@@across+0.3",
+     "do": "sticker_in",
+     "id": "st_eyes"
+    },
+    {
+     "at": "@@across+0.7",
+     "do": "sticker_pulse",
+     "id": "st_eyes"
+    },
+    {
+     "at": "@@closest",
+     "do": "sticker_out",
+     "id": "st_eyes"
+    },
+    {
+     "at": "@@closest",
+     "do": "character_in",
+     "id": "cd_happy"
+    },
+    {
+     "at": "@@closest+0.2",
+     "do": "sticker_in",
+     "id": "st_hands"
+    },
+    {
+     "at": "@@closest+0.6",
+     "do": "sticker_pulse",
+     "id": "st_hands"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_hands"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "cd_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "kin"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "bzv"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_south",
+   "type": "sticker",
+   "emoji": "2b07",
+   "x": 840,
+   "y": 700,
+   "size": 150,
+   "rot": -6
+  },
+  {
+   "id": "st_arc",
+   "type": "sticker",
+   "emoji": "1f504",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_boat",
+   "type": "sticker",
+   "emoji": "1f6f6",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "st_anchor",
+   "type": "sticker",
+   "emoji": "2693",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_wave",
+   "type": "sticker",
+   "emoji": "1f30a",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_eyes",
+   "type": "sticker",
+   "emoji": "1f440",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_hands",
+   "type": "sticker",
+   "emoji": "1f91d",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "br_think",
+   "type": "character",
+   "flag": "br",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "eg_think",
+   "type": "character",
+   "flag": "eg",
+   "face": "think",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "cd_happy",
+   "type": "character",
+   "flag": "cd",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

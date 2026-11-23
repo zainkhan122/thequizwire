@@ -1,0 +1,915 @@
+{
+ "id": "ep26-first-winter-olympics-chamonix-france",
+ "series": "sports-sprint",
+ "number": 26,
+ "seed": 2626,
+ "question": "Which country hosted the FIRST Winter Olympics?",
+ "keyword": "FIRST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Switzerland",
+   "flag": "ch",
+   "cue": "switzerland"
+  },
+  {
+   "text": "Norway",
+   "flag": "no",
+   "cue": "norway"
+  },
+  {
+   "text": "France",
+   "flag": "fr",
+   "cue": "france"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "a ski town under the Alps, 1924",
+ "outro_headline": "CHALLENGE A FRIEND",
+ "cover_emoji": "⛸️",
+ "cover_emoji_why": "an ice skate names the subject (winter sport) and belongs to no country; it is not the flag or emoji of any option",
+ "post": {
+  "premise": "The first Winter Olympics were not called that at the time",
+  "bait": "Switzerland, Norway or France — which did you pick? 👇",
+  "keywords": [
+   "first winter olympics",
+   "which country hosted the first winter olympics",
+   "winter olympics history",
+   "1924 winter olympics",
+   "olympics quiz",
+   "sports quiz",
+   "winter games facts",
+   "sports trivia"
+  ],
+  "tags": [
+   "SportsQuiz",
+   "Olympics"
+  ],
+  "sources_line": "International Olympic Committee (olympics.com); Encyclopaedia Britannica",
+  "copy": {
+   "spoilers": [
+    "france",
+    "french",
+    "chamonix",
+    "mont blanc",
+    "alps",
+    "258",
+    "16 nations",
+    "1926",
+    "bronze"
+   ],
+   "youtube": {
+    "title": "Which country hosted the first Winter Olympics? Not who you think ⛸️",
+    "description": "The ski-resort country, the skiing superpower, or the third one? The first Winter Olympics were held in a small mountain town a century ago and were not even called the Olympics at the time; the host nation went home without a single gold, and the name was awarded two years after the Games ended.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#winterolympics",
+     "#olympics",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country hosted the FIRST Winter Olympics? ⛸️\nThe ski-resort country, the skiing superpower, or the third one? The first Winter Olympics were held in a small mountain town a century ago and were not even called the Olympics at the time; the host went home without a single gold.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#winterolympics",
+     "#olympichistory",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country hosted the first Winter Olympics — Switzerland, Norway or France?\nThey were held in a small mountain town a century ago and were not even called the Olympics at the time; the host nation went home without a single gold, and the name was awarded two years after the Games ended. Pick your flag before the medal bars go up.",
+    "tags": [
+     "#sportsquiz",
+     "#wintergames"
+    ]
+   },
+   "twitter": {
+    "text": "Which country hosted the FIRST Winter Olympics?\nSwitzerland, Norway or France? A mountain town a century ago, a host without a single gold — and nobody called it the Olympics until later.",
+    "tags": [
+     "#SportsQuiz",
+     "#WinterGames"
+    ]
+   },
+   "threads": {
+    "text": "Which country hosted the first Winter Olympics — Switzerland, Norway or France? They were held in a small mountain town a century ago and were not even called the Olympics at the time; the host nation went home without a single gold, and the name was awarded two years after the Games ended.",
+    "tags": [
+     "#winterolympics"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "straight",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "bars",
+   "flash",
+   "counter",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:fr + flagball:ch + flagball:no + emoji-set:winter",
+  "music": "bed:brass",
+  "outro": "CHALLENGE A FRIEND"
+ },
+ "intent": "A host that did not win and a Games that was not yet the Games: medal bars make Norway's haul dwarf the host's three bronzes, a white flash marks the 1926 moment the week was renamed the first Winter Olympics, and a counter runs the athletes up to 258 over a pin on the town under the Alps.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "first": "first"
+  },
+  "v04": {
+   "text": "France. A small ski town under the Alps, in 1924.",
+   "cues": {
+    "answer": "france",
+    "town": "town",
+    "alps": "alps"
+   }
+  },
+  "v05": {
+   "text": "Switzerland hosted the next ones. Norway sent the champions and went home with the most medals.",
+   "cues": {
+    "switzerland": "switzerland",
+    "norway": "norway",
+    "medals": "medals"
+   }
+  },
+  "v06": {
+   "text": "It began as a winter sports week. Only in 1926 did the Olympic movement call it the first Winter Games.",
+   "cues": {
+    "week": "week",
+    "movement": "movement",
+    "first": "first"
+   }
+  },
+  "v07": {
+   "text": "16 nations, 258 athletes, 11 of them women, and the host took home nothing but bronze.",
+   "cues": {
+    "nations": "nations",
+    "women": "women",
+    "bronze": "bronze"
+   }
+  },
+  "v08": {
+   "text": "A ski week became the Games. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "1924",
+   "text": "a ski town under the Alps"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "fr",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "no",
+   "face": "cool",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "The first Olympic Winter Games were held at Chamonix, France, 25 January–5 February 1924, at the foot of Mont Blanc. Staged as an 'International Winter Sports Week' attached to the Paris 1924 Games, they were retroactively designated the first Winter Olympics by the IOC in 1926 (olympics.com; Britannica). 16 nations and 258 athletes (247 men, 11 women) competed in 16 events (olympics.com). Norway topped the medal table with 17 medals (4 gold), Finland took 11 (4 gold); the host France won 3 medals, all bronze (Wikipedia 1924 Winter Olympics medal table; olympics.com). The second Winter Games were at St. Moritz, Switzerland, in 1928.",
+  "myths": [
+   {
+    "myth": "The Winter Olympics began in Switzerland or Norway, the countries of skiing.",
+    "reality": "They began in Chamonix, France, in 1924; Switzerland hosted the second Games in 1928 and Norway did not host until Oslo 1952.",
+    "sources": [
+     "oly_chamonix",
+     "brit_chamonix"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "First-Winter-Olympics clips are archive montages; nobody puts the host's bronze-only haul against Norway on bars, flashes the 1926 renaming, and counts the 258 athletes over a pin on the town as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=first+winter+olympics",
+     "title": "Search: first winter olympics",
+     "angle": "archive montages",
+     "misses": "no map, no medal comparison"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=chamonix+1924",
+     "title": "Search: the host town by name",
+     "angle": "history documentaries",
+     "misses": "answer in the title"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=winter+olympics+history",
+     "title": "Search: winter olympics history",
+     "angle": "long explainers",
+     "misses": "no single hook, no quiz"
+    }
+   ]
+  },
+  "sources": {
+   "oly_chamonix": {
+    "type": "primary",
+    "publisher": "International Olympic Committee — olympics.com",
+    "title": "Chamonix 1924 Olympic Winter Games",
+    "url": "https://olympics.com/en/olympic-games/chamonix-1924",
+    "date": "2026-11-20",
+    "notes": "25 January–5 February 1924; 16 NOCs, 258 athletes (11 women, 247 men), 16 events; held as International Winter Sports Week and designated the first Olympic Winter Games by the IOC in 1926"
+   },
+   "brit_chamonix": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Chamonix 1924 Olympic Winter Games",
+    "url": "https://www.britannica.com/event/Chamonix-1924-Olympic-Winter-Games",
+    "date": "2026-11-20",
+    "notes": "first occurrence of the Winter Olympics; held at Chamonix, France, at the base of Mont Blanc; originally called International Winter Sports Week; retroactively named the first Winter Games in 1926; Norway dominated"
+   },
+   "wiki_1924": {
+    "type": "reference",
+    "publisher": "Wikipedia",
+    "title": "1924 Winter Olympics",
+    "url": "https://en.wikipedia.org/wiki/1924_Winter_Olympics",
+    "date": "2026-11-20",
+    "notes": "medal table: Norway 17 (4-7-6), Finland 11 (4-4-3); France 3 (0-0-3); 16 nations, 258 athletes"
+   },
+   "oly_stmoritz": {
+    "type": "primary",
+    "publisher": "International Olympic Committee — olympics.com",
+    "title": "St. Moritz 1928 Olympic Winter Games",
+    "url": "https://olympics.com/en/olympic-games/st-moritz-1928",
+    "date": "2026-11-20",
+    "notes": "the second Olympic Winter Games, Switzerland, 1928"
+   },
+   "oly_norway": {
+    "type": "primary",
+    "publisher": "International Olympic Committee — olympics.com",
+    "title": "Chamonix 1924 medal table",
+    "url": "https://olympics.com/en/olympic-games/chamonix-1924/medals",
+    "date": "2026-11-20",
+    "notes": "Norway first with 17 medals, Finland 11; France 3 bronze"
+   },
+   "natural_earth": {
+    "type": "primary",
+    "publisher": "Natural Earth",
+    "title": "Admin 0 countries, 50m",
+    "url": "https://www.naturalearthdata.com/",
+    "date": "2026-11-20",
+    "notes": "country polygons for the fill"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "The first Olympic Winter Games were held at Chamonix, France, in 1924, at the foot of Mont Blanc in the Alps.",
+    "sources": [
+     "oly_chamonix",
+     "brit_chamonix",
+     "wiki_1924"
+    ],
+    "vo": [
+     "which country hosted the first winter olympics",
+     "switzerland, norway, or france",
+     "france. a small ski town under the alps, in 1924",
+     "a ski week became the games. follow us"
+    ],
+    "screen": [
+     "France",
+     "Switzerland",
+     "Norway",
+     "1924",
+     "a ski town under the Alps",
+     "Chamonix",
+     "Chamonix · 1924"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Switzerland hosted the second Winter Games (St. Moritz 1928); at Chamonix Norway topped the medal table with 17 medals, Finland took 11 and the host France 3.",
+    "sources": [
+     "oly_stmoritz",
+     "wiki_1924",
+     "oly_norway"
+    ],
+    "vo": [
+     "switzerland hosted the next ones. norway sent the champions and went home with the most medals"
+    ],
+    "screen": [
+     "17",
+     "11",
+     "3",
+     "Finland",
+     "medals in 1924"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "Chamonix 1924 was staged as an International Winter Sports Week and retroactively designated the first Olympic Winter Games by the IOC in 1926.",
+    "sources": [
+     "oly_chamonix",
+     "brit_chamonix"
+    ],
+    "vo": [
+     "it began as a winter sports week. only in 1926 did the olympic movement call it the first winter games"
+    ],
+    "screen": [
+     "1926",
+     "named the first Winter Games"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "16 nations and 258 athletes, 11 of them women, competed; France's three medals were all bronze.",
+    "sources": [
+     "oly_chamonix",
+     "wiki_1924",
+     "oly_norway"
+    ],
+    "vo": [
+     "16 nations, 258 athletes, 11 of them women, and the host took home nothing but bronze"
+    ],
+    "screen": [
+     "258",
+     "athletes from 16 nations",
+     "ONLY BRONZE",
+     "the host's 3 medals"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -5.5,
+   41.5,
+   9.8,
+   51.5
+  ],
+  "far_bbox": [
+   -30,
+   30,
+   40,
+   72
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "250"
+  ],
+  "highlight_note": "France (metropolitan polygon)",
+  "labels": [
+   {
+    "id": "ch24",
+    "lonlat": [
+     7.4,
+     45.3
+    ],
+    "text": "Chamonix · 1924",
+    "cls": "tag",
+    "in": "s06@first+0.2",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "cham",
+    "lonlat": [
+     6.87,
+     45.92
+    ],
+    "label": "Chamonix",
+    "side": "right"
+   }
+  ],
+  "scalebar": {
+   "km": 200,
+   "lonlat": [
+    -5,
+    42
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s06@first",
+    "pid": "cham"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.38,
+    [
+     10,
+     58
+    ]
+   ],
+   "s01": [
+    0.5,
+    [
+     12,
+     60
+    ]
+   ],
+   "s04": [
+    0.9,
+    [
+     4.0,
+     46.5
+    ]
+   ],
+   "s04b": [
+    0.94,
+    [
+     4.3,
+     46.3
+    ]
+   ],
+   "s05": [
+    0.8,
+    [
+     6.0,
+     47.5
+    ]
+   ],
+   "s05b": [
+    0.84,
+    [
+     6.3,
+     47.3
+    ]
+   ],
+   "s06": [
+    1.3,
+    [
+     6.5,
+     46.0
+    ]
+   ],
+   "s06b": [
+    1.36,
+    [
+     6.7,
+     45.9
+    ]
+   ],
+   "s07": [
+    1.5,
+    [
+     6.9,
+     45.8
+    ]
+   ],
+   "s07b": [
+    1.56,
+    [
+     7.0,
+     45.7
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Switzerland hosted the next ones. Norway sent the champions and went home with the most medals.",
+    "cues": {
+     "switzerland": "switzerland",
+     "norway": "norway",
+     "medals": "medals"
+    }
+   },
+   "direction": "ease back so France and Switzerland share the frame; the Swiss flag-ball thinks on 'Switzerland'; three medal bars rise on 'Norway' with the host's bar a stub; the Norwegian flag-ball looks cool on 'medals' as France pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.8,
+    [
+     6.0,
+     47.5
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.84,
+    [
+     6.3,
+     47.3
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "med",
+     "type": "bars",
+     "rows": [
+      [
+       "Norway",
+       17,
+       "17"
+      ],
+      [
+       "Finland",
+       11,
+       "11"
+      ],
+      [
+       "France",
+       3,
+       "3"
+      ]
+     ],
+     "unit": "medals in 1924",
+     "y": 300,
+     "x": 60,
+     "w": 900
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@switzerland",
+     "do": "character_in",
+     "id": "ch_think"
+    },
+    {
+     "at": "@@switzerland+0.3",
+     "do": "sticker_in",
+     "id": "st_ski"
+    },
+    {
+     "at": "@@switzerland+0.7",
+     "do": "sticker_pulse",
+     "id": "st_ski"
+    },
+    {
+     "at": "@@norway-0.3",
+     "do": "character_out",
+     "id": "ch_think"
+    },
+    {
+     "at": "@@norway-0.3",
+     "do": "sticker_out",
+     "id": "st_ski"
+    },
+    {
+     "at": "@@norway-0.2",
+     "do": "chart.bars_in",
+     "id": "med",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.25
+     }
+    },
+    {
+     "at": "@@medals",
+     "do": "character_in",
+     "id": "no_cool"
+    },
+    {
+     "at": "@@medals+0.2",
+     "do": "sticker_in",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@medals+0.6",
+     "do": "sticker_pulse",
+     "id": "st_medal"
+    },
+    {
+     "at": "@@medals+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "250",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "med"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_medal"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "no_cool"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "It began as a winter sports week. Only in 1926 did the Olympic movement call it the first Winter Games.",
+    "cues": {
+     "week": "week",
+     "movement": "movement",
+     "first": "first"
+    }
+   },
+   "direction": "tighten on the Alps; a snowflake sticker on 'week'; a white flash and the 1926 card on 'movement'; the Chamonix pin and tag land on 'first' with a rings-style trophy sticker as France pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "card": {
+    "kicker": "1926",
+    "text": "named the first Winter Games"
+   },
+   "card_at": null,
+   "cam": [
+    1.3,
+    [
+     6.5,
+     46.0
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.36,
+    [
+     6.7,
+     45.9
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@week",
+     "do": "sticker_in",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@week+0.4",
+     "do": "sticker_pulse",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@movement-0.1",
+     "do": "sticker_out",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@movement",
+     "do": "fx.flash",
+     "args": {
+      "peak": 0.9,
+      "out": 0.3
+     }
+    },
+    {
+     "at": "@@movement+0.2",
+     "do": "fact_in",
+     "id": "f3",
+     "until": "@.end-0.2"
+    },
+    {
+     "at": "@@first+0.2",
+     "do": "sticker_in",
+     "id": "st_trophy"
+    },
+    {
+     "at": "@@first+0.6",
+     "do": "sticker_pulse",
+     "id": "st_trophy"
+    },
+    {
+     "at": "@@first+0.4",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "250",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_trophy"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "16 nations, 258 athletes, 11 of them women, and the host took home nothing but bronze.",
+    "cues": {
+     "nations": "nations",
+     "women": "women",
+     "bronze": "bronze"
+    }
+   },
+   "direction": "hold close on the town; the athlete counter runs to 258 from 'nations' to 'women' with a skater sticker; the ONLY BRONZE card on 'bronze' as the French flag-ball grins anyway; pin leaves at the end",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "ONLY BRONZE",
+    "text": "the host's 3 medals"
+   },
+   "card_at": null,
+   "cam": [
+    1.5,
+    [
+     6.9,
+     45.8
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.56,
+    [
+     7.0,
+     45.7
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "ath",
+     "type": "counter",
+     "start": 0,
+     "end": 258,
+     "y": 330,
+     "label": "athletes from 16 nations",
+     "fmt": "int",
+     "size": 170
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@nations-0.3",
+     "do": "chart.counter_run",
+     "id": "ath",
+     "until": "@@women+0.4"
+    },
+    {
+     "at": "@@nations",
+     "do": "sticker_in",
+     "id": "st_skate"
+    },
+    {
+     "at": "@@nations+0.4",
+     "do": "sticker_pulse",
+     "id": "st_skate"
+    },
+    {
+     "at": "@@women",
+     "do": "sticker_pulse",
+     "id": "st_skate"
+    },
+    {
+     "at": "@@bronze-0.2",
+     "do": "sticker_out",
+     "id": "st_skate"
+    },
+    {
+     "at": "@@bronze",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end"
+    },
+    {
+     "at": "@@bronze+0.1",
+     "do": "character_in",
+     "id": "fr_happy"
+    },
+    {
+     "at": "@@bronze+0.3",
+     "do": "sticker_in",
+     "id": "st_bronze"
+    },
+    {
+     "at": "@@bronze+0.7",
+     "do": "sticker_pulse",
+     "id": "st_bronze"
+    },
+    {
+     "at": "@@bronze+0.5",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "250",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_bronze"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "fr_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "cham"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_ski",
+   "type": "sticker",
+   "emoji": "1f3bf",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_medal",
+   "type": "sticker",
+   "emoji": "1f3c5",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_snow",
+   "type": "sticker",
+   "emoji": "2744",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_trophy",
+   "type": "sticker",
+   "emoji": "1f3c6",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_skate",
+   "type": "sticker",
+   "emoji": "26f8",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_bronze",
+   "type": "sticker",
+   "emoji": "1f949",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "ch_think",
+   "type": "character",
+   "flag": "ch",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "no_cool",
+   "type": "character",
+   "flag": "no",
+   "face": "cool",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "fr_happy",
+   "type": "character",
+   "flag": "fr",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

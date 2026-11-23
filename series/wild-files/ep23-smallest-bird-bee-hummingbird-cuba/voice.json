@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep23-smallest-bird-bee-hummingbird-cuba",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A size you can feel: a compare chart puts the bird beside a sparrow and a pigeon so it looks like a mistake, then the bird's own swamp rises out of the island with the bird sticker on it while a wing-beat sticker shivers, and the coffee-bean egg card closes on a pin in the swamp.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Which country is home to the SMALLEST bird?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Which country is home to the smallest bird?",
+   "cues": {
+    "which": "which",
+    "smallest": "smallest"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Brazil, Costa Rica, or Cuba?",
+   "cues": {
+    "a": "brazil",
+    "b": "costa",
+    "c": "cuba"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "Cuba. The bee hummingbird, about 6 centimetres long and lighter than a coin.",
+   "cues": {
+    "answer": "cuba",
+    "long": "long",
+    "coin": "coin"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.35,
+   "direction": "ease back so the whole island sits in frame; the size compare rises on 'Brazil' with the bird a sliver beside a sparrow and a pigeon; the Brazilian flag-ball thinks on 'Brazil', the Costa Rican one on 'Costa'; the island pulses on 'island'",
+   "text": "Brazil and Costa Rica are hummingbird country. The smallest of all lives only on this island.",
+   "cues": {
+    "brazil": "brazil",
+    "costa": "costa",
+    "island": "island"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "tighten on the south-west of the island; the swamp outline lights and rises with the bird sticker on it on 'wings'; a wind sticker shivers on 'second'; a flower sticker on 'flowers' as the island pulses; the swamp settles at the end",
+   "text": "Its wings beat around 80 times a second, and it visits up to 1,500 flowers a day.",
+   "cues": {
+    "wings": "wings",
+    "second": "second",
+    "flowers": "flowers"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.8,
+   "direction": "ease back a little; the COFFEE BEAN card and an egg sticker on 'egg'; the stronghold pin lands on 'nest' with a nest sticker; the Cuban flag-ball grins on 'thimble' as the island pulses; the pin leaves at the end",
+   "text": "The egg is the size of a coffee bean, laid in a nest no bigger than a thimble.",
+   "cues": {
+    "egg": "egg",
+    "nest": "nest",
+    "thimble": "thimble"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "Lighter than a coin. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

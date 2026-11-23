@@ -1,0 +1,93 @@
+{
+ "version": 1,
+ "episode": "ep17-first-heart-transplant-south-africa-barnard",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     15.5,
+     -35.5,
+     33.5,
+     -22.0
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "710"
+     ],
+     "cls": "",
+     "note": "South Africa",
+     "lift": "color",
+     "color": "#FFD400"
+    }
+   ],
+   "pins": [
+    {
+     "id": "gsh",
+     "lonlat": [
+      18.46,
+      -33.94
+     ],
+     "label": "Groote Schuur",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "ct67",
+     "lonlat": [
+      19.6,
+      -34.6
+     ],
+     "text": "Cape Town · 1967",
+     "cls": "tag",
+     "in": "s05@here+0.2",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "night",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -20,
+      -40,
+      60,
+      40
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 200,
+    "lonlat": [
+     16,
+     -35
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

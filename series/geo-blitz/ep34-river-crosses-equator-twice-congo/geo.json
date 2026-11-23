@@ -1,0 +1,247 @@
+{
+ "version": 1,
+ "episode": "ep34-river-crosses-equator-twice-congo",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     11,
+     -7,
+     31,
+     5
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "route",
+     "id": "eq",
+     "cls": "neon yellow dashed",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "line",
+        "properties": {
+         "name": "Equator"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           8.0,
+           0.0
+          ],
+          [
+           34.0,
+           0.0
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "the Equator as a dashed yellow line for the two crossings"
+    },
+    {
+     "kind": "route",
+     "id": "congo",
+     "cls": "river",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "main",
+        "properties": {
+         "name": "Congo main stem (schematic)"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           25.95,
+           -2.95
+          ],
+          [
+           25.9,
+           -1.6
+          ],
+          [
+           25.5,
+           -0.5
+          ],
+          [
+           25.4,
+           0.1
+          ],
+          [
+           25.19,
+           0.52
+          ],
+          [
+           24.4,
+           1.2
+          ],
+          [
+           23.3,
+           1.9
+          ],
+          [
+           22.47,
+           2.19
+          ],
+          [
+           21.5,
+           2.15
+          ],
+          [
+           20.3,
+           1.6
+          ],
+          [
+           19.2,
+           0.9
+          ],
+          [
+           18.26,
+           0.05
+          ],
+          [
+           17.7,
+           -0.6
+          ],
+          [
+           17.2,
+           -1.07
+          ],
+          [
+           16.23,
+           -2.17
+          ],
+          [
+           16.0,
+           -3.2
+          ],
+          [
+           15.3,
+           -4.3
+          ],
+          [
+           14.4,
+           -4.9
+          ],
+          [
+           13.45,
+           -5.82
+          ],
+          [
+           12.33,
+           -6.07
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic main stem from Kindu through the great bend to the mouth at Banana, for the draw-on and the boat"
+    }
+   ],
+   "pins": [
+    {
+     "id": "kin",
+     "lonlat": [
+      15.31,
+      -4.32
+     ],
+     "label": "Kinshasa",
+     "side": "right"
+    },
+    {
+     "id": "bzv",
+     "lonlat": [
+      15.24,
+      -4.26
+     ],
+     "label": "Brazzaville",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "eqlab",
+     "lonlat": [
+      11.6,
+      0.0
+     ],
+     "text": "Equator",
+     "cls": "tag",
+     "in": "s04+0.3",
+     "out": "s05.end"
+    },
+    {
+     "id": "x1",
+     "lonlat": [
+      26.0,
+      0.9
+     ],
+     "text": "1st crossing",
+     "cls": "tag",
+     "in": "s05@arc+0.1",
+     "out": "s05.end"
+    },
+    {
+     "id": "x2",
+     "lonlat": [
+      18.6,
+      -0.9
+     ],
+     "text": "2nd crossing",
+     "cls": "tag",
+     "in": "s05@arc+0.4",
+     "out": "s05.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -20,
+      -36,
+      56,
+      38
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 500,
+    "lonlat": [
+     11.5,
+     -6.5
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

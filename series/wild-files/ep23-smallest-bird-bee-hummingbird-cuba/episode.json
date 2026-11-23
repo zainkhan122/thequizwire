@@ -1,0 +1,142 @@
+{
+ "id": "ep23-smallest-bird-bee-hummingbird-cuba",
+ "format": "quiz-v3",
+ "series": "wild-files",
+ "number": 23,
+ "title": "Which country is home to the SMALLEST bird?",
+ "difficulty": "MEDIUM",
+ "seed": 2323,
+ "quiz": {
+  "question": "Which country is home to the SMALLEST bird?",
+  "keyword": "SMALLEST",
+  "options": [
+   "Brazil",
+   "Costa Rica",
+   "Cuba"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Cuba",
+  "answer_sub": "a bird lighter than a coin",
+  "option_meta": [
+   {
+    "flag": "br"
+   },
+   {
+    "flag": "cr"
+   },
+   {
+    "flag": "cu"
+   }
+  ],
+  "banner": "Cuba",
+  "banner_sub": "✓  C was right · a bird lighter than a coin",
+  "outro": {
+   "headline": "1 FOR 1?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country is home to the SMALLEST bird? 🪶",
+  "premise": "The smallest bird on Earth weighs less than a coin",
+  "bait": "Brazil, Costa Rica or Cuba — which did you pick? 👇",
+  "keywords": [
+   "smallest bird in the world",
+   "which country is home to the smallest bird",
+   "smallest bird on earth",
+   "hummingbird facts",
+   "animal quiz",
+   "wildlife facts",
+   "bird facts",
+   "tiny animals"
+  ],
+  "description": "The smallest bird on Earth weighs less than a coin. Brazil, Costa Rica or Cuba — which did you pick? 👇\n\nSources: Encyclopaedia Britannica; Cornell Lab of Ornithology; Guinness World Records.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #23",
+  "hashtags": [
+   "#AnimalQuiz",
+   "#WildlifeFacts",
+   "#thequizwire"
+  ],
+  "tags": [
+   "AnimalQuiz",
+   "Birds"
+  ],
+  "cover_emoji": "🪶",
+  "cover_emoji_why": "a feather names the subject (a bird) and belongs to no country; it is not the emoji of any option or of the species",
+  "copy": {
+   "spoilers": [
+    "cuba",
+    "cuban",
+    "bee hummingbird",
+    "zapata",
+    "helenae",
+    "1,500",
+    "80",
+    "caribbean",
+    "havana"
+   ],
+   "youtube": {
+    "title": "Which country is home to the smallest bird on Earth? 🪶",
+    "description": "The Amazon giant, the rainforest paradise, or the third one? The smallest bird on Earth is about as long as your thumb and lighter than a coin, lives on one island and nowhere else, beats its wings dozens of times a second and lays an egg the size of a coffee bean.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#smallestbird",
+     "#wildlife",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country is home to the SMALLEST bird? 🪶\nThe Amazon giant, the rainforest paradise, or the third one? The smallest bird on Earth is about as long as your thumb and lighter than a coin, lives on one island and nowhere else, and lays an egg the size of a coffee bean.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#smallestbird",
+     "#tinyanimals",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country is home to the smallest bird — Brazil, Costa Rica or Cuba?\nIt is about as long as your thumb and lighter than a coin, lives on one island and nowhere else, beats its wings dozens of times a second and lays an egg the size of a coffee bean in a nest no bigger than a thimble. Pick your flag before the chart comes up.",
+    "tags": [
+     "#animalquiz",
+     "#smallestbird"
+    ]
+   },
+   "twitter": {
+    "text": "Which country is home to the SMALLEST bird?\nBrazil, Costa Rica or Cuba? Thumb-length, lighter than a coin, one island only — and the rainforest giants do not have it.",
+    "tags": [
+     "#AnimalQuiz",
+     "#SmallestBird"
+    ]
+   },
+   "threads": {
+    "text": "Which country is home to the smallest bird — Brazil, Costa Rica or Cuba? It is about as long as your thumb and lighter than a coin, lives on one island and nowhere else, beats its wings dozens of times a second and lays an egg the size of a coffee bean in a nest no bigger than a thimble.",
+    "tags": [
+     "#hummingbird"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "flag-lift",
+  "beats": [
+   "bars",
+   "rise",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:cu + flagball:br + flagball:cr + emoji-set:garden",
+  "music": "bed:pluck"
+ },
+ "status": "draft"
+}

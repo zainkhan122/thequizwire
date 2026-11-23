@@ -1,0 +1,764 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "TWICE",
+   "text": "over the Equator, then back again"
+  },
+  {
+   "id": "deep",
+   "type": "counter",
+   "start": 0,
+   "end": 220,
+   "y": 330,
+   "label": "metres deep · the deepest river known",
+   "fmt": "int",
+   "size": 170,
+   "suffix": " m"
+  },
+  {
+   "id": "f4",
+   "type": "fact",
+   "kicker": "2 CAPITALS",
+   "text": "facing each other across the river"
+  },
+  {
+   "id": "st_south",
+   "type": "sticker",
+   "emoji": "2b07",
+   "x": 840,
+   "y": 700,
+   "size": 150,
+   "rot": -6
+  },
+  {
+   "id": "st_arc",
+   "type": "sticker",
+   "emoji": "1f504",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_boat",
+   "type": "sticker",
+   "emoji": "1f6f6",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "st_anchor",
+   "type": "sticker",
+   "emoji": "2693",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_wave",
+   "type": "sticker",
+   "emoji": "1f30a",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_eyes",
+   "type": "sticker",
+   "emoji": "1f440",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_hands",
+   "type": "sticker",
+   "emoji": "1f91d",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "br_think",
+   "type": "character",
+   "flag": "br",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "eg_think",
+   "type": "character",
+   "flag": "eg",
+   "face": "think",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "cd_happy",
+   "type": "character",
+   "flag": "cd",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  },
+  {
+   "id": "cha",
+   "type": "character",
+   "flag": "cd",
+   "face": "happy",
+   "x": 230,
+   "y": 1060,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "chb",
+   "type": "character",
+   "flag": "br",
+   "face": "think",
+   "x": 850,
+   "y": 1060,
+   "size": 200,
+   "rot": 8
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.42,
+    "lonlat": [
+     12,
+     2
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02",
+   "args": {
+    "k": 0.42,
+    "lonlat": [
+     10,
+     3
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s02@a",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02@a+0.9",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     -58,
+     -3
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s02@b",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02@b+0.9",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     31,
+     24
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s02@c",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02@c+0.9",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     21,
+     -1
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s03",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.42,
+    "lonlat": [
+     12,
+     2
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 0.72,
+    "lonlat": [
+     19.5,
+     -2.0
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 0.75,
+    "lonlat": [
+     19.8,
+     -2.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.route_draw",
+   "stage": "stage_map",
+   "until": "s04@north",
+   "args": {
+    "rid": "line",
+    "layer": "eq"
+   }
+  },
+  {
+   "at": "s04@north-0.2",
+   "do": "geo.route_draw",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "rid": "main",
+    "layer": "congo"
+   }
+  },
+  {
+   "at": "s04+0.3",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "eqlab"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "eqlab"
+   }
+  },
+  {
+   "at": "s05@arc+0.1",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "x1"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "x1"
+   }
+  },
+  {
+   "at": "s05@arc+0.4",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "x2"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "x2"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 0.7,
+    "lonlat": [
+     19.5,
+     -1.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 0.73,
+    "lonlat": [
+     19.8,
+     -1.8
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@amazon",
+   "do": "character_in",
+   "id": "br_think"
+  },
+  {
+   "at": "s05@amazon+0.3",
+   "do": "sticker_in",
+   "id": "st_south"
+  },
+  {
+   "at": "s05@amazon+0.7",
+   "do": "sticker_pulse",
+   "id": "st_south"
+  },
+  {
+   "at": "s05@nile",
+   "do": "sticker_out",
+   "id": "st_south"
+  },
+  {
+   "at": "s05@nile",
+   "do": "character_in",
+   "id": "eg_think"
+  },
+  {
+   "at": "s05@arc-0.2",
+   "do": "character_out",
+   "id": "br_think"
+  },
+  {
+   "at": "s05@arc-0.2",
+   "do": "character_out",
+   "id": "eg_think"
+  },
+  {
+   "at": "s05@arc",
+   "do": "geo.route_draw",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "rid": "main",
+    "layer": "congo"
+   }
+  },
+  {
+   "at": "s05@arc+0.2",
+   "do": "sticker_in",
+   "id": "st_arc"
+  },
+  {
+   "at": "s05@arc+0.6",
+   "do": "sticker_pulse",
+   "id": "st_arc"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_arc"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 0.85,
+    "lonlat": [
+     16.5,
+     -3.0
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 0.9,
+    "lonlat": [
+     16.2,
+     -3.4
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06+0.1",
+   "do": "sticker_in",
+   "id": "st_boat"
+  },
+  {
+   "at": "s06+0.1",
+   "do": "geo.travel",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "rid": "main",
+    "layer": "congo",
+    "sid": "st_boat",
+    "offset": [
+     0,
+     -50
+    ]
+   }
+  },
+  {
+   "at": "s06@deepest-0.2",
+   "do": "chart.counter_run",
+   "id": "deep",
+   "until": "s06@places+0.6"
+  },
+  {
+   "at": "s06@deepest",
+   "do": "sticker_in",
+   "id": "st_anchor"
+  },
+  {
+   "at": "s06@deepest+0.4",
+   "do": "sticker_pulse",
+   "id": "st_anchor"
+  },
+  {
+   "at": "s06@metres+0.2",
+   "do": "sticker_pulse",
+   "id": "st_anchor"
+  },
+  {
+   "at": "s06@places",
+   "do": "sticker_out",
+   "id": "st_anchor"
+  },
+  {
+   "at": "s06@places",
+   "do": "sticker_in",
+   "id": "st_wave"
+  },
+  {
+   "at": "s06@places+0.4",
+   "do": "sticker_pulse",
+   "id": "st_wave"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_wave"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_boat"
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.5",
+   "args": {
+    "k": 1.3,
+    "lonlat": [
+     15.3,
+     -4.3
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 1.36,
+    "lonlat": [
+     15.2,
+     -4.4
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@capitals",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "kin"
+   }
+  },
+  {
+   "at": "s07@capitals+0.3",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "bzv"
+   }
+  },
+  {
+   "at": "s07@across+0.1",
+   "do": "fact_in",
+   "id": "f4",
+   "until": "s07@closest+0.9"
+  },
+  {
+   "at": "s07@across+0.3",
+   "do": "sticker_in",
+   "id": "st_eyes"
+  },
+  {
+   "at": "s07@across+0.7",
+   "do": "sticker_pulse",
+   "id": "st_eyes"
+  },
+  {
+   "at": "s07@closest",
+   "do": "sticker_out",
+   "id": "st_eyes"
+  },
+  {
+   "at": "s07@closest",
+   "do": "character_in",
+   "id": "cd_happy"
+  },
+  {
+   "at": "s07@closest+0.2",
+   "do": "sticker_in",
+   "id": "st_hands"
+  },
+  {
+   "at": "s07@closest+0.6",
+   "do": "sticker_pulse",
+   "id": "st_hands"
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_hands"
+  },
+  {
+   "at": "s07.end",
+   "do": "character_out",
+   "id": "cd_happy"
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "kin"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "bzv"
+   }
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.42,
+    "lonlat": [
+     12,
+     2
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04+1.7",
+   "do": "geo.scalebar_in",
+   "stage": "stage_map"
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.6",
+   "do": "character_in",
+   "id": "cha"
+  },
+  {
+   "at": "s04+1.9",
+   "do": "character_in",
+   "id": "chb"
+  },
+  {
+   "at": "s05+1.0",
+   "do": "character_out",
+   "id": "cha"
+  },
+  {
+   "at": "s05+0.8",
+   "do": "character_out",
+   "id": "chb"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

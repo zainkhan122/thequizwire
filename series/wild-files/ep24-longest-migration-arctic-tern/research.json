@@ -1,0 +1,210 @@
+{
+ "version": 1,
+ "episode": "ep24-longest-migration-arctic-tern",
+ "topic": "The Arctic tern (Sterna paradisaea) makes the longest known animal migration. Geolocator tracking of birds from Greenland and Iceland (Egevang et al., PNAS 2010) recorded an average round trip of about 70,900 km a year (up to 81,600 km), following an S-shaped route down the Atlantic to the Weddell Sea off Antarctica and back. Over a lifetime of about 30 years that adds up to roughly 2.4 million km, about three return trips to the Moon (Audubon; Britannica). It breeds in the Arctic and sub-Arctic summer and winters at the Antarctic ice edge, so it experiences two summers a year and more daylight than any other animal (Britannica; Audubon). It weighs about 90–120 g (Cornell All About Birds). Humpback whales migrate about 8,000 km each way (up to ~8,300 km one way recorded, NOAA; Britannica); monarch butterflies travel up to about 4,800 km to Mexico (US Fish & Wildlife Service).",
+ "researched": "2026-11-23",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The longest migration must belong to a whale — the humpback crosses whole oceans.",
+   "reality": "The humpback covers about 8,000 km each way; the Arctic tern's yearly round trip is around 70,000 km, pole to pole and back.",
+   "sources": [
+    "pnas_tern",
+    "noaa_humpback"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Longest-migration clips are bird-footage montages; nobody draws the actual tracked S-curve from Greenland to the Antarctic ice and flies the bird down it while the kilometres count up, as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=longest+animal+migration",
+    "title": "Search: longest animal migration",
+    "angle": "footage montage",
+    "misses": "no map, no scale against the whale"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=arctic+tern+migration",
+    "title": "Search: the species by name",
+    "angle": "nature documentary",
+    "misses": "answer in the title"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=animal+migration+facts",
+    "title": "Search: animal migration facts",
+    "angle": "list facts",
+    "misses": "no single route drawn"
+   }
+  ]
+ },
+ "sources": {
+  "pnas_tern": {
+   "type": "scholarly",
+   "publisher": "Proceedings of the National Academy of Sciences",
+   "title": "Tracking of Arctic terns Sterna paradisaea reveals longest animal migration (Egevang et al., 2010)",
+   "url": "https://www.pnas.org/doi/10.1073/pnas.0909493107",
+   "date": "2026-11-20",
+   "notes": "geolocators on Greenland/Iceland birds; mean annual round trip 70,900 km (range to 81,600 km); S-shaped Atlantic route to the Weddell Sea; lifetime about 2.4 million km"
+  },
+  "audubon_tern": {
+   "type": "reference",
+   "publisher": "National Audubon Society",
+   "title": "Arctic Tern",
+   "url": "https://www.audubon.org/field-guide/bird/arctic-tern",
+   "date": "2026-11-20",
+   "notes": "longest migration of any animal; sees two summers a year and more daylight than any other creature; lifetime distance equals about three round trips to the Moon"
+  },
+  "brit_tern": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Arctic tern",
+   "url": "https://www.britannica.com/animal/Arctic-tern",
+   "date": "2026-11-20",
+   "notes": "breeds in the Arctic, winters in the Antarctic; longest migration of any bird; up to about 30 years lifespan"
+  },
+  "cornell_tern": {
+   "type": "reference",
+   "publisher": "Cornell Lab of Ornithology — All About Birds",
+   "title": "Arctic Tern Identification",
+   "url": "https://www.allaboutbirds.org/guide/Arctic_Tern/id",
+   "date": "2026-11-20",
+   "notes": "weight about 86–127 g"
+  },
+  "noaa_humpback": {
+   "type": "primary",
+   "publisher": "NOAA Fisheries",
+   "title": "Humpback Whale",
+   "url": "https://www.fisheries.noaa.gov/species/humpback-whale",
+   "date": "2026-11-20",
+   "notes": "among the longest migrations of any mammal, up to about 8,000 km (5,000 miles) each way between feeding and breeding grounds"
+  },
+  "fws_monarch": {
+   "type": "primary",
+   "publisher": "US Fish & Wildlife Service",
+   "title": "Monarch butterfly migration",
+   "url": "https://www.fws.gov/species/monarch-butterfly-danaus-plexippus",
+   "date": "2026-11-20",
+   "notes": "eastern monarchs travel up to about 3,000 miles (4,800 km) to central Mexico"
+  },
+  "nasa_moon": {
+   "type": "primary",
+   "publisher": "NASA",
+   "title": "How far away is the Moon?",
+   "url": "https://spaceplace.nasa.gov/moon-distance/en/",
+   "date": "2026-11-20",
+   "notes": "average Earth–Moon distance about 384,400 km; a return trip about 769,000 km, so 2.4 million km is about three return trips"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 countries, 50m",
+   "url": "https://www.naturalearthdata.com/",
+   "date": "2026-11-20",
+   "notes": "country polygons; the route is a schematic of the published S-curve"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The Arctic tern makes the longest known animal migration, from the Arctic to the Antarctic and back every year.",
+   "sources": [
+    "pnas_tern",
+    "audubon_tern",
+    "brit_tern"
+   ],
+   "vo": [
+    "which animal makes the longest migration",
+    "humpback whale, monarch butterfly, or arctic tern",
+    "the arctic tern. pole to pole and back, every single year",
+    "lighter than a bar of soap. follow us"
+   ],
+   "screen": [
+    "Arctic tern",
+    "Humpback whale",
+    "Monarch butterfly",
+    "POLE TO POLE",
+    "and back, every year",
+    "Greenland",
+    "Antarctic ice edge"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "A humpback whale migrates about 8,000 km each way; tracked Arctic terns averaged about 70,900 km a year on an S-shaped Atlantic route.",
+   "sources": [
+    "noaa_humpback",
+    "pnas_tern"
+   ],
+   "vo": [
+    "a humpback swims about 8,000 kilometres each way. the tern zigzags around 70,000 a year"
+   ],
+   "screen": [
+    "70,000",
+    "km flown every year",
+    "whale · 8,000 km each way"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "It breeds in the Arctic summer and feeds at the Antarctic ice edge, seeing two summers a year and more daylight than any other animal.",
+   "sources": [
+    "audubon_tern",
+    "brit_tern"
+   ],
+   "vo": [
+    "it breeds in the arctic summer, then feeds at the antarctic ice. more daylight than any animal alive"
+   ],
+   "screen": [
+    "2 SUMMERS",
+    "every single year"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "It weighs about 100 g; over a roughly 30-year life it covers about 2.4 million km, about three return trips to the Moon.",
+   "sources": [
+    "cornell_tern",
+    "pnas_tern",
+    "audubon_tern",
+    "nasa_moon"
+   ],
+   "vo": [
+    "it weighs about 100 grams. in a lifetime it covers 3 trips to the moon and back"
+   ],
+   "screen": [
+    "2.4 MILLION KM",
+    "in a lifetime"
+   ]
+  }
+ ]
+}

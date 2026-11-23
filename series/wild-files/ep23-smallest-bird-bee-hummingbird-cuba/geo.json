@@ -1,0 +1,142 @@
+{
+ "version": 1,
+ "episode": "ep23-smallest-bird-bee-hummingbird-cuba",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -85.5,
+     19.3,
+     -73.5,
+     23.8
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "192"
+     ],
+     "cls": "",
+     "note": "Cuba",
+     "lift": "flag",
+     "flag": "cu"
+    },
+    {
+     "kind": "area",
+     "id": "swamp",
+     "cls": "zone",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "zap",
+        "properties": {
+         "name": "Zapata Swamp (schematic)"
+        },
+        "geometry": {
+         "type": "Polygon",
+         "coordinates": [
+          [
+           [
+            -82.2,
+            22.0
+           ],
+           [
+            -81.0,
+            22.0
+           ],
+           [
+            -80.9,
+            22.5
+           ],
+           [
+            -81.6,
+            22.75
+           ],
+           [
+            -82.2,
+            22.55
+           ],
+           [
+            -82.2,
+            22.0
+           ]
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic outline of the Zapata Swamp, the bird's best-known stronghold"
+    }
+   ],
+   "pins": [
+    {
+     "id": "zp",
+     "lonlat": [
+      -81.4,
+      22.3
+     ],
+     "label": "its stronghold",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "zl",
+     "lonlat": [
+      -81.5,
+      21.5
+     ],
+     "text": "Zapata Swamp",
+     "cls": "tag",
+     "in": "s06@wings+0.3",
+     "out": "s06.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -105,
+      2,
+      -55,
+      38
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 200,
+    "lonlat": [
+     -85,
+     19.8
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

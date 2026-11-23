@@ -1,0 +1,91 @@
+{
+ "version": 1,
+ "episode": "ep26-first-winter-olympics-chamonix-france",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -5.5,
+     41.5,
+     9.8,
+     51.5
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "250"
+     ],
+     "cls": "",
+     "note": "France (metropolitan polygon)"
+    }
+   ],
+   "pins": [
+    {
+     "id": "cham",
+     "lonlat": [
+      6.87,
+      45.92
+     ],
+     "label": "Chamonix",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "ch24",
+     "lonlat": [
+      7.4,
+      45.3
+     ],
+     "text": "Chamonix · 1924",
+     "cls": "tag",
+     "in": "s06@first+0.2",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -30,
+      30,
+      40,
+      72
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 200,
+    "lonlat": [
+     -5,
+     42
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

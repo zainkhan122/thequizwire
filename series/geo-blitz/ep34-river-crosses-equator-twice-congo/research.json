@@ -1,0 +1,219 @@
+{
+ "version": 1,
+ "episode": "ep34-river-crosses-equator-twice-congo",
+ "topic": "The Congo River is the only major river to cross the Equator twice: the upper river (Lualaba) flows north across the Equator near Kisangani, the great bend carries it west, and it recrosses the Equator southbound near Mbandaka before reaching the Atlantic (Britannica; NASA Earth Observatory). Length about 4,700 km, second-largest discharge after the Amazon at about 41,000 m³/s (Britannica; USGS). It is the deepest river known: USGS measurements in the lower Congo in 2008 found depths exceeding 220 m (Oberg et al., USGS 2009; Britannica). The Amazon runs mostly a few degrees south of the Equator and the Nile begins near the Equator at Lake Victoria but flows north away from it. Kinshasa (DR Congo) and Brazzaville (Republic of the Congo) face each other across Pool Malebo, the closest pair of national capitals in the world (Britannica).",
+ "researched": "2026-11-23",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "The Amazon, the biggest river, must be the one on the Equator.",
+   "reality": "The Amazon runs a few degrees south of the Equator and never crosses it; the Congo crosses it twice because of its great northern bend.",
+   "sources": [
+    "brit_congo",
+    "nasa_congo",
+    "brit_amazon"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Equator-crossing clips are text lists over stock footage; nobody draws the line and the arc together on a real map, runs the depth down as a counter, and pins the two facing capitals as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=congo+river+facts",
+    "title": "Search: congo river facts",
+    "angle": "documentary listicles",
+    "misses": "the arc is said, never drawn"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=river+crosses+equator+twice",
+    "title": "Search: river crosses equator twice",
+    "angle": "text-over-stock trivia",
+    "misses": "no map, no scale"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=deepest+river+in+the+world",
+    "title": "Search: deepest river in the world",
+    "angle": "depth facts",
+    "misses": "no geography of the river"
+   }
+  ]
+ },
+ "sources": {
+  "brit_congo": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Congo River",
+   "url": "https://www.britannica.com/place/Congo-River",
+   "date": "2026-11-20",
+   "notes": "about 4,700 km long; second only to the Amazon in discharge; the river crosses the Equator twice; depths of more than 220 m reported in the lower course"
+  },
+  "nasa_congo": {
+   "type": "primary",
+   "publisher": "NASA Earth Observatory",
+   "title": "The Congo River",
+   "url": "https://earthobservatory.nasa.gov/images/148405/the-congo-river",
+   "date": "2026-11-20",
+   "notes": "the river arcs north across the Equator and then back south of it before reaching the Atlantic; second largest river by discharge"
+  },
+  "usgs_congo": {
+   "type": "scholarly",
+   "publisher": "US Geological Survey (Oberg et al., 2009)",
+   "title": "Discharge and Other Hydraulic Measurements for Characterizing the Hydraulics of Lower Congo River, July 2008",
+   "url": "https://pubs.usgs.gov/of/2009/1164/",
+   "date": "2026-11-20",
+   "notes": "ADCP surveys of the lower Congo measured depths exceeding 220 m, the deepest known in any river; discharge about 41,000 m³/s"
+  },
+  "wiki_congo": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Congo River",
+   "url": "https://en.wikipedia.org/wiki/Congo_River",
+   "date": "2026-11-20",
+   "notes": "crosses the Equator twice; deepest river in the world with measured depths in excess of 220 m; length about 4,700 km"
+  },
+  "brit_amazon": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Amazon River",
+   "url": "https://www.britannica.com/place/Amazon-River",
+   "date": "2026-11-20",
+   "notes": "flows roughly parallel to and a few degrees south of the Equator across Brazil to the Atlantic"
+  },
+  "brit_nile": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Nile River",
+   "url": "https://www.britannica.com/place/Nile-River",
+   "date": "2026-11-20",
+   "notes": "rises south of the Equator and flows northward through north-eastern Africa to the Mediterranean"
+  },
+  "brit_kinshasa": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Kinshasa",
+   "url": "https://www.britannica.com/place/Kinshasa",
+   "date": "2026-11-20",
+   "notes": "lies on the south bank of Pool Malebo, directly opposite Brazzaville, capital of the Republic of the Congo"
+  },
+  "wiki_brazza": {
+   "type": "reference",
+   "publisher": "Wikipedia",
+   "title": "Brazzaville",
+   "url": "https://en.wikipedia.org/wiki/Brazzaville",
+   "date": "2026-11-20",
+   "notes": "Brazzaville and Kinshasa are the closest pair of national capitals in the world, facing each other across the Congo River"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 countries, 50m",
+   "url": "https://www.naturalearthdata.com/",
+   "date": "2026-11-20",
+   "notes": "country polygons for the fill and the basin view"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "The Congo is the only major river to cross the Equator twice: its upper course flows north across the line near Kisangani and the river recrosses it southbound near Mbandaka on the way to the Atlantic.",
+   "sources": [
+    "brit_congo",
+    "nasa_congo",
+    "wiki_congo"
+   ],
+   "vo": [
+    "which river crosses the equator twice",
+    "amazon, nile, or congo",
+    "the congo. it bends north over the equator, then swings back south across it on the way to the sea",
+    "over the line and back. follow us"
+   ],
+   "screen": [
+    "Congo",
+    "Amazon",
+    "Nile",
+    "TWICE",
+    "over the Equator, then back again",
+    "Equator",
+    "1st crossing",
+    "2nd crossing"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "The Amazon runs a few degrees south of the Equator and never crosses it; the Nile rises near the Equator and flows north away from it.",
+   "sources": [
+    "brit_amazon",
+    "brit_nile",
+    "nasa_congo"
+   ],
+   "vo": [
+    "the amazon stays just south of the line. the nile never gets near it. only this river makes the arc"
+   ],
+   "screen": []
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "The Congo is the deepest river known, with measured depths exceeding 220 m in its lower course.",
+   "sources": [
+    "usgs_congo",
+    "brit_congo",
+    "wiki_congo"
+   ],
+   "vo": [
+    "it is also the deepest river on earth, over 220 metres down in places"
+   ],
+   "screen": [
+    "220",
+    "metres deep · the deepest river known",
+    "m"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Kinshasa and Brazzaville face each other across Pool Malebo on the lower Congo, the closest pair of national capitals in the world.",
+   "sources": [
+    "brit_kinshasa",
+    "wiki_brazza"
+   ],
+   "vo": [
+    "near its end, a pair of capitals stare at each other across the water, the closest in the world"
+   ],
+   "screen": [
+    "2 CAPITALS",
+    "facing each other across the river",
+    "Kinshasa",
+    "Brazzaville"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,685 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "ABOUT 2 G",
+   "text": "lighter than a coin"
+  },
+  {
+   "id": "size",
+   "type": "bars",
+   "rows": [
+    [
+     "Bee hummingbird",
+     6,
+     "6 cm"
+    ],
+    [
+     "Sparrow",
+     16,
+     "16 cm"
+    ],
+    [
+     "Pigeon",
+     32,
+     "32 cm"
+    ]
+   ],
+   "unit": "body length",
+   "y": 300,
+   "x": 60,
+   "w": 900
+  },
+  {
+   "id": "f4",
+   "type": "fact",
+   "kicker": "COFFEE BEAN",
+   "text": "the size of its egg"
+  },
+  {
+   "id": "st_bird",
+   "type": "sticker",
+   "emoji": "1f426",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -8
+  },
+  {
+   "id": "st_bird2",
+   "type": "sticker",
+   "emoji": "1f426",
+   "x": 540,
+   "y": 900,
+   "size": 120,
+   "rot": 0
+  },
+  {
+   "id": "st_wind",
+   "type": "sticker",
+   "emoji": "1f4a8",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_flower",
+   "type": "sticker",
+   "emoji": "1f33a",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_egg",
+   "type": "sticker",
+   "emoji": "1f95a",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_nest",
+   "type": "sticker",
+   "emoji": "1fab9",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "br_think",
+   "type": "character",
+   "flag": "br",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "cr_think",
+   "type": "character",
+   "flag": "cr",
+   "face": "think",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "cu_happy",
+   "type": "character",
+   "flag": "cu",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  },
+  {
+   "id": "cha",
+   "type": "character",
+   "flag": "cu",
+   "face": "happy",
+   "x": 230,
+   "y": 1060,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "chb",
+   "type": "character",
+   "flag": "br",
+   "face": "think",
+   "x": 850,
+   "y": 1060,
+   "size": 200,
+   "rot": 8
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.42,
+    "lonlat": [
+     -72,
+     14
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.42,
+    "lonlat": [
+     -70,
+     13
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 1.0,
+    "lonlat": [
+     -79.5,
+     21.8
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 1.04,
+    "lonlat": [
+     -79.3,
+     21.7
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "192",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s06@wings+0.3",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "zl"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "zl"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 0.9,
+    "lonlat": [
+     -80.0,
+     21.4
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 0.94,
+    "lonlat": [
+     -79.8,
+     21.5
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@brazil-0.2",
+   "do": "chart.bars_in",
+   "id": "size",
+   "args": {
+    "dur": 0.9,
+    "stagger": 0.25
+   }
+  },
+  {
+   "at": "s05@brazil+0.2",
+   "do": "character_in",
+   "id": "br_think"
+  },
+  {
+   "at": "s05@costa",
+   "do": "character_in",
+   "id": "cr_think"
+  },
+  {
+   "at": "s05@island-0.3",
+   "do": "character_out",
+   "id": "br_think"
+  },
+  {
+   "at": "s05@island-0.3",
+   "do": "character_out",
+   "id": "cr_think"
+  },
+  {
+   "at": "s05@island",
+   "do": "sticker_in",
+   "id": "st_bird"
+  },
+  {
+   "at": "s05@island+0.4",
+   "do": "sticker_pulse",
+   "id": "st_bird"
+  },
+  {
+   "at": "s05@island+0.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "192",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "size"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_bird"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 1.5,
+    "lonlat": [
+     -81.3,
+     22.2
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 1.56,
+    "lonlat": [
+     -81.2,
+     22.3
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@wings-0.1",
+   "do": "sticker_in",
+   "id": "st_bird2"
+  },
+  {
+   "at": "s06@wings-0.2",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "zap",
+    "layer": "swamp",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s06@wings",
+   "do": "geo.rise",
+   "stage": "stage_map",
+   "args": {
+    "fid": "zap",
+    "eid": "st_bird2",
+    "layer": "swamp",
+    "dur": 0.8,
+    "lift": 10
+   }
+  },
+  {
+   "at": "s06@second",
+   "do": "sticker_in",
+   "id": "st_wind"
+  },
+  {
+   "at": "s06@second+0.3",
+   "do": "sticker_pulse",
+   "id": "st_wind"
+  },
+  {
+   "at": "s06@second+0.7",
+   "do": "sticker_pulse",
+   "id": "st_wind"
+  },
+  {
+   "at": "s06@flowers-0.1",
+   "do": "sticker_out",
+   "id": "st_wind"
+  },
+  {
+   "at": "s06@flowers",
+   "do": "sticker_in",
+   "id": "st_flower"
+  },
+  {
+   "at": "s06@flowers+0.4",
+   "do": "sticker_pulse",
+   "id": "st_flower"
+  },
+  {
+   "at": "s06@flowers+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "192",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_flower"
+  },
+  {
+   "at": "s06.end",
+   "do": "geo.highlight_out",
+   "stage": "stage_map",
+   "args": {
+    "fid": "zap",
+    "layer": "swamp",
+    "dur": 0.4
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_bird2"
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.5",
+   "args": {
+    "k": 1.3,
+    "lonlat": [
+     -80.6,
+     22.0
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 1.36,
+    "lonlat": [
+     -80.4,
+     22.1
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@egg+0.1",
+   "do": "fact_in",
+   "id": "f4",
+   "until": "s07@thimble-0.2"
+  },
+  {
+   "at": "s07@egg+0.3",
+   "do": "sticker_in",
+   "id": "st_egg"
+  },
+  {
+   "at": "s07@egg+0.7",
+   "do": "sticker_pulse",
+   "id": "st_egg"
+  },
+  {
+   "at": "s07@nest",
+   "do": "sticker_out",
+   "id": "st_egg"
+  },
+  {
+   "at": "s07@nest",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "zp"
+   }
+  },
+  {
+   "at": "s07@nest+0.1",
+   "do": "sticker_in",
+   "id": "st_nest"
+  },
+  {
+   "at": "s07@nest+0.5",
+   "do": "sticker_pulse",
+   "id": "st_nest"
+  },
+  {
+   "at": "s07@thimble",
+   "do": "sticker_out",
+   "id": "st_nest"
+  },
+  {
+   "at": "s07@thimble",
+   "do": "character_in",
+   "id": "cu_happy"
+  },
+  {
+   "at": "s07@thimble+0.4",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "192",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "character_out",
+   "id": "cu_happy"
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "zp"
+   }
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.42,
+    "lonlat": [
+     -72,
+     14
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04+1.7",
+   "do": "geo.scalebar_in",
+   "stage": "stage_map"
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.6",
+   "do": "character_in",
+   "id": "cha"
+  },
+  {
+   "at": "s04+1.9",
+   "do": "character_in",
+   "id": "chb"
+  },
+  {
+   "at": "s05+1.0",
+   "do": "character_out",
+   "id": "cha"
+  },
+  {
+   "at": "s05+0.8",
+   "do": "character_out",
+   "id": "chb"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

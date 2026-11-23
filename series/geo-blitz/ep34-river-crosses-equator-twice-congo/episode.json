@@ -1,0 +1,149 @@
+{
+ "id": "ep34-river-crosses-equator-twice-congo",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 34,
+ "title": "Which river crosses the Equator TWICE?",
+ "difficulty": "MEDIUM",
+ "seed": 4334,
+ "quiz": {
+  "question": "Which river crosses the Equator TWICE?",
+  "keyword": "TWICE",
+  "options": [
+   "Amazon",
+   "Nile",
+   "Congo"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Congo",
+  "answer_sub": "a giant arc over the line and back",
+  "option_meta": [
+   {
+    "flag": "br"
+   },
+   {
+    "flag": "eg"
+   },
+   {
+    "flag": "cd"
+   }
+  ],
+  "banner": "Congo",
+  "banner_sub": "✓  C was right · a giant arc over the line and back",
+  "outro": {
+   "headline": "DID YOU GET IT?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which river crosses the Equator TWICE? 🧭",
+  "premise": "One river crosses the Equator north, then south again",
+  "bait": "Amazon, Nile or Congo — which did you pick? 👇",
+  "keywords": [
+   "river that crosses the equator twice",
+   "which river crosses the equator twice",
+   "equator facts",
+   "deepest river in the world",
+   "africa rivers",
+   "geography quiz",
+   "map quiz",
+   "world map facts"
+  ],
+  "description": "One river crosses the Equator north, then south again. Amazon, Nile or Congo — which did you pick? 👇\n\nSources: Encyclopaedia Britannica; NASA Earth Observatory; US Geological Survey.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #34",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "GeographyQuiz",
+   "Rivers"
+  ],
+  "cover_emoji": "🧭",
+  "cover_emoji_why": "a compass states the subject (a line of latitude, a direction) and belongs to none of the three rivers",
+  "copy": {
+   "spoilers": [
+    "congo",
+    "congolese",
+    "kinshasa",
+    "brazzaville",
+    "lualaba",
+    "kisangani",
+    "mbandaka",
+    "zaire",
+    "drc",
+    "4,700",
+    "220",
+    "boyoma",
+    "malebo",
+    "matadi",
+    "deepest"
+   ],
+   "youtube": {
+    "title": "Which river crosses the Equator twice? Most people guess wrong 🧭",
+    "description": "The Amazon giant, the longest river, or the third one? Only one river on Earth bends north over the Equator and then swings back south across it on its way to the sea. It also drops further below its surface than any other river, and near its end two capital cities stare at each other across the water, the closest pair in the world.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#rivers",
+     "#geography",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which river crosses the Equator TWICE? 🧭\nThe Amazon giant, the longest river, or the third one? Only one river bends north over the Equator and then swings back south across it on its way to the sea, and two capital cities stare at each other across its water near the end.\nWhich did you pick?",
+    "tags": [
+     "#geoquiz",
+     "#rivers",
+     "#geography",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which river crosses the Equator twice — Amazon, Nile or Congo?\nOnly one river bends north over the line and then swings back south across it on its way to the sea. It also drops further below its surface than any other river, and near its end two capital cities stare at each other across the water, the closest pair in the world. Pick your river before the line is drawn.",
+    "tags": [
+     "#geoquiz",
+     "#rivers"
+    ]
+   },
+   "twitter": {
+    "text": "Which river crosses the Equator TWICE?\nAmazon, Nile or Congo? One giant arc north over the line and back south again — and the Amazon never even touches it.",
+    "tags": [
+     "#GeoQuiz",
+     "#Rivers"
+    ]
+   },
+   "threads": {
+    "text": "Which river crosses the Equator twice — Amazon, Nile or Congo? Only one bends north over the line and then swings back south across it on its way to the sea; it also drops further below its surface than any river on Earth, and two capital cities face each other across its water near the end.",
+    "tags": [
+     "#equator"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-record",
+  "hook": "question-first",
+  "opener": "split-candidates",
+  "reveal": "route-draw",
+  "beats": [
+   "route",
+   "travel",
+   "counter",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:cd + flagball:br + emoji-set:river",
+  "music": "bed:warm"
+ },
+ "status": "draft"
+}

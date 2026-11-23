@@ -1,0 +1,143 @@
+{
+ "id": "ep17-first-heart-transplant-south-africa-barnard",
+ "format": "quiz-v3",
+ "series": "body-brain",
+ "number": 17,
+ "title": "Which country did the FIRST human heart transplant?",
+ "difficulty": "MEDIUM",
+ "seed": 1717,
+ "quiz": {
+  "question": "Which country did the FIRST human heart transplant?",
+  "keyword": "FIRST",
+  "options": [
+   "United States",
+   "Britain",
+   "South Africa"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "South Africa",
+  "answer_sub": "a Cape Town hospital, December 1967",
+  "option_meta": [
+   {
+    "flag": "us"
+   },
+   {
+    "flag": "gb"
+   },
+   {
+    "flag": "za"
+   }
+  ],
+  "banner": "South Africa",
+  "banner_sub": "✓  C was right · a Cape Town hospital, December 1967",
+  "outro": {
+   "headline": "CHALLENGE A FRIEND",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country did the FIRST human heart transplant? 🫀",
+  "premise": "The first human heart transplant was not done where you think",
+  "bait": "United States, Britain or South Africa — which did you pick? 👇",
+  "keywords": [
+   "first heart transplant",
+   "which country did the first heart transplant",
+   "first human heart transplant",
+   "heart transplant history",
+   "medical history quiz",
+   "body quiz",
+   "medicine facts",
+   "science trivia"
+  ],
+  "description": "The first human heart transplant was not done where you think. United States, Britain or South Africa — which did you pick? 👇\n\nSources: Encyclopaedia Britannica; Heart of Cape Town Museum; Nobel Prize / NIH archives.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nBody & Brain #17",
+  "hashtags": [
+   "#BodyFacts",
+   "#BrainQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "MedicalHistory",
+   "BodyQuiz"
+  ],
+  "cover_emoji": "🫀",
+  "cover_emoji_why": "an anatomical heart names the organ; it belongs to no country and is not the flag or emoji of any option",
+  "copy": {
+   "spoilers": [
+    "south africa",
+    "south african",
+    "cape town",
+    "barnard",
+    "groote schuur",
+    "1967",
+    "washkansky",
+    "18 days",
+    "africa"
+   ],
+   "youtube": {
+    "title": "Which country did the first human heart transplant? Not the one you think 🫀",
+    "description": "The country with the biggest hospitals, the one with the oldest medical schools, or the third one? The first human heart transplant was done one night in December by a surgeon most of the world had never heard of, the patient woke and spoke, and the news beat the big medical powers to it by weeks.\nWhich did you pick?",
+    "tags": [
+     "#medicalhistory",
+     "#hearttransplant",
+     "#bodyquiz",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country did the FIRST human heart transplant? 🫀\nThe country with the biggest hospitals, the one with the oldest medical schools, or the third one? One night in December, a surgeon most of the world had never heard of did it first, and the patient woke and spoke.\nWhich did you pick?",
+    "tags": [
+     "#medicalhistory",
+     "#hearttransplant",
+     "#sciencefacts",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country did the first human heart transplant — United States, Britain or South Africa?\nIt was done one night in December by a surgeon most of the world had never heard of; the patient woke and spoke, and the news beat the big medical powers by weeks. Pick your flag before the then-and-now panels slide in.",
+    "tags": [
+     "#medicalhistory",
+     "#hearttransplant"
+    ]
+   },
+   "twitter": {
+    "text": "Which country did the FIRST human heart transplant?\nUnited States, Britain or South Africa? One December night, a surgeon nobody had heard of — and the patient woke and spoke.",
+    "tags": [
+     "#MedicalHistory",
+     "#HeartTransplant"
+    ]
+   },
+   "threads": {
+    "text": "Which country did the first human heart transplant — United States, Britain or South Africa? It was done one night in December by a surgeon most of the world had never heard of; the patient woke and spoke, and the news beat the big medical powers by weeks.",
+    "tags": [
+     "#hearttransplant"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "question-first",
+  "opener": "night-lights",
+  "reveal": "colour-lift",
+  "beats": [
+   "photo",
+   "split",
+   "counter",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:za + flagball:us + emoji-set:hospital",
+  "music": "bed:warm"
+ },
+ "status": "draft"
+}

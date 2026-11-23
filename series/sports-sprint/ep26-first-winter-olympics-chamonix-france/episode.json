@@ -1,0 +1,143 @@
+{
+ "id": "ep26-first-winter-olympics-chamonix-france",
+ "format": "quiz-v3",
+ "series": "sports-sprint",
+ "number": 26,
+ "title": "Which country hosted the FIRST Winter Olympics?",
+ "difficulty": "MEDIUM",
+ "seed": 2626,
+ "quiz": {
+  "question": "Which country hosted the FIRST Winter Olympics?",
+  "keyword": "FIRST",
+  "options": [
+   "Switzerland",
+   "Norway",
+   "France"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "France",
+  "answer_sub": "a ski town under the Alps, 1924",
+  "option_meta": [
+   {
+    "flag": "ch"
+   },
+   {
+    "flag": "no"
+   },
+   {
+    "flag": "fr"
+   }
+  ],
+  "banner": "France",
+  "banner_sub": "✓  C was right · a ski town under the Alps, 1924",
+  "outro": {
+   "headline": "CHALLENGE A FRIEND",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which country hosted the FIRST Winter Olympics? ⛸️",
+  "premise": "The first Winter Olympics were not called that at the time",
+  "bait": "Switzerland, Norway or France — which did you pick? 👇",
+  "keywords": [
+   "first winter olympics",
+   "which country hosted the first winter olympics",
+   "winter olympics history",
+   "1924 winter olympics",
+   "olympics quiz",
+   "sports quiz",
+   "winter games facts",
+   "sports trivia"
+  ],
+  "description": "The first Winter Olympics were not called that at the time. Switzerland, Norway or France — which did you pick? 👇\n\nSources: International Olympic Committee (olympics.com); Encyclopaedia Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nSports Sprint #26",
+  "hashtags": [
+   "#SportsQuiz",
+   "#SportsTrivia",
+   "#thequizwire"
+  ],
+  "tags": [
+   "SportsQuiz",
+   "Olympics"
+  ],
+  "cover_emoji": "⛸️",
+  "cover_emoji_why": "an ice skate names the subject (winter sport) and belongs to no country; it is not the flag or emoji of any option",
+  "copy": {
+   "spoilers": [
+    "france",
+    "french",
+    "chamonix",
+    "mont blanc",
+    "alps",
+    "258",
+    "16 nations",
+    "1926",
+    "bronze"
+   ],
+   "youtube": {
+    "title": "Which country hosted the first Winter Olympics? Not who you think ⛸️",
+    "description": "The ski-resort country, the skiing superpower, or the third one? The first Winter Olympics were held in a small mountain town a century ago and were not even called the Olympics at the time; the host nation went home without a single gold, and the name was awarded two years after the Games ended.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#winterolympics",
+     "#olympics",
+     "#quiz",
+     "#shorts"
+    ]
+   },
+   "instagram": {
+    "caption": "Which country hosted the FIRST Winter Olympics? ⛸️\nThe ski-resort country, the skiing superpower, or the third one? The first Winter Olympics were held in a small mountain town a century ago and were not even called the Olympics at the time; the host went home without a single gold.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#winterolympics",
+     "#olympichistory",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which country hosted the first Winter Olympics — Switzerland, Norway or France?\nThey were held in a small mountain town a century ago and were not even called the Olympics at the time; the host nation went home without a single gold, and the name was awarded two years after the Games ended. Pick your flag before the medal bars go up.",
+    "tags": [
+     "#sportsquiz",
+     "#wintergames"
+    ]
+   },
+   "twitter": {
+    "text": "Which country hosted the FIRST Winter Olympics?\nSwitzerland, Norway or France? A mountain town a century ago, a host without a single gold — and nobody called it the Olympics until later.",
+    "tags": [
+     "#SportsQuiz",
+     "#WinterGames"
+    ]
+   },
+   "threads": {
+    "text": "Which country hosted the first Winter Olympics — Switzerland, Norway or France? They were held in a small mountain town a century ago and were not even called the Olympics at the time; the host nation went home without a single gold, and the name was awarded two years after the Games ended.",
+    "tags": [
+     "#winterolympics"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "who-was-first",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "bars",
+   "flash",
+   "counter",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:fr + flagball:ch + flagball:no + emoji-set:winter",
+  "music": "bed:brass"
+ },
+ "status": "draft"
+}
