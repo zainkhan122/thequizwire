@@ -130,7 +130,7 @@
   "opener": "mystery-zoom-out",
   "reveal": "colour-lift",
   "beats": [
-   "bars",
+   "compare",
    "counter",
    "split",
    "label"

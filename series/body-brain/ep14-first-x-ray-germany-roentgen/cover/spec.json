@@ -1,0 +1,49 @@
+{
+ "bg": "hero.jpg",
+ "anchor": [
+  0.5,
+  0.32
+ ],
+ "hero_prompt": "Vibrant stylised vertical 9:16 illustration, bold retro poster style, bold shapes, halftone texture, saturated colours, high contrast. No text, no letters, no numbers, no flags, no faces, no logos, no map labels. Subject: a glowing blue-white skeletal hand with a dark ring on one finger floating against black, electric sparks from a vintage glass vacuum tube, 1890s laboratory mood.",
+ "head": "THE FIRST X-RAY WAS A HAND WITH A *RING*",
+ "head_top": 1100,
+ "head_size": 140,
+ "badge": "FRANCE  ·  ???  ·  USA",
+ "badge_color": "#FFD400",
+ "badge_xy": [
+  60,
+  970
+ ],
+ "burst": {
+  "text": "1895",
+  "xy": [
+   870,
+   330
+  ],
+  "r": 150,
+  "color": "#FF2D2D"
+ },
+ "stickers": [
+  [
+   "1f92f",
+   250,
+   [
+    780,
+    1480
+   ],
+   12
+  ],
+  [
+   "1fa7b",
+   190,
+   [
+    80,
+    620
+   ],
+   -10
+  ]
+ ],
+ "approved": "2026-11-27 owner standing instruction ('make sure all shorts are ready for backlog, no more questions'); rendered to review/v2/covers6",
+ "hero_url": "https://api.github.com/repos/zainkhan122/thequizwire/releases/assets/801411217",
+ "cover_url": "https://api.github.com/repos/zainkhan122/thequizwire/releases/assets/801411278"
+}

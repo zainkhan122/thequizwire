@@ -107,7 +107,7 @@
   "opener": "mystery-zoom-out",
   "reveal": "fill-pulse",
   "beats": [
-   "bars",
+   "compare",
    "flash",
    "counter",
    "pin",
@@ -509,8 +509,11 @@
    "elements": [
     {
      "id": "med",
-     "type": "bars",
-     "rows": [
+     "type": "compare",
+     "y": 300,
+     "x": 60,
+     "w": 900,
+     "items": [
       [
        "Norway",
        17,
@@ -527,10 +530,7 @@
        "3"
       ]
      ],
-     "unit": "medals in 1924",
-     "y": 300,
-     "x": 60,
-     "w": 900
+     "max_h": 520
     }
    ],
    "devices": [
@@ -561,7 +561,7 @@
     },
     {
      "at": "@@norway-0.2",
-     "do": "chart.bars_in",
+     "do": "chart.compare_in",
      "id": "med",
      "args": {
       "dur": 0.9,

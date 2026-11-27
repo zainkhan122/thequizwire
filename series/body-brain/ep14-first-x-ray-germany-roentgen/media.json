@@ -116,7 +116,7 @@
   },
   "geo/main_basemap.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 950513,
+   "bytes": 994697,
    "credit": "NASA Blue Marble",
    "kind": "image",
    "licence": "PD-USGov",

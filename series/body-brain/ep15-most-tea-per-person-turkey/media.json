@@ -93,7 +93,7 @@
   },
   "geo/main.json": {
    "by": "reelkit/geodata.py",
-   "bytes": 200193,
+   "bytes": 200218,
    "credit": "Natural Earth",
    "kind": "data",
    "licence": "PD",
@@ -111,7 +111,7 @@
   },
   "geo/main_basemap_far.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 1317154,
+   "bytes": 905728,
    "credit": "NASA Blue Marble",
    "kind": "image",
    "licence": "PD-USGov",

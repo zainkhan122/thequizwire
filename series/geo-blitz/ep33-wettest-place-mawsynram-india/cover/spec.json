@@ -1,0 +1,47 @@
+{
+ "bg": "hero.jpg",
+ "anchor": [
+  0.5,
+  0.32
+ ],
+ "hero_prompt": "Vibrant stylised vertical 9:16 illustration, bold retro poster style, bold shapes, halftone texture, saturated colours, high contrast. No text, no letters, no numbers, no flags, no faces, no logos, no map labels. Subject: a torrential monsoon downpour over lush emerald hills, waterfalls pouring off every cliff, a living root bridge in mist, dark storm clouds, streaks of rain.",
+ "head": "*12 METRES* OF RAIN. EVERY YEAR.",
+ "head_top": 1100,
+ "head_size": 150,
+ "badge": "BRAZIL  ·  INDONESIA  ·  ???",
+ "badge_color": "#FFD400",
+ "badge_xy": [
+  60,
+  970
+ ],
+ "burst": {
+  "text": "12 M",
+  "xy": [
+   870,
+   330
+  ],
+  "r": 150,
+  "color": "#FF2D2D"
+ },
+ "stickers": [
+  [
+   "1f92f",
+   250,
+   [
+    780,
+    1480
+   ],
+   12
+  ],
+  [
+   "1f327",
+   190,
+   [
+    80,
+    620
+   ],
+   -10
+  ]
+ ],
+ "approved": "2026-11-27 owner standing instruction ('make sure all shorts are ready for backlog, no more questions'); rendered to review/v2/covers6"
+}

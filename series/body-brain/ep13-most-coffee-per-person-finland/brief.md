@@ -8,22 +8,22 @@ guarantee two coffee breaks (kahvitauko) a working day; long dark winters are th
 
 ## Show it
 Mystery-zoom-out opener over the Mediterranean under the question; three flags. Reveal = colour-lift on Finland with the
-12 KG card. Ease back over the Baltic: three kilogram bars rise on "Italy" with Finland on top, the Italian flag-ball thinks
-on "States", the bars leave and the cups counter runs 0 → 4 on "cups" with a cup sticker. Tighten slightly: the 4 CUPS /
+12 KG card. Ease back over the Baltic: three kilogram compare blocks rise on "Italy" with Finland on top, the Italian flag-ball thinks
+on "States", the compare blocks leave and the cups counter runs 0 → 4 on "cups" with a cup sticker. Tighten slightly: the 4 CUPS /
 400 MG split lands on "milligrams", a warning sticker on "limit", a green tick on "safe". Tighten on Helsinki for the
 close: a snowflake on "winters", the Helsinki pin and the COFFEE BREAK card on "law", the "2 coffee breaks a day" tag and
 the Finnish flag-ball on "breaks"; the pin leaves.
 
 ## Beat order
 1. s04 reveal — colour-lift Finland, 12 KG card.
-2. s05 three countries, four cups — chart.bars ×3, it flag-ball think, chart.counter 0 → 4, ☕ sticker, pulse.
+2. s05 three countries, four cups — chart.compare ×3, it flag-ball think, chart.counter 0 → 4, ☕ sticker, pulse.
 3. s06 the body limit — chart.split CUPS / LIMIT, ⚠ ✅ stickers, pulse.
 4. s07 why — ❄ sticker, geo.pin Helsinki, COFFEE BREAK card, tag, fi flag-ball, pulse, pin out.
 
 ## Different from
 #12 (insulin) was pin + counter + split + erase on a medical first; #11 erase + split; #10 erase + counter + route. This
-is the first Body & Brain about a habit rather than a disease or a first, the first to run bars straight into a counter,
-and its split is a dose-against-limit — SHOW set {bars, counter, split}.
+is the first Body & Brain about a habit rather than a disease or a first, the first to run compare blocks straight into a counter,
+and its split is a dose-against-limit — SHOW set {compare blocks, counter, split}.
 
 ## Swipe test
 - 1 s — the Mediterranean drifting under MOST in yellow; three flags about to land.
@@ -32,10 +32,10 @@ and its split is a dose-against-limit — SHOW set {bars, counter, split}.
 - 18 s — the Finland bar doubles Italy's; the cups counter ticks to 4.
 
 ## Devices
-mystery-zoom-out opener · colour-lift reveal · fact cards ×2 · chart.bars_in · chart.counter_run · chart.split_in · geo.pin /
+mystery-zoom-out opener · colour-lift reveal · fact cards ×2 · chart.compare_in · chart.counter_run · chart.split_in · geo.pin /
 pin_out · tag label ×1 · geo.highlight_pulse ×3 · stickers ☕ ⚠ ✅ ❄ + sticker_pulse ×4 · flag-ball fi happy / it think ·
 scalebar.
 
 ## Media & Pace
-No photograph: the bars, the counter and the split carry it. Target 80–90 words, spoken numerals 12 / 6 / 5 / 4 / 4 /
+No photograph: the compare blocks, the counter and the split carry it. Target 80–90 words, spoken numerals 12 / 6 / 5 / 4 / 4 /
 400 / 2, ≥ 16 motion events / 10 s, ≤ 37 s.

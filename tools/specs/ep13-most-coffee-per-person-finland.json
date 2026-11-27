@@ -107,7 +107,7 @@
   "opener": "mystery-zoom-out",
   "reveal": "colour-lift",
   "beats": [
-   "bars",
+   "compare",
    "counter",
    "split",
    "label"
@@ -513,8 +513,11 @@
    "elements": [
     {
      "id": "kg",
-     "type": "bars",
-     "rows": [
+     "type": "compare",
+     "y": 300,
+     "x": 60,
+     "w": 900,
+     "items": [
       [
        "Finland",
        12,
@@ -531,10 +534,7 @@
        "4.7 kg"
       ]
      ],
-     "unit": "kg of beans per person per year",
-     "y": 300,
-     "x": 60,
-     "w": 900
+     "max_h": 520
     },
     {
      "id": "cups",
@@ -550,7 +550,7 @@
    "devices": [
     {
      "at": "@@italy-0.4",
-     "do": "chart.bars_in",
+     "do": "chart.compare_in",
      "id": "kg",
      "args": {
       "dur": 1.0,

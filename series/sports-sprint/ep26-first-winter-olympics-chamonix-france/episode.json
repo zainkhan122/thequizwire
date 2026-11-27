@@ -130,7 +130,7 @@
   "opener": "mystery-zoom-out",
   "reveal": "fill-pulse",
   "beats": [
-   "bars",
+   "compare",
    "flash",
    "counter",
    "pin",
