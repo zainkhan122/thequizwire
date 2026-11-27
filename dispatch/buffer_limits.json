@@ -1,0 +1,12 @@
+{
+ "BUFFER_API_KEY": {
+  "until": "2026-12-06T14:08:00+00:00",
+  "reason": "HTTP 429 Retry-After 766812s (seen in dispatch run 46042653858)",
+  "seen": "2026-11-27T17:08:35+00:00"
+ },
+ "BUFFER_API_KEY_2": {
+  "until": "2026-11-28T15:38:00+00:00",
+  "reason": "HTTP 429 Retry-After 81000s (seen in dispatch run 46042653858)",
+  "seen": "2026-11-27T17:08:35+00:00"
+ }
+}

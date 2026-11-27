@@ -35,6 +35,9 @@ on:
       BUFFER_API_KEY: {required: false}
       BUFFER_API_KEY_2: {required: false}
       MEDIA_TOKEN: {required: false}
+      YT_CLIENT_ID: {required: false}
+      YT_CLIENT_SECRET: {required: false}
+      YT_REFRESH_TOKEN: {required: false}
 permissions:
   contents: write
 concurrency:
@@ -49,6 +52,9 @@ jobs:
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
       BUFFER_API_KEY_2: ${{ secrets.BUFFER_API_KEY_2 }}
       MEDIA_TOKEN: ${{ secrets.MEDIA_TOKEN }}
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}          # direct YouTube upload when Buffer's YouTube account is rate-limited (buffer.py yt_direct)
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
       PYTHONUNBUFFERED: "1"
     steps:
       - uses: actions/checkout@v4
@@ -60,7 +66,7 @@ jobs:
           # 16:00Z slot because Buffer's posts(filter) returns nothing and the checked-out ledger was stale). Always schedule
           # against main's current ledger.
           git fetch -q origin main
-          git checkout -q origin/main -- dispatch/ledger.json config/publishing.json 2>/dev/null || true
+          git checkout -q origin/main -- dispatch/ledger.json dispatch/pending.json dispatch/buffer_limits.json dispatch/yt_quota.json config/publishing.json 2>/dev/null || true
           python3 -c "import json;L=json.load(open('dispatch/ledger.json'));print('ledger posts:',len(L.get('posts',[])))"
       - name: Cover toolchain (Pillow + cairosvg; ffmpeg ships with the runner)
         run: |
@@ -95,7 +101,7 @@ jobs:
         if: always()
         run: |
           git config user.name "quizwire-dispatch"; git config user.email "dispatch@users.noreply.github.com"
-          for f in dispatch/ledger.json config/publishing.json; do [ -f "$f" ] && git add "$f"; done; true
+          for f in dispatch/ledger.json dispatch/pending.json dispatch/buffer_limits.json dispatch/yt_quota.json config/publishing.json; do [ -f "$f" ] && git add "$f"; done; true
           git diff --cached --quiet && { echo "ledger unchanged"; exit 0; }
           git commit -m "dispatch: ${{ inputs.tag || format('run {0}', inputs.run) }} (${{ inputs.live && 'live' || 'dry-run' }}) [skip ci]"
           for i in 1 2 3; do git pull --rebase -q -X theirs && git push -q && break || { git rebase --abort 2>/dev/null; sleep 5; }; done   # -X theirs = keep the files this run generated

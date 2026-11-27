@@ -133,6 +133,18 @@ out of `--channels`.
 * **Rate limit**: ~10 createPost + scans within minutes on one key → HTTP 429 with `Retry-After` of 4–6 min. The client sleeps
   through waits ≤ 8 min; `buffer.py dispatch` takes all episodes in ONE process (one post scan + limits query per account) and
   the duplicate scan is bounded to `buffer.dedupe_window_days` (14) so logins with years of history stay cheap.
+* **Limit-aware scheduler (owner 2026-11-27: "do not waste API calls; retry when the limit lifts; keep YouTube flowing")**
+  * `dispatch/buffer_limits.json` remembers every `429 Retry-After` per account (`buffer.py` → `limit_set`). While the window is
+    open, `dispatch`, `retry`, `channels`, `queue`, `status --refresh` and `tools/stats.py` make **no request** to that account —
+    its channels are reported as waiting. The first successful call after the window clears the entry.
+  * `dispatch/pending.json` holds every episode × channel that could not be posted (rate-limited account · queue cap · daily
+    limit · account secret missing), with the full createPost payload and the hosted media URL — no re-render needed.
+    `buffer.py retry --live` (publish-sync, 3×/day) posts them as soon as their account is open again; rows whose media is
+    gone or whose episode already has a ledger post are dropped; `REJECTED` rows go to the ledger as errors.
+  * **YouTube never waits for Buffer**: when the YouTube channel's account is rate-limited and `YT_CLIENT_ID/SECRET/REFRESH_TOKEN`
+    are present, `buffer.py` uploads through the YouTube Data API (`yt_enrich.py upload`, 1 600 units, private + `publishAt` at
+    the next best slot) and the ledger row says `provider: youtube-direct`; a later Buffer retry sees the row and skips.
+  * `dispatch.sh` treats a deferred channel as a notice, not a failure — only `REJECTED` and gate failures fail the run.
 * **Cadence is Buffer's posting schedule, not ours** (`addToQueue`): with 7–8 slots/day per channel the 10 pilots went out over
   two days. Thin the slots in Buffer (Settings → Posting schedule); queued posts re-flow automatically.
 * **GitHub side**: the Contents API rejects ~45 MB files (422) → media is `git push`ed from a blob-less sparse clone, all episodes

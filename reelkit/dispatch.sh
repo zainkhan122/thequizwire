@@ -84,7 +84,7 @@ if [ ${#VERIFIED[@]} -gt 0 ]; then
     if grep -q "^buffer: $NAME " "$EP/out/dispatch.log"; then
       row="| $NAME | ok |"; for p in youtube instagram facebook twitter threads; do
         st="$(grep -E "^ +$p " "$EP/out/dispatch.log" | sed -E 's/^ +[a-z]+ +//' | head -1 | cut -c1-48)"; row="$row ${st:-—} |"; done
-      echo "$row" >> "$SUMMARY"; grep -qE "REJECTED|deferred" "$EP/out/dispatch.log" && FAILS=$((FAILS+1))
+      echo "$row" >> "$SUMMARY"; grep -q "REJECTED" "$EP/out/dispatch.log" && FAILS=$((FAILS+1)); grep -q "deferred:" "$EP/out/dispatch.log" && echo "::notice::$NAME: some channels deferred to dispatch/pending.json (Buffer rate limit or queue cap) — publish-sync retries them"
     else
       echo "   $NAME: buffer FAIL"; echo "| $NAME | buffer FAIL | — | — | — | — | — |" >> "$SUMMARY"; FAILS=$((FAILS+1))
     fi

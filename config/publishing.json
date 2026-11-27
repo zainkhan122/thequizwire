@@ -318,18 +318,7 @@
  "cover": {
   "rule": "owner 2026-11-20: every short ships with a custom-made cover (reelkit/cover_scroll.py). postkit/quizlint FAIL without it; cover.py --burn refuses to template.",
   "pre_rule_warn_only": [
-   "_template*",
-   "ep13-most-coffee-per-person-finland",
-   "ep14-first-x-ray-germany-roentgen",
-   "ep15-most-tea-per-person-turkey",
-   "ep31-largest-landlocked-kazakhstan",
-   "ep32-eight-thousanders-nepal",
-   "ep33-wettest-place-mawsynram-india",
-   "ep22-table-tennis-invented-england",
-   "ep23-most-olympic-hockey-golds-india",
-   "ep24-first-world-cup-uruguay",
-   "ep20-most-bird-species-colombia",
-   "ep21-strongest-bite-saltwater-crocodile"
+   "_template*"
   ],
   "note": "pre-rule episodes authored before 2026-11-20 lint as WARN, but still cannot be published without a cover (dispatch gate). Remove a name once its cover is approved."
  }

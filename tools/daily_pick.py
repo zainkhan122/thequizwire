@@ -30,6 +30,10 @@ def main():
     a = ap.parse_args(); day = a.date or date.today().isoformat()
     ledger = json.loads((ROOT / "dispatch/ledger.json").read_text()).get("posts", [])
     done = {p["episode"] for p in ledger if p.get("state") in ("scheduled", "sending", "sent")}
+    pend = ROOT / "dispatch/pending.json"                                     # rendered + hosted, waiting for a Buffer limit to lift: never re-render
+    if pend.exists():
+        try: done |= {r["episode"] for r in json.loads(pend.read_text()).get("rows", [])}
+        except ValueError: pass
     dp = ROOT / "dispatch/daily.json"; plan = json.loads(dp.read_text()) if dp.exists() else {"version": 1, "days": {}}
     planned = {e for eps in plan["days"].values() for e in eps}
     if day in plan["days"]:                                                                  # idempotent per day

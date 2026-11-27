@@ -1,0 +1,180 @@
+{
+ "version": 1,
+ "rows": [
+  {
+   "episode": "ep14-first-x-ray-germany-roentgen",
+   "ep_dir": "series/body-brain/ep14-first-x-ray-germany-roentgen",
+   "platform": "youtube",
+   "account": "BUFFER_API_KEY",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/8d87ed7022d8/Which-country-made-the-FIRST-X-ray-image.mp4",
+   "payload": {
+    "channelId": "6a72ff4f99afb44349064208",
+    "mode": "customScheduled",
+    "schedulingType": "automatic",
+    "needsApproval": false,
+    "aiAssisted": false,
+    "source": "thequizwire-reelkit",
+    "text": "The great laboratories, the famous inventor, or the third one? A physics professor caught a new kind of ray on a photographic plate, then placed his wife's hand on it for a quarter of an hour. Her bones appeared, and her wedding ring, and she said five words nobody forgets. Within weeks doctors everywhere were using it. He refused to patent it.\nWhich did you pick?\n\n#bodyquiz #xray #medicalhistory #quiz #shorts",
+    "assets": [
+     {
+      "video": {
+       "url": "https://zainkhan122.github.io/thequizwire-media/media/8d87ed7022d8/Which-country-made-the-FIRST-X-ray-image.mp4",
+       "metadata": {
+        "title": "Where was the first X-ray ever taken? Her first words were chilling 🦴"
+       }
+      }
+     }
+    ],
+    "metadata": {
+     "youtube": {
+      "title": "Where was the first X-ray ever taken? Her first words were chilling 🦴",
+      "categoryId": "27",
+      "privacy": "public",
+      "madeForKids": false,
+      "notifySubscribers": true,
+      "embeddable": true,
+      "license": "youtube",
+      "isAiGenerated": false
+     }
+    },
+    "dueAt": "2026-11-28T00:00:00Z"
+   },
+   "reason": "rate limited until 2026-11-28T01:17:10+00:00 (5.0 h left) — no call made",
+   "queued_at": "2026-11-27T20:17:10+00:00",
+   "last_try": "2026-11-27T20:17:36+00:00",
+   "tries": 2
+  },
+  {
+   "episode": "ep14-first-x-ray-germany-roentgen",
+   "ep_dir": "series/body-brain/ep14-first-x-ray-germany-roentgen",
+   "platform": "instagram",
+   "account": "BUFFER_API_KEY_2",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/8d87ed7022d8/Which-country-made-the-FIRST-X-ray-image.mp4",
+   "payload": {
+    "channelId": "695bfd29457dae6a34df0f74",
+    "mode": "customScheduled",
+    "schedulingType": "automatic",
+    "needsApproval": false,
+    "aiAssisted": false,
+    "source": "thequizwire-reelkit",
+    "text": "Which country made the FIRST X-ray image? 🦴\nThe great laboratories, the famous inventor, or the other one? A physics professor placed his wife's hand on a photographic plate for a quarter of an hour. Her bones appeared, and her wedding ring, and she said five words nobody forgets.\nWhich did you pick?\n\n#bodyquiz #xray #medicalhistory #quiz #didyouknow",
+    "assets": [
+     {
+      "video": {
+       "url": "https://zainkhan122.github.io/thequizwire-media/media/8d87ed7022d8/Which-country-made-the-FIRST-X-ray-image.mp4",
+       "metadata": {
+        "thumbnailOffset": 0
+       }
+      }
+     }
+    ],
+    "metadata": {
+     "instagram": {
+      "type": "reel",
+      "shouldShareToFeed": true,
+      "isAiGenerated": true
+     }
+    },
+    "dueAt": "2026-11-28T00:00:00Z"
+   },
+   "reason": "rate limited until 2026-11-28T01:17:10+00:00 (5.0 h left) — no call made",
+   "queued_at": "2026-11-27T20:17:10+00:00",
+   "last_try": "2026-11-27T20:17:10+00:00",
+   "tries": 1
+  },
+  {
+   "episode": "ep14-first-x-ray-germany-roentgen",
+   "ep_dir": "series/body-brain/ep14-first-x-ray-germany-roentgen",
+   "platform": "facebook",
+   "account": "BUFFER_API_KEY_2",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/8d87ed7022d8/Which-country-made-the-FIRST-X-ray-image.mp4",
+   "payload": {
+    "channelId": "695a159a457dae6a34d901bc",
+    "mode": "customScheduled",
+    "schedulingType": "automatic",
+    "needsApproval": false,
+    "aiAssisted": false,
+    "source": "thequizwire-reelkit",
+    "text": "Which country made the first X-ray image — France, Germany or the United States?\nA physics professor caught a new kind of ray on a photographic plate, then placed his wife's hand on it for a quarter of an hour. Her bones appeared, and her wedding ring, and she said five words nobody forgets. Choose your flag before the plate develops.\n\n#bodyquiz #xray",
+    "assets": [
+     {
+      "video": {
+       "url": "https://zainkhan122.github.io/thequizwire-media/media/8d87ed7022d8/Which-country-made-the-FIRST-X-ray-image.mp4"
+      }
+     }
+    ],
+    "metadata": {
+     "facebook": {
+      "type": "reel"
+     }
+    },
+    "dueAt": "2026-11-28T00:00:00Z"
+   },
+   "reason": "rate limited until 2026-11-28T01:17:10+00:00 (5.0 h left) — no call made",
+   "queued_at": "2026-11-27T20:17:10+00:00",
+   "last_try": "2026-11-27T20:17:10+00:00",
+   "tries": 1
+  },
+  {
+   "episode": "ep14-first-x-ray-germany-roentgen",
+   "ep_dir": "series/body-brain/ep14-first-x-ray-germany-roentgen",
+   "platform": "twitter",
+   "account": "BUFFER_API_KEY_2",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/8d87ed7022d8/Which-country-made-the-FIRST-X-ray-image.mp4",
+   "payload": {
+    "channelId": "69f30e2a5c4c051afaf58634",
+    "mode": "customScheduled",
+    "schedulingType": "automatic",
+    "needsApproval": false,
+    "aiAssisted": false,
+    "source": "thequizwire-reelkit",
+    "text": "Which country made the FIRST X-ray image?\nFrance, Germany or United States? His wife's hand, a quarter of an hour on the plate — and five words nobody forgets.\n\n#BodyQuiz #XRay",
+    "assets": [
+     {
+      "video": {
+       "url": "https://zainkhan122.github.io/thequizwire-media/media/8d87ed7022d8/Which-country-made-the-FIRST-X-ray-image.mp4"
+      }
+     }
+    ],
+    "metadata": {
+     "twitter": {
+      "isAiGenerated": true
+     }
+    },
+    "dueAt": "2026-11-27T22:00:00Z"
+   },
+   "reason": "rate limited until 2026-11-28T01:17:10+00:00 (5.0 h left) — no call made",
+   "queued_at": "2026-11-27T20:17:10+00:00",
+   "last_try": "2026-11-27T20:17:10+00:00",
+   "tries": 1
+  },
+  {
+   "episode": "ep14-first-x-ray-germany-roentgen",
+   "ep_dir": "series/body-brain/ep14-first-x-ray-germany-roentgen",
+   "platform": "threads",
+   "account": "BUFFER_API_KEY",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/8d87ed7022d8/Which-country-made-the-FIRST-X-ray-image.mp4",
+   "payload": {
+    "channelId": "6a6dd3b24b2d03035f7e82e8",
+    "mode": "customScheduled",
+    "schedulingType": "automatic",
+    "needsApproval": false,
+    "aiAssisted": false,
+    "source": "thequizwire-reelkit",
+    "text": "Which country made the first X-ray image — France, Germany or the United States? A physics professor placed his wife's hand on a photographic plate for a quarter of an hour; her bones appeared, and her wedding ring, and she said five words nobody forgets.\n\n#xrayhistory",
+    "assets": [
+     {
+      "video": {
+       "url": "https://zainkhan122.github.io/thequizwire-media/media/8d87ed7022d8/Which-country-made-the-FIRST-X-ray-image.mp4"
+      }
+     }
+    ],
+    "dueAt": "2026-11-28T00:00:00Z"
+   },
+   "reason": "rate limited until 2026-11-28T01:17:10+00:00 (5.0 h left) — no call made",
+   "queued_at": "2026-11-27T20:17:10+00:00",
+   "last_try": "2026-11-27T20:17:10+00:00",
+   "tries": 1
+  }
+ ]
+}

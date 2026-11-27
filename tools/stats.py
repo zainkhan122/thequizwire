@@ -70,6 +70,7 @@ def fetch_buffer(posts):
         account = B.account_of(c, platform)
         if not account or not (os.environ.get(account) or (Path.home() / f".cache/secrets/{account.lower()}").exists()):
             notes[platform] = f"secret {account} not set here"; continue
+        if B.blocked(account): notes[platform] = f"buffer insights skipped: {B.blocked(account)}"; continue
         cl = B.Client(c, account); n, err1, st = 0, None, 200
         for i in range(0, len(ids), 25):
             chunk = ids[i:i + 25]

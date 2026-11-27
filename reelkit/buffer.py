@@ -5,6 +5,7 @@
   python3 reelkit/buffer.py queue                    # queue depth per channel (scheduled / daily limit)
   python3 reelkit/buffer.py plan     <ep> --media-url URL      # show the exact createPost payloads (no network)
   python3 reelkit/buffer.py dispatch <ep> [<ep>…] [--media-url URL] [--live] [--channels youtube,instagram,facebook,twitter,threads]
+  python3 reelkit/buffer.py retry    [--live]        # post what dispatch/pending.json holds, skipping accounts still rate-limited (no call)
   python3 reelkit/buffer.py status   [--refresh]     # ledger view; --refresh pulls each post's status from Buffer
 
 Design (docs/DISTRIBUTION.md):
@@ -25,6 +26,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CFG_PATH = ROOT / "config/publishing.json"
 LEDGER = ROOT / "dispatch/ledger.json"
+LIMITS = ROOT / "dispatch/buffer_limits.json"     # {account: {until, reason, seen}} — a 429 Retry-After is remembered across runs (owner 2026-11-27:
+PENDING = ROOT / "dispatch/pending.json"          #   "do not waste API calls, be limit-aware, retry when the limit lifts"); deferred posts wait here
 UA = "TheQuizWire-reelkit/1 (+https://github.com/zainkhan122/thequizwire)"
 
 POST_FIELDS = "id channelId status dueAt sentAt createdAt externalLink schedulingType shareMode text assets { source mimeType } error { message supportUrl }"
@@ -92,6 +95,75 @@ def redact(s, t):
 
 class BufferError(RuntimeError): pass
 class Deferred(BufferError): pass      # try again later (rate limit, 5xx on a query)
+# ---------------------------------------------------------------- limit memory + pending queue (no network)
+def limits_load():
+    try: return json.loads(LIMITS.read_text()) if LIMITS.exists() else {}
+    except ValueError: return {}
+
+
+def limit_set(account, seconds, reason):
+    """Remember that `account` answered a rate limit: no request goes to it before now+seconds (clamped 60 s … 10 days)."""
+    L = limits_load(); until = datetime.now(timezone.utc) + timedelta(seconds=max(60.0, min(float(seconds), 10 * 86400)))
+    L[account] = {"until": until.isoformat(timespec="seconds"), "reason": str(reason)[:200], "seen": now()}
+    LIMITS.parent.mkdir(parents=True, exist_ok=True); LIMITS.write_text(json.dumps(L, indent=1) + "\n")
+
+
+def limit_clear(account):
+    L = limits_load()
+    if account in L: L.pop(account); LIMITS.write_text(json.dumps(L, indent=1) + "\n")
+
+
+def blocked(account):
+    """Human reason if this account is still inside a remembered rate-limit window, else None. Costs no API call."""
+    e = limits_load().get(account)
+    if not e: return None
+    try: until = datetime.fromisoformat(e["until"])
+    except Exception: return None
+    left = (until - datetime.now(timezone.utc)).total_seconds()
+    if left <= 0: return None
+    h = left / 3600
+    return f"rate limited until {e['until']} ({h:.1f} h left) — no call made"
+
+
+def pending_load():
+    try: return json.loads(PENDING.read_text()) if PENDING.exists() else {"version": 1, "rows": []}
+    except ValueError: return {"version": 1, "rows": []}
+
+
+def pending_save(P):
+    PENDING.parent.mkdir(parents=True, exist_ok=True); PENDING.write_text(json.dumps(P, indent=1, ensure_ascii=False) + "\n")
+
+
+def pending_add(P, episode, ep_dir, platform, account, media_url, payload, reason):
+    """Queue one episode × channel for a later `buffer.py retry` (idempotent on episode × platform). The payload is stored
+    whole so the retry needs neither the render nor postkit — only the hosted media URL, which stays live until posted."""
+    for r in P["rows"]:
+        if r["episode"] == episode and r["platform"] == platform:
+            r.update({"reason": str(reason)[:200], "last_try": now(), "tries": int(r.get("tries", 0)) + 1, "media_url": media_url, "payload": payload}); return r
+    r = {"episode": episode, "ep_dir": str(ep_dir), "platform": platform, "account": account, "media_url": media_url, "payload": payload,
+         "reason": str(reason)[:200], "queued_at": now(), "last_try": now(), "tries": 1}
+    P["rows"].append(r); return r
+
+
+def pending_drop(P, episode, platform):
+    P["rows"] = [r for r in P["rows"] if not (r["episode"] == episode and r["platform"] == platform)]
+
+
+def yt_direct_available():
+    return all(os.environ.get(k) for k in ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN"))
+
+
+def yt_direct(ep_dir, media_url, when):
+    """YouTube Data API upload (reelkit/yt_enrich.py upload) when Buffer's YouTube account is rate-limited: YouTube keeps
+    flowing on its own quota (owner 2026-11-27: "YT is okay, keep sharing to YT"). Returns True when the ledger row was written."""
+    import subprocess
+    cmd = [sys.executable, str(ROOT / "reelkit/yt_enrich.py"), "upload", str(ep_dir), "--media-url", media_url, "--publish-at", when.strftime("%Y-%m-%dT%H:%M:%SZ")]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    tail = (r.stdout + r.stderr).strip().splitlines()
+    for l in tail[-4:]: print("      " + l)
+    return r.returncode == 0
+
+
 class Ambiguous(BufferError): pass     # a mutation may have landed: reconcile before retrying
 class Rejected(BufferError): pass      # Buffer refused the input deterministically (nothing was created): fix the payload, rerun
 
@@ -125,7 +197,9 @@ class Client:
             if status == 429:
                 ra = headers.get("Retry-After") or headers.get("retry-after") or "30"
                 wait = float(ra) if re.fullmatch(r"[\d.]+", ra) else 60.0
-                if wait > 480 or attempt + 1 == self.attempts: raise Deferred(f"rate limited; retry after {wait:.0f}s")
+                if wait > 480 or attempt + 1 == self.attempts:
+                    limit_set(self.account_name, wait if wait > 480 else 900, f"HTTP 429 Retry-After {wait:.0f}s")      # remembered: later runs skip this account without a call
+                    raise Deferred(f"rate limited; retry after {wait:.0f}s")
                 print(f"   (Buffer rate limit on {self.account_name}: sleeping {wait:.0f}s)", flush=True); time.sleep(wait + 1); continue
             if status in (401, 403): raise BufferError("Buffer rejected the API key (401/403) — rotate BUFFER_API_KEY")
             if status >= 500:
@@ -143,7 +217,9 @@ class Client:
                 msg = "; ".join(e.get("message", "") for e in errs)[:300]
                 data = body.get("data") or {}
                 if mutation and ((data.get("createPost") or {}).get("post") or {}).get("id"): return data
-                if codes <= {"RATE_LIMIT_EXCEEDED"} and attempt + 1 < self.attempts: time.sleep(30); continue
+                if codes <= {"RATE_LIMIT_EXCEEDED"}:
+                    if attempt + 1 < self.attempts: time.sleep(30); continue
+                    limit_set(self.account_name, 3600, "GraphQL RATE_LIMIT_EXCEEDED"); raise Deferred("rate limited (RATE_LIMIT_EXCEEDED); retry in 1 h")
                 if codes & {"UNAUTHORIZED", "FORBIDDEN"}: raise BufferError(f"Buffer auth error: {msg}")
                 if codes <= {"GRAPHQL_VALIDATION_FAILED", "BAD_USER_INPUT"}: raise BufferError(f"GraphQL input rejected: {msg}")
                 if mutation: raise Ambiguous(f"uncertain createPost outcome ({','.join(sorted(codes))}): {msg}")
@@ -151,6 +227,7 @@ class Client:
             if not isinstance(body.get("data"), dict):
                 if mutation: raise Ambiguous("createPost returned no data — reconcile before retrying")
                 raise Deferred("Buffer returned no data")
+            if self.n == 1 and limits_load().get(self.account_name): limit_clear(self.account_name)   # the window has passed and the account answers again
             return body["data"]
         raise Deferred("retry budget exhausted")
 
@@ -304,6 +381,7 @@ def cmd_channels(a):
     present = present_accounts(c); unavailable = []
     if not present: sys.exit(f"buffer: none of {accounts(c)} is set")
     for acc in present:
+        if blocked(acc): print(f"   ({acc}: {blocked(acc)} — keeping its channels from config)"); unavailable.append(acc); continue
         cl = Client(c, acc)
         try: acct = cl.account()
         except Deferred as e:                                                   # 11-19: BUFFER_API_KEY_2 answered 429 Retry-After 9.5 days; discovery must not sink the whole preflight
@@ -349,6 +427,7 @@ def cmd_queue(a):
         if chan_cfg(c, p).get("buffer_id") and not account_of(c, p): print(f"   {p:<10} account unknown — run `buffer.py channels` with every key present")
     for (acc, org), items in g.items():
         if not token(acc, required=False): print(f"   ({acc} not set — {', '.join(p for p, _ in items)} not checked)"); continue
+        if blocked(acc): print(f"   ({acc}: {blocked(acc)} — {', '.join(p for p, _ in items)} not checked)"); continue
         cl = Client(c, acc); ids = [cid for _, cid in items]
         try:
             sched, complete = cl.posts(org, ids, ["scheduled", "sending"])
@@ -365,14 +444,111 @@ def cmd_plan(a):
     print(json.dumps(rows, indent=1, ensure_ascii=False))
 
 
+def _create_rows(c, L, P, clients, existing, lim, down, taken, jobs, live, no_verify=False, retry=False):
+    """Shared by dispatch and retry: for every (episode, channel) row create the Buffer post, or queue it in pending.json
+    with the reason. A channel whose Buffer account is rate-limited gets no API call; YouTube falls back to a direct
+    Data-API upload when the OAuth secrets are present. Returns (created, skipped, failed, deferred)."""
+    cap = int(c["buffer"].get("queue_limit_per_channel", 14)); T = dict(created=0, skipped=0, failed=0, deferred=0)
+    for name, ep_dir, kit, media_url, rows in jobs:
+        print(f"== {name}")
+        if no_verify and not live: print(f"   media (unverified, dry-run): {media_url}")
+        else:
+            try: size = verify_media(media_url); print(f"   media ok: {media_url} ({(size or 0) / 1e6:.1f} MB)")
+            except SystemExit as e:
+                print(f"   media gone: {e}")
+                for r in rows: pending_drop(P, name, r["platform"])
+                T["failed"] += 1; continue
+        created = skipped = failed = deferred = 0
+        for r in rows:
+            platform, payload = r["platform"], r["payload"]
+            prev = ledger_entry(L, name, platform)
+            if prev:
+                print(f"   {platform:<10} already queued as {prev['post_id']} ({prev['state']}) — skip"); pending_drop(P, name, platform); skipped += 1; continue
+            acc = account_of(c, platform)
+            slot = best_slot(c, platform, payload["channelId"], taken)
+            if slot: payload["mode"] = "customScheduled"; payload["dueAt"] = slot.strftime("%Y-%m-%dT%H:%M:%SZ")
+            else: payload.pop("dueAt", None); payload["mode"] = c["buffer"].get("mode", "addToQueue")
+            if not live:
+                print(f"   {platform:<10} DRY-RUN would create {payload['mode']} post{' at ' + payload['dueAt'] if slot else ''} · text {len(payload['text'])} chars · channel {payload['channelId']} · via {acc or 'account unknown'}"); continue
+
+            def defer(reason):
+                nonlocal deferred
+                if platform == "youtube" and yt_direct_available() and ep_dir and Path(ep_dir).exists():
+                    print(f"   {platform:<10} Buffer unavailable ({reason}) → direct YouTube upload")
+                    when = slot or (datetime.now(timezone.utc) + timedelta(minutes=int((c["buffer"].get("scheduling") or {}).get("min_lead_minutes", 90))))
+                    if yt_direct(ep_dir, media_url, when):
+                        L.update(load_ledger()); pending_drop(P, name, platform); print(f"   {platform:<10} uploaded directly (YouTube Data API) · publishAt {when.strftime('%Y-%m-%dT%H:%M:%SZ')}"); return True
+                    print(f"   {platform:<10} direct upload failed — kept in pending")
+                pending_add(P, name, ep_dir, platform, acc, media_url, payload, reason)
+                print(f"   {platform:<10} deferred: {reason} → dispatch/pending.json (retried by publish-sync)"); deferred += 1; return False
+
+            if acc not in clients or acc in down:
+                if defer('channel account unknown' if not acc else down.get(acc) or acc + ' secret not set'): created += 1
+                continue
+            same = [p for p in existing if p["channelId"] == payload["channelId"] and any(x.get("source") == media_url for x in p.get("assets") or [])]
+            if same:                                                                   # a lost response from an earlier run: adopt it
+                p = same[0]; print(f"   {platform:<10} found existing post {p['id']} ({p['status']}) with this media — adopting")
+                L["posts"].append({"episode": name, "platform": platform, "post_id": p["id"], "channel_id": payload["channelId"], "state": p["status"],
+                                   "media_url": media_url, "due_at": p.get("dueAt"), "created_at": p.get("createdAt"), "recorded_at": now(), "adopted": True, "account": acc})
+                save_ledger(L); pending_drop(P, name, platform); skipped += 1; continue
+            queued = sum(1 for p in existing if p["channelId"] == payload["channelId"] and p["status"] in ("scheduled", "sending"))
+            queued += sum(1 for p in L["posts"] if p.get("channel_id") == payload["channelId"] and p.get("state") == "scheduled" and p.get("recorded_at", "") > (datetime.now(timezone.utc) - timedelta(hours=1)).isoformat())
+            if queued >= cap:
+                defer(f"queue has {queued} posts (cap {cap})"); continue
+            if lim.get(payload["channelId"], {}).get("isAtLimit"):
+                defer("Buffer daily posting limit reached"); continue
+            try:
+                p = clients[acc].create(payload)
+            except Ambiguous as e:
+                L["posts"].append({"episode": name, "platform": platform, "post_id": None, "channel_id": payload["channelId"], "state": "ambiguous",
+                                   "media_url": media_url, "recorded_at": now(), "error": str(e), "account": acc}); save_ledger(L); pending_save(P)
+                sys.exit(f"buffer: {platform}: {e} — ledger marked ambiguous; rerun reconciles before creating again")
+            except Deferred as e:
+                down[acc] = str(e)
+                if defer(str(e)): created += 1
+                continue
+            except Rejected as e:                                                      # nothing created; other channels go on; exit 1 at the end
+                print(f"   {platform:<10} REJECTED: {e}")
+                L["posts"].append({"episode": name, "platform": platform, "post_id": None, "channel_id": payload["channelId"], "state": "error",
+                                   "media_url": media_url, "recorded_at": now(), "error": str(e)[:300], "account": acc}); save_ledger(L); pending_drop(P, name, platform); failed += 1; continue
+            L["posts"].append({"episode": name, "platform": platform, "post_id": p["id"], "channel_id": payload["channelId"], "state": p["status"],
+                               "media_url": media_url, "due_at": p.get("dueAt"), "created_at": p.get("createdAt"), "recorded_at": now(),
+                               "title": (kit or {}).get("youtube", {}).get("title") if platform == "youtube" else None, "account": acc, **({"retried": True} if retry else {})})
+            save_ledger(L); pending_drop(P, name, platform); created += 1
+            print(f"   {platform:<10} queued → post {p['id']} · status {p['status']} · due {p.get('dueAt') or 'next free slot'}")
+        print(f"buffer: {name} · {'LIVE' if live else 'dry-run'} · created {created} · skipped {skipped} · rejected {failed} · deferred {deferred}")
+        for k, v in (("created", created), ("skipped", skipped), ("failed", failed), ("deferred", deferred)): T[k] += v
+    pending_save(P)
+    return T
+
+
+def _scan_accounts(c, plats, live, clients, existing, lim, down):
+    """One post scan + limits query per Buffer account that is not inside a remembered rate-limit window."""
+    if not live: return
+    for (acc, org), items in groups(c, plats).items():
+        why = blocked(acc)
+        if why: down[acc] = why; print(f"   ({acc}: {why} — its channels wait in pending.json)"); continue
+        if not token(acc, required=False): down[acc] = f"{acc} secret not set"; print(f"   ({acc} secret not set — its channels are deferred)"); continue
+        cl = clients[acc] = clients.get(acc) or Client(c, acc); gids = [cid for _, cid in items]
+        win = int(c["buffer"].get("dedupe_window_days", 14))                       # a lost createPost response is minutes old, not months
+        try:
+            ex, complete = cl.posts(org, gids, ["scheduled", "sending", "sent", "needs_approval", "draft"], max_pages=10, since_days=win)
+            if not complete: sys.exit(f"buffer: post scan incomplete (> 1000 posts in {win} days) — refusing to risk a duplicate; lower buffer.dedupe_window_days")
+            existing += ex; lim.update({l["channelId"]: l for l in cl.limits(gids)})
+        except Deferred as e:                                                      # this account is unavailable right now: defer its channels
+            down[acc] = str(e); print(f"   ({acc}: {e} — its channels are deferred to pending.json)")
+
+
 def cmd_dispatch(a):
     """Queue one or more episodes. Several episodes share ONE post scan + limits query per Buffer account (rate limits are tight
-    on Free plans); each episode's media URL comes from --media-url (single episode) or <ep>/out/media_url.txt."""
+    on Free plans); each episode's media URL comes from --media-url (single episode) or <ep>/out/media_url.txt.
+    Channels that cannot be posted now (account rate-limited · queue cap · daily limit) go to dispatch/pending.json and are
+    retried by `buffer.py retry` (publish-sync, 3×/day) without re-rendering; YouTube falls back to a direct upload."""
     c = cfg()
     if not c.get("enabled"): sys.exit("buffer: config/publishing.json enabled=false")
     if a.media_url and len(a.episode) != 1: sys.exit("buffer: --media-url needs exactly one episode")
     want = a.channels.split(",") if a.channels else None
-    jobs = []                                                                          # (name, kit, media_url, rows)
+    jobs = []                                                                          # (name, ep_dir, kit, media_url, rows)
     for e in a.episode:
         ep = Path(e); kit_p = ep / "out/postkit.json"
         if not kit_p.exists(): sys.exit(f"buffer: {kit_p} missing — run reelkit/postkit.py build first")
@@ -380,91 +556,65 @@ def cmd_dispatch(a):
         if kit.get("checks", {}).get("fail"): sys.exit(f"buffer: {ep.name}: postkit has FAILs: {kit['checks']['fail']}")
         url = a.media_url or ((ep / "out/media_url.txt").read_text().strip() if (ep / "out/media_url.txt").exists() else "")
         if not url: sys.exit(f"buffer: {ep.name}: no media url (--media-url or out/media_url.txt from mediahost.py push)")
-        jobs.append((ep.name, kit, url, payloads(c, ep, url, kit, want)))
+        jobs.append((ep.name, str(ep), kit, url, payloads(c, ep, url, kit, want)))
     live = a.live and not a.dry_run
-    L = load_ledger(); clients, existing, lim, down = {}, [], {}, {}
+    L = load_ledger(); P = pending_load(); clients, existing, lim, down = {}, [], {}, {}
     if live:
-        ids = [r["payload"]["channelId"] for _, _, _, rows in jobs for r in rows]
+        ids = [r["payload"]["channelId"] for *_, rows in jobs for r in rows]
         if any(i.startswith("<") for i in ids): sys.exit("buffer: channel ids missing — run `buffer.py channels`")
-        plats = sorted({r["platform"] for _, _, _, rows in jobs for r in rows})
-        for (acc, org), items in groups(c, plats).items():
-            cl = clients[acc] = clients.get(acc) or Client(c, acc); gids = [cid for _, cid in items]
-            win = int(c["buffer"].get("dedupe_window_days", 14))                       # a lost createPost response is minutes old, not months
-            try:
-                ex, complete = cl.posts(org, gids, ["scheduled", "sending", "sent", "needs_approval", "draft"], max_pages=10, since_days=win)
-                if not complete: sys.exit(f"buffer: post scan incomplete (> 1000 posts in {win} days) — refusing to risk a duplicate; lower buffer.dedupe_window_days")
-                existing += ex; lim.update({l["channelId"]: l for l in cl.limits(gids)})
-            except Deferred as e:                                                      # this account is unavailable right now: defer its channels
-                down[acc] = str(e); print(f"   ({acc}: {e} — its channels are deferred to the next run)")
-    cap = int(c["buffer"].get("queue_limit_per_channel", 14)); tot_created = tot_failed = 0
+        _scan_accounts(c, sorted({r["platform"] for *_, rows in jobs for r in rows}), live, clients, existing, lim, down)
     taken = taken_slots(existing, L)
-    for name, kit, media_url, rows in jobs:
-        print(f"== {name}")
-        if a.no_verify and not live: print(f"   media (unverified, dry-run): {media_url}")
-        else:
-            size = verify_media(media_url); print(f"   media ok: {media_url} ({(size or 0) / 1e6:.1f} MB)")
-        created = skipped = failed = 0
-        for r in rows:
-            platform, payload = r["platform"], r["payload"]
-            prev = ledger_entry(L, name, platform)
-            if prev:
-                print(f"   {platform:<10} already queued as {prev['post_id']} ({prev['state']}) — skip"); skipped += 1; continue
-            acc = account_of(c, platform)
-            slot = best_slot(c, platform, payload["channelId"], taken)
-            if slot: payload["mode"] = "customScheduled"; payload["dueAt"] = slot.strftime("%Y-%m-%dT%H:%M:%SZ")
-            if not live:
-                print(f"   {platform:<10} DRY-RUN would create {payload['mode']} post{' at ' + payload['dueAt'] if slot else ''} · text {len(payload['text'])} chars · channel {payload['channelId']} · via {acc or 'account unknown'}"); continue
-            if acc not in clients or acc in down:
-                print(f"   {platform:<10} deferred: {'channel account unknown' if not acc else down.get(acc) or acc + ' secret not set'}"); continue
-            same = [p for p in existing if p["channelId"] == payload["channelId"] and any(x.get("source") == media_url for x in p.get("assets") or [])]
-            if same:                                                                   # a lost response from an earlier run: adopt it
-                p = same[0]; print(f"   {platform:<10} found existing post {p['id']} ({p['status']}) with this media — adopting")
-                L["posts"].append({"episode": name, "platform": platform, "post_id": p["id"], "channel_id": payload["channelId"], "state": p["status"],
-                                   "media_url": media_url, "due_at": p.get("dueAt"), "created_at": p.get("createdAt"), "recorded_at": now(), "adopted": True, "account": acc})
-                save_ledger(L); skipped += 1; continue
-            queued = sum(1 for p in existing if p["channelId"] == payload["channelId"] and p["status"] in ("scheduled", "sending"))
-            queued += sum(1 for p in L["posts"] if p.get("channel_id") == payload["channelId"] and p.get("state") == "scheduled" and p.get("recorded_at", "") > (datetime.now(timezone.utc) - timedelta(hours=1)).isoformat())
-            if queued >= cap:
-                print(f"   {platform:<10} queue has {queued} posts (cap {cap}) — deferring this episode"); continue
-            if lim.get(payload["channelId"], {}).get("isAtLimit"):
-                print(f"   {platform:<10} Buffer daily posting limit reached — deferring"); continue
-            try:
-                p = clients[acc].create(payload)
-            except Ambiguous as e:
-                L["posts"].append({"episode": name, "platform": platform, "post_id": None, "channel_id": payload["channelId"], "state": "ambiguous",
-                                   "media_url": media_url, "recorded_at": now(), "error": str(e), "account": acc}); save_ledger(L)
-                sys.exit(f"buffer: {platform}: {e} — ledger marked ambiguous; rerun reconciles before creating again")
-            except Deferred as e:
-                print(f"   {platform:<10} deferred: {e}"); down[acc] = str(e); continue
-            except Rejected as e:                                                      # nothing created; other channels go on; exit 1 at the end
-                print(f"   {platform:<10} REJECTED: {e}")
-                L["posts"].append({"episode": name, "platform": platform, "post_id": None, "channel_id": payload["channelId"], "state": "error",
-                                   "media_url": media_url, "recorded_at": now(), "error": str(e)[:300], "account": acc}); save_ledger(L); failed += 1; continue
-            L["posts"].append({"episode": name, "platform": platform, "post_id": p["id"], "channel_id": payload["channelId"], "state": p["status"],
-                               "media_url": media_url, "due_at": p.get("dueAt"), "created_at": p.get("createdAt"), "recorded_at": now(),
-                               "title": kit["youtube"]["title"] if platform == "youtube" else None, "account": acc})
-            save_ledger(L); created += 1
-            print(f"   {platform:<10} queued → post {p['id']} · status {p['status']} · due {p.get('dueAt') or 'next free slot'}")
-        print(f"buffer: {name} · {'LIVE' if live else 'dry-run'} · created {created} · skipped {skipped} · rejected {failed}")
-        tot_created += created; tot_failed += failed
-    if len(jobs) > 1: print(f"buffer: {len(jobs)} episode(s) · created {tot_created} · rejected {tot_failed}" + (f" · deferred accounts: {', '.join(down)}" if down else ""))
-    if tot_failed: sys.exit(1)
+    T = _create_rows(c, L, P, clients, existing, lim, down, taken, jobs, live, no_verify=a.no_verify)
+    if len(jobs) > 1: print(f"buffer: {len(jobs)} episode(s) · created {T['created']} · rejected {T['failed']} · deferred {T['deferred']}" + (f" · unavailable accounts: {', '.join(down)}" if down else ""))
+    if T["failed"]: sys.exit(1)
+
+
+def cmd_retry(a):
+    """Post what earlier runs had to defer (dispatch/pending.json). Accounts still inside their remembered rate-limit window
+    are skipped WITHOUT a request; the rest get one scan + create per row. Runs from publish-sync 3×/day, so a lifted limit
+    is used within hours. Rows whose media is gone or whose episode already has a ledger post are dropped."""
+    c = cfg(); P = pending_load()
+    want = set(a.channels.split(",")) if a.channels else None
+    rows = [r for r in P["rows"] if not want or r["platform"] in want]
+    if not rows: print("buffer retry: nothing pending"); return
+    live = a.live and not a.dry_run
+    by_ep = {}
+    for r in rows: by_ep.setdefault((r["episode"], r.get("ep_dir"), r["media_url"]), []).append({"platform": r["platform"], "payload": dict(r["payload"])})
+    jobs = [(name, ep_dir, None, url, rs) for (name, ep_dir, url), rs in by_ep.items()]
+    plats = sorted({r["platform"] for r in rows})
+    accts = {account_of(c, p) for p in plats}
+    waiting = {acc: blocked(acc) for acc in accts if acc and blocked(acc)}
+    for acc, why in waiting.items(): print(f"   ({acc}: {why})")
+    if live and len(waiting) == len([x for x in accts if x]) and not (yt_direct_available() and "youtube" in plats):
+        print(f"buffer retry: every account is rate-limited — {len(rows)} row(s) wait (no API call made)"); return
+    L = load_ledger(); clients, existing, lim, down = {}, [], {}, {}
+    _scan_accounts(c, plats, live, clients, existing, lim, down)
+    taken = taken_slots(existing, L)
+    T = _create_rows(c, L, P, clients, existing, lim, down, taken, jobs, live, retry=True)
+    left = len(pending_load()["rows"])
+    print(f"buffer retry: {len(rows)} row(s) · created {T['created']} · rejected {T['failed']} · still pending {left}")
+    if T["failed"]: sys.exit(1)
 
 
 def cmd_status(a):
     c = cfg(); L = load_ledger()
     if a.refresh:
-        clients = {}
+        clients = {}; skipped_acc = set()
         for p in L["posts"]:
             if p.get("post_id") and p.get("state") not in ("sent",):
                 acc = p.get("account") or account_of(c, p["platform"])
+                if acc == "YT_OAUTH" or str(p.get("post_id", "")).startswith("yt:"): continue          # direct YouTube uploads are not Buffer posts
                 if not token(acc, required=False): p["refresh_error"] = f"{acc} not set"; continue
+                if blocked(acc): skipped_acc.add(acc); continue                                          # no call inside a remembered rate-limit window
                 cl = clients[acc] = clients.get(acc) or Client(c, acc)
                 try:
                     q = cl.post(p["post_id"]); p.update({"state": q["status"], "due_at": q.get("dueAt"), "sent_at": q.get("sentAt"), "external_link": q.get("externalLink"), "refreshed_at": now()})
                     if q.get("error"): p["error"] = q["error"].get("message")
+                except Deferred as e:
+                    p["refresh_error"] = str(e); skipped_acc.add(acc)                                     # the 429 is now remembered; later posts of this account are skipped
                 except BufferError as e:
                     p["refresh_error"] = str(e)
+        for acc in skipped_acc: print(f"   ({acc}: {blocked(acc) or 'unavailable'} — its posts were not refreshed)")
         save_ledger(L)
     for p in L["posts"]:
         print(f"   {p['episode']:<44} {p['platform']:<10} {str(p.get('state')):<12} {p.get('post_id') or '—':<26} due {p.get('due_at') or '—'}  {p.get('external_link') or ''}")
@@ -516,10 +666,11 @@ def main():
     p = sp.add_parser("plan"); p.add_argument("episode"); p.add_argument("--media-url", required=True); p.add_argument("--channels")
     p = sp.add_parser("dispatch"); p.add_argument("episode", nargs="+"); p.add_argument("--media-url"); p.add_argument("--channels")
     p.add_argument("--live", action="store_true"); p.add_argument("--dry-run", action="store_true"); p.add_argument("--no-verify", action="store_true", help="dry-run only: skip the media URL probe")
+    p = sp.add_parser("retry"); p.add_argument("--live", action="store_true"); p.add_argument("--dry-run", action="store_true"); p.add_argument("--channels")
     p = sp.add_parser("status"); p.add_argument("--refresh", action="store_true")
     p = sp.add_parser("recopy"); p.add_argument("episode", nargs="+"); p.add_argument("--live", action="store_true"); p.add_argument("--channels", help="comma list; default all")
     a = ap.parse_args()
-    {"channels": cmd_channels, "queue": cmd_queue, "plan": cmd_plan, "dispatch": cmd_dispatch, "status": cmd_status, "recopy": cmd_recopy}[a.cmd](a)
+    {"channels": cmd_channels, "queue": cmd_queue, "plan": cmd_plan, "dispatch": cmd_dispatch, "retry": cmd_retry, "status": cmd_status, "recopy": cmd_recopy}[a.cmd](a)
 
 
 if __name__ == "__main__":
