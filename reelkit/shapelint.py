@@ -128,8 +128,34 @@ def recent_episodes(ep, n):
         try: OE = json.loads((d / "episode.json").read_text())
         except Exception: continue
         if OE.get("status") not in ("ready", "sent", "scheduled", "published"): continue
-        rows.append((v.stat().st_mtime, d))
+        rows.append((_when(d), d))
+    # 'before this one': shipped episodes (ledger) always count; a ready-but-unshipped episode only counts if it was
+    # authored before me — otherwise the backlog can deadlock (older episode judged against newer drafts, 2026-11-26)
+    mine = _when(me)
+    rows = [(t, d) for t, d in rows if d.name in (_LEDGER_T or {}) or t <= mine]
     return [d for _, d in sorted(rows, reverse=True)[:n]]
+
+
+_LEDGER_T = None
+def _when(d):
+    """Recency of an episode that survives a fresh CI checkout (mtime is checkout time there, so the 'last 8' was random
+    and blocked the backlog, 2026-11-26): first ledger post time, else the git commit time of episode.json, else mtime."""
+    global _LEDGER_T
+    if _LEDGER_T is None:
+        _LEDGER_T = {}
+        try:
+            import datetime
+            for p in json.loads((ROOT / "dispatch/ledger.json").read_text()).get("posts", []):
+                t = p.get("created_at") or p.get("recorded_at")
+                if t: _LEDGER_T[p["episode"]] = max(_LEDGER_T.get(p["episode"], 0), datetime.datetime.fromisoformat(t.replace("Z", "+00:00")).timestamp())
+        except Exception: pass
+    if d.name in _LEDGER_T: return _LEDGER_T[d.name]
+    try:
+        import subprocess
+        out = subprocess.run(["git", "log", "-1", "--format=%ct", "--", str(d / "episode.json")], cwd=ROOT, capture_output=True, text=True, timeout=20).stdout.strip()
+        if out: return float(out)
+    except Exception: pass
+    return (d / "visuals.json").stat().st_mtime
 
 
 def balance_check(ep):

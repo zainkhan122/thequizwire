@@ -2,7 +2,7 @@
  "version": 1,
  "episode": "ep13-most-coffee-per-person-finland",
  "topic": "Highest coffee consumption per capita: Finland, about 12 kg of green coffee per person per year (ICO data; roughly 4 cups a day). Italy about 6 kg; United States about 4.7 kg. EFSA (2015) considers up to 400 mg caffeine a day safe for healthy adults (a cup of filter coffee ~ 90–100 mg). Finnish collective agreements typically guarantee two 10–15 minute coffee breaks (kahvitauko) per working day. Long dark winters are commonly cited for the habit.",
- "researched": "2026-11-13",
+ "researched": "2026-11-27",
  "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
  "myths": [
   {
@@ -132,7 +132,7 @@
     "thisisfinland"
    ],
    "vo": [
-    "which country drinks the most coffee per person",
+    "where do people drink the most coffee per person",
     "italy, united states, or finland",
     "finland. finns get through about 12 kilograms of coffee beans a year each",
     "4 cups a day, by agreement"

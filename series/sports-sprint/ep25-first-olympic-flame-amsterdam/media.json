@@ -93,7 +93,7 @@
   },
   "geo/main.json": {
    "by": "reelkit/geodata.py",
-   "bytes": 287275,
+   "bytes": 287287,
    "credit": "Natural Earth",
    "kind": "data",
    "licence": "PD",
@@ -102,7 +102,7 @@
   },
   "geo/main_basemap.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 1265334,
+   "bytes": 907671,
    "credit": "NASA Blue Marble",
    "kind": "image",
    "licence": "PD-USGov",
@@ -117,6 +117,14 @@
    "licence": "PD-USGov",
    "provider": "NASA GIBS",
    "source": "BlueMarble_ShadedRelief_Bathymetry z4 (35 tiles)"
+  },
+  "mix.wav": {
+   "ai_voice": "Kokoro am_michael",
+   "by": "reelkit/quizscore.py (procedural bed/ticks/sting) + Kokoro VO takes",
+   "derived_from": "procedural reelkit/synth.py + Kokoro takes vo/*",
+   "kind": "mix",
+   "licence": "own",
+   "provider": "build"
   },
   "stickers/1f3ac.svg": {
    "by": "reelkit/stickers.py",

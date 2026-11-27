@@ -63,15 +63,6 @@
    "rot": 6
   },
   {
-   "id": "st_boat",
-   "type": "sticker",
-   "emoji": "1f6f6",
-   "x": 540,
-   "y": 900,
-   "size": 110,
-   "rot": 0
-  },
-  {
    "id": "st_anchor",
    "type": "sticker",
    "emoji": "2693",
@@ -483,26 +474,6 @@
    }
   },
   {
-   "at": "s06+0.1",
-   "do": "sticker_in",
-   "id": "st_boat"
-  },
-  {
-   "at": "s06+0.1",
-   "do": "geo.travel",
-   "stage": "stage_map",
-   "until": "s06.end",
-   "args": {
-    "rid": "main",
-    "layer": "congo",
-    "sid": "st_boat",
-    "offset": [
-     0,
-     -50
-    ]
-   }
-  },
-  {
    "at": "s06@deepest-0.2",
    "do": "chart.counter_run",
    "id": "deep",
@@ -542,11 +513,6 @@
    "at": "s06.end",
    "do": "sticker_out",
    "id": "st_wave"
-  },
-  {
-   "at": "s06.end",
-   "do": "sticker_out",
-   "id": "st_boat"
   },
   {
    "at": "s07",

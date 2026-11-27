@@ -137,7 +137,6 @@
   "reveal": "route-draw",
   "beats": [
    "route",
-   "travel",
    "counter",
    "pin",
    "label"
@@ -145,5 +144,5 @@
   "cast": "flagball:cd + flagball:br + emoji-set:river",
   "music": "bed:warm"
  },
- "status": "draft"
+ "status": "ready"
 }

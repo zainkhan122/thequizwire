@@ -1,4 +1,4 @@
-# Which country drinks the MOST coffee per person?
+# Where do people drink the MOST coffee per person?
 
 ## Signal
 suggest: "which country drinks the most coffee" (YouTube autocomplete, "which country consumes the most <food/drink>"
@@ -25,7 +25,7 @@ A Italy — espresso culture, the obvious guess · B United States — the bigge
 coffee grows within 5,000 km of it.
 
 ## Search term
-"which country drinks the most coffee"
+"most coffee per person"
 
 ## Rejected alternatives
 - "Which country grows the most coffee" — Brazil; a trade fact, no body angle.
