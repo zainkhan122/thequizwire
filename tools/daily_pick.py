@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def v4_ok(ep):
     """Hard v4 gate before an episode can be picked: quizlint (incl. Q11 authoring rules) + postkit check must pass."""
     import subprocess
-    for cmd in (["python3", str(ROOT / "reelkit/quizlint.py"), str(ep)], ["python3", str(ROOT / "reelkit/postkit.py"), "check", str(ep)]):
+    for cmd in (["python3", str(ROOT / "reelkit/quizlint.py"), str(ep)], ["python3", str(ROOT / "reelkit/postkit.py"), "check", str(ep)], ["python3", str(ROOT / "reelkit/cover_scroll.py"), str(ep), "--check"]):  # cover gate: dispatch refuses to post without an approved cover (owner rule 2026-11-19/20)
         r = subprocess.run(cmd, capture_output=True, text=True)
         if r.returncode != 0:
             print(f"daily_pick: SKIP {ep.name} — {cmd[1].split('/')[-1]} failed:\n" + "\n".join(l for l in (r.stdout + r.stderr).splitlines() if "FAIL" in l)[:1500], file=sys.stderr)
