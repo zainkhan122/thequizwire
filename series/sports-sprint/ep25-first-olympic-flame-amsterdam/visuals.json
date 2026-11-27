@@ -396,14 +396,6 @@
    }
   },
   {
-   "at": "s06@olympia",
-   "do": "fx.flash",
-   "args": {
-    "peak": 0.9,
-    "out": 0.3
-   }
-  },
-  {
    "at": "s06@olympia+0.2",
    "do": "sticker_in",
    "id": "st_runner"

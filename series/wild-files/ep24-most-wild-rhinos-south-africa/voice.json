@@ -1,0 +1,133 @@
+{
+ "version": 1,
+ "episode": "ep24-most-wild-rhinos-south-africa",
+ "backend": "kokoro",
+ "voice": "Kokoro am_michael (owner decision D3, 2026-10-14)",
+ "kokoro_fallback": {
+  "voice": "am_michael",
+  "speed": 1.3
+ },
+ "intent": "A share you can see: the compare blocks put South Africa's 16,000 against India's 4,000, a split sets the 2 African species side by side, and the park with the most rhinos on Earth rises off the map.",
+ "pacing_profile": "question read verbatim, three options, 3-s beat, reveal with the number, story beats shaped per episode (brief.md), punchline + short follow",
+ "pause_policy": "Pause only at the marked ellipses; the beat is real silence (ticks come from quizscore.py).",
+ "start_hold": 0.0,
+ "end_hold": 2.4,
+ "sample_line": "v04",
+ "title": "Where do MOST wild rhinos live?",
+ "lines": [
+  {
+   "id": "v01",
+   "scene": "s01",
+   "role": "hook",
+   "tone": "urgent",
+   "energy": 4,
+   "pause_after": 0.3,
+   "direction": "the question, cold — curiosity comes from the map moving under it",
+   "text": "Where do most wild rhinos live?",
+   "cues": {
+    "where": "where",
+    "most": "most"
+   }
+  },
+  {
+   "id": "v02",
+   "scene": "s02",
+   "role": "options",
+   "tone": "neutral",
+   "energy": 3,
+   "pause_after": 0.3,
+   "direction": "quick, each option its own beat",
+   "text": "Kenya, India, or South Africa?",
+   "cues": {
+    "a": "kenya",
+    "b": "india",
+    "c": "south"
+   }
+  },
+  {
+   "id": "v03",
+   "scene": "s03",
+   "role": "countdown",
+   "tone": "neutral",
+   "energy": 1,
+   "pause_after": 0.1,
+   "direction": "silence — the bar drains",
+   "silence": 3.0,
+   "text": ""
+  },
+  {
+   "id": "v04",
+   "scene": "s04",
+   "role": "reveal",
+   "tone": "revelatory",
+   "energy": 4,
+   "pause_after": 0.45,
+   "direction": "the map answers with you",
+   "text": "South Africa. Around 6 in 10 wild rhinos live here.",
+   "cues": {
+    "answer": "south",
+    "around": "around",
+    "here": "here"
+   },
+   "climax": true
+  },
+  {
+   "id": "v05",
+   "scene": "s05",
+   "role": "story",
+   "tone": "resolute",
+   "energy": 4,
+   "pause_after": 0.35,
+   "direction": "ease back over the whole country; the Kenyan flag-ball thinks on 'Kenya' with a rhino sticker; the compare blocks stack 16,000 over 4,000 and 2,000 on 'India' with a horn sticker; a grass sticker on 'Africa' as the country pulses",
+   "text": "Kenya has around 2,000. India has around 4,000, nearly all with a single horn. South Africa has around 16,000.",
+   "cues": {
+    "kenya": "kenya",
+    "india": "india",
+    "africa": "africa"
+   }
+  },
+  {
+   "id": "v06",
+   "scene": "s06",
+   "role": "story",
+   "tone": "revelatory",
+   "energy": 3,
+   "pause_after": 0.45,
+   "direction": "drift east; the split slides in on 'species' — white rhino ≈ 17,500 left against black rhino ≈ 6,400 left, both labelled AFRICA; a white circle sticker on 'white'; a black circle sticker on 'black' as the country pulses",
+   "text": "There are 5 species. The 2 African ones live here, the white rhino, and the much rarer black rhino.",
+   "cues": {
+    "species": "species",
+    "white": "white",
+    "black": "black"
+   }
+  },
+  {
+   "id": "v07",
+   "scene": "s07",
+   "role": "story",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.8,
+   "direction": "push in on the north-east; the Kruger outline lights and rises with a rhino sticker riding it on 'Kruger' as the pin and tag land, a tree sticker beside; the MOST RHINOS card on 'more'; the South African flag-ball grins on 'Earth' as the country pulses; pin leaves",
+   "text": "And the Kruger National Park holds more rhinos than any other place on Earth.",
+   "cues": {
+    "kruger": "kruger",
+    "more": "more",
+    "earth": "earth"
+   }
+  },
+  {
+   "id": "v08",
+   "scene": "s08",
+   "role": "cta",
+   "tone": "tender",
+   "energy": 3,
+   "pause_after": 0.0,
+   "direction": "punchline, then a short follow — the outro visual asks",
+   "text": "6 in 10, in 1 country. Follow us.",
+   "cues": {
+    "follow": "follow"
+   }
+  }
+ ]
+}

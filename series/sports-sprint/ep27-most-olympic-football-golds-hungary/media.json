@@ -55,6 +55,33 @@
    "provider": "Simple Icons",
    "source": "https://github.com/simple-icons/simple-icons"
   },
+  "geo/flags/ar.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 3461,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/flags/br.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 7140,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
+  "geo/flags/hu.svg": {
+   "by": "reelkit/flags.py",
+   "bytes": 264,
+   "credit": "flag-icons",
+   "kind": "image",
+   "licence": "MIT",
+   "provider": "flag-icons (lipis)",
+   "source": "https://github.com/lipis/flag-icons"
+  },
   "geo/flags/un.svg": {
    "by": "reelkit/flags.py",
    "bytes": 18702,
@@ -66,30 +93,30 @@
   },
   "geo/main.json": {
    "by": "reelkit/geodata.py",
-   "bytes": 92936,
+   "bytes": 169276,
    "credit": "Natural Earth",
    "kind": "data",
    "licence": "PD",
    "provider": "Natural Earth",
-   "source": "world-atlas 2.0.2 110m"
+   "source": "world-atlas 2.0.2 50m"
   },
   "geo/main_basemap.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 836135,
+   "bytes": 1067805,
    "credit": "NASA Blue Marble",
    "kind": "image",
    "licence": "PD-USGov",
    "provider": "NASA GIBS",
-   "source": "BlueMarble_ShadedRelief_Bathymetry z4 (160 tiles)"
+   "source": "BlueMarble_ShadedRelief_Bathymetry z8 (110 tiles)"
   },
   "geo/main_basemap_far.jpg": {
    "by": "reelkit/basemap.py",
-   "bytes": 204283,
+   "bytes": 899653,
    "credit": "NASA Blue Marble",
    "kind": "image",
    "licence": "PD-USGov",
    "provider": "NASA GIBS",
-   "source": "BlueMarble_ShadedRelief_Bathymetry z2 (16 tiles)"
+   "source": "BlueMarble_ShadedRelief_Bathymetry z6 (154 tiles)"
   },
   "mix.wav": {
    "ai_voice": "Kokoro am_michael",
@@ -99,36 +126,18 @@
    "licence": "own",
    "provider": "build"
   },
-  "stickers/1f315.svg": {
+  "stickers/1f3c5.svg": {
    "by": "reelkit/stickers.py",
-   "bytes": 422,
+   "bytes": 967,
    "credit": "Twemoji",
    "kind": "image",
    "licence": "CC-BY-4.0",
    "provider": "Twemoji (Twitter, Inc. and other contributors)",
    "source": "https://github.com/twitter/twemoji"
   },
-  "stickers/1f31e.svg": {
+  "stickers/1f3df.svg": {
    "by": "reelkit/stickers.py",
-   "bytes": 1991,
-   "credit": "Twemoji",
-   "kind": "image",
-   "licence": "CC-BY-4.0",
-   "provider": "Twemoji (Twitter, Inc. and other contributors)",
-   "source": "https://github.com/twitter/twemoji"
-  },
-  "stickers/1f40b.svg": {
-   "by": "reelkit/stickers.py",
-   "bytes": 673,
-   "credit": "Twemoji",
-   "kind": "image",
-   "licence": "CC-BY-4.0",
-   "provider": "Twemoji (Twitter, Inc. and other contributors)",
-   "source": "https://github.com/twitter/twemoji"
-  },
-  "stickers/1f426.svg": {
-   "by": "reelkit/stickers.py",
-   "bytes": 2132,
+   "bytes": 3430,
    "credit": "Twemoji",
    "kind": "image",
    "licence": "CC-BY-4.0",
@@ -144,9 +153,9 @@
    "provider": "Twemoji (Twitter, Inc. and other contributors)",
    "source": "https://github.com/twitter/twemoji"
   },
-  "stickers/1f4ab.svg": {
+  "stickers/1f47b.svg": {
    "by": "reelkit/stickers.py",
-   "bytes": 931,
+   "bytes": 729,
    "credit": "Twemoji",
    "kind": "image",
    "licence": "CC-BY-4.0",
@@ -162,45 +171,27 @@
    "provider": "Twemoji (Twitter, Inc. and other contributors)",
    "source": "https://github.com/twitter/twemoji"
   },
-  "stickers/1f680.svg": {
+  "stickers/1f947.svg": {
    "by": "reelkit/stickers.py",
-   "bytes": 677,
+   "bytes": 665,
    "credit": "Twemoji",
    "kind": "image",
    "licence": "CC-BY-4.0",
    "provider": "Twemoji (Twitter, Inc. and other contributors)",
    "source": "https://github.com/twitter/twemoji"
   },
-  "stickers/1f98b.svg": {
+  "stickers/26bd.svg": {
    "by": "reelkit/stickers.py",
-   "bytes": 5042,
+   "bytes": 3238,
    "credit": "Twemoji",
    "kind": "image",
    "licence": "CC-BY-4.0",
    "provider": "Twemoji (Twitter, Inc. and other contributors)",
    "source": "https://github.com/twitter/twemoji"
   },
-  "stickers/1f9ca.svg": {
+  "stickers/2728.svg": {
    "by": "reelkit/stickers.py",
-   "bytes": 2969,
-   "credit": "Twemoji",
-   "kind": "image",
-   "licence": "CC-BY-4.0",
-   "provider": "Twemoji (Twitter, Inc. and other contributors)",
-   "source": "https://github.com/twitter/twemoji"
-  },
-  "stickers/1f9fc.svg": {
-   "by": "reelkit/stickers.py",
-   "bytes": 1992,
-   "credit": "Twemoji",
-   "kind": "image",
-   "licence": "CC-BY-4.0",
-   "provider": "Twemoji (Twitter, Inc. and other contributors)",
-   "source": "https://github.com/twitter/twemoji"
-  },
-  "stickers/2600.svg": {
-   "by": "reelkit/stickers.py",
-   "bytes": 759,
+   "bytes": 1052,
    "credit": "Twemoji",
    "kind": "image",
    "licence": "CC-BY-4.0",

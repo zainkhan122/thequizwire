@@ -1,0 +1,49 @@
+{
+ "bg": "hero.jpg",
+ "anchor": [
+  0.5,
+  0.35
+ ],
+ "hero_prompt": "Vibrant stylised vertical 9:16 illustration, bold vintage 1920s poster style: a tall brick stadium tower with a giant flaming bowl on top, orange fire against a twilight blue sky, art-deco geometric clouds, warm highlights, saturated colours, high contrast. No text, no letters, no flags, no rings, no logos, no recognisable landmarks.",
+ "head": "THE FIRST OLYMPIC FLAME WASN'T LIT IN *GREECE*",
+ "head_top": 1120,
+ "head_size": 150,
+ "badge": "ATHENS  ·  ???  ·  BERLIN",
+ "badge_color": "#FF2D2D",
+ "badge_xy": [
+  60,
+  990
+ ],
+ "burst": {
+  "text": "NOT\nGREECE",
+  "xy": [
+   870,
+   330
+  ],
+  "r": 155,
+  "color": "#FFD400"
+ },
+ "stickers": [
+  [
+   "1f914",
+   250,
+   [
+    780,
+    1480
+   ],
+   12
+  ],
+  [
+   "1f525",
+   200,
+   [
+    80,
+    760
+   ],
+   -10
+  ]
+ ],
+ "approved": "2026-11-27 owner standing instruction ('make sure all shorts are ready for backlog, no more questions'); rendered to review/v2/covers5",
+ "hero_url": "https://api.github.com/repos/zainkhan122/thequizwire/releases/assets/801373185",
+ "cover_url": "https://api.github.com/repos/zainkhan122/thequizwire/releases/assets/801373251"
+}

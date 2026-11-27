@@ -1,0 +1,94 @@
+{
+ "version": 1,
+ "episode": "ep35-largest-island-greenland",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "110m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     -75,
+     58,
+     -10,
+     84
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "304"
+     ],
+     "cls": "",
+     "note": "Greenland",
+     "lift": "color",
+     "color": "#FFD400"
+    }
+   ],
+   "pins": [
+    {
+     "id": "nuuk",
+     "lonlat": [
+      -51.72,
+      64.18
+     ],
+     "label": "capital",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "nk",
+     "lonlat": [
+      -51.7,
+      62.6
+     ],
+     "text": "Nuuk",
+     "cls": "tag",
+     "in": "s07@nuuk+0.2",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -180,
+      -30,
+      180,
+      88
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; the size comparison between the three islands is carried by the to-scale compare chart 'area', not by map shapes (P1)",
+   "size_claim_device": "area",
+   "scalebar": {
+    "km": 500,
+    "lonlat": [
+     -70,
+     59
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

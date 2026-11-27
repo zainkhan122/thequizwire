@@ -11,7 +11,7 @@ Leni Riefenstahl for the Nazi regime (Wikipedia: 1936 Summer Olympics torch rela
 Wide-drift opener over the Alps under the question; three flags. Reveal = flag-lift of the Netherlands with the "1928 · a bowl
 on the Marathon Tower" card, the Amsterdam pin and the Marathon Tower tag. Ease back over the Low Countries: the Greek
 flag-ball thinks on "Athens" with the 1896 card, a snuffed candle on "flame", a tower sticker on "tower" as the Netherlands
-pulses. Pull out so Greece and Germany share the frame: the Olympia pin on "relay", a white flash on "Olympia" as a runner
+pulses. Pull out so Greece and Germany share the frame: the Olympia pin on "relay", a runner sticker lands on "Olympia" as a runner
 sticker rides the drawn route from Olympia through Sofia, Belgrade, Budapest, Vienna and Prague to Berlin until "runners",
 then the Berlin pin and the kilometres tag. Hold on central Europe with the route lit: a calendar and the days tag on
 "twelve", a clapperboard on "propaganda" as the German flag-ball thinks, a torch on "copies"; the pins leave.
@@ -19,11 +19,11 @@ then the Berlin pin and the kilometres tag. Hold on central Europe with the rout
 ## Beat order
 1. s04 reveal — flag-lift Netherlands, answer card, Amsterdam pin, Marathon Tower tag.
 2. s05 no flame in Athens — 🇬🇷 flag-ball thinks, 1896 card, 🕯 🗼 stickers, pulse.
-3. s06 the relay — geo.pin Olympia, fx.flash at the lighting, geo.route_draw + geo.travel (runner) Olympia → Berlin, geo.pin Berlin, 3,187 km tag, pulse.
+3. s06 the relay — geo.pin Olympia, geo.route_draw + geo.travel (runner) Olympia → Berlin, geo.pin Berlin, 3,187 km tag, pulse.
 4. s07 twelve days — 📅 sticker + 12 days tag, 🎬 sticker, 🇩🇪 flag-ball thinks, 🔥 sticker, pulse, pins out.
 
 ## Different from
-#24 (first World Cup) was route + travel + flash too, but at sea and in one country; here the route crosses seven countries
+#24 (first World Cup) was route + travel + flash, at sea and in one country; here there is no flash and the route crosses seven countries
 with a flash at the start, not the end. #23 (hockey golds) was bars + counter; #22 (table tennis) compare + erase; #21
 (Silverstone) route + rise. SHOW set {route, travel, flash} with a relay of pins across a continent — no counter, no bars.
 
@@ -34,7 +34,7 @@ with a flash at the start, not the end. #23 (hockey golds) was bars + counter; #
 - 16 s — the Greek flag-ball thinks under the 1896 card: the Games returned without a flame.
 
 ## Devices
-wide-drift opener · flag-lift reveal · fact cards ×2 · fx.flash ×1 · geo.route_draw + geo.travel (runner rides the relay
+wide-drift opener · flag-lift reveal · fact cards ×2 · geo.route_draw + geo.travel (runner rides the relay
 line) · geo.pin ×3 / pin_out ×3 · tag labels ×3 · geo.highlight_pulse ×3 · flag-balls 🇬🇷 🇩🇪 think · stickers 🕯 🗼 🏃 📅
 🎬 🔥 + sticker_pulse ×10 · scalebar.
 

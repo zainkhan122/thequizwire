@@ -1,0 +1,726 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "6 IN 10",
+   "text": "wild rhinos live here"
+  },
+  {
+   "id": "pop",
+   "type": "compare",
+   "items": [
+    [
+     "South Africa",
+     16,
+     "≈ 16,000"
+    ],
+    [
+     "India",
+     4,
+     "≈ 4,000"
+    ],
+    [
+     "Kenya",
+     2,
+     "≈ 2,000"
+    ]
+   ],
+   "y": 300,
+   "x": 60,
+   "w": 900,
+   "max_h": 520
+  },
+  {
+   "id": "sp",
+   "type": "split",
+   "left": {
+    "kicker": "WHITE RHINO",
+    "text": "≈ 17,500 left"
+   },
+   "right": {
+    "kicker": "BLACK RHINO",
+    "text": "≈ 6,400 left"
+   },
+   "label_left": "AFRICA",
+   "label_right": "AFRICA",
+   "y": 310,
+   "h": 540,
+   "x": 60,
+   "w": 620
+  },
+  {
+   "id": "f4",
+   "type": "fact",
+   "kicker": "MOST RHINOS",
+   "text": "of any place on Earth"
+  },
+  {
+   "id": "st_rhino",
+   "type": "sticker",
+   "emoji": "1f98f",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_grass",
+   "type": "sticker",
+   "emoji": "1f33f",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_white",
+   "type": "sticker",
+   "emoji": "26aa",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_black",
+   "type": "sticker",
+   "emoji": "26ab",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_tree",
+   "type": "sticker",
+   "emoji": "1f333",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_heart",
+   "type": "sticker",
+   "emoji": "1f49a",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_rhino2",
+   "type": "sticker",
+   "emoji": "1f98f",
+   "x": 540,
+   "y": 900,
+   "size": 120,
+   "rot": 0
+  },
+  {
+   "id": "ke_think",
+   "type": "character",
+   "flag": "ke",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "za_happy",
+   "type": "character",
+   "flag": "za",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  },
+  {
+   "id": "cha",
+   "type": "character",
+   "flag": "za",
+   "face": "happy",
+   "x": 230,
+   "y": 1060,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "chb",
+   "type": "character",
+   "flag": "ke",
+   "face": "think",
+   "x": 850,
+   "y": 1060,
+   "size": 200,
+   "rot": 8
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     27,
+     -8
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.38,
+    "lonlat": [
+     25,
+     -10
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 0.9,
+    "lonlat": [
+     25,
+     -29
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 0.94,
+    "lonlat": [
+     25.3,
+     -29.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "710",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s07@kruger+0.2",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "kr"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "kr"
+   }
+  },
+  {
+   "at": "s04+3.2",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "710",
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 0.85,
+    "lonlat": [
+     26,
+     -28
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 0.89,
+    "lonlat": [
+     26.3,
+     -28.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@kenya",
+   "do": "character_in",
+   "id": "ke_think"
+  },
+  {
+   "at": "s05@kenya+0.2",
+   "do": "sticker_in",
+   "id": "st_rhino"
+  },
+  {
+   "at": "s05@kenya+0.6",
+   "do": "sticker_pulse",
+   "id": "st_rhino"
+  },
+  {
+   "at": "s05@india-0.3",
+   "do": "character_out",
+   "id": "ke_think"
+  },
+  {
+   "at": "s05@india-0.2",
+   "do": "chart.compare_in",
+   "id": "pop",
+   "args": {
+    "dur": 0.9,
+    "stagger": 0.3
+   }
+  },
+  {
+   "at": "s05@india",
+   "do": "sticker_pulse",
+   "id": "st_rhino"
+  },
+  {
+   "at": "s05@africa-0.1",
+   "do": "sticker_out",
+   "id": "st_rhino"
+  },
+  {
+   "at": "s05@africa",
+   "do": "sticker_in",
+   "id": "st_grass"
+  },
+  {
+   "at": "s05@africa+0.4",
+   "do": "sticker_pulse",
+   "id": "st_grass"
+  },
+  {
+   "at": "s05@africa+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "710",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "pop"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_grass"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 0.95,
+    "lonlat": [
+     27,
+     -27
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 0.99,
+    "lonlat": [
+     27.2,
+     -27.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@species-0.2",
+   "do": "chart.split_in",
+   "id": "sp"
+  },
+  {
+   "at": "s06@white",
+   "do": "sticker_in",
+   "id": "st_white"
+  },
+  {
+   "at": "s06@white+0.4",
+   "do": "sticker_pulse",
+   "id": "st_white"
+  },
+  {
+   "at": "s06@black-0.2",
+   "do": "sticker_out",
+   "id": "st_white"
+  },
+  {
+   "at": "s06@black",
+   "do": "sticker_in",
+   "id": "st_black"
+  },
+  {
+   "at": "s06@black+0.4",
+   "do": "sticker_pulse",
+   "id": "st_black"
+  },
+  {
+   "at": "s06@black+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "710",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "chart.out",
+   "id": "sp"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_black"
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.5",
+   "args": {
+    "k": 1.6,
+    "lonlat": [
+     30.5,
+     -24.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 1.66,
+    "lonlat": [
+     30.6,
+     -24.4
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@kruger-0.2",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "krf",
+    "layer": "kr",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s07@kruger-0.1",
+   "do": "sticker_in",
+   "id": "st_rhino2"
+  },
+  {
+   "at": "s07@kruger",
+   "do": "geo.rise",
+   "stage": "stage_map",
+   "args": {
+    "fid": "krf",
+    "eid": "st_rhino2",
+    "layer": "kr",
+    "dur": 0.8,
+    "lift": 10
+   }
+  },
+  {
+   "at": "s07@kruger+0.1",
+   "do": "sticker_in",
+   "id": "st_tree"
+  },
+  {
+   "at": "s07@kruger+0.5",
+   "do": "sticker_pulse",
+   "id": "st_tree"
+  },
+  {
+   "at": "s07@more-0.2",
+   "do": "sticker_out",
+   "id": "st_tree"
+  },
+  {
+   "at": "s07@more",
+   "do": "fact_in",
+   "id": "f4",
+   "until": "s07.end-0.2"
+  },
+  {
+   "at": "s07@more+0.2",
+   "do": "sticker_in",
+   "id": "st_heart"
+  },
+  {
+   "at": "s07@more+0.6",
+   "do": "sticker_pulse",
+   "id": "st_heart"
+  },
+  {
+   "at": "s07@earth",
+   "do": "character_in",
+   "id": "za_happy"
+  },
+  {
+   "at": "s07@earth+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "710",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_heart"
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_rhino2"
+  },
+  {
+   "at": "s07.end",
+   "do": "character_out",
+   "id": "za_happy"
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "kr"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.highlight_out",
+   "stage": "stage_map",
+   "args": {
+    "fid": "krf",
+    "layer": "kr",
+    "dur": 0.4
+   }
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     27,
+     -8
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04+1.7",
+   "do": "geo.scalebar_in",
+   "stage": "stage_map"
+  },
+  {
+   "at": "s07@kruger",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "kr"
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.6",
+   "do": "character_in",
+   "id": "cha"
+  },
+  {
+   "at": "s04+1.9",
+   "do": "character_in",
+   "id": "chb"
+  },
+  {
+   "at": "s05+1.0",
+   "do": "character_out",
+   "id": "cha"
+  },
+  {
+   "at": "s05+0.8",
+   "do": "character_out",
+   "id": "chb"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

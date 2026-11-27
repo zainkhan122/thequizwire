@@ -132,12 +132,11 @@
   "beats": [
    "route",
    "travel",
-   "flash",
    "pin",
    "label"
   ],
   "cast": "flagball:nl + flagball:gr + flagball:de + emoji-set:olympic",
   "music": "bed:epic"
  },
- "status": "draft"
+ "status": "ready"
 }

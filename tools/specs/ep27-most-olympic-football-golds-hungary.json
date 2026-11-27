@@ -1,0 +1,987 @@
+{
+ "id": "ep27-most-olympic-football-golds-hungary",
+ "series": "sports-sprint",
+ "number": 27,
+ "seed": 2727,
+ "question": "Who has the MOST Olympic golds in men's football?",
+ "keyword": "MOST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Brazil",
+   "flag": "br",
+   "cue": "brazil"
+  },
+  {
+   "text": "Argentina",
+   "flag": "ar",
+   "cue": "argentina"
+  },
+  {
+   "text": "Hungary",
+   "flag": "hu",
+   "cue": "hungary"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "3 golds, the last in 1968",
+ "outro_headline": "TOO EASY?",
+ "cover_emoji": "⚽",
+ "cover_emoji_why": "a football names the sport; it is not the flag or emoji of any option",
+ "post": {
+  "premise": "The Olympic football record belongs to a team you never see",
+  "bait": "Brazil, Argentina or Hungary — which did you pick? 👇",
+  "keywords": [
+   "most olympic football golds",
+   "olympic football record",
+   "olympic soccer gold medals",
+   "football quiz",
+   "olympics quiz",
+   "sports trivia",
+   "football history",
+   "soccer facts"
+  ],
+  "tags": [
+   "SportsQuiz",
+   "OlympicFootball"
+  ],
+  "sources_line": "International Olympic Committee (olympics.com); FIFA; Encyclopaedia Britannica",
+  "copy": {
+   "spoilers": [
+    "hungary",
+    "hungarian",
+    "magical magyars",
+    "puskas",
+    "1952",
+    "1964",
+    "1968",
+    "budapest",
+    "3 golds",
+    "helsinki"
+   ],
+   "youtube": {
+    "title": "Who has the most Olympic golds in men's football? Not Brazil ⚽",
+    "description": "The five-time world champions, Messi's country, or the third one? The record for Olympic men's football gold is held by a team that has not even qualified for the tournament for more than 50 years — and it once went 4 years without losing a match.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#olympicfootball",
+     "#quiz",
+     "#shorts",
+     "#sportssprint"
+    ]
+   },
+   "instagram": {
+    "caption": "Who has the MOST Olympic golds in men's football? ⚽\nThe record for Olympic men's football gold is held by a team that has not qualified for more than 50 years.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#olympicfootball",
+     "#footballhistory",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Who has the most Olympic golds in men's football?\nThe five-time world champions, Messi's country, or the third one? The record for Olympic men's football gold is held by a team that has not even qualified for the tournament for more than 50 years — and it once went 4 years without losing a match. Choose your flag before the gold blocks stack up.",
+    "tags": [
+     "#sportsquiz",
+     "#olympicfootball"
+    ]
+   },
+   "twitter": {
+    "text": "Who has the MOST Olympic golds in men's football?\nBrazil, Argentina or Hungary? The record holder has not qualified for more than 50 years — and once went 4 years unbeaten.",
+    "tags": [
+     "#SportsQuiz",
+     "#OlympicFootball"
+    ]
+   },
+   "threads": {
+    "text": "Who has the most Olympic golds in men's football? The five-time world champions, Messi's country, or the third one? The record for Olympic men's football gold is held by a team that has not even qualified for the tournament for more than 50 years — and it once went 4 years without losing a match.",
+    "tags": [
+     "#olympicfootball"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-record",
+  "hook": "straight",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "compare",
+   "route",
+   "travel",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:hu + flagball:br + flagball:ar + emoji-set:stadium",
+  "music": "bed:bright",
+  "outro": "TOO EASY?"
+ },
+ "intent": "A record held by a ghost: the gold bars put Hungary's 3 above Brazil's 2 and Argentina's 2, the unbeaten counter climbs to 42 matches, and a pin lands on the Budapest stadium where the golden team played.",
+ "voice": {
+  "v01_cues": {
+   "who": "who",
+   "most": "most"
+  },
+  "v04": {
+   "text": "Hungary. 3 golds, the last of them in 1968.",
+   "cues": {
+    "answer": "hungary",
+    "golds": "golds",
+    "last": "last"
+   }
+  },
+  "v05": {
+   "text": "Brazil has 2, Argentina has 2. Great Britain also has 3, but Hungary's came last, so Hungary holds the record.",
+   "cues": {
+    "brazil": "brazil",
+    "argentina": "argentina",
+    "hungary": "hungary"
+   }
+  },
+  "v06": {
+   "text": "The golden team were the Magical Magyars. They travelled from Budapest to Helsinki in 1952 and went 42 matches without defeat.",
+   "cues": {
+    "magical": "magical",
+    "helsinki": "helsinki",
+    "defeat": "defeat"
+   }
+  },
+  "v07": {
+   "text": "Their home was the Nepstadion in Budapest. Hungary has not qualified for the Olympics for more than 50 years.",
+   "cues": {
+    "budapest": "budapest",
+    "qualified": "qualified",
+    "years": "years"
+   }
+  },
+  "v08": {
+   "text": "A record nobody has touched. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "3 OLYMPIC GOLDS",
+   "text": "1952 · 1964 · 1968"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "hu",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "br",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "Hungary and Great Britain share the record of 3 Olympic men's football gold medals: Hungary in 1952, 1964 and 1968; Great Britain in 1900, 1908 and 1912 (olympics.com; Britannica). Brazil (2016, 2020) and Argentina (2004, 2008) have 2 each; Uruguay and the Soviet Union also 2. Hungary's 1952 Helsinki team, the 'Magical Magyars' of Puskás, Kocsis and Hidegkuti, went unbeaten in 42 consecutive matches from May 1950 to the 1954 World Cup final (FIFA; Britannica). Their home ground was the Népstadion in Budapest (opened 1953; now replaced by the Puskás Aréna). Hungary last qualified for the Olympic men's football tournament in 1972 (silver).",
+  "myths": [
+   {
+    "myth": "Brazil has the most Olympic football golds — they win everything.",
+    "reality": "Brazil has 2 (2016, 2020); Hungary and Great Britain have 3 each, and Hungary's came in 1952, 1964 and 1968.",
+    "sources": [
+     "oly_football",
+     "brit_hungary"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Olympic football clips are Brazil/Argentina highlight reels; nobody bars the all-time golds, runs the 42-match unbeaten counter and pins the old Budapest stadium as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=olympic+football+gold+medals",
+     "title": "Search: olympic football gold medals",
+     "angle": "recent-final highlights",
+     "misses": "no all-time table"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=magical+magyars",
+     "title": "Search: the team by nickname",
+     "angle": "history documentaries",
+     "misses": "answer in the title"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=olympic+football+history",
+     "title": "Search: olympic football history",
+     "angle": "long explainers",
+     "misses": "no quiz"
+    }
+   ]
+  },
+  "sources": {
+   "oly_football": {
+    "type": "primary",
+    "publisher": "International Olympic Committee — olympics.com",
+    "title": "Football — Olympic medallists (men)",
+    "url": "https://olympics.com/en/sports/football/",
+    "date": "2026-11-26",
+    "notes": "Hungary gold 1952, 1964, 1968; Great Britain 1900, 1908, 1912; Brazil 2016, 2020; Argentina 2004, 2008"
+   },
+   "brit_hungary": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Hungary — football",
+    "url": "https://www.britannica.com/place/Hungary",
+    "date": "2026-11-26",
+    "notes": "Olympic champions 1952, 1964 and 1968; the 1950s side unbeaten for four years"
+   },
+   "fifa_magyars": {
+    "type": "primary",
+    "publisher": "FIFA",
+    "title": "The Magical Magyars",
+    "url": "https://www.fifa.com/",
+    "date": "2026-11-26",
+    "notes": "unbeaten run of 42 matches from 1950 to the 1954 World Cup final; Olympic gold at Helsinki 1952"
+   },
+   "brit_puskas": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Ferenc Puskás",
+    "url": "https://www.britannica.com/biography/Ferenc-Puskas",
+    "date": "2026-11-26",
+    "notes": "captain of the Hungary team that won Olympic gold in 1952 and went unbeaten 1950–54"
+   },
+   "oly_1972": {
+    "type": "primary",
+    "publisher": "International Olympic Committee — olympics.com",
+    "title": "Munich 1972 Football",
+    "url": "https://olympics.com/en/olympic-games/munich-1972",
+    "date": "2026-11-26",
+    "notes": "Hungary silver in 1972, their last Olympic men's football tournament"
+   },
+   "brit_nepstadion": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Budapest — sports",
+    "url": "https://www.britannica.com/place/Budapest",
+    "date": "2026-11-26",
+    "notes": "Népstadion (People's Stadium) opened 1953, home of the national team; replaced by the Puskás Aréna in 2019"
+   },
+   "natural_earth": {
+    "type": "primary",
+    "publisher": "Natural Earth",
+    "title": "Admin 0 countries, 50m",
+    "url": "https://www.naturalearthdata.com/",
+    "date": "2026-11-26",
+    "notes": "country polygons"
+   },
+   "fifa_oly": {
+    "type": "primary",
+    "publisher": "FIFA",
+    "title": "Men's Olympic Football Tournament — past winners",
+    "url": "https://www.fifa.com/en/tournaments/olympicgames",
+    "date": "2026-11-26",
+    "notes": "winners by edition: Hungary 1952, 1964, 1968; Great Britain 1900, 1908, 1912; Brazil 2016, 2020; Argentina 2004, 2008"
+   },
+   "brit_olyfootball": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Olympic Games — football",
+    "url": "https://www.britannica.com/sports/Olympic-Games",
+    "date": "2026-11-26",
+    "notes": "Hungary and Great Britain three men's titles each; Brazil, Argentina, Uruguay and the Soviet Union two each"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Hungary has 3 Olympic men's football golds (1952, 1964, 1968), a record shared with Great Britain.",
+    "sources": [
+     "oly_football",
+     "brit_hungary"
+    ],
+    "vo": [
+     "who has the most olympic golds in men's football",
+     "brazil, argentina, or hungary",
+     "hungary. 3 golds, the last of them in 1968",
+     "a record nobody has touched. follow us"
+    ],
+    "screen": [
+     "Hungary",
+     "Brazil",
+     "Argentina",
+     "3 GOLDS",
+     "1952 · 1964 · 1968"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Brazil and Argentina have 2 golds each; Great Britain also has 3 (1900, 1908, 1912).",
+    "sources": [
+     "oly_football",
+     "fifa_oly",
+     "brit_olyfootball"
+    ],
+    "vo": [
+     "brazil has 2, argentina has 2. great britain also has 3, but hungary's came last, so hungary holds the record"
+    ],
+    "screen": [
+     "3",
+     "2",
+     "Great Britain"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "The 1952 'Magical Magyars' travelled from Budapest to Helsinki for the Olympic tournament and went 42 matches unbeaten from 1950 to 1954.",
+    "sources": [
+     "fifa_magyars",
+     "brit_puskas"
+    ],
+    "vo": [
+     "the golden team were the magical magyars. they travelled from budapest to helsinki in 1952 and went 42 matches without defeat"
+    ],
+    "screen": [
+     "1950 → 1954",
+     "42 matches unbeaten",
+     "Helsinki 1952"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Their home was the Népstadion in Budapest; Hungary last qualified for the Olympic men's tournament in 1972.",
+    "sources": [
+     "brit_nepstadion",
+     "oly_1972"
+    ],
+    "vo": [
+     "their home was the nepstadion in budapest. hungary has not qualified for the olympics for more than 50 years"
+    ],
+    "screen": [
+     "Népstadion",
+     "Budapest",
+     "NOT QUALIFIED",
+     "for more than 50 years",
+     "NOT QUALIFIED for more than 50 years"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   15.5,
+   45.5,
+   23.5,
+   49
+  ],
+  "far_bbox": [
+   -10,
+   30,
+   45,
+   72
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "348"
+  ],
+  "highlight_note": "Hungary",
+  "labels": [
+   {
+    "id": "bud",
+    "lonlat": [
+     19.3,
+     47.2
+    ],
+    "text": "Budapest",
+    "cls": "tag",
+    "in": "s07@budapest+0.2",
+    "out": "s07.end"
+   },
+   {
+    "id": "hel",
+    "lonlat": [
+     25.5,
+     60.6
+    ],
+    "text": "Helsinki 1952",
+    "cls": "tag",
+    "in": "s06@helsinki+0.6",
+    "out": "s06.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "nep",
+    "lonlat": [
+     19.1,
+     47.5
+    ],
+    "label": "Népstadion",
+    "side": "right"
+   }
+  ],
+  "scalebar": {
+   "km": 100,
+   "lonlat": [
+    16,
+    45.8
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s07@budapest",
+    "pid": "nep"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.42,
+    [
+     10,
+     47
+    ]
+   ],
+   "s01": [
+    0.42,
+    [
+     8,
+     46
+    ]
+   ],
+   "s04": [
+    0.9,
+    [
+     19.5,
+     47.2
+    ]
+   ],
+   "s04b": [
+    0.94,
+    [
+     19.6,
+     47.1
+    ]
+   ],
+   "s05": [
+    0.85,
+    [
+     19.3,
+     47.0
+    ]
+   ],
+   "s05b": [
+    0.89,
+    [
+     19.4,
+     46.9
+    ]
+   ],
+   "s06": [
+    0.3,
+    [
+     21.5,
+     54
+    ]
+   ],
+   "s06b": [
+    0.32,
+    [
+     21.8,
+     54.2
+    ]
+   ],
+   "s07": [
+    1.6,
+    [
+     19.1,
+     47.4
+    ]
+   ],
+   "s07b": [
+    1.66,
+    [
+     19.15,
+     47.45
+    ]
+   ]
+  },
+  "extra_layers": [
+   {
+    "kind": "route",
+    "id": "trip",
+    "cls": "neon yellow",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "bh",
+       "properties": {
+        "name": "Budapest → Helsinki 1952 (schematic)"
+       },
+       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+         [
+          19.05,
+          47.5
+         ],
+         [
+          19.5,
+          50.5
+         ],
+         [
+          21.5,
+          54.5
+         ],
+         [
+          24.0,
+          58.5
+         ],
+         [
+          24.95,
+          60.17
+         ]
+        ]
+       }
+      }
+     ]
+    },
+    "note": "schematic line from Budapest to Helsinki, the 1952 Olympic host"
+   }
+  ]
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Brazil has 2, Argentina has 2. Great Britain also has 3, but Hungary's came last, so Hungary holds the record.",
+    "cues": {
+     "brazil": "brazil",
+     "argentina": "argentina",
+     "hungary": "hungary"
+    }
+   },
+   "direction": "ease back so the whole country sits in frame; the gold bars rise on 'Brazil' with the Brazilian flag-ball thinking; the Argentine flag-ball thinks on 'Argentina'; a gold medal sticker on 'Hungary' as the country pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.85,
+    [
+     19.3,
+     47.0
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.89,
+    [
+     19.4,
+     46.9
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "golds",
+     "type": "compare",
+     "items": [
+      [
+       "Hungary",
+       3,
+       "3"
+      ],
+      [
+       "Great Britain",
+       3,
+       "3"
+      ],
+      [
+       "Brazil",
+       2,
+       "2"
+      ],
+      [
+       "Argentina",
+       2,
+       "2"
+      ]
+     ],
+     "y": 300,
+     "x": 60,
+     "w": 900,
+     "max_h": 520
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@brazil-0.2",
+     "do": "chart.compare_in",
+     "id": "golds",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.2
+     }
+    },
+    {
+     "at": "@@brazil",
+     "do": "character_in",
+     "id": "br_think"
+    },
+    {
+     "at": "@@argentina-0.2",
+     "do": "character_out",
+     "id": "br_think"
+    },
+    {
+     "at": "@@argentina",
+     "do": "character_in",
+     "id": "ar_think"
+    },
+    {
+     "at": "@@hungary-0.2",
+     "do": "character_out",
+     "id": "ar_think"
+    },
+    {
+     "at": "@@hungary",
+     "do": "sticker_in",
+     "id": "st_gold"
+    },
+    {
+     "at": "@@hungary+0.4",
+     "do": "sticker_pulse",
+     "id": "st_gold"
+    },
+    {
+     "at": "@@hungary+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "348",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "golds"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_gold"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "The golden team were the Magical Magyars. They travelled from Budapest to Helsinki in 1952 and went 42 matches without defeat.",
+    "cues": {
+     "magical": "magical",
+     "helsinki": "helsinki",
+     "defeat": "defeat"
+    }
+   },
+   "direction": "pull right out so Hungary and Finland share the frame; a sparkle on 'Magical'; on 'Helsinki' a yellow line draws from Budapest north to Helsinki with a football sticker travelling along it; the 42-unbeaten card and a medal on 'defeat' as Hungary pulses",
+   "energy": 4,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    0.3,
+    [
+     21.5,
+     54
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.32,
+    [
+     21.8,
+     54.2
+    ]
+   ],
+   "pulse": false,
+   "elements": [],
+   "devices": [
+    {
+     "at": "@@magical",
+     "do": "sticker_in",
+     "id": "st_spark"
+    },
+    {
+     "at": "@@magical+0.4",
+     "do": "sticker_pulse",
+     "id": "st_spark"
+    },
+    {
+     "at": "@@helsinki-0.4",
+     "do": "sticker_out",
+     "id": "st_spark"
+    },
+    {
+     "at": "@@helsinki-0.4",
+     "do": "geo.route_draw",
+     "stage": "stage_map",
+     "until": "@@defeat",
+     "args": {
+      "rid": "bh",
+      "layer": "trip"
+     }
+    },
+    {
+     "at": "@@helsinki-0.3",
+     "do": "sticker_in",
+     "id": "st_ball"
+    },
+    {
+     "at": "@@helsinki-0.3",
+     "do": "geo.travel",
+     "stage": "stage_map",
+     "until": "@@defeat",
+     "args": {
+      "rid": "bh",
+      "layer": "trip",
+      "sid": "st_ball",
+      "offset": [
+       0,
+       -40
+      ]
+     }
+    },
+    {
+     "at": "@@defeat",
+     "do": "fact_in",
+     "id": "f3",
+     "until": "@.end"
+    },
+    {
+     "at": "@@defeat+0.2",
+     "do": "sticker_in",
+     "id": "st_gold2"
+    },
+    {
+     "at": "@@defeat+0.6",
+     "do": "sticker_pulse",
+     "id": "st_gold2"
+    },
+    {
+     "at": "@@defeat+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "348",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_ball"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_gold2"
+    }
+   ],
+   "card": {
+    "kicker": "1950 → 1954",
+    "text": "42 matches unbeaten"
+   },
+   "card_at": null
+  },
+  {
+   "vo": {
+    "text": "Their home was the Nepstadion in Budapest. Hungary has not qualified for the Olympics for more than 50 years.",
+    "cues": {
+     "budapest": "budapest",
+     "qualified": "qualified",
+     "years": "years"
+    }
+   },
+   "direction": "push in on the capital; the stadium pin and tag land on 'Budapest' with a stadium sticker; the SINCE 1972 card on 'qualified'; the Hungarian flag-ball shrugs happy on 'years' with a ghost sticker as the country pulses; pin leaves",
+   "energy": 3,
+   "tone": "resolute",
+   "pause_after": 0.5,
+   "card": {
+    "kicker": "NOT QUALIFIED",
+    "text": "for more than 50 years"
+   },
+   "card_at": null,
+   "cam": [
+    1.6,
+    [
+     19.1,
+     47.4
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.66,
+    [
+     19.15,
+     47.45
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@budapest+0.1",
+     "do": "sticker_in",
+     "id": "st_stadium"
+    },
+    {
+     "at": "@@budapest+0.5",
+     "do": "sticker_pulse",
+     "id": "st_stadium"
+    },
+    {
+     "at": "@@qualified-0.2",
+     "do": "sticker_out",
+     "id": "st_stadium"
+    },
+    {
+     "at": "@@qualified",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end-0.2"
+    },
+    {
+     "at": "@@years",
+     "do": "character_in",
+     "id": "hu_happy"
+    },
+    {
+     "at": "@@years+0.2",
+     "do": "sticker_in",
+     "id": "st_ghost"
+    },
+    {
+     "at": "@@years+0.6",
+     "do": "sticker_pulse",
+     "id": "st_ghost"
+    },
+    {
+     "at": "@@years+0.4",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "348",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_ghost"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "hu_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "nep"
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_gold",
+   "type": "sticker",
+   "emoji": "1f947",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_spark",
+   "type": "sticker",
+   "emoji": "2728",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_stadium",
+   "type": "sticker",
+   "emoji": "1f3df",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_ghost",
+   "type": "sticker",
+   "emoji": "1f47b",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "br_think",
+   "type": "character",
+   "flag": "br",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "ar_think",
+   "type": "character",
+   "flag": "ar",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "hu_happy",
+   "type": "character",
+   "flag": "hu",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "st_ball",
+   "type": "sticker",
+   "emoji": "26bd",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "st_gold2",
+   "type": "sticker",
+   "emoji": "1f3c5",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  }
+ ]
+}

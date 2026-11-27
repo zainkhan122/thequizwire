@@ -1,0 +1,224 @@
+{
+ "version": 1,
+ "episode": "ep24-most-wild-rhinos-south-africa",
+ "topic": "The International Rhino Foundation's State of the Rhino 2024 puts the world's wild rhinos at about 27,000: roughly 17,500 white, 6,400 black, 4,000 greater one-horned, fewer than 50 Sumatran and about 76 Javan. South Africa holds around 16,000 (about 13,000 white and 2,000–2,500 black; DFFE 2024), roughly 6 in 10 of all rhinos. India holds about 4,000, almost all greater one-horned, around 2,600 of them in Kaziranga (Assam Forest Department census 2022). Kenya holds about 2,000 (KWS 2023). Kruger National Park has the largest single rhino population in the world, despite poaching losses (SANParks). The 2 African species are the white and the black rhino; the 3 Asian species are the greater one-horned, Sumatran and Javan.",
+ "researched": "2026-11-27",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Kenya is rhino country — that is where the safari photos come from.",
+   "reality": "Kenya holds about 2,000 rhinos; South Africa holds around 16,000, roughly 6 in 10 of the world's total.",
+   "sources": [
+    "irf_2024",
+    "kws"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Rhino clips are poaching news and safari footage; nobody stacks the national shares, splits the 2 African species and lifts the park with the most rhinos off the map as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=where+do+rhinos+live",
+    "title": "Search: where do rhinos live",
+    "angle": "classroom explainers",
+    "misses": "no country shares"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=kruger+rhino",
+    "title": "Search: the park by name",
+    "angle": "safari footage",
+    "misses": "answer in the title"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=rhino+facts",
+    "title": "Search: rhino facts",
+    "angle": "list facts",
+    "misses": "no map"
+   }
+  ]
+ },
+ "sources": {
+  "irf_2024": {
+   "type": "primary",
+   "publisher": "International Rhino Foundation",
+   "title": "State of the Rhino 2024",
+   "url": "https://rhinos.org/state-of-the-rhino/",
+   "date": "2026-11-26",
+   "notes": "about 27,000 rhinos worldwide; white about 17,500, black about 6,400, greater one-horned about 4,000, Javan about 76, Sumatran fewer than 50; South Africa holds the majority"
+  },
+  "dffe": {
+   "type": "primary",
+   "publisher": "South African Department of Forestry, Fisheries and the Environment",
+   "title": "Rhino poaching and population update 2024",
+   "url": "https://www.dffe.gov.za/",
+   "date": "2026-11-26",
+   "notes": "South Africa's rhino population about 16,000 (white about 13,000, black about 2,000–2,500)"
+  },
+  "iucn_white": {
+   "type": "scholarly",
+   "publisher": "IUCN Red List",
+   "title": "Ceratotherium simum (white rhinoceros) assessment",
+   "url": "https://www.iucnredlist.org/species/4185/45813880",
+   "date": "2026-11-26",
+   "notes": "Near Threatened; the great majority of white rhinos are in South Africa"
+  },
+  "iucn_black": {
+   "type": "scholarly",
+   "publisher": "IUCN Red List",
+   "title": "Diceros bicornis (black rhinoceros) assessment",
+   "url": "https://www.iucnredlist.org/species/6557/152728945",
+   "date": "2026-11-26",
+   "notes": "Critically Endangered; about 6,400; largest populations in South Africa, Namibia, Kenya, Zimbabwe"
+  },
+  "kws": {
+   "type": "primary",
+   "publisher": "Kenya Wildlife Service",
+   "title": "National rhino population 2023",
+   "url": "https://www.kws.go.ke/",
+   "date": "2026-11-26",
+   "notes": "Kenya's rhinos about 2,000 (black about 1,000, southern white about 970)"
+  },
+  "assam": {
+   "type": "primary",
+   "publisher": "Assam Forest Department",
+   "title": "Rhino census 2022",
+   "url": "https://forest.assam.gov.in/",
+   "date": "2026-11-26",
+   "notes": "Kaziranga about 2,613 greater one-horned rhinos; India about 4,000 in total"
+  },
+  "sanparks": {
+   "type": "primary",
+   "publisher": "South African National Parks",
+   "title": "Kruger National Park rhino population",
+   "url": "https://www.sanparks.org/",
+   "date": "2026-11-26",
+   "notes": "Kruger holds the largest single rhino population in the world"
+  },
+  "save_rhino": {
+   "type": "reference",
+   "publisher": "Save the Rhino International",
+   "title": "Rhino populations",
+   "url": "https://www.savetherhino.org/rhino-info/population-figures/",
+   "date": "2026-11-26",
+   "notes": "five species; 2 African (white, black) and 3 Asian (greater one-horned, Sumatran, Javan); country breakdowns"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 countries, 50m",
+   "url": "https://www.naturalearthdata.com/",
+   "date": "2026-11-26",
+   "notes": "country polygons"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "South Africa holds around 16,000 of the world's roughly 27,000 wild rhinos, about 6 in 10.",
+   "sources": [
+    "irf_2024",
+    "dffe",
+    "save_rhino"
+   ],
+   "vo": [
+    "where do most wild rhinos live",
+    "kenya, india, or south africa",
+    "south africa. around 6 in 10 wild rhinos live here",
+    "6 in 10, in 1 country. follow us"
+   ],
+   "screen": [
+    "South Africa",
+    "Kenya",
+    "India",
+    "6 IN 10",
+    "wild rhinos live here"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Kenya has about 2,000 rhinos; India about 4,000, almost all greater one-horned (single horn); South Africa about 16,000.",
+   "sources": [
+    "kws",
+    "assam",
+    "dffe",
+    "irf_2024"
+   ],
+   "vo": [
+    "kenya has around 2,000. india has around 4,000, nearly all with a single horn. south africa has around 16,000"
+   ],
+   "screen": [
+    "≈ 16,000",
+    "≈ 4,000",
+    "≈ 2,000"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "There are 5 rhino species; the 2 African species, white (about 17,500) and black (about 6,400), both live in South Africa.",
+   "sources": [
+    "irf_2024",
+    "save_rhino",
+    "iucn_white",
+    "iucn_black"
+   ],
+   "vo": [
+    "there are 5 species. the 2 african ones live here, the white rhino, and the much rarer black rhino"
+   ],
+   "screen": [
+    "WHITE RHINO",
+    "≈ 17,500 left",
+    "BLACK RHINO",
+    "≈ 6,400 left",
+    "AFRICA",
+    "AFRICA"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Kruger National Park holds the largest single rhino population in the world.",
+   "sources": [
+    "sanparks",
+    "iucn_white"
+   ],
+   "vo": [
+    "and the kruger national park holds more rhinos than any other place on earth"
+   ],
+   "screen": [
+    "Kruger",
+    "MOST RHINOS",
+    "of any place on Earth",
+    "the park"
+   ]
+  }
+ ]
+}

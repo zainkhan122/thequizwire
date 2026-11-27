@@ -24,111 +24,108 @@
   {
    "id": "f1",
    "type": "fact",
-   "kicker": "POLE TO POLE",
-   "text": "and back, every year"
+   "kicker": "2.2 MILLION KM²",
+   "text": "the largest island on Earth"
   },
   {
-   "id": "km",
-   "type": "counter",
-   "start": 0,
-   "end": 70000,
-   "y": 330,
-   "label": "km flown every year",
-   "fmt": "int",
-   "size": 170
+   "id": "area",
+   "type": "compare",
+   "items": [
+    [
+     "Greenland",
+     2166,
+     "2,166,000"
+    ],
+    [
+     "Borneo",
+     748,
+     "748,000"
+    ],
+    [
+     "Madagascar",
+     587,
+     "587,000"
+    ]
+   ],
+   "y": 300,
+   "x": 60,
+   "w": 900,
+   "max_h": 520
   },
   {
    "id": "f3",
    "type": "fact",
-   "kicker": "2 SUMMERS",
-   "text": "every single year"
+   "kicker": "80% ICE",
+   "text": "up to 3 km thick"
   },
   {
    "id": "f4",
    "type": "fact",
-   "kicker": "2.4 MILLION KM",
-   "text": "in a lifetime"
+   "kicker": "56,000",
+   "text": "people on the whole island"
   },
   {
-   "id": "st_whale",
+   "id": "st_jungle",
    "type": "sticker",
-   "emoji": "1f40b",
-   "x": 840,
-   "y": 700,
-   "size": 165,
-   "rot": -6
-  },
-  {
-   "id": "st_tern",
-   "type": "sticker",
-   "emoji": "1f426",
-   "x": 540,
-   "y": 900,
-   "size": 110,
-   "rot": 0
-  },
-  {
-   "id": "st_dizzy",
-   "type": "sticker",
-   "emoji": "1f4ab",
+   "emoji": "1f334",
    "x": 840,
    "y": 1010,
    "size": 165,
    "rot": 6
   },
   {
-   "id": "st_sun",
+   "id": "st_lemur",
    "type": "sticker",
-   "emoji": "2600",
+   "emoji": "1f412",
    "x": 840,
-   "y": 700,
+   "y": 1010,
    "size": 165,
    "rot": -6
   },
   {
-   "id": "st_ice",
+   "id": "st_muscle",
    "type": "sticker",
-   "emoji": "1f9ca",
+   "emoji": "1f4aa",
    "x": 840,
    "y": 1010,
    "size": 165,
    "rot": 6
   },
   {
-   "id": "st_sun2",
+   "id": "st_snow",
    "type": "sticker",
-   "emoji": "1f31e",
+   "emoji": "2744",
    "x": 840,
    "y": 700,
    "size": 165,
    "rot": -6
   },
   {
-   "id": "st_soap",
+   "id": "st_ruler",
    "type": "sticker",
-   "emoji": "1f9fc",
+   "emoji": "1f4cf",
    "x": 840,
-   "y": 700,
-   "size": 165,
-   "rot": -6
-  },
-  {
-   "id": "st_moon",
-   "type": "sticker",
-   "emoji": "1f315",
-   "x": 840,
-   "y": 700,
+   "y": 1010,
    "size": 165,
    "rot": 6
   },
   {
-   "id": "st_rocket",
+   "id": "st_people",
    "type": "sticker",
-   "emoji": "1f680",
+   "emoji": "1f465",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_house",
+   "type": "sticker",
+   "emoji": "1f3e0",
    "x": 840,
    "y": 1010,
    "size": 165,
-   "rot": -6
+   "rot": 6
   },
   {
    "id": "mascot",
@@ -160,10 +157,10 @@
    "do": "geo.cam_set",
    "stage": "stage_map",
    "args": {
-    "k": 0.5,
+    "k": 0.42,
     "lonlat": [
-     -25,
-     8
+     -10,
+     20
     ]
    }
   },
@@ -171,12 +168,68 @@
    "at": "s01",
    "do": "geo.cam_to",
    "stage": "stage_map",
+   "until": "s02",
+   "args": {
+    "k": 0.42,
+    "lonlat": [
+     -5,
+     22
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s02@a",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02@a+0.9",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     114,
+     0.5
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s02@b",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02@b+0.9",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     47,
+     -19
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s02@c",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s02@c+0.9",
+   "args": {
+    "k": 0.5,
+    "lonlat": [
+     -42,
+     72
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s03",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
    "until": "s03.end",
    "args": {
-    "k": 0.38,
+    "k": 0.42,
     "lonlat": [
-     -25,
-     10
+     -10,
+     20
     ],
     "ease": "power1.inOut"
    }
@@ -187,10 +240,10 @@
    "stage": "stage_map",
    "until": "s04+1.4",
    "args": {
-    "k": 0.4,
+    "k": 0.9,
     "lonlat": [
-     -22,
-     4
+     -42,
+     72
     ],
     "ease": "power2.inOut"
    }
@@ -201,10 +254,10 @@
    "stage": "stage_map",
    "until": "s04.end",
    "args": {
-    "k": 0.42,
+    "k": 0.94,
     "lonlat": [
-     -21,
-     2
+     -41.5,
+     71.5
     ],
     "ease": "none"
    }
@@ -220,45 +273,19 @@
    }
   },
   {
-   "at": "s04@pole-0.2",
-   "do": "geo.route_draw",
-   "stage": "stage_map",
-   "until": "s04.end",
-   "args": {
-    "rid": "south",
-    "layer": "tern"
-   }
-  },
-  {
-   "at": "s06@breeds+0.2",
+   "at": "s07@nuuk+0.2",
    "do": "geo.label_in",
    "stage": "stage_map",
    "args": {
-    "lid": "gl"
+    "lid": "nk"
    }
   },
   {
-   "at": "s06.end",
+   "at": "s07.end",
    "do": "geo.label_out",
    "stage": "stage_map",
    "args": {
-    "lid": "gl"
-   }
-  },
-  {
-   "at": "s06@antarctic+0.2",
-   "do": "geo.label_in",
-   "stage": "stage_map",
-   "args": {
-    "lid": "ice"
-   }
-  },
-  {
-   "at": "s06.end",
-   "do": "geo.label_out",
-   "stage": "stage_map",
-   "args": {
-    "lid": "ice"
+    "lid": "nk"
    }
   },
   {
@@ -273,10 +300,10 @@
    "stage": "stage_map",
    "until": "s05+1.3",
    "args": {
-    "k": 0.42,
+    "k": 0.8,
     "lonlat": [
-     -25,
-     6
+     -40,
+     70
     ],
     "ease": "power2.inOut"
    }
@@ -287,84 +314,82 @@
    "stage": "stage_map",
    "until": "s05.end",
    "args": {
-    "k": 0.44,
+    "k": 0.84,
     "lonlat": [
-     -24,
-     4
+     -39.5,
+     69.5
     ],
     "ease": "none"
    }
   },
   {
-   "at": "s05@humpback-0.1",
-   "do": "geo.route_draw",
-   "stage": "stage_map",
-   "until": "s05@humpback+1.0",
+   "at": "s05@borneo-0.2",
+   "do": "chart.compare_in",
+   "id": "area",
    "args": {
-    "rid": "hump",
-    "layer": "whale"
+    "dur": 0.9,
+    "stagger": 0.25
    }
   },
   {
-   "at": "s05@humpback",
+   "at": "s05@borneo",
    "do": "sticker_in",
-   "id": "st_whale"
+   "id": "st_jungle"
   },
   {
-   "at": "s05@humpback+0.4",
+   "at": "s05@borneo+0.4",
    "do": "sticker_pulse",
-   "id": "st_whale"
+   "id": "st_jungle"
   },
   {
-   "at": "s05@tern-0.2",
+   "at": "s05@madagascar-0.1",
    "do": "sticker_out",
-   "id": "st_whale"
+   "id": "st_jungle"
   },
   {
-   "at": "s05@tern",
+   "at": "s05@madagascar",
    "do": "sticker_in",
-   "id": "st_tern"
+   "id": "st_lemur"
   },
   {
-   "at": "s05@tern+0.1",
-   "do": "geo.travel",
+   "at": "s05@madagascar+0.4",
+   "do": "sticker_pulse",
+   "id": "st_lemur"
+  },
+  {
+   "at": "s05@greenland-0.1",
+   "do": "sticker_out",
+   "id": "st_lemur"
+  },
+  {
+   "at": "s05@greenland",
+   "do": "sticker_in",
+   "id": "st_muscle"
+  },
+  {
+   "at": "s05@greenland+0.4",
+   "do": "sticker_pulse",
+   "id": "st_muscle"
+  },
+  {
+   "at": "s05@greenland+0.3",
+   "do": "geo.highlight_pulse",
    "stage": "stage_map",
-   "until": "s05.end",
    "args": {
-    "rid": "south",
-    "layer": "tern",
-    "sid": "st_tern",
-    "offset": [
-     0,
-     -40
-    ]
+    "fid": "304",
+    "dur": 0.7,
+    "layer": "hl"
    }
   },
   {
-   "at": "s05@tern",
-   "do": "chart.counter_run",
-   "id": "km",
-   "until": "s05@year+0.3"
-  },
-  {
-   "at": "s05@year",
-   "do": "sticker_in",
-   "id": "st_dizzy"
-  },
-  {
-   "at": "s05@year+0.4",
-   "do": "sticker_pulse",
-   "id": "st_dizzy"
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "area"
   },
   {
    "at": "s05.end",
    "do": "sticker_out",
-   "id": "st_dizzy"
-  },
-  {
-   "at": "s05.end",
-   "do": "sticker_out",
-   "id": "st_tern"
+   "id": "st_muscle"
   },
   {
    "at": "s06",
@@ -372,10 +397,10 @@
    "stage": "stage_map",
    "until": "s06+1.4",
    "args": {
-    "k": 0.4,
+    "k": 1.0,
     "lonlat": [
-     -22,
-     2
+     -40,
+     74
     ],
     "ease": "power2.inOut"
    }
@@ -386,26 +411,55 @@
    "stage": "stage_map",
    "until": "s06.end",
    "args": {
-    "k": 0.42,
+    "k": 1.04,
     "lonlat": [
-     -21,
-     0
+     -39.5,
+     73.5
     ],
     "ease": "none"
    }
   },
   {
-   "at": "s06@breeds",
+   "at": "s06@percent",
+   "do": "fx.flash",
+   "args": {
+    "peak": 0.9,
+    "out": 0.3
+   }
+  },
+  {
+   "at": "s06@percent+0.1",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s06.end-0.2"
+  },
+  {
+   "at": "s06@ice",
    "do": "sticker_in",
-   "id": "st_sun"
+   "id": "st_snow"
   },
   {
-   "at": "s06@breeds+0.4",
+   "at": "s06@ice+0.4",
    "do": "sticker_pulse",
-   "id": "st_sun"
+   "id": "st_snow"
   },
   {
-   "at": "s06@breeds+0.2",
+   "at": "s06@thick-0.2",
+   "do": "sticker_out",
+   "id": "st_snow"
+  },
+  {
+   "at": "s06@thick",
+   "do": "sticker_in",
+   "id": "st_ruler"
+  },
+  {
+   "at": "s06@thick+0.4",
+   "do": "sticker_pulse",
+   "id": "st_ruler"
+  },
+  {
+   "at": "s06@thick+0.3",
    "do": "geo.highlight_pulse",
    "stage": "stage_map",
    "args": {
@@ -415,58 +469,9 @@
    }
   },
   {
-   "at": "s06@antarctic-0.2",
-   "do": "sticker_out",
-   "id": "st_sun"
-  },
-  {
-   "at": "s06@antarctic",
-   "do": "sticker_in",
-   "id": "st_ice"
-  },
-  {
-   "at": "s06@antarctic+0.4",
-   "do": "sticker_pulse",
-   "id": "st_ice"
-  },
-  {
-   "at": "s06@daylight-0.2",
-   "do": "sticker_out",
-   "id": "st_ice"
-  },
-  {
-   "at": "s06@daylight",
-   "do": "fact_in",
-   "id": "f3",
-   "until": "s06.end"
-  },
-  {
-   "at": "s06@daylight+0.2",
-   "do": "sticker_in",
-   "id": "st_sun2"
-  },
-  {
-   "at": "s06@daylight+0.6",
-   "do": "sticker_pulse",
-   "id": "st_sun2"
-  },
-  {
-   "at": "s06@daylight+1.0",
-   "do": "sticker_pulse",
-   "id": "st_sun2"
-  },
-  {
    "at": "s06.end",
    "do": "sticker_out",
-   "id": "st_sun2"
-  },
-  {
-   "at": "s06.end",
-   "do": "geo.pin_out",
-   "stage": "stage_map",
-   "args": {
-    "pid": "wed"
-   }
+   "id": "st_ruler"
   },
   {
    "at": "s07",
@@ -474,10 +479,10 @@
    "stage": "stage_map",
    "until": "s07+1.5",
    "args": {
-    "k": 0.5,
+    "k": 1.4,
     "lonlat": [
-     -28,
-     20
+     -50,
+     64.5
     ],
     "ease": "power2.inOut"
    }
@@ -488,74 +493,79 @@
    "stage": "stage_map",
    "until": "s08+0.2",
    "args": {
-    "k": 0.52,
+    "k": 1.46,
     "lonlat": [
-     -27,
-     22
+     -50.5,
+     64.2
     ],
     "ease": "none"
    }
   },
   {
-   "at": "s07@weighs",
-   "do": "sticker_in",
-   "id": "st_soap"
-  },
-  {
-   "at": "s07@weighs+0.4",
-   "do": "sticker_pulse",
-   "id": "st_soap"
-  },
-  {
-   "at": "s07@lifetime-0.3",
-   "do": "sticker_out",
-   "id": "st_soap"
-  },
-  {
-   "at": "s07@lifetime",
-   "do": "fact_in",
-   "id": "f4",
-   "until": "s07@moon-0.1"
-  },
-  {
-   "at": "s07@lifetime",
-   "do": "geo.route_draw",
+   "at": "s07@people",
+   "do": "geo.rise",
    "stage": "stage_map",
-   "until": "s07@lifetime+1.2",
    "args": {
-    "rid": "south",
-    "layer": "tern"
+    "fid": "304",
+    "eid": "st_people",
+    "layer": "hl",
+    "dur": 0.8,
+    "lift": 10
    }
   },
   {
-   "at": "s07@moon",
+   "at": "s07@people+0.3",
+   "do": "fact_in",
+   "id": "f4",
+   "until": "s07@nuuk-0.1"
+  },
+  {
+   "at": "s07@people",
    "do": "sticker_in",
-   "id": "st_moon"
+   "id": "st_people"
   },
   {
-   "at": "s07@moon+0.2",
+   "at": "s07@people+0.4",
+   "do": "sticker_pulse",
+   "id": "st_people"
+  },
+  {
+   "at": "s07@nuuk-0.2",
+   "do": "sticker_out",
+   "id": "st_people"
+  },
+  {
+   "at": "s07@nuuk+0.1",
    "do": "sticker_in",
-   "id": "st_rocket"
+   "id": "st_house"
   },
   {
-   "at": "s07@moon+0.5",
+   "at": "s07@nuuk+0.5",
    "do": "sticker_pulse",
-   "id": "st_rocket"
+   "id": "st_house"
   },
   {
-   "at": "s07@moon+0.9",
-   "do": "sticker_pulse",
-   "id": "st_moon"
+   "at": "s07@nuuk+0.4",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "304",
+    "dur": 0.7,
+    "layer": "hl"
+   }
   },
   {
    "at": "s07.end",
    "do": "sticker_out",
-   "id": "st_moon"
+   "id": "st_house"
   },
   {
    "at": "s07.end",
-   "do": "sticker_out",
-   "id": "st_rocket"
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "nuuk"
+   }
   },
   {
    "at": "s08",
@@ -571,10 +581,10 @@
    "stage": "stage_map",
    "until": "end-0.3",
    "args": {
-    "k": 0.5,
+    "k": 0.42,
     "lonlat": [
-     -25,
-     8
+     -10,
+     20
     ],
     "ease": "power1.inOut"
    }
@@ -585,11 +595,11 @@
    "stage": "stage_map"
   },
   {
-   "at": "s06@antarctic",
+   "at": "s07@nuuk",
    "do": "geo.pin_in",
    "stage": "stage_map",
    "args": {
-    "pid": "wed"
+    "pid": "nuuk"
    }
   },
   {

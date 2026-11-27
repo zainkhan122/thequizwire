@@ -1,0 +1,218 @@
+{
+ "version": 1,
+ "episode": "ep27-most-olympic-football-golds-hungary",
+ "topic": "Hungary and Great Britain share the record of 3 Olympic men's football gold medals: Hungary in 1952, 1964 and 1968; Great Britain in 1900, 1908 and 1912 (olympics.com; Britannica). Brazil (2016, 2020) and Argentina (2004, 2008) have 2 each; Uruguay and the Soviet Union also 2. Hungary's 1952 Helsinki team, the 'Magical Magyars' of Puskás, Kocsis and Hidegkuti, went unbeaten in 42 consecutive matches from May 1950 to the 1954 World Cup final (FIFA; Britannica). Their home ground was the Népstadion in Budapest (opened 1953; now replaced by the Puskás Aréna). Hungary last qualified for the Olympic men's football tournament in 1972 (silver).",
+ "researched": "2026-11-27",
+ "policy_note": "Every spoken or shown fact → a claim with ≥ 2 independent publishers; core claims need a primary/scholarly source.",
+ "myths": [
+  {
+   "myth": "Brazil has the most Olympic football golds — they win everything.",
+   "reality": "Brazil has 2 (2016, 2020); Hungary and Great Britain have 3 each, and Hungary's came in 1952, 1964 and 1968.",
+   "sources": [
+    "oly_football",
+    "brit_hungary"
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "never": "arabian gulf|persian gulf",
+   "why": "Contested name — say 'the Gulf' or use both names (docs/BORDER_POLICY.md)."
+  },
+  {
+   "never": "\\bowns?\\b.*(kashmir|crimea|taiwan|golan|western sahara)",
+   "why": "Sovereignty language on disputed areas is banned; say administers / claims."
+  }
+ ],
+ "screen_exempt": [
+  "^GEO BLITZ",
+  "^SPORTS SPRINT",
+  "^BODY & BRAIN",
+  "^WILD FILES",
+  "^#\\d+$",
+  "^(EASY|MEDIUM|HARD)$",
+  "^THE ?QUIZ ?WIRE",
+  "km at \\d+°$",
+  "^Map data:",
+  "Voice: AI",
+  "^TOO EASY\\?$",
+  "^thequizwire\\.com$",
+  "^GUESS BEFORE",
+  "^A was right|^B was right|^C was right"
+ ],
+ "landscape": {
+  "our_gap": "Olympic football clips are Brazil/Argentina highlight reels; nobody bars the all-time golds, runs the 42-match unbeaten counter and pins the old Budapest stadium as a quiz.",
+  "existing": [
+   {
+    "url": "https://www.youtube.com/results?search_query=olympic+football+gold+medals",
+    "title": "Search: olympic football gold medals",
+    "angle": "recent-final highlights",
+    "misses": "no all-time table"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=magical+magyars",
+    "title": "Search: the team by nickname",
+    "angle": "history documentaries",
+    "misses": "answer in the title"
+   },
+   {
+    "url": "https://www.youtube.com/results?search_query=olympic+football+history",
+    "title": "Search: olympic football history",
+    "angle": "long explainers",
+    "misses": "no quiz"
+   }
+  ]
+ },
+ "sources": {
+  "oly_football": {
+   "type": "primary",
+   "publisher": "International Olympic Committee — olympics.com",
+   "title": "Football — Olympic medallists (men)",
+   "url": "https://olympics.com/en/sports/football/",
+   "date": "2026-11-26",
+   "notes": "Hungary gold 1952, 1964, 1968; Great Britain 1900, 1908, 1912; Brazil 2016, 2020; Argentina 2004, 2008"
+  },
+  "brit_hungary": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Hungary — football",
+   "url": "https://www.britannica.com/place/Hungary",
+   "date": "2026-11-26",
+   "notes": "Olympic champions 1952, 1964 and 1968; the 1950s side unbeaten for four years"
+  },
+  "fifa_magyars": {
+   "type": "primary",
+   "publisher": "FIFA",
+   "title": "The Magical Magyars",
+   "url": "https://www.fifa.com/",
+   "date": "2026-11-26",
+   "notes": "unbeaten run of 42 matches from 1950 to the 1954 World Cup final; Olympic gold at Helsinki 1952"
+  },
+  "brit_puskas": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Ferenc Puskás",
+   "url": "https://www.britannica.com/biography/Ferenc-Puskas",
+   "date": "2026-11-26",
+   "notes": "captain of the Hungary team that won Olympic gold in 1952 and went unbeaten 1950–54"
+  },
+  "oly_1972": {
+   "type": "primary",
+   "publisher": "International Olympic Committee — olympics.com",
+   "title": "Munich 1972 Football",
+   "url": "https://olympics.com/en/olympic-games/munich-1972",
+   "date": "2026-11-26",
+   "notes": "Hungary silver in 1972, their last Olympic men's football tournament"
+  },
+  "brit_nepstadion": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Budapest — sports",
+   "url": "https://www.britannica.com/place/Budapest",
+   "date": "2026-11-26",
+   "notes": "Népstadion (People's Stadium) opened 1953, home of the national team; replaced by the Puskás Aréna in 2019"
+  },
+  "natural_earth": {
+   "type": "primary",
+   "publisher": "Natural Earth",
+   "title": "Admin 0 countries, 50m",
+   "url": "https://www.naturalearthdata.com/",
+   "date": "2026-11-26",
+   "notes": "country polygons"
+  },
+  "fifa_oly": {
+   "type": "primary",
+   "publisher": "FIFA",
+   "title": "Men's Olympic Football Tournament — past winners",
+   "url": "https://www.fifa.com/en/tournaments/olympicgames",
+   "date": "2026-11-26",
+   "notes": "winners by edition: Hungary 1952, 1964, 1968; Great Britain 1900, 1908, 1912; Brazil 2016, 2020; Argentina 2004, 2008"
+  },
+  "brit_olyfootball": {
+   "type": "reference",
+   "publisher": "Encyclopaedia Britannica",
+   "title": "Olympic Games — football",
+   "url": "https://www.britannica.com/sports/Olympic-Games",
+   "date": "2026-11-26",
+   "notes": "Hungary and Great Britain three men's titles each; Brazil, Argentina, Uruguay and the Soviet Union two each"
+  }
+ },
+ "claims": [
+  {
+   "id": "C01",
+   "weight": "core",
+   "text": "Hungary has 3 Olympic men's football golds (1952, 1964, 1968), a record shared with Great Britain.",
+   "sources": [
+    "oly_football",
+    "brit_hungary"
+   ],
+   "vo": [
+    "who has the most olympic golds in men's football",
+    "brazil, argentina, or hungary",
+    "hungary. 3 golds, the last of them in 1968",
+    "a record nobody has touched. follow us"
+   ],
+   "screen": [
+    "Hungary",
+    "Brazil",
+    "Argentina",
+    "3 GOLDS",
+    "1952 · 1964 · 1968"
+   ]
+  },
+  {
+   "id": "C02",
+   "weight": "core",
+   "text": "Brazil and Argentina have 2 golds each; Great Britain also has 3 (1900, 1908, 1912).",
+   "sources": [
+    "oly_football",
+    "fifa_oly",
+    "brit_olyfootball"
+   ],
+   "vo": [
+    "brazil has 2, argentina has 2. great britain also has 3, but hungary's came last, so hungary holds the record"
+   ],
+   "screen": [
+    "3",
+    "2",
+    "Great Britain"
+   ]
+  },
+  {
+   "id": "C03",
+   "weight": "core",
+   "text": "The 1952 'Magical Magyars' travelled from Budapest to Helsinki for the Olympic tournament and went 42 matches unbeaten from 1950 to 1954.",
+   "sources": [
+    "fifa_magyars",
+    "brit_puskas"
+   ],
+   "vo": [
+    "the golden team were the magical magyars. they travelled from budapest to helsinki in 1952 and went 42 matches without defeat"
+   ],
+   "screen": [
+    "1950 → 1954",
+    "42 matches unbeaten",
+    "Helsinki 1952"
+   ]
+  },
+  {
+   "id": "C04",
+   "weight": "detail",
+   "text": "Their home was the Népstadion in Budapest; Hungary last qualified for the Olympic men's tournament in 1972.",
+   "sources": [
+    "brit_nepstadion",
+    "oly_1972"
+   ],
+   "vo": [
+    "their home was the nepstadion in budapest. hungary has not qualified for the olympics for more than 50 years"
+   ],
+   "screen": [
+    "Népstadion",
+    "Budapest",
+    "NOT QUALIFIED",
+    "for more than 50 years",
+    "NOT QUALIFIED for more than 50 years"
+   ]
+  }
+ ]
+}

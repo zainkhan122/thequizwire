@@ -1,0 +1,144 @@
+{
+ "id": "ep35-largest-island-greenland",
+ "format": "quiz-v3",
+ "series": "geo-blitz",
+ "number": 35,
+ "title": "Which is the LARGEST island on Earth?",
+ "difficulty": "MEDIUM",
+ "seed": 3535,
+ "quiz": {
+  "question": "Which is the LARGEST island on Earth?",
+  "keyword": "LARGEST",
+  "options": [
+   "Borneo",
+   "Madagascar",
+   "Greenland"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Greenland",
+  "answer_sub": "about 2.2 million square kilometres",
+  "option_meta": [
+   {
+    "emoji": "1f334"
+   },
+   {
+    "emoji": "1f412"
+   },
+   {
+    "emoji": "1f9ca"
+   }
+  ],
+  "banner": "Greenland",
+  "banner_sub": "✓  C was right · about 2.2 million square kilometres",
+  "outro": {
+   "headline": "1 FOR 1?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Which is the LARGEST island on Earth? 🗺️",
+  "premise": "The largest island on Earth is 3 times bigger than the runner-up",
+  "bait": "Borneo, Madagascar or Greenland — which did you pick? 👇",
+  "keywords": [
+   "largest island in the world",
+   "biggest island on earth",
+   "which is the largest island",
+   "island facts",
+   "geography quiz",
+   "map quiz",
+   "world geography",
+   "geo trivia"
+  ],
+  "description": "The largest island on Earth is 3 times bigger than the runner-up. Borneo, Madagascar or Greenland — which did you pick? 👇\n\nSources: Encyclopaedia Britannica; CIA World Factbook; Statistics Greenland.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nGeo Blitz #35",
+  "hashtags": [
+   "#GeographyQuiz",
+   "#MapQuiz",
+   "#thequizwire"
+  ],
+  "tags": [
+   "GeographyQuiz",
+   "Islands"
+  ],
+  "cover_emoji": "🗺️",
+  "cover_emoji_why": "a map names the subject (a geography record); it is not any option's icon",
+  "copy": {
+   "spoilers": [
+    "greenland",
+    "nuuk",
+    "2.17",
+    "2,166,086",
+    "2.2 million",
+    "56,000",
+    "80%",
+    "ice sheet",
+    "denmark",
+    "danish"
+   ],
+   "youtube": {
+    "title": "Which is the largest island on Earth? 🧊 Most people pick wrong",
+    "description": "The jungle giant, the lemur island, or the third one? The largest island on Earth is almost 3 times the size of the runner-up, is mostly covered by ice, and has fewer people than a small town — and no, Australia does not count.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#islands",
+     "#quiz",
+     "#shorts",
+     "#geoblitz"
+    ]
+   },
+   "instagram": {
+    "caption": "Which is the LARGEST island on Earth? 🧊\nThe largest island is almost 3 times the size of the runner-up, mostly covered by ice, with fewer people than a small town.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#islands",
+     "#mapfacts",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which is the largest island on Earth?\nThe jungle giant, the lemur island, or the third one? The largest island on Earth is almost 3 times the size of the runner-up, is mostly covered by ice, and has fewer people than a small town — and no, Australia does not count. Pick your island before the bars go up.",
+    "tags": [
+     "#geographyquiz",
+     "#largestisland"
+    ]
+   },
+   "twitter": {
+    "text": "Which is the LARGEST island on Earth?\nBorneo, Madagascar or Greenland? Almost 3 times the runner-up, mostly ice, fewer people than a small town.",
+    "tags": [
+     "#GeographyQuiz",
+     "#LargestIsland"
+    ]
+   },
+   "threads": {
+    "text": "Which is the largest island on Earth? The jungle giant, the lemur island, or the third one? The largest island on Earth is almost 3 times the size of the runner-up, is mostly covered by ice, and has fewer people than a small town — and no, Australia does not count.",
+    "tags": [
+     "#largestisland"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-record",
+  "hook": "question-first",
+  "opener": "split-candidates",
+  "reveal": "colour-lift",
+  "beats": [
+   "compare",
+   "flash",
+   "rise",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:none + emoji-set:ice",
+  "music": "bed:deep"
+ },
+ "status": "ready"
+}

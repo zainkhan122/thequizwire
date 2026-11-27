@@ -1,0 +1,706 @@
+{
+ "version": 1,
+ "stage": [
+  {
+   "id": "stage_map",
+   "type": "geo",
+   "scene": "main",
+   "from": "start",
+   "to": "end",
+   "box": [
+    0,
+    0,
+    1080,
+    1920
+   ],
+   "anchor": [
+    540,
+    900
+   ],
+   "z": 10
+  }
+ ],
+ "elements": [
+  {
+   "id": "f1",
+   "type": "fact",
+   "kicker": "3 OLYMPIC GOLDS",
+   "text": "1952 · 1964 · 1968"
+  },
+  {
+   "id": "golds",
+   "type": "compare",
+   "items": [
+    [
+     "Hungary",
+     3,
+     "3"
+    ],
+    [
+     "Great Britain",
+     3,
+     "3"
+    ],
+    [
+     "Brazil",
+     2,
+     "2"
+    ],
+    [
+     "Argentina",
+     2,
+     "2"
+    ]
+   ],
+   "y": 300,
+   "x": 60,
+   "w": 900,
+   "max_h": 520
+  },
+  {
+   "id": "f3",
+   "type": "fact",
+   "kicker": "1950 → 1954",
+   "text": "42 matches unbeaten"
+  },
+  {
+   "id": "f4",
+   "type": "fact",
+   "kicker": "NOT QUALIFIED",
+   "text": "for more than 50 years"
+  },
+  {
+   "id": "st_gold",
+   "type": "sticker",
+   "emoji": "1f947",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_spark",
+   "type": "sticker",
+   "emoji": "2728",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_stadium",
+   "type": "sticker",
+   "emoji": "1f3df",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_ghost",
+   "type": "sticker",
+   "emoji": "1f47b",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "br_think",
+   "type": "character",
+   "flag": "br",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "ar_think",
+   "type": "character",
+   "flag": "ar",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "hu_happy",
+   "type": "character",
+   "flag": "hu",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  },
+  {
+   "id": "st_ball",
+   "type": "sticker",
+   "emoji": "26bd",
+   "x": 540,
+   "y": 900,
+   "size": 110,
+   "rot": 0
+  },
+  {
+   "id": "st_gold2",
+   "type": "sticker",
+   "emoji": "1f3c5",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "mascot",
+   "type": "character",
+   "flag": "un",
+   "face": "think",
+   "x": 860,
+   "y": 1480,
+   "size": 210,
+   "rot": 6
+  },
+  {
+   "id": "cha",
+   "type": "character",
+   "flag": "hu",
+   "face": "happy",
+   "x": 230,
+   "y": 1060,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "id": "chb",
+   "type": "character",
+   "flag": "br",
+   "face": "think",
+   "x": 850,
+   "y": 1060,
+   "size": 200,
+   "rot": 8
+  }
+ ],
+ "beats": [
+  {
+   "at": 0,
+   "do": "character_in",
+   "id": "mascot",
+   "args": {
+    "dur": 0.01
+   }
+  },
+  {
+   "at": "s02+0.2",
+   "do": "character_out",
+   "id": "mascot"
+  },
+  {
+   "at": 0,
+   "do": "geo.cam_set",
+   "stage": "stage_map",
+   "args": {
+    "k": 0.42,
+    "lonlat": [
+     10,
+     47
+    ]
+   }
+  },
+  {
+   "at": "s01",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s03.end",
+   "args": {
+    "k": 0.42,
+    "lonlat": [
+     8,
+     46
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04+1.4",
+   "args": {
+    "k": 0.9,
+    "lonlat": [
+     19.5,
+     47.2
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s04+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s04.end",
+   "args": {
+    "k": 0.94,
+    "lonlat": [
+     19.6,
+     47.1
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s04+0.1",
+   "do": "geo.highlight_in",
+   "stage": "stage_map",
+   "args": {
+    "fid": "348",
+    "layer": "hl",
+    "dur": 0.5
+   }
+  },
+  {
+   "at": "s07@budapest+0.2",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "bud"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "bud"
+   }
+  },
+  {
+   "at": "s06@helsinki+0.6",
+   "do": "geo.label_in",
+   "stage": "stage_map",
+   "args": {
+    "lid": "hel"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "geo.label_out",
+   "stage": "stage_map",
+   "args": {
+    "lid": "hel"
+   }
+  },
+  {
+   "at": "s04+2.6",
+   "do": "fact_in",
+   "id": "f1",
+   "until": "s04.end"
+  },
+  {
+   "at": "s05",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05+1.3",
+   "args": {
+    "k": 0.85,
+    "lonlat": [
+     19.3,
+     47.0
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s05+1.3",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s05.end",
+   "args": {
+    "k": 0.89,
+    "lonlat": [
+     19.4,
+     46.9
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s05@brazil-0.2",
+   "do": "chart.compare_in",
+   "id": "golds",
+   "args": {
+    "dur": 0.9,
+    "stagger": 0.2
+   }
+  },
+  {
+   "at": "s05@brazil",
+   "do": "character_in",
+   "id": "br_think"
+  },
+  {
+   "at": "s05@argentina-0.2",
+   "do": "character_out",
+   "id": "br_think"
+  },
+  {
+   "at": "s05@argentina",
+   "do": "character_in",
+   "id": "ar_think"
+  },
+  {
+   "at": "s05@hungary-0.2",
+   "do": "character_out",
+   "id": "ar_think"
+  },
+  {
+   "at": "s05@hungary",
+   "do": "sticker_in",
+   "id": "st_gold"
+  },
+  {
+   "at": "s05@hungary+0.4",
+   "do": "sticker_pulse",
+   "id": "st_gold"
+  },
+  {
+   "at": "s05@hungary+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "348",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s05.end",
+   "do": "chart.out",
+   "id": "golds"
+  },
+  {
+   "at": "s05.end",
+   "do": "sticker_out",
+   "id": "st_gold"
+  },
+  {
+   "at": "s06",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06+1.4",
+   "args": {
+    "k": 0.3,
+    "lonlat": [
+     21.5,
+     54
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s06+1.4",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s06.end",
+   "args": {
+    "k": 0.32,
+    "lonlat": [
+     21.8,
+     54.2
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s06@magical",
+   "do": "sticker_in",
+   "id": "st_spark"
+  },
+  {
+   "at": "s06@magical+0.4",
+   "do": "sticker_pulse",
+   "id": "st_spark"
+  },
+  {
+   "at": "s06@helsinki-0.4",
+   "do": "sticker_out",
+   "id": "st_spark"
+  },
+  {
+   "at": "s06@helsinki-0.4",
+   "do": "geo.route_draw",
+   "stage": "stage_map",
+   "until": "s06@defeat",
+   "args": {
+    "rid": "bh",
+    "layer": "trip"
+   }
+  },
+  {
+   "at": "s06@helsinki-0.3",
+   "do": "sticker_in",
+   "id": "st_ball"
+  },
+  {
+   "at": "s06@helsinki-0.3",
+   "do": "geo.travel",
+   "stage": "stage_map",
+   "until": "s06@defeat",
+   "args": {
+    "rid": "bh",
+    "layer": "trip",
+    "sid": "st_ball",
+    "offset": [
+     0,
+     -40
+    ]
+   }
+  },
+  {
+   "at": "s06@defeat",
+   "do": "fact_in",
+   "id": "f3",
+   "until": "s06.end"
+  },
+  {
+   "at": "s06@defeat+0.2",
+   "do": "sticker_in",
+   "id": "st_gold2"
+  },
+  {
+   "at": "s06@defeat+0.6",
+   "do": "sticker_pulse",
+   "id": "st_gold2"
+  },
+  {
+   "at": "s06@defeat+0.3",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "348",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_ball"
+  },
+  {
+   "at": "s06.end",
+   "do": "sticker_out",
+   "id": "st_gold2"
+  },
+  {
+   "at": "s07",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s07+1.5",
+   "args": {
+    "k": 1.6,
+    "lonlat": [
+     19.1,
+     47.4
+    ],
+    "ease": "power2.inOut"
+   }
+  },
+  {
+   "at": "s07+1.5",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "s08+0.2",
+   "args": {
+    "k": 1.66,
+    "lonlat": [
+     19.15,
+     47.45
+    ],
+    "ease": "none"
+   }
+  },
+  {
+   "at": "s07@budapest+0.1",
+   "do": "sticker_in",
+   "id": "st_stadium"
+  },
+  {
+   "at": "s07@budapest+0.5",
+   "do": "sticker_pulse",
+   "id": "st_stadium"
+  },
+  {
+   "at": "s07@qualified-0.2",
+   "do": "sticker_out",
+   "id": "st_stadium"
+  },
+  {
+   "at": "s07@qualified",
+   "do": "fact_in",
+   "id": "f4",
+   "until": "s07.end-0.2"
+  },
+  {
+   "at": "s07@years",
+   "do": "character_in",
+   "id": "hu_happy"
+  },
+  {
+   "at": "s07@years+0.2",
+   "do": "sticker_in",
+   "id": "st_ghost"
+  },
+  {
+   "at": "s07@years+0.6",
+   "do": "sticker_pulse",
+   "id": "st_ghost"
+  },
+  {
+   "at": "s07@years+0.4",
+   "do": "geo.highlight_pulse",
+   "stage": "stage_map",
+   "args": {
+    "fid": "348",
+    "dur": 0.7,
+    "layer": "hl"
+   }
+  },
+  {
+   "at": "s07.end",
+   "do": "sticker_out",
+   "id": "st_ghost"
+  },
+  {
+   "at": "s07.end",
+   "do": "character_out",
+   "id": "hu_happy"
+  },
+  {
+   "at": "s07.end",
+   "do": "geo.pin_out",
+   "stage": "stage_map",
+   "args": {
+    "pid": "nep"
+   }
+  },
+  {
+   "at": "s08",
+   "do": "geo.clear",
+   "stage": "stage_map",
+   "args": {
+    "dur": 0.25
+   }
+  },
+  {
+   "at": "s08+0.2",
+   "do": "geo.cam_to",
+   "stage": "stage_map",
+   "until": "end-0.3",
+   "args": {
+    "k": 0.42,
+    "lonlat": [
+     10,
+     47
+    ],
+    "ease": "power1.inOut"
+   }
+  },
+  {
+   "at": "s04+1.7",
+   "do": "geo.scalebar_in",
+   "stage": "stage_map"
+  },
+  {
+   "at": "s07@budapest",
+   "do": "geo.pin_in",
+   "stage": "stage_map",
+   "args": {
+    "pid": "nep"
+   }
+  },
+  {
+   "at": 0,
+   "do": "hook_in"
+  },
+  {
+   "at": "s02",
+   "do": "chips_in"
+  },
+  {
+   "at": "s03",
+   "do": "bug_in"
+  },
+  {
+   "at": "s03",
+   "do": "beat"
+  },
+  {
+   "at": "s04",
+   "do": "reveal"
+  },
+  {
+   "at": "s04+0.9",
+   "do": "hook_out"
+  },
+  {
+   "at": "s04+1.2",
+   "do": "chips_out"
+  },
+  {
+   "at": "s04+1.3",
+   "do": "banner_in"
+  },
+  {
+   "at": "s04+4.4",
+   "do": "banner_out"
+  },
+  {
+   "at": "s04+1.6",
+   "do": "character_in",
+   "id": "cha"
+  },
+  {
+   "at": "s04+1.9",
+   "do": "character_in",
+   "id": "chb"
+  },
+  {
+   "at": "s05+1.0",
+   "do": "character_out",
+   "id": "cha"
+  },
+  {
+   "at": "s05+0.8",
+   "do": "character_out",
+   "id": "chb"
+  },
+  {
+   "at": "s08",
+   "do": "cta_in",
+   "until": "end-1.0"
+  },
+  {
+   "at": "s08",
+   "do": "credit_in",
+   "until": "end-0.2"
+  },
+  {
+   "at": "end-1.0",
+   "do": "hook_in"
+  }
+ ],
+ "captions": {
+  "roles": [
+   "reveal",
+   "story"
+  ],
+  "max_words": 4,
+  "max_chars": 26,
+  "hold": 0.12
+ }
+}

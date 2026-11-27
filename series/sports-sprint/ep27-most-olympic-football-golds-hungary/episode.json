@@ -1,0 +1,144 @@
+{
+ "id": "ep27-most-olympic-football-golds-hungary",
+ "format": "quiz-v3",
+ "series": "sports-sprint",
+ "number": 27,
+ "title": "Who has the MOST Olympic golds in men's football?",
+ "difficulty": "MEDIUM",
+ "seed": 2727,
+ "quiz": {
+  "question": "Who has the MOST Olympic golds in men's football?",
+  "keyword": "MOST",
+  "options": [
+   "Brazil",
+   "Argentina",
+   "Hungary"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "Hungary",
+  "answer_sub": "3 golds, the last in 1968",
+  "option_meta": [
+   {
+    "flag": "br"
+   },
+   {
+    "flag": "ar"
+   },
+   {
+    "flag": "hu"
+   }
+  ],
+  "banner": "Hungary",
+  "banner_sub": "✓  C was right · 3 golds, the last in 1968",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Who has the MOST Olympic golds in men's football? ⚽",
+  "premise": "The Olympic football record belongs to a team you never see",
+  "bait": "Brazil, Argentina or Hungary — which did you pick? 👇",
+  "keywords": [
+   "most olympic football golds",
+   "olympic football record",
+   "olympic soccer gold medals",
+   "football quiz",
+   "olympics quiz",
+   "sports trivia",
+   "football history",
+   "soccer facts"
+  ],
+  "description": "The Olympic football record belongs to a team you never see. Brazil, Argentina or Hungary — which did you pick? 👇\n\nSources: International Olympic Committee (olympics.com); FIFA; Encyclopaedia Britannica.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nSports Sprint #27",
+  "hashtags": [
+   "#SportsQuiz",
+   "#SportsTrivia",
+   "#thequizwire"
+  ],
+  "tags": [
+   "SportsQuiz",
+   "OlympicFootball"
+  ],
+  "cover_emoji": "⚽",
+  "cover_emoji_why": "a football names the sport; it is not the flag or emoji of any option",
+  "copy": {
+   "spoilers": [
+    "hungary",
+    "hungarian",
+    "magical magyars",
+    "puskas",
+    "1952",
+    "1964",
+    "1968",
+    "budapest",
+    "3 golds",
+    "helsinki"
+   ],
+   "youtube": {
+    "title": "Who has the most Olympic golds in men's football? Not Brazil ⚽",
+    "description": "The five-time world champions, Messi's country, or the third one? The record for Olympic men's football gold is held by a team that has not even qualified for the tournament for more than 50 years — and it once went 4 years without losing a match.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#olympicfootball",
+     "#quiz",
+     "#shorts",
+     "#sportssprint"
+    ]
+   },
+   "instagram": {
+    "caption": "Who has the MOST Olympic golds in men's football? ⚽\nThe record for Olympic men's football gold is held by a team that has not qualified for more than 50 years.\nWhich did you pick?",
+    "tags": [
+     "#sportsquiz",
+     "#olympicfootball",
+     "#footballhistory",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Who has the most Olympic golds in men's football?\nThe five-time world champions, Messi's country, or the third one? The record for Olympic men's football gold is held by a team that has not even qualified for the tournament for more than 50 years — and it once went 4 years without losing a match. Choose your flag before the gold blocks stack up.",
+    "tags": [
+     "#sportsquiz",
+     "#olympicfootball"
+    ]
+   },
+   "twitter": {
+    "text": "Who has the MOST Olympic golds in men's football?\nBrazil, Argentina or Hungary? The record holder has not qualified for more than 50 years — and once went 4 years unbeaten.",
+    "tags": [
+     "#SportsQuiz",
+     "#OlympicFootball"
+    ]
+   },
+   "threads": {
+    "text": "Who has the most Olympic golds in men's football? The five-time world champions, Messi's country, or the third one? The record for Olympic men's football gold is held by a team that has not even qualified for the tournament for more than 50 years — and it once went 4 years without losing a match.",
+    "tags": [
+     "#olympicfootball"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-record",
+  "hook": "question-first",
+  "opener": "wide-drift",
+  "reveal": "colour-lift",
+  "beats": [
+   "compare",
+   "route",
+   "travel",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:hu + flagball:br + flagball:ar + emoji-set:stadium",
+  "music": "bed:bright"
+ },
+ "status": "ready"
+}

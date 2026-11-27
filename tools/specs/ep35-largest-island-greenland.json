@@ -1,0 +1,894 @@
+{
+ "id": "ep35-largest-island-greenland",
+ "series": "geo-blitz",
+ "number": 35,
+ "seed": 3535,
+ "question": "Which is the LARGEST island on Earth?",
+ "keyword": "LARGEST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Borneo",
+   "emoji": "1f334",
+   "cue": "borneo",
+   "lonlat": [
+    114,
+    0.5
+   ]
+  },
+  {
+   "text": "Madagascar",
+   "emoji": "1f412",
+   "cue": "madagascar",
+   "lonlat": [
+    47,
+    -19
+   ]
+  },
+  {
+   "text": "Greenland",
+   "emoji": "1f9ca",
+   "cue": "greenland",
+   "lonlat": [
+    -42,
+    72
+   ]
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "about 2.2 million square kilometres",
+ "outro_headline": "1 FOR 1?",
+ "cover_emoji": "🗺️",
+ "cover_emoji_why": "a map names the subject (a geography record); it is not any option's icon",
+ "post": {
+  "premise": "The largest island on Earth is 3 times bigger than the runner-up",
+  "bait": "Borneo, Madagascar or Greenland — which did you pick? 👇",
+  "keywords": [
+   "largest island in the world",
+   "biggest island on earth",
+   "which is the largest island",
+   "island facts",
+   "geography quiz",
+   "map quiz",
+   "world geography",
+   "geo trivia"
+  ],
+  "tags": [
+   "GeographyQuiz",
+   "Islands"
+  ],
+  "sources_line": "Encyclopaedia Britannica; CIA World Factbook; Statistics Greenland",
+  "copy": {
+   "spoilers": [
+    "greenland",
+    "nuuk",
+    "2.17",
+    "2,166,086",
+    "2.2 million",
+    "56,000",
+    "80%",
+    "ice sheet",
+    "denmark",
+    "danish"
+   ],
+   "youtube": {
+    "title": "Which is the largest island on Earth? 🧊 Most people pick wrong",
+    "description": "The jungle giant, the lemur island, or the third one? The largest island on Earth is almost 3 times the size of the runner-up, is mostly covered by ice, and has fewer people than a small town — and no, Australia does not count.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#islands",
+     "#quiz",
+     "#shorts",
+     "#geoblitz"
+    ]
+   },
+   "instagram": {
+    "caption": "Which is the LARGEST island on Earth? 🧊\nThe largest island is almost 3 times the size of the runner-up, mostly covered by ice, with fewer people than a small town.\nWhich did you pick?",
+    "tags": [
+     "#geographyquiz",
+     "#islands",
+     "#mapfacts",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Which is the largest island on Earth?\nThe jungle giant, the lemur island, or the third one? The largest island on Earth is almost 3 times the size of the runner-up, is mostly covered by ice, and has fewer people than a small town — and no, Australia does not count. Pick your island before the bars go up.",
+    "tags": [
+     "#geographyquiz",
+     "#largestisland"
+    ]
+   },
+   "twitter": {
+    "text": "Which is the LARGEST island on Earth?\nBorneo, Madagascar or Greenland? Almost 3 times the runner-up, mostly ice, fewer people than a small town.",
+    "tags": [
+     "#GeographyQuiz",
+     "#LargestIsland"
+    ]
+   },
+   "threads": {
+    "text": "Which is the largest island on Earth? The jungle giant, the lemur island, or the third one? The largest island on Earth is almost 3 times the size of the runner-up, is mostly covered by ice, and has fewer people than a small town — and no, Australia does not count.",
+    "tags": [
+     "#largestisland"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-record",
+  "hook": "misconception",
+  "opener": "split-candidates",
+  "reveal": "colour-lift",
+  "beats": [
+   "compare",
+   "flash",
+   "rise",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:none + emoji-set:ice",
+  "music": "bed:deep",
+  "outro": "1 FOR 1?"
+ },
+ "intent": "A size people misjudge: the camera visits each island as it is named, the to-scale bars make the winner 3 times the runner-up, a flash marks the ice sheet fact, and the population counter stops at a number smaller than a town.",
+ "voice": {
+  "v01_cues": {
+   "which": "which",
+   "largest": "largest"
+  },
+  "v04": {
+   "text": "Greenland. Over 2 million square kilometres of island.",
+   "cues": {
+    "answer": "greenland",
+    "million": "million",
+    "kilometres": "kilometres"
+   }
+  },
+  "v05": {
+   "text": "Borneo is huge, and Madagascar is bigger than France. Greenland is almost 3 times bigger than either.",
+   "cues": {
+    "borneo": "borneo",
+    "madagascar": "madagascar",
+    "greenland": "greenland"
+   }
+  },
+  "v06": {
+   "text": "About 80 percent of it is buried under a single ice sheet, which in places is up to 3 kilometres thick.",
+   "cues": {
+    "percent": "percent",
+    "ice": "ice",
+    "thick": "thick"
+   }
+  },
+  "v07": {
+   "text": "Only around 56,000 people live on the whole island, most of them along the south west coast, around the small capital, Nuuk.",
+   "cues": {
+    "people": "people",
+    "coast": "coast",
+    "nuuk": "nuuk"
+   }
+  },
+  "v08": {
+   "text": "3 times the runner-up. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "2.2 MILLION KM²",
+   "text": "the largest island on Earth"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": null,
+  "b": null
+ },
+ "research": {
+  "topic": "Greenland is the largest island in the world at about 2,166,086 km² (Britannica; Statistics Greenland); New Guinea is second at about 786,000 km², Borneo third at about 748,000 km² and Madagascar fourth at about 587,000 km² (Britannica). Australia (7.7 million km²) is classed as a continent, not an island. About 80% of Greenland is covered by the Greenland Ice Sheet, up to about 3 km thick (NSIDC; Britannica). The population is about 56,000–57,000 (Statistics Greenland 2025), most living on the ice-free south-west coast; Nuuk, the capital, has about 20,000. Greenland is an autonomous territory of the Kingdom of Denmark.",
+  "myths": [
+   {
+    "myth": "Australia is the largest island.",
+    "reality": "Australia is counted as a continent; among islands Greenland is largest at about 2.17 million km², almost three times Borneo or New Guinea.",
+    "sources": [
+     "brit_greenland",
+     "brit_islands"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Largest-island clips argue about Australia; nobody visits the candidates on the map, bars them to scale and lands the population counter on a number smaller than a town, as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=largest+island+in+the+world",
+     "title": "Search: largest island in the world",
+     "angle": "top-10 lists",
+     "misses": "no to-scale comparison"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=greenland+size",
+     "title": "Search: the island by name",
+     "angle": "map projection explainers",
+     "misses": "answer in the title"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=is+australia+an+island",
+     "title": "Search: is Australia an island",
+     "angle": "definition debates",
+     "misses": "no quiz"
+    }
+   ]
+  },
+  "sources": {
+   "brit_greenland": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Greenland",
+    "url": "https://www.britannica.com/place/Greenland",
+    "date": "2026-11-26",
+    "notes": "largest island in the world, about 2,166,086 km²; about 80% ice-covered; autonomous territory of Denmark; capital Nuuk"
+   },
+   "brit_islands": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "The largest islands in the world",
+    "url": "https://www.britannica.com/list/the-largest-islands-in-the-world",
+    "date": "2026-11-26",
+    "notes": "Greenland 2,166,086 km²; New Guinea about 785,753 km²; Borneo about 748,168 km²; Madagascar about 587,041 km²"
+   },
+   "stat_gl": {
+    "type": "primary",
+    "publisher": "Statistics Greenland",
+    "title": "Greenland in Figures 2025",
+    "url": "https://stat.gl/",
+    "date": "2026-11-26",
+    "notes": "population about 56,500; area 2,166,086 km², of which about 410,000 km² ice-free; Nuuk about 20,000 inhabitants"
+   },
+   "cia_gl": {
+    "type": "primary",
+    "publisher": "CIA World Factbook",
+    "title": "Greenland",
+    "url": "https://www.cia.gov/the-world-factbook/countries/greenland/",
+    "date": "2026-11-26",
+    "notes": "area 2,166,086 km²; population about 57,000; most people live on the south-west coast"
+   },
+   "nsidc": {
+    "type": "scholarly",
+    "publisher": "National Snow and Ice Data Center",
+    "title": "Greenland Ice Sheet",
+    "url": "https://nsidc.org/learn/parts-cryosphere/ice-sheets",
+    "date": "2026-11-26",
+    "notes": "the Greenland Ice Sheet covers about 1.7 million km², roughly 80% of the island, up to about 3 km thick"
+   },
+   "brit_madagascar": {
+    "type": "reference",
+    "publisher": "Encyclopaedia Britannica",
+    "title": "Madagascar",
+    "url": "https://www.britannica.com/place/Madagascar",
+    "date": "2026-11-26",
+    "notes": "about 587,000 km², larger than metropolitan France (about 544,000 km²)"
+   },
+   "natural_earth": {
+    "type": "primary",
+    "publisher": "Natural Earth",
+    "title": "Admin 0 countries, 50m",
+    "url": "https://www.naturalearthdata.com/",
+    "date": "2026-11-26",
+    "notes": "Greenland polygon; sizes are stated on the bars, not read from the map"
+   },
+   "cia_borneo": {
+    "type": "primary",
+    "publisher": "CIA World Factbook",
+    "title": "Indonesia / Malaysia — geography",
+    "url": "https://www.cia.gov/the-world-factbook/countries/indonesia/",
+    "date": "2026-11-26",
+    "notes": "Borneo about 748,000 km²; Madagascar about 587,000 km² (CIA Factbook Madagascar entry)"
+   },
+   "unep_islands": {
+    "type": "primary",
+    "publisher": "UNEP Island Directory",
+    "title": "Island directory — area table",
+    "url": "https://islands.unep.ch/Tiarea.htm",
+    "date": "2026-11-26",
+    "notes": "Greenland 2,175,600 km²; New Guinea 808,510; Borneo 745,561; Madagascar 587,713"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "Greenland is the largest island on Earth, about 2.17 million km².",
+    "sources": [
+     "brit_greenland",
+     "brit_islands",
+     "cia_gl"
+    ],
+    "vo": [
+     "which is the largest island on earth",
+     "borneo, madagascar, or greenland",
+     "greenland. over 2 million square kilometres of island",
+     "3 times the runner-up. follow us"
+    ],
+    "screen": [
+     "Greenland",
+     "Borneo",
+     "Madagascar",
+     "2.2 MILLION KM²",
+     "the largest island on Earth"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Borneo is about 748,000 km² and Madagascar about 587,000 km² (larger than metropolitan France); Greenland is almost three times either.",
+    "sources": [
+     "brit_islands",
+     "brit_madagascar",
+     "unep_islands",
+     "cia_borneo"
+    ],
+    "vo": [
+     "borneo is huge, and madagascar is bigger than france. greenland is almost 3 times bigger than either"
+    ],
+    "screen": [
+     "2,166,000",
+     "748,000",
+     "587,000"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "About 80% of Greenland is covered by an ice sheet up to about 3 km thick.",
+    "sources": [
+     "nsidc",
+     "brit_greenland"
+    ],
+    "vo": [
+     "about 80 percent of it is buried under a single ice sheet, which in places is up to 3 kilometres thick"
+    ],
+    "screen": [
+     "80% ICE",
+     "up to 3 km thick"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Greenland has about 56,000 people, most on the south-west coast around the capital Nuuk.",
+    "sources": [
+     "stat_gl",
+     "cia_gl"
+    ],
+    "vo": [
+     "only around 56,000 people live on the whole island, most of them along the south west coast, around the small capital, nuuk"
+    ],
+    "screen": [
+     "56,000",
+     "people on the whole island",
+     "Nuuk",
+     "capital"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   -75,
+   58,
+   -10,
+   84
+  ],
+  "far_bbox": [
+   -180,
+   -30,
+   180,
+   88
+  ],
+  "resolution": "110m",
+  "highlight_ids": [
+   "304"
+  ],
+  "highlight_note": "Greenland",
+  "size_claim_device": "area",
+  "projection_reason": "satellite raster (Web Mercator tiles) under a location story; the size comparison between the three islands is carried by the to-scale compare chart 'area', not by map shapes (P1)",
+  "labels": [
+   {
+    "id": "nk",
+    "lonlat": [
+     -51.7,
+     62.6
+    ],
+    "text": "Nuuk",
+    "cls": "tag",
+    "in": "s07@nuuk+0.2",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "nuuk",
+    "lonlat": [
+     -51.72,
+     64.18
+    ],
+    "label": "capital",
+    "side": "right"
+   }
+  ],
+  "scalebar": {
+   "km": 500,
+   "lonlat": [
+    -70,
+    59
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s07@nuuk",
+    "pid": "nuuk"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.42,
+    [
+     -10,
+     20
+    ]
+   ],
+   "s01": [
+    0.42,
+    [
+     -5,
+     22
+    ]
+   ],
+   "s04": [
+    0.9,
+    [
+     -42,
+     72
+    ]
+   ],
+   "s04b": [
+    0.94,
+    [
+     -41.5,
+     71.5
+    ]
+   ],
+   "s05": [
+    0.8,
+    [
+     -40,
+     70
+    ]
+   ],
+   "s05b": [
+    0.84,
+    [
+     -39.5,
+     69.5
+    ]
+   ],
+   "s06": [
+    1.0,
+    [
+     -40,
+     74
+    ]
+   ],
+   "s06b": [
+    1.04,
+    [
+     -39.5,
+     73.5
+    ]
+   ],
+   "s07": [
+    1.4,
+    [
+     -50,
+     64.5
+    ]
+   ],
+   "s07b": [
+    1.46,
+    [
+     -50.5,
+     64.2
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Borneo is huge, and Madagascar is bigger than France. Greenland is almost 3 times bigger than either.",
+    "cues": {
+     "borneo": "borneo",
+     "madagascar": "madagascar",
+     "greenland": "greenland"
+    }
+   },
+   "direction": "hold the island wide; the to-scale area bars rise on 'Borneo' — three bars, the winner towering; a jungle sticker on 'Borneo', a lemur sticker on 'Madagascar'; a muscle sticker on 'Greenland' as the island pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.8,
+    [
+     -40,
+     70
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.84,
+    [
+     -39.5,
+     69.5
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "area",
+     "type": "compare",
+     "items": [
+      [
+       "Greenland",
+       2166,
+       "2,166,000"
+      ],
+      [
+       "Borneo",
+       748,
+       "748,000"
+      ],
+      [
+       "Madagascar",
+       587,
+       "587,000"
+      ]
+     ],
+     "y": 300,
+     "x": 60,
+     "w": 900,
+     "max_h": 520
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@borneo-0.2",
+     "do": "chart.compare_in",
+     "id": "area",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.25
+     }
+    },
+    {
+     "at": "@@borneo",
+     "do": "sticker_in",
+     "id": "st_jungle"
+    },
+    {
+     "at": "@@borneo+0.4",
+     "do": "sticker_pulse",
+     "id": "st_jungle"
+    },
+    {
+     "at": "@@madagascar-0.1",
+     "do": "sticker_out",
+     "id": "st_jungle"
+    },
+    {
+     "at": "@@madagascar",
+     "do": "sticker_in",
+     "id": "st_lemur"
+    },
+    {
+     "at": "@@madagascar+0.4",
+     "do": "sticker_pulse",
+     "id": "st_lemur"
+    },
+    {
+     "at": "@@greenland-0.1",
+     "do": "sticker_out",
+     "id": "st_lemur"
+    },
+    {
+     "at": "@@greenland",
+     "do": "sticker_in",
+     "id": "st_muscle"
+    },
+    {
+     "at": "@@greenland+0.4",
+     "do": "sticker_pulse",
+     "id": "st_muscle"
+    },
+    {
+     "at": "@@greenland+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "304",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "area"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_muscle"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "About 80 percent of it is buried under a single ice sheet, which in places is up to 3 kilometres thick.",
+    "cues": {
+     "percent": "percent",
+     "ice": "ice",
+     "thick": "thick"
+    }
+   },
+   "direction": "push north over the ice; a white flash and the 80% ICE card on 'percent'; a snowflake on 'ice'; a ruler sticker on 'thick' as the island pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "card": {
+    "kicker": "80% ICE",
+    "text": "up to 3 km thick"
+   },
+   "card_at": null,
+   "cam": [
+    1.0,
+    [
+     -40,
+     74
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    1.04,
+    [
+     -39.5,
+     73.5
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@percent",
+     "do": "fx.flash",
+     "args": {
+      "peak": 0.9,
+      "out": 0.3
+     }
+    },
+    {
+     "at": "@@percent+0.1",
+     "do": "fact_in",
+     "id": "f3",
+     "until": "@.end-0.2"
+    },
+    {
+     "at": "@@ice",
+     "do": "sticker_in",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@ice+0.4",
+     "do": "sticker_pulse",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@thick-0.2",
+     "do": "sticker_out",
+     "id": "st_snow"
+    },
+    {
+     "at": "@@thick",
+     "do": "sticker_in",
+     "id": "st_ruler"
+    },
+    {
+     "at": "@@thick+0.4",
+     "do": "sticker_pulse",
+     "id": "st_ruler"
+    },
+    {
+     "at": "@@thick+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "304",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_ruler"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "Only around 56,000 people live on the whole island, most of them along the south west coast, around the small capital, Nuuk.",
+    "cues": {
+     "people": "people",
+     "coast": "coast",
+     "nuuk": "nuuk"
+    }
+   },
+   "direction": "push south-west to the coast; the island rises with a people sticker on it on 'people' and the 56,000 card lands; the Nuuk pin and tag land on 'Nuuk' with a house sticker as the island pulses; pin leaves",
+   "energy": 3,
+   "tone": "tender",
+   "pause_after": 0.8,
+   "cam": [
+    1.4,
+    [
+     -50,
+     64.5
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.46,
+    [
+     -50.5,
+     64.2
+    ]
+   ],
+   "pulse": false,
+   "elements": [],
+   "devices": [
+    {
+     "at": "@@people",
+     "do": "geo.rise",
+     "stage": "stage_map",
+     "args": {
+      "fid": "304",
+      "eid": "st_people",
+      "layer": "hl",
+      "dur": 0.8,
+      "lift": 10
+     }
+    },
+    {
+     "at": "@@people+0.3",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@@nuuk-0.1"
+    },
+    {
+     "at": "@@people",
+     "do": "sticker_in",
+     "id": "st_people"
+    },
+    {
+     "at": "@@people+0.4",
+     "do": "sticker_pulse",
+     "id": "st_people"
+    },
+    {
+     "at": "@@nuuk-0.2",
+     "do": "sticker_out",
+     "id": "st_people"
+    },
+    {
+     "at": "@@nuuk+0.1",
+     "do": "sticker_in",
+     "id": "st_house"
+    },
+    {
+     "at": "@@nuuk+0.5",
+     "do": "sticker_pulse",
+     "id": "st_house"
+    },
+    {
+     "at": "@@nuuk+0.4",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "304",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_house"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "nuuk"
+     }
+    }
+   ],
+   "card": {
+    "kicker": "56,000",
+    "text": "people on the whole island"
+   },
+   "card_at": null
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_jungle",
+   "type": "sticker",
+   "emoji": "1f334",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_lemur",
+   "type": "sticker",
+   "emoji": "1f412",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_muscle",
+   "type": "sticker",
+   "emoji": "1f4aa",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_snow",
+   "type": "sticker",
+   "emoji": "2744",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_ruler",
+   "type": "sticker",
+   "emoji": "1f4cf",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_people",
+   "type": "sticker",
+   "emoji": "1f465",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_house",
+   "type": "sticker",
+   "emoji": "1f3e0",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  }
+ ]
+}

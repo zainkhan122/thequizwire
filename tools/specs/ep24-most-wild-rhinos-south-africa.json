@@ -1,0 +1,1018 @@
+{
+ "id": "ep24-most-wild-rhinos-south-africa",
+ "series": "wild-files",
+ "number": 24,
+ "seed": 2425,
+ "question": "Where do MOST wild rhinos live?",
+ "keyword": "MOST",
+ "difficulty": "MEDIUM",
+ "options": [
+  {
+   "text": "Kenya",
+   "flag": "ke",
+   "cue": "kenya"
+  },
+  {
+   "text": "India",
+   "flag": "in",
+   "cue": "india"
+  },
+  {
+   "text": "South Africa",
+   "flag": "za",
+   "cue": "south"
+  }
+ ],
+ "correct": 2,
+ "answer_sub": "around 6 in 10 of them",
+ "outro_headline": "TOO EASY?",
+ "cover_emoji": "🦏",
+ "cover_emoji_why": "a rhino names the subject; it is not the flag or emoji of any option",
+ "post": {
+  "premise": "6 in 10 of the world's rhinos live in one country",
+  "bait": "Kenya, India or South Africa — which did you pick? 👇",
+  "keywords": [
+   "where do rhinos live",
+   "most rhinos",
+   "rhino facts",
+   "wild rhinos",
+   "animal quiz",
+   "wildlife facts",
+   "rhino population",
+   "safari animals"
+  ],
+  "tags": [
+   "AnimalQuiz",
+   "Rhinos"
+  ],
+  "sources_line": "International Rhino Foundation (State of the Rhino 2024); IUCN; SANParks",
+  "copy": {
+   "spoilers": [
+    "south africa",
+    "south african",
+    "kruger",
+    "16,000",
+    "hluhluwe",
+    "johannesburg",
+    "pretoria"
+   ],
+   "youtube": {
+    "title": "Where do most wild rhinos live? 🦏 Most people get it wrong",
+    "description": "The safari reflex, the one-horned country, or the third one? Around 6 in 10 of the world's wild rhinos live in one country, 2 of the 5 species live there, and one national park holds more of them than any other place on Earth.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#rhinos",
+     "#quiz",
+     "#shorts",
+     "#wildfiles"
+    ]
+   },
+   "instagram": {
+    "caption": "Where do MOST wild rhinos live? 🦏\nAround 6 in 10 of the world's wild rhinos live in one country, and one national park holds more of them than anywhere on Earth.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#rhinos",
+     "#safari",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Where do most wild rhinos live?\nAround 6 in 10 of the world's wild rhinos live in one country, 2 of the 5 species live there, and one national park holds more of them than any other place on Earth. Choose your flag before the blocks stack up.",
+    "tags": [
+     "#AnimalQuiz",
+     "#Rhinos"
+    ]
+   },
+   "twitter": {
+    "text": "Where do MOST wild rhinos live?\nKenya, India or South Africa? Six in ten of them, 2 of the 5 species, and one park with more than anywhere else.",
+    "tags": [
+     "#animalquiz",
+     "#rhinos"
+    ]
+   },
+   "threads": {
+    "text": "Where do most wild rhinos live? Around 6 in 10 of the world's wild rhinos live in one country, 2 of the 5 species live there, and one national park holds more of them than any other place on Earth.",
+    "tags": [
+     "#rhinos"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "misconception",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "compare",
+   "split",
+   "rise",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:za + flagball:ke + emoji-set:savanna",
+  "music": "bed:bright",
+  "outro": "TOO EASY?"
+ },
+ "intent": "A share you can see: the compare blocks put South Africa's 16,000 against India's 4,000, a split sets the 2 African species side by side, and the park with the most rhinos on Earth rises off the map.",
+ "voice": {
+  "v01_cues": {
+   "where": "where",
+   "most": "most"
+  },
+  "v04": {
+   "text": "South Africa. Around 6 in 10 wild rhinos live here.",
+   "cues": {
+    "answer": "south",
+    "around": "around",
+    "here": "here"
+   }
+  },
+  "v05": {
+   "text": "Kenya has around 2,000. India has around 4,000, nearly all with a single horn. South Africa has around 16,000.",
+   "cues": {
+    "kenya": "kenya",
+    "india": "india",
+    "africa": "africa"
+   }
+  },
+  "v06": {
+   "text": "There are 5 species. The 2 African ones live here, the white rhino, and the much rarer black rhino.",
+   "cues": {
+    "species": "species",
+    "white": "white",
+    "black": "black"
+   }
+  },
+  "v07": {
+   "text": "And the Kruger National Park holds more rhinos than any other place on Earth.",
+   "cues": {
+    "kruger": "kruger",
+    "more": "more",
+    "earth": "earth"
+   }
+  },
+  "v08": {
+   "text": "6 in 10, in 1 country. Follow us."
+  }
+ },
+ "facts": [
+  {
+   "kicker": "6 IN 10",
+   "text": "wild rhinos live here"
+  }
+ ],
+ "characters": {
+  "mascot_face": "think",
+  "a": {
+   "flag": "za",
+   "face": "happy",
+   "x": 230,
+   "y": 1060
+  },
+  "b": {
+   "flag": "ke",
+   "face": "think",
+   "x": 850,
+   "y": 1060
+  }
+ },
+ "research": {
+  "topic": "The International Rhino Foundation's State of the Rhino 2024 puts the world's wild rhinos at about 27,000: roughly 17,500 white, 6,400 black, 4,000 greater one-horned, fewer than 50 Sumatran and about 76 Javan. South Africa holds around 16,000 (about 13,000 white and 2,000–2,500 black; DFFE 2024), roughly 6 in 10 of all rhinos. India holds about 4,000, almost all greater one-horned, around 2,600 of them in Kaziranga (Assam Forest Department census 2022). Kenya holds about 2,000 (KWS 2023). Kruger National Park has the largest single rhino population in the world, despite poaching losses (SANParks). The 2 African species are the white and the black rhino; the 3 Asian species are the greater one-horned, Sumatran and Javan.",
+  "myths": [
+   {
+    "myth": "Kenya is rhino country — that is where the safari photos come from.",
+    "reality": "Kenya holds about 2,000 rhinos; South Africa holds around 16,000, roughly 6 in 10 of the world's total.",
+    "sources": [
+     "irf_2024",
+     "kws"
+    ]
+   }
+  ],
+  "landscape": {
+   "our_gap": "Rhino clips are poaching news and safari footage; nobody stacks the national shares, splits the 2 African species and lifts the park with the most rhinos off the map as a quiz.",
+   "existing": [
+    {
+     "url": "https://www.youtube.com/results?search_query=where+do+rhinos+live",
+     "title": "Search: where do rhinos live",
+     "angle": "classroom explainers",
+     "misses": "no country shares"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=kruger+rhino",
+     "title": "Search: the park by name",
+     "angle": "safari footage",
+     "misses": "answer in the title"
+    },
+    {
+     "url": "https://www.youtube.com/results?search_query=rhino+facts",
+     "title": "Search: rhino facts",
+     "angle": "list facts",
+     "misses": "no map"
+    }
+   ]
+  },
+  "sources": {
+   "irf_2024": {
+    "type": "primary",
+    "publisher": "International Rhino Foundation",
+    "title": "State of the Rhino 2024",
+    "url": "https://rhinos.org/state-of-the-rhino/",
+    "date": "2026-11-26",
+    "notes": "about 27,000 rhinos worldwide; white about 17,500, black about 6,400, greater one-horned about 4,000, Javan about 76, Sumatran fewer than 50; South Africa holds the majority"
+   },
+   "dffe": {
+    "type": "primary",
+    "publisher": "South African Department of Forestry, Fisheries and the Environment",
+    "title": "Rhino poaching and population update 2024",
+    "url": "https://www.dffe.gov.za/",
+    "date": "2026-11-26",
+    "notes": "South Africa's rhino population about 16,000 (white about 13,000, black about 2,000–2,500)"
+   },
+   "iucn_white": {
+    "type": "scholarly",
+    "publisher": "IUCN Red List",
+    "title": "Ceratotherium simum (white rhinoceros) assessment",
+    "url": "https://www.iucnredlist.org/species/4185/45813880",
+    "date": "2026-11-26",
+    "notes": "Near Threatened; the great majority of white rhinos are in South Africa"
+   },
+   "iucn_black": {
+    "type": "scholarly",
+    "publisher": "IUCN Red List",
+    "title": "Diceros bicornis (black rhinoceros) assessment",
+    "url": "https://www.iucnredlist.org/species/6557/152728945",
+    "date": "2026-11-26",
+    "notes": "Critically Endangered; about 6,400; largest populations in South Africa, Namibia, Kenya, Zimbabwe"
+   },
+   "kws": {
+    "type": "primary",
+    "publisher": "Kenya Wildlife Service",
+    "title": "National rhino population 2023",
+    "url": "https://www.kws.go.ke/",
+    "date": "2026-11-26",
+    "notes": "Kenya's rhinos about 2,000 (black about 1,000, southern white about 970)"
+   },
+   "assam": {
+    "type": "primary",
+    "publisher": "Assam Forest Department",
+    "title": "Rhino census 2022",
+    "url": "https://forest.assam.gov.in/",
+    "date": "2026-11-26",
+    "notes": "Kaziranga about 2,613 greater one-horned rhinos; India about 4,000 in total"
+   },
+   "sanparks": {
+    "type": "primary",
+    "publisher": "South African National Parks",
+    "title": "Kruger National Park rhino population",
+    "url": "https://www.sanparks.org/",
+    "date": "2026-11-26",
+    "notes": "Kruger holds the largest single rhino population in the world"
+   },
+   "save_rhino": {
+    "type": "reference",
+    "publisher": "Save the Rhino International",
+    "title": "Rhino populations",
+    "url": "https://www.savetherhino.org/rhino-info/population-figures/",
+    "date": "2026-11-26",
+    "notes": "five species; 2 African (white, black) and 3 Asian (greater one-horned, Sumatran, Javan); country breakdowns"
+   },
+   "natural_earth": {
+    "type": "primary",
+    "publisher": "Natural Earth",
+    "title": "Admin 0 countries, 50m",
+    "url": "https://www.naturalearthdata.com/",
+    "date": "2026-11-26",
+    "notes": "country polygons"
+   }
+  },
+  "claims": [
+   {
+    "id": "C01",
+    "weight": "core",
+    "text": "South Africa holds around 16,000 of the world's roughly 27,000 wild rhinos, about 6 in 10.",
+    "sources": [
+     "irf_2024",
+     "dffe",
+     "save_rhino"
+    ],
+    "vo": [
+     "where do most wild rhinos live",
+     "kenya, india, or south africa",
+     "south africa. around 6 in 10 wild rhinos live here",
+     "6 in 10, in 1 country. follow us"
+    ],
+    "screen": [
+     "South Africa",
+     "Kenya",
+     "India",
+     "6 IN 10",
+     "wild rhinos live here"
+    ]
+   },
+   {
+    "id": "C02",
+    "weight": "core",
+    "text": "Kenya has about 2,000 rhinos; India about 4,000, almost all greater one-horned (single horn); South Africa about 16,000.",
+    "sources": [
+     "kws",
+     "assam",
+     "dffe",
+     "irf_2024"
+    ],
+    "vo": [
+     "kenya has around 2,000. india has around 4,000, nearly all with a single horn. south africa has around 16,000"
+    ],
+    "screen": [
+     "≈ 16,000",
+     "≈ 4,000",
+     "≈ 2,000"
+    ]
+   },
+   {
+    "id": "C03",
+    "weight": "core",
+    "text": "There are 5 rhino species; the 2 African species, white (about 17,500) and black (about 6,400), both live in South Africa.",
+    "sources": [
+     "irf_2024",
+     "save_rhino",
+     "iucn_white",
+     "iucn_black"
+    ],
+    "vo": [
+     "there are 5 species. the 2 african ones live here, the white rhino, and the much rarer black rhino"
+    ],
+    "screen": [
+     "WHITE RHINO",
+     "≈ 17,500 left",
+     "BLACK RHINO",
+     "≈ 6,400 left",
+     "AFRICA",
+     "AFRICA"
+    ]
+   },
+   {
+    "id": "C04",
+    "weight": "detail",
+    "text": "Kruger National Park holds the largest single rhino population in the world.",
+    "sources": [
+     "sanparks",
+     "iucn_white"
+    ],
+    "vo": [
+     "and the kruger national park holds more rhinos than any other place on earth"
+    ],
+    "screen": [
+     "Kruger",
+     "MOST RHINOS",
+     "of any place on Earth",
+     "the park"
+    ]
+   }
+  ]
+ },
+ "geo": {
+  "fit_bbox": [
+   16,
+   -35,
+   33,
+   -22
+  ],
+  "far_bbox": [
+   -20,
+   -40,
+   60,
+   40
+  ],
+  "resolution": "50m",
+  "highlight_ids": [
+   "710"
+  ],
+  "highlight_note": "South Africa",
+  "labels": [
+   {
+    "id": "kr",
+    "lonlat": [
+     32.2,
+     -25.2
+    ],
+    "text": "Kruger",
+    "cls": "tag",
+    "in": "s07@kruger+0.2",
+    "out": "s07.end"
+   }
+  ],
+  "pins": [
+   {
+    "id": "kr",
+    "lonlat": [
+     31.5,
+     -24.0
+    ],
+    "label": "the park",
+    "side": "left"
+   }
+  ],
+  "scalebar": {
+   "km": 500,
+   "lonlat": [
+    17,
+    -34
+   ]
+  },
+  "pin_beats": [
+   {
+    "at": "s07@kruger",
+    "pid": "kr"
+   }
+  ],
+  "extra_layers": [
+   {
+    "kind": "area",
+    "id": "kr",
+    "cls": "zone",
+    "geojson": {
+     "type": "FeatureCollection",
+     "features": [
+      {
+       "type": "Feature",
+       "id": "krf",
+       "properties": {
+        "name": "Kruger National Park (schematic)"
+       },
+       "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+         [
+          [
+           31.0,
+           -25.5
+          ],
+          [
+           31.9,
+           -25.5
+          ],
+          [
+           31.6,
+           -24.0
+          ],
+          [
+           31.3,
+           -22.4
+          ],
+          [
+           31.0,
+           -22.9
+          ],
+          [
+           30.9,
+           -24.3
+          ],
+          [
+           31.0,
+           -25.5
+          ]
+         ]
+        ]
+       }
+      }
+     ]
+    },
+    "note": "schematic outline of Kruger National Park"
+   }
+  ],
+  "cams": {
+   "start": [
+    0.42,
+    [
+     25,
+     -10
+    ]
+   ],
+   "s01": [
+    0.42,
+    [
+     27,
+     -8
+    ]
+   ],
+   "s04": [
+    0.9,
+    [
+     25,
+     -29
+    ]
+   ],
+   "s04b": [
+    0.94,
+    [
+     25.3,
+     -29.2
+    ]
+   ],
+   "s05": [
+    0.85,
+    [
+     26,
+     -28
+    ]
+   ],
+   "s05b": [
+    0.89,
+    [
+     26.3,
+     -28.2
+    ]
+   ],
+   "s06": [
+    0.95,
+    [
+     27,
+     -27
+    ]
+   ],
+   "s06b": [
+    0.99,
+    [
+     27.2,
+     -27.2
+    ]
+   ],
+   "s07": [
+    1.6,
+    [
+     30.5,
+     -24.5
+    ]
+   ],
+   "s07b": [
+    1.66,
+    [
+     30.6,
+     -24.4
+    ]
+   ]
+  }
+ },
+ "story": [
+  {
+   "vo": {
+    "text": "Kenya has around 2,000. India has around 4,000, nearly all with a single horn. South Africa has around 16,000.",
+    "cues": {
+     "kenya": "kenya",
+     "india": "india",
+     "africa": "africa"
+    }
+   },
+   "direction": "ease back over the whole country; the Kenyan flag-ball thinks on 'Kenya' with a rhino sticker; the compare blocks stack 16,000 over 4,000 and 2,000 on 'India' with a horn sticker; a grass sticker on 'Africa' as the country pulses",
+   "energy": 4,
+   "tone": "resolute",
+   "pause_after": 0.35,
+   "cam": [
+    0.85,
+    [
+     26,
+     -28
+    ]
+   ],
+   "cam_dur": 1.3,
+   "cam_hold": [
+    0.89,
+    [
+     26.3,
+     -28.2
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "pop",
+     "type": "compare",
+     "items": [
+      [
+       "South Africa",
+       16,
+       "≈ 16,000"
+      ],
+      [
+       "India",
+       4,
+       "≈ 4,000"
+      ],
+      [
+       "Kenya",
+       2,
+       "≈ 2,000"
+      ]
+     ],
+     "y": 300,
+     "x": 60,
+     "w": 900,
+     "max_h": 520
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@kenya",
+     "do": "character_in",
+     "id": "ke_think"
+    },
+    {
+     "at": "@@kenya+0.2",
+     "do": "sticker_in",
+     "id": "st_rhino"
+    },
+    {
+     "at": "@@kenya+0.6",
+     "do": "sticker_pulse",
+     "id": "st_rhino"
+    },
+    {
+     "at": "@@india-0.3",
+     "do": "character_out",
+     "id": "ke_think"
+    },
+    {
+     "at": "@@india-0.2",
+     "do": "chart.compare_in",
+     "id": "pop",
+     "args": {
+      "dur": 0.9,
+      "stagger": 0.3
+     }
+    },
+    {
+     "at": "@@india",
+     "do": "sticker_pulse",
+     "id": "st_rhino"
+    },
+    {
+     "at": "@@africa-0.1",
+     "do": "sticker_out",
+     "id": "st_rhino"
+    },
+    {
+     "at": "@@africa",
+     "do": "sticker_in",
+     "id": "st_grass"
+    },
+    {
+     "at": "@@africa+0.4",
+     "do": "sticker_pulse",
+     "id": "st_grass"
+    },
+    {
+     "at": "@@africa+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "710",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "pop"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_grass"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "There are 5 species. The 2 African ones live here, the white rhino, and the much rarer black rhino.",
+    "cues": {
+     "species": "species",
+     "white": "white",
+     "black": "black"
+    }
+   },
+   "direction": "drift east; the split slides in on 'species' — white rhino ≈ 17,500 left against black rhino ≈ 6,400 left, both labelled AFRICA; a white circle sticker on 'white'; a black circle sticker on 'black' as the country pulses",
+   "energy": 3,
+   "tone": "revelatory",
+   "pause_after": 0.45,
+   "cam": [
+    0.95,
+    [
+     27,
+     -27
+    ]
+   ],
+   "cam_dur": 1.4,
+   "cam_hold": [
+    0.99,
+    [
+     27.2,
+     -27.2
+    ]
+   ],
+   "pulse": false,
+   "elements": [
+    {
+     "id": "sp",
+     "type": "split",
+     "left": {
+      "kicker": "WHITE RHINO",
+      "text": "≈ 17,500 left"
+     },
+     "right": {
+      "kicker": "BLACK RHINO",
+      "text": "≈ 6,400 left"
+     },
+     "label_left": "AFRICA",
+     "label_right": "AFRICA",
+     "y": 310,
+     "h": 540,
+     "x": 60,
+     "w": 620
+    }
+   ],
+   "devices": [
+    {
+     "at": "@@species-0.2",
+     "do": "chart.split_in",
+     "id": "sp"
+    },
+    {
+     "at": "@@white",
+     "do": "sticker_in",
+     "id": "st_white"
+    },
+    {
+     "at": "@@white+0.4",
+     "do": "sticker_pulse",
+     "id": "st_white"
+    },
+    {
+     "at": "@@black-0.2",
+     "do": "sticker_out",
+     "id": "st_white"
+    },
+    {
+     "at": "@@black",
+     "do": "sticker_in",
+     "id": "st_black"
+    },
+    {
+     "at": "@@black+0.4",
+     "do": "sticker_pulse",
+     "id": "st_black"
+    },
+    {
+     "at": "@@black+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "710",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "chart.out",
+     "id": "sp"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_black"
+    }
+   ]
+  },
+  {
+   "vo": {
+    "text": "And the Kruger National Park holds more rhinos than any other place on Earth.",
+    "cues": {
+     "kruger": "kruger",
+     "more": "more",
+     "earth": "earth"
+    }
+   },
+   "direction": "push in on the north-east; the Kruger outline lights and rises with a rhino sticker riding it on 'Kruger' as the pin and tag land, a tree sticker beside; the MOST RHINOS card on 'more'; the South African flag-ball grins on 'Earth' as the country pulses; pin leaves",
+   "energy": 3,
+   "tone": "tender",
+   "pause_after": 0.8,
+   "card": {
+    "kicker": "MOST RHINOS",
+    "text": "of any place on Earth"
+   },
+   "card_at": null,
+   "cam": [
+    1.6,
+    [
+     30.5,
+     -24.5
+    ]
+   ],
+   "cam_dur": 1.5,
+   "cam_hold": [
+    1.66,
+    [
+     30.6,
+     -24.4
+    ]
+   ],
+   "pulse": false,
+   "devices": [
+    {
+     "at": "@@kruger-0.2",
+     "do": "geo.highlight_in",
+     "stage": "stage_map",
+     "args": {
+      "fid": "krf",
+      "layer": "kr",
+      "dur": 0.5
+     }
+    },
+    {
+     "at": "@@kruger-0.1",
+     "do": "sticker_in",
+     "id": "st_rhino2"
+    },
+    {
+     "at": "@@kruger",
+     "do": "geo.rise",
+     "stage": "stage_map",
+     "args": {
+      "fid": "krf",
+      "eid": "st_rhino2",
+      "layer": "kr",
+      "dur": 0.8,
+      "lift": 10
+     }
+    },
+    {
+     "at": "@@kruger+0.1",
+     "do": "sticker_in",
+     "id": "st_tree"
+    },
+    {
+     "at": "@@kruger+0.5",
+     "do": "sticker_pulse",
+     "id": "st_tree"
+    },
+    {
+     "at": "@@more-0.2",
+     "do": "sticker_out",
+     "id": "st_tree"
+    },
+    {
+     "at": "@@more",
+     "do": "fact_in",
+     "id": "f4",
+     "until": "@.end-0.2"
+    },
+    {
+     "at": "@@more+0.2",
+     "do": "sticker_in",
+     "id": "st_heart"
+    },
+    {
+     "at": "@@more+0.6",
+     "do": "sticker_pulse",
+     "id": "st_heart"
+    },
+    {
+     "at": "@@earth",
+     "do": "character_in",
+     "id": "za_happy"
+    },
+    {
+     "at": "@@earth+0.3",
+     "do": "geo.highlight_pulse",
+     "stage": "stage_map",
+     "args": {
+      "fid": "710",
+      "dur": 0.7,
+      "layer": "hl"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_heart"
+    },
+    {
+     "at": "@.end",
+     "do": "sticker_out",
+     "id": "st_rhino2"
+    },
+    {
+     "at": "@.end",
+     "do": "character_out",
+     "id": "za_happy"
+    },
+    {
+     "at": "@.end",
+     "do": "geo.pin_out",
+     "stage": "stage_map",
+     "args": {
+      "pid": "kr"
+     }
+    },
+    {
+     "at": "@.end",
+     "do": "geo.highlight_out",
+     "stage": "stage_map",
+     "args": {
+      "fid": "krf",
+      "layer": "kr",
+      "dur": 0.4
+     }
+    }
+   ]
+  }
+ ],
+ "extra_elements": [
+  {
+   "id": "st_rhino",
+   "type": "sticker",
+   "emoji": "1f98f",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_grass",
+   "type": "sticker",
+   "emoji": "1f33f",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_white",
+   "type": "sticker",
+   "emoji": "26aa",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_black",
+   "type": "sticker",
+   "emoji": "26ab",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_tree",
+   "type": "sticker",
+   "emoji": "1f333",
+   "x": 840,
+   "y": 700,
+   "size": 165,
+   "rot": -6
+  },
+  {
+   "id": "st_heart",
+   "type": "sticker",
+   "emoji": "1f49a",
+   "x": 840,
+   "y": 1010,
+   "size": 165,
+   "rot": 6
+  },
+  {
+   "id": "st_rhino2",
+   "type": "sticker",
+   "emoji": "1f98f",
+   "x": 540,
+   "y": 900,
+   "size": 120,
+   "rot": 0
+  },
+  {
+   "id": "ke_think",
+   "type": "character",
+   "flag": "ke",
+   "face": "think",
+   "x": 820,
+   "y": 1000,
+   "size": 200,
+   "rot": 6
+  },
+  {
+   "id": "za_happy",
+   "type": "character",
+   "flag": "za",
+   "face": "happy",
+   "x": 300,
+   "y": 1000,
+   "size": 200,
+   "rot": -6
+  }
+ ]
+}

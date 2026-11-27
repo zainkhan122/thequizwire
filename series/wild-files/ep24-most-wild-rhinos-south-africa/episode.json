@@ -1,0 +1,141 @@
+{
+ "id": "ep24-most-wild-rhinos-south-africa",
+ "format": "quiz-v3",
+ "series": "wild-files",
+ "number": 24,
+ "title": "Where do MOST wild rhinos live?",
+ "difficulty": "MEDIUM",
+ "seed": 2425,
+ "quiz": {
+  "question": "Where do MOST wild rhinos live?",
+  "keyword": "MOST",
+  "options": [
+   "Kenya",
+   "India",
+   "South Africa"
+  ],
+  "correct": 2,
+  "beat": 3.0,
+  "answer_line": "South Africa",
+  "answer_sub": "around 6 in 10 of them",
+  "option_meta": [
+   {
+    "flag": "ke"
+   },
+   {
+    "flag": "in"
+   },
+   {
+    "flag": "za"
+   }
+  ],
+  "banner": "South Africa",
+  "banner_sub": "✓  C was right · around 6 in 10 of them",
+  "outro": {
+   "headline": "TOO EASY?",
+   "url": "thequizwire.com"
+  }
+ },
+ "hook_type": "question-first",
+ "promise": {
+  "min_motion": 0.7
+ },
+ "credits": [
+  "Natural Earth"
+ ],
+ "post": {
+  "title": "Where do MOST wild rhinos live? 🦏",
+  "premise": "6 in 10 of the world's rhinos live in one country",
+  "bait": "Kenya, India or South Africa — which did you pick? 👇",
+  "keywords": [
+   "where do rhinos live",
+   "most rhinos",
+   "rhino facts",
+   "wild rhinos",
+   "animal quiz",
+   "wildlife facts",
+   "rhino population",
+   "safari animals"
+  ],
+  "description": "6 in 10 of the world's rhinos live in one country. Kenya, India or South Africa — which did you pick? 👇\n\nSources: International Rhino Foundation (State of the Rhino 2024); IUCN; SANParks.\nMap data: Natural Earth (public domain). Voice: AI (Kokoro).\n\nWild Files #24",
+  "hashtags": [
+   "#AnimalQuiz",
+   "#WildlifeFacts",
+   "#thequizwire"
+  ],
+  "tags": [
+   "AnimalQuiz",
+   "Rhinos"
+  ],
+  "cover_emoji": "🦏",
+  "cover_emoji_why": "a rhino names the subject; it is not the flag or emoji of any option",
+  "copy": {
+   "spoilers": [
+    "south africa",
+    "south african",
+    "kruger",
+    "16,000",
+    "hluhluwe",
+    "johannesburg",
+    "pretoria"
+   ],
+   "youtube": {
+    "title": "Where do most wild rhinos live? 🦏 Most people get it wrong",
+    "description": "The safari reflex, the one-horned country, or the third one? Around 6 in 10 of the world's wild rhinos live in one country, 2 of the 5 species live there, and one national park holds more of them than any other place on Earth.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#rhinos",
+     "#quiz",
+     "#shorts",
+     "#wildfiles"
+    ]
+   },
+   "instagram": {
+    "caption": "Where do MOST wild rhinos live? 🦏\nAround 6 in 10 of the world's wild rhinos live in one country, and one national park holds more of them than anywhere on Earth.\nWhich did you pick?",
+    "tags": [
+     "#animalquiz",
+     "#rhinos",
+     "#safari",
+     "#quiz",
+     "#didyouknow"
+    ]
+   },
+   "facebook": {
+    "text": "Where do most wild rhinos live?\nAround 6 in 10 of the world's wild rhinos live in one country, 2 of the 5 species live there, and one national park holds more of them than any other place on Earth. Choose your flag before the blocks stack up.",
+    "tags": [
+     "#AnimalQuiz",
+     "#Rhinos"
+    ]
+   },
+   "twitter": {
+    "text": "Where do MOST wild rhinos live?\nKenya, India or South Africa? Six in ten of them, 2 of the 5 species, and one park with more than anywhere else.",
+    "tags": [
+     "#animalquiz",
+     "#rhinos"
+    ]
+   },
+   "threads": {
+    "text": "Where do most wild rhinos live? Around 6 in 10 of the world's wild rhinos live in one country, 2 of the 5 species live there, and one national park holds more of them than any other place on Earth.",
+    "tags": [
+     "#rhinos"
+    ]
+   }
+  }
+ },
+ "variety": {
+  "question": "which-country",
+  "hook": "question-first",
+  "opener": "mystery-zoom-out",
+  "reveal": "fill-pulse",
+  "beats": [
+   "compare",
+   "split",
+   "rise",
+   "pin",
+   "label"
+  ],
+  "cast": "flagball:za + flagball:ke + emoji-set:savanna",
+  "music": "bed:bright"
+ },
+ "status": "ready"
+}

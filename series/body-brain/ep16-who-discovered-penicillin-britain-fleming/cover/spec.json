@@ -1,0 +1,49 @@
+{
+ "bg": "hero.jpg",
+ "anchor": [
+  0.5,
+  0.35
+ ],
+ "hero_prompt": "Vibrant stylised vertical 9:16 illustration, bold retro-science poster style: a single glass petri dish held up to a window, a fuzzy blue-green mould colony glowing inside it, dramatic shaft of golden light, deep teal background, bold shapes, halftone texture, saturated colours, high contrast. No text, no letters, no flags, no faces, no logos.",
+ "head": "THE DRUG THAT CHANGED MEDICINE STARTED AS A *DIRTY DISH*",
+ "head_top": 1090,
+ "head_size": 140,
+ "badge": "USA  ·  GERMANY  ·  ???",
+ "badge_color": "#FFD400",
+ "badge_xy": [
+  60,
+  960
+ ],
+ "burst": {
+  "text": "OOPS",
+  "xy": [
+   870,
+   330
+  ],
+  "r": 150,
+  "color": "#FF2D2D"
+ },
+ "stickers": [
+  [
+   "1f92f",
+   250,
+   [
+    780,
+    1480
+   ],
+   12
+  ],
+  [
+   "1f9eb",
+   200,
+   [
+    80,
+    760
+   ],
+   -10
+  ]
+ ],
+ "approved": "2026-11-27 owner standing instruction ('make sure all shorts are ready for backlog, no more questions'); rendered to review/v2/covers5",
+ "hero_url": "https://api.github.com/repos/zainkhan122/thequizwire/releases/assets/801373038",
+ "cover_url": "https://api.github.com/repos/zainkhan122/thequizwire/releases/assets/801373106"
+}

@@ -109,7 +109,6 @@
   "beats": [
    "route",
    "travel",
-   "flash",
    "pin",
    "label"
   ],
@@ -773,14 +772,6 @@
      "stage": "stage_map",
      "args": {
       "pid": "oly"
-     }
-    },
-    {
-     "at": "@@olympia",
-     "do": "fx.flash",
-     "args": {
-      "peak": 0.9,
-      "out": 0.3
      }
     },
     {

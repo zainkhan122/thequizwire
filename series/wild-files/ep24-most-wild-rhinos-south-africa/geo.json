@@ -1,0 +1,144 @@
+{
+ "version": 1,
+ "episode": "ep24-most-wild-rhinos-south-africa",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     16,
+     -35,
+     33,
+     -22
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "710"
+     ],
+     "cls": "",
+     "note": "South Africa"
+    },
+    {
+     "kind": "area",
+     "id": "kr",
+     "cls": "zone",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "krf",
+        "properties": {
+         "name": "Kruger National Park (schematic)"
+        },
+        "geometry": {
+         "type": "Polygon",
+         "coordinates": [
+          [
+           [
+            31.0,
+            -25.5
+           ],
+           [
+            31.9,
+            -25.5
+           ],
+           [
+            31.6,
+            -24.0
+           ],
+           [
+            31.3,
+            -22.4
+           ],
+           [
+            31.0,
+            -22.9
+           ],
+           [
+            30.9,
+            -24.3
+           ],
+           [
+            31.0,
+            -25.5
+           ]
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic outline of Kruger National Park"
+    }
+   ],
+   "pins": [
+    {
+     "id": "kr",
+     "lonlat": [
+      31.5,
+      -24.0
+     ],
+     "label": "the park",
+     "side": "left"
+    }
+   ],
+   "labels": [
+    {
+     "id": "kr",
+     "lonlat": [
+      32.2,
+      -25.2
+     ],
+     "text": "Kruger",
+     "cls": "tag",
+     "in": "s07@kruger+0.2",
+     "out": "s07.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -20,
+      -40,
+      60,
+      40
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 500,
+    "lonlat": [
+     17,
+     -34
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}

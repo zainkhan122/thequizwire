@@ -1,0 +1,147 @@
+{
+ "version": 1,
+ "episode": "ep27-most-olympic-football-golds-hungary",
+ "policy": "docs/BORDER_POLICY.md",
+ "scenes": {
+  "main": {
+   "resolution": "50m",
+   "projection": "mercator",
+   "fit": {
+    "type": "bbox",
+    "bbox": [
+     15.5,
+     45.5,
+     23.5,
+     49
+    ]
+   },
+   "padding": 20,
+   "layers": [
+    {
+     "kind": "land"
+    },
+    {
+     "kind": "borders"
+    },
+    {
+     "kind": "highlight",
+     "id": "hl",
+     "ids": [
+      "348"
+     ],
+     "cls": "",
+     "note": "Hungary",
+     "lift": "color",
+     "color": "#FFD400"
+    },
+    {
+     "kind": "route",
+     "id": "trip",
+     "cls": "neon yellow",
+     "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+       {
+        "type": "Feature",
+        "id": "bh",
+        "properties": {
+         "name": "Budapest → Helsinki 1952 (schematic)"
+        },
+        "geometry": {
+         "type": "LineString",
+         "coordinates": [
+          [
+           19.05,
+           47.5
+          ],
+          [
+           19.5,
+           50.5
+          ],
+          [
+           21.5,
+           54.5
+          ],
+          [
+           24.0,
+           58.5
+          ],
+          [
+           24.95,
+           60.17
+          ]
+         ]
+        }
+       }
+      ]
+     },
+     "note": "schematic line from Budapest to Helsinki, the 1952 Olympic host"
+    }
+   ],
+   "pins": [
+    {
+     "id": "nep",
+     "lonlat": [
+      19.1,
+      47.5
+     ],
+     "label": "Népstadion",
+     "side": "right"
+    }
+   ],
+   "labels": [
+    {
+     "id": "bud",
+     "lonlat": [
+      19.3,
+      47.2
+     ],
+     "text": "Budapest",
+     "cls": "tag",
+     "in": "s07@budapest+0.2",
+     "out": "s07.end"
+    },
+    {
+     "id": "hel",
+     "lonlat": [
+      25.5,
+      60.6
+     ],
+     "text": "Helsinki 1952",
+     "cls": "tag",
+     "in": "s06@helsinki+0.6",
+     "out": "s06.end"
+    }
+   ],
+   "disputed": [],
+   "sources": [
+    "Natural Earth"
+   ],
+   "basemap": {
+    "layer": "bluemarble",
+    "k_max": 2.0,
+    "far": {
+     "bbox": [
+      -10,
+      30,
+      45,
+      72
+     ],
+     "k_min": 0.3
+    }
+   },
+   "projection_reason": "satellite raster (Web Mercator tiles) under a location story; numbers are stated, no area comparison is made (P1)",
+   "scalebar": {
+    "km": 100,
+    "lonlat": [
+     16,
+     45.8
+    ],
+    "at": [
+     60,
+     1130
+    ]
+   }
+  }
+ }
+}
