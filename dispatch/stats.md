@@ -1,40 +1,40 @@
-# Channel stats — 2026-11-27T17:08Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
+# Channel stats — 2026-11-28T18:44Z (audience tz America/New_York) · source: Buffer Insights (YouTube page fallback)
 
 ## Per series, all channels (7-day movement — what is trending for us)
-- wild-files: 26 posts · +47 in 7 d · 12433 total
-- geo-blitz: 40 posts · +34 in 7 d · 19139 total
-- body-brain: 18 posts · +20 in 7 d · 7347 total
+- body-brain: 18 posts · +17 in 7 d · 7347 total
+- geo-blitz: 40 posts · +15 in 7 d · 19140 total
+- wild-files: 26 posts · +14 in 7 d · 12435 total
 - sports-sprint: 26 posts · +4 in 7 d · 10791 total
 
-## youtube — 56 posts · metric views · buffer insights · 0/56 sent posts with metrics · http 429 RATE_LIMIT_EXCEEDED Too many requests from this client. Please try again later. You can raise your Buffer API limit: https://publish.buffer.
+## youtube — 56 posts · metric views · buffer insights skipped: rate limited until 2026-12-06T14:08:00+00:00 (187.4 h left) — no call made
 last 24 h:
-- ep06-most-stroke-deaths-china (body-brain): +1 · 928 total
-- ep10-komodo-dragons-indonesia (wild-files): +1 · 796 total
+- ep13-most-wild-lions-tanzania (wild-files): +2 · 548 total
+- ep24-most-time-zones-france (geo-blitz): +1 · 1125 total
 - ep29-most-islands-sweden (geo-blitz): +0 · 1398 total
 - ep19-biggest-eyes-colossal-squid (wild-files): +0 · 1283 total
 - ep14-most-time-zones-france (geo-blitz): +0 · 1267 total
-series (7 d): wild-files +47 (13) · geo-blitz +34 (21) · body-brain +19 (9) · sports-sprint +4 (13)
+series (7 d): body-brain +17 (9) · geo-blitz +15 (21) · wild-files +14 (13) · sports-sprint +4 (13)
 hours (first-24 h by publish hour): 12:00 n=5 med 161 · 19:00 n=4 med 715.5
 → slots: ['19:00', '12:00']
 
-## instagram — 0 posts · metric — · buffer insights · 0/32 sent posts with metrics · http 429 RATE_LIMIT_EXCEEDED Too many requests from this client. Please try again later. You can raise your Buffer API limit: https://publish.buffer.
+## instagram — 0 posts · metric — · buffer insights · 0/32 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
 
-## facebook — 0 posts · metric — · buffer insights · 0/32 sent posts with metrics · http 429 RATE_LIMIT_EXCEEDED Too many requests from this client. Please try again later. You can raise your Buffer API limit: https://publish.buffer.
+## facebook — 0 posts · metric — · buffer insights · 0/32 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
 
-## threads — 54 posts · metric views · buffer insights · 0/54 sent posts with metrics · http 429 RATE_LIMIT_EXCEEDED Too many requests from this client. Please try again later. You can raise your Buffer API limit: https://publish.buffer.
+## threads — 54 posts · metric views · buffer insights skipped: rate limited until 2026-12-06T14:08:00+00:00 (187.4 h left) — no call made
 last 24 h:
 - ep25-most-pyramids-sudan (geo-blitz): +? · 16 total
 - ep13-southern-alps-new-zealand (geo-blitz): +? · 15 total
 - ep18-most-world-cup-goals-mbappe (sports-sprint): +? · 12 total
 - ep18-newest-un-member (geo-blitz): +? · 11 total
 - ep14-cricket-world-cup-wins (sports-sprint): +? · 11 total
-series (7 d): body-brain +1 (9) · geo-blitz +0 (19) · sports-sprint +0 (13) · wild-files +0 (13)
+series (7 d): geo-blitz +0 (19) · sports-sprint +0 (13) · wild-files +0 (13) · body-brain +0 (9)
 hours (first-24 h by publish hour): 10:00 n=4 med 1.5 · 19:00 n=4 med 2.0
 → slots: ['19:00', '10:00']
 
-## twitter — 0 posts · metric — · buffer insights · 0/32 sent posts with metrics · http 429 RATE_LIMIT_EXCEEDED Too many requests from this client. Please try again later. You can raise your Buffer API limit: https://publish.buffer.
+## twitter — 0 posts · metric — · buffer insights · 0/32 sent posts with metrics · http 200 INSUFFICIENT_SCOPE Insufficient scope. Required: insights:read. Granted: posts:read, posts:write, ideas:read, ideas:write, account:read, acc
 
-## YouTube API: 16/56 thumbnails · 32 series-playlist items · 32 channel-playlist items · 31 tagged · quota 8855 units on 2026-11-20
+## YouTube API: 16/56 thumbnails · 32 series-playlist items · 32 channel-playlist items · 31 tagged · quota 3402 units on 2026-11-28
 
 ## Every post
 
@@ -44,8 +44,8 @@ hours (first-24 h by publish hour): 10:00 n=4 med 1.5 · 19:00 n=4 med 2.0
 | ep30-highest-capital-la-paz | youtube | Tue 12:00 | views | 1013 | 0 | 1 | 935 | None | None |
 | ep19-biggest-eyes-colossal-squid | threads | Tue 10:00 | views | 4 | None | 0 | 3 | 0 | 0 |
 | ep29-most-islands-sweden | threads | Mon 19:00 | views | 5 | None | 0 | None | 0 | 0 |
-| ep19-biggest-eyes-colossal-squid | youtube | Mon 19:00 | views | 1283 | 0 | 31 | None | None | None |
-| ep29-most-islands-sweden | youtube | Mon 12:00 | views | 1398 | 0 | 17 | None | None | None |
+| ep19-biggest-eyes-colossal-squid | youtube | Mon 19:00 | views | 1283 | 0 | -1 | None | None | None |
+| ep29-most-islands-sweden | youtube | Mon 12:00 | views | 1398 | 0 | -2 | None | None | None |
 | ep21-first-f1-championship-race-silverstone | threads | Mon 10:00 | views | 10 | None | 0 | None | 0 | 0 |
 | ep17-longest-flight-without-landing-swift | threads | Sun 19:00 | views | 0 | None | 0 | None | 0 | 0 |
 | ep21-first-f1-championship-race-silverstone | youtube | Sun 19:00 | views | 313 | 0 | 0 | None | None | None |
@@ -54,14 +54,14 @@ hours (first-24 h by publish hour): 10:00 n=4 med 1.5 · 19:00 n=4 med 2.0
 | ep28-river-most-water-amazon | youtube | Sat 19:00 | views | 1101 | 0 | 4 | None | None | None |
 | ep18-loudest-animal-sperm-whale | youtube | Sat 12:00 | views | 1044 | 0 | 0 | None | None | None |
 | ep27-flattest-country-maldives | threads | Sat 10:00 | views | 9 | None | 0 | None | 0 | 0 |
-| ep12-first-insulin-injection-toronto | threads | Fri 19:00 | views | 8 | None | 1 | None | 0 | 0 |
+| ep12-first-insulin-injection-toronto | threads | Fri 19:00 | views | 8 | None | 0 | None | 0 | 0 |
 | ep27-flattest-country-maldives | youtube | Fri 19:00 | views | 553 | 0 | 0 | None | None | None |
 | ep12-first-insulin-injection-toronto | youtube | Fri 12:00 | views | 166 | 0 | 0 | None | None | None |
-| ep11-stethoscope-invented-paris-laennec | youtube | Thu 12:00 | views | 234 | 0 | 2 | None | None | None |
+| ep11-stethoscope-invented-paris-laennec | youtube | Thu 12:00 | views | 234 | 0 | 0 | None | None | None |
 | ep11-stethoscope-invented-paris-laennec | threads | Thu 10:00 | views | 1 | None | 0 | None | 0 | 0 |
 | ep26-longest-coastline-canada | threads | Wed 19:00 | views | 7 | None | 0 | None | 0 | 0 |
 | ep26-longest-coastline-canada | youtube | Wed 19:00 | views | 690 | 0 | 1 | None | None | None |
-| ep16-most-camels-somalia | youtube | Wed 12:00 | views | 1200 | 0 | 7 | None | None | None |
+| ep16-most-camels-somalia | youtube | Wed 12:00 | views | 1200 | 0 | 4 | None | None | None |
 | ep16-most-camels-somalia | threads | Wed 10:00 | views | 0 | None | 0 | None | 0 | 0 |
 | ep10-first-anaesthesia-boston-ether | threads | Tue 19:00 | views | 3 | None | 0 | None | 0 | 0 |
 | ep10-first-anaesthesia-boston-ether | youtube | Tue 19:00 | views | 1042 | 0 | 2 | None | None | None |
@@ -74,7 +74,7 @@ hours (first-24 h by publish hour): 10:00 n=4 med 1.5 · 19:00 n=4 med 2.0
 | ep09-first-vaccine-england-jenner | youtube | Sat 12:00 | views | 1076 | 0 | 0 | None | None | None |
 | ep09-first-vaccine-england-jenner | threads | Sat 10:00 | views | 2 | None | 0 | None | 0 | 0 |
 | ep24-most-time-zones-france | threads | Fri 19:00 | views | 0 | None | 0 | None | 0 | 0 |
-| ep24-most-time-zones-france | youtube | Fri 12:00 | views | 1124 | 0 | 1 | None | None | None |
+| ep24-most-time-zones-france | youtube | Fri 12:00 | views | 1125 | 1 | 2 | None | None | None |
 | ep15-longest-living-animal-greenland-shark | youtube | Thu 12:00 | views | 1055 | 0 | 0 | None | None | None |
 | ep15-longest-living-animal-greenland-shark | threads | Thu 10:00 | views | 1 | None | 0 | None | 0 | 0 |
 | ep07-most-diabetes-china | threads | Wed 19:00 | views | 3 | None | 0 | None | 0 | 0 |
@@ -94,12 +94,12 @@ hours (first-24 h by publish hour): 10:00 n=4 med 1.5 · 19:00 n=4 med 2.0
 | ep17-first-olympic-gold-connolly | threads | Fri 19:00 | views | 6 | None | 0 | None | 0 | 0 |
 | ep14-fastest-animal-peregrine | youtube | Fri 19:00 | views | 1032 | 0 | 0 | 840 | None | None |
 | ep17-first-olympic-gold-connolly | youtube | Fri 12:00 | views | 39 | 0 | 0 | None | None | None |
-| ep20-coldest-capital-ulaanbaatar | youtube | Fri 12:00 | views | 542 | 0 | 1 | 161 | None | None |
-| ep13-most-wild-lions-tanzania | youtube | Thu 12:00 | views | 546 | 0 | 0 | 34 | None | None |
+| ep20-coldest-capital-ulaanbaatar | youtube | Fri 12:00 | views | 542 | 0 | 0 | 161 | None | None |
+| ep13-most-wild-lions-tanzania | youtube | Thu 12:00 | views | 548 | 2 | 2 | 34 | None | None |
 | ep13-most-wild-lions-tanzania | threads | Thu 10:00 | views | 2 | None | 0 | 0 | 0 | 0 |
 | ep16-most-olympics-hosted-usa | threads | Wed 19:00 | views | 4 | None | 0 | 4 | 0 | 0 |
 | ep16-most-olympics-hosted-usa | youtube | Wed 19:00 | views | 934 | 0 | 0 | 591 | None | None |
-| ep06-most-stroke-deaths-china | youtube | Wed 12:00 | views | 928 | 1 | 2 | 310 | None | None |
+| ep06-most-stroke-deaths-china | youtube | Wed 12:00 | views | 928 | 0 | 2 | 310 | None | None |
 | ep06-most-stroke-deaths-china | threads | Wed 10:00 | views | 3 | None | 0 | 3 | 0 | 0 |
 | ep19-coldest-inhabited-oymyakon | threads | Tue 19:00 | views | 0 | None | 0 | 0 | 0 | 0 |
 | ep19-coldest-inhabited-oymyakon | youtube | Tue 19:00 | views | 1042 | 0 | 1 | 920 | None | None |
@@ -123,7 +123,7 @@ hours (first-24 h by publish hour): 10:00 n=4 med 1.5 · 19:00 n=4 med 2.0
 | ep12-most-world-cups-brazil | youtube | Wed 12:00 | views | 1026 | 0 | 0 | None | None | None |
 | ep10-komodo-dragons-indonesia | threads | Tue 19:00 | views | 7 | None | 0 | None | 1 | 0 |
 | ep17-deepest-lake-baikal | youtube | Tue 19:00 | views | 1008 | 0 | 0 | None | None | None |
-| ep10-komodo-dragons-indonesia | youtube | Tue 12:00 | views | 796 | 1 | 4 | None | None | None |
+| ep10-komodo-dragons-indonesia | youtube | Tue 12:00 | views | 796 | 0 | 4 | None | None | None |
 | ep04-tallest-men-netherlands | threads | Mon 19:00 | views | 1 | None | 0 | None | 0 | 0 |
 | ep04-tallest-men-netherlands | youtube | Mon 19:00 | views | 1205 | 0 | 2 | None | None | None |
 | ep11-first-modern-olympics-athens | youtube | Sun 12:00 | views | 1069 | 0 | 0 | None | None | None |
