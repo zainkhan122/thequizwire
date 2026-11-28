@@ -42,7 +42,11 @@ DEFAULTS = {"daily_units_cap": 6000, "thumbnails_per_run": 12, "min_age_minutes"
 
 
 def now(): return datetime.now(timezone.utc).isoformat(timespec="seconds")
-def today(): return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+def today():
+    """YouTube's quota day resets at midnight Pacific (08:00Z PST / 07:00Z PDT), not UTC — count the same day Google counts."""
+    try:
+        from zoneinfo import ZoneInfo; return datetime.now(ZoneInfo("America/Los_Angeles")).strftime("%Y-%m-%d")
+    except Exception: return (datetime.now(timezone.utc) - timedelta(hours=8)).strftime("%Y-%m-%d")
 
 
 class Budget(Exception): pass          # daily cap reached — stop cleanly, resume next run
@@ -439,7 +443,9 @@ def cmd_run(a):
     if not todo and not (ROOT / "dispatch/yt_merges.json").exists(): print("yt_enrich: nothing to do"); return
     est = sum(EST[s] for _, ss in todo for s in ss)
     print(f"yt_enrich: {len(todo)} video(s) with work · estimate {est} units · cap {A['daily_units_cap']}/day · thumbnails ≤ {A['thumbnails_per_run']}/run")
-    yt = YT(a.dry_run, offline=offline, cap=A["daily_units_cap"]); cache = {}; done = {"thumb": 0, "series": 0, "channel": 0, "tags": 0}
+    # enrichment is nice-to-have; uploads are the product → `run` stops upload_reserve units short of the cap so the day's
+    # 1–3 direct uploads (1600 units each) always fit even after thumbnails/playlists/stats ran first.
+    yt = YT(a.dry_run, offline=offline, cap=max(0, A["daily_units_cap"] - A.get("upload_reserve", 3300))); cache = {}; done = {"thumb": 0, "series": 0, "channel": 0, "tags": 0}
     thumbs_open, stopped = True, None
     MQ = ROOT / "dispatch/yt_merges.json"                      # queued playlist merges (owner 2026-11-18: duplicates → owner's lists), run first
     if MQ.exists():
