@@ -1,4 +1,4 @@
-# Where do MOST wild rhinos live?
+# Which country has the MOST wild rhinos?
 
 ## Signal
 suggest: "where do rhinos live" (YouTube autocomplete under "rhino", checked 2026-11-26); wikipedia:
@@ -19,7 +19,7 @@ can lift off the map.
 India about 4,000; there are 5 species, 2 of them African; Kruger National Park holds the most rhinos anywhere."
 
 ## Question shape
-which-country on an animal ("where do most wild rhinos live?"); flag options; reads verbatim as the hook; hook =
+which-country on an animal ("which country has the most wild rhinos?"); flag options; reads verbatim as the hook; hook =
 misconception; mystery-zoom-out opener starts tight on savanna so the country is not framed before the reveal.
 
 ## Options and why they fool
@@ -27,7 +27,7 @@ A Kenya — the safari-photo country, the famous northern white rhinos at Ol Pej
 of Kaziranga, which most people have seen in a documentary · C South Africa (answer) — around 6 in 10 of all rhinos.
 
 ## Search term
-"where do most wild rhinos live"
+"which country has the most wild rhinos"
 
 ## Rejected alternatives
 - "Which rhino is the rarest" — Javan, fewer than 80; a one-number fact with no map share.
@@ -35,7 +35,7 @@ of Kaziranga, which most people have seen in a documentary · C South Africa (an
 - "Which country has the most wild orangutans" — Indonesia; dropped because #10 (Komodo dragons) already answers Indonesia.
 
 ## Copy
-Title carries the search term ("where do most wild rhinos live") and "most people get it wrong", never the country.
+Title carries the search term ("which country has the most wild rhinos") and "most people get it wrong", never the country.
 Descriptions promise 6 in 10 in one country, 2 of the 5 species and one park with more than anywhere. Comment
 question: which did you pick. Tags: #animalquiz #rhinos #quiz #shorts #wildfiles; IG swaps #shorts for #didyouknow;
 Threads carries #rhinos only. Spoilers kept out: South Africa, South African, Kruger, 16,000, Hluhluwe, Johannesburg,

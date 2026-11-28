@@ -3,11 +3,11 @@
  "format": "quiz-v3",
  "series": "body-brain",
  "number": 17,
- "title": "Where do the MOST people aged 100 or more live?",
+ "title": "Which country has the MOST people aged 100 or more?",
  "difficulty": "MEDIUM",
  "seed": 1717,
  "quiz": {
-  "question": "Where do the MOST people aged 100 or more live?",
+  "question": "Which country has the MOST people aged 100 or more?",
   "keyword": "MOST",
   "options": [
    "United States",
@@ -44,7 +44,7 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Where do the MOST people aged 100 or more live? 🎂",
+  "title": "Which country has the MOST people aged 100 or more? 🎂",
   "premise": "One country has nearly 100,000 people aged 100 or more",
   "bait": "United States, China or Japan — which did you pick? 👇",
   "keywords": [
@@ -80,7 +80,7 @@
     "tokyo"
    ],
    "youtube": {
-    "title": "Where do the most people aged 100 or more live? 🎂",
+    "title": "Which country has the most people aged 100 or more? 🎂",
     "description": "The biggest economy, the biggest population, or the third one? One country has nearly a hundred thousand people who have blown out 100 candles, 9 in 10 of them women, and it used to send every one of them a solid silver cup — until there were too many.\nWhich did you pick?",
     "tags": [
      "#bodyquiz",
@@ -91,7 +91,7 @@
     ]
    },
    "instagram": {
-    "caption": "Where do the MOST people aged 100 or more live? 🎂\nThe biggest economy, the biggest population, or the third one? One country has nearly a hundred thousand people who have blown out 100 candles, 9 in 10 of them women.\nWhich did you pick?",
+    "caption": "Which country has the MOST people aged 100 or more? 🎂\nThe biggest economy, the biggest population, or the third one? One country has nearly a hundred thousand people who have blown out 100 candles, 9 in 10 of them women.\nWhich did you pick?",
     "tags": [
      "#bodyquiz",
      "#centenarians",
@@ -108,7 +108,7 @@
     ]
    },
    "twitter": {
-    "text": "Where do the MOST people aged 100 or more live?\nUnited States, China or Japan? Nearly a hundred thousand of them, 9 in 10 women — and the biggest population is not the answer.",
+    "text": "Which country has the MOST people aged 100 or more?\nUnited States, China or Japan? Nearly a hundred thousand of them, 9 in 10 women — and the biggest population is not the answer.",
     "tags": [
      "#BodyQuiz",
      "#LivingTo100"

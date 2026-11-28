@@ -1,4 +1,4 @@
-# Brief — Body & Brain #17 · Where do the MOST people aged 100 or more live?
+# Brief — Body & Brain #17 · Which country has the MOST people aged 100 or more?
 
 ## Hook fact
 Japan has the most centenarians of any country: 99,763 people aged 100+ as of 1 September 2025, a record for the 55th

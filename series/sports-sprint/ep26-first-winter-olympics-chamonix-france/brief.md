@@ -1,4 +1,4 @@
-# Brief — Sports Sprint #26 · Which country hosted the FIRST Winter Olympics?
+# Brief — Sports Sprint #26 · Where were the FIRST Winter Olympics held?
 
 ## Hook fact
 The first Olympic Winter Games were held at Chamonix, France, 25 January–5 February 1924, at the foot of Mont Blanc.

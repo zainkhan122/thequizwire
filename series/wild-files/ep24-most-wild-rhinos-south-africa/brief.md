@@ -1,4 +1,4 @@
-# Brief — Wild Files #24 · Where do MOST wild rhinos live?
+# Brief — Wild Files #24 · Which country has the MOST wild rhinos?
 
 ## Hook fact
 The world holds about 27,000 wild rhinos: roughly 17,500 white, 6,400 black, 4,000 greater one-horned, about 76

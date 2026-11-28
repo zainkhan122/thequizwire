@@ -1,4 +1,4 @@
-# Where do the MOST people aged 100 or more live?
+# Which country has the MOST people aged 100 or more?
 
 ## Signal
 trends: "centenarians" spikes every September around Japan's Respect for the Aged Day release (Google Trends, worldwide,
@@ -17,7 +17,7 @@ UN WPP). The silver-cup story (downgraded to silver-plated in 2016 because there
 in the US; the government used to send each one a silver cup."
 
 ## Question shape
-which-country superlative with a per-person twist ("where do the most people aged 100 or more live?"); flag
+which-country superlative with a per-person twist ("which country has the most people aged 100 or more?"); flag
 options; reads verbatim as the hook; hook = misconception (the biggest population is not the answer); night-lights
 opener over South-East Asia so Japan stays off-frame.
 

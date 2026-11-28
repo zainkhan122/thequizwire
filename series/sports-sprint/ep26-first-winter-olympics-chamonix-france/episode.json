@@ -3,11 +3,11 @@
  "format": "quiz-v3",
  "series": "sports-sprint",
  "number": 26,
- "title": "Which country hosted the FIRST Winter Olympics?",
+ "title": "Where were the FIRST Winter Olympics held?",
  "difficulty": "MEDIUM",
  "seed": 2626,
  "quiz": {
-  "question": "Which country hosted the FIRST Winter Olympics?",
+  "question": "Where were the FIRST Winter Olympics held?",
   "keyword": "FIRST",
   "options": [
    "Switzerland",
@@ -44,7 +44,7 @@
   "Natural Earth"
  ],
  "post": {
-  "title": "Which country hosted the FIRST Winter Olympics? ⛸️",
+  "title": "Where were the FIRST Winter Olympics held? ⛸️",
   "premise": "The first Winter Olympics were not called that at the time",
   "bait": "Switzerland, Norway or France — which did you pick? 👇",
   "keywords": [
@@ -82,7 +82,7 @@
     "bronze"
    ],
    "youtube": {
-    "title": "Which country hosted the first Winter Olympics? Not who you think ⛸️",
+    "title": "Where were the first Winter Olympics held? Not who you think ⛸️",
     "description": "The ski-resort country, the skiing superpower, or the third one? The first Winter Olympics were held in a small mountain town a century ago and were not even called the Olympics at the time; the host nation went home without a single gold, and the name was awarded two years after the Games ended.\nWhich did you pick?",
     "tags": [
      "#sportsquiz",
@@ -93,7 +93,7 @@
     ]
    },
    "instagram": {
-    "caption": "Which country hosted the FIRST Winter Olympics? ⛸️\nThe ski-resort country, the skiing superpower, or the third one? The first Winter Olympics were held in a small mountain town a century ago and were not even called the Olympics at the time; the host went home without a single gold.\nWhich did you pick?",
+    "caption": "Where were the FIRST Winter Olympics held? ⛸️\nThe ski-resort country, the skiing superpower, or the third one? The first Winter Olympics were held in a small mountain town a century ago and were not even called the Olympics at the time; the host went home without a single gold.\nWhich did you pick?",
     "tags": [
      "#sportsquiz",
      "#winterolympics",
@@ -110,7 +110,7 @@
     ]
    },
    "twitter": {
-    "text": "Which country hosted the FIRST Winter Olympics?\nSwitzerland, Norway or France? A mountain town a century ago, a host without a single gold — and nobody called it the Olympics until later.",
+    "text": "Where were the FIRST Winter Olympics held?\nSwitzerland, Norway or France? A mountain town a century ago, a host without a single gold — and nobody called it the Olympics until later.",
     "tags": [
      "#SportsQuiz",
      "#WinterGames"

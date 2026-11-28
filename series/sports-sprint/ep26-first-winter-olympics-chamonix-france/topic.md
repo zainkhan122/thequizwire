@@ -1,4 +1,4 @@
-# Which country hosted the FIRST Winter Olympics?
+# Where were the FIRST Winter Olympics held?
 
 ## Signal
 trends: "winter olympics" rising into the 2026 Milano Cortina cycle (Google Trends, worldwide, 12 months, checked

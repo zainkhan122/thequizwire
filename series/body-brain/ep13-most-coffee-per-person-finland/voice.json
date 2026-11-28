@@ -13,7 +13,7 @@
  "start_hold": 0.0,
  "end_hold": 2.4,
  "sample_line": "v04",
- "title": "Where do people drink the MOST coffee per person?",
+ "title": "Which nation drinks the MOST coffee per person?",
  "lines": [
   {
    "id": "v01",
@@ -23,7 +23,7 @@
    "energy": 4,
    "pause_after": 0.3,
    "direction": "the question, cold — curiosity comes from the map moving under it",
-   "text": "Where do people drink the most coffee per person?",
+   "text": "Which nation drinks the most coffee per person?",
    "cues": {
     "where": "where",
     "most": "most"
