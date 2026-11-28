@@ -25,6 +25,8 @@ jobs:
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
+      - name: Gate toolchain   # quizlint's cover gate imports Pillow; 11-28 a bare runner SKIPped every episode as "backlog empty"
+        run: python3 -c "import PIL, cairosvg" 2>/dev/null || python3 -m pip install -q pillow cairosvg 2>/dev/null || python3 -m pip install -q --break-system-packages pillow cairosvg
       - name: Channel stats first (what performed, which hours)
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}

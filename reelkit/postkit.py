@@ -355,8 +355,8 @@ def _ledger_posts():
 def cover_gate(ep):
     """PRODUCTION RULE (owner 2026-11-20): every short has a custom-made cover — <ep>/cover/spec.json + hero.png, rendered and approved."""
     try:
-        sys.path.insert(0, str(Path(__file__).resolve().parent)); import cover_scroll
-        return cover_scroll.check(ep)
+        sys.path.insert(0, str(Path(__file__).resolve().parent)); import cover_check
+        return cover_check.check(ep)
     except Exception as e: return [f"cover gate error: {e}"]
 
 

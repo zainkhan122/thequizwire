@@ -113,18 +113,8 @@ def approved_cover_bytes(ep):
 
 
 def check(ep, need_approval=True):
-    """Return a list of problems (empty = the episode has a production cover)."""
-    ep = Path(ep); sp = spec_path(ep); bad = []
-    if not sp.exists(): return [f"{ep.name}: cover/spec.json missing — author the cover spec (hero_prompt + head/badge/stickers)"]
-    try: spec = json.loads(sp.read_text())
-    except Exception as e: return [f"{ep.name}: cover/spec.json unreadable ({e})"]
-    for k in ("head", "bg"):
-        if not spec.get(k): bad.append(f"{ep.name}: cover/spec.json has no '{k}'")
-    if spec.get("bg") and not (ep / "cover" / spec["bg"]).exists() and not spec.get("hero_url"): bad.append(f"{ep.name}: cover/{spec['bg']} missing — generate the hero art from spec.hero_prompt (then `mediahost.py cover <ep>` to host it)")
-    if spec.get("status") == "draft": bad.append(f"{ep.name}: cover spec is still a draft stub")
-    if need_approval and not spec.get("approved"): bad.append(f"{ep.name}: cover not approved — render, show the owner the contact sheet, then set spec.approved")
-    if need_approval and not (ep / "cover" / "cover.jpg").exists() and not spec.get("cover_url"): bad.append(f"{ep.name}: cover/cover.jpg missing — render the approved cover (cover_scroll.py <ep> --jpg <ep>/cover/cover.jpg) and host it (mediahost.py cover <ep>)")
-    return bad
+    from cover_check import check as _c
+    return _c(ep, need_approval)
 
 
 def build(ep, spec):
