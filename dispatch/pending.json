@@ -28,6 +28,34 @@
    "queued_at": "2026-11-27T20:17:10+00:00",
    "last_try": "2026-11-28T18:34:52+00:00",
    "tries": 2
+  },
+  {
+   "episode": "ep16-who-discovered-penicillin-britain-fleming",
+   "ep_dir": "series/body-brain/ep16-who-discovered-penicillin-britain-fleming",
+   "platform": "threads",
+   "account": "BUFFER_API_KEY",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/2e9d69686dc7/Which-country-DISCOVERED-penicillin.mp4",
+   "payload": {
+    "channelId": "6a6dd3b24b2d03035f7e82e8",
+    "mode": "customScheduled",
+    "schedulingType": "automatic",
+    "needsApproval": false,
+    "aiAssisted": false,
+    "source": "thequizwire-reelkit",
+    "text": "Which country discovered penicillin — the United States, Germany or Britain? A doctor came back from holiday, picked up a dish he had left out, and saw a mould killing the bacteria around it; then nobody could make enough of it for more than a decade.\n\n#antibiotics",
+    "assets": [
+     {
+      "video": {
+       "url": "https://zainkhan122.github.io/thequizwire-media/media/2e9d69686dc7/Which-country-DISCOVERED-penicillin.mp4"
+      }
+     }
+    ],
+    "dueAt": "2026-11-29T00:00:00Z"
+   },
+   "reason": "rate limited until 2026-12-06T14:08:00+00:00 (187.5 h left) — no call made",
+   "queued_at": "2026-11-28T18:38:28+00:00",
+   "last_try": "2026-11-28T18:38:28+00:00",
+   "tries": 1
   }
  ]
 }
