@@ -131,8 +131,14 @@ def recent_episodes(ep, n):
         rows.append((_when(d), d))
     # 'before this one': shipped episodes (ledger) always count; a ready-but-unshipped episode only counts if it was
     # authored before me — otherwise the backlog can deadlock (older episode judged against newer drafts, 2026-11-26)
-    mine = _when(me)
-    rows = [(t, d) for t, d in rows if d.name in (_LEDGER_T or {}) or t <= mine]
+    # 11-28: the 'authored before me' rule used the LAST commit time, so one housekeeping commit touching four drafts made
+    # them each other's "last 8" and all four FAILed Q24 at once. Variety is about what the AUDIENCE saw: only shipped
+    # episodes (ledger) and episodes already planned for a day (dispatch/daily.json, about to ship) count as recent.
+    planned = set()
+    try:
+        for eps in json.loads((ROOT / "dispatch/daily.json").read_text()).get("days", {}).values(): planned |= {Path(e).name for e in eps}
+    except Exception: pass
+    rows = [(t, d) for t, d in rows if d.name in (_LEDGER_T or {}) or d.name in planned]
     return [d for _, d in sorted(rows, reverse=True)[:n]]
 
 
