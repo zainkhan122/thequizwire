@@ -1,4 +1,4 @@
-# How many peaks above 8000 m stand in NEPAL?
+# How many peaks above eight thousand metres stand in NEPAL?
 
 ## Signal
 suggest: "how many 8000m peaks are in nepal" (YouTube autocomplete under "eight thousanders", checked 2026-11-17);
@@ -16,7 +16,7 @@ the metre by both countries together in 2020. A number question lets the map sho
 Nepal's stand on its borders; Everest is 8,849 m, agreed by Nepal and China in 2020."
 
 ## Question shape
-how-many, a count with a too-low trap ("how many peaks above 8000 m stand in nepal?"); number options; reads
+how-many, a count with a too-low trap ("how many peaks above eight thousand metres stand in nepal?"); number options; reads
 verbatim as the hook; hook = challenge; wide-drift opener along the range (the answer is a number, so the country may
 be in frame).
 
