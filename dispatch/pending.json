@@ -56,6 +56,105 @@
    "queued_at": "2026-11-28T18:38:28+00:00",
    "last_try": "2026-11-28T18:38:28+00:00",
    "tries": 1
+  },
+  {
+   "episode": "ep22-table-tennis-invented-england",
+   "ep_dir": "series/sports-sprint/ep22-table-tennis-invented-england",
+   "platform": "threads",
+   "account": "BUFFER_API_KEY",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/34fe0cfd009b/Which-country-INVENTED-table-tennis.mp4",
+   "payload": {
+    "channelId": "6a6dd3b24b2d03035f7e82e8",
+    "mode": "customScheduled",
+    "schedulingType": "automatic",
+    "needsApproval": false,
+    "aiAssisted": false,
+    "source": "thequizwire-reelkit",
+    "text": "Which country invented table tennis — China, England or Japan? The country that has won almost every Olympic gold in the sport did not invent it; the first games were played after dinner on a dining table, with books for a net and a lid for a bat.\n\n#sportshistory",
+    "assets": [
+     {
+      "video": {
+       "url": "https://zainkhan122.github.io/thequizwire-media/media/34fe0cfd009b/Which-country-INVENTED-table-tennis.mp4"
+      }
+     }
+    ],
+    "dueAt": "2026-11-29T00:00:00Z"
+   },
+   "reason": "rate limited until 2026-12-06T14:08:00+00:00 (187.2 h left) — no call made",
+   "queued_at": "2026-11-28T18:55:53+00:00",
+   "last_try": "2026-11-28T18:55:53+00:00",
+   "tries": 1
+  },
+  {
+   "episode": "ep20-most-bird-species-colombia",
+   "ep_dir": "series/wild-files/ep20-most-bird-species-colombia",
+   "platform": "youtube",
+   "account": "BUFFER_API_KEY",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/ae560b0cb17c/Where-do-the-MOST-bird-species-live.mp4",
+   "payload": {
+    "channelId": "6a72ff4f99afb44349064208",
+    "mode": "customScheduled",
+    "schedulingType": "automatic",
+    "needsApproval": false,
+    "aiAssisted": false,
+    "source": "thequizwire-reelkit",
+    "text": "The rainforest giant, the island nation of thousands, or the third one? One country holds about a fifth of every bird species on Earth, more hummingbirds than anywhere else, and new species are still being described from its hills. The reason is not jungle — it is three walls of mountains.\nWhich did you pick?\n\n#animalquiz #birds #wildlife #quiz #shorts",
+    "assets": [
+     {
+      "video": {
+       "url": "https://zainkhan122.github.io/thequizwire-media/media/ae560b0cb17c/Where-do-the-MOST-bird-species-live.mp4",
+       "metadata": {
+        "title": "Which country has the most bird species? Not the Amazon one 🔭"
+       }
+      }
+     }
+    ],
+    "metadata": {
+     "youtube": {
+      "title": "Which country has the most bird species? Not the Amazon one 🔭",
+      "categoryId": "15",
+      "privacy": "public",
+      "madeForKids": false,
+      "notifySubscribers": true,
+      "embeddable": true,
+      "license": "youtube",
+      "isAiGenerated": false
+     }
+    },
+    "dueAt": "2026-12-02T00:00:00Z"
+   },
+   "reason": "rate limited until 2026-12-06T14:08:00+00:00 (187.2 h left) — no call made",
+   "queued_at": "2026-11-28T18:55:55+00:00",
+   "last_try": "2026-11-28T18:55:55+00:00",
+   "tries": 1
+  },
+  {
+   "episode": "ep20-most-bird-species-colombia",
+   "ep_dir": "series/wild-files/ep20-most-bird-species-colombia",
+   "platform": "threads",
+   "account": "BUFFER_API_KEY",
+   "media_url": "https://zainkhan122.github.io/thequizwire-media/media/ae560b0cb17c/Where-do-the-MOST-bird-species-live.mp4",
+   "payload": {
+    "channelId": "6a6dd3b24b2d03035f7e82e8",
+    "mode": "customScheduled",
+    "schedulingType": "automatic",
+    "needsApproval": false,
+    "aiAssisted": false,
+    "source": "thequizwire-reelkit",
+    "text": "Where do the most bird species live — Brazil, Indonesia or Colombia? One country holds about a fifth of every bird species on Earth and more hummingbirds than anywhere else; the reason is not jungle, it is three walls of mountains.\n\n#birdwatching",
+    "assets": [
+     {
+      "video": {
+       "url": "https://zainkhan122.github.io/thequizwire-media/media/ae560b0cb17c/Where-do-the-MOST-bird-species-live.mp4"
+      }
+     }
+    ],
+    "dueAt": "2026-11-30T00:00:00Z"
+   },
+   "reason": "rate limited until 2026-12-06T14:08:00+00:00 (187.2 h left) — no call made",
+   "queued_at": "2026-11-28T18:56:00+00:00",
+   "last_try": "2026-11-28T18:56:00+00:00",
+   "tries": 1
   }
  ]
 }
