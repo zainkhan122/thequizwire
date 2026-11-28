@@ -104,7 +104,7 @@ jobs:
           for f in dispatch/ledger.json dispatch/pending.json dispatch/buffer_limits.json dispatch/yt_quota.json config/publishing.json; do [ -f "$f" ] && git add "$f"; done; true
           git diff --cached --quiet && { echo "ledger unchanged"; exit 0; }
           git commit -m "dispatch: ${{ inputs.tag || format('run {0}', inputs.run) }} (${{ inputs.live && 'live' || 'dry-run' }}) [skip ci]"
-          for i in 1 2 3; do git pull --rebase -q -X theirs && git push -q && break || { git rebase --abort 2>/dev/null; sleep 5; }; done   # -X theirs = keep the files this run generated
+          git stash -q --include-untracked 2>/dev/null || true; ok=0; for i in 1 2 3 4 5; do git pull --rebase -q -X theirs && git push -q && { ok=1; break; } || { git rebase --abort 2>/dev/null; sleep $((i*7)); }; done; git stash drop -q 2>/dev/null || true; [ "$ok" = 1 ] || { echo "::error::could not push ledger after 5 tries"; git status -sb; exit 1; }   # -X theirs = keep the files this run generated
       - uses: actions/upload-artifact@v4
         if: always()
         with:

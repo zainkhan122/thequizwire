@@ -35,7 +35,9 @@ def main():
         try: done |= {r["episode"] for r in json.loads(pend.read_text()).get("rows", [])}
         except ValueError: pass
     dp = ROOT / "dispatch/daily.json"; plan = json.loads(dp.read_text()) if dp.exists() else {"version": 1, "days": {}}
-    planned = {e for eps in plan["days"].values() for e in eps}
+    # episodes planned on EARLIER days are deliberately NOT excluded: if their render crashed they must be picked again
+    # (18–27 Nov: ep22 was re-planned daily while render.yml failed). ledger + pending.json are the only "done" truth.
+    planned = set()
     if day in plan["days"]:                                                                  # idempotent per day
         if a.if_unplanned: print("daily_pick: already planned today — retry is a no-op", file=sys.stderr); return
         print(" ".join(plan["days"][day])); return

@@ -31,4 +31,4 @@ jobs:
         if: always()
         run: |
           git config user.name "quizwire-dispatch"; git config user.email "dispatch@users.noreply.github.com"
-          git add dispatch/ledger.json && git commit -qm "recopy: ledger" && git pull --rebase -q && git push -q || echo "ledger unchanged"
+          git add dispatch/ledger.json && git commit -qm "recopy: ledger" && git stash -q 2>/dev/null || true; git pull --rebase -q -X theirs && git push -q || echo "ledger push failed"
